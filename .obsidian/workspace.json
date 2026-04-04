@@ -4,33 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ad4b8ede28ee4581",
+        "id": "9beed55865b9f20f",
         "type": "tabs",
         "children": [
           {
-            "id": "e1a5b214660a8d03",
+            "id": "445af7aa2b8710da",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
-            }
-          }
-        ]
-      },
-      {
-        "id": "58d99cff9d587e5a",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "0c76c4a95534f5ee",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "markdown",
+              "state": {
+                "file": "Asus/Contrataciones/Modelo de Liquidación CCT 130-75.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Modelo de Liquidación CCT 130-75"
             }
           }
         ]
@@ -106,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Libre Opcion/00-resumen-diagnostico-seo-performance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de 00-resumen-diagnostico-seo-performance"
             }
           },
           {
@@ -124,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Libre Opcion/00-resumen-diagnostico-seo-performance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes"
+              "title": "Enlaces salientes de 00-resumen-diagnostico-seo-performance"
             }
           },
           {
@@ -166,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Libre Opcion/00-resumen-diagnostico-seo-performance.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema"
+              "title": "Esquema de 00-resumen-diagnostico-seo-performance"
             }
           },
           {
@@ -203,14 +194,43 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e1a5b214660a8d03",
+  "active": "5859a2c5685f108b",
   "lastOpenFiles": [
-    "Libre Opcion/00-resumen-diagnostico-seo-performance.md",
-    "Libre Opcion/04-fix-fuentes-innecesarias.md",
-    "Libre Opcion/03-fix-header-min-height.md",
+    "Asus/Contrataciones/Fórmulas del Modelo.md",
+    "Asus/Contrataciones/Escenarios de Contratación.md",
+    "Asus/Contrataciones/Contrataciones MOC.md",
+    "Asus/Contrataciones/Coeficientes de Facturación.md",
+    "Asus/Contrataciones/Calculadora Excel - Instrucciones.md",
+    "Skills/schedule/SKILL.md",
+    "Asus/Contrataciones/Modelo de Liquidación CCT 130-75.md",
+    "Asus/Contrataciones",
+    "Asus",
+    "Skills/xlsx/SKILL.md",
+    "Skills/pptx/editing.md",
+    "Skills/pdf/REFERENCE.md",
+    "Skills/pdf/SKILL.md",
+    "Skills/pdf/FORMS.md",
+    "Skills/docx/SKILL.md",
     "Libre Opcion/02-fix-lcp-render-blocking.md",
+    "Skills/skill-creator/references/schemas.md",
+    "Skills/skill-creator/agents/analyzer.md",
+    "Skills/skill-creator/agents/comparator.md",
+    "Skills/skill-creator/agents/grader.md",
+    "Skills/skill-creator/SKILL.md",
+    "Skills/pptx/pptxgenjs.md",
+    "Skills/pptx/SKILL.md",
+    "Skills/xlsx",
+    "Skills/skill-creator/references",
+    "Skills/skill-creator/agents",
+    "Skills/skill-creator",
+    "Skills/schedule",
+    "Skills/pptx",
+    "Skills/pdf",
+    "Skills/docx",
+    "Libre Opcion/00-resumen-diagnostico-seo-performance.md",
+    "Libre Opcion/03-fix-header-min-height.md",
+    "Planilla Acciones Bully/Documentacion Apps Script - Opciones API.md",
     "Libre Opcion/01-fix-cls-imagenes.md",
-    "Bienvenido.md",
-    "Libre Opcion"
+    "Libre Opcion/04-fix-fuentes-innecesarias.md"
   ]
 }

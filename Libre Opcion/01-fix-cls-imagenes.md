@@ -132,3 +132,48 @@ Después de hacer los cambios:
 3. Verificar que las primeras 4 imágenes NO tengan `loading="lazy"`
 4. Correr Lighthouse en modo mobile y verificar que CLS < 0.1
 5. Esperar 2-4 semanas para que Google recoja los datos de campo actualizados
+
+---
+
+## Estado: ✅ IMPLEMENTADO (2026-04-04)
+
+**Branch:** `fix/cls-imagenes-width-height-v2` (basada en `fix/fouc-critical-css-critters`)
+
+### Resumen de lo implementado
+
+#### Componentes de producto modificados (7 módulos + padres)
+| Módulo | Archivo | size_h | width/height |
+|--------|---------|--------|-------------|
+| ModuloA | `components/Productos/ModuloA.vue` | h190 | 190x190 |
+| ModuloAHome | `components/Productos/ModuloAHome.vue` | h190 | 190x190 |
+| ModuloB | `components/Productos/ModuloB.vue` | h165 | 165x165 |
+| ModuloC | `components/Productos/ModuloC.vue` | h180 | 180x180 |
+| ModuloD | `components/Productos/ModuloD.vue` | h100 | 100x100 |
+| ModuloE | `components/Productos/ModuloE.vue` | h100 | 100x100 |
+| ModuloFilaA | `components/Home/ModuloFilaA.vue` | h80 | 80x80 |
+
+#### Cambios aplicados en cada módulo
+- `width`/`height` HTML acorde al contenedor CSS
+- `:loading="index < 4 ? 'eager' : 'lazy'"` — primeras 4 imágenes eager
+- `:fetchpriority="index === 0 ? 'high' : 'auto'"` — primera imagen prioridad alta
+- `aspect-ratio: 1 / 1` en CSS de `.producto img`
+- Prop `index` (Number, default: 99) agregado a cada módulo
+- `size_h` en URL optimizado al alto real del contenedor CSS
+
+#### Padres modificados (pasan `:index="index"`)
+- `CarouselBanner.vue`, `CarouselScroll.vue`, `Carousel.vue`
+- `CarouselDosFilas.vue`, `ProductosMobile.vue`, `ProductosMobileB.vue`
+- `pages/busquedas/general.vue`, `pages/mi-cuenta/favoritos.vue`, `pages/mi-cuenta/historial.vue`
+
+#### Header — iconos con width/height
+- `Carrito.vue` — `width="23" height="23"`
+- `Notificaciones.vue` — `width="23" height="23"`
+- `AvisoCarrito.vue` — `width="23" height="23"`
+
+#### No requirió cambios
+- Badge "Verificado" en ModuloB y ModuloC — ya tenía `width="16" height="16"`
+- Galería de producto (`Galeria.vue`) — ya estaba optimizada
+
+### Notas
+- Los `size_h` en la URL controlan el alto de la imagen servida por el CDN. Se ajustaron para no servir imágenes más grandes de lo necesario (PageSpeed lo penaliza como "Properly size images")
+- Las imágenes no se deforman a pesar de usar width/height cuadrado porque tienen `object-fit: contain`

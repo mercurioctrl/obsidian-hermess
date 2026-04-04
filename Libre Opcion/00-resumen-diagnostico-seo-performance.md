@@ -57,14 +57,23 @@ Se inició una **validación de CLS** en Search Console el 28/3/26 (tarda hasta 
 
 ### Problemas encontrados (ordenados por impacto)
 
-#### 1. CLS — Imágenes sin dimensiones (CRÍTICO)
+#### 1. CLS — Imágenes sin dimensiones (CRÍTICO) ✅ IMPLEMENTADO
 - 25 de 42 imágenes sin atributos `width`/`height`
 - 17 imágenes de producto (200x200px natural) dentro de `.imagen > .producto > img` sin dimensiones HTML
 - 8 imágenes above-the-fold con `loading="lazy"` innecesario
 - Sin `aspect-ratio` en CSS (usa `auto`)
 - 18 badges "Verificado" sin dimensiones
 - Íconos del header sin dimensiones
-- **Instrucciones:** [[01-fix-cls-imagenes]]
+- **Solución aplicada:**
+  - Agregado `width`/`height` a imágenes de producto en 7 módulos (A, AHome, B, C, D, E, FilaA)
+  - Lazy loading condicional: `eager` para las primeras 4 imágenes, `lazy` para el resto
+  - `fetchpriority="high"` en la primera imagen de cada listado
+  - `aspect-ratio: 1/1` en CSS de `.producto img`
+  - `width`/`height` en iconos del header (carrito, notificaciones, aviso carrito)
+  - Optimizado `size_h` en URLs de imágenes para coincidir con el alto real del contenedor CSS (ahorro de bytes)
+  - Badge "Verificado" ya tenía dimensiones en ModuloB y ModuloC
+- **Branch:** `fix/cls-imagenes-width-height-v2` (basada en `fix/fouc-critical-css-critters`)
+- **Instrucciones y detalle:** [[01-fix-cls-imagenes]]
 
 #### 2. LCP — Recursos render-blocking (ALTO)
 - 23 hojas de estilo CSS (excesivo)
@@ -85,13 +94,22 @@ Se inició una **validación de CLS** en Search Console el 28/3/26 (tarda hasta 
 - Slick font cargada en páginas sin carrusel
 - **Instrucciones:** [[04-fix-fuentes-innecesarias]]
 
+#### 5. FOUC — Flash of Unstyled Content (ALTO) ✅ IMPLEMENTADO
+- Al cargar el sitio, se veía "desarmado" por ~700ms antes de que se apliquen los estilos
+- CSS del header/layout estaba en chunks lazy que Nuxt cargaba via JS después de la hidratación
+- **Solución aplicada:** módulo custom que inyecta CSS de header/layout como `<style>` inline sin tocar los `<link>` sync existentes
+- **Branch:** `fix/fouc-critical-css-critters`
+- **Limitación:** componentes `client-only` (botones "Agregar al carrito") siguen dependiendo del CSS sync — no es regresión
+- **Instrucciones y detalle:** [[05-fix-fouc-css-tardio]]
+
 ## Plan de acción recomendado
 
-1. **Inmediato:** Implementar fix #1 (imágenes) — mayor impacto en CLS
-2. **Corto plazo:** Fix #3 (header) y #4 (fuentes) — cambios simples
-3. **Mediano plazo:** Fix #2 (render-blocking) — requiere más testing
-4. **Monitoreo:** Esperar 2-4 semanas para que Google recoja datos de campo actualizados
-5. **Seguimiento:** Revisar Core Web Vitals en Search Console después de los cambios
+1. ~~**Inmediato:** Implementar fix #5 (FOUC) — el usuario lo ve en cada visita~~ ✅ Implementado
+2. ~~**Inmediato:** Implementar fix #1 (imágenes) — mayor impacto en CLS~~ ✅ Implementado
+3. **Corto plazo:** Fix #3 (header) y #4 (fuentes) — cambios simples
+4. **Mediano plazo:** Fix #2 (render-blocking) — requiere más testing
+5. **Monitoreo:** Esperar 2-4 semanas para que Google recoja datos de campo actualizados
+6. **Seguimiento:** Revisar Core Web Vitals en Search Console después de los cambios
 
 ## Archivos en esta carpeta
 
@@ -102,3 +120,4 @@ Se inició una **validación de CLS** en Search Console el 28/3/26 (tarda hasta 
 | [[02-fix-lcp-render-blocking]] | Instrucciones para Claude Code: fix LCP render-blocking |
 | [[03-fix-header-min-height]] | Instrucciones para Claude Code: fix header sin min-height |
 | [[04-fix-fuentes-innecesarias]] | Instrucciones para Claude Code: fix fuentes innecesarias |
+| [[05-fix-fouc-css-tardio]] | Instrucciones para Claude Code: fix FOUC (flash sin estilos) |
