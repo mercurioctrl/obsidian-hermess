@@ -1,0 +1,321 @@
+---
+jira_key: "LIO-483"
+aliases: ["LIO-483"]
+summary: "API - Refactor - Obtener los vídeos desde la base de datos"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Franco Callipo"
+reporter: "Catriel Mercurio"
+created: "2025-12-03 07:28"
+updated: "2025-12-19 14:51"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-483"
+---
+
+# LIO-483: API - Refactor - Obtener los vídeos desde la base de datos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Franco Callipo |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-03 07:28 |
+| Actualizado | 2025-12-19 14:51 |
+| Etiquetas | ninguna |
+| Jira | [LIO-483](https://bluinc.atlassian.net/browse/LIO-483) |
+
+## Relaciones
+
+- **Padre:** [[LIO-481]] Recomendaciones de loki
+- **has action item:** [[LIO-491]] APP - Maquetado - Sección “Las recomendaciones de Loki” (grid + vista Clips tipo ML)
+
+## Descripcion
+
+Refactorizar el endpoint existente:
+
+```
+GET {API_URL}/v4/yt/shorts?label=recomendaciones-de-loki
+```
+
+para que:
+
+- Abandone el origen hardcodeado.
+
+
+- Obtenga los registros desde SQL Server.
+
+
+- Filtre dinámicamente por `label`.
+
+
+- Mantenga **100% compatible** el contrato del endpoint (URL, parámetros, formato de salida y paginación).
+
+
+
+## Nueva fuente de datos (debes crear la tabla)
+
+Tabla SQL Server:
+
+```
+[LO].[dbo].[yt_videos]
+```
+
+---
+
+## Estructura definitiva de la tabla
+
+| Campo | Tipo sugerido | Descripción |
+| --- | --- | --- |
+| `id` | INT IDENTITY PK | Identificador único del video. |
+| `label` | VARCHAR(100) | Categoría o agrupador lógico del video (ej: `recomendaciones-de-loki`). Se utiliza para filtrar desde la API. |
+| `url` | VARCHAR(512) | URL pública del video/short de YouTube. |
+| `thumbnail` | VARCHAR(512) NULL | URL de la imagen preview del video. Campo opcional. |
+| `deleted` | BIT DEFAULT 0 | Flag de borrado lógico. Si está activo, el registro no se devuelve. |
+| `createdAt` | DATETIME DEFAULT GETDATE() | Fecha de creación del video en la plataforma. |
+| `show` | BIT DEFAULT 1 | Habilita o deshabilita la exhibición pública del video. |
+| `homeShow` | BIT DEFAULT 0 | Flag para indicar si el video puede mostrarse destacado en Home (no usado en esta historia). |
+
+---
+
+## Comportamiento del Endpoint
+
+Se mantiene el endpoint:
+
+```
+GET {API_URL}/v4/yt/shorts?label=recomendaciones-de-loki
+```
+
+---
+
+## Reglas de negocio
+
+- El recurso consultará la base de datos filtrando por:
+
+- `label = :label`
+
+
+- `deleted = 0`
+
+
+- `show = 1`
+
+
+
+
+- Si **no existen registros** para el label recibido:
+
+- Responder array vacío.
+
+
+- HTTP 200.
+
+
+
+
+- No existe ninguna whitelist de labels en código.
+
+- El backend actúa como **passthrough del parámetro**.
+
+
+- Los labels permitidos son los que existan poblados en la DB.
+
+
+
+
+
+---
+
+## Query SQL Base
+
+### Obtención paginada
+
+```
+SELECT 
+    id,
+    url,
+    thumbnail
+FROM [LO].[dbo].[yt_videos]
+WHERE label = :label
+  AND deleted = 0
+  AND show = 1
+ORDER BY createdAt DESC
+OFFSET :offset ROWS FETCH NEXT :limit ROWS ONLY;
+```
+
+---
+
+### Conteo total
+
+```
+SELECT COUNT(*)
+FROM [LO].[dbo].[yt_videos]
+WHERE label = :label
+  AND deleted = 0
+  AND show = 1;
+```
+
+---
+
+## Estructura del Response
+
+La salida permanece **idéntica**:
+
+```
+{
+  "data": [
+    {
+      "id": 1,
+      "url": "https://www.youtube.com/shorts/jvaQbXXIa-k",
+      "thumbnail": "https://img.youtube.com/vi/jvaQbXXIa-k/hqdefault.jpg" <<-- (si estsa, sino viene null)
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "total": 5
+  }
+}
+
+```
+
+---
+
+---
+
+## Validaciones
+
+- `label` es obligatorio.
+
+
+- Si `label` está vacío o no informado:
+
+- Retornar 400.
+
+
+
+
+- `page` mínimo = 1.
+
+
+- `limit` mínimo = 1.
+
+
+- Nunca retornar:
+
+- registros con `deleted = 1`,
+
+
+- registros con `show = 0`.
+
+
+
+
+
+---
+
+---
+
+## Criterios de aceptación
+
+✅ Invocar:
+
+```
+GET /v4/yt/shorts?label=recomendaciones-de-loki&page=1&limit=2
+```
+
+- Retorna solo resultados correspondientes a ese label.
+
+
+- Paginación correcta.
+
+
+- `total` refleja la cantidad real en DB.
+
+
+
+✅ Invocar:
+
+```
+GET /v4/yt/shorts?label=otro-label
+```
+
+- Respuesta válida.
+
+
+- `data`: `[]`.
+
+
+- `total`: `0`.
+
+
+
+✅ Tabla poblada manualmente desde SQL Server funciona sin intervención adicional desde el backend.
+
+✅ Eliminado completamente el set hardcodeado.
+
+✅ Lógica desacoplada que permitirá agregar otros labels sin tocar código.
+
+---
+
+---
+
+## Alcance
+
+**Incluye**
+
+- Nueva tabla en DB.
+
+
+- Refactor del datasource.
+
+
+- Filtro dinámico por label.
+
+
+- Paginación SQL.
+
+
+- Mantenimiento del contrato del endpoint.
+
+
+
+**No incluye**
+
+- ❌ ABM de videos.
+
+
+- ❌ Gestión de thumbnails.
+
+
+- ❌ Soporte de `homeShow`.
+
+
+- ❌ Cache.
+
+
+- ❌ Integraciones externas.
+
+
+
+---
+
+---
+
+## Definición de listo (DoD)
+
+- Tabla creada con campo `label`.
+
+
+- SQL de carga inicial ejecutable.
+
+
+- Endpoint funcionando contra DB con filtro por label.
+
+
+- Tests manuales desde Postman por label válido/inválido.
+
+
+- Documentación de refactor realizada.

@@ -1,0 +1,36 @@
+---
+jira_key: "LIO-366"
+aliases: ["LIO-366"]
+summary: "APP- refactor-quitar el antiguo track de purchase y agregar mas datos al codigo de trackeo actual"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-05-28 12:59"
+updated: "2025-06-11 10:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-366"
+---
+
+# LIO-366: APP- refactor-quitar el antiguo track de purchase y agregar mas datos al codigo de trackeo actual
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-05-28 12:59 |
+| Actualizado | 2025-06-11 10:38 |
+| Etiquetas | ninguna |
+| Jira | [LIO-366](https://bluinc.atlassian.net/browse/LIO-366) |
+
+## Relaciones
+
+- **Padre:** [[LIO-344]] Adwords y Analytics
+
+## Descripcion
+
+*Sin descripcion*

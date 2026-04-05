@@ -1,0 +1,40 @@
+---
+jira_key: "MKT-247"
+aliases: ["MKT-247"]
+summary: "LO_ NO FUNCIONA LA HERRAMIENTA PARA SUBIR BANNERS"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2025-02-26 10:54"
+updated: "2025-02-26 11:11"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-247"
+---
+
+# MKT-247: LO_ NO FUNCIONA LA HERRAMIENTA PARA SUBIR BANNERS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-02-26 10:54 |
+| Actualizado | 2025-02-26 11:11 |
+| Etiquetas | ninguna |
+| Jira | [MKT-247](https://bluinc.atlassian.net/browse/MKT-247) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola! 
+
+en el [https://cms-lo.saftel.com/banners](https://cms-lo.saftel.com/banners) veo un banner que no está en la web de LO, y si subo los banners de la nueva promo de AMD tampoco se visualizan en la web. Les paso los banners que tengo que subir. 
+Link: es un bitly para poder medir clicks 
+[link](https://bit.ly/BundleAMDMHW25)

@@ -1,0 +1,44 @@
+---
+jira_key: "LIO-255"
+aliases: ["LIO-255"]
+summary: "DATA - Refactor - Agregar nueva estructura de datos a la tabla LO.dbo.mediosPago y crear medio de pago tarjeta"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2025-03-11 08:55"
+updated: "2025-03-14 10:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-255"
+---
+
+# LIO-255: DATA - Refactor - Agregar nueva estructura de datos a la tabla LO.dbo.mediosPago y crear medio de pago tarjeta
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-03-11 08:55 |
+| Actualizado | 2025-03-14 10:40 |
+| Etiquetas | ninguna |
+| Jira | [LIO-255](https://bluinc.atlassian.net/browse/LIO-255) |
+
+## Relaciones
+
+- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+
+## Descripcion
+
+Agregaremos en producción las nuevas columnas y agregaremos el medio de pago para tarjeta de crédito de mercado pago
+
+```
+,[interes1]
+,[interes3]
+,[interes6]
+,[interes9]
+,[interes12]
+```

@@ -1,0 +1,40 @@
+---
+jira_key: "MKT-140"
+aliases: ["MKT-140"]
+summary: "LO_CUPÓN DE DESCUENTO"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel M."
+reporter: "Eloy passarella"
+created: "2023-01-26 10:13"
+updated: "2023-01-30 08:13"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-140"
+---
+
+# MKT-140: LO_CUPÓN DE DESCUENTO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel M. |
+| Reportado por | Eloy passarella |
+| Creado | 2023-01-26 10:13 |
+| Actualizado | 2023-01-30 08:13 |
+| Etiquetas | ninguna |
+| Jira | [MKT-140](https://bluinc.atlassian.net/browse/MKT-140) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Catri! 
+
+Estoy realizando diferentes campañas de email a la base de libre opcion, para ver real cuantos contactos tenemos activos. Me gustaría enviar un cupón de descuento de un 10% con tope de 5000 por la campaña de SUMMERDAYS
+
+Me ayudas? gracias.

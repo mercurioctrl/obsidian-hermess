@@ -1,0 +1,272 @@
+---
+jira_key: "LIO-557"
+aliases: ["LIO-557"]
+summary: "API - Feat - Cotización de envío por producto"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Franco Callipo"
+reporter: "Catriel Mercurio"
+created: "2026-02-24 09:35"
+updated: "2026-02-27 12:05"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-557"
+---
+
+# LIO-557: API - Feat - Cotización de envío por producto
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Franco Callipo |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-02-24 09:35 |
+| Actualizado | 2026-02-27 12:05 |
+| Etiquetas | ninguna |
+| Jira | [LIO-557](https://bluinc.atlassian.net/browse/LIO-557) |
+
+## Relaciones
+
+- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **is cloned by:** [[LIO-562]] API - Review - Cotización de envío por producto - Validación obligatoria de campos en la carga útil
+
+## Descripcion
+
+# Historia de migración: Cotización de envío por producto
+
+**Contexto:** Migración de endpoint legacy (PHP/Restler) a la nueva API Laravel. **Objetivo:** El front-end solo cambiará la URL base; el contrato (payload, respuesta, verbo) debe ser idéntico.
+
+---
+
+## Descripción
+
+Este endpoint recibe un ID de producto y dos códigos postales (vendedor y cliente), consulta un **microservicio interno de envíos** y devuelve las opciones de cotización disponibles.
+
+La API Laravel actúa como **proxy**: no calcula nada, solo reenvía al microservicio y devuelve su respuesta.
+
+---
+
+## Endpoint a implementar
+
+| Campo | Valor |
+| --- | --- |
+| Verbo | `POST` |
+| Ruta | `/envios/producto/cotizacion` |
+| Auth | Bearer JWT (opcional — no bloquea si no hay token) |
+
+### Request Body (JSON)
+
+```
+{
+  "productoId": 573936,
+  "codigoPostalVendedor": "1229",
+  "codigoPostalCliente": 1407
+}
+```
+
+### Validaciones de campos
+
+| Campo | Tipo | Requerido | Notas |
+| --- | --- | --- | --- |
+| `productoId` | integer | Sí | ID del producto en la plataforma |
+| `codigoPostalVendedor` | string | Sí | CP de origen (donde está el producto) |
+| `codigoPostalCliente` | string/int | Sí | CP de destino (donde va el comprador) |
+
+> **Nota:** el front puede enviar `codigoPostalCliente` como entero o string; castear a string internamente.
+
+
+---
+
+## Llamada al microservicio interno
+
+El controller/service debe hacer un **GET HTTP** al microservicio de envíos usando esta URL pattern:
+
+```
+GET {URL_SERVICE_ENVIOS}item/{productoId}/cp/{codigoPostalCliente}/cphost/{codigoPostalVendedor}
+```
+
+**Ejemplo concreto con los datos del request:**
+
+```
+GET {URL_SERVICE_ENVIOS}item/573936/cp/1407/cphost/1229
+```
+
+- `URL_SERVICE_ENVIOS` → variable de entorno (`.env`). Preguntar al tech lead el valor para el ambiente correspondiente.
+
+
+- No se envía body, no se envían headers especiales al microservicio.
+
+
+- La respuesta del microservicio es JSON; devolverla tal cual al front.
+
+
+
+---
+
+## Response esperada
+
+La respuesta es el JSON directo del microservicio de envíos. El controller debe devolverlo con `200 OK`.
+
+En caso de error del microservicio o fallo de conexión, devolver `500` con mensaje descriptivo.
+
+**Ejemplo de estructura de respuesta exitosa (referencial):**
+
+```
+[
+  {
+    "nombre": "Andreani",
+    "modalidad": "Estándar",
+    "precio": 1850.00,
+    "dias": 3
+  },
+  {
+    "nombre": "OCA",
+    "modalidad": "Express",
+    "precio": 2300.00,
+    "dias": 1
+  }
+]
+```
+
+> La estructura exacta la define el microservicio de envíos. No transformar la respuesta.
+
+
+---
+
+## Implementación sugerida en Laravel
+
+### 1. Ruta (`routes/api.php`)
+
+```
+Route::post('/envios/producto/cotizacion', [EnvioController::class, 'cotizarProducto']);
+```
+
+> No poner middleware `auth` en esta ruta — el endpoint legacy no exige autenticación.
+
+
+### 2. Form Request (`app/Http/Requests/CotizarEnvioProductoRequest.php`)
+
+```
+public function rules(): array
+{
+    return [
+        'productoId'           => ['required', 'integer'],
+        'codigoPostalVendedor' => ['required', 'string'],
+        'codigoPostalCliente'  => ['required'],
+    ];
+}
+​
+public function authorize(): bool
+{
+    return true; // no requiere auth
+}
+```
+
+### 3. Controller (`app/Http/Controllers/EnvioController.php`)
+
+```
+public function cotizarProducto(CotizarEnvioProductoRequest $request, EnvioService $service)
+{
+    $datos = $request->validated();
+    $datos['codigoPostalCliente'] = (string) $datos['codigoPostalCliente'];
+​
+    $resultado = $service->cotizarProducto(
+        $datos['productoId'],
+        $datos['codigoPostalCliente'],
+        $datos['codigoPostalVendedor']
+    );
+​
+    return response()->json($resultado);
+}
+```
+
+### 4. Service (`app/Services/EnvioService.php`)
+
+```
+public function cotizarProducto(int $productoId, string $cpCliente, string $cpVendedor): mixed
+{
+    $url = config('services.envios.url') . "item/{$productoId}/cp/{$cpCliente}/cphost/{$cpVendedor}";
+​
+    $response = Http::get($url);
+​
+    if ($response->failed()) {
+        throw new \RuntimeException('No se pudo obtener cotización del microservicio de envíos.');
+    }
+​
+    return $response->json();
+}
+```
+
+### 5. Config (`config/services.php`)
+
+```
+'envios' => [
+    'url' => env('URL_SERVICE_ENVIOS'),
+],
+```
+
+### 6. `.env`
+
+```
+URL_SERVICE_ENVIOS=http://[preguntar-al-tech-lead]/
+```
+
+---
+
+## Resumen del flujo completo
+
+```
+Frontend
+  │
+  │  POST /envios/producto/cotizacion
+  │  Body: { productoId, codigoPostalVendedor, codigoPostalCliente }
+  │
+  ▼
+Laravel (nueva API)
+  │
+  │  Valida campos (Form Request)
+  │  Castea codigoPostalCliente a string
+  │
+  ▼
+EnvioService::cotizarProducto()
+  │
+  │  GET {URL_SERVICE_ENVIOS}item/{id}/cp/{cpCliente}/cphost/{cpVendedor}
+  │
+  ▼
+Microservicio interno de envíos
+  │
+  │  Devuelve JSON con opciones de envío
+  │
+  ▼
+Laravel devuelve JSON directo → 200 OK
+Frontend recibe exactamente lo mismo que antes
+```
+
+---
+
+## Checklist antes de dar por terminado
+
+- La ruta responde en `POST /envios/producto/cotizacion`
+
+
+- Valida los 3 campos requeridos y devuelve 422 si faltan
+
+
+- `codigoPostalCliente` se castea a string antes de armar la URL
+
+
+- La URL al microservicio se construye correctamente (verificar con un log)
+
+
+- La respuesta del microservicio se devuelve sin transformar
+
+
+- Si el microservicio falla, devuelve 500 con mensaje legible
+
+
+- No tiene middleware de auth (el front no siempre envía token para este endpoint)
+
+
+- Testeado con el mismo curl del legacy reemplazando solo el host

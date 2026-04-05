@@ -1,0 +1,39 @@
+---
+jira_key: "LIO-464"
+aliases: ["LIO-464"]
+summary: "API - Review - SyncUp - Impactar tokens por conversión -> Correos duplicados"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2025-09-30 11:19"
+updated: "2025-10-13 11:05"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-464"
+---
+
+# LIO-464: API - Review - SyncUp - Impactar tokens por conversión -> Correos duplicados
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2025-09-30 11:19 |
+| Actualizado | 2025-10-13 11:05 |
+| Etiquetas | ninguna |
+| Jira | [LIO-464](https://bluinc.atlassian.net/browse/LIO-464) |
+
+## Relaciones
+
+- **Padre:** [[LIO-408]] Referidos
+- **relates to:** [[LIO-418]] API - Feat - SyncUp - Impactar tokens por conversión
+
+## Descripcion
+
+Realizaremos una revisión para determinar la causa que provoca que, al realizar una conversión, aparentemente se envíen todas las conversiones realizadas con anterioridad, con el objetivo de corregir el funcionamiento.
+
+[adjunto]

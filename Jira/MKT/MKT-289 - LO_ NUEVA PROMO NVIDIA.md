@@ -1,0 +1,63 @@
+---
+jira_key: "MKT-289"
+aliases: ["MKT-289"]
+summary: "LO_ NUEVA PROMO NVIDIA"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2025-10-08 16:16"
+updated: "2025-10-14 08:11"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-289"
+---
+
+# MKT-289: LO_ NUEVA PROMO NVIDIA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-10-08 16:16 |
+| Actualizado | 2025-10-14 08:11 |
+| Etiquetas | ninguna |
+| Jira | [MKT-289](https://bluinc.atlassian.net/browse/MKT-289) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola   
+
+Nueva promo de Nvidia
+
+ID de productos (para filtro de productos) : 
+
+P736950
+P736942
+P743639
+P743636
+P751858
+P748200
+P741862
+P741863
+P749775
+P743634
+P741888
+P749784
+P743640
+P743635
+P749746
+P749377
+
+**Fecha de inicio del Bundle:  **07 de octubre 6:00 AM PT, 2025
+
+- **Fecha de fin del Bundle: **04 de noviembre 23:59 PT, 2025
+
+Tarjetas Gráficas y Desktops con: GeForce RTX 5090, 5080, 5070 Ti y 5070

@@ -1,0 +1,49 @@
+---
+jira_key: "LIO-380"
+aliases: ["LIO-380"]
+summary: "APP - Refactor - Agregar porcentaje de interes para poder operarlo en los calculos directamente y evitar el bug de cambio de precio"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Highest"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-07-07 10:15"
+updated: "2025-07-11 02:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-380"
+---
+
+# LIO-380: APP - Refactor - Agregar porcentaje de interes para poder operarlo en los calculos directamente y evitar el bug de cambio de precio
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Highest |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-07 10:15 |
+| Actualizado | 2025-07-11 02:43 |
+| Etiquetas | ninguna |
+| Jira | [LIO-380](https://bluinc.atlassian.net/browse/LIO-380) |
+
+## Relaciones
+
+- **Padre:** [[LIO-373]] Seguridad del checkout y protección de transacciones
+- **is blocked by:** [[LIO-379]] API - Refactor - Agregar porcentaje de interes para poder operarlo en los calculos directamente y evitar el bug de cambio de precio
+
+## Descripcion
+
+Se debe refactorizar el checkout para integrar el porcentaje en la realización de los cálculos evitando el bug de cambio de precios según la historia [link](https://bluinc.atlassian.net/browse/LIO-379) 
+
+```
+PATCH /pedidos/checkout
+```
+
+y
+
+```
+GET /pedidos/checkout/{checkOutId}
+```
+
+Para operar el atributo `cuotasPorcentual` de forma tal que los cálculos puedan volver a realizarse y que una modificación en el precio no produzca cambios en el total final

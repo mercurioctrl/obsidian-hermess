@@ -1,0 +1,78 @@
+---
+jira_key: "LIO-379"
+aliases: ["LIO-379"]
+summary: "API - Refactor - Agregar porcentaje de interes para poder operarlo en los calculos directamente y evitar el bug de cambio de precio"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Highest"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2025-07-07 10:13"
+updated: "2025-07-08 10:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-379"
+---
+
+# LIO-379: API - Refactor - Agregar porcentaje de interes para poder operarlo en los calculos directamente y evitar el bug de cambio de precio
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Highest |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-07 10:13 |
+| Actualizado | 2025-07-08 10:38 |
+| Etiquetas | ninguna |
+| Jira | [LIO-379](https://bluinc.atlassian.net/browse/LIO-379) |
+
+## Relaciones
+
+- **Padre:** [[LIO-373]] Seguridad del checkout y protección de transacciones
+- **blocks:** [[LIO-380]] APP - Refactor - Agregar porcentaje de interes para poder operarlo en los calculos directamente y evitar el bug de cambio de precio
+
+## Descripcion
+
+Se debe refactorizar los recursos
+
+```
+PATCH /pedidos/checkout
+```
+
+y
+
+```
+GET /pedidos/checkout/{checkOutId}
+```
+
+Para operar el atributo `cuotasPorcentual` de forma tal que los cálculos puedan volver a realizarse y que una modificación en el precio no produzca cambios en el total final
+
+
+
+Importante:
+
+Se rectifica esta tarea, según lo conversado con marbe, no es necesario agregar este campo, aún asi se realizo un ajuste que es retornar los campos `financingFee` y `installmentRate`. 
+
+En el recurso:
+
+```
+GET pedidos/checkout/{id}
+```
+
+
+
+```json
+  "pago": {
+                "medioPagoId": 5062,
+                "cuotas": 12,
+                "costo": {
+                    "cuotas": 300620,
+                    "interes": -0
+                },
+                "limiteTiempoHoras": 48,
+                "datosPagoConTarjeta": true,
+                "financingFee": 214251.87,
+                "installmentRate": 71.27
+            },
+```

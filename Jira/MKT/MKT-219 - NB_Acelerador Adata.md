@@ -1,0 +1,40 @@
+---
+jira_key: "MKT-219"
+aliases: ["MKT-219"]
+summary: "NB_Acelerador Adata"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy passarella"
+created: "2024-10-01 11:37"
+updated: "2024-10-01 14:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-219"
+---
+
+# MKT-219: NB_Acelerador Adata
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy passarella |
+| Creado | 2024-10-01 11:37 |
+| Actualizado | 2024-10-01 14:07 |
+| Etiquetas | ninguna |
+| Jira | [MKT-219](https://bluinc.atlassian.net/browse/MKT-219) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Todos los productos de ADATA
+
+Acelerador: 5
+
+del 7 al 18 de OCT

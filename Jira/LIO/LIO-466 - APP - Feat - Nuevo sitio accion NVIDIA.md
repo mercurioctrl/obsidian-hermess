@@ -1,0 +1,48 @@
+---
+jira_key: "LIO-466"
+aliases: ["LIO-466"]
+summary: "APP - Feat - Nuevo sitio accion NVIDIA"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-10-13 07:42"
+updated: "2025-10-14 08:16"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-466"
+---
+
+# LIO-466: APP - Feat - Nuevo sitio accion NVIDIA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-10-13 07:42 |
+| Actualizado | 2025-10-14 08:16 |
+| Etiquetas | ninguna |
+| Jira | [LIO-466](https://bluinc.atlassian.net/browse/LIO-466) |
+
+## Relaciones
+
+- **Padre:** [[LIO-465]] Micrositios
+
+## Descripcion
+
+Crearemos como hacemos a menudo el sitio [link](https://libreopcion.com.ar/productos?campaign=RTX_oct) 
+
+
+[adjunto]
+Enlazado con [link](https://libreopcion.com.ar/productos?campaign=RTX_oct) 
+
+
+
+**Fecha de inicio del Bundle:  **07 de octubre 6:00 AM PT, 2025
+
+- **Fecha de fin del Bundle: **04 de noviembre 23:59 PT, 2025
+
+Tarjetas Gráficas y Desktops con: GeForce RTX 5090, 5080, 5070 Ti y 5070

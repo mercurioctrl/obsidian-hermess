@@ -1,0 +1,45 @@
+---
+jira_key: "MKT-130"
+aliases: ["MKT-130"]
+summary: "LO_DESCUENTO POR GANAR AR"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2022-12-01 09:50"
+updated: "2022-12-21 10:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-130"
+---
+
+# MKT-130: LO_DESCUENTO POR GANAR AR
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2022-12-01 09:50 |
+| Actualizado | 2022-12-21 10:21 |
+| Etiquetas | ninguna |
+| Jira | [MKT-130](https://bluinc.atlassian.net/browse/MKT-130) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Catri! Armamos un código de descuento de un 10% con un tope de reintegro de 5.000 
+
+LASCALONETAENOCTAVOS 
+si es muy largo probemos LASCALONETAEN8VOS
+
+Si seguimos ganando podemos armar 
+LASCALONETAEN4TOS
+LASCALONETAENSEMIS
+LASCALONETAFINAL
+LASCALONETACAMPEONA

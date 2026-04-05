@@ -1,0 +1,48 @@
+---
+jira_key: "MKT-175"
+aliases: ["MKT-175"]
+summary: "LO_ CUOTAS SIN INTERES_ INTEGRACIÓN"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2024-05-08 09:37"
+updated: "2024-05-30 16:16"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-175"
+---
+
+# MKT-175: LO_ CUOTAS SIN INTERES_ INTEGRACIÓN
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2024-05-08 09:37 |
+| Actualizado | 2024-05-30 16:16 |
+| Etiquetas | ninguna |
+| Jira | [MKT-175](https://bluinc.atlassian.net/browse/MKT-175) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola! Cómo están? 
+
+Estuve leyendo que para poder ofrecer cuota Simple tenemos que tener en nuestro ecommerce / marketplace las siguientes formas de cobrar: 
+
+[link](https://www.fiserv.com.ar/gateway-posnet/) 
+
+[link](https://ayuda.payway.com.ar/cobros/medios-de-pago/venta-online) 
+
+Hoy en día ambas compañias trabajan mucho mejor la parte de devoluciones y cancelaciones de pago. 
+
+En mi punto de vista, mercadopago debería ser una opción de cobro pero no la unica. 
+
+En el caso de no poder o no querer avanzar con ninguna de las dos terminales de cobro, deberíamos cambiar la palabra ahora 6 y 12 de la web, esto quedo viejo. El plan del gobierno ahora se llama cuota simple.

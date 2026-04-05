@@ -1,0 +1,36 @@
+---
+jira_key: "MNB2-24"
+aliases: ["MNB2-24"]
+summary: "Banner Adata + XPG en LO"
+status: "Tareas por hacer"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Sofía Melograna"
+created: "2025-07-29 14:17"
+updated: "2025-07-29 14:17"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MNB2-24"
+---
+
+# MNB2-24: Banner Adata + XPG en LO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Sofía Melograna |
+| Creado | 2025-07-29 14:17 |
+| Actualizado | 2025-07-29 14:17 |
+| Etiquetas | ninguna |
+| Jira | [MNB2-24](https://bluinc.atlassian.net/browse/MNB2-24) |
+
+## Relaciones
+
+- **Padre:** [[MNB2-21]]  NB_Imagen ingreso ADATA
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,65 @@
+---
+jira_key: "MKT-220"
+aliases: ["MKT-220"]
+summary: "Conseguir avales de las marcas para obtener contenido sindicado de manera automatica"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Eloy passarella"
+reporter: "Catriel Mercurio"
+created: "2024-10-02 09:22"
+updated: "2024-11-13 07:26"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-220"
+---
+
+# MKT-220: Conseguir avales de las marcas para obtener contenido sindicado de manera automatica
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Eloy passarella |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-10-02 09:22 |
+| Actualizado | 2024-11-13 07:26 |
+| Etiquetas | ninguna |
+| Jira | [MKT-220](https://bluinc.atlassian.net/browse/MKT-220) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+La idea es poder conseguir un correo/comunicacion donde nos autoricen a obtener informacion de sus productos para enriquecer como mostramos los productos a través del sitio flixmedia 
+
+Te muestro el ultimo mensaje cursado con Roxana sobre que marcas si tenian autorizacion en Argentina.
+
+Entiendo que muchas ni nos sirven, pero por ahi hay alguna que pueden andar lg, intel, cualquiera sirve. Otras se que ni vale la pena mandarles, eso fijate segun tu criterio… 
+
+> 
+
+ Hola Catriel,
+
+Tenemos Asus en Peru, Chile y Mexico pero aun no en Argentina. Entiendo nombre a Asus en la lista, sin embargo aun estamos en negociaciones. He solicitado al representante de Asus en Flixmedia para que se contacte con ellos para ampliar a Argentina.
+
+He vuelto a revisar la lista de marcas en Argentina. Aqui la actualizacion completa: **LG, Lenovo, Logitech, Philips (Versuni), Philips Consumer Lifestyle, Hisense, Samsung, Intel, Nespresso, Drean, Candy y Bose.**
+
+Un saludo,
+
+Roxana  
+
+From: Catriel Mercurio <[cmercurio@nb.com.ar](mailto:cmercurio@nb.com.ar)>
+
+Sent: 24 September 2024 9:52 AM
+
+To: Roxana Vergani <[roxana@flixmedia.tv](mailto:roxana@flixmedia.tv)>
+
+Subject: Re: Flixmedia & New Byte AR
+
+
+
+
+Ojo, esta idea podemos combinarla con nuestro propio contenido, siempre y cuando la marca nos mande el contenido o nos pase un lugar para descargarlo

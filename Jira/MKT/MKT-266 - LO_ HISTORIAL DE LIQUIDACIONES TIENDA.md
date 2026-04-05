@@ -1,0 +1,39 @@
+---
+jira_key: "MKT-266"
+aliases: ["MKT-266"]
+summary: "LO_ HISTORIAL DE LIQUIDACIONES TIENDA"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2025-06-02 10:33"
+updated: "2025-09-05 13:49"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-266"
+---
+
+# MKT-266: LO_ HISTORIAL DE LIQUIDACIONES TIENDA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-06-02 10:33 |
+| Actualizado | 2025-09-05 13:49 |
+| Etiquetas | ninguna |
+| Jira | [MKT-266](https://bluinc.atlassian.net/browse/MKT-266) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+En el apartado de liquidaciones no hay un historial de lo que deberían liquidar en las tiendas. 
+
+[adjunto]
+por ejemplo ya no se cuando deberia cobrar en mayo. Este es un tema que deberiamos resolver si queremos sumar nuevas tiendas.

@@ -1,0 +1,51 @@
+---
+jira_key: "M1-15"
+aliases: ["M1-15"]
+summary: "DSG - Refactor - Slide Marcas "
+status: "LISTO"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2025-07-29 12:27"
+updated: "2025-08-05 20:27"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/M1-15"
+---
+
+# M1-15: DSG - Refactor - Slide Marcas 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | LISTO (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-07-29 12:27 |
+| Actualizado | 2025-08-05 20:27 |
+| Etiquetas | ninguna |
+| Jira | [M1-15](https://bluinc.atlassian.net/browse/M1-15) |
+
+## Relaciones
+
+- **Padre:** [[M1-2]] ⬛ Refactor Site  Mesa 1_Rev1
+- **action item from:** [[M1-14]] DSG - Refactor - Logos 
+
+## Descripcion
+
+- Armar logos en color Gris y mas grandes 
+
+
+- Porbar intercalado los que tienen fuentes mas gruesas con los que tienen fuentes mas finas y delicadas
+
+
+- Usar el logo de natchman como aparece en el site de Tienda mesa 1
+
+
+- **Hacer Mockup en el sitio antes de exportar todos los logos **
+
+
+
+
+[adjunto]

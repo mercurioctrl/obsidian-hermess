@@ -1,0 +1,58 @@
+---
+jira_key: "MKT-278"
+aliases: ["MKT-278"]
+summary: "LO_ NUEVA PROMO NVIDIA"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Eloy Passarella"
+created: "2025-08-14 17:04"
+updated: "2025-08-22 14:18"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-278"
+---
+
+# MKT-278: LO_ NUEVA PROMO NVIDIA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-08-14 17:04 |
+| Actualizado | 2025-08-22 14:18 |
+| Etiquetas | ninguna |
+| Jira | [MKT-278](https://bluinc.atlassian.net/browse/MKT-278) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola  ! 
+
+Te paso la nueva landing que tenemos que subir a nuestra web de LO. 
+
+Info de la promo: 
+
+- **Fecha de inicio del Bundle:  **18 de agosto 12:30 PM PT, 2025
+
+
+- **Fecha de fin del Bundle: **22 de septiembre 11:59 PT, 2025
+
+
+- **Fecha límite para canjear o redimir el código del juego:** 22 de Octubre,2025 11:59 PM PT
+
+
+- **Productos participantes:**
+
+
+
+- Tarjetas Gráficas y Desktops con: GeForce RTX 5090, 5080, 5070 Ti, 5070 (deberiamos cargar un link con todas las placas participantes creo yo que deberiamos crear un filto que diga: placa_de_video_RTX_50)
+
+
+- Laptops con GeForce RTX 5090, 5080, 5070 Ti, 5070 - (creo que no hay notebooks que participen en stock)

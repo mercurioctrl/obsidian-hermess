@@ -1,0 +1,41 @@
+---
+jira_key: "LIO-279"
+aliases: ["LIO-279"]
+summary: "API - Gestión de información de cuentas bancarias para el cliente y su billetera - No autorizado para crear cuenta bancaria con mi clientId"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2025-03-18 14:04"
+updated: "2025-03-18 14:23"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-279"
+---
+
+# LIO-279: API - Gestión de información de cuentas bancarias para el cliente y su billetera - No autorizado para crear cuenta bancaria con mi clientId
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2025-03-18 14:04 |
+| Actualizado | 2025-03-18 14:23 |
+| Etiquetas | ninguna |
+| Jira | [LIO-279](https://bluinc.atlassian.net/browse/LIO-279) |
+
+## Relaciones
+
+- **Padre:** [[LIO-5]] Seguridad y Confianza
+- **relates to:** [[LIO-241]] API - Feat - Gestion de informacion de cuentas bancarias para el cliente y su billetera
+
+## Descripcion
+
+Al intentar crear una cuenta con mi número de cliente me aparece el siguiente mensaje:
+
+[adjunto]
+[adjunto]
+[adjunto]

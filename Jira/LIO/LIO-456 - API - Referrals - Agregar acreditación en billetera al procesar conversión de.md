@@ -1,0 +1,85 @@
+---
+jira_key: "LIO-456"
+aliases: ["LIO-456"]
+summary: "API - Referrals - Agregar acreditación en billetera al procesar conversión de referido"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2025-09-16 10:24"
+updated: "2025-09-25 10:36"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-456"
+---
+
+# LIO-456: API - Referrals - Agregar acreditación en billetera al procesar conversión de referido
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-09-16 10:24 |
+| Actualizado | 2025-09-25 10:36 |
+| Etiquetas | ninguna |
+| Jira | [LIO-456](https://bluinc.atlassian.net/browse/LIO-456) |
+
+## Relaciones
+
+- **Padre:** [[LIO-408]] Referidos
+- **action item from:** [[LIO-418]] API - Feat - SyncUp - Impactar tokens por conversión
+- **action item from:** [[LIO-414]] API - Feat - Guardar token referido para un usuario ya logueado
+
+## Descripcion
+
+Actualmente el recurso 
+
+```
+PSOT {{API_URL}}/v4/syncUp/referralConversions
+```
+
+
+procesa la conversión de un referido y registra la confirmación en la tabla `[LO].[dbo].[referral_conversions]`.
+
+**Lo que falta implementar **es que, una vez confirmada la conversión, se acredite el pago correspondiente en la billetera del creador del referido.
+
+**Detalles técnicos:**
+
+- El creador del referido se obtiene de `[LO].[dbo].[user_referrals].usuarioId` (referencia: [[[LIO-414]]](https://bluinc.atlassian.net/browse/LIO-414)).
+
+
+- Se debe insertar una nueva fila en `[NEW_BYTES].[dbo].[MC_CCORRIENTES_MOVIMIENTOS]` del usuario correspondiente.
+
+
+- La fila debe contener:
+
+- **HMAC** válido del usuario.
+
+
+- **showWallet = true** para que sea visible en la billetera.
+
+
+- **monto:** tomar el valor de `[LO].[dbo].[referral_conversions].fee`.
+
+
+
+
+- El monto debe almacenarse en dólares, pero convertido con la **cotización vigente** para mostrarse en pesos dentro de la billetera en LO.
+
+
+
+**Criterios de aceptación:**
+
+- Al confirmarse una conversión en `referral_conversions`, se crea automáticamente un movimiento en `MC_CCORRIENTES_MOVIMIENTOS` del creador del referido.
+
+
+- El movimiento refleja correctamente el monto en dólares (fee), con conversión a pesos según la cotización del momento.
+
+
+- El movimiento queda marcado con `showWallet = true` y es visible desde la vista de billetera.
+
+
+- Se valida que no se dupliquen movimientos al reintentar la conversión.

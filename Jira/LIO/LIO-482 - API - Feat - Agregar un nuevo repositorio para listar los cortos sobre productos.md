@@ -1,0 +1,247 @@
+---
+jira_key: "LIO-482"
+aliases: ["LIO-482"]
+summary: "API - Feat - Agregar un nuevo repositorio para listar los cortos sobre productos"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Franco Callipo"
+reporter: "Catriel Mercurio"
+created: "2025-12-02 12:10"
+updated: "2025-12-22 00:31"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-482"
+---
+
+# LIO-482: API - Feat - Agregar un nuevo repositorio para listar los cortos sobre productos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Franco Callipo |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-02 12:10 |
+| Actualizado | 2025-12-22 00:31 |
+| Etiquetas | ninguna |
+| Jira | [LIO-482](https://bluinc.atlassian.net/browse/LIO-482) |
+
+## Relaciones
+
+- **Padre:** [[LIO-481]] Recomendaciones de loki
+
+## Descripcion
+
+Implementar un nuevo recurso HTTP que permita listar shorts de YouTube asociados al label `recomendaciones-de-loki`.
+
+En esta primera versión, los enlaces estarán **hardcodeados en el backend**.
+Posteriormente se realizará un refactor para obtenerlos dinámicamente desde una API externa.
+
+---
+
+## Endpoint
+
+```
+GET {API_URL}/v4/yt/shorts?label=recomendaciones-de-loki
+```
+
+---
+
+## Comportamiento
+
+- El endpoint **solo responde con datos** cuando el query param `label` es exactamente:
+
+```
+recomendaciones-de-loki
+```
+
+
+- Para cualquier otro valor de `label`:
+
+- Retornar una lista vacía.
+
+
+- Mantener el status HTTP 200 (no error).
+
+
+
+
+
+---
+
+## Fuente de datos (hardcode inicial)
+
+La respuesta se construirá a partir de este set fijo de URLs:
+
+```
+https://www.youtube.com/shorts/jvaQbXXIa-k
+https://www.youtube.com/shorts/sx5QA7HomCQ
+https://www.youtube.com/shorts/vkOpM8Z6PUs
+https://www.youtube.com/shorts/ORcNHqoYmjs
+https://www.youtube.com/shorts/_WFeL6J35N8
+```
+
+No se debe acceder a ninguna API externa en esta versión.
+
+---
+
+## Paginación
+
+El recurso debe ser **paginable** mediante los parámetros estándar:
+
+| Parámetro | Tipo | Default | Descripción |
+| --- | --- | --- | --- |
+| `page` | int | 1 | Página solicitada |
+| `limit` | int | 10 | Cantidad de items por página |
+
+---
+
+### Lógica de paginado
+
+- El backend **debe paginar sobre la lista hardcodeada**.
+
+
+- Si la página solicitada no tiene resultados:
+
+- Retornar lista vacía.
+
+
+- Mantener `total` correcto.
+
+
+
+
+
+---
+
+## Estructura del Response
+
+Formato estándar JSON paginado:
+
+```
+{
+  "data": [
+    {
+      "url": "https://www.youtube.com/shorts/jvaQbXXIa-k"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "total": 5
+  }
+}
+
+```
+
+---
+
+## Validaciones
+
+- `label` es obligatorio.
+
+
+- Si `label` es distinto de `recomendaciones-de-loki`:
+
+- `data` debe ser un array vacío.
+
+
+- `total` debe ser `0`.
+
+
+
+
+- Si `page` o `limit` son inválidos (<= 0):
+
+- Normalizar:
+
+- `page` mínimo = 1.
+
+
+- `limit` mínimo = 1.
+
+
+
+
+
+
+
+---
+
+## Criterios de aceptación
+
+✅ Consumir el endpoint con:
+
+```
+GET /v4/yt/shorts?label=recomendaciones-de-loki&page=1&limit=2
+```
+
+Debe retornar solo **2 items** y:
+
+```
+"total": 5
+```
+
+✅ Consumir el endpoint con:
+
+```
+GET /v4/yt/shorts?label=otro-label
+```
+
+Debe retornar:
+
+```
+{
+  "data": [],
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "total": 0
+  }
+}
+```
+
+✅ No debe existir ningún acceso externo a APIs en esta versión.
+
+✅ El set de URLs debe estar hardcodeado directamente en el código backend.
+
+✅ El formato de salida debe ser estable para permitir un refactor futuro sin romper el front.
+
+---
+
+## Nota técnica
+
+Este endpoint debe estructurarse de manera que el origen de los datos pueda ser reemplazado fácilmente en un segundo sprint (fuente externa vía API) sin modificar:
+
+- La URL del endpoint.
+
+
+- El formato del response.
+
+
+- La lógica de paginación.
+
+
+
+---
+
+## Definición de listo (DoD)
+
+- Endpoint funcionando en ambiente local.
+
+
+- Recurso manual desde Postman validando:
+
+- Paginación correcta.
+
+
+- Respuesta vacía para labels inválidos.
+
+
+
+
+- Código simple, sin dependencias innecesarias.
+
+
+- Hardcode documentado como solución temporal.

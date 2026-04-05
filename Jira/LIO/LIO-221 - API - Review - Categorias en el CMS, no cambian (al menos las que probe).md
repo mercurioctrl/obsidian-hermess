@@ -1,0 +1,56 @@
+---
+jira_key: "LIO-221"
+aliases: ["LIO-221"]
+summary: "API - Review - Categorias en el CMS, no cambian (al menos las que probe)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-02-13 09:18"
+updated: "2025-02-18 04:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-221"
+---
+
+# LIO-221: API - Review - Categorias en el CMS, no cambian (al menos las que probe)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-02-13 09:18 |
+| Actualizado | 2025-02-18 04:46 |
+| Etiquetas | ninguna |
+| Jira | [LIO-221](https://bluinc.atlassian.net/browse/LIO-221) |
+
+## Relaciones
+
+- **Padre:** [[LIO-105]] Home
+
+## Descripcion
+
+Si tomo de ejemplo la categoria “compu” por ejemplo, intento sacarla de la home y no me deja. Tampoco cambiarle el nombre.
+
+```
+curl 'https://gamma.api.cmslio.lio.red/v1/categories' \
+  -X 'PATCH' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: es-US,es-419;q=0.9,es;q=0.8,gl;q=0.7,en;q=0.6' \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3Mzk0NTg1NzIsImF1ZCI6IjM5NjQ4ZmFhYTkxMTBjODVhODEyNzQ5NDM4NWZjZTk1ZDdhNzY1MTYiLCJ1c2VyIjp7InVzZXJuYW1lIjoiY2F0cmllbCIsImlkIjoiNTUiLCJjbXNfbG8iOiIxIiwicGF5bWVudE1ldGhvZHNMTyI6IjEiLCJzaGlwcGluZ01ldGhvZHNMTyI6IjEiLCJiYW5uZXJzTE8iOiIxIiwiY291cG9uc0xPIjoiMSIsImhlbHBMTyI6IjEiLCJnaWZ0Y2FyZHNMTyI6IjEiLCJpbnN0YW50Rmxhc2hMTyI6IjEiLCJjb2VmZmljaWVudFJhbmtpbmdMTyI6IjEifSwiaWF0IjoxNzM5NDQ3NzcyLCJuYmYiOjE3Mzk0NDc3NzJ9.-EdfOkHxl2LFuIsBUaPqcJCdCVv1dUtKW9SbNqgfpLQ' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://gamma.cms-lo.saftel.com' \
+  -H 'Referer: https://gamma.cms-lo.saftel.com/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Not(A:Brand";v="99", "Google Chrome";v="133", "Chromium";v="133"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Linux"' \
+  --data-raw '{"id":1778,"active":1,"name":"Compuw","icon":"","keywords":"","id_nb":0,"utility":".00","parentCategory":1763,"searchName":"Compu","countItems":0,"homeShow":1,"directUrl":""}'
+```

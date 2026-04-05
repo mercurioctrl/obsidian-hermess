@@ -1,0 +1,102 @@
+---
+jira_key: "LIO-272"
+aliases: ["LIO-272"]
+summary: "API - Refactor - Enviar por correo el formulario de feedback"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-03-13 10:39"
+updated: "2025-03-19 16:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-272"
+---
+
+# LIO-272: API - Refactor - Enviar por correo el formulario de feedback
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-03-13 10:39 |
+| Actualizado | 2025-03-19 16:46 |
+| Etiquetas | ninguna |
+| Jira | [LIO-272](https://bluinc.atlassian.net/browse/LIO-272) |
+
+## Relaciones
+
+- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
+- **action item from:** [[LIO-265]] APP - Refactor - Accionable feedback en el menu horizontal
+- **relates to:** [[LIO-280]] API - Refactor - Enviar por correo el formulario de feedback -> Agregar parámetro success al objeto de respuesta
+
+## Descripcion
+
+**E**enviar calificación y comentario de feedback desde el frontend para que sea enviado por correo a `feedback@libreopcion.com`, permitiendo que el equipo de LibreOpción lo reciba y analice.
+
+#### **Criterios de Aceptación**
+
+✅ Se debe crear un endpoint 
+
+```
+POST {API4_URL}/v4/feedback
+```
+
+ que reciba solicitudes en formato JSON.
+✅ El endpoint debe aceptar los siguientes parámetros en el cuerpo de la solicitud:
+
+- `rating` (entero, obligatorio): Calificación del usuario (1-5).
+
+
+- `feedback` (string, opcional): Comentario adicional del usuario.
+
+✅ Se debe enviar un correo a `feedback@libreopcion.com` con el siguiente contenido:
+
+
+- Asunto: **Nuevo feedback recibido - Rating: {rating}**
+
+
+- Cuerpo: 
+
+```
+Se ha recibido un nuevo feedback:  
+Rating: {rating} 
+Comentario: {feedback}  Enviado desde: {IP del usuario}
+userId: {userId}   este campo lo tomo del back si el usuario esta logueado, pero es opcional
+```
+
+
+
+
+
+ ✅ En caso de éxito, devolver un `HTTP 200 OK` con un JSON de confirmación.
+ ✅ En caso de datos inválidos, devolver un `HTTP 400 Bad Request` con un mensaje de error descriptivo.
+
+
+#### **Ejemplo de Petición**
+
+```
+curl 'https://gamma.api4.libreopcion.com/v4/feedback' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://gamma.libreopcion.com' \
+  --data-raw '{"rating":2,"feedback":"Lo que escriban", "userId":45}'
+```
+
+#### **Ejemplo de Respuesta Exitosa (200 OK)**
+
+```
+{   "message": "Feedback enviado correctamente" } 
+```
+
+#### **Ejemplo de Respuesta con Error (400 Bad Request)**
+
+```
+{   "error": "El campo 'rating' debe ser un número entre 1 y 5" } 
+```
+
+#### Casilla que recibo el correo: [feedback@libreopcion.com](mailto:feedback@libreopcion.com)
+
+#### Casilla que envía el correo:  [web@libreopcion.com](mailto:web@libreopcion.com) (pedir datos por privado)

@@ -1,0 +1,42 @@
+---
+jira_key: "MKT-143"
+aliases: ["MKT-143"]
+summary: "LO_CUPON DESCUENTO"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel M."
+reporter: "Eloy passarella"
+created: "2023-02-07 12:54"
+updated: "2023-02-14 10:33"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-143"
+---
+
+# MKT-143: LO_CUPON DESCUENTO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel M. |
+| Reportado por | Eloy passarella |
+| Creado | 2023-02-07 12:54 |
+| Actualizado | 2023-02-14 10:33 |
+| Etiquetas | ninguna |
+| Jira | [MKT-143](https://bluinc.atlassian.net/browse/MKT-143) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+HOLA CATRI! 
+
+Tengo que armarmar un código de descuento de 10% OFF con tope de reintegro de 5000
+
+Nombre del código: SANVALENTIN
+
+VALIDO SOLAMENTE POR EL 14 de FEBRERO.

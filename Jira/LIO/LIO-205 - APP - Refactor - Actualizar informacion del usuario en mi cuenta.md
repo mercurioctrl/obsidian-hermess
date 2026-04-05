@@ -1,0 +1,39 @@
+---
+jira_key: "LIO-205"
+aliases: ["LIO-205"]
+summary: "APP - Refactor - Actualizar informacion del usuario en mi cuenta"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-02-03 06:18"
+updated: "2025-02-10 21:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-205"
+---
+
+# LIO-205: APP - Refactor - Actualizar informacion del usuario en mi cuenta
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-02-03 06:18 |
+| Actualizado | 2025-02-10 21:43 |
+| Etiquetas | ninguna |
+| Jira | [LIO-205](https://bluinc.atlassian.net/browse/LIO-205) |
+
+## Relaciones
+
+- **Padre:** [[LIO-203]] Mi cuenta
+- **action item from:** [[LIO-204]] APIv4 - Feat - Actualizar informacion del usuario en mi cuenta
+
+## Descripcion
+
+Reconectaremos a V4 el nuevo recurso de Mi cuenta usando el refactor en [link](https://lioteam.atlassian.net/browse/LIO-204) 
+
+[adjunto]

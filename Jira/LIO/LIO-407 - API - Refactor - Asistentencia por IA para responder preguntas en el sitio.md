@@ -1,0 +1,38 @@
+---
+jira_key: "LIO-407"
+aliases: ["LIO-407"]
+summary: "API - Refactor - Asistentencia por IA para responder preguntas en el sitio (opcion deepseek)"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-08-06 09:10"
+updated: "2025-08-13 11:26"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-407"
+---
+
+# LIO-407: API - Refactor - Asistentencia por IA para responder preguntas en el sitio (opcion deepseek)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-08-06 09:10 |
+| Actualizado | 2025-08-13 11:26 |
+| Etiquetas | ninguna |
+| Jira | [LIO-407](https://bluinc.atlassian.net/browse/LIO-407) |
+
+## Relaciones
+
+- **Padre:** [[LIO-391]] Desarrollos IA para LIO (Aleph)
+
+## Descripcion
+
+La idea es integrar en el mismo recurso de asistencia de compatibilidad diferentes modelos, lo haremos en este caso para el modelo de deepseek en la misma linea que lo hicimos con el asistente de compatibilidad.
+
+Para hacerlo multi-modelo y utilizar un parámetro dentro de las variables  de entorno para poder cambiar entre uno u otro mediante el parámetro `ANSWERING_MODEL={DEEPSEEK/GPT4}`

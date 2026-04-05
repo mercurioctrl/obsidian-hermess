@@ -1,0 +1,122 @@
+---
+jira_key: "LIO-486"
+aliases: ["LIO-486"]
+summary: "API - Refactor - Agregar recurso a redis con duración de cache de 30 minutos"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Franco Callipo"
+reporter: "Catriel Mercurio"
+created: "2025-12-03 13:43"
+updated: "2025-12-15 17:12"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-486"
+---
+
+# LIO-486: API - Refactor - Agregar recurso a redis con duración de cache de 30 minutos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Franco Callipo |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-03 13:43 |
+| Actualizado | 2025-12-15 17:12 |
+| Etiquetas | ninguna |
+| Jira | [LIO-486](https://bluinc.atlassian.net/browse/LIO-486) |
+
+## Relaciones
+
+- **Padre:** [[LIO-481]] Recomendaciones de loki
+
+## Descripcion
+
+Agregar **cache en Redis** al endpoint:
+
+```
+GET {API_URL}/v4/yt/shorts?label={label}
+```
+
+para reducir lecturas a DB y mejorar performance, manteniendo el contrato actual sin cambios.
+
+---
+
+## Implementación
+
+- Cache **read-through** usando Laravel.
+
+
+- TTL fijo: **30 minutos (1800 segundos)**.
+
+
+- Cachear la respuesta completa del endpoint.
+
+
+
+### Key
+
+```
+yt:shorts:{label}:{page}:{limit}
+```
+
+Ejemplo:
+
+```
+yt:shorts:recomendaciones-de-loki:1:10
+```
+
+---
+
+## Flujo
+
+- Buscar key en Redis.
+
+
+- Si existe → devolver cache.
+
+
+- Si no existe → consultar DB → guardar en Redis → responder.
+
+
+
+---
+
+## Exclusiones
+
+No se incluye:
+
+- Invalidados manuales.
+
+
+- Cache warming.
+
+
+- Integración con ABM.
+
+
+- Otras rutas.
+
+
+
+---
+
+## Criterios de aceptación
+
+✅ Primer request consulta DB.
+✅ Requests siguientes usan Redis.
+✅ Tras vencer TTL se regenera el cache.
+✅ Si Redis falla, el endpoint continúa funcionando.
+
+---
+
+## DoD
+
+- TTL configurado correctamente.
+
+
+- Keys verificables en Redis.
+
+
+- Tests manuales de hit DB / hit Redis realizados.

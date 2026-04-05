@@ -1,0 +1,59 @@
+---
+jira_key: "MKT-238"
+aliases: ["MKT-238"]
+summary: "LO_ BLACK FRIDAY PROMOS"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2024-11-22 11:30"
+updated: "2024-12-02 13:11"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-238"
+---
+
+# MKT-238: LO_ BLACK FRIDAY PROMOS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2024-11-22 11:30 |
+| Actualizado | 2024-12-02 13:11 |
+| Etiquetas | ninguna |
+| Jira | [MKT-238](https://bluinc.atlassian.net/browse/MKT-238) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Catri Cómo va?
+
+Además de los productos que tenemos con aging tenemos productos puntuales buenos que me pasaron los PMS para hacer promos durante todo el viernes. Tal como hablamos la idea es generar esa sensación de que si no aprovechas la oferta cuando la ves perdes la oportunidad. 
+
+GIGABYTE NOTEBOOK 14 FHD 60HZ I5 INTEL IRIS XE 16GB SSD 512GB GEN4 W11 - Hasta 30%
+PROCESADOR AMD (AM5) RYZEN 5 8600G - Hasta 20%
+PROCESADOR AMD (AM5) RYZEN 5 8400F C/COOLER - Hasta 20%
+ACCESORIOS TRUST MAKU (ARO DE LUZ) VLOGGING KIT -  Hasta 30%
+AURICULAR GAMER TRUST CARUS BLACK GXT 322 -  Hasta 30%
+MEMORIA NETAC SHADOW II DDR4 3200 8GB C16 BLACK -  Hasta 30%
+
+220-GA-0750	EVGA 750W SUPERNOVA GOLD MODULAR - 20% o 30%
+100-BR-0500	EVGA 500W BR 80 BRONZE - 20% o 30%
+100-W2-0500	EVGA 500W W2 80 PLUS - 20% o 30%
+
+GX GAMING TODO AL PRECIO QUE SEA - Hasta 40% si alguno lo permite. 
+DUCKY HASTA 15%
+
+--
+Además de precios relámpago, la idea es que el sitio tenga envios gratis como lo manejamos la otra vez.. con un minimo de compra de 10.000 excluyendo gabos y sillas. 
+
+– 
+
+Armemos un código de descuento de un 10% off sin tope solo para el viernes que sea: BLACKLO

@@ -1,0 +1,38 @@
+---
+jira_key: "MKT-191"
+aliases: ["MKT-191"]
+summary: "NB_ ACELERADOR ASUS AGOSTO"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2024-07-29 10:14"
+updated: "2024-07-29 12:42"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-191"
+---
+
+# MKT-191: NB_ ACELERADOR ASUS AGOSTO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2024-07-29 10:14 |
+| Actualizado | 2024-07-29 12:42 |
+| Etiquetas | ninguna |
+| Jira | [MKT-191](https://bluinc.atlassian.net/browse/MKT-191) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Catri! 
+
+Tenemos que armar una campaña para todos los productos de ASUS de x2 - El acelerador debería terminar el 31 de Agosto.

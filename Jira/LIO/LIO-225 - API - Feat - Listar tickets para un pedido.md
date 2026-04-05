@@ -1,0 +1,69 @@
+---
+jira_key: "LIO-225"
+aliases: ["LIO-225"]
+summary: "API - Feat - Listar tickets para un pedido"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-02-17 14:26"
+updated: "2025-02-21 17:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-225"
+---
+
+# LIO-225: API - Feat - Listar tickets para un pedido
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-02-17 14:26 |
+| Actualizado | 2025-02-21 17:40 |
+| Etiquetas | ninguna |
+| Jira | [LIO-225](https://bluinc.atlassian.net/browse/LIO-225) |
+
+## Relaciones
+
+- **Padre:** [[LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
+- **has action item:** [[LIO-224]] APP - Refactor - Conectar listado de tickets en una compra a V4
+- **has action item:** [[LIO-226]] APP - Refactor - Conectar sistema de envio de ticket a v4
+
+## Descripcion
+
+Este recurso se encarga de listar los tickets asociados a un pedido, independientemente de que estén abiertos o cerrados
+
+```
+GET {APIv4_URL}/v4/ticket/680312?open=1|0
+```
+
+```
+[
+  {
+      "id": 85695,
+      "open": true,
+      "description":"esto es una prueba",
+      "startDate": "2025-02-12 14:26:36.360",
+      "endDate": "",
+      "type": {
+          "id": 2,
+          "description": "Tengo un problema"
+      }
+  },
+  {
+      "id": 85696,
+      "open": true,
+      "description":"esto es una prueba 2",
+      "startDate": "2025-02-12 14:26:36.360",
+      "endDate": "",
+      "type": {
+          "id": 2,
+          "description": "Tengo un problema 2"
+      }
+  },  
+]
+```

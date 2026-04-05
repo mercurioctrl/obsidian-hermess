@@ -1,0 +1,52 @@
+---
+jira_key: "LIO-365"
+aliases: ["LIO-365"]
+summary: "Cambiar Ruta de Especificaciones."
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Ezequiel manzano"
+created: "2025-05-27 14:33"
+updated: "2025-06-10 22:50"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-365"
+---
+
+# LIO-365: Cambiar Ruta de Especificaciones.
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Ezequiel manzano |
+| Creado | 2025-05-27 14:33 |
+| Actualizado | 2025-06-10 22:50 |
+| Etiquetas | ninguna |
+| Jira | [LIO-365](https://bluinc.atlassian.net/browse/LIO-365) |
+
+## Relaciones
+
+- **relates to:** [[LIO-364]] API - Refactor - Implementar cache de redis en las especificaciones
+
+## Descripcion
+
+Se migro el recurso que lsita las espcificaciones de un producto en libre opcion a v4.
+
+Ruta antigua : 
+
+
+
+[https://omega-api.libreopcion.com.ar/productos/ficha/691009/especificaciones](https://omega-api.libreopcion.com.ar/productos/ficha/691009/especificaciones)
+
+
+
+se migro a 
+
+{{API_URL}}/v4/item/691009/specs
+
+
+
+Devuelve casi lo mismo, solamente se quito “key” del objeto pq era redundante.

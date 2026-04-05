@@ -1,0 +1,42 @@
+---
+jira_key: "MKT-221"
+aliases: ["MKT-221"]
+summary: "Agregaremos una encuesta para poder obtener feedback de parte de los clienes en NB"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-10-02 12:32"
+updated: "2024-10-08 10:48"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-221"
+---
+
+# MKT-221: Agregaremos una encuesta para poder obtener feedback de parte de los clienes en NB
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-10-02 12:32 |
+| Actualizado | 2024-10-08 10:48 |
+| Etiquetas | ninguna |
+| Jira | [MKT-221](https://bluinc.atlassian.net/browse/MKT-221) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Enlace de la encuesta a abrirse en una nueva pagina
+
+Solo pueden verla los usuarios logueados, se adjunta a continuacion de un ejemplo posible
+
+
+
+[https://es.surveymonkey.com/r/NDQFDJ6](https://es.surveymonkey.com/r/NDQFDJ6)

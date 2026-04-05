@@ -1,0 +1,40 @@
+---
+jira_key: "MKT-285"
+aliases: ["MKT-285"]
+summary: "LO_ RECOMENDACIONES DE LOKI"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2025-09-05 17:20"
+updated: "2026-02-13 13:51"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-285"
+---
+
+# MKT-285: LO_ RECOMENDACIONES DE LOKI
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-09-05 17:20 |
+| Actualizado | 2026-02-13 13:51 |
+| Etiquetas | ninguna |
+| Jira | [MKT-285](https://bluinc.atlassian.net/browse/MKT-285) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+La idea es armar en la home de LO un apartado de Recomendaciones de LOKI. Hay videos que son Tips de tecnologia sobre productos puntuales y habrá reviews tmb. 
+
+En este caso habla de los routers DLINK con antena en general estaria bueno asociarlo a productos como: [link](https://libreopcion.com.ar/d-link-router-r15-smart-wifi-6-ax1500-4-antenas-dual-band-blanco-P689108?catalogue=1) 
+
+Durante la semana voy a tener más contenido, te los voy a ir cargando en comentarios.

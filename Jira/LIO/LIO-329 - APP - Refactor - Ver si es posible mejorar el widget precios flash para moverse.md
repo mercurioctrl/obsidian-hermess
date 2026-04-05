@@ -1,0 +1,40 @@
+---
+jira_key: "LIO-329"
+aliases: ["LIO-329"]
+summary: "APP - Refactor - Ver si es posible mejorar el widget \"precios flash\" para moverse siempre a alguno que no este finalizado"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-04-23 08:42"
+updated: "2025-05-02 23:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-329"
+---
+
+# LIO-329: APP - Refactor - Ver si es posible mejorar el widget "precios flash" para moverse siempre a alguno que no este finalizado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-04-23 08:42 |
+| Actualizado | 2025-05-02 23:35 |
+| Etiquetas | ninguna |
+| Jira | [LIO-329](https://bluinc.atlassian.net/browse/LIO-329) |
+
+## Relaciones
+
+- **Padre:** [[LIO-105]] Home
+
+## Descripcion
+
+Para evitar esto, debemos intentar movernos en caso de que quede en posicion de “Precio Flash agotado” a otro que no este agotado.
+
+También es posible explorar alguna opción con rotación o slide, dentro de el mismo concepto tal cual como esta animado.
+
+[adjunto]

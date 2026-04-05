@@ -1,0 +1,337 @@
+---
+jira_key: "LIO-530"
+aliases: ["LIO-530"]
+summary: "APP - Feat - Pantalla de verificacion del Vendedor"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2026-02-04 08:40"
+updated: "2026-04-01 10:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-530"
+---
+
+# LIO-530: APP - Feat - Pantalla de verificacion del Vendedor
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-02-04 08:40 |
+| Actualizado | 2026-04-01 10:30 |
+| Etiquetas | ninguna |
+| Jira | [LIO-530](https://bluinc.atlassian.net/browse/LIO-530) |
+
+## Relaciones
+
+- **Padre:** [[LIO-526]] Verificar Vendedores
+- **action item from:** [[LIO-529]] API - Refactor - Agregar parámetros de verificación al objeto user
+- **action item from:** [[LIO-528]] API - Feat - Comprobar verificación de vendedor
+- **action item from:** [[LIO-527]] API - Feat - Guardar informacion de verificación de vendedores 
+- **has action item:** [[LIO-588]] APP Mobile - Feat - Pantalla de Verificación del Vendedor
+
+## Descripcion
+
+# Historia Frontend: Pantalla de Verificación del Vendedor
+
+---
+
+## Punto de entrada
+
+```
+https://libreopion.com/ verification o verificarVendedor o verificar-vendedor segun el uso
+```
+
+---
+
+# Pantalla `/verification`
+
+---
+
+## Objetivo
+
+Permitir que el vendedor complete su verificación enviando:
+
+- Datos reales
+
+
+- Imágenes del DNI
+
+
+
+---
+
+## Layout general
+
+```
+┌─────────────────────────────────────────────────┐
+│              Verificación de cuenta          │
+│  Complete sus datos para activar su tienda   │
+├─────────────────────────────────────────────────┤
+│  Nombre real                                 │
+│  Domicilio real                              │
+│  Teléfono real                               │
+│                                              │
+│  Documento de identidad                      │
+│  Frente DNI | Dorso DNI                      │
+│                                              │
+│            Botón Verificar cuenta            │
+└─────────────────────────────────────────────────┘
+```
+
+---
+
+# Componentes y estados
+
+---
+
+## 1. Inputs de texto
+
+Campos:
+
+- real_name
+
+
+- real_address
+
+
+- real_phone
+
+
+
+| Estado | Comportamiento |
+| --- | --- |
+| idle | Sin error |
+| focused | Borde resaltado |
+| valid | Cumple validación |
+| error | Borde rojo + mensaje |
+
+---
+
+## 2. Upload de imágenes (dni_front / dni_back)
+
+Cada caja es un componente independiente.
+
+### Máquina de estados
+
+```
+idle → uploading → uploaded
+  ↘ error ↗
+
+```
+
+### Estados visuales
+
+| Estado | UI |
+| --- | --- |
+| idle | Área drag & drop + botón subir |
+| uploading | Spinner + deshabilitado |
+| uploaded | Preview + botón "Cambiar" |
+| error | Mensaje de error + reintentar |
+
+---
+
+### Restricciones de archivos
+
+| Regla | Valor |
+| --- | --- |
+| Tipos permitidos | image/jpeg, image/png |
+| Tamaño máximo | 5 MB |
+
+---
+
+## 3. Botón "Verificar cuenta"
+
+| Estado | Comportamiento |
+| --- | --- |
+| disabled | Faltan campos válidos o imágenes |
+| enabled | Todo completo |
+| loading | POST en progreso |
+| error | Mostrar mensaje backend |
+
+---
+
+# Validaciones client-side
+
+| Campo | Regla | Mensaje |
+| --- | --- | --- |
+| real_name | obligatorio, min 2 chars | El nombre es obligatorio |
+| real_address | obligatorio, min 5 chars | El domicilio es obligatorio |
+| real_phone | obligatorio, formato válido | Ingrese un teléfono válido |
+| dni_front | estado uploaded | Validación visual |
+| dni_back | estado uploaded | Validación visual |
+
+### Regex teléfono
+
+```
+/^(\+?\d{1,3}[\s-]?)?(\(?\d{2,4}\)?[\s-]?)?[\d\s-]{6,12}$/
+```
+
+---
+
+# Flujo completo paso a paso
+
+---
+
+## 1. Apertura de pantalla
+
+Estado inicial: formulario vacío, botón deshabilitado.
+
+---
+
+## 2. Usuario completa inputs
+
+Validación en tiempo real.
+
+---
+
+## 3. Subida de imágenes
+
+### Flujo upload
+
+```
+onClick / drag&drop
+→ validar tipo y tamaño
+→ estado uploading
+→ POST /uploadImage
+→ response.filename
+→ guardar filename en state
+→ estado uploaded
+
+```
+
+Se ejecuta dos veces:
+
+- Frente DNI
+
+
+- Dorso DNI
+
+
+
+---
+
+## 4. Formulario completo
+
+Condición para habilitar botón:
+
+- Campos válidos
+
+
+- Ambas imágenes uploaded
+
+
+
+---
+
+## 5. Submit del formulario
+
+### Request
+
+```
+POST /vendor-verification
+Authorization: Bearer <jwt>
+```
+
+```
+{
+  real_name,
+  real_address,
+  real_phone,
+  dni_front,
+  dni_back
+}
+
+```
+
+---
+
+### Resultado
+
+| Response | Acción |
+| --- | --- |
+| 200 | Redirect /home |
+| Error | Mostrar mensaje |
+
+---
+
+# Estados globales de la pantalla
+
+| Estado | Descripción |
+| --- | --- |
+| INITIAL | Formulario vacío |
+| FILLING | Usuario escribiendo |
+| UPLOADING_FRONT | Subiendo frente |
+| UPLOADING_BACK | Subiendo dorso |
+| READY | Formulario válido |
+| SUBMITTING | POST en progreso |
+| SUCCESS | Redirect |
+| ERROR | Mostrar error |
+
+---
+
+# Manejo de errores
+
+| Escenario | Acción |
+| --- | --- |
+| Error upload imagen | Error en caja correspondiente |
+| 400 "ya verificado" | Toast + redirect /home |
+| 401 | Toast + redirect /login |
+| Otros errores | Mostrar mensaje backend |
+
+---
+
+# Re-verificación (strongVerification)
+
+Si el JWT contiene:
+
+```
+vendorVerified: true
+strongVerification: true
+```
+
+Se reutiliza la misma pantalla con cambios:
+
+- Mostrar banner superior:
+"Es necesario actualizar sus datos de verificación"
+
+
+- Prellenar formulario con datos actuales
+
+
+- Flujo de submit idéntico
+
+
+
+---
+
+# Datos necesarios al cargar pantalla
+
+Cuando hay strongVerification:
+
+```
+GET /vendor-verification
+```
+
+| Respuesta | Acción |
+| --- | --- |
+| verified: true | Prellenar campos |
+| verified: false | Formulario vacío |
+
+En primera verificación este request no es necesario.
+
+---
+
+# Resumen de endpoints consumidos
+
+| Orden | Método | Endpoint | Cuándo |
+| --- | --- | --- | --- |
+| 0 | — | JWT decode | Al entrar a la app |
+| 1 | GET | /vendor-verification | Solo si strongVerification |
+| 2 | POST | /uploadImage | Subida de imágenes |
+| 3 | POST | /vendor-verification | Submit del formulario |

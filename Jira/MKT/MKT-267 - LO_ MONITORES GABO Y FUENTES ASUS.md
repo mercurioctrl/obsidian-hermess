@@ -1,0 +1,42 @@
+---
+jira_key: "MKT-267"
+aliases: ["MKT-267"]
+summary: "LO_ MONITORES GABO Y FUENTES ASUS"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2025-06-02 15:20"
+updated: "2025-07-22 14:01"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-267"
+---
+
+# MKT-267: LO_ MONITORES GABO Y FUENTES ASUS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-06-02 15:20 |
+| Actualizado | 2025-07-22 14:01 |
+| Etiquetas | ninguna |
+| Jira | [MKT-267](https://bluinc.atlassian.net/browse/MKT-267) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+VA24EH  - 10% OFF Fijo por todo junio
+
+VG24QL3 - 10% OFF Fijo por todo junio
+
+VA27EH - 10% OFF Fijo por todo junio
+
+Gabinetes y fuentes todo 10% OFF

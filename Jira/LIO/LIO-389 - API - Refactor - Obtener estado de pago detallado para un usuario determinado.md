@@ -1,0 +1,68 @@
+---
+jira_key: "LIO-389"
+aliases: ["LIO-389"]
+summary: "API - Refactor - Obtener estado de pago detallado para un usuario determinado"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-07-23 06:23"
+updated: "2025-08-04 10:39"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-389"
+---
+
+# LIO-389: API - Refactor - Obtener estado de pago detallado para un usuario determinado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-23 06:23 |
+| Actualizado | 2025-08-04 10:39 |
+| Etiquetas | ninguna |
+| Jira | [LIO-389](https://bluinc.atlassian.net/browse/LIO-389) |
+
+## Relaciones
+
+- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **action item from:** [[LIO-387]] API - Refactor - Obtener estado de pago detallado para cada intento
+- **action item from:** [[PED-1058]] API - Feat - Crear un recurso para obtener los intentos de pago de un usuario determinado
+
+## Descripcion
+
+Agregaremos un accionable que nos permite mostrar un nuevo modal donde se ven todos los intentos de pago **para una compra realizada con tarjeta **usando [link](https://bluinc.atlassian.net/browse/PED-1058) 
+
+[adjunto]
+Para esto se usara el recurso 
+
+```
+GET {API_URL}/v1/aboutMarketPlace/{branch-order}/paymentTransactions
+```
+
+Y mostraremos una tablita con scroll vertical donde se vean todos estos datos ordenado por orden de ocurrencia
+
+```
+  {
+    "transaction_amount": 5916200.0,
+    "installments": 1,
+    "email": "corvalangabriel82@gmail.com",
+    "identification_type": "DNI",
+    "identification_number": "23278740",
+    "cardholder_name": "Alicia quiroga ",
+    "payment_gateway": "mercadopago",
+    "status": "pending",
+    "status_detail": "cc_rejected_high_risk",    
+    "response_code": null,
+    "pedido_cabecera_id": 740529,
+    "created_at": "2025-07-19T02:19:04.373",
+    "interest_amount": 0.0,
+    "financing_fee": 0.0,
+    "installment_rate": 0.0,
+    "bin": 52392000
+  },
+```

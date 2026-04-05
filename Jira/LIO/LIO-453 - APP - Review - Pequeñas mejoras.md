@@ -1,0 +1,40 @@
+---
+jira_key: "LIO-453"
+aliases: ["LIO-453"]
+summary: "APP - Review - Pequeñas mejoras"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-09-16 09:13"
+updated: "2025-09-23 10:45"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-453"
+---
+
+# LIO-453: APP - Review - Pequeñas mejoras
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-09-16 09:13 |
+| Actualizado | 2025-09-23 10:45 |
+| Etiquetas | ninguna |
+| Jira | [LIO-453](https://bluinc.atlassian.net/browse/LIO-453) |
+
+## Relaciones
+
+- **Padre:** [[LIO-408]] Referidos
+
+## Descripcion
+
+1 - Que los botones de esquinas redondeadas tengan las mismas distancias en sus bordes, al menos visualmente (tal vez este la diferencia en los que tienen icono pero se puede rectificar par los que no lo tienen),
+
+2 - En el conmutador Visitas | Conversiones, la linea divisora | esta en un azul demasiado marcado… no se si debería ser gris o al menos mas claro para que no resalte tanto del resto de los elementos
+
+[adjunto]

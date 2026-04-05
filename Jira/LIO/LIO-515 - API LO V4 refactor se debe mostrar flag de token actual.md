@@ -1,0 +1,45 @@
+---
+jira_key: "LIO-515"
+aliases: ["LIO-515"]
+summary: "API LO V4 refactor se debe mostrar flag de token actual"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Emanuel Jesus Ferreyra"
+created: "2026-01-16 09:53"
+updated: "2026-01-29 10:31"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-515"
+---
+
+# LIO-515: API LO V4 refactor se debe mostrar flag de token actual
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Emanuel Jesus Ferreyra |
+| Creado | 2026-01-16 09:53 |
+| Actualizado | 2026-01-29 10:31 |
+| Etiquetas | ninguna |
+| Jira | [LIO-515](https://bluinc.atlassian.net/browse/LIO-515) |
+
+## Relaciones
+
+- **Padre:** [[LIO-504]] Sección Referidos
+
+## Descripcion
+
+El token "actual en uso" se define como el más recientemente creado (último created_at). Este flag debe aparecer en todas las respuestas que retornen tokens.
+
+Objetivo: Agregar el campo booleano isCurrent en la respuesta del array de tokens para identificar el token actualmente en uso.
+
+Criterio de "token actual":
+
+- El token con la fecha created_at más reciente.
+
+
+- En caso de empate (mismo timestamp), utilizar el id más alto.

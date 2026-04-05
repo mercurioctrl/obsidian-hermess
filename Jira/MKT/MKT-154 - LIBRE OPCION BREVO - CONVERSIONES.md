@@ -1,0 +1,36 @@
+---
+jira_key: "MKT-154"
+aliases: ["MKT-154"]
+summary: "LIBRE OPCION BREVO - CONVERSIONES"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Guillermo Avila"
+reporter: "Catriel Mercurio"
+created: "2023-06-16 14:22"
+updated: "2023-07-19 10:09"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-154"
+---
+
+# MKT-154: LIBRE OPCION BREVO - CONVERSIONES
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Guillermo Avila |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-06-16 14:22 |
+| Actualizado | 2023-07-19 10:09 |
+| Etiquetas | ninguna |
+| Jira | [MKT-154](https://bluinc.atlassian.net/browse/MKT-154) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Se debe almacenar en brevo como evento toda la informacion posible que es parte de la conversion.

@@ -1,0 +1,88 @@
+---
+jira_key: "LIO-411"
+aliases: ["LIO-411"]
+summary: "API - Refactor - Envío de correo electrónico con token de validación al registrar usuario"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-08-06 14:19"
+updated: "2025-08-20 10:41"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-411"
+---
+
+# LIO-411: API - Refactor - Envío de correo electrónico con token de validación al registrar usuario
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-08-06 14:19 |
+| Actualizado | 2025-08-20 10:41 |
+| Etiquetas | ninguna |
+| Jira | [LIO-411](https://bluinc.atlassian.net/browse/LIO-411) |
+
+## Relaciones
+
+- **Padre:** [[LIO-410]] Validar identidad
+- **has action item:** [[LIO-412]] APP - Refactor - Conectar nuevo recurso de verificacion de correo en v4
+
+## Descripcion
+
+```
+POST {API_V4}/v4/auth/register
+```
+
+Enviaremos un correo electrónico con un token que expire en una hora para poder validar que el usuario efectivamente es quien dice ser respecto al correo y tiene acceso a la cuenta
+
+Ejemplo de enlace:
+
+```
+https://libreopcion.com.ar/validar-email/2e649cb646a97b66ba92270c42026c2c/mail@hotmail.com
+```
+
+[adjunto]
+```
+Hola!
+Te registraste en Libre Opción, para confirmar tu cuenta hacé click en:
+Verificar correo electronico
+Verificar Correo
+
+Si no podés acceder desde "Verificar cuenta", copiá y pegá el siguiente link en tu navegador: https://www.libreopcion.com/validar-email/d4f2f5fe5c561958e315edbe041bec7f/lukyleonel@hotmail.com
+```
+
+Tambien migraremos desde legacy el recurso 
+
+```
+POST {API_LEGACY}/auth/validate-email
+```
+
+para terminar de cerrar el circulo de la validacion.
+
+Una vez terminada la feature, no dejaremos loguear a quienes no tengal el correo verificado, pero a su vez verificaremos de una vez todos los actuales para que no tengan problemas al ingresar
+
+Se agregoe l recurso 
+
+```
+POST {{API_URL}}/v4/auth/resend-email-validation
+```
+
+```
+{
+“email”: “easda@gmail.com”
+}
+```
+
+que responde 
+
+```
+{
+    "success": true,
+    "msg": "Se ha reenviado el correo de verificación"
+}
+```

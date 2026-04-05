@@ -1,0 +1,42 @@
+---
+jira_key: "MKT-153"
+aliases: ["MKT-153"]
+summary: "Landing AMD en LO."
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Eloy Passarella"
+created: "2023-06-12 16:20"
+updated: "2023-06-14 17:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-153"
+---
+
+# MKT-153: Landing AMD en LO.
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Eloy Passarella |
+| Creado | 2023-06-12 16:20 |
+| Actualizado | 2023-06-14 17:43 |
+| Etiquetas | ninguna |
+| Jira | [MKT-153](https://bluinc.atlassian.net/browse/MKT-153) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Buenas! adjunto el .zip de la landing de AMD. 
+
+La idea es poder subirla en una ruta por ejemplo: [libreopcion.com/AMD/Radeon/juegaconAMD](http://libreopcion.com/AMD/Radeon/juegaconAMD)
+
+Es una campaña que terminará el 1/7.  Estaría bueno implementarla rápido. 
+
+La idea es que quede insertada en nuestra web.

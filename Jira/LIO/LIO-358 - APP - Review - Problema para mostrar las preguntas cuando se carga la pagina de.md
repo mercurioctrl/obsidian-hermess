@@ -1,0 +1,45 @@
+---
+jira_key: "LIO-358"
+aliases: ["LIO-358"]
+summary: "APP - Review - Problema para mostrar las preguntas cuando se carga la pagina de manera sincronica"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Highest"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-05-21 08:59"
+updated: "2025-05-26 14:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-358"
+---
+
+# LIO-358: APP - Review - Problema para mostrar las preguntas cuando se carga la pagina de manera sincronica
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Highest |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-05-21 08:59 |
+| Actualizado | 2025-05-26 14:35 |
+| Etiquetas | ninguna |
+| Jira | [LIO-358](https://bluinc.atlassian.net/browse/LIO-358) |
+
+## Relaciones
+
+- **Padre:** [[LIO-203]] Mi cuenta
+- **has action item:** [[SNB-3066]] Seccion preguntas no funciona y no deja responder preguntas
+
+## Descripcion
+
+Revisando a fondo este tema que venia revisando guille ([link](https://bluinc.atlassian.net/browse/SNB-3066) ) pude notar que el problema es simular al que venimos teniendo (como en la ficha con los precios Relámpago).
+
+Veo que cuando cargo el sitio llegando a la sección compras>preguntas mediante navegacion, funciona bien (ver imagen 1)
+
+[adjunto]
+Pero cuando entro a la sección mediante el link: [link](https://libreopcion.com.ar/venta/preguntas?p=1&estado=pendientes) 
+Entonces se rompe el sitio y veo el error clásico `"HierarchyRequestError: Failed to execute 'appendChild' on 'Node': This node type does not support this method." `
+
+[adjunto]

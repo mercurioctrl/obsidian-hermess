@@ -1,0 +1,36 @@
+---
+jira_key: "LIO-301"
+aliases: ["LIO-301"]
+summary: "APP - Review - Mejorar titulos para que sea mas intuitivo los accesos directos del centro de ayuda"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-03-27 15:27"
+updated: "2025-03-28 02:01"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-301"
+---
+
+# LIO-301: APP - Review - Mejorar titulos para que sea mas intuitivo los accesos directos del centro de ayuda
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-03-27 15:27 |
+| Actualizado | 2025-03-28 02:01 |
+| Etiquetas | ninguna |
+| Jira | [LIO-301](https://bluinc.atlassian.net/browse/LIO-301) |
+
+## Relaciones
+
+- **Padre:** [[LIO-277]] Centro de ayuda
+
+## Descripcion
+
+*Sin descripcion*

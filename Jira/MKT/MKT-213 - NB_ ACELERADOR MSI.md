@@ -1,0 +1,38 @@
+---
+jira_key: "MKT-213"
+aliases: ["MKT-213"]
+summary: "NB_ ACELERADOR MSI"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel M."
+reporter: "Eloy passarella"
+created: "2024-09-04 14:54"
+updated: "2024-09-04 17:42"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-213"
+---
+
+# MKT-213: NB_ ACELERADOR MSI
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel M. |
+| Reportado por | Eloy passarella |
+| Creado | 2024-09-04 14:54 |
+| Actualizado | 2024-09-04 17:42 |
+| Etiquetas | ninguna |
+| Jira | [MKT-213](https://bluinc.atlassian.net/browse/MKT-213) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola! 
+
+Necesito que armemos un acelerador para todas las notebooks de MSI multiplicando puntos x4 - durante todo septiembre.

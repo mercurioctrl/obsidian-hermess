@@ -1,0 +1,47 @@
+---
+jira_key: "MKT-270"
+aliases: ["MKT-270"]
+summary: "LO_ CUPONES DIA DEL AMIGO"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2025-07-18 10:39"
+updated: "2025-07-18 12:56"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-270"
+---
+
+# MKT-270: LO_ CUPONES DIA DEL AMIGO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-18 10:39 |
+| Actualizado | 2025-07-18 12:56 |
+| Etiquetas | ninguna |
+| Jira | [MKT-270](https://bluinc.atlassian.net/browse/MKT-270) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Catri! Cómo va? 
+
+Me ayudas con la creación de 10 cupones de uso unico para regalar en mi comunidad de mejores amigos? 
+
+- 5 que den 5000 pesos de regalo 
+
+
+- 5 que te den 5%off para la compra
+
+
+
+Es lo que me habilitó sebas.

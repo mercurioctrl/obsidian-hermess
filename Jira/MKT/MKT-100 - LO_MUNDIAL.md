@@ -1,0 +1,40 @@
+---
+jira_key: "MKT-100"
+aliases: ["MKT-100"]
+summary: "LO_MUNDIAL"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2022-09-05 16:31"
+updated: "2022-11-15 08:58"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-100"
+---
+
+# MKT-100: LO_MUNDIAL
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2022-09-05 16:31 |
+| Actualizado | 2022-11-15 08:58 |
+| Etiquetas | ninguna |
+| Jira | [MKT-100](https://bluinc.atlassian.net/browse/MKT-100) |
+
+## Relaciones
+
+- **Subtarea:** [[MKT-101]] Research Actividad / Ideas
+- **Subtarea:** [[MKT-102]] Fork estetico sitio
+- **Subtarea:** [[MKT-103]] Imagenes, colores, estetica
+
+## Descripcion
+
+Empieza el 20 de nov. Estaría bueno lookear el sitio con algo del mundial.
+
+Me gustaría que adaptemos el sitio con cosas de la selección argentina. La campaña que podemos hacer es Somos el hincha n° 1 de la selección.

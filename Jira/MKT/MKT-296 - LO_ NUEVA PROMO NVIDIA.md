@@ -1,0 +1,51 @@
+---
+jira_key: "MKT-296"
+aliases: ["MKT-296"]
+summary: "LO_ NUEVA PROMO NVIDIA"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Eloy Passarella"
+created: "2026-02-06 16:25"
+updated: "2026-02-10 18:59"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-296"
+---
+
+# MKT-296: LO_ NUEVA PROMO NVIDIA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Eloy Passarella |
+| Creado | 2026-02-06 16:25 |
+| Actualizado | 2026-02-10 18:59 |
+| Etiquetas | ninguna |
+| Jira | [MKT-296](https://bluinc.atlassian.net/browse/MKT-296) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola  y  !
+
+Tenemos una nueva promo de NVIDIA que arranca el 10/02
+
+- Adjunto HTML.
+
+Productos Participantes: GeForce RTX 5090, 5080, 5070 Ti, 5070
+
+
+
+ID DE PRODUCTOS: 
+P748200
+P743636
+P749377
+
+Tengo entendido que estamos próximos a un ingreso de algunas placas, les paso ni bien estén dadas de alta.

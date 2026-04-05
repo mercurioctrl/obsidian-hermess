@@ -1,0 +1,38 @@
+---
+jira_key: "LIO-336"
+aliases: ["LIO-336"]
+summary: "APP - O. Mejora - Buscador de ordenes"
+status: "Finalizada"
+type: "Subtarea"
+priority: "High"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-04-28 09:30"
+updated: "2025-04-29 16:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-336"
+---
+
+# LIO-336: APP - O. Mejora - Buscador de ordenes
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | High |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-04-28 09:30 |
+| Actualizado | 2025-04-29 16:30 |
+| Etiquetas | ninguna |
+| Jira | [LIO-336](https://bluinc.atlassian.net/browse/LIO-336) |
+
+## Relaciones
+
+- **Padre:** [[LIO-277]] Centro de ayuda
+
+## Descripcion
+
+Tal vez podamos darle mas cuerpo y aire entre elementos para mejorar la lectura haciendo algo asi
+
+[adjunto]

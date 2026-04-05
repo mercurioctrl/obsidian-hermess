@@ -1,0 +1,54 @@
+---
+jira_key: "MKT-288"
+aliases: ["MKT-288"]
+summary: "NB TRAVEL_ AJUSTE DE TyC"
+status: "Finalizada"
+type: "Tarea"
+priority: "Highest"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2025-10-07 10:38"
+updated: "2025-10-13 08:19"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-288"
+---
+
+# MKT-288: NB TRAVEL_ AJUSTE DE TyC
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Highest |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-10-07 10:38 |
+| Actualizado | 2025-10-13 08:19 |
+| Etiquetas | ninguna |
+| Jira | [MKT-288](https://bluinc.atlassian.net/browse/MKT-288) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Catri! 
+
+Por unos temas de pasajes tengo que correr la fecha de finalización del programa. 
+
+Vamos a hacerlo hasta el 28/10 a las 18hs
+
+necesito que ajustemos en lo TyC el punto 4 que habla de millas y de finalización del programa
+
+**Podemos poner:**** **
+
+- **Compras que Suman Millas**
+**- Las compras válidas para acumular millas sumarán 150 millas cada 10 dólares. **
+
+
+
+- **- Las compras válidas para acumular millas serán las realizadas entre el 1 de agosto de 2025 y el 28 de octubre de 2025 a las 18:00 h (hora Argentina) y sólo sumarán millas las marcas participantes del programa.**
+
+
+- **- Solo se considerarán aquellas totalmente abonadas antes del cierre del período. No se incluirán compras en cuenta corriente, impagas o pendientes.**

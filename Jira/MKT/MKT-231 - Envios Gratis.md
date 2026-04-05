@@ -1,0 +1,36 @@
+---
+jira_key: "MKT-231"
+aliases: ["MKT-231"]
+summary: "Envios Gratis"
+status: "En curso"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2024-10-30 16:56"
+updated: "2024-11-03 11:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-231"
+---
+
+# MKT-231: Envios Gratis
+
+| Campo | Valor |
+|-------|-------|
+| Estado | En curso (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2024-10-30 16:56 |
+| Actualizado | 2024-11-03 11:25 |
+| Etiquetas | ninguna |
+| Jira | [MKT-231](https://bluinc.atlassian.net/browse/MKT-231) |
+
+## Relaciones
+
+- **Padre:** [[MKT-229]] LO_ CYBER MONDAY CAMPAÑA
+
+## Descripcion
+
+*Sin descripcion*

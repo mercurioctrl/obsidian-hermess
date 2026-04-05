@@ -1,0 +1,44 @@
+---
+jira_key: "LIO-216"
+aliases: ["LIO-216"]
+summary: "APP - Refactor- Agregar la opcion de desplazamiento automático en los slides de la home de productos"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-02-12 12:47"
+updated: "2025-02-13 10:41"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-216"
+---
+
+# LIO-216: APP - Refactor- Agregar la opcion de desplazamiento automático en los slides de la home de productos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-02-12 12:47 |
+| Actualizado | 2025-02-13 10:41 |
+| Etiquetas | ninguna |
+| Jira | [LIO-216](https://bluinc.atlassian.net/browse/LIO-216) |
+
+## Relaciones
+
+- **Padre:** [[LIO-105]] Home
+
+## Descripcion
+
+Agregaremos en nuestras variables de entorno (`.env`) la posibilidad de activar el desplazamiento automático o no de los slides.
+
+Creo que lo mejor es que si uno va para la izquierda el siguiente debería ir para la derecha y así intercalado.
+
+Aunque tambien vi que hay sitios que los aplican todos iguales (como este: [link](https://www.venex.com.ar/pagina-inicial.htm) ).
+
+Igual si queres probamos y vemos
+
+[adjunto]

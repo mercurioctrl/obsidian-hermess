@@ -1,0 +1,37 @@
+---
+jira_key: "LIO-194"
+aliases: ["LIO-194"]
+summary: "APP - Refactor - reestilizar botones"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-01-30 09:37"
+updated: "2025-02-05 10:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-194"
+---
+
+# LIO-194: APP - Refactor - reestilizar botones
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-01-30 09:37 |
+| Actualizado | 2025-02-05 10:46 |
+| Etiquetas | ninguna |
+| Jira | [LIO-194](https://bluinc.atlassian.net/browse/LIO-194) |
+
+## Relaciones
+
+- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
+
+## Descripcion
+
+[adjunto]
+[adjunto]

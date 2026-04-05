@@ -1,0 +1,133 @@
+---
+jira_key: "LIO-490"
+aliases: ["LIO-490"]
+summary: "API - Feat - Migrar historial de producto desde legacy con paginación y cache Redis"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-12-10 11:32"
+updated: "2025-12-22 00:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-490"
+---
+
+# LIO-490: API - Feat - Migrar historial de producto desde legacy con paginación y cache Redis
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-10 11:32 |
+| Actualizado | 2025-12-22 00:38 |
+| Etiquetas | ninguna |
+| Jira | [LIO-490](https://bluinc.atlassian.net/browse/LIO-490) |
+
+## Relaciones
+
+- **Padre:** [[LIO-484]] Home
+
+## Descripcion
+
+Migrar el recurso de historial de producto desde la API legacy a la API v4, manteniendo el mismo formato de respuesta (mismo JSON) pero agregando paginación y cache en Redis por 1 hora. Debe existir un parámetro para forzar la expiración de la cache.
+
+Si no se envían paginas, debe mostrar un paginado por defecto.
+
+---
+
+### Endpoint
+
+```
+GET {API_URL}/v4/productos/{productId}/historial
+```
+
+- `productId`: ID del producto cuyo historial se consulta.
+
+
+- Debe devolver el mismo tipo de array JSON que el recurso legacy actual (`id`, `idInterno`, `calificacion`, `precios`, `envios`, `marca`, `vendedor`, etc.).
+
+
+
+---
+
+### Parámetros
+
+Query:
+
+- `page` (opcional, int, default: `1`)
+
+
+- `perPage` (opcional, int, default: `30`)
+
+
+- `expireCache` (opcional, bool, default: `false`)
+
+- `true`: invalida cache para ese `productId` (y combinación de `page`/`perPage`) antes de leer datos.
+
+
+- `false`: usa cache si existe.
+
+
+
+
+
+---
+
+### Cache Redis
+
+- **TTL:** 1 hora (3600s).
+
+
+- Clave sugerida:
+
+```
+productos:{productId}:historial:page:{page}:perPage:{perPage}
+```
+
+
+- Flujo:
+
+- Si `expireCache=true`: borrar clave y recalcular.
+
+
+- Si `expireCache=false`: intentar leer de Redis; si no hay, consultar datos, guardar en Redis, devolver.
+
+
+
+
+
+---
+
+### Comportamiento
+
+- La lógica de negocio y el orden de los resultados deben ser equivalentes a la API legacy.
+
+
+- Si el `productId` no tiene historial, devolver `[]`.
+
+
+- Validar que `page` y `perPage` sean positivos (si no, usar default o devolver 400 según estándar v4).
+
+
+
+---
+
+### Criterios de aceptación
+
+- Para el mismo `productId`, el JSON de v4 coincide con la estructura de la API legacy (campos y tipos).
+
+
+- `page`/`perPage` funcionan correctamente (página 1, 2, etc., devuelve subconjuntos consistentes).
+
+
+- Primera llamada sin cache guarda los datos en Redis con TTL de 1 hora; siguientes lecturas dentro de ese período salen de cache.
+
+
+- Con `expireCache=true`, se invalida la cache previa y se refrescan los datos.
+
+
+- Ante error de Redis, el endpoint sigue respondiendo (sin cache) y se loguea el error.

@@ -1,0 +1,39 @@
+---
+jira_key: "LIO-254"
+aliases: ["LIO-254"]
+summary: "APP - Refactor - agregar titulo a la seccion de precio relampago destacada y mantener centrado"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-03-10 12:57"
+updated: "2025-03-10 19:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-254"
+---
+
+# LIO-254: APP - Refactor - agregar titulo a la seccion de precio relampago destacada y mantener centrado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-03-10 12:57 |
+| Actualizado | 2025-03-10 19:35 |
+| Etiquetas | ninguna |
+| Jira | [LIO-254](https://bluinc.atlassian.net/browse/LIO-254) |
+
+## Relaciones
+
+- **Padre:** [[LIO-105]] Home
+
+## Descripcion
+
+Idea: 
+
+[adjunto]
+Centrar las imagenes

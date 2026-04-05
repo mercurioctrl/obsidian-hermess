@@ -1,0 +1,89 @@
+---
+jira_key: "LIO-400"
+aliases: ["LIO-400"]
+summary: "API - Refactor - Ajustes para el asistente de compatibilidad, ejecutar la consulta solo si parece ser relevante"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-08-01 14:41"
+updated: "2025-08-04 14:31"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-400"
+---
+
+# LIO-400: API - Refactor - Ajustes para el asistente de compatibilidad, ejecutar la consulta solo si parece ser relevante
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-08-01 14:41 |
+| Actualizado | 2025-08-04 14:31 |
+| Etiquetas | ninguna |
+| Jira | [LIO-400](https://bluinc.atlassian.net/browse/LIO-400) |
+
+## Relaciones
+
+- **Padre:** [[LIO-391]] Desarrollos IA para LIO (Aleph)
+- **action item from:** [[LIO-395]] APP - Refactor - Asistente de compatibilidad en el carrito de compras
+- **relates to:** [[LIO-405]] API - Asistente de compatibilidad - Propuesta de mejora en el filtrado de productos enviados
+
+## Descripcion
+
+**Lógica de activación del asistente de compatibilidad de hardware**
+
+Para evitar ejecutar el asistente de compatibilidad en casos innecesarios, implementamos una validación previa basada en los productos presentes en el carrito. El objetivo es asegurarnos de que haya al menos dos componentes relevantes que puedan ser evaluados en términos de compatibilidad.
+
+Para ello, analizamos los nombres o descripciones de los productos buscando coincidencias con las siguientes palabras clave:
+
+- **memoria**
+
+
+- **procesador**
+
+
+- **mother**
+
+
+- **fuente**
+
+
+- **placa**
+
+
+- **gabinete**
+
+
+- **disco**
+
+
+- **ssd**
+
+
+- **nvme**
+
+
+- **m.2**
+
+
+- **hdd**
+
+
+- **cooler**
+
+
+- **watercooler**
+
+
+- **disipador**
+
+
+
+Si se detectan **dos o más ocurrencias** de estos términos dentro del payload de productos, entonces se considera que hay potencial de compatibilidad entre componentes, y el asistente será activado automáticamente.
+
+Esta lógica permite optimizar el uso del asistente, reservándolo únicamente para situaciones donde realmente se requiera una evaluación técnica entre elementos del hardware.

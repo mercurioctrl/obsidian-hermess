@@ -1,0 +1,42 @@
+---
+jira_key: "MKT-174"
+aliases: ["MKT-174"]
+summary: "NB_ NUEVA NOTA DESTACADOS NB"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Eloy Passarella"
+created: "2024-04-19 11:06"
+updated: "2024-04-19 17:44"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-174"
+---
+
+# MKT-174: NB_ NUEVA NOTA DESTACADOS NB
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Eloy Passarella |
+| Creado | 2024-04-19 11:06 |
+| Actualizado | 2024-04-19 17:44 |
+| Etiquetas | ninguna |
+| Jira | [MKT-174](https://bluinc.atlassian.net/browse/MKT-174) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Buenas! 
+
+Les paso la nueva nota que tenemos disponible. 
+
+[link](https://www.enfasys.net/2024/04/17/new-bytes-acelera-los-procesos-de-sus-clientes-a-traves-de-su-nueva-api/) 
+
+Para sumarla a la web

@@ -1,0 +1,36 @@
+---
+jira_key: "LIO-274"
+aliases: ["LIO-274"]
+summary: "APP - Refactor: mejorar precios relamapgo destacado onomatopeya mas destaque de producto"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-03-14 13:16"
+updated: "2025-03-17 02:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-274"
+---
+
+# LIO-274: APP - Refactor: mejorar precios relamapgo destacado onomatopeya mas destaque de producto
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-03-14 13:16 |
+| Actualizado | 2025-03-17 02:25 |
+| Etiquetas | ninguna |
+| Jira | [LIO-274](https://bluinc.atlassian.net/browse/LIO-274) |
+
+## Relaciones
+
+- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
+
+## Descripcion
+
+*Sin descripcion*

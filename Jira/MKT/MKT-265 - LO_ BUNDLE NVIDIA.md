@@ -1,0 +1,56 @@
+---
+jira_key: "MKT-265"
+aliases: ["MKT-265"]
+summary: "LO_ BUNDLE NVIDIA"
+status: "Finalizada"
+type: "Tarea"
+priority: "Highest"
+assignee: "Catriel Mercurio"
+reporter: "Eloy Passarella"
+created: "2025-05-22 16:31"
+updated: "2025-05-30 14:41"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MKT-265"
+---
+
+# MKT-265: LO_ BUNDLE NVIDIA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Highest |
+| Asignado | Catriel Mercurio |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-05-22 16:31 |
+| Actualizado | 2025-05-30 14:41 |
+| Etiquetas | ninguna |
+| Jira | [MKT-265](https://bluinc.atlassian.net/browse/MKT-265) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Catri! 
+
+Me pasas todas las ventas de LO de los siguientes productos en el siguiente perido de fechas: 
+
+- **Fecha de inicio del Bundle:  **30 de Abril 6 AM PT 
+
+
+- **Fecha de fin del Bundle: **21 de mayo 11:59 PST
+
+
+- **Productos participantes:**
+
+
+
+- Tarjetas Gráficas y Desktops con: GeForce RTX 5090, 5080, 5070 Ti, 5070
+
+
+
+Necesito: Nombre y Apellido, Email, producto que compro, Link de la factura (si esto no está no pasa nada, pasame el número de compra asi la ratreo con CAMI).
+
+Me avisaron que tenemos tiempo hasta mañana.

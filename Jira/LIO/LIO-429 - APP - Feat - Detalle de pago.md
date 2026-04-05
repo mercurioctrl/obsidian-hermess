@@ -1,0 +1,55 @@
+---
+jira_key: "LIO-429"
+aliases: ["LIO-429"]
+summary: "APP - Feat - Detalle de pago"
+status: "Finalizada"
+type: "Subtarea"
+priority: "High"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-08-20 07:32"
+updated: "2025-08-20 19:23"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-429"
+---
+
+# LIO-429: APP - Feat - Detalle de pago
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | High |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-08-20 07:32 |
+| Actualizado | 2025-08-20 19:23 |
+| Etiquetas | ninguna |
+| Jira | [LIO-429](https://bluinc.atlassian.net/browse/LIO-429) |
+
+## Relaciones
+
+- **Padre:** [[LIO-419]] Mejoras de pagos
+- **action item from:** [[LIO-420]] API - Feat - Detalles de pago
+
+## Descripcion
+
+La idea de este recurso es poder dar mas informacion sobre los pagos (Empezaremos mostrandolo solo para los pagos con tarjeta)
+
+[adjunto]
+Basándonos en el recurso [link](https://bluinc.atlassian.net/browse/LIO-420) 
+
+```
+GET {API_URL}/v4/estados/pedidos/{pedidoLo}/pago
+```
+
+```
+{
+  "paymentStatus": "Rechazado",
+  "paymentStatusDetail": "Debes autorizar el pago con tu banco.",
+  "paymentStatusCode": "cc_rejected_call_for_authorize",
+  "paymentStatusTip": "La compra no pudo completarse. Llama al número del dorso de tu tarjeta para que el banco la autorice y vuelve a intentarlo.",
+}
+```
+
+Sumaremos informacion extra para que el usuario pueda comprender que acaba de pasar con su pago y como debe proceder para solucionar el problema.

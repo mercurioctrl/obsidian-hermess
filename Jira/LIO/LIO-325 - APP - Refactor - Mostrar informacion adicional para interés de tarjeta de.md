@@ -1,0 +1,65 @@
+---
+jira_key: "LIO-325"
+aliases: ["LIO-325"]
+summary: "APP - Refactor - Mostrar informacion adicional para interés de tarjeta de crédito y ajustar total mostrado (sin afectar valores enviados a MercadoPago) (Caso Naranja y otros)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-04-15 13:10"
+updated: "2025-04-16 01:09"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-325"
+---
+
+# LIO-325: APP - Refactor - Mostrar informacion adicional para interés de tarjeta de crédito y ajustar total mostrado (sin afectar valores enviados a MercadoPago) (Caso Naranja y otros)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-04-15 13:10 |
+| Actualizado | 2025-04-16 01:09 |
+| Etiquetas | ninguna |
+| Jira | [LIO-325](https://bluinc.atlassian.net/browse/LIO-325) |
+
+## Relaciones
+
+- **Padre:** [[LIO-119]] Inventario
+
+## Descripcion
+
+Cuando una tarjeta de crédito utilizada para el pago genera un interés adicional, este debe mostrarse claramente al usuario como una línea separada en el resumen de compra (ver ejemplo visual con flechas en la imagen adjunta).
+
+
+
+[adjunto]
+Si se recibe un valor de interés adicional para el método de pago con tarjeta, debe mostrarse como una línea aparte debajo de “Pago X productos”.
+
+- Ejemplo:
+
+- Pago 1 productos → $88.559,00
+
+
+- Interres de pago → Sin interés
+
+
+- Interés de tu tarjeta → $2.000,00
+
+
+- Total → $90.559,00
+
+
+
+
+
+- El total debe reflejar la suma del monto original + interés, aunque **ninguno de estos valores debe modificar los datos enviados a MercadoPago**.
+
+
+- A la derecha del texto "Interés por tarjeta", debe incluirse un ícono “🛈” (I informativa), que al hacer hover o click muestre el siguiente texto:
+
+Este interés es el interés que agrega tu tarjeta de crédito y no forma parte de los costos de pagar en nuestra plataforma. Si deseas, puedes intentar pagar con otra tarjeta que no agregue intereses adicionales.

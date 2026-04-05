@@ -1,0 +1,93 @@
+---
+jira_key: "LIO-563"
+aliases: ["LIO-563"]
+summary: "API -  LO - V4 - Feat - Procesar y despachar las notificaciones pendientes actuando como proxy "
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Emanuel Jesus Ferreyra"
+created: "2026-03-02 10:34"
+updated: "2026-03-10 19:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-563"
+---
+
+# LIO-563: API -  LO - V4 - Feat - Procesar y despachar las notificaciones pendientes actuando como proxy 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Emanuel Jesus Ferreyra |
+| Creado | 2026-03-02 10:34 |
+| Actualizado | 2026-03-10 19:35 |
+| Etiquetas | ninguna |
+| Jira | [LIO-563](https://bluinc.atlassian.net/browse/LIO-563) |
+
+## Relaciones
+
+- **Padre:** [[LIO-550]] Migración de notificaciones LO Legacy → V4
+
+## Descripcion
+
+Importate : endpoint eliminado
+
+Se eliminó la implementación de este proxy para evitar duplicidad de lógica. Ahora, los pendientes de cada canal deben ejecutarse desde TASK-V3, evitando la cadena de acoplamiento entre microservicios.
+
+
+
+
+
+Se debe centralizar el envío de notificaciones pendientes (push, mailing, ….) en el servicio externo task-v3, eliminando lógica de
+negocio duplicada en la API.
+
+**Cambios realizados**
+
+- NotificationRepository
+
+- Nuevo método sendPendingByChannel() que delega en task-v3 vía HTTP
+
+
+- Endpoint: POST /internal/notifications/send/pendings/{channel}
+
+
+
+
+- NotificationService
+
+- Simplificado: ahora solo valida el canal y delega al repository
+
+
+- Canales configurables via variable de entorno
+
+
+
+
+- Configuración
+
+- Nueva variable .env: `NOTIFICATION_CHANNELS=push,mailing,sms,whatsapp`
+
+
+- Valor por defecto: `push,mailing`
+
+
+
+
+
+
+
+Beneficios:
+
+- Código más limpio y mantenible
+
+
+- Un solo punto de verdad para el envío de notificaciones
+
+
+- Nuevos canales (whatsapp, etc.) se agregan solo modificando .env
+
+
+- Preparado para soportar más canales sin cambios de código
