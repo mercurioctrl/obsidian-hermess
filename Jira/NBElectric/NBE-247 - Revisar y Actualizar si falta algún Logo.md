@@ -1,0 +1,37 @@
+---
+jira_key: "NBE-247"
+aliases: ["NBE-247"]
+summary: "Revisar y Actualizar si falta algún Logo"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2026-03-12 09:49"
+updated: "2026-03-13 12:16"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-247"
+---
+
+# NBE-247: Revisar y Actualizar si falta algún Logo
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2026-03-12 09:49 |
+| Actualizado | 2026-03-13 12:16 |
+| Etiquetas | ninguna |
+| Jira | [NBE-247](https://bluinc.atlassian.net/browse/NBE-247) |
+
+## Relaciones
+
+- **Padre:** [[NBE-229]] Marzo: Nbelectric Institucional
+- **has action item:** [[NBE-246]] Presentaciones actualizar marcas
+
+## Descripcion
+
+*Sin descripcion*

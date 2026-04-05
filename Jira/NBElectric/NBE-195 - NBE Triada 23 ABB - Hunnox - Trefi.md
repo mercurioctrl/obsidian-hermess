@@ -1,0 +1,38 @@
+---
+jira_key: "NBE-195"
+aliases: ["NBE-195"]
+summary: "NBE: Triada 23 ABB - Hunnox - Trefi"
+status: "Listo"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Alejandra Guidobono"
+created: "2025-11-09 20:04"
+updated: "2025-11-27 14:10"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-195"
+---
+
+# NBE-195: NBE: Triada 23 ABB - Hunnox - Trefi
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-11-09 20:04 |
+| Actualizado | 2025-11-27 14:10 |
+| Etiquetas | ninguna |
+| Jira | [NBE-195](https://bluinc.atlassian.net/browse/NBE-195) |
+
+## Relaciones
+
+- **Subtarea:** [[NBE-196]] 1.NBE: Triada 23 Diseño ABB-Hunnox-Trefi
+- **Subtarea:** [[NBE-197]] 2.NBE: Triada 23 Copys ABB-Hunnox_Trefi (ver comentario de linkedin)
+- **Subtarea:** [[NBE-198]] 5.NBE: Triada 23 Programar  ABB-Hunnox_Trefi miercoles 3-12
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,47 @@
+---
+jira_key: "NBE-132"
+aliases: ["NBE-132"]
+summary: "⚡Triada 13_Argenplas_Desarrollo de piezas Social Media"
+status: "Listo"
+type: "Subtarea"
+priority: "Highest"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2025-07-15 14:07"
+updated: "2025-08-08 18:03"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-132"
+---
+
+# NBE-132: ⚡Triada 13_Argenplas_Desarrollo de piezas Social Media
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Highest |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-07-15 14:07 |
+| Actualizado | 2025-08-08 18:03 |
+| Etiquetas | ninguna |
+| Jira | [NBE-132](https://bluinc.atlassian.net/browse/NBE-132) |
+
+## Relaciones
+
+- **Padre:** [[NBE-112]] Triada 12_Argenplas_Social Media
+
+## Descripcion
+
+- **Instagram:** Triada (no olvidar el post final de comparti, dale like etc) 6 piezas
+
+
+- **Instagram + Estado de WhatsApp**: Formato Story (1 pieza)
+
+
+- **Linkedin**: último slide con Qr de productos (3 Piezas)
+[https://nbe.com.ar/argenplas?available_stock=0](https://nbe.com.ar/argenplas?available_stock=0) 
+
+
+
+**Facebook: **(dos piezas)

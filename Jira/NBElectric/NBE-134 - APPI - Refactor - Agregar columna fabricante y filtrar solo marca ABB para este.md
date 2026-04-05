@@ -1,0 +1,42 @@
+---
+jira_key: "NBE-134"
+aliases: ["NBE-134"]
+summary: "APPI - Refactor - Agregar columna fabricante y filtrar solo marca ABB para este repo especificamente"
+status: "Listo"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-07-18 08:48"
+updated: "2025-07-29 10:33"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-134"
+---
+
+# NBE-134: APPI - Refactor - Agregar columna fabricante y filtrar solo marca ABB para este repo especificamente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-18 08:48 |
+| Actualizado | 2025-07-29 10:33 |
+| Etiquetas | ninguna |
+| Jira | [NBE-134](https://bluinc.atlassian.net/browse/NBE-134) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+```
+GET {API_URL}/v1/priceListEfinderABB/{token}
+```
+
+Agregaremos una columna extra llamada “Fabricante” donde en nuestro caso, pondremos la marca.
+
+Por otro lado este repo especifico `priceListEfinderABB` estara filtrado para la marca ABB, osea que en la columna Fabricante, solo veremos una marca sola de producto, y todo el listado sera par esa marca ABB

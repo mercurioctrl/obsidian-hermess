@@ -1,0 +1,36 @@
+---
+jira_key: "NBE-127"
+aliases: ["NBE-127"]
+summary: "✏️Triada 15_KING_Armar Copy + realizar post en instagram, linkedin y Facebook"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Alejandra Guidobono"
+reporter: "Alejandra Guidobono"
+created: "2025-07-14 14:55"
+updated: "2025-08-11 09:49"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-127"
+---
+
+# NBE-127: ✏️Triada 15_KING_Armar Copy + realizar post en instagram, linkedin y Facebook
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Alejandra Guidobono |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-07-14 14:55 |
+| Actualizado | 2025-08-11 09:49 |
+| Etiquetas | ninguna |
+| Jira | [NBE-127](https://bluinc.atlassian.net/browse/NBE-127) |
+
+## Relaciones
+
+- **Padre:** [[NBE-116]] Triada 15_AEA_Social Media
+
+## Descripcion
+
+*Sin descripcion*

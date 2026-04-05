@@ -1,0 +1,39 @@
+---
+jira_key: "NBE-246"
+aliases: ["NBE-246"]
+summary: "Presentaciones actualizar marcas"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2026-03-12 09:46"
+updated: "2026-03-13 12:16"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-246"
+---
+
+# NBE-246: Presentaciones actualizar marcas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2026-03-12 09:46 |
+| Actualizado | 2026-03-13 12:16 |
+| Etiquetas | ninguna |
+| Jira | [NBE-246](https://bluinc.atlassian.net/browse/NBE-246) |
+
+## Relaciones
+
+- **Padre:** [[NBE-229]] Marzo: Nbelectric Institucional
+- **action item from:** [[NBE-247]] Revisar y Actualizar si falta algún Logo
+
+## Descripcion
+
+[link](https://docs.google.com/presentation/d/1qmEzw9NQVAsrNaKfMJ6lftdzGbUOKQMYgh9NVkxVMYY/edit?slide=id.g33d3f25c6a4_3_1#slide=id.g33d3f25c6a4_3_1) 
+[link](https://docs.google.com/presentation/d/15c5x7-sl0HVPriMEn5VJJ_G7UvBMC5ySKGSj6hbPMqA/edit?slide=id.p1#slide=id.p1) 
+[link](https://docs.google.com/presentation/d/1Vd3rC4C7Ecj0uDYHCmVlwf4JvxqkYL-wRTS97JyB7GY/edit?slide=id.p1#slide=id.p1)

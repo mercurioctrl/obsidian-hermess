@@ -1,0 +1,44 @@
+---
+jira_key: "NBE-210"
+aliases: ["NBE-210"]
+summary: "NBE: Triada 24 Programar Hunnox_Jadever_Elbet"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "barbara"
+reporter: "Alejandra Guidobono"
+created: "2025-12-01 09:35"
+updated: "2025-12-12 13:34"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-210"
+---
+
+# NBE-210: NBE: Triada 24 Programar Hunnox_Jadever_Elbet
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | barbara |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-12-01 09:35 |
+| Actualizado | 2025-12-12 13:34 |
+| Etiquetas | ninguna |
+| Jira | [NBE-210](https://bluinc.atlassian.net/browse/NBE-210) |
+
+## Relaciones
+
+- **Padre:** [[NBE-204]] NBE: Diciembre Triada 24 Hunnox-Jadever-Elibet
+
+## Descripcion
+
+Orden de post 
+
+- Elibet
+
+
+- Jadever
+
+
+- 3.Hunnox

@@ -1,0 +1,37 @@
+---
+jira_key: "NBE-140"
+aliases: ["NBE-140"]
+summary: "DSG- Refactor -  Actualizar banner de inteck"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2025-07-29 09:32"
+updated: "2025-07-30 14:44"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-140"
+---
+
+# NBE-140: DSG- Refactor -  Actualizar banner de inteck
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-07-29 09:32 |
+| Actualizado | 2025-07-30 14:44 |
+| Etiquetas | ninguna |
+| Jira | [NBE-140](https://bluinc.atlassian.net/browse/NBE-140) |
+
+## Relaciones
+
+- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
+- **has action item:** [[NBE-146]] API - Refactor -  Reemplazar Banner de  inteck
+
+## Descripcion
+
+*Sin descripcion*

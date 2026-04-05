@@ -1,0 +1,46 @@
+---
+jira_key: "NBE-106"
+aliases: ["NBE-106"]
+summary: " ⚡Triada 15_Elibet_Desarrollo de piezas Social Media"
+status: "Listo"
+type: "Subtarea"
+priority: "Highest"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2025-07-14 14:00"
+updated: "2025-08-19 13:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-106"
+---
+
+# NBE-106:  ⚡Triada 15_Elibet_Desarrollo de piezas Social Media
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Highest |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-07-14 14:00 |
+| Actualizado | 2025-08-19 13:29 |
+| Etiquetas | ninguna |
+| Jira | [NBE-106](https://bluinc.atlassian.net/browse/NBE-106) |
+
+## Relaciones
+
+- **Padre:** [[NBE-99]] Triada 14_Elibet_Social Media
+
+## Descripcion
+
+- **Instagram:** Triada (no olvidar el post final de comparti, dale like etc) 6 piezas
+
+
+- **Instagram**: Formato Story (1 pieza)
+
+
+- **Linkedin**: último slide con Qr de productos (3 Piezas)
+[https://nbe.com.ar/brands/elibet?available_stock=0](https://nbe.com.ar/brands/elibet?available_stock=0)
+
+
+- **Facebook: **(dos piezas)

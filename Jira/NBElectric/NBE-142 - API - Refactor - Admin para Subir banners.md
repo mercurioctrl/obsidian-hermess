@@ -1,0 +1,39 @@
+---
+jira_key: "NBE-142"
+aliases: ["NBE-142"]
+summary: "API - Refactor - Admin para Subir banners "
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Alejandra Guidobono"
+created: "2025-07-29 09:40"
+updated: "2026-01-22 08:54"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-142"
+---
+
+# NBE-142: API - Refactor - Admin para Subir banners 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-07-29 09:40 |
+| Actualizado | 2026-01-22 08:54 |
+| Etiquetas | ninguna |
+| Jira | [NBE-142](https://bluinc.atlassian.net/browse/NBE-142) |
+
+## Relaciones
+
+- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
+- **has action item:** [[NBE-237]] APP - Refactor - Conectar Banners al recurso y segmento de banners 3
+
+## Descripcion
+
+Se incorpora al CMS general de NB que permite gestioanr sitios de varias empresas con el apartado “NBE Home Principal”
+
+[adjunto]

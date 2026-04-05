@@ -1,0 +1,36 @@
+---
+jira_key: "MNB2-61"
+aliases: ["MNB2-61"]
+summary: "NEWSLETTER"
+status: "Tareas por hacer"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Sofía Melograna"
+created: "2025-08-22 16:24"
+updated: "2025-08-22 16:24"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MNB2-61"
+---
+
+# MNB2-61: NEWSLETTER
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Sofía Melograna |
+| Creado | 2025-08-22 16:24 |
+| Actualizado | 2025-08-22 16:24 |
+| Etiquetas | ninguna |
+| Jira | [MNB2-61](https://bluinc.atlassian.net/browse/MNB2-61) |
+
+## Relaciones
+
+- **Padre:** [[MNB2-60]] NB_Lanzamiento
+
+## Descripcion
+
+*Sin descripcion*

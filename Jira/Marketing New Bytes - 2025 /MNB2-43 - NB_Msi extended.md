@@ -1,0 +1,36 @@
+---
+jira_key: "MNB2-43"
+aliases: ["MNB2-43"]
+summary: "NB_Msi extended"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Sofía Melograna"
+created: "2025-08-04 09:37"
+updated: "2025-08-08 09:37"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MNB2-43"
+---
+
+# MNB2-43: NB_Msi extended
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Sofía Melograna |
+| Creado | 2025-08-04 09:37 |
+| Actualizado | 2025-08-08 09:37 |
+| Etiquetas | ninguna |
+| Jira | [MNB2-43](https://bluinc.atlassian.net/browse/MNB2-43) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

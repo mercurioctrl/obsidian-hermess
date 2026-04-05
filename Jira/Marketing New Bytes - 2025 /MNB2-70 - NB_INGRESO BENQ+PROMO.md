@@ -1,0 +1,38 @@
+---
+jira_key: "MNB2-70"
+aliases: ["MNB2-70"]
+summary: "NB_INGRESO BENQ+PROMO"
+status: "ENTREGA DE ARCHIVOS"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Sofía Melograna"
+created: "2025-09-15 11:47"
+updated: "2025-10-08 13:32"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/MNB2-70"
+---
+
+# MNB2-70: NB_INGRESO BENQ+PROMO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | ENTREGA DE ARCHIVOS (En curso) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Sofía Melograna |
+| Creado | 2025-09-15 11:47 |
+| Actualizado | 2025-10-08 13:32 |
+| Etiquetas | ninguna |
+| Jira | [MNB2-70](https://bluinc.atlassian.net/browse/MNB2-70) |
+
+## Relaciones
+
+- **Subtarea:** [[MNB2-71]] IMAGENES
+- **Subtarea:** [[MNB2-72]] BANNER WEB
+- **Subtarea:** [[MNB2-73]] NEWSLETTER
+
+## Descripcion
+
+*Sin descripcion*

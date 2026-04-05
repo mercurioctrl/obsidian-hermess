@@ -1,0 +1,36 @@
+---
+jira_key: "NBE-121"
+aliases: ["NBE-121"]
+summary: "✏️Triada 18_Rievtech_Armar Copy + realizar post en instagram, linkedin y Facebook"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Alejandra Guidobono"
+reporter: "Alejandra Guidobono"
+created: "2025-07-14 14:49"
+updated: "2025-08-11 09:49"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-121"
+---
+
+# NBE-121: ✏️Triada 18_Rievtech_Armar Copy + realizar post en instagram, linkedin y Facebook
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Alejandra Guidobono |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-07-14 14:49 |
+| Actualizado | 2025-08-11 09:49 |
+| Etiquetas | ninguna |
+| Jira | [NBE-121](https://bluinc.atlassian.net/browse/NBE-121) |
+
+## Relaciones
+
+- **Padre:** [[NBE-119]] Triada 17_Rievtech_Social Media
+
+## Descripcion
+
+*Sin descripcion*

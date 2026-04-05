@@ -1,0 +1,47 @@
+---
+jira_key: "NBE-180"
+aliases: ["NBE-180"]
+summary: "NBE: Realizar Post en las diferentes Redes"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "barbara"
+reporter: "Alejandra Guidobono"
+created: "2025-09-11 13:54"
+updated: "2025-09-12 11:22"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/NBE-180"
+---
+
+# NBE-180: NBE: Realizar Post en las diferentes Redes
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | barbara |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-09-11 13:54 |
+| Actualizado | 2025-09-12 11:22 |
+| Etiquetas | ninguna |
+| Jira | [NBE-180](https://bluinc.atlassian.net/browse/NBE-180) |
+
+## Relaciones
+
+- **Padre:** [[NBE-151]] NBE:Triada 20_APP
+- **action item from:** [[NBE-171]] NBE:Triada 20 Copys 
+- **action item from:** [[NBE-151]] NBE:Triada 20_APP
+
+## Descripcion
+
+Adjunto imagenes de como se deberian postear el orden
+Post:
+
+- Instagram: Feed + Story
+
+
+- Facebook
+
+
+- Linkedin
