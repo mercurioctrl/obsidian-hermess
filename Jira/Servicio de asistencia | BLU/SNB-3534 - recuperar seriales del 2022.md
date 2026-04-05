@@ -1,0 +1,116 @@
+---
+jira_key: "SNB-3534"
+aliases: ["SNB-3534"]
+summary: "recuperar seriales del 2022"
+status: "Resuelta"
+type: "Support"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "logistica@nb.com.ar"
+created: "2025-12-01 10:57"
+updated: "2025-12-02 15:13"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/SNB-3534"
+---
+
+# SNB-3534: recuperar seriales del 2022
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Resuelta (Listo) |
+| Tipo | Support |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | logistica@nb.com.ar |
+| Creado | 2025-12-01 10:57 |
+| Actualizado | 2025-12-02 15:13 |
+| Etiquetas | ninguna |
+| Jira | [SNB-3534](https://bluinc.atlassian.net/browse/SNB-3534) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+AC2133D11101770
+
+AC2133D11101855
+
+AC2133D11101858
+
+AC2133D11101859
+
+AC2133D11101860
+
+AC2133D11101861
+
+AC2133D11101862
+
+AC2133D11101863
+
+AC2133D11101864
+
+AC2133D11101865
+
+AC2133D11101867
+
+AC2133D11101758
+
+AC2133D11101759
+
+AC2133D11101760
+
+AC2133D11101761
+
+AC2133D11101762
+
+AC2133D11101763
+
+AC2133D11101764
+
+AC2133D11101765
+
+AC2133D11101766
+
+AC2133D11101769
+
+AC2133D11101826
+
+AC2133D11101832
+
+AC2133D11101830
+
+AC2133D11101831
+
+AC2133D11101829
+
+AC2133D11101838
+
+AC2128D11100710
+
+AC2128D11100711
+
+AC2128D11100708
+
+AC2133D11101835
+
+AC2133D11101854
+
+AC2133D11101856
+
+AC2133D11101836
+
+AC2133D11101852
+
+AC2133D11101857
+
+AC2133D11101840
+
+AC2133D11101839
+
+AC2133D11101837
+
+AC2133D11101841
+
+AC2133D11101843
