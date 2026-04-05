@@ -4,7 +4,7 @@ name: "NBElectric"
 type: "software"
 total_issues: 221
 jira_url: "https://bluinc.atlassian.net/browse/NBE"
-synced: "2026-04-05 07:39"
+synced: "2026-04-05 07:55"
 ---
 
 # NBElectric (NBE)

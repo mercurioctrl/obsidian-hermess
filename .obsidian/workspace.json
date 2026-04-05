@@ -11,10 +11,14 @@
             "id": "912ff32531a50967",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "Jira/LO | Marketing/_LOMKT - Indice.md",
+                "bFile": "Jira/LO | Marketing/_LOMKT - Indice.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: _LOMKT - Indice  (Working Tree)"
             }
           }
         ]

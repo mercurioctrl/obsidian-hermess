@@ -4,7 +4,7 @@ name: " LO - Servicio Comprobantes - APP"
 type: "software"
 total_issues: 105
 jira_url: "https://bluinc.atlassian.net/browse/LOCAPP"
-synced: "2026-04-05 07:39"
+synced: "2026-04-05 07:54"
 ---
 
 #  LO - Servicio Comprobantes - APP (LOCAPP)
