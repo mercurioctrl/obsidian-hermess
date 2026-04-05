@@ -11,10 +11,14 @@
             "id": "db666da2d1f343d6",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "markdown",
+              "state": {
+                "file": "Skills/configurar-boveda/SKILL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SKILL"
             }
           }
         ]
@@ -192,6 +196,8 @@
   },
   "active": "db666da2d1f343d6",
   "lastOpenFiles": [
+    "Skills/configurar-boveda/SKILL.md",
+    "Skills/configurar-boveda",
     "Skills/pdf/SKILL.md",
     "Skills/fullstack-docker-app/SKILL.md",
     "Skills/fullstack-docker-app/references/architecture.md",
@@ -222,11 +228,9 @@
     "Asus",
     "Skills/xlsx/SKILL.md",
     "Skills/pptx/editing.md",
-    "Skills/pdf/REFERENCE.md",
     "Skills/xlsx",
     "Skills/skill-creator/references",
     "Skills/skill-creator/agents",
-    "Skills/skill-creator",
-    "Skills/schedule"
+    "Skills/skill-creator"
   ]
 }
