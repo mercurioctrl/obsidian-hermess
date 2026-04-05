@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-833"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **is blocked by:** [[NBWEB-832]] API - Feat - Generar listado para Tienda Negocio
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **is blocked by:** [[NBWEB-832 - API - Feat - Generar listado para Tienda Negocio|NBWEB-832]] API - Feat - Generar listado para Tienda Negocio
 
 ## Descripcion
 

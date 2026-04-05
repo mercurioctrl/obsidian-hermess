@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-57"
 
 ## Relaciones
 
-- **Padre:** [[COM-11]] Pedidos de compra (Ingresos)
-- **is blocked by:** [[COM-34]] API - Feat -  Listar ingresos (despachos de compra) - > Agregar totales
-- **is blocked by:** [[COM-29]] API - Feat - Listar ingresos (despacho de compra)
-- **blocks:** [[COM-13]] APP - Feat - Listar ingresos (despachos de compra)
+- **Padre:** [[COM-11 - Pedidos de compra (Ingresos)|COM-11]] Pedidos de compra (Ingresos)
+- **is blocked by:** [[COM-34 - API - Feat - Listar ingresos (despachos de compra) - Agregar totales|COM-34]] API - Feat -  Listar ingresos (despachos de compra) - > Agregar totales
+- **is blocked by:** [[COM-29 - API - Feat - Listar ingresos (despacho de compra)|COM-29]] API - Feat - Listar ingresos (despacho de compra)
+- **blocks:** [[COM-13 - APP - Feat - Listar ingresos (despachos de compra)|COM-13]] APP - Feat - Listar ingresos (despachos de compra)
 
 ## Descripcion
 

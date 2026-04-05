@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-162"
 
 ## Relaciones
 
-- **Padre:** [[LIO-3]] Envíos
-- **Subtarea:** [[LIO-163]] APP - Refactor - Cambiar herramienta para cotizacion
-- **Subtarea:** [[LIO-164]] API - Feat - Migrar recurso para actualizar punto de entrega
-- **Subtarea:** [[LIO-171]] API - Feat - Agregar funcionalidad para manejar y retornar información del código postal en la APIv4
-- **Subtarea:** [[LIO-495]] APP - Review - Al crear una cuenta nueva e intentar cotizar en la ficha del producto, si el usuario no posee codigo postal, debe usar el default
+- **Padre:** [[LIO-3 - Envíos|LIO-3]] Envíos
+- **Subtarea:** [[LIO-163 - APP - Refactor - Cambiar herramienta para cotizacion|LIO-163]] APP - Refactor - Cambiar herramienta para cotizacion
+- **Subtarea:** [[LIO-164 - API - Feat - Migrar recurso para actualizar punto de entrega|LIO-164]] API - Feat - Migrar recurso para actualizar punto de entrega
+- **Subtarea:** [[LIO-171 - API - Feat - Agregar funcionalidad para manejar y retornar información del|LIO-171]] API - Feat - Agregar funcionalidad para manejar y retornar información del código postal en la APIv4
+- **Subtarea:** [[LIO-495 - APP - Review - Al crear una cuenta nueva e intentar cotizar en la ficha del|LIO-495]] APP - Review - Al crear una cuenta nueva e intentar cotizar en la ficha del producto, si el usuario no posee codigo postal, debe usar el default
 
 ## Descripcion
 

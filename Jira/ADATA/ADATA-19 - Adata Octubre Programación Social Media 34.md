@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-19"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-15]] ❌Adata Octubre: 3/4 Social Media Fuentes no se subio
+- **Padre:** [[ADATA-15 - ❌Adata Octubre 34 Social Media Fuentes no se subio|ADATA-15]] ❌Adata Octubre: 3/4 Social Media Fuentes no se subio
 
 ## Descripcion
 

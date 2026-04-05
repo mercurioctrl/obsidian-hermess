@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-474"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
 
 ## Descripcion
 

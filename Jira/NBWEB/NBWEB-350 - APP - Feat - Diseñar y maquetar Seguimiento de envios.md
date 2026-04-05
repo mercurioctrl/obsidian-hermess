@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-350"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **relates to:** [[NBWEB-254]] API - Feat - Seguimiento de envios
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **relates to:** [[NBWEB-254 - API - Feat - Seguimiento de envios|NBWEB-254]] API - Feat - Seguimiento de envios
 
 ## Descripcion
 

@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-504"
 
 ## Relaciones
 
-- **Padre:** [[LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
-- **Subtarea:** [[LIO-514]] API LO V4 refactor: Listar todos los tokens de un cliente
-- **Subtarea:** [[LIO-515]] API LO V4 refactor se debe mostrar flag de token actual
-- **Subtarea:** [[LIO-516]] API LO refactor Asociación de conversion para vincular al token específico
-- **Subtarea:** [[LIO-522]] API LO V4 - Review - Listar todos los tokens de un cliente -> Tokens no visibles
+- **Padre:** [[LIO-497 - App Mobile Vendedores – Gestión integral del seller en Libre Opción|LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
+- **Subtarea:** [[LIO-514 - API LO V4 refactor Listar todos los tokens de un cliente|LIO-514]] API LO V4 refactor: Listar todos los tokens de un cliente
+- **Subtarea:** [[LIO-515 - API LO V4 refactor se debe mostrar flag de token actual|LIO-515]] API LO V4 refactor se debe mostrar flag de token actual
+- **Subtarea:** [[LIO-516 - API LO refactor Asociación de conversion para vincular al token específico|LIO-516]] API LO refactor Asociación de conversion para vincular al token específico
+- **Subtarea:** [[LIO-522 - API LO V4 - Review - Listar todos los tokens de un cliente - Tokens no visibles|LIO-522]] API LO V4 - Review - Listar todos los tokens de un cliente -> Tokens no visibles
 
 ## Descripcion
 

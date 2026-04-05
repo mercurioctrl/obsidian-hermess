@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-455"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **relates to:** [[EXP-456]] API - Agregar notificacion firebase
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **relates to:** [[EXP-456 - API - Agregar notificacion firebase|EXP-456]] API - Agregar notificacion firebase
 
 ## Descripcion
 

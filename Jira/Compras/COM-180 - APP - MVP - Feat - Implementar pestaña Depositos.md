@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-180"
 
 ## Relaciones
 
-- **Padre:** [[COM-178]] Depositos
-- **action item from:** [[COM-179]] API - MVP - Feat - Implementar endpoints REST CRUD para el recurso warehouses basado en la tabla [FP_Almacen]
-- **is blocked by:** [[COM-183]] API-MVP-Refactor- Agregar al get de warehouses los nombres de pais,provincia y ciudad
-- **relates to:** [[COM-188]] APP - MVP - Oportunidad de mejora - Depósitos -> al editar actualizar automáticamente 
+- **Padre:** [[COM-178 - Depositos|COM-178]] Depositos
+- **action item from:** [[COM-179 - API - MVP - Feat - Implementar endpoints REST CRUD para el recurso warehouses|COM-179]] API - MVP - Feat - Implementar endpoints REST CRUD para el recurso warehouses basado en la tabla [FP_Almacen]
+- **is blocked by:** [[COM-183 - API-MVP-Refactor- Agregar al get de warehouses los nombres de pais,provincia y|COM-183]] API-MVP-Refactor- Agregar al get de warehouses los nombres de pais,provincia y ciudad
+- **relates to:** [[COM-188 - APP - MVP - Oportunidad de mejora - Depósitos - al editar actualizar|COM-188]] APP - MVP - Oportunidad de mejora - Depósitos -> al editar actualizar automáticamente 
 
 ## Descripcion
 

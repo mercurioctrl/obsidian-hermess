@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-519"
 
 ## Relaciones
 
-- **Padre:** [[EXP-512]] Almacenes multiples
-- **action item from:** [[EXP-518]] API - Refactor - Agregar parámetros de almacén en los ingresos 
+- **Padre:** [[EXP-512 - Almacenes multiples|EXP-512]] Almacenes multiples
+- **action item from:** [[EXP-518 - API - Refactor - Agregar parámetros de almacén en los ingresos|EXP-518]] API - Refactor - Agregar parámetros de almacén en los ingresos 
 
 ## Descripcion
 

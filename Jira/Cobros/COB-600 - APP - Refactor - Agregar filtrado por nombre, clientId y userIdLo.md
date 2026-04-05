@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-600"
 
 ## Relaciones
 
-- **Padre:** [[COB-581]] Repositorio y Gestión de Billeteras Libre Opción
-- **action item from:** [[COB-599]] API - Refactor - Agregar filtrado por nombre, clientId y userIdLo
+- **Padre:** [[COB-581 - Repositorio y Gestión de Billeteras Libre Opción|COB-581]] Repositorio y Gestión de Billeteras Libre Opción
+- **action item from:** [[COB-599 - API - Refactor - Agregar filtrado por nombre, clientId y userIdLo|COB-599]] API - Refactor - Agregar filtrado por nombre, clientId y userIdLo
 
 ## Descripcion
 

@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-110"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
-- **relates to:** [[NBWEB-100]] API - Buscar por serial para formulario de postventa
-- **relates to:** [[NBWEB-104]] API - Pre ingreso de postventa
-- **relates to:** [[NBWEB-108]] Carga de imagenes
-- **blocks:** [[NBWEB-193]] APP - Agregar un suggest box  con description de producto al formulario de alta de post venta
-- **relates to:** [[NBWEB-201]] FIX - Pre ingreso de postventa - Se agregan parametros al request
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
+- **relates to:** [[NBWEB-100 - API - Buscar por serial para formulario de postventa|NBWEB-100]] API - Buscar por serial para formulario de postventa
+- **relates to:** [[NBWEB-104 - API - Pre ingreso de postventa|NBWEB-104]] API - Pre ingreso de postventa
+- **relates to:** [[NBWEB-108 - Carga de imagenes|NBWEB-108]] Carga de imagenes
+- **blocks:** [[NBWEB-193 - APP - Agregar un suggest box con description de producto al formulario de alta|NBWEB-193]] APP - Agregar un suggest box  con description de producto al formulario de alta de post venta
+- **relates to:** [[NBWEB-201 - FIX - Pre ingreso de postventa - Se agregan parametros al request|NBWEB-201]] FIX - Pre ingreso de postventa - Se agregan parametros al request
 
 ## Descripcion
 

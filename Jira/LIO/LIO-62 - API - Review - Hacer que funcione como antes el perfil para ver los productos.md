@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-62"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **relates to:** [[LIO-73]] API - Refactor - Ver productos del vendedor - Añadir atributos
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **relates to:** [[LIO-73 - API - Refactor - Ver productos del vendedor - Añadir atributos|LIO-73]] API - Refactor - Ver productos del vendedor - Añadir atributos
 
 ## Descripcion
 

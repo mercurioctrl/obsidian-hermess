@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-19"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-20]] DSG - Feature - Tarjeta virtual de cumpleaños
-- **Subtarea:** [[BLUWEB-21]] DSG - Feature - Tarjeta Impresa de cumpleaños
+- **Subtarea:** [[BLUWEB-20 - DSG - Feature - Tarjeta virtual de cumpleaños|BLUWEB-20]] DSG - Feature - Tarjeta virtual de cumpleaños
+- **Subtarea:** [[BLUWEB-21 - DSG - Feature - Tarjeta Impresa de cumpleaños|BLUWEB-21]] DSG - Feature - Tarjeta Impresa de cumpleaños
 
 ## Descripcion
 

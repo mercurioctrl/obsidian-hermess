@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-347"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-348]] APP - Refactor - Modificar breadcrumbs
-- **Subtarea:** [[LIO-349]] APP - Refactor - Accesibilidad
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-348 - APP - Refactor - Modificar breadcrumbs|LIO-348]] APP - Refactor - Modificar breadcrumbs
+- **Subtarea:** [[LIO-349 - APP - Refactor - Accesibilidad|LIO-349]] APP - Refactor - Accesibilidad
 
 ## Descripcion
 

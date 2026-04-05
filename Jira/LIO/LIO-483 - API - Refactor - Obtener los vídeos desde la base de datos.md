@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-483"
 
 ## Relaciones
 
-- **Padre:** [[LIO-481]] Recomendaciones de loki
-- **has action item:** [[LIO-491]] APP - Maquetado - Sección “Las recomendaciones de Loki” (grid + vista Clips tipo ML)
+- **Padre:** [[LIO-481 - Recomendaciones de loki|LIO-481]] Recomendaciones de loki
+- **has action item:** [[LIO-491 - APP - Maquetado - Sección “Las recomendaciones de Loki” (grid + vista Clips|LIO-491]] APP - Maquetado - Sección “Las recomendaciones de Loki” (grid + vista Clips tipo ML)
 
 ## Descripcion
 

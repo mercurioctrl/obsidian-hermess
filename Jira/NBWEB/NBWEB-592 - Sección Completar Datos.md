@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-592"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-495]] API - Features especiales
-- **Subtarea:** [[NBWEB-593]] APP - Feat - Completar Datos
-- **Subtarea:** [[NBWEB-594]] API - Feat - Completar Datos
-- **Subtarea:** [[NBWEB-598]] SCRIPT - Feat - Tarea para hacer syncyup de datos a brevo de manera periodica
+- **Padre:** [[NBWEB-495 - API - Features especiales|NBWEB-495]] API - Features especiales
+- **Subtarea:** [[NBWEB-593 - APP - Feat - Completar Datos|NBWEB-593]] APP - Feat - Completar Datos
+- **Subtarea:** [[NBWEB-594 - API - Feat - Completar Datos|NBWEB-594]] API - Feat - Completar Datos
+- **Subtarea:** [[NBWEB-598 - SCRIPT - Feat - Tarea para hacer syncyup de datos a brevo de manera periodica|NBWEB-598]] SCRIPT - Feat - Tarea para hacer syncyup de datos a brevo de manera periodica
 
 ## Descripcion
 

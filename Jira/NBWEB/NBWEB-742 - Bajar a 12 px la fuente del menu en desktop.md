@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-742"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-741]] Oportunidades de mejora generales
+- **Padre:** [[NBWEB-741 - Oportunidades de mejora generales|NBWEB-741]] Oportunidades de mejora generales
 
 ## Descripcion
 

@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-145"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-146]] Research - Optimización SEO
-- **Subtarea:** [[LIO-147]] Research - Problemas tecnicos
-- **Subtarea:** [[LIO-148]] Research - Enviar sitemaps y gestionar indexacion
-- **Subtarea:** [[LIO-149]] Research - Solucionar problemas relacionados con la cobertura
-- **Subtarea:** [[LIO-150]] Research - Viabilidad de implementar datos estructurados
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-146 - Research - Optimización SEO|LIO-146]] Research - Optimización SEO
+- **Subtarea:** [[LIO-147 - Research - Problemas tecnicos|LIO-147]] Research - Problemas tecnicos
+- **Subtarea:** [[LIO-148 - Research - Enviar sitemaps y gestionar indexacion|LIO-148]] Research - Enviar sitemaps y gestionar indexacion
+- **Subtarea:** [[LIO-149 - Research - Solucionar problemas relacionados con la cobertura|LIO-149]] Research - Solucionar problemas relacionados con la cobertura
+- **Subtarea:** [[LIO-150 - Research - Viabilidad de implementar datos estructurados|LIO-150]] Research - Viabilidad de implementar datos estructurados
 
 ## Descripcion
 

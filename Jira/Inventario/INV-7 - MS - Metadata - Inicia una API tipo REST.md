@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-7"
 
 ## Relaciones
 
-- **Padre:** [[INV-4]] Research
+- **Padre:** [[INV-4 - Research|INV-4]] Research
 
 ## Descripcion
 

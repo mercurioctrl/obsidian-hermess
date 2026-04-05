@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-482"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **relates to:** [[EXP-410]] APP - Refactor - Modificar el modal de generar etiqueta para el multidestino
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **relates to:** [[EXP-410 - APP - Refactor - Modificar el modal de generar etiqueta para el multidestino|EXP-410]] APP - Refactor - Modificar el modal de generar etiqueta para el multidestino
 
 ## Descripcion
 

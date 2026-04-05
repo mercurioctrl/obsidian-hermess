@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-444"
 
 ## Relaciones
 
-- **Padre:** [[EXP-116]] Devoluciones
+- **Padre:** [[EXP-116 - Devoluciones|EXP-116]] Devoluciones
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-225"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-218]] API - MVP - Feat - Mostrar log de stock para un item determinado
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-218 - API - MVP - Feat - Mostrar log de stock para un item determinado|INV-218]] API - MVP - Feat - Mostrar log de stock para un item determinado
 
 ## Descripcion
 

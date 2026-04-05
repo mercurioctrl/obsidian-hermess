@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-94"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-93]] API - Refactor - Agregar parametro companyCode a los productos
-- **is blocked by:** [[INV-96]] API - Feat - Listar las empresas
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-93 - API - Refactor - Agregar parametro companyCode a los productos|INV-93]] API - Refactor - Agregar parametro companyCode a los productos
+- **is blocked by:** [[INV-96 - API - Feat - Listar las empresas|INV-96]] API - Feat - Listar las empresas
 
 ## Descripcion
 

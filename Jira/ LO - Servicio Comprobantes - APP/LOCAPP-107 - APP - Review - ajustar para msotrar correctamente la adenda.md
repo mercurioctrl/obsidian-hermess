@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-107"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
+- **Padre:** [[LOCAPP-80 - MVP - Vouchers para LASET (eticket, efactura,packingList PL, SLI)|LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
 
 ## Descripcion
 

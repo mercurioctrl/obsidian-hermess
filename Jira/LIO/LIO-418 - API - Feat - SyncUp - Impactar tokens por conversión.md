@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-418"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **relates to:** [[LIO-443]] API - Review - SyncUp - Impactar tokens por conversión -> Tabla inexistente
-- **has action item:** [[LIO-456]] API - Referrals - Agregar acreditación en billetera al procesar conversión de referido
-- **relates to:** [[LIO-464]] API - Review - SyncUp - Impactar tokens por conversión -> Correos duplicados
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **relates to:** [[LIO-443 - API - Review - SyncUp - Impactar tokens por conversión - Tabla inexistente|LIO-443]] API - Review - SyncUp - Impactar tokens por conversión -> Tabla inexistente
+- **has action item:** [[LIO-456 - API - Referrals - Agregar acreditación en billetera al procesar conversión de|LIO-456]] API - Referrals - Agregar acreditación en billetera al procesar conversión de referido
+- **relates to:** [[LIO-464 - API - Review - SyncUp - Impactar tokens por conversión - Correos duplicados|LIO-464]] API - Review - SyncUp - Impactar tokens por conversión -> Correos duplicados
 
 ## Descripcion
 

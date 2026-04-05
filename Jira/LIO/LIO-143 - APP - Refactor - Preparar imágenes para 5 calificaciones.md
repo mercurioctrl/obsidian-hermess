@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-143"
 
 ## Relaciones
 
-- **Padre:** [[LIO-124]] Calificaciones
-- **has action item:** [[LIO-141]] API - Refactor - Patrón de 5 calificaciones en los correos
+- **Padre:** [[LIO-124 - Calificaciones|LIO-124]] Calificaciones
+- **has action item:** [[LIO-141 - API - Refactor - Patrón de 5 calificaciones en los correos|LIO-141]] API - Refactor - Patrón de 5 calificaciones en los correos
 
 ## Descripcion
 

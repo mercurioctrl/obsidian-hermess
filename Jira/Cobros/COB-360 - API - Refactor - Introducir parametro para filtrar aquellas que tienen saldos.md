@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-360"
 
 ## Relaciones
 
-- **Padre:** [[COB-28]] API - Feat - Listar saldos de caja
-- **blocks:** [[COB-361]] APP - Feat - Agregar filtro para ver las caja activas (las que tienen saldos distintos de cero)
+- **Padre:** [[COB-28 - API - Feat - Listar saldos de caja|COB-28]] API - Feat - Listar saldos de caja
+- **blocks:** [[COB-361 - APP - Feat - Agregar filtro para ver las caja activas (las que tienen saldos|COB-361]] APP - Feat - Agregar filtro para ver las caja activas (las que tienen saldos distintos de cero)
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-531"
 
 ## Relaciones
 
-- **Padre:** [[EXP-108]] Feat - Burbujas
-- **has action item:** [[EXP-532]] APP - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas
-- **is cloned by:** [[EXP-536]] API - Review - Agregar companyCode y las burbujas pendings -> Diferencias entre los pendientes y listados
+- **Padre:** [[EXP-108 - Feat - Burbujas|EXP-108]] Feat - Burbujas
+- **has action item:** [[EXP-532 - APP - Refactor - Agregar companyCode y las burbujas pendings y controlar que|EXP-532]] APP - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas
+- **is cloned by:** [[EXP-536 - API - Review - Agregar companyCode y las burbujas pendings - Diferencias entre|EXP-536]] API - Review - Agregar companyCode y las burbujas pendings -> Diferencias entre los pendientes y listados
 
 ## Descripcion
 

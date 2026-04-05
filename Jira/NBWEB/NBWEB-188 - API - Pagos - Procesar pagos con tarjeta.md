@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-188"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-77]] Implementar Pagos
-- **blocks:** [[NBWEB-242]] APP - Procesar pago con tarjeta y plata en cuenta de mp
+- **Padre:** [[NBWEB-77 - Implementar Pagos|NBWEB-77]] Implementar Pagos
+- **blocks:** [[NBWEB-242 - APP - Procesar pago con tarjeta y plata en cuenta de mp|NBWEB-242]] APP - Procesar pago con tarjeta y plata en cuenta de mp
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-271"
 
 ## Relaciones
 
-- **Padre:** [[EXP-15]] Feat - Serializar salida
-- **blocks:** [[SNB-680]] No se despachan pedidos de LO por no estar facturados
-- **blocks:** [[SNB-687]] quitar remitos de Libre opcion de la grilla
+- **Padre:** [[EXP-15 - Feat - Serializar salida|EXP-15]] Feat - Serializar salida
+- **blocks:** [[SNB-680 - No se despachan pedidos de LO por no estar facturados|SNB-680]] No se despachan pedidos de LO por no estar facturados
+- **blocks:** [[SNB-687 - quitar remitos de Libre opcion de la grilla|SNB-687]] quitar remitos de Libre opcion de la grilla
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-584"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-495]] API - Features especiales
-- **Subtarea:** [[NBWEB-588]] APP - Feat - Promos especiales
-- **Subtarea:** [[NBWEB-589]] API - DATA - Marcar como promocionarles los que pasaron en la historia de MKT
-- **blocks:** [[MKT-163]] NB_ FILTRO ESPECIAL PROMO PRECIOS ESPECIALES
+- **Padre:** [[NBWEB-495 - API - Features especiales|NBWEB-495]] API - Features especiales
+- **Subtarea:** [[NBWEB-588 - APP - Feat - Promos especiales|NBWEB-588]] APP - Feat - Promos especiales
+- **Subtarea:** [[NBWEB-589 - API - DATA - Marcar como promocionarles los que pasaron en la historia de MKT|NBWEB-589]] API - DATA - Marcar como promocionarles los que pasaron en la historia de MKT
+- **blocks:** [[MKT-163 - NB_ FILTRO ESPECIAL PROMO PRECIOS ESPECIALES|MKT-163]] NB_ FILTRO ESPECIAL PROMO PRECIOS ESPECIALES
 
 ## Descripcion
 

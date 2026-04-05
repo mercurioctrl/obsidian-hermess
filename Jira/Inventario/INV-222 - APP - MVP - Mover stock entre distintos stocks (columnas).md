@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-222"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-223]] API - Refactor - Algunos cambios para el repositorio de stock
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-223 - API - Refactor - Algunos cambios para el repositorio de stock|INV-223]] API - Refactor - Algunos cambios para el repositorio de stock
 
 ## Descripcion
 

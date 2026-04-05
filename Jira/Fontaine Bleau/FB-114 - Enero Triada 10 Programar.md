@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-114"
 
 ## Relaciones
 
-- **Padre:** [[FB-111]] Enero: Triada 10
+- **Padre:** [[FB-111 - Enero Triada 10|FB-111]] Enero: Triada 10
 
 ## Descripcion
 

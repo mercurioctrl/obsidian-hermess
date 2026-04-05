@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-645"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **is blocked by:** [[NBWEB-644]] API - Feat - Mis Categorias -> Leer enlaces entre categorias del cliente y categorias de la api
-- **relates to:** [[NBWEB-664]] APP - Mi cuenta -> Mis Categorías - No se visualiza mensaje de error 
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **is blocked by:** [[NBWEB-644 - API - Feat - Mis Categorias - Leer enlaces entre categorias del cliente y|NBWEB-644]] API - Feat - Mis Categorias -> Leer enlaces entre categorias del cliente y categorias de la api
+- **relates to:** [[NBWEB-664 - APP - Mi cuenta - Mis Categorías - No se visualiza mensaje de error|NBWEB-664]] APP - Mi cuenta -> Mis Categorías - No se visualiza mensaje de error 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-45"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-46]] Newsletter
-- **blocks:** [[REDESYNEWS-33]] Week Netac NEWS
+- **Subtarea:** [[DNYL-46 - Newsletter|DNYL-46]] Newsletter
+- **blocks:** [[REDESYNEWS-33 - Week Netac NEWS|REDESYNEWS-33]] Week Netac NEWS
 
 ## Descripcion
 

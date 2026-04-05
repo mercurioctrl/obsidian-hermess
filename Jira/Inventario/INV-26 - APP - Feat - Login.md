@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-26"
 
 ## Relaciones
 
-- **Padre:** [[INV-24]] Feat - Bases y login
+- **Padre:** [[INV-24 - Feat - Bases y login|INV-24]] Feat - Bases y login
 
 ## Descripcion
 

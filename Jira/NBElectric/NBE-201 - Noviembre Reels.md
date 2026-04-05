@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-201"
 
 ## Relaciones
 
-- **Padre:** [[NBE-199]] NBE Noviembre: Evento ABB
+- **Padre:** [[NBE-199 - NBE Noviembre Evento ABB|NBE-199]] NBE Noviembre: Evento ABB
 
 ## Descripcion
 

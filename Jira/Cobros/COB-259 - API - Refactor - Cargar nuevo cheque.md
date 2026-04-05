@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-259"
 
 ## Relaciones
 
-- **Padre:** [[COB-188]] Feat - Cargar nuevo cheque
-- **relates to:** [[COB-189]] API - Feat - Cargar nuevo cheque
-- **blocks:** [[COB-257]] APP - Refactor - El ABM de cheques debe calcular la linea de cheques automáticamente al cargarse los mismo
-- **blocks:** [[COB-260]] API - Refactor - Detalle cheque, agregar interes y cotizacion de cheque
+- **Padre:** [[COB-188 - Feat - Cargar nuevo cheque|COB-188]] Feat - Cargar nuevo cheque
+- **relates to:** [[COB-189 - API - Feat - Cargar nuevo cheque|COB-189]] API - Feat - Cargar nuevo cheque
+- **blocks:** [[COB-257 - APP - Refactor - El ABM de cheques debe calcular la linea de cheques|COB-257]] APP - Refactor - El ABM de cheques debe calcular la linea de cheques automáticamente al cargarse los mismo
+- **blocks:** [[COB-260 - API - Refactor - Detalle cheque, agregar interes y cotizacion de cheque|COB-260]] API - Refactor - Detalle cheque, agregar interes y cotizacion de cheque
 
 ## Descripcion
 

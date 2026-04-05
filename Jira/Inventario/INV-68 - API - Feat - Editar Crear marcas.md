@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-68"
 
 ## Relaciones
 
-- **Padre:** [[INV-65]] Marcas
-- **blocks:** [[INV-67]] APP - Feat - Pestaña de marcas
-- **is blocked by:** [[INV-74]] API - Refactor - Editar / Crear marcas - Guardar datos adicionales
-- **relates to:** [[INV-103]] API - Editar / Crear marcas - Error al subir imagen 
+- **Padre:** [[INV-65 - Marcas|INV-65]] Marcas
+- **blocks:** [[INV-67 - APP - Feat - Pestaña de marcas|INV-67]] APP - Feat - Pestaña de marcas
+- **is blocked by:** [[INV-74 - API - Refactor - Editar Crear marcas - Guardar datos adicionales|INV-74]] API - Refactor - Editar / Crear marcas - Guardar datos adicionales
+- **relates to:** [[INV-103 - API - Editar Crear marcas - Error al subir imagen|INV-103]] API - Editar / Crear marcas - Error al subir imagen 
 
 ## Descripcion
 

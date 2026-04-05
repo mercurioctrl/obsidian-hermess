@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-458"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **has action item:** [[SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
-- **relates to:** [[EXP-481]] API - Añadir etiqueta de seguimiento - Respuesta nula al intentar generar
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **has action item:** [[SNB-2463 - MS -Envios - Refactor - Implementar cambiar el parametro 'items' por|SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
+- **relates to:** [[EXP-481 - API - Añadir etiqueta de seguimiento - Respuesta nula al intentar generar|EXP-481]] API - Añadir etiqueta de seguimiento - Respuesta nula al intentar generar
 
 ## Descripcion
 

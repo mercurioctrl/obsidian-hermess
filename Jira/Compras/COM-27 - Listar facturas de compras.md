@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-27"
 
 ## Relaciones
 
-- **Padre:** [[COM-25]] Facturas de compra
-- **Subtarea:** [[COM-28]] API - Feat - Listar facturas de compra
-- **Subtarea:** [[COM-30]] APP - Feat - Listar facturas de compra
-- **Subtarea:** [[COM-154]] API - Refactor - Incorporar concepto companyCode al repositorio de facturas de COMPRA
+- **Padre:** [[COM-25 - Facturas de compra|COM-25]] Facturas de compra
+- **Subtarea:** [[COM-28 - API - Feat - Listar facturas de compra|COM-28]] API - Feat - Listar facturas de compra
+- **Subtarea:** [[COM-30 - APP - Feat - Listar facturas de compra|COM-30]] APP - Feat - Listar facturas de compra
+- **Subtarea:** [[COM-154 - API - Refactor - Incorporar concepto companyCode al repositorio de facturas de|COM-154]] API - Refactor - Incorporar concepto companyCode al repositorio de facturas de COMPRA
 
 ## Descripcion
 

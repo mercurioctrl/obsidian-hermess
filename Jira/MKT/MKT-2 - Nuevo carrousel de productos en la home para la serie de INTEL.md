@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-2"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-3]] Agregar Recurso en la API para generar el json
-- **Subtarea:** [[MKT-4]] Tarea en static2 para almacenar el archivo estatico
-- **Subtarea:** [[MKT-5]] Maquetado en el sitio
-- **Subtarea:** [[MKT-7]] Agregar tarea de precios relampago sobre los productos comentados
+- **Subtarea:** [[MKT-3 - Agregar Recurso en la API para generar el json|MKT-3]] Agregar Recurso en la API para generar el json
+- **Subtarea:** [[MKT-4 - Tarea en static2 para almacenar el archivo estatico|MKT-4]] Tarea en static2 para almacenar el archivo estatico
+- **Subtarea:** [[MKT-5 - Maquetado en el sitio|MKT-5]] Maquetado en el sitio
+- **Subtarea:** [[MKT-7 - Agregar tarea de precios relampago sobre los productos comentados|MKT-7]] Agregar tarea de precios relampago sobre los productos comentados
 
 ## Descripcion
 

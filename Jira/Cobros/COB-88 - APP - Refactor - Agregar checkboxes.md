@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-88"
 
 ## Relaciones
 
-- **Padre:** [[COB-77]] APP - Feat - Listar pases
-- **is blocked by:** [[COB-66]] API - Feat - Aceptar/Rechazar un pase recibido desde otra caja
+- **Padre:** [[COB-77 - APP - Feat - Listar pases|COB-77]] APP - Feat - Listar pases
+- **is blocked by:** [[COB-66 - API - Feat - AceptarRechazar un pase recibido desde otra caja|COB-66]] API - Feat - Aceptar/Rechazar un pase recibido desde otra caja
 
 ## Descripcion
 

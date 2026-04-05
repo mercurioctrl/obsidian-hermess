@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-227"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-226]] API - MVP - Refactor - Agregar paginacion al repositorio de stock, permitiendo elegir cantidad por pagina
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-226 - API - MVP - Refactor - Agregar paginacion al repositorio de stock, permitiendo|INV-226]] API - MVP - Refactor - Agregar paginacion al repositorio de stock, permitiendo elegir cantidad por pagina
 
 ## Descripcion
 

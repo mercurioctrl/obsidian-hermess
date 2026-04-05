@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-306"
 
 ## Relaciones
 
-- **Padre:** [[EXP-294]] Refactor - Devoluciones (pre-despacho)
+- **Padre:** [[EXP-294 - Refactor - Devoluciones (pre-despacho)|EXP-294]] Refactor - Devoluciones (pre-despacho)
 
 ## Descripcion
 

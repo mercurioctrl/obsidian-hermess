@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-121"
 
 ## Relaciones
 
-- **Padre:** [[EXP-117]] Feat - Listar pedidos despachados para hacer devoluciones
-- **blocks:** [[EXP-122]] APP - Feat - Listar pedidos para realizar devoluciones
+- **Padre:** [[EXP-117 - Feat - Listar pedidos despachados para hacer devoluciones|EXP-117]] Feat - Listar pedidos despachados para hacer devoluciones
+- **blocks:** [[EXP-122 - APP - Feat - Listar pedidos para realizar devoluciones|EXP-122]] APP - Feat - Listar pedidos para realizar devoluciones
 
 ## Descripcion
 

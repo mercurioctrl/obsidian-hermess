@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-86"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-85]] XBOX - LIO
+- **Padre:** [[DNYL-85 - XBOX - LIO|DNYL-85]] XBOX - LIO
 
 ## Descripcion
 

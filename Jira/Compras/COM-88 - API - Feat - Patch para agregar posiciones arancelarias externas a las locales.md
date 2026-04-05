@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-88"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **is blocked by:** [[COM-75]] APP - Feact - Selector de posiciones arancelarias
-- **relates to:** [[COM-101]] API - Agregar/editar posiciones arancelarias - Valores no coincidentes
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **is blocked by:** [[COM-75 - APP - Feact - Selector de posiciones arancelarias|COM-75]] APP - Feact - Selector de posiciones arancelarias
+- **relates to:** [[COM-101 - API - Agregareditar posiciones arancelarias - Valores no coincidentes|COM-101]] API - Agregar/editar posiciones arancelarias - Valores no coincidentes
 
 ## Descripcion
 

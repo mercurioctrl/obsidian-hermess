@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-150"
 
 ## Relaciones
 
-- **Padre:** [[COB-17]] Pagos a proveedores
-- **Subtarea:** [[COB-151]] APP - Feat - Editar proveedor
-- **Subtarea:** [[COB-152]] API - Feat - Editar proveedor
-- **Subtarea:** [[COB-315]] API - Feat - Crear proveedor
-- **Subtarea:** [[COB-316]] APP - Feat - Agregar proveedor
-- **Subtarea:** [[COB-319]] APP - Feat - Agregar accionable para carga rápida de proveedor
+- **Padre:** [[COB-17 - Pagos a proveedores|COB-17]] Pagos a proveedores
+- **Subtarea:** [[COB-151 - APP - Feat - Editar proveedor|COB-151]] APP - Feat - Editar proveedor
+- **Subtarea:** [[COB-152 - API - Feat - Editar proveedor|COB-152]] API - Feat - Editar proveedor
+- **Subtarea:** [[COB-315 - API - Feat - Crear proveedor|COB-315]] API - Feat - Crear proveedor
+- **Subtarea:** [[COB-316 - APP - Feat - Agregar proveedor|COB-316]] APP - Feat - Agregar proveedor
+- **Subtarea:** [[COB-319 - APP - Feat - Agregar accionable para carga rápida de proveedor|COB-319]] APP - Feat - Agregar accionable para carga rápida de proveedor
 
 ## Descripcion
 

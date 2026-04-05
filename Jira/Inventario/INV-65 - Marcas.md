@@ -29,17 +29,17 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-65"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **Subtarea:** [[INV-66]] API - Feat - Repositorio de marcas
-- **Subtarea:** [[INV-67]] APP - Feat - Pestaña de marcas
-- **Subtarea:** [[INV-68]] API - Feat - Editar / Crear marcas
-- **Subtarea:** [[INV-73]] APP - Refactor - Incluir en el formulario de edicion de marca, la posiblidad de subir y cambiar la foto
-- **Subtarea:** [[INV-98]] API - Refactor - Agregar parametro companyCode al repositorio de marcas
-- **Subtarea:** [[INV-99]] APP - Refactor - Agregar parametro companyCode al repositorio de marcas
-- **Subtarea:** [[INV-112]] APP - Refactor - Cambio de nombre de columna "ocultar" por "ocultar del sistema"
-- **Subtarea:** [[INV-204]] API - Refactor - Al hacer un cambio de marca (por ejemplo al cambiar nombre o imagen) esto debe impactar tambien en libre opción
-- **Subtarea:** [[INV-342]] APP - Refactor - al crear una marca se debe poder enviar el companycode
-- **blocks:** [[SNB-1973]] Generador de Marcas
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **Subtarea:** [[INV-66 - API - Feat - Repositorio de marcas|INV-66]] API - Feat - Repositorio de marcas
+- **Subtarea:** [[INV-67 - APP - Feat - Pestaña de marcas|INV-67]] APP - Feat - Pestaña de marcas
+- **Subtarea:** [[INV-68 - API - Feat - Editar Crear marcas|INV-68]] API - Feat - Editar / Crear marcas
+- **Subtarea:** [[INV-73 - APP - Refactor - Incluir en el formulario de edicion de marca, la posiblidad de|INV-73]] APP - Refactor - Incluir en el formulario de edicion de marca, la posiblidad de subir y cambiar la foto
+- **Subtarea:** [[INV-98 - API - Refactor - Agregar parametro companyCode al repositorio de marcas|INV-98]] API - Refactor - Agregar parametro companyCode al repositorio de marcas
+- **Subtarea:** [[INV-99 - APP - Refactor - Agregar parametro companyCode al repositorio de marcas|INV-99]] APP - Refactor - Agregar parametro companyCode al repositorio de marcas
+- **Subtarea:** [[INV-112 - APP - Refactor - Cambio de nombre de columna ocultar por ocultar del sistema|INV-112]] APP - Refactor - Cambio de nombre de columna "ocultar" por "ocultar del sistema"
+- **Subtarea:** [[INV-204 - API - Refactor - Al hacer un cambio de marca (por ejemplo al cambiar nombre o|INV-204]] API - Refactor - Al hacer un cambio de marca (por ejemplo al cambiar nombre o imagen) esto debe impactar tambien en libre opción
+- **Subtarea:** [[INV-342 - APP - Refactor - al crear una marca se debe poder enviar el companycode|INV-342]] APP - Refactor - al crear una marca se debe poder enviar el companycode
+- **blocks:** [[SNB-1973 - Generador de Marcas|SNB-1973]] Generador de Marcas
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-62"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-60]] Play 5 - Lio y NB
+- **Padre:** [[DNYL-60 - Play 5 - Lio y NB|DNYL-60]] Play 5 - Lio y NB
 
 ## Descripcion
 

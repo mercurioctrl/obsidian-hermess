@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-49"
 
 ## Relaciones
 
-- **Padre:** [[NBE-45]] Triada 2_Social Media_ABB
+- **Padre:** [[NBE-45 - Triada 2_Social Media_ABB|NBE-45]] Triada 2_Social Media_ABB
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-710"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-676]] API - Agregar agregar direccion, codigo postal y whatsapp en el registro de un cliente y que se pueda levantar en PED
-- **relates to:** [[NBWEB-709]] APP - Registrar usuario - Teléfono invalido
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-676 - API - Agregar agregar direccion, codigo postal y whatsapp en el registro de un|NBWEB-676]] API - Agregar agregar direccion, codigo postal y whatsapp en el registro de un cliente y que se pueda levantar en PED
+- **relates to:** [[NBWEB-709 - APP - Registrar usuario - Teléfono invalido|NBWEB-709]] APP - Registrar usuario - Teléfono invalido
 
 ## Descripcion
 

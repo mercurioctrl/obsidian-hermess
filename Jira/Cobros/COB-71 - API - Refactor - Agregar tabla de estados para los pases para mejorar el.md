@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-71"
 
 ## Relaciones
 
-- **Padre:** [[COB-12]] Feat - Procesar pases de caja
+- **Padre:** [[COB-12 - Feat - Procesar pases de caja|COB-12]] Feat - Procesar pases de caja
 
 ## Descripcion
 

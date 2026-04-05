@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-145"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-140]] APP - Conexión con el carrito
-- **is blocked by:** [[NBWEB-142]] API - Traer direcciones de envío
+- **Padre:** [[NBWEB-140 - APP - Conexión con el carrito|NBWEB-140]] APP - Conexión con el carrito
+- **is blocked by:** [[NBWEB-142 - API - Traer direcciones de envío|NBWEB-142]] API - Traer direcciones de envío
 
 ## Descripcion
 

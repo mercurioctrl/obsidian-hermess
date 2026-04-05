@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-131"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-157]] API - Feat - SyncUp para cargar el archivo efinderABB en el endpoint directamente
+- **Subtarea:** [[NBE-157 - API - Feat - SyncUp para cargar el archivo efinderABB en el endpoint|NBE-157]] API - Feat - SyncUp para cargar el archivo efinderABB en el endpoint directamente
 
 ## Descripcion
 

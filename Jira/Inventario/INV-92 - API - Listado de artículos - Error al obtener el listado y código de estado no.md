@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-92"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **blocks:** [[INV-91]] API - Refactor - En el repositorio de productos excluir categorias 65, a menos que se filtre esa cateogria especifica
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **blocks:** [[INV-91 - API - Refactor - En el repositorio de productos excluir categorias 65, a menos|INV-91]] API - Refactor - En el repositorio de productos excluir categorias 65, a menos que se filtre esa cateogria especifica
 
 ## Descripcion
 

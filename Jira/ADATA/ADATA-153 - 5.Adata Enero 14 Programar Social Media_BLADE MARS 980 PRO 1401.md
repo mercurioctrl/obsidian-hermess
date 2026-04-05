@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-153"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-140]] Adata Enero: Social Media 1/4_ BLADE MARS 980 PRO
+- **Padre:** [[ADATA-140 - Adata Enero Social Media 14_ BLADE MARS 980 PRO|ADATA-140]] Adata Enero: Social Media 1/4_ BLADE MARS 980 PRO
 
 ## Descripcion
 

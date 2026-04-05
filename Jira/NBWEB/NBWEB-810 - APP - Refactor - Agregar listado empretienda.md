@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-810"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[NBWEB-806]] API - Feat - Generar listado de precios para EMPRETIENDA
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[NBWEB-806 - API - Feat - Generar listado de precios para EMPRETIENDA|NBWEB-806]] API - Feat - Generar listado de precios para EMPRETIENDA
 
 ## Descripcion
 

@@ -33,9 +33,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-294"
 
 ## Relaciones
 
-- **Padre:** [[LIO-17]] Mejorar seguimientos de guia y agregar un seguimiento activo
-- **action item from:** [[LIO-93]] API - Refactor - Migrar recurso de seguimiento 
-- **has action item:** [[LIO-295]] APP - Feat - Rastreo de envios
+- **Padre:** [[LIO-17 - Mejorar seguimientos de guia y agregar un seguimiento activo|LIO-17]] Mejorar seguimientos de guia y agregar un seguimiento activo
+- **action item from:** [[LIO-93 - API - Refactor - Migrar recurso de seguimiento|LIO-93]] API - Refactor - Migrar recurso de seguimiento 
+- **has action item:** [[LIO-295 - APP - Feat - Rastreo de envios|LIO-295]] APP - Feat - Rastreo de envios
 
 ## Descripcion
 

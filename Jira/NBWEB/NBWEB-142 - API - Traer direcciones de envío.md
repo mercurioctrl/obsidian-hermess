@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-142"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-11]] API - Implementar Cotizadores de envio
-- **blocks:** [[NBWEB-145]] APP -  Carrito - Maquetar y conectar Direcciones de envio 
+- **Padre:** [[NBWEB-11 - API - Implementar Cotizadores de envio|NBWEB-11]] API - Implementar Cotizadores de envio
+- **blocks:** [[NBWEB-145 - APP - Carrito - Maquetar y conectar Direcciones de envio|NBWEB-145]] APP -  Carrito - Maquetar y conectar Direcciones de envio 
 
 ## Descripcion
 

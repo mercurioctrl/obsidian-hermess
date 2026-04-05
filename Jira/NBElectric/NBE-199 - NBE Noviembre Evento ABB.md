@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-199"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-200]] Noviembre: Portadas de Charlas
-- **Subtarea:** [[NBE-201]] Noviembre: Reels
-- **Subtarea:** [[NBE-202]] Noviembre: Linkedin en Canva tipo ejemplo enviado por slack
+- **Subtarea:** [[NBE-200 - Noviembre Portadas de Charlas|NBE-200]] Noviembre: Portadas de Charlas
+- **Subtarea:** [[NBE-201 - Noviembre Reels|NBE-201]] Noviembre: Reels
+- **Subtarea:** [[NBE-202 - Noviembre Linkedin en Canva tipo ejemplo enviado por slack|NBE-202]] Noviembre: Linkedin en Canva tipo ejemplo enviado por slack
 
 ## Descripcion
 

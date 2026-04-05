@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-68"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-66]] Pieza Razer LO + NB
+- **Padre:** [[DNYL-66 - Pieza Razer LO + NB|DNYL-66]] Pieza Razer LO + NB
 
 ## Descripcion
 

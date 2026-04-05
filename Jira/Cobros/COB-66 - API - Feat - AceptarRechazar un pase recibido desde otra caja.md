@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-66"
 
 ## Relaciones
 
-- **Padre:** [[COB-12]] Feat - Procesar pases de caja
-- **blocks:** [[COB-88]] APP - Refactor - Agregar checkboxes
+- **Padre:** [[COB-12 - Feat - Procesar pases de caja|COB-12]] Feat - Procesar pases de caja
+- **blocks:** [[COB-88 - APP - Refactor - Agregar checkboxes|COB-88]] APP - Refactor - Agregar checkboxes
 
 ## Descripcion
 

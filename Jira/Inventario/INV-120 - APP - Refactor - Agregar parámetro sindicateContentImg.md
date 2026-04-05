@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-120"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-119]] API - Refactor - Agregar parámetro sindicateContentImg
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-119 - API - Refactor - Agregar parámetro sindicateContentImg|INV-119]] API - Refactor - Agregar parámetro sindicateContentImg
 
 ## Descripcion
 

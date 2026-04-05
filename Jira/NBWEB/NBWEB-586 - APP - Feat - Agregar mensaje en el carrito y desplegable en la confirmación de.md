@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-586"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **is blocked by:** [[NBWEB-585]] API - Feat - Agregar al objeto "user" el nombre del vendedor y el id del vendedor para esa cuenta, si existe
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **is blocked by:** [[NBWEB-585 - API - Feat - Agregar al objeto user el nombre del vendedor y el id del vendedor|NBWEB-585]] API - Feat - Agregar al objeto "user" el nombre del vendedor y el id del vendedor para esa cuenta, si existe
 
 ## Descripcion
 

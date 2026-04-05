@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-763"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **is blocked by:** [[NBWEB-762]] API - Feat - Obtener acelerador para un item determinado
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **is blocked by:** [[NBWEB-762 - API - Feat - Obtener acelerador para un item determinado|NBWEB-762]] API - Feat - Obtener acelerador para un item determinado
 
 ## Descripcion
 

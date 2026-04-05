@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-482"
 
 ## Relaciones
 
-- **causes:** [[SNB-272]] DOS LISTAS DE UN MISMO CLIENTE
+- **causes:** [[SNB-272 - DOS LISTAS DE UN MISMO CLIENTE|SNB-272]] DOS LISTAS DE UN MISMO CLIENTE
 
 ## Descripcion
 

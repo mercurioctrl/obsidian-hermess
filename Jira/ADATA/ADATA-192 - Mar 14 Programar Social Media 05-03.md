@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-192"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-174]] Mar: 1/4 Social Media RAM EVOLUTION 5-03
+- **Padre:** [[ADATA-174 - Mar 14 Social Media RAM EVOLUTION 5-03|ADATA-174]] Mar: 1/4 Social Media RAM EVOLUTION 5-03
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-21"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-19]] Site LO
+- **Padre:** [[LOMKT-19 - Site LO|LOMKT-19]] Site LO
 
 ## Descripcion
 

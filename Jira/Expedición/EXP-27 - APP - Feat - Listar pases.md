@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-27"
 
 ## Relaciones
 
-- **Padre:** [[EXP-18]] Feat - Listar pases
-- **is blocked by:** [[EXP-26]] API - Feat - Listar pases de mercaderia
+- **Padre:** [[EXP-18 - Feat - Listar pases|EXP-18]] Feat - Listar pases
+- **is blocked by:** [[EXP-26 - API - Feat - Listar pases de mercaderia|EXP-26]] API - Feat - Listar pases de mercaderia
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-223"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-77]] Implementar Pagos
-- **is blocked by:** [[NBWEB-247]] Crear Tabla para Registrar Clientes MercadoPago
+- **Padre:** [[NBWEB-77 - Implementar Pagos|NBWEB-77]] Implementar Pagos
+- **is blocked by:** [[NBWEB-247 - Crear Tabla para Registrar Clientes MercadoPago|NBWEB-247]] Crear Tabla para Registrar Clientes MercadoPago
 
 ## Descripcion
 

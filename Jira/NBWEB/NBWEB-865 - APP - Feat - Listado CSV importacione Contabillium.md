@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-865"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **is blocked by:** [[NBWEB-864]] API - Feat - Listado CSV importacione Contabillium
-- **blocks:** [[NBWEB-866]] DOC - Feat - Agregaremos la sección para explicar como importar el archivo de Contabillium
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **is blocked by:** [[NBWEB-864 - API - Feat - Listado CSV importacione Contabillium|NBWEB-864]] API - Feat - Listado CSV importacione Contabillium
+- **blocks:** [[NBWEB-866 - DOC - Feat - Agregaremos la sección para explicar como importar el archivo de|NBWEB-866]] DOC - Feat - Agregaremos la sección para explicar como importar el archivo de Contabillium
 
 ## Descripcion
 

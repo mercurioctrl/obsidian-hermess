@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-403"
 
 ## Relaciones
 
-- **relates to:** [[SNB-1685]] problema en comprobantes
+- **relates to:** [[SNB-1685 - problema en comprobantes|SNB-1685]] problema en comprobantes
 
 ## Descripcion
 

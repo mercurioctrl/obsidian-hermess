@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-389"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-390]] Armar Forms
-- **Subtarea:** [[ADATA-391]] Centros de Mesa
-- **Subtarea:** [[ADATA-392]] Presentes de Fin de Evento
-- **Subtarea:** [[ADATA-393]] Bolsas
-- **Subtarea:** [[ADATA-396]] Invitación Lanzamiento  + Top de Forms
+- **Subtarea:** [[ADATA-390 - Armar Forms|ADATA-390]] Armar Forms
+- **Subtarea:** [[ADATA-391 - Centros de Mesa|ADATA-391]] Centros de Mesa
+- **Subtarea:** [[ADATA-392 - Presentes de Fin de Evento|ADATA-392]] Presentes de Fin de Evento
+- **Subtarea:** [[ADATA-393 - Bolsas|ADATA-393]] Bolsas
+- **Subtarea:** [[ADATA-396 - Invitación Lanzamiento + Top de Forms|ADATA-396]] Invitación Lanzamiento  + Top de Forms
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-374"
 
 ## Relaciones
 
-- **Padre:** [[EXP-346]] APP - Mover seriales - Incidencias varias
+- **Padre:** [[EXP-346 - APP - Mover seriales - Incidencias varias|EXP-346]] APP - Mover seriales - Incidencias varias
 
 ## Descripcion
 

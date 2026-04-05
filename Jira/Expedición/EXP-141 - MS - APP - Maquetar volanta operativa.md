@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-141"
 
 ## Relaciones
 
-- **Padre:** [[EXP-137]] Feat - Volanta operativa
-- **relates to:** [[EXP-170]] APP - Refactor reordenar columnas en la volanta operativa
+- **Padre:** [[EXP-137 - Feat - Volanta operativa|EXP-137]] Feat - Volanta operativa
+- **relates to:** [[EXP-170 - APP - Refactor reordenar columnas en la volanta operativa|EXP-170]] APP - Refactor reordenar columnas en la volanta operativa
 
 ## Descripcion
 

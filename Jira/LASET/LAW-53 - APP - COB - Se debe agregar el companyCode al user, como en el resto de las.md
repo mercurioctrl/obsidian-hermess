@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-53"
 
 ## Relaciones
 
-- **action item from:** [[LAW-52]] API - COB - Se debe agregar el companyCode al user, como en el resto de las apps (PED,INV...)
+- **action item from:** [[LAW-52 - API - COB - Se debe agregar el companyCode al user, como en el resto de las|LAW-52]] API - COB - Se debe agregar el companyCode al user, como en el resto de las apps (PED,INV...)
 
 ## Descripcion
 

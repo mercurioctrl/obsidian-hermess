@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-61"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-89]] Vista de Lista
-- **Subtarea:** [[NBWEB-90]] Vista Compacta
-- **Subtarea:** [[NBWEB-91]] Vista Galeria
-- **Subtarea:** [[NBWEB-92]] Conmutadores
-- **Subtarea:** [[NBWEB-93]] Orden y filtrado
-- **relates to:** [[NBWEB-89]] Vista de Lista
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-89 - Vista de Lista|NBWEB-89]] Vista de Lista
+- **Subtarea:** [[NBWEB-90 - Vista Compacta|NBWEB-90]] Vista Compacta
+- **Subtarea:** [[NBWEB-91 - Vista Galeria|NBWEB-91]] Vista Galeria
+- **Subtarea:** [[NBWEB-92 - Conmutadores|NBWEB-92]] Conmutadores
+- **Subtarea:** [[NBWEB-93 - Orden y filtrado|NBWEB-93]] Orden y filtrado
+- **relates to:** [[NBWEB-89 - Vista de Lista|NBWEB-89]] Vista de Lista
 
 ## Descripcion
 

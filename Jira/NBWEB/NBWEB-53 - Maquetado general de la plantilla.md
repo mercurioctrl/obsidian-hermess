@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-53"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-52]] APP - Maquetado y Desarrollo - Home
-- **is caused by:** [[NBWEB-9]] APP - Home
+- **Padre:** [[NBWEB-52 - APP - Maquetado y Desarrollo - Home|NBWEB-52]] APP - Maquetado y Desarrollo - Home
+- **is caused by:** [[NBWEB-9 - APP - Home|NBWEB-9]] APP - Home
 
 ## Descripcion
 

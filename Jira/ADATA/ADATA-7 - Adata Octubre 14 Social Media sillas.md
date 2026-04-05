@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-7"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-8]] Adata Octubre: Diseño Social Media 1/4 Sillas Gamers
-- **Subtarea:** [[ADATA-9]] Adata Octubre: Copys Social Media 1/4 Sillas Gamers 
-- **Subtarea:** [[ADATA-10]] Adata Octubre: Programar Social Media 1/4 Sillas para el 23-10
+- **Subtarea:** [[ADATA-8 - Adata Octubre Diseño Social Media 14 Sillas Gamers|ADATA-8]] Adata Octubre: Diseño Social Media 1/4 Sillas Gamers
+- **Subtarea:** [[ADATA-9 - Adata Octubre Copys Social Media 14 Sillas Gamers|ADATA-9]] Adata Octubre: Copys Social Media 1/4 Sillas Gamers 
+- **Subtarea:** [[ADATA-10 - Adata Octubre Programar Social Media 14 Sillas para el 23-10|ADATA-10]] Adata Octubre: Programar Social Media 1/4 Sillas para el 23-10
 
 ## Descripcion
 

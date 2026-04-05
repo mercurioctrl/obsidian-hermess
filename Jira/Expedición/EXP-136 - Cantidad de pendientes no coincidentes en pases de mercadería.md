@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-136"
 
 ## Relaciones
 
-- **blocks:** [[EXP-108]] Feat - Burbujas
+- **blocks:** [[EXP-108 - Feat - Burbujas|EXP-108]] Feat - Burbujas
 
 ## Descripcion
 

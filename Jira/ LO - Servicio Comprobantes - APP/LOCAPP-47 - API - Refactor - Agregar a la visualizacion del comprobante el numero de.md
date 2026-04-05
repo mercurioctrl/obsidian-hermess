@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-47"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-45]] Numeros de despacho visibles
+- **Padre:** [[LOCAPP-45 - Numeros de despacho visibles|LOCAPP-45]] Numeros de despacho visibles
 
 ## Descripcion
 

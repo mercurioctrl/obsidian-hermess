@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-498"
 
 ## Relaciones
 
-- **Padre:** [[EXP-493]] Listar envios
-- **action item from:** [[EXP-497]] API - Refactor - Impedir despacho cuando tiene alguna intervención técnica, pero no tiene la intervención técnica completa
+- **Padre:** [[EXP-493 - Listar envios|EXP-493]] Listar envios
+- **action item from:** [[EXP-497 - API - Refactor - Impedir despacho cuando tiene alguna intervención técnica,|EXP-497]] API - Refactor - Impedir despacho cuando tiene alguna intervención técnica, pero no tiene la intervención técnica completa
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-286"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **relates to:** [[LIO-241]] API - Feat - Gestion de informacion de cuentas bancarias para el cliente y su billetera
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **relates to:** [[LIO-241 - API - Feat - Gestion de informacion de cuentas bancarias para el cliente y su|LIO-241]] API - Feat - Gestion de informacion de cuentas bancarias para el cliente y su billetera
 
 ## Descripcion
 

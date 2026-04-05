@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-348"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-337]] fixes y sugerencias
-- **relates to:** [[NBWEB-823]] APP - Filtrado de productos - Marcas no visibles por categoría
+- **Padre:** [[NBWEB-337 - fixes y sugerencias|NBWEB-337]] fixes y sugerencias
+- **relates to:** [[NBWEB-823 - APP - Filtrado de productos - Marcas no visibles por categoría|NBWEB-823]] APP - Filtrado de productos - Marcas no visibles por categoría
 
 ## Descripcion
 

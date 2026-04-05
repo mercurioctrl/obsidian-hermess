@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-452"
 
 ## Relaciones
 
-- **Padre:** [[LIO-373]] Seguridad del checkout y protección de transacciones
-- **action item from:** [[LIO-386]] API - Feat - Evaluar integridad de una compra respecto a su envio, pago y descuentos
+- **Padre:** [[LIO-373 - Seguridad del checkout y protección de transacciones|LIO-373]] Seguridad del checkout y protección de transacciones
+- **action item from:** [[LIO-386 - API - Feat - Evaluar integridad de una compra respecto a su envio, pago y|LIO-386]] API - Feat - Evaluar integridad de una compra respecto a su envio, pago y descuentos
 
 ## Descripcion
 

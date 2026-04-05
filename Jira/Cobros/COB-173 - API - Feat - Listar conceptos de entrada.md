@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-173"
 
 ## Relaciones
 
-- **Padre:** [[COB-170]] Feat - Realizar entrada de caja
-- **blocks:** [[COB-172]] APP - Feat - Realizar entrada
+- **Padre:** [[COB-170 - Feat - Realizar entrada de caja|COB-170]] Feat - Realizar entrada de caja
+- **blocks:** [[COB-172 - APP - Feat - Realizar entrada|COB-172]] APP - Feat - Realizar entrada
 
 ## Descripcion
 

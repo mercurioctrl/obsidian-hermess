@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-128"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
-- **is blocked by:** [[COB-127]] API - Feat - Crear recibo
-- **blocks:** [[COB-129]] APP - Feat - Mostrar recibo
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-127 - API - Feat - Crear recibo|COB-127]] API - Feat - Crear recibo
+- **blocks:** [[COB-129 - APP - Feat - Mostrar recibo|COB-129]] APP - Feat - Mostrar recibo
 
 ## Descripcion
 

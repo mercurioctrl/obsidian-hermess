@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-183"
 
 ## Relaciones
 
-- **Padre:** [[NBE-178]] NBE:  Armar News Septiembre 1  de 2 API
-- **action item from:** [[NBE-178]] NBE:  Armar News Septiembre 1  de 2 API
+- **Padre:** [[NBE-178 - NBE Armar News Septiembre 1 de 2 API|NBE-178]] NBE:  Armar News Septiembre 1  de 2 API
+- **action item from:** [[NBE-178 - NBE Armar News Septiembre 1 de 2 API|NBE-178]] NBE:  Armar News Septiembre 1  de 2 API
 
 ## Descripcion
 

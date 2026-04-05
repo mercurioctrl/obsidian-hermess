@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-86"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **blocks:** [[LIO-87]] APP - Feat - Pantalla de autologin (similar como se trabajo en NB)
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **blocks:** [[LIO-87 - APP - Feat - Pantalla de autologin (similar como se trabajo en NB)|LIO-87]] APP - Feat - Pantalla de autologin (similar como se trabajo en NB)
 
 ## Descripcion
 

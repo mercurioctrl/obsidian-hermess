@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-489"
 
 ## Relaciones
 
-- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
-- **blocks:** [[EXP-485]] APP - MVP - Feat - Agregar Filtro empresa según companyCode
+- **Padre:** [[EXP-14 - Feat - Listar pedidos para retiro|EXP-14]] Feat - Listar pedidos para retiro
+- **blocks:** [[EXP-485 - APP - MVP - Feat - Agregar Filtro empresa según companyCode|EXP-485]] APP - MVP - Feat - Agregar Filtro empresa según companyCode
 
 ## Descripcion
 

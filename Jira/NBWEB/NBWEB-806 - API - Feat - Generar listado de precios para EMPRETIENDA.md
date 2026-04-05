@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-806"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-810]] APP - Refactor - Agregar listado empretienda
-- **relates to:** [[NBWEB-814]] API - Generar listado de precios para EMPRETIENDA - Sugerencias de mejora en los datos
-- **causes:** [[NBWEB-822]] API - Errorres al subir el xlsx de empretienda a "empretienda" y csv de shopify  a "shopify"
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-810 - APP - Refactor - Agregar listado empretienda|NBWEB-810]] APP - Refactor - Agregar listado empretienda
+- **relates to:** [[NBWEB-814 - API - Generar listado de precios para EMPRETIENDA - Sugerencias de mejora en|NBWEB-814]] API - Generar listado de precios para EMPRETIENDA - Sugerencias de mejora en los datos
+- **causes:** [[NBWEB-822 - API - Errorres al subir el xlsx de empretienda a empretienda y csv de shopify a|NBWEB-822]] API - Errorres al subir el xlsx de empretienda a "empretienda" y csv de shopify  a "shopify"
 
 ## Descripcion
 

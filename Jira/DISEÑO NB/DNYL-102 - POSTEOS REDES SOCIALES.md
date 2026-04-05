@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-102"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-75]] HOT DAYS LIBRE OPCION
+- **Padre:** [[DNYL-75 - HOT DAYS LIBRE OPCION|DNYL-75]] HOT DAYS LIBRE OPCION
 
 ## Descripcion
 

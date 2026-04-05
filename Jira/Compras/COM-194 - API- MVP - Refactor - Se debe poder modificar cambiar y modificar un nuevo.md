@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-194"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **has action item:** [[COM-195]] APP- MVP  - Refactor - Se debe poder modificar cambiar y modificar un nuevo atributo countryId asociado a las ordenes
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **has action item:** [[COM-195 - APP- MVP - Refactor - Se debe poder modificar cambiar y modificar un nuevo|COM-195]] APP- MVP  - Refactor - Se debe poder modificar cambiar y modificar un nuevo atributo countryId asociado a las ordenes
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-242"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-379]] 1.Mar: Trofeo Armar un diseño_Cotizar_Reclamar cotizaciones por todos los medios
+- **Subtarea:** [[ADATA-379 - 1.Mar Trofeo Armar un diseño_Cotizar_Reclamar cotizaciones por todos los medios|ADATA-379]] 1.Mar: Trofeo Armar un diseño_Cotizar_Reclamar cotizaciones por todos los medios
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-426"
 
 ## Relaciones
 
-- **Padre:** [[LIO-391]] Desarrollos IA para LIO (Aleph)
-- **has action item:** [[LIO-427]] APP - Feat - Comentario sobre los vendedores utilizando IA
+- **Padre:** [[LIO-391 - Desarrollos IA para LIO (Aleph)|LIO-391]] Desarrollos IA para LIO (Aleph)
+- **has action item:** [[LIO-427 - APP - Feat - Comentario sobre los vendedores utilizando IA|LIO-427]] APP - Feat - Comentario sobre los vendedores utilizando IA
 
 ## Descripcion
 

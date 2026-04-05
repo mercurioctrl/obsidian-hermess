@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-214"
 
 ## Relaciones
 
-- **Padre:** [[INV-211]] API - MVP - Feat- Agregar repo con pestaña de producto por depósito
-- **has action item:** [[INV-213]] API - MVP - Feat-  opción para cambiar el producto de depósito
+- **Padre:** [[INV-211 - API - MVP - Feat- Agregar repo con pestaña de producto por depósito|INV-211]] API - MVP - Feat- Agregar repo con pestaña de producto por depósito
+- **has action item:** [[INV-213 - API - MVP - Feat- opción para cambiar el producto de depósito|INV-213]] API - MVP - Feat-  opción para cambiar el producto de depósito
 
 ## Descripcion
 

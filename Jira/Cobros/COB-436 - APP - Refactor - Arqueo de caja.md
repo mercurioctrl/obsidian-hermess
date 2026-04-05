@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-436"
 
 ## Relaciones
 
-- **blocks:** [[COB-435]] API - Refactor- Arqueo de caja
-- **duplicates:** [[COB-434]] APP - Al posponer el arqueo manual de caja guardar los saldos de caja
+- **blocks:** [[COB-435 - API - Refactor- Arqueo de caja|COB-435]] API - Refactor- Arqueo de caja
+- **duplicates:** [[COB-434 - APP - Al posponer el arqueo manual de caja guardar los saldos de caja|COB-434]] APP - Al posponer el arqueo manual de caja guardar los saldos de caja
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-153"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-154]] Banners Home + Newsletter (NVIDIA)
+- **Subtarea:** [[LOMKT-154 - Banners Home + Newsletter (NVIDIA)|LOMKT-154]] Banners Home + Newsletter (NVIDIA)
 
 ## Descripcion
 

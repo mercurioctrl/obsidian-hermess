@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-229"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-230]] Código CYBER2024
-- **Subtarea:** [[MKT-231]] Envios Gratis
-- **Subtarea:** [[MKT-232]] Precios Relampagos
+- **Subtarea:** [[MKT-230 - Código CYBER2024|MKT-230]] Código CYBER2024
+- **Subtarea:** [[MKT-231 - Envios Gratis|MKT-231]] Envios Gratis
+- **Subtarea:** [[MKT-232 - Precios Relampagos|MKT-232]] Precios Relampagos
 
 ## Descripcion
 

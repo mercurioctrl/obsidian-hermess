@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-398"
 
 ## Relaciones
 
-- **Padre:** [[LIO-397]] Pagos de Ganancias y Comisiones
+- **Padre:** [[LIO-397 - Pagos de Ganancias y Comisiones|LIO-397]] Pagos de Ganancias y Comisiones
 
 ## Descripcion
 

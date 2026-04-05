@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-91"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
 
 ## Descripcion
 

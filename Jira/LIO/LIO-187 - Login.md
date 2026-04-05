@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-187"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-188]] API - Feat - Login en V4 con obtencion de token legacy
-- **Subtarea:** [[LIO-189]] Research - Login con redes (Google, Apple)
-- **Subtarea:** [[LIO-195]] APP - Feat - Login con v4 con obtencion de token de legacy
-- **Subtarea:** [[LIO-196]] APP - Login con redes (google,apple) y sincronizacion de carrito al incio de sesion
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-188 - API - Feat - Login en V4 con obtencion de token legacy|LIO-188]] API - Feat - Login en V4 con obtencion de token legacy
+- **Subtarea:** [[LIO-189 - Research - Login con redes (Google, Apple)|LIO-189]] Research - Login con redes (Google, Apple)
+- **Subtarea:** [[LIO-195 - APP - Feat - Login con v4 con obtencion de token de legacy|LIO-195]] APP - Feat - Login con v4 con obtencion de token de legacy
+- **Subtarea:** [[LIO-196 - APP - Login con redes (google,apple) y sincronizacion de carrito al incio de|LIO-196]] APP - Login con redes (google,apple) y sincronizacion de carrito al incio de sesion
 
 ## Descripcion
 

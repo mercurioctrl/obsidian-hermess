@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-103"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-68]] API - Feat - Editar / Crear marcas
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-68 - API - Feat - Editar Crear marcas|INV-68]] API - Feat - Editar / Crear marcas
 
 ## Descripcion
 

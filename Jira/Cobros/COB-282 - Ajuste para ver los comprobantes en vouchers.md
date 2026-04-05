@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-282"
 
 ## Relaciones
 
-- **Subtarea:** [[COB-283]] APP - Ajuste para ver los comprobantes de voucher con el token
-- **Subtarea:** [[COB-284]] API - Ajuste para ver los comprobantes de voucher con el token
+- **Subtarea:** [[COB-283 - APP - Ajuste para ver los comprobantes de voucher con el token|COB-283]] APP - Ajuste para ver los comprobantes de voucher con el token
+- **Subtarea:** [[COB-284 - API - Ajuste para ver los comprobantes de voucher con el token|COB-284]] API - Ajuste para ver los comprobantes de voucher con el token
 
 ## Descripcion
 

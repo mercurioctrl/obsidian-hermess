@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-126"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
-- **is blocked by:** [[COB-125]] APP - Feat - Modal de cobro
-- **is blocked by:** [[COB-127]] API - Feat - Crear recibo
-- **blocks:** [[COB-243]] API - Refactor - Realizar cobro de múltiples medios de pago
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-125 - APP - Feat - Modal de cobro|COB-125]] APP - Feat - Modal de cobro
+- **is blocked by:** [[COB-127 - API - Feat - Crear recibo|COB-127]] API - Feat - Crear recibo
+- **blocks:** [[COB-243 - API - Refactor - Realizar cobro de múltiples medios de pago|COB-243]] API - Refactor - Realizar cobro de múltiples medios de pago
 
 ## Descripcion
 

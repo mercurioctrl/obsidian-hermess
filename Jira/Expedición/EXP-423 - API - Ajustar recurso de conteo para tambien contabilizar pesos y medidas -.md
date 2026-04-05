@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-423"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **relates to:** [[EXP-421]] API - Refactor - Ajustar recurso de conteo para tambien contabilizar pesos y medidas
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **relates to:** [[EXP-421 - API - Refactor - Ajustar recurso de conteo para tambien contabilizar pesos y|EXP-421]] API - Refactor - Ajustar recurso de conteo para tambien contabilizar pesos y medidas
 
 ## Descripcion
 

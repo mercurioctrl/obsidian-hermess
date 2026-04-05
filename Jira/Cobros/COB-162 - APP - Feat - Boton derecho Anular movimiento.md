@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-162"
 
 ## Relaciones
 
-- **Padre:** [[COB-54]] APP - Feat - Listar clientes
-- **is blocked by:** [[COB-61]] API - Feat - Anular un movimiento
+- **Padre:** [[COB-54 - APP - Feat - Listar clientes|COB-54]] APP - Feat - Listar clientes
+- **is blocked by:** [[COB-61 - API - Feat - Anular un movimiento|COB-61]] API - Feat - Anular un movimiento
 
 ## Descripcion
 

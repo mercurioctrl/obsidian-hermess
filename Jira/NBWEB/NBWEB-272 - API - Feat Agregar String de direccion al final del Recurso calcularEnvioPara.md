@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-272"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **relates to:** [[NBWEB-729]] API - Recurso calcularEnvioPara - Validación al no enviar la dirección completa
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **relates to:** [[NBWEB-729 - API - Recurso calcularEnvioPara - Validación al no enviar la dirección completa|NBWEB-729]] API - Recurso calcularEnvioPara - Validación al no enviar la dirección completa
 
 ## Descripcion
 

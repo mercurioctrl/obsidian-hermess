@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-49"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-48]] Adaptar diseño AMD en LO + NB
+- **Padre:** [[DNYL-48 - Adaptar diseño AMD en LO + NB|DNYL-48]] Adaptar diseño AMD en LO + NB
 
 ## Descripcion
 

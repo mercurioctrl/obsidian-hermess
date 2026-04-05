@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-10"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-115]] Banner Web
-- **Subtarea:** [[DNYL-116]] Redes Sociales (quizás puede ser en video)
-- **Subtarea:** [[DNYL-117]] Newsletter
+- **Subtarea:** [[DNYL-115 - Banner Web|DNYL-115]] Banner Web
+- **Subtarea:** [[DNYL-116 - Redes Sociales (quizás puede ser en video)|DNYL-116]] Redes Sociales (quizás puede ser en video)
+- **Subtarea:** [[DNYL-117 - Newsletter|DNYL-117]] Newsletter
 
 ## Descripcion
 

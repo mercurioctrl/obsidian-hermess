@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-245"
 
 ## Relaciones
 
-- **Padre:** [[LIO-198]] CMS
-- **has action item:** [[LIO-246]] APP - Feat - Agregar sección para editar CMS remoto
+- **Padre:** [[LIO-198 - CMS|LIO-198]] CMS
+- **has action item:** [[LIO-246 - APP - Feat - Agregar sección para editar CMS remoto|LIO-246]] APP - Feat - Agregar sección para editar CMS remoto
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-118"
 
 ## Relaciones
 
-- **Padre:** [[COM-117]] Listar / Editar Categorias
-- **blocks:** [[COM-120]] APP - Feat - Pestaña categorias
-- **relates to:** [[COM-122]] API - Refactor - Listar categorías - Mostrar no visibles en la web
+- **Padre:** [[COM-117 - Listar Editar Categorias|COM-117]] Listar / Editar Categorias
+- **blocks:** [[COM-120 - APP - Feat - Pestaña categorias|COM-120]] APP - Feat - Pestaña categorias
+- **relates to:** [[COM-122 - API - Refactor - Listar categorías - Mostrar no visibles en la web|COM-122]] API - Refactor - Listar categorías - Mostrar no visibles en la web
 
 ## Descripcion
 

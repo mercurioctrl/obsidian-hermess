@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-119"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-73]] API - CMS - ABMS
+- **Padre:** [[NBWEB-73 - API - CMS - ABMS|NBWEB-73]] API - CMS - ABMS
 
 ## Descripcion
 

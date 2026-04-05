@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-308"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-319]] API - Feat - Asignar palabra clave
-- **Subtarea:** [[NBWEB-320]] API - Feat - Guardar palabra clave
+- **Subtarea:** [[NBWEB-319 - API - Feat - Asignar palabra clave|NBWEB-319]] API - Feat - Asignar palabra clave
+- **Subtarea:** [[NBWEB-320 - API - Feat - Guardar palabra clave|NBWEB-320]] API - Feat - Guardar palabra clave
 
 ## Descripcion
 

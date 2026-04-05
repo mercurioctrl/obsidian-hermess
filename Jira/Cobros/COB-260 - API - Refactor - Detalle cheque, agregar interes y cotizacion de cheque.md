@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-260"
 
 ## Relaciones
 
-- **Padre:** [[COB-183]] Feat - Listar cheques
-- **is blocked by:** [[COB-259]] API - Refactor - Cargar nuevo cheque
+- **Padre:** [[COB-183 - Feat - Listar cheques|COB-183]] Feat - Listar cheques
+- **is blocked by:** [[COB-259 - API - Refactor - Cargar nuevo cheque|COB-259]] API - Refactor - Cargar nuevo cheque
 
 ## Descripcion
 

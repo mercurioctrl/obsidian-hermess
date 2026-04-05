@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-320"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-308]] API - Enviar correo de compra
+- **Padre:** [[NBWEB-308 - API - Enviar correo de compra|NBWEB-308]] API - Enviar correo de compra
 
 ## Descripcion
 

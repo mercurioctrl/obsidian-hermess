@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-740"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-744]] API - Refactor - se debe agregar campo dropshipping en respuesta de cotizacion de carrito
+- **is blocked by:** [[NBWEB-744 - API - Refactor - se debe agregar campo dropshipping en respuesta de cotizacion|NBWEB-744]] API - Refactor - se debe agregar campo dropshipping en respuesta de cotizacion de carrito
 
 ## Descripcion
 

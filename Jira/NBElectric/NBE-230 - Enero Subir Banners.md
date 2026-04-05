@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-230"
 
 ## Relaciones
 
-- **Padre:** [[NBE-218]]  Enero: Banners
-- **is implemented by:** [[NBE-237]] APP - Refactor - Conectar Banners al recurso y segmento de banners 3
+- **Padre:** [[NBE-218 - Enero Banners|NBE-218]]  Enero: Banners
+- **is implemented by:** [[NBE-237 - APP - Refactor - Conectar Banners al recurso y segmento de banners 3|NBE-237]] APP - Refactor - Conectar Banners al recurso y segmento de banners 3
 
 ## Descripcion
 

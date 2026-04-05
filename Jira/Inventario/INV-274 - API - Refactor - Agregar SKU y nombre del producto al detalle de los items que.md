@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-274"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
-- **has action item:** [[INV-267]] APP -Refactor - Agregar SKU y nombre del producto cuando veo el modal para adminstrar sus productos vinculados
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
+- **has action item:** [[INV-267 - APP -Refactor - Agregar SKU y nombre del producto cuando veo el modal para|INV-267]] APP -Refactor - Agregar SKU y nombre del producto cuando veo el modal para adminstrar sus productos vinculados
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-106"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-101]] Mostrar Kits
-- **action item from:** [[LOCAPP-105]] API - Refactor - Agregar los parametros necesarios para construir el kit visualmente en el REMITO FISCAL
+- **Padre:** [[LOCAPP-101 - Mostrar Kits|LOCAPP-101]] Mostrar Kits
+- **action item from:** [[LOCAPP-105 - API - Refactor - Agregar los parametros necesarios para construir el kit|LOCAPP-105]] API - Refactor - Agregar los parametros necesarios para construir el kit visualmente en el REMITO FISCAL
 
 ## Descripcion
 

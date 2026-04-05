@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-323"
 
 ## Relaciones
 
-- **blocks:** [[NBWEB-355]] Mostar percepciones en el carrito
+- **blocks:** [[NBWEB-355 - Mostar percepciones en el carrito|NBWEB-355]] Mostar percepciones en el carrito
 
 ## Descripcion
 

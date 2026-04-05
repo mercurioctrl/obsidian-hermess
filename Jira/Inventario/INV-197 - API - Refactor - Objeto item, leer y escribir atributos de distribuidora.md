@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-197"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[INV-198]] API - Feat - Crear la tabla [NewBytes_DBF].[dbo].[distributor] y exponer repositorio REST con GET/POST/PATCH/DELETE para administrar distribuidoras.
-- **has action item:** [[INV-200]] APP - Feat - Cambiar atributo "distributor" y poder filtrarlo en el repositorio "items"
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[INV-198 - API - Feat - Crear la tabla NewBytes_DBF.dbo.distributor y exponer repositorio|INV-198]] API - Feat - Crear la tabla [NewBytes_DBF].[dbo].[distributor] y exponer repositorio REST con GET/POST/PATCH/DELETE para administrar distribuidoras.
+- **has action item:** [[INV-200 - APP - Feat - Cambiar atributo distributor y poder filtrarlo en el repositorio|INV-200]] APP - Feat - Cambiar atributo "distributor" y poder filtrarlo en el repositorio "items"
 
 ## Descripcion
 

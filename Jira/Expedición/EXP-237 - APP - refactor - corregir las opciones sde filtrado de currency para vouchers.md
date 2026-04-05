@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-237"
 
 ## Relaciones
 
-- **is duplicated by:** [[EXP-231]] Comprobantes - Filtro por moneda resultados no coincidentes
+- **is duplicated by:** [[EXP-231 - Comprobantes - Filtro por moneda resultados no coincidentes|EXP-231]] Comprobantes - Filtro por moneda resultados no coincidentes
 
 ## Descripcion
 

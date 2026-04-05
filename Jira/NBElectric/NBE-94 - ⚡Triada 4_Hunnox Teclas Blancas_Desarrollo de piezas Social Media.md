@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-94"
 
 ## Relaciones
 
-- **Padre:** [[NBE-93]] Triada 4_Hunnox Teclas blancas_Social Media
+- **Padre:** [[NBE-93 - Triada 4_Hunnox Teclas blancas_Social Media|NBE-93]] Triada 4_Hunnox Teclas blancas_Social Media
 
 ## Descripcion
 

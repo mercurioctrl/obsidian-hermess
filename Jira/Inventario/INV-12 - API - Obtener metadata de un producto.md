@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-12"
 
 ## Relaciones
 
-- **Padre:** [[INV-2]] MS - METADATA - API
-- **Subtarea:** [[INV-17]] API - Feat - Obtener todas las imágenes para un producto desde los repositorios
-- **Subtarea:** [[INV-18]] API - Feat - Obtener todos los atributos para un producto desde los repositorios
+- **Padre:** [[INV-2 - MS - METADATA - API|INV-2]] MS - METADATA - API
+- **Subtarea:** [[INV-17 - API - Feat - Obtener todas las imágenes para un producto desde los repositorios|INV-17]] API - Feat - Obtener todas las imágenes para un producto desde los repositorios
+- **Subtarea:** [[INV-18 - API - Feat - Obtener todos los atributos para un producto desde los repositorios|INV-18]] API - Feat - Obtener todos los atributos para un producto desde los repositorios
 
 ## Descripcion
 

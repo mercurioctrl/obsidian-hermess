@@ -29,17 +29,17 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-59"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-87]] Maquetar y conectar Mi cuenta - Ordenes de compra
-- **Subtarea:** [[NBWEB-88]] Maquetar y Conectar Mi cuenta - Mis Comprobantes
-- **Subtarea:** [[NBWEB-170]] APP - Mi cuenta - Postventa
-- **Subtarea:** [[NBWEB-171]] APP - Mi cuenta - Mis datos
-- **Subtarea:** [[NBWEB-172]] APP - Mi cuenta - Mis ususarios
-- **Subtarea:** [[NBWEB-175]] APP - Mi cuenta - Pedidos
-- **Subtarea:** [[NBWEB-226]] APP - Mi cuenta - Mis usuarios - Agregar un usuario nuevo
-- **Subtarea:** [[NBWEB-227]] APP - MI cuenta - Mis usuario - Eliminar un ususario
-- **Subtarea:** [[NBWEB-255]] APP - Feat - Mis Direcciones de envio
-- **Subtarea:** [[NBWEB-519]] APP - Feat - Mostrar seriales por producto
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-87 - Maquetar y conectar Mi cuenta - Ordenes de compra|NBWEB-87]] Maquetar y conectar Mi cuenta - Ordenes de compra
+- **Subtarea:** [[NBWEB-88 - Maquetar y Conectar Mi cuenta - Mis Comprobantes|NBWEB-88]] Maquetar y Conectar Mi cuenta - Mis Comprobantes
+- **Subtarea:** [[NBWEB-170 - APP - Mi cuenta - Postventa|NBWEB-170]] APP - Mi cuenta - Postventa
+- **Subtarea:** [[NBWEB-171 - APP - Mi cuenta - Mis datos|NBWEB-171]] APP - Mi cuenta - Mis datos
+- **Subtarea:** [[NBWEB-172 - APP - Mi cuenta - Mis ususarios|NBWEB-172]] APP - Mi cuenta - Mis ususarios
+- **Subtarea:** [[NBWEB-175 - APP - Mi cuenta - Pedidos|NBWEB-175]] APP - Mi cuenta - Pedidos
+- **Subtarea:** [[NBWEB-226 - APP - Mi cuenta - Mis usuarios - Agregar un usuario nuevo|NBWEB-226]] APP - Mi cuenta - Mis usuarios - Agregar un usuario nuevo
+- **Subtarea:** [[NBWEB-227 - APP - MI cuenta - Mis usuario - Eliminar un ususario|NBWEB-227]] APP - MI cuenta - Mis usuario - Eliminar un ususario
+- **Subtarea:** [[NBWEB-255 - APP - Feat - Mis Direcciones de envio|NBWEB-255]] APP - Feat - Mis Direcciones de envio
+- **Subtarea:** [[NBWEB-519 - APP - Feat - Mostrar seriales por producto|NBWEB-519]] APP - Feat - Mostrar seriales por producto
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-151"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-171]] NBE:Triada 20 Copys 
-- **Subtarea:** [[NBE-180]] NBE: Realizar Post en las diferentes Redes
-- **has action item:** [[NBE-180]] NBE: Realizar Post en las diferentes Redes
+- **Subtarea:** [[NBE-171 - NBETriada 20 Copys|NBE-171]] NBE:Triada 20 Copys 
+- **Subtarea:** [[NBE-180 - NBE Realizar Post en las diferentes Redes|NBE-180]] NBE: Realizar Post en las diferentes Redes
+- **has action item:** [[NBE-180 - NBE Realizar Post en las diferentes Redes|NBE-180]] NBE: Realizar Post en las diferentes Redes
 
 ## Descripcion
 

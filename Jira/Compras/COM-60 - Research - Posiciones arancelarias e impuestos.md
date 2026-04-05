@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-60"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **is blocked by:** [[COM-65]] API - Posiciones arancelarias e impuestos -> SyncUp - Error al ejecutar el recurso
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **is blocked by:** [[COM-65 - API - Posiciones arancelarias e impuestos - SyncUp - Error al ejecutar el|COM-65]] API - Posiciones arancelarias e impuestos -> SyncUp - Error al ejecutar el recurso
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-396"
 
 ## Relaciones
 
-- **Padre:** [[COB-389]] Refactor - Cobros multiples
-- **blocks:** [[COB-391]] APP - Refactor - Cobrar mas de un pedido en el mismo "cobro"
+- **Padre:** [[COB-389 - Refactor - Cobros multiples|COB-389]] Refactor - Cobros multiples
+- **blocks:** [[COB-391 - APP - Refactor - Cobrar mas de un pedido en el mismo cobro|COB-391]] APP - Refactor - Cobrar mas de un pedido en el mismo "cobro"
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-64"
 
 ## Relaciones
 
-- **Padre:** [[LIO-2]] Variedad y Calidad de Productos/Catalogos
-- **blocks:** [[LIO-60]] API - Refactor - Mostrar solo las descripciones que tienen karma positivo
+- **Padre:** [[LIO-2 - Variedad y Calidad de ProductosCatalogos|LIO-2]] Variedad y Calidad de Productos/Catalogos
+- **blocks:** [[LIO-60 - API - Refactor - Mostrar solo las descripciones que tienen karma positivo|LIO-60]] API - Refactor - Mostrar solo las descripciones que tienen karma positivo
 
 ## Descripcion
 

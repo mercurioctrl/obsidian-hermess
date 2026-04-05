@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-152"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **relates to:** [[COM-211]] API - MVP - Refactor - Recurso para modificar datos de cabecera en Provider Order -> Eliminar país
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **relates to:** [[COM-211 - API - MVP - Refactor - Recurso para modificar datos de cabecera en Provider|COM-211]] API - MVP - Refactor - Recurso para modificar datos de cabecera en Provider Order -> Eliminar país
 
 ## Descripcion
 

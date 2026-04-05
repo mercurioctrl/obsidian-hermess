@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-208"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-206]] Partner Services (Servicios para asociados)
-- **has action item:** [[FB-90]] APP - Refactor - Conectar formulario de suscripción al news utilizando el recurso y token de cliente
+- **Padre:** [[BLUWEB-206 - Partner Services (Servicios para asociados)|BLUWEB-206]] Partner Services (Servicios para asociados)
+- **has action item:** [[FB-90 - APP - Refactor - Conectar formulario de suscripción al news utilizando el|FB-90]] APP - Refactor - Conectar formulario de suscripción al news utilizando el recurso y token de cliente
 
 ## Descripcion
 

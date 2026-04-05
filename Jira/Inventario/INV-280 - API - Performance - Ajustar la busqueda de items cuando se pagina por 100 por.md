@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-280"
 
 ## Relaciones
 
-- **Padre:** [[INV-277]] APP - Review - Al buscar un kit, se debe hacer un paginado infinto o muy amplio
+- **Padre:** [[INV-277 - APP - Review - Al buscar un kit, se debe hacer un paginado infinto o muy amplio|INV-277]] APP - Review - Al buscar un kit, se debe hacer un paginado infinto o muy amplio
 
 ## Descripcion
 

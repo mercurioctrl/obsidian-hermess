@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-136"
 
 ## Relaciones
 
-- **Padre:** [[LIO-135]] Precios Relampago
+- **Padre:** [[LIO-135 - Precios Relampago|LIO-135]] Precios Relampago
 
 ## Descripcion
 

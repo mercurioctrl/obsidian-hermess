@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-188"
 
 ## Relaciones
 
-- **Padre:** [[INV-35]] Importadores/ Scrappers
-- **has action item:** [[INV-189]] API - Refactor - Volver a conectar repositorio de búsqueda de imágenes a mercadolibre según research
+- **Padre:** [[INV-35 - Importadores Scrappers|INV-35]] Importadores/ Scrappers
+- **has action item:** [[INV-189 - API - Refactor - Volver a conectar repositorio de búsqueda de imágenes a|INV-189]] API - Refactor - Volver a conectar repositorio de búsqueda de imágenes a mercadolibre según research
 
 ## Descripcion
 

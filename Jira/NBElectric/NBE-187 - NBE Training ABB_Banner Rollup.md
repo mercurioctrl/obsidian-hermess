@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-187"
 
 ## Relaciones
 
-- **Padre:** [[NBE-185]] NBE Noviembre: Training ABB
+- **Padre:** [[NBE-185 - NBE Noviembre Training ABB|NBE-185]] NBE Noviembre: Training ABB
 
 ## Descripcion
 

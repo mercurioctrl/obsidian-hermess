@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-182"
 
 ## Relaciones
 
-- **Padre:** [[MKT-180]] NB_ INCENTIVO CAPILARIDAD
-- **is blocked by:** [[MKT-181]] API - Refactor - Crear recurso necesario para llevar el conteo del objetivo
+- **Padre:** [[MKT-180 - NB_ INCENTIVO CAPILARIDAD|MKT-180]] NB_ INCENTIVO CAPILARIDAD
+- **is blocked by:** [[MKT-181 - API - Refactor - Crear recurso necesario para llevar el conteo del objetivo|MKT-181]] API - Refactor - Crear recurso necesario para llevar el conteo del objetivo
 
 ## Descripcion
 

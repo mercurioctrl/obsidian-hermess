@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-586"
 
 ## Relaciones
 
-- **Padre:** [[COB-581]] Repositorio y Gestión de Billeteras Libre Opción
-- **action item from:** [[COB-585]] API - Feat - Repositorio para ver lo detalles de una billetera de libre opción determinada (transactions)
+- **Padre:** [[COB-581 - Repositorio y Gestión de Billeteras Libre Opción|COB-581]] Repositorio y Gestión de Billeteras Libre Opción
+- **action item from:** [[COB-585 - API - Feat - Repositorio para ver lo detalles de una billetera de libre opción|COB-585]] API - Feat - Repositorio para ver lo detalles de una billetera de libre opción determinada (transactions)
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-631"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-630]] Responsive
+- **Padre:** [[NBWEB-630 - Responsive|NBWEB-630]] Responsive
 
 ## Descripcion
 

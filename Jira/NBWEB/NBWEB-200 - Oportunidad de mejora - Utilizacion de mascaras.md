@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-200"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-129]] APP - Formulario de registro y alta de cliente
-- **relates to:** [[NBWEB-275]] APP - Envios - Si no se dispone del tiempo de entrega, no debe mostrarse la linea
+- **Padre:** [[NBWEB-129 - APP - Formulario de registro y alta de cliente|NBWEB-129]] APP - Formulario de registro y alta de cliente
+- **relates to:** [[NBWEB-275 - APP - Envios - Si no se dispone del tiempo de entrega, no debe mostrarse la|NBWEB-275]] APP - Envios - Si no se dispone del tiempo de entrega, no debe mostrarse la linea
 
 ## Descripcion
 

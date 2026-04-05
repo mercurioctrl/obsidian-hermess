@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-786"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **blocks:** [[NBWEB-780]] APP - Refactor - Listado de direcciones en "Mi cuenta": Agregar filtro de dropshipping y mostrar el listado según el filtro
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **blocks:** [[NBWEB-780 - APP - Refactor - Listado de direcciones en Mi cuenta Agregar filtro de|NBWEB-780]] APP - Refactor - Listado de direcciones en "Mi cuenta": Agregar filtro de dropshipping y mostrar el listado según el filtro
 
 ## Descripcion
 

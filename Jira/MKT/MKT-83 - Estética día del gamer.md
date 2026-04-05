@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-83"
 
 ## Relaciones
 
-- **causes:** [[MKT-80]] LO_DIA DEL GAMER
+- **causes:** [[MKT-80 - LO_DIA DEL GAMER|MKT-80]] LO_DIA DEL GAMER
 
 ## Descripcion
 

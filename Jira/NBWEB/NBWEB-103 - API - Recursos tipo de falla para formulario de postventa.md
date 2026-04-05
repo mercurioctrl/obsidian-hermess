@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-103"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
 
 ## Descripcion
 

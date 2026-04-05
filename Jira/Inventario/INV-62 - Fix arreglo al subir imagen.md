@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-62"
 
 ## Relaciones
 
-- **relates to:** [[SNB-1788]] INVENTARIO NO GUARDA LAS FOTOS
+- **relates to:** [[SNB-1788 - INVENTARIO NO GUARDA LAS FOTOS|SNB-1788]] INVENTARIO NO GUARDA LAS FOTOS
 
 ## Descripcion
 

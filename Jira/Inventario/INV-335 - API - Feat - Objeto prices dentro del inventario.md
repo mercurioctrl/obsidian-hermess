@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-335"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
 
 ## Descripcion
 

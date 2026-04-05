@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-128"
 
 ## Relaciones
 
-- **Padre:** [[INV-125]] Importación de catálogos
-- **is blocked by:** [[INV-127]] API - Feat - Importar catalogo a partir de un archivo xlsx
-- **is blocked by:** [[INV-126]] API - Feat - Obtener esquema estándar del mapeo de columnas 
-- **blocks:** [[INV-132]] APP - Refactor - Agregar selector de empresa (companyCode) en el modal de importacion
-- **relates to:** [[INV-138]] APP - Formulario de carga masiva de productos a través de un archivo - Sugerencia de mejora al recibir un error en la previsualización 
-- **relates to:** [[INV-140]] APP - Formulario de carga masiva de productos a través de un archivo - Cotización enviada no coincidente
+- **Padre:** [[INV-125 - Importación de catálogos|INV-125]] Importación de catálogos
+- **is blocked by:** [[INV-127 - API - Feat - Importar catalogo a partir de un archivo xlsx|INV-127]] API - Feat - Importar catalogo a partir de un archivo xlsx
+- **is blocked by:** [[INV-126 - API - Feat - Obtener esquema estándar del mapeo de columnas|INV-126]] API - Feat - Obtener esquema estándar del mapeo de columnas 
+- **blocks:** [[INV-132 - APP - Refactor - Agregar selector de empresa (companyCode) en el modal de|INV-132]] APP - Refactor - Agregar selector de empresa (companyCode) en el modal de importacion
+- **relates to:** [[INV-138 - APP - Formulario de carga masiva de productos a través de un archivo -|INV-138]] APP - Formulario de carga masiva de productos a través de un archivo - Sugerencia de mejora al recibir un error en la previsualización 
+- **relates to:** [[INV-140 - APP - Formulario de carga masiva de productos a través de un archivo -|INV-140]] APP - Formulario de carga masiva de productos a través de un archivo - Cotización enviada no coincidente
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-263"
 
 ## Relaciones
 
-- **Padre:** [[MKT-260]] LO HOT SALE
+- **Padre:** [[MKT-260 - LO HOT SALE|MKT-260]] LO HOT SALE
 
 ## Descripcion
 

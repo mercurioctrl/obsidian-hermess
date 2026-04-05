@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-459"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **relates to:** [[LIO-469]] APP - Review - Visibilidad de la sección de referidos en el menú desplegable
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **relates to:** [[LIO-469 - APP - Review - Visibilidad de la sección de referidos en el menú desplegable|LIO-469]] APP - Review - Visibilidad de la sección de referidos en el menú desplegable
 
 ## Descripcion
 

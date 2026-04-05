@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-32"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-48]] 5.Adata Noviembre: Diseño Social Media 4/4 SSD
-- **Subtarea:** [[ADATA-49]] Adata Noviembre: Programación 26-11 4/4 SSD
-- **Subtarea:** [[ADATA-50]] Adata Noviembre: Copys 4/4 SSD
+- **Subtarea:** [[ADATA-48 - 5.Adata Noviembre Diseño Social Media 44 SSD|ADATA-48]] 5.Adata Noviembre: Diseño Social Media 4/4 SSD
+- **Subtarea:** [[ADATA-49 - Adata Noviembre Programación 26-11 44 SSD|ADATA-49]] Adata Noviembre: Programación 26-11 4/4 SSD
+- **Subtarea:** [[ADATA-50 - Adata Noviembre Copys 44 SSD|ADATA-50]] Adata Noviembre: Copys 4/4 SSD
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-9"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-222]] APP - Refactor/Research - Bajar TBT del sitio
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-222 - APP - RefactorResearch - Bajar TBT del sitio|LIO-222]] APP - Refactor/Research - Bajar TBT del sitio
 
 ## Descripcion
 

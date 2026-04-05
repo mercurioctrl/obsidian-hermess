@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-2"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-3]] APP - Feat - Maquetar firmas para que se visualicen de forma correcta en todos los clientes
-- **Subtarea:** [[BLUWEB-55]] APP - O. Mejora - Detalles en la firmas y compatibilidades con distintos clientes
+- **Subtarea:** [[BLUWEB-3 - APP - Feat - Maquetar firmas para que se visualicen de forma correcta en todos|BLUWEB-3]] APP - Feat - Maquetar firmas para que se visualicen de forma correcta en todos los clientes
+- **Subtarea:** [[BLUWEB-55 - APP - O. Mejora - Detalles en la firmas y compatibilidades con distintos|BLUWEB-55]] APP - O. Mejora - Detalles en la firmas y compatibilidades con distintos clientes
 
 ## Descripcion
 

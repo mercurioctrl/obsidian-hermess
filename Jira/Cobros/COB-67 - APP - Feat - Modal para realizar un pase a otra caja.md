@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-67"
 
 ## Relaciones
 
-- **Padre:** [[COB-12]] Feat - Procesar pases de caja
-- **is blocked by:** [[COB-65]] API - Feat - Realizar un pasa a otra caja 
+- **Padre:** [[COB-12 - Feat - Procesar pases de caja|COB-12]] Feat - Procesar pases de caja
+- **is blocked by:** [[COB-65 - API - Feat - Realizar un pasa a otra caja|COB-65]] API - Feat - Realizar un pasa a otra caja 
 
 ## Descripcion
 

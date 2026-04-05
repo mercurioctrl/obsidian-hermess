@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-173"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-174]] 3-Buscar Fechas
-- **Subtarea:** [[BLUWEB-175]] 1-Cargar en Calendario de Blu
+- **Subtarea:** [[BLUWEB-174 - 3-Buscar Fechas|BLUWEB-174]] 3-Buscar Fechas
+- **Subtarea:** [[BLUWEB-175 - 1-Cargar en Calendario de Blu|BLUWEB-175]] 1-Cargar en Calendario de Blu
 
 ## Descripcion
 

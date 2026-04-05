@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-63"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-62]] Descarga y procesamiento de padrones
-- **relates to:** [[LOCAPP-65]] API - Procesar Padron ARBA - Propuesta de mejora en la autenticación
+- **Padre:** [[LOCAPP-62 - Descarga y procesamiento de padrones|LOCAPP-62]] Descarga y procesamiento de padrones
+- **relates to:** [[LOCAPP-65 - API - Procesar Padron ARBA - Propuesta de mejora en la autenticación|LOCAPP-65]] API - Procesar Padron ARBA - Propuesta de mejora en la autenticación
 
 ## Descripcion
 

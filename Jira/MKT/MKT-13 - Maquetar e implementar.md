@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-13"
 
 ## Relaciones
 
-- **Padre:** [[MKT-6]] LANDING LANZAMIENTO AMD
-- **is blocked by:** [[MKT-12]] Diseñar header
+- **Padre:** [[MKT-6 - LANDING LANZAMIENTO AMD|MKT-6]] LANDING LANZAMIENTO AMD
+- **is blocked by:** [[MKT-12 - Diseñar header|MKT-12]] Diseñar header
 
 ## Descripcion
 

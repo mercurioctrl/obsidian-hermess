@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-887"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-804]] APP - Feat - Separar el menu de mi cuenta y el desplegable las secciones que son para integracion/api
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-804 - APP - Feat - Separar el menu de mi cuenta y el desplegable las secciones que|NBWEB-804]] APP - Feat - Separar el menu de mi cuenta y el desplegable las secciones que son para integracion/api
 
 ## Descripcion
 

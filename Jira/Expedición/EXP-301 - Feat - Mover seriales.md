@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-301"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **Subtarea:** [[EXP-302]] API - Feat - Buscar seriales que son plausible de ser movidos 
-- **Subtarea:** [[EXP-303]] API - Feat - Mover seriales seleccionados
-- **Subtarea:** [[EXP-304]] APP - Feat - Modal "Mover Seriales"
-- **Subtarea:** [[EXP-313]] API - Refactor - Buscar seriales, parece no ser reactivo a los seriales, o encuentra demasiados.
-- **Subtarea:** [[EXP-314]] API - Refactor - Agregar el recurso que trae los seriles buscados: Nombre de producto, id de producto, Pedido "donde se ingreso, pero ya no existe"
-- **is blocked by:** [[EXP-346]] APP - Mover seriales - Incidencias varias
-- **is blocked by:** [[EXP-367]] API - Mover seriales - Incidencias varias
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **Subtarea:** [[EXP-302 - API - Feat - Buscar seriales que son plausible de ser movidos|EXP-302]] API - Feat - Buscar seriales que son plausible de ser movidos 
+- **Subtarea:** [[EXP-303 - API - Feat - Mover seriales seleccionados|EXP-303]] API - Feat - Mover seriales seleccionados
+- **Subtarea:** [[EXP-304 - APP - Feat - Modal Mover Seriales|EXP-304]] APP - Feat - Modal "Mover Seriales"
+- **Subtarea:** [[EXP-313 - API - Refactor - Buscar seriales, parece no ser reactivo a los seriales, o|EXP-313]] API - Refactor - Buscar seriales, parece no ser reactivo a los seriales, o encuentra demasiados.
+- **Subtarea:** [[EXP-314 - API - Refactor - Agregar el recurso que trae los seriles buscados Nombre de|EXP-314]] API - Refactor - Agregar el recurso que trae los seriles buscados: Nombre de producto, id de producto, Pedido "donde se ingreso, pero ya no existe"
+- **is blocked by:** [[EXP-346 - APP - Mover seriales - Incidencias varias|EXP-346]] APP - Mover seriales - Incidencias varias
+- **is blocked by:** [[EXP-367 - API - Mover seriales - Incidencias varias|EXP-367]] API - Mover seriales - Incidencias varias
 
 ## Descripcion
 

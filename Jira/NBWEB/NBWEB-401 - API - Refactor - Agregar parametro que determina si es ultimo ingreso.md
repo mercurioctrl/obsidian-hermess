@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-401"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-311]] Etiqueta ultimo ingreso para los productos
+- **Padre:** [[NBWEB-311 - Etiqueta ultimo ingreso para los productos|NBWEB-311]] Etiqueta ultimo ingreso para los productos
 
 ## Descripcion
 

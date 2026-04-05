@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-863"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-857]] APP - Create bulk mis categorias
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-857 - APP - Create bulk mis categorias|NBWEB-857]] APP - Create bulk mis categorias
 
 ## Descripcion
 

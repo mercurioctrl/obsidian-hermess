@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-271"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **action item from:** [[LIO-248]] API - Feat -  Recurso para Solicitar un Retiro de Dinero en la Billetera
-- **action item from:** [[LIO-241]] API - Feat - Gestion de informacion de cuentas bancarias para el cliente y su billetera
-- **action item from:** [[LIO-240]] API - Feat - Obtener balance de billetera
-- **action item from:** [[LIO-232]] API - Feat - Listar movimientos en billetera
-- **action item from:** [[LIO-273]] API - Feat - Editar campos de  cuentas bancarias
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **action item from:** [[LIO-248 - API - Feat - Recurso para Solicitar un Retiro de Dinero en la Billetera|LIO-248]] API - Feat -  Recurso para Solicitar un Retiro de Dinero en la Billetera
+- **action item from:** [[LIO-241 - API - Feat - Gestion de informacion de cuentas bancarias para el cliente y su|LIO-241]] API - Feat - Gestion de informacion de cuentas bancarias para el cliente y su billetera
+- **action item from:** [[LIO-240 - API - Feat - Obtener balance de billetera|LIO-240]] API - Feat - Obtener balance de billetera
+- **action item from:** [[LIO-232 - API - Feat - Listar movimientos en billetera|LIO-232]] API - Feat - Listar movimientos en billetera
+- **action item from:** [[LIO-273 - API - Feat - Editar campos de cuentas bancarias|LIO-273]] API - Feat - Editar campos de  cuentas bancarias
 
 ## Descripcion
 

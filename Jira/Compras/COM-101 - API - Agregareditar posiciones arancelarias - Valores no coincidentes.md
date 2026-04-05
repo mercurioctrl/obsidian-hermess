@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-101"
 
 ## Relaciones
 
-- **relates to:** [[COM-88]] API - Feat - Patch para agregar posiciones arancelarias externas a las locales o en su defecto agregar la descripcion de las posiciones arancelarias a la orden
+- **relates to:** [[COM-88 - API - Feat - Patch para agregar posiciones arancelarias externas a las locales|COM-88]] API - Feat - Patch para agregar posiciones arancelarias externas a las locales o en su defecto agregar la descripcion de las posiciones arancelarias a la orden
 
 ## Descripcion
 

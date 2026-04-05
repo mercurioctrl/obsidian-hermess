@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-388"
 
 ## Relaciones
 
-- **Padre:** [[COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
-- **is blocked by:** [[COB-376]] API - Feat - Editar saldo de credito por cliente
+- **Padre:** [[COB-374 - Feat - Editar estado crediticio de la cuenta del cliente|COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
+- **is blocked by:** [[COB-376 - API - Feat - Editar saldo de credito por cliente|COB-376]] API - Feat - Editar saldo de credito por cliente
 
 ## Descripcion
 

@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-946"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **Subtarea:** [[NBWEB-947]] API - Refactor - Agregar a la lista de pedidos el estado del mismo
-- **Subtarea:** [[NBWEB-948]] APP - Refactor - Agregar a la lista de pedidos el estado del mismo
-- **Subtarea:** [[NBWEB-974]] API - Refactor - Mis ordenes de compra - Revision de totales e incorporación de percepciones
-- **Subtarea:** [[NBWEB-975]] APP - Refactor - Agregar percepciones al modal de ordenes en mi cuenta
-- **Subtarea:** [[NBWEB-976]] API - Refactor - Agregar percepciones en pedidos dentro de mi cuenta
-- **Subtarea:** [[NBWEB-977]] APP - Refactor - Agregar percepciones en pedidos dentro de mi cuenta
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **Subtarea:** [[NBWEB-947 - API - Refactor - Agregar a la lista de pedidos el estado del mismo|NBWEB-947]] API - Refactor - Agregar a la lista de pedidos el estado del mismo
+- **Subtarea:** [[NBWEB-948 - APP - Refactor - Agregar a la lista de pedidos el estado del mismo|NBWEB-948]] APP - Refactor - Agregar a la lista de pedidos el estado del mismo
+- **Subtarea:** [[NBWEB-974 - API - Refactor - Mis ordenes de compra - Revision de totales e incorporación de|NBWEB-974]] API - Refactor - Mis ordenes de compra - Revision de totales e incorporación de percepciones
+- **Subtarea:** [[NBWEB-975 - APP - Refactor - Agregar percepciones al modal de ordenes en mi cuenta|NBWEB-975]] APP - Refactor - Agregar percepciones al modal de ordenes en mi cuenta
+- **Subtarea:** [[NBWEB-976 - API - Refactor - Agregar percepciones en pedidos dentro de mi cuenta|NBWEB-976]] API - Refactor - Agregar percepciones en pedidos dentro de mi cuenta
+- **Subtarea:** [[NBWEB-977 - APP - Refactor - Agregar percepciones en pedidos dentro de mi cuenta|NBWEB-977]] APP - Refactor - Agregar percepciones en pedidos dentro de mi cuenta
 
 ## Descripcion
 

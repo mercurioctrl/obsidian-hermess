@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-116"
 
 ## Relaciones
 
-- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
-- **action item from:** [[LIO-117]] API - Feat - Getnent crear intención de pago
-- **action item from:** [[LIO-97]] Resarch - Revisar la documentacion para poder implementar plataforma de pagos GETNET (santander) dentro del sitio (sin salir) para pago con tarjeta y promociones bancarias
+- **Padre:** [[LIO-8 - Proceso pago sencillo y competitiva a nivel financiamiento|LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **action item from:** [[LIO-117 - API - Feat - Getnent crear intención de pago|LIO-117]] API - Feat - Getnent crear intención de pago
+- **action item from:** [[LIO-97 - Resarch - Revisar la documentacion para poder implementar plataforma de pagos|LIO-97]] Resarch - Revisar la documentacion para poder implementar plataforma de pagos GETNET (santander) dentro del sitio (sin salir) para pago con tarjeta y promociones bancarias
 
 ## Descripcion
 

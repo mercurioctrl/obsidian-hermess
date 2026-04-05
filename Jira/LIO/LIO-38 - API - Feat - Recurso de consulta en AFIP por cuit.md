@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-38"
 
 ## Relaciones
 
-- **Padre:** [[LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
-- **relates to:** [[SNB-3253]] Whaticket - LO - CUIT no asociado a ninguna empresa
+- **Padre:** [[LIO-11 - Proceso de registro sencillo para los vendedoresCompradores|LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
+- **relates to:** [[SNB-3253 - Whaticket - LO - CUIT no asociado a ninguna empresa|SNB-3253]] Whaticket - LO - CUIT no asociado a ninguna empresa
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-832"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-833]] APP - Feat - Agregar a Mis Listas el lsitado de Tienda negocio
-- **is blocked by:** [[NBWEB-845]] API - Generar listado para Tienda Negocio - Mi producto y categoría no visible 
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-833 - APP - Feat - Agregar a Mis Listas el lsitado de Tienda negocio|NBWEB-833]] APP - Feat - Agregar a Mis Listas el lsitado de Tienda negocio
+- **is blocked by:** [[NBWEB-845 - API - Generar listado para Tienda Negocio - Mi producto y categoría no visible|NBWEB-845]] API - Generar listado para Tienda Negocio - Mi producto y categoría no visible 
 
 ## Descripcion
 

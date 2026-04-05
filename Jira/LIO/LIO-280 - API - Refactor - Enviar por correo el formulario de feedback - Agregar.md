@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-280"
 
 ## Relaciones
 
-- **relates to:** [[LIO-272]] API - Refactor - Enviar por correo el formulario de feedback
+- **relates to:** [[LIO-272 - API - Refactor - Enviar por correo el formulario de feedback|LIO-272]] API - Refactor - Enviar por correo el formulario de feedback
 
 ## Descripcion
 

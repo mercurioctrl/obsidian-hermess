@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-176"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-105]] 5.🧬 Triada 3_Blu_Desarrollo de piezas Social Media
+- **Padre:** [[BLUWEB-105 - 5.🧬 Triada 3_Blu_Desarrollo de piezas Social Media|BLUWEB-105]] 5.🧬 Triada 3_Blu_Desarrollo de piezas Social Media
 
 ## Descripcion
 

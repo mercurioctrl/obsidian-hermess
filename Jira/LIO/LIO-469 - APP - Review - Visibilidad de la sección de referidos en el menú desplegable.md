@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-469"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **relates to:** [[LIO-459]] APP - Mejora - cambiar la posicion de los referidos debajo de la wallet (menu header) ya que tienen cosas en comun
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **relates to:** [[LIO-459 - APP - Mejora - cambiar la posicion de los referidos debajo de la wallet (menu|LIO-459]] APP - Mejora - cambiar la posicion de los referidos debajo de la wallet (menu header) ya que tienen cosas en comun
 
 ## Descripcion
 

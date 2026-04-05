@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-168"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-178]] Mar: Programar Gabinete Invader
+- **Subtarea:** [[LOMKT-178 - Mar Programar Gabinete Invader|LOMKT-178]] Mar: Programar Gabinete Invader
 
 ## Descripcion
 

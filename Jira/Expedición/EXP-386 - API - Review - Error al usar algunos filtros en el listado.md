@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-386"
 
 ## Relaciones
 
-- **Padre:** [[EXP-10]] Feat - Listar pedidos (despachos) proveedores
+- **Padre:** [[EXP-10 - Feat - Listar pedidos (despachos) proveedores|EXP-10]] Feat - Listar pedidos (despachos) proveedores
 
 ## Descripcion
 

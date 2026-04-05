@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-186"
 
 ## Relaciones
 
-- **relates to:** [[LIO-334]] API - Obtener provincia por código postal - Provincia no coincidente
+- **relates to:** [[LIO-334 - API - Obtener provincia por código postal - Provincia no coincidente|LIO-334]] API - Obtener provincia por código postal - Provincia no coincidente
 
 ## Descripcion
 

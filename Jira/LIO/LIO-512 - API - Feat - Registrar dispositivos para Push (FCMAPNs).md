@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-512"
 
 ## Relaciones
 
-- **Padre:** [[LIO-507]] Login y otros aspectos generales
-- **has action item:** [[LIO-517]] APP MOBILE - Feat - Registrar token FCM post login al ingresar al dashboard inicial
-- **is cloned by:** [[LIO-520]] API - Review - Registrar dispositivos para Push (FCM/APNs) -> Token duplicado y fecha de actualización
-- **action item from:** [[LIO-541]] API - Feat - Registrar dispositivos Web para Push (FCM Web)
+- **Padre:** [[LIO-507 - Login y otros aspectos generales|LIO-507]] Login y otros aspectos generales
+- **has action item:** [[LIO-517 - APP MOBILE - Feat - Registrar token FCM post login al ingresar al dashboard|LIO-517]] APP MOBILE - Feat - Registrar token FCM post login al ingresar al dashboard inicial
+- **is cloned by:** [[LIO-520 - API - Review - Registrar dispositivos para Push (FCMAPNs) - Token duplicado y|LIO-520]] API - Review - Registrar dispositivos para Push (FCM/APNs) -> Token duplicado y fecha de actualización
+- **action item from:** [[LIO-541 - API - Feat - Registrar dispositivos Web para Push (FCM Web)|LIO-541]] API - Feat - Registrar dispositivos Web para Push (FCM Web)
 
 ## Descripcion
 

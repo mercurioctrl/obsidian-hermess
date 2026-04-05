@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-795"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **is blocked by:** [[NBWEB-830]] EXTENSIÓN - Registrar dominio de la extensión - Dominio no encontrado
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **is blocked by:** [[NBWEB-830 - EXTENSIÓN - Registrar dominio de la extensión - Dominio no encontrado|NBWEB-830]] EXTENSIÓN - Registrar dominio de la extensión - Dominio no encontrado
 
 ## Descripcion
 

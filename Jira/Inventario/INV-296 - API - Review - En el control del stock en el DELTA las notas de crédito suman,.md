@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-296"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-297]] APP - Review - En stock delta el parametro NC suma, en lugar de restar
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-297 - APP - Review - En stock delta el parametro NC suma, en lugar de restar|INV-297]] APP - Review - En stock delta el parametro NC suma, en lugar de restar
 
 ## Descripcion
 

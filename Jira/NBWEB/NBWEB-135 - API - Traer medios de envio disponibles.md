@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-135"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-11]] API - Implementar Cotizadores de envio
+- **Padre:** [[NBWEB-11 - API - Implementar Cotizadores de envio|NBWEB-11]] API - Implementar Cotizadores de envio
 
 ## Descripcion
 

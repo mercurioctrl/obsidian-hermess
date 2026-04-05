@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-561"
 
 ## Relaciones
 
-- **Padre:** [[COB-559]] Listar y descargar percepciones
-- **has action item:** [[COB-567]] APP - Feat - Agregar seccion percepciones para visualizar y filtrar y accionables de descarga
+- **Padre:** [[COB-559 - Listar y descargar percepciones|COB-559]] Listar y descargar percepciones
+- **has action item:** [[COB-567 - APP - Feat - Agregar seccion percepciones para visualizar y filtrar y|COB-567]] APP - Feat - Agregar seccion percepciones para visualizar y filtrar y accionables de descarga
 
 ## Descripcion
 

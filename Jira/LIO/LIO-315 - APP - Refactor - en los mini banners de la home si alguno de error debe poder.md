@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-315"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
 
 ## Descripcion
 

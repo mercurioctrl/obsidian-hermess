@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-53"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-51]] Prpuesta comercial
+- **Padre:** [[BLUWEB-51 - Prpuesta comercial|BLUWEB-51]] Prpuesta comercial
 
 ## Descripcion
 

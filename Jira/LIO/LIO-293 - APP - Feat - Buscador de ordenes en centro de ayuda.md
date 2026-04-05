@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-293"
 
 ## Relaciones
 
-- **Padre:** [[LIO-277]] Centro de ayuda
-- **action item from:** [[LIO-282]] APIv4 - Feat - Migrar repositorio de compras y liberar una parte para visualizarlo sin login
+- **Padre:** [[LIO-277 - Centro de ayuda|LIO-277]] Centro de ayuda
+- **action item from:** [[LIO-282 - APIv4 - Feat - Migrar repositorio de compras y liberar una parte para|LIO-282]] APIv4 - Feat - Migrar repositorio de compras y liberar una parte para visualizarlo sin login
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-108"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **blocks:** [[COM-103]] API - Refactor - Calcular totales de impuestos por linea y subtotales
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **blocks:** [[COM-103 - API - Refactor - Calcular totales de impuestos por linea y subtotales|COM-103]] API - Refactor - Calcular totales de impuestos por linea y subtotales
 
 ## Descripcion
 

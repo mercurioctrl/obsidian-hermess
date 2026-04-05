@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-138"
 
 ## Relaciones
 
-- **Padre:** [[LIO-133]] Ms Envios Libre Opcion
-- **action item from:** [[LIO-139]] API - Refactor - Cambiar el objeto en el recurso de cotización nativo (evaluar migración a v4) para tener informacion del paquete disponible al front 
+- **Padre:** [[LIO-133 - Ms Envios Libre Opcion|LIO-133]] Ms Envios Libre Opcion
+- **action item from:** [[LIO-139 - API - Refactor - Cambiar el objeto en el recurso de cotización nativo (evaluar|LIO-139]] API - Refactor - Cambiar el objeto en el recurso de cotización nativo (evaluar migración a v4) para tener informacion del paquete disponible al front 
 
 ## Descripcion
 

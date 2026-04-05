@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-960"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **has action item:** [[NBWEB-966]] API - Refactor - Algunos cambios pedidos por Reply para nuestro catalogo
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **has action item:** [[NBWEB-966 - API - Refactor - Algunos cambios pedidos por Reply para nuestro catalogo|NBWEB-966]] API - Refactor - Algunos cambios pedidos por Reply para nuestro catalogo
 
 ## Descripcion
 

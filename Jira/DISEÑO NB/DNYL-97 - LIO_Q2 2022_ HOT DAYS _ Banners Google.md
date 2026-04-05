@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-97"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-98]] CAMPAÑA DISPLAY
-- **Subtarea:** [[DNYL-99]] Campañas de Discovery
+- **Subtarea:** [[DNYL-98 - CAMPAÑA DISPLAY|DNYL-98]] CAMPAÑA DISPLAY
+- **Subtarea:** [[DNYL-99 - Campañas de Discovery|DNYL-99]] Campañas de Discovery
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-778"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-777]] Carrito
-- **blocks:** [[NBWEB-779]] API - Refactor - Listado de direcciones en "Mi cuenta": Agregar filtro de dropshipping y mostrar el parametro en el objeto
+- **Padre:** [[NBWEB-777 - Carrito|NBWEB-777]] Carrito
+- **blocks:** [[NBWEB-779 - API - Refactor - Listado de direcciones en Mi cuenta Agregar filtro de|NBWEB-779]] API - Refactor - Listado de direcciones en "Mi cuenta": Agregar filtro de dropshipping y mostrar el parametro en el objeto
 
 ## Descripcion
 

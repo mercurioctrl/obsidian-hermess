@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-166"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-167]] API - Feat - Filtrar según lo conversado (la idea de eze de las campañas) en APIv4
+- **Subtarea:** [[MKT-167 - API - Feat - Filtrar según lo conversado (la idea de eze de las campañas) en|MKT-167]] API - Feat - Filtrar según lo conversado (la idea de eze de las campañas) en APIv4
 
 ## Descripcion
 

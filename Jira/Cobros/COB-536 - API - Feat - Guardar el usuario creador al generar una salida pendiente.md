@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-536"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **blocks:** [[COB-537]] APP - Refactor - Agregar a los formularios de solicitudes, a nombre de quien es la solicitud (elegir agente)
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **blocks:** [[COB-537 - APP - Refactor - Agregar a los formularios de solicitudes, a nombre de quien es|COB-537]] APP - Refactor - Agregar a los formularios de solicitudes, a nombre de quien es la solicitud (elegir agente)
 
 ## Descripcion
 

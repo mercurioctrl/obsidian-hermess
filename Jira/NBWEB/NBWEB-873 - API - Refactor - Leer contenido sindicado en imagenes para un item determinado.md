@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-873"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **blocks:** [[NBWEB-874]] APP - Refactor - Mostrar contenido sindicado en imagenes para un item determinado
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **blocks:** [[NBWEB-874 - APP - Refactor - Mostrar contenido sindicado en imagenes para un item|NBWEB-874]] APP - Refactor - Mostrar contenido sindicado en imagenes para un item determinado
 
 ## Descripcion
 

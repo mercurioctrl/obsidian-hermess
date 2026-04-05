@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-130"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-131]] Crear solicitud de alta
-- **Subtarea:** [[NBWEB-132]] Enviar correo para confirmar cuenta de correo
-- **Subtarea:** [[NBWEB-194]] API - Listar categorias iva
-- **Subtarea:** [[NBWEB-195]] API - Listar Provincias
-- **Subtarea:** [[NBWEB-196]] API - Listar localidades
-- **Subtarea:** [[NBWEB-198]] API - El recursos para listar localidades debe estar filtrado por provincia siempre 
-- **relates to:** [[NBWEB-129]] APP - Formulario de registro y alta de cliente
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-131 - Crear solicitud de alta|NBWEB-131]] Crear solicitud de alta
+- **Subtarea:** [[NBWEB-132 - Enviar correo para confirmar cuenta de correo|NBWEB-132]] Enviar correo para confirmar cuenta de correo
+- **Subtarea:** [[NBWEB-194 - API - Listar categorias iva|NBWEB-194]] API - Listar categorias iva
+- **Subtarea:** [[NBWEB-195 - API - Listar Provincias|NBWEB-195]] API - Listar Provincias
+- **Subtarea:** [[NBWEB-196 - API - Listar localidades|NBWEB-196]] API - Listar localidades
+- **Subtarea:** [[NBWEB-198 - API - El recursos para listar localidades debe estar filtrado por provincia|NBWEB-198]] API - El recursos para listar localidades debe estar filtrado por provincia siempre 
+- **relates to:** [[NBWEB-129 - APP - Formulario de registro y alta de cliente|NBWEB-129]] APP - Formulario de registro y alta de cliente
 
 ## Descripcion
 

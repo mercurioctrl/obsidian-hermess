@@ -29,16 +29,16 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-24"
 
 ## Relaciones
 
-- **Padre:** [[NBE-1]] Sitio Web_Etapa 1
-- **action item from:** [[NBE-4]] DSG - Refactor - Mejorar Banner de CHINT    
-- **action item from:** [[NBE-5]] DSG - Feature - Nuevo Banner ABB
-- **action item from:** [[NBE-11]] DSG - Feature - Nuevo Banner GENROD
-- **action item from:** [[NBE-12]] DSG - Feature - Nuevo Banner HUNNOX
-- **action item from:** [[NBE-13]] DSG - Feature - Nuevo Banner ARGENPLAS  
-- **action item from:** [[NBE-14]] DSG - Feature - Nuevo Banner TREFILCON 
-- **action item from:** [[NBE-15]] DSG - Refactor - Mejorar Banner MACROLED 
-- **action item from:** [[NBE-16]] DSG - Feature - Mejorar  Banner LS ELECTRIC 
-- **action item from:** [[NBE-17]] DSG -  Refactor - Nuevo Banner IDEC
+- **Padre:** [[NBE-1 - Sitio Web_Etapa 1|NBE-1]] Sitio Web_Etapa 1
+- **action item from:** [[NBE-4 - DSG - Refactor - Mejorar Banner de CHINT|NBE-4]] DSG - Refactor - Mejorar Banner de CHINT    
+- **action item from:** [[NBE-5 - DSG - Feature - Nuevo Banner ABB|NBE-5]] DSG - Feature - Nuevo Banner ABB
+- **action item from:** [[NBE-11 - DSG - Feature - Nuevo Banner GENROD|NBE-11]] DSG - Feature - Nuevo Banner GENROD
+- **action item from:** [[NBE-12 - DSG - Feature - Nuevo Banner HUNNOX|NBE-12]] DSG - Feature - Nuevo Banner HUNNOX
+- **action item from:** [[NBE-13 - DSG - Feature - Nuevo Banner ARGENPLAS|NBE-13]] DSG - Feature - Nuevo Banner ARGENPLAS  
+- **action item from:** [[NBE-14 - DSG - Feature - Nuevo Banner TREFILCON|NBE-14]] DSG - Feature - Nuevo Banner TREFILCON 
+- **action item from:** [[NBE-15 - DSG - Refactor - Mejorar Banner MACROLED|NBE-15]] DSG - Refactor - Mejorar Banner MACROLED 
+- **action item from:** [[NBE-16 - DSG - Feature - Mejorar Banner LS ELECTRIC|NBE-16]] DSG - Feature - Mejorar  Banner LS ELECTRIC 
+- **action item from:** [[NBE-17 - DSG - Refactor - Nuevo Banner IDEC|NBE-17]] DSG -  Refactor - Nuevo Banner IDEC
 
 ## Descripcion
 

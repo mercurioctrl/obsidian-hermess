@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-748"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-668]] Envíos bonificados
-- **is blocked by:** [[NBWEB-747]] API - Refactor - En los caso que tengamos envíos gratis solo pondremos como "gratis" la opción que tenga el menor precio de envío.
+- **Padre:** [[NBWEB-668 - Envíos bonificados|NBWEB-668]] Envíos bonificados
+- **is blocked by:** [[NBWEB-747 - API - Refactor - En los caso que tengamos envíos gratis solo pondremos como|NBWEB-747]] API - Refactor - En los caso que tengamos envíos gratis solo pondremos como "gratis" la opción que tenga el menor precio de envío.
 
 ## Descripcion
 

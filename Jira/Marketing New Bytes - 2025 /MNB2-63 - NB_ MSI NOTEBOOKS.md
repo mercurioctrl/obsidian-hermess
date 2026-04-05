@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-63"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-64]] NEWSLETTER
-- **Subtarea:** [[MNB2-65]] IMAGEN PARA BANNER WEB
-- **Subtarea:** [[MNB2-66]] IMAGEN PARA ESTADO
+- **Subtarea:** [[MNB2-64 - NEWSLETTER|MNB2-64]] NEWSLETTER
+- **Subtarea:** [[MNB2-65 - IMAGEN PARA BANNER WEB|MNB2-65]] IMAGEN PARA BANNER WEB
+- **Subtarea:** [[MNB2-66 - IMAGEN PARA ESTADO|MNB2-66]] IMAGEN PARA ESTADO
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-35"
 
 ## Relaciones
 
-- **Padre:** [[FB-27]] Feed Social Media
+- **Padre:** [[FB-27 - Feed Social Media|FB-27]] Feed Social Media
 
 ## Descripcion
 

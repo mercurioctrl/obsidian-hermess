@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-260"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-261]] Descuentos Fijos
-- **Subtarea:** [[MKT-262]] Precios relampago
-- **Subtarea:** [[MKT-263]] Diseños hot sale
+- **Subtarea:** [[MKT-261 - Descuentos Fijos|MKT-261]] Descuentos Fijos
+- **Subtarea:** [[MKT-262 - Precios relampago|MKT-262]] Precios relampago
+- **Subtarea:** [[MKT-263 - Diseños hot sale|MKT-263]] Diseños hot sale
 
 ## Descripcion
 

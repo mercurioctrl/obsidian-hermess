@@ -29,18 +29,18 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-21"
 
 ## Relaciones
 
-- **Padre:** [[LIO-4]] Soporte al Cliente
-- **Subtarea:** [[LIO-217]] API - Feat - Repositorio de motivos de ticket
-- **Subtarea:** [[LIO-218]] API - Feat - Repositorio de tipos de ticket
-- **Subtarea:** [[LIO-219]] API - Feat - Crear un ticket vinculado a el ítem de un una orden
-- **Subtarea:** [[LIO-223]] API - Feat - Actualizar ticket (agregar comentario)
-- **Subtarea:** [[LIO-224]] APP - Refactor - Conectar listado de tickets en una compra a V4
-- **Subtarea:** [[LIO-225]] API - Feat - Listar tickets para un pedido
-- **Subtarea:** [[LIO-226]] APP - Refactor - Conectar sistema de envio de ticket a v4
-- **Subtarea:** [[LIO-227]] API - Refactor - Cerrar ticket
-- **Subtarea:** [[LIO-228]] API - Feat - Mostrar un ticket por id de ticket
-- **Subtarea:** [[LIO-243]] API - Review - Corrección de la ubicación de la tabla de hilos
-- **Subtarea:** [[LIO-244]] API - Refactor - Marcar si el ticket esta pendiente de respuesta desde el punto de vista de la empresa
+- **Padre:** [[LIO-4 - Soporte al Cliente|LIO-4]] Soporte al Cliente
+- **Subtarea:** [[LIO-217 - API - Feat - Repositorio de motivos de ticket|LIO-217]] API - Feat - Repositorio de motivos de ticket
+- **Subtarea:** [[LIO-218 - API - Feat - Repositorio de tipos de ticket|LIO-218]] API - Feat - Repositorio de tipos de ticket
+- **Subtarea:** [[LIO-219 - API - Feat - Crear un ticket vinculado a el ítem de un una orden|LIO-219]] API - Feat - Crear un ticket vinculado a el ítem de un una orden
+- **Subtarea:** [[LIO-223 - API - Feat - Actualizar ticket (agregar comentario)|LIO-223]] API - Feat - Actualizar ticket (agregar comentario)
+- **Subtarea:** [[LIO-224 - APP - Refactor - Conectar listado de tickets en una compra a V4|LIO-224]] APP - Refactor - Conectar listado de tickets en una compra a V4
+- **Subtarea:** [[LIO-225 - API - Feat - Listar tickets para un pedido|LIO-225]] API - Feat - Listar tickets para un pedido
+- **Subtarea:** [[LIO-226 - APP - Refactor - Conectar sistema de envio de ticket a v4|LIO-226]] APP - Refactor - Conectar sistema de envio de ticket a v4
+- **Subtarea:** [[LIO-227 - API - Refactor - Cerrar ticket|LIO-227]] API - Refactor - Cerrar ticket
+- **Subtarea:** [[LIO-228 - API - Feat - Mostrar un ticket por id de ticket|LIO-228]] API - Feat - Mostrar un ticket por id de ticket
+- **Subtarea:** [[LIO-243 - API - Review - Corrección de la ubicación de la tabla de hilos|LIO-243]] API - Review - Corrección de la ubicación de la tabla de hilos
+- **Subtarea:** [[LIO-244 - API - Refactor - Marcar si el ticket esta pendiente de respuesta desde el punto|LIO-244]] API - Refactor - Marcar si el ticket esta pendiente de respuesta desde el punto de vista de la empresa
 
 ## Descripcion
 

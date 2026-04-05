@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-67"
 
 ## Relaciones
 
-- **Padre:** [[LIO-6]] Diseño de una interfaz intuitiva y navegacion
-- **is duplicated by:** [[LIO-69]] APP - Refactor - Nueva prueba de color
+- **Padre:** [[LIO-6 - Diseño de una interfaz intuitiva y navegacion|LIO-6]] Diseño de una interfaz intuitiva y navegacion
+- **is duplicated by:** [[LIO-69 - APP - Refactor - Nueva prueba de color|LIO-69]] APP - Refactor - Nueva prueba de color
 
 ## Descripcion
 

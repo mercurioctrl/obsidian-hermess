@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-32"
 
 ## Relaciones
 
-- **Padre:** [[LAW-30]] Onboarding de la nueva empresa en los sistemas del grupo NB
+- **Padre:** [[LAW-30 - Onboarding de la nueva empresa en los sistemas del grupo NB|LAW-30]] Onboarding de la nueva empresa en los sistemas del grupo NB
 
 ## Descripcion
 

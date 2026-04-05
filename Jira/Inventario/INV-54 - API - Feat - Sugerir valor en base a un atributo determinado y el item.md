@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-54"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[INV-53]] APP - Feat- Sugerir atributos cuando estamos creando uno
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[INV-53 - APP - Feat- Sugerir atributos cuando estamos creando uno|INV-53]] APP - Feat- Sugerir atributos cuando estamos creando uno
 
 ## Descripcion
 

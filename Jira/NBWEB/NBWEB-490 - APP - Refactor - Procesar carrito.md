@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-490"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **is blocked by:** [[NBWEB-489]] API - Refactor - Procesar carrito
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **is blocked by:** [[NBWEB-489 - API - Refactor - Procesar carrito|NBWEB-489]] API - Refactor - Procesar carrito
 
 ## Descripcion
 

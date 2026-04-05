@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-506"
 
 ## Relaciones
 
-- **Padre:** [[COB-505]] Dashboard
-- **Subtarea:** [[COB-509]] API - Feat - Repositorio de gastos logísticos por currier
-- **Subtarea:** [[COB-510]] APP - Feat - Pestaña de gastos logisticos en dashboard
-- **Subtarea:** [[COB-517]] API - Feat - Implementar recurso para obtener los transportistas
-- **Subtarea:** [[COB-527]] APP - Refactor - Ajustar barras para que ambas, sean la suma del total enviado
-- **Subtarea:** [[COB-529]] APP - Pestaña de gastos logísticos en dashboard - Sugerencias de mejora en los nombres
-- **Subtarea:** [[COB-531]] APP - Refactor - Incoporar el cobro total a los clientes y las descripciones
-- **Subtarea:** [[COB-547]] APP - Refactor - Agregar nueva columna de porcentaje rapido basdo en cotizaciones
+- **Padre:** [[COB-505 - Dashboard|COB-505]] Dashboard
+- **Subtarea:** [[COB-509 - API - Feat - Repositorio de gastos logísticos por currier|COB-509]] API - Feat - Repositorio de gastos logísticos por currier
+- **Subtarea:** [[COB-510 - APP - Feat - Pestaña de gastos logisticos en dashboard|COB-510]] APP - Feat - Pestaña de gastos logisticos en dashboard
+- **Subtarea:** [[COB-517 - API - Feat - Implementar recurso para obtener los transportistas|COB-517]] API - Feat - Implementar recurso para obtener los transportistas
+- **Subtarea:** [[COB-527 - APP - Refactor - Ajustar barras para que ambas, sean la suma del total enviado|COB-527]] APP - Refactor - Ajustar barras para que ambas, sean la suma del total enviado
+- **Subtarea:** [[COB-529 - APP - Pestaña de gastos logísticos en dashboard - Sugerencias de mejora en los|COB-529]] APP - Pestaña de gastos logísticos en dashboard - Sugerencias de mejora en los nombres
+- **Subtarea:** [[COB-531 - APP - Refactor - Incoporar el cobro total a los clientes y las descripciones|COB-531]] APP - Refactor - Incoporar el cobro total a los clientes y las descripciones
+- **Subtarea:** [[COB-547 - APP - Refactor - Agregar nueva columna de porcentaje rapido basdo en|COB-547]] APP - Refactor - Agregar nueva columna de porcentaje rapido basdo en cotizaciones
 
 ## Descripcion
 

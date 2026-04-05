@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-104"
 
 ## Relaciones
 
-- **Padre:** [[LIO-98]] Inventario resellers
-- **relates to:** [[LIO-100]] API - Refactor - Permitir hacer el cambio de utilidad lineal sin restringir a minUtility
+- **Padre:** [[LIO-98 - Inventario resellers|LIO-98]] Inventario resellers
+- **relates to:** [[LIO-100 - API - Refactor - Permitir hacer el cambio de utilidad lineal sin restringir a|LIO-100]] API - Refactor - Permitir hacer el cambio de utilidad lineal sin restringir a minUtility
 
 ## Descripcion
 

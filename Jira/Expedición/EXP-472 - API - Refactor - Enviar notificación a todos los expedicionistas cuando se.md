@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-472"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **has action item:** [[SNB-2580]] Alertados
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **has action item:** [[SNB-2580 - Alertados|SNB-2580]] Alertados
 
 ## Descripcion
 

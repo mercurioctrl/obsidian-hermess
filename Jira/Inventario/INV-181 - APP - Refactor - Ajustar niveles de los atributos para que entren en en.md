@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-181"
 
 ## Relaciones
 
-- **Padre:** [[INV-177]] Atributos
+- **Padre:** [[INV-177 - Atributos|INV-177]] Atributos
 
 ## Descripcion
 

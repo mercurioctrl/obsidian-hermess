@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-406"
 
 ## Relaciones
 
-- **Padre:** [[EXP-404]] DropShipping
-- **is blocked by:** [[EXP-405]] API - Feat - Agregar parametro dropShipping al listado de despacho de envios
+- **Padre:** [[EXP-404 - DropShipping|EXP-404]] DropShipping
+- **is blocked by:** [[EXP-405 - API - Feat - Agregar parametro dropShipping al listado de despacho de envios|EXP-405]] API - Feat - Agregar parametro dropShipping al listado de despacho de envios
 
 ## Descripcion
 

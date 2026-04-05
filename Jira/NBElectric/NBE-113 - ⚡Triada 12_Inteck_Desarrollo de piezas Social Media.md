@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-113"
 
 ## Relaciones
 
-- **Padre:** [[NBE-109]] Triada 11_Inteck_Social Media
+- **Padre:** [[NBE-109 - Triada 11_Inteck_Social Media|NBE-109]] Triada 11_Inteck_Social Media
 
 ## Descripcion
 

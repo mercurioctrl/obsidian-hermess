@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-284"
 
 ## Relaciones
 
-- **Padre:** [[COB-282]] Ajuste para ver los comprobantes en vouchers
+- **Padre:** [[COB-282 - Ajuste para ver los comprobantes en vouchers|COB-282]] Ajuste para ver los comprobantes en vouchers
 
 ## Descripcion
 

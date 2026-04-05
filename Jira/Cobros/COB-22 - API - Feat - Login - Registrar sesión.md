@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-22"
 
 ## Relaciones
 
-- **Padre:** [[COB-7]] API - Feat - Login
+- **Padre:** [[COB-7 - API - Feat - Login|COB-7]] API - Feat - Login
 
 ## Descripcion
 

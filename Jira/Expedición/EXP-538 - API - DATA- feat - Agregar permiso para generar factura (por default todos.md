@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-538"
 
 ## Relaciones
 
-- **Padre:** [[EXP-533]] Permisos de visualizacion
-- **has action item:** [[EXP-537]] APP - Agregar permiso para generar factura
+- **Padre:** [[EXP-533 - Permisos de visualizacion|EXP-533]] Permisos de visualizacion
+- **has action item:** [[EXP-537 - APP - Agregar permiso para generar factura|EXP-537]] APP - Agregar permiso para generar factura
 
 ## Descripcion
 

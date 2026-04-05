@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-445"
 
 ## Relaciones
 
-- **Padre:** [[LIO-419]] Mejoras de pagos
-- **has action item:** [[LIO-450]] API - Refactor - Al confirmar un pedido que usa plata en wallet o billetera, agregar parametro idLo a la linea de cuenta corriente
+- **Padre:** [[LIO-419 - Mejoras de pagos|LIO-419]] Mejoras de pagos
+- **has action item:** [[LIO-450 - API - Refactor - Al confirmar un pedido que usa plata en wallet o billetera,|LIO-450]] API - Refactor - Al confirmar un pedido que usa plata en wallet o billetera, agregar parametro idLo a la linea de cuenta corriente
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-259"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-261]] Mar: Diseño (triada 13)
-- **Subtarea:** [[BLUWEB-265]] Mar: Copys Triada 13
-- **Subtarea:** [[BLUWEB-271]] Mar: Programar Triada 13 
+- **Subtarea:** [[BLUWEB-261 - Mar Diseño (triada 13)|BLUWEB-261]] Mar: Diseño (triada 13)
+- **Subtarea:** [[BLUWEB-265 - Mar Copys Triada 13|BLUWEB-265]] Mar: Copys Triada 13
+- **Subtarea:** [[BLUWEB-271 - Mar Programar Triada 13|BLUWEB-271]] Mar: Programar Triada 13 
 
 ## Descripcion
 

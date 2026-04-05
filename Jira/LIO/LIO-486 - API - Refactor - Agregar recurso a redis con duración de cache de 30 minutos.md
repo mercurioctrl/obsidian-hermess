@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-486"
 
 ## Relaciones
 
-- **Padre:** [[LIO-481]] Recomendaciones de loki
+- **Padre:** [[LIO-481 - Recomendaciones de loki|LIO-481]] Recomendaciones de loki
 
 ## Descripcion
 

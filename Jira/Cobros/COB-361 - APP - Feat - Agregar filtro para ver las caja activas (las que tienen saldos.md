@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-361"
 
 ## Relaciones
 
-- **Padre:** [[COB-78]] APP - Feat - Listar saldos de caja
-- **is blocked by:** [[COB-360]] API - Refactor - Introducir parametro para filtrar aquellas que tienen saldos distintos de cero
+- **Padre:** [[COB-78 - APP - Feat - Listar saldos de caja|COB-78]] APP - Feat - Listar saldos de caja
+- **is blocked by:** [[COB-360 - API - Refactor - Introducir parametro para filtrar aquellas que tienen saldos|COB-360]] API - Refactor - Introducir parametro para filtrar aquellas que tienen saldos distintos de cero
 
 ## Descripcion
 

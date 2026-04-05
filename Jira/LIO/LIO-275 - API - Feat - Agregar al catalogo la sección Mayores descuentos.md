@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-275"
 
 ## Relaciones
 
-- **Padre:** [[LIO-166]] Catalogos y sincronizaciones
-- **has action item:** [[LIO-276]] APP - Refactor - Agregar la seccion "mayores descuentos"
+- **Padre:** [[LIO-166 - Catalogos y sincronizaciones|LIO-166]] Catalogos y sincronizaciones
+- **has action item:** [[LIO-276 - APP - Refactor - Agregar la seccion mayores descuentos|LIO-276]] APP - Refactor - Agregar la seccion "mayores descuentos"
 
 ## Descripcion
 

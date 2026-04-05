@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-184"
 
 ## Relaciones
 
-- **Padre:** [[NBE-173]] NBE: Triada 21
+- **Padre:** [[NBE-173 - NBE Triada 21|NBE-173]] NBE: Triada 21
 
 ## Descripcion
 

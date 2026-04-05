@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-166"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-56]] API Abierta y Documentacion
+- **Padre:** [[NBWEB-56 - API Abierta y Documentacion|NBWEB-56]] API Abierta y Documentacion
 
 ## Descripcion
 

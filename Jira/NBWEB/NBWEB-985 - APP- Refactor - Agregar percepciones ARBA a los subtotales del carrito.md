@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-985"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-983]] Percepciones
+- **Padre:** [[NBWEB-983 - Percepciones|NBWEB-983]] Percepciones
 
 ## Descripcion
 

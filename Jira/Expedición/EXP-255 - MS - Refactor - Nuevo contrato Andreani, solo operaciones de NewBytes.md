@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-255"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-256]] MS - Refactor - Nuevo contrato Andreani, solo operaciones de NewBytes
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-256 - MS - Refactor - Nuevo contrato Andreani, solo operaciones de NewBytes|EXP-256]] MS - Refactor - Nuevo contrato Andreani, solo operaciones de NewBytes
 
 ## Descripcion
 

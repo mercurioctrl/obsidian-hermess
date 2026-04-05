@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-100"
 
 ## Relaciones
 
-- **Padre:** [[NBE-96]] Triada 7_Trefi_Social Media
+- **Padre:** [[NBE-96 - Triada 7_Trefi_Social Media|NBE-96]] Triada 7_Trefi_Social Media
 
 ## Descripcion
 

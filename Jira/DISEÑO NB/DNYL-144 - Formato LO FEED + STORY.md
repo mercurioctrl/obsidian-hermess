@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-144"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-143]] NB_ Sillas Gamers Trust_ Redes
+- **Padre:** [[DNYL-143 - NB_ Sillas Gamers Trust_ Redes|DNYL-143]] NB_ Sillas Gamers Trust_ Redes
 
 ## Descripcion
 

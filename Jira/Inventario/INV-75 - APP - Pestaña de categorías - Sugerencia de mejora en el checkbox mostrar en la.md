@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-75"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-71]] APP - Feat - Pestaña de categorias
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-71 - APP - Feat - Pestaña de categorias|INV-71]] APP - Feat - Pestaña de categorias
 
 ## Descripcion
 

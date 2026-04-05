@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-82"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **has action item:** [[NBE-137]] APP - Refactir - Cambiar iconos  + TEXTOS
-- **has action item:** [[NBE-148]] APP - Refactor - cambiar iconografía Home
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **has action item:** [[NBE-137 - APP - Refactir - Cambiar iconos + TEXTOS|NBE-137]] APP - Refactir - Cambiar iconos  + TEXTOS
+- **has action item:** [[NBE-148 - APP - Refactor - cambiar iconografía Home|NBE-148]] APP - Refactor - cambiar iconografía Home
 
 ## Descripcion
 

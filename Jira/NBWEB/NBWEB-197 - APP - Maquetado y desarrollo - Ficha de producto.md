@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-197"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **relates to:** [[NBWEB-211]] API - Detalle de producto
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **relates to:** [[NBWEB-211 - API - Detalle de producto|NBWEB-211]] API - Detalle de producto
 
 ## Descripcion
 

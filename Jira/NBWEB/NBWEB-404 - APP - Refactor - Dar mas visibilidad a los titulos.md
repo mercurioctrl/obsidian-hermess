@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-404"
 
 ## Relaciones
 
-- **causes:** [[SNB-199]] SUGERENCIA DE CLIENTE
+- **causes:** [[SNB-199 - SUGERENCIA DE CLIENTE|SNB-199]] SUGERENCIA DE CLIENTE
 
 ## Descripcion
 

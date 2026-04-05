@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-102"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **has action item:** [[BLUWEB-100]] APP - Refactor - Contenido - Servicios - Blu.Marketing
-- **has action item:** [[BLUWEB-101]] APP - Refactor - Contenido - Servicios - Blu.BI
-- **action item from:** [[BLUWEB-97]] APP - Refactor - Contenido - Servicios - Blu.it
-- **action item from:** [[BLUWEB-99]] DSG - Feature - Generar Iconografia referente para cada título en la seccion de 
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **has action item:** [[BLUWEB-100 - APP - Refactor - Contenido - Servicios - Blu.Marketing|BLUWEB-100]] APP - Refactor - Contenido - Servicios - Blu.Marketing
+- **has action item:** [[BLUWEB-101 - APP - Refactor - Contenido - Servicios - Blu.BI|BLUWEB-101]] APP - Refactor - Contenido - Servicios - Blu.BI
+- **action item from:** [[BLUWEB-97 - APP - Refactor - Contenido - Servicios - Blu.it|BLUWEB-97]] APP - Refactor - Contenido - Servicios - Blu.it
+- **action item from:** [[BLUWEB-99 - DSG - Feature - Generar Iconografia referente para cada título en la seccion de|BLUWEB-99]] DSG - Feature - Generar Iconografia referente para cada título en la seccion de 
 
 ## Descripcion
 

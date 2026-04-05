@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-72"
 
 ## Relaciones
 
-- **Padre:** [[EXP-71]] Feat - Remito fiscal / no fiscal
+- **Padre:** [[EXP-71 - Feat - Remito fiscal no fiscal|EXP-71]] Feat - Remito fiscal / no fiscal
 
 ## Descripcion
 

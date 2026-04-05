@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-185"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **blocks:** [[COM-177]] APP - MVP - Refactor - Agregar campos trackingNumber y arrivalDate en el modal de orden de compra
-- **relates to:** [[COM-211]] API - MVP - Refactor - Recurso para modificar datos de cabecera en Provider Order -> Eliminar país
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **blocks:** [[COM-177 - APP - MVP - Refactor - Agregar campos trackingNumber y arrivalDate en el modal|COM-177]] APP - MVP - Refactor - Agregar campos trackingNumber y arrivalDate en el modal de orden de compra
+- **relates to:** [[COM-211 - API - MVP - Refactor - Recurso para modificar datos de cabecera en Provider|COM-211]] API - MVP - Refactor - Recurso para modificar datos de cabecera en Provider Order -> Eliminar país
 
 ## Descripcion
 

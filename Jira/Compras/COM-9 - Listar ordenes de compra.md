@@ -29,18 +29,18 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-9"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **Subtarea:** [[COM-10]] API - Feat - Listar ordenes de compra
-- **Subtarea:** [[COM-22]] API - Refactor - Listar ordenes de compra ->Agregados
-- **Subtarea:** [[COM-21]] APP - Feat - Listar ordenes de compra
-- **Subtarea:** [[COM-31]] API - Feat - Listar ordenes de compra -> Agregar totales
-- **Subtarea:** [[COM-32]] APP - Feat - Listar ordenes de compra -> Agregar totales
-- **Subtarea:** [[COM-152]] API - Refactor - Incorporar concepto companyCode al repositorio de ordenes de compra
-- **Subtarea:** [[COM-209]] APP - MVP - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)
-- **Subtarea:** [[COM-210]] API - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)
-- **Subtarea:** [[COM-257]] APP - Review - al editar el pais de la orden se borra el depósito que tenía guardado
-- **Subtarea:** [[COM-282]] API - Review - al editar  el IVA -> el IVA no se refleja correctamente en el listado
-- **Subtarea:** [[COM-283]] APP - Cambiar IVA por (taxAmount) impuestos en el listado de ordenes
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **Subtarea:** [[COM-10 - API - Feat - Listar ordenes de compra|COM-10]] API - Feat - Listar ordenes de compra
+- **Subtarea:** [[COM-22 - API - Refactor - Listar ordenes de compra -Agregados|COM-22]] API - Refactor - Listar ordenes de compra ->Agregados
+- **Subtarea:** [[COM-21 - APP - Feat - Listar ordenes de compra|COM-21]] APP - Feat - Listar ordenes de compra
+- **Subtarea:** [[COM-31 - API - Feat - Listar ordenes de compra - Agregar totales|COM-31]] API - Feat - Listar ordenes de compra -> Agregar totales
+- **Subtarea:** [[COM-32 - APP - Feat - Listar ordenes de compra - Agregar totales|COM-32]] APP - Feat - Listar ordenes de compra -> Agregar totales
+- **Subtarea:** [[COM-152 - API - Refactor - Incorporar concepto companyCode al repositorio de ordenes de|COM-152]] API - Refactor - Incorporar concepto companyCode al repositorio de ordenes de compra
+- **Subtarea:** [[COM-209 - APP - MVP - Feat - agregar filtro para buscar por nro de invoice y proforma|COM-209]] APP - MVP - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)
+- **Subtarea:** [[COM-210 - API - Feat - agregar filtro para buscar por nro de invoice y proforma|COM-210]] API - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)
+- **Subtarea:** [[COM-257 - APP - Review - al editar el pais de la orden se borra el depósito que tenía|COM-257]] APP - Review - al editar el pais de la orden se borra el depósito que tenía guardado
+- **Subtarea:** [[COM-282 - API - Review - al editar el IVA - el IVA no se refleja correctamente en el|COM-282]] API - Review - al editar  el IVA -> el IVA no se refleja correctamente en el listado
+- **Subtarea:** [[COM-283 - APP - Cambiar IVA por (taxAmount) impuestos en el listado de ordenes|COM-283]] APP - Cambiar IVA por (taxAmount) impuestos en el listado de ordenes
 
 ## Descripcion
 

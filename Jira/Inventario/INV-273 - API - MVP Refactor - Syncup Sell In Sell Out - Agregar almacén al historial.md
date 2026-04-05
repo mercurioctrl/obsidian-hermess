@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-273"
 
 ## Relaciones
 
-- **Padre:** [[INV-250]] Repositorio de Sell In Sell Out
-- **relates to:** [[INV-252]] API - MVP - Sync up - Modificacion de costos por sellIn sellOut ( Se encarga de ajustar los costosy guardar los valores anteriores segun el criterio de fecha o cantidad de corte)
+- **Padre:** [[INV-250 - Repositorio de Sell In Sell Out|INV-250]] Repositorio de Sell In Sell Out
+- **relates to:** [[INV-252 - API - MVP - Sync up - Modificacion de costos por sellIn sellOut ( Se encarga de|INV-252]] API - MVP - Sync up - Modificacion de costos por sellIn sellOut ( Se encarga de ajustar los costosy guardar los valores anteriores segun el criterio de fecha o cantidad de corte)
 
 ## Descripcion
 

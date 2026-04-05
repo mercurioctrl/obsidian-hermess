@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-973"
 
 ## Relaciones
 
-- **has action item:** [[MNB2-2]] DLink_ CAMPAÑA BIENVENIDO_Q1
+- **has action item:** [[MNB2-2 - DLink_ CAMPAÑA BIENVENIDO_Q1|MNB2-2]] DLink_ CAMPAÑA BIENVENIDO_Q1
 
 ## Descripcion
 

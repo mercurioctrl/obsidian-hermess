@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-33"
 
 ## Relaciones
 
-- **Padre:** [[FB-30]] Cerco Perimetral Ugarte
+- **Padre:** [[FB-30 - Cerco Perimetral Ugarte|FB-30]] Cerco Perimetral Ugarte
 
 ## Descripcion
 

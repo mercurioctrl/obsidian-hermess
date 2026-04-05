@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-599"
 
 ## Relaciones
 
-- **Padre:** [[COB-581]] Repositorio y Gestión de Billeteras Libre Opción
-- **action item from:** [[COB-582]] API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el saldo relativo a libre opción tal cual lo muestra la billetera para el cliente
-- **has action item:** [[COB-600]] APP - Refactor - Agregar filtrado por nombre, clientId y userIdLo
+- **Padre:** [[COB-581 - Repositorio y Gestión de Billeteras Libre Opción|COB-581]] Repositorio y Gestión de Billeteras Libre Opción
+- **action item from:** [[COB-582 - API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el|COB-582]] API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el saldo relativo a libre opción tal cual lo muestra la billetera para el cliente
+- **has action item:** [[COB-600 - APP - Refactor - Agregar filtrado por nombre, clientId y userIdLo|COB-600]] APP - Refactor - Agregar filtrado por nombre, clientId y userIdLo
 
 ## Descripcion
 

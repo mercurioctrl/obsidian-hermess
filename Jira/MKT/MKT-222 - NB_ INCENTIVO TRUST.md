@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-222"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-225]] https://lioteam.atlassian.net/browse/PED-846
-- **action item from:** [[PED-846]] API - Feat - Cuotas Vendedores (match %TRUST%)
+- **Subtarea:** [[MKT-225 - httpslioteam.atlassian.netbrowsePED-846|MKT-225]] https://lioteam.atlassian.net/browse/PED-846
+- **action item from:** [[PED-846 - API - Feat - Cuotas Vendedores (match %TRUST%)|PED-846]] API - Feat - Cuotas Vendedores (match %TRUST%)
 
 ## Descripcion
 

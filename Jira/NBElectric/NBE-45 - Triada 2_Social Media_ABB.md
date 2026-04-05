@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-45"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-48]] Triada 2 Instagram_ABB (Story)  1
-- **Subtarea:** [[NBE-49]] Post 2 Linkedin_ABB
-- **Subtarea:** [[NBE-50]] Post 2 Facebook_ABB
-- **Subtarea:** [[NBE-51]] Armar copy 2_ABB
-- **Subtarea:** [[NBE-52]] Realizar post  2 en Instagram, Linkedin y Facebook_ABB
-- **Subtarea:** [[NBE-53]] Armar Youtube Short + Story_ABB
+- **Subtarea:** [[NBE-48 - Triada 2 Instagram_ABB (Story) 1|NBE-48]] Triada 2 Instagram_ABB (Story)  1
+- **Subtarea:** [[NBE-49 - Post 2 Linkedin_ABB|NBE-49]] Post 2 Linkedin_ABB
+- **Subtarea:** [[NBE-50 - Post 2 Facebook_ABB|NBE-50]] Post 2 Facebook_ABB
+- **Subtarea:** [[NBE-51 - Armar copy 2_ABB|NBE-51]] Armar copy 2_ABB
+- **Subtarea:** [[NBE-52 - Realizar post 2 en Instagram, Linkedin y Facebook_ABB|NBE-52]] Realizar post  2 en Instagram, Linkedin y Facebook_ABB
+- **Subtarea:** [[NBE-53 - Armar Youtube Short + Story_ABB|NBE-53]] Armar Youtube Short + Story_ABB
 
 ## Descripcion
 

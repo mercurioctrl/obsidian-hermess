@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-402"
 
 ## Relaciones
 
-- **Padre:** [[EXP-7]] Despacho de retiros
-- **blocks:** [[EXP-400]] APP - Refactor - Agregar el recurso de solicitud de l tipo de voucher en envios y retiros
-- **is blocked by:** [[SNB-1584]] [EXP-API] Obtener tipos de voucher - Datos vacíos
+- **Padre:** [[EXP-7 - Despacho de retiros|EXP-7]] Despacho de retiros
+- **blocks:** [[EXP-400 - APP - Refactor - Agregar el recurso de solicitud de l tipo de voucher en envios|EXP-400]] APP - Refactor - Agregar el recurso de solicitud de l tipo de voucher en envios y retiros
+- **is blocked by:** [[SNB-1584 - EXP-API Obtener tipos de voucher - Datos vacíos|SNB-1584]] [EXP-API] Obtener tipos de voucher - Datos vacíos
 
 ## Descripcion
 

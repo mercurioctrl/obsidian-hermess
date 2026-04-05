@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-21"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **is blocked by:** [[COM-10]] API - Feat - Listar ordenes de compra
-- **is blocked by:** [[COM-22]] API - Refactor - Listar ordenes de compra ->Agregados
-- **is blocked by:** [[COM-23]] API - Feat - Repositorio depositos
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **is blocked by:** [[COM-10 - API - Feat - Listar ordenes de compra|COM-10]] API - Feat - Listar ordenes de compra
+- **is blocked by:** [[COM-22 - API - Refactor - Listar ordenes de compra -Agregados|COM-22]] API - Refactor - Listar ordenes de compra ->Agregados
+- **is blocked by:** [[COM-23 - API - Feat - Repositorio depositos|COM-23]] API - Feat - Repositorio depositos
 
 ## Descripcion
 

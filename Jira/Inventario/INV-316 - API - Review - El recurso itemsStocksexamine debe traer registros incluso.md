@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-316"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **clones:** [[INV-304]] API - Review - El recurso itemsStocks/examine debe traer  registros incluso cuando no se filtra el ID_ALMACEN de manera explicita
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **clones:** [[INV-304 - API - Review - El recurso itemsStocksexamine debe traer registros incluso|INV-304]] API - Review - El recurso itemsStocks/examine debe traer  registros incluso cuando no se filtra el ID_ALMACEN de manera explicita
 
 ## Descripcion
 

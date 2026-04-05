@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-10"
 
 ## Relaciones
 
-- **Padre:** [[MKT-8]] SUBIR BANNER WEB 3-4 GSKILL
+- **Padre:** [[MKT-8 - SUBIR BANNER WEB 3-4 GSKILL|MKT-8]] SUBIR BANNER WEB 3-4 GSKILL
 
 ## Descripcion
 

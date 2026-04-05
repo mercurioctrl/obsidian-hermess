@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-108"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-104]] API - Pre ingreso de postventa
-- **relates to:** [[NBWEB-110]] APP - Maquetado y desarrollo Postventa
+- **Padre:** [[NBWEB-104 - API - Pre ingreso de postventa|NBWEB-104]] API - Pre ingreso de postventa
+- **relates to:** [[NBWEB-110 - APP - Maquetado y desarrollo Postventa|NBWEB-110]] APP - Maquetado y desarrollo Postventa
 
 ## Descripcion
 

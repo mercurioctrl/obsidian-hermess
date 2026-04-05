@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-45"
 
 ## Relaciones
 
-- **Padre:** [[LIO-44]] Integrar whaticket.com
-- **is blocked by:** [[LIO-20]] Bot de whatsapp
+- **Padre:** [[LIO-44 - Integrar whaticket.com|LIO-44]] Integrar whaticket.com
+- **is blocked by:** [[LIO-20 - Bot de whatsapp|LIO-20]] Bot de whatsapp
 
 ## Descripcion
 

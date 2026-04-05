@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-39"
 
 ## Relaciones
 
-- **Padre:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **blocks:** [[COB-40]] APP - Feat - Listar movimientos caja
-- **blocks:** [[COB-56]] APP - Feat - Filtrar movimientos de caja
+- **Padre:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **blocks:** [[COB-40 - APP - Feat - Listar movimientos caja|COB-40]] APP - Feat - Listar movimientos caja
+- **blocks:** [[COB-56 - APP - Feat - Filtrar movimientos de caja|COB-56]] APP - Feat - Filtrar movimientos de caja
 
 ## Descripcion
 

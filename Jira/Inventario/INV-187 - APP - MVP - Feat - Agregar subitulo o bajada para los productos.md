@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-187"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[INV-186]] API - MVP - Feat - Agregar subitulo o bajada para los productos
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[INV-186 - API - MVP - Feat - Agregar subitulo o bajada para los productos|INV-186]] API - MVP - Feat - Agregar subitulo o bajada para los productos
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-135"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-134]] Respuestas a Qa del sitio etapa 0
-- **has action item:** [[BLUWEB-132]] Qa - Evaluación pre-lanzamiento como visitante del sitio web
+- **Padre:** [[BLUWEB-134 - Respuestas a Qa del sitio etapa 0|BLUWEB-134]] Respuestas a Qa del sitio etapa 0
+- **has action item:** [[BLUWEB-132 - Qa - Evaluación pre-lanzamiento como visitante del sitio web|BLUWEB-132]] Qa - Evaluación pre-lanzamiento como visitante del sitio web
 
 ## Descripcion
 

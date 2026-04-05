@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-46"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **is blocked by:** [[COM-47]] API - Feat - Ver detalle de un provoeedor
-- **is blocked by:** [[COM-45]] API - Feat - Modificar un provedor
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **is blocked by:** [[COM-47 - API - Feat - Ver detalle de un provoeedor|COM-47]] API - Feat - Ver detalle de un provoeedor
+- **is blocked by:** [[COM-45 - API - Feat - Modificar un provedor|COM-45]] API - Feat - Modificar un provedor
 
 ## Descripcion
 

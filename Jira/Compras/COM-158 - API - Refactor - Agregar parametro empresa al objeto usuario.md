@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-158"
 
 ## Relaciones
 
-- **Padre:** [[COM-156]] Filtro Empresa
-- **has action item:** [[COM-159]] APP - Refactor - Agregar filtro empresa global
-- **action item from:** [[COM-281]] API - Refactor - Usuario autenticado → Homologado de respuesta en companyCode
+- **Padre:** [[COM-156 - Filtro Empresa|COM-156]] Filtro Empresa
+- **has action item:** [[COM-159 - APP - Refactor - Agregar filtro empresa global|COM-159]] APP - Refactor - Agregar filtro empresa global
+- **action item from:** [[COM-281 - API - Refactor - Usuario autenticado → Homologado de respuesta en companyCode|COM-281]] API - Refactor - Usuario autenticado → Homologado de respuesta en companyCode
 
 ## Descripcion
 

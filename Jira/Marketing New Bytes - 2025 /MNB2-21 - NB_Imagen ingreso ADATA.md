@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-21"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-22]] Newsletter
-- **Subtarea:** [[MNB2-23]] Banner Adata+XPG en web NB
-- **Subtarea:** [[MNB2-24]] Banner Adata + XPG en LO
+- **Subtarea:** [[MNB2-22 - Newsletter|MNB2-22]] Newsletter
+- **Subtarea:** [[MNB2-23 - Banner Adata+XPG en web NB|MNB2-23]] Banner Adata+XPG en web NB
+- **Subtarea:** [[MNB2-24 - Banner Adata + XPG en LO|MNB2-24]] Banner Adata + XPG en LO
 
 ## Descripcion
 

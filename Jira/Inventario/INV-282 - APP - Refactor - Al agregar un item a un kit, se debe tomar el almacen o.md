@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-282"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **action item from:** [[INV-281]] API - Refactor - Al agregar un item a un kit, se debe tomar el almacen o deposito especifico
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **action item from:** [[INV-281 - API - Refactor - Al agregar un item a un kit, se debe tomar el almacen o|INV-281]] API - Refactor - Al agregar un item a un kit, se debe tomar el almacen o deposito especifico
 
 ## Descripcion
 

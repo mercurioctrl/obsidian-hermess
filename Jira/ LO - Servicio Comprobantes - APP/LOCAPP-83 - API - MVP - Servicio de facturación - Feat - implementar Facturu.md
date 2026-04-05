@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-83"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
-- **action item from:** [[LOCAPP-81]]  APP - MVP -Feat - Crear maqutacion para eticket y efactura (voucher) FACTURU 
+- **Padre:** [[LOCAPP-80 - MVP - Vouchers para LASET (eticket, efactura,packingList PL, SLI)|LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
+- **action item from:** [[LOCAPP-81 - APP - MVP -Feat - Crear maqutacion para eticket y efactura (voucher) FACTURU|LOCAPP-81]]  APP - MVP -Feat - Crear maqutacion para eticket y efactura (voucher) FACTURU 
 
 ## Descripcion
 

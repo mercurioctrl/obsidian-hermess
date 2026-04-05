@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-96"
 
 ## Relaciones
 
-- **relates to:** [[LIO-94]] APP - Refactor - Clarificar cuotas en checkout
+- **relates to:** [[LIO-94 - APP - Refactor - Clarificar cuotas en checkout|LIO-94]] APP - Refactor - Clarificar cuotas en checkout
 
 ## Descripcion
 

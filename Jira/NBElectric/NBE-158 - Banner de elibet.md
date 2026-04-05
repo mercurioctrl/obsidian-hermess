@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-158"
 
 ## Relaciones
 
-- **has action item:** [[NBE-168]] NBE: Subir Banner de elibet en posición 1
+- **has action item:** [[NBE-168 - NBE Subir Banner de elibet en posición 1|NBE-168]] NBE: Subir Banner de elibet en posición 1
 
 ## Descripcion
 

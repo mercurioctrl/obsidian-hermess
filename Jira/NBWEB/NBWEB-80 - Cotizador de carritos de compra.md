@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-80"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **is blocked by:** [[NBWEB-1]] API - Carrito de compras
-- **relates to:** [[NBWEB-11]] API - Implementar Cotizadores de envio
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **is blocked by:** [[NBWEB-1 - API - Carrito de compras|NBWEB-1]] API - Carrito de compras
+- **relates to:** [[NBWEB-11 - API - Implementar Cotizadores de envio|NBWEB-11]] API - Implementar Cotizadores de envio
 
 ## Descripcion
 

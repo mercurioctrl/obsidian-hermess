@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-217"
 
 ## Relaciones
 
-- **causes:** [[SNB-597]] problemas con la volanta 
+- **causes:** [[SNB-597 - problemas con la volanta|SNB-597]] problemas con la volanta 
 
 ## Descripcion
 

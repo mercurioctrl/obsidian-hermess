@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-196"
 
 ## Relaciones
 
-- **Padre:** [[MKT-194]] LO_ Landing Promo Nvidia GPU 
+- **Padre:** [[MKT-194 - LO_ Landing Promo Nvidia GPU|MKT-194]] LO_ Landing Promo Nvidia GPU 
 
 ## Descripcion
 

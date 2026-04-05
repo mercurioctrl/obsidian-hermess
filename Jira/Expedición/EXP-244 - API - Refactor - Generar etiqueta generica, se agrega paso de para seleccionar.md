@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-244"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **blocks:** [[EXP-245]] APP - Refactor - Agregar selector de transportista al modal para generar etiqueta generica
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **blocks:** [[EXP-245 - APP - Refactor - Agregar selector de transportista al modal para generar|EXP-245]] APP - Refactor - Agregar selector de transportista al modal para generar etiqueta generica
 
 ## Descripcion
 

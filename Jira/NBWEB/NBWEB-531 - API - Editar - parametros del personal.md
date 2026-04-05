@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-531"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-529]] CMS -  Personal
+- **Padre:** [[NBWEB-529 - CMS - Personal|NBWEB-529]] CMS -  Personal
 
 ## Descripcion
 

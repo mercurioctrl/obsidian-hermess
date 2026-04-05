@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-410"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-408]] API - Feat - Listar banners
+- **Padre:** [[NBWEB-408 - API - Feat - Listar banners|NBWEB-408]] API - Feat - Listar banners
 
 ## Descripcion
 

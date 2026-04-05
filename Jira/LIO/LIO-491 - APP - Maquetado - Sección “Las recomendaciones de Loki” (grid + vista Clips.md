@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-491"
 
 ## Relaciones
 
-- **Padre:** [[LIO-481]] Recomendaciones de loki
-- **action item from:** [[LIO-483]] API - Refactor - Obtener los vídeos desde la base de datos
-- **action item from:** [[LIO-492]] API - Refactor - Listar el repositorio de cortos de video -> Agregar ultimos parámetro sobre el objeto existente para modelar objeto enriquecido
+- **Padre:** [[LIO-481 - Recomendaciones de loki|LIO-481]] Recomendaciones de loki
+- **action item from:** [[LIO-483 - API - Refactor - Obtener los vídeos desde la base de datos|LIO-483]] API - Refactor - Obtener los vídeos desde la base de datos
+- **action item from:** [[LIO-492 - API - Refactor - Listar el repositorio de cortos de video - Agregar ultimos|LIO-492]] API - Refactor - Listar el repositorio de cortos de video -> Agregar ultimos parámetro sobre el objeto existente para modelar objeto enriquecido
 
 ## Descripcion
 

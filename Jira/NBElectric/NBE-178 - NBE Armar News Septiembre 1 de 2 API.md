@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-178"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-183]] Programar Newletter  para 26-09
-- **has action item:** [[NBE-183]] Programar Newletter  para 26-09
+- **Subtarea:** [[NBE-183 - Programar Newletter para 26-09|NBE-183]] Programar Newletter  para 26-09
+- **has action item:** [[NBE-183 - Programar Newletter para 26-09|NBE-183]] Programar Newletter  para 26-09
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-921"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-913]] API - Refactor - Agregaremos internalTax a todos nuestros listados de precio de descarga
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-913 - API - Refactor - Agregaremos internalTax a todos nuestros listados de precio de|NBWEB-913]] API - Refactor - Agregaremos internalTax a todos nuestros listados de precio de descarga
 
 ## Descripcion
 

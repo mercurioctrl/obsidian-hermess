@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-91"
 
 ## Relaciones
 
-- **action item from:** [[BLUWEB-207]] API - Feat - Recurso para formularios de contacto para landings de clientes (partner contact forms)
+- **action item from:** [[BLUWEB-207 - API - Feat - Recurso para formularios de contacto para landings de clientes|BLUWEB-207]] API - Feat - Recurso para formularios de contacto para landings de clientes (partner contact forms)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-208"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-210]] API - Feat - Agregar repositorio de objtetivo genius por ventas/vendedor
-- **Subtarea:** [[MKT-211]] APP - Feat - Agregar tabla de posiciones por vendedor
+- **Subtarea:** [[MKT-210 - API - Feat - Agregar repositorio de objtetivo genius por ventasvendedor|MKT-210]] API - Feat - Agregar repositorio de objtetivo genius por ventas/vendedor
+- **Subtarea:** [[MKT-211 - APP - Feat - Agregar tabla de posiciones por vendedor|MKT-211]] APP - Feat - Agregar tabla de posiciones por vendedor
 
 ## Descripcion
 

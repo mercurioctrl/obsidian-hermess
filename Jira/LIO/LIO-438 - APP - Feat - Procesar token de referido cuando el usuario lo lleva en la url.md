@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-438"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **action item from:** [[LIO-414]] API - Feat - Guardar token referido para un usuario ya logueado
-- **action item from:** [[LIO-413]] API  - Refactor - Recibir token de referido al hacer login (este caso es para cuando esta guardado en localStorage, porque aun no logueo)
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **action item from:** [[LIO-414 - API - Feat - Guardar token referido para un usuario ya logueado|LIO-414]] API - Feat - Guardar token referido para un usuario ya logueado
+- **action item from:** [[LIO-413 - API - Refactor - Recibir token de referido al hacer login (este caso es para|LIO-413]] API  - Refactor - Recibir token de referido al hacer login (este caso es para cuando esta guardado en localStorage, porque aun no logueo)
 
 ## Descripcion
 

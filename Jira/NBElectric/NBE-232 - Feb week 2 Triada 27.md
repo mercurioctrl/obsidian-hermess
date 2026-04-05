@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-232"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-233]] Feb: Week 1/27 Diseño
-- **Subtarea:** [[NBE-234]] Feb: Week 1/27 Copys
-- **Subtarea:** [[NBE-235]] Feb: Week 1/27 Programar
-- **Subtarea:** [[NBE-236]] Enero: Week 1/27 Activaciones
+- **Subtarea:** [[NBE-233 - Feb Week 127 Diseño|NBE-233]] Feb: Week 1/27 Diseño
+- **Subtarea:** [[NBE-234 - Feb Week 127 Copys|NBE-234]] Feb: Week 1/27 Copys
+- **Subtarea:** [[NBE-235 - Feb Week 127 Programar|NBE-235]] Feb: Week 1/27 Programar
+- **Subtarea:** [[NBE-236 - Enero Week 127 Activaciones|NBE-236]] Enero: Week 1/27 Activaciones
 
 ## Descripcion
 

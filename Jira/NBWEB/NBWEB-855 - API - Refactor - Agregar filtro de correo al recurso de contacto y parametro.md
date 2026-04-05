@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-855"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **has action item:** [[NBWEB-892]] APP - Refactor - Cambiaremos el recurso que lee las vCard para filtrar especificamente por el email deseado en lugar de traer todo el repo (esto ademas nos permite obtener aquellos que no figuran en contactos)
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **has action item:** [[NBWEB-892 - APP - Refactor - Cambiaremos el recurso que lee las vCard para filtrar|NBWEB-892]] APP - Refactor - Cambiaremos el recurso que lee las vCard para filtrar especificamente por el email deseado en lugar de traer todo el repo (esto ademas nos permite obtener aquellos que no figuran en contactos)
 
 ## Descripcion
 

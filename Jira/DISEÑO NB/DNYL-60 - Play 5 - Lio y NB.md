@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-60"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-61]] Feed Instagram NB
-- **Subtarea:** [[DNYL-62]] Feed Instagram LO
-- **Subtarea:** [[DNYL-63]] Story NB y LO
-- **Subtarea:** [[DNYL-64]] REEL LO - Misma imagen pero animada
-- **Subtarea:** [[DNYL-70]] Twitter LO
-- **Subtarea:** [[DNYL-71]] Twitter NB
+- **Subtarea:** [[DNYL-61 - Feed Instagram NB|DNYL-61]] Feed Instagram NB
+- **Subtarea:** [[DNYL-62 - Feed Instagram LO|DNYL-62]] Feed Instagram LO
+- **Subtarea:** [[DNYL-63 - Story NB y LO|DNYL-63]] Story NB y LO
+- **Subtarea:** [[DNYL-64 - REEL LO - Misma imagen pero animada|DNYL-64]] REEL LO - Misma imagen pero animada
+- **Subtarea:** [[DNYL-70 - Twitter LO|DNYL-70]] Twitter LO
+- **Subtarea:** [[DNYL-71 - Twitter NB|DNYL-71]] Twitter NB
 
 ## Descripcion
 

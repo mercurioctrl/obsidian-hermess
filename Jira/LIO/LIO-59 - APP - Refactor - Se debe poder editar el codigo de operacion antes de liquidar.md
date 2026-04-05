@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-59"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **blocks:** [[SNB-1798]] Autorizaciones
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **blocks:** [[SNB-1798 - Autorizaciones|SNB-1798]] Autorizaciones
 
 ## Descripcion
 

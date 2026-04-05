@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-46"
 
 ## Relaciones
 
-- **Padre:** [[LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
-- **relates to:** [[LIO-34]] API - Feat - Crear formularios de registro especifico para empresas e individuos 
-- **relates to:** [[LIO-47]] APP - Refactor - Crear formularios de registro especifico para empresas e individuos - Añadir razón social al registrar
+- **Padre:** [[LIO-11 - Proceso de registro sencillo para los vendedoresCompradores|LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
+- **relates to:** [[LIO-34 - API - Feat - Crear formularios de registro especifico para empresas e individuos|LIO-34]] API - Feat - Crear formularios de registro especifico para empresas e individuos 
+- **relates to:** [[LIO-47 - APP - Refactor - Crear formularios de registro especifico para empresas e|LIO-47]] APP - Refactor - Crear formularios de registro especifico para empresas e individuos - Añadir razón social al registrar
 
 ## Descripcion
 

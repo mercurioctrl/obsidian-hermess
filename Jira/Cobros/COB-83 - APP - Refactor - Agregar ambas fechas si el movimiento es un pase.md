@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-83"
 
 ## Relaciones
 
-- **Padre:** [[COB-40]] APP - Feat - Listar movimientos caja
-- **is blocked by:** [[COB-84]] API - Refactor - Si el movimiento es un pase, agregar un parametro para la fecha en que fue aceptado
+- **Padre:** [[COB-40 - APP - Feat - Listar movimientos caja|COB-40]] APP - Feat - Listar movimientos caja
+- **is blocked by:** [[COB-84 - API - Refactor - Si el movimiento es un pase, agregar un parametro para la|COB-84]] API - Refactor - Si el movimiento es un pase, agregar un parametro para la fecha en que fue aceptado
 
 ## Descripcion
 

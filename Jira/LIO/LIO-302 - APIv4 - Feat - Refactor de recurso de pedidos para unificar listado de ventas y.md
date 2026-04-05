@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-302"
 
 ## Relaciones
 
-- **Padre:** [[LIO-281]] Compras
-- **has action item:** [[LIO-303]] APP - Refactor - Consumir y mostrar pedidos desde el nuevo recurso unificado GET /purchases
-- **relates to:** [[LIO-324]] API - Unificado del listado de ventas y compras - Detalles en la búsqueda por texto y filtrado del estado del pedido
+- **Padre:** [[LIO-281 - Compras|LIO-281]] Compras
+- **has action item:** [[LIO-303 - APP - Refactor - Consumir y mostrar pedidos desde el nuevo recurso unificado|LIO-303]] APP - Refactor - Consumir y mostrar pedidos desde el nuevo recurso unificado GET /purchases
+- **relates to:** [[LIO-324 - API - Unificado del listado de ventas y compras - Detalles en la búsqueda por|LIO-324]] API - Unificado del listado de ventas y compras - Detalles en la búsqueda por texto y filtrado del estado del pedido
 
 ## Descripcion
 

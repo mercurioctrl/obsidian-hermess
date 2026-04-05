@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-780"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[NBWEB-779]] API - Refactor - Listado de direcciones en "Mi cuenta": Agregar filtro de dropshipping y mostrar el parametro en el objeto
-- **is blocked by:** [[NBWEB-786]] APP - Carrito de compras - Detalle en la visualización de las direcciones y medios de pago 
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[NBWEB-779 - API - Refactor - Listado de direcciones en Mi cuenta Agregar filtro de|NBWEB-779]] API - Refactor - Listado de direcciones en "Mi cuenta": Agregar filtro de dropshipping y mostrar el parametro en el objeto
+- **is blocked by:** [[NBWEB-786 - APP - Carrito de compras - Detalle en la visualización de las direcciones y|NBWEB-786]] APP - Carrito de compras - Detalle en la visualización de las direcciones y medios de pago 
 
 ## Descripcion
 

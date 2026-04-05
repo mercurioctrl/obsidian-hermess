@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-618"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[NBWEB-616]] API  - Feat - Regenerar hard token
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[NBWEB-616 - API - Feat - Regenerar hard token|NBWEB-616]] API  - Feat - Regenerar hard token
 
 ## Descripcion
 

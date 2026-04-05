@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-485"
 
 ## Relaciones
 
-- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
-- **is blocked by:** [[EXP-489]] API - MVP - Feat - Agregar listado de companies
+- **Padre:** [[EXP-14 - Feat - Listar pedidos para retiro|EXP-14]] Feat - Listar pedidos para retiro
+- **is blocked by:** [[EXP-489 - API - MVP - Feat - Agregar listado de companies|EXP-489]] API - MVP - Feat - Agregar listado de companies
 
 ## Descripcion
 

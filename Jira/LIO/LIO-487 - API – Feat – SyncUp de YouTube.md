@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-487"
 
 ## Relaciones
 
-- **Padre:** [[LIO-481]] Recomendaciones de loki
-- **has action item:** [[LIO-489]] API - Refactor - El recurso de SyncUp estará detrás de un token fijado en las variables de entorno
+- **Padre:** [[LIO-481 - Recomendaciones de loki|LIO-481]] Recomendaciones de loki
+- **has action item:** [[LIO-489 - API - Refactor - El recurso de SyncUp estará detrás de un token fijado en las|LIO-489]] API - Refactor - El recurso de SyncUp estará detrás de un token fijado en las variables de entorno
 
 ## Descripcion
 

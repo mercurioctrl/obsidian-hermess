@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-82"
 
 ## Relaciones
 
-- **Padre:** [[INV-80]] Descripciones
-- **blocks:** [[INV-83]] APP - Feat - Listar y editar descripciones
+- **Padre:** [[INV-80 - Descripciones|INV-80]] Descripciones
+- **blocks:** [[INV-83 - APP - Feat - Listar y editar descripciones|INV-83]] APP - Feat - Listar y editar descripciones
 
 ## Descripcion
 

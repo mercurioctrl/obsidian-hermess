@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-100"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **blocks:** [[COM-84]] APP - Feat - Editar item en una orden de compra
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **blocks:** [[COM-84 - APP - Feat - Editar item en una orden de compra|COM-84]] APP - Feat - Editar item en una orden de compra
 
 ## Descripcion
 

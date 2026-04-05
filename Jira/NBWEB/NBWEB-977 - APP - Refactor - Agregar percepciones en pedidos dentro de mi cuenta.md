@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-977"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-946]] Mi Cuenta
-- **action item from:** [[NBWEB-976]] API - Refactor - Agregar percepciones en pedidos dentro de mi cuenta
-- **has action item:** [[SNB-3182]] la web no muestra percepçion
+- **Padre:** [[NBWEB-946 - Mi Cuenta|NBWEB-946]] Mi Cuenta
+- **action item from:** [[NBWEB-976 - API - Refactor - Agregar percepciones en pedidos dentro de mi cuenta|NBWEB-976]] API - Refactor - Agregar percepciones en pedidos dentro de mi cuenta
+- **has action item:** [[SNB-3182 - la web no muestra percepçion|SNB-3182]] la web no muestra percepçion
 
 ## Descripcion
 

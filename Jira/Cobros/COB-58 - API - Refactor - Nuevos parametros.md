@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-58"
 
 ## Relaciones
 
-- **Padre:** [[COB-6]] API - Feat -  Obtener saldos de un cliente
+- **Padre:** [[COB-6 - API - Feat - Obtener saldos de un cliente|COB-6]] API - Feat -  Obtener saldos de un cliente
 
 ## Descripcion
 

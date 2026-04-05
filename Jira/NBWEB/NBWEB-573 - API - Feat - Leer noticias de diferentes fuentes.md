@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-573"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-572]] Prensa y noticias en la home
+- **Padre:** [[NBWEB-572 - Prensa y noticias en la home|NBWEB-572]] Prensa y noticias en la home
 
 ## Descripcion
 

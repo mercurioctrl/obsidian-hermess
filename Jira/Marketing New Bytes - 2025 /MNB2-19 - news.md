@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-19"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-18]] NB_ XPG LANZAMIENTO
+- **Padre:** [[MNB2-18 - NB_ XPG LANZAMIENTO|MNB2-18]] NB_ XPG LANZAMIENTO
 
 ## Descripcion
 

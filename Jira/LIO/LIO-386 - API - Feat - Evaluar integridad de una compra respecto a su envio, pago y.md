@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-386"
 
 ## Relaciones
 
-- **Padre:** [[LIO-373]] Seguridad del checkout y protección de transacciones
-- **has action item:** [[LIO-452]] API - Refactor - Se debe sumar a el analisis de integridad los nuevos parametros de uso de dinero en wallet
+- **Padre:** [[LIO-373 - Seguridad del checkout y protección de transacciones|LIO-373]] Seguridad del checkout y protección de transacciones
+- **has action item:** [[LIO-452 - API - Refactor - Se debe sumar a el analisis de integridad los nuevos|LIO-452]] API - Refactor - Se debe sumar a el analisis de integridad los nuevos parametros de uso de dinero en wallet
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-379"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-242]] Presupuestos Trofeos
+- **Padre:** [[ADATA-242 - Presupuestos Trofeos|ADATA-242]] Presupuestos Trofeos
 
 ## Descripcion
 

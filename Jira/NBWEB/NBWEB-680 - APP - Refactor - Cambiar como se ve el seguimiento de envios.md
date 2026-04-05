@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-680"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **relates to:** [[NBWEB-711]] API - Seguimiento de envíos - Sin datos de seguimiento
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **relates to:** [[NBWEB-711 - API - Seguimiento de envíos - Sin datos de seguimiento|NBWEB-711]] API - Seguimiento de envíos - Sin datos de seguimiento
 
 ## Descripcion
 

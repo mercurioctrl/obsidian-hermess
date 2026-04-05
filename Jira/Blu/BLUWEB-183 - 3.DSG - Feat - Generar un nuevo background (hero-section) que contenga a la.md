@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-183"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-141]] Refactor primera iteración
-- **has action item:** [[BLUWEB-184]] APP - Refactor - Probar en una nueva rama, fondo nuevo para hero-section 
-- **has action item:** [[BLUWEB-186]] APP - Refactor - Incluir nuevo fondo con figura para cada caso de uso
+- **Padre:** [[BLUWEB-141 - Refactor primera iteración|BLUWEB-141]] Refactor primera iteración
+- **has action item:** [[BLUWEB-184 - APP - Refactor - Probar en una nueva rama, fondo nuevo para hero-section|BLUWEB-184]] APP - Refactor - Probar en una nueva rama, fondo nuevo para hero-section 
+- **has action item:** [[BLUWEB-186 - APP - Refactor - Incluir nuevo fondo con figura para cada caso de uso|BLUWEB-186]] APP - Refactor - Incluir nuevo fondo con figura para cada caso de uso
 
 ## Descripcion
 

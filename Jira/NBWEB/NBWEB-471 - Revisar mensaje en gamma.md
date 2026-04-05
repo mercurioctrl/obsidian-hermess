@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-471"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-403]] API - Feat - Enviar correo a soporte cuando se carga un preingreso de postventa
+- **Padre:** [[NBWEB-403 - API - Feat - Enviar correo a soporte cuando se carga un preingreso de postventa|NBWEB-403]] API - Feat - Enviar correo a soporte cuando se carga un preingreso de postventa
 
 ## Descripcion
 

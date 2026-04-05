@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-53"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-52]] API  - Feat - Recurso para sugerir atributos
-- **is blocked by:** [[INV-54]] API - Feat - Sugerir valor en base a un atributo determinado y el item
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-52 - API - Feat - Recurso para sugerir atributos|INV-52]] API  - Feat - Recurso para sugerir atributos
+- **is blocked by:** [[INV-54 - API - Feat - Sugerir valor en base a un atributo determinado y el item|INV-54]] API - Feat - Sugerir valor en base a un atributo determinado y el item
 
 ## Descripcion
 

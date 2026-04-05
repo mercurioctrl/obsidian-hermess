@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-226"
 
 ## Relaciones
 
-- **Padre:** [[LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
-- **action item from:** [[LIO-223]] API - Feat - Actualizar ticket (agregar comentario)
-- **action item from:** [[LIO-219]] API - Feat - Crear un ticket vinculado a el ítem de un una orden
-- **action item from:** [[LIO-218]] API - Feat - Repositorio de tipos de ticket
-- **action item from:** [[LIO-217]] API - Feat - Repositorio de motivos de ticket
-- **action item from:** [[LIO-225]] API - Feat - Listar tickets para un pedido
-- **action item from:** [[LIO-228]] API - Feat - Mostrar un ticket por id de ticket
+- **Padre:** [[LIO-21 - Migrar sistema de tickets para usar el de capa 1 (NB)|LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
+- **action item from:** [[LIO-223 - API - Feat - Actualizar ticket (agregar comentario)|LIO-223]] API - Feat - Actualizar ticket (agregar comentario)
+- **action item from:** [[LIO-219 - API - Feat - Crear un ticket vinculado a el ítem de un una orden|LIO-219]] API - Feat - Crear un ticket vinculado a el ítem de un una orden
+- **action item from:** [[LIO-218 - API - Feat - Repositorio de tipos de ticket|LIO-218]] API - Feat - Repositorio de tipos de ticket
+- **action item from:** [[LIO-217 - API - Feat - Repositorio de motivos de ticket|LIO-217]] API - Feat - Repositorio de motivos de ticket
+- **action item from:** [[LIO-225 - API - Feat - Listar tickets para un pedido|LIO-225]] API - Feat - Listar tickets para un pedido
+- **action item from:** [[LIO-228 - API - Feat - Mostrar un ticket por id de ticket|LIO-228]] API - Feat - Mostrar un ticket por id de ticket
 
 ## Descripcion
 

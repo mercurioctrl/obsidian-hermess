@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-522"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **relates to:** [[COB-513]] APP - Feat - Pestaña Salidas pendientes
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **relates to:** [[COB-513 - APP - Feat - Pestaña Salidas pendientes|COB-513]] APP - Feat - Pestaña Salidas pendientes
 
 ## Descripcion
 

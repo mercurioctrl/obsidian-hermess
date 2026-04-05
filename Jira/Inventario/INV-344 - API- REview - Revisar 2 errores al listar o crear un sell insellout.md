@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-344"
 
 ## Relaciones
 
-- **Padre:** [[INV-250]] Repositorio de Sell In Sell Out
+- **Padre:** [[INV-250 - Repositorio de Sell In Sell Out|INV-250]] Repositorio de Sell In Sell Out
 
 ## Descripcion
 

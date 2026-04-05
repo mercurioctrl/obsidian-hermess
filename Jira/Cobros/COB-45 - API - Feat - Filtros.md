@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-45"
 
 ## Relaciones
 
-- **Padre:** [[COB-8]] API - Feat - Listar pases
-- **blocks:** [[COB-77]] APP - Feat - Listar pases
+- **Padre:** [[COB-8 - API - Feat - Listar pases|COB-8]] API - Feat - Listar pases
+- **blocks:** [[COB-77 - APP - Feat - Listar pases|COB-77]] APP - Feat - Listar pases
 
 ## Descripcion
 

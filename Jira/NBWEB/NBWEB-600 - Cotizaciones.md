@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-600"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-599]] CMS
-- **Subtarea:** [[NBWEB-601]] APP - Refactor - Precalcular campos segun la logica establecida
-- **Subtarea:** [[NBWEB-604]] API - Feat - Incorporar tabla medios de pago a el update de cotizaciones 
-- **Subtarea:** [[NBWEB-665]] APP - Refactor - Revision de error 401 al cambiar las cotizaciones
+- **Padre:** [[NBWEB-599 - CMS|NBWEB-599]] CMS
+- **Subtarea:** [[NBWEB-601 - APP - Refactor - Precalcular campos segun la logica establecida|NBWEB-601]] APP - Refactor - Precalcular campos segun la logica establecida
+- **Subtarea:** [[NBWEB-604 - API - Feat - Incorporar tabla medios de pago a el update de cotizaciones|NBWEB-604]] API - Feat - Incorporar tabla medios de pago a el update de cotizaciones 
+- **Subtarea:** [[NBWEB-665 - APP - Refactor - Revision de error 401 al cambiar las cotizaciones|NBWEB-665]] APP - Refactor - Revision de error 401 al cambiar las cotizaciones
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-207"
 
 ## Relaciones
 
-- **Padre:** [[EXP-137]] Feat - Volanta operativa
-- **blocks:** [[SNB-569]] tamaño de letra en la volanta por favor
+- **Padre:** [[EXP-137 - Feat - Volanta operativa|EXP-137]] Feat - Volanta operativa
+- **blocks:** [[SNB-569 - tamaño de letra en la volanta por favor|SNB-569]] tamaño de letra en la volanta por favor
 
 ## Descripcion
 

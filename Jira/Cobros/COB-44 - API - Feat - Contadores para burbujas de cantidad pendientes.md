@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-44"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **Subtarea:** [[COB-122]] APP - Feat - Contadores para burbujas de cantidad pendientes
-- **Subtarea:** [[COB-167]] API - Review - Solo mostrar los pases que son de la caja logueada
-- **Subtarea:** [[COB-194]] API - Review - La burbuja de pases, debe mostrar solo los pases recibido pendientes para esa cuenta.
-- **Subtarea:** [[COB-372]] API - Refactor - Agregar cobros pendientes "pendingTradables"
-- **Subtarea:** [[COB-373]] APP - Refactor - Agregar cobros pendientes "pendingTradables"
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **Subtarea:** [[COB-122 - APP - Feat - Contadores para burbujas de cantidad pendientes|COB-122]] APP - Feat - Contadores para burbujas de cantidad pendientes
+- **Subtarea:** [[COB-167 - API - Review - Solo mostrar los pases que son de la caja logueada|COB-167]] API - Review - Solo mostrar los pases que son de la caja logueada
+- **Subtarea:** [[COB-194 - API - Review - La burbuja de pases, debe mostrar solo los pases recibido|COB-194]] API - Review - La burbuja de pases, debe mostrar solo los pases recibido pendientes para esa cuenta.
+- **Subtarea:** [[COB-372 - API - Refactor - Agregar cobros pendientes pendingTradables|COB-372]] API - Refactor - Agregar cobros pendientes "pendingTradables"
+- **Subtarea:** [[COB-373 - APP - Refactor - Agregar cobros pendientes pendingTradables|COB-373]] APP - Refactor - Agregar cobros pendientes "pendingTradables"
 
 ## Descripcion
 

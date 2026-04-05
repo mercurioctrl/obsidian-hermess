@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-140"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-151]] Adata Enero: 1/4 Portada Diseño Social Media_ BLADE MARS 980 PRO
-- **Subtarea:** [[ADATA-152]] Adata Enero: 1/4 Copys Social Media_BLADE MARS 980 PRO
-- **Subtarea:** [[ADATA-153]] 5.Adata Enero: 1/4 Programar Social Media_BLADE MARS 980 PRO 14/01 
+- **Subtarea:** [[ADATA-151 - Adata Enero 14 Portada Diseño Social Media_ BLADE MARS 980 PRO|ADATA-151]] Adata Enero: 1/4 Portada Diseño Social Media_ BLADE MARS 980 PRO
+- **Subtarea:** [[ADATA-152 - Adata Enero 14 Copys Social Media_BLADE MARS 980 PRO|ADATA-152]] Adata Enero: 1/4 Copys Social Media_BLADE MARS 980 PRO
+- **Subtarea:** [[ADATA-153 - 5.Adata Enero 14 Programar Social Media_BLADE MARS 980 PRO 1401|ADATA-153]] 5.Adata Enero: 1/4 Programar Social Media_BLADE MARS 980 PRO 14/01 
 
 ## Descripcion
 

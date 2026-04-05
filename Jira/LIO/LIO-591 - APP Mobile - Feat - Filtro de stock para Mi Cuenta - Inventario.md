@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-591"
 
 ## Relaciones
 
-- **Padre:** [[LIO-501]] Catálogo / Inventario de productos
-- **action item from:** [[LIO-567]] APP - Feat - Filtro de stock para Mi Cuenta -> Inventario
+- **Padre:** [[LIO-501 - Catálogo Inventario de productos|LIO-501]] Catálogo / Inventario de productos
+- **action item from:** [[LIO-567 - APP - Feat - Filtro de stock para Mi Cuenta - Inventario|LIO-567]] APP - Feat - Filtro de stock para Mi Cuenta -> Inventario
 
 ## Descripcion
 

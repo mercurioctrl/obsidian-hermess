@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-893"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **Subtarea:** [[NBWEB-898]] EXTENSION - Refactor - Precios en pesos / Dolares
-- **Subtarea:** [[NBWEB-899]] ESTENSION - Refactor - Precios sin iva / finales
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **Subtarea:** [[NBWEB-898 - EXTENSION - Refactor - Precios en pesos Dolares|NBWEB-898]] EXTENSION - Refactor - Precios en pesos / Dolares
+- **Subtarea:** [[NBWEB-899 - ESTENSION - Refactor - Precios sin iva finales|NBWEB-899]] ESTENSION - Refactor - Precios sin iva / finales
 
 ## Descripcion
 

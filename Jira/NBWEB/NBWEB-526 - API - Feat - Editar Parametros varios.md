@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-526"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-524]] CMS - Parametros varios
-- **blocks:** [[NBWEB-527]] APP - Feat - Seccion Parametros varios
+- **Padre:** [[NBWEB-524 - CMS - Parametros varios|NBWEB-524]] CMS - Parametros varios
+- **blocks:** [[NBWEB-527 - APP - Feat - Seccion Parametros varios|NBWEB-527]] APP - Feat - Seccion Parametros varios
 
 ## Descripcion
 

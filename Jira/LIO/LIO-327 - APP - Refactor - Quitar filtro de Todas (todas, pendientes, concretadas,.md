@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-327"
 
 ## Relaciones
 
-- **Padre:** [[LIO-281]] Compras
+- **Padre:** [[LIO-281 - Compras|LIO-281]] Compras
 
 ## Descripcion
 

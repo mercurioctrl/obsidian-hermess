@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-526"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
-- **action item from:** [[EXP-525]] API - Refactor - Agregar stockWarehouseId al ingreso de seriales 
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
+- **action item from:** [[EXP-525 - API - Refactor - Agregar stockWarehouseId al ingreso de seriales|EXP-525]] API - Refactor - Agregar stockWarehouseId al ingreso de seriales 
 
 ## Descripcion
 

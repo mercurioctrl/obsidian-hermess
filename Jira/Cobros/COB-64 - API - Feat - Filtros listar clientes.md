@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-64"
 
 ## Relaciones
 
-- **Padre:** [[COB-53]] API - Feat - Listar clientes
+- **Padre:** [[COB-53 - API - Feat - Listar clientes|COB-53]] API - Feat - Listar clientes
 
 ## Descripcion
 

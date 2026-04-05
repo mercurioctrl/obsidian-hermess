@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-144"
 
 ## Relaciones
 
-- **Padre:** [[INV-142]] Refactor: Validar sku
+- **Padre:** [[INV-142 - Refactor Validar sku|INV-142]] Refactor: Validar sku
 
 ## Descripcion
 

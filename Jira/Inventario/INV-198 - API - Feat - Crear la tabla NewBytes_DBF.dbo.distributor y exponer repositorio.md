@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-198"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **has action item:** [[INV-197]] API - Refactor - Objeto "item, leer y escribir atributos de distribuidora
-- **has action item:** [[INV-200]] APP - Feat - Cambiar atributo "distributor" y poder filtrarlo en el repositorio "items"
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **has action item:** [[INV-197 - API - Refactor - Objeto item, leer y escribir atributos de distribuidora|INV-197]] API - Refactor - Objeto "item, leer y escribir atributos de distribuidora
+- **has action item:** [[INV-200 - APP - Feat - Cambiar atributo distributor y poder filtrarlo en el repositorio|INV-200]] APP - Feat - Cambiar atributo "distributor" y poder filtrarlo en el repositorio "items"
 
 ## Descripcion
 

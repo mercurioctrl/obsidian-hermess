@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-163"
 
 ## Relaciones
 
-- **Padre:** [[LIO-162]] Mejoras generales para envios
-- **action item from:** [[LIO-164]] API - Feat - Migrar recurso para actualizar punto de entrega
-- **action item from:** [[LIO-171]] API - Feat - Agregar funcionalidad para manejar y retornar información del código postal en la APIv4
+- **Padre:** [[LIO-162 - Mejoras generales para envios|LIO-162]] Mejoras generales para envios
+- **action item from:** [[LIO-164 - API - Feat - Migrar recurso para actualizar punto de entrega|LIO-164]] API - Feat - Migrar recurso para actualizar punto de entrega
+- **action item from:** [[LIO-171 - API - Feat - Agregar funcionalidad para manejar y retornar información del|LIO-171]] API - Feat - Agregar funcionalidad para manejar y retornar información del código postal en la APIv4
 
 ## Descripcion
 

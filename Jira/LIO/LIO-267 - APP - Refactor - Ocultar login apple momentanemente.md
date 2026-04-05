@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-267"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **duplicates:** [[LIO-196]] APP - Login con redes (google,apple) y sincronizacion de carrito al incio de sesion
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **duplicates:** [[LIO-196 - APP - Login con redes (google,apple) y sincronizacion de carrito al incio de|LIO-196]] APP - Login con redes (google,apple) y sincronizacion de carrito al incio de sesion
 
 ## Descripcion
 

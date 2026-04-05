@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-62"
 
 ## Relaciones
 
-- **Padre:** [[FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
-- **is cloned by:** [[FB-63]] APP - Feat - Maqutado Seccion
+- **Padre:** [[FB-28 - Fontaine Bleau Sitio Web_Etapa 0|FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
+- **is cloned by:** [[FB-63 - APP - Feat - Maqutado Seccion|FB-63]] APP - Feat - Maqutado Seccion
 
 ## Descripcion
 

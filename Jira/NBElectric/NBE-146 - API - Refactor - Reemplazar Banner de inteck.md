@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-146"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **action item from:** [[NBE-140]] DSG- Refactor -  Actualizar banner de inteck
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **action item from:** [[NBE-140 - DSG- Refactor - Actualizar banner de inteck|NBE-140]] DSG- Refactor -  Actualizar banner de inteck
 
 ## Descripcion
 

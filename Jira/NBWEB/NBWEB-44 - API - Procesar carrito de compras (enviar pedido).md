@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-44"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-1]] API - Carrito de compras
-- **relates to:** [[NBWEB-139]] Agregar comentario al procesar el carrito
+- **Padre:** [[NBWEB-1 - API - Carrito de compras|NBWEB-1]] API - Carrito de compras
+- **relates to:** [[NBWEB-139 - Agregar comentario al procesar el carrito|NBWEB-139]] Agregar comentario al procesar el carrito
 
 ## Descripcion
 

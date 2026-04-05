@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-672"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-663]] API - Refactor - Agregar parametros para comprobantes de pago al repositorio de ordenes
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-663 - API - Refactor - Agregar parametros para comprobantes de pago al repositorio de|NBWEB-663]] API - Refactor - Agregar parametros para comprobantes de pago al repositorio de ordenes
 
 ## Descripcion
 

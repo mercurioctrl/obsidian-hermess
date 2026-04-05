@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-183"
 
 ## Relaciones
 
-- **action item from:** [[LIO-177]] APP - CMS - Feat - Sección categorías en el CMS
+- **action item from:** [[LIO-177 - APP - CMS - Feat - Sección categorías en el CMS|LIO-177]] APP - CMS - Feat - Sección categorías en el CMS
 
 ## Descripcion
 

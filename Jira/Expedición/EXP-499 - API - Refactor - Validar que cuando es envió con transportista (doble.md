@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-499"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-18"
 
 ## Relaciones
 
-- **Padre:** [[INV-12]] API - Obtener metadata de un producto
+- **Padre:** [[INV-12 - API - Obtener metadata de un producto|INV-12]] API - Obtener metadata de un producto
 
 ## Descripcion
 

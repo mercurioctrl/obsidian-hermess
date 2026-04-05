@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-174"
 
 ## Relaciones
 
-- **Padre:** [[COM-25]] Facturas de compra
-- **Subtarea:** [[COM-175]] API - Feat - Crear una factura de compra
+- **Padre:** [[COM-25 - Facturas de compra|COM-25]] Facturas de compra
+- **Subtarea:** [[COM-175 - API - Feat - Crear una factura de compra|COM-175]] API - Feat - Crear una factura de compra
 
 ## Descripcion
 

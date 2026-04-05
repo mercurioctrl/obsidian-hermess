@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-104"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-88]] FactUru
+- **Padre:** [[LOCAPP-88 - FactUru|LOCAPP-88]] FactUru
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-216"
 
 ## Relaciones
 
-- **Padre:** [[COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
-- **action item from:** [[COM-217]] APP - MVP - refactor - agregar botón para cerrar la orden que ejecuta checkComplete y usarlo cada vez que se cambian las cantidades de “total” y también cuando se hace un ingreso (esto permite cambiar de estado pendiente a remitido)
-- **relates to:** [[COM-251]] API - MVP - Review - Generar ingreso -> Diferencia de IVA al finalizar la orden
+- **Padre:** [[COM-109 - Generar INGRESO o pedido (a partir de una orden de compra)|COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
+- **action item from:** [[COM-217 - APP - MVP - refactor - agregar botón para cerrar la orden que ejecuta|COM-217]] APP - MVP - refactor - agregar botón para cerrar la orden que ejecuta checkComplete y usarlo cada vez que se cambian las cantidades de “total” y también cuando se hace un ingreso (esto permite cambiar de estado pendiente a remitido)
+- **relates to:** [[COM-251 - API - MVP - Review - Generar ingreso - Diferencia de IVA al finalizar la orden|COM-251]] API - MVP - Review - Generar ingreso -> Diferencia de IVA al finalizar la orden
 
 ## Descripcion
 

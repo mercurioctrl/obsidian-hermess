@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-75"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-76]] BANNER LO HOT DAYS
-- **Subtarea:** [[DNYL-102]] POSTEOS REDES SOCIALES
+- **Subtarea:** [[DNYL-76 - BANNER LO HOT DAYS|DNYL-76]] BANNER LO HOT DAYS
+- **Subtarea:** [[DNYL-102 - POSTEOS REDES SOCIALES|DNYL-102]] POSTEOS REDES SOCIALES
 
 ## Descripcion
 

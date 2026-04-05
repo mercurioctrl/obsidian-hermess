@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-77"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-84]] Mostrar productos de la tienda
-- **Subtarea:** [[MKT-85]] Sliders
-- **Subtarea:** [[MKT-86]] Barra de descarga de recursos
-- **Subtarea:** [[MKT-87]] Arreglos para los titulos de los productos
+- **Subtarea:** [[MKT-84 - Mostrar productos de la tienda|MKT-84]] Mostrar productos de la tienda
+- **Subtarea:** [[MKT-85 - Sliders|MKT-85]] Sliders
+- **Subtarea:** [[MKT-86 - Barra de descarga de recursos|MKT-86]] Barra de descarga de recursos
+- **Subtarea:** [[MKT-87 - Arreglos para los titulos de los productos|MKT-87]] Arreglos para los titulos de los productos
 
 ## Descripcion
 

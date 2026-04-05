@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-179"
 
 ## Relaciones
 
-- **Padre:** [[COB-136]] Cheques
+- **Padre:** [[COB-136 - Cheques|COB-136]] Cheques
 
 ## Descripcion
 

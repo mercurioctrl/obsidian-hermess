@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-25"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-26]] NB_Banner en la web con un mix de productos.
-- **Subtarea:** [[MNB2-27]] LO_Banner en la web con un mix de productos. 
-- **Subtarea:** [[MNB2-28]] NB_Newsletter por categoría
-- **Subtarea:** [[MNB2-29]] LO_Newsletter de la marca 
+- **Subtarea:** [[MNB2-26 - NB_Banner en la web con un mix de productos.|MNB2-26]] NB_Banner en la web con un mix de productos.
+- **Subtarea:** [[MNB2-27 - LO_Banner en la web con un mix de productos.|MNB2-27]] LO_Banner en la web con un mix de productos. 
+- **Subtarea:** [[MNB2-28 - NB_Newsletter por categoría|MNB2-28]] NB_Newsletter por categoría
+- **Subtarea:** [[MNB2-29 - LO_Newsletter de la marca|MNB2-29]] LO_Newsletter de la marca 
 
 ## Descripcion
 

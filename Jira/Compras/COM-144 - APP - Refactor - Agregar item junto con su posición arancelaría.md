@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-144"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **relates to:** [[COM-70]] APP - Refactor - Agregar a el objeto del detalle de la orden la posicion arancelaria y sus impuestos 
-- **relates to:** [[COM-143]] APP - Review - Problema al obtener posición arancelaria
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **relates to:** [[COM-70 - APP - Refactor - Agregar a el objeto del detalle de la orden la posicion|COM-70]] APP - Refactor - Agregar a el objeto del detalle de la orden la posicion arancelaria y sus impuestos 
+- **relates to:** [[COM-143 - APP - Review - Problema al obtener posición arancelaria|COM-143]] APP - Review - Problema al obtener posición arancelaria
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-980"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-978]] NB TRAVEL
-- **action item from:** [[NBWEB-979]] API - Feat - Registro y aprobación de términos de la promoción por parte del cliente
+- **Padre:** [[NBWEB-978 - NB TRAVEL|NBWEB-978]] NB TRAVEL
+- **action item from:** [[NBWEB-979 - API - Feat - Registro y aprobación de términos de la promoción por parte del|NBWEB-979]] API - Feat - Registro y aprobación de términos de la promoción por parte del cliente
 
 ## Descripcion
 

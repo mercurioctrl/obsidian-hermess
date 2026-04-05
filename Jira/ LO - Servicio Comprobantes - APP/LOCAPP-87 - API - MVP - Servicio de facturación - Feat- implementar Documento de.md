@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-87"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
-- **has action item:** [[LOCAPP-86]] APP - MVP - Feat - Maquetacion de documento de exportación SLI (PDF)
+- **Padre:** [[LOCAPP-80 - MVP - Vouchers para LASET (eticket, efactura,packingList PL, SLI)|LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
+- **has action item:** [[LOCAPP-86 - APP - MVP - Feat - Maquetacion de documento de exportación SLI (PDF)|LOCAPP-86]] APP - MVP - Feat - Maquetacion de documento de exportación SLI (PDF)
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-397"
 
 ## Relaciones
 
-- **Padre:** [[EXP-396]] Repositorio contar stock
+- **Padre:** [[EXP-396 - Repositorio contar stock|EXP-396]] Repositorio contar stock
 
 ## Descripcion
 

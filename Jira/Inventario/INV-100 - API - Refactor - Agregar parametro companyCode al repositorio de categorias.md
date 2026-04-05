@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-100"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **blocks:** [[INV-101]] APP - Refactor - Agregar parametro companyCode al repositorio de categorias
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **blocks:** [[INV-101 - APP - Refactor - Agregar parametro companyCode al repositorio de categorias|INV-101]] APP - Refactor - Agregar parametro companyCode al repositorio de categorias
 
 ## Descripcion
 

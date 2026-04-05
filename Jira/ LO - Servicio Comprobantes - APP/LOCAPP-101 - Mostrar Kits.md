@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-101"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-20]] Mostrar comprobante
-- **Subtarea:** [[LOCAPP-102]] API - Refactor - Agregar parámetros necesarios para construir los kits visualmente 
-- **Subtarea:** [[LOCAPP-103]] APP - Refactor - Modificar comprobantes fiscales para mostrar los kits
-- **Subtarea:** [[LOCAPP-105]] API - Refactor - Agregar los parametros necesarios para construir el kit visualmente en el REMITO FISCAL
-- **Subtarea:** [[LOCAPP-106]] APP - Refactor - Modificar remito fiscal para mostrar el kit como se hace en las facturas
+- **Padre:** [[LOCAPP-20 - Mostrar comprobante|LOCAPP-20]] Mostrar comprobante
+- **Subtarea:** [[LOCAPP-102 - API - Refactor - Agregar parámetros necesarios para construir los kits|LOCAPP-102]] API - Refactor - Agregar parámetros necesarios para construir los kits visualmente 
+- **Subtarea:** [[LOCAPP-103 - APP - Refactor - Modificar comprobantes fiscales para mostrar los kits|LOCAPP-103]] APP - Refactor - Modificar comprobantes fiscales para mostrar los kits
+- **Subtarea:** [[LOCAPP-105 - API - Refactor - Agregar los parametros necesarios para construir el kit|LOCAPP-105]] API - Refactor - Agregar los parametros necesarios para construir el kit visualmente en el REMITO FISCAL
+- **Subtarea:** [[LOCAPP-106 - APP - Refactor - Modificar remito fiscal para mostrar el kit como se hace en|LOCAPP-106]] APP - Refactor - Modificar remito fiscal para mostrar el kit como se hace en las facturas
 
 ## Descripcion
 

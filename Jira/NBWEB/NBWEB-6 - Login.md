@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-6"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-15]] Implementar token manager con JWT
-- **Subtarea:** [[NBWEB-16]] Crear recurso de login
-- **Subtarea:** [[NBWEB-17]] Crear recurso logOut
-- **Subtarea:** [[NBWEB-622]] API - Refactor - Crear recurso de login - Validar credenciales
-- **causes:** [[NBWEB-62]] Login
+- **Subtarea:** [[NBWEB-15 - Implementar token manager con JWT|NBWEB-15]] Implementar token manager con JWT
+- **Subtarea:** [[NBWEB-16 - Crear recurso de login|NBWEB-16]] Crear recurso de login
+- **Subtarea:** [[NBWEB-17 - Crear recurso logOut|NBWEB-17]] Crear recurso logOut
+- **Subtarea:** [[NBWEB-622 - API - Refactor - Crear recurso de login - Validar credenciales|NBWEB-622]] API - Refactor - Crear recurso de login - Validar credenciales
+- **causes:** [[NBWEB-62 - Login|NBWEB-62]] Login
 
 ## Descripcion
 

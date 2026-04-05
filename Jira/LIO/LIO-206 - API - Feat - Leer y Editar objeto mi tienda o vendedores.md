@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-206"
 
 ## Relaciones
 
-- **Padre:** [[LIO-203]] Mi cuenta
-- **has action item:** [[LIO-207]] APP - Feat - Editar informacion de "mi tienda"
+- **Padre:** [[LIO-203 - Mi cuenta|LIO-203]] Mi cuenta
+- **has action item:** [[LIO-207 - APP - Feat - Editar informacion de mi tienda|LIO-207]] APP - Feat - Editar informacion de "mi tienda"
 
 ## Descripcion
 

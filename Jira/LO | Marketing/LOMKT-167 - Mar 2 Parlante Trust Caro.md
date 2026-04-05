@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-167"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-177]] Mar: Programar Parlante Caro
+- **Subtarea:** [[LOMKT-177 - Mar Programar Parlante Caro|LOMKT-177]] Mar: Programar Parlante Caro
 
 ## Descripcion
 

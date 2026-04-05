@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-358"
 
 ## Relaciones
 
-- **Padre:** [[LIO-203]] Mi cuenta
-- **has action item:** [[SNB-3066]] Seccion preguntas no funciona y no deja responder preguntas
+- **Padre:** [[LIO-203 - Mi cuenta|LIO-203]] Mi cuenta
+- **has action item:** [[SNB-3066 - Seccion preguntas no funciona y no deja responder preguntas|SNB-3066]] Seccion preguntas no funciona y no deja responder preguntas
 
 ## Descripcion
 

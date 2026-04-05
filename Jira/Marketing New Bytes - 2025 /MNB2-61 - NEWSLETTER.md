@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-61"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-60]] NB_Lanzamiento
+- **Padre:** [[MNB2-60 - NB_Lanzamiento|MNB2-60]] NB_Lanzamiento
 
 ## Descripcion
 

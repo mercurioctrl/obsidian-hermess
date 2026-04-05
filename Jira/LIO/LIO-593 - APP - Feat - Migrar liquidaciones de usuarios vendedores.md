@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-593"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **action item from:** [[LIO-559]] API - Feat - Migrar liquidaciones de usuarios vendedores
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **action item from:** [[LIO-559 - API - Feat - Migrar liquidaciones de usuarios vendedores|LIO-559]] API - Feat - Migrar liquidaciones de usuarios vendedores
 
 ## Descripcion
 

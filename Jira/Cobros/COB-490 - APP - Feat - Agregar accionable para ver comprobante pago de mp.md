@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-490"
 
 ## Relaciones
 
-- **Padre:** [[COB-487]] Feat - Cobrables -> Comprobantes de pago
-- **is blocked by:** [[COB-489]] API - Feat - Ver comprobante de pago
-- **is blocked by:** [[COB-488]] API - Feat - Agregar comprobante de pago / MercadoPago de igual forma que se hizo en pedidos
+- **Padre:** [[COB-487 - Feat - Cobrables - Comprobantes de pago|COB-487]] Feat - Cobrables -> Comprobantes de pago
+- **is blocked by:** [[COB-489 - API - Feat - Ver comprobante de pago|COB-489]] API - Feat - Ver comprobante de pago
+- **is blocked by:** [[COB-488 - API - Feat - Agregar comprobante de pago MercadoPago de igual forma que se hizo|COB-488]] API - Feat - Agregar comprobante de pago / MercadoPago de igual forma que se hizo en pedidos
 
 ## Descripcion
 

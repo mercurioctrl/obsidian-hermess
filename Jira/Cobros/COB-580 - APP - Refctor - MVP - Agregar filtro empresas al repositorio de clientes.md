@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-580"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **action item from:** [[COB-578]] API - Refactor - MVP - Agregar filtro empresas, basándose en el companyCode del cliente
-- **action item from:** [[COB-579]] API - Feat - Agregar repositorio de empresas
-- **relates to:** [[COB-584]] APP - Refactor - MVP - Agregar filtro empresas al repositorio de clientes -> Solo visualizar empresas activas
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **action item from:** [[COB-578 - API - Refactor - MVP - Agregar filtro empresas, basándose en el companyCode del|COB-578]] API - Refactor - MVP - Agregar filtro empresas, basándose en el companyCode del cliente
+- **action item from:** [[COB-579 - API - Feat - Agregar repositorio de empresas|COB-579]] API - Feat - Agregar repositorio de empresas
+- **relates to:** [[COB-584 - APP - Refactor - MVP - Agregar filtro empresas al repositorio de clientes -|COB-584]] APP - Refactor - MVP - Agregar filtro empresas al repositorio de clientes -> Solo visualizar empresas activas
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-81"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
-- **has action item:** [[LOCAPP-83]] API - MVP - Servicio de facturación - Feat - implementar Facturu
-- **action item from:** [[LOCAPP-89]] API - Feat - Mostrar comprobante fiscal Facturu e-ticket/e-factura
+- **Padre:** [[LOCAPP-80 - MVP - Vouchers para LASET (eticket, efactura,packingList PL, SLI)|LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
+- **has action item:** [[LOCAPP-83 - API - MVP - Servicio de facturación - Feat - implementar Facturu|LOCAPP-83]] API - MVP - Servicio de facturación - Feat - implementar Facturu
+- **action item from:** [[LOCAPP-89 - API - Feat - Mostrar comprobante fiscal Facturu e-tickete-factura|LOCAPP-89]] API - Feat - Mostrar comprobante fiscal Facturu e-ticket/e-factura
 
 ## Descripcion
 

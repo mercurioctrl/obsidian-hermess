@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BROT-3"
 
 ## Relaciones
 
-- **Subtarea:** [[BROT-4]] 4.ARMAR REMITOS PARA LA ENTREGA
-- **Subtarea:** [[BROT-5]] 3.PONER TODO EN MAYUSCULA
+- **Subtarea:** [[BROT-4 - 4.ARMAR REMITOS PARA LA ENTREGA|BROT-4]] 4.ARMAR REMITOS PARA LA ENTREGA
+- **Subtarea:** [[BROT-5 - 3.PONER TODO EN MAYUSCULA|BROT-5]] 3.PONER TODO EN MAYUSCULA
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-218"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-217]] Blu: Triada 6 Transformamos ideas en experiencias únicas
+- **Padre:** [[BLUWEB-217 - Blu Triada 6 Transformamos ideas en experiencias únicas|BLUWEB-217]] Blu: Triada 6 Transformamos ideas en experiencias únicas
 
 ## Descripcion
 

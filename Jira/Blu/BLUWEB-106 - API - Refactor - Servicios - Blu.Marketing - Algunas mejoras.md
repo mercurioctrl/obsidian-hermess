@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-106"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **is duplicated by:** [[BLUWEB-109]] APP - Refactor - Servicios - Iconografía Blu.marketing
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **is duplicated by:** [[BLUWEB-109 - APP - Refactor - Servicios - Iconografía Blu.marketing|BLUWEB-109]] APP - Refactor - Servicios - Iconografía Blu.marketing
 
 ## Descripcion
 

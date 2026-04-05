@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-175"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
-- **blocks:** [[NBWEB-518]] que el cliente visualice los seriales de su compra
+- **Padre:** [[NBWEB-59 - APP -Maquetado y Desarrollo - Mi cuenta|NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
+- **blocks:** [[NBWEB-518 - que el cliente visualice los seriales de su compra|NBWEB-518]] que el cliente visualice los seriales de su compra
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-56"
 
 ## Relaciones
 
-- **Padre:** [[COB-40]] APP - Feat - Listar movimientos caja
-- **is blocked by:** [[COB-39]] API - Feat - Agregar Filtros
+- **Padre:** [[COB-40 - APP - Feat - Listar movimientos caja|COB-40]] APP - Feat - Listar movimientos caja
+- **is blocked by:** [[COB-39 - API - Feat - Agregar Filtros|COB-39]] API - Feat - Agregar Filtros
 
 ## Descripcion
 

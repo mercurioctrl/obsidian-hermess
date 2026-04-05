@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/M1-3"
 
 ## Relaciones
 
-- **Padre:** [[M1-2]] ⬛ Refactor Site  Mesa 1_Rev1
+- **Padre:** [[M1-2 - ⬛ Refactor Site Mesa 1_Rev1|M1-2]] ⬛ Refactor Site  Mesa 1_Rev1
 
 ## Descripcion
 

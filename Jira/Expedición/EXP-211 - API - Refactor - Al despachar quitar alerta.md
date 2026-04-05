@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-211"
 
 ## Relaciones
 
-- **Padre:** [[EXP-169]] Feat - Alertar pedidos
-- **blocks:** [[EXP-169]] Feat - Alertar pedidos
+- **Padre:** [[EXP-169 - Feat - Alertar pedidos|EXP-169]] Feat - Alertar pedidos
+- **blocks:** [[EXP-169 - Feat - Alertar pedidos|EXP-169]] Feat - Alertar pedidos
 
 ## Descripcion
 

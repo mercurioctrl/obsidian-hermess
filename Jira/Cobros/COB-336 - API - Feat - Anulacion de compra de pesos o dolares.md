@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-336"
 
 ## Relaciones
 
-- **Padre:** [[COB-335]] Feat - Anulacion de compra de dolares/pesos
+- **Padre:** [[COB-335 - Feat - Anulacion de compra de dolarespesos|COB-335]] Feat - Anulacion de compra de dolares/pesos
 
 ## Descripcion
 

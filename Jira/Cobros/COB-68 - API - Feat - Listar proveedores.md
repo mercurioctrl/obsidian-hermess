@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-68"
 
 ## Relaciones
 
-- **Padre:** [[COB-17]] Pagos a proveedores
-- **Subtarea:** [[COB-69]] API - Feat - Filtros y paginado
-- **blocks:** [[COB-70]] APP - Feat - Listar proveedores
+- **Padre:** [[COB-17 - Pagos a proveedores|COB-17]] Pagos a proveedores
+- **Subtarea:** [[COB-69 - API - Feat - Filtros y paginado|COB-69]] API - Feat - Filtros y paginado
+- **blocks:** [[COB-70 - APP - Feat - Listar proveedores|COB-70]] APP - Feat - Listar proveedores
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-560"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **has action item:** [[LIO-594]] APP - Feat - Migrar liquidaciones -> Obtener meses previos 
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **has action item:** [[LIO-594 - APP - Feat - Migrar liquidaciones - Obtener meses previos|LIO-594]] APP - Feat - Migrar liquidaciones -> Obtener meses previos 
 
 ## Descripcion
 

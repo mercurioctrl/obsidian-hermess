@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-207"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-206]] Partner Services (Servicios para asociados)
-- **has action item:** [[FB-91]] APP - Refactor - Conectar formulario de contacto utilizando el recurso y token de cliente
+- **Padre:** [[BLUWEB-206 - Partner Services (Servicios para asociados)|BLUWEB-206]] Partner Services (Servicios para asociados)
+- **has action item:** [[FB-91 - APP - Refactor - Conectar formulario de contacto utilizando el recurso y token|FB-91]] APP - Refactor - Conectar formulario de contacto utilizando el recurso y token de cliente
 
 ## Descripcion
 

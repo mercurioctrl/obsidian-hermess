@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-54"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-55]] Establecer formato para el banner del nuevo componente de la home (sección hogar)
-- **Subtarea:** [[MKT-61]] Tarea json con el producto y formato
+- **Subtarea:** [[MKT-55 - Establecer formato para el banner del nuevo componente de la home (sección|MKT-55]] Establecer formato para el banner del nuevo componente de la home (sección hogar)
+- **Subtarea:** [[MKT-61 - Tarea json con el producto y formato|MKT-61]] Tarea json con el producto y formato
 
 ## Descripcion
 

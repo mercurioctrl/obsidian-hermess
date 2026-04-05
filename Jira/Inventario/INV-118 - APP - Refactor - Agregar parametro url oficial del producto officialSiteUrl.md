@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-118"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-117]] API - Refactor - Agregar parametro url oficial del producto officialSiteUrl
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-117 - API - Refactor - Agregar parametro url oficial del producto officialSiteUrl|INV-117]] API - Refactor - Agregar parametro url oficial del producto officialSiteUrl
 
 ## Descripcion
 

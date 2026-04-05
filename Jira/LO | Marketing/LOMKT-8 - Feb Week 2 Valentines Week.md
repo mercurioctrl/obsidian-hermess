@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-8"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-9]] Feb: Week 2/1 :  Diseño Red flag / Green flag
-- **Subtarea:** [[LOMKT-10]] Feb: Week 2/2 :  Diseño TECHQUIERO
-- **Subtarea:** [[LOMKT-11]] Feb: Week 2/3 :  Diseño el match perfecto existe Referidos
-- **Subtarea:** [[LOMKT-18]] 1.Feb Week 2: Copys San Valentín
-- **Subtarea:** [[LOMKT-22]] Feb Week 2: Banners + Portada de newsletter
-- **Subtarea:** [[LOMKT-34]] Feb Week 2: Programar
+- **Subtarea:** [[LOMKT-9 - Feb Week 21 Diseño Red flag Green flag|LOMKT-9]] Feb: Week 2/1 :  Diseño Red flag / Green flag
+- **Subtarea:** [[LOMKT-10 - Feb Week 22 Diseño TECHQUIERO|LOMKT-10]] Feb: Week 2/2 :  Diseño TECHQUIERO
+- **Subtarea:** [[LOMKT-11 - Feb Week 23 Diseño el match perfecto existe Referidos|LOMKT-11]] Feb: Week 2/3 :  Diseño el match perfecto existe Referidos
+- **Subtarea:** [[LOMKT-18 - 1.Feb Week 2 Copys San Valentín|LOMKT-18]] 1.Feb Week 2: Copys San Valentín
+- **Subtarea:** [[LOMKT-22 - Feb Week 2 Banners + Portada de newsletter|LOMKT-22]] Feb Week 2: Banners + Portada de newsletter
+- **Subtarea:** [[LOMKT-34 - Feb Week 2 Programar|LOMKT-34]] Feb Week 2: Programar
 
 ## Descripcion
 

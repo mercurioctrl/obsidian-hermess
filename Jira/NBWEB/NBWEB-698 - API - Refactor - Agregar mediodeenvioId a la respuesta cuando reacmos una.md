@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-698"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-581]] CMS - Carrito web
-- **blocks:** [[NBWEB-701]] APP - Refactor - Agregar explicacion de que se puede incluir directamente el medio de envio obtenido cuando creas el envio
+- **Padre:** [[NBWEB-581 - CMS - Carrito web|NBWEB-581]] CMS - Carrito web
+- **blocks:** [[NBWEB-701 - APP - Refactor - Agregar explicacion de que se puede incluir directamente el|NBWEB-701]] APP - Refactor - Agregar explicacion de que se puede incluir directamente el medio de envio obtenido cuando creas el envio
 
 ## Descripcion
 

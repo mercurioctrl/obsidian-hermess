@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-172"
 
 ## Relaciones
 
-- **Padre:** [[COB-170]] Feat - Realizar entrada de caja
-- **is blocked by:** [[COB-173]] API - Feat - Listar conceptos de entrada
+- **Padre:** [[COB-170 - Feat - Realizar entrada de caja|COB-170]] Feat - Realizar entrada de caja
+- **is blocked by:** [[COB-173 - API - Feat - Listar conceptos de entrada|COB-173]] API - Feat - Listar conceptos de entrada
 
 ## Descripcion
 

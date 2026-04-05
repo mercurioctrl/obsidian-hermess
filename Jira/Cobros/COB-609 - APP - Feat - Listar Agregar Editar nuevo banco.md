@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-609"
 
 ## Relaciones
 
-- **Padre:** [[COB-9]] API - Feat - Listar bancos
-- **action item from:** [[COB-608]] API - Feat - Listar / Agregar / Editar nuevo banco 
-- **action item from:** [[COB-612]] API - Feat - Agregar recurso para crear banco con cuenta bancaria asociada automáticamente   
+- **Padre:** [[COB-9 - API - Feat - Listar bancos|COB-9]] API - Feat - Listar bancos
+- **action item from:** [[COB-608 - API - Feat - Listar Agregar Editar nuevo banco|COB-608]] API - Feat - Listar / Agregar / Editar nuevo banco 
+- **action item from:** [[COB-612 - API - Feat - Agregar recurso para crear banco con cuenta bancaria asociada|COB-612]] API - Feat - Agregar recurso para crear banco con cuenta bancaria asociada automáticamente   
 
 ## Descripcion
 

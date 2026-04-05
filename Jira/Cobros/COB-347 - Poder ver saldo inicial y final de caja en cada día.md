@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-347"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **Subtarea:** [[COB-348]] API - Feat - Hacer arqueo de caja manual
-- **Subtarea:** [[COB-349]] API - Refactor - Modificar objeto user para traer la fecha del ultimo arqueo de caja
-- **Subtarea:** [[COB-350]] APP - Feat - Modal para hacer arqueo de caja manual
-- **Subtarea:** [[COB-351]] API - Feat - Listar saldos históricos de caja
-- **Subtarea:** [[COB-352]] APP - Feat - Listar saldos históricos de caja
-- **Subtarea:** [[COB-364]] API - Refactor - Agregar columna "datetime" automtica en la tabla [NEW_BYTES].[dbo].[MC_SALDOS_CAJA]
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **Subtarea:** [[COB-348 - API - Feat - Hacer arqueo de caja manual|COB-348]] API - Feat - Hacer arqueo de caja manual
+- **Subtarea:** [[COB-349 - API - Refactor - Modificar objeto user para traer la fecha del ultimo arqueo de|COB-349]] API - Refactor - Modificar objeto user para traer la fecha del ultimo arqueo de caja
+- **Subtarea:** [[COB-350 - APP - Feat - Modal para hacer arqueo de caja manual|COB-350]] APP - Feat - Modal para hacer arqueo de caja manual
+- **Subtarea:** [[COB-351 - API - Feat - Listar saldos históricos de caja|COB-351]] API - Feat - Listar saldos históricos de caja
+- **Subtarea:** [[COB-352 - APP - Feat - Listar saldos históricos de caja|COB-352]] APP - Feat - Listar saldos históricos de caja
+- **Subtarea:** [[COB-364 - API - Refactor - Agregar columna datetime automtica en la tabla|COB-364]] API - Refactor - Agregar columna "datetime" automtica en la tabla [NEW_BYTES].[dbo].[MC_SALDOS_CAJA]
 
 ## Descripcion
 

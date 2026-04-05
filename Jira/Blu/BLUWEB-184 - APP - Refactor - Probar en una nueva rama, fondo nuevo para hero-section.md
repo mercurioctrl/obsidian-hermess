@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-184"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-141]] Refactor primera iteración
-- **action item from:** [[BLUWEB-183]] 3.DSG - Feat - Generar un nuevo background (hero-section) que contenga a la "chica de las gafas" para usar en el sitio
-- **has action item:** [[BLUWEB-186]] APP - Refactor - Incluir nuevo fondo con figura para cada caso de uso
+- **Padre:** [[BLUWEB-141 - Refactor primera iteración|BLUWEB-141]] Refactor primera iteración
+- **action item from:** [[BLUWEB-183 - 3.DSG - Feat - Generar un nuevo background (hero-section) que contenga a la|BLUWEB-183]] 3.DSG - Feat - Generar un nuevo background (hero-section) que contenga a la "chica de las gafas" para usar en el sitio
+- **has action item:** [[BLUWEB-186 - APP - Refactor - Incluir nuevo fondo con figura para cada caso de uso|BLUWEB-186]] APP - Refactor - Incluir nuevo fondo con figura para cada caso de uso
 
 ## Descripcion
 

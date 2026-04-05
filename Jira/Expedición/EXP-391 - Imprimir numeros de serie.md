@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-391"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **Subtarea:** [[EXP-392]] API - Feat - Imprimir numeros de serie enviados en el payload
-- **Subtarea:** [[EXP-393]] APP - Feat - Seleccionar y enviar para imprimir números de serie especificos en un payload
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **Subtarea:** [[EXP-392 - API - Feat - Imprimir numeros de serie enviados en el payload|EXP-392]] API - Feat - Imprimir numeros de serie enviados en el payload
+- **Subtarea:** [[EXP-393 - APP - Feat - Seleccionar y enviar para imprimir números de serie especificos en|EXP-393]] APP - Feat - Seleccionar y enviar para imprimir números de serie especificos en un payload
 
 ## Descripcion
 

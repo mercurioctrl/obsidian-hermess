@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-66"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-67]] FEED
-- **Subtarea:** [[DNYL-68]] STORY
-- **Subtarea:** [[DNYL-69]] BANNER
-- **Subtarea:** [[DNYL-73]] TWITTER
+- **Subtarea:** [[DNYL-67 - FEED|DNYL-67]] FEED
+- **Subtarea:** [[DNYL-68 - STORY|DNYL-68]] STORY
+- **Subtarea:** [[DNYL-69 - BANNER|DNYL-69]] BANNER
+- **Subtarea:** [[DNYL-73 - TWITTER|DNYL-73]] TWITTER
 
 ## Descripcion
 

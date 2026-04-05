@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-189"
 
 ## Relaciones
 
-- **Padre:** [[COB-188]] Feat - Cargar nuevo cheque
-- **blocks:** [[COB-190]] APP - Feat - Cargar nuevo cheque
-- **relates to:** [[COB-259]] API - Refactor - Cargar nuevo cheque
+- **Padre:** [[COB-188 - Feat - Cargar nuevo cheque|COB-188]] Feat - Cargar nuevo cheque
+- **blocks:** [[COB-190 - APP - Feat - Cargar nuevo cheque|COB-190]] APP - Feat - Cargar nuevo cheque
+- **relates to:** [[COB-259 - API - Refactor - Cargar nuevo cheque|COB-259]] API - Refactor - Cargar nuevo cheque
 
 ## Descripcion
 

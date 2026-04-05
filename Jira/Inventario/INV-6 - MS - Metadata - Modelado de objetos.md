@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-6"
 
 ## Relaciones
 
-- **Padre:** [[INV-1]] Ms - Metadata - Repositorios
+- **Padre:** [[INV-1 - Ms - Metadata - Repositorios|INV-1]] Ms - Metadata - Repositorios
 
 ## Descripcion
 

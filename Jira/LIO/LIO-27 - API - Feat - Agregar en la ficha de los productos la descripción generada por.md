@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-27"
 
 ## Relaciones
 
-- **Padre:** [[LIO-6]] Diseño de una interfaz intuitiva y navegacion
-- **blocks:** [[LIO-26]] APP - Feat - Agregar en la ficha de los productos la descripción generada por IA de los mismos como hicimos en "capa 1" 
+- **Padre:** [[LIO-6 - Diseño de una interfaz intuitiva y navegacion|LIO-6]] Diseño de una interfaz intuitiva y navegacion
+- **blocks:** [[LIO-26 - APP - Feat - Agregar en la ficha de los productos la descripción generada por|LIO-26]] APP - Feat - Agregar en la ficha de los productos la descripción generada por IA de los mismos como hicimos en "capa 1" 
 
 ## Descripcion
 

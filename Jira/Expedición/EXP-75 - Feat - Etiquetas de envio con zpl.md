@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-75"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-76]] API - Research - Generar plantilla (codigo ZPL) compatible para OCA, Andreani,Urbano y Camioneta propia
-- **Subtarea:** [[EXP-77]] API - Feat - Generar codigo zpl para un envio
-- **Subtarea:** [[EXP-307]] API - Refactor - Agregar numero de pedido (ex remito) y orden en algún lugar de la etiqueta y comentarios
-- **Subtarea:** [[EXP-311]] API - Feat - Contador de impresiones de etiqueta ZPL
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-76 - API - Research - Generar plantilla (codigo ZPL) compatible para OCA,|EXP-76]] API - Research - Generar plantilla (codigo ZPL) compatible para OCA, Andreani,Urbano y Camioneta propia
+- **Subtarea:** [[EXP-77 - API - Feat - Generar codigo zpl para un envio|EXP-77]] API - Feat - Generar codigo zpl para un envio
+- **Subtarea:** [[EXP-307 - API - Refactor - Agregar numero de pedido (ex remito) y orden en algún lugar de|EXP-307]] API - Refactor - Agregar numero de pedido (ex remito) y orden en algún lugar de la etiqueta y comentarios
+- **Subtarea:** [[EXP-311 - API - Feat - Contador de impresiones de etiqueta ZPL|EXP-311]] API - Feat - Contador de impresiones de etiqueta ZPL
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-103"
 
 ## Relaciones
 
-- **Padre:** [[MKT-100]] LO_MUNDIAL
+- **Padre:** [[MKT-100 - LO_MUNDIAL|MKT-100]] LO_MUNDIAL
 
 ## Descripcion
 

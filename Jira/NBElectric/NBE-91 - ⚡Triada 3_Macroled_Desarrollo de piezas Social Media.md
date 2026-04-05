@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-91"
 
 ## Relaciones
 
-- **Padre:** [[NBE-90]] Triada 3_ Macroled_Social Media
+- **Padre:** [[NBE-90 - Triada 3_ Macroled_Social Media|NBE-90]] Triada 3_ Macroled_Social Media
 
 ## Descripcion
 

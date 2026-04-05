@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-106"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
 
 ## Descripcion
 

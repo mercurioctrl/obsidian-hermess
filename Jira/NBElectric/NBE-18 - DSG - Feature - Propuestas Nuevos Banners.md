@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-18"
 
 ## Relaciones
 
-- **Padre:** [[NBE-1]] Sitio Web_Etapa 1
-- **has action item:** [[NBE-21]] APP - Refactor - Modificar area de banners para desktop/mobile con "área utilizable"
+- **Padre:** [[NBE-1 - Sitio Web_Etapa 1|NBE-1]] Sitio Web_Etapa 1
+- **has action item:** [[NBE-21 - APP - Refactor - Modificar area de banners para desktopmobile con área|NBE-21]] APP - Refactor - Modificar area de banners para desktop/mobile con "área utilizable"
 
 ## Descripcion
 

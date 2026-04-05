@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-42"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-48]] Maquetar Fork
-- **Subtarea:** [[MKT-49]] Codigos de descuento en $
-- **Subtarea:** [[MKT-50]] Precios relampago
-- **Subtarea:** [[MKT-51]] Codigos de descuento en %
+- **Subtarea:** [[MKT-48 - Maquetar Fork|MKT-48]] Maquetar Fork
+- **Subtarea:** [[MKT-49 - Codigos de descuento en $|MKT-49]] Codigos de descuento en $
+- **Subtarea:** [[MKT-50 - Precios relampago|MKT-50]] Precios relampago
+- **Subtarea:** [[MKT-51 - Codigos de descuento en %|MKT-51]] Codigos de descuento en %
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-102"
 
 ## Relaciones
 
-- **Padre:** [[LIO-17]] Mejorar seguimientos de guia y agregar un seguimiento activo
-- **action item from:** [[LIO-93]] API - Refactor - Migrar recurso de seguimiento 
+- **Padre:** [[LIO-17 - Mejorar seguimientos de guia y agregar un seguimiento activo|LIO-17]] Mejorar seguimientos de guia y agregar un seguimiento activo
+- **action item from:** [[LIO-93 - API - Refactor - Migrar recurso de seguimiento|LIO-93]] API - Refactor - Migrar recurso de seguimiento 
 
 ## Descripcion
 

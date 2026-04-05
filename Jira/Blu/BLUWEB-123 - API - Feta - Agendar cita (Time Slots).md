@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-123"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-121]] Agenda de cita por calendario en contacto
+- **Padre:** [[BLUWEB-121 - Agenda de cita por calendario en contacto|BLUWEB-121]] Agenda de cita por calendario en contacto
 
 ## Descripcion
 

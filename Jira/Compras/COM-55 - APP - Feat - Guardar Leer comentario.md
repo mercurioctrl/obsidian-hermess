@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-55"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **is blocked by:** [[COM-54]] API - Feat - Guardar / Leer comentario
-- **is blocked by:** [[COM-61]] APP - Guardar / Leer comentario - Comentario no visible
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **is blocked by:** [[COM-54 - API - Feat - Guardar Leer comentario|COM-54]] API - Feat - Guardar / Leer comentario
+- **is blocked by:** [[COM-61 - APP - Guardar Leer comentario - Comentario no visible|COM-61]] APP - Guardar / Leer comentario - Comentario no visible
 
 ## Descripcion
 

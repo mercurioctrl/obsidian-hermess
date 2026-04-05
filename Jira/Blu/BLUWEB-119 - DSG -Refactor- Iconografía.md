@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-119"
 
 ## Relaciones
 
-- **has action item:** [[BLUWEB-124]] APP - Refactor - Cambio de iconos Servicios Marketing
+- **has action item:** [[BLUWEB-124 - APP - Refactor - Cambio de iconos Servicios Marketing|BLUWEB-124]] APP - Refactor - Cambio de iconos Servicios Marketing
 
 ## Descripcion
 

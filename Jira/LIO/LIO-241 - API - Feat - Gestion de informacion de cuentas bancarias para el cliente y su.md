@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-241"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **has action item:** [[LIO-271]] APP - Feat - Visualización de la Billetera del Usuario
-- **relates to:** [[LIO-279]] API - Gestión de información de cuentas bancarias para el cliente y su billetera - No autorizado para crear cuenta bancaria con mi clientId
-- **relates to:** [[LIO-286]] API - Refactor - Gestión de información de cuentas bancarias para el cliente y su billetera -> Normalización del número de documento
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **has action item:** [[LIO-271 - APP - Feat - Visualización de la Billetera del Usuario|LIO-271]] APP - Feat - Visualización de la Billetera del Usuario
+- **relates to:** [[LIO-279 - API - Gestión de información de cuentas bancarias para el cliente y su|LIO-279]] API - Gestión de información de cuentas bancarias para el cliente y su billetera - No autorizado para crear cuenta bancaria con mi clientId
+- **relates to:** [[LIO-286 - API - Refactor - Gestión de información de cuentas bancarias para el cliente y|LIO-286]] API - Refactor - Gestión de información de cuentas bancarias para el cliente y su billetera -> Normalización del número de documento
 
 ## Descripcion
 

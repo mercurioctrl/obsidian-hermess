@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-150"
 
 ## Relaciones
 
-- **Padre:** [[MKT-93]] LO_ACCION CARRITO DE COMPRAS
+- **Padre:** [[MKT-93 - LO_ACCION CARRITO DE COMPRAS|MKT-93]] LO_ACCION CARRITO DE COMPRAS
 
 ## Descripcion
 

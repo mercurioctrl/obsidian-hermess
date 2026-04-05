@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-51"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-52]] IMAGENES PARA ESTADO 
-- **Subtarea:** [[MNB2-53]] IMAGENES PARA NEWSLETTER 
-- **Subtarea:** [[MNB2-54]] ENVIO DE NEWSLETTER
-- **Subtarea:** [[MNB2-55]] BANNER WEB 
+- **Subtarea:** [[MNB2-52 - IMAGENES PARA ESTADO|MNB2-52]] IMAGENES PARA ESTADO 
+- **Subtarea:** [[MNB2-53 - IMAGENES PARA NEWSLETTER|MNB2-53]] IMAGENES PARA NEWSLETTER 
+- **Subtarea:** [[MNB2-54 - ENVIO DE NEWSLETTER|MNB2-54]] ENVIO DE NEWSLETTER
+- **Subtarea:** [[MNB2-55 - BANNER WEB|MNB2-55]] BANNER WEB 
 
 ## Descripcion
 

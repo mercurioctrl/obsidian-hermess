@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-89"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-90]] Banners con enlace
-- **Subtarea:** [[MKT-91]] Subanner
-- **Subtarea:** [[MKT-92]] Banners mobile con enlace
+- **Subtarea:** [[MKT-90 - Banners con enlace|MKT-90]] Banners con enlace
+- **Subtarea:** [[MKT-91 - Subanner|MKT-91]] Subanner
+- **Subtarea:** [[MKT-92 - Banners mobile con enlace|MKT-92]] Banners mobile con enlace
 
 ## Descripcion
 

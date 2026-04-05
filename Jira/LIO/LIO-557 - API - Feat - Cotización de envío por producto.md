@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-557"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **is cloned by:** [[LIO-562]] API - Review - Cotización de envío por producto - Validación obligatoria de campos en la carga útil
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **is cloned by:** [[LIO-562 - API - Review - Cotización de envío por producto - Validación obligatoria de|LIO-562]] API - Review - Cotización de envío por producto - Validación obligatoria de campos en la carga útil
 
 ## Descripcion
 

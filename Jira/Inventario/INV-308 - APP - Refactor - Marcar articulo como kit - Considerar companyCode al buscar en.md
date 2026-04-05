@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-308"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **relates to:** [[INV-271]] APP - Feat - Pestaña “Kits”, listado y acción “Marcar como kit”
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **relates to:** [[INV-271 - APP - Feat - Pestaña “Kits”, listado y acción “Marcar como kit”|INV-271]] APP - Feat - Pestaña “Kits”, listado y acción “Marcar como kit”
 
 ## Descripcion
 

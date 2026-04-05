@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-812"
 
 ## Relaciones
 
-- **blocks:** [[NBWEB-799]] API - Refactor - Agregar utilidad extra por categoría al cliente (al precio que paga el reseller)
+- **blocks:** [[NBWEB-799 - API - Refactor - Agregar utilidad extra por categoría al cliente (al precio que|NBWEB-799]] API - Refactor - Agregar utilidad extra por categoría al cliente (al precio que paga el reseller)
 
 ## Descripcion
 

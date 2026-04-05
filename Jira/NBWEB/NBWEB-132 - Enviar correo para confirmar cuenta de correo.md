@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-132"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-130]] API - Registro y alta de cliente
-- **relates to:** [[NBWEB-746]] API - Refactor - Enviar correo para confirmar cuenta de correo - Añadir URL de pruebas
+- **Padre:** [[NBWEB-130 - API - Registro y alta de cliente|NBWEB-130]] API - Registro y alta de cliente
+- **relates to:** [[NBWEB-746 - API - Refactor - Enviar correo para confirmar cuenta de correo - Añadir URL de|NBWEB-746]] API - Refactor - Enviar correo para confirmar cuenta de correo - Añadir URL de pruebas
 
 ## Descripcion
 

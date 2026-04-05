@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-165"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-184]] Feb: 3/4 Portada Diseño Social Media_PSU FAMILY
-- **Subtarea:** [[ADATA-185]] 4.Adata Febrero: 3/4 Copys Social Media_ 
-- **Subtarea:** [[ADATA-186]] Febrero: 3/4 Programar Social Media_ PSU FAMYLY 22-02
-- **Subtarea:** [[ADATA-235]] 3. Feb: Buscar producto en base a lo que pasaron para comunicar 
+- **Subtarea:** [[ADATA-184 - Feb 34 Portada Diseño Social Media_PSU FAMILY|ADATA-184]] Feb: 3/4 Portada Diseño Social Media_PSU FAMILY
+- **Subtarea:** [[ADATA-185 - 4.Adata Febrero 34 Copys Social Media_|ADATA-185]] 4.Adata Febrero: 3/4 Copys Social Media_ 
+- **Subtarea:** [[ADATA-186 - Febrero 34 Programar Social Media_ PSU FAMYLY 22-02|ADATA-186]] Febrero: 3/4 Programar Social Media_ PSU FAMYLY 22-02
+- **Subtarea:** [[ADATA-235 - 3. Feb Buscar producto en base a lo que pasaron para comunicar|ADATA-235]] 3. Feb: Buscar producto en base a lo que pasaron para comunicar 
 
 ## Descripcion
 

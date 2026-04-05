@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-324"
 
 ## Relaciones
 
-- **Padre:** [[LIO-2]] Variedad y Calidad de Productos/Catalogos
-- **relates to:** [[LIO-302]] APIv4 - Feat - Refactor de recurso de pedidos para unificar listado de ventas y compras
+- **Padre:** [[LIO-2 - Variedad y Calidad de ProductosCatalogos|LIO-2]] Variedad y Calidad de Productos/Catalogos
+- **relates to:** [[LIO-302 - APIv4 - Feat - Refactor de recurso de pedidos para unificar listado de ventas y|LIO-302]] APIv4 - Feat - Refactor de recurso de pedidos para unificar listado de ventas y compras
 
 ## Descripcion
 

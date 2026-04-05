@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-80"
 
 ## Relaciones
 
-- **Padre:** [[EXP-18]] Feat - Listar pases
-- **blocks:** [[EXP-81]] APP - Feat - Detalle del pase
+- **Padre:** [[EXP-18 - Feat - Listar pases|EXP-18]] Feat - Listar pases
+- **blocks:** [[EXP-81 - APP - Feat - Detalle del pase|EXP-81]] APP - Feat - Detalle del pase
 
 ## Descripcion
 

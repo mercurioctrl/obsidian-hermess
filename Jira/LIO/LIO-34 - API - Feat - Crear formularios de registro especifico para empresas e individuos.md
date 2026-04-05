@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-34"
 
 ## Relaciones
 
-- **Padre:** [[LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
-- **blocks:** [[LIO-36]] APP - Refactor - Desconectar registro del sitio legacy para migrar 
-- **relates to:** [[LIO-46]] API - Refactor - Crear formularios de registro especifico para empresas e individuos - Añadir razón social
-- **relates to:** [[LIO-354]] API - Oportunidad de mejora - Registro de usuarios -> Acortar nombre de usuario
+- **Padre:** [[LIO-11 - Proceso de registro sencillo para los vendedoresCompradores|LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
+- **blocks:** [[LIO-36 - APP - Refactor - Desconectar registro del sitio legacy para migrar|LIO-36]] APP - Refactor - Desconectar registro del sitio legacy para migrar 
+- **relates to:** [[LIO-46 - API - Refactor - Crear formularios de registro especifico para empresas e|LIO-46]] API - Refactor - Crear formularios de registro especifico para empresas e individuos - Añadir razón social
+- **relates to:** [[LIO-354 - API - Oportunidad de mejora - Registro de usuarios - Acortar nombre de usuario|LIO-354]] API - Oportunidad de mejora - Registro de usuarios -> Acortar nombre de usuario
 
 ## Descripcion
 

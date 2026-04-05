@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-370"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **is blocked by:** [[EXP-371]] API - Repository - Tipos de orden
-- **is blocked by:** [[EXP-369]] API - Refactor - Agrear filtro tipo de pedido
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **is blocked by:** [[EXP-371 - API - Repository - Tipos de orden|EXP-371]] API - Repository - Tipos de orden
+- **is blocked by:** [[EXP-369 - API - Refactor - Agrear filtro tipo de pedido|EXP-369]] API - Refactor - Agrear filtro tipo de pedido
 
 ## Descripcion
 

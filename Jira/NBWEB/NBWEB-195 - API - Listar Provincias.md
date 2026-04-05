@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-195"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-130]] API - Registro y alta de cliente
+- **Padre:** [[NBWEB-130 - API - Registro y alta de cliente|NBWEB-130]] API - Registro y alta de cliente
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-106"
 
 ## Relaciones
 
-- **Padre:** [[NBE-99]] Triada 14_Elibet_Social Media
+- **Padre:** [[NBE-99 - Triada 14_Elibet_Social Media|NBE-99]] Triada 14_Elibet_Social Media
 
 ## Descripcion
 

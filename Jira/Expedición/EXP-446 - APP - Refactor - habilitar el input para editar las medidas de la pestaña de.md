@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-446"
 
 ## Relaciones
 
-- **Padre:** [[EXP-395]] Control de stock
+- **Padre:** [[EXP-395 - Control de stock|EXP-395]] Control de stock
 
 ## Descripcion
 

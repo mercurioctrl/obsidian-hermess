@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-128"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **blocks:** [[COM-110]] API - Generar un ingreso
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **blocks:** [[COM-110 - API - Generar un ingreso|COM-110]] API - Generar un ingreso
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-550"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **has action item:** [[COB-551]] APP - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y observaciones)
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **has action item:** [[COB-551 - APP - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y|COB-551]] APP - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y observaciones)
 
 ## Descripcion
 

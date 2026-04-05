@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-71"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-70]] Plantilla News del Sitio para exponer productos
+- **Padre:** [[NBWEB-70 - Plantilla News del Sitio para exponer productos|NBWEB-70]] Plantilla News del Sitio para exponer productos
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-209"
 
 ## Relaciones
 
-- **Padre:** [[LIO-16]] Mejorar tiempos de entrega
-- **action item from:** [[LIO-208]] APP - Refactor - Transportar y procesar "promesa de envio"
+- **Padre:** [[LIO-16 - Mejorar tiempos de entrega|LIO-16]] Mejorar tiempos de entrega
+- **action item from:** [[LIO-208 - APP - Refactor - Transportar y procesar promesa de envio|LIO-208]] APP - Refactor - Transportar y procesar "promesa de envio"
 
 ## Descripcion
 

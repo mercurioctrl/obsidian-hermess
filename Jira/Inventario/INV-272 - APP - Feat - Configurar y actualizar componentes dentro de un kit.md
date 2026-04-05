@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-272"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **action item from:** [[INV-256]] API - Feat - Eliminar un componente de un kit (soft delete) y recalcular su costo
-- **action item from:** [[INV-255]] API - Feat - Configurar o actualizar componentes de un kit y recalcular su costo
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **action item from:** [[INV-256 - API - Feat - Eliminar un componente de un kit (soft delete) y recalcular su|INV-256]] API - Feat - Eliminar un componente de un kit (soft delete) y recalcular su costo
+- **action item from:** [[INV-255 - API - Feat - Configurar o actualizar componentes de un kit y recalcular su costo|INV-255]] API - Feat - Configurar o actualizar componentes de un kit y recalcular su costo
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-225"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-224]] APP - Oportunidades de mejora
-- **relates to:** [[NBWEB-229]] API - Mi cuenta - Mis datos - Validar la contraseña
+- **Padre:** [[NBWEB-224 - APP - Oportunidades de mejora|NBWEB-224]] APP - Oportunidades de mejora
+- **relates to:** [[NBWEB-229 - API - Mi cuenta - Mis datos - Validar la contraseña|NBWEB-229]] API - Mi cuenta - Mis datos - Validar la contraseña
 
 ## Descripcion
 

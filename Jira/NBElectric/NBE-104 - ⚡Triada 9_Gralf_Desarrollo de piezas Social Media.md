@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-104"
 
 ## Relaciones
 
-- **Padre:** [[NBE-98]] Triada 9_Gralf_Social Media
+- **Padre:** [[NBE-98 - Triada 9_Gralf_Social Media|NBE-98]] Triada 9_Gralf_Social Media
 
 ## Descripcion
 

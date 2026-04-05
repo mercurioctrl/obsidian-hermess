@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-121"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-122]] API - Feat - Ver disponibilidad (Time Slots) y Calendario
-- **Subtarea:** [[BLUWEB-123]] API - Feta - Agendar cita (Time Slots)
+- **Subtarea:** [[BLUWEB-122 - API - Feat - Ver disponibilidad (Time Slots) y Calendario|BLUWEB-122]] API - Feat - Ver disponibilidad (Time Slots) y Calendario
+- **Subtarea:** [[BLUWEB-123 - API - Feta - Agendar cita (Time Slots)|BLUWEB-123]] API - Feta - Agendar cita (Time Slots)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-30"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[INV-31]] APP - Feat- Agregar filtro tipo "checbox" para listar todos los que no tienen imagen
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[INV-31 - APP - Feat- Agregar filtro tipo checbox para listar todos los que no tienen|INV-31]] APP - Feat- Agregar filtro tipo "checbox" para listar todos los que no tienen imagen
 
 ## Descripcion
 

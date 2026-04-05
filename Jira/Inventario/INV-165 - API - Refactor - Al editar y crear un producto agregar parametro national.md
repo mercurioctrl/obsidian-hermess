@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-165"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[INV-166]] APP - Refactor - Al editar y crear un producto agregar parametro national
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[INV-166 - APP - Refactor - Al editar y crear un producto agregar parametro national|INV-166]] APP - Refactor - Al editar y crear un producto agregar parametro national
 
 ## Descripcion
 

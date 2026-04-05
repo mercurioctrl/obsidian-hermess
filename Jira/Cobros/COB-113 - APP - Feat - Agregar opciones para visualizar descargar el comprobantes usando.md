@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-113"
 
 ## Relaciones
 
-- **Padre:** [[COB-51]] APP - Feat - Listar comprobantes de pago
+- **Padre:** [[COB-51 - APP - Feat - Listar comprobantes de pago|COB-51]] APP - Feat - Listar comprobantes de pago
 
 ## Descripcion
 

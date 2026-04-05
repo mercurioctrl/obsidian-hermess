@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-948"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-949]] BANNER HOME
-- **Subtarea:** [[DNYL-950]] BANNER NEWS
-- **Subtarea:** [[DNYL-951]] STORY VENDEDORES
-- **Subtarea:** [[DNYL-952]] FEED
+- **Subtarea:** [[DNYL-949 - BANNER HOME|DNYL-949]] BANNER HOME
+- **Subtarea:** [[DNYL-950 - BANNER NEWS|DNYL-950]] BANNER NEWS
+- **Subtarea:** [[DNYL-951 - STORY VENDEDORES|DNYL-951]] STORY VENDEDORES
+- **Subtarea:** [[DNYL-952 - FEED|DNYL-952]] FEED
 
 ## Descripcion
 

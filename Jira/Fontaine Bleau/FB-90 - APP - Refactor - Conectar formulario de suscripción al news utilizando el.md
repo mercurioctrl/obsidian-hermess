@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-90"
 
 ## Relaciones
 
-- **action item from:** [[BLUWEB-208]] API - Feat - Recurso de suscripción a newsletter para landings de clientes (partner newsletter subscriptions)
+- **action item from:** [[BLUWEB-208 - API - Feat - Recurso de suscripción a newsletter para landings de clientes|BLUWEB-208]] API - Feat - Recurso de suscripción a newsletter para landings de clientes (partner newsletter subscriptions)
 
 ## Descripcion
 

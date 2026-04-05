@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-21"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-19]] Talento Humano
+- **Padre:** [[BLUWEB-19 - Talento Humano|BLUWEB-19]] Talento Humano
 
 ## Descripcion
 

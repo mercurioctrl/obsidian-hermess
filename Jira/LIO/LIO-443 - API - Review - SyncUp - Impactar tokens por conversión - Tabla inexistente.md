@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-443"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **relates to:** [[LIO-418]] API - Feat - SyncUp - Impactar tokens por conversión
-- **blocks:** [[LIO-432]] API - Feat - Listar conversiones
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **relates to:** [[LIO-418 - API - Feat - SyncUp - Impactar tokens por conversión|LIO-418]] API - Feat - SyncUp - Impactar tokens por conversión
+- **blocks:** [[LIO-432 - API - Feat - Listar conversiones|LIO-432]] API - Feat - Listar conversiones
 
 ## Descripcion
 

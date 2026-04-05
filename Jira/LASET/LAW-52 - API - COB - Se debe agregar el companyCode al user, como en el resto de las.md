@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-52"
 
 ## Relaciones
 
-- **has action item:** [[LAW-53]] APP - COB - Se debe agregar el companyCode al user, como en el resto de las apps (PED,INV...)
-- **is cloned by:** [[LAW-54]] API - COB - Review - Se debe agregar el companyCode al user -> Parámetro includeNull sin resultados
+- **has action item:** [[LAW-53 - APP - COB - Se debe agregar el companyCode al user, como en el resto de las|LAW-53]] APP - COB - Se debe agregar el companyCode al user, como en el resto de las apps (PED,INV...)
+- **is cloned by:** [[LAW-54 - API - COB - Review - Se debe agregar el companyCode al user - Parámetro|LAW-54]] API - COB - Review - Se debe agregar el companyCode al user -> Parámetro includeNull sin resultados
 
 ## Descripcion
 

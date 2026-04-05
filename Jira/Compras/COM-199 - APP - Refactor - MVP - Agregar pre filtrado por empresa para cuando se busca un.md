@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-199"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **action item from:** [[COM-197]] API - Refactor - MVP - Agregar pre filtrado por empresa para cuando se busca un producto para ingresar en orden de compra
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **action item from:** [[COM-197 - API - Refactor - MVP - Agregar pre filtrado por empresa para cuando se busca un|COM-197]] API - Refactor - MVP - Agregar pre filtrado por empresa para cuando se busca un producto para ingresar en orden de compra
 
 ## Descripcion
 

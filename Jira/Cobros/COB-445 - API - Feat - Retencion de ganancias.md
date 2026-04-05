@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-445"
 
 ## Relaciones
 
-- **Padre:** [[COB-444]] Refactor - Retencion de ganancias
+- **Padre:** [[COB-444 - Refactor - Retencion de ganancias|COB-444]] Refactor - Retencion de ganancias
 
 ## Descripcion
 

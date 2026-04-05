@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-162"
 
 ## Relaciones
 
-- **Padre:** [[INV-35]] Importadores/ Scrappers
-- **relates to:** [[INV-148]] API - Feat - Tracker (crawler) de atributos (especificaciones)
-- **relates to:** [[INV-161]] APP - Refactor - Mejora cuando se muestran los atributos den ser editables en caso que tenga algun error
+- **Padre:** [[INV-35 - Importadores Scrappers|INV-35]] Importadores/ Scrappers
+- **relates to:** [[INV-148 - API - Feat - Tracker (crawler) de atributos (especificaciones)|INV-148]] API - Feat - Tracker (crawler) de atributos (especificaciones)
+- **relates to:** [[INV-161 - APP - Refactor - Mejora cuando se muestran los atributos den ser editables en|INV-161]] APP - Refactor - Mejora cuando se muestran los atributos den ser editables en caso que tenga algun error
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-166"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
-- **is blocked by:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **is blocked by:** [[COB-169]] API - Refactor - Agregar filtros necesarios para comprobantes
-- **blocks:** [[COB-129]] APP - Feat - Mostrar recibo
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **is blocked by:** [[COB-169 - API - Refactor - Agregar filtros necesarios para comprobantes|COB-169]] API - Refactor - Agregar filtros necesarios para comprobantes
+- **blocks:** [[COB-129 - APP - Feat - Mostrar recibo|COB-129]] APP - Feat - Mostrar recibo
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-85"
 
 ## Relaciones
 
-- **Padre:** [[COB-40]] APP - Feat - Listar movimientos caja
-- **is blocked by:** [[COB-86]] API - Refactor - Se debe agregar un parametro llamado docuemtReference
+- **Padre:** [[COB-40 - APP - Feat - Listar movimientos caja|COB-40]] APP - Feat - Listar movimientos caja
+- **is blocked by:** [[COB-86 - API - Refactor - Se debe agregar un parametro llamado docuemtReference|COB-86]] API - Refactor - Se debe agregar un parametro llamado docuemtReference
 
 ## Descripcion
 

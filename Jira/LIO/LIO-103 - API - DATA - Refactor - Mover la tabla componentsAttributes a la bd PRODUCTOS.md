@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-103"
 
 ## Relaciones
 
-- **Padre:** [[LIO-71]] Armador de equipos
-- **has action item:** [[INV-147]] API - Refactor - Filtrar productos que no cuentan con todos sus atributos obligatorios
-- **action item from:** [[LIO-72]] API - Research - Crearemos una tabla con los atributos que son obligatorios para cada cateogria
+- **Padre:** [[LIO-71 - Armador de equipos|LIO-71]] Armador de equipos
+- **has action item:** [[INV-147 - API - Refactor - Filtrar productos que no cuentan con todos sus atributos|INV-147]] API - Refactor - Filtrar productos que no cuentan con todos sus atributos obligatorios
+- **action item from:** [[LIO-72 - API - Research - Crearemos una tabla con los atributos que son obligatorios|LIO-72]] API - Research - Crearemos una tabla con los atributos que son obligatorios para cada cateogria
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-265"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
-- **has action item:** [[INV-266]] APP - Feat - Adjuntar PDF a un certificado
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
+- **has action item:** [[INV-266 - APP - Feat - Adjuntar PDF a un certificado|INV-266]] APP - Feat - Adjuntar PDF a un certificado
 
 ## Descripcion
 

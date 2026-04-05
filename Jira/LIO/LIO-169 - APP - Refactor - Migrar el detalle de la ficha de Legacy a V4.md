@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-169"
 
 ## Relaciones
 
-- **Padre:** [[LIO-119]] Inventario
-- **action item from:** [[LIO-120]] API - Refactor - Migrar el detalle de la ficha de Legacy a V4
-- **causes:** [[LIO-191]] APP - Fix - Arreglar que se pueda ver los videos de un item  porque se rompe la ficha
+- **Padre:** [[LIO-119 - Inventario|LIO-119]] Inventario
+- **action item from:** [[LIO-120 - API - Refactor - Migrar el detalle de la ficha de Legacy a V4|LIO-120]] API - Refactor - Migrar el detalle de la ficha de Legacy a V4
+- **causes:** [[LIO-191 - APP - Fix - Arreglar que se pueda ver los videos de un item porque se rompe la|LIO-191]] APP - Fix - Arreglar que se pueda ver los videos de un item  porque se rompe la ficha
 
 ## Descripcion
 

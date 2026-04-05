@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-211"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **Subtarea:** [[INV-213]] API - MVP - Feat-  opción para cambiar el producto de depósito
-- **Subtarea:** [[INV-214]]  APP  - MVP - Feat-  opción para cambiar el producto de depósito
-- **Subtarea:** [[INV-259]] API - MVP - Refactor - Registro de stock -> Agregar control de stock al snapshot
-- **action item from:** [[INV-212]] APP - MVP - Feat- Agregar repo con pestaña de producto por depósito
-- **has action item:** [[INV-231]] API - Refactor - Repositorio de stock -> Agregar cantidad de productos ingresando
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **Subtarea:** [[INV-213 - API - MVP - Feat- opción para cambiar el producto de depósito|INV-213]] API - MVP - Feat-  opción para cambiar el producto de depósito
+- **Subtarea:** [[INV-214 - APP - MVP - Feat- opción para cambiar el producto de depósito|INV-214]]  APP  - MVP - Feat-  opción para cambiar el producto de depósito
+- **Subtarea:** [[INV-259 - API - MVP - Refactor - Registro de stock - Agregar control de stock al snapshot|INV-259]] API - MVP - Refactor - Registro de stock -> Agregar control de stock al snapshot
+- **action item from:** [[INV-212 - APP - MVP - Feat- Agregar repo con pestaña de producto por depósito|INV-212]] APP - MVP - Feat- Agregar repo con pestaña de producto por depósito
+- **has action item:** [[INV-231 - API - Refactor - Repositorio de stock - Agregar cantidad de productos ingresando|INV-231]] API - Refactor - Repositorio de stock -> Agregar cantidad de productos ingresando
 
 ## Descripcion
 

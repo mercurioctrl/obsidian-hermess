@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-95"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **is blocked by:** [[EXP-93]] API - Feat - Agregar codigo unico a un item
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **is blocked by:** [[EXP-93 - API - Feat - Agregar codigo unico a un item|EXP-93]] API - Feat - Agregar codigo unico a un item
 
 ## Descripcion
 

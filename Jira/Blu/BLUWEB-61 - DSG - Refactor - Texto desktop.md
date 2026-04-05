@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-61"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **blocks:** [[BLUWEB-65]] APP - Refactor - Texto desktop y mobile diferenciados
-- **has action item:** [[BLUWEB-71]] APP - Refactor - Modificar todos los textos de la sección servicios por los del pdf y refactorizar segun el ejemplo
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **blocks:** [[BLUWEB-65 - APP - Refactor - Texto desktop y mobile diferenciados|BLUWEB-65]] APP - Refactor - Texto desktop y mobile diferenciados
+- **has action item:** [[BLUWEB-71 - APP - Refactor - Modificar todos los textos de la sección servicios por los del|BLUWEB-71]] APP - Refactor - Modificar todos los textos de la sección servicios por los del pdf y refactorizar segun el ejemplo
 
 ## Descripcion
 

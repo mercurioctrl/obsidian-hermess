@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-239"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-229]] Triada 10: Recruiting
+- **Padre:** [[BLUWEB-229 - Triada 10 Recruiting|BLUWEB-229]] Triada 10: Recruiting
 
 ## Descripcion
 

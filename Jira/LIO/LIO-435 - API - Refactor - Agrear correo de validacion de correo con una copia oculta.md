@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-435"
 
 ## Relaciones
 
-- **Padre:** [[LIO-410]] Validar identidad
+- **Padre:** [[LIO-410 - Validar identidad|LIO-410]] Validar identidad
 
 ## Descripcion
 

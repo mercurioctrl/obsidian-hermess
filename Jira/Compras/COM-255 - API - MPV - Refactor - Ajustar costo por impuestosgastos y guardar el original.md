@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-255"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **relates to:** [[COM-231]] API- MVP - Refactor - Al agregar un impuesto/gasto a una orden de compra se debe calcular segun prorratee o no el nuevo costo y guardar el costo original (Futuro calculo comisiones)
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **relates to:** [[COM-231 - API- MVP - Refactor - Al agregar un impuestogasto a una orden de compra se debe|COM-231]] API- MVP - Refactor - Al agregar un impuesto/gasto a una orden de compra se debe calcular segun prorratee o no el nuevo costo y guardar el costo original (Futuro calculo comisiones)
 
 ## Descripcion
 

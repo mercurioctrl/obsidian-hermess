@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-74"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-75]] NEWSLETTER 
-- **Subtarea:** [[MNB2-76]] BANNER WEB 
-- **Subtarea:** [[MNB2-77]] IMAGENES
+- **Subtarea:** [[MNB2-75 - NEWSLETTER|MNB2-75]] NEWSLETTER 
+- **Subtarea:** [[MNB2-76 - BANNER WEB|MNB2-76]] BANNER WEB 
+- **Subtarea:** [[MNB2-77 - IMAGENES|MNB2-77]] IMAGENES
 
 ## Descripcion
 

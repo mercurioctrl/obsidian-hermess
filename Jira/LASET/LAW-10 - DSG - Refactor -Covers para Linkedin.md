@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-10"
 
 ## Relaciones
 
-- **Padre:** [[LAW-8]] Social Media Laset
-- **has action item:** [[LAW-11]] DSG - Reactor -Profile Picture Instagram-Facebook-Linkedin
-- **has action item:** [[LAW-12]] DSG - Refactor - Covers para Facebook
+- **Padre:** [[LAW-8 - Social Media Laset|LAW-8]] Social Media Laset
+- **has action item:** [[LAW-11 - DSG - Reactor -Profile Picture Instagram-Facebook-Linkedin|LAW-11]] DSG - Reactor -Profile Picture Instagram-Facebook-Linkedin
+- **has action item:** [[LAW-12 - DSG - Refactor - Covers para Facebook|LAW-12]] DSG - Refactor - Covers para Facebook
 
 ## Descripcion
 

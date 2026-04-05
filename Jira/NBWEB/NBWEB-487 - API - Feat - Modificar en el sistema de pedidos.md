@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-487"
 
 ## Relaciones
 
-- **causes:** [[NBWEB-486]] API - Refactor - Agregar incremento por cliente
+- **causes:** [[NBWEB-486 - API - Refactor - Agregar incremento por cliente|NBWEB-486]] API - Refactor - Agregar incremento por cliente
 
 ## Descripcion
 

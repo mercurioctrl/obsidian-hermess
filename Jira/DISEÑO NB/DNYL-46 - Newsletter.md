@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-46"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-45]] NETAC WEEK - NB
+- **Padre:** [[DNYL-45 - NETAC WEEK - NB|DNYL-45]] NETAC WEEK - NB
 
 ## Descripcion
 

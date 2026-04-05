@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-183"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
 
 ## Descripcion
 

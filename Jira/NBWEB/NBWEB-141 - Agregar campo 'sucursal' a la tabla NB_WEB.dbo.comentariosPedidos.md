@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-141"
 
 ## Relaciones
 
-- **blocks:** [[NBWEB-139]] Agregar comentario al procesar el carrito
+- **blocks:** [[NBWEB-139 - Agregar comentario al procesar el carrito|NBWEB-139]] Agregar comentario al procesar el carrito
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-387"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-383]] Feat - Alta de Admins multicliente
-- **action item from:** [[ADATA-386]] API - Feat - Procesar compras mediante el reporte del cliente
+- **Padre:** [[ADATA-383 - Feat - Alta de Admins multicliente|ADATA-383]] Feat - Alta de Admins multicliente
+- **action item from:** [[ADATA-386 - API - Feat - Procesar compras mediante el reporte del cliente|ADATA-386]] API - Feat - Procesar compras mediante el reporte del cliente
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-273"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **has action item:** [[LIO-271]] APP - Feat - Visualización de la Billetera del Usuario
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **has action item:** [[LIO-271 - APP - Feat - Visualización de la Billetera del Usuario|LIO-271]] APP - Feat - Visualización de la Billetera del Usuario
 
 ## Descripcion
 

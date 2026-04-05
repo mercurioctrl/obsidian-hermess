@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-694"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **blocks:** [[NBWEB-695]] APP - Feat - Conectaremos el recurso de validacion cruzada para las decripciones
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **blocks:** [[NBWEB-695 - APP - Feat - Conectaremos el recurso de validacion cruzada para las decripciones|NBWEB-695]] APP - Feat - Conectaremos el recurso de validacion cruzada para las decripciones
 
 ## Descripcion
 

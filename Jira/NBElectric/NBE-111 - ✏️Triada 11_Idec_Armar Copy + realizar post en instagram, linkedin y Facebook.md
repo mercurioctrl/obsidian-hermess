@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-111"
 
 ## Relaciones
 
-- **Padre:** [[NBE-108]] Triada 10_ Idec_Social Media
+- **Padre:** [[NBE-108 - Triada 10_ Idec_Social Media|NBE-108]] Triada 10_ Idec_Social Media
 
 ## Descripcion
 

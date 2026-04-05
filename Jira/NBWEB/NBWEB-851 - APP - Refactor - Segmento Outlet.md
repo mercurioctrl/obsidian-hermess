@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-851"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-782]] APP - Feat - Rediseño de menu de productos
-- **relates to:** [[NBWEB-853]] APP - Segmento Outlet - Sugerencia de mejora en las categorías
+- **Padre:** [[NBWEB-782 - APP - Feat - Rediseño de menu de productos|NBWEB-782]] APP - Feat - Rediseño de menu de productos
+- **relates to:** [[NBWEB-853 - APP - Segmento Outlet - Sugerencia de mejora en las categorías|NBWEB-853]] APP - Segmento Outlet - Sugerencia de mejora en las categorías
 
 ## Descripcion
 

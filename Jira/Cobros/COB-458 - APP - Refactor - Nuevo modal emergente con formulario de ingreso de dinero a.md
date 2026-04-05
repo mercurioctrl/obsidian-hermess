@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-458"
 
 ## Relaciones
 
-- **Padre:** [[COB-456]] Refactor - Limitaciones para ingresar dinero "a mano" cuando no selecciono un pedido
-- **is blocked by:** [[COB-457]] API - Refactor - Observación justificativa obligatoria
+- **Padre:** [[COB-456 - Refactor - Limitaciones para ingresar dinero a mano cuando no selecciono un|COB-456]] Refactor - Limitaciones para ingresar dinero "a mano" cuando no selecciono un pedido
+- **is blocked by:** [[COB-457 - API - Refactor - Observación justificativa obligatoria|COB-457]] API - Refactor - Observación justificativa obligatoria
 
 ## Descripcion
 

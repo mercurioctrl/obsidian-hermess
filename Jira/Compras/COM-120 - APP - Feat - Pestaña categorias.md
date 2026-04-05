@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-120"
 
 ## Relaciones
 
-- **Padre:** [[COM-117]] Listar / Editar Categorias
-- **is blocked by:** [[COM-119]] API - Feat - Editar Categorias
-- **is blocked by:** [[COM-118]] API - Feat - Listar categorias
-- **is blocked by:** [[COM-121]] APP - Pestaña categorías - Al acceder permanece cargando
+- **Padre:** [[COM-117 - Listar Editar Categorias|COM-117]] Listar / Editar Categorias
+- **is blocked by:** [[COM-119 - API - Feat - Editar Categorias|COM-119]] API - Feat - Editar Categorias
+- **is blocked by:** [[COM-118 - API - Feat - Listar categorias|COM-118]] API - Feat - Listar categorias
+- **is blocked by:** [[COM-121 - APP - Pestaña categorías - Al acceder permanece cargando|COM-121]] APP - Pestaña categorías - Al acceder permanece cargando
 
 ## Descripcion
 

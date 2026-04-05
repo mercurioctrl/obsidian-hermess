@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-22"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **blocks:** [[COM-21]] APP - Feat - Listar ordenes de compra
-- **is blocked by:** [[COM-35]] API - Listar ordenes de compra - Depósitos no coincidentes
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **blocks:** [[COM-21 - APP - Feat - Listar ordenes de compra|COM-21]] APP - Feat - Listar ordenes de compra
+- **is blocked by:** [[COM-35 - API - Listar ordenes de compra - Depósitos no coincidentes|COM-35]] API - Listar ordenes de compra - Depósitos no coincidentes
 
 ## Descripcion
 

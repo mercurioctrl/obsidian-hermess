@@ -29,15 +29,15 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-453"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-454]] API - Feat - Regularizar cuenta corriente
-- **Subtarea:** [[COB-455]] APP - Feat - Regularizar cuentas corriente por administradores
-- **Subtarea:** [[COB-477]] APP - Review - Regularizar cuentas corrientes -> Error en el mensaje "succes"
-- **blocks:** [[SNB-953]] se liquidó un pedido y se autorizó sólo / OTRO MÁS
-- **blocks:** [[SNB-929]] regularizar cuenta
-- **is caused by:** [[SNB-929]] regularizar cuenta
-- **is blocked by:** [[COB-473]] APP - Regularizar cuenta para administradores - Incidencias varias
-- **is blocked by:** [[COB-474]] API - Regularizar cuenta para administradores - Incidencias varias
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-454 - API - Feat - Regularizar cuenta corriente|COB-454]] API - Feat - Regularizar cuenta corriente
+- **Subtarea:** [[COB-455 - APP - Feat - Regularizar cuentas corriente por administradores|COB-455]] APP - Feat - Regularizar cuentas corriente por administradores
+- **Subtarea:** [[COB-477 - APP - Review - Regularizar cuentas corrientes - Error en el mensaje succes|COB-477]] APP - Review - Regularizar cuentas corrientes -> Error en el mensaje "succes"
+- **blocks:** [[SNB-953 - se liquidó un pedido y se autorizó sólo OTRO MÁS|SNB-953]] se liquidó un pedido y se autorizó sólo / OTRO MÁS
+- **blocks:** [[SNB-929 - regularizar cuenta|SNB-929]] regularizar cuenta
+- **is caused by:** [[SNB-929 - regularizar cuenta|SNB-929]] regularizar cuenta
+- **is blocked by:** [[COB-473 - APP - Regularizar cuenta para administradores - Incidencias varias|COB-473]] APP - Regularizar cuenta para administradores - Incidencias varias
+- **is blocked by:** [[COB-474 - API - Regularizar cuenta para administradores - Incidencias varias|COB-474]] API - Regularizar cuenta para administradores - Incidencias varias
 
 ## Descripcion
 

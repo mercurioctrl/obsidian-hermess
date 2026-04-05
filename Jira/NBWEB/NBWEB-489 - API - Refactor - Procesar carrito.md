@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-489"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **is blocked by:** [[NBWEB-488]] MS - Envios - Refactor Cotizador del carrito de compra
-- **blocks:** [[NBWEB-490]] APP - Refactor - Procesar carrito
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **is blocked by:** [[NBWEB-488 - MS - Envios - Refactor Cotizador del carrito de compra|NBWEB-488]] MS - Envios - Refactor Cotizador del carrito de compra
+- **blocks:** [[NBWEB-490 - APP - Refactor - Procesar carrito|NBWEB-490]] APP - Refactor - Procesar carrito
 
 ## Descripcion
 

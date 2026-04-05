@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-378"
 
 ## Relaciones
 
-- **Padre:** [[LIO-373]] Seguridad del checkout y protección de transacciones
+- **Padre:** [[LIO-373 - Seguridad del checkout y protección de transacciones|LIO-373]] Seguridad del checkout y protección de transacciones
 
 ## Descripcion
 

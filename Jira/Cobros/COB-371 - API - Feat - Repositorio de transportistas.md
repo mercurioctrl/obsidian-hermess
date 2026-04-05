@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-371"
 
 ## Relaciones
 
-- **Padre:** [[COB-357]] Feat - Listar Despachados, pendientes a cobrar
+- **Padre:** [[COB-357 - Feat - Listar Despachados, pendientes a cobrar|COB-357]] Feat - Listar Despachados, pendientes a cobrar
 
 ## Descripcion
 

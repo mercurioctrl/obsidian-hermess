@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-217"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-218]] Blu Diciembre:Triada 6  Diseño Social Media
-- **Subtarea:** [[BLUWEB-219]] Blu Diciembre:  Copys  Social Media
-- **Subtarea:** [[BLUWEB-220]] 2. blu.inc Diciembre: Programar Social Media LUNES 22
+- **Subtarea:** [[BLUWEB-218 - Blu DiciembreTriada 6 Diseño Social Media|BLUWEB-218]] Blu Diciembre:Triada 6  Diseño Social Media
+- **Subtarea:** [[BLUWEB-219 - Blu Diciembre Copys Social Media|BLUWEB-219]] Blu Diciembre:  Copys  Social Media
+- **Subtarea:** [[BLUWEB-220 - 2. blu.inc Diciembre Programar Social Media LUNES 22|BLUWEB-220]] 2. blu.inc Diciembre: Programar Social Media LUNES 22
 
 ## Descripcion
 

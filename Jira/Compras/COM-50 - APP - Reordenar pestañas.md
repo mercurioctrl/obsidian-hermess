@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-50"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
 
 ## Descripcion
 

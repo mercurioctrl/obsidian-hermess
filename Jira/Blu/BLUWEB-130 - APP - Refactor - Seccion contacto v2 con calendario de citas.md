@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-130"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **action item from:** [[BLUWEB-133]] API - Feat - Contacto (envío de correo)
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **action item from:** [[BLUWEB-133 - API - Feat - Contacto (envío de correo)|BLUWEB-133]] API - Feat - Contacto (envío de correo)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-143"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **relates to:** [[COM-144]] APP - Refactor - Agregar item junto con su posición arancelaría 
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **relates to:** [[COM-144 - APP - Refactor - Agregar item junto con su posición arancelaría|COM-144]] APP - Refactor - Agregar item junto con su posición arancelaría 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-314"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **has action item:** [[INV-315]] APP - Refactor - Incluir filtro Excluidos 
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **has action item:** [[INV-315 - APP - Refactor - Incluir filtro Excluidos|INV-315]] APP - Refactor - Incluir filtro Excluidos 
 
 ## Descripcion
 

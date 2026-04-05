@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-245"
 
 ## Relaciones
 
-- **Padre:** [[NBE-241]] Feb: Elibet
-- **action item from:** [[NBE-243]] Feb: Banner Nbe Elibet
+- **Padre:** [[NBE-241 - Feb Elibet|NBE-241]] Feb: Elibet
+- **action item from:** [[NBE-243 - Feb Banner Nbe Elibet|NBE-243]] Feb: Banner Nbe Elibet
 
 ## Descripcion
 

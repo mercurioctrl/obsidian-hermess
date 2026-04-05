@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-86"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **is blocked by:** [[EXP-112]] API - Feat - Listar estados de pedidos de salida
-- **is blocked by:** [[EXP-113]] API - Feat - Listar medios de envío
-- **blocks:** [[EXP-87]] APP - Feat - Filtros Listar pedidos envios
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **is blocked by:** [[EXP-112 - API - Feat - Listar estados de pedidos de salida|EXP-112]] API - Feat - Listar estados de pedidos de salida
+- **is blocked by:** [[EXP-113 - API - Feat - Listar medios de envío|EXP-113]] API - Feat - Listar medios de envío
+- **blocks:** [[EXP-87 - APP - Feat - Filtros Listar pedidos envios|EXP-87]] APP - Feat - Filtros Listar pedidos envios
 
 ## Descripcion
 

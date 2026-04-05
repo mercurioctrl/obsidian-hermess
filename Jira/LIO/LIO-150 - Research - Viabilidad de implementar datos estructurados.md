@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-150"
 
 ## Relaciones
 
-- **Padre:** [[LIO-145]] Google Search Console
+- **Padre:** [[LIO-145 - Google Search Console|LIO-145]] Google Search Console
 
 ## Descripcion
 

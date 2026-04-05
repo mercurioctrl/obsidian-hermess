@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-328"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-330]] APP - Refactor - Agregar nuevo parámetro sales a la resta y las columnas
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-330 - APP - Refactor - Agregar nuevo parámetro sales a la resta y las columnas|INV-330]] APP - Refactor - Agregar nuevo parámetro sales a la resta y las columnas
 
 ## Descripcion
 

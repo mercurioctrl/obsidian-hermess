@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-103"
 
 ## Relaciones
 
-- **Padre:** [[COB-101]] Feat - Realizar salida de caja
-- **relates to:** [[SNB-350]] TIPOS DE SALIDA - CAJA 
+- **Padre:** [[COB-101 - Feat - Realizar salida de caja|COB-101]] Feat - Realizar salida de caja
+- **relates to:** [[SNB-350 - TIPOS DE SALIDA - CAJA|SNB-350]] TIPOS DE SALIDA - CAJA 
 
 ## Descripcion
 

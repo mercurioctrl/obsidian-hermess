@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-112"
 
 ## Relaciones
 
-- **Padre:** [[INV-65]] Marcas
+- **Padre:** [[INV-65 - Marcas|INV-65]] Marcas
 
 ## Descripcion
 

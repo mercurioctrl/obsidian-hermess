@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-396"
 
 ## Relaciones
 
-- **Padre:** [[EXP-395]] Control de stock
-- **Subtarea:** [[EXP-397]] API - Feat - Repositorio listar conteos de stock
+- **Padre:** [[EXP-395 - Control de stock|EXP-395]] Control de stock
+- **Subtarea:** [[EXP-397 - API - Feat - Repositorio listar conteos de stock|EXP-397]] API - Feat - Repositorio listar conteos de stock
 
 ## Descripcion
 

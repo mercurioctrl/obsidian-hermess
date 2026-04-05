@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-361"
 
 ## Relaciones
 
-- **causes:** [[SNB-167]] Listado de precios 
-- **blocks:** [[SNB-166]] no me deja descargar lista desde página nueva. 
-- **blocks:** [[SNB-163]] DESCARGA LISTA TXT
+- **causes:** [[SNB-167 - Listado de precios|SNB-167]] Listado de precios 
+- **blocks:** [[SNB-166 - no me deja descargar lista desde página nueva.|SNB-166]] no me deja descargar lista desde página nueva. 
+- **blocks:** [[SNB-163 - DESCARGA LISTA TXT|SNB-163]] DESCARGA LISTA TXT
 
 ## Descripcion
 

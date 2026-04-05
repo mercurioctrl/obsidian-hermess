@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-15"
 
 ## Relaciones
 
-- **Padre:** [[MKT-6]] LANDING LANZAMIENTO AMD
+- **Padre:** [[MKT-6 - LANDING LANZAMIENTO AMD|MKT-6]] LANDING LANZAMIENTO AMD
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-190"
 
 ## Relaciones
 
-- **causes:** [[LIO-181]] API - Feat - Capturar los intereses de usuarios (con o sin login)
+- **causes:** [[LIO-181 - API - Feat - Capturar los intereses de usuarios (con o sin login)|LIO-181]] API - Feat - Capturar los intereses de usuarios (con o sin login)
 
 ## Descripcion
 

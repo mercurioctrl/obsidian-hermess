@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-294"
 
 ## Relaciones
 
-- **Padre:** [[COB-293]] Retenciones / Percepciones
-- **Subtarea:** [[COB-297]] APP - Feat - Listar provincias y el total de retenciones
-- **Subtarea:** [[COB-296]] API - Feat - Listar provincias y el total de retenciones
-- **Subtarea:** [[COB-298]] API - Feat - Ver movimiento de retenciones por provincia
-- **Subtarea:** [[COB-299]] APP - Feat - Ver movimiento de retenciones por provincia
-- **Subtarea:** [[COB-300]] APP - Review - En movimientos Agregar campo comentario para que aparezca un string que indique de que pedido es la retencion
-- **Subtarea:** [[COB-301]] APP - Review - En movimientos Agregar campo comentario para que aparezca un string que indique de que pedido es la retencion
+- **Padre:** [[COB-293 - Retenciones Percepciones|COB-293]] Retenciones / Percepciones
+- **Subtarea:** [[COB-297 - APP - Feat - Listar provincias y el total de retenciones|COB-297]] APP - Feat - Listar provincias y el total de retenciones
+- **Subtarea:** [[COB-296 - API - Feat - Listar provincias y el total de retenciones|COB-296]] API - Feat - Listar provincias y el total de retenciones
+- **Subtarea:** [[COB-298 - API - Feat - Ver movimiento de retenciones por provincia|COB-298]] API - Feat - Ver movimiento de retenciones por provincia
+- **Subtarea:** [[COB-299 - APP - Feat - Ver movimiento de retenciones por provincia|COB-299]] APP - Feat - Ver movimiento de retenciones por provincia
+- **Subtarea:** [[COB-300 - APP - Review - En movimientos Agregar campo comentario para que aparezca un|COB-300]] APP - Review - En movimientos Agregar campo comentario para que aparezca un string que indique de que pedido es la retencion
+- **Subtarea:** [[COB-301 - APP - Review - En movimientos Agregar campo comentario para que aparezca un|COB-301]] APP - Review - En movimientos Agregar campo comentario para que aparezca un string que indique de que pedido es la retencion
 
 ## Descripcion
 

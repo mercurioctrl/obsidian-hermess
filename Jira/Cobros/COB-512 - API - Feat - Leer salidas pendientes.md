@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-512"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **blocks:** [[COB-513]] APP - Feat - Pestaña Salidas pendientes
-- **relates to:** [[COB-521]] API - Leer salidas pendientes - Sugerencia de mejora en la búsqueda de la referencia
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **blocks:** [[COB-513 - APP - Feat - Pestaña Salidas pendientes|COB-513]] APP - Feat - Pestaña Salidas pendientes
+- **relates to:** [[COB-521 - API - Leer salidas pendientes - Sugerencia de mejora en la búsqueda de la|COB-521]] API - Leer salidas pendientes - Sugerencia de mejora en la búsqueda de la referencia
 
 ## Descripcion
 

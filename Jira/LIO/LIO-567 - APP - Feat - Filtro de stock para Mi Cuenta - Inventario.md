@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-567"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **action item from:** [[LIO-565]] API - Feat - Filtro de stock para Mi Cuenta -> Inventario
-- **has action item:** [[LIO-591]] APP Mobile - Feat - Filtro de stock para Mi Cuenta -> Inventario
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **action item from:** [[LIO-565 - API - Feat - Filtro de stock para Mi Cuenta - Inventario|LIO-565]] API - Feat - Filtro de stock para Mi Cuenta -> Inventario
+- **has action item:** [[LIO-591 - APP Mobile - Feat - Filtro de stock para Mi Cuenta - Inventario|LIO-591]] APP Mobile - Feat - Filtro de stock para Mi Cuenta -> Inventario
 
 ## Descripcion
 

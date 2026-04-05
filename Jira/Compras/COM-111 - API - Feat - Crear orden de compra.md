@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-111"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **blocks:** [[COM-112]] APP - Feat - Agregar orden de compra
-- **is blocked by:** [[COM-114]] API - Crear orden de compra - Error de tipo de dato
-- **relates to:** [[COM-187]] API - Refactor- Crear orden de compra -> Guardar compañía 
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **blocks:** [[COM-112 - APP - Feat - Agregar orden de compra|COM-112]] APP - Feat - Agregar orden de compra
+- **is blocked by:** [[COM-114 - API - Crear orden de compra - Error de tipo de dato|COM-114]] API - Crear orden de compra - Error de tipo de dato
+- **relates to:** [[COM-187 - API - Refactor- Crear orden de compra - Guardar compañía|COM-187]] API - Refactor- Crear orden de compra -> Guardar compañía 
 
 ## Descripcion
 

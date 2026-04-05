@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-949"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-948]] NB_ CAMPAÑA SUMMER DEALS
+- **Padre:** [[DNYL-948 - NB_ CAMPAÑA SUMMER DEALS|DNYL-948]] NB_ CAMPAÑA SUMMER DEALS
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-77"
 
 ## Relaciones
 
-- **Padre:** [[COB-14]] Pases
-- **Subtarea:** [[COB-88]] APP - Refactor - Agregar checkboxes
-- **is blocked by:** [[COB-8]] API - Feat - Listar pases
-- **is blocked by:** [[COB-45]] API - Feat - Filtros
+- **Padre:** [[COB-14 - Pases|COB-14]] Pases
+- **Subtarea:** [[COB-88 - APP - Refactor - Agregar checkboxes|COB-88]] APP - Refactor - Agregar checkboxes
+- **is blocked by:** [[COB-8 - API - Feat - Listar pases|COB-8]] API - Feat - Listar pases
+- **is blocked by:** [[COB-45 - API - Feat - Filtros|COB-45]] API - Feat - Filtros
 
 ## Descripcion
 

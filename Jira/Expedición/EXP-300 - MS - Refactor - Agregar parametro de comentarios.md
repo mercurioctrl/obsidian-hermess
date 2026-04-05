@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-300"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **blocks:** [[EXP-299]] APP - Refactor - Agregar observaciones editables para los expedicionistas
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **blocks:** [[EXP-299 - APP - Refactor - Agregar observaciones editables para los expedicionistas|EXP-299]] APP - Refactor - Agregar observaciones editables para los expedicionistas
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-557"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **blocks:** [[SNB-984]] PALABRA CLAVE
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **blocks:** [[SNB-984 - PALABRA CLAVE|SNB-984]] PALABRA CLAVE
 
 ## Descripcion
 

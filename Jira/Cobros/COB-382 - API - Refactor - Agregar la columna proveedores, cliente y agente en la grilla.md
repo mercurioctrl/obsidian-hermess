@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-382"
 
 ## Relaciones
 
-- **Padre:** [[COB-218]] Feat - Movimientos bancarios
-- **blocks:** [[COB-392]] APP - Refactor - Agregar columnras "Cliente", "Proveedor" y "Agente" a cada movimiento, en caso de que esten disponibles
+- **Padre:** [[COB-218 - Feat - Movimientos bancarios|COB-218]] Feat - Movimientos bancarios
+- **blocks:** [[COB-392 - APP - Refactor - Agregar columnras Cliente, Proveedor y Agente a cada|COB-392]] APP - Refactor - Agregar columnras "Cliente", "Proveedor" y "Agente" a cada movimiento, en caso de que esten disponibles
 
 ## Descripcion
 

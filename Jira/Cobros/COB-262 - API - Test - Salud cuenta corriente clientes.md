@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-262"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-263]] API - Test - Comprobar salud de cuna cuenta especifica
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-263 - API - Test - Comprobar salud de cuna cuenta especifica|COB-263]] API - Test - Comprobar salud de cuna cuenta especifica
 
 ## Descripcion
 

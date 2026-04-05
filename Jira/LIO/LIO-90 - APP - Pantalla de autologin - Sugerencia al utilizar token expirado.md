@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-90"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **relates to:** [[LIO-87]] APP - Feat - Pantalla de autologin (similar como se trabajo en NB)
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **relates to:** [[LIO-87 - APP - Feat - Pantalla de autologin (similar como se trabajo en NB)|LIO-87]] APP - Feat - Pantalla de autologin (similar como se trabajo en NB)
 
 ## Descripcion
 

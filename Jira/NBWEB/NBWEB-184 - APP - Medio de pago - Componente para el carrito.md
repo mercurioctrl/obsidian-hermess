@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-184"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-122]] APP - Implementar Pagos
-- **relates to:** [[NBWEB-160]] API - Listar medios de pago
+- **Padre:** [[NBWEB-122 - APP - Implementar Pagos|NBWEB-122]] APP - Implementar Pagos
+- **relates to:** [[NBWEB-160 - API - Listar medios de pago|NBWEB-160]] API - Listar medios de pago
 
 ## Descripcion
 

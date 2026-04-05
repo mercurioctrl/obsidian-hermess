@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-192"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-196]] Copy
+- **Subtarea:** [[LOMKT-196 - Copy|LOMKT-196]] Copy
 
 ## Descripcion
 

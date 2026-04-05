@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-2"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **Subtarea:** [[EXP-3]] API - Feat - Login administrativo
-- **Subtarea:** [[EXP-4]] API - Feat - Login
-- **Subtarea:** [[EXP-20]] API - Dataset - Agregar columnas de permisos 
-- **Subtarea:** [[EXP-22]] APP - Feat - Pantalla de login
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **Subtarea:** [[EXP-3 - API - Feat - Login administrativo|EXP-3]] API - Feat - Login administrativo
+- **Subtarea:** [[EXP-4 - API - Feat - Login|EXP-4]] API - Feat - Login
+- **Subtarea:** [[EXP-20 - API - Dataset - Agregar columnas de permisos|EXP-20]] API - Dataset - Agregar columnas de permisos 
+- **Subtarea:** [[EXP-22 - APP - Feat - Pantalla de login|EXP-22]] APP - Feat - Pantalla de login
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-250"
 
 ## Relaciones
 
-- **Padre:** [[LIO-166]] Catalogos y sincronizaciones
-- **has action item:** [[LIO-252]] APP - Refactor - Agregar al catalogo la sección "Basado en tus busquedas" y enlazar en la home 
+- **Padre:** [[LIO-166 - Catalogos y sincronizaciones|LIO-166]] Catalogos y sincronizaciones
+- **has action item:** [[LIO-252 - APP - Refactor - Agregar al catalogo la sección Basado en tus busquedas y|LIO-252]] APP - Refactor - Agregar al catalogo la sección "Basado en tus busquedas" y enlazar en la home 
 
 ## Descripcion
 

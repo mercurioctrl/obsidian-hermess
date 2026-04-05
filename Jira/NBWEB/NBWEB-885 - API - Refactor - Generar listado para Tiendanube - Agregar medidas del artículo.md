@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-885"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-717]] API - Feat - Generar listado para tienda nube
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-717 - API - Feat - Generar listado para tienda nube|NBWEB-717]] API - Feat - Generar listado para tienda nube
 
 ## Descripcion
 

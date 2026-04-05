@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-983"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **Subtarea:** [[NBWEB-984]] API - Refactor - Agregar percepciones CABA y percepciones ARBA para el cliente de un usuario determinado
-- **Subtarea:** [[NBWEB-985]] APP- Refactor - Agregar percepciones ARBA a los subtotales del carrito
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **Subtarea:** [[NBWEB-984 - API - Refactor - Agregar percepciones CABA y percepciones ARBA para el cliente|NBWEB-984]] API - Refactor - Agregar percepciones CABA y percepciones ARBA para el cliente de un usuario determinado
+- **Subtarea:** [[NBWEB-985 - APP- Refactor - Agregar percepciones ARBA a los subtotales del carrito|NBWEB-985]] APP- Refactor - Agregar percepciones ARBA a los subtotales del carrito
 
 ## Descripcion
 

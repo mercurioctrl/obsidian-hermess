@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-516"
 
 ## Relaciones
 
-- **Padre:** [[COB-513]] APP - Feat - Pestaña Salidas pendientes
+- **Padre:** [[COB-513 - APP - Feat - Pestaña Salidas pendientes|COB-513]] APP - Feat - Pestaña Salidas pendientes
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-39"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-13]] Febrero Week 3: Back to School color verde
+- **Padre:** [[LOMKT-13 - Febrero Week 3 Back to School color verde|LOMKT-13]] Febrero Week 3: Back to School color verde
 
 ## Descripcion
 

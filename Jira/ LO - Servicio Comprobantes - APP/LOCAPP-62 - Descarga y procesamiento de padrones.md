@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-62"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-61]] Ingresos Brutos
-- **Subtarea:** [[LOCAPP-63]] API - Refactor - Procesar Padron ARBA
-- **Subtarea:** [[LOCAPP-67]] API - Refactor - Tomar archivos desde un directorio local de la aplicacion
-- **has action item:** [[PED-991]] API - Refactor - Agregar percepciones ARBA en caso de que existan para el cliente en el repositorio para listar ordenes
+- **Padre:** [[LOCAPP-61 - Ingresos Brutos|LOCAPP-61]] Ingresos Brutos
+- **Subtarea:** [[LOCAPP-63 - API - Refactor - Procesar Padron ARBA|LOCAPP-63]] API - Refactor - Procesar Padron ARBA
+- **Subtarea:** [[LOCAPP-67 - API - Refactor - Tomar archivos desde un directorio local de la aplicacion|LOCAPP-67]] API - Refactor - Tomar archivos desde un directorio local de la aplicacion
+- **has action item:** [[PED-991 - API - Refactor - Agregar percepciones ARBA en caso de que existan para el|PED-991]] API - Refactor - Agregar percepciones ARBA en caso de que existan para el cliente en el repositorio para listar ordenes
 
 ## Descripcion
 

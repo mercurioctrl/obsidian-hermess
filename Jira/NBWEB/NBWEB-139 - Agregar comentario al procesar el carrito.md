@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-139"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-1]] API - Carrito de compras
-- **relates to:** [[NBWEB-44]] API - Procesar carrito de compras (enviar pedido)
-- **is blocked by:** [[NBWEB-141]] Agregar campo 'sucursal' a la tabla [NB_WEB].[dbo].[comentariosPedidos]
+- **Padre:** [[NBWEB-1 - API - Carrito de compras|NBWEB-1]] API - Carrito de compras
+- **relates to:** [[NBWEB-44 - API - Procesar carrito de compras (enviar pedido)|NBWEB-44]] API - Procesar carrito de compras (enviar pedido)
+- **is blocked by:** [[NBWEB-141 - Agregar campo 'sucursal' a la tabla NB_WEB.dbo.comentariosPedidos|NBWEB-141]] Agregar campo 'sucursal' a la tabla [NB_WEB].[dbo].[comentariosPedidos]
 
 ## Descripcion
 

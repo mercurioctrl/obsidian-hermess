@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-207"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **has action item:** [[INV-208]] APP - MVP - Refactor - Agregar cantidad por caja al objeto items para mostrar y editar
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **has action item:** [[INV-208 - APP - MVP - Refactor - Agregar cantidad por caja al objeto items para mostrar y|INV-208]] APP - MVP - Refactor - Agregar cantidad por caja al objeto items para mostrar y editar
 
 ## Descripcion
 

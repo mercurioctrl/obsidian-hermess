@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ENV-8"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-1931]] envio gratis
+- **is blocked by:** [[SNB-1931 - envio gratis|SNB-1931]] envio gratis
 
 ## Descripcion
 

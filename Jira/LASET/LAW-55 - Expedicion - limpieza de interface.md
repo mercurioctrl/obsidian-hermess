@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-55"
 
 ## Relaciones
 
-- **Padre:** [[LAW-30]] Onboarding de la nueva empresa en los sistemas del grupo NB
-- **Subtarea:** [[LAW-56]] Mostrar / Ocultar pestañas 
+- **Padre:** [[LAW-30 - Onboarding de la nueva empresa en los sistemas del grupo NB|LAW-30]] Onboarding de la nueva empresa en los sistemas del grupo NB
+- **Subtarea:** [[LAW-56 - Mostrar Ocultar pestañas|LAW-56]] Mostrar / Ocultar pestañas 
 
 ## Descripcion
 

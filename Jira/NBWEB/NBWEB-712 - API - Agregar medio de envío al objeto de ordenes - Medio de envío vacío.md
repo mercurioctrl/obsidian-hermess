@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-712"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-681]] API - Refactor - Agregar el nombre de medio de envio al objeto de las ordenes
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-681 - API - Refactor - Agregar el nombre de medio de envio al objeto de las ordenes|NBWEB-681]] API - Refactor - Agregar el nombre de medio de envio al objeto de las ordenes
 
 ## Descripcion
 

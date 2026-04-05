@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-9"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-44]] NEWSLETTER 
+- **Subtarea:** [[DNYL-44 - NEWSLETTER|DNYL-44]] NEWSLETTER 
 
 ## Descripcion
 

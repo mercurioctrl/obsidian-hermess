@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-454"
 
 ## Relaciones
 
-- **relates to:** [[EXP-445]] API - Refactor - Cuando se ejecuta la acción de devolución por faltante (que envía el stock a control)
+- **relates to:** [[EXP-445 - API - Refactor - Cuando se ejecuta la acción de devolución por faltante (que|EXP-445]] API - Refactor - Cuando se ejecuta la acción de devolución por faltante (que envía el stock a control)
 
 ## Descripcion
 

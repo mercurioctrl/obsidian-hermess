@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-281"
 
 ## Relaciones
 
-- **Padre:** [[COM-3]] Login y credenciales
-- **has action item:** [[COM-158]] API - Refactor - Agregar parametro empresa al objeto usuario
+- **Padre:** [[COM-3 - Login y credenciales|COM-3]] Login y credenciales
+- **has action item:** [[COM-158 - API - Refactor - Agregar parametro empresa al objeto usuario|COM-158]] API - Refactor - Agregar parametro empresa al objeto usuario
 
 ## Descripcion
 

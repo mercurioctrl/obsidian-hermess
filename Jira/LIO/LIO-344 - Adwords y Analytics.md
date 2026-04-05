@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-344"
 
 ## Relaciones
 
-- **Padre:** [[LIO-343]] Trackeo y estadistica
-- **Subtarea:** [[LIO-345]] APP - Feat - Agregar codigo de trackeo de evento aportado por LEO para adwords
-- **Subtarea:** [[LIO-366]] APP- refactor-quitar el antiguo track de purchase y agregar mas datos al codigo de trackeo actual
-- **Subtarea:** [[LIO-524]] APP - Refactor - Implementar evento add_to_cart en Google Analytics con métricas de ingresos
+- **Padre:** [[LIO-343 - Trackeo y estadistica|LIO-343]] Trackeo y estadistica
+- **Subtarea:** [[LIO-345 - APP - Feat - Agregar codigo de trackeo de evento aportado por LEO para adwords|LIO-345]] APP - Feat - Agregar codigo de trackeo de evento aportado por LEO para adwords
+- **Subtarea:** [[LIO-366 - APP- refactor-quitar el antiguo track de purchase y agregar mas datos al codigo|LIO-366]] APP- refactor-quitar el antiguo track de purchase y agregar mas datos al codigo de trackeo actual
+- **Subtarea:** [[LIO-524 - APP - Refactor - Implementar evento add_to_cart en Google Analytics con|LIO-524]] APP - Refactor - Implementar evento add_to_cart en Google Analytics con métricas de ingresos
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-237"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **action item from:** [[NBE-142]] API - Refactor - Admin para Subir banners 
-- **implements:** [[NBE-230]] Enero: Subir Banners 
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **action item from:** [[NBE-142 - API - Refactor - Admin para Subir banners|NBE-142]] API - Refactor - Admin para Subir banners 
+- **implements:** [[NBE-230 - Enero Subir Banners|NBE-230]] Enero: Subir Banners 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-25"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-15]] BRIX GIGABYTE AMD
+- **blocks:** [[REDESYNEWS-15 - BRIX GIGABYTE AMD|REDESYNEWS-15]] BRIX GIGABYTE AMD
 
 ## Descripcion
 

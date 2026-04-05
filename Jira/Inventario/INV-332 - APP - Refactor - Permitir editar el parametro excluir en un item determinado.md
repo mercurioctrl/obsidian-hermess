@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-332"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[INV-333]] API - Refactor - Agregar el parámetro "excluir" al repositorio de items 
-- **action item from:** [[INV-331]] API - Refactor - Permitir editar el parametro "excluir" en un item determinado
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[INV-333 - API - Refactor - Agregar el parámetro excluir al repositorio de items|INV-333]] API - Refactor - Agregar el parámetro "excluir" al repositorio de items 
+- **action item from:** [[INV-331 - API - Refactor - Permitir editar el parametro excluir en un item determinado|INV-331]] API - Refactor - Permitir editar el parametro "excluir" en un item determinado
 
 ## Descripcion
 

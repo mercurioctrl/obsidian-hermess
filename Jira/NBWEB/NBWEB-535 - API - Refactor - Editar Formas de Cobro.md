@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-535"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-533]] CMS - Medio de pago
-- **blocks:** [[NBWEB-534]] APP - Refactor - Agregar FP_TOLERANCIA_DE_PAGO y DIF_COTIZACION_TOLERADA a la lista de medio formas de cobro para su edicion
+- **Padre:** [[NBWEB-533 - CMS - Medio de pago|NBWEB-533]] CMS - Medio de pago
+- **blocks:** [[NBWEB-534 - APP - Refactor - Agregar FP_TOLERANCIA_DE_PAGO y DIF_COTIZACION_TOLERADA a la|NBWEB-534]] APP - Refactor - Agregar FP_TOLERANCIA_DE_PAGO y DIF_COTIZACION_TOLERADA a la lista de medio formas de cobro para su edicion
 
 ## Descripcion
 

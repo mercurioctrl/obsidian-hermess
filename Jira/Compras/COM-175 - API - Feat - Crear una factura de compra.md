@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-175"
 
 ## Relaciones
 
-- **Padre:** [[COM-174]] Crear factura de compra
-- **relates to:** [[COM-189]] API - Crear una factura de compra -> Posibles datos faltantes
+- **Padre:** [[COM-174 - Crear factura de compra|COM-174]] Crear factura de compra
+- **relates to:** [[COM-189 - API - Crear una factura de compra - Posibles datos faltantes|COM-189]] API - Crear una factura de compra -> Posibles datos faltantes
 
 ## Descripcion
 

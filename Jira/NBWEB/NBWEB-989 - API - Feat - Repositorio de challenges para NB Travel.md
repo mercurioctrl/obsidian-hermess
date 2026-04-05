@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-989"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-978]] NB TRAVEL
+- **Padre:** [[NBWEB-978 - NB TRAVEL|NBWEB-978]] NB TRAVEL
 
 ## Descripcion
 

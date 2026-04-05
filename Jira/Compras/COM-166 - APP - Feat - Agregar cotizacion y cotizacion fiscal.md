@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-166"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **action item from:** [[COM-165]] API - Feat - Agregar cotizacion y cotizacion fiscal
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **action item from:** [[COM-165 - API - Feat - Agregar cotizacion y cotizacion fiscal|COM-165]] API - Feat - Agregar cotizacion y cotizacion fiscal
 
 ## Descripcion
 

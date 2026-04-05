@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-123"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-124]] Adata Diciembre: Diseño portada 4/4 Social Media_Invader X Mini
-- **Subtarea:** [[ADATA-125]] Adata Diciembre:4/4  Copys Social Media_Invader X Mini
-- **Subtarea:** [[ADATA-126]] 6.Adata Diciembre: 4/4 Porgramar Social Media_Invader X Mini
+- **Subtarea:** [[ADATA-124 - Adata Diciembre Diseño portada 44 Social Media_Invader X Mini|ADATA-124]] Adata Diciembre: Diseño portada 4/4 Social Media_Invader X Mini
+- **Subtarea:** [[ADATA-125 - Adata Diciembre44 Copys Social Media_Invader X Mini|ADATA-125]] Adata Diciembre:4/4  Copys Social Media_Invader X Mini
+- **Subtarea:** [[ADATA-126 - 6.Adata Diciembre 44 Porgramar Social Media_Invader X Mini|ADATA-126]] 6.Adata Diciembre: 4/4 Porgramar Social Media_Invader X Mini
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-258"
 
 ## Relaciones
 
-- **Padre:** [[COB-134]] API - Feat - Obtener cotizaciones
-- **blocks:** [[COB-257]] APP - Refactor - El ABM de cheques debe calcular la linea de cheques automáticamente al cargarse los mismo
+- **Padre:** [[COB-134 - API - Feat - Obtener cotizaciones|COB-134]] API - Feat - Obtener cotizaciones
+- **blocks:** [[COB-257 - APP - Refactor - El ABM de cheques debe calcular la linea de cheques|COB-257]] APP - Refactor - El ABM de cheques debe calcular la linea de cheques automáticamente al cargarse los mismo
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-277"
 
 ## Relaciones
 
-- **blocks:** [[COB-271]] API - Refactor - Se debe poder ingresar nombres con la letra ñ, al menos como un comodin
+- **blocks:** [[COB-271 - API - Refactor - Se debe poder ingresar nombres con la letra ñ, al menos como|COB-271]] API - Refactor - Se debe poder ingresar nombres con la letra ñ, al menos como un comodin
 
 ## Descripcion
 

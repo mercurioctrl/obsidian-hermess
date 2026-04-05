@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-477"
 
 ## Relaciones
 
-- **Padre:** [[COB-453]] Feat - Regularizar cuenta para administradores
+- **Padre:** [[COB-453 - Feat - Regularizar cuenta para administradores|COB-453]] Feat - Regularizar cuenta para administradores
 
 ## Descripcion
 

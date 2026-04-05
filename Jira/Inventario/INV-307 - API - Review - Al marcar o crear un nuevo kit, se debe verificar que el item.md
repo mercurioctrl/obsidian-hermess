@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-307"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **clones:** [[INV-292]] API - Refactor - Al marcar o crear un nuevo kit, se debe verificar que el item sea "nuevo" (no tenga aun costo promedio), ni tenga ventas (albclil)
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **clones:** [[INV-292 - API - Refactor - Al marcar o crear un nuevo kit, se debe verificar que el item|INV-292]] API - Refactor - Al marcar o crear un nuevo kit, se debe verificar que el item sea "nuevo" (no tenga aun costo promedio), ni tenga ventas (albclil)
 
 ## Descripcion
 

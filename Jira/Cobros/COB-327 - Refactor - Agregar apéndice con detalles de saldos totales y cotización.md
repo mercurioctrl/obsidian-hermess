@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-327"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-328]] APP - Refactor - Agregar apéndice con detalles de saldos totales y cotización relativa al ver los movimientos de cuenta
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-328 - APP - Refactor - Agregar apéndice con detalles de saldos totales y cotización|COB-328]] APP - Refactor - Agregar apéndice con detalles de saldos totales y cotización relativa al ver los movimientos de cuenta
 
 ## Descripcion
 

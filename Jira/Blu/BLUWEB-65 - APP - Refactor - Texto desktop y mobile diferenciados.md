@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-65"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **is blocked by:** [[BLUWEB-61]] DSG - Refactor - Texto desktop 
-- **has action item:** [[BLUWEB-57]] APP - Refactor - Texto mobile
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **is blocked by:** [[BLUWEB-61 - DSG - Refactor - Texto desktop|BLUWEB-61]] DSG - Refactor - Texto desktop 
+- **has action item:** [[BLUWEB-57 - APP - Refactor - Texto mobile|BLUWEB-57]] APP - Refactor - Texto mobile
 
 ## Descripcion
 

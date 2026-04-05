@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BROT-4"
 
 ## Relaciones
 
-- **Padre:** [[BROT-3]] Brother Diciembre: ENTREGA DE PRESENTES
+- **Padre:** [[BROT-3 - Brother Diciembre ENTREGA DE PRESENTES|BROT-3]] Brother Diciembre: ENTREGA DE PRESENTES
 
 ## Descripcion
 

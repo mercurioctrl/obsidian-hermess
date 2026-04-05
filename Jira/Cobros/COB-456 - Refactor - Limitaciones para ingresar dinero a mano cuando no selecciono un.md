@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-456"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **Subtarea:** [[COB-457]] API - Refactor - Observación justificativa obligatoria
-- **Subtarea:** [[COB-458]] APP - Refactor - Nuevo modal emergente con formulario de ingreso de dinero "a mano" 
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **Subtarea:** [[COB-457 - API - Refactor - Observación justificativa obligatoria|COB-457]] API - Refactor - Observación justificativa obligatoria
+- **Subtarea:** [[COB-458 - APP - Refactor - Nuevo modal emergente con formulario de ingreso de dinero a|COB-458]] APP - Refactor - Nuevo modal emergente con formulario de ingreso de dinero "a mano" 
 
 ## Descripcion
 

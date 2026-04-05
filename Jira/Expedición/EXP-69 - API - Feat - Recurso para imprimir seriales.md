@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-69"
 
 ## Relaciones
 
-- **Padre:** [[EXP-46]] Crear etiquetas con ZEBRA
-- **blocks:** [[EXP-70]] APP - Feat - Imprimir codigos en formato zpl
+- **Padre:** [[EXP-46 - Crear etiquetas con ZEBRA|EXP-46]] Crear etiquetas con ZEBRA
+- **blocks:** [[EXP-70 - APP - Feat - Imprimir codigos en formato zpl|EXP-70]] APP - Feat - Imprimir codigos en formato zpl
 
 ## Descripcion
 

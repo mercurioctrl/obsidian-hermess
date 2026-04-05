@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-388"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
 
 ## Descripcion
 

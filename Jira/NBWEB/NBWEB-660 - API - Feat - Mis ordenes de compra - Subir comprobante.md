@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-660"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **blocks:** [[NBWEB-662]] APP - Feat - Agregar modal para cargar comprobantes por parte de los clientes
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **blocks:** [[NBWEB-662 - APP - Feat - Agregar modal para cargar comprobantes por parte de los clientes|NBWEB-662]] APP - Feat - Agregar modal para cargar comprobantes por parte de los clientes
 
 ## Descripcion
 

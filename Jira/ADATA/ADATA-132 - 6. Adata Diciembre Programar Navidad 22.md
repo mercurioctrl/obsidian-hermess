@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-132"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-60]] Adata Diciembre: 2/2 Edición de videos (reels, cortos, institucionales, etc.) Felices Fiestas
+- **Padre:** [[ADATA-60 - Adata Diciembre 22 Edición de videos (reels, cortos, institucionales, etc.)|ADATA-60]] Adata Diciembre: 2/2 Edición de videos (reels, cortos, institucionales, etc.) Felices Fiestas
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-265"
 
 ## Relaciones
 
-- **blocks:** [[NBWEB-266]] API - Feat - Contacto - Vendedores
-- **is blocked by:** [[NBWEB-266]] API - Feat - Contacto - Vendedores
+- **blocks:** [[NBWEB-266 - API - Feat - Contacto - Vendedores|NBWEB-266]] API - Feat - Contacto - Vendedores
+- **is blocked by:** [[NBWEB-266 - API - Feat - Contacto - Vendedores|NBWEB-266]] API - Feat - Contacto - Vendedores
 
 ## Descripcion
 

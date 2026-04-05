@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-940"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-529]] CMS -  Personal
-- **has action item:** [[MKT-243]] NB_ INCENTIVO VENDEDORES CUOTA MENSUAL
-- **has action item:** [[NBWEB-941]] APP - Refactor - Agregar Objetivo mensual de facturación para los vendedores
+- **Padre:** [[NBWEB-529 - CMS - Personal|NBWEB-529]] CMS -  Personal
+- **has action item:** [[MKT-243 - NB_ INCENTIVO VENDEDORES CUOTA MENSUAL|MKT-243]] NB_ INCENTIVO VENDEDORES CUOTA MENSUAL
+- **has action item:** [[NBWEB-941 - APP - Refactor - Agregar Objetivo mensual de facturación para los vendedores|NBWEB-941]] APP - Refactor - Agregar Objetivo mensual de facturación para los vendedores
 
 ## Descripcion
 

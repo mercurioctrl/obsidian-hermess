@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-31"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-30]] API - Feat - Filtro para los que no tienen imangen
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-30 - API - Feat - Filtro para los que no tienen imangen|INV-30]] API - Feat - Filtro para los que no tienen imangen
 
 ## Descripcion
 

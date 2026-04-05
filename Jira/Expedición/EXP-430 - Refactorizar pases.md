@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-430"
 
 ## Relaciones
 
-- **Subtarea:** [[EXP-432]] APP - Aceptar pase de pvnta a expedicion
-- **Subtarea:** [[EXP-431]] API -  Aceptar pase de postventa - expedicion
-- **Subtarea:** [[EXP-433]] API - Refactor - Conectar expedicion a postventa
-- **Subtarea:** [[EXP-435]] APP - Agregar serial a pase - Sugerencia de mejora al agregar serial
-- **Subtarea:** [[EXP-436]] API - Filtrar pases - Sugerencia de mejora el filtrar por estado
-- **Subtarea:** [[EXP-437]] APP - Filtrar pases - Sugerencia de mejora al abrir la sección 
+- **Subtarea:** [[EXP-432 - APP - Aceptar pase de pvnta a expedicion|EXP-432]] APP - Aceptar pase de pvnta a expedicion
+- **Subtarea:** [[EXP-431 - API - Aceptar pase de postventa - expedicion|EXP-431]] API -  Aceptar pase de postventa - expedicion
+- **Subtarea:** [[EXP-433 - API - Refactor - Conectar expedicion a postventa|EXP-433]] API - Refactor - Conectar expedicion a postventa
+- **Subtarea:** [[EXP-435 - APP - Agregar serial a pase - Sugerencia de mejora al agregar serial|EXP-435]] APP - Agregar serial a pase - Sugerencia de mejora al agregar serial
+- **Subtarea:** [[EXP-436 - API - Filtrar pases - Sugerencia de mejora el filtrar por estado|EXP-436]] API - Filtrar pases - Sugerencia de mejora el filtrar por estado
+- **Subtarea:** [[EXP-437 - APP - Filtrar pases - Sugerencia de mejora al abrir la sección|EXP-437]] APP - Filtrar pases - Sugerencia de mejora al abrir la sección 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-355"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-323]] agregar percepciones en el carrito
+- **is blocked by:** [[NBWEB-323 - agregar percepciones en el carrito|NBWEB-323]] agregar percepciones en el carrito
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-546"
 
 ## Relaciones
 
-- **Padre:** [[COB-505]] Dashboard
-- **blocks:** [[COB-547]] APP - Refactor - Agregar nueva columna de porcentaje rapido basdo en cotizaciones
+- **Padre:** [[COB-505 - Dashboard|COB-505]] Dashboard
+- **blocks:** [[COB-547 - APP - Refactor - Agregar nueva columna de porcentaje rapido basdo en|COB-547]] APP - Refactor - Agregar nueva columna de porcentaje rapido basdo en cotizaciones
 
 ## Descripcion
 

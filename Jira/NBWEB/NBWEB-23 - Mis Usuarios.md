@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-23"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **relates to:** [[NBWEB-172]] APP - Mi cuenta - Mis ususarios
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **relates to:** [[NBWEB-172 - APP - Mi cuenta - Mis ususarios|NBWEB-172]] APP - Mi cuenta - Mis ususarios
 
 ## Descripcion
 

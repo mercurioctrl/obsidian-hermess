@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-180"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **relates to:** [[INV-28]] APP - Feat - Listar productos (Pestaña productos)
-- **blocks:** [[SNB-2825]] Ni bien cargo una imagen desde un repositorio (por ejemplo meli) al marcarla como portada no funciona, parece no tener el id
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **relates to:** [[INV-28 - APP - Feat - Listar productos (Pestaña productos)|INV-28]] APP - Feat - Listar productos (Pestaña productos)
+- **blocks:** [[SNB-2825 - Ni bien cargo una imagen desde un repositorio (por ejemplo meli) al marcarla|SNB-2825]] Ni bien cargo una imagen desde un repositorio (por ejemplo meli) al marcarla como portada no funciona, parece no tener el id
 
 ## Descripcion
 

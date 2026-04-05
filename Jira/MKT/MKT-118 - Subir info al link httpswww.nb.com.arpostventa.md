@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-118"
 
 ## Relaciones
 
-- **Padre:** [[MKT-117]] NB_POST VENTA INFORMACIÓN
+- **Padre:** [[MKT-117 - NB_POST VENTA INFORMACIÓN|MKT-117]] NB_POST VENTA INFORMACIÓN
 
 ## Descripcion
 

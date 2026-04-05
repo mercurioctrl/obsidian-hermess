@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/M1-2"
 
 ## Relaciones
 
-- **Subtarea:** [[M1-3]] Irinox Abatidores
-- **Subtarea:** [[M1-4]]  Winterhalter Lavavajillas
-- **Subtarea:** [[M1-10]] Riedel Cristalería
-- **Subtarea:** [[M1-11]] Banner Rational propuesta para la Home (adjunto imagen ya que es diferente)
-- **Subtarea:** [[M1-12]] Rediseñar o hacer los chicos tres mini banners 
-- **Subtarea:** [[M1-13]] Hacer banner de Eurocave
-- **Subtarea:** [[M1-14]] DSG - Refactor - Logos 
-- **Subtarea:** [[M1-15]] DSG - Refactor - Slide Marcas 
+- **Subtarea:** [[M1-3 - Irinox Abatidores|M1-3]] Irinox Abatidores
+- **Subtarea:** [[M1-4 - Winterhalter Lavavajillas|M1-4]]  Winterhalter Lavavajillas
+- **Subtarea:** [[M1-10 - Riedel Cristalería|M1-10]] Riedel Cristalería
+- **Subtarea:** [[M1-11 - Banner Rational propuesta para la Home (adjunto imagen ya que es diferente)|M1-11]] Banner Rational propuesta para la Home (adjunto imagen ya que es diferente)
+- **Subtarea:** [[M1-12 - Rediseñar o hacer los chicos tres mini banners|M1-12]] Rediseñar o hacer los chicos tres mini banners 
+- **Subtarea:** [[M1-13 - Hacer banner de Eurocave|M1-13]] Hacer banner de Eurocave
+- **Subtarea:** [[M1-14 - DSG - Refactor - Logos|M1-14]] DSG - Refactor - Logos 
+- **Subtarea:** [[M1-15 - DSG - Refactor - Slide Marcas|M1-15]] DSG - Refactor - Slide Marcas 
 
 ## Descripcion
 

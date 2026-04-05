@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-333"
 
 ## Relaciones
 
-- **Padre:** [[COB-43]] API - Feat - Listar comprobantes de pago
-- **blocks:** [[SNB-591]] La seccion de comprobantes (en todas las aps, no busca correctamente)
+- **Padre:** [[COB-43 - API - Feat - Listar comprobantes de pago|COB-43]] API - Feat - Listar comprobantes de pago
+- **blocks:** [[SNB-591 - La seccion de comprobantes (en todas las aps, no busca correctamente)|SNB-591]] La seccion de comprobantes (en todas las aps, no busca correctamente)
 
 ## Descripcion
 

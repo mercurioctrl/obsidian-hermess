@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-240"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **relates to:** [[EXP-49]] API - Feat - Listar pedidos para envío
-- **blocks:** [[EXP-239]] API - Refactor - En el modal para cargar la direccion de "envio moto" agregar las observaciones escritas por el vendedor
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **relates to:** [[EXP-49 - API - Feat - Listar pedidos para envío|EXP-49]] API - Feat - Listar pedidos para envío
+- **blocks:** [[EXP-239 - API - Refactor - En el modal para cargar la direccion de envio moto agregar las|EXP-239]] API - Refactor - En el modal para cargar la direccion de "envio moto" agregar las observaciones escritas por el vendedor
 
 ## Descripcion
 

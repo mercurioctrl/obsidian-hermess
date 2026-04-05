@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-289"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **action item from:** [[INV-258]] API - Feat - SyncUp para actualizar el stock (nstock) de kits según el stock de sus componentes
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **action item from:** [[INV-258 - API - Feat - SyncUp para actualizar el stock (nstock) de kits según el stock de|INV-258]] API - Feat - SyncUp para actualizar el stock (nstock) de kits según el stock de sus componentes
 
 ## Descripcion
 

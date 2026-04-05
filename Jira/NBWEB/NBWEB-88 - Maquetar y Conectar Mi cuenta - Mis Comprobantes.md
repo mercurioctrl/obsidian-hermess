@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-88"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
+- **Padre:** [[NBWEB-59 - APP -Maquetado y Desarrollo - Mi cuenta|NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
 
 ## Descripcion
 

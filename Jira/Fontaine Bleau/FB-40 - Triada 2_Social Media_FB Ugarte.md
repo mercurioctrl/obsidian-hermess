@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-40"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-41]] Ugarte: Triada 2_Instagram 
-- **Subtarea:** [[FB-42]] Ugarte: Post 2 Linkedin_Ugarte
-- **Subtarea:** [[FB-43]] Post 2 Facebook_Ugarte
-- **Subtarea:** [[FB-44]] Triada 2_Instagram Reel + Short_Ugarte
-- **Subtarea:** [[FB-45]] Armar copy
-- **Subtarea:** [[FB-46]] Realizar post  2 en Instagram, Linkedin y Facebook_Ugarte
+- **Subtarea:** [[FB-41 - Ugarte Triada 2_Instagram|FB-41]] Ugarte: Triada 2_Instagram 
+- **Subtarea:** [[FB-42 - Ugarte Post 2 Linkedin_Ugarte|FB-42]] Ugarte: Post 2 Linkedin_Ugarte
+- **Subtarea:** [[FB-43 - Post 2 Facebook_Ugarte|FB-43]] Post 2 Facebook_Ugarte
+- **Subtarea:** [[FB-44 - Triada 2_Instagram Reel + Short_Ugarte|FB-44]] Triada 2_Instagram Reel + Short_Ugarte
+- **Subtarea:** [[FB-45 - Armar copy|FB-45]] Armar copy
+- **Subtarea:** [[FB-46 - Realizar post 2 en Instagram, Linkedin y Facebook_Ugarte|FB-46]] Realizar post  2 en Instagram, Linkedin y Facebook_Ugarte
 
 ## Descripcion
 

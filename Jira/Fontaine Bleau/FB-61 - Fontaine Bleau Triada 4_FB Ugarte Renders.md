@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-61"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-65]] 1.Fontaine Bleau: Triada 4_DSG1
-- **Subtarea:** [[FB-66]] Fontaine Bleau: Triada 4_Bleau Ugarte_Copys
-- **Subtarea:** [[FB-67]] Fontaine Bleau: Triada 4 Programar Redes para el martes 16-09
-- **Subtarea:** [[FB-71]] 1.Fontaine Bleau: Triada 4_Comunicar Linkedin 
-- **has action item:** [[FB-71]] 1.Fontaine Bleau: Triada 4_Comunicar Linkedin 
+- **Subtarea:** [[FB-65 - 1.Fontaine Bleau Triada 4_DSG1|FB-65]] 1.Fontaine Bleau: Triada 4_DSG1
+- **Subtarea:** [[FB-66 - Fontaine Bleau Triada 4_Bleau Ugarte_Copys|FB-66]] Fontaine Bleau: Triada 4_Bleau Ugarte_Copys
+- **Subtarea:** [[FB-67 - Fontaine Bleau Triada 4 Programar Redes para el martes 16-09|FB-67]] Fontaine Bleau: Triada 4 Programar Redes para el martes 16-09
+- **Subtarea:** [[FB-71 - 1.Fontaine Bleau Triada 4_Comunicar Linkedin|FB-71]] 1.Fontaine Bleau: Triada 4_Comunicar Linkedin 
+- **has action item:** [[FB-71 - 1.Fontaine Bleau Triada 4_Comunicar Linkedin|FB-71]] 1.Fontaine Bleau: Triada 4_Comunicar Linkedin 
 
 ## Descripcion
 

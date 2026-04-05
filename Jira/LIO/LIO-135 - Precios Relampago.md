@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-135"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-136]] APP - Refactor - Precios Relampago por tiempo y cantidad
-- **Subtarea:** [[LIO-137]] APP - Refactor - Precios Relampago por tiempo solamente
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-136 - APP - Refactor - Precios Relampago por tiempo y cantidad|LIO-136]] APP - Refactor - Precios Relampago por tiempo y cantidad
+- **Subtarea:** [[LIO-137 - APP - Refactor - Precios Relampago por tiempo solamente|LIO-137]] APP - Refactor - Precios Relampago por tiempo solamente
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-354"
 
 ## Relaciones
 
-- **relates to:** [[LIO-34]] API - Feat - Crear formularios de registro especifico para empresas e individuos 
+- **relates to:** [[LIO-34 - API - Feat - Crear formularios de registro especifico para empresas e individuos|LIO-34]] API - Feat - Crear formularios de registro especifico para empresas e individuos 
 
 ## Descripcion
 

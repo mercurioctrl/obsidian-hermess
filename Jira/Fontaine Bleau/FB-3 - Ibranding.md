@@ -29,20 +29,20 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-3"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-4]] Profile picture para Instagram, Facebook y Linkedin
-- **Subtarea:** [[FB-7]] Crear Facebook
-- **Subtarea:** [[FB-8]] Crear Instagram
-- **Subtarea:** [[FB-9]] Crear Linkedin:
-- **Subtarea:** [[FB-13]] Cover para Linkedin
-- **Subtarea:** [[FB-14]] Cover Facebook
-- **Subtarea:** [[FB-15]] Subir Cover Facebook
-- **Subtarea:** [[FB-16]] Subir Cover linkedin
-- **Subtarea:** [[FB-21]] DSG - Refactor-Cover Linkedin
-- **Subtarea:** [[FB-22]] DSG - Refactor-Cover Facebook 
-- **Subtarea:** [[FB-23]] DSG - Refactor - Profile picture Para Linkedin
-- **Subtarea:** [[FB-24]] Subir PFP Linkedin
-- **Subtarea:** [[FB-53]] Subir Cover Youtube
-- **Subtarea:** [[FB-54]] Crear Youtube
+- **Subtarea:** [[FB-4 - Profile picture para Instagram, Facebook y Linkedin|FB-4]] Profile picture para Instagram, Facebook y Linkedin
+- **Subtarea:** [[FB-7 - Crear Facebook|FB-7]] Crear Facebook
+- **Subtarea:** [[FB-8 - Crear Instagram|FB-8]] Crear Instagram
+- **Subtarea:** [[FB-9 - Crear Linkedin|FB-9]] Crear Linkedin:
+- **Subtarea:** [[FB-13 - Cover para Linkedin|FB-13]] Cover para Linkedin
+- **Subtarea:** [[FB-14 - Cover Facebook|FB-14]] Cover Facebook
+- **Subtarea:** [[FB-15 - Subir Cover Facebook|FB-15]] Subir Cover Facebook
+- **Subtarea:** [[FB-16 - Subir Cover linkedin|FB-16]] Subir Cover linkedin
+- **Subtarea:** [[FB-21 - DSG - Refactor-Cover Linkedin|FB-21]] DSG - Refactor-Cover Linkedin
+- **Subtarea:** [[FB-22 - DSG - Refactor-Cover Facebook|FB-22]] DSG - Refactor-Cover Facebook 
+- **Subtarea:** [[FB-23 - DSG - Refactor - Profile picture Para Linkedin|FB-23]] DSG - Refactor - Profile picture Para Linkedin
+- **Subtarea:** [[FB-24 - Subir PFP Linkedin|FB-24]] Subir PFP Linkedin
+- **Subtarea:** [[FB-53 - Subir Cover Youtube|FB-53]] Subir Cover Youtube
+- **Subtarea:** [[FB-54 - Crear Youtube|FB-54]] Crear Youtube
 
 ## Descripcion
 

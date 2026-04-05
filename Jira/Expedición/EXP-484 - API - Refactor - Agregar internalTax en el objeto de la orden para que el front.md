@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-484"
 
 ## Relaciones
 
-- **Padre:** [[EXP-116]] Devoluciones
-- **blocks:** [[EXP-483]] APP - Refactor - Agregar internalTax en los casos que corresponda
-- **has action item:** [[SNB-2914]] ERROR EN NC CON ART. CON IMP. INTERNO
+- **Padre:** [[EXP-116 - Devoluciones|EXP-116]] Devoluciones
+- **blocks:** [[EXP-483 - APP - Refactor - Agregar internalTax en los casos que corresponda|EXP-483]] APP - Refactor - Agregar internalTax en los casos que corresponda
+- **has action item:** [[SNB-2914 - ERROR EN NC CON ART. CON IMP. INTERNO|SNB-2914]] ERROR EN NC CON ART. CON IMP. INTERNO
 
 ## Descripcion
 

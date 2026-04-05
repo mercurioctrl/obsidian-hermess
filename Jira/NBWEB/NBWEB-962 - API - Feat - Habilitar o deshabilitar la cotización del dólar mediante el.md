@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-962"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-524]] CMS - Parametros varios
-- **has action item:** [[NBWEB-963]] APP - Feat - Agregar un conmutador para mostrar u ocultar la cotización del dólar en el sitio web
+- **Padre:** [[NBWEB-524 - CMS - Parametros varios|NBWEB-524]] CMS - Parametros varios
+- **has action item:** [[NBWEB-963 - APP - Feat - Agregar un conmutador para mostrar u ocultar la cotización del|NBWEB-963]] APP - Feat - Agregar un conmutador para mostrar u ocultar la cotización del dólar en el sitio web
 
 ## Descripcion
 

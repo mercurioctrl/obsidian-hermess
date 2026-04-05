@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-109"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-113]]  ⚡Triada 12_Inteck_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-114]] ✏️Triada 12_Inteck_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-113 - ⚡Triada 12_Inteck_Desarrollo de piezas Social Media|NBE-113]]  ⚡Triada 12_Inteck_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-114 - ✏️Triada 12_Inteck_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-114]] ✏️Triada 12_Inteck_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

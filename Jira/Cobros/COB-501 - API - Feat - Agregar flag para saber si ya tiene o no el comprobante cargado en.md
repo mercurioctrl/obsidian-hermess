@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-501"
 
 ## Relaciones
 
-- **Padre:** [[COB-487]] Feat - Cobrables -> Comprobantes de pago
-- **blocks:** [[COB-499]] APP - Refactor - Ver comprobante de pago - Apuntar a NB
+- **Padre:** [[COB-487 - Feat - Cobrables - Comprobantes de pago|COB-487]] Feat - Cobrables -> Comprobantes de pago
+- **blocks:** [[COB-499 - APP - Refactor - Ver comprobante de pago - Apuntar a NB|COB-499]] APP - Refactor - Ver comprobante de pago - Apuntar a NB
 
 ## Descripcion
 

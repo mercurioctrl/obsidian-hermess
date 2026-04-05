@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-188"
 
 ## Relaciones
 
-- **Padre:** [[COB-136]] Cheques
-- **Subtarea:** [[COB-189]] API - Feat - Cargar nuevo cheque
-- **Subtarea:** [[COB-190]] APP - Feat - Cargar nuevo cheque
-- **Subtarea:** [[COB-227]] API - Feat - Anular cheques que estan en su estado inicial
-- **Subtarea:** [[COB-228]] APP - Feat - Anular cheques que estan en su estado incial
-- **Subtarea:** [[COB-259]] API - Refactor - Cargar nuevo cheque
-- **Subtarea:** [[COB-416]] APP - Refactor - Refactor en modal de agregar cheques
+- **Padre:** [[COB-136 - Cheques|COB-136]] Cheques
+- **Subtarea:** [[COB-189 - API - Feat - Cargar nuevo cheque|COB-189]] API - Feat - Cargar nuevo cheque
+- **Subtarea:** [[COB-190 - APP - Feat - Cargar nuevo cheque|COB-190]] APP - Feat - Cargar nuevo cheque
+- **Subtarea:** [[COB-227 - API - Feat - Anular cheques que estan en su estado inicial|COB-227]] API - Feat - Anular cheques que estan en su estado inicial
+- **Subtarea:** [[COB-228 - APP - Feat - Anular cheques que estan en su estado incial|COB-228]] APP - Feat - Anular cheques que estan en su estado incial
+- **Subtarea:** [[COB-259 - API - Refactor - Cargar nuevo cheque|COB-259]] API - Refactor - Cargar nuevo cheque
+- **Subtarea:** [[COB-416 - APP - Refactor - Refactor en modal de agregar cheques|COB-416]] APP - Refactor - Refactor en modal de agregar cheques
 
 ## Descripcion
 

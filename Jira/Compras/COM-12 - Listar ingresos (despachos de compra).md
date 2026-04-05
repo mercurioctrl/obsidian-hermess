@@ -29,16 +29,16 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-12"
 
 ## Relaciones
 
-- **Padre:** [[COM-11]] Pedidos de compra (Ingresos)
-- **Subtarea:** [[COM-29]] API - Feat - Listar ingresos (despacho de compra)
-- **Subtarea:** [[COM-13]] APP - Feat - Listar ingresos (despachos de compra)
-- **Subtarea:** [[COM-34]] API - Feat -  Listar ingresos (despachos de compra) - > Agregar totales
-- **Subtarea:** [[COM-150]] API - Refactor - Evitar la duplicación de items en los ingresaso cuando este tiene mas de un ingreso a partir de la misma orden
-- **Subtarea:** [[COM-153]] API - Refactor - Incorporar concepto companyCode al repositorio de INGRESOS
-- **Subtarea:** [[COM-181]] API - Refactor - Agregar providerOrderInboundId (de nnumalb) a recurso existente de órdenes entrantes de proveedor
-- **Subtarea:** [[COM-182]] APP - Refactor - Agregar para a los ingresos el nuevo parámetro providerOrderInboundId bajo el nombre "pedido"
-- **Subtarea:** [[COM-258]] API - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace en ordenes de compra incluyendo el filtrado del mismo
-- **Subtarea:** [[COM-259]] APP - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace en ordenes de compra incluyendo el filtrado del mismo
+- **Padre:** [[COM-11 - Pedidos de compra (Ingresos)|COM-11]] Pedidos de compra (Ingresos)
+- **Subtarea:** [[COM-29 - API - Feat - Listar ingresos (despacho de compra)|COM-29]] API - Feat - Listar ingresos (despacho de compra)
+- **Subtarea:** [[COM-13 - APP - Feat - Listar ingresos (despachos de compra)|COM-13]] APP - Feat - Listar ingresos (despachos de compra)
+- **Subtarea:** [[COM-34 - API - Feat - Listar ingresos (despachos de compra) - Agregar totales|COM-34]] API - Feat -  Listar ingresos (despachos de compra) - > Agregar totales
+- **Subtarea:** [[COM-150 - API - Refactor - Evitar la duplicación de items en los ingresaso cuando este|COM-150]] API - Refactor - Evitar la duplicación de items en los ingresaso cuando este tiene mas de un ingreso a partir de la misma orden
+- **Subtarea:** [[COM-153 - API - Refactor - Incorporar concepto companyCode al repositorio de INGRESOS|COM-153]] API - Refactor - Incorporar concepto companyCode al repositorio de INGRESOS
+- **Subtarea:** [[COM-181 - API - Refactor - Agregar providerOrderInboundId (de nnumalb) a recurso|COM-181]] API - Refactor - Agregar providerOrderInboundId (de nnumalb) a recurso existente de órdenes entrantes de proveedor
+- **Subtarea:** [[COM-182 - APP - Refactor - Agregar para a los ingresos el nuevo parámetro|COM-182]] APP - Refactor - Agregar para a los ingresos el nuevo parámetro providerOrderInboundId bajo el nombre "pedido"
+- **Subtarea:** [[COM-258 - API - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace|COM-258]] API - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace en ordenes de compra incluyendo el filtrado del mismo
+- **Subtarea:** [[COM-259 - APP - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace|COM-259]] APP - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace en ordenes de compra incluyendo el filtrado del mismo
 
 ## Descripcion
 

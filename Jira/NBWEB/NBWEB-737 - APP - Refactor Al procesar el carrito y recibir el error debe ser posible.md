@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-737"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-736]] API - Feat - controlar campo dropshipping si corresponde con medio de envio habilitado
-- **is blocked by:** [[NBWEB-739]] APP - Procesar carrito con medio de envío no habilitado para dropshipping - No se visualiza mensaje de respuesta
+- **is caused by:** [[NBWEB-736 - API - Feat - controlar campo dropshipping si corresponde con medio de envio|NBWEB-736]] API - Feat - controlar campo dropshipping si corresponde con medio de envio habilitado
+- **is blocked by:** [[NBWEB-739 - APP - Procesar carrito con medio de envío no habilitado para dropshipping - No|NBWEB-739]] APP - Procesar carrito con medio de envío no habilitado para dropshipping - No se visualiza mensaje de respuesta
 
 ## Descripcion
 

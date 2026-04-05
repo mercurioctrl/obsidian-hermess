@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-168"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-140]] APP - Conexión con el carrito
+- **Padre:** [[NBWEB-140 - APP - Conexión con el carrito|NBWEB-140]] APP - Conexión con el carrito
 
 ## Descripcion
 

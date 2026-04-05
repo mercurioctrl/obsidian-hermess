@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-19"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **is blocked by:** [[COM-16]] API - Feat - Repositorios Paises
-- **blocks:** [[COM-20]] APP - Feat - Filtrar por pais
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **is blocked by:** [[COM-16 - API - Feat - Repositorios Paises|COM-16]] API - Feat - Repositorios Paises
+- **blocks:** [[COM-20 - APP - Feat - Filtrar por pais|COM-20]] APP - Feat - Filtrar por pais
 
 ## Descripcion
 

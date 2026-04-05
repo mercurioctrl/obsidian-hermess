@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-441"
 
 ## Relaciones
 
-- **Padre:** [[EXP-438]] Despacho envios LIbreOpcion
-- **is blocked by:** [[EXP-438]] Despacho envios LIbreOpcion
+- **Padre:** [[EXP-438 - Despacho envios LIbreOpcion|EXP-438]] Despacho envios LIbreOpcion
+- **is blocked by:** [[EXP-438 - Despacho envios LIbreOpcion|EXP-438]] Despacho envios LIbreOpcion
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-363"
 
 ## Relaciones
 
-- **Padre:** [[EXP-355]] Emision de facturas
-- **blocks:** [[SNB-1141]] facturacion 
+- **Padre:** [[EXP-355 - Emision de facturas|EXP-355]] Emision de facturas
+- **blocks:** [[SNB-1141 - facturacion|SNB-1141]] facturacion 
 
 ## Descripcion
 

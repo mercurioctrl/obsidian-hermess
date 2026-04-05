@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-142"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **relates to:** [[COM-140]] APP - Refactor - Agregar el proveedor primario al crear una orden de compra
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **relates to:** [[COM-140 - APP - Refactor - Agregar el proveedor primario al crear una orden de compra|COM-140]] APP - Refactor - Agregar el proveedor primario al crear una orden de compra
 
 ## Descripcion
 

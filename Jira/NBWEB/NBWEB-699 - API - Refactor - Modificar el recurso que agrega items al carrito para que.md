@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-699"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-581]] CMS - Carrito web
-- **blocks:** [[NBWEB-700]] APP - Refactor - Agregar explicacion de que ahora pueden enviarse varios items en el mismo payload para agregar al carrito, pero como algo aparte, dejando la explicacion que ya esta.
-- **relates to:** [[NBWEB-708]] API - Agregar productos al carrito - Validar stock
+- **Padre:** [[NBWEB-581 - CMS - Carrito web|NBWEB-581]] CMS - Carrito web
+- **blocks:** [[NBWEB-700 - APP - Refactor - Agregar explicacion de que ahora pueden enviarse varios items|NBWEB-700]] APP - Refactor - Agregar explicacion de que ahora pueden enviarse varios items en el mismo payload para agregar al carrito, pero como algo aparte, dejando la explicacion que ya esta.
+- **relates to:** [[NBWEB-708 - API - Agregar productos al carrito - Validar stock|NBWEB-708]] API - Agregar productos al carrito - Validar stock
 
 ## Descripcion
 

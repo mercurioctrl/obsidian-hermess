@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-9"
 
 ## Relaciones
 
-- **Padre:** [[INV-2]] MS - METADATA - API
-- **Subtarea:** [[INV-14]] API - Listar productos
-- **Subtarea:** [[INV-15]] API - Listar Marcas
-- **Subtarea:** [[INV-16]] API - Listar Categorias
-- **Subtarea:** [[INV-215]] API - MVP - Feat - Ocultar depósitos por usuario
+- **Padre:** [[INV-2 - MS - METADATA - API|INV-2]] MS - METADATA - API
+- **Subtarea:** [[INV-14 - API - Listar productos|INV-14]] API - Listar productos
+- **Subtarea:** [[INV-15 - API - Listar Marcas|INV-15]] API - Listar Marcas
+- **Subtarea:** [[INV-16 - API - Listar Categorias|INV-16]] API - Listar Categorias
+- **Subtarea:** [[INV-215 - API - MVP - Feat - Ocultar depósitos por usuario|INV-215]] API - MVP - Feat - Ocultar depósitos por usuario
 
 ## Descripcion
 

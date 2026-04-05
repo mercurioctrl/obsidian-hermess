@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-317"
 
 ## Relaciones
 
-- **Padre:** [[EXP-10]] Feat - Listar pedidos (despachos) proveedores
-- **is blocked by:** [[EXP-316]] API - Feat - Filtro especifico por id, sku en parámetros separados
-- **blocks:** [[SNB-838]] mejoras para el sistema
+- **Padre:** [[EXP-10 - Feat - Listar pedidos (despachos) proveedores|EXP-10]] Feat - Listar pedidos (despachos) proveedores
+- **is blocked by:** [[EXP-316 - API - Feat - Filtro especifico por id, sku en parámetros separados|EXP-316]] API - Feat - Filtro especifico por id, sku en parámetros separados
+- **blocks:** [[SNB-838 - mejoras para el sistema|SNB-838]] mejoras para el sistema
 
 ## Descripcion
 

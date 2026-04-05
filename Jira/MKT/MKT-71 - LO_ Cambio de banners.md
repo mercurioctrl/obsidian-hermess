@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-71"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-72]] EVGA
-- **Subtarea:** [[MKT-73]] AMD
-- **Subtarea:** [[MKT-74]] BANNER LINEA HOGAR
-- **Subtarea:** [[MKT-75]] GIGABYTE
+- **Subtarea:** [[MKT-72 - EVGA|MKT-72]] EVGA
+- **Subtarea:** [[MKT-73 - AMD|MKT-73]] AMD
+- **Subtarea:** [[MKT-74 - BANNER LINEA HOGAR|MKT-74]] BANNER LINEA HOGAR
+- **Subtarea:** [[MKT-75 - GIGABYTE|MKT-75]] GIGABYTE
 
 ## Descripcion
 

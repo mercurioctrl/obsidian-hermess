@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-765"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **blocks:** [[SNB-2017]] descripción autogenerada
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **blocks:** [[SNB-2017 - descripción autogenerada|SNB-2017]] descripción autogenerada
 
 ## Descripcion
 

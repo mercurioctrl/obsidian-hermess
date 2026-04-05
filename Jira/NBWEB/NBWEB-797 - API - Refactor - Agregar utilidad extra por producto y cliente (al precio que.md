@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-797"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
 
 ## Descripcion
 

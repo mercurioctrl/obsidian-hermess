@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-570"
 
 ## Relaciones
 
-- **has action item:** [[SNB-3222]] Los montos parecen venir en cero en la presentacion jurada de ARBA (caba salio perfecto)
+- **has action item:** [[SNB-3222 - Los montos parecen venir en cero en la presentacion jurada de ARBA (caba salio|SNB-3222]] Los montos parecen venir en cero en la presentacion jurada de ARBA (caba salio perfecto)
 
 ## Descripcion
 

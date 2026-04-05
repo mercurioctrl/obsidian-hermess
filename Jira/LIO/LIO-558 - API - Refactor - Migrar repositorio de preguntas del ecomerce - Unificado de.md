@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-558"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **clones:** [[LIO-544]] API - Feat - Migrar repositorio de preguntas del ecomerce
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **clones:** [[LIO-544 - API - Feat - Migrar repositorio de preguntas del ecomerce|LIO-544]] API - Feat - Migrar repositorio de preguntas del ecomerce
 
 ## Descripcion
 

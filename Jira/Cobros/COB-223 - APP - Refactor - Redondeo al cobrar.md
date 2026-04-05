@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-223"
 
 ## Relaciones
 
-- **Padre:** [[COB-222]] Refactor - Redondeo al cobrar
-- **is blocked by:** [[COB-225]] API - Refactor - Agregar toleranca a los medios de pago
+- **Padre:** [[COB-222 - Refactor - Redondeo al cobrar|COB-222]] Refactor - Redondeo al cobrar
+- **is blocked by:** [[COB-225 - API - Refactor - Agregar toleranca a los medios de pago|COB-225]] API - Refactor - Agregar toleranca a los medios de pago
 
 ## Descripcion
 

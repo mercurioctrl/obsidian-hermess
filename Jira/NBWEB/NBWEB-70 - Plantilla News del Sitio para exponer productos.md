@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-70"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-71]] Maqueta General
-- **Subtarea:** [[NBWEB-72]] Footer
+- **Subtarea:** [[NBWEB-71 - Maqueta General|NBWEB-71]] Maqueta General
+- **Subtarea:** [[NBWEB-72 - Footer|NBWEB-72]] Footer
 
 ## Descripcion
 

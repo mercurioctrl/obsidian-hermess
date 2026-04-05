@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-22"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-13]] SMARTPHONES - LO
+- **blocks:** [[REDESYNEWS-13 - SMARTPHONES - LO|REDESYNEWS-13]] SMARTPHONES - LO
 
 ## Descripcion
 

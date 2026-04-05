@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-499"
 
 ## Relaciones
 
-- **Padre:** [[COB-487]] Feat - Cobrables -> Comprobantes de pago
-- **is blocked by:** [[COB-501]] API - Feat - Agregar flag para saber si ya tiene o no el comprobante cargado en cobrables
+- **Padre:** [[COB-487 - Feat - Cobrables - Comprobantes de pago|COB-487]] Feat - Cobrables -> Comprobantes de pago
+- **is blocked by:** [[COB-501 - API - Feat - Agregar flag para saber si ya tiene o no el comprobante cargado en|COB-501]] API - Feat - Agregar flag para saber si ya tiene o no el comprobante cargado en cobrables
 
 ## Descripcion
 

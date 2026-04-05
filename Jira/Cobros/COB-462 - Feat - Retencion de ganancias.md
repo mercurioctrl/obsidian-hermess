@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-462"
 
 ## Relaciones
 
-- **Padre:** [[COB-293]] Retenciones / Percepciones
-- **Subtarea:** [[COB-463]] API - Feat - Listar retenciones de ganancias
-- **Subtarea:** [[COB-464]] APP - Refactor - Agregar selector para diferenciar Retencin de IIBB y Retencion de Ganancia
+- **Padre:** [[COB-293 - Retenciones Percepciones|COB-293]] Retenciones / Percepciones
+- **Subtarea:** [[COB-463 - API - Feat - Listar retenciones de ganancias|COB-463]] API - Feat - Listar retenciones de ganancias
+- **Subtarea:** [[COB-464 - APP - Refactor - Agregar selector para diferenciar Retencin de IIBB y Retencion|COB-464]] APP - Refactor - Agregar selector para diferenciar Retencin de IIBB y Retencion de Ganancia
 
 ## Descripcion
 

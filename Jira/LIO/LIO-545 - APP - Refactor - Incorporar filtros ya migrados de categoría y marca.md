@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-545"
 
 ## Relaciones
 
-- **Padre:** [[LIO-98]] Inventario resellers
-- **action item from:** [[LIO-543]] API - Feat - Migrar inventario -> Categorias
-- **action item from:** [[LIO-540]] API - Feat - Migrar inventario -> Marcas
+- **Padre:** [[LIO-98 - Inventario resellers|LIO-98]] Inventario resellers
+- **action item from:** [[LIO-543 - API - Feat - Migrar inventario - Categorias|LIO-543]] API - Feat - Migrar inventario -> Categorias
+- **action item from:** [[LIO-540 - API - Feat - Migrar inventario - Marcas|LIO-540]] API - Feat - Migrar inventario -> Marcas
 
 ## Descripcion
 

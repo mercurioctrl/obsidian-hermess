@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-655"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-647]] API - Feat - Listas de precio xlmx -> Agregar nueva utilidad y mascara de Categoria
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-647 - API - Feat - Listas de precio xlmx - Agregar nueva utilidad y mascara de|NBWEB-647]] API - Feat - Listas de precio xlmx -> Agregar nueva utilidad y mascara de Categoria
 
 ## Descripcion
 

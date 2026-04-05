@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-370"
 
 ## Relaciones
 
-- **Padre:** [[LIO-3]] Envíos
-- **action item from:** [[SNB-3175]] Envio en moto gabinete enorme
+- **Padre:** [[LIO-3 - Envíos|LIO-3]] Envíos
+- **action item from:** [[SNB-3175 - Envio en moto gabinete enorme|SNB-3175]] Envio en moto gabinete enorme
 
 ## Descripcion
 

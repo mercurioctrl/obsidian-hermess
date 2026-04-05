@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-815"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-816]] APP - Agregar a Mis Listados el listado de Shopify
-- **is blocked by:** [[NBWEB-824]] API - Generar listado CSV Shopify - Datos no coincidentes
-- **is blocked by:** [[NBWEB-822]] API - Errorres al subir el xlsx de empretienda a "empretienda" y csv de shopify  a "shopify"
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-816 - APP - Agregar a Mis Listados el listado de Shopify|NBWEB-816]] APP - Agregar a Mis Listados el listado de Shopify
+- **is blocked by:** [[NBWEB-824 - API - Generar listado CSV Shopify - Datos no coincidentes|NBWEB-824]] API - Generar listado CSV Shopify - Datos no coincidentes
+- **is blocked by:** [[NBWEB-822 - API - Errorres al subir el xlsx de empretienda a empretienda y csv de shopify a|NBWEB-822]] API - Errorres al subir el xlsx de empretienda a "empretienda" y csv de shopify  a "shopify"
 
 ## Descripcion
 

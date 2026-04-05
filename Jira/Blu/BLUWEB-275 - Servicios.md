@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-275"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-273]] Site New
+- **Padre:** [[BLUWEB-273 - Site New|BLUWEB-273]] Site New
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-356"
 
 ## Relaciones
 
-- **Padre:** [[COB-353]] Creditos
+- **Padre:** [[COB-353 - Creditos|COB-353]] Creditos
 
 ## Descripcion
 

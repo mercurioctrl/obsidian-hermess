@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-123"
 
 ## Relaciones
 
-- **Padre:** [[NBE-118]] Triada 18_Unitronics_Social Media
+- **Padre:** [[NBE-118 - Triada 18_Unitronics_Social Media|NBE-118]] Triada 18_Unitronics_Social Media
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-387"
 
 ## Relaciones
 
-- **Padre:** [[EXP-116]] Devoluciones
-- **relates to:** [[EXP-202]] Feat - Pestaña comprobantes
+- **Padre:** [[EXP-116 - Devoluciones|EXP-116]] Devoluciones
+- **relates to:** [[EXP-202 - Feat - Pestaña comprobantes|EXP-202]] Feat - Pestaña comprobantes
 
 ## Descripcion
 

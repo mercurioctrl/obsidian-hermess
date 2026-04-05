@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-317"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-318]] APP - Refactor - En mobile, no llego a poder cerrar session ya que las herramientas de compra bloquean el final del menu
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-318 - APP - Refactor - En mobile, no llego a poder cerrar session ya que las|LIO-318]] APP - Refactor - En mobile, no llego a poder cerrar session ya que las herramientas de compra bloquean el final del menu
 
 ## Descripcion
 

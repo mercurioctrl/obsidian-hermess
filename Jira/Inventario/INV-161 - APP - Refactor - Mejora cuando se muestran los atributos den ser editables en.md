@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-161"
 
 ## Relaciones
 
-- **relates to:** [[INV-157]] APP - Refactor - Modificar modal de atributos para tener en cuenta atributos obligatorios y herramienta de búsqueda automatica
-- **relates to:** [[INV-162]] API - Feat - Tracker (crawler) de atributos (especificaciones) - Error de sintaxis
+- **relates to:** [[INV-157 - APP - Refactor - Modificar modal de atributos para tener en cuenta atributos|INV-157]] APP - Refactor - Modificar modal de atributos para tener en cuenta atributos obligatorios y herramienta de búsqueda automatica
+- **relates to:** [[INV-162 - API - Feat - Tracker (crawler) de atributos (especificaciones) - Error de|INV-162]] API - Feat - Tracker (crawler) de atributos (especificaciones) - Error de sintaxis
 
 ## Descripcion
 

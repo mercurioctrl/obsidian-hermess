@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-16"
 
 ## Relaciones
 
-- **Padre:** [[LIO-3]] Envíos
-- **Subtarea:** [[LIO-208]] APP - Refactor - Transportar y procesar "promesa de envio"
-- **Subtarea:** [[LIO-209]] API - Refactor - Transportar y procesar "promesa de envio"
+- **Padre:** [[LIO-3 - Envíos|LIO-3]] Envíos
+- **Subtarea:** [[LIO-208 - APP - Refactor - Transportar y procesar promesa de envio|LIO-208]] APP - Refactor - Transportar y procesar "promesa de envio"
+- **Subtarea:** [[LIO-209 - API - Refactor - Transportar y procesar promesa de envio|LIO-209]] API - Refactor - Transportar y procesar "promesa de envio"
 
 ## Descripcion
 

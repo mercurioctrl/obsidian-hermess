@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-258"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **relates to:** [[PED-1175]] API - Review - Problema con kits y duplicaciones
-- **has action item:** [[INV-289]] API - Refactor - Kit con 
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **relates to:** [[PED-1175 - API - Review - Problema con kits y duplicaciones|PED-1175]] API - Review - Problema con kits y duplicaciones
+- **has action item:** [[INV-289 - API - Refactor - Kit con|INV-289]] API - Refactor - Kit con 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-244"
 
 ## Relaciones
 
-- **Padre:** [[COB-242]] Refactor - Modal de cobros para mezclar medios de pago diferentes
-- **is blocked by:** [[COB-243]] API - Refactor - Realizar cobro de múltiples medios de pago
+- **Padre:** [[COB-242 - Refactor - Modal de cobros para mezclar medios de pago diferentes|COB-242]] Refactor - Modal de cobros para mezclar medios de pago diferentes
+- **is blocked by:** [[COB-243 - API - Refactor - Realizar cobro de múltiples medios de pago|COB-243]] API - Refactor - Realizar cobro de múltiples medios de pago
 
 ## Descripcion
 

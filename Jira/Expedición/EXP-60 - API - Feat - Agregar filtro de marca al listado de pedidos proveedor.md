@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-60"
 
 ## Relaciones
 
-- **Padre:** [[EXP-10]] Feat - Listar pedidos (despachos) proveedores
-- **is blocked by:** [[EXP-61]] API - Feat - Listar Marcas
+- **Padre:** [[EXP-10 - Feat - Listar pedidos (despachos) proveedores|EXP-10]] Feat - Listar pedidos (despachos) proveedores
+- **is blocked by:** [[EXP-61 - API - Feat - Listar Marcas|EXP-61]] API - Feat - Listar Marcas
 
 ## Descripcion
 

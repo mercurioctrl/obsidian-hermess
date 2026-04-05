@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-178"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-168]] Mar 3 Gabinete Adata invader Mini
+- **Padre:** [[LOMKT-168 - Mar 3 Gabinete Adata invader Mini|LOMKT-168]] Mar 3 Gabinete Adata invader Mini
 
 ## Descripcion
 

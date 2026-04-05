@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-447"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
-- **relates to:** [[EXP-92]] API - Refactor - No dejar serializar un item que no tiene cargado al menos uno de los codigos unicos
-- **has action item:** [[EXP-448]] APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se serializan y no los tienen
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
+- **relates to:** [[EXP-92 - API - Refactor - No dejar serializar un item que no tiene cargado al menos uno|EXP-92]] API - Refactor - No dejar serializar un item que no tiene cargado al menos uno de los codigos unicos
+- **has action item:** [[EXP-448 - APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se|EXP-448]] APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se serializan y no los tienen
 
 ## Descripcion
 

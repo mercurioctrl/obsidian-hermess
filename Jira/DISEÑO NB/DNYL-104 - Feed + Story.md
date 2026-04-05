@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-104"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-103]] NB_Q2 2022_ ASUS Banner Mother + POST redes
+- **Padre:** [[DNYL-103 - NB_Q2 2022_ ASUS Banner Mother + POST redes|DNYL-103]] NB_Q2 2022_ ASUS Banner Mother + POST redes
 
 ## Descripcion
 

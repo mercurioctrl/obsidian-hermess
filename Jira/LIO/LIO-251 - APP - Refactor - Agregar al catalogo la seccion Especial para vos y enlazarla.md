@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-251"
 
 ## Relaciones
 
-- **Padre:** [[LIO-166]] Catalogos y sincronizaciones
-- **action item from:** [[LIO-249]] API - Feat - Mostrar repositorio basado en "Especial para vos"
-- **action item from:** [[LIO-253]] API - Refactor - Agregar parametro "home" a "Especial para vos"  y "Basado en tus busquedas" para los datos de la home
-- **is resolved by:** [[LIO-252]] APP - Refactor - Agregar al catalogo la sección "Basado en tus busquedas" y enlazar en la home 
+- **Padre:** [[LIO-166 - Catalogos y sincronizaciones|LIO-166]] Catalogos y sincronizaciones
+- **action item from:** [[LIO-249 - API - Feat - Mostrar repositorio basado en Especial para vos|LIO-249]] API - Feat - Mostrar repositorio basado en "Especial para vos"
+- **action item from:** [[LIO-253 - API - Refactor - Agregar parametro home a Especial para vos y Basado en tus|LIO-253]] API - Refactor - Agregar parametro "home" a "Especial para vos"  y "Basado en tus busquedas" para los datos de la home
+- **is resolved by:** [[LIO-252 - APP - Refactor - Agregar al catalogo la sección Basado en tus busquedas y|LIO-252]] APP - Refactor - Agregar al catalogo la sección "Basado en tus busquedas" y enlazar en la home 
 
 ## Descripcion
 

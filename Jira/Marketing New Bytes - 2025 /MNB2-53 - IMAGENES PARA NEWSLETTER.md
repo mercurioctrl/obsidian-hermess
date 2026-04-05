@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-53"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-51]] NB_ Semana del gamer
+- **Padre:** [[MNB2-51 - NB_ Semana del gamer|MNB2-51]] NB_ Semana del gamer
 
 ## Descripcion
 

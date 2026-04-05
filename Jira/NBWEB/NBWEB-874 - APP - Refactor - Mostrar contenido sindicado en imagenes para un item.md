@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-874"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **is blocked by:** [[NBWEB-873]] API - Refactor - Leer contenido sindicado en imagenes para un item determinado
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **is blocked by:** [[NBWEB-873 - API - Refactor - Leer contenido sindicado en imagenes para un item determinado|NBWEB-873]] API - Refactor - Leer contenido sindicado en imagenes para un item determinado
 
 ## Descripcion
 

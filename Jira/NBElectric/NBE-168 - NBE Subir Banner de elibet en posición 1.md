@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-168"
 
 ## Relaciones
 
-- **action item from:** [[NBE-158]] Banner de elibet
+- **action item from:** [[NBE-158 - Banner de elibet|NBE-158]] Banner de elibet
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-216"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-215]] NB_THERMALTAKE_ENVIO GRATIS
+- **Padre:** [[DNYL-215 - NB_THERMALTAKE_ENVIO GRATIS|DNYL-215]] NB_THERMALTAKE_ENVIO GRATIS
 
 ## Descripcion
 

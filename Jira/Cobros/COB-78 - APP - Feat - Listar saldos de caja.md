@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-78"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **Subtarea:** [[COB-97]] APP - Feat - Filtarar por caja
-- **Subtarea:** [[COB-361]] APP - Feat - Agregar filtro para ver las caja activas (las que tienen saldos distintos de cero)
-- **is blocked by:** [[COB-28]] API - Feat - Listar saldos de caja
-- **blocks:** [[COB-107]] APP - Refactor - Filtrar por nombre de caja
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **Subtarea:** [[COB-97 - APP - Feat - Filtarar por caja|COB-97]] APP - Feat - Filtarar por caja
+- **Subtarea:** [[COB-361 - APP - Feat - Agregar filtro para ver las caja activas (las que tienen saldos|COB-361]] APP - Feat - Agregar filtro para ver las caja activas (las que tienen saldos distintos de cero)
+- **is blocked by:** [[COB-28 - API - Feat - Listar saldos de caja|COB-28]] API - Feat - Listar saldos de caja
+- **blocks:** [[COB-107 - APP - Refactor - Filtrar por nombre de caja|COB-107]] APP - Refactor - Filtrar por nombre de caja
 
 ## Descripcion
 

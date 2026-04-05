@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-245"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **is blocked by:** [[EXP-243]] API - Feat - Listar transportistas/moto
-- **is blocked by:** [[EXP-244]] API - Refactor - Generar etiqueta generica, se agrega paso de para seleccionar transportista
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **is blocked by:** [[EXP-243 - API - Feat - Listar transportistasmoto|EXP-243]] API - Feat - Listar transportistas/moto
+- **is blocked by:** [[EXP-244 - API - Refactor - Generar etiqueta generica, se agrega paso de para seleccionar|EXP-244]] API - Refactor - Generar etiqueta generica, se agrega paso de para seleccionar transportista
 
 ## Descripcion
 

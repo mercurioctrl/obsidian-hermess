@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-222"
 
 ## Relaciones
 
-- **relates to:** [[DNYL-229]] NB_PRECIO ESPECIAL DISCO AORUS
+- **relates to:** [[DNYL-229 - NB_PRECIO ESPECIAL DISCO AORUS|DNYL-229]] NB_PRECIO ESPECIAL DISCO AORUS
 
 ## Descripcion
 

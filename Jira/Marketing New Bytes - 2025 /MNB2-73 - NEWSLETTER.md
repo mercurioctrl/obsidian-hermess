@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-73"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-70]] NB_INGRESO BENQ+PROMO
+- **Padre:** [[MNB2-70 - NB_INGRESO BENQ+PROMO|MNB2-70]] NB_INGRESO BENQ+PROMO
 
 ## Descripcion
 

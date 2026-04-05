@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-578"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **has action item:** [[COB-580]] APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **has action item:** [[COB-580 - APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes|COB-580]] APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes
 
 ## Descripcion
 

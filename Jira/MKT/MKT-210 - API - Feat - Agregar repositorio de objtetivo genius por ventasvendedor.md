@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-210"
 
 ## Relaciones
 
-- **Padre:** [[MKT-208]] NB_ Incentivo GENIUS
-- **blocks:** [[MKT-211]] APP - Feat - Agregar tabla de posiciones por vendedor
+- **Padre:** [[MKT-208 - NB_ Incentivo GENIUS|MKT-208]] NB_ Incentivo GENIUS
+- **blocks:** [[MKT-211 - APP - Feat - Agregar tabla de posiciones por vendedor|MKT-211]] APP - Feat - Agregar tabla de posiciones por vendedor
 
 ## Descripcion
 

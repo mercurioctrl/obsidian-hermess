@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-41"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-42]] DSG -  Feature - Who We Are
-- **Subtarea:** [[BLUWEB-54]] Armar en Figma Linea de colores de los servicios
+- **Subtarea:** [[BLUWEB-42 - DSG - Feature - Who We Are|BLUWEB-42]] DSG -  Feature - Who We Are
+- **Subtarea:** [[BLUWEB-54 - Armar en Figma Linea de colores de los servicios|BLUWEB-54]] Armar en Figma Linea de colores de los servicios
 
 ## Descripcion
 

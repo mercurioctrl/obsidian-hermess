@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-216"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-221]] Blu Diciembre: Triada 7 Diseño Social Media Felices Fiestas 
-- **Subtarea:** [[BLUWEB-222]] Blu.inc Diciembre: Copys Social Media Felices Fiestas 
-- **Subtarea:** [[BLUWEB-223]] 3. blu.inc Diciembre:  Triada 7 Programar Social Media Felices Fiestas 
+- **Subtarea:** [[BLUWEB-221 - Blu Diciembre Triada 7 Diseño Social Media Felices Fiestas|BLUWEB-221]] Blu Diciembre: Triada 7 Diseño Social Media Felices Fiestas 
+- **Subtarea:** [[BLUWEB-222 - Blu.inc Diciembre Copys Social Media Felices Fiestas|BLUWEB-222]] Blu.inc Diciembre: Copys Social Media Felices Fiestas 
+- **Subtarea:** [[BLUWEB-223 - 3. blu.inc Diciembre Triada 7 Programar Social Media Felices Fiestas|BLUWEB-223]] 3. blu.inc Diciembre:  Triada 7 Programar Social Media Felices Fiestas 
 
 ## Descripcion
 

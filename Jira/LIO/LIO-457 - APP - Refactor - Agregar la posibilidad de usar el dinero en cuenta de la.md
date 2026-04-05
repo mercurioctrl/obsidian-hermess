@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-457"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **action item from:** [[LIO-444]] API - Refactor - Traer monto de billetera en el checkout
-- **has action item:** [[LIO-461]] APP - Refactor - Cambiar descripciones de medio de paago billetera
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **action item from:** [[LIO-444 - API - Refactor - Traer monto de billetera en el checkout|LIO-444]] API - Refactor - Traer monto de billetera en el checkout
+- **has action item:** [[LIO-461 - APP - Refactor - Cambiar descripciones de medio de paago billetera|LIO-461]] APP - Refactor - Cambiar descripciones de medio de paago billetera
 
 ## Descripcion
 

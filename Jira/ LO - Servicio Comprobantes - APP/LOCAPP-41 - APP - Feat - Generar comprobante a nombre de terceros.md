@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-41"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-39]] Generar comprobantes a terceros diferentes, para el mismo cliente
-- **relates to:** [[LOCAPP-42]] APP - Comprobante a terceros - Oportunidad de mejora en la clave del documento
+- **Padre:** [[LOCAPP-39 - Generar comprobantes a terceros diferentes, para el mismo cliente|LOCAPP-39]] Generar comprobantes a terceros diferentes, para el mismo cliente
+- **relates to:** [[LOCAPP-42 - APP - Comprobante a terceros - Oportunidad de mejora en la clave del documento|LOCAPP-42]] APP - Comprobante a terceros - Oportunidad de mejora en la clave del documento
 
 ## Descripcion
 

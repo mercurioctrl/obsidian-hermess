@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-39"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **relates to:** [[COM-252]] API -MVP - Refactor - Detalle de la orden -> Agregar costo promedio ponderado
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **relates to:** [[COM-252 - API -MVP - Refactor - Detalle de la orden - Agregar costo promedio ponderado|COM-252]] API -MVP - Refactor - Detalle de la orden -> Agregar costo promedio ponderado
 
 ## Descripcion
 

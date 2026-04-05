@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-416"
 
 ## Relaciones
 
-- **Subtarea:** [[LIO-422]] API - Feat - Crear intención de pago
-- **Subtarea:** [[LIO-423]] API - Feat - Completar intención de pago
-- **Subtarea:** [[LIO-440]] API - Feat - Autorizar intención de pago
-- **Subtarea:** [[LIO-441]] API - Feat - Cancelación de intención
-- **Subtarea:** [[LIO-442]] API - Feat - Listar intenciones de pago
-- **has action item:** [[PED-1076]] API - Research - Ofrecer pagos con dinero en Wallet, en caso de que tenga dinero disponible
+- **Subtarea:** [[LIO-422 - API - Feat - Crear intención de pago|LIO-422]] API - Feat - Crear intención de pago
+- **Subtarea:** [[LIO-423 - API - Feat - Completar intención de pago|LIO-423]] API - Feat - Completar intención de pago
+- **Subtarea:** [[LIO-440 - API - Feat - Autorizar intención de pago|LIO-440]] API - Feat - Autorizar intención de pago
+- **Subtarea:** [[LIO-441 - API - Feat - Cancelación de intención|LIO-441]] API - Feat - Cancelación de intención
+- **Subtarea:** [[LIO-442 - API - Feat - Listar intenciones de pago|LIO-442]] API - Feat - Listar intenciones de pago
+- **has action item:** [[PED-1076 - API - Research - Ofrecer pagos con dinero en Wallet, en caso de que tenga|PED-1076]] API - Research - Ofrecer pagos con dinero en Wallet, en caso de que tenga dinero disponible
 
 ## Descripcion
 

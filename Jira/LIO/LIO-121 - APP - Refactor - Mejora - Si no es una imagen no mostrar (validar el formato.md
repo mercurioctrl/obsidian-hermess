@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-121"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **causes:** [[LIO-113]] APP - Feat - Leer contenido sindicado en imagenes para un item determinado
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **causes:** [[LIO-113 - APP - Feat - Leer contenido sindicado en imagenes para un item determinado|LIO-113]] APP - Feat - Leer contenido sindicado en imagenes para un item determinado
 
 ## Descripcion
 

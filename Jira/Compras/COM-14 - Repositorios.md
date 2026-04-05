@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-14"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **Subtarea:** [[COM-15]] API - Feat - Repositorio Marcas
-- **Subtarea:** [[COM-16]] API - Feat - Repositorios Paises
-- **Subtarea:** [[COM-23]] API - Feat - Repositorio depositos
-- **Subtarea:** [[COM-48]] API - Feat - Repositorio Provincias
-- **Subtarea:** [[COM-49]] API - Feat - Repositorio Localidades
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **Subtarea:** [[COM-15 - API - Feat - Repositorio Marcas|COM-15]] API - Feat - Repositorio Marcas
+- **Subtarea:** [[COM-16 - API - Feat - Repositorios Paises|COM-16]] API - Feat - Repositorios Paises
+- **Subtarea:** [[COM-23 - API - Feat - Repositorio depositos|COM-23]] API - Feat - Repositorio depositos
+- **Subtarea:** [[COM-48 - API - Feat - Repositorio Provincias|COM-48]] API - Feat - Repositorio Provincias
+- **Subtarea:** [[COM-49 - API - Feat - Repositorio Localidades|COM-49]] API - Feat - Repositorio Localidades
 
 ## Descripcion
 

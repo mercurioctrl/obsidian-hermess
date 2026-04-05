@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-184"
 
 ## Relaciones
 
-- **Padre:** [[COB-183]] Feat - Listar cheques
-- **is blocked by:** [[COB-185]] API - Feat - Listar cheques
+- **Padre:** [[COB-183 - Feat - Listar cheques|COB-183]] Feat - Listar cheques
+- **is blocked by:** [[COB-185 - API - Feat - Listar cheques|COB-185]] API - Feat - Listar cheques
 
 ## Descripcion
 

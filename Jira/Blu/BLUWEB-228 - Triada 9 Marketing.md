@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-228"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-234]] Blu Diciembre: Triada 9 Diseño Blu.Marketing
-- **Subtarea:** [[BLUWEB-235]] 3.blu.inc Diciembre: Triada 9 Copys Blu.Marketing
-- **Subtarea:** [[BLUWEB-236]] Blu Diciembre: Triada 9 Programar  Blu.Marketing Esta semana
+- **Subtarea:** [[BLUWEB-234 - Blu Diciembre Triada 9 Diseño Blu.Marketing|BLUWEB-234]] Blu Diciembre: Triada 9 Diseño Blu.Marketing
+- **Subtarea:** [[BLUWEB-235 - 3.blu.inc Diciembre Triada 9 Copys Blu.Marketing|BLUWEB-235]] 3.blu.inc Diciembre: Triada 9 Copys Blu.Marketing
+- **Subtarea:** [[BLUWEB-236 - Blu Diciembre Triada 9 Programar Blu.Marketing Esta semana|BLUWEB-236]] Blu Diciembre: Triada 9 Programar  Blu.Marketing Esta semana
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-29"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **is blocked by:** [[LIO-53]] API - Al cancelar un pedido desde libre opción, cambiar estado a "cancelado" y marcarlo como "eliminado" en "Capa 1" - Orden no anulada
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **is blocked by:** [[LIO-53 - API - Al cancelar un pedido desde libre opción, cambiar estado a cancelado y|LIO-53]] API - Al cancelar un pedido desde libre opción, cambiar estado a "cancelado" y marcarlo como "eliminado" en "Capa 1" - Orden no anulada
 
 ## Descripcion
 

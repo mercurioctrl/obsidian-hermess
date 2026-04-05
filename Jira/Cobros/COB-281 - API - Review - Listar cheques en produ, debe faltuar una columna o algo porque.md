@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-281"
 
 ## Relaciones
 
-- **Padre:** [[COB-183]] Feat - Listar cheques
+- **Padre:** [[COB-183 - Feat - Listar cheques|COB-183]] Feat - Listar cheques
 
 ## Descripcion
 

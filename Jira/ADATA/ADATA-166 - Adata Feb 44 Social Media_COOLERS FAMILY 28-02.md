@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-166"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-187]] Feb: 4/4 Portada Diseño Social Media_ COOLERS FAMILY
-- **Subtarea:** [[ADATA-188]] 4.Adata Febrero: 4/4 Copys Social Media_  
-- **Subtarea:** [[ADATA-189]] Febrero: 4/4 Programar Social Media_ COOLERS FAMILY 28-02
-- **Subtarea:** [[ADATA-236]] 2. Feb: Buscar producto en base a lo que pasaron para comunicar 
+- **Subtarea:** [[ADATA-187 - Feb 44 Portada Diseño Social Media_ COOLERS FAMILY|ADATA-187]] Feb: 4/4 Portada Diseño Social Media_ COOLERS FAMILY
+- **Subtarea:** [[ADATA-188 - 4.Adata Febrero 44 Copys Social Media_|ADATA-188]] 4.Adata Febrero: 4/4 Copys Social Media_  
+- **Subtarea:** [[ADATA-189 - Febrero 44 Programar Social Media_ COOLERS FAMILY 28-02|ADATA-189]] Febrero: 4/4 Programar Social Media_ COOLERS FAMILY 28-02
+- **Subtarea:** [[ADATA-236 - 2. Feb Buscar producto en base a lo que pasaron para comunicar|ADATA-236]] 2. Feb: Buscar producto en base a lo que pasaron para comunicar 
 
 ## Descripcion
 

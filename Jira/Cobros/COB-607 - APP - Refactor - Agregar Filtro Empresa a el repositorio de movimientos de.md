@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-607"
 
 ## Relaciones
 
-- **Padre:** [[COB-9]] API - Feat - Listar bancos
-- **action item from:** [[COB-606]] API - Refactor - Refactorizar el repositorio de  movimientos de bancos para agregar atributos y filtros referidos a companyCode
+- **Padre:** [[COB-9 - API - Feat - Listar bancos|COB-9]] API - Feat - Listar bancos
+- **action item from:** [[COB-606 - API - Refactor - Refactorizar el repositorio de movimientos de bancos para|COB-606]] API - Refactor - Refactorizar el repositorio de  movimientos de bancos para agregar atributos y filtros referidos a companyCode
 
 ## Descripcion
 

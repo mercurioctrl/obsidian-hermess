@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-251"
 
 ## Relaciones
 
-- **Padre:** [[COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
-- **relates to:** [[COM-216]] API - MVP - Refactor  - Cada que se haga un ingreso revisar para cambiar el estado de la orden en caso que sean iguales la cantidad ingresadas que las totales para todos los items
+- **Padre:** [[COM-109 - Generar INGRESO o pedido (a partir de una orden de compra)|COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
+- **relates to:** [[COM-216 - API - MVP - Refactor - Cada que se haga un ingreso revisar para cambiar el|COM-216]] API - MVP - Refactor  - Cada que se haga un ingreso revisar para cambiar el estado de la orden en caso que sean iguales la cantidad ingresadas que las totales para todos los items
 
 ## Descripcion
 

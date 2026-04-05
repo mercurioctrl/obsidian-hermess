@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-67"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **action item from:** [[BLUWEB-66]] DSG - Feat - Exportar bacgkround desde el EPS a los formatos necesarios
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **action item from:** [[BLUWEB-66 - DSG - Feat - Exportar bacgkround desde el EPS a los formatos necesarios|BLUWEB-66]] DSG - Feat - Exportar bacgkround desde el EPS a los formatos necesarios
 
 ## Descripcion
 

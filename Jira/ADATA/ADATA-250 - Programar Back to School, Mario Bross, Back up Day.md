@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-250"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-243]] Feb: Publicaciones: 22-02 Back 10-03 Mario +31-03 Backup
+- **Padre:** [[ADATA-243 - Feb Publicaciones 22-02 Back 10-03 Mario +31-03 Backup|ADATA-243]] Feb: Publicaciones: 22-02 Back 10-03 Mario +31-03 Backup
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-5"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-1]] Bases y repositorios
-- **Subtarea:** [[BULLY-6]] API - Contenedor MariaDB / phpmyadmin
-- **Subtarea:** [[BULLY-7]] API - Contenedor FastApi / uvicorn
+- **Padre:** [[BULLY-1 - Bases y repositorios|BULLY-1]] Bases y repositorios
+- **Subtarea:** [[BULLY-6 - API - Contenedor MariaDB phpmyadmin|BULLY-6]] API - Contenedor MariaDB / phpmyadmin
+- **Subtarea:** [[BULLY-7 - API - Contenedor FastApi uvicorn|BULLY-7]] API - Contenedor FastApi / uvicorn
 
 ## Descripcion
 

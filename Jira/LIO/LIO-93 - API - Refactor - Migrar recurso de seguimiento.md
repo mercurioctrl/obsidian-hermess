@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-93"
 
 ## Relaciones
 
-- **Padre:** [[LIO-17]] Mejorar seguimientos de guia y agregar un seguimiento activo
-- **has action item:** [[LIO-102]] APP - Refactor - Conectar nuevo recurso de seguimiento en la ficha de compra 
-- **has action item:** [[LIO-294]] API - Feat - Recurso para permitir a usuarios sin login consultar el estado de su envío desde el Centro de Ayuda
+- **Padre:** [[LIO-17 - Mejorar seguimientos de guia y agregar un seguimiento activo|LIO-17]] Mejorar seguimientos de guia y agregar un seguimiento activo
+- **has action item:** [[LIO-102 - APP - Refactor - Conectar nuevo recurso de seguimiento en la ficha de compra|LIO-102]] APP - Refactor - Conectar nuevo recurso de seguimiento en la ficha de compra 
+- **has action item:** [[LIO-294 - API - Feat - Recurso para permitir a usuarios sin login consultar el estado de|LIO-294]] API - Feat - Recurso para permitir a usuarios sin login consultar el estado de su envío desde el Centro de Ayuda
 
 
 

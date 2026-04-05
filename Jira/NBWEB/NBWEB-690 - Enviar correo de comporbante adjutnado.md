@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-690"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-707]] API - Enviar correo al adjuntar comprobante de pago - Error al enviar correo
+- **is blocked by:** [[NBWEB-707 - API - Enviar correo al adjuntar comprobante de pago - Error al enviar correo|NBWEB-707]] API - Enviar correo al adjuntar comprobante de pago - Error al enviar correo
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-228"
 
 ## Relaciones
 
-- **Padre:** [[COB-188]] Feat - Cargar nuevo cheque
+- **Padre:** [[COB-188 - Feat - Cargar nuevo cheque|COB-188]] Feat - Cargar nuevo cheque
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-122"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-64]] APP - Feat - Agregar checkbox stock
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-64 - APP - Feat - Agregar checkbox stock|INV-64]] APP - Feat - Agregar checkbox stock
 
 ## Descripcion
 

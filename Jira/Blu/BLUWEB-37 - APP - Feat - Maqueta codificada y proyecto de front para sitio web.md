@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-37"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **action item from:** [[BLUWEB-17]] DSG - Home - Diseño de concepto visual
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **action item from:** [[BLUWEB-17 - DSG - Home - Diseño de concepto visual|BLUWEB-17]] DSG - Home - Diseño de concepto visual
 
 ## Descripcion
 

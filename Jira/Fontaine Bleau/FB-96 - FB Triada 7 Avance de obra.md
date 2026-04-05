@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-96"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-97]] FB: Diciembre Avance de Obra Diciembre _Diseño
-- **Subtarea:** [[FB-98]] FB: Noviembre Triada 7 Ambientes_Copys Reformular acorde al comentario
-- **Subtarea:** [[FB-99]] 2.FB: Noviembre Triada 7 Ambientes_Programar para el  Martes
+- **Subtarea:** [[FB-97 - FB Diciembre Avance de Obra Diciembre _Diseño|FB-97]] FB: Diciembre Avance de Obra Diciembre _Diseño
+- **Subtarea:** [[FB-98 - FB Noviembre Triada 7 Ambientes_Copys Reformular acorde al comentario|FB-98]] FB: Noviembre Triada 7 Ambientes_Copys Reformular acorde al comentario
+- **Subtarea:** [[FB-99 - 2.FB Noviembre Triada 7 Ambientes_Programar para el Martes|FB-99]] 2.FB: Noviembre Triada 7 Ambientes_Programar para el  Martes
 
 ## Descripcion
 

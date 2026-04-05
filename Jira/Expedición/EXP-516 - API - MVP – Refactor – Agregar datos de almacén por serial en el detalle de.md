@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-516"
 
 ## Relaciones
 
-- **Padre:** [[EXP-512]] Almacenes multiples
+- **Padre:** [[EXP-512 - Almacenes multiples|EXP-512]] Almacenes multiples
 
 ## Descripcion
 

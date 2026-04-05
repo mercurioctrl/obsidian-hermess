@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-202"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-203]] Newsletter - (usar archivo landing page)
-- **Subtarea:** [[DNYL-205]] BANNER WEB 
+- **Subtarea:** [[DNYL-203 - Newsletter - (usar archivo landing page)|DNYL-203]] Newsletter - (usar archivo landing page)
+- **Subtarea:** [[DNYL-205 - BANNER WEB|DNYL-205]] BANNER WEB 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-744"
 
 ## Relaciones
 
-- **blocks:** [[NBWEB-740]] APP - Mejora - No permitir seleccionar dropshipping en medio de pago que no esten habilitado
+- **blocks:** [[NBWEB-740 - APP - Mejora - No permitir seleccionar dropshipping en medio de pago que no|NBWEB-740]] APP - Mejora - No permitir seleccionar dropshipping en medio de pago que no esten habilitado
 
 ## Descripcion
 

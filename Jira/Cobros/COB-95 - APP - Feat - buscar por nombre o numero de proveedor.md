@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-95"
 
 ## Relaciones
 
-- **Padre:** [[COB-70]] APP - Feat - Listar proveedores
-- **is blocked by:** [[COB-69]] API - Feat - Filtros y paginado
+- **Padre:** [[COB-70 - APP - Feat - Listar proveedores|COB-70]] APP - Feat - Listar proveedores
+- **is blocked by:** [[COB-69 - API - Feat - Filtros y paginado|COB-69]] API - Feat - Filtros y paginado
 
 ## Descripcion
 

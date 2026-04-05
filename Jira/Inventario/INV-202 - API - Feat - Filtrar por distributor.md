@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-202"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **has action item:** [[INV-200]] APP - Feat - Cambiar atributo "distributor" y poder filtrarlo en el repositorio "items"
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **has action item:** [[INV-200 - APP - Feat - Cambiar atributo distributor y poder filtrarlo en el repositorio|INV-200]] APP - Feat - Cambiar atributo "distributor" y poder filtrarlo en el repositorio "items"
 
 ## Descripcion
 

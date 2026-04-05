@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-77"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-34]] Volanta
-- **action item from:** [[LOCAPP-76]] API - Refactor - Agregar parámetros de intervención técnica en la Volanta (operationalOrder)
+- **Padre:** [[LOCAPP-34 - Volanta|LOCAPP-34]] Volanta
+- **action item from:** [[LOCAPP-76 - API - Refactor - Agregar parámetros de intervención técnica en la Volanta|LOCAPP-76]] API - Refactor - Agregar parámetros de intervención técnica en la Volanta (operationalOrder)
 
 ## Descripcion
 

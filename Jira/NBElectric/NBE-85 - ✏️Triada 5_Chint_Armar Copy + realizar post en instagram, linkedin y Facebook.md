@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-85"
 
 ## Relaciones
 
-- **Padre:** [[NBE-84]] Triada 5_Chint_Social Media
+- **Padre:** [[NBE-84 - Triada 5_Chint_Social Media|NBE-84]] Triada 5_Chint_Social Media
 
 ## Descripcion
 

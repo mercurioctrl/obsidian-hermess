@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-92"
 
 ## Relaciones
 
-- **Padre:** [[MKT-89]] CAMPAÑA INTEL VIGENCIA DESDE EL 25/8
+- **Padre:** [[MKT-89 - CAMPAÑA INTEL VIGENCIA DESDE EL 258|MKT-89]] CAMPAÑA INTEL VIGENCIA DESDE EL 25/8
 
 ## Descripcion
 

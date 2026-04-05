@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-113"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **blocks:** [[INV-114]] APP - Refactor - Agregar filtros de ocultos del sistema
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **blocks:** [[INV-114 - APP - Refactor - Agregar filtros de ocultos del sistema|INV-114]] APP - Refactor - Agregar filtros de ocultos del sistema
 
 ## Descripcion
 

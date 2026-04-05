@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-496"
 
 ## Relaciones
 
-- **Padre:** [[LIO-98]] Inventario resellers
-- **has action item:** [[LIO-535]] APP - Refactor - Se debe migrar a V4 el recurso para navegar el inventario
+- **Padre:** [[LIO-98 - Inventario resellers|LIO-98]] Inventario resellers
+- **has action item:** [[LIO-535 - APP - Refactor - Se debe migrar a V4 el recurso para navegar el inventario|LIO-535]] APP - Refactor - Se debe migrar a V4 el recurso para navegar el inventario
 
 ## Descripcion
 

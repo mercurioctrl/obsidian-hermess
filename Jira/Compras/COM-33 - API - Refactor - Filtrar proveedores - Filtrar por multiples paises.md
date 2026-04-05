@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-33"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
 
 ## Descripcion
 

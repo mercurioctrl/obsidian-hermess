@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-2"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-1]] Generador de PDF de facturas
+- **Padre:** [[LOCAPP-1 - Generador de PDF de facturas|LOCAPP-1]] Generador de PDF de facturas
 
 ## Descripcion
 

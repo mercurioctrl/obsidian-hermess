@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-604"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **clones:** [[COB-602]] API - Refactor - Se debe hacer la descarga del reporte de balances sensible a los mismos filtros que se aplica al repositorio
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **clones:** [[COB-602 - API - Refactor - Se debe hacer la descarga del reporte de balances sensible a|COB-602]] API - Refactor - Se debe hacer la descarga del reporte de balances sensible a los mismos filtros que se aplica al repositorio
 
 ## Descripcion
 

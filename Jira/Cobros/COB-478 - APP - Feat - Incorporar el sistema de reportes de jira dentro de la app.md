@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-478"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-479]] APP - Incorporar el sistema de reportes de jira dentro de la app - Incidencias varias
+- **is blocked by:** [[COB-479 - APP - Incorporar el sistema de reportes de jira dentro de la app - Incidencias|COB-479]] APP - Incorporar el sistema de reportes de jira dentro de la app - Incidencias varias
 
 ## Descripcion
 

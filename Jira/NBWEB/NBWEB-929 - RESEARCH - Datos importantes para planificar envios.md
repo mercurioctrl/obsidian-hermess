@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-929"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-423]] Logistica Envios
-- **has action item:** [[STASK-6]] TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora -> Guardar tiempo desde que lo tomo el currier hasta que lo entregaron
-- **has action item:** [[STASK-8]] API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos
+- **Padre:** [[NBWEB-423 - Logistica Envios|NBWEB-423]] Logistica Envios
+- **has action item:** [[STASK-6 - TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora - Guardar|STASK-6]] TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora -> Guardar tiempo desde que lo tomo el currier hasta que lo entregaron
+- **has action item:** [[STASK-8 - API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos|STASK-8]] API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos
 
 ## Descripcion
 

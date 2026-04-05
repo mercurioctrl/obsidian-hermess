@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-42"
 
 ## Relaciones
 
-- **Padre:** [[LIO-41]] Mejorar vendedores
+- **Padre:** [[LIO-41 - Mejorar vendedores|LIO-41]] Mejorar vendedores
 
 ## Descripcion
 

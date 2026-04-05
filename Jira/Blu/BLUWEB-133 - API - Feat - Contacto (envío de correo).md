@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-133"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **has action item:** [[BLUWEB-130]] APP - Refactor - Seccion contacto v2 con calendario de citas
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **has action item:** [[BLUWEB-130 - APP - Refactor - Seccion contacto v2 con calendario de citas|BLUWEB-130]] APP - Refactor - Seccion contacto v2 con calendario de citas
 
 ## Descripcion
 

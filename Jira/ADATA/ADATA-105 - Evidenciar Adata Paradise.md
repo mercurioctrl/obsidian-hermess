@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-105"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-100]] Octubre: PPT Poes
+- **Padre:** [[ADATA-100 - Octubre PPT Poes|ADATA-100]] Octubre: PPT Poes
 
 ## Descripcion
 

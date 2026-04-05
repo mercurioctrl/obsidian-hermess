@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-90"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **relates to:** [[COM-80]] API - Feat - Agregar/Editar un producto a una orden de compra abierta
-- **is blocked by:** [[COM-95]] API - Agregar/Editar un producto a una orden de compra abierta - Orden duplicada
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **relates to:** [[COM-80 - API - Feat - AgregarEditar un producto a una orden de compra abierta|COM-80]] API - Feat - Agregar/Editar un producto a una orden de compra abierta
+- **is blocked by:** [[COM-95 - API - AgregarEditar un producto a una orden de compra abierta - Orden duplicada|COM-95]] API - Agregar/Editar un producto a una orden de compra abierta - Orden duplicada
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-14"
 
 ## Relaciones
 
-- **Subtarea:** [[LAW-15]] Logos Laset
-- **Subtarea:** [[LAW-26]] Logo blanco fondo transparente en PNG
-- **has action item:** [[LAW-8]] Social Media Laset
+- **Subtarea:** [[LAW-15 - Logos Laset|LAW-15]] Logos Laset
+- **Subtarea:** [[LAW-26 - Logo blanco fondo transparente en PNG|LAW-26]] Logo blanco fondo transparente en PNG
+- **has action item:** [[LAW-8 - Social Media Laset|LAW-8]] Social Media Laset
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-234"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-228]] API - Feat - Ver seriales para un stock determinado
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-228 - API - Feat - Ver seriales para un stock determinado|INV-228]] API - Feat - Ver seriales para un stock determinado
 
 ## Descripcion
 

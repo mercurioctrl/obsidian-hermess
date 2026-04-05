@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-89"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-61]] Buscador
-- **relates to:** [[NBWEB-61]] Buscador
+- **Padre:** [[NBWEB-61 - Buscador|NBWEB-61]] Buscador
+- **relates to:** [[NBWEB-61 - Buscador|NBWEB-61]] Buscador
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-203"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
 
 ## Descripcion
 

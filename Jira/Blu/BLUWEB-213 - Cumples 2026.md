@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-213"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-214]] Blu: Tarjeta de cumpleaños Team Blu_
+- **Subtarea:** [[BLUWEB-214 - Blu Tarjeta de cumpleaños Team Blu_|BLUWEB-214]] Blu: Tarjeta de cumpleaños Team Blu_
 
 ## Descripcion
 

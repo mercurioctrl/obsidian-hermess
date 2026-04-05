@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-460"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-469]] APP - Refactor - Habilitar para que "Andreani" y "Oca" tambien muestren la comparativa como lo hace entregar
-- **duplicates:** [[EXP-459]] APP - Refactor - Modificaremos la funcionalidad del modal para generar un envio
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-469 - APP - Refactor - Habilitar para que Andreani y Oca tambien muestren la|EXP-469]] APP - Refactor - Habilitar para que "Andreani" y "Oca" tambien muestren la comparativa como lo hace entregar
+- **duplicates:** [[EXP-459 - APP - Refactor - Modificaremos la funcionalidad del modal para generar un envio|EXP-459]] APP - Refactor - Modificaremos la funcionalidad del modal para generar un envio
 
 ## Descripcion
 

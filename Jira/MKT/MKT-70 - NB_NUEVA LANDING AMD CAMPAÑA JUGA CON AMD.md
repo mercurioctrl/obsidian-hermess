@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-70"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-434]] APP - Feat - Micro Sitio AMD
-- **is blocked by:** [[DNYL-207]] NB - Imagenes de los productos para micro sitio AMD
+- **is caused by:** [[NBWEB-434 - APP - Feat - Micro Sitio AMD|NBWEB-434]] APP - Feat - Micro Sitio AMD
+- **is blocked by:** [[DNYL-207 - NB - Imagenes de los productos para micro sitio AMD|DNYL-207]] NB - Imagenes de los productos para micro sitio AMD
 
 ## Descripcion
 

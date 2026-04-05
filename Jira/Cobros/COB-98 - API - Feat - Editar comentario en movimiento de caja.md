@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-98"
 
 ## Relaciones
 
-- **Padre:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **blocks:** [[COB-99]] APP - Feat - Editar comentario en movimiento de caja
+- **Padre:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **blocks:** [[COB-99 - APP - Feat - Editar comentario en movimiento de caja|COB-99]] APP - Feat - Editar comentario en movimiento de caja
 
 ## Descripcion
 

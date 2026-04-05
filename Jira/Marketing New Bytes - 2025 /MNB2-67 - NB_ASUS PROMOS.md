@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-67"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-68]] IMAGENES PARA ESTADO
-- **Subtarea:** [[MNB2-69]] NEWSLETTER DE PROMOCIONES
+- **Subtarea:** [[MNB2-68 - IMAGENES PARA ESTADO|MNB2-68]] IMAGENES PARA ESTADO
+- **Subtarea:** [[MNB2-69 - NEWSLETTER DE PROMOCIONES|MNB2-69]] NEWSLETTER DE PROMOCIONES
 
 ## Descripcion
 

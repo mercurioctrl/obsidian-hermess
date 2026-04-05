@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-506"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-496]] API - Feat - Recurso de reenvió de correo con palabra clave
+- **Padre:** [[NBWEB-496 - API - Feat - Recurso de reenvió de correo con palabra clave|NBWEB-496]] API - Feat - Recurso de reenvió de correo con palabra clave
 
 ## Descripcion
 

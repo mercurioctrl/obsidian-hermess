@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-202"
 
 ## Relaciones
 
-- **Padre:** [[COB-18]] Compra / Venta Dolares
+- **Padre:** [[COB-18 - Compra Venta Dolares|COB-18]] Compra / Venta Dolares
 
 ## Descripcion
 

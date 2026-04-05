@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-341"
 
 ## Relaciones
 
-- **Padre:** [[PED-1170]] Kits
-- **action item from:** [[PED-1309]] API - Feedback MVP - Alcance del cambio para mejroar la interpretacion de la relacion costo - beneficio en el armado de kits
+- **Padre:** [[PED-1170 - Kits|PED-1170]] Kits
+- **action item from:** [[PED-1309 - API - Feedback MVP - Alcance del cambio para mejroar la interpretacion de la|PED-1309]] API - Feedback MVP - Alcance del cambio para mejroar la interpretacion de la relacion costo - beneficio en el armado de kits
 
 ## Descripcion
 

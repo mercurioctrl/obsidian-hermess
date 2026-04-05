@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-92"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-61]] Buscador
-- **is blocked by:** [[NBWEB-28]] Cambio de datos de usuario
-- **is blocked by:** [[NBWEB-106]] Agregar parametros (conmutadores) al objeto user
+- **Padre:** [[NBWEB-61 - Buscador|NBWEB-61]] Buscador
+- **is blocked by:** [[NBWEB-28 - Cambio de datos de usuario|NBWEB-28]] Cambio de datos de usuario
+- **is blocked by:** [[NBWEB-106 - Agregar parametros (conmutadores) al objeto user|NBWEB-106]] Agregar parametros (conmutadores) al objeto user
 
 ## Descripcion
 

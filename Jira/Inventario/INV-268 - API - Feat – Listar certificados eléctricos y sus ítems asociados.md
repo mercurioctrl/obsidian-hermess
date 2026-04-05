@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-268"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
-- **has action item:** [[INV-269]] APP - Feat - Nueva pestaña de “Certificados eléctricos” en Inventario
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
+- **has action item:** [[INV-269 - APP - Feat - Nueva pestaña de “Certificados eléctricos” en Inventario|INV-269]] APP - Feat - Nueva pestaña de “Certificados eléctricos” en Inventario
 
 ## Descripcion
 

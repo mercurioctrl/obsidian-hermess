@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-634"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-619]] Generar ordenes
-- **blocks:** [[NBWEB-635]] APP - Refactor - Agregar un parametro dropShipping
+- **Padre:** [[NBWEB-619 - Generar ordenes|NBWEB-619]] Generar ordenes
+- **blocks:** [[NBWEB-635 - APP - Refactor - Agregar un parametro dropShipping|NBWEB-635]] APP - Refactor - Agregar un parametro dropShipping
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-482"
 
 ## Relaciones
 
-- **Padre:** [[COB-48]] Comprobantes fiscales
-- **relates to:** [[COB-43]] API - Feat - Listar comprobantes de pago
+- **Padre:** [[COB-48 - Comprobantes fiscales|COB-48]] Comprobantes fiscales
+- **relates to:** [[COB-43 - API - Feat - Listar comprobantes de pago|COB-43]] API - Feat - Listar comprobantes de pago
 
 ## Descripcion
 

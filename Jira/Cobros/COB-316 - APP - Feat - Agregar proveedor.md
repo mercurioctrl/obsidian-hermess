@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-316"
 
 ## Relaciones
 
-- **Padre:** [[COB-150]] Feat - Proveedores
-- **is blocked by:** [[COB-291]] API - Feat - Listar provincias (para retención)
-- **is blocked by:** [[COB-317]] API - Feat- Repositorio Localidades
-- **is blocked by:** [[COB-318]] API - Feat- Repositorio Paises
-- **blocks:** [[COB-319]] APP - Feat - Agregar accionable para carga rápida de proveedor
+- **Padre:** [[COB-150 - Feat - Proveedores|COB-150]] Feat - Proveedores
+- **is blocked by:** [[COB-291 - API - Feat - Listar provincias (para retención)|COB-291]] API - Feat - Listar provincias (para retención)
+- **is blocked by:** [[COB-317 - API - Feat- Repositorio Localidades|COB-317]] API - Feat- Repositorio Localidades
+- **is blocked by:** [[COB-318 - API - Feat- Repositorio Paises|COB-318]] API - Feat- Repositorio Paises
+- **blocks:** [[COB-319 - APP - Feat - Agregar accionable para carga rápida de proveedor|COB-319]] APP - Feat - Agregar accionable para carga rápida de proveedor
 
 ## Descripcion
 

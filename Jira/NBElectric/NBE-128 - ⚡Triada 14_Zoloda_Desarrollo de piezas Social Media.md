@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-128"
 
 ## Relaciones
 
-- **Padre:** [[NBE-115]] Triada 13_ Zoloda_Social Media
+- **Padre:** [[NBE-115 - Triada 13_ Zoloda_Social Media|NBE-115]] Triada 13_ Zoloda_Social Media
 
 ## Descripcion
 

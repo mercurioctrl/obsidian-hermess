@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-383"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-356]] XPG - Landing Fidelización (Puntos + Aceleradores + Ranking + Carga Compras)
-- **Subtarea:** [[ADATA-384]] API - Feat - Agregar KeywordMatch para buscar dentro del nombre de los clientes
-- **Subtarea:** [[ADATA-385]] APP - Refactor - Agregar KeywordMatch para buscar dentro del nombre de los clientes
-- **Subtarea:** [[ADATA-386]] API - Feat - Procesar compras mediante el reporte del cliente
-- **Subtarea:** [[ADATA-387]] APP - Feat - Procesar compras mediante el reporte del cliente
+- **Padre:** [[ADATA-356 - XPG - Landing Fidelización (Puntos + Aceleradores + Ranking + Carga Compras)|ADATA-356]] XPG - Landing Fidelización (Puntos + Aceleradores + Ranking + Carga Compras)
+- **Subtarea:** [[ADATA-384 - API - Feat - Agregar KeywordMatch para buscar dentro del nombre de los clientes|ADATA-384]] API - Feat - Agregar KeywordMatch para buscar dentro del nombre de los clientes
+- **Subtarea:** [[ADATA-385 - APP - Refactor - Agregar KeywordMatch para buscar dentro del nombre de los|ADATA-385]] APP - Refactor - Agregar KeywordMatch para buscar dentro del nombre de los clientes
+- **Subtarea:** [[ADATA-386 - API - Feat - Procesar compras mediante el reporte del cliente|ADATA-386]] API - Feat - Procesar compras mediante el reporte del cliente
+- **Subtarea:** [[ADATA-387 - APP - Feat - Procesar compras mediante el reporte del cliente|ADATA-387]] APP - Feat - Procesar compras mediante el reporte del cliente
 
 ## Descripcion
 

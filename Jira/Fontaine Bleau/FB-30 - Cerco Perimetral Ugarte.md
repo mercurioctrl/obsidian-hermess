@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-30"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-31]] Cambiar imágenes en el cartel
-- **Subtarea:** [[FB-32]] Enviar por mail
-- **Subtarea:** [[FB-33]] Guardar version última en drive
+- **Subtarea:** [[FB-31 - Cambiar imágenes en el cartel|FB-31]] Cambiar imágenes en el cartel
+- **Subtarea:** [[FB-32 - Enviar por mail|FB-32]] Enviar por mail
+- **Subtarea:** [[FB-33 - Guardar version última en drive|FB-33]] Guardar version última en drive
 
 ## Descripcion
 

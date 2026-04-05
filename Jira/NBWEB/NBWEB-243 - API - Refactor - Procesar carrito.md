@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-243"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-1]] API - Carrito de compras
-- **blocks:** [[NBWEB-215]] APP - Paginas de destino para los pagos
+- **Padre:** [[NBWEB-1 - API - Carrito de compras|NBWEB-1]] API - Carrito de compras
+- **blocks:** [[NBWEB-215 - APP - Paginas de destino para los pagos|NBWEB-215]] APP - Paginas de destino para los pagos
 
 ## Descripcion
 

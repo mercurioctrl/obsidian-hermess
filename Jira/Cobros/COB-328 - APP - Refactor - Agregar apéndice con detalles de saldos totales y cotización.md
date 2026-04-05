@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-328"
 
 ## Relaciones
 
-- **Padre:** [[COB-327]] Refactor - Agregar apéndice con detalles de saldos totales y cotización relativa al ver los movimientos de cuenta
+- **Padre:** [[COB-327 - Refactor - Agregar apéndice con detalles de saldos totales y cotización|COB-327]] Refactor - Agregar apéndice con detalles de saldos totales y cotización relativa al ver los movimientos de cuenta
 
 ## Descripcion
 

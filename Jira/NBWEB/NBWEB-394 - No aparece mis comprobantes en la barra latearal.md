@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-394"
 
 ## Relaciones
 
-- **is duplicated by:** [[NBWEB-326]] en comprobantes que aparezca con iva, sin iva y las percepciones
+- **is duplicated by:** [[NBWEB-326 - en comprobantes que aparezca con iva, sin iva y las percepciones|NBWEB-326]] en comprobantes que aparezca con iva, sin iva y las percepciones
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-488"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **relates to:** [[LIO-240]] API - Feat - Obtener balance de billetera
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **relates to:** [[LIO-240 - API - Feat - Obtener balance de billetera|LIO-240]] API - Feat - Obtener balance de billetera
 
 ## Descripcion
 

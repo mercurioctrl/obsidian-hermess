@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-71"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-72]] Research - Averiguar si existe en el webservice de afip algo respecto a este servicio
-- **Subtarea:** [[EXP-297]] API - Refactor - Habilitar remito no fiscal, para los casos de sucursal 10
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-72 - Research - Averiguar si existe en el webservice de afip algo respecto a este|EXP-72]] Research - Averiguar si existe en el webservice de afip algo respecto a este servicio
+- **Subtarea:** [[EXP-297 - API - Refactor - Habilitar remito no fiscal, para los casos de sucursal 10|EXP-297]] API - Refactor - Habilitar remito no fiscal, para los casos de sucursal 10
 
 ## Descripcion
 

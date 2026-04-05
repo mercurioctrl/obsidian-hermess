@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-254"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **relates to:** [[NBWEB-350]] APP - Feat - Diseñar y maquetar Seguimiento de envios
-- **relates to:** [[NBWEB-711]] API - Seguimiento de envíos - Sin datos de seguimiento
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **relates to:** [[NBWEB-350 - APP - Feat - Diseñar y maquetar Seguimiento de envios|NBWEB-350]] APP - Feat - Diseñar y maquetar Seguimiento de envios
+- **relates to:** [[NBWEB-711 - API - Seguimiento de envíos - Sin datos de seguimiento|NBWEB-711]] API - Seguimiento de envíos - Sin datos de seguimiento
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-131"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-133]] APP - Refactor por evento - Preparar Rama navidad con mini banner y probar algun efecto nieve
+- **Subtarea:** [[MKT-133 - APP - Refactor por evento - Preparar Rama navidad con mini banner y probar|MKT-133]] APP - Refactor por evento - Preparar Rama navidad con mini banner y probar algun efecto nieve
 
 ## Descripcion
 

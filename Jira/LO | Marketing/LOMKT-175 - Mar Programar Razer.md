@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-175"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-166]] Mar: 1 Razer
+- **Padre:** [[LOMKT-166 - Mar 1 Razer|LOMKT-166]] Mar: 1 Razer
 
 ## Descripcion
 

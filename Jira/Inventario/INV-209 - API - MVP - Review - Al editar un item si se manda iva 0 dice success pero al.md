@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-209"
 
 ## Relaciones
 
-- **Padre:** [[INV-11]] API - Detalle de producto
+- **Padre:** [[INV-11 - API - Detalle de producto|INV-11]] API - Detalle de producto
 
 ## Descripcion
 

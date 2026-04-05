@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-267"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
-- **action item from:** [[INV-274]] API - Refactor - Agregar SKU y nombre del producto al detalle de los items que tiene vinculado el certificado
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
+- **action item from:** [[INV-274 - API - Refactor - Agregar SKU y nombre del producto al detalle de los items que|INV-274]] API - Refactor - Agregar SKU y nombre del producto al detalle de los items que tiene vinculado el certificado
 
 ## Descripcion
 

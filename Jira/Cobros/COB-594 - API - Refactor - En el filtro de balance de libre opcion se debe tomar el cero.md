@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-594"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **has action item:** [[COB-597]] APP - Refactor - Agregaremos el nuevo parametro de balance a la tabla para que se visualice primero
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **has action item:** [[COB-597 - APP - Refactor - Agregaremos el nuevo parametro de balance a la tabla para que|COB-597]] APP - Refactor - Agregaremos el nuevo parametro de balance a la tabla para que se visualice primero
 
 ## Descripcion
 

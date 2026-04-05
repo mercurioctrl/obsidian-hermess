@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-103"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-101]] Mostrar Kits
-- **action item from:** [[LOCAPP-102]] API - Refactor - Agregar parámetros necesarios para construir los kits visualmente 
+- **Padre:** [[LOCAPP-101 - Mostrar Kits|LOCAPP-101]] Mostrar Kits
+- **action item from:** [[LOCAPP-102 - API - Refactor - Agregar parámetros necesarios para construir los kits|LOCAPP-102]] API - Refactor - Agregar parámetros necesarios para construir los kits visualmente 
 
 ## Descripcion
 

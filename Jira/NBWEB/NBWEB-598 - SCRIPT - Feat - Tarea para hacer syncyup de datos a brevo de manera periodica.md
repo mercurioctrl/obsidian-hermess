@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-598"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-592]] Sección Completar Datos
+- **Padre:** [[NBWEB-592 - Sección Completar Datos|NBWEB-592]] Sección Completar Datos
 
 ## Descripcion
 

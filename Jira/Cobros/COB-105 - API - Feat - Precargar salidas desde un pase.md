@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-105"
 
 ## Relaciones
 
-- **Padre:** [[COB-101]] Feat - Realizar salida de caja
+- **Padre:** [[COB-101 - Feat - Realizar salida de caja|COB-101]] Feat - Realizar salida de caja
 
 ## Descripcion
 

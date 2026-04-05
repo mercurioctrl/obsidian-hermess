@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-375"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-373]] Adata Rewards
+- **Padre:** [[ADATA-373 - Adata Rewards|ADATA-373]] Adata Rewards
 
 ## Descripcion
 

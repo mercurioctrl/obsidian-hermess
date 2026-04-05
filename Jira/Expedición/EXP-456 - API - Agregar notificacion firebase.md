@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-456"
 
 ## Relaciones
 
-- **relates to:** [[EXP-455]] APP - Agregar notificaciones firebase
+- **relates to:** [[EXP-455 - APP - Agregar notificaciones firebase|EXP-455]] APP - Agregar notificaciones firebase
 
 ## Descripcion
 

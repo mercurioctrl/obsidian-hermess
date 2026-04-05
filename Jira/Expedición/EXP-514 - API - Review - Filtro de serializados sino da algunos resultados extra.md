@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-514"
 
 ## Relaciones
 
-- **Padre:** [[EXP-7]] Despacho de retiros
+- **Padre:** [[EXP-7 - Despacho de retiros|EXP-7]] Despacho de retiros
 
 ## Descripcion
 

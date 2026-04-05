@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-319"
 
 ## Relaciones
 
-- **Padre:** [[COB-150]] Feat - Proveedores
-- **is blocked by:** [[COB-316]] APP - Feat - Agregar proveedor
+- **Padre:** [[COB-150 - Feat - Proveedores|COB-150]] Feat - Proveedores
+- **is blocked by:** [[COB-316 - APP - Feat - Agregar proveedor|COB-316]] APP - Feat - Agregar proveedor
 
 ## Descripcion
 

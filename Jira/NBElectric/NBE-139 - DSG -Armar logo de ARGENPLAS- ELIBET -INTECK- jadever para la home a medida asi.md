@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-139"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **has action item:** [[NBE-144]] APP -Refactor + Feature - Subir logos
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **has action item:** [[NBE-144 - APP -Refactor + Feature - Subir logos|NBE-144]] APP -Refactor + Feature - Subir logos
 
 ## Descripcion
 

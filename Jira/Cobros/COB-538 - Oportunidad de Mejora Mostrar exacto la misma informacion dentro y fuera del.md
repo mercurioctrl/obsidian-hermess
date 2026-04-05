@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-538"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-539]] API - Refactor - Entregar los mismos parametros en el listado de clientes, que en el recurso balances
-- **Subtarea:** [[COB-540]] APP - Refactor - Mostrar en la lista de clientes exacto el mismo informe crediticio que se obtiene en la cuenta corriente con "balances"
-- **blocks:** [[SNB-2203]] NO MUESTRA LINEA DE CREDITO EN EL CLIENTE
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-539 - API - Refactor - Entregar los mismos parametros en el listado de clientes, que|COB-539]] API - Refactor - Entregar los mismos parametros en el listado de clientes, que en el recurso balances
+- **Subtarea:** [[COB-540 - APP - Refactor - Mostrar en la lista de clientes exacto el mismo informe|COB-540]] APP - Refactor - Mostrar en la lista de clientes exacto el mismo informe crediticio que se obtiene en la cuenta corriente con "balances"
+- **blocks:** [[SNB-2203 - NO MUESTRA LINEA DE CREDITO EN EL CLIENTE|SNB-2203]] NO MUESTRA LINEA DE CREDITO EN EL CLIENTE
 
 ## Descripcion
 

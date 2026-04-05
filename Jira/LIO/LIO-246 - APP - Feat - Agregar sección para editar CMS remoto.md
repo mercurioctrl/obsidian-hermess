@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-246"
 
 ## Relaciones
 
-- **Padre:** [[LIO-198]] CMS
-- **action item from:** [[LIO-245]] API - Feat - Editar archivo css dinamico
+- **Padre:** [[LIO-198 - CMS|LIO-198]] CMS
+- **action item from:** [[LIO-245 - API - Feat - Editar archivo css dinamico|LIO-245]] API - Feat - Editar archivo css dinamico
 
 ## Descripcion
 

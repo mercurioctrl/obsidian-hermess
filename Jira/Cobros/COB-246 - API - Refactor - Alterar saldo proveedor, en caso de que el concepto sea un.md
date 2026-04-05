@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-246"
 
 ## Relaciones
 
-- **Padre:** [[COB-101]] Feat - Realizar salida de caja
-- **is blocked by:** [[COB-247]] APP - Refactor - Agregar al modal de salida un selector de proveedor si el id del concepto es 3 o 35
-- **is blocked by:** [[COB-104]] API - Feat - Realizar salida
+- **Padre:** [[COB-101 - Feat - Realizar salida de caja|COB-101]] Feat - Realizar salida de caja
+- **is blocked by:** [[COB-247 - APP - Refactor - Agregar al modal de salida un selector de proveedor si el id|COB-247]] APP - Refactor - Agregar al modal de salida un selector de proveedor si el id del concepto es 3 o 35
+- **is blocked by:** [[COB-104 - API - Feat - Realizar salida|COB-104]] API - Feat - Realizar salida
 
 ## Descripcion
 

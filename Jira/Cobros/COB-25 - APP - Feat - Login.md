@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-25"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **causes:** [[COB-7]] API - Feat - Login
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **causes:** [[COB-7 - API - Feat - Login|COB-7]] API - Feat - Login
 
 ## Descripcion
 

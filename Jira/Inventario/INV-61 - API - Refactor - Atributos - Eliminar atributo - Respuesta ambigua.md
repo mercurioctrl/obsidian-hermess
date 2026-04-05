@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-61"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[SNB-1658]] INVENTARIO 
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[SNB-1658 - INVENTARIO|SNB-1658]] INVENTARIO 
 
 ## Descripcion
 

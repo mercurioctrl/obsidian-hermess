@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-387"
 
 ## Relaciones
 
-- **causes:** [[SNB-178]] SECCION CONTACTO 
+- **causes:** [[SNB-178 - SECCION CONTACTO|SNB-178]] SECCION CONTACTO 
 
 ## Descripcion
 

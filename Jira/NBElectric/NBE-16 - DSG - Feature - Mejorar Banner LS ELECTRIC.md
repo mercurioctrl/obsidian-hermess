@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-16"
 
 ## Relaciones
 
-- **Padre:** [[NBE-1]] Sitio Web_Etapa 1
-- **has action item:** [[NBE-24]] APP - Refactor - Subir los nuevos banners
+- **Padre:** [[NBE-1 - Sitio Web_Etapa 1|NBE-1]] Sitio Web_Etapa 1
+- **has action item:** [[NBE-24 - APP - Refactor - Subir los nuevos banners|NBE-24]] APP - Refactor - Subir los nuevos banners
 
 ## Descripcion
 

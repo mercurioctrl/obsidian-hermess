@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-346"
 
 ## Relaciones
 
-- **Subtarea:** [[EXP-374]] API - Refactor - Retornar fecha en el formato correcto en moveSerials
-- **blocks:** [[EXP-301]] Feat - Mover seriales
+- **Subtarea:** [[EXP-374 - API - Refactor - Retornar fecha en el formato correcto en moveSerials|EXP-374]] API - Refactor - Retornar fecha en el formato correcto en moveSerials
+- **blocks:** [[EXP-301 - Feat - Mover seriales|EXP-301]] Feat - Mover seriales
 
 ## Descripcion
 

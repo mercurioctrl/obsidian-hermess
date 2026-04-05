@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-857"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-856]] API - Create bulk mis categorias
-- **relates to:** [[NBWEB-863]] APP - Refactor - Create bulk mis categorias - Marcar utilidad por defecto en cero
+- **relates to:** [[NBWEB-856 - API - Create bulk mis categorias|NBWEB-856]] API - Create bulk mis categorias
+- **relates to:** [[NBWEB-863 - APP - Refactor - Create bulk mis categorias - Marcar utilidad por defecto en|NBWEB-863]] APP - Refactor - Create bulk mis categorias - Marcar utilidad por defecto en cero
 
 ## Descripcion
 

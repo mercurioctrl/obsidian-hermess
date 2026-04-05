@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-20"
 
 ## Relaciones
 
-- **Padre:** [[INV-11]] API - Detalle de producto
-- **blocks:** [[INV-28]] APP - Feat - Listar productos (Pestaña productos)
+- **Padre:** [[INV-11 - API - Detalle de producto|INV-11]] API - Detalle de producto
+- **blocks:** [[INV-28 - APP - Feat - Listar productos (Pestaña productos)|INV-28]] APP - Feat - Listar productos (Pestaña productos)
 
 ## Descripcion
 

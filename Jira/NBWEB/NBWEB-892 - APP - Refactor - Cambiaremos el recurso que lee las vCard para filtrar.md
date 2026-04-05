@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-892"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **action item from:** [[NBWEB-855]] API - Refactor - Agregar filtro de correo al recurso de contacto y parametro para visualizar la vCard aunque no se muestre en la seccion de contacto
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **action item from:** [[NBWEB-855 - API - Refactor - Agregar filtro de correo al recurso de contacto y parametro|NBWEB-855]] API - Refactor - Agregar filtro de correo al recurso de contacto y parametro para visualizar la vCard aunque no se muestre en la seccion de contacto
 
 ## Descripcion
 

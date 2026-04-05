@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-720"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-722]] API - Oportunidad de mejora - Objeto de respuesta al actualizar envío
+- **relates to:** [[NBWEB-722 - API - Oportunidad de mejora - Objeto de respuesta al actualizar envío|NBWEB-722]] API - Oportunidad de mejora - Objeto de respuesta al actualizar envío
 
 ## Descripcion
 

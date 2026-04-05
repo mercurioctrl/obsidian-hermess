@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-22"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-16]] ❌Adata Octubre: 4/4 Social Media  SSD
+- **Padre:** [[ADATA-16 - ❌Adata Octubre 44 Social Media SSD|ADATA-16]] ❌Adata Octubre: 4/4 Social Media  SSD
 
 ## Descripcion
 

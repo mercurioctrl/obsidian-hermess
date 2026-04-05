@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-74"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **blocks:** [[COM-69]] API - Refactor - Agregar a el objeto del detalle de la orden la posicion arancelaria y sus impuestos 
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **blocks:** [[COM-69 - API - Refactor - Agregar a el objeto del detalle de la orden la posicion|COM-69]] API - Refactor - Agregar a el objeto del detalle de la orden la posicion arancelaria y sus impuestos 
 
 ## Descripcion
 

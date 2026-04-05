@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-21"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-20]] Mostrar comprobante
-- **Subtarea:** [[LOCAPP-49]] APP - Refactor - Reducir peso de los comprobantes
-- **Subtarea:** [[LOCAPP-51]] APP - Refactor - Introducir un parametro por url que nos permita mostrar o no mostrar las imeagenes de los logos
-- **Subtarea:** [[LOCAPP-66]] APP - Refactor - Agregar percepciones diferenciadas (CABA / ARBA)
+- **Padre:** [[LOCAPP-20 - Mostrar comprobante|LOCAPP-20]] Mostrar comprobante
+- **Subtarea:** [[LOCAPP-49 - APP - Refactor - Reducir peso de los comprobantes|LOCAPP-49]] APP - Refactor - Reducir peso de los comprobantes
+- **Subtarea:** [[LOCAPP-51 - APP - Refactor - Introducir un parametro por url que nos permita mostrar o no|LOCAPP-51]] APP - Refactor - Introducir un parametro por url que nos permita mostrar o no mostrar las imeagenes de los logos
+- **Subtarea:** [[LOCAPP-66 - APP - Refactor - Agregar percepciones diferenciadas (CABA ARBA)|LOCAPP-66]] APP - Refactor - Agregar percepciones diferenciadas (CABA / ARBA)
 
 ## Descripcion
 

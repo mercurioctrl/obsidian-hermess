@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-507"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-423]] Logistica Envios
-- **Subtarea:** [[NBWEB-508]] API - Feat - Bultos por unidad
-- **Subtarea:** [[NBWEB-528]] MS Envios - Refactor - Incorporar cotizador mayorista dentro del micro servicio de envios
-- **Subtarea:** [[NBWEB-543]] MS Envios - Refactor - Agregar "valorDeclarado" y "valorDeclaradoConImpuestos
-- **Subtarea:** [[NBWEB-858]] MS Envios - Refactor - Agregar medidas y peso principales para los productos (segunda jerarquia por categoria)
+- **Padre:** [[NBWEB-423 - Logistica Envios|NBWEB-423]] Logistica Envios
+- **Subtarea:** [[NBWEB-508 - API - Feat - Bultos por unidad|NBWEB-508]] API - Feat - Bultos por unidad
+- **Subtarea:** [[NBWEB-528 - MS Envios - Refactor - Incorporar cotizador mayorista dentro del micro servicio|NBWEB-528]] MS Envios - Refactor - Incorporar cotizador mayorista dentro del micro servicio de envios
+- **Subtarea:** [[NBWEB-543 - MS Envios - Refactor - Agregar valorDeclarado y valorDeclaradoConImpuestos|NBWEB-543]] MS Envios - Refactor - Agregar "valorDeclarado" y "valorDeclaradoConImpuestos
+- **Subtarea:** [[NBWEB-858 - MS Envios - Refactor - Agregar medidas y peso principales para los productos|NBWEB-858]] MS Envios - Refactor - Agregar medidas y peso principales para los productos (segunda jerarquia por categoria)
 
 ## Descripcion
 

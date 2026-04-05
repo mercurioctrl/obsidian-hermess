@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-583"
 
 ## Relaciones
 
-- **Padre:** [[COB-581]] Repositorio y Gestión de Billeteras Libre Opción
-- **action item from:** [[COB-582]] API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el saldo relativo a libre opción tal cual lo muestra la billetera para el cliente
+- **Padre:** [[COB-581 - Repositorio y Gestión de Billeteras Libre Opción|COB-581]] Repositorio y Gestión de Billeteras Libre Opción
+- **action item from:** [[COB-582 - API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el|COB-582]] API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el saldo relativo a libre opción tal cual lo muestra la billetera para el cliente
 
 ## Descripcion
 

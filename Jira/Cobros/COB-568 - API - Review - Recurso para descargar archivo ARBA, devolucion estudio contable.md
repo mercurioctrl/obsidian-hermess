@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-568"
 
 ## Relaciones
 
-- **Padre:** [[COB-559]] Listar y descargar percepciones
-- **relates to:** [[COB-560]] API - Feat - Recurso para listar y descargar percepciones ARBA (parte 1)
+- **Padre:** [[COB-559 - Listar y descargar percepciones|COB-559]] Listar y descargar percepciones
+- **relates to:** [[COB-560 - API - Feat - Recurso para listar y descargar percepciones ARBA (parte 1)|COB-560]] API - Feat - Recurso para listar y descargar percepciones ARBA (parte 1)
 
 ## Descripcion
 

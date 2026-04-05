@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-64"
 
 ## Relaciones
 
-- **Padre:** [[EXP-16]] Feat - Historia del producto (Por serial o sku)
+- **Padre:** [[EXP-16 - Feat - Historia del producto (Por serial o sku)|EXP-16]] Feat - Historia del producto (Por serial o sku)
 
 ## Descripcion
 

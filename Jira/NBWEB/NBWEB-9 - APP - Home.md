@@ -29,17 +29,17 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-9"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-29]] Header
-- **Subtarea:** [[NBWEB-30]] Footer
-- **Subtarea:** [[NBWEB-31]] slider principal - categorias
-- **Subtarea:** [[NBWEB-32]] novedades - mas visitados - banners
-- **Subtarea:** [[NBWEB-33]] mas vendidos
-- **Subtarea:** [[NBWEB-34]] marcas
-- **Subtarea:** [[NBWEB-35]] informacion
-- **Subtarea:** [[NBWEB-752]] APP - Refactor - Categorías - Actualización de categoría
-- **Subtarea:** [[NBWEB-1011]] APP - Mejora - Categorías -> Ocultado automático de sección al seleccionar una categoría
-- **causes:** [[NBWEB-53]] Maquetado general de la plantilla
-- **relates to:** [[NBWEB-62]] Login
+- **Subtarea:** [[NBWEB-29 - Header|NBWEB-29]] Header
+- **Subtarea:** [[NBWEB-30 - Footer|NBWEB-30]] Footer
+- **Subtarea:** [[NBWEB-31 - slider principal - categorias|NBWEB-31]] slider principal - categorias
+- **Subtarea:** [[NBWEB-32 - novedades - mas visitados - banners|NBWEB-32]] novedades - mas visitados - banners
+- **Subtarea:** [[NBWEB-33 - mas vendidos|NBWEB-33]] mas vendidos
+- **Subtarea:** [[NBWEB-34 - marcas|NBWEB-34]] marcas
+- **Subtarea:** [[NBWEB-35 - informacion|NBWEB-35]] informacion
+- **Subtarea:** [[NBWEB-752 - APP - Refactor - Categorías - Actualización de categoría|NBWEB-752]] APP - Refactor - Categorías - Actualización de categoría
+- **Subtarea:** [[NBWEB-1011 - APP - Mejora - Categorías - Ocultado automático de sección al seleccionar una|NBWEB-1011]] APP - Mejora - Categorías -> Ocultado automático de sección al seleccionar una categoría
+- **causes:** [[NBWEB-53 - Maquetado general de la plantilla|NBWEB-53]] Maquetado general de la plantilla
+- **relates to:** [[NBWEB-62 - Login|NBWEB-62]] Login
 
 ## Descripcion
 

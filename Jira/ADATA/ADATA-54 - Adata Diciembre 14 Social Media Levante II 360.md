@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-54"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-70]] Adata Diciembre:  1/4 Portada Diseño Social Media 1/4 Levante II 360
-- **Subtarea:** [[ADATA-71]] 8.Adata Diciembre: 1/4 Copys Social Media LEVANTE II 360
-- **Subtarea:** [[ADATA-72]] Adata Diciembre: 1/4 Programar Social MediaLevante II 360
+- **Subtarea:** [[ADATA-70 - Adata Diciembre 14 Portada Diseño Social Media 14 Levante II 360|ADATA-70]] Adata Diciembre:  1/4 Portada Diseño Social Media 1/4 Levante II 360
+- **Subtarea:** [[ADATA-71 - 8.Adata Diciembre 14 Copys Social Media LEVANTE II 360|ADATA-71]] 8.Adata Diciembre: 1/4 Copys Social Media LEVANTE II 360
+- **Subtarea:** [[ADATA-72 - Adata Diciembre 14 Programar Social MediaLevante II 360|ADATA-72]] Adata Diciembre: 1/4 Programar Social MediaLevante II 360
 
 ## Descripcion
 

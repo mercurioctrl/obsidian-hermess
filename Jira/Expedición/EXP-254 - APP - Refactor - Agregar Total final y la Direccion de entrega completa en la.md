@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-254"
 
 ## Relaciones
 
-- **Padre:** [[EXP-137]] Feat - Volanta operativa
+- **Padre:** [[EXP-137 - Feat - Volanta operativa|EXP-137]] Feat - Volanta operativa
 
 ## Descripcion
 

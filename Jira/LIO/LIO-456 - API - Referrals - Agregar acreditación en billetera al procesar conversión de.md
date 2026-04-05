@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-456"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **action item from:** [[LIO-418]] API - Feat - SyncUp - Impactar tokens por conversión
-- **action item from:** [[LIO-414]] API - Feat - Guardar token referido para un usuario ya logueado
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **action item from:** [[LIO-418 - API - Feat - SyncUp - Impactar tokens por conversión|LIO-418]] API - Feat - SyncUp - Impactar tokens por conversión
+- **action item from:** [[LIO-414 - API - Feat - Guardar token referido para un usuario ya logueado|LIO-414]] API - Feat - Guardar token referido para un usuario ya logueado
 
 ## Descripcion
 

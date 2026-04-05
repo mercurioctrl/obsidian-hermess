@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-18"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-11]] Placa de Video Sapphire
+- **blocks:** [[REDESYNEWS-11 - Placa de Video Sapphire|REDESYNEWS-11]] Placa de Video Sapphire
 
 ## Descripcion
 

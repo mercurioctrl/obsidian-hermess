@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-45"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
-- **blocks:** [[EXP-186]] APP - Feat - Serializar salida por intervalos
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
+- **blocks:** [[EXP-186 - APP - Feat - Serializar salida por intervalos|EXP-186]] APP - Feat - Serializar salida por intervalos
 
 ## Descripcion
 

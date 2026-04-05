@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-83"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-2190]] cliente no puede finalizar pedido
+- **is blocked by:** [[SNB-2190 - cliente no puede finalizar pedido|SNB-2190]] cliente no puede finalizar pedido
 
 ## Descripcion
 

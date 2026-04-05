@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-10"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-8]] Feb Week 2: Valentines Week
+- **Padre:** [[LOMKT-8 - Feb Week 2 Valentines Week|LOMKT-8]] Feb Week 2: Valentines Week
 
 ## Descripcion
 

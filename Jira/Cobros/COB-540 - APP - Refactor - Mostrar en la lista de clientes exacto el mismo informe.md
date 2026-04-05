@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-540"
 
 ## Relaciones
 
-- **Padre:** [[COB-538]] Oportunidad de Mejora: Mostrar exacto la misma informacion dentro y fuera del estado crediticio del cliente
-- **is blocked by:** [[COB-539]] API - Refactor - Entregar los mismos parametros en el listado de clientes, que en el recurso balances
+- **Padre:** [[COB-538 - Oportunidad de Mejora Mostrar exacto la misma informacion dentro y fuera del|COB-538]] Oportunidad de Mejora: Mostrar exacto la misma informacion dentro y fuera del estado crediticio del cliente
+- **is blocked by:** [[COB-539 - API - Refactor - Entregar los mismos parametros en el listado de clientes, que|COB-539]] API - Refactor - Entregar los mismos parametros en el listado de clientes, que en el recurso balances
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-376"
 
 ## Relaciones
 
-- **Padre:** [[COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
-- **blocks:** [[COB-388]] API - Refactor - Al editar un cliente que no tiene saldo, no hace la inserción de manera correcta
+- **Padre:** [[COB-374 - Feat - Editar estado crediticio de la cuenta del cliente|COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
+- **blocks:** [[COB-388 - API - Refactor - Al editar un cliente que no tiene saldo, no hace la inserción|COB-388]] API - Refactor - Al editar un cliente que no tiene saldo, no hace la inserción de manera correcta
 
 ## Descripcion
 

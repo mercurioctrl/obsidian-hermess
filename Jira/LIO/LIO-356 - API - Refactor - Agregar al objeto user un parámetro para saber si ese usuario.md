@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-356"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **has action item:** [[LIO-357]] APP - Refactor - Mostrar accesos a billetera solo si esta habilitado en el parámetro de usuario
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **has action item:** [[LIO-357 - APP - Refactor - Mostrar accesos a billetera solo si esta habilitado en el|LIO-357]] APP - Refactor - Mostrar accesos a billetera solo si esta habilitado en el parámetro de usuario
 
 ## Descripcion
 

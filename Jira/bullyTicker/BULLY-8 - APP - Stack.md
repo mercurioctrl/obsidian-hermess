@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-8"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-1]] Bases y repositorios
-- **Subtarea:** [[BULLY-13]] APP - Feat - Esquema de la aplicacion
-- **relates to:** [[BULLY-15]] APP - Feat - Login
+- **Padre:** [[BULLY-1 - Bases y repositorios|BULLY-1]] Bases y repositorios
+- **Subtarea:** [[BULLY-13 - APP - Feat - Esquema de la aplicacion|BULLY-13]] APP - Feat - Esquema de la aplicacion
+- **relates to:** [[BULLY-15 - APP - Feat - Login|BULLY-15]] APP - Feat - Login
 
 ## Descripcion
 

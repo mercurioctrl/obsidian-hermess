@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-571"
 
 ## Relaciones
 
-- **Padre:** [[COB-559]] Listar y descargar percepciones
-- **has action item:** [[SNB-3222]] Los montos parecen venir en cero en la presentacion jurada de ARBA (caba salio perfecto)
-- **relates to:** [[SNB-3550]] COB - API - Diseño del archivo de ARBA  Operaciones rechazadas
+- **Padre:** [[COB-559 - Listar y descargar percepciones|COB-559]] Listar y descargar percepciones
+- **has action item:** [[SNB-3222 - Los montos parecen venir en cero en la presentacion jurada de ARBA (caba salio|SNB-3222]] Los montos parecen venir en cero en la presentacion jurada de ARBA (caba salio perfecto)
+- **relates to:** [[SNB-3550 - COB - API - Diseño del archivo de ARBA Operaciones rechazadas|SNB-3550]] COB - API - Diseño del archivo de ARBA  Operaciones rechazadas
 
 ## Descripcion
 

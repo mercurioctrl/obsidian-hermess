@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-141"
 
 ## Relaciones
 
-- **Padre:** [[LIO-124]] Calificaciones
-- **action item from:** [[LIO-143]] APP - Refactor - Preparar imágenes para 5 calificaciones  
-- **has action item:** [[LIO-144]] APP - Refctor - Patron de 5 calificaciones al calificar 
+- **Padre:** [[LIO-124 - Calificaciones|LIO-124]] Calificaciones
+- **action item from:** [[LIO-143 - APP - Refactor - Preparar imágenes para 5 calificaciones|LIO-143]] APP - Refactor - Preparar imágenes para 5 calificaciones  
+- **has action item:** [[LIO-144 - APP - Refctor - Patron de 5 calificaciones al calificar|LIO-144]] APP - Refctor - Patron de 5 calificaciones al calificar 
 
 ## Descripcion
 

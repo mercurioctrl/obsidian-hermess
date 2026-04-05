@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-209"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **action item from:** [[COM-210]] API - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **action item from:** [[COM-210 - API - Feat - agregar filtro para buscar por nro de invoice y proforma|COM-210]] API - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)
 
 ## Descripcion
 

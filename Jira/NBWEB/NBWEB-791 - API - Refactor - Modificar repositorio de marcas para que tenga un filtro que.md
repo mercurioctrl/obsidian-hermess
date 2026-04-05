@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-791"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-782]] APP - Feat - Rediseño de menu de productos
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-782 - APP - Feat - Rediseño de menu de productos|NBWEB-782]] APP - Feat - Rediseño de menu de productos
 
 ## Descripcion
 

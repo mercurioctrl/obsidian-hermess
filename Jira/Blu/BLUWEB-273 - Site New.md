@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-273"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-274]] Nosotros
-- **Subtarea:** [[BLUWEB-275]] Servicios
+- **Subtarea:** [[BLUWEB-274 - Nosotros|BLUWEB-274]] Nosotros
+- **Subtarea:** [[BLUWEB-275 - Servicios|BLUWEB-275]] Servicios
 
 ## Descripcion
 

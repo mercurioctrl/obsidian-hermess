@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-100"
 
 ## Relaciones
 
-- **Padre:** [[LIO-98]] Inventario resellers
-- **has action item:** [[LIO-101]] APP - Refactor - Cambios de precio y utilidad en el inventario
-- **relates to:** [[LIO-104]] API - Refactor - Guardar precio exacto de mi artículo 
+- **Padre:** [[LIO-98 - Inventario resellers|LIO-98]] Inventario resellers
+- **has action item:** [[LIO-101 - APP - Refactor - Cambios de precio y utilidad en el inventario|LIO-101]] APP - Refactor - Cambios de precio y utilidad en el inventario
+- **relates to:** [[LIO-104 - API - Refactor - Guardar precio exacto de mi artículo|LIO-104]] API - Refactor - Guardar precio exacto de mi artículo 
 
 ## Descripcion
 

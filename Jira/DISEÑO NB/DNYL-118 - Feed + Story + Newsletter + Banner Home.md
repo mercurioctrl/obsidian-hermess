@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-118"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-12]] NB_ Q2 2022_ Trust_ Week de la marca
+- **Padre:** [[DNYL-12 - NB_ Q2 2022_ Trust_ Week de la marca|DNYL-12]] NB_ Q2 2022_ Trust_ Week de la marca
 
 ## Descripcion
 

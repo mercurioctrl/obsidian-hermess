@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-182"
 
 ## Relaciones
 
-- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
-- **has action item:** [[LIO-197]] APP - Feat - Agregar en el checkOut interes segun cuotas diferenciadas
+- **Padre:** [[LIO-8 - Proceso pago sencillo y competitiva a nivel financiamiento|LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **has action item:** [[LIO-197 - APP - Feat - Agregar en el checkOut interes segun cuotas diferenciadas|LIO-197]] APP - Feat - Agregar en el checkOut interes segun cuotas diferenciadas
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-130"
 
 ## Relaciones
 
-- **Padre:** [[INV-125]] Importación de catálogos
+- **Padre:** [[INV-125 - Importación de catálogos|INV-125]] Importación de catálogos
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-924"
 
 ## Relaciones
 
-- **has action item:** [[SNB-2520]] Verificar porque no se guardan las características del paquete cuando se hace desde la web de NB
+- **has action item:** [[SNB-2520 - Verificar porque no se guardan las características del paquete cuando se hace|SNB-2520]] Verificar porque no se guardan las características del paquete cuando se hace desde la web de NB
 
 ## Descripcion
 

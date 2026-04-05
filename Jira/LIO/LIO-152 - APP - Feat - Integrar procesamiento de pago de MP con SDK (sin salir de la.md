@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-152"
 
 ## Relaciones
 
-- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
-- **action item from:** [[LIO-151]] API - Feat - Integrar procesamiento de pago de MP con SDK (sin salir de la plataforma)
-- **is blocked by:** [[LIO-159]] API - Refactor - Modificar patch del checkout para agregar nuevo objeto de informacion de tarjeta MP con SDK
-- **is blocked by:** [[LIO-165]] API - Feat - Procesar pagos con tarjeta conectando v4 con LO
+- **Padre:** [[LIO-8 - Proceso pago sencillo y competitiva a nivel financiamiento|LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **action item from:** [[LIO-151 - API - Feat - Integrar procesamiento de pago de MP con SDK (sin salir de la|LIO-151]] API - Feat - Integrar procesamiento de pago de MP con SDK (sin salir de la plataforma)
+- **is blocked by:** [[LIO-159 - API - Refactor - Modificar patch del checkout para agregar nuevo objeto de|LIO-159]] API - Refactor - Modificar patch del checkout para agregar nuevo objeto de informacion de tarjeta MP con SDK
+- **is blocked by:** [[LIO-165 - API - Feat - Procesar pagos con tarjeta conectando v4 con LO|LIO-165]] API - Feat - Procesar pagos con tarjeta conectando v4 con LO
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-996"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **relates to:** [[NBWEB-648]] API - Feat - Listas de precio csv -> Agregar nueva utilidad y mascara de Categoria
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **relates to:** [[NBWEB-648 - API - Feat - Listas de precio csv - Agregar nueva utilidad y mascara de|NBWEB-648]] API - Feat - Listas de precio csv -> Agregar nueva utilidad y mascara de Categoria
 
 ## Descripcion
 

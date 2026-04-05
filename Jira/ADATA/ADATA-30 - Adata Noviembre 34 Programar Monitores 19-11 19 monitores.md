@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-30"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-42]] 3. Adata Noviembre: Diseño Social Media  3/4 Monitores
-- **Subtarea:** [[ADATA-43]] Adata Noviembre: Copys  3/4 Monitores
-- **Subtarea:** [[ADATA-44]] Adata Noviembre: Programación 19-11   3/4 MONITORES
+- **Subtarea:** [[ADATA-42 - 3. Adata Noviembre Diseño Social Media 34 Monitores|ADATA-42]] 3. Adata Noviembre: Diseño Social Media  3/4 Monitores
+- **Subtarea:** [[ADATA-43 - Adata Noviembre Copys 34 Monitores|ADATA-43]] Adata Noviembre: Copys  3/4 Monitores
+- **Subtarea:** [[ADATA-44 - Adata Noviembre Programación 19-11 34 MONITORES|ADATA-44]] Adata Noviembre: Programación 19-11   3/4 MONITORES
 
 ## Descripcion
 

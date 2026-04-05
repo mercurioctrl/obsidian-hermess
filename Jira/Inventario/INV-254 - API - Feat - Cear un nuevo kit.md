@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-254"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **has action item:** [[INV-271]] APP - Feat - Pestaña “Kits”, listado y acción “Marcar como kit”
-- **has action item:** [[INV-292]] API - Refactor - Al marcar o crear un nuevo kit, se debe verificar que el item sea "nuevo" (no tenga aun costo promedio), ni tenga ventas (albclil)
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **has action item:** [[INV-271 - APP - Feat - Pestaña “Kits”, listado y acción “Marcar como kit”|INV-271]] APP - Feat - Pestaña “Kits”, listado y acción “Marcar como kit”
+- **has action item:** [[INV-292 - API - Refactor - Al marcar o crear un nuevo kit, se debe verificar que el item|INV-292]] API - Refactor - Al marcar o crear un nuevo kit, se debe verificar que el item sea "nuevo" (no tenga aun costo promedio), ni tenga ventas (albclil)
 
 ## Descripcion
 

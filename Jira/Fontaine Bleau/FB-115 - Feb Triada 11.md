@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-115"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-116]] Feb: Triada 11 - Bleau Echeverría
-- **Subtarea:** [[FB-117]] Feb: Triada 11 - Bleau Echeverría - Copys
-- **Subtarea:** [[FB-118]] 2.Feb: Triada 11 - Bleau Echeverría - Promagrar
-- **Subtarea:** [[FB-119]] Feb: Mandar por Whatsapp
-- **Subtarea:** [[FB-120]] Agregar en activaciones de Febrero 
+- **Subtarea:** [[FB-116 - Feb Triada 11 - Bleau Echeverría|FB-116]] Feb: Triada 11 - Bleau Echeverría
+- **Subtarea:** [[FB-117 - Feb Triada 11 - Bleau Echeverría - Copys|FB-117]] Feb: Triada 11 - Bleau Echeverría - Copys
+- **Subtarea:** [[FB-118 - 2.Feb Triada 11 - Bleau Echeverría - Promagrar|FB-118]] 2.Feb: Triada 11 - Bleau Echeverría - Promagrar
+- **Subtarea:** [[FB-119 - Feb Mandar por Whatsapp|FB-119]] Feb: Mandar por Whatsapp
+- **Subtarea:** [[FB-120 - Agregar en activaciones de Febrero|FB-120]] Agregar en activaciones de Febrero 
 
 ## Descripcion
 

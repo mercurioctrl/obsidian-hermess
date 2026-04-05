@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-311"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-401]] API - Refactor - Agregar parametro que determina si es ultimo ingreso
-- **Subtarea:** [[NBWEB-402]] APP - Agregar etiqueta ultimo ingreso
+- **Subtarea:** [[NBWEB-401 - API - Refactor - Agregar parametro que determina si es ultimo ingreso|NBWEB-401]] API - Refactor - Agregar parametro que determina si es ultimo ingreso
+- **Subtarea:** [[NBWEB-402 - APP - Agregar etiqueta ultimo ingreso|NBWEB-402]] APP - Agregar etiqueta ultimo ingreso
 
 ## Descripcion
 

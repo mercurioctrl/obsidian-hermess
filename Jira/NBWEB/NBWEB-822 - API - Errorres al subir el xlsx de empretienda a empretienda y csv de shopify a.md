@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-822"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **is caused by:** [[NBWEB-806]] API - Feat - Generar listado de precios para EMPRETIENDA
-- **blocks:** [[NBWEB-819]] developers documentacion - agregar pasos y video en la seccion de lista de precio por plataforma (tienda nube, empretienda....)
-- **blocks:** [[NBWEB-815]] API - Feat - Generar listado CSV Shopify
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **is caused by:** [[NBWEB-806 - API - Feat - Generar listado de precios para EMPRETIENDA|NBWEB-806]] API - Feat - Generar listado de precios para EMPRETIENDA
+- **blocks:** [[NBWEB-819 - developers documentacion - agregar pasos y video en la seccion de lista de|NBWEB-819]] developers documentacion - agregar pasos y video en la seccion de lista de precio por plataforma (tienda nube, empretienda....)
+- **blocks:** [[NBWEB-815 - API - Feat - Generar listado CSV Shopify|NBWEB-815]] API - Feat - Generar listado CSV Shopify
 
 ## Descripcion
 

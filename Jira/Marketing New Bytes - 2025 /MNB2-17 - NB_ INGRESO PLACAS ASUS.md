@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-17"
 
 ## Relaciones
 
-- **action item from:** [[DNYL-1156]] NB_ ASUS PROMOCION
+- **action item from:** [[DNYL-1156 - NB_ ASUS PROMOCION|DNYL-1156]] NB_ ASUS PROMOCION
 
 ## Descripcion
 

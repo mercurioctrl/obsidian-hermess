@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-123"
 
 ## Relaciones
 
-- **Padre:** [[EXP-119]] Feat - Acreditar un pedido parcial o totalmente
-- **is blocked by:** [[EXP-124]] API - Feat - Ver detalle para acreditar
+- **Padre:** [[EXP-119 - Feat - Acreditar un pedido parcial o totalmente|EXP-119]] Feat - Acreditar un pedido parcial o totalmente
+- **is blocked by:** [[EXP-124 - API - Feat - Ver detalle para acreditar|EXP-124]] API - Feat - Ver detalle para acreditar
 
 ## Descripcion
 

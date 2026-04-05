@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-317"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **relates to:** [[NBWEB-196]] API - Listar localidades
-- **blocks:** [[COB-316]] APP - Feat - Agregar proveedor
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **relates to:** [[NBWEB-196 - API - Listar localidades|NBWEB-196]] API - Listar localidades
+- **blocks:** [[COB-316 - APP - Feat - Agregar proveedor|COB-316]] APP - Feat - Agregar proveedor
 
 ## Descripcion
 

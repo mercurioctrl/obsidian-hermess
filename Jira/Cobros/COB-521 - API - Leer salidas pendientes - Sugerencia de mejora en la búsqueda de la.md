@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-521"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **relates to:** [[COB-512]] API - Feat - Leer salidas pendientes
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **relates to:** [[COB-512 - API - Feat - Leer salidas pendientes|COB-512]] API - Feat - Leer salidas pendientes
 
 ## Descripcion
 

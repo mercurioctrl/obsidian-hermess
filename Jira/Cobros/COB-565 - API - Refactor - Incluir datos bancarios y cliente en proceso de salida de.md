@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-565"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **has action item:** [[COB-564]] APP - Refactor - Agregar nuevos campos dentro del formulario de solicitud de salida de retiro (y precarga para generar la salida)
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **has action item:** [[COB-564 - APP - Refactor - Agregar nuevos campos dentro del formulario de solicitud de|COB-564]] APP - Refactor - Agregar nuevos campos dentro del formulario de solicitud de salida de retiro (y precarga para generar la salida)
 
 ## Descripcion
 

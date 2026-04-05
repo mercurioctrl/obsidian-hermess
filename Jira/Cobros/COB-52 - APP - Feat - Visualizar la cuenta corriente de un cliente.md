@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-52"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-405]] APP - Refactor - Agregar cuadro de saldo de cheque utilizado y pesificar parametros que son cheques
-- **is blocked by:** [[COB-6]] API - Feat -  Obtener saldos de un cliente
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-405 - APP - Refactor - Agregar cuadro de saldo de cheque utilizado y pesificar|COB-405]] APP - Refactor - Agregar cuadro de saldo de cheque utilizado y pesificar parametros que son cheques
+- **is blocked by:** [[COB-6 - API - Feat - Obtener saldos de un cliente|COB-6]] API - Feat -  Obtener saldos de un cliente
 
 ## Descripcion
 

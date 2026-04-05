@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-286"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **is cloned by:** [[INV-294]] APP - Review - Al menos uno de los filtros obligatorios antes de submitear - Leyenda no visible
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **is cloned by:** [[INV-294 - APP - Review - Al menos uno de los filtros obligatorios antes de submitear -|INV-294]] APP - Review - Al menos uno de los filtros obligatorios antes de submitear - Leyenda no visible
 
 ## Descripcion
 

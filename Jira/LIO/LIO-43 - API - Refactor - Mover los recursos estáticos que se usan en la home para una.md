@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-43"
 
 ## Relaciones
 
-- **Padre:** [[LIO-6]] Diseño de una interfaz intuitiva y navegacion
-- **blocks:** [[LIO-58]] APP - Refactor - Mover los recursos estáticos que se usan en la home para una carga mas rapida y evitar un servidor extra (static2)
+- **Padre:** [[LIO-6 - Diseño de una interfaz intuitiva y navegacion|LIO-6]] Diseño de una interfaz intuitiva y navegacion
+- **blocks:** [[LIO-58 - APP - Refactor - Mover los recursos estáticos que se usan en la home para una|LIO-58]] APP - Refactor - Mover los recursos estáticos que se usan en la home para una carga mas rapida y evitar un servidor extra (static2)
 
 ## Descripcion
 

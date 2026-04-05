@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-186"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-77]] Implementar Pagos
-- **blocks:** [[NBWEB-189]] API - Pagos - Guardar historial de cobros y sus estados confirmados o rechazados
+- **Padre:** [[NBWEB-77 - Implementar Pagos|NBWEB-77]] Implementar Pagos
+- **blocks:** [[NBWEB-189 - API - Pagos - Guardar historial de cobros y sus estados confirmados o rechazados|NBWEB-189]] API - Pagos - Guardar historial de cobros y sus estados confirmados o rechazados
 
 ## Descripcion
 

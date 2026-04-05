@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-370"
 
 ## Relaciones
 
-- **Padre:** [[COB-357]] Feat - Listar Despachados, pendientes a cobrar
-- **is blocked by:** [[COB-369]] API - Feat - Listado de cobros pendientes
+- **Padre:** [[COB-357 - Feat - Listar Despachados, pendientes a cobrar|COB-357]] Feat - Listar Despachados, pendientes a cobrar
+- **is blocked by:** [[COB-369 - API - Feat - Listado de cobros pendientes|COB-369]] API - Feat - Listado de cobros pendientes
 
 ## Descripcion
 

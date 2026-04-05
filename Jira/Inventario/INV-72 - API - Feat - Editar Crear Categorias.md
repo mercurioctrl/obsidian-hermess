@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-72"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **blocks:** [[INV-71]] APP - Feat - Pestaña de categorias
-- **is blocked by:** [[INV-76]] API - Editar / Crear Categorías - Stock guardado no coincidente 
-- **relates to:** [[INV-78]] API - Refactor - Editar / Crear Categorías - Ocultar categoría en el sitio web
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **blocks:** [[INV-71 - APP - Feat - Pestaña de categorias|INV-71]] APP - Feat - Pestaña de categorias
+- **is blocked by:** [[INV-76 - API - Editar Crear Categorías - Stock guardado no coincidente|INV-76]] API - Editar / Crear Categorías - Stock guardado no coincidente 
+- **relates to:** [[INV-78 - API - Refactor - Editar Crear Categorías - Ocultar categoría en el sitio web|INV-78]] API - Refactor - Editar / Crear Categorías - Ocultar categoría en el sitio web
 
 ## Descripcion
 

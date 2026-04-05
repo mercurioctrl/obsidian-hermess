@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-360"
 
 ## Relaciones
 
-- **Padre:** [[LIO-359]] Cancelaciones
-- **has action item:** [[LIO-361]] APP - Refactor - Conectar nuevo recurso de cacnelacion en las compras/ventas
+- **Padre:** [[LIO-359 - Cancelaciones|LIO-359]] Cancelaciones
+- **has action item:** [[LIO-361 - APP - Refactor - Conectar nuevo recurso de cacnelacion en las comprasventas|LIO-361]] APP - Refactor - Conectar nuevo recurso de cacnelacion en las compras/ventas
 
 ## Descripcion
 

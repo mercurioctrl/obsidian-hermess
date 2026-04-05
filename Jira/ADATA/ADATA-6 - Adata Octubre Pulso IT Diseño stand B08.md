@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-6"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-5]] Adata Octubre: Pulso IT
+- **Padre:** [[ADATA-5 - Adata Octubre Pulso IT|ADATA-5]] Adata Octubre: Pulso IT
 
 ## Descripcion
 

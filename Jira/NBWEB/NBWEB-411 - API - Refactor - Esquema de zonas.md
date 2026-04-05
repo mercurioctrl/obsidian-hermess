@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-411"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
 
 ## Descripcion
 

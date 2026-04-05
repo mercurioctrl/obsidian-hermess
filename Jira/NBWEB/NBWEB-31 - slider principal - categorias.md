@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-31"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-9]] APP - Home
-- **relates to:** [[NBWEB-752]] APP - Refactor - Categorías - Actualización de categoría
+- **Padre:** [[NBWEB-9 - APP - Home|NBWEB-9]] APP - Home
+- **relates to:** [[NBWEB-752 - APP - Refactor - Categorías - Actualización de categoría|NBWEB-752]] APP - Refactor - Categorías - Actualización de categoría
 
 ## Descripcion
 

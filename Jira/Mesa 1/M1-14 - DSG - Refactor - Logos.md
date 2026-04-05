@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/M1-14"
 
 ## Relaciones
 
-- **Padre:** [[M1-2]] ⬛ Refactor Site  Mesa 1_Rev1
-- **has action item:** [[M1-15]] DSG - Refactor - Slide Marcas 
+- **Padre:** [[M1-2 - ⬛ Refactor Site Mesa 1_Rev1|M1-2]] ⬛ Refactor Site  Mesa 1_Rev1
+- **has action item:** [[M1-15 - DSG - Refactor - Slide Marcas|M1-15]] DSG - Refactor - Slide Marcas 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-235"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-165]] Adata Feb: 3/4 Social Media_PSU FAMILY 25-02
+- **Padre:** [[ADATA-165 - Adata Feb 34 Social Media_PSU FAMILY 25-02|ADATA-165]] Adata Feb: 3/4 Social Media_PSU FAMILY 25-02
 
 ## Descripcion
 

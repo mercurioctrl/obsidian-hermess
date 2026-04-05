@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-143"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-141]] Refactor primera iteración
+- **Padre:** [[BLUWEB-141 - Refactor primera iteración|BLUWEB-141]] Refactor primera iteración
 
 ## Descripcion
 

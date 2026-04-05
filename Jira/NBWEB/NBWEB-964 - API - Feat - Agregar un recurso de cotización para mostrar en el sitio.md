@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-964"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-524]] CMS - Parametros varios
-- **has action item:** [[NBWEB-965]] APP - Feat - Mostrar / Ocultar en el sitio la cotizacion del momento segun corresponda
+- **Padre:** [[NBWEB-524 - CMS - Parametros varios|NBWEB-524]] CMS - Parametros varios
+- **has action item:** [[NBWEB-965 - APP - Feat - Mostrar Ocultar en el sitio la cotizacion del momento segun|NBWEB-965]] APP - Feat - Mostrar / Ocultar en el sitio la cotizacion del momento segun corresponda
 
 ## Descripcion
 

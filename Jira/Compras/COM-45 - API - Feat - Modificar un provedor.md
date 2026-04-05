@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-45"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **blocks:** [[COM-46]] APP - Feat - Modificar un proveedor
-- **relates to:** [[COM-277]] APP - Refactor - Alta/Edición de Proveedores -> Añadir selector de empresa
-- **is cloned by:** [[COM-278]] API - Refactor - Modificar un proveedor ->  Incorporar companyCode
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **blocks:** [[COM-46 - APP - Feat - Modificar un proveedor|COM-46]] APP - Feat - Modificar un proveedor
+- **relates to:** [[COM-277 - APP - Refactor - AltaEdición de Proveedores - Añadir selector de empresa|COM-277]] APP - Refactor - Alta/Edición de Proveedores -> Añadir selector de empresa
+- **is cloned by:** [[COM-278 - API - Refactor - Modificar un proveedor - Incorporar companyCode|COM-278]] API - Refactor - Modificar un proveedor ->  Incorporar companyCode
 
 ## Descripcion
 

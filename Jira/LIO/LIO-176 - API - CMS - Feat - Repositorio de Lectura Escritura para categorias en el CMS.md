@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-176"
 
 ## Relaciones
 
-- **Padre:** [[LIO-173]] Categorias
-- **has action item:** [[LIO-177]] APP - CMS - Feat - Sección categorías en el CMS
-- **has action item:** [[LIO-184]] API - CMS - Refactor - Sección categorías en el CMS -> Adición de categoría hija
+- **Padre:** [[LIO-173 - Categorias|LIO-173]] Categorias
+- **has action item:** [[LIO-177 - APP - CMS - Feat - Sección categorías en el CMS|LIO-177]] APP - CMS - Feat - Sección categorías en el CMS
+- **has action item:** [[LIO-184 - API - CMS - Refactor - Sección categorías en el CMS - Adición de categoría hija|LIO-184]] API - CMS - Refactor - Sección categorías en el CMS -> Adición de categoría hija
 
 ## Descripcion
 

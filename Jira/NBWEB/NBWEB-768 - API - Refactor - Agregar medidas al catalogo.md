@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-768"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **blocks:** [[NBWEB-769]] EXTESION - Refactor - Agregar medidas a la importación que se hace con woocomerce 
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **blocks:** [[NBWEB-769 - EXTESION - Refactor - Agregar medidas a la importación que se hace con|NBWEB-769]] EXTESION - Refactor - Agregar medidas a la importación que se hace con woocomerce 
 
 ## Descripcion
 

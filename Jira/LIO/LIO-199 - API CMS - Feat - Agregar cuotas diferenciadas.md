@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-199"
 
 ## Relaciones
 
-- **Padre:** [[LIO-198]] CMS
-- **blocks:** [[LIO-200]] APP CMS - Feat - Agregar cuotas diferenciadas
+- **Padre:** [[LIO-198 - CMS|LIO-198]] CMS
+- **blocks:** [[LIO-200 - APP CMS - Feat - Agregar cuotas diferenciadas|LIO-200]] APP CMS - Feat - Agregar cuotas diferenciadas
 
 ## Descripcion
 

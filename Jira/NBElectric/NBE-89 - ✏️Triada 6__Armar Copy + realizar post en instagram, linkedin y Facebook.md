@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-89"
 
 ## Relaciones
 
-- **Padre:** [[NBE-87]] Triada 6_Social Media Hunnox Teclas negras
+- **Padre:** [[NBE-87 - Triada 6_Social Media Hunnox Teclas negras|NBE-87]] Triada 6_Social Media Hunnox Teclas negras
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-105"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-101]] Mostrar Kits
-- **has action item:** [[LOCAPP-106]] APP - Refactor - Modificar remito fiscal para mostrar el kit como se hace en las facturas
+- **Padre:** [[LOCAPP-101 - Mostrar Kits|LOCAPP-101]] Mostrar Kits
+- **has action item:** [[LOCAPP-106 - APP - Refactor - Modificar remito fiscal para mostrar el kit como se hace en|LOCAPP-106]] APP - Refactor - Modificar remito fiscal para mostrar el kit como se hace en las facturas
 
 ## Descripcion
 

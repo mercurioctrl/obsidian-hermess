@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-109"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **duplicates:** [[BLUWEB-106]] API - Refactor - Servicios - Blu.Marketing - Algunas mejoras
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **duplicates:** [[BLUWEB-106 - API - Refactor - Servicios - Blu.Marketing - Algunas mejoras|BLUWEB-106]] API - Refactor - Servicios - Blu.Marketing - Algunas mejoras
 
 ## Descripcion
 

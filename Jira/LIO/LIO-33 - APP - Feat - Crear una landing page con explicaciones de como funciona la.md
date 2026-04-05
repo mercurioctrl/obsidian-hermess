@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-33"
 
 ## Relaciones
 
-- **Padre:** [[LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
+- **Padre:** [[LIO-11 - Proceso de registro sencillo para los vendedoresCompradores|LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
 
 ## Descripcion
 

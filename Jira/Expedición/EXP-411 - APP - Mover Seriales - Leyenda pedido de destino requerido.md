@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-411"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **relates to:** [[EXP-304]] APP - Feat - Modal "Mover Seriales"
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **relates to:** [[EXP-304 - APP - Feat - Modal Mover Seriales|EXP-304]] APP - Feat - Modal "Mover Seriales"
 
 ## Descripcion
 

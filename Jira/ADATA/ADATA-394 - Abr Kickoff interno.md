@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-394"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-395]] Kick off Invitación 
+- **Subtarea:** [[ADATA-395 - Kick off Invitación|ADATA-395]] Kick off Invitación 
 
 ## Descripcion
 

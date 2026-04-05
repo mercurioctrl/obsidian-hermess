@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-329"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **Subtarea:** [[COB-330]] API - Refactor - Autoliquidar si el medio de pago es efectivo y retiro
-- **Subtarea:** [[COB-331]] API - Refactor - Modificar listado para que aparezcan aquellos pedidos no liquidados, para poder cobrarlos en efectivo
-- **Subtarea:** [[COB-332]] APP - Refactor - Modificar modal de cobro para poder cobrar los "sin liquidar" pero solo en efectivo y retiro.
-- **Subtarea:** [[COB-337]] API - Refactor - Tipo de cambio especifico para pedidos de libre opcion
-- **Subtarea:** [[COB-338]] API - Refactor - Olvide un cambio que hay que hacer en albclit al liquidar con exito
-- **Subtarea:** [[COB-345]] API - Refactor - Cotizacion para pedidos de libre opcion
-- **blocks:** [[SNB-554]] monto diferente de LO en NB
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **Subtarea:** [[COB-330 - API - Refactor - Autoliquidar si el medio de pago es efectivo y retiro|COB-330]] API - Refactor - Autoliquidar si el medio de pago es efectivo y retiro
+- **Subtarea:** [[COB-331 - API - Refactor - Modificar listado para que aparezcan aquellos pedidos no|COB-331]] API - Refactor - Modificar listado para que aparezcan aquellos pedidos no liquidados, para poder cobrarlos en efectivo
+- **Subtarea:** [[COB-332 - APP - Refactor - Modificar modal de cobro para poder cobrar los sin liquidar|COB-332]] APP - Refactor - Modificar modal de cobro para poder cobrar los "sin liquidar" pero solo en efectivo y retiro.
+- **Subtarea:** [[COB-337 - API - Refactor - Tipo de cambio especifico para pedidos de libre opcion|COB-337]] API - Refactor - Tipo de cambio especifico para pedidos de libre opcion
+- **Subtarea:** [[COB-338 - API - Refactor - Olvide un cambio que hay que hacer en albclit al liquidar con|COB-338]] API - Refactor - Olvide un cambio que hay que hacer en albclit al liquidar con exito
+- **Subtarea:** [[COB-345 - API - Refactor - Cotizacion para pedidos de libre opcion|COB-345]] API - Refactor - Cotizacion para pedidos de libre opcion
+- **blocks:** [[SNB-554 - monto diferente de LO en NB|SNB-554]] monto diferente de LO en NB
 
 ## Descripcion
 

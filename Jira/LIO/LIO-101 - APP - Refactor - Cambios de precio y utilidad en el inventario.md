@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-101"
 
 ## Relaciones
 
-- **Padre:** [[LIO-98]] Inventario resellers
-- **action item from:** [[LIO-100]] API - Refactor - Permitir hacer el cambio de utilidad lineal sin restringir a minUtility
-- **has action item:** [[LIO-536]] APP - Refactor - Cambiar la posibilidad de cambiar el precio de un item en el listado de inventario
+- **Padre:** [[LIO-98 - Inventario resellers|LIO-98]] Inventario resellers
+- **action item from:** [[LIO-100 - API - Refactor - Permitir hacer el cambio de utilidad lineal sin restringir a|LIO-100]] API - Refactor - Permitir hacer el cambio de utilidad lineal sin restringir a minUtility
+- **has action item:** [[LIO-536 - APP - Refactor - Cambiar la posibilidad de cambiar el precio de un item en el|LIO-536]] APP - Refactor - Cambiar la posibilidad de cambiar el precio de un item en el listado de inventario
 
 ## Descripcion
 

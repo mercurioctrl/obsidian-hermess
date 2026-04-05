@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-18"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **relates to:** [[NBWEB-87]] Maquetar y conectar Mi cuenta - Ordenes de compra
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **relates to:** [[NBWEB-87 - Maquetar y conectar Mi cuenta - Ordenes de compra|NBWEB-87]] Maquetar y conectar Mi cuenta - Ordenes de compra
 
 ## Descripcion
 

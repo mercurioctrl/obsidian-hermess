@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-191"
 
 ## Relaciones
 
-- **Padre:** [[INV-190]] Control de precios
+- **Padre:** [[INV-190 - Control de precios|INV-190]] Control de precios
 
 ## Descripcion
 

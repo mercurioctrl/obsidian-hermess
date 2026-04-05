@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-196"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-130]] API - Registro y alta de cliente
-- **relates to:** [[COB-317]] API - Feat- Repositorio Localidades
+- **Padre:** [[NBWEB-130 - API - Registro y alta de cliente|NBWEB-130]] API - Registro y alta de cliente
+- **relates to:** [[COB-317 - API - Feat- Repositorio Localidades|COB-317]] API - Feat- Repositorio Localidades
 
 ## Descripcion
 

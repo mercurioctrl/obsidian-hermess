@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-250"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **relates to:** [[NBWEB-256]] MS - Feat - Integrar transporte con precio por KM
-- **is blocked by:** [[NBWEB-261]] API - Feat -  Agregar un porcentaje mínimo de exclusión en la cotización 
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **relates to:** [[NBWEB-256 - MS - Feat - Integrar transporte con precio por KM|NBWEB-256]] MS - Feat - Integrar transporte con precio por KM
+- **is blocked by:** [[NBWEB-261 - API - Feat - Agregar un porcentaje mínimo de exclusión en la cotización|NBWEB-261]] API - Feat -  Agregar un porcentaje mínimo de exclusión en la cotización 
 
 ## Descripcion
 

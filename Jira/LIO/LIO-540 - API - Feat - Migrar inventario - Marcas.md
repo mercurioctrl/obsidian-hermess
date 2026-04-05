@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-540"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **has action item:** [[LIO-545]] APP - Refactor - Incorporar filtros ya migrados de categoría y marca
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **has action item:** [[LIO-545 - APP - Refactor - Incorporar filtros ya migrados de categoría y marca|LIO-545]] APP - Refactor - Incorporar filtros ya migrados de categoría y marca
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-708"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-699]] API - Refactor - Modificar el recurso que agrega items al carrito para que acepte enviar varios en una sola peticion
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-699 - API - Refactor - Modificar el recurso que agrega items al carrito para que|NBWEB-699]] API - Refactor - Modificar el recurso que agrega items al carrito para que acepte enviar varios en una sola peticion
 
 ## Descripcion
 

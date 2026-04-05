@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-695"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **is blocked by:** [[NBWEB-694]] API - Feat - Recurso de validación cruzada (cross-validation)
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **is blocked by:** [[NBWEB-694 - API - Feat - Recurso de validación cruzada (cross-validation)|NBWEB-694]] API - Feat - Recurso de validación cruzada (cross-validation)
 
 ## Descripcion
 

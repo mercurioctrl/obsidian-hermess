@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-701"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-636]] Documentacion publica
-- **is blocked by:** [[NBWEB-698]] API - Refactor - Agregar mediodeenvioId a la respuesta cuando reacmos una direccion de modo tal que pueda tomarse directamente
+- **Padre:** [[NBWEB-636 - Documentacion publica|NBWEB-636]] Documentacion publica
+- **is blocked by:** [[NBWEB-698 - API - Refactor - Agregar mediodeenvioId a la respuesta cuando reacmos una|NBWEB-698]] API - Refactor - Agregar mediodeenvioId a la respuesta cuando reacmos una direccion de modo tal que pueda tomarse directamente
 
 ## Descripcion
 

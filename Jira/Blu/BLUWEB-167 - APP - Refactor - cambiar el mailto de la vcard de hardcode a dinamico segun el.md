@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-167"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-140]] Etapa 1 - Mejoras primer iteracion
+- **Padre:** [[BLUWEB-140 - Etapa 1 - Mejoras primer iteracion|BLUWEB-140]] Etapa 1 - Mejoras primer iteracion
 
 ## Descripcion
 

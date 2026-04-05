@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-227"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-245]] POES: Portadas Métricas
+- **Subtarea:** [[ADATA-245 - POES Portadas Métricas|ADATA-245]] POES: Portadas Métricas
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-209"
 
 ## Relaciones
 
-- **Padre:** [[NBE-204]] NBE: Diciembre Triada 24 Hunnox-Jadever-Elibet
+- **Padre:** [[NBE-204 - NBE Diciembre Triada 24 Hunnox-Jadever-Elibet|NBE-204]] NBE: Diciembre Triada 24 Hunnox-Jadever-Elibet
 
 ## Descripcion
 

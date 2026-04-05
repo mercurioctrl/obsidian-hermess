@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-371"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-368]] Mejoras de la home
+- **Padre:** [[NBWEB-368 - Mejoras de la home|NBWEB-368]] Mejoras de la home
 
 ## Descripcion
 

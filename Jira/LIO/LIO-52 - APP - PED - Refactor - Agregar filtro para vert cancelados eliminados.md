@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-52"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **is blocked by:** [[LIO-51]] API - PED - Refactor - Agregar filtro para ver cancelados / eliminados
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **is blocked by:** [[LIO-51 - API - PED - Refactor - Agregar filtro para ver cancelados eliminados|LIO-51]] API - PED - Refactor - Agregar filtro para ver cancelados / eliminados
 
 ## Descripcion
 

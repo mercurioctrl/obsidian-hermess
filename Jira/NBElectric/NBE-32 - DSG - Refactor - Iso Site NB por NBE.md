@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-32"
 
 ## Relaciones
 
-- **Padre:** [[NBE-25]] Sitio Web_Etapa 2
-- **has action item:** [[NBE-36]] APP- Refactor - Iso Site NB por NBE
+- **Padre:** [[NBE-25 - Sitio Web_Etapa 2|NBE-25]] Sitio Web_Etapa 2
+- **has action item:** [[NBE-36 - APP- Refactor - Iso Site NB por NBE|NBE-36]] APP- Refactor - Iso Site NB por NBE
 
 ## Descripcion
 

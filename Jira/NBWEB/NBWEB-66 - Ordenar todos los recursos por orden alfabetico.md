@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-66"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-3]] Recursos de lista
+- **Padre:** [[NBWEB-3 - Recursos de lista|NBWEB-3]] Recursos de lista
 
 ## Descripcion
 

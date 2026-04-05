@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-935"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **action item from:** [[NBWEB-934]] API - Feat - Agregar subtitulo a los items
-- **has action item:** [[SNB-2642]] AGREGAR ITEM EN WEB POR PROMOCIÓN EN COMBO
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **action item from:** [[NBWEB-934 - API - Feat - Agregar subtitulo a los items|NBWEB-934]] API - Feat - Agregar subtitulo a los items
+- **has action item:** [[SNB-2642 - AGREGAR ITEM EN WEB POR PROMOCIÓN EN COMBO|SNB-2642]] AGREGAR ITEM EN WEB POR PROMOCIÓN EN COMBO
 
 ## Descripcion
 

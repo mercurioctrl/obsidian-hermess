@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-997"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-423]] Logistica Envios
-- **action item from:** [[NBWEB-995]] API - Refactor - agregar sugerencia de transportista por zona, según codigo postal cotizado
-- **has action item:** [[NBWEB-998]] APP - Refactor - Destacar mejor opción de envió
+- **Padre:** [[NBWEB-423 - Logistica Envios|NBWEB-423]] Logistica Envios
+- **action item from:** [[NBWEB-995 - API - Refactor - agregar sugerencia de transportista por zona, según codigo|NBWEB-995]] API - Refactor - agregar sugerencia de transportista por zona, según codigo postal cotizado
+- **has action item:** [[NBWEB-998 - APP - Refactor - Destacar mejor opción de envió|NBWEB-998]] APP - Refactor - Destacar mejor opción de envió
 
 ## Descripcion
 

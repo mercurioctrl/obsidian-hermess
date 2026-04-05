@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-8"
 
 ## Relaciones
 
-- **Padre:** [[COB-14]] Pases
-- **Subtarea:** [[COB-45]] API - Feat - Filtros
-- **Subtarea:** [[COB-46]] API - Feat - Paginado
-- **Subtarea:** [[COB-92]] API - Review - Peuqueño error en la consuta SQL
-- **Subtarea:** [[COB-116]] API - Refactor - dateDestiny,dateOrigin,aceptedDate
-- **Subtarea:** [[COB-153]] APP - Feat - Filtrar por pase abierto y cerrado
-- **Subtarea:** [[COB-168]] API - Refactor - Permisos para aceptar pases
-- **blocks:** [[COB-77]] APP - Feat - Listar pases
+- **Padre:** [[COB-14 - Pases|COB-14]] Pases
+- **Subtarea:** [[COB-45 - API - Feat - Filtros|COB-45]] API - Feat - Filtros
+- **Subtarea:** [[COB-46 - API - Feat - Paginado|COB-46]] API - Feat - Paginado
+- **Subtarea:** [[COB-92 - API - Review - Peuqueño error en la consuta SQL|COB-92]] API - Review - Peuqueño error en la consuta SQL
+- **Subtarea:** [[COB-116 - API - Refactor - dateDestiny,dateOrigin,aceptedDate|COB-116]] API - Refactor - dateDestiny,dateOrigin,aceptedDate
+- **Subtarea:** [[COB-153 - APP - Feat - Filtrar por pase abierto y cerrado|COB-153]] APP - Feat - Filtrar por pase abierto y cerrado
+- **Subtarea:** [[COB-168 - API - Refactor - Permisos para aceptar pases|COB-168]] API - Refactor - Permisos para aceptar pases
+- **blocks:** [[COB-77 - APP - Feat - Listar pases|COB-77]] APP - Feat - Listar pases
 
 ## Descripcion
 

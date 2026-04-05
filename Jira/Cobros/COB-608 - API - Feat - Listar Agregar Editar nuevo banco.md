@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-608"
 
 ## Relaciones
 
-- **Padre:** [[COB-9]] API - Feat - Listar bancos
-- **has action item:** [[COB-609]] APP - Feat - Listar  Agregar / Editar nuevo banco
+- **Padre:** [[COB-9 - API - Feat - Listar bancos|COB-9]] API - Feat - Listar bancos
+- **has action item:** [[COB-609 - APP - Feat - Listar Agregar Editar nuevo banco|COB-609]] APP - Feat - Listar  Agregar / Editar nuevo banco
 
 ## Descripcion
 

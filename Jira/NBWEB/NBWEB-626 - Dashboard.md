@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-626"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-625]] Suit de Aplicaciones
-- **Subtarea:** [[NBWEB-627]] APP - Review - Sugerencias 
+- **Padre:** [[NBWEB-625 - Suit de Aplicaciones|NBWEB-625]] Suit de Aplicaciones
+- **Subtarea:** [[NBWEB-627 - APP - Review - Sugerencias|NBWEB-627]] APP - Review - Sugerencias 
 
 ## Descripcion
 

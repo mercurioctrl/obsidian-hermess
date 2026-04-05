@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-385"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-383]] Feat - Alta de Admins multicliente
-- **action item from:** [[ADATA-384]] API - Feat - Agregar KeywordMatch para buscar dentro del nombre de los clientes
+- **Padre:** [[ADATA-383 - Feat - Alta de Admins multicliente|ADATA-383]] Feat - Alta de Admins multicliente
+- **action item from:** [[ADATA-384 - API - Feat - Agregar KeywordMatch para buscar dentro del nombre de los clientes|ADATA-384]] API - Feat - Agregar KeywordMatch para buscar dentro del nombre de los clientes
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-103"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-161]] Blu: Triada 1 Copys 
-- **has action item:** [[BLUWEB-161]] Blu: Triada 1 Copys 
+- **Subtarea:** [[BLUWEB-161 - Blu Triada 1 Copys|BLUWEB-161]] Blu: Triada 1 Copys 
+- **has action item:** [[BLUWEB-161 - Blu Triada 1 Copys|BLUWEB-161]] Blu: Triada 1 Copys 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-107"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **relates to:** [[COM-80]] API - Feat - Agregar/Editar un producto a una orden de compra abierta
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **relates to:** [[COM-80 - API - Feat - AgregarEditar un producto a una orden de compra abierta|COM-80]] API - Feat - Agregar/Editar un producto a una orden de compra abierta
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-63"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[INV-64]] APP - Feat - Agregar checkbox stock
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[INV-64 - APP - Feat - Agregar checkbox stock|INV-64]] APP - Feat - Agregar checkbox stock
 
 ## Descripcion
 

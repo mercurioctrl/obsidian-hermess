@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-602"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **has action item:** [[COB-603]] APP - Refactor - Al descargar el archivo con los balances, se deben incorporar los mismos parámetros de filtrado que el repositorio en si
-- **is cloned by:** [[COB-604]] API - Review - Se debe hacer la descarga del reporte de balances sensible a los mismos filtros que se aplica al repositorio - Error de clase no encontrada
-- **is cloned by:** [[COB-605]] API - Review - Se debe hacer la descarga del reporte de balances sensible a los mismos filtros que se aplica al repositorio -> Deuda cheque no coincidente
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **has action item:** [[COB-603 - APP - Refactor - Al descargar el archivo con los balances, se deben incorporar|COB-603]] APP - Refactor - Al descargar el archivo con los balances, se deben incorporar los mismos parámetros de filtrado que el repositorio en si
+- **is cloned by:** [[COB-604 - API - Review - Se debe hacer la descarga del reporte de balances sensible a los|COB-604]] API - Review - Se debe hacer la descarga del reporte de balances sensible a los mismos filtros que se aplica al repositorio - Error de clase no encontrada
+- **is cloned by:** [[COB-605 - API - Review - Se debe hacer la descarga del reporte de balances sensible a los|COB-605]] API - Review - Se debe hacer la descarga del reporte de balances sensible a los mismos filtros que se aplica al repositorio -> Deuda cheque no coincidente
 
 ## Descripcion
 

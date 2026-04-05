@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-142"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **has action item:** [[NBE-237]] APP - Refactor - Conectar Banners al recurso y segmento de banners 3
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **has action item:** [[NBE-237 - APP - Refactor - Conectar Banners al recurso y segmento de banners 3|NBE-237]] APP - Refactor - Conectar Banners al recurso y segmento de banners 3
 
 ## Descripcion
 

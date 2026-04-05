@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-97"
 
 ## Relaciones
 
-- **Padre:** [[COB-78]] APP - Feat - Listar saldos de caja
-- **is blocked by:** [[COB-28]] API - Feat - Listar saldos de caja
+- **Padre:** [[COB-78 - APP - Feat - Listar saldos de caja|COB-78]] APP - Feat - Listar saldos de caja
+- **is blocked by:** [[COB-28 - API - Feat - Listar saldos de caja|COB-28]] API - Feat - Listar saldos de caja
 
 ## Descripcion
 

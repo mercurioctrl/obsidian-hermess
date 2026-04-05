@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-460"
 
 ## Relaciones
 
-- **Padre:** [[LIO-419]] Mejoras de pagos
+- **Padre:** [[LIO-419 - Mejoras de pagos|LIO-419]] Mejoras de pagos
 
 ## Descripcion
 

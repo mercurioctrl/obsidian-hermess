@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-158"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **Subtarea:** [[NBWEB-562]] Al ocultar una categoría ocultar productos vinculados
-- **Subtarea:** [[NBWEB-564]] Añadir stock activo por categoría
-- **relates to:** [[NBWEB-156]] APP - CMS - Categorias
-- **blocks:** [[NBWEB-440]] Problema al guardar los limites en las categorias del CMS
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **Subtarea:** [[NBWEB-562 - Al ocultar una categoría ocultar productos vinculados|NBWEB-562]] Al ocultar una categoría ocultar productos vinculados
+- **Subtarea:** [[NBWEB-564 - Añadir stock activo por categoría|NBWEB-564]] Añadir stock activo por categoría
+- **relates to:** [[NBWEB-156 - APP - CMS - Categorias|NBWEB-156]] APP - CMS - Categorias
+- **blocks:** [[NBWEB-440 - Problema al guardar los limites en las categorias del CMS|NBWEB-440]] Problema al guardar los limites en las categorias del CMS
 
 ## Descripcion
 

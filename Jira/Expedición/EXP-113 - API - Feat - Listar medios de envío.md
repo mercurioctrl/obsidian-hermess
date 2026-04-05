@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-113"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **blocks:** [[EXP-86]] API - Feat - Filtros listar pedidos envios
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **blocks:** [[EXP-86 - API - Feat - Filtros listar pedidos envios|EXP-86]] API - Feat - Filtros listar pedidos envios
 
 ## Descripcion
 

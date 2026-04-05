@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-173"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-174]] API - Refactor - Nuevo parámetros y filtros para el repositorio categorías
-- **Subtarea:** [[LIO-175]] APP- Refactor - Nuevo parámetros y filtros para el repositorio categorías
-- **Subtarea:** [[LIO-176]] API - CMS - Feat - Repositorio de Lectura / Escritura para categorias en el CMS
-- **Subtarea:** [[LIO-177]] APP - CMS - Feat - Sección categorías en el CMS
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-174 - API - Refactor - Nuevo parámetros y filtros para el repositorio categorías|LIO-174]] API - Refactor - Nuevo parámetros y filtros para el repositorio categorías
+- **Subtarea:** [[LIO-175 - APP- Refactor - Nuevo parámetros y filtros para el repositorio categorías|LIO-175]] APP- Refactor - Nuevo parámetros y filtros para el repositorio categorías
+- **Subtarea:** [[LIO-176 - API - CMS - Feat - Repositorio de Lectura Escritura para categorias en el CMS|LIO-176]] API - CMS - Feat - Repositorio de Lectura / Escritura para categorias en el CMS
+- **Subtarea:** [[LIO-177 - APP - CMS - Feat - Sección categorías en el CMS|LIO-177]] APP - CMS - Feat - Sección categorías en el CMS
 
 ## Descripcion
 

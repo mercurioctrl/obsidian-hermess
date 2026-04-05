@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-124"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-123]] Adata Diciembre:  4/4 Social Media_Invader X Mini
+- **Padre:** [[ADATA-123 - Adata Diciembre 44 Social Media_Invader X Mini|ADATA-123]] Adata Diciembre:  4/4 Social Media_Invader X Mini
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-180"
 
 ## Relaciones
 
-- **Padre:** [[NBE-151]] NBE:Triada 20_APP
-- **action item from:** [[NBE-171]] NBE:Triada 20 Copys 
-- **action item from:** [[NBE-151]] NBE:Triada 20_APP
+- **Padre:** [[NBE-151 - NBETriada 20_APP|NBE-151]] NBE:Triada 20_APP
+- **action item from:** [[NBE-171 - NBETriada 20 Copys|NBE-171]] NBE:Triada 20 Copys 
+- **action item from:** [[NBE-151 - NBETriada 20_APP|NBE-151]] NBE:Triada 20_APP
 
 ## Descripcion
 

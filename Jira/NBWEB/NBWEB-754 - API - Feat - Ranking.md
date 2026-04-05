@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-754"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **blocks:** [[NBWEB-755]] APP - Feat - Ranking 
-- **blocks:** [[MKT-183]] NB_ Incentivo Resellers 25 años
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **blocks:** [[NBWEB-755 - APP - Feat - Ranking|NBWEB-755]] APP - Feat - Ranking 
+- **blocks:** [[MKT-183 - NB_ Incentivo Resellers 25 años|MKT-183]] NB_ Incentivo Resellers 25 años
 
 ## Descripcion
 

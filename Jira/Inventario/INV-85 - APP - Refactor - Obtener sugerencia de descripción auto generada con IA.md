@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-85"
 
 ## Relaciones
 
-- **Padre:** [[INV-80]] Descripciones
-- **is blocked by:** [[INV-84]] API - Refactor - Incorporar codigo para autogenerar descripciones con IA
+- **Padre:** [[INV-80 - Descripciones|INV-80]] Descripciones
+- **is blocked by:** [[INV-84 - API - Refactor - Incorporar codigo para autogenerar descripciones con IA|INV-84]] API - Refactor - Incorporar codigo para autogenerar descripciones con IA
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-248"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **relates to:** [[COM-201]] APP - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **relates to:** [[COM-201 - APP - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo|COM-201]] APP - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
 
 ## Descripcion
 

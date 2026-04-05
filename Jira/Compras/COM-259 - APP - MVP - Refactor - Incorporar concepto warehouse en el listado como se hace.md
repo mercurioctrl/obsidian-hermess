@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-259"
 
 ## Relaciones
 
-- **Padre:** [[COM-12]] Listar ingresos (despachos de compra)
-- **action item from:** [[COM-258]] API - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace en ordenes de compra incluyendo el filtrado del mismo
+- **Padre:** [[COM-12 - Listar ingresos (despachos de compra)|COM-12]] Listar ingresos (despachos de compra)
+- **action item from:** [[COM-258 - API - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace|COM-258]] API - MVP - Refactor - Incorporar concepto warehouse en el listado como se hace en ordenes de compra incluyendo el filtrado del mismo
 
 ## Descripcion
 

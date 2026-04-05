@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-195"
 
 ## Relaciones
 
-- **Padre:** [[COB-136]] Cheques
-- **Subtarea:** [[COB-197]] API - Feat - Mover el cheque de una caja a otra caja
-- **Subtarea:** [[COB-198]] APP - Feat - Mover el cheque de una caja a otra caja
-- **Subtarea:** [[COB-280]] APP - Review - Falta payloadCheck cuando haces un pase de cheques en el objeto
-- **Subtarea:** [[COB-554]] API - Feat - Mover cheques simultáneamente de una caja a otra caja
+- **Padre:** [[COB-136 - Cheques|COB-136]] Cheques
+- **Subtarea:** [[COB-197 - API - Feat - Mover el cheque de una caja a otra caja|COB-197]] API - Feat - Mover el cheque de una caja a otra caja
+- **Subtarea:** [[COB-198 - APP - Feat - Mover el cheque de una caja a otra caja|COB-198]] APP - Feat - Mover el cheque de una caja a otra caja
+- **Subtarea:** [[COB-280 - APP - Review - Falta payloadCheck cuando haces un pase de cheques en el objeto|COB-280]] APP - Review - Falta payloadCheck cuando haces un pase de cheques en el objeto
+- **Subtarea:** [[COB-554 - API - Feat - Mover cheques simultáneamente de una caja a otra caja|COB-554]] API - Feat - Mover cheques simultáneamente de una caja a otra caja
 
 ## Descripcion
 

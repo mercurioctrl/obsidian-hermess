@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-37"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-3]] Recursos de lista
-- **relates to:** [[NBWEB-55]] Categorías / Marcas -  Barra Lateral
+- **Padre:** [[NBWEB-3 - Recursos de lista|NBWEB-3]] Recursos de lista
+- **relates to:** [[NBWEB-55 - Categorías Marcas - Barra Lateral|NBWEB-55]] Categorías / Marcas -  Barra Lateral
 
 ## Descripcion
 

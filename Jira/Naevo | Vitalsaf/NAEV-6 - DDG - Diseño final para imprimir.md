@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NAEV-6"
 
 ## Relaciones
 
-- **Padre:** [[NAEV-3]] Etiquetas
-- **Subtarea:** [[NAEV-7]] DDG - Diseño etiqueta modelo - LUTEINA
+- **Padre:** [[NAEV-3 - Etiquetas|NAEV-3]] Etiquetas
+- **Subtarea:** [[NAEV-7 - DDG - Diseño etiqueta modelo - LUTEINA|NAEV-7]] DDG - Diseño etiqueta modelo - LUTEINA
 
 ## Descripcion
 

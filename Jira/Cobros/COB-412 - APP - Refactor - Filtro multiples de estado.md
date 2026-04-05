@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-412"
 
 ## Relaciones
 
-- **Padre:** [[COB-183]] Feat - Listar cheques
-- **is blocked by:** [[COB-411]] API - Refactor - Recibir múltiples estados en el filtro statusId
+- **Padre:** [[COB-183 - Feat - Listar cheques|COB-183]] Feat - Listar cheques
+- **is blocked by:** [[COB-411 - API - Refactor - Recibir múltiples estados en el filtro statusId|COB-411]] API - Refactor - Recibir múltiples estados en el filtro statusId
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-725"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **is blocked by:** [[NBWEB-724]] API - Feat - Agregaremos como posibilidad enviar la provincia sola, y en lugar de placeId, enviaremos placeTxt
-- **blocks:** [[PED-701]] APP - Refactor - Nueva validación al descargar una orden para cuando tiene una dirección incompleta 
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **is blocked by:** [[NBWEB-724 - API - Feat - Agregaremos como posibilidad enviar la provincia sola, y en lugar|NBWEB-724]] API - Feat - Agregaremos como posibilidad enviar la provincia sola, y en lugar de placeId, enviaremos placeTxt
+- **blocks:** [[PED-701 - APP - Refactor - Nueva validación al descargar una orden para cuando tiene una|PED-701]] APP - Refactor - Nueva validación al descargar una orden para cuando tiene una dirección incompleta 
 
 ## Descripcion
 

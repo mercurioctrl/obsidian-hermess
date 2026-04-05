@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-256"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **has action item:** [[INV-272]] APP - Feat - Configurar y actualizar componentes dentro de un kit
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **has action item:** [[INV-272 - APP - Feat - Configurar y actualizar componentes dentro de un kit|INV-272]] APP - Feat - Configurar y actualizar componentes dentro de un kit
 
 ## Descripcion
 

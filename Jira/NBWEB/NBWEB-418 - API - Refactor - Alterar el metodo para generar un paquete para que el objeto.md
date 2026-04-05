@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-418"
 
 ## Relaciones
 
-- **causes:** [[NBWEB-357]] API - Feat - Agregar un recurso para consumir el ms-envios para generar un nuevo paquete
+- **causes:** [[NBWEB-357 - API - Feat - Agregar un recurso para consumir el ms-envios para generar un|NBWEB-357]] API - Feat - Agregar un recurso para consumir el ms-envios para generar un nuevo paquete
 
 ## Descripcion
 

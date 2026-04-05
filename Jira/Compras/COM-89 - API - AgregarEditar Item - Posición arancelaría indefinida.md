@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-89"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **blocks:** [[COM-87]] API - Refactor - Agregar/Editar un item no debe tener como campo obligatorio la posicion arancelaria
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **blocks:** [[COM-87 - API - Refactor - AgregarEditar un item no debe tener como campo obligatorio la|COM-87]] API - Refactor - Agregar/Editar un item no debe tener como campo obligatorio la posicion arancelaria
 
 ## Descripcion
 

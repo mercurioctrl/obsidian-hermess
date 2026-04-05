@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-230"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-231]] Blu Diciembre: Triada 11 Diseño Blu.BI
-- **Subtarea:** [[BLUWEB-232]] 2.blu.inc Diciembre: Triada 11 Copys Blu.BI 
-- **Subtarea:** [[BLUWEB-233]] 6.blu.inc Diciembre: Triada 11 Programar  Blu.BI  para la semana que viene el mejor dia
+- **Subtarea:** [[BLUWEB-231 - Blu Diciembre Triada 11 Diseño Blu.BI|BLUWEB-231]] Blu Diciembre: Triada 11 Diseño Blu.BI
+- **Subtarea:** [[BLUWEB-232 - 2.blu.inc Diciembre Triada 11 Copys Blu.BI|BLUWEB-232]] 2.blu.inc Diciembre: Triada 11 Copys Blu.BI 
+- **Subtarea:** [[BLUWEB-233 - 6.blu.inc Diciembre Triada 11 Programar Blu.BI para la semana que viene el|BLUWEB-233]] 6.blu.inc Diciembre: Triada 11 Programar  Blu.BI  para la semana que viene el mejor dia
 
 ## Descripcion
 

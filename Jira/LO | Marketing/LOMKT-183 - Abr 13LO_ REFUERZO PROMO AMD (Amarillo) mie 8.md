@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-183"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-188]] Mar 10: COPY REFUERZO PROMO AMD (Red)
+- **Subtarea:** [[LOMKT-188 - Mar 10 COPY REFUERZO PROMO AMD (Red)|LOMKT-188]] Mar 10: COPY REFUERZO PROMO AMD (Red)
 
 ## Descripcion
 

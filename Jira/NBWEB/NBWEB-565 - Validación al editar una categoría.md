@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-565"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-156]] APP - CMS - Categorias
+- **Padre:** [[NBWEB-156 - APP - CMS - Categorias|NBWEB-156]] APP - CMS - Categorias
 
 ## Descripcion
 

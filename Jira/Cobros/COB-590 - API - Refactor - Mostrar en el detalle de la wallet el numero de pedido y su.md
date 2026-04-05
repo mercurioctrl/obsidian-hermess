@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-590"
 
 ## Relaciones
 
-- **Padre:** [[COB-581]] Repositorio y Gestión de Billeteras Libre Opción
-- **has action item:** [[COB-591]] APP - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su enlace para rastrearlo en la aplicacion de pedidos
+- **Padre:** [[COB-581 - Repositorio y Gestión de Billeteras Libre Opción|COB-581]] Repositorio y Gestión de Billeteras Libre Opción
+- **has action item:** [[COB-591 - APP - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su|COB-591]] APP - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su enlace para rastrearlo en la aplicacion de pedidos
 
 ## Descripcion
 

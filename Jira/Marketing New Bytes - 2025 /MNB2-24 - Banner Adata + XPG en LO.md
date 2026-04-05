@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-24"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-21]]  NB_Imagen ingreso ADATA
+- **Padre:** [[MNB2-21 - NB_Imagen ingreso ADATA|MNB2-21]]  NB_Imagen ingreso ADATA
 
 ## Descripcion
 

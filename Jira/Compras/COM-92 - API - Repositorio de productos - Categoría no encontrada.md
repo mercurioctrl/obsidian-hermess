@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-92"
 
 ## Relaciones
 
-- **relates to:** [[COM-82]] API - Feat - Repositorio de productos
+- **relates to:** [[COM-82 - API - Feat - Repositorio de productos|COM-82]] API - Feat - Repositorio de productos
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-132"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **is blocked by:** [[COM-130]] API - Refactor - Agregar nuevo parametro al repositorio de impuestos
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **is blocked by:** [[COM-130 - API - Refactor - Agregar nuevo parametro al repositorio de impuestos|COM-130]] API - Refactor - Agregar nuevo parametro al repositorio de impuestos
 
 ## Descripcion
 

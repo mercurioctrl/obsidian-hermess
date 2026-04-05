@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-324"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-314]] LO_ DIA DE LA MADRE (UNA SEMANA ANTES)
+- **Padre:** [[DNYL-314 - LO_ DIA DE LA MADRE (UNA SEMANA ANTES)|DNYL-314]] LO_ DIA DE LA MADRE (UNA SEMANA ANTES)
 
 ## Descripcion
 

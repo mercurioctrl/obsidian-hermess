@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-16"
 
 ## Relaciones
 
-- **Subtarea:** [[LAW-17]] Acceso a lnstagram
-- **Subtarea:** [[LAW-18]] Acceso a Facebook
-- **Subtarea:** [[LAW-21]] DSG - Feature - Adjuntar ejemplos de manual de posteos en redes sociales para armar el de Raidmax
+- **Subtarea:** [[LAW-17 - Acceso a lnstagram|LAW-17]] Acceso a lnstagram
+- **Subtarea:** [[LAW-18 - Acceso a Facebook|LAW-18]] Acceso a Facebook
+- **Subtarea:** [[LAW-21 - DSG - Feature - Adjuntar ejemplos de manual de posteos en redes sociales para|LAW-21]] DSG - Feature - Adjuntar ejemplos de manual de posteos en redes sociales para armar el de Raidmax
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-75"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **blocks:** [[COM-88]] API - Feat - Patch para agregar posiciones arancelarias externas a las locales o en su defecto agregar la descripcion de las posiciones arancelarias a la orden
-- **is blocked by:** [[COM-91]] API - Feat - Listar categorías
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **blocks:** [[COM-88 - API - Feat - Patch para agregar posiciones arancelarias externas a las locales|COM-88]] API - Feat - Patch para agregar posiciones arancelarias externas a las locales o en su defecto agregar la descripcion de las posiciones arancelarias a la orden
+- **is blocked by:** [[COM-91 - API - Feat - Listar categorías|COM-91]] API - Feat - Listar categorías
 
 ## Descripcion
 

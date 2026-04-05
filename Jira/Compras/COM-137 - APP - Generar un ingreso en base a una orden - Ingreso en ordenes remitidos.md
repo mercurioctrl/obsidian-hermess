@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-137"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **blocks:** [[COM-129]] APP - Refactor - Generar un ingreso en base a una orden
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **blocks:** [[COM-129 - APP - Refactor - Generar un ingreso en base a una orden|COM-129]] APP - Refactor - Generar un ingreso en base a una orden
 
 ## Descripcion
 

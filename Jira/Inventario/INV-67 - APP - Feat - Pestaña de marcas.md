@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-67"
 
 ## Relaciones
 
-- **Padre:** [[INV-65]] Marcas
-- **is blocked by:** [[INV-66]] API - Feat - Repositorio de marcas
-- **is blocked by:** [[INV-68]] API - Feat - Editar / Crear marcas
-- **relates to:** [[INV-77]] APP - Pestaña de marcas - Nombre de parámetro no coincidente
+- **Padre:** [[INV-65 - Marcas|INV-65]] Marcas
+- **is blocked by:** [[INV-66 - API - Feat - Repositorio de marcas|INV-66]] API - Feat - Repositorio de marcas
+- **is blocked by:** [[INV-68 - API - Feat - Editar Crear marcas|INV-68]] API - Feat - Editar / Crear marcas
+- **relates to:** [[INV-77 - APP - Pestaña de marcas - Nombre de parámetro no coincidente|INV-77]] APP - Pestaña de marcas - Nombre de parámetro no coincidente
 
 ## Descripcion
 

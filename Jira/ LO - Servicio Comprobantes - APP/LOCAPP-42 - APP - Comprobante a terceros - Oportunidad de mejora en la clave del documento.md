@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-42"
 
 ## Relaciones
 
-- **relates to:** [[LOCAPP-41]] APP - Feat - Generar comprobante a nombre de terceros
+- **relates to:** [[LOCAPP-41 - APP - Feat - Generar comprobante a nombre de terceros|LOCAPP-41]] APP - Feat - Generar comprobante a nombre de terceros
 
 ## Descripcion
 

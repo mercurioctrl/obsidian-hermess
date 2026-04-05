@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-12"
 
 ## Relaciones
 
-- **Padre:** [[MKT-6]] LANDING LANZAMIENTO AMD
-- **blocks:** [[MKT-13]] Maquetar e implementar
+- **Padre:** [[MKT-6 - LANDING LANZAMIENTO AMD|MKT-6]] LANDING LANZAMIENTO AMD
+- **blocks:** [[MKT-13 - Maquetar e implementar|MKT-13]] Maquetar e implementar
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-11"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-9]] Grafico de velas / movimientos de precios
-- **is blocked by:** [[BULLY-10]] API - Feat - Obtener velas para un ticker determinado
+- **Padre:** [[BULLY-9 - Grafico de velas movimientos de precios|BULLY-9]] Grafico de velas / movimientos de precios
+- **is blocked by:** [[BULLY-10 - API - Feat - Obtener velas para un ticker determinado|BULLY-10]] API - Feat - Obtener velas para un ticker determinado
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-151"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-149]] Oportunidades de mejora
-- **relates to:** [[NBWEB-140]] APP - Conexión con el carrito
+- **Padre:** [[NBWEB-149 - Oportunidades de mejora|NBWEB-149]] Oportunidades de mejora
+- **relates to:** [[NBWEB-140 - APP - Conexión con el carrito|NBWEB-140]] APP - Conexión con el carrito
 
 ## Descripcion
 

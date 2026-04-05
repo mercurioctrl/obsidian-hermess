@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-182"
 
 ## Relaciones
 
-- **Padre:** [[NBE-47]] Nbelectric Mail
+- **Padre:** [[NBE-47 - Nbelectric Mail|NBE-47]] Nbelectric Mail
 
 ## Descripcion
 

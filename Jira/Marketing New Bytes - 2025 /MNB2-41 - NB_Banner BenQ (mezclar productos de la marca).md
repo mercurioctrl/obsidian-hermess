@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-41"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-39]] NB_BenQ
+- **Padre:** [[MNB2-39 - NB_BenQ|MNB2-39]] NB_BenQ
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-652"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **relates to:** [[NBWEB-656]] APP - Feat - Mis Categorías -> Eliminar "Mi categoría"
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **relates to:** [[NBWEB-656 - APP - Feat - Mis Categorías - Eliminar Mi categoría|NBWEB-656]] APP - Feat - Mis Categorías -> Eliminar "Mi categoría"
 
 ## Descripcion
 

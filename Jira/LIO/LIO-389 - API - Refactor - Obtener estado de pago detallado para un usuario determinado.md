@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-389"
 
 ## Relaciones
 
-- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
-- **action item from:** [[LIO-387]] API - Refactor - Obtener estado de pago detallado para cada intento
-- **action item from:** [[PED-1058]] API - Feat - Crear un recurso para obtener los intentos de pago de un usuario determinado
+- **Padre:** [[LIO-8 - Proceso pago sencillo y competitiva a nivel financiamiento|LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **action item from:** [[LIO-387 - API - Refactor - Obtener estado de pago detallado para cada intento|LIO-387]] API - Refactor - Obtener estado de pago detallado para cada intento
+- **action item from:** [[PED-1058 - API - Feat - Crear un recurso para obtener los intentos de pago de un usuario|PED-1058]] API - Feat - Crear un recurso para obtener los intentos de pago de un usuario determinado
 
 ## Descripcion
 

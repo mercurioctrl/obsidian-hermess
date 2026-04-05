@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-50"
 
 ## Relaciones
 
-- **Padre:** [[COB-43]] API - Feat - Listar comprobantes de pago
-- **blocks:** [[COB-51]] APP - Feat - Listar comprobantes de pago
+- **Padre:** [[COB-43 - API - Feat - Listar comprobantes de pago|COB-43]] API - Feat - Listar comprobantes de pago
+- **blocks:** [[COB-51 - APP - Feat - Listar comprobantes de pago|COB-51]] APP - Feat - Listar comprobantes de pago
 
 ## Descripcion
 

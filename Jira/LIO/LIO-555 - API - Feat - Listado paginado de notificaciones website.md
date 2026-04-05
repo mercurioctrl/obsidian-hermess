@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-555"
 
 ## Relaciones
 
-- **Padre:** [[LIO-550]] Migración de notificaciones LO Legacy → V4
+- **Padre:** [[LIO-550 - Migración de notificaciones LO Legacy → V4|LIO-550]] Migración de notificaciones LO Legacy → V4
 
 ## Descripcion
 

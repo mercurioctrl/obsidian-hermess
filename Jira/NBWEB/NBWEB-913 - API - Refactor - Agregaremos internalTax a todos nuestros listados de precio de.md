@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-913"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **is blocked by:** [[NBWEB-921]] API - Listado de precios - No es posible realizar la descarga en el ambiente de desarrollo
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **is blocked by:** [[NBWEB-921 - API - Listado de precios - No es posible realizar la descarga en el ambiente de|NBWEB-921]] API - Listado de precios - No es posible realizar la descarga en el ambiente de desarrollo
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-752"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-9]] APP - Home
-- **relates to:** [[NBWEB-31]] slider principal - categorias
+- **Padre:** [[NBWEB-9 - APP - Home|NBWEB-9]] APP - Home
+- **relates to:** [[NBWEB-31 - slider principal - categorias|NBWEB-31]] slider principal - categorias
 
 ## Descripcion
 

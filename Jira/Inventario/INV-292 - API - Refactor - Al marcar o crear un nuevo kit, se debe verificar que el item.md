@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-292"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **action item from:** [[INV-254]] API - Feat - Cear un nuevo kit
-- **is cloned by:** [[INV-307]] API - Review - Al marcar o crear un nuevo kit, se debe verificar que el item sea "nuevo" (no tenga aun costo promedio), ni tenga ventas (albclil) - QA observaciones
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **action item from:** [[INV-254 - API - Feat - Cear un nuevo kit|INV-254]] API - Feat - Cear un nuevo kit
+- **is cloned by:** [[INV-307 - API - Review - Al marcar o crear un nuevo kit, se debe verificar que el item|INV-307]] API - Review - Al marcar o crear un nuevo kit, se debe verificar que el item sea "nuevo" (no tenga aun costo promedio), ni tenga ventas (albclil) - QA observaciones
 
 ## Descripcion
 

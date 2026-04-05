@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-421"
 
 ## Relaciones
 
-- **causes:** [[SNB-206]] cliente NAZ ACOTTO(37392)
+- **causes:** [[SNB-206 - cliente NAZ ACOTTO(37392)|SNB-206]] cliente NAZ ACOTTO(37392)
 
 ## Descripcion
 

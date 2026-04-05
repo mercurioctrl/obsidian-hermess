@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-204"
 
 ## Relaciones
 
-- **Padre:** [[LIO-203]] Mi cuenta
-- **has action item:** [[LIO-205]] APP - Refactor - Actualizar informacion del usuario en mi cuenta
+- **Padre:** [[LIO-203 - Mi cuenta|LIO-203]] Mi cuenta
+- **has action item:** [[LIO-205 - APP - Refactor - Actualizar informacion del usuario en mi cuenta|LIO-205]] APP - Refactor - Actualizar informacion del usuario en mi cuenta
 
 ## Descripcion
 

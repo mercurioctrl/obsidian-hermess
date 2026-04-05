@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-180"
 
 ## Relaciones
 
-- **Padre:** [[EXP-137]] Feat - Volanta operativa
-- **is blocked by:** [[EXP-179]] API - Refactor - Agregar direccion de envio al objeto cliente dentro de la volanta
-- **blocks:** [[EXP-181]] APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la volanta
+- **Padre:** [[EXP-137 - Feat - Volanta operativa|EXP-137]] Feat - Volanta operativa
+- **is blocked by:** [[EXP-179 - API - Refactor - Agregar direccion de envio al objeto cliente dentro de la|EXP-179]] API - Refactor - Agregar direccion de envio al objeto cliente dentro de la volanta
+- **blocks:** [[EXP-181 - APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la|EXP-181]] APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la volanta
 
 ## Descripcion
 

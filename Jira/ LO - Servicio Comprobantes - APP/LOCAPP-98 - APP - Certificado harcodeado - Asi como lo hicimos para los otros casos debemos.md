@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-98"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-93]] Certificados
+- **Padre:** [[LOCAPP-93 - Certificados|LOCAPP-93]] Certificados
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-155"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **has action item:** [[COM-159]] APP - Refactor - Agregar filtro empresa global
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **has action item:** [[COM-159 - APP - Refactor - Agregar filtro empresa global|COM-159]] APP - Refactor - Agregar filtro empresa global
 
 ## Descripcion
 

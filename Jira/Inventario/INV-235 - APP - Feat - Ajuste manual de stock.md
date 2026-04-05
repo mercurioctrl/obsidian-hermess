@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-235"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-216]] API - MVP - Feat - Ajuste manual de stock (con permisos y registro)
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-216 - API - MVP - Feat - Ajuste manual de stock (con permisos y registro)|INV-216]] API - MVP - Feat - Ajuste manual de stock (con permisos y registro)
 
 ## Descripcion
 

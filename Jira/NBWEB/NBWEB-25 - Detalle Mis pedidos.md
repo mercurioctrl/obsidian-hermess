@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-25"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
 
 ## Descripcion
 

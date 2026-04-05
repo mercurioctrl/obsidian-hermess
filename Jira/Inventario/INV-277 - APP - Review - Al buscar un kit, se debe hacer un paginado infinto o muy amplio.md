@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-277"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **Subtarea:** [[INV-280]] API - Performance - Ajustar la busqueda de items cuando se pagina por 100 por ej para lograr la regla de los 2 seg
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **Subtarea:** [[INV-280 - API - Performance - Ajustar la busqueda de items cuando se pagina por 100 por|INV-280]] API - Performance - Ajustar la busqueda de items cuando se pagina por 100 por ej para lograr la regla de los 2 seg
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/M1-25"
 
 ## Relaciones
 
-- **Subtarea:** [[M1-26]] M1: DSG-Refactor-Logo de Mesa 1  y Sublogo M1
-- **Subtarea:** [[M1-27]] M1: DSG-Refactor-Manual de Marca y Redes
-- **Subtarea:** [[M1-28]] M1: DSG- Feature- Sacar a los Banners chicos las frases
-- **Subtarea:** [[M1-29]] M1: DSG - Refactor - Favicon
+- **Subtarea:** [[M1-26 - M1 DSG-Refactor-Logo de Mesa 1 y Sublogo M1|M1-26]] M1: DSG-Refactor-Logo de Mesa 1  y Sublogo M1
+- **Subtarea:** [[M1-27 - M1 DSG-Refactor-Manual de Marca y Redes|M1-27]] M1: DSG-Refactor-Manual de Marca y Redes
+- **Subtarea:** [[M1-28 - M1 DSG- Feature- Sacar a los Banners chicos las frases|M1-28]] M1: DSG- Feature- Sacar a los Banners chicos las frases
+- **Subtarea:** [[M1-29 - M1 DSG - Refactor - Favicon|M1-29]] M1: DSG - Refactor - Favicon
 
 ## Descripcion
 

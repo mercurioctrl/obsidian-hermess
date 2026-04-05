@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-648"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **is blocked by:** [[NBWEB-657]] API - Listas de precio csv -> Agregar nueva utilidad y mascara de categoría - Filtrar categorías por usuario
-- **relates to:** [[NBWEB-996]] API - Refactor - Listas de precio csv -> Agregar mascara de Marca
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **is blocked by:** [[NBWEB-657 - API - Listas de precio csv - Agregar nueva utilidad y mascara de categoría -|NBWEB-657]] API - Listas de precio csv -> Agregar nueva utilidad y mascara de categoría - Filtrar categorías por usuario
+- **relates to:** [[NBWEB-996 - API - Refactor - Listas de precio csv - Agregar mascara de Marca|NBWEB-996]] API - Refactor - Listas de precio csv -> Agregar mascara de Marca
 
 ## Descripcion
 

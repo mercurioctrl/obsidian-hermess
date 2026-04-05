@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-203"
 
 ## Relaciones
 
-- **Padre:** [[EXP-202]] Feat - Pestaña comprobantes
-- **blocks:** [[EXP-204]] APP - Feat - Pestaña comproabantes
+- **Padre:** [[EXP-202 - Feat - Pestaña comprobantes|EXP-202]] Feat - Pestaña comprobantes
+- **blocks:** [[EXP-204 - APP - Feat - Pestaña comproabantes|EXP-204]] APP - Feat - Pestaña comproabantes
 
 ## Descripcion
 

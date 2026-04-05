@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-99"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-92]] Octubre Adata: Banner Custommers
+- **Padre:** [[ADATA-92 - Octubre Adata Banner Custommers|ADATA-92]] Octubre Adata: Banner Custommers
 
 ## Descripcion
 

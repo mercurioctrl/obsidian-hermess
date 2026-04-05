@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-175"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-193]] Mar: 2/4 Portada Diseño Social Media_SSD EVOLUTION
-- **Subtarea:** [[ADATA-194]] Mar: 2/4 Copys Social Media
-- **Subtarea:** [[ADATA-195]] Mar: 2/4 Programar Social Media
-- **Subtarea:** [[ADATA-252]] Buscar videos_SSD EVOLUTION
+- **Subtarea:** [[ADATA-193 - Mar 24 Portada Diseño Social Media_SSD EVOLUTION|ADATA-193]] Mar: 2/4 Portada Diseño Social Media_SSD EVOLUTION
+- **Subtarea:** [[ADATA-194 - Mar 24 Copys Social Media|ADATA-194]] Mar: 2/4 Copys Social Media
+- **Subtarea:** [[ADATA-195 - Mar 24 Programar Social Media|ADATA-195]] Mar: 2/4 Programar Social Media
+- **Subtarea:** [[ADATA-252 - Buscar videos_SSD EVOLUTION|ADATA-252]] Buscar videos_SSD EVOLUTION
 
 ## Descripcion
 

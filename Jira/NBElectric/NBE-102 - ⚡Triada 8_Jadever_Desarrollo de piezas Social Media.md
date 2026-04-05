@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-102"
 
 ## Relaciones
 
-- **Padre:** [[NBE-97]] Triada 8_Jadever_Social Media
+- **Padre:** [[NBE-97 - Triada 8_Jadever_Social Media|NBE-97]] Triada 8_Jadever_Social Media
 
 ## Descripcion
 

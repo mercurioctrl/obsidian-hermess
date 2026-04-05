@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-120"
 
 ## Relaciones
 
-- **Padre:** [[LIO-119]] Inventario
-- **has action item:** [[LIO-169]] APP - Refactor - Migrar el detalle de la ficha de Legacy a V4
+- **Padre:** [[LIO-119 - Inventario|LIO-119]] Inventario
+- **has action item:** [[LIO-169 - APP - Refactor - Migrar el detalle de la ficha de Legacy a V4|LIO-169]] APP - Refactor - Migrar el detalle de la ficha de Legacy a V4
 
 ## Descripcion
 

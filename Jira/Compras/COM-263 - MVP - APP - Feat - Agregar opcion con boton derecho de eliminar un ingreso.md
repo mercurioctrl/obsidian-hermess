@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-263"
 
 ## Relaciones
 
-- **Padre:** [[COM-11]] Pedidos de compra (Ingresos)
+- **Padre:** [[COM-11 - Pedidos de compra (Ingresos)|COM-11]] Pedidos de compra (Ingresos)
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-63"
 
 ## Relaciones
 
-- **Padre:** [[LIO-6]] Diseño de una interfaz intuitiva y navegacion
+- **Padre:** [[LIO-6 - Diseño de una interfaz intuitiva y navegacion|LIO-6]] Diseño de una interfaz intuitiva y navegacion
 
 ## Descripcion
 

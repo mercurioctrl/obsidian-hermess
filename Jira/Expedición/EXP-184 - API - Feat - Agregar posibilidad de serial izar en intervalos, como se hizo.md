@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-184"
 
 ## Relaciones
 
-- **Padre:** [[EXP-15]] Feat - Serializar salida
-- **blocks:** [[EXP-186]] APP - Feat - Serializar salida por intervalos
+- **Padre:** [[EXP-15 - Feat - Serializar salida|EXP-15]] Feat - Serializar salida
+- **blocks:** [[EXP-186 - APP - Feat - Serializar salida por intervalos|EXP-186]] APP - Feat - Serializar salida por intervalos
 
 ## Descripcion
 

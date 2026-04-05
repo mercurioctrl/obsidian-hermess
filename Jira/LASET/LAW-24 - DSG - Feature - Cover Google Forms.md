@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-24"
 
 ## Relaciones
 
-- **Padre:** [[LAW-8]] Social Media Laset
+- **Padre:** [[LAW-8 - Social Media Laset|LAW-8]] Social Media Laset
 
 ## Descripcion
 

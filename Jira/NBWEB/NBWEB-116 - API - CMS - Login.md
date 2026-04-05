@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-116"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **Subtarea:** [[NBWEB-577]] API/APP - Feat - Login / Relogin
-- **relates to:** [[NBWEB-117]] APP - CMS - Login
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **Subtarea:** [[NBWEB-577 - APIAPP - Feat - Login Relogin|NBWEB-577]] API/APP - Feat - Login / Relogin
+- **relates to:** [[NBWEB-117 - APP - CMS - Login|NBWEB-117]] APP - CMS - Login
 
 ## Descripcion
 

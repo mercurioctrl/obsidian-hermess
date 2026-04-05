@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-515"
 
 ## Relaciones
 
-- **Padre:** [[EXP-512]] Almacenes multiples
-- **action item from:** [[EXP-513]] API - MVP - Feat - Agregar información de depósito (stockWarehouseId, stockWarehouseDescription, stockWarehouseCode) al recurso /v1/orders/{branch}-{order}
+- **Padre:** [[EXP-512 - Almacenes multiples|EXP-512]] Almacenes multiples
+- **action item from:** [[EXP-513 - API - MVP - Feat - Agregar información de depósito (stockWarehouseId,|EXP-513]] API - MVP - Feat - Agregar información de depósito (stockWarehouseId, stockWarehouseDescription, stockWarehouseCode) al recurso /v1/orders/{branch}-{order}
 
 ## Descripcion
 

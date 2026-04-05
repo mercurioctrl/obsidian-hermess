@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-592"
 
 ## Relaciones
 
-- **Padre:** [[LIO-500]] Resúmenes de ganancia y liquidación
-- **action item from:** [[LIO-595]] API - Feat - Migrar resumen de liquidación por mes/año a v4
+- **Padre:** [[LIO-500 - Resúmenes de ganancia y liquidación|LIO-500]] Resúmenes de ganancia y liquidación
+- **action item from:** [[LIO-595 - API - Feat - Migrar resumen de liquidación por mesaño a v4|LIO-595]] API - Feat - Migrar resumen de liquidación por mes/año a v4
 
 ## Descripcion
 

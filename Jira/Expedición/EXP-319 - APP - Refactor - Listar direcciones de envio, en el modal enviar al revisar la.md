@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-319"
 
 ## Relaciones
 
-- **Padre:** [[EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
-- **is blocked by:** [[EXP-318]] API - Refactor - Listar direcciones de envio por cliente y por pedido especifico
+- **Padre:** [[EXP-218 - Etiquetas para envíos que no las generan (genericas de ahora en mas)|EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
+- **is blocked by:** [[EXP-318 - API - Refactor - Listar direcciones de envio por cliente y por pedido especifico|EXP-318]] API - Refactor - Listar direcciones de envio por cliente y por pedido especifico
 
 ## Descripcion
 

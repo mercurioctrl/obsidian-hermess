@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-58"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **relates to:** [[COM-47]] API - Feat - Ver detalle de un provoeedor
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **relates to:** [[COM-47 - API - Feat - Ver detalle de un provoeedor|COM-47]] API - Feat - Ver detalle de un provoeedor
 
 ## Descripcion
 

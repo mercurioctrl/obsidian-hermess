@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-143"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-144]] Formato LO FEED + STORY
-- **Subtarea:** [[DNYL-145]] Formato NB Feed + Story
+- **Subtarea:** [[DNYL-144 - Formato LO FEED + STORY|DNYL-144]] Formato LO FEED + STORY
+- **Subtarea:** [[DNYL-145 - Formato NB Feed + Story|DNYL-145]] Formato NB Feed + Story
 
 ## Descripcion
 

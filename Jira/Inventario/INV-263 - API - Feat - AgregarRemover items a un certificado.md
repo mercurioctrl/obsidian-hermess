@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-263"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
-- **has action item:** [[INV-264]] APP - Feat - Agregar/Remover items a un certificado
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
+- **has action item:** [[INV-264 - APP - Feat - AgregarRemover items a un certificado|INV-264]] APP - Feat - Agregar/Remover items a un certificado
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-240"
 
 ## Relaciones
 
-- **action item from:** [[PED-897]] API - Feat - Objetivo total por string agrupado por vendedor
-- **action item from:** [[PED-898]] APP - Feat - Objetivo por sting agrupado por vendedor
+- **action item from:** [[PED-897 - API - Feat - Objetivo total por string agrupado por vendedor|PED-897]] API - Feat - Objetivo total por string agrupado por vendedor
+- **action item from:** [[PED-898 - APP - Feat - Objetivo por sting agrupado por vendedor|PED-898]] APP - Feat - Objetivo por sting agrupado por vendedor
 
 ## Descripcion
 

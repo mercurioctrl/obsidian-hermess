@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-462"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-423]] Logistica Envios
-- **blocks:** [[NBWEB-464]] DB - Create - Agregar Tabla Nueva trackingNumber
+- **Padre:** [[NBWEB-423 - Logistica Envios|NBWEB-423]] Logistica Envios
+- **blocks:** [[NBWEB-464 - DB - Create - Agregar Tabla Nueva trackingNumber|NBWEB-464]] DB - Create - Agregar Tabla Nueva trackingNumber
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-858"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-507]] Refactor cotizacion de envios en el sitio
+- **Padre:** [[NBWEB-507 - Refactor cotizacion de envios en el sitio|NBWEB-507]] Refactor cotizacion de envios en el sitio
 
 ## Descripcion
 

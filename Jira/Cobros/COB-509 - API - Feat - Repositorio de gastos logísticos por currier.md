@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-509"
 
 ## Relaciones
 
-- **Padre:** [[COB-506]] Logistica
-- **blocks:** [[COB-510]] APP - Feat - Pestaña de gastos logisticos en dashboard
+- **Padre:** [[COB-506 - Logistica|COB-506]] Logistica
+- **blocks:** [[COB-510 - APP - Feat - Pestaña de gastos logisticos en dashboard|COB-510]] APP - Feat - Pestaña de gastos logisticos en dashboard
 
 ## Descripcion
 

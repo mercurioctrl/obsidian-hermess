@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-80"
 
 ## Relaciones
 
-- **is caused by:** [[MKT-83]] Estética día del gamer
+- **is caused by:** [[MKT-83 - Estética día del gamer|MKT-83]] Estética día del gamer
 
 ## Descripcion
 

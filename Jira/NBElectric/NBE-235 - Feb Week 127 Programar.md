@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-235"
 
 ## Relaciones
 
-- **Padre:** [[NBE-232]] Feb: week 2 Triada 27
+- **Padre:** [[NBE-232 - Feb week 2 Triada 27|NBE-232]] Feb: week 2 Triada 27
 
 ## Descripcion
 

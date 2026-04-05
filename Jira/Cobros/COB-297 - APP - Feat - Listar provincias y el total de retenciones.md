@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-297"
 
 ## Relaciones
 
-- **Padre:** [[COB-294]] Feat - Listar provincias (Mas subtotales de retenciones)
-- **is blocked by:** [[COB-296]] API - Feat - Listar provincias y el total de retenciones
+- **Padre:** [[COB-294 - Feat - Listar provincias (Mas subtotales de retenciones)|COB-294]] Feat - Listar provincias (Mas subtotales de retenciones)
+- **is blocked by:** [[COB-296 - API - Feat - Listar provincias y el total de retenciones|COB-296]] API - Feat - Listar provincias y el total de retenciones
 
 ## Descripcion
 

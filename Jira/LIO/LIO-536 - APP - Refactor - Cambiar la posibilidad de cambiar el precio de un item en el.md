@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-536"
 
 ## Relaciones
 
-- **Padre:** [[LIO-98]] Inventario resellers
-- **action item from:** [[LIO-101]] APP - Refactor - Cambios de precio y utilidad en el inventario
+- **Padre:** [[LIO-98 - Inventario resellers|LIO-98]] Inventario resellers
+- **action item from:** [[LIO-101 - APP - Refactor - Cambios de precio y utilidad en el inventario|LIO-101]] APP - Refactor - Cambios de precio y utilidad en el inventario
 
 ## Descripcion
 

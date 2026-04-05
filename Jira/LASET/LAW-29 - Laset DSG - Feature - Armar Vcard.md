@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-29"
 
 ## Relaciones
 
-- **Padre:** [[LAW-1]] Sitio Web Actual_Etapa 1
+- **Padre:** [[LAW-1 - Sitio Web Actual_Etapa 1|LAW-1]] Sitio Web Actual_Etapa 1
 
 ## Descripcion
 

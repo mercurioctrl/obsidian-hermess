@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-199"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-193]] Abr 17: Escritorio trust  amarillo vie 17 
+- **Padre:** [[LOMKT-193 - Abr 17 Escritorio trust amarillo vie 17|LOMKT-193]] Abr 17: Escritorio trust  amarillo vie 17 
 
 ## Descripcion
 

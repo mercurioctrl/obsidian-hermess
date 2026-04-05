@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-361"
 
 ## Relaciones
 
-- **blocks:** [[EXP-357]] APP - Feat - Generar factura
+- **blocks:** [[EXP-357 - APP - Feat - Generar factura|EXP-357]] APP - Feat - Generar factura
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-153"
 
 ## Relaciones
 
-- **Padre:** [[NBE-135]] Armar Newsleter
+- **Padre:** [[NBE-135 - Armar Newsleter|NBE-135]] Armar Newsleter
 
 ## Descripcion
 

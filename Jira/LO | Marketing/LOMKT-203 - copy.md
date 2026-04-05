@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-203"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-201]] Abr 14: Memoria Patriot verde sab 11
+- **Padre:** [[LOMKT-201 - Abr 14 Memoria Patriot verde sab 11|LOMKT-201]] Abr 14: Memoria Patriot verde sab 11
 
 ## Descripcion
 

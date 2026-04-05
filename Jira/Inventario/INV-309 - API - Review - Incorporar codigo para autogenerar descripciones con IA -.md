@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-309"
 
 ## Relaciones
 
-- **Padre:** [[INV-80]] Descripciones
-- **clones:** [[INV-84]] API - Refactor - Incorporar codigo para autogenerar descripciones con IA
+- **Padre:** [[INV-80 - Descripciones|INV-80]] Descripciones
+- **clones:** [[INV-84 - API - Refactor - Incorporar codigo para autogenerar descripciones con IA|INV-84]] API - Refactor - Incorporar codigo para autogenerar descripciones con IA
 
 ## Descripcion
 

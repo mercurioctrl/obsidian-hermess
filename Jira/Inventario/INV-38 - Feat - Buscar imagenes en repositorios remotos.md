@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-38"
 
 ## Relaciones
 
-- **Padre:** [[INV-35]] Importadores/ Scrappers
-- **Subtarea:** [[INV-39]] APP - Feat - Buscar imagenes
-- **Subtarea:** [[INV-40]] API - Refactor - Agregar a los repositorios de imagenes ML chile, ML colombia
-- **Subtarea:** [[INV-50]] API - Refactor - Agregar imagen a un producto y portada, tambien para libre opcion
+- **Padre:** [[INV-35 - Importadores Scrappers|INV-35]] Importadores/ Scrappers
+- **Subtarea:** [[INV-39 - APP - Feat - Buscar imagenes|INV-39]] APP - Feat - Buscar imagenes
+- **Subtarea:** [[INV-40 - API - Refactor - Agregar a los repositorios de imagenes ML chile, ML colombia|INV-40]] API - Refactor - Agregar a los repositorios de imagenes ML chile, ML colombia
+- **Subtarea:** [[INV-50 - API - Refactor - Agregar imagen a un producto y portada, tambien para libre|INV-50]] API - Refactor - Agregar imagen a un producto y portada, tambien para libre opcion
 
 ## Descripcion
 

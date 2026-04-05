@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-11"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-135]] API -  Traer medios de envio disponibles
-- **Subtarea:** [[NBWEB-136]] API -  Agregar envio
-- **Subtarea:** [[NBWEB-142]] API - Traer direcciones de envío
-- **Subtarea:** [[NBWEB-148]] API - Opciones medios envio
-- **relates to:** [[NBWEB-80]] Cotizador de carritos de compra
+- **Subtarea:** [[NBWEB-135 - API - Traer medios de envio disponibles|NBWEB-135]] API -  Traer medios de envio disponibles
+- **Subtarea:** [[NBWEB-136 - API - Agregar envio|NBWEB-136]] API -  Agregar envio
+- **Subtarea:** [[NBWEB-142 - API - Traer direcciones de envío|NBWEB-142]] API - Traer direcciones de envío
+- **Subtarea:** [[NBWEB-148 - API - Opciones medios envio|NBWEB-148]] API - Opciones medios envio
+- **relates to:** [[NBWEB-80 - Cotizador de carritos de compra|NBWEB-80]] Cotizador de carritos de compra
 
 ## Descripcion
 

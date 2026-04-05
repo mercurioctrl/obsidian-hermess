@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-257"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
-- **relates to:** [[NBWEB-206]] API - Leer mensajes de un meesageChannel
-- **blocks:** [[NBWEB-208]] APP - Feat - Maquetar y Conectar tickets
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
+- **relates to:** [[NBWEB-206 - API - Leer mensajes de un meesageChannel|NBWEB-206]] API - Leer mensajes de un meesageChannel
+- **blocks:** [[NBWEB-208 - APP - Feat - Maquetar y Conectar tickets|NBWEB-208]] APP - Feat - Maquetar y Conectar tickets
 
 ## Descripcion
 

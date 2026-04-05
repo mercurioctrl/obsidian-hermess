@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-527"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **action item from:** [[EXP-457]] API - Feat - Agregar un recurso para traer informacion completa y complementaria de lo referido al envio (para evaluar datos de cotizacion y posteriormente de armado)
-- **has action item:** [[EXP-528]] APP - Feat - Extender informacion del envio y como se confecciona el paquete
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **action item from:** [[EXP-457 - API - Feat - Agregar un recurso para traer informacion completa y|EXP-457]] API - Feat - Agregar un recurso para traer informacion completa y complementaria de lo referido al envio (para evaluar datos de cotizacion y posteriormente de armado)
+- **has action item:** [[EXP-528 - APP - Feat - Extender informacion del envio y como se confecciona el paquete|EXP-528]] APP - Feat - Extender informacion del envio y como se confecciona el paquete
 
 ## Descripcion
 

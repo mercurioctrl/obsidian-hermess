@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-128"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-126]] APP - Recuperar contraseña
-- **is blocked by:** [[NBWEB-125]] API - Cambiar password
+- **Padre:** [[NBWEB-126 - APP - Recuperar contraseña|NBWEB-126]] APP - Recuperar contraseña
+- **is blocked by:** [[NBWEB-125 - API - Cambiar password|NBWEB-125]] API - Cambiar password
 
 ## Descripcion
 

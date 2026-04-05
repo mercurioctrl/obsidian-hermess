@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-218"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-230]] Enero: Subir Banners 
+- **Subtarea:** [[NBE-230 - Enero Subir Banners|NBE-230]] Enero: Subir Banners 
 
 ## Descripcion
 

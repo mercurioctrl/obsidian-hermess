@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-647"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-648]] Diseño Invitacion evento 
-- **Subtarea:** [[DNYL-649]] Diseño banner 
-- **Subtarea:** [[DNYL-650]] Diseño Remeras
-- **Subtarea:** [[DNYL-651]] Diseño Banderas
-- **Subtarea:** [[DNYL-652]] Cotización Remeras
-- **Subtarea:** [[DNYL-653]] Cotización Banderas
+- **Subtarea:** [[DNYL-648 - Diseño Invitacion evento|DNYL-648]] Diseño Invitacion evento 
+- **Subtarea:** [[DNYL-649 - Diseño banner|DNYL-649]] Diseño banner 
+- **Subtarea:** [[DNYL-650 - Diseño Remeras|DNYL-650]] Diseño Remeras
+- **Subtarea:** [[DNYL-651 - Diseño Banderas|DNYL-651]] Diseño Banderas
+- **Subtarea:** [[DNYL-652 - Cotización Remeras|DNYL-652]] Cotización Remeras
+- **Subtarea:** [[DNYL-653 - Cotización Banderas|DNYL-653]] Cotización Banderas
 
 ## Descripcion
 

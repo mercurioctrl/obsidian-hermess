@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-179"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-239]] 5.Armar imagenes en proporción _Mandar por mail a Maty y Agus para que las cambien (chequear q. el drive esten habilitados para lectura)
-- **action item from:** [[NBE-81]] Sitio Web_Etapa 3
+- **Subtarea:** [[NBE-239 - 5.Armar imagenes en proporción _Mandar por mail a Maty y Agus para que las|NBE-239]] 5.Armar imagenes en proporción _Mandar por mail a Maty y Agus para que las cambien (chequear q. el drive esten habilitados para lectura)
+- **action item from:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
 
 ## Descripcion
 

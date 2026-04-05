@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-213"
 
 ## Relaciones
 
-- **Padre:** [[NBE-211]] Mejoras de usabilidad para captar clientes
-- **relates to:** [[NBE-212]] API - Refactor - Reducir campos olbigatorioso en registro dado un parametro para tal fin en las variables globales (.env)
+- **Padre:** [[NBE-211 - Mejoras de usabilidad para captar clientes|NBE-211]] Mejoras de usabilidad para captar clientes
+- **relates to:** [[NBE-212 - API - Refactor - Reducir campos olbigatorioso en registro dado un parametro|NBE-212]] API - Refactor - Reducir campos olbigatorioso en registro dado un parametro para tal fin en las variables globales (.env)
 
 ## Descripcion
 

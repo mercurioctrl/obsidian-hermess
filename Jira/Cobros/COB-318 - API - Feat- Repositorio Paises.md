@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-318"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **blocks:** [[COB-316]] APP - Feat - Agregar proveedor
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **blocks:** [[COB-316 - APP - Feat - Agregar proveedor|COB-316]] APP - Feat - Agregar proveedor
 
 ## Descripcion
 

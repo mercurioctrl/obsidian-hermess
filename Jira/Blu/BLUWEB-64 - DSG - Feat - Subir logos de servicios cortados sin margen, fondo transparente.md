@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-64"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **blocks:** [[BLUWEB-62]] APP - Refactor - Alinear mejor footer mobile
-- **has action item:** [[BLUWEB-59]] APP - Refactor - Cambiar cuadrados de servicios por una tira que se mueve a velocidad constante
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **blocks:** [[BLUWEB-62 - APP - Refactor - Alinear mejor footer mobile|BLUWEB-62]] APP - Refactor - Alinear mejor footer mobile
+- **has action item:** [[BLUWEB-59 - APP - Refactor - Cambiar cuadrados de servicios por una tira que se mueve a|BLUWEB-59]] APP - Refactor - Cambiar cuadrados de servicios por una tira que se mueve a velocidad constante
 
 ## Descripcion
 

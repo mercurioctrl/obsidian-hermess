@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-106"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **blocks:** [[NBWEB-92]] Conmutadores
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **blocks:** [[NBWEB-92 - Conmutadores|NBWEB-92]] Conmutadores
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-192"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-187]] Proveedores
+- **Padre:** [[BLUWEB-187 - Proveedores|BLUWEB-187]] Proveedores
 
 ## Descripcion
 

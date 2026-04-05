@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-676"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-675]] APP - Refactorizar los pasos de registro de cliente y agregar direccion, codigo postal y whatsapp
-- **relates to:** [[NBWEB-706]] API - Registro de usuario - Email invalido 
-- **relates to:** [[NBWEB-710]] API - Registrar usuario - Fecha no guardada
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-675 - APP - Refactorizar los pasos de registro de cliente y agregar direccion, codigo|NBWEB-675]] APP - Refactorizar los pasos de registro de cliente y agregar direccion, codigo postal y whatsapp
+- **relates to:** [[NBWEB-706 - API - Registro de usuario - Email invalido|NBWEB-706]] API - Registro de usuario - Email invalido 
+- **relates to:** [[NBWEB-710 - API - Registrar usuario - Fecha no guardada|NBWEB-710]] API - Registrar usuario - Fecha no guardada
 
 ## Descripcion
 

@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-530"
 
 ## Relaciones
 
-- **Padre:** [[LIO-526]] Verificar Vendedores
-- **action item from:** [[LIO-529]] API - Refactor - Agregar parámetros de verificación al objeto user
-- **action item from:** [[LIO-528]] API - Feat - Comprobar verificación de vendedor
-- **action item from:** [[LIO-527]] API - Feat - Guardar informacion de verificación de vendedores 
-- **has action item:** [[LIO-588]] APP Mobile - Feat - Pantalla de Verificación del Vendedor
+- **Padre:** [[LIO-526 - Verificar Vendedores|LIO-526]] Verificar Vendedores
+- **action item from:** [[LIO-529 - API - Refactor - Agregar parámetros de verificación al objeto user|LIO-529]] API - Refactor - Agregar parámetros de verificación al objeto user
+- **action item from:** [[LIO-528 - API - Feat - Comprobar verificación de vendedor|LIO-528]] API - Feat - Comprobar verificación de vendedor
+- **action item from:** [[LIO-527 - API - Feat - Guardar informacion de verificación de vendedores|LIO-527]] API - Feat - Guardar informacion de verificación de vendedores 
+- **has action item:** [[LIO-588 - APP Mobile - Feat - Pantalla de Verificación del Vendedor|LIO-588]] APP Mobile - Feat - Pantalla de Verificación del Vendedor
 
 ## Descripcion
 

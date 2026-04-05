@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-176"
 
 ## Relaciones
 
-- **Padre:** [[EXP-169]] Feat - Alertar pedidos
-- **blocks:** [[EXP-177]] APP - Feat - Alertar pedido
+- **Padre:** [[EXP-169 - Feat - Alertar pedidos|EXP-169]] Feat - Alertar pedidos
+- **blocks:** [[EXP-177 - APP - Feat - Alertar pedido|EXP-177]] APP - Feat - Alertar pedido
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-214"
 
 ## Relaciones
 
-- **Padre:** [[NBE-188]] 2.Nuevos Banners
-- **action item from:** [[NBE-188]] 2.Nuevos Banners
+- **Padre:** [[NBE-188 - 2.Nuevos Banners|NBE-188]] 2.Nuevos Banners
+- **action item from:** [[NBE-188 - 2.Nuevos Banners|NBE-188]] 2.Nuevos Banners
 
 ## Descripcion
 

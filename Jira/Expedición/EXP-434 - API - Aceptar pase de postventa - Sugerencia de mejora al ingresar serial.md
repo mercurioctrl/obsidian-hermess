@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-434"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[EXP-431]] API -  Aceptar pase de postventa - expedicion
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[EXP-431 - API - Aceptar pase de postventa - expedicion|EXP-431]] API -  Aceptar pase de postventa - expedicion
 
 ## Descripcion
 

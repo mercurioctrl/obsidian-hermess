@@ -29,26 +29,26 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-11"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **Subtarea:** [[EXP-42]] API - Feat - Ingresar nuevos seriales a un producto, dentro de un pedido
-- **Subtarea:** [[EXP-43]] APP - Feat - Ingresar nuevos seriales a un producto, dentro de un pedido
-- **Subtarea:** [[EXP-44]] API - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un pedido
-- **Subtarea:** [[EXP-45]] APP - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un pedido
-- **Subtarea:** [[EXP-47]] API - Feat - Ingresar nuevos seriales a un producto NO SERIALIZADO, dentro de un pedido
-- **Subtarea:** [[EXP-48]] APP - Feat - Ingresar nuevos seriales a un producto NO SERIALIZADO, dentro de un pedido
-- **Subtarea:** [[EXP-56]] API - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto, dentro de un pedido
-- **Subtarea:** [[EXP-57]] APP - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto, dentro de un pedido
-- **Subtarea:** [[EXP-65]] API - Feat - Eliminar un serial o intervalo de seriales
-- **Subtarea:** [[EXP-92]] API - Refactor - No dejar serializar un item que no tiene cargado al menos uno de los codigos unicos
-- **Subtarea:** [[EXP-209]] APP - Refactor - Agregar opcion para imprimir seriales dobles
-- **Subtarea:** [[EXP-388]] APP - Refactor - Evitar cierre y perdida de seriales
-- **Subtarea:** [[EXP-447]] API - Refactor - No dejar serializar un item que no tiene pesos,medidas y cantidad por bulto
-- **Subtarea:** [[EXP-448]] APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se serializan y no los tienen
-- **Subtarea:** [[EXP-449]] API - Refactor - Permitir editar pesos y medidas del item igual que ean/sku/gtin
-- **Subtarea:** [[EXP-466]] APP - Refactor - Leer seriales con divisor especial (por ej: masterbox AMD)
-- **Subtarea:** [[EXP-467]] APP - Refactor - Mejora de performance al abrir modal para ver los serials 
-- **Subtarea:** [[EXP-525]] API - Refactor - Agregar stockWarehouseId al ingreso de seriales 
-- **Subtarea:** [[EXP-526]] APP - Refactor - Agregar stockWarehouseId al ingreso de seriales 
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **Subtarea:** [[EXP-42 - API - Feat - Ingresar nuevos seriales a un producto, dentro de un pedido|EXP-42]] API - Feat - Ingresar nuevos seriales a un producto, dentro de un pedido
+- **Subtarea:** [[EXP-43 - APP - Feat - Ingresar nuevos seriales a un producto, dentro de un pedido|EXP-43]] APP - Feat - Ingresar nuevos seriales a un producto, dentro de un pedido
+- **Subtarea:** [[EXP-44 - API - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un|EXP-44]] API - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un pedido
+- **Subtarea:** [[EXP-45 - APP - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un|EXP-45]] APP - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un pedido
+- **Subtarea:** [[EXP-47 - API - Feat - Ingresar nuevos seriales a un producto NO SERIALIZADO, dentro de|EXP-47]] API - Feat - Ingresar nuevos seriales a un producto NO SERIALIZADO, dentro de un pedido
+- **Subtarea:** [[EXP-48 - APP - Feat - Ingresar nuevos seriales a un producto NO SERIALIZADO, dentro de|EXP-48]] APP - Feat - Ingresar nuevos seriales a un producto NO SERIALIZADO, dentro de un pedido
+- **Subtarea:** [[EXP-56 - API - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto,|EXP-56]] API - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto, dentro de un pedido
+- **Subtarea:** [[EXP-57 - APP - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto,|EXP-57]] APP - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto, dentro de un pedido
+- **Subtarea:** [[EXP-65 - API - Feat - Eliminar un serial o intervalo de seriales|EXP-65]] API - Feat - Eliminar un serial o intervalo de seriales
+- **Subtarea:** [[EXP-92 - API - Refactor - No dejar serializar un item que no tiene cargado al menos uno|EXP-92]] API - Refactor - No dejar serializar un item que no tiene cargado al menos uno de los codigos unicos
+- **Subtarea:** [[EXP-209 - APP - Refactor - Agregar opcion para imprimir seriales dobles|EXP-209]] APP - Refactor - Agregar opcion para imprimir seriales dobles
+- **Subtarea:** [[EXP-388 - APP - Refactor - Evitar cierre y perdida de seriales|EXP-388]] APP - Refactor - Evitar cierre y perdida de seriales
+- **Subtarea:** [[EXP-447 - API - Refactor - No dejar serializar un item que no tiene pesos,medidas y|EXP-447]] API - Refactor - No dejar serializar un item que no tiene pesos,medidas y cantidad por bulto
+- **Subtarea:** [[EXP-448 - APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se|EXP-448]] APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se serializan y no los tienen
+- **Subtarea:** [[EXP-449 - API - Refactor - Permitir editar pesos y medidas del item igual que eanskugtin|EXP-449]] API - Refactor - Permitir editar pesos y medidas del item igual que ean/sku/gtin
+- **Subtarea:** [[EXP-466 - APP - Refactor - Leer seriales con divisor especial (por ej masterbox AMD)|EXP-466]] APP - Refactor - Leer seriales con divisor especial (por ej: masterbox AMD)
+- **Subtarea:** [[EXP-467 - APP - Refactor - Mejora de performance al abrir modal para ver los serials|EXP-467]] APP - Refactor - Mejora de performance al abrir modal para ver los serials 
+- **Subtarea:** [[EXP-525 - API - Refactor - Agregar stockWarehouseId al ingreso de seriales|EXP-525]] API - Refactor - Agregar stockWarehouseId al ingreso de seriales 
+- **Subtarea:** [[EXP-526 - APP - Refactor - Agregar stockWarehouseId al ingreso de seriales|EXP-526]] APP - Refactor - Agregar stockWarehouseId al ingreso de seriales 
 
 ## Descripcion
 

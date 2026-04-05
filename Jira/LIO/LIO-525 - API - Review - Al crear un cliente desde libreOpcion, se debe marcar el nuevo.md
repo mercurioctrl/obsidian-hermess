@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-525"
 
 ## Relaciones
 
-- **Padre:** [[LIO-402]] Clientes
+- **Padre:** [[LIO-402 - Clientes|LIO-402]] Clientes
 
 ## Descripcion
 

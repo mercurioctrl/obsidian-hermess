@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-106"
 
 ## Relaciones
 
-- **Padre:** [[LIO-105]] Home
+- **Padre:** [[LIO-105 - Home|LIO-105]] Home
 
 ## Descripcion
 

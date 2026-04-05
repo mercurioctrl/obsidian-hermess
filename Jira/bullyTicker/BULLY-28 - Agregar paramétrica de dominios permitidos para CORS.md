@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-28"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-1]] Bases y repositorios
+- **Padre:** [[BULLY-1 - Bases y repositorios|BULLY-1]] Bases y repositorios
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-666"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-651]] API - Feat - Al procesar un carrito que tiene utilidad por categoría, la guardaremos para no perder el dato si esta cambia
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-651 - API - Feat - Al procesar un carrito que tiene utilidad por categoría, la|NBWEB-651]] API - Feat - Al procesar un carrito que tiene utilidad por categoría, la guardaremos para no perder el dato si esta cambia
 
 ## Descripcion
 

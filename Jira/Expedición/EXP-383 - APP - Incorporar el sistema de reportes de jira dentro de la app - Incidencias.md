@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-383"
 
 ## Relaciones
 
-- **blocks:** [[EXP-380]] APP - Feat - Incorporar el sistema de reportes de jira dentro de la app
+- **blocks:** [[EXP-380 - APP - Feat - Incorporar el sistema de reportes de jira dentro de la app|EXP-380]] APP - Feat - Incorporar el sistema de reportes de jira dentro de la app
 
 ## Descripcion
 

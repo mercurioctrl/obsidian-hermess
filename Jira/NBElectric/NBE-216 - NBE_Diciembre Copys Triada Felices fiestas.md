@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-216"
 
 ## Relaciones
 
-- **Padre:** [[NBE-205]] Diciembre: Triada 3 Flices Fiestas
+- **Padre:** [[NBE-205 - Diciembre Triada 3 Flices Fiestas|NBE-205]] Diciembre: Triada 3 Flices Fiestas
 
 ## Descripcion
 

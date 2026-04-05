@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-426"
 
 ## Relaciones
 
-- **Padre:** [[EXP-424]] Controles de stock al despachar
+- **Padre:** [[EXP-424 - Controles de stock al despachar|EXP-424]] Controles de stock al despachar
 
 ## Descripcion
 

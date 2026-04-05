@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-97"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-27]] Adata Octubre: 1/2 Edición de videos (reels, cortos, institucionales, etc.)
+- **Padre:** [[ADATA-27 - Adata Octubre 12 Edición de videos (reels, cortos, institucionales, etc.)|ADATA-27]] Adata Octubre: 1/2 Edición de videos (reels, cortos, institucionales, etc.)
 
 ## Descripcion
 

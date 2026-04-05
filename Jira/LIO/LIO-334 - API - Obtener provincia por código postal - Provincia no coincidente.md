@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-334"
 
 ## Relaciones
 
-- **relates to:** [[LIO-186]] API - Feat - implementar recurso para obtener provincia por codigo postal
+- **relates to:** [[LIO-186 - API - Feat - implementar recurso para obtener provincia por codigo postal|LIO-186]] API - Feat - implementar recurso para obtener provincia por codigo postal
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-251"
 
 ## Relaciones
 
-- **Padre:** [[EXP-249]] Feat - Vincular despacho / Editar despacho
-- **relates to:** [[EXP-414]] BD - Actualización - Eliminar nombres de despachos incorrectos
+- **Padre:** [[EXP-249 - Feat - Vincular despacho Editar despacho|EXP-249]] Feat - Vincular despacho / Editar despacho
+- **relates to:** [[EXP-414 - BD - Actualización - Eliminar nombres de despachos incorrectos|EXP-414]] BD - Actualización - Eliminar nombres de despachos incorrectos
 
 ## Descripcion
 

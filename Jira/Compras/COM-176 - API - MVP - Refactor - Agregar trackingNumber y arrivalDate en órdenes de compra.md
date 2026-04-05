@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-176"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **has action item:** [[COM-177]] APP - MVP - Refactor - Agregar campos trackingNumber y arrivalDate en el modal de orden de compra
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **has action item:** [[COM-177 - APP - MVP - Refactor - Agregar campos trackingNumber y arrivalDate en el modal|COM-177]] APP - MVP - Refactor - Agregar campos trackingNumber y arrivalDate en el modal de orden de compra
 
 ## Descripcion
 

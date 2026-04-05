@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-215"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-216]] Banner Home
-- **Subtarea:** [[DNYL-217]] Redes Sociales (Story para WPP)
-- **Subtarea:** [[DNYL-218]] Banner Newsletter (600 x 300 )
+- **Subtarea:** [[DNYL-216 - Banner Home|DNYL-216]] Banner Home
+- **Subtarea:** [[DNYL-217 - Redes Sociales (Story para WPP)|DNYL-217]] Redes Sociales (Story para WPP)
+- **Subtarea:** [[DNYL-218 - Banner Newsletter (600 x 300 )|DNYL-218]] Banner Newsletter (600 x 300 )
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-452"
 
 ## Relaciones
 
-- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
-- **has action item:** [[EXP-453]] APP - Refactor - Agregar logo de NBe cuando el companyCode es el de esa empresa
+- **Padre:** [[EXP-14 - Feat - Listar pedidos para retiro|EXP-14]] Feat - Listar pedidos para retiro
+- **has action item:** [[EXP-453 - APP - Refactor - Agregar logo de NBe cuando el companyCode es el de esa empresa|EXP-453]] APP - Refactor - Agregar logo de NBe cuando el companyCode es el de esa empresa
 
 ## Descripcion
 

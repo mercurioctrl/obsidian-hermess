@@ -29,18 +29,18 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-3"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-4]] Adata Octubre:  AGS Diseños de plotters
-- **Subtarea:** [[ADATA-78]] Adata Octubre AGS: Adaptación de videos solo los pintados en verde 
-- **Subtarea:** [[ADATA-79]] Adata Octubre AGS: Buscar videos de productos
-- **Subtarea:** [[ADATA-80]] Armar referencia en formato XPG
-- **Subtarea:** [[ADATA-81]] Adata Octubre: Subir Archivos imprimibles a Drive
-- **Subtarea:** [[ADATA-82]] 1.AGS: Videos Armar Carpetas con medidas las que estan en color verde
-- **Subtarea:** [[ADATA-83]] AGS Video 1
-- **Subtarea:** [[ADATA-84]] AGS: Video 2
-- **Subtarea:** [[ADATA-85]] AGS: Video 3
-- **Subtarea:** [[ADATA-86]] AGS: Video 4
-- **Subtarea:** [[ADATA-87]] AGS Video 5
-- **Subtarea:** [[ADATA-88]] AGS Video 6
+- **Subtarea:** [[ADATA-4 - Adata Octubre AGS Diseños de plotters|ADATA-4]] Adata Octubre:  AGS Diseños de plotters
+- **Subtarea:** [[ADATA-78 - Adata Octubre AGS Adaptación de videos solo los pintados en verde|ADATA-78]] Adata Octubre AGS: Adaptación de videos solo los pintados en verde 
+- **Subtarea:** [[ADATA-79 - Adata Octubre AGS Buscar videos de productos|ADATA-79]] Adata Octubre AGS: Buscar videos de productos
+- **Subtarea:** [[ADATA-80 - Armar referencia en formato XPG|ADATA-80]] Armar referencia en formato XPG
+- **Subtarea:** [[ADATA-81 - Adata Octubre Subir Archivos imprimibles a Drive|ADATA-81]] Adata Octubre: Subir Archivos imprimibles a Drive
+- **Subtarea:** [[ADATA-82 - 1.AGS Videos Armar Carpetas con medidas las que estan en color verde|ADATA-82]] 1.AGS: Videos Armar Carpetas con medidas las que estan en color verde
+- **Subtarea:** [[ADATA-83 - AGS Video 1|ADATA-83]] AGS Video 1
+- **Subtarea:** [[ADATA-84 - AGS Video 2|ADATA-84]] AGS: Video 2
+- **Subtarea:** [[ADATA-85 - AGS Video 3|ADATA-85]] AGS: Video 3
+- **Subtarea:** [[ADATA-86 - AGS Video 4|ADATA-86]] AGS: Video 4
+- **Subtarea:** [[ADATA-87 - AGS Video 5|ADATA-87]] AGS Video 5
+- **Subtarea:** [[ADATA-88 - AGS Video 6|ADATA-88]] AGS Video 6
 
 ## Descripcion
 

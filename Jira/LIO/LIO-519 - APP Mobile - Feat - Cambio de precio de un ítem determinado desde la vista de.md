@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-519"
 
 ## Relaciones
 
-- **Padre:** [[LIO-501]] Catálogo / Inventario de productos
+- **Padre:** [[LIO-501 - Catálogo Inventario de productos|LIO-501]] Catálogo / Inventario de productos
 
 ## Descripcion
 

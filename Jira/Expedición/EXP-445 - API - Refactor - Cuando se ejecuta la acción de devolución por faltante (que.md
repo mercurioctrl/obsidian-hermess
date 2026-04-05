@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-445"
 
 ## Relaciones
 
-- **Padre:** [[EXP-424]] Controles de stock al despachar
-- **relates to:** [[EXP-454]] API - Devolución por faltante - Oportunidad de mejora en la visualización del correo
+- **Padre:** [[EXP-424 - Controles de stock al despachar|EXP-424]] Controles de stock al despachar
+- **relates to:** [[EXP-454 - API - Devolución por faltante - Oportunidad de mejora en la visualización del|EXP-454]] API - Devolución por faltante - Oportunidad de mejora en la visualización del correo
 
 ## Descripcion
 

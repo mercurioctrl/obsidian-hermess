@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-501"
 
 ## Relaciones
 
-- **Padre:** [[LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
-- **Subtarea:** [[LIO-518]] APP Mobile - Refactor -  Listar el inventario según el nuevo recurso de inventario desde API 4, en lugar de legacy
-- **Subtarea:** [[LIO-519]] APP Mobile - Feat - Cambio de precio de un ítem determinado desde la vista de listado
-- **Subtarea:** [[LIO-590]] APP Mobile - Feat - Editar estado activo/inactivo de producto
-- **Subtarea:** [[LIO-591]] APP Mobile - Feat - Filtro de stock para Mi Cuenta -> Inventario
+- **Padre:** [[LIO-497 - App Mobile Vendedores – Gestión integral del seller en Libre Opción|LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
+- **Subtarea:** [[LIO-518 - APP Mobile - Refactor - Listar el inventario según el nuevo recurso de|LIO-518]] APP Mobile - Refactor -  Listar el inventario según el nuevo recurso de inventario desde API 4, en lugar de legacy
+- **Subtarea:** [[LIO-519 - APP Mobile - Feat - Cambio de precio de un ítem determinado desde la vista de|LIO-519]] APP Mobile - Feat - Cambio de precio de un ítem determinado desde la vista de listado
+- **Subtarea:** [[LIO-590 - APP Mobile - Feat - Editar estado activoinactivo de producto|LIO-590]] APP Mobile - Feat - Editar estado activo/inactivo de producto
+- **Subtarea:** [[LIO-591 - APP Mobile - Feat - Filtro de stock para Mi Cuenta - Inventario|LIO-591]] APP Mobile - Feat - Filtro de stock para Mi Cuenta -> Inventario
 
 ## Descripcion
 

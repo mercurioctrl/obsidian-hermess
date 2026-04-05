@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-577"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **is cloned by:** [[LIO-583]] APP/API - Review - Ficha de edición de producto -> Observaciones en el breadcrumb y cambio de utilidad
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **is cloned by:** [[LIO-583 - APPAPI - Review - Ficha de edición de producto - Observaciones en el breadcrumb|LIO-583]] APP/API - Review - Ficha de edición de producto -> Observaciones en el breadcrumb y cambio de utilidad
 
 ## Descripcion
 

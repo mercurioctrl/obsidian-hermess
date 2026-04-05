@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-244"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **blocks:** [[NBWEB-285]] APP - Feat - Mi cuenta - Listar direcciones
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **blocks:** [[NBWEB-285 - APP - Feat - Mi cuenta - Listar direcciones|NBWEB-285]] APP - Feat - Mi cuenta - Listar direcciones
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-297"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-296]] API  - Review - En el control del stock en el DELTA las notas de crédito suman, no restan
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-296 - API - Review - En el control del stock en el DELTA las notas de crédito suman,|INV-296]] API  - Review - En el control del stock en el DELTA las notas de crédito suman, no restan
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-205"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-216]] NBE_Diciembre: Copys Triada Felices fiestas
-- **Subtarea:** [[NBE-217]] NBE_Diciembre: Programar Triada Felices fiestas
+- **Subtarea:** [[NBE-216 - NBE_Diciembre Copys Triada Felices fiestas|NBE-216]] NBE_Diciembre: Copys Triada Felices fiestas
+- **Subtarea:** [[NBE-217 - NBE_Diciembre Programar Triada Felices fiestas|NBE-217]] NBE_Diciembre: Programar Triada Felices fiestas
 
 ## Descripcion
 

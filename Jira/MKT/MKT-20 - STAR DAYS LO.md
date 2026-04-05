@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-20"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-21]] BANNER LUMINOSO
+- **Subtarea:** [[MKT-21 - BANNER LUMINOSO|MKT-21]] BANNER LUMINOSO
 
 ## Descripcion
 

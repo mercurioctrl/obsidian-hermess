@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-490"
 
 ## Relaciones
 
-- **Padre:** [[LIO-484]] Home
+- **Padre:** [[LIO-484 - Home|LIO-484]] Home
 
 ## Descripcion
 

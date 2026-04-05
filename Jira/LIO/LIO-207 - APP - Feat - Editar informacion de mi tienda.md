@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-207"
 
 ## Relaciones
 
-- **Padre:** [[LIO-203]] Mi cuenta
-- **action item from:** [[LIO-206]] API - Feat - Leer y Editar objeto "mi tienda" o vendedores
+- **Padre:** [[LIO-203 - Mi cuenta|LIO-203]] Mi cuenta
+- **action item from:** [[LIO-206 - API - Feat - Leer y Editar objeto mi tienda o vendedores|LIO-206]] API - Feat - Leer y Editar objeto "mi tienda" o vendedores
 
 ## Descripcion
 

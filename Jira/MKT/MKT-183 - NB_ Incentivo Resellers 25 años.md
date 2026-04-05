@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-183"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-748]] Incentivo 25 años
-- **is blocked by:** [[NBWEB-755]] APP - Feat - Ranking 
-- **is blocked by:** [[NBWEB-754]] API - Feat - Ranking 
+- **is blocked by:** [[PED-748 - Incentivo 25 años|PED-748]] Incentivo 25 años
+- **is blocked by:** [[NBWEB-755 - APP - Feat - Ranking|NBWEB-755]] APP - Feat - Ranking 
+- **is blocked by:** [[NBWEB-754 - API - Feat - Ranking|NBWEB-754]] API - Feat - Ranking 
 
 ## Descripcion
 

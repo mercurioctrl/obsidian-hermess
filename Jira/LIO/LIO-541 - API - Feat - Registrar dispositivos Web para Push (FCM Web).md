@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-541"
 
 ## Relaciones
 
-- **Padre:** [[LIO-507]] Login y otros aspectos generales
-- **has action item:** [[LIO-542]] APP - Feat - Registrar dispositivo web para Push Notifications (FCM)
-- **has action item:** [[LIO-512]] API - Feat - Registrar dispositivos para Push (FCM/APNs)
+- **Padre:** [[LIO-507 - Login y otros aspectos generales|LIO-507]] Login y otros aspectos generales
+- **has action item:** [[LIO-542 - APP - Feat - Registrar dispositivo web para Push Notifications (FCM)|LIO-542]] APP - Feat - Registrar dispositivo web para Push Notifications (FCM)
+- **has action item:** [[LIO-512 - API - Feat - Registrar dispositivos para Push (FCMAPNs)|LIO-512]] API - Feat - Registrar dispositivos para Push (FCM/APNs)
 
 ## Descripcion
 

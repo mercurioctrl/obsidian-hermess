@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-453"
 
 ## Relaciones
 
-- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
-- **action item from:** [[EXP-452]] API - Refactor - Agregar companyCode, sin afectar el tiempo de el repositorio
+- **Padre:** [[EXP-14 - Feat - Listar pedidos para retiro|EXP-14]] Feat - Listar pedidos para retiro
+- **action item from:** [[EXP-452 - API - Refactor - Agregar companyCode, sin afectar el tiempo de el repositorio|EXP-452]] API - Refactor - Agregar companyCode, sin afectar el tiempo de el repositorio
 
 ## Descripcion
 

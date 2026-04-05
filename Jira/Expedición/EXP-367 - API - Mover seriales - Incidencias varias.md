@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-367"
 
 ## Relaciones
 
-- **blocks:** [[EXP-301]] Feat - Mover seriales
+- **blocks:** [[EXP-301 - Feat - Mover seriales|EXP-301]] Feat - Mover seriales
 
 ## Descripcion
 

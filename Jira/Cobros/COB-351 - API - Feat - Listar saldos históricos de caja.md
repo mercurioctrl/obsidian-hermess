@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-351"
 
 ## Relaciones
 
-- **Padre:** [[COB-347]] Poder ver saldo inicial y final de caja en cada día
-- **blocks:** [[COB-352]] APP - Feat - Listar saldos históricos de caja
+- **Padre:** [[COB-347 - Poder ver saldo inicial y final de caja en cada día|COB-347]] Poder ver saldo inicial y final de caja en cada día
+- **blocks:** [[COB-352 - APP - Feat - Listar saldos históricos de caja|COB-352]] APP - Feat - Listar saldos históricos de caja
 
 ## Descripcion
 

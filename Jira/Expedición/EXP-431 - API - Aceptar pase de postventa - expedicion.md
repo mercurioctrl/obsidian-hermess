@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-431"
 
 ## Relaciones
 
-- **Padre:** [[EXP-430]] Refactorizar pases
-- **relates to:** [[EXP-434]] API - Aceptar pase de postventa - Sugerencia de mejora al ingresar serial invalido
+- **Padre:** [[EXP-430 - Refactorizar pases|EXP-430]] Refactorizar pases
+- **relates to:** [[EXP-434 - API - Aceptar pase de postventa - Sugerencia de mejora al ingresar serial|EXP-434]] API - Aceptar pase de postventa - Sugerencia de mejora al ingresar serial invalido
 
 ## Descripcion
 

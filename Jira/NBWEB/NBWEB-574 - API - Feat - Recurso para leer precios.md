@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-574"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-1004]] API - Refactor - Recurso para leer precios -> Actualizar objeto de respuesta
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-1004 - API - Refactor - Recurso para leer precios - Actualizar objeto de respuesta|NBWEB-1004]] API - Refactor - Recurso para leer precios -> Actualizar objeto de respuesta
 
 ## Descripcion
 

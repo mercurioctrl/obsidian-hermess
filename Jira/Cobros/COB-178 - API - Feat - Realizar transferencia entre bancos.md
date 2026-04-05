@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-178"
 
 ## Relaciones
 
-- **Padre:** [[COB-16]] Cuentas bancarias
-- **Subtarea:** [[COB-192]] API - Research - Buscar si existen tablas de movimientos de banco
-- **Subtarea:** [[COB-248]] API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un "pago de factura" o "pago proveedor"
-- **Subtarea:** [[COB-249]] APP - Refactor - Agregar al modal de salida un selector de proveedor si el id del concepto es 3 o 35
+- **Padre:** [[COB-16 - Cuentas bancarias|COB-16]] Cuentas bancarias
+- **Subtarea:** [[COB-192 - API - Research - Buscar si existen tablas de movimientos de banco|COB-192]] API - Research - Buscar si existen tablas de movimientos de banco
+- **Subtarea:** [[COB-248 - API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un|COB-248]] API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un "pago de factura" o "pago proveedor"
+- **Subtarea:** [[COB-249 - APP - Refactor - Agregar al modal de salida un selector de proveedor si el id|COB-249]] APP - Refactor - Agregar al modal de salida un selector de proveedor si el id del concepto es 3 o 35
 
 ## Descripcion
 

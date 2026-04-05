@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-236"
 
 ## Relaciones
 
-- **action item from:** [[PED-874]] API - Refactor -  capillarityIncentive
-- **action item from:** [[PED-879]] APP - Refactor - Objetivos
+- **action item from:** [[PED-874 - API - Refactor - capillarityIncentive|PED-874]] API - Refactor -  capillarityIncentive
+- **action item from:** [[PED-879 - APP - Refactor - Objetivos|PED-879]] APP - Refactor - Objetivos
 
 ## Descripcion
 

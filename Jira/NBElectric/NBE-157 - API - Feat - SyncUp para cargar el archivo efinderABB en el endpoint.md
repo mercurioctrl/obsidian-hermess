@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-157"
 
 ## Relaciones
 
-- **Padre:** [[NBE-131]] APPI - Feat- Exportar planilla para Efinder ABB
+- **Padre:** [[NBE-131 - APPI - Feat- Exportar planilla para Efinder ABB|NBE-131]] APPI - Feat- Exportar planilla para Efinder ABB
 
 ## Descripcion
 

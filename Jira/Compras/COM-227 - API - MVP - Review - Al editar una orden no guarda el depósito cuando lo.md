@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-227"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **relates to:** [[COM-200]] API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **relates to:** [[COM-200 - API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo|COM-200]] API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
 
 ## Descripcion
 

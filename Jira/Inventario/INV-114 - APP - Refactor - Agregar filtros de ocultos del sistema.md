@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-114"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **is blocked by:** [[INV-113]] API - Refactor - Agregar filtro para los ocultos del sistema 
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **is blocked by:** [[INV-113 - API - Refactor - Agregar filtro para los ocultos del sistema|INV-113]] API - Refactor - Agregar filtro para los ocultos del sistema 
 
 ## Descripcion
 

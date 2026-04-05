@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-193"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **action item from:** [[COM-192]] APP - MVP - Refactor - Permitir agregar posición arancelaria de manera mas sencilla 
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **action item from:** [[COM-192 - APP - MVP - Refactor - Permitir agregar posición arancelaria de manera mas|COM-192]] APP - MVP - Refactor - Permitir agregar posición arancelaria de manera mas sencilla 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-189"
 
 ## Relaciones
 
-- **Padre:** [[LIO-187]] Login
-- **has action item:** [[LIO-196]] APP - Login con redes (google,apple) y sincronizacion de carrito al incio de sesion
+- **Padre:** [[LIO-187 - Login|LIO-187]] Login
+- **has action item:** [[LIO-196 - APP - Login con redes (google,apple) y sincronizacion de carrito al incio de|LIO-196]] APP - Login con redes (google,apple) y sincronizacion de carrito al incio de sesion
 
 ## Descripcion
 

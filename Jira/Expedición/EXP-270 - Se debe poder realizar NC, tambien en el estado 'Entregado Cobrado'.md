@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-270"
 
 ## Relaciones
 
-- **causes:** [[SNB-683]] Nota de crédito
+- **causes:** [[SNB-683 - Nota de crédito|SNB-683]] Nota de crédito
 
 ## Descripcion
 

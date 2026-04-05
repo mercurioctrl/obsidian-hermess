@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-488"
 
 ## Relaciones
 
-- **Padre:** [[EXP-486]] Ver ingreso
-- **action item from:** [[EXP-487]] API - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos
-- **relates to:** [[EXP-490]] APP - MVP - Oportunidad de mejora - Ingresos -> sugerencia en el cambio de columna proveedor
+- **Padre:** [[EXP-486 - Ver ingreso|EXP-486]] Ver ingreso
+- **action item from:** [[EXP-487 - API - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos|EXP-487]] API - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos
+- **relates to:** [[EXP-490 - APP - MVP - Oportunidad de mejora - Ingresos - sugerencia en el cambio de|EXP-490]] APP - MVP - Oportunidad de mejora - Ingresos -> sugerencia en el cambio de columna proveedor
 
 ## Descripcion
 

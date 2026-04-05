@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-44"
 
 ## Relaciones
 
-- **Padre:** [[LAW-30]] Onboarding de la nueva empresa en los sistemas del grupo NB
-- **Subtarea:** [[LAW-45]] API - PED -  Refactor - Filtro companyCode en ShippingMethods
-- **Subtarea:** [[LAW-46]] APP - PED - Refactor -Filtro companyCode en ShippingMethods
-- **Subtarea:** [[LAW-47]] API -PED - Refactor - Agregar permiso `includeNull` en `permisos_agente`
-- **Subtarea:** [[LAW-48]] API - PED - Refector - Filtro companyCode + includeNull en PaymentMethods
-- **Subtarea:** [[LAW-49]] APP - PED - Feat- Filtro companyCode + includeNull en PaymentMethods
+- **Padre:** [[LAW-30 - Onboarding de la nueva empresa en los sistemas del grupo NB|LAW-30]] Onboarding de la nueva empresa en los sistemas del grupo NB
+- **Subtarea:** [[LAW-45 - API - PED - Refactor - Filtro companyCode en ShippingMethods|LAW-45]] API - PED -  Refactor - Filtro companyCode en ShippingMethods
+- **Subtarea:** [[LAW-46 - APP - PED - Refactor -Filtro companyCode en ShippingMethods|LAW-46]] APP - PED - Refactor -Filtro companyCode en ShippingMethods
+- **Subtarea:** [[LAW-47 - API -PED - Refactor - Agregar permiso `includeNull` en `permisos_agente`|LAW-47]] API -PED - Refactor - Agregar permiso `includeNull` en `permisos_agente`
+- **Subtarea:** [[LAW-48 - API - PED - Refector - Filtro companyCode + includeNull en PaymentMethods|LAW-48]] API - PED - Refector - Filtro companyCode + includeNull en PaymentMethods
+- **Subtarea:** [[LAW-49 - APP - PED - Feat- Filtro companyCode + includeNull en PaymentMethods|LAW-49]] APP - PED - Feat- Filtro companyCode + includeNull en PaymentMethods
 
 ## Descripcion
 

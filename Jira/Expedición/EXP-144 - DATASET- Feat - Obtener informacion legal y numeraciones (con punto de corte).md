@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-144"
 
 ## Relaciones
 
-- **Padre:** [[EXP-143]] Feat - Remito fiscal
-- **blocks:** [[EXP-148]] APP - Feat - Se debe poder descargar de ambos listados de pedidos el remito fiscal con preview, imprimir y descarga
+- **Padre:** [[EXP-143 - Feat - Remito fiscal|EXP-143]] Feat - Remito fiscal
+- **blocks:** [[EXP-148 - APP - Feat - Se debe poder descargar de ambos listados de pedidos el remito|EXP-148]] APP - Feat - Se debe poder descargar de ambos listados de pedidos el remito fiscal con preview, imprimir y descarga
 
 ## Descripcion
 

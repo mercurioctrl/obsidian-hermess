@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-573"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **action item from:** [[LIO-568]] API - Feat - Agregar campo instantFlash al PATCH de productos del inventario
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **action item from:** [[LIO-568 - API - Feat - Agregar campo instantFlash al PATCH de productos del inventario|LIO-568]] API - Feat - Agregar campo instantFlash al PATCH de productos del inventario
 
 ## Descripcion
 

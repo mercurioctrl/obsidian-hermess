@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-241"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-215]] 5. Buscar y Cargar dias comerciales en calendario de blu
+- **Padre:** [[BLUWEB-215 - 5. Buscar y Cargar dias comerciales en calendario de blu|BLUWEB-215]] 5. Buscar y Cargar dias comerciales en calendario de blu
 
 ## Descripcion
 

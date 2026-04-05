@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-19"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-42]] DSG - Feature - Primeros Post Triada 1 ( Story) 2
+- **Subtarea:** [[NBE-42 - DSG - Feature - Primeros Post Triada 1 ( Story) 2|NBE-42]] DSG - Feature - Primeros Post Triada 1 ( Story) 2
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-203"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **action item from:** [[COM-204]] API - MVP - Feat - Agregar campos número invoice y de proforma
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **action item from:** [[COM-204 - API - MVP - Feat - Agregar campos número invoice y de proforma|COM-204]] API - MVP - Feat - Agregar campos número invoice y de proforma
 
 ## Descripcion
 

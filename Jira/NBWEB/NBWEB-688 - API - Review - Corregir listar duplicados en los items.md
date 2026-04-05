@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-688"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-687]] Review - Cuando abro el modal de filtros, no puedo cerrarlo de ninguna forma
+- **relates to:** [[NBWEB-687 - Review - Cuando abro el modal de filtros, no puedo cerrarlo de ninguna forma|NBWEB-687]] Review - Cuando abro el modal de filtros, no puedo cerrarlo de ninguna forma
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-243"
 
 ## Relaciones
 
-- **Padre:** [[LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
+- **Padre:** [[LIO-21 - Migrar sistema de tickets para usar el de capa 1 (NB)|LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
 
 ## Descripcion
 

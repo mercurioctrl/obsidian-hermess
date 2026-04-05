@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-247"
 
 ## Relaciones
 
-- **Padre:** [[COB-101]] Feat - Realizar salida de caja
-- **blocks:** [[COB-246]] API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un "pago de factura" o "pago proveedor"
+- **Padre:** [[COB-101 - Feat - Realizar salida de caja|COB-101]] Feat - Realizar salida de caja
+- **blocks:** [[COB-246 - API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un|COB-246]] API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un "pago de factura" o "pago proveedor"
 
 ## Descripcion
 

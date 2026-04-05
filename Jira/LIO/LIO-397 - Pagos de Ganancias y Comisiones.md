@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-397"
 
 ## Relaciones
 
-- **Padre:** [[LIO-5]] Seguridad y Confianza
-- **Subtarea:** [[LIO-398]] API - Review - Verificar ganancia de meses anteriores en cuentas de vendedores, parecen no traer resultados
+- **Padre:** [[LIO-5 - Seguridad y Confianza|LIO-5]] Seguridad y Confianza
+- **Subtarea:** [[LIO-398 - API - Review - Verificar ganancia de meses anteriores en cuentas de vendedores,|LIO-398]] API - Review - Verificar ganancia de meses anteriores en cuentas de vendedores, parecen no traer resultados
 
 ## Descripcion
 

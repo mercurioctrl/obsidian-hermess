@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-486"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **Subtarea:** [[EXP-510]] API - Obtener seriales en xlsx -> Propuesta de mejora al visualizar ingreso sin artículos 
-- **Subtarea:** [[EXP-487]] API - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos
-- **Subtarea:** [[EXP-488]] APP - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos
-- **Subtarea:** [[EXP-517]] API - Refactor - Agregar parámetros de almacén en los ingresos 
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **Subtarea:** [[EXP-510 - API - Obtener seriales en xlsx - Propuesta de mejora al visualizar ingreso sin|EXP-510]] API - Obtener seriales en xlsx -> Propuesta de mejora al visualizar ingreso sin artículos 
+- **Subtarea:** [[EXP-487 - API - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos|EXP-487]] API - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos
+- **Subtarea:** [[EXP-488 - APP - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos|EXP-488]] APP - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos
+- **Subtarea:** [[EXP-517 - API - Refactor - Agregar parámetros de almacén en los ingresos|EXP-517]] API - Refactor - Agregar parámetros de almacén en los ingresos 
 
 ## Descripcion
 

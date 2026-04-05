@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-117"
 
 ## Relaciones
 
-- **Padre:** [[EXP-116]] Devoluciones
-- **Subtarea:** [[EXP-121]] API - Feat - Listar pedidos ya despachados para hacer devoluciones
-- **Subtarea:** [[EXP-122]] APP - Feat - Listar pedidos para realizar devoluciones
-- **Subtarea:** [[EXP-129]] API - Performance - Mejorar velocidad en la carga del listado < 4s
-- **Subtarea:** [[EXP-187]] API - Review - Problemas para encontrar y abrir un pedido en devoluciones
-- **Subtarea:** [[EXP-275]] API - Refactor - Solo mostrar resultados del ultimo año (ultimos 365 dias), en todos los casos a menos que la fecha se explicite
-- **Subtarea:** [[EXP-354]] API - Refactor - Refund, agregar percepciones
+- **Padre:** [[EXP-116 - Devoluciones|EXP-116]] Devoluciones
+- **Subtarea:** [[EXP-121 - API - Feat - Listar pedidos ya despachados para hacer devoluciones|EXP-121]] API - Feat - Listar pedidos ya despachados para hacer devoluciones
+- **Subtarea:** [[EXP-122 - APP - Feat - Listar pedidos para realizar devoluciones|EXP-122]] APP - Feat - Listar pedidos para realizar devoluciones
+- **Subtarea:** [[EXP-129 - API - Performance - Mejorar velocidad en la carga del listado 4s|EXP-129]] API - Performance - Mejorar velocidad en la carga del listado < 4s
+- **Subtarea:** [[EXP-187 - API - Review - Problemas para encontrar y abrir un pedido en devoluciones|EXP-187]] API - Review - Problemas para encontrar y abrir un pedido en devoluciones
+- **Subtarea:** [[EXP-275 - API - Refactor - Solo mostrar resultados del ultimo año (ultimos 365 dias), en|EXP-275]] API - Refactor - Solo mostrar resultados del ultimo año (ultimos 365 dias), en todos los casos a menos que la fecha se explicite
+- **Subtarea:** [[EXP-354 - API - Refactor - Refund, agregar percepciones|EXP-354]] API - Refactor - Refund, agregar percepciones
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-307"
 
 ## Relaciones
 
-- **Padre:** [[EXP-75]] Feat - Etiquetas de envio con zpl
-- **blocks:** [[SNB-807]] mejoras para oca y andreani 
+- **Padre:** [[EXP-75 - Feat - Etiquetas de envio con zpl|EXP-75]] Feat - Etiquetas de envio con zpl
+- **blocks:** [[SNB-807 - mejoras para oca y andreani|SNB-807]] mejoras para oca y andreani 
 
 ## Descripcion
 

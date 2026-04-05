@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-192"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
-- **relates to:** [[NBWEB-193]] APP - Agregar un suggest box  con description de producto al formulario de alta de post venta
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
+- **relates to:** [[NBWEB-193 - APP - Agregar un suggest box con description de producto al formulario de alta|NBWEB-193]] APP - Agregar un suggest box  con description de producto al formulario de alta de post venta
 
 ## Descripcion
 

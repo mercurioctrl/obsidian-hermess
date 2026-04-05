@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-187"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-190]] Mar 12:  COPYS Cooler Master Master HUB (Blue)
+- **Subtarea:** [[LOMKT-190 - Mar 12 COPYS Cooler Master Master HUB (Blue)|LOMKT-190]] Mar 12:  COPYS Cooler Master Master HUB (Blue)
 
 ## Descripcion
 

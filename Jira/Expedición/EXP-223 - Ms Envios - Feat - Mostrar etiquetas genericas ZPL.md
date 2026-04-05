@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-223"
 
 ## Relaciones
 
-- **Padre:** [[EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
+- **Padre:** [[EXP-218 - Etiquetas para envíos que no las generan (genericas de ahora en mas)|EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
 
 ## Descripcion
 

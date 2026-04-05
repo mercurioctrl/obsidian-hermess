@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-444"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **Subtarea:** [[COB-445]] API - Feat - Retencion de ganancias
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **Subtarea:** [[COB-445 - API - Feat - Retencion de ganancias|COB-445]] API - Feat - Retencion de ganancias
 
 ## Descripcion
 

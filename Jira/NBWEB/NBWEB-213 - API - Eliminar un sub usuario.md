@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-213"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **blocks:** [[NBWEB-172]] APP - Mi cuenta - Mis ususarios
-- **relates to:** [[NBWEB-227]] APP - MI cuenta - Mis usuario - Eliminar un ususario
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **blocks:** [[NBWEB-172 - APP - Mi cuenta - Mis ususarios|NBWEB-172]] APP - Mi cuenta - Mis ususarios
+- **relates to:** [[NBWEB-227 - APP - MI cuenta - Mis usuario - Eliminar un ususario|NBWEB-227]] APP - MI cuenta - Mis usuario - Eliminar un ususario
 
 ## Descripcion
 

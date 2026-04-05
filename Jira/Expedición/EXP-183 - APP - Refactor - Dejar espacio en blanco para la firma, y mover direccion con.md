@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-183"
 
 ## Relaciones
 
-- **Padre:** [[EXP-143]] Feat - Remito fiscal
+- **Padre:** [[EXP-143 - Feat - Remito fiscal|EXP-143]] Feat - Remito fiscal
 
 ## Descripcion
 

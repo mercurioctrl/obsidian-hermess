@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-115"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-10]] NB_ Q2 2022_ GIGABYTE_  WEEK de la marca
+- **Padre:** [[DNYL-10 - NB_ Q2 2022_ GIGABYTE_ WEEK de la marca|DNYL-10]] NB_ Q2 2022_ GIGABYTE_  WEEK de la marca
 
 ## Descripcion
 

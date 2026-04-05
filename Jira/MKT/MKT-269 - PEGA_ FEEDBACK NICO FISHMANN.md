@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-269"
 
 ## Relaciones
 
-- **has action item:** [[PEGA-204]] API - Refactor - Filtrado ordenar por precio mayor/menor
+- **has action item:** [[PEGA-204 - API - Refactor - Filtrado ordenar por precio mayormenor|PEGA-204]] API - Refactor - Filtrado ordenar por precio mayor/menor
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-469"
 
 ## Relaciones
 
-- **Padre:** [[EXP-460]] APP- Refactor en el modal de crear etiqueta
+- **Padre:** [[EXP-460 - APP- Refactor en el modal de crear etiqueta|EXP-460]] APP- Refactor en el modal de crear etiqueta
 
 ## Descripcion
 

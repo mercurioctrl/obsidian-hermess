@@ -4,7 +4,7 @@ name: "Service Task v3"
 type: "software"
 total_issues: 30
 jira_url: "https://bluinc.atlassian.net/browse/STASK"
-synced: "2026-04-05 07:41"
+synced: "2026-04-05 07:55"
 ---
 
 # Service Task v3 (STASK)

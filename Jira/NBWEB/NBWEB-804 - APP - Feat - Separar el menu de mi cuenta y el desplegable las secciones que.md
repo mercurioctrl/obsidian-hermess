@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-804"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **relates to:** [[NBWEB-887]] APP - Separar del menú "Integraciones y API" - Observación de mejora en el fondo
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **relates to:** [[NBWEB-887 - APP - Separar del menú Integraciones y API - Observación de mejora en el fondo|NBWEB-887]] APP - Separar del menú "Integraciones y API" - Observación de mejora en el fondo
 
 ## Descripcion
 

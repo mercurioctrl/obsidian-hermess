@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-272"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-262]] Mar: Triada 14
+- **Padre:** [[BLUWEB-262 - Mar Triada 14|BLUWEB-262]] Mar: Triada 14
 
 ## Descripcion
 

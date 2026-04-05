@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-544"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **is cloned by:** [[LIO-558]] API - Refactor - Migrar repositorio de preguntas del ecomerce -> Unificado de imagen
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **is cloned by:** [[LIO-558 - API - Refactor - Migrar repositorio de preguntas del ecomerce - Unificado de|LIO-558]] API - Refactor - Migrar repositorio de preguntas del ecomerce -> Unificado de imagen
 
 ## Descripcion
 

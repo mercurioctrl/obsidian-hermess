@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-242"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-77]] Implementar Pagos
-- **is blocked by:** [[NBWEB-219]] API - Procesar pagos con plata en cuenta de mercadopago
-- **is blocked by:** [[NBWEB-188]] API - Pagos - Procesar pagos con tarjeta
+- **Padre:** [[NBWEB-77 - Implementar Pagos|NBWEB-77]] Implementar Pagos
+- **is blocked by:** [[NBWEB-219 - API - Procesar pagos con plata en cuenta de mercadopago|NBWEB-219]] API - Procesar pagos con plata en cuenta de mercadopago
+- **is blocked by:** [[NBWEB-188 - API - Pagos - Procesar pagos con tarjeta|NBWEB-188]] API - Pagos - Procesar pagos con tarjeta
 
 ## Descripcion
 

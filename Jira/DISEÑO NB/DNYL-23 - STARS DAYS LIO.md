@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-23"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-33]] STORYS DIA 4-5
-- **Subtarea:** [[DNYL-34]] STORYS DIA 5-5
-- **Subtarea:** [[DNYL-35]] STORYS DIA 6-5
-- **Subtarea:** [[DNYL-36]] STORYS DIA 7-5
-- **Subtarea:** [[DNYL-37]] STORYS DIA 8-5
-- **blocks:** [[REDESYNEWS-16]] STAR DAYS
+- **Subtarea:** [[DNYL-33 - STORYS DIA 4-5|DNYL-33]] STORYS DIA 4-5
+- **Subtarea:** [[DNYL-34 - STORYS DIA 5-5|DNYL-34]] STORYS DIA 5-5
+- **Subtarea:** [[DNYL-35 - STORYS DIA 6-5|DNYL-35]] STORYS DIA 6-5
+- **Subtarea:** [[DNYL-36 - STORYS DIA 7-5|DNYL-36]] STORYS DIA 7-5
+- **Subtarea:** [[DNYL-37 - STORYS DIA 8-5|DNYL-37]] STORYS DIA 8-5
+- **blocks:** [[REDESYNEWS-16 - STAR DAYS|REDESYNEWS-16]] STAR DAYS
 
 ## Descripcion
 

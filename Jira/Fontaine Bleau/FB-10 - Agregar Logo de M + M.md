@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-10"
 
 ## Relaciones
 
-- **Padre:** [[FB-1]] Cartel Ugarte
+- **Padre:** [[FB-1 - Cartel Ugarte|FB-1]] Cartel Ugarte
 
 ## Descripcion
 

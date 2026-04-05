@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-92"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-93]] 2.FB: Noviembre Triada 6 Ambientes_Diseño
-- **Subtarea:** [[FB-94]] 6.FB: Noviembre Triada 6 Ambientes_Copys
-- **Subtarea:** [[FB-95]] 6. FB: Noviembre Triada 6 Ambientes_Programar sábado 6-12
+- **Subtarea:** [[FB-93 - 2.FB Noviembre Triada 6 Ambientes_Diseño|FB-93]] 2.FB: Noviembre Triada 6 Ambientes_Diseño
+- **Subtarea:** [[FB-94 - 6.FB Noviembre Triada 6 Ambientes_Copys|FB-94]] 6.FB: Noviembre Triada 6 Ambientes_Copys
+- **Subtarea:** [[FB-95 - 6. FB Noviembre Triada 6 Ambientes_Programar sábado 6-12|FB-95]] 6. FB: Noviembre Triada 6 Ambientes_Programar sábado 6-12
 
 ## Descripcion
 

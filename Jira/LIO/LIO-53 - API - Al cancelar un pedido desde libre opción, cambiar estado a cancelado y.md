@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-53"
 
 ## Relaciones
 
-- **blocks:** [[LIO-29]] API - Refactor - Al cancelar un pedido desde libre opcion, debe cambiar bien el estado "cancelado" y marcarlo como "eliminado" en "Capa 1"
+- **blocks:** [[LIO-29 - API - Refactor - Al cancelar un pedido desde libre opcion, debe cambiar bien el|LIO-29]] API - Refactor - Al cancelar un pedido desde libre opcion, debe cambiar bien el estado "cancelado" y marcarlo como "eliminado" en "Capa 1"
 
 ## Descripcion
 

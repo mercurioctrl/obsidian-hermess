@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-103"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-104]] Feed + Story
-- **Subtarea:** [[DNYL-105]] Banner 
+- **Subtarea:** [[DNYL-104 - Feed + Story|DNYL-104]] Feed + Story
+- **Subtarea:** [[DNYL-105 - Banner|DNYL-105]] Banner 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-127"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-128]] Feed + Story + tw
+- **Subtarea:** [[DNYL-128 - Feed + Story + tw|DNYL-128]] Feed + Story + tw
 
 ## Descripcion
 

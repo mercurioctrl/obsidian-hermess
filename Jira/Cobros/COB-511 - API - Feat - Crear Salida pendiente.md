@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-511"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **blocks:** [[COB-514]] APP - Feat - Crear salida pendiente
-- **is blocked by:** [[COB-520]] API - Crear Salida pendiente - Error de tipo de dato
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **blocks:** [[COB-514 - APP - Feat - Crear salida pendiente|COB-514]] APP - Feat - Crear salida pendiente
+- **is blocked by:** [[COB-520 - API - Crear Salida pendiente - Error de tipo de dato|COB-520]] API - Crear Salida pendiente - Error de tipo de dato
 
 ## Descripcion
 

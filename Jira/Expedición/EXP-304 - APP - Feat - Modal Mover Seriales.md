@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-304"
 
 ## Relaciones
 
-- **Padre:** [[EXP-301]] Feat - Mover seriales
-- **is blocked by:** [[EXP-302]] API - Feat - Buscar seriales que son plausible de ser movidos 
-- **is blocked by:** [[EXP-303]] API - Feat - Mover seriales seleccionados
-- **relates to:** [[EXP-411]] APP - Mover Seriales -  Leyenda pedido de destino requerido
+- **Padre:** [[EXP-301 - Feat - Mover seriales|EXP-301]] Feat - Mover seriales
+- **is blocked by:** [[EXP-302 - API - Feat - Buscar seriales que son plausible de ser movidos|EXP-302]] API - Feat - Buscar seriales que son plausible de ser movidos 
+- **is blocked by:** [[EXP-303 - API - Feat - Mover seriales seleccionados|EXP-303]] API - Feat - Mover seriales seleccionados
+- **relates to:** [[EXP-411 - APP - Mover Seriales - Leyenda pedido de destino requerido|EXP-411]] APP - Mover Seriales -  Leyenda pedido de destino requerido
 
 ## Descripcion
 

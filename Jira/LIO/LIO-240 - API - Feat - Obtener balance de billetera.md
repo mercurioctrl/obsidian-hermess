@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-240"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **has action item:** [[LIO-271]] APP - Feat - Visualización de la Billetera del Usuario
-- **relates to:** [[LIO-488]] API - Refactor - Obtener balance de billetera -> Excluir retiros pendientes del saldo disponible
-- **relates to:** [[SNB-3557]] LO - API - Billetera electrónica - Pago no reflejado
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **has action item:** [[LIO-271 - APP - Feat - Visualización de la Billetera del Usuario|LIO-271]] APP - Feat - Visualización de la Billetera del Usuario
+- **relates to:** [[LIO-488 - API - Refactor - Obtener balance de billetera - Excluir retiros pendientes del|LIO-488]] API - Refactor - Obtener balance de billetera -> Excluir retiros pendientes del saldo disponible
+- **relates to:** [[SNB-3557 - LO - API - Billetera electrónica - Pago no reflejado|SNB-3557]] LO - API - Billetera electrónica - Pago no reflejado
 
 ## Descripcion
 

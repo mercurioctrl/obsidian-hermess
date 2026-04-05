@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-93"
 
 ## Relaciones
 
-- **Padre:** [[COB-5]] API - Feat - Obtener cuenta corriente de un cliente
-- **is blocked by:** [[COB-94]] API - Feat - Listar condiciones fiscales
+- **Padre:** [[COB-5 - API - Feat - Obtener cuenta corriente de un cliente|COB-5]] API - Feat - Obtener cuenta corriente de un cliente
+- **is blocked by:** [[COB-94 - API - Feat - Listar condiciones fiscales|COB-94]] API - Feat - Listar condiciones fiscales
 
 ## Descripcion
 

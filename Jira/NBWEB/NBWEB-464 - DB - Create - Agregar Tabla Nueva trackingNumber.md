@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-464"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-423]] Logistica Envios
-- **is blocked by:** [[NBWEB-462]] API - Feat - Agregar tabla enexa con todos los numeros de tracking
+- **Padre:** [[NBWEB-423 - Logistica Envios|NBWEB-423]] Logistica Envios
+- **is blocked by:** [[NBWEB-462 - API - Feat - Agregar tabla enexa con todos los numeros de tracking|NBWEB-462]] API - Feat - Agregar tabla enexa con todos los numeros de tracking
 
 ## Descripcion
 

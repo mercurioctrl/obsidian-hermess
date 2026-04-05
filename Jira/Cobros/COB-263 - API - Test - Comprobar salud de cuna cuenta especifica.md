@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-263"
 
 ## Relaciones
 
-- **Padre:** [[COB-262]] API - Test - Salud cuenta corriente clientes
+- **Padre:** [[COB-262 - API - Test - Salud cuenta corriente clientes|COB-262]] API - Test - Salud cuenta corriente clientes
 
 ## Descripcion
 

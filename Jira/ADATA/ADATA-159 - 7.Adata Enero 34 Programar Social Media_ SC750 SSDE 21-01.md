@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-159"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-142]] Adata Enero: Social Media 3/4_SSD EXTERNA SC750 
+- **Padre:** [[ADATA-142 - Adata Enero Social Media 34_SSD EXTERNA SC750|ADATA-142]] Adata Enero: Social Media 3/4_SSD EXTERNA SC750 
 
 ## Descripcion
 

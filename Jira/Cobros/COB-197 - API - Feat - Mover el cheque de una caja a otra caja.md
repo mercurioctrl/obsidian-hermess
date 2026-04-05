@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-197"
 
 ## Relaciones
 
-- **Padre:** [[COB-195]] Feat - Pases de cheques
-- **blocks:** [[COB-198]] APP - Feat - Mover el cheque de una caja a otra caja
+- **Padre:** [[COB-195 - Feat - Pases de cheques|COB-195]] Feat - Pases de cheques
+- **blocks:** [[COB-198 - APP - Feat - Mover el cheque de una caja a otra caja|COB-198]] APP - Feat - Mover el cheque de una caja a otra caja
 
 ## Descripcion
 

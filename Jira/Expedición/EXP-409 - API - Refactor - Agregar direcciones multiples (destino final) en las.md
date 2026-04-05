@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-409"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **blocks:** [[EXP-410]] APP - Refactor - Modificar el modal de generar etiqueta para el multidestino
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **blocks:** [[EXP-410 - APP - Refactor - Modificar el modal de generar etiqueta para el multidestino|EXP-410]] APP - Refactor - Modificar el modal de generar etiqueta para el multidestino
 
 ## Descripcion
 

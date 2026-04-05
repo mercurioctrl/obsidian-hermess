@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-25"
 
 ## Relaciones
 
-- **Padre:** [[FB-17]] Site- Etapa 0
-- **action item from:** [[FB-19]] DSG - Feature - Portada de próximamente
-- **action item from:** [[FB-20]] DSG - Feature - FavIcon
+- **Padre:** [[FB-17 - Site- Etapa 0|FB-17]] Site- Etapa 0
+- **action item from:** [[FB-19 - DSG - Feature - Portada de próximamente|FB-19]] DSG - Feature - Portada de próximamente
+- **action item from:** [[FB-20 - DSG - Feature - FavIcon|FB-20]] DSG - Feature - FavIcon
 
 ## Descripcion
 

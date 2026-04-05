@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-222"
 
 ## Relaciones
 
-- **Padre:** [[LIO-9]] Optimización
+- **Padre:** [[LIO-9 - Optimización|LIO-9]] Optimización
 
 ## Descripcion
 

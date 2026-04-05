@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-152"
 
 ## Relaciones
 
-- **Padre:** [[COB-150]] Feat - Proveedores
+- **Padre:** [[COB-150 - Feat - Proveedores|COB-150]] Feat - Proveedores
 
 ## Descripcion
 

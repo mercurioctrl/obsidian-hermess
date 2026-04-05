@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-204"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-208]] 1.NBE: Triada 24 Diseño Hunnox_Jadever_Elbet
-- **Subtarea:** [[NBE-209]] NBE: Triada 24 Copys Hunnox_Jadever_Elbet
-- **Subtarea:** [[NBE-210]] NBE: Triada 24 Programar Hunnox_Jadever_Elbet
+- **Subtarea:** [[NBE-208 - 1.NBE Triada 24 Diseño Hunnox_Jadever_Elbet|NBE-208]] 1.NBE: Triada 24 Diseño Hunnox_Jadever_Elbet
+- **Subtarea:** [[NBE-209 - NBE Triada 24 Copys Hunnox_Jadever_Elbet|NBE-209]] NBE: Triada 24 Copys Hunnox_Jadever_Elbet
+- **Subtarea:** [[NBE-210 - NBE Triada 24 Programar Hunnox_Jadever_Elbet|NBE-210]] NBE: Triada 24 Programar Hunnox_Jadever_Elbet
 
 ## Descripcion
 

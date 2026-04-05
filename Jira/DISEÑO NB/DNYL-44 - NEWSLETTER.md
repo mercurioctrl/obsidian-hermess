@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-44"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-9]] LLEGARON LOS DIAS ROJOS - SEMANA AMD
+- **Padre:** [[DNYL-9 - LLEGARON LOS DIAS ROJOS - SEMANA AMD|DNYL-9]] LLEGARON LOS DIAS ROJOS - SEMANA AMD
 
 ## Descripcion
 

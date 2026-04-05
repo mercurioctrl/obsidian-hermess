@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-257"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
-- **is blocked by:** [[COB-258]] API - Refactor - Incluir interes diario en el objeto cheques
-- **is blocked by:** [[COB-259]] API - Refactor - Cargar nuevo cheque
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-258 - API - Refactor - Incluir interes diario en el objeto cheques|COB-258]] API - Refactor - Incluir interes diario en el objeto cheques
+- **is blocked by:** [[COB-259 - API - Refactor - Cargar nuevo cheque|COB-259]] API - Refactor - Cargar nuevo cheque
 
 ## Descripcion
 

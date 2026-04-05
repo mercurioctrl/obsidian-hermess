@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-26"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-36]] Enviar invitación webinar Trust
+- **blocks:** [[REDESYNEWS-36 - Enviar invitación webinar Trust|REDESYNEWS-36]] Enviar invitación webinar Trust
 
 ## Descripcion
 

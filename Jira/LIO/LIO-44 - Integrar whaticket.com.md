@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-44"
 
 ## Relaciones
 
-- **Padre:** [[LIO-4]] Soporte al Cliente
-- **Subtarea:** [[LIO-45]] API - Research - Averiguar los primeros pasos para integrar un bot con whaticket.com y si es posible  intgrar el bot directo al sitio
+- **Padre:** [[LIO-4 - Soporte al Cliente|LIO-4]] Soporte al Cliente
+- **Subtarea:** [[LIO-45 - API - Research - Averiguar los primeros pasos para integrar un bot con|LIO-45]] API - Research - Averiguar los primeros pasos para integrar un bot con whaticket.com y si es posible  intgrar el bot directo al sitio
 
 ## Descripcion
 

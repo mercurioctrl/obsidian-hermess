@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-28"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-14]] API - Listar productos
-- **is blocked by:** [[INV-20]] API - Editar detalle de producto
-- **relates to:** [[INV-180]] APP - Refactor - Listar productos (Pestaña productos) - Portada no visible tras selección
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-14 - API - Listar productos|INV-14]] API - Listar productos
+- **is blocked by:** [[INV-20 - API - Editar detalle de producto|INV-20]] API - Editar detalle de producto
+- **relates to:** [[INV-180 - APP - Refactor - Listar productos (Pestaña productos) - Portada no visible tras|INV-180]] APP - Refactor - Listar productos (Pestaña productos) - Portada no visible tras selección
 
 ## Descripcion
 

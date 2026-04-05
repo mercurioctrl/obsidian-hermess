@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-170"
 
 ## Relaciones
 
-- **Padre:** [[EXP-137]] Feat - Volanta operativa
-- **relates to:** [[EXP-141]] MS - APP - Maquetar volanta operativa
+- **Padre:** [[EXP-137 - Feat - Volanta operativa|EXP-137]] Feat - Volanta operativa
+- **relates to:** [[EXP-141 - MS - APP - Maquetar volanta operativa|EXP-141]] MS - APP - Maquetar volanta operativa
 
 ## Descripcion
 

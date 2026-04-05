@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-156"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **Subtarea:** [[NBWEB-563]] Visualización de stock activo por categoría
-- **Subtarea:** [[NBWEB-565]] Validación al editar una categoría
-- **relates to:** [[NBWEB-158]] API - CMS - Categories
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **Subtarea:** [[NBWEB-563 - Visualización de stock activo por categoría|NBWEB-563]] Visualización de stock activo por categoría
+- **Subtarea:** [[NBWEB-565 - Validación al editar una categoría|NBWEB-565]] Validación al editar una categoría
+- **relates to:** [[NBWEB-158 - API - CMS - Categories|NBWEB-158]] API - CMS - Categories
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-335"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **Subtarea:** [[COB-336]] API - Feat - Anulacion de compra de pesos o dolares
-- **blocks:** [[SNB-587]] Cuando anulas una compra o venta de dolares, no afecta el saldo de caja
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **Subtarea:** [[COB-336 - API - Feat - Anulacion de compra de pesos o dolares|COB-336]] API - Feat - Anulacion de compra de pesos o dolares
+- **blocks:** [[SNB-587 - Cuando anulas una compra o venta de dolares, no afecta el saldo de caja|SNB-587]] Cuando anulas una compra o venta de dolares, no afecta el saldo de caja
 
 ## Descripcion
 

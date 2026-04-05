@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-148"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **action item from:** [[NBE-82]] DSG - Refactor - Iconos utilizados en el sector de estacionamiento
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **action item from:** [[NBE-82 - DSG - Refactor - Iconos utilizados en el sector de estacionamiento|NBE-82]] DSG - Refactor - Iconos utilizados en el sector de estacionamiento
 
 ## Descripcion
 

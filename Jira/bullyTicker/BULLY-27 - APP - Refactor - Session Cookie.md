@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-27"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-12]] Logins y autenticaciones 
+- **Padre:** [[BULLY-12 - Logins y autenticaciones|BULLY-12]] Logins y autenticaciones 
 
 ## Descripcion
 

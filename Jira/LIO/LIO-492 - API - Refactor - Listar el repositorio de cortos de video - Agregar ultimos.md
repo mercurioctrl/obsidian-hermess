@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-492"
 
 ## Relaciones
 
-- **Padre:** [[LIO-481]] Recomendaciones de loki
-- **has action item:** [[LIO-491]] APP - Maquetado - Sección “Las recomendaciones de Loki” (grid + vista Clips tipo ML)
-- **has action item:** [[LIO-523]] API - Refactor - Utilizar informacion real de productos, con clip (video) vinculado 
+- **Padre:** [[LIO-481 - Recomendaciones de loki|LIO-481]] Recomendaciones de loki
+- **has action item:** [[LIO-491 - APP - Maquetado - Sección “Las recomendaciones de Loki” (grid + vista Clips|LIO-491]] APP - Maquetado - Sección “Las recomendaciones de Loki” (grid + vista Clips tipo ML)
+- **has action item:** [[LIO-523 - API - Refactor - Utilizar informacion real de productos, con clip (video)|LIO-523]] API - Refactor - Utilizar informacion real de productos, con clip (video) vinculado 
 
 ## Descripcion
 

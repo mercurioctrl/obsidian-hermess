@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-510"
 
 ## Relaciones
 
-- **Padre:** [[LIO-498]] Listado de preguntas
-- **action item from:** [[LIO-534]] API - Feat - Responder preguntas
+- **Padre:** [[LIO-498 - Listado de preguntas|LIO-498]] Listado de preguntas
+- **action item from:** [[LIO-534 - API - Feat - Responder preguntas|LIO-534]] API - Feat - Responder preguntas
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-108"
 
 ## Relaciones
 
-- **Padre:** [[LIO-71]] Armador de equipos
+- **Padre:** [[LIO-71 - Armador de equipos|LIO-71]] Armador de equipos
 
 ## Descripcion
 

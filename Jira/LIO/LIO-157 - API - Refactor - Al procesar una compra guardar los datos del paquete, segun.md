@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-157"
 
 ## Relaciones
 
-- **Padre:** [[LIO-133]] Ms Envios Libre Opcion
+- **Padre:** [[LIO-133 - Ms Envios Libre Opcion|LIO-133]] Ms Envios Libre Opcion
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-416"
 
 ## Relaciones
 
-- **Padre:** [[COB-188]] Feat - Cargar nuevo cheque
-- **blocks:** [[SNB-705]] CHEQUES / DIFERIDOS
+- **Padre:** [[COB-188 - Feat - Cargar nuevo cheque|COB-188]] Feat - Cargar nuevo cheque
+- **blocks:** [[SNB-705 - CHEQUES DIFERIDOS|SNB-705]] CHEQUES / DIFERIDOS
 
 ## Descripcion
 

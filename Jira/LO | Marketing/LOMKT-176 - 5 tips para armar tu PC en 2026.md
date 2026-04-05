@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-176"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-173]] LO_ IDEAS DE CONTENIDO BY ELO
+- **Padre:** [[LOMKT-173 - LO_ IDEAS DE CONTENIDO BY ELO|LOMKT-173]] LO_ IDEAS DE CONTENIDO BY ELO
 
 ## Descripcion
 

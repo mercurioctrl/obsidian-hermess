@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-446"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-447]] API - Feat - Descargar XLSX con el token
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-447 - API - Feat - Descargar XLSX con el token|NBWEB-447]] API - Feat - Descargar XLSX con el token
 
 ## Descripcion
 

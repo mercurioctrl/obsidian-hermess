@@ -29,15 +29,15 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-325"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-326]] API - Feat - Listar pedidos con tracking (con etiqueta)
-- **Subtarea:** [[EXP-327]] API - Feat - Procesar retiro de currrier
-- **Subtarea:** [[EXP-328]] API - Feat - Descargar planilla de retiro de currier
-- **Subtarea:** [[EXP-329]] API - Feat - Listar retiros para descargar 
-- **Subtarea:** [[EXP-330]] APP - Feat - Pestaña Seguimientos
-- **Subtarea:** [[EXP-332]] APP - Procesar retiro de correo (Boton)
-- **Subtarea:** [[EXP-334]] APP - Refactor - Descargar planilla
-- **Subtarea:** [[EXP-352]] API - Refactor - Modificar "confirmación de despacho" según lo conversado con exp
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-326 - API - Feat - Listar pedidos con tracking (con etiqueta)|EXP-326]] API - Feat - Listar pedidos con tracking (con etiqueta)
+- **Subtarea:** [[EXP-327 - API - Feat - Procesar retiro de currrier|EXP-327]] API - Feat - Procesar retiro de currrier
+- **Subtarea:** [[EXP-328 - API - Feat - Descargar planilla de retiro de currier|EXP-328]] API - Feat - Descargar planilla de retiro de currier
+- **Subtarea:** [[EXP-329 - API - Feat - Listar retiros para descargar|EXP-329]] API - Feat - Listar retiros para descargar 
+- **Subtarea:** [[EXP-330 - APP - Feat - Pestaña Seguimientos|EXP-330]] APP - Feat - Pestaña Seguimientos
+- **Subtarea:** [[EXP-332 - APP - Procesar retiro de correo (Boton)|EXP-332]] APP - Procesar retiro de correo (Boton)
+- **Subtarea:** [[EXP-334 - APP - Refactor - Descargar planilla|EXP-334]] APP - Refactor - Descargar planilla
+- **Subtarea:** [[EXP-352 - API - Refactor - Modificar confirmación de despacho según lo conversado con exp|EXP-352]] API - Refactor - Modificar "confirmación de despacho" según lo conversado con exp
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-188"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-183]] Abr 13:LO_ REFUERZO PROMO AMD (Amarillo) mie 8
+- **Padre:** [[LOMKT-183 - Abr 13LO_ REFUERZO PROMO AMD (Amarillo) mie 8|LOMKT-183]] Abr 13:LO_ REFUERZO PROMO AMD (Amarillo) mie 8
 
 ## Descripcion
 

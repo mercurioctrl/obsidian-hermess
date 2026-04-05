@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-229"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-237]] Blu Diciembre: Triada 10 Diseño Blu.Recruiting
-- **Subtarea:** [[BLUWEB-238]] 2.Blu.inc Diciembre: Triada 10 Copys Blu.Recruiting
-- **Subtarea:** [[BLUWEB-239]] Blu Diciembre: Triada 10 Programar  Blu.Recruiting  para esta semana el mejor dia
+- **Subtarea:** [[BLUWEB-237 - Blu Diciembre Triada 10 Diseño Blu.Recruiting|BLUWEB-237]] Blu Diciembre: Triada 10 Diseño Blu.Recruiting
+- **Subtarea:** [[BLUWEB-238 - 2.Blu.inc Diciembre Triada 10 Copys Blu.Recruiting|BLUWEB-238]] 2.Blu.inc Diciembre: Triada 10 Copys Blu.Recruiting
+- **Subtarea:** [[BLUWEB-239 - Blu Diciembre Triada 10 Programar Blu.Recruiting para esta semana el mejor dia|BLUWEB-239]] Blu Diciembre: Triada 10 Programar  Blu.Recruiting  para esta semana el mejor dia
 
 ## Descripcion
 

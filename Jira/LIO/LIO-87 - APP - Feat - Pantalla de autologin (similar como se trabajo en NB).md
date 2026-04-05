@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-87"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **is blocked by:** [[LIO-85]] API - Feat - AutoLogin desde pedidos
-- **is blocked by:** [[LIO-86]] API - PED - Feat - Crear autorización en libre opción desde pedidos
-- **relates to:** [[LIO-90]] APP - Pantalla de autologin - Sugerencia al utilizar token expirado
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **is blocked by:** [[LIO-85 - API - Feat - AutoLogin desde pedidos|LIO-85]] API - Feat - AutoLogin desde pedidos
+- **is blocked by:** [[LIO-86 - API - PED - Feat - Crear autorización en libre opción desde pedidos|LIO-86]] API - PED - Feat - Crear autorización en libre opción desde pedidos
+- **relates to:** [[LIO-90 - APP - Pantalla de autologin - Sugerencia al utilizar token expirado|LIO-90]] APP - Pantalla de autologin - Sugerencia al utilizar token expirado
 
 ## Descripcion
 

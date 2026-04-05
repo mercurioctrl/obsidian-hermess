@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-224"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-225]] APP - Mi cuenta - Datos de usuario
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-225 - APP - Mi cuenta - Datos de usuario|NBWEB-225]] APP - Mi cuenta - Datos de usuario
 
 ## Descripcion
 

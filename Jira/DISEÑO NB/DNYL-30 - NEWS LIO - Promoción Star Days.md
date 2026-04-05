@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-30"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-17]] NEWSLETTER STAR DAYS
+- **blocks:** [[REDESYNEWS-17 - NEWSLETTER STAR DAYS|REDESYNEWS-17]] NEWSLETTER STAR DAYS
 
 ## Descripcion
 

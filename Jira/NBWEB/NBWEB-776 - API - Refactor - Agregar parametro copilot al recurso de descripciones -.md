@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-776"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-772]] API - Refactor - Agregar parametro "copilot" al recurso de descripciones 
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-772 - API - Refactor - Agregar parametro copilot al recurso de descripciones|NBWEB-772]] API - Refactor - Agregar parametro "copilot" al recurso de descripciones 
 
 ## Descripcion
 

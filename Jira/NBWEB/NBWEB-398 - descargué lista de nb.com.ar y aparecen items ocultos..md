@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-398"
 
 ## Relaciones
 
-- **causes:** [[SNB-189]] descargué lista de nb.com.ar y aparecen items ocultos.
+- **causes:** [[SNB-189 - descargué lista de nb.com.ar y aparecen items ocultos.|SNB-189]] descargué lista de nb.com.ar y aparecen items ocultos.
 
 ## Descripcion
 

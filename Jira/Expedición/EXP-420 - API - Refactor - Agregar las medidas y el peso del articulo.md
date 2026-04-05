@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-420"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **blocks:** [[EXP-422]] APP - Refactor - En el modulo de conteo se deben poder visualizar y editar tambien medidas y pesos
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **blocks:** [[EXP-422 - APP - Refactor - En el modulo de conteo se deben poder visualizar y editar|EXP-422]] APP - Refactor - En el modulo de conteo se deben poder visualizar y editar tambien medidas y pesos
 
 ## Descripcion
 

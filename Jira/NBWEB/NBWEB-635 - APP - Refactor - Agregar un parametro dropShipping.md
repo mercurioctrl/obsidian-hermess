@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-635"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-619]] Generar ordenes
-- **is blocked by:** [[NBWEB-634]] API - Refactor - Agregar un parametro dropShipping
+- **Padre:** [[NBWEB-619 - Generar ordenes|NBWEB-619]] Generar ordenes
+- **is blocked by:** [[NBWEB-634 - API - Refactor - Agregar un parametro dropShipping|NBWEB-634]] API - Refactor - Agregar un parametro dropShipping
 
 ## Descripcion
 

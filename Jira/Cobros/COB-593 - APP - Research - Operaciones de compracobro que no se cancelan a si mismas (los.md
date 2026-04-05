@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-593"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
 
 ## Descripcion
 

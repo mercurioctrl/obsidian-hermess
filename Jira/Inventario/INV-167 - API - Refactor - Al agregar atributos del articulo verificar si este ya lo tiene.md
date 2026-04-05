@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-167"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **relates to:** [[INV-168]] APP - Refactor - Al agregar atributos al articulo actualizar el modal de atributos
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **relates to:** [[INV-168 - APP - Refactor - Al agregar atributos al articulo actualizar el modal de|INV-168]] APP - Refactor - Al agregar atributos al articulo actualizar el modal de atributos
 
 ## Descripcion
 

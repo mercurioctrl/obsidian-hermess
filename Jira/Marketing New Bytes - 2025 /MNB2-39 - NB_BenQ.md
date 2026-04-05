@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-39"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-40]] NB_Newsletter BenQ 27
-- **Subtarea:** [[MNB2-41]] NB_Banner BenQ (mezclar productos de la marca) 
+- **Subtarea:** [[MNB2-40 - NB_Newsletter BenQ 27|MNB2-40]] NB_Newsletter BenQ 27
+- **Subtarea:** [[MNB2-41 - NB_Banner BenQ (mezclar productos de la marca)|MNB2-41]] NB_Banner BenQ (mezclar productos de la marca) 
 
 ## Descripcion
 

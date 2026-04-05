@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-234"
 
 ## Relaciones
 
-- **Padre:** [[LIO-105]] Home
-- **has action item:** [[LIO-239]] APP - Refactor - Conectar los mini banners de productos destacados con el CMS unificando la obtencion de los banners con una sola peticion
+- **Padre:** [[LIO-105 - Home|LIO-105]] Home
+- **has action item:** [[LIO-239 - APP - Refactor - Conectar los mini banners de productos destacados con el CMS|LIO-239]] APP - Refactor - Conectar los mini banners de productos destacados con el CMS unificando la obtencion de los banners con una sola peticion
 
 ## Descripcion
 

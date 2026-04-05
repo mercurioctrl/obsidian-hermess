@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-317"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-259]] APP - Oportunidad de mejora - Refactor Home
-- **relates to:** [[NBWEB-337]] fixes y sugerencias
-- **relates to:** [[NBWEB-295]] Ultimos ingresos en vez de "mas vendidos"
+- **Padre:** [[NBWEB-259 - APP - Oportunidad de mejora - Refactor Home|NBWEB-259]] APP - Oportunidad de mejora - Refactor Home
+- **relates to:** [[NBWEB-337 - fixes y sugerencias|NBWEB-337]] fixes y sugerencias
+- **relates to:** [[NBWEB-295 - Ultimos ingresos en vez de mas vendidos|NBWEB-295]] Ultimos ingresos en vez de "mas vendidos"
 
 ## Descripcion
 

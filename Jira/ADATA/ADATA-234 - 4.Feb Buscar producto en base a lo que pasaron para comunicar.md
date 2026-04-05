@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-234"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-164]] Adata Feb: 1/4 Social Media_LEVANTE II 24O 08-02
+- **Padre:** [[ADATA-164 - Adata Feb 14 Social Media_LEVANTE II 24O 08-02|ADATA-164]] Adata Feb: 1/4 Social Media_LEVANTE II 24O 08-02
 
 ## Descripcion
 

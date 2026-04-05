@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-117"
 
 ## Relaciones
 
-- **Padre:** [[COM-116]] Categorias
-- **Subtarea:** [[COM-118]] API - Feat - Listar categorias
-- **Subtarea:** [[COM-119]] API - Feat - Editar Categorias
-- **Subtarea:** [[COM-120]] APP - Feat - Pestaña categorias
+- **Padre:** [[COM-116 - Categorias|COM-116]] Categorias
+- **Subtarea:** [[COM-118 - API - Feat - Listar categorias|COM-118]] API - Feat - Listar categorias
+- **Subtarea:** [[COM-119 - API - Feat - Editar Categorias|COM-119]] API - Feat - Editar Categorias
+- **Subtarea:** [[COM-120 - APP - Feat - Pestaña categorias|COM-120]] APP - Feat - Pestaña categorias
 
 ## Descripcion
 

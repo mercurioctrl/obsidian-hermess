@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-196"
 
 ## Relaciones
 
-- **Padre:** [[INV-24]] Feat - Bases y login
-- **has action item:** [[INV-195]] APP - INV- agregar el selector de empresa general (en la parte superior derecha como PED o EXP)
+- **Padre:** [[INV-24 - Feat - Bases y login|INV-24]] Feat - Bases y login
+- **has action item:** [[INV-195 - APP - INV- agregar el selector de empresa general (en la parte superior derecha|INV-195]] APP - INV- agregar el selector de empresa general (en la parte superior derecha como PED o EXP)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-76"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **is blocked by:** [[LIO-80]] API - En la home, la imagen por defecto a veces no se muestra cuando no hay imagen disponible - Imagen por defecto no visible
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **is blocked by:** [[LIO-80 - API - En la home, la imagen por defecto a veces no se muestra cuando no hay|LIO-80]] API - En la home, la imagen por defecto a veces no se muestra cuando no hay imagen disponible - Imagen por defecto no visible
 
 ## Descripcion
 

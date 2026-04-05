@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-277"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **clones:** [[COM-246]] APP - MVP - Mandar companyCode al crear un proveedor
-- **relates to:** [[COM-44]] APP - Feat - Alta de proveedores
-- **relates to:** [[COM-45]] API - Feat - Modificar un provedor
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **clones:** [[COM-246 - APP - MVP - Mandar companyCode al crear un proveedor|COM-246]] APP - MVP - Mandar companyCode al crear un proveedor
+- **relates to:** [[COM-44 - APP - Feat - Alta de proveedores|COM-44]] APP - Feat - Alta de proveedores
+- **relates to:** [[COM-45 - API - Feat - Modificar un provedor|COM-45]] API - Feat - Modificar un provedor
 
 ## Descripcion
 

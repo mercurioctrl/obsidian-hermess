@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-475"
 
 ## Relaciones
 
-- **causes:** [[MKT-88]] INTEL Campaña gamer Call of Duty W
-- **is blocked by:** [[NBWEB-474]] INTEL Campaña gamer Call of Duty W
+- **causes:** [[MKT-88 - INTEL Campaña gamer Call of Duty W|MKT-88]] INTEL Campaña gamer Call of Duty W
+- **is blocked by:** [[NBWEB-474 - INTEL Campaña gamer Call of Duty W|NBWEB-474]] INTEL Campaña gamer Call of Duty W
 
 ## Descripcion
 

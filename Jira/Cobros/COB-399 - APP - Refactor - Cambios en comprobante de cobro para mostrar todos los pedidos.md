@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-399"
 
 ## Relaciones
 
-- **Padre:** [[COB-268]] Refactor - Comprobantes de cobro
+- **Padre:** [[COB-268 - Refactor - Comprobantes de cobro|COB-268]] Refactor - Comprobantes de cobro
 
 ## Descripcion
 

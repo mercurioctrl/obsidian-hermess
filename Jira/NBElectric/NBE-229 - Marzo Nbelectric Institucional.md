@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-229"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-246]] Presentaciones actualizar marcas
-- **Subtarea:** [[NBE-247]] Revisar y Actualizar si falta algún Logo
+- **Subtarea:** [[NBE-246 - Presentaciones actualizar marcas|NBE-246]] Presentaciones actualizar marcas
+- **Subtarea:** [[NBE-247 - Revisar y Actualizar si falta algún Logo|NBE-247]] Revisar y Actualizar si falta algún Logo
 
 ## Descripcion
 

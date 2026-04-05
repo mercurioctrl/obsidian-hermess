@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-83"
 
 ## Relaciones
 
-- **Padre:** [[INV-80]] Descripciones
-- **is blocked by:** [[INV-82]] API - Feat - Editar descripción
-- **is blocked by:** [[INV-81]] API - Feat - Listar descripciones autogeneradas
+- **Padre:** [[INV-80 - Descripciones|INV-80]] Descripciones
+- **is blocked by:** [[INV-82 - API - Feat - Editar descripción|INV-82]] API - Feat - Editar descripción
+- **is blocked by:** [[INV-81 - API - Feat - Listar descripciones autogeneradas|INV-81]] API - Feat - Listar descripciones autogeneradas
 
 ## Descripcion
 

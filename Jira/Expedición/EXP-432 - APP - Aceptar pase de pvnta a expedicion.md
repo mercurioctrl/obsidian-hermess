@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-432"
 
 ## Relaciones
 
-- **Padre:** [[EXP-430]] Refactorizar pases
+- **Padre:** [[EXP-430 - Refactorizar pases|EXP-430]] Refactorizar pases
 
 ## Descripcion
 

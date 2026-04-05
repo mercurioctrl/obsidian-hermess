@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-152"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **relates to:** [[INV-153]] API - Refactor - Agregar parametros necesarios para editar la descripcion autogenerada desde listado de productos
-- **relates to:** [[INV-158]] APP - Agregar herramienta de edición en el inventario directamente para todos los productos - Observación en el indicador del determinismo 
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **relates to:** [[INV-153 - API - Refactor - Agregar parametros necesarios para editar la descripcion|INV-153]] API - Refactor - Agregar parametros necesarios para editar la descripcion autogenerada desde listado de productos
+- **relates to:** [[INV-158 - APP - Agregar herramienta de edición en el inventario directamente para todos|INV-158]] APP - Agregar herramienta de edición en el inventario directamente para todos los productos - Observación en el indicador del determinismo 
 
 ## Descripcion
 

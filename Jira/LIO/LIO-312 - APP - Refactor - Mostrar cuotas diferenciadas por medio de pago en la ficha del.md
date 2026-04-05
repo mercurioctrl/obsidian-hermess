@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-312"
 
 ## Relaciones
 
-- **Padre:** [[LIO-119]] Inventario
-- **action item from:** [[LIO-311]] API - Refactor del recurso de item para soportar intereses diferenciados por cuota
+- **Padre:** [[LIO-119 - Inventario|LIO-119]] Inventario
+- **action item from:** [[LIO-311 - API - Refactor del recurso de item para soportar intereses diferenciados por|LIO-311]] API - Refactor del recurso de item para soportar intereses diferenciados por cuota
 
 ## Descripcion
 

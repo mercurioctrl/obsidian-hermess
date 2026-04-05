@@ -29,16 +29,16 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-52"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-53]] Maquetado general de la plantilla
-- **Subtarea:** [[NBWEB-55]] Categorías / Marcas -  Barra Lateral
-- **Subtarea:** [[NBWEB-62]] Login
-- **Subtarea:** [[NBWEB-63]] Mas Vendidos
-- **Subtarea:** [[NBWEB-64]] Novedades / Mas visitados
-- **Subtarea:** [[NBWEB-65]] Slide Footer de Marcas
-- **Subtarea:** [[NBWEB-146]] SYS - Solucionar error de cors
-- **Subtarea:** [[NBWEB-260]] APP - Fix - No son clickeables los elementos que muestran productos en la home
-- **is blocked by:** [[NBWEB-169]] Revisar parametro Novedades para la home del sitio
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-53 - Maquetado general de la plantilla|NBWEB-53]] Maquetado general de la plantilla
+- **Subtarea:** [[NBWEB-55 - Categorías Marcas - Barra Lateral|NBWEB-55]] Categorías / Marcas -  Barra Lateral
+- **Subtarea:** [[NBWEB-62 - Login|NBWEB-62]] Login
+- **Subtarea:** [[NBWEB-63 - Mas Vendidos|NBWEB-63]] Mas Vendidos
+- **Subtarea:** [[NBWEB-64 - Novedades Mas visitados|NBWEB-64]] Novedades / Mas visitados
+- **Subtarea:** [[NBWEB-65 - Slide Footer de Marcas|NBWEB-65]] Slide Footer de Marcas
+- **Subtarea:** [[NBWEB-146 - SYS - Solucionar error de cors|NBWEB-146]] SYS - Solucionar error de cors
+- **Subtarea:** [[NBWEB-260 - APP - Fix - No son clickeables los elementos que muestran productos en la home|NBWEB-260]] APP - Fix - No son clickeables los elementos que muestran productos en la home
+- **is blocked by:** [[NBWEB-169 - Revisar parametro Novedades para la home del sitio|NBWEB-169]] Revisar parametro Novedades para la home del sitio
 
 ## Descripcion
 

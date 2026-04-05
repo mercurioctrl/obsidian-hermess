@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-320"
 
 ## Relaciones
 
-- **has action item:** [[SNB-2979]] Libre Opción - Autologin desde pedidos fallido 
+- **has action item:** [[SNB-2979 - Libre Opción - Autologin desde pedidos fallido|SNB-2979]] Libre Opción - Autologin desde pedidos fallido 
 
 ## Descripcion
 

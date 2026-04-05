@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-252"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **Subtarea:** [[COB-253]] API - Test - Obtener saldo de una caja especifica
-- **Subtarea:** [[COB-254]] API - Test - Comprobar salud de un array de cajas
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **Subtarea:** [[COB-253 - API - Test - Obtener saldo de una caja especifica|COB-253]] API - Test - Obtener saldo de una caja especifica
+- **Subtarea:** [[COB-254 - API - Test - Comprobar salud de un array de cajas|COB-254]] API - Test - Comprobar salud de un array de cajas
 
 ## Descripcion
 

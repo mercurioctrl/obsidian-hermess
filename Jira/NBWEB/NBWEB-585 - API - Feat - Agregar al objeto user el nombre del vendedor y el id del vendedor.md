@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-585"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **blocks:** [[NBWEB-586]] APP - Feat - Agregar mensaje en el carrito y desplegable en la confirmación de la compra
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **blocks:** [[NBWEB-586 - APP - Feat - Agregar mensaje en el carrito y desplegable en la confirmación de|NBWEB-586]] APP - Feat - Agregar mensaje en el carrito y desplegable en la confirmación de la compra
 
 ## Descripcion
 

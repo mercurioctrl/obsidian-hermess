@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-19"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-9]] G5 - Notebook
+- **blocks:** [[REDESYNEWS-9 - G5 - Notebook|REDESYNEWS-9]] G5 - Notebook
 
 ## Descripcion
 

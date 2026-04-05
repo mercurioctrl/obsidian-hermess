@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-365"
 
 ## Relaciones
 
-- **relates to:** [[LIO-364]] API - Refactor - Implementar cache de redis en las especificaciones
+- **relates to:** [[LIO-364 - API - Refactor - Implementar cache de redis en las especificaciones|LIO-364]] API - Refactor - Implementar cache de redis en las especificaciones
 
 ## Descripcion
 

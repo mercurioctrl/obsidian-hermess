@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-94"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **relates to:** [[LIO-96]] APP - Clarificar cuotas en checkout - Sugerencia de mejora en la visualización de cuotas
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **relates to:** [[LIO-96 - APP - Clarificar cuotas en checkout - Sugerencia de mejora en la visualización|LIO-96]] APP - Clarificar cuotas en checkout - Sugerencia de mejora en la visualización de cuotas
 
 ## Descripcion
 

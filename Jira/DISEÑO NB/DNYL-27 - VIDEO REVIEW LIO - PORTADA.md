@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-27"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-12]] Viernes de Review LO PLAY
+- **blocks:** [[REDESYNEWS-12 - Viernes de Review LO PLAY|REDESYNEWS-12]] Viernes de Review LO PLAY
 
 ## Descripcion
 

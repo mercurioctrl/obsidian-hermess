@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-265"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **has action item:** [[LIO-272]] API - Refactor - Enviar por correo el formulario de feedback
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **has action item:** [[LIO-272 - API - Refactor - Enviar por correo el formulario de feedback|LIO-272]] API - Refactor - Enviar por correo el formulario de feedback
 
 ## Descripcion
 

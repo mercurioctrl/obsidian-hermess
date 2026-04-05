@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-131"
 
 ## Relaciones
 
-- **Padre:** [[LIO-17]] Mejorar seguimientos de guia y agregar un seguimiento activo
+- **Padre:** [[LIO-17 - Mejorar seguimientos de guia y agregar un seguimiento activo|LIO-17]] Mejorar seguimientos de guia y agregar un seguimiento activo
 
 ## Descripcion
 

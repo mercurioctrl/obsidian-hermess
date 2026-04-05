@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-658"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-657]] NB_ Nueva estetica 2024 Instagram
+- **Padre:** [[DNYL-657 - NB_ Nueva estetica 2024 Instagram|DNYL-657]] NB_ Nueva estetica 2024 Instagram
 
 ## Descripcion
 

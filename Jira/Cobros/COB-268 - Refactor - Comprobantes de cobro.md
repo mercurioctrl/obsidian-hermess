@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-268"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **Subtarea:** [[COB-269]] API - Refactor - Comprobantes de cobro
-- **Subtarea:** [[COB-270]] APP - Refactor - Comprobantes de cobro
-- **Subtarea:** [[COB-362]] API - Refactor - Cuando el pago se hace en pesos, debe mostrar el saldo en pesos en el comprobante y el tipo de cambio
-- **Subtarea:** [[COB-399]] APP - Refactor - Cambios en comprobante de cobro para mostrar todos los pedidos del conjunto y su informacion 
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **Subtarea:** [[COB-269 - API - Refactor - Comprobantes de cobro|COB-269]] API - Refactor - Comprobantes de cobro
+- **Subtarea:** [[COB-270 - APP - Refactor - Comprobantes de cobro|COB-270]] APP - Refactor - Comprobantes de cobro
+- **Subtarea:** [[COB-362 - API - Refactor - Cuando el pago se hace en pesos, debe mostrar el saldo en|COB-362]] API - Refactor - Cuando el pago se hace en pesos, debe mostrar el saldo en pesos en el comprobante y el tipo de cambio
+- **Subtarea:** [[COB-399 - APP - Refactor - Cambios en comprobante de cobro para mostrar todos los pedidos|COB-399]] APP - Refactor - Cambios en comprobante de cobro para mostrar todos los pedidos del conjunto y su informacion 
 
 ## Descripcion
 

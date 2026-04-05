@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-1156"
 
 ## Relaciones
 
-- **has action item:** [[MNB2-17]] NB_ INGRESO PLACAS ASUS
-- **has action item:** [[MNB2-15]] NB_ PROMO ASUS FUENTE + PLACA
+- **has action item:** [[MNB2-17 - NB_ INGRESO PLACAS ASUS|MNB2-17]] NB_ INGRESO PLACAS ASUS
+- **has action item:** [[MNB2-15 - NB_ PROMO ASUS FUENTE + PLACA|MNB2-15]] NB_ PROMO ASUS FUENTE + PLACA
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-129"
 
 ## Relaciones
 
-- **Padre:** [[EXP-117]] Feat - Listar pedidos despachados para hacer devoluciones
+- **Padre:** [[EXP-117 - Feat - Listar pedidos despachados para hacer devoluciones|EXP-117]] Feat - Listar pedidos despachados para hacer devoluciones
 
 ## Descripcion
 

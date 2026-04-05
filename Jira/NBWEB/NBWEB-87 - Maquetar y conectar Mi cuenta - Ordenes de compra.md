@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-87"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
-- **relates to:** [[NBWEB-18]] Listar Ordenes de compra
+- **Padre:** [[NBWEB-59 - APP -Maquetado y Desarrollo - Mi cuenta|NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
+- **relates to:** [[NBWEB-18 - Listar Ordenes de compra|NBWEB-18]] Listar Ordenes de compra
 
 ## Descripcion
 

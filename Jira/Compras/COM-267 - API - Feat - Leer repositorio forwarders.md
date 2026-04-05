@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-267"
 
 ## Relaciones
 
-- **Padre:** [[COM-265]] Forwarders
-- **has action item:** [[COM-268]] APP - Feat - Agregar pestaña de alta y edicion de forwarders
+- **Padre:** [[COM-265 - Forwarders|COM-265]] Forwarders
+- **has action item:** [[COM-268 - APP - Feat - Agregar pestaña de alta y edicion de forwarders|COM-268]] APP - Feat - Agregar pestaña de alta y edicion de forwarders
 
 ## Descripcion
 

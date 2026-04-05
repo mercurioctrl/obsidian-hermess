@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-53"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-64]] API - Feat - Filtros listar clientes
-- **Subtarea:** [[COB-271]] API - Refactor - Se debe poder ingresar nombres con la letra ñ, al menos como un comodin
-- **Subtarea:** [[COB-437]] API - Refactor - Agregar parametro y filtro para clientes activos/inactivos/todos
-- **blocks:** [[COB-54]] APP - Feat - Listar clientes
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-64 - API - Feat - Filtros listar clientes|COB-64]] API - Feat - Filtros listar clientes
+- **Subtarea:** [[COB-271 - API - Refactor - Se debe poder ingresar nombres con la letra ñ, al menos como|COB-271]] API - Refactor - Se debe poder ingresar nombres con la letra ñ, al menos como un comodin
+- **Subtarea:** [[COB-437 - API - Refactor - Agregar parametro y filtro para clientes activosinactivostodos|COB-437]] API - Refactor - Agregar parametro y filtro para clientes activos/inactivos/todos
+- **blocks:** [[COB-54 - APP - Feat - Listar clientes|COB-54]] APP - Feat - Listar clientes
 
 ## Descripcion
 

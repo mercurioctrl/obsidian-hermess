@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-813"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-801]] APP - Feat - Listar/Editar/Agregar Mis Productos
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-801 - APP - Feat - ListarEditarAgregar Mis Productos|NBWEB-801]] APP - Feat - Listar/Editar/Agregar Mis Productos
 
 ## Descripcion
 

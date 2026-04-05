@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-278"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **clones:** [[COM-45]] API - Feat - Modificar un provedor
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **clones:** [[COM-45 - API - Feat - Modificar un provedor|COM-45]] API - Feat - Modificar un provedor
 
 ## Descripcion
 

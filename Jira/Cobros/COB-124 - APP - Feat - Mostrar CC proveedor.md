@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-124"
 
 ## Relaciones
 
-- **Padre:** [[COB-114]] Feat - Ver cuentas proveedores
+- **Padre:** [[COB-114 - Feat - Ver cuentas proveedores|COB-114]] Feat - Ver cuentas proveedores
 
 ## Descripcion
 

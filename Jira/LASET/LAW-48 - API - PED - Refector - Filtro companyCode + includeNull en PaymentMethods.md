@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-48"
 
 ## Relaciones
 
-- **Padre:** [[LAW-44]] LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una empresa determinada
-- **has action item:** [[LAW-49]] APP - PED - Feat- Filtro companyCode + includeNull en PaymentMethods
+- **Padre:** [[LAW-44 - LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una|LAW-44]] LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una empresa determinada
+- **has action item:** [[LAW-49 - APP - PED - Feat- Filtro companyCode + includeNull en PaymentMethods|LAW-49]] APP - PED - Feat- Filtro companyCode + includeNull en PaymentMethods
 
 ## Descripcion
 

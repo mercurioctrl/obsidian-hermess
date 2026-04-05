@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-334"
 
 ## Relaciones
 
-- **Padre:** [[EXP-325]] Feat - Pestaña seguimiento
+- **Padre:** [[EXP-325 - Feat - Pestaña seguimiento|EXP-325]] Feat - Pestaña seguimiento
 
 ## Descripcion
 

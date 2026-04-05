@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-409"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **has action item:** [[LIO-467]] API - Refactor - Al crear  o modificar un token de referidos, verificamos si el usuario crador tiene cliente en NB, si no es asi lo creamos y se lo asignamos
-- **relates to:** [[LIO-513]] API - Refactor - Obtener token de usuario - Obtener el token más reciente
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **has action item:** [[LIO-467 - API - Refactor - Al crear o modificar un token de referidos, verificamos si el|LIO-467]] API - Refactor - Al crear  o modificar un token de referidos, verificamos si el usuario crador tiene cliente en NB, si no es asi lo creamos y se lo asignamos
+- **relates to:** [[LIO-513 - API - Refactor - Obtener token de usuario - Obtener el token más reciente|LIO-513]] API - Refactor - Obtener token de usuario - Obtener el token más reciente
 
 ## Descripcion
 

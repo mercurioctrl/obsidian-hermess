@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-464"
 
 ## Relaciones
 
-- **Padre:** [[EXP-463]] Pedido de informacion para los items que ingresan por primera vez
-- **has action item:** [[EXP-465]] APP - Refactor - Ingreso de seriales (Control de parametros obligatorios)
+- **Padre:** [[EXP-463 - Pedido de informacion para los items que ingresan por primera vez|EXP-463]] Pedido de informacion para los items que ingresan por primera vez
+- **has action item:** [[EXP-465 - APP - Refactor - Ingreso de seriales (Control de parametros obligatorios)|EXP-465]] APP - Refactor - Ingreso de seriales (Control de parametros obligatorios)
 
 ## Descripcion
 

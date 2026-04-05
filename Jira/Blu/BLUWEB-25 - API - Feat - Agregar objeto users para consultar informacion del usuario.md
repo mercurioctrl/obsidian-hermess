@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-25"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-9]] Autenticación y Administracion de usuarios 
+- **Padre:** [[BLUWEB-9 - Autenticación y Administracion de usuarios|BLUWEB-9]] Autenticación y Administracion de usuarios 
 
 ## Descripcion
 

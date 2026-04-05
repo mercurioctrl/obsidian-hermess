@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-453"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **Subtarea:** [[NBWEB-515]] APP - Review - No se ve completo el valor si tiene mas de 3 cifrias, por ejemplo la tarifa minima de camioneta es 4500
-- **is blocked by:** [[NBWEB-441]] APP - CMS - Listar medios de envio
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **Subtarea:** [[NBWEB-515 - APP - Review - No se ve completo el valor si tiene mas de 3 cifrias, por|NBWEB-515]] APP - Review - No se ve completo el valor si tiene mas de 3 cifrias, por ejemplo la tarifa minima de camioneta es 4500
+- **is blocked by:** [[NBWEB-441 - APP - CMS - Listar medios de envio|NBWEB-441]] APP - CMS - Listar medios de envio
 
 ## Descripcion
 

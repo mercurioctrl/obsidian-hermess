@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-323"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-325]] API - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
-- **Subtarea:** [[COB-326]] APP - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
-- **is blocked by:** [[COB-339]] Clientes - Error al descargar comprobante
-- **is blocked by:** [[EXP-196]] Documentación no disponible
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-325 - API - Refactor - Enlace a documentación de postventa (Notas de credito) a los|COB-325]] API - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
+- **Subtarea:** [[COB-326 - APP - Refactor - Enlace a documentación de postventa (Notas de credito) a los|COB-326]] APP - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
+- **is blocked by:** [[COB-339 - Clientes - Error al descargar comprobante|COB-339]] Clientes - Error al descargar comprobante
+- **is blocked by:** [[EXP-196 - Documentación no disponible|EXP-196]] Documentación no disponible
 
 ## Descripcion
 

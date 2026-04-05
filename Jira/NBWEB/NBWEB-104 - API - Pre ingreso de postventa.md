@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-104"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
-- **Subtarea:** [[NBWEB-108]] Carga de imagenes
-- **relates to:** [[NBWEB-110]] APP - Maquetado y desarrollo Postventa
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
+- **Subtarea:** [[NBWEB-108 - Carga de imagenes|NBWEB-108]] Carga de imagenes
+- **relates to:** [[NBWEB-110 - APP - Maquetado y desarrollo Postventa|NBWEB-110]] APP - Maquetado y desarrollo Postventa
 
 ## Descripcion
 

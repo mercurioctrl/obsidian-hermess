@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-57"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-23]] Generar un comprobante
-- **has action item:** [[LOCAPP-58]] APP - Refactor - Agregaremos los "impuestos internos" a los comprobantes cuando estan disponibles
+- **Padre:** [[LOCAPP-23 - Generar un comprobante|LOCAPP-23]] Generar un comprobante
+- **has action item:** [[LOCAPP-58 - APP - Refactor - Agregaremos los impuestos internos a los comprobantes cuando|LOCAPP-58]] APP - Refactor - Agregaremos los "impuestos internos" a los comprobantes cuando estan disponibles
 
 ## Descripcion
 

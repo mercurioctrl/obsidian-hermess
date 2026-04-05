@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-201"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-197]] Triada 5
+- **Padre:** [[BLUWEB-197 - Triada 5|BLUWEB-197]] Triada 5
 
 ## Descripcion
 

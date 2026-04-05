@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-203"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-204]] APIv4 - Feat - Actualizar informacion del usuario en mi cuenta
-- **Subtarea:** [[LIO-205]] APP - Refactor - Actualizar informacion del usuario en mi cuenta
-- **Subtarea:** [[LIO-206]] API - Feat - Leer y Editar objeto "mi tienda" o vendedores
-- **Subtarea:** [[LIO-207]] APP - Feat - Editar informacion de "mi tienda"
-- **Subtarea:** [[LIO-358]] APP - Review - Problema para mostrar las preguntas cuando se carga la pagina de manera sincronica
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-204 - APIv4 - Feat - Actualizar informacion del usuario en mi cuenta|LIO-204]] APIv4 - Feat - Actualizar informacion del usuario en mi cuenta
+- **Subtarea:** [[LIO-205 - APP - Refactor - Actualizar informacion del usuario en mi cuenta|LIO-205]] APP - Refactor - Actualizar informacion del usuario en mi cuenta
+- **Subtarea:** [[LIO-206 - API - Feat - Leer y Editar objeto mi tienda o vendedores|LIO-206]] API - Feat - Leer y Editar objeto "mi tienda" o vendedores
+- **Subtarea:** [[LIO-207 - APP - Feat - Editar informacion de mi tienda|LIO-207]] APP - Feat - Editar informacion de "mi tienda"
+- **Subtarea:** [[LIO-358 - APP - Review - Problema para mostrar las preguntas cuando se carga la pagina de|LIO-358]] APP - Review - Problema para mostrar las preguntas cuando se carga la pagina de manera sincronica
 
 ## Descripcion
 

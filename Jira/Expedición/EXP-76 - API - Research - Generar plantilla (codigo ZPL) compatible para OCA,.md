@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-76"
 
 ## Relaciones
 
-- **Padre:** [[EXP-75]] Feat - Etiquetas de envio con zpl
+- **Padre:** [[EXP-75 - Feat - Etiquetas de envio con zpl|EXP-75]] Feat - Etiquetas de envio con zpl
 
 ## Descripcion
 

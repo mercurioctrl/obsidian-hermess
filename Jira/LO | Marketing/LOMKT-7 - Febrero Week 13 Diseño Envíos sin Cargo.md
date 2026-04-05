@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-7"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-1]] Febrero Week 1 : Summer Mode ON 
+- **Padre:** [[LOMKT-1 - Febrero Week 1 Summer Mode ON|LOMKT-1]] Febrero Week 1 : Summer Mode ON 
 
 ## Descripcion
 

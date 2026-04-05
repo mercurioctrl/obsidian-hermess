@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-464"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **relates to:** [[LIO-418]] API - Feat - SyncUp - Impactar tokens por conversión
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **relates to:** [[LIO-418 - API - Feat - SyncUp - Impactar tokens por conversión|LIO-418]] API - Feat - SyncUp - Impactar tokens por conversión
 
 ## Descripcion
 

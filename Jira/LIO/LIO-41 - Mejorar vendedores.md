@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-41"
 
 ## Relaciones
 
-- **Padre:** [[LIO-5]] Seguridad y Confianza
-- **Subtarea:** [[LIO-42]] API - Review - Confirmar que esta funcionando el dropp de los vendedores y el ranking
+- **Padre:** [[LIO-5 - Seguridad y Confianza|LIO-5]] Seguridad y Confianza
+- **Subtarea:** [[LIO-42 - API - Review - Confirmar que esta funcionando el dropp de los vendedores y el|LIO-42]] API - Review - Confirmar que esta funcionando el dropp de los vendedores y el ranking
 
 ## Descripcion
 

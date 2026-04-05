@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-25"
 
 ## Relaciones
 
-- **Padre:** [[LAW-22]] Sitio Web_Raidmax Etapa 0
+- **Padre:** [[LAW-22 - Sitio Web_Raidmax Etapa 0|LAW-22]] Sitio Web_Raidmax Etapa 0
 
 ## Descripcion
 

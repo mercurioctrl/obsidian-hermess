@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-215"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-240]] 3.Revisar en el calendar de blu.inc que esten cargados
-- **Subtarea:** [[BLUWEB-241]] 4.Cargar tareas por mes de los que esten pintados en color naranja
+- **Subtarea:** [[BLUWEB-240 - 3.Revisar en el calendar de blu.inc que esten cargados|BLUWEB-240]] 3.Revisar en el calendar de blu.inc que esten cargados
+- **Subtarea:** [[BLUWEB-241 - 4.Cargar tareas por mes de los que esten pintados en color naranja|BLUWEB-241]] 4.Cargar tareas por mes de los que esten pintados en color naranja
 
 ## Descripcion
 

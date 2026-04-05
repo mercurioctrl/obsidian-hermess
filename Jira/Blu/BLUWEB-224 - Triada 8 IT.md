@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-224"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-225]] Blu Diciembre: Triada 8 Diseño Blu.IT
-- **Subtarea:** [[BLUWEB-226]] Blu Diciembre: Triada 8 Copys Blu.IT
-- **Subtarea:** [[BLUWEB-227]] 2.blu.inc Diciembre: Triada 8 Programar  Blu.IT VIERNES 2 DE DICIEMBRE
+- **Subtarea:** [[BLUWEB-225 - Blu Diciembre Triada 8 Diseño Blu.IT|BLUWEB-225]] Blu Diciembre: Triada 8 Diseño Blu.IT
+- **Subtarea:** [[BLUWEB-226 - Blu Diciembre Triada 8 Copys Blu.IT|BLUWEB-226]] Blu Diciembre: Triada 8 Copys Blu.IT
+- **Subtarea:** [[BLUWEB-227 - 2.blu.inc Diciembre Triada 8 Programar Blu.IT VIERNES 2 DE DICIEMBRE|BLUWEB-227]] 2.blu.inc Diciembre: Triada 8 Programar  Blu.IT VIERNES 2 DE DICIEMBRE
 
 ## Descripcion
 

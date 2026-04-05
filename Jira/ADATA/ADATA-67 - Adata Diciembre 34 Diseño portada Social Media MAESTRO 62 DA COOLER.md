@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-67"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-53]] Adata Diciembre: 3/4 Social Media MAESTRO PLUS 62
+- **Padre:** [[ADATA-53 - Adata Diciembre 34 Social Media MAESTRO PLUS 62|ADATA-53]] Adata Diciembre: 3/4 Social Media MAESTRO PLUS 62
 
 ## Descripcion
 

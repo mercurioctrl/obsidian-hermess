@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-433"
 
 ## Relaciones
 
-- **Padre:** [[COB-183]] Feat - Listar cheques
-- **blocks:** [[SNB-785]] CHEQUES / FECHAS
+- **Padre:** [[COB-183 - Feat - Listar cheques|COB-183]] Feat - Listar cheques
+- **blocks:** [[SNB-785 - CHEQUES FECHAS|SNB-785]] CHEQUES / FECHAS
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-228"
 
 ## Relaciones
 
-- **Padre:** [[LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
-- **has action item:** [[LIO-226]] APP - Refactor - Conectar sistema de envio de ticket a v4
-- **has action item:** [[PED-962]] API - Feat - Leer ticket por numero de orden
-- **relates to:** [[SNB-3285]] Whaticket - LO - Orden de los mensajes del ticket
+- **Padre:** [[LIO-21 - Migrar sistema de tickets para usar el de capa 1 (NB)|LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
+- **has action item:** [[LIO-226 - APP - Refactor - Conectar sistema de envio de ticket a v4|LIO-226]] APP - Refactor - Conectar sistema de envio de ticket a v4
+- **has action item:** [[PED-962 - API - Feat - Leer ticket por numero de orden|PED-962]] API - Feat - Leer ticket por numero de orden
+- **relates to:** [[SNB-3285 - Whaticket - LO - Orden de los mensajes del ticket|SNB-3285]] Whaticket - LO - Orden de los mensajes del ticket
 
 ## Descripcion
 

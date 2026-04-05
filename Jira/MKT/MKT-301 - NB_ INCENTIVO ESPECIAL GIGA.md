@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-301"
 
 ## Relaciones
 
-- **action item from:** [[PED-1339]] APP - Feat - Incentivo gigabyte reutilizable
-- **action item from:** [[PED-1338]] API - Feat - Incentivo gigabyte reutilizable
+- **action item from:** [[PED-1339 - APP - Feat - Incentivo gigabyte reutilizable|PED-1339]] APP - Feat - Incentivo gigabyte reutilizable
+- **action item from:** [[PED-1338 - API - Feat - Incentivo gigabyte reutilizable|PED-1338]] API - Feat - Incentivo gigabyte reutilizable
 
 ## Descripcion
 

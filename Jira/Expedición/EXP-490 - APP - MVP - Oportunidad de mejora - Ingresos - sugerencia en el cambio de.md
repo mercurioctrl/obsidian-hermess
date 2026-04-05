@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-490"
 
 ## Relaciones
 
-- **relates to:** [[EXP-488]] APP - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos
+- **relates to:** [[EXP-488 - APP - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos|EXP-488]] APP - MVP - Refactor - Agregar trackingNumber y arrivalDate en Ingresos
 
 ## Descripcion
 

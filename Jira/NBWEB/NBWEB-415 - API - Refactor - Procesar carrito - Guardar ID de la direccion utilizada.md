@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-415"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-417]] Agregar direccion seleccionada por cliente al procesar carrito
+- **relates to:** [[NBWEB-417 - Agregar direccion seleccionada por cliente al procesar carrito|NBWEB-417]] Agregar direccion seleccionada por cliente al procesar carrito
 
 ## Descripcion
 

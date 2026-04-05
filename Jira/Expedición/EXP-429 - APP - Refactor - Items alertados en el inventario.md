@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-429"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **is blocked by:** [[EXP-428]] API - Refactor - Agregar parametros al recurso de inventario
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **is blocked by:** [[EXP-428 - API - Refactor - Agregar parametros al recurso de inventario|EXP-428]] API - Refactor - Agregar parametros al recurso de inventario
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-400"
 
 ## Relaciones
 
-- **Padre:** [[EXP-7]] Despacho de retiros
-- **is blocked by:** [[EXP-402]] API - Obtener tipos de voucher - Datos vacíos
+- **Padre:** [[EXP-7 - Despacho de retiros|EXP-7]] Despacho de retiros
+- **is blocked by:** [[EXP-402 - API - Obtener tipos de voucher - Datos vacíos|EXP-402]] API - Obtener tipos de voucher - Datos vacíos
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-114"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-115]] APP - Refactor - Mini Banners
+- **Subtarea:** [[MKT-115 - APP - Refactor - Mini Banners|MKT-115]] APP - Refactor - Mini Banners
 
 ## Descripcion
 

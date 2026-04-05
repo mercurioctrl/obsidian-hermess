@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-678"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **blocks:** [[NBWEB-679]] APP - Refactor - Agregar parámetro dropshipping a el listado de ordenes
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **blocks:** [[NBWEB-679 - APP - Refactor - Agregar parámetro dropshipping a el listado de ordenes|NBWEB-679]] APP - Refactor - Agregar parámetro dropshipping a el listado de ordenes
 
 ## Descripcion
 

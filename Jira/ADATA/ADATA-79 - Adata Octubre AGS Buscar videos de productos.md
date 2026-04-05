@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-79"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-3]] Adata Octubre: AGS.
+- **Padre:** [[ADATA-3 - Adata Octubre AGS.|ADATA-3]] Adata Octubre: AGS.
 
 ## Descripcion
 

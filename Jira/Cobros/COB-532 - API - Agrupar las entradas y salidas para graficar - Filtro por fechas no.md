@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-532"
 
 ## Relaciones
 
-- **Padre:** [[COB-505]] Dashboard
-- **blocks:** [[COB-518]] API - Refactor - Agrupar por concepto las Entradas / Salidas para graficar
+- **Padre:** [[COB-505 - Dashboard|COB-505]] Dashboard
+- **blocks:** [[COB-518 - API - Refactor - Agrupar por concepto las Entradas Salidas para graficar|COB-518]] API - Refactor - Agrupar por concepto las Entradas / Salidas para graficar
 
 ## Descripcion
 

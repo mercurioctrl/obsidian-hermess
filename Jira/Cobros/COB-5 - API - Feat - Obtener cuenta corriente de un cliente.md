@@ -29,27 +29,27 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-5"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-57]] API - Refactor - Nuevos parametros
-- **Subtarea:** [[COB-59]] API - Feat - Paginar
-- **Subtarea:** [[COB-60]] API - Feat - Agregar saldo en cuenta a un cliente
-- **Subtarea:** [[COB-61]] API - Feat - Anular un movimiento
-- **Subtarea:** [[COB-62]] API - Feat - Editar un movimiento
-- **Subtarea:** [[COB-63]] API - Feat - Agregar un memo
-- **Subtarea:** [[COB-76]] API - Refactor - Refactor subtotales en pesos de las cuentas corrientes
-- **Subtarea:** [[COB-87]] API - Review - Paginar
-- **Subtarea:** [[COB-93]] API - Feat - Filtrar lista clientes
-- **Subtarea:** [[COB-256]] API - Refactor - Anular movimiento
-- **Subtarea:** [[COB-279]] API - Refactor - Agregar al objeto de la cuenta corriente la branch
-- **Subtarea:** [[COB-378]] API - Feat - Mover saldo entre clientes
-- **Subtarea:** [[COB-379]] API - O. Mejora - Mejorar rendimiento de la consulta 
-- **Subtarea:** [[COB-467]] API - Feat - Obtener pedido completo para que el que lee la cuenta corriente lo pueda visualizar
-- **Subtarea:** [[COB-468]] APP - Feat - Obtener pedido completo para que el que lee la cuenta corriente pueda visualizarlo
-- **Subtarea:** [[COB-472]] API - Refactor - Cotización en cero
-- **Subtarea:** [[COB-483]] API - Review Performance - Recurso "Balances"
-- **blocks:** [[COB-322]] Refactor - Agregar nombre real a los movimientos de cc
-- **blocks:** [[COB-325]] API - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
-- **blocks:** [[COB-326]] APP - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-57 - API - Refactor - Nuevos parametros|COB-57]] API - Refactor - Nuevos parametros
+- **Subtarea:** [[COB-59 - API - Feat - Paginar|COB-59]] API - Feat - Paginar
+- **Subtarea:** [[COB-60 - API - Feat - Agregar saldo en cuenta a un cliente|COB-60]] API - Feat - Agregar saldo en cuenta a un cliente
+- **Subtarea:** [[COB-61 - API - Feat - Anular un movimiento|COB-61]] API - Feat - Anular un movimiento
+- **Subtarea:** [[COB-62 - API - Feat - Editar un movimiento|COB-62]] API - Feat - Editar un movimiento
+- **Subtarea:** [[COB-63 - API - Feat - Agregar un memo|COB-63]] API - Feat - Agregar un memo
+- **Subtarea:** [[COB-76 - API - Refactor - Refactor subtotales en pesos de las cuentas corrientes|COB-76]] API - Refactor - Refactor subtotales en pesos de las cuentas corrientes
+- **Subtarea:** [[COB-87 - API - Review - Paginar|COB-87]] API - Review - Paginar
+- **Subtarea:** [[COB-93 - API - Feat - Filtrar lista clientes|COB-93]] API - Feat - Filtrar lista clientes
+- **Subtarea:** [[COB-256 - API - Refactor - Anular movimiento|COB-256]] API - Refactor - Anular movimiento
+- **Subtarea:** [[COB-279 - API - Refactor - Agregar al objeto de la cuenta corriente la branch|COB-279]] API - Refactor - Agregar al objeto de la cuenta corriente la branch
+- **Subtarea:** [[COB-378 - API - Feat - Mover saldo entre clientes|COB-378]] API - Feat - Mover saldo entre clientes
+- **Subtarea:** [[COB-379 - API - O. Mejora - Mejorar rendimiento de la consulta|COB-379]] API - O. Mejora - Mejorar rendimiento de la consulta 
+- **Subtarea:** [[COB-467 - API - Feat - Obtener pedido completo para que el que lee la cuenta corriente lo|COB-467]] API - Feat - Obtener pedido completo para que el que lee la cuenta corriente lo pueda visualizar
+- **Subtarea:** [[COB-468 - APP - Feat - Obtener pedido completo para que el que lee la cuenta corriente|COB-468]] APP - Feat - Obtener pedido completo para que el que lee la cuenta corriente pueda visualizarlo
+- **Subtarea:** [[COB-472 - API - Refactor - Cotización en cero|COB-472]] API - Refactor - Cotización en cero
+- **Subtarea:** [[COB-483 - API - Review Performance - Recurso Balances|COB-483]] API - Review Performance - Recurso "Balances"
+- **blocks:** [[COB-322 - Refactor - Agregar nombre real a los movimientos de cc|COB-322]] Refactor - Agregar nombre real a los movimientos de cc
+- **blocks:** [[COB-325 - API - Refactor - Enlace a documentación de postventa (Notas de credito) a los|COB-325]] API - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
+- **blocks:** [[COB-326 - APP - Refactor - Enlace a documentación de postventa (Notas de credito) a los|COB-326]] APP - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
 
 ## Descripcion
 

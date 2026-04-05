@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-434"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-433]] Micro Sitios
-- **causes:** [[MKT-70]] NB_NUEVA LANDING AMD CAMPAÑA JUGA CON AMD
+- **Padre:** [[NBWEB-433 - Micro Sitios|NBWEB-433]] Micro Sitios
+- **causes:** [[MKT-70 - NB_NUEVA LANDING AMD CAMPAÑA JUGA CON AMD|MKT-70]] NB_NUEVA LANDING AMD CAMPAÑA JUGA CON AMD
 
 ## Descripcion
 

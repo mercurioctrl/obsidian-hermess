@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-196"
 
 ## Relaciones
 
-- **Padre:** [[LIO-187]] Login
-- **action item from:** [[LIO-189]] Research - Login con redes (Google, Apple)
-- **is duplicated by:** [[LIO-267]] APP - Refactor - Ocultar login apple momentanemente
+- **Padre:** [[LIO-187 - Login|LIO-187]] Login
+- **action item from:** [[LIO-189 - Research - Login con redes (Google, Apple)|LIO-189]] Research - Login con redes (Google, Apple)
+- **is duplicated by:** [[LIO-267 - APP - Refactor - Ocultar login apple momentanemente|LIO-267]] APP - Refactor - Ocultar login apple momentanemente
 
 ## Descripcion
 

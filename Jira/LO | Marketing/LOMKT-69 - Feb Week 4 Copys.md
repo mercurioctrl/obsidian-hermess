@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-69"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-14]] Febrero Week 4: Back to school color Amarillo
+- **Padre:** [[LOMKT-14 - Febrero Week 4 Back to school color Amarillo|LOMKT-14]] Febrero Week 4: Back to school color Amarillo
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-443"
 
 ## Relaciones
 
-- **relates to:** [[SNB-2224]] mejora para el sistema
+- **relates to:** [[SNB-2224 - mejora para el sistema|SNB-2224]] mejora para el sistema
 
 ## Descripcion
 

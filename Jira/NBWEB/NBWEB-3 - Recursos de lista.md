@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-3"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-37]] Listar Categorias
-- **Subtarea:** [[NBWEB-38]] Listar Marcas
-- **Subtarea:** [[NBWEB-66]] Ordenar todos los recursos por orden alfabetico
+- **Subtarea:** [[NBWEB-37 - Listar Categorias|NBWEB-37]] Listar Categorias
+- **Subtarea:** [[NBWEB-38 - Listar Marcas|NBWEB-38]] Listar Marcas
+- **Subtarea:** [[NBWEB-66 - Ordenar todos los recursos por orden alfabetico|NBWEB-66]] Ordenar todos los recursos por orden alfabetico
 
 ## Descripcion
 

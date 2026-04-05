@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-395"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-394]] Abr: Kickoff interno
+- **Padre:** [[ADATA-394 - Abr Kickoff interno|ADATA-394]] Abr: Kickoff interno
 
 ## Descripcion
 

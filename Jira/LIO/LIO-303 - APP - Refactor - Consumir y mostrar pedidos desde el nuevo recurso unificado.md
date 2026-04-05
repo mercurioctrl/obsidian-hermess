@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-303"
 
 ## Relaciones
 
-- **Padre:** [[LIO-281]] Compras
-- **action item from:** [[LIO-302]] APIv4 - Feat - Refactor de recurso de pedidos para unificar listado de ventas y compras
-- **action item from:** [[LIO-298]] APIv4 - Feat - Oportunidad de mejora en listar y filtrar las compras (orderStatus)
+- **Padre:** [[LIO-281 - Compras|LIO-281]] Compras
+- **action item from:** [[LIO-302 - APIv4 - Feat - Refactor de recurso de pedidos para unificar listado de ventas y|LIO-302]] APIv4 - Feat - Refactor de recurso de pedidos para unificar listado de ventas y compras
+- **action item from:** [[LIO-298 - APIv4 - Feat - Oportunidad de mejora en listar y filtrar las compras|LIO-298]] APIv4 - Feat - Oportunidad de mejora en listar y filtrar las compras (orderStatus)
 
 ## Descripcion
 

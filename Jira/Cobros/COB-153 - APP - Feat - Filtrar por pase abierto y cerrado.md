@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-153"
 
 ## Relaciones
 
-- **Padre:** [[COB-8]] API - Feat - Listar pases
+- **Padre:** [[COB-8 - API - Feat - Listar pases|COB-8]] API - Feat - Listar pases
 
 ## Descripcion
 

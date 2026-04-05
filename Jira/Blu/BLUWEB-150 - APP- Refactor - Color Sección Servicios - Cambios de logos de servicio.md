@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-150"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-141]] Refactor primera iteración
-- **is blocked by:** [[BLUWEB-149]] DSG- Refactor - Color Sección Servicios - Cambios de logos de servicio
+- **Padre:** [[BLUWEB-141 - Refactor primera iteración|BLUWEB-141]] Refactor primera iteración
+- **is blocked by:** [[BLUWEB-149 - DSG- Refactor - Color Sección Servicios - Cambios de logos de servicio|BLUWEB-149]] DSG- Refactor - Color Sección Servicios - Cambios de logos de servicio
 
 ## Descripcion
 

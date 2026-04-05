@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-400"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-401]] API - Feat - Descargar reporte de un cliente especifico
-- **Subtarea:** [[COB-402]] API - Feat - Descargar reporte de todos los clientes
-- **Subtarea:** [[COB-403]] APP - Feat - Agregar botones para descargar reportes
-- **blocks:** [[SNB-679]] EXPORTAR CTAS CTES
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-401 - API - Feat - Descargar reporte de un cliente especifico|COB-401]] API - Feat - Descargar reporte de un cliente especifico
+- **Subtarea:** [[COB-402 - API - Feat - Descargar reporte de todos los clientes|COB-402]] API - Feat - Descargar reporte de todos los clientes
+- **Subtarea:** [[COB-403 - APP - Feat - Agregar botones para descargar reportes|COB-403]] APP - Feat - Agregar botones para descargar reportes
+- **blocks:** [[SNB-679 - EXPORTAR CTAS CTES|SNB-679]] EXPORTAR CTAS CTES
 
 ## Descripcion
 

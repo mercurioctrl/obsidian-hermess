@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-117"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-118]] Subir info al link: https://www.nb.com.ar/postventa
-- **Subtarea:** [[MKT-119]] Email Marketing clientes activos últimos 24 meses
+- **Subtarea:** [[MKT-118 - Subir info al link httpswww.nb.com.arpostventa|MKT-118]] Subir info al link: https://www.nb.com.ar/postventa
+- **Subtarea:** [[MKT-119 - Email Marketing clientes activos últimos 24 meses|MKT-119]] Email Marketing clientes activos últimos 24 meses
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-461"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **action item from:** [[LIO-457]] APP - Refactor - Agregar la posibilidad de usar el dinero en cuenta de la billetera para una compra en el checkout
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **action item from:** [[LIO-457 - APP - Refactor - Agregar la posibilidad de usar el dinero en cuenta de la|LIO-457]] APP - Refactor - Agregar la posibilidad de usar el dinero en cuenta de la billetera para una compra en el checkout
 
 ## Descripcion
 

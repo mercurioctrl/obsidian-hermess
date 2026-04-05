@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-236"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-237]] APP - Review - Solo mostrar formulario de carga de direccion (cuando no esta cargada) si selecciono envio
-- **Subtarea:** [[LIO-477]] APP - Refactor - Confirmación de compra -> visualización de mensajes de error del backend
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-237 - APP - Review - Solo mostrar formulario de carga de direccion (cuando no esta|LIO-237]] APP - Review - Solo mostrar formulario de carga de direccion (cuando no esta cargada) si selecciono envio
+- **Subtarea:** [[LIO-477 - APP - Refactor - Confirmación de compra - visualización de mensajes de error|LIO-477]] APP - Refactor - Confirmación de compra -> visualización de mensajes de error del backend
 
 ## Descripcion
 

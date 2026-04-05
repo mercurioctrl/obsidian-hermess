@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-161"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
 
 ## Descripcion
 

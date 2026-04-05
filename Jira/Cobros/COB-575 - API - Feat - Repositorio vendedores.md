@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-575"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **has action item:** [[COB-576]] APP - Refactor - Agregar filtros "vendedor" y "deudores" al repositorio de clientes
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **has action item:** [[COB-576 - APP - Refactor - Agregar filtros vendedor y deudores al repositorio de clientes|COB-576]] APP - Refactor - Agregar filtros "vendedor" y "deudores" al repositorio de clientes
 
 ## Descripcion
 

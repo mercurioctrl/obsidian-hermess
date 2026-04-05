@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-128"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-127]] NB_Q2 2022_ Notebook MSI KATANA
+- **Padre:** [[DNYL-127 - NB_Q2 2022_ Notebook MSI KATANA|DNYL-127]] NB_Q2 2022_ Notebook MSI KATANA
 
 ## Descripcion
 

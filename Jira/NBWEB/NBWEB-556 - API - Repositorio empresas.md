@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-556"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-548]] CMS - Clientes
-- **blocks:** [[NBWEB-550]] APP - Feat - Listar clientes
+- **Padre:** [[NBWEB-548 - CMS - Clientes|NBWEB-548]] CMS - Clientes
+- **blocks:** [[NBWEB-550 - APP - Feat - Listar clientes|NBWEB-550]] APP - Feat - Listar clientes
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-122"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-174]] Research para la integracion de checkout integrado de MP
-- **Subtarea:** [[NBWEB-184]] APP - Medio de pago - Componente para el carrito
-- **Subtarea:** [[NBWEB-214]] Hacer validaciones en el form de mercado pago / agregar botón de pagar después
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-174 - Research para la integracion de checkout integrado de MP|NBWEB-174]] Research para la integracion de checkout integrado de MP
+- **Subtarea:** [[NBWEB-184 - APP - Medio de pago - Componente para el carrito|NBWEB-184]] APP - Medio de pago - Componente para el carrito
+- **Subtarea:** [[NBWEB-214 - Hacer validaciones en el form de mercado pago agregar botón de pagar después|NBWEB-214]] Hacer validaciones en el form de mercado pago / agregar botón de pagar después
 
 ## Descripcion
 

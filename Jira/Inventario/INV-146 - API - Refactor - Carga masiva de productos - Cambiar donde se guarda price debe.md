@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-146"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **has action item:** [[SNB-2366]] Importador masivo de productos
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **has action item:** [[SNB-2366 - Importador masivo de productos|SNB-2366]] Importador masivo de productos
 
 ## Descripcion
 

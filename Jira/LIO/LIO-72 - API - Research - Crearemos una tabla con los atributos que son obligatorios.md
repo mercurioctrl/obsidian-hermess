@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-72"
 
 ## Relaciones
 
-- **Padre:** [[LIO-71]] Armador de equipos
-- **has action item:** [[LIO-103]] API - DATA - Refactor -> Mover la tabla componentsAttributes a la bd PRODUCTOS
+- **Padre:** [[LIO-71 - Armador de equipos|LIO-71]] Armador de equipos
+- **has action item:** [[LIO-103 - API - DATA - Refactor - Mover la tabla componentsAttributes a la bd PRODUCTOS|LIO-103]] API - DATA - Refactor -> Mover la tabla componentsAttributes a la bd PRODUCTOS
 
 ## Descripcion
 

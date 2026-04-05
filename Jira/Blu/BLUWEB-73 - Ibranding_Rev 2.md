@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-73"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-74]] DSG - Refactor - Wallpapers
-- **Subtarea:** [[BLUWEB-75]] DSG - Feature - Subir Detalle en diferentes formatos
-- **Subtarea:** [[BLUWEB-78]] Frases con Ibrand en blanco y negro
+- **Subtarea:** [[BLUWEB-74 - DSG - Refactor - Wallpapers|BLUWEB-74]] DSG - Refactor - Wallpapers
+- **Subtarea:** [[BLUWEB-75 - DSG - Feature - Subir Detalle en diferentes formatos|BLUWEB-75]] DSG - Feature - Subir Detalle en diferentes formatos
+- **Subtarea:** [[BLUWEB-78 - Frases con Ibrand en blanco y negro|BLUWEB-78]] Frases con Ibrand en blanco y negro
 
 ## Descripcion
 

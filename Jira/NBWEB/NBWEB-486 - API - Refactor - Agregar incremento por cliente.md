@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-486"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-4]] API - Catalogos de productos
-- **blocks:** [[SNB-308]] Incrementos para clientes de misiones
-- **is caused by:** [[NBWEB-487]] API - Feat - Modificar en el sistema de pedidos
+- **Padre:** [[NBWEB-4 - API - Catalogos de productos|NBWEB-4]] API - Catalogos de productos
+- **blocks:** [[SNB-308 - Incrementos para clientes de misiones|SNB-308]] Incrementos para clientes de misiones
+- **is caused by:** [[NBWEB-487 - API - Feat - Modificar en el sistema de pedidos|NBWEB-487]] API - Feat - Modificar en el sistema de pedidos
 
 ## Descripcion
 

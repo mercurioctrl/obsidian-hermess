@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-16"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-20]] Adata Octubre: Diseño Social Media 4/4 SSD
-- **Subtarea:** [[ADATA-21]] Adata Octubre: Programación Social Media 4/4
-- **Subtarea:** [[ADATA-22]] Adata Octubre: Copys Social Media 4/4 SSD
+- **Subtarea:** [[ADATA-20 - Adata Octubre Diseño Social Media 44 SSD|ADATA-20]] Adata Octubre: Diseño Social Media 4/4 SSD
+- **Subtarea:** [[ADATA-21 - Adata Octubre Programación Social Media 44|ADATA-21]] Adata Octubre: Programación Social Media 4/4
+- **Subtarea:** [[ADATA-22 - Adata Octubre Copys Social Media 44 SSD|ADATA-22]] Adata Octubre: Copys Social Media 4/4 SSD
 
 ## Descripcion
 

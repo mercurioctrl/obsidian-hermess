@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-376"
 
 ## Relaciones
 
-- **relates to:** [[MKT-65]] NB_ METRICAS DE LA WEB METRICOOL
+- **relates to:** [[MKT-65 - NB_ METRICAS DE LA WEB METRICOOL|MKT-65]] NB_ METRICAS DE LA WEB METRICOOL
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-447"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-446]] API - Feat Descargar XLSX
+- **Padre:** [[NBWEB-446 - API - Feat Descargar XLSX|NBWEB-446]] API - Feat Descargar XLSX
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-122"
 
 ## Relaciones
 
-- **Padre:** [[COM-116]] Categorias
-- **relates to:** [[COM-118]] API - Feat - Listar categorias
+- **Padre:** [[COM-116 - Categorias|COM-116]] Categorias
+- **relates to:** [[COM-118 - API - Feat - Listar categorias|COM-118]] API - Feat - Listar categorias
 
 ## Descripcion
 

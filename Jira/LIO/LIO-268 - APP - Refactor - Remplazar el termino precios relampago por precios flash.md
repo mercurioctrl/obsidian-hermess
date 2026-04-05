@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-268"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **duplicates:** [[LIO-257]] APP - Refactor - Cambiar precios relámpago por precios Flash en todo el sitio
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **duplicates:** [[LIO-257 - APP - Refactor - Cambiar precios relámpago por precios Flash en todo el sitio|LIO-257]] APP - Refactor - Cambiar precios relámpago por precios Flash en todo el sitio
 
 ## Descripcion
 

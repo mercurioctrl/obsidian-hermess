@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-39"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-38]] Facturacion a terceros
-- **Subtarea:** [[LOCAPP-40]] API - Faet - Generar comprobante (fc,nc,db) a un tercero, para un cliente determinado
-- **Subtarea:** [[LOCAPP-41]] APP - Feat - Generar comprobante a nombre de terceros
+- **Padre:** [[LOCAPP-38 - Facturacion a terceros|LOCAPP-38]] Facturacion a terceros
+- **Subtarea:** [[LOCAPP-40 - API - Faet - Generar comprobante (fc,nc,db) a un tercero, para un cliente|LOCAPP-40]] API - Faet - Generar comprobante (fc,nc,db) a un tercero, para un cliente determinado
+- **Subtarea:** [[LOCAPP-41 - APP - Feat - Generar comprobante a nombre de terceros|LOCAPP-41]] APP - Feat - Generar comprobante a nombre de terceros
 
 ## Descripcion
 

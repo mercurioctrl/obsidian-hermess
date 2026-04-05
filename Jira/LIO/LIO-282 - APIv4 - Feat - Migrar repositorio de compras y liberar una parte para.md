@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-282"
 
 ## Relaciones
 
-- **Padre:** [[LIO-281]] Compras
-- **has action item:** [[LIO-293]] APP - Feat - Buscador de ordenes en centro de ayuda
-- **has action item:** [[LIO-304]] APP - Oportunidad de mejora - Ver Venta
+- **Padre:** [[LIO-281 - Compras|LIO-281]] Compras
+- **has action item:** [[LIO-293 - APP - Feat - Buscador de ordenes en centro de ayuda|LIO-293]] APP - Feat - Buscador de ordenes en centro de ayuda
+- **has action item:** [[LIO-304 - APP - Oportunidad de mejora - Ver Venta|LIO-304]] APP - Oportunidad de mejora - Ver Venta
 
 ## Descripcion
 

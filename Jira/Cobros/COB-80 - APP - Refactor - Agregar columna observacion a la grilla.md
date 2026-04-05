@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-80"
 
 ## Relaciones
 
-- **Padre:** [[COB-40]] APP - Feat - Listar movimientos caja
+- **Padre:** [[COB-40 - APP - Feat - Listar movimientos caja|COB-40]] APP - Feat - Listar movimientos caja
 
 ## Descripcion
 

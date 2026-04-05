@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-958"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-957]] Redis
-- **relates to:** [[SNB-3483]] NB - API - Catalogo de productos - Error al conectar con Redis
+- **Padre:** [[NBWEB-957 - Redis|NBWEB-957]] Redis
+- **relates to:** [[SNB-3483 - NB - API - Catalogo de productos - Error al conectar con Redis|SNB-3483]] NB - API - Catalogo de productos - Error al conectar con Redis
 
 ## Descripcion
 

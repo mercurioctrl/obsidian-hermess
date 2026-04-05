@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-37"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-34]] Volanta
-- **is blocked by:** [[LOCAPP-44]] MS - Volanta - Intento fallido al leer la variable token
+- **Padre:** [[LOCAPP-34 - Volanta|LOCAPP-34]] Volanta
+- **is blocked by:** [[LOCAPP-44 - MS - Volanta - Intento fallido al leer la variable token|LOCAPP-44]] MS - Volanta - Intento fallido al leer la variable token
 
 ## Descripcion
 

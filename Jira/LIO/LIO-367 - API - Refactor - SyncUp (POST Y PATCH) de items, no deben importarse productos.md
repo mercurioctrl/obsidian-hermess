@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-367"
 
 ## Relaciones
 
-- **Padre:** [[LIO-2]] Variedad y Calidad de Productos/Catalogos
-- **has action item:** [[SNB-3135]] No se puede entrar a producto por que falla al no tener imagen
+- **Padre:** [[LIO-2 - Variedad y Calidad de ProductosCatalogos|LIO-2]] Variedad y Calidad de Productos/Catalogos
+- **has action item:** [[SNB-3135 - No se puede entrar a producto por que falla al no tener imagen|SNB-3135]] No se puede entrar a producto por que falla al no tener imagen
 
 ## Descripcion
 

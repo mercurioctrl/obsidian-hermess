@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-324"
 
 ## Relaciones
 
-- **Padre:** [[COB-322]] Refactor - Agregar nombre real a los movimientos de cc
+- **Padre:** [[COB-322 - Refactor - Agregar nombre real a los movimientos de cc|COB-322]] Refactor - Agregar nombre real a los movimientos de cc
 
 ## Descripcion
 

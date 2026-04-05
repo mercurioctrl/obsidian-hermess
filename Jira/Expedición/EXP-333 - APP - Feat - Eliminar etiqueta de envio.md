@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-333"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **is blocked by:** [[EXP-331]] API - Feat - Eliminar etiqueta de envio
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **is blocked by:** [[EXP-331 - API - Feat - Eliminar etiqueta de envio|EXP-331]] API - Feat - Eliminar etiqueta de envio
 
 ## Descripcion
 

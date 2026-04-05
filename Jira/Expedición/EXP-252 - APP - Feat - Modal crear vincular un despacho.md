@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-252"
 
 ## Relaciones
 
-- **Padre:** [[EXP-249]] Feat - Vincular despacho / Editar despacho
+- **Padre:** [[EXP-249 - Feat - Vincular despacho Editar despacho|EXP-249]] Feat - Vincular despacho / Editar despacho
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-224"
 
 ## Relaciones
 
-- **Padre:** [[LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
-- **action item from:** [[LIO-225]] API - Feat - Listar tickets para un pedido
+- **Padre:** [[LIO-21 - Migrar sistema de tickets para usar el de capa 1 (NB)|LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
+- **action item from:** [[LIO-225 - API - Feat - Listar tickets para un pedido|LIO-225]] API - Feat - Listar tickets para un pedido
 
 ## Descripcion
 

@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-121"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-124]] API - Pedir recuperacion
-- **Subtarea:** [[NBWEB-125]] API - Cambiar password
-- **relates to:** [[NBWEB-126]] APP - Recuperar contraseña
-- **blocks:** [[NBWEB-126]] APP - Recuperar contraseña
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-124 - API - Pedir recuperacion|NBWEB-124]] API - Pedir recuperacion
+- **Subtarea:** [[NBWEB-125 - API - Cambiar password|NBWEB-125]] API - Cambiar password
+- **relates to:** [[NBWEB-126 - APP - Recuperar contraseña|NBWEB-126]] APP - Recuperar contraseña
+- **blocks:** [[NBWEB-126 - APP - Recuperar contraseña|NBWEB-126]] APP - Recuperar contraseña
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-966"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **action item from:** [[NBWEB-960]] API - Feat - Generar catálogo exclusivo para ReplyLatam con precio en pesos final y columnas adicionales
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **action item from:** [[NBWEB-960 - API - Feat - Generar catálogo exclusivo para ReplyLatam con precio en pesos|NBWEB-960]] API - Feat - Generar catálogo exclusivo para ReplyLatam con precio en pesos final y columnas adicionales
 
 ## Descripcion
 

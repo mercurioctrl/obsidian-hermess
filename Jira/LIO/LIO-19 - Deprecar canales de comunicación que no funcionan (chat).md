@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-19"
 
 ## Relaciones
 
-- **Padre:** [[LIO-4]] Soporte al Cliente
+- **Padre:** [[LIO-4 - Soporte al Cliente|LIO-4]] Soporte al Cliente
 
 ## Descripcion
 

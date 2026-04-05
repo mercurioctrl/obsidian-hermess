@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-569"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-529]] CMS -  Personal
-- **is blocked by:** [[NBWEB-568]] API - Refactor - Agregar la columna nominalDailyLimit para sucursal 10
+- **Padre:** [[NBWEB-529 - CMS - Personal|NBWEB-529]] CMS -  Personal
+- **is blocked by:** [[NBWEB-568 - API - Refactor - Agregar la columna nominalDailyLimit para sucursal 10|NBWEB-568]] API - Refactor - Agregar la columna nominalDailyLimit para sucursal 10
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-95"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[INV-102]] APP - Refactor - Agregare nuevo producto
-- **relates to:** [[INV-104]] API - Agregar nuevo producto - Sugerencia de mejora en el llenado de columnas
-- **relates to:** [[PED-831]] APP - Refactor - Agregar stock de Postventa -> Agregar sucursal
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[INV-102 - APP - Refactor - Agregare nuevo producto|INV-102]] APP - Refactor - Agregare nuevo producto
+- **relates to:** [[INV-104 - API - Agregar nuevo producto - Sugerencia de mejora en el llenado de columnas|INV-104]] API - Agregar nuevo producto - Sugerencia de mejora en el llenado de columnas
+- **relates to:** [[PED-831 - APP - Refactor - Agregar stock de Postventa - Agregar sucursal|PED-831]] APP - Refactor - Agregar stock de Postventa -> Agregar sucursal
 
 ## Descripcion
 

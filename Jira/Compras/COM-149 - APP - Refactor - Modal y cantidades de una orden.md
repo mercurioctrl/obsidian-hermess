@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-149"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **action item from:** [[COM-148]] API - Refactor - Cambios en cantidades de los items
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **action item from:** [[COM-148 - API - Refactor - Cambios en cantidades de los items|COM-148]] API - Refactor - Cambios en cantidades de los items
 
 ## Descripcion
 

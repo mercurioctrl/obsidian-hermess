@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-79"
 
 ## Relaciones
 
-- **Padre:** [[LIO-71]] Armador de equipos
-- **is blocked by:** [[LIO-81]] API - DATA - Columna para enlazar componentsAttributes a la cateogoria interna (capa 1) - Categorías no coincidentes
+- **Padre:** [[LIO-71 - Armador de equipos|LIO-71]] Armador de equipos
+- **is blocked by:** [[LIO-81 - API - DATA - Columna para enlazar componentsAttributes a la cateogoria interna|LIO-81]] API - DATA - Columna para enlazar componentsAttributes a la cateogoria interna (capa 1) - Categorías no coincidentes
 
 ## Descripcion
 

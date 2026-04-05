@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-51"
 
 ## Relaciones
 
-- **Padre:** [[COB-48]] Comprobantes fiscales
-- **Subtarea:** [[COB-113]] APP - Feat - Agregar opciones para visualizar / descargar el comprobantes usando el sistema de comprobantes
-- **Subtarea:** [[COB-308]] APP - Review - Parece ser que algo no esta funcionando al querer previsualizar un comprobante
-- **Subtarea:** [[COB-549]] API - Refactor - Arreglo para evitar duplicaciones por sucursal en listado de comprobantes
-- **is blocked by:** [[COB-49]] API - Feat - Filtrar comprobantes
-- **is blocked by:** [[COB-50]] API - Feat - Paginar
+- **Padre:** [[COB-48 - Comprobantes fiscales|COB-48]] Comprobantes fiscales
+- **Subtarea:** [[COB-113 - APP - Feat - Agregar opciones para visualizar descargar el comprobantes usando|COB-113]] APP - Feat - Agregar opciones para visualizar / descargar el comprobantes usando el sistema de comprobantes
+- **Subtarea:** [[COB-308 - APP - Review - Parece ser que algo no esta funcionando al querer previsualizar|COB-308]] APP - Review - Parece ser que algo no esta funcionando al querer previsualizar un comprobante
+- **Subtarea:** [[COB-549 - API - Refactor - Arreglo para evitar duplicaciones por sucursal en listado de|COB-549]] API - Refactor - Arreglo para evitar duplicaciones por sucursal en listado de comprobantes
+- **is blocked by:** [[COB-49 - API - Feat - Filtrar comprobantes|COB-49]] API - Feat - Filtrar comprobantes
+- **is blocked by:** [[COB-50 - API - Feat - Paginar|COB-50]] API - Feat - Paginar
 
 ## Descripcion
 

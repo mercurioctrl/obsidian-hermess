@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-330"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-328]] API - Refactor - A pedido del owner separaremos en dos conceptos salesReserved
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-328 - API - Refactor - A pedido del owner separaremos en dos conceptos salesReserved|INV-328]] API - Refactor - A pedido del owner separaremos en dos conceptos salesReserved
 
 ## Descripcion
 

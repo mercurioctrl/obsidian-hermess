@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-413"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **has action item:** [[LIO-438]] APP - Feat - Procesar token de referido cuando el usuario lo lleva en la url (con y sin login)
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **has action item:** [[LIO-438 - APP - Feat - Procesar token de referido cuando el usuario lo lleva en la url|LIO-438]] APP - Feat - Procesar token de referido cuando el usuario lo lleva en la url (con y sin login)
 
 ## Descripcion
 

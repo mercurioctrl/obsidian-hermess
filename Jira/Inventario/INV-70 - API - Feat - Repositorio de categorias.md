@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-70"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **blocks:** [[INV-71]] APP - Feat - Pestaña de categorias
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **blocks:** [[INV-71 - APP - Feat - Pestaña de categorias|INV-71]] APP - Feat - Pestaña de categorias
 
 ## Descripcion
 

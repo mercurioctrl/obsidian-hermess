@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-18"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **is blocked by:** [[COM-7]] API - Feat - Listar proveedores
-- **is blocked by:** [[COM-36]] APP - Listado de proveedores - Id del proveedor distinto
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **is blocked by:** [[COM-7 - API - Feat - Listar proveedores|COM-7]] API - Feat - Listar proveedores
+- **is blocked by:** [[COM-36 - APP - Listado de proveedores - Id del proveedor distinto|COM-36]] APP - Listado de proveedores - Id del proveedor distinto
 
 ## Descripcion
 

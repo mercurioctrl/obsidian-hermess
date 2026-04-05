@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-201"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-177]] Mar: 4/4 Social Media USB EVOLUTION 26-03
+- **Padre:** [[ADATA-177 - Mar 44 Social Media USB EVOLUTION 26-03|ADATA-177]] Mar: 4/4 Social Media USB EVOLUTION 26-03
 
 ## Descripcion
 

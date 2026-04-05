@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-192"
 
 ## Relaciones
 
-- **Padre:** [[COB-178]] API - Feat - Realizar transferencia entre bancos
+- **Padre:** [[COB-178 - API - Feat - Realizar transferencia entre bancos|COB-178]] API - Feat - Realizar transferencia entre bancos
 
 ## Descripcion
 

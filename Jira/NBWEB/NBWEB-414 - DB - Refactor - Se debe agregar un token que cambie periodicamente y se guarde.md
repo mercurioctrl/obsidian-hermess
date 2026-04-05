@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-414"
 
 ## Relaciones
 
-- **causes:** [[NBWEB-413]] API - Refactor - Mi cuenta - Mis comprobantes
+- **causes:** [[NBWEB-413 - API - Refactor - Mi cuenta - Mis comprobantes|NBWEB-413]] API - Refactor - Mi cuenta - Mis comprobantes
 
 ## Descripcion
 

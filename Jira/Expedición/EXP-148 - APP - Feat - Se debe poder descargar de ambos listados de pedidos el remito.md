@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-148"
 
 ## Relaciones
 
-- **Padre:** [[EXP-143]] Feat - Remito fiscal
-- **is blocked by:** [[EXP-145]] MS - APP - Feat - Maqueta en el ms de comprobantes el remito fiscal
-- **is blocked by:** [[EXP-144]] DATASET- Feat - Obtener informacion legal y numeraciones (con punto de corte)
-- **is blocked by:** [[EXP-146]] MS - API - Feat - Conectar objeto para remito fiscal en comprobantes
-- **is blocked by:** [[EXP-147]] API - Feat - Recurso para remito fiscal
+- **Padre:** [[EXP-143 - Feat - Remito fiscal|EXP-143]] Feat - Remito fiscal
+- **is blocked by:** [[EXP-145 - MS - APP - Feat - Maqueta en el ms de comprobantes el remito fiscal|EXP-145]] MS - APP - Feat - Maqueta en el ms de comprobantes el remito fiscal
+- **is blocked by:** [[EXP-144 - DATASET- Feat - Obtener informacion legal y numeraciones (con punto de corte)|EXP-144]] DATASET- Feat - Obtener informacion legal y numeraciones (con punto de corte)
+- **is blocked by:** [[EXP-146 - MS - API - Feat - Conectar objeto para remito fiscal en comprobantes|EXP-146]] MS - API - Feat - Conectar objeto para remito fiscal en comprobantes
+- **is blocked by:** [[EXP-147 - API - Feat - Recurso para remito fiscal|EXP-147]] API - Feat - Recurso para remito fiscal
 
 ## Descripcion
 

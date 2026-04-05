@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-22"
 
 ## Relaciones
 
-- **Padre:** [[FB-3]] Ibranding
-- **action item from:** [[FB-21]] DSG - Refactor-Cover Linkedin
+- **Padre:** [[FB-3 - Ibranding|FB-3]] Ibranding
+- **action item from:** [[FB-21 - DSG - Refactor-Cover Linkedin|FB-21]] DSG - Refactor-Cover Linkedin
 
 ## Descripcion
 

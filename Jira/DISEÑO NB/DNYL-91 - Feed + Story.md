@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-91"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-90]] ADATA - PRODUCTOS NB
+- **Padre:** [[DNYL-90 - ADATA - PRODUCTOS NB|DNYL-90]] ADATA - PRODUCTOS NB
 
 ## Descripcion
 

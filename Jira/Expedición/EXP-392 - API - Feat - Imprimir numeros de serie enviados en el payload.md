@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-392"
 
 ## Relaciones
 
-- **Padre:** [[EXP-391]] Imprimir numeros de serie
+- **Padre:** [[EXP-391 - Imprimir numeros de serie|EXP-391]] Imprimir numeros de serie
 
 ## Descripcion
 

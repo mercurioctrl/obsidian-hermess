@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-310"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
-- **has action item:** [[INV-311]] APP - Feat - Imprimir Recurso ZPL de qr de certificacion
-- **has action item:** [[INV-321]] API - Refactor - Recurso ZPL para imprimir qr de certificacion -> Multiplicador de cantidad
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
+- **has action item:** [[INV-311 - APP - Feat - Imprimir Recurso ZPL de qr de certificacion|INV-311]] APP - Feat - Imprimir Recurso ZPL de qr de certificacion
+- **has action item:** [[INV-321 - API - Refactor - Recurso ZPL para imprimir qr de certificacion - Multiplicador|INV-321]] API - Refactor - Recurso ZPL para imprimir qr de certificacion -> Multiplicador de cantidad
 
 ## Descripcion
 

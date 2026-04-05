@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-451"
 
 ## Relaciones
 
-- **Padre:** [[COB-357]] Feat - Listar Despachados, pendientes a cobrar
-- **blocks:** [[SNB-944]] se cambió de columna un pedido jajajaj
+- **Padre:** [[COB-357 - Feat - Listar Despachados, pendientes a cobrar|COB-357]] Feat - Listar Despachados, pendientes a cobrar
+- **blocks:** [[SNB-944 - se cambió de columna un pedido jajajaj|SNB-944]] se cambió de columna un pedido jajajaj
 
 ## Descripcion
 

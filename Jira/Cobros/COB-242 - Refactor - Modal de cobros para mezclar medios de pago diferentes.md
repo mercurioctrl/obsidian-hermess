@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-242"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **Subtarea:** [[COB-243]] API - Refactor - Realizar cobro de múltiples medios de pago
-- **Subtarea:** [[COB-244]] APP - Refactor - Hacer dinámica la grilla de pago en el modal de cobro
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **Subtarea:** [[COB-243 - API - Refactor - Realizar cobro de múltiples medios de pago|COB-243]] API - Refactor - Realizar cobro de múltiples medios de pago
+- **Subtarea:** [[COB-244 - APP - Refactor - Hacer dinámica la grilla de pago en el modal de cobro|COB-244]] APP - Refactor - Hacer dinámica la grilla de pago en el modal de cobro
 
 ## Descripcion
 

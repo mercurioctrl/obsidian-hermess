@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-716"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-711]] API - Seguimiento de envíos - Sin datos de seguimiento
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-711 - API - Seguimiento de envíos - Sin datos de seguimiento|NBWEB-711]] API - Seguimiento de envíos - Sin datos de seguimiento
 
 ## Descripcion
 

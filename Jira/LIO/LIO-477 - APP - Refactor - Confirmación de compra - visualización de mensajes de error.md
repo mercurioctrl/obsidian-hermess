@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-477"
 
 ## Relaciones
 
-- **Padre:** [[LIO-236]] Checkout
+- **Padre:** [[LIO-236 - Checkout|LIO-236]] Checkout
 
 ## Descripcion
 

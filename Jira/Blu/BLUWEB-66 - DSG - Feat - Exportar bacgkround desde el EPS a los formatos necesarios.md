@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-66"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **has action item:** [[BLUWEB-67]] APP - refactor - cambiar los fondos de la herosection
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **has action item:** [[BLUWEB-67 - APP - refactor - cambiar los fondos de la herosection|BLUWEB-67]] APP - refactor - cambiar los fondos de la herosection
 
 ## Descripcion
 

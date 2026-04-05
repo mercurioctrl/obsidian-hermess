@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-96"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-93]] Certificados
-- **action item from:** [[LOCAPP-95]] API - Feat - Traer informacion del certificado
+- **Padre:** [[LOCAPP-93 - Certificados|LOCAPP-93]] Certificados
+- **action item from:** [[LOCAPP-95 - API - Feat - Traer informacion del certificado|LOCAPP-95]] API - Feat - Traer informacion del certificado
 
 ## Descripcion
 

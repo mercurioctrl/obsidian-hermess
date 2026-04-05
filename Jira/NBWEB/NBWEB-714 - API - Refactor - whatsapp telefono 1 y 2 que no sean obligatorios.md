@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-714"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-709]] APP - Registrar usuario - Teléfono invalido
+- **relates to:** [[NBWEB-709 - APP - Registrar usuario - Teléfono invalido|NBWEB-709]] APP - Registrar usuario - Teléfono invalido
 
 ## Descripcion
 

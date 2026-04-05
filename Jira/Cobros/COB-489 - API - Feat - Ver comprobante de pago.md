@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-489"
 
 ## Relaciones
 
-- **Padre:** [[COB-487]] Feat - Cobrables -> Comprobantes de pago
-- **blocks:** [[COB-490]] APP - Feat - Agregar accionable para ver comprobante / pago de mp
-- **blocks:** [[COB-491]] APP - Feat - Mostrar Modal de comprobante de pago
-- **relates to:** [[PED-585]] API - Feat - Agregar comprobantes de pago
-- **relates to:** [[COB-498]] API - Refactor - Ver comprobante de pago - Apuntar a NB
+- **Padre:** [[COB-487 - Feat - Cobrables - Comprobantes de pago|COB-487]] Feat - Cobrables -> Comprobantes de pago
+- **blocks:** [[COB-490 - APP - Feat - Agregar accionable para ver comprobante pago de mp|COB-490]] APP - Feat - Agregar accionable para ver comprobante / pago de mp
+- **blocks:** [[COB-491 - APP - Feat - Mostrar Modal de comprobante de pago|COB-491]] APP - Feat - Mostrar Modal de comprobante de pago
+- **relates to:** [[PED-585 - API - Feat - Agregar comprobantes de pago|PED-585]] API - Feat - Agregar comprobantes de pago
+- **relates to:** [[COB-498 - API - Refactor - Ver comprobante de pago - Apuntar a NB|COB-498]] API - Refactor - Ver comprobante de pago - Apuntar a NB
 
 ## Descripcion
 

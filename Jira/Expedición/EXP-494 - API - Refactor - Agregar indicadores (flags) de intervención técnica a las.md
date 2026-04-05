@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-494"
 
 ## Relaciones
 
-- **Padre:** [[EXP-493]] Listar envios
+- **Padre:** [[EXP-493 - Listar envios|EXP-493]] Listar envios
 
 ## Descripcion
 

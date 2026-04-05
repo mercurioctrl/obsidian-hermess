@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-27"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-96]] Adata: Reel + TikTok AGS
-- **Subtarea:** [[ADATA-97]] Adata: Reel Adata Paradise
-- **Subtarea:** [[ADATA-102]] Adata Paradise Copy y post
+- **Subtarea:** [[ADATA-96 - Adata Reel + TikTok AGS|ADATA-96]] Adata: Reel + TikTok AGS
+- **Subtarea:** [[ADATA-97 - Adata Reel Adata Paradise|ADATA-97]] Adata: Reel Adata Paradise
+- **Subtarea:** [[ADATA-102 - Adata Paradise Copy y post|ADATA-102]] Adata Paradise Copy y post
 
 ## Descripcion
 

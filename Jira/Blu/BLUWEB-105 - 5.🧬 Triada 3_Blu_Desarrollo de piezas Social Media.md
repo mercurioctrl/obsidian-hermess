@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-105"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-165]] Blu: Triada 3 Copys
-- **Subtarea:** [[BLUWEB-176]] 4-Blu: Triada 3 Programar 1-10
-- **Subtarea:** [[BLUWEB-195]] Blu: Triada 3 Postear Reels y también como shorts ( una vez realizada la tarea ponerla en revision y dejar los links de los post)
+- **Subtarea:** [[BLUWEB-165 - Blu Triada 3 Copys|BLUWEB-165]] Blu: Triada 3 Copys
+- **Subtarea:** [[BLUWEB-176 - 4-Blu Triada 3 Programar 1-10|BLUWEB-176]] 4-Blu: Triada 3 Programar 1-10
+- **Subtarea:** [[BLUWEB-195 - Blu Triada 3 Postear Reels y también como shorts ( una vez realizada la tarea|BLUWEB-195]] Blu: Triada 3 Postear Reels y también como shorts ( una vez realizada la tarea ponerla en revision y dejar los links de los post)
 
 ## Descripcion
 

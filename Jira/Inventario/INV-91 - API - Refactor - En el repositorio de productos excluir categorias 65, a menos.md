@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-91"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-92]] API - Listado de artículos - Error al obtener el listado y código de estado no coincidente
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-92 - API - Listado de artículos - Error al obtener el listado y código de estado no|INV-92]] API - Listado de artículos - Error al obtener el listado y código de estado no coincidente
 
 ## Descripcion
 

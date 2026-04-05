@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-140"
 
 ## Relaciones
 
-- **Padre:** [[LIO-10]] Reuducir cantidad de clicks para lograr una conversion
+- **Padre:** [[LIO-10 - Reuducir cantidad de clicks para lograr una conversion|LIO-10]] Reuducir cantidad de clicks para lograr una conversion
 
 ## Descripcion
 

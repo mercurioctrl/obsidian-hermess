@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-463"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **Subtarea:** [[EXP-464]] API - Refactor - Ingreso de seriales (Control de parametros obligatorios)
-- **Subtarea:** [[EXP-465]] APP - Refactor - Ingreso de seriales (Control de parametros obligatorios)
-- **Subtarea:** [[EXP-522]] API - Refactor - Ingreso de seriales (Control de parametros obligatorios) pide validación, aunque no este como obligatorio
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **Subtarea:** [[EXP-464 - API - Refactor - Ingreso de seriales (Control de parametros obligatorios)|EXP-464]] API - Refactor - Ingreso de seriales (Control de parametros obligatorios)
+- **Subtarea:** [[EXP-465 - APP - Refactor - Ingreso de seriales (Control de parametros obligatorios)|EXP-465]] APP - Refactor - Ingreso de seriales (Control de parametros obligatorios)
+- **Subtarea:** [[EXP-522 - API - Refactor - Ingreso de seriales (Control de parametros obligatorios) pide|EXP-522]] API - Refactor - Ingreso de seriales (Control de parametros obligatorios) pide validación, aunque no este como obligatorio
 
 ## Descripcion
 

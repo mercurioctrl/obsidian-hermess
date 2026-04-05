@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-179"
 
 ## Relaciones
 
-- **Padre:** [[COM-178]] Depositos
-- **has action item:** [[COM-180]] APP - MVP - Feat - Implementar pestaña "Depositos"
+- **Padre:** [[COM-178 - Depositos|COM-178]] Depositos
+- **has action item:** [[COM-180 - APP - MVP - Feat - Implementar pestaña Depositos|COM-180]] APP - MVP - Feat - Implementar pestaña "Depositos"
 
 ## Descripcion
 

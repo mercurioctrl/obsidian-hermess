@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-138"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **Subtarea:** [[COM-139]] API - Refactor - Agregar el Proveedor primario al crear una orden de compra
-- **Subtarea:** [[COM-140]] APP - Refactor - Agregar el proveedor primario al crear una orden de compra
-- **Subtarea:** [[COM-220]] APP - MVP - agregar una info extra sobre proveedor y proveedor primario
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **Subtarea:** [[COM-139 - API - Refactor - Agregar el Proveedor primario al crear una orden de compra|COM-139]] API - Refactor - Agregar el Proveedor primario al crear una orden de compra
+- **Subtarea:** [[COM-140 - APP - Refactor - Agregar el proveedor primario al crear una orden de compra|COM-140]] APP - Refactor - Agregar el proveedor primario al crear una orden de compra
+- **Subtarea:** [[COM-220 - APP - MVP - agregar una info extra sobre proveedor y proveedor primario|COM-220]] APP - MVP - agregar una info extra sobre proveedor y proveedor primario
 
 ## Descripcion
 

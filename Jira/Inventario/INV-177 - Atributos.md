@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-177"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **Subtarea:** [[INV-178]] API - Refactor - Modificar la clave de un atributo en base a su valor 
-- **Subtarea:** [[INV-179]] APP - Refactor - Modificar la clave de un atributo en base a su valor
-- **Subtarea:** [[INV-181]] APP - Refactor - Ajustar niveles de los atributos para que entren en en parámetro "data"
-- **Subtarea:** [[INV-182]] APP - Review - Arreglo en "anidado" del objeto attributes/scrap
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **Subtarea:** [[INV-178 - API - Refactor - Modificar la clave de un atributo en base a su valor|INV-178]] API - Refactor - Modificar la clave de un atributo en base a su valor 
+- **Subtarea:** [[INV-179 - APP - Refactor - Modificar la clave de un atributo en base a su valor|INV-179]] APP - Refactor - Modificar la clave de un atributo en base a su valor
+- **Subtarea:** [[INV-181 - APP - Refactor - Ajustar niveles de los atributos para que entren en en|INV-181]] APP - Refactor - Ajustar niveles de los atributos para que entren en en parámetro "data"
+- **Subtarea:** [[INV-182 - APP - Review - Arreglo en anidado del objeto attributesscrap|INV-182]] APP - Review - Arreglo en "anidado" del objeto attributes/scrap
 
 ## Descripcion
 

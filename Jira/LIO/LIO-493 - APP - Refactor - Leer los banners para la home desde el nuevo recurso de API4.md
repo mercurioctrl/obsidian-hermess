@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-493"
 
 ## Relaciones
 
-- **Padre:** [[LIO-484]] Home
-- **action item from:** [[LIO-485]] API - Feat - Migrar repositorio de banners desde legacy, con redis
+- **Padre:** [[LIO-484 - Home|LIO-484]] Home
+- **action item from:** [[LIO-485 - API - Feat - Migrar repositorio de banners desde legacy, con redis|LIO-485]] API - Feat - Migrar repositorio de banners desde legacy, con redis
 
 ## Descripcion
 

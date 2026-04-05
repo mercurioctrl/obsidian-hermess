@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-63"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-52]] APP - Maquetado y Desarrollo - Home
-- **relates to:** [[NBWEB-64]] Novedades / Mas visitados
+- **Padre:** [[NBWEB-52 - APP - Maquetado y Desarrollo - Home|NBWEB-52]] APP - Maquetado y Desarrollo - Home
+- **relates to:** [[NBWEB-64 - Novedades Mas visitados|NBWEB-64]] Novedades / Mas visitados
 
 ## Descripcion
 

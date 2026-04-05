@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-201"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **action item from:** [[COM-200]] API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
-- **relates to:** [[COM-248]] APP - MVP - Review - Generar ingreso -> envió de parámetro de depósito vacío
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **action item from:** [[COM-200 - API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo|COM-200]] API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
+- **relates to:** [[COM-248 - APP - MVP - Review - Generar ingreso - envió de parámetro de depósito vacío|COM-248]] APP - MVP - Review - Generar ingreso -> envió de parámetro de depósito vacío
 
 ## Descripcion
 

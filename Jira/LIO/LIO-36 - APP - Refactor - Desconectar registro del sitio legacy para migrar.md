@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-36"
 
 ## Relaciones
 
-- **Padre:** [[LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
-- **is blocked by:** [[LIO-34]] API - Feat - Crear formularios de registro especifico para empresas e individuos 
+- **Padre:** [[LIO-11 - Proceso de registro sencillo para los vendedoresCompradores|LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
+- **is blocked by:** [[LIO-34 - API - Feat - Crear formularios de registro especifico para empresas e individuos|LIO-34]] API - Feat - Crear formularios de registro especifico para empresas e individuos 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-245"
 
 ## Relaciones
 
-- **action item from:** [[PED-942]] API - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
-- **action item from:** [[PED-943]] APP - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
+- **action item from:** [[PED-942 - API - Refactor - Objetivo total por string agrupado por vendedor - Agregar|PED-942]] API - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
+- **action item from:** [[PED-943 - APP - Refactor - Objetivo total por string agrupado por vendedor - Agregar|PED-943]] APP - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
 
 ## Descripcion
 

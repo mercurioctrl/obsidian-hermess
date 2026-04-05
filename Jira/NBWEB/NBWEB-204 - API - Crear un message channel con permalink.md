@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-204"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
-- **blocks:** [[NBWEB-208]] APP - Feat - Maquetar y Conectar tickets
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
+- **blocks:** [[NBWEB-208 - APP - Feat - Maquetar y Conectar tickets|NBWEB-208]] APP - Feat - Maquetar y Conectar tickets
 
 ## Descripcion
 

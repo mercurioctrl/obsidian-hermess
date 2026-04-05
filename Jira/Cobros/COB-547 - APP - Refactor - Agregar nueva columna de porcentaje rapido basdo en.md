@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-547"
 
 ## Relaciones
 
-- **Padre:** [[COB-506]] Logistica
-- **is blocked by:** [[COB-546]] APP - Refactor - Cambios en el dashboard - se agregaran 3 tablas y se quitara los datos  de "importe cobrado por los envios e importe facturad por los envios
+- **Padre:** [[COB-506 - Logistica|COB-506]] Logistica
+- **is blocked by:** [[COB-546 - APP - Refactor - Cambios en el dashboard - se agregaran 3 tablas y se quitara|COB-546]] APP - Refactor - Cambios en el dashboard - se agregaran 3 tablas y se quitara los datos  de "importe cobrado por los envios e importe facturad por los envios
 
 ## Descripcion
 

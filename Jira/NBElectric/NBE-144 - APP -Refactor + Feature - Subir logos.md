@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-144"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **action item from:** [[NBE-139]] DSG -Armar logo de> ARGENPLAS- ELIBET -INTECK-  jadever para la home a medida asi lo reemplazamos
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **action item from:** [[NBE-139 - DSG -Armar logo de ARGENPLAS- ELIBET -INTECK- jadever para la home a medida asi|NBE-139]] DSG -Armar logo de> ARGENPLAS- ELIBET -INTECK-  jadever para la home a medida asi lo reemplazamos
 
 ## Descripcion
 

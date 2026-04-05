@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-16"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-6]] Login
-- **relates to:** [[NBWEB-622]] API - Refactor - Crear recurso de login - Validar credenciales
+- **Padre:** [[NBWEB-6 - Login|NBWEB-6]] Login
+- **relates to:** [[NBWEB-622 - API - Refactor - Crear recurso de login - Validar credenciales|NBWEB-622]] API - Refactor - Crear recurso de login - Validar credenciales
 
 ## Descripcion
 

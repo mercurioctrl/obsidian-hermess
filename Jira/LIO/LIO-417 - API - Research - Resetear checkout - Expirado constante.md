@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-417"
 
 ## Relaciones
 
-- **relates to:** [[LIO-381]] API - Feat - Resetear checkout
+- **relates to:** [[LIO-381 - API - Feat - Resetear checkout|LIO-381]] API - Feat - Resetear checkout
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-518"
 
 ## Relaciones
 
-- **Padre:** [[COB-507]] Entrada / Salida Cajas
-- **is blocked by:** [[COB-532]] API - Agrupar las entradas y salidas para graficar - Filtro por fechas no coincidente
-- **is blocked by:** [[COB-533]] API - Agrupar por concepto las Entradas / Salidas para graficar - Pases visibles
-- **relates to:** [[COB-519]] APP - Refactor - Graficar Entradas / Salidas de caja
+- **Padre:** [[COB-507 - Entrada Salida Cajas|COB-507]] Entrada / Salida Cajas
+- **is blocked by:** [[COB-532 - API - Agrupar las entradas y salidas para graficar - Filtro por fechas no|COB-532]] API - Agrupar las entradas y salidas para graficar - Filtro por fechas no coincidente
+- **is blocked by:** [[COB-533 - API - Agrupar por concepto las Entradas Salidas para graficar - Pases visibles|COB-533]] API - Agrupar por concepto las Entradas / Salidas para graficar - Pases visibles
+- **relates to:** [[COB-519 - APP - Refactor - Graficar Entradas Salidas de caja|COB-519]] APP - Refactor - Graficar Entradas / Salidas de caja
 
 ## Descripcion
 

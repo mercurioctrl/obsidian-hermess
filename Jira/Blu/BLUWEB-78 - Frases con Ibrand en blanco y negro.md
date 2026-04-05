@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-78"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-73]] Ibranding_Rev 2
-- **has action item:** [[BLUWEB-84]] APP - Feat - Maqueta seccion NOSOTROS
+- **Padre:** [[BLUWEB-73 - Ibranding_Rev 2|BLUWEB-73]] Ibranding_Rev 2
+- **has action item:** [[BLUWEB-84 - APP - Feat - Maqueta seccion NOSOTROS|BLUWEB-84]] APP - Feat - Maqueta seccion NOSOTROS
 
 ## Descripcion
 

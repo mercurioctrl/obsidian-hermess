@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-193"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-175]] Mar:  2/4 Social Media_SSD EVOLUTION 08-03
+- **Padre:** [[ADATA-175 - Mar 24 Social Media_SSD EVOLUTION 08-03|ADATA-175]] Mar:  2/4 Social Media_SSD EVOLUTION 08-03
 
 ## Descripcion
 

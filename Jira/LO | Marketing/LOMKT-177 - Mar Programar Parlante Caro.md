@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-177"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-167]] Mar: 2 Parlante Trust Caro
+- **Padre:** [[LOMKT-167 - Mar 2 Parlante Trust Caro|LOMKT-167]] Mar: 2 Parlante Trust Caro
 
 ## Descripcion
 

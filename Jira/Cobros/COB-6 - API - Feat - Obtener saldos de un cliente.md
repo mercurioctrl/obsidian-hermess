@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-6"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-58]] API - Refactor - Nuevos parametros
-- **blocks:** [[COB-52]] APP - Feat - Visualizar la cuenta corriente de un cliente
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-58 - API - Refactor - Nuevos parametros|COB-58]] API - Refactor - Nuevos parametros
+- **blocks:** [[COB-52 - APP - Feat - Visualizar la cuenta corriente de un cliente|COB-52]] APP - Feat - Visualizar la cuenta corriente de un cliente
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-246"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **has action item:** [[COM-247]] API - MVP - Recibir CompanyCode al crear un poveedor para poder identificar a que empresa pertenece el proveedor
-- **is cloned by:** [[COM-277]] APP - Refactor - Alta/Edición de Proveedores -> Añadir selector de empresa
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **has action item:** [[COM-247 - API - MVP - Recibir CompanyCode al crear un poveedor para poder identificar a|COM-247]] API - MVP - Recibir CompanyCode al crear un poveedor para poder identificar a que empresa pertenece el proveedor
+- **is cloned by:** [[COM-277 - APP - Refactor - AltaEdición de Proveedores - Añadir selector de empresa|COM-277]] APP - Refactor - Alta/Edición de Proveedores -> Añadir selector de empresa
 
 ## Descripcion
 

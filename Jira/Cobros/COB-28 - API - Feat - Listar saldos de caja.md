@@ -29,16 +29,16 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-28"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **Subtarea:** [[COB-38]] API - Feat - Paginado
-- **Subtarea:** [[COB-91]] API - Review - Solo estoy viendo el saldo de una caja
-- **Subtarea:** [[COB-96]] API - Feat - Filtrar por nombre del propietario de la caja
-- **Subtarea:** [[COB-106]] API - Refactor - Mostrar solo aquellas que tienen saldo para evitar lo que se muestra en las imagenes
-- **Subtarea:** [[COB-360]] API - Refactor - Introducir parametro para filtrar aquellas que tienen saldos distintos de cero
-- **blocks:** [[COB-40]] APP - Feat - Listar movimientos caja
-- **blocks:** [[COB-78]] APP - Feat - Listar saldos de caja
-- **blocks:** [[COB-97]] APP - Feat - Filtarar por caja
-- **blocks:** [[COB-107]] APP - Refactor - Filtrar por nombre de caja
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **Subtarea:** [[COB-38 - API - Feat - Paginado|COB-38]] API - Feat - Paginado
+- **Subtarea:** [[COB-91 - API - Review - Solo estoy viendo el saldo de una caja|COB-91]] API - Review - Solo estoy viendo el saldo de una caja
+- **Subtarea:** [[COB-96 - API - Feat - Filtrar por nombre del propietario de la caja|COB-96]] API - Feat - Filtrar por nombre del propietario de la caja
+- **Subtarea:** [[COB-106 - API - Refactor - Mostrar solo aquellas que tienen saldo para evitar lo que se|COB-106]] API - Refactor - Mostrar solo aquellas que tienen saldo para evitar lo que se muestra en las imagenes
+- **Subtarea:** [[COB-360 - API - Refactor - Introducir parametro para filtrar aquellas que tienen saldos|COB-360]] API - Refactor - Introducir parametro para filtrar aquellas que tienen saldos distintos de cero
+- **blocks:** [[COB-40 - APP - Feat - Listar movimientos caja|COB-40]] APP - Feat - Listar movimientos caja
+- **blocks:** [[COB-78 - APP - Feat - Listar saldos de caja|COB-78]] APP - Feat - Listar saldos de caja
+- **blocks:** [[COB-97 - APP - Feat - Filtarar por caja|COB-97]] APP - Feat - Filtarar por caja
+- **blocks:** [[COB-107 - APP - Refactor - Filtrar por nombre de caja|COB-107]] APP - Refactor - Filtrar por nombre de caja
 
 ## Descripcion
 

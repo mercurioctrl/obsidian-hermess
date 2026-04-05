@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-762"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **blocks:** [[NBWEB-763]] APP - Refactor - Modificaremos la ficha del producto para mostrar el acelerador que tiene el item (si tiene)
-- **relates to:** [[NBWEB-764]] API - Obtener acelerador para un item determinado - Articulo sin acelerador 
-- **blocks:** [[NBWEB-767]] API - Review - Obtener acelerador para un item determinado parece no asimilar las fechas de inicio y fin para mostrarse
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **blocks:** [[NBWEB-763 - APP - Refactor - Modificaremos la ficha del producto para mostrar el acelerador|NBWEB-763]] APP - Refactor - Modificaremos la ficha del producto para mostrar el acelerador que tiene el item (si tiene)
+- **relates to:** [[NBWEB-764 - API - Obtener acelerador para un item determinado - Articulo sin acelerador|NBWEB-764]] API - Obtener acelerador para un item determinado - Articulo sin acelerador 
+- **blocks:** [[NBWEB-767 - API - Review - Obtener acelerador para un item determinado parece no asimilar|NBWEB-767]] API - Review - Obtener acelerador para un item determinado parece no asimilar las fechas de inicio y fin para mostrarse
 
 ## Descripcion
 

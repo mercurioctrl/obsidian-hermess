@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-693"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-671]] APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con condiciones
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-671 - APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con|NBWEB-671]] APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con condiciones
 
 ## Descripcion
 

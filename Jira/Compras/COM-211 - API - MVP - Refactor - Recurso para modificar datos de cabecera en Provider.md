@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-211"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **relates to:** [[COM-185]] API - MVP - Feat - Recurso para modificar datos de cabecera en Provider Order 
-- **relates to:** [[COM-152]] API - Refactor - Incorporar concepto companyCode al repositorio de ordenes de compra
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **relates to:** [[COM-185 - API - MVP - Feat - Recurso para modificar datos de cabecera en Provider Order|COM-185]] API - MVP - Feat - Recurso para modificar datos de cabecera en Provider Order 
+- **relates to:** [[COM-152 - API - Refactor - Incorporar concepto companyCode al repositorio de ordenes de|COM-152]] API - Refactor - Incorporar concepto companyCode al repositorio de ordenes de compra
 
 ## Descripcion
 

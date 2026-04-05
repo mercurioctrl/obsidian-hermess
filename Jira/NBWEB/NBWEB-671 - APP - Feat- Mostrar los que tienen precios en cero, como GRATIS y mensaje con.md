@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-671"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-668]] Envíos bonificados
-- **is blocked by:** [[NBWEB-669]] API - Feat - Dataset para limites de exclusion
-- **is blocked by:** [[NBWEB-670]] MS - Feat - Cotizar con la bonificacion desde ms-envios directamente
-- **relates to:** [[NBWEB-693]] APP - Condiciones de envío - Permanecer en el carrito
+- **Padre:** [[NBWEB-668 - Envíos bonificados|NBWEB-668]] Envíos bonificados
+- **is blocked by:** [[NBWEB-669 - API - Feat - Dataset para limites de exclusion|NBWEB-669]] API - Feat - Dataset para limites de exclusion
+- **is blocked by:** [[NBWEB-670 - MS - Feat - Cotizar con la bonificacion desde ms-envios directamente|NBWEB-670]] MS - Feat - Cotizar con la bonificacion desde ms-envios directamente
+- **relates to:** [[NBWEB-693 - APP - Condiciones de envío - Permanecer en el carrito|NBWEB-693]] APP - Condiciones de envío - Permanecer en el carrito
 
 ## Descripcion
 

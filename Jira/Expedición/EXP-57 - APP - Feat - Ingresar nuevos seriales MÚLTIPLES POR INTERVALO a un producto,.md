@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-57"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
-- **is blocked by:** [[EXP-56]] API - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto, dentro de un pedido
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
+- **is blocked by:** [[EXP-56 - API - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto,|EXP-56]] API - Feat - Ingresar nuevos seriales MÚLTIPLES POR INTERVALO a un producto, dentro de un pedido
 
 ## Descripcion
 

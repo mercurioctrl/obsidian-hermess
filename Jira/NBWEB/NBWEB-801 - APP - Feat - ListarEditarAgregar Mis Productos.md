@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-801"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[NBWEB-800]] API - Feat - Listar/Editar/Agregar Mis Productos
-- **is blocked by:** [[NBWEB-813]] APP - Listar/Editar/Agregar Mis Productos - Filtro por categoría no coincidente 
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[NBWEB-800 - API - Feat - ListarEditarAgregar Mis Productos|NBWEB-800]] API - Feat - Listar/Editar/Agregar Mis Productos
+- **is blocked by:** [[NBWEB-813 - APP - ListarEditarAgregar Mis Productos - Filtro por categoría no coincidente|NBWEB-813]] APP - Listar/Editar/Agregar Mis Productos - Filtro por categoría no coincidente 
 
 ## Descripcion
 

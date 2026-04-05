@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-717"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **Subtarea:** [[NBWEB-949]] API - Refactor - Generar listado para tienda nube - Adición de imagén principal
-- **blocks:** [[NBWEB-718]] APP - Feat - Descargar listado para tienda nube
-- **relates to:** [[NBWEB-723]] API - Generar listado para tienda nube - Cambio en nombre de columna SKU
-- **relates to:** [[NBWEB-885]] API - Refactor - Generar listado para Tiendanube - Agregar medidas del artículo 
-- **has action item:** [[NBWEB-949]] API - Refactor - Generar listado para tienda nube - Adición de imagén principal
-- **relates to:** [[SNB-3308]] Integraciones - Generar listado para tienda nube - Error al intentar descargar
-- **relates to:** [[SNB-3340]] Integraciones - Generar listado para tienda nube -> Articulos repetidos
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **Subtarea:** [[NBWEB-949 - API - Refactor - Generar listado para tienda nube - Adición de imagén principal|NBWEB-949]] API - Refactor - Generar listado para tienda nube - Adición de imagén principal
+- **blocks:** [[NBWEB-718 - APP - Feat - Descargar listado para tienda nube|NBWEB-718]] APP - Feat - Descargar listado para tienda nube
+- **relates to:** [[NBWEB-723 - API - Generar listado para tienda nube - Cambio en nombre de columna SKU|NBWEB-723]] API - Generar listado para tienda nube - Cambio en nombre de columna SKU
+- **relates to:** [[NBWEB-885 - API - Refactor - Generar listado para Tiendanube - Agregar medidas del artículo|NBWEB-885]] API - Refactor - Generar listado para Tiendanube - Agregar medidas del artículo 
+- **has action item:** [[NBWEB-949 - API - Refactor - Generar listado para tienda nube - Adición de imagén principal|NBWEB-949]] API - Refactor - Generar listado para tienda nube - Adición de imagén principal
+- **relates to:** [[SNB-3308 - Integraciones - Generar listado para tienda nube - Error al intentar descargar|SNB-3308]] Integraciones - Generar listado para tienda nube - Error al intentar descargar
+- **relates to:** [[SNB-3340 - Integraciones - Generar listado para tienda nube - Articulos repetidos|SNB-3340]] Integraciones - Generar listado para tienda nube -> Articulos repetidos
 
 ## Descripcion
 

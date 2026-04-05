@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NAEV-7"
 
 ## Relaciones
 
-- **Padre:** [[NAEV-6]] DDG - Diseño final para imprimir
+- **Padre:** [[NAEV-6 - DDG - Diseño final para imprimir|NAEV-6]] DDG - Diseño final para imprimir
 
 ## Descripcion
 

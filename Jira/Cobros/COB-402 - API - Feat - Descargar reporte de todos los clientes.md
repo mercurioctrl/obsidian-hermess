@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-402"
 
 ## Relaciones
 
-- **Padre:** [[COB-400]] Feat - Descargar Reportes
+- **Padre:** [[COB-400 - Feat - Descargar Reportes|COB-400]] Feat - Descargar Reportes
 
 ## Descripcion
 

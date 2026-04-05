@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-171"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
 
 ## Descripcion
 

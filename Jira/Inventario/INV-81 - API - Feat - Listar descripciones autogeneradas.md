@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-81"
 
 ## Relaciones
 
-- **Padre:** [[INV-80]] Descripciones
-- **blocks:** [[SNB-2017]] descripción autogenerada
-- **blocks:** [[INV-83]] APP - Feat - Listar y editar descripciones
-- **is blocked by:** [[INV-86]] API - Listar descripciones autogeneradas - Búsqueda por id de articulo no devuelve resultado específico 
+- **Padre:** [[INV-80 - Descripciones|INV-80]] Descripciones
+- **blocks:** [[SNB-2017 - descripción autogenerada|SNB-2017]] descripción autogenerada
+- **blocks:** [[INV-83 - APP - Feat - Listar y editar descripciones|INV-83]] APP - Feat - Listar y editar descripciones
+- **is blocked by:** [[INV-86 - API - Listar descripciones autogeneradas - Búsqueda por id de articulo no|INV-86]] API - Listar descripciones autogeneradas - Búsqueda por id de articulo no devuelve resultado específico 
 
 ## Descripcion
 

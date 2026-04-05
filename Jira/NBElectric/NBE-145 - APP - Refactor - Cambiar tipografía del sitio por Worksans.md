@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-145"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
 
 ## Descripcion
 

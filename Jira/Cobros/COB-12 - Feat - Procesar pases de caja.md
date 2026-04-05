@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-12"
 
 ## Relaciones
 
-- **Padre:** [[COB-14]] Pases
-- **Subtarea:** [[COB-65]] API - Feat - Realizar un pasa a otra caja 
-- **Subtarea:** [[COB-66]] API - Feat - Aceptar/Rechazar un pase recibido desde otra caja
-- **Subtarea:** [[COB-67]] APP - Feat - Modal para realizar un pase a otra caja
-- **Subtarea:** [[COB-71]] API - Refactor - Agregar tabla de estados para los pases para mejorar el sistema viejo
+- **Padre:** [[COB-14 - Pases|COB-14]] Pases
+- **Subtarea:** [[COB-65 - API - Feat - Realizar un pasa a otra caja|COB-65]] API - Feat - Realizar un pasa a otra caja 
+- **Subtarea:** [[COB-66 - API - Feat - AceptarRechazar un pase recibido desde otra caja|COB-66]] API - Feat - Aceptar/Rechazar un pase recibido desde otra caja
+- **Subtarea:** [[COB-67 - APP - Feat - Modal para realizar un pase a otra caja|COB-67]] APP - Feat - Modal para realizar un pase a otra caja
+- **Subtarea:** [[COB-71 - API - Refactor - Agregar tabla de estados para los pases para mejorar el|COB-71]] API - Refactor - Agregar tabla de estados para los pases para mejorar el sistema viejo
 
 ## Descripcion
 

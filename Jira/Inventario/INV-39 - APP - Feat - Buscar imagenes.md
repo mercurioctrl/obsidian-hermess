@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-39"
 
 ## Relaciones
 
-- **Padre:** [[INV-38]] Feat - Buscar imagenes en repositorios remotos
+- **Padre:** [[INV-38 - Feat - Buscar imagenes en repositorios remotos|INV-38]] Feat - Buscar imagenes en repositorios remotos
 
 ## Descripcion
 

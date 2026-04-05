@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-169"
 
 ## Relaciones
 
-- **blocks:** [[NBWEB-52]] APP - Maquetado y Desarrollo - Home
+- **blocks:** [[NBWEB-52 - APP - Maquetado y Desarrollo - Home|NBWEB-52]] APP - Maquetado y Desarrollo - Home
 
 ## Descripcion
 

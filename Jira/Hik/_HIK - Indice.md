@@ -4,7 +4,7 @@ name: "Hik"
 type: "software"
 total_issues: 2
 jira_url: "https://bluinc.atlassian.net/browse/HIK"
-synced: "2026-04-05 07:54"
+synced: "2026-04-05 07:58"
 ---
 
 # Hik (HIK)
@@ -19,5 +19,5 @@ synced: "2026-04-05 07:54"
 
 ## Issues
 
-- [[HIK-1]] — Portada de Hik Presenctación y cierre (Finalizada)
-- [[HIK-2]] — Armar en formato Hik + Brother  azul por separado jpg  (Finalizada)
+- [[HIK-1 - Portada de Hik Presenctación y cierre|HIK-1 �� Portada de Hik Presenctación y cierre]] (Finalizada)
+- [[HIK-2 - Armar en formato Hik + Brother azul por separado jpg|HIK-2 �� Armar en formato Hik + Brother  azul por separado jpg ]] (Finalizada)

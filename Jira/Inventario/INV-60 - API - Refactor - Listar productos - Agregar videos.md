@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-60"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[INV-59]] APP - Feat - Agregar y remover videos 
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[INV-59 - APP - Feat - Agregar y remover videos|INV-59]] APP - Feat - Agregar y remover videos 
 
 ## Descripcion
 

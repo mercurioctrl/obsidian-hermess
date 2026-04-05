@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-521"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **action item from:** [[EXP-520]] APP - Refactor - en la pestaña de ingreso de mercadería al editar el ingreso (con botón derecho)  no son obligatorios los campos Tipo y despacho ( caso Laset NBE)
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **action item from:** [[EXP-520 - APP - Refactor - en la pestaña de ingreso de mercadería al editar el ingreso|EXP-520]] APP - Refactor - en la pestaña de ingreso de mercadería al editar el ingreso (con botón derecho)  no son obligatorios los campos Tipo y despacho ( caso Laset NBE)
 
 ## Descripcion
 

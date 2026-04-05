@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-381"
 
 ## Relaciones
 
-- **Padre:** [[COB-380]] Feat - Mover saldo entre cuentas de cliente
-- **blocks:** [[COB-384]] APP - Feat - Mover saldo entre cuentas de clientes
+- **Padre:** [[COB-380 - Feat - Mover saldo entre cuentas de cliente|COB-380]] Feat - Mover saldo entre cuentas de cliente
+- **blocks:** [[COB-384 - APP - Feat - Mover saldo entre cuentas de clientes|COB-384]] APP - Feat - Mover saldo entre cuentas de clientes
 
 ## Descripcion
 

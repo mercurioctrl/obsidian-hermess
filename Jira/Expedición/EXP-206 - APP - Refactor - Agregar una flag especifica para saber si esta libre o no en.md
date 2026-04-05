@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-206"
 
 ## Relaciones
 
-- **Padre:** [[EXP-16]] Feat - Historia del producto (Por serial o sku)
-- **is blocked by:** [[EXP-205]] API - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
-- **blocks:** [[SNB-558]] Se debe mostrar en la historia del serial, explicito si esta disponible para ser tomado o no
+- **Padre:** [[EXP-16 - Feat - Historia del producto (Por serial o sku)|EXP-16]] Feat - Historia del producto (Por serial o sku)
+- **is blocked by:** [[EXP-205 - API - Refactor - Agregar una flag especifica para saber si esta libre o no en|EXP-205]] API - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
+- **blocks:** [[SNB-558 - Se debe mostrar en la historia del serial, explicito si esta disponible para|SNB-558]] Se debe mostrar en la historia del serial, explicito si esta disponible para ser tomado o no
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-681"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[NBWEB-712]] API - Agregar medio de envío al objeto de ordenes - Medio de envío vacío
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[NBWEB-712 - API - Agregar medio de envío al objeto de ordenes - Medio de envío vacío|NBWEB-712]] API - Agregar medio de envío al objeto de ordenes - Medio de envío vacío
 
 ## Descripcion
 

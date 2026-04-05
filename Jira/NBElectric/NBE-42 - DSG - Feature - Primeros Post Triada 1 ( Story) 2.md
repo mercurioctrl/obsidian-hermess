@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-42"
 
 ## Relaciones
 
-- **Padre:** [[NBE-19]] Triada 1_ Social Media_Institucional
+- **Padre:** [[NBE-19 - Triada 1_ Social Media_Institucional|NBE-19]] Triada 1_ Social Media_Institucional
 
 ## Descripcion
 

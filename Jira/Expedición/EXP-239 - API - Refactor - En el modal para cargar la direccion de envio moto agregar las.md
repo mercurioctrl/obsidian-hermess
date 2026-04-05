@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-239"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **is blocked by:** [[EXP-240]] API - Feat - Obtener comentarios del vendedor para un pedido determinado
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **is blocked by:** [[EXP-240 - API - Feat - Obtener comentarios del vendedor para un pedido determinado|EXP-240]] API - Feat - Obtener comentarios del vendedor para un pedido determinado
 
 ## Descripcion
 

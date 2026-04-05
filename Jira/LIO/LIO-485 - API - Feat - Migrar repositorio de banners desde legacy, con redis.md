@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-485"
 
 ## Relaciones
 
-- **Padre:** [[LIO-484]] Home
-- **Subtarea:** [[LIO-494]] API - Refactor - ajustar lectura de banners desde recurso API4
-- **has action item:** [[LIO-493]] APP - Refactor - Leer los banners para la home desde el nuevo recurso de API4
+- **Padre:** [[LIO-484 - Home|LIO-484]] Home
+- **Subtarea:** [[LIO-494 - API - Refactor - ajustar lectura de banners desde recurso API4|LIO-494]] API - Refactor - ajustar lectura de banners desde recurso API4
+- **has action item:** [[LIO-493 - APP - Refactor - Leer los banners para la home desde el nuevo recurso de API4|LIO-493]] APP - Refactor - Leer los banners para la home desde el nuevo recurso de API4
 
 ## Descripcion
 

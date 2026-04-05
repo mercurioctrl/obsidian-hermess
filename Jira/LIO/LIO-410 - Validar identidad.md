@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-410"
 
 ## Relaciones
 
-- **Padre:** [[LIO-5]] Seguridad y Confianza
-- **Subtarea:** [[LIO-411]] API - Refactor - Envío de correo electrónico con token de validación al registrar usuario
-- **Subtarea:** [[LIO-412]] APP - Refactor - Conectar nuevo recurso de verificacion de correo en v4
-- **Subtarea:** [[LIO-435]] API - Refactor - Agrear correo de "validacion de correo" con una copia oculta para notificalibreopcion@gmail.com
+- **Padre:** [[LIO-5 - Seguridad y Confianza|LIO-5]] Seguridad y Confianza
+- **Subtarea:** [[LIO-411 - API - Refactor - Envío de correo electrónico con token de validación al|LIO-411]] API - Refactor - Envío de correo electrónico con token de validación al registrar usuario
+- **Subtarea:** [[LIO-412 - APP - Refactor - Conectar nuevo recurso de verificacion de correo en v4|LIO-412]] APP - Refactor - Conectar nuevo recurso de verificacion de correo en v4
+- **Subtarea:** [[LIO-435 - API - Refactor - Agrear correo de validacion de correo con una copia oculta|LIO-435]] API - Refactor - Agrear correo de "validacion de correo" con una copia oculta para notificalibreopcion@gmail.com
 
 ## Descripcion
 

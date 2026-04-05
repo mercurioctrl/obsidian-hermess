@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-163"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **has action item:** [[INV-164]] APP - Refactor - Agregar los parametros "notSerializable" y "national" a la carga masiva
-- **has action item:** [[SNB-2417]] Agregar a las altas masivas de producto la posibilidad de poner nacional y que no sea serializable
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **has action item:** [[INV-164 - APP - Refactor - Agregar los parametros notSerializable y national a la carga|INV-164]] APP - Refactor - Agregar los parametros "notSerializable" y "national" a la carga masiva
+- **has action item:** [[SNB-2417 - Agregar a las altas masivas de producto la posibilidad de poner nacional y que|SNB-2417]] Agregar a las altas masivas de producto la posibilidad de poner nacional y que no sea serializable
 
 ## Descripcion
 

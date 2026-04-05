@@ -29,33 +29,33 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-10"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **Subtarea:** [[EXP-32]] API - Feat - Listar pedidos de proveedores
-- **Subtarea:** [[EXP-34]] APP - Feat - Listar pedidos de proveedores (Pestaña ingresos)
-- **Subtarea:** [[EXP-33]] API - Feat - Filtros al listar pedidos proveedor
-- **Subtarea:** [[EXP-60]] API - Feat - Agregar filtro de marca al listado de pedidos proveedor
-- **Subtarea:** [[EXP-62]] APP - Feat - Agregar filtro de marca al listado de pedidos proveedor
-- **Subtarea:** [[EXP-40]] APP - Feat - Detalle pedido proveedor
-- **Subtarea:** [[EXP-38]] API - Feat - Detalle pedido proveedor
-- **Subtarea:** [[EXP-39]] API - Feat - Detalle seriales por ítem de pedido proveedor
-- **Subtarea:** [[EXP-41]] APP - Feat - Detalle seriales por ítem de pedido proveedor
-- **Subtarea:** [[EXP-37]] API - Feat - Determinar si están cumplida la serializacion completa de un ítem
-- **Subtarea:** [[EXP-63]] APP - Feat - Herramienta borrar en modale Detalle de seriales por item
-- **Subtarea:** [[EXP-79]] APP - Refactor - Detalle pedido proveedor, marcar en verde los completados
-- **Subtarea:** [[EXP-94]] API - Refactor - Detalle item de pedido, agregar codigos unicos
-- **Subtarea:** [[EXP-127]] APP - Refactor - Detalle de ingreso de mercadería, ampliar imagen 
-- **Subtarea:** [[EXP-159]] API - Refactor - Agregar filtro de producto al listado pedidos proveedor
-- **Subtarea:** [[EXP-247]] APP - Refactor - Ocultar ingresos segun permiso especifico 
-- **Subtarea:** [[EXP-274]] API - Refactor - Solo mostrar resultados del ultimo año (ultimos 365 dias), en todos los casos a menos que la fecha se explicite
-- **Subtarea:** [[EXP-287]] APP - Refactor - Se deben modificar los filtros de estado para ser mutliples
-- **Subtarea:** [[EXP-288]] API - Refactor - Se deben modificar los filtros de estadO para ser mutliples
-- **Subtarea:** [[EXP-316]] API - Feat - Filtro especifico por id, sku en parámetros separados
-- **Subtarea:** [[EXP-317]] APP - Feat - Filtro especifico por id, sku en parámetros separados
-- **Subtarea:** [[EXP-336]] API - Review - El listado de ingresos no busca bien por numero de ingreso
-- **Subtarea:** [[EXP-386]] API - Review - Error al usar algunos filtros en el listado
-- **is blocked by:** [[EXP-153]] Ingresos - Pedido completamente serializado
-- **is blocked by:** [[EXP-155]] Ingresos - Filtro por proveedor sin resultados
-- **is blocked by:** [[EXP-200]] Ingresos - Buscar id proveedor sin resultados
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **Subtarea:** [[EXP-32 - API - Feat - Listar pedidos de proveedores|EXP-32]] API - Feat - Listar pedidos de proveedores
+- **Subtarea:** [[EXP-34 - APP - Feat - Listar pedidos de proveedores (Pestaña ingresos)|EXP-34]] APP - Feat - Listar pedidos de proveedores (Pestaña ingresos)
+- **Subtarea:** [[EXP-33 - API - Feat - Filtros al listar pedidos proveedor|EXP-33]] API - Feat - Filtros al listar pedidos proveedor
+- **Subtarea:** [[EXP-60 - API - Feat - Agregar filtro de marca al listado de pedidos proveedor|EXP-60]] API - Feat - Agregar filtro de marca al listado de pedidos proveedor
+- **Subtarea:** [[EXP-62 - APP - Feat - Agregar filtro de marca al listado de pedidos proveedor|EXP-62]] APP - Feat - Agregar filtro de marca al listado de pedidos proveedor
+- **Subtarea:** [[EXP-40 - APP - Feat - Detalle pedido proveedor|EXP-40]] APP - Feat - Detalle pedido proveedor
+- **Subtarea:** [[EXP-38 - API - Feat - Detalle pedido proveedor|EXP-38]] API - Feat - Detalle pedido proveedor
+- **Subtarea:** [[EXP-39 - API - Feat - Detalle seriales por ítem de pedido proveedor|EXP-39]] API - Feat - Detalle seriales por ítem de pedido proveedor
+- **Subtarea:** [[EXP-41 - APP - Feat - Detalle seriales por ítem de pedido proveedor|EXP-41]] APP - Feat - Detalle seriales por ítem de pedido proveedor
+- **Subtarea:** [[EXP-37 - API - Feat - Determinar si están cumplida la serializacion completa de un ítem|EXP-37]] API - Feat - Determinar si están cumplida la serializacion completa de un ítem
+- **Subtarea:** [[EXP-63 - APP - Feat - Herramienta borrar en modale Detalle de seriales por item|EXP-63]] APP - Feat - Herramienta borrar en modale Detalle de seriales por item
+- **Subtarea:** [[EXP-79 - APP - Refactor - Detalle pedido proveedor, marcar en verde los completados|EXP-79]] APP - Refactor - Detalle pedido proveedor, marcar en verde los completados
+- **Subtarea:** [[EXP-94 - API - Refactor - Detalle item de pedido, agregar codigos unicos|EXP-94]] API - Refactor - Detalle item de pedido, agregar codigos unicos
+- **Subtarea:** [[EXP-127 - APP - Refactor - Detalle de ingreso de mercadería, ampliar imagen|EXP-127]] APP - Refactor - Detalle de ingreso de mercadería, ampliar imagen 
+- **Subtarea:** [[EXP-159 - API - Refactor - Agregar filtro de producto al listado pedidos proveedor|EXP-159]] API - Refactor - Agregar filtro de producto al listado pedidos proveedor
+- **Subtarea:** [[EXP-247 - APP - Refactor - Ocultar ingresos segun permiso especifico|EXP-247]] APP - Refactor - Ocultar ingresos segun permiso especifico 
+- **Subtarea:** [[EXP-274 - API - Refactor - Solo mostrar resultados del ultimo año (ultimos 365 dias), en|EXP-274]] API - Refactor - Solo mostrar resultados del ultimo año (ultimos 365 dias), en todos los casos a menos que la fecha se explicite
+- **Subtarea:** [[EXP-287 - APP - Refactor - Se deben modificar los filtros de estado para ser mutliples|EXP-287]] APP - Refactor - Se deben modificar los filtros de estado para ser mutliples
+- **Subtarea:** [[EXP-288 - API - Refactor - Se deben modificar los filtros de estadO para ser mutliples|EXP-288]] API - Refactor - Se deben modificar los filtros de estadO para ser mutliples
+- **Subtarea:** [[EXP-316 - API - Feat - Filtro especifico por id, sku en parámetros separados|EXP-316]] API - Feat - Filtro especifico por id, sku en parámetros separados
+- **Subtarea:** [[EXP-317 - APP - Feat - Filtro especifico por id, sku en parámetros separados|EXP-317]] APP - Feat - Filtro especifico por id, sku en parámetros separados
+- **Subtarea:** [[EXP-336 - API - Review - El listado de ingresos no busca bien por numero de ingreso|EXP-336]] API - Review - El listado de ingresos no busca bien por numero de ingreso
+- **Subtarea:** [[EXP-386 - API - Review - Error al usar algunos filtros en el listado|EXP-386]] API - Review - Error al usar algunos filtros en el listado
+- **is blocked by:** [[EXP-153 - Ingresos - Pedido completamente serializado|EXP-153]] Ingresos - Pedido completamente serializado
+- **is blocked by:** [[EXP-155 - Ingresos - Filtro por proveedor sin resultados|EXP-155]] Ingresos - Filtro por proveedor sin resultados
+- **is blocked by:** [[EXP-200 - Ingresos - Buscar id proveedor sin resultados|EXP-200]] Ingresos - Buscar id proveedor sin resultados
 
 ## Descripcion
 

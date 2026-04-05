@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-294"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **clones:** [[INV-286]] APP - Refactor - Al menos uno de los filtros obligatorio antes de submitear
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **clones:** [[INV-286 - APP - Refactor - Al menos uno de los filtros obligatorio antes de submitear|INV-286]] APP - Refactor - Al menos uno de los filtros obligatorio antes de submitear
 
 ## Descripcion
 

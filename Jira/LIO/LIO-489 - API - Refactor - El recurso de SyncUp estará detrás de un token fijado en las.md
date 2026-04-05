@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-489"
 
 ## Relaciones
 
-- **Padre:** [[LIO-481]] Recomendaciones de loki
-- **action item from:** [[LIO-487]] API – Feat – SyncUp de YouTube
+- **Padre:** [[LIO-481 - Recomendaciones de loki|LIO-481]] Recomendaciones de loki
+- **action item from:** [[LIO-487 - API – Feat – SyncUp de YouTube|LIO-487]] API – Feat – SyncUp de YouTube
 
 ## Descripcion
 

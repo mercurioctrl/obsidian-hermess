@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-84"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-85]] 1.FB: Triada 5 Diseño LOCAL
-- **Subtarea:** [[FB-86]] 4. FB: Triada 5 Copys LOCAL
-- **Subtarea:** [[FB-87]] 3. FB: Triada 5 Programar Post LOCAL
+- **Subtarea:** [[FB-85 - 1.FB Triada 5 Diseño LOCAL|FB-85]] 1.FB: Triada 5 Diseño LOCAL
+- **Subtarea:** [[FB-86 - 4. FB Triada 5 Copys LOCAL|FB-86]] 4. FB: Triada 5 Copys LOCAL
+- **Subtarea:** [[FB-87 - 3. FB Triada 5 Programar Post LOCAL|FB-87]] 3. FB: Triada 5 Programar Post LOCAL
 
 ## Descripcion
 

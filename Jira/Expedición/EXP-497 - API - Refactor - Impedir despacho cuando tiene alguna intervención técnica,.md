@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-497"
 
 ## Relaciones
 
-- **Padre:** [[EXP-493]] Listar envios
-- **has action item:** [[EXP-498]] APP - Refactor - Reflejar nueva notificación al momento de despachar/finalizar una orden en expedición
+- **Padre:** [[EXP-493 - Listar envios|EXP-493]] Listar envios
+- **has action item:** [[EXP-498 - APP - Refactor - Reflejar nueva notificación al momento de despacharfinalizar|EXP-498]] APP - Refactor - Reflejar nueva notificación al momento de despachar/finalizar una orden en expedición
 
 ## Descripcion
 

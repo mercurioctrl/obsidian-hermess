@@ -29,17 +29,17 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-581"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-582]] API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el saldo relativo a libre opción tal cual lo muestra la billetera para el cliente
-- **Subtarea:** [[COB-583]] APP - Feat – Mostrar repositorio de billeteras en nueva pestaña
-- **Subtarea:** [[COB-585]] API - Feat - Repositorio para ver lo detalles de una billetera de libre opción determinada (transactions)
-- **Subtarea:** [[COB-586]] APP - Feat - Ver transacciones de billetera por usuario LO
-- **Subtarea:** [[COB-588]] API - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo positivo, negativo o neutro (solo wallet, no cc)
-- **Subtarea:** [[COB-589]] APP - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo positivo, negativo o neutro (solo wallet, no cc)
-- **Subtarea:** [[COB-590]] API - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su enlace para rastrearlo en la aplicacion de pedidos
-- **Subtarea:** [[COB-591]] APP - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su enlace para rastrearlo en la aplicacion de pedidos
-- **Subtarea:** [[COB-599]] API - Refactor - Agregar filtrado por nombre, clientId y userIdLo
-- **Subtarea:** [[COB-600]] APP - Refactor - Agregar filtrado por nombre, clientId y userIdLo
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-582 - API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el|COB-582]] API - Feat - Crear repositorio de billeteras de libre opción, mostrando solo el saldo relativo a libre opción tal cual lo muestra la billetera para el cliente
+- **Subtarea:** [[COB-583 - APP - Feat – Mostrar repositorio de billeteras en nueva pestaña|COB-583]] APP - Feat – Mostrar repositorio de billeteras en nueva pestaña
+- **Subtarea:** [[COB-585 - API - Feat - Repositorio para ver lo detalles de una billetera de libre opción|COB-585]] API - Feat - Repositorio para ver lo detalles de una billetera de libre opción determinada (transactions)
+- **Subtarea:** [[COB-586 - APP - Feat - Ver transacciones de billetera por usuario LO|COB-586]] APP - Feat - Ver transacciones de billetera por usuario LO
+- **Subtarea:** [[COB-588 - API - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo|COB-588]] API - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo positivo, negativo o neutro (solo wallet, no cc)
+- **Subtarea:** [[COB-589 - APP - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo|COB-589]] APP - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo positivo, negativo o neutro (solo wallet, no cc)
+- **Subtarea:** [[COB-590 - API - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su|COB-590]] API - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su enlace para rastrearlo en la aplicacion de pedidos
+- **Subtarea:** [[COB-591 - APP - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su|COB-591]] APP - Refactor - Mostrar en el detalle de la wallet el numero de pedido y su enlace para rastrearlo en la aplicacion de pedidos
+- **Subtarea:** [[COB-599 - API - Refactor - Agregar filtrado por nombre, clientId y userIdLo|COB-599]] API - Refactor - Agregar filtrado por nombre, clientId y userIdLo
+- **Subtarea:** [[COB-600 - APP - Refactor - Agregar filtrado por nombre, clientId y userIdLo|COB-600]] APP - Refactor - Agregar filtrado por nombre, clientId y userIdLo
 
 ## Descripcion
 

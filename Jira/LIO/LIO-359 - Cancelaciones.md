@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-359"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-360]] API - Feat - Cancelación de orden por comprador o vendedor autenticado
-- **Subtarea:** [[LIO-361]] APP - Refactor - Conectar nuevo recurso de cacnelacion en las compras/ventas
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-360 - API - Feat - Cancelación de orden por comprador o vendedor autenticado|LIO-360]] API - Feat - Cancelación de orden por comprador o vendedor autenticado
+- **Subtarea:** [[LIO-361 - APP - Refactor - Conectar nuevo recurso de cacnelacion en las comprasventas|LIO-361]] APP - Refactor - Conectar nuevo recurso de cacnelacion en las compras/ventas
 
 ## Descripcion
 

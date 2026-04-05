@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-559"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-495]] API - Features especiales
-- **Subtarea:** [[NBWEB-560]] API - Feat - Palabra clave en el recurso de postventa para que el usuario pueda visualizar la palabra de retiro
-- **Subtarea:** [[NBWEB-561]] APP - Feat - Agregar visuzalizacion de la palabra clave para retiro en el apartado Mi cuenta > Postventa
-- **Subtarea:** [[NBWEB-566]] APP - Refactor - Unificar criterios de como se muestra la palabra clave en postventa y ordenes de compra
+- **Padre:** [[NBWEB-495 - API - Features especiales|NBWEB-495]] API - Features especiales
+- **Subtarea:** [[NBWEB-560 - API - Feat - Palabra clave en el recurso de postventa para que el usuario pueda|NBWEB-560]] API - Feat - Palabra clave en el recurso de postventa para que el usuario pueda visualizar la palabra de retiro
+- **Subtarea:** [[NBWEB-561 - APP - Feat - Agregar visuzalizacion de la palabra clave para retiro en el|NBWEB-561]] APP - Feat - Agregar visuzalizacion de la palabra clave para retiro en el apartado Mi cuenta > Postventa
+- **Subtarea:** [[NBWEB-566 - APP - Refactor - Unificar criterios de como se muestra la palabra clave en|NBWEB-566]] APP - Refactor - Unificar criterios de como se muestra la palabra clave en postventa y ordenes de compra
 
 ## Descripcion
 

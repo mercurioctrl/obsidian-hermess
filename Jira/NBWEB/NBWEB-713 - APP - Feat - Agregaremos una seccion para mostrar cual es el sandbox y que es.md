@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-713"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-636]] Documentacion publica
-- **relates to:** [[NBWEB-721]] APP -  Documentación Sandbox - Oportunidad de mejora
+- **Padre:** [[NBWEB-636 - Documentacion publica|NBWEB-636]] Documentacion publica
+- **relates to:** [[NBWEB-721 - APP - Documentación Sandbox - Oportunidad de mejora|NBWEB-721]] APP -  Documentación Sandbox - Oportunidad de mejora
 
 ## Descripcion
 

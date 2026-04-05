@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-180"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-181]] API - Feat - Capturar los intereses de usuarios (con o sin login)
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-181 - API - Feat - Capturar los intereses de usuarios (con o sin login)|LIO-181]] API - Feat - Capturar los intereses de usuarios (con o sin login)
 
 ## Descripcion
 

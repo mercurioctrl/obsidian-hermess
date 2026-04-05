@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-4"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-5]] API - Feat - Crear Servidor Ec2 en AWS para BACK
-- **Subtarea:** [[BLUWEB-6]] API - Feat - Crear Servidor Ec2 en AWS para FRONT
-- **Subtarea:** [[BLUWEB-7]] API - Feat - Instalar entorno Docker para Laravel con MySQL, phpMyAdmin y Redis
-- **Subtarea:** [[BLUWEB-8]] API - Feat - Delegacion de dominios
+- **Subtarea:** [[BLUWEB-5 - API - Feat - Crear Servidor Ec2 en AWS para BACK|BLUWEB-5]] API - Feat - Crear Servidor Ec2 en AWS para BACK
+- **Subtarea:** [[BLUWEB-6 - API - Feat - Crear Servidor Ec2 en AWS para FRONT|BLUWEB-6]] API - Feat - Crear Servidor Ec2 en AWS para FRONT
+- **Subtarea:** [[BLUWEB-7 - API - Feat - Instalar entorno Docker para Laravel con MySQL, phpMyAdmin y Redis|BLUWEB-7]] API - Feat - Instalar entorno Docker para Laravel con MySQL, phpMyAdmin y Redis
+- **Subtarea:** [[BLUWEB-8 - API - Feat - Delegacion de dominios|BLUWEB-8]] API - Feat - Delegacion de dominios
 
 ## Descripcion
 

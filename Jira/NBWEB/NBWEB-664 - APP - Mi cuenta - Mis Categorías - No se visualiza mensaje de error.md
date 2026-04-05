@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-664"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-645]] APP - Feat - Mi cuenta -> Mis Categorias
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-645 - APP - Feat - Mi cuenta - Mis Categorias|NBWEB-645]] APP - Feat - Mi cuenta -> Mis Categorias
 
 ## Descripcion
 

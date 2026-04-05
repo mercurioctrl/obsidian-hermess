@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-111"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-112]] Enero: Triada 10 Diseño Social Media
-- **Subtarea:** [[FB-113]] Enero: Triada 10 Copy
-- **Subtarea:** [[FB-114]] Enero: Triada 10 Programar
+- **Subtarea:** [[FB-112 - Enero Triada 10 Diseño Social Media|FB-112]] Enero: Triada 10 Diseño Social Media
+- **Subtarea:** [[FB-113 - Enero Triada 10 Copy|FB-113]] Enero: Triada 10 Copy
+- **Subtarea:** [[FB-114 - Enero Triada 10 Programar|FB-114]] Enero: Triada 10 Programar
 
 ## Descripcion
 

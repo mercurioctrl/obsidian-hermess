@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-256"
 
 ## Relaciones
 
-- **Padre:** [[EXP-255]] MS - Refactor - Nuevo contrato Andreani, solo operaciones de NewBytes
+- **Padre:** [[EXP-255 - MS - Refactor - Nuevo contrato Andreani, solo operaciones de NewBytes|EXP-255]] MS - Refactor - Nuevo contrato Andreani, solo operaciones de NewBytes
 
 ## Descripcion
 

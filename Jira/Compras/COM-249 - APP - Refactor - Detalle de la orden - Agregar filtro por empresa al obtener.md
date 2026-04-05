@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-249"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **relates to:** [[COM-147]] APP - Feat - Agregar / Editar / Eliminar impuestos distribuidos
-- **relates to:** [[COM-232]] APP - MVP - Agregar filtro de empresa a la pestaña de impuestos/gasto (tariffTax)
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **relates to:** [[COM-147 - APP - Feat - Agregar Editar Eliminar impuestos distribuidos|COM-147]] APP - Feat - Agregar / Editar / Eliminar impuestos distribuidos
+- **relates to:** [[COM-232 - APP - MVP - Agregar filtro de empresa a la pestaña de impuestosgasto (tariffTax)|COM-232]] APP - MVP - Agregar filtro de empresa a la pestaña de impuestos/gasto (tariffTax)
 
 ## Descripcion
 

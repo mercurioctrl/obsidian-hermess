@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-502"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **blocks:** [[COB-498]] API - Refactor - Ver comprobante de pago - Apuntar a NB
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **blocks:** [[COB-498 - API - Refactor - Ver comprobante de pago - Apuntar a NB|COB-498]] API - Refactor - Ver comprobante de pago - Apuntar a NB
 
 ## Descripcion
 

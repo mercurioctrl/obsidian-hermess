@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-959"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-423]] Logistica Envios
+- **Padre:** [[NBWEB-423 - Logistica Envios|NBWEB-423]] Logistica Envios
 
 ## Descripcion
 

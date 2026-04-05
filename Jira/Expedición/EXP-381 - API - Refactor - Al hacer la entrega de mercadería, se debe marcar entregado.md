@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-381"
 
 ## Relaciones
 
-- **Padre:** [[EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
-- **is blocked by:** [[EXP-382]] API - Marcar mercadería entregada para LO - Incidencias varias
+- **Padre:** [[EXP-258 - Feat - Autorizar Entrega mediante tarjeta de autorizacion|EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
+- **is blocked by:** [[EXP-382 - API - Marcar mercadería entregada para LO - Incidencias varias|EXP-382]] API - Marcar mercadería entregada para LO - Incidencias varias
 
 ## Descripcion
 

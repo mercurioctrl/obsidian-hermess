@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-84"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
-- **action item from:** [[LOCAPP-82]] APP - MVP - Feat - Crear maquetacion para packing List
-- **has action item:** [[LOCAPP-85]] APP - MVP - Feat - Conectar packing List  con la api
-- **is blocked by:** [[PED-1321]] API - Feat - Ver detalle pedido -> Agregar nro proforma (ver/editar)
+- **Padre:** [[LOCAPP-80 - MVP - Vouchers para LASET (eticket, efactura,packingList PL, SLI)|LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
+- **action item from:** [[LOCAPP-82 - APP - MVP - Feat - Crear maquetacion para packing List|LOCAPP-82]] APP - MVP - Feat - Crear maquetacion para packing List
+- **has action item:** [[LOCAPP-85 - APP - MVP - Feat - Conectar packing List con la api|LOCAPP-85]] APP - MVP - Feat - Conectar packing List  con la api
+- **is blocked by:** [[PED-1321 - API - Feat - Ver detalle pedido - Agregar nro proforma (vereditar)|PED-1321]] API - Feat - Ver detalle pedido -> Agregar nro proforma (ver/editar)
 
 ## Descripcion
 

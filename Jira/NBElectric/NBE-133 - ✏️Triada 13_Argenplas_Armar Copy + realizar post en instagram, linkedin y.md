@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-133"
 
 ## Relaciones
 
-- **Padre:** [[NBE-112]] Triada 12_Argenplas_Social Media
+- **Padre:** [[NBE-112 - Triada 12_Argenplas_Social Media|NBE-112]] Triada 12_Argenplas_Social Media
 
 ## Descripcion
 

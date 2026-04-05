@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-564"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **action item from:** [[COB-562]] API - Refactor - Agregar informacion a las salidas pendientes necesaria para retiros de wallet  (POST)
-- **action item from:** [[COB-563]] API - Refactor - Agregar informacion a las salidas pendientes necesaria para retiros de wallet (GET)
-- **action item from:** [[COB-565]] API - Refactor - Incluir datos bancarios y cliente en proceso de salida de fondos que se hace con cashOut para procesar una solicitud de salida
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **action item from:** [[COB-562 - API - Refactor - Agregar informacion a las salidas pendientes necesaria para|COB-562]] API - Refactor - Agregar informacion a las salidas pendientes necesaria para retiros de wallet  (POST)
+- **action item from:** [[COB-563 - API - Refactor - Agregar informacion a las salidas pendientes necesaria para|COB-563]] API - Refactor - Agregar informacion a las salidas pendientes necesaria para retiros de wallet (GET)
+- **action item from:** [[COB-565 - API - Refactor - Incluir datos bancarios y cliente en proceso de salida de|COB-565]] API - Refactor - Incluir datos bancarios y cliente en proceso de salida de fondos que se hace con cashOut para procesar una solicitud de salida
 
 ## Descripcion
 

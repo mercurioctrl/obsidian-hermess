@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-533"
 
 ## Relaciones
 
-- **Padre:** [[LIO-532]] Migración Preguntas/Respuestas API (Vendedores)
-- **has action item:** [[LIO-511]] APP - Feat - Migrar endpoint “Responder pregunta de producto” desde Legacy
+- **Padre:** [[LIO-532 - Migración PreguntasRespuestas API (Vendedores)|LIO-532]] Migración Preguntas/Respuestas API (Vendedores)
+- **has action item:** [[LIO-511 - APP - Feat - Migrar endpoint “Responder pregunta de producto” desde Legacy|LIO-511]] APP - Feat - Migrar endpoint “Responder pregunta de producto” desde Legacy
 
 ## Descripcion
 

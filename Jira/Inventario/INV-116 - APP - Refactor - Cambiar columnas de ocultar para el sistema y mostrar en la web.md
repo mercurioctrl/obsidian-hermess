@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-116"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **is blocked by:** [[INV-115]] API - Refactor - Agregar parametro para ocultar del sistema
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **is blocked by:** [[INV-115 - API - Refactor - Agregar parametro para ocultar del sistema|INV-115]] API - Refactor - Agregar parametro para ocultar del sistema
 
 ## Descripcion
 

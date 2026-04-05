@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-619"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **Subtarea:** [[NBWEB-620]] API - Feat - Setear medio de pago, asi como seteamos cuando tiene un envio
-- **Subtarea:** [[NBWEB-634]] API - Refactor - Agregar un parametro dropShipping
-- **Subtarea:** [[NBWEB-635]] APP - Refactor - Agregar un parametro dropShipping
-- **Subtarea:** [[NBWEB-931]] API - Refactor - Al procesar un carrito (generar orden) se debe marcar la empresa que esta primero
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **Subtarea:** [[NBWEB-620 - API - Feat - Setear medio de pago, asi como seteamos cuando tiene un envio|NBWEB-620]] API - Feat - Setear medio de pago, asi como seteamos cuando tiene un envio
+- **Subtarea:** [[NBWEB-634 - API - Refactor - Agregar un parametro dropShipping|NBWEB-634]] API - Refactor - Agregar un parametro dropShipping
+- **Subtarea:** [[NBWEB-635 - APP - Refactor - Agregar un parametro dropShipping|NBWEB-635]] APP - Refactor - Agregar un parametro dropShipping
+- **Subtarea:** [[NBWEB-931 - API - Refactor - Al procesar un carrito (generar orden) se debe marcar la|NBWEB-931]] API - Refactor - Al procesar un carrito (generar orden) se debe marcar la empresa que esta primero
 
 ## Descripcion
 

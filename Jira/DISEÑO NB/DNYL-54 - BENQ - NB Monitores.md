@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-54"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-32]] Monitores Zowie BenQ
+- **blocks:** [[REDESYNEWS-32 - Monitores Zowie BenQ|REDESYNEWS-32]] Monitores Zowie BenQ
 
 ## Descripcion
 

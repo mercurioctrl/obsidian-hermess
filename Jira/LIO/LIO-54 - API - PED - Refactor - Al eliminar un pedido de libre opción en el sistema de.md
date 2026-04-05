@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-54"
 
 ## Relaciones
 
-- **blocks:** [[LIO-30]] API - PED - Refactor - Al eliminar un pedido de libre opcion en el sistema de pedidos, se debe marcar como "cancelado" en la plataforma libre opcion
+- **blocks:** [[LIO-30 - API - PED - Refactor - Al eliminar un pedido de libre opcion en el sistema de|LIO-30]] API - PED - Refactor - Al eliminar un pedido de libre opcion en el sistema de pedidos, se debe marcar como "cancelado" en la plataforma libre opcion
 
 ## Descripcion
 

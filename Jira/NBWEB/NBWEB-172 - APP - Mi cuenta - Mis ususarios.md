@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-172"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
-- **relates to:** [[NBWEB-23]] Mis Usuarios
-- **is blocked by:** [[NBWEB-212]] API - Crear nuevo sub usuario
-- **is blocked by:** [[NBWEB-213]] API - Eliminar un sub usuario
+- **Padre:** [[NBWEB-59 - APP -Maquetado y Desarrollo - Mi cuenta|NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
+- **relates to:** [[NBWEB-23 - Mis Usuarios|NBWEB-23]] Mis Usuarios
+- **is blocked by:** [[NBWEB-212 - API - Crear nuevo sub usuario|NBWEB-212]] API - Crear nuevo sub usuario
+- **is blocked by:** [[NBWEB-213 - API - Eliminar un sub usuario|NBWEB-213]] API - Eliminar un sub usuario
 
 ## Descripcion
 

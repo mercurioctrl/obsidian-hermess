@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-191"
 
 ## Relaciones
 
-- **Padre:** [[COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
-- **is blocked by:** [[COM-190]] API -MVP - Refactor - Elegir si altera o no el costo promedio del item para cada item
+- **Padre:** [[COM-109 - Generar INGRESO o pedido (a partir de una orden de compra)|COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
+- **is blocked by:** [[COM-190 - API -MVP - Refactor - Elegir si altera o no el costo promedio del item para|COM-190]] API -MVP - Refactor - Elegir si altera o no el costo promedio del item para cada item
 
 ## Descripcion
 

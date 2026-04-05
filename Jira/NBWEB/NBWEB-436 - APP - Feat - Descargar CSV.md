@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-436"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **is blocked by:** [[NBWEB-432]] API - Feat - Descargar CSV
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **is blocked by:** [[NBWEB-432 - API - Feat - Descargar CSV|NBWEB-432]] API - Feat - Descargar CSV
 
 ## Descripcion
 

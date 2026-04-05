@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-439"
 
 ## Relaciones
 
-- **Padre:** [[EXP-7]] Despacho de retiros
-- **Subtarea:** [[EXP-440]] APP - Refactor - Agregar el numero de Libre Opcion como en pedidos
-- **Subtarea:** [[EXP-491]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de retiros
-- **Subtarea:** [[EXP-492]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes de retiro
-- **blocks:** [[EXP-440]] APP - Refactor - Agregar el numero de Libre Opcion como en pedidos
+- **Padre:** [[EXP-7 - Despacho de retiros|EXP-7]] Despacho de retiros
+- **Subtarea:** [[EXP-440 - APP - Refactor - Agregar el numero de Libre Opcion como en pedidos|EXP-440]] APP - Refactor - Agregar el numero de Libre Opcion como en pedidos
+- **Subtarea:** [[EXP-491 - API - Refactor - Agregar indicadores (flags) de intervención técnica a las|EXP-491]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de retiros
+- **Subtarea:** [[EXP-492 - APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|EXP-492]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes de retiro
+- **blocks:** [[EXP-440 - APP - Refactor - Agregar el numero de Libre Opcion como en pedidos|EXP-440]] APP - Refactor - Agregar el numero de Libre Opcion como en pedidos
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-206"
 
 ## Relaciones
 
-- **Padre:** [[COB-14]] Pases
-- **blocks:** [[COB-207]] APP - Feat - Cuando se precarga la salida, desde un pase marcar cotizacion por parametro
-- **blocks:** [[SNB-351]] Refactor - Guardar cotizacion al momento de hacer un pase, para luego usar esa en los formularios de salida (si esa no esta, pongo la del sia)
+- **Padre:** [[COB-14 - Pases|COB-14]] Pases
+- **blocks:** [[COB-207 - APP - Feat - Cuando se precarga la salida, desde un pase marcar cotizacion por|COB-207]] APP - Feat - Cuando se precarga la salida, desde un pase marcar cotizacion por parametro
+- **blocks:** [[SNB-351 - Refactor - Guardar cotizacion al momento de hacer un pase, para luego usar esa|SNB-351]] Refactor - Guardar cotizacion al momento de hacer un pase, para luego usar esa en los formularios de salida (si esa no esta, pongo la del sia)
 
 ## Descripcion
 

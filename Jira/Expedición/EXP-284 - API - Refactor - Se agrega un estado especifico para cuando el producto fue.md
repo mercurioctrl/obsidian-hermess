@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-284"
 
 ## Relaciones
 
-- **Padre:** [[EXP-119]] Feat - Acreditar un pedido parcial o totalmente
-- **blocks:** [[SNB-770]] ver en cobros pendientes
+- **Padre:** [[EXP-119 - Feat - Acreditar un pedido parcial o totalmente|EXP-119]] Feat - Acreditar un pedido parcial o totalmente
+- **blocks:** [[SNB-770 - ver en cobros pendientes|SNB-770]] ver en cobros pendientes
 
 ## Descripcion
 

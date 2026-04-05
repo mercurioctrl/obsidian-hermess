@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-47"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-182]] APP -Feature- Firma en HTML
+- **Subtarea:** [[NBE-182 - APP -Feature- Firma en HTML|NBE-182]] APP -Feature- Firma en HTML
 
 ## Descripcion
 

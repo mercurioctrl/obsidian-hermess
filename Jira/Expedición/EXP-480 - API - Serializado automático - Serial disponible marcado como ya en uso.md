@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-480"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **action item from:** [[EXP-185]] API - Feat - Serializado automatico
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **action item from:** [[EXP-185 - API - Feat - Serializado automatico|EXP-185]] API - Feat - Serializado automatico
 
 ## Descripcion
 

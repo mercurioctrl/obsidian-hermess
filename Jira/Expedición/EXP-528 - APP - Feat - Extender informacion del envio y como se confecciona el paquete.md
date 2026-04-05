@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-528"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **action item from:** [[EXP-527]] API - Refactor - Extender informacion para el recurso de envios
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **action item from:** [[EXP-527 - API - Refactor - Extender informacion para el recurso de envios|EXP-527]] API - Refactor - Extender informacion para el recurso de envios
 
 ## Descripcion
 

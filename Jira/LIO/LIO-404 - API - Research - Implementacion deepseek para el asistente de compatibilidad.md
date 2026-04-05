@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-404"
 
 ## Relaciones
 
-- **Padre:** [[LIO-391]] Desarrollos IA para LIO (Aleph)
-- **action item from:** [[LIO-392]] APIv4 - Research - Investigar integración con OpenAI para verificar compatibilidad de productos (no es lo mismo que el armador)
+- **Padre:** [[LIO-391 - Desarrollos IA para LIO (Aleph)|LIO-391]] Desarrollos IA para LIO (Aleph)
+- **action item from:** [[LIO-392 - APIv4 - Research - Investigar integración con OpenAI para verificar|LIO-392]] APIv4 - Research - Investigar integración con OpenAI para verificar compatibilidad de productos (no es lo mismo que el armador)
 
 ## Descripcion
 

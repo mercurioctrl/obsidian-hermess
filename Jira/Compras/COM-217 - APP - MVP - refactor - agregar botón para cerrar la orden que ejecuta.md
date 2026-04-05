@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-217"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **has action item:** [[COM-216]] API - MVP - Refactor  - Cada que se haga un ingreso revisar para cambiar el estado de la orden en caso que sean iguales la cantidad ingresadas que las totales para todos los items
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **has action item:** [[COM-216 - API - MVP - Refactor - Cada que se haga un ingreso revisar para cambiar el|COM-216]] API - MVP - Refactor  - Cada que se haga un ingreso revisar para cambiar el estado de la orden en caso que sean iguales la cantidad ingresadas que las totales para todos los items
 
 ## Descripcion
 

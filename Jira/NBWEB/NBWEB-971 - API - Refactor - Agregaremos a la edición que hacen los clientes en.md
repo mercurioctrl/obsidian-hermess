@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-971"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-957]] Redis
-- **has action item:** [[SNB-2998]] Conector NB - Se muestran artículos de categorías ocultas por el cliente
+- **Padre:** [[NBWEB-957 - Redis|NBWEB-957]] Redis
+- **has action item:** [[SNB-2998 - Conector NB - Se muestran artículos de categorías ocultas por el cliente|SNB-2998]] Conector NB - Se muestran artículos de categorías ocultas por el cliente
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-26"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **is blocked by:** [[NBWEB-20]] Mis comprobantes
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **is blocked by:** [[NBWEB-20 - Mis comprobantes|NBWEB-20]] Mis comprobantes
 
 ## Descripcion
 

@@ -4,7 +4,7 @@ name: "Servicio de asistencia | BLU"
 type: "service_desk"
 total_issues: 3665
 jira_url: "https://bluinc.atlassian.net/browse/SNB"
-synced: "2026-04-05 07:40"
+synced: "2026-04-05 07:55"
 ---
 
 # Servicio de asistencia | BLU (SNB)

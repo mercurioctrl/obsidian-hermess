@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-188"
 
 ## Relaciones
 
-- **Padre:** [[LIO-187]] Login
-- **has action item:** [[LIO-195]] APP - Feat - Login con v4 con obtencion de token de legacy
+- **Padre:** [[LIO-187 - Login|LIO-187]] Login
+- **has action item:** [[LIO-195 - APP - Feat - Login con v4 con obtencion de token de legacy|LIO-195]] APP - Feat - Login con v4 con obtencion de token de legacy
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-125"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
-- **is blocked by:** [[COB-54]] APP - Feat - Listar clientes
-- **is blocked by:** [[COB-41]] APP - Feat -  Listar cobrables
-- **blocks:** [[COB-126]] API - Feat - Realizar cobro
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-54 - APP - Feat - Listar clientes|COB-54]] APP - Feat - Listar clientes
+- **is blocked by:** [[COB-41 - APP - Feat - Listar cobrables|COB-41]] APP - Feat -  Listar cobrables
+- **blocks:** [[COB-126 - API - Feat - Realizar cobro|COB-126]] API - Feat - Realizar cobro
 
 ## Descripcion
 

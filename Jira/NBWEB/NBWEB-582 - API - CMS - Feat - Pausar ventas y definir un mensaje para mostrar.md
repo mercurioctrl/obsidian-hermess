@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-582"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-581]] CMS - Carrito web
-- **is blocked by:** [[NBWEB-580]] API - Feat - Carrito -> Cerrar ventas y mostrar un mensaje según se indico en el cms
-- **blocks:** [[NBWEB-580]] API - Feat - Carrito -> Cerrar ventas y mostrar un mensaje según se indico en el cms
+- **Padre:** [[NBWEB-581 - CMS - Carrito web|NBWEB-581]] CMS - Carrito web
+- **is blocked by:** [[NBWEB-580 - API - Feat - Carrito - Cerrar ventas y mostrar un mensaje según se indico en el|NBWEB-580]] API - Feat - Carrito -> Cerrar ventas y mostrar un mensaje según se indico en el cms
+- **blocks:** [[NBWEB-580 - API - Feat - Carrito - Cerrar ventas y mostrar un mensaje según se indico en el|NBWEB-580]] API - Feat - Carrito -> Cerrar ventas y mostrar un mensaje según se indico en el cms
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-38"
 
 ## Relaciones
 
-- **Padre:** [[MKT-35]] Accion Fischman Armado de maquina
+- **Padre:** [[MKT-35 - Accion Fischman Armado de maquina|MKT-35]] Accion Fischman Armado de maquina
 
 ## Descripcion
 

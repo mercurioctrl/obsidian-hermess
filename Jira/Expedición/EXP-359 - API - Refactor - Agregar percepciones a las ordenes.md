@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-359"
 
 ## Relaciones
 
-- **Padre:** [[EXP-355]] Emision de facturas
+- **Padre:** [[EXP-355 - Emision de facturas|EXP-355]] Emision de facturas
 
 ## Descripcion
 

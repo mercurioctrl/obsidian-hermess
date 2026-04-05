@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-17"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-18]] Subir fontainebleau.ar
-- **Subtarea:** [[FB-19]] DSG - Feature - Portada de próximamente
-- **Subtarea:** [[FB-20]] DSG - Feature - FavIcon
-- **Subtarea:** [[FB-25]] APP - Feat - Crear proyecto del sitio fontainebleau.ar y dejar maqueta "proximamente"
-- **Subtarea:** [[FB-26]] DSG - Refactor  - Portada de Próximamente
+- **Subtarea:** [[FB-18 - Subir fontainebleau.ar|FB-18]] Subir fontainebleau.ar
+- **Subtarea:** [[FB-19 - DSG - Feature - Portada de próximamente|FB-19]] DSG - Feature - Portada de próximamente
+- **Subtarea:** [[FB-20 - DSG - Feature - FavIcon|FB-20]] DSG - Feature - FavIcon
+- **Subtarea:** [[FB-25 - APP - Feat - Crear proyecto del sitio fontainebleau.ar y dejar maqueta|FB-25]] APP - Feat - Crear proyecto del sitio fontainebleau.ar y dejar maqueta "proximamente"
+- **Subtarea:** [[FB-26 - DSG - Refactor - Portada de Próximamente|FB-26]] DSG - Refactor  - Portada de Próximamente
 
 ## Descripcion
 

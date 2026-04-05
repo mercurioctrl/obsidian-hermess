@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-13"
 
 ## Relaciones
 
-- **Padre:** [[COM-12]] Listar ingresos (despachos de compra)
-- **is blocked by:** [[COM-29]] API - Feat - Listar ingresos (despacho de compra)
-- **is blocked by:** [[COM-42]] APP - Listar ingresos (despachos de compra) - Selector de marcas vacío
-- **is blocked by:** [[COM-57]] API - Listar ingresos -> Referencia a tabla distinta
-- **is blocked by:** [[COM-41]] API - Feat - Listar ingresos (despacho de compra) - Filtro por serializado no coincidente 
+- **Padre:** [[COM-12 - Listar ingresos (despachos de compra)|COM-12]] Listar ingresos (despachos de compra)
+- **is blocked by:** [[COM-29 - API - Feat - Listar ingresos (despacho de compra)|COM-29]] API - Feat - Listar ingresos (despacho de compra)
+- **is blocked by:** [[COM-42 - APP - Listar ingresos (despachos de compra) - Selector de marcas vacío|COM-42]] APP - Listar ingresos (despachos de compra) - Selector de marcas vacío
+- **is blocked by:** [[COM-57 - API - Listar ingresos - Referencia a tabla distinta|COM-57]] API - Listar ingresos -> Referencia a tabla distinta
+- **is blocked by:** [[COM-41 - API - Feat - Listar ingresos (despacho de compra) - Filtro por serializado no|COM-41]] API - Feat - Listar ingresos (despacho de compra) - Filtro por serializado no coincidente 
 
 ## Descripcion
 

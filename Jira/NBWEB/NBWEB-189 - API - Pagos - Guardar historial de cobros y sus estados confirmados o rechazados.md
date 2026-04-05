@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-189"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-77]] Implementar Pagos
-- **is blocked by:** [[NBWEB-186]] API - Pagos - Implementar endpoint de escucha para el webhook mp
+- **Padre:** [[NBWEB-77 - Implementar Pagos|NBWEB-77]] Implementar Pagos
+- **is blocked by:** [[NBWEB-186 - API - Pagos - Implementar endpoint de escucha para el webhook mp|NBWEB-186]] API - Pagos - Implementar endpoint de escucha para el webhook mp
 
 ## Descripcion
 

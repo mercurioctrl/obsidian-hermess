@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-127"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **relates to:** [[COM-125]] API - Feat - Editar/Crear Impuesto
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **relates to:** [[COM-125 - API - Feat - EditarCrear Impuesto|COM-125]] API - Feat - Editar/Crear Impuesto
 
 ## Descripcion
 

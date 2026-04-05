@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-781"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-774]] APP - Refactor - Seccion postventa
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-774 - APP - Refactor - Seccion postventa|NBWEB-774]] APP - Refactor - Seccion postventa
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-21"
 
 ## Relaciones
 
-- **Padre:** [[MKT-20]] STAR DAYS LO
+- **Padre:** [[MKT-20 - STAR DAYS LO|MKT-20]] STAR DAYS LO
 
 ## Descripcion
 

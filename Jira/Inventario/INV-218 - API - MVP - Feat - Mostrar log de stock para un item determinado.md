@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-218"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-225]] APP - MVP - Feat - Mostrar log de stock para un item determinado
-- **has action item:** [[INV-233]] APP -MVP - Refactor - Agregar log de stock para un item determinado -> Agregar filtrado por fecha (mostrar por defecto ultimo mes)
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-225 - APP - MVP - Feat - Mostrar log de stock para un item determinado|INV-225]] APP - MVP - Feat - Mostrar log de stock para un item determinado
+- **has action item:** [[INV-233 - APP -MVP - Refactor - Agregar log de stock para un item determinado - Agregar|INV-233]] APP -MVP - Refactor - Agregar log de stock para un item determinado -> Agregar filtrado por fecha (mostrar por defecto ultimo mes)
 
 ## Descripcion
 

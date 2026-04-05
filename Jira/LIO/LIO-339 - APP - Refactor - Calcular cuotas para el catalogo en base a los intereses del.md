@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-339"
 
 ## Relaciones
 
-- **Padre:** [[LIO-119]] Inventario
-- **action item from:** [[LIO-338]] API - Feat - Agregar repositorio de medios de pago disponibles en el sitio
+- **Padre:** [[LIO-119 - Inventario|LIO-119]] Inventario
+- **action item from:** [[LIO-338 - API - Feat - Agregar repositorio de medios de pago disponibles en el sitio|LIO-338]] API - Feat - Agregar repositorio de medios de pago disponibles en el sitio
 
 
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-3"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **Subtarea:** [[COM-4]] API - Feat - Login y credencialesa
-- **Subtarea:** [[COM-281]] API - Refactor - Usuario autenticado → Homologado de respuesta en companyCode
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **Subtarea:** [[COM-4 - API - Feat - Login y credencialesa|COM-4]] API - Feat - Login y credencialesa
+- **Subtarea:** [[COM-281 - API - Refactor - Usuario autenticado → Homologado de respuesta en companyCode|COM-281]] API - Refactor - Usuario autenticado → Homologado de respuesta en companyCode
 
 ## Descripcion
 

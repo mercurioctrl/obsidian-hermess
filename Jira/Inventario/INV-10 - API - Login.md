@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-10"
 
 ## Relaciones
 
-- **Padre:** [[INV-2]] MS - METADATA - API
-- **Subtarea:** [[INV-13]] API - Login -  Ingreso a la cuenta
+- **Padre:** [[INV-2 - MS - METADATA - API|INV-2]] MS - METADATA - API
+- **Subtarea:** [[INV-13 - API - Login - Ingreso a la cuenta|INV-13]] API - Login -  Ingreso a la cuenta
 
 ## Descripcion
 

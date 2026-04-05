@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-55"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **blocks:** [[COB-41]] APP - Feat -  Listar cobrables
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **blocks:** [[COB-41 - APP - Feat - Listar cobrables|COB-41]] APP - Feat -  Listar cobrables
 
 ## Descripcion
 

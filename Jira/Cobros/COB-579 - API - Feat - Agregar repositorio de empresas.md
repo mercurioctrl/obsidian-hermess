@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-579"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **has action item:** [[COB-580]] APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes
-- **relates to:** [[COB-584]] APP - Refactor - MVP - Agregar filtro empresas al repositorio de clientes -> Solo visualizar empresas activas
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **has action item:** [[COB-580 - APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes|COB-580]] APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes
+- **relates to:** [[COB-584 - APP - Refactor - MVP - Agregar filtro empresas al repositorio de clientes -|COB-584]] APP - Refactor - MVP - Agregar filtro empresas al repositorio de clientes -> Solo visualizar empresas activas
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-182"
 
 ## Relaciones
 
-- **Padre:** [[COM-12]] Listar ingresos (despachos de compra)
+- **Padre:** [[COM-12 - Listar ingresos (despachos de compra)|COM-12]] Listar ingresos (despachos de compra)
 
 ## Descripcion
 

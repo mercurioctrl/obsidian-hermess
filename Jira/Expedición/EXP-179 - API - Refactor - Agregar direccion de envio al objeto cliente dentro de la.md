@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-179"
 
 ## Relaciones
 
-- **Padre:** [[EXP-137]] Feat - Volanta operativa
-- **blocks:** [[SNB-511]] NUEVO SISTEMA EXPEDICION  DIRECCIONES
-- **blocks:** [[EXP-180]] MS - Refactor - Agregar direccion de envio al objeto cliente dentro de la volanta
-- **blocks:** [[EXP-181]] APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la volanta
+- **Padre:** [[EXP-137 - Feat - Volanta operativa|EXP-137]] Feat - Volanta operativa
+- **blocks:** [[SNB-511 - NUEVO SISTEMA EXPEDICION DIRECCIONES|SNB-511]] NUEVO SISTEMA EXPEDICION  DIRECCIONES
+- **blocks:** [[EXP-180 - MS - Refactor - Agregar direccion de envio al objeto cliente dentro de la|EXP-180]] MS - Refactor - Agregar direccion de envio al objeto cliente dentro de la volanta
+- **blocks:** [[EXP-181 - APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la|EXP-181]] APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la volanta
 
 ## Descripcion
 

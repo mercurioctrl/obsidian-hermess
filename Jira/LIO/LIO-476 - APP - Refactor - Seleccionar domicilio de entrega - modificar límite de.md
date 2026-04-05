@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-476"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **relates to:** [[LIO-368]] APP - Refactor - Seleccionar domicilio de entrega -> modificar límite de caracteres
-- **relates to:** [[LIO-346]] APP - Refactor - Seleccionar domicilio de entrega -> Oportunidad de mejora en la validación de campos
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **relates to:** [[LIO-368 - APP - Refactor - Seleccionar domicilio de entrega - modificar límite de|LIO-368]] APP - Refactor - Seleccionar domicilio de entrega -> modificar límite de caracteres
+- **relates to:** [[LIO-346 - APP - Refactor - Seleccionar domicilio de entrega - Oportunidad de mejora en la|LIO-346]] APP - Refactor - Seleccionar domicilio de entrega -> Oportunidad de mejora en la validación de campos
 
 ## Descripcion
 

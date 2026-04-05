@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-432"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **is blocked by:** [[LIO-443]] API - Review - SyncUp - Impactar tokens por conversión -> Tabla inexistente
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **is blocked by:** [[LIO-443 - API - Review - SyncUp - Impactar tokens por conversión - Tabla inexistente|LIO-443]] API - Review - SyncUp - Impactar tokens por conversión -> Tabla inexistente
 
 ## Descripcion
 

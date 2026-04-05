@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-121"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-59]] 2.Adata Diciembre: 1/2 Edición de videos (reels, cortos, institucionales, etc.) Adata Paradise
+- **Padre:** [[ADATA-59 - 2.Adata Diciembre 12 Edición de videos (reels, cortos, institucionales, etc.)|ADATA-59]] 2.Adata Diciembre: 1/2 Edición de videos (reels, cortos, institucionales, etc.) Adata Paradise
 
 ## Descripcion
 

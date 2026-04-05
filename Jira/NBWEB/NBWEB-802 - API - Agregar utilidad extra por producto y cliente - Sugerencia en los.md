@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-802"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-798]] API - Refactor - Agregar utilidad extra a finalPriceWithUtility por porducto y cliente (no al costo como hicimos antes, sino que a finalPriceWithUtility)
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-798 - API - Refactor - Agregar utilidad extra a finalPriceWithUtility por porducto y|NBWEB-798]] API - Refactor - Agregar utilidad extra a finalPriceWithUtility por porducto y cliente (no al costo como hicimos antes, sino que a finalPriceWithUtility)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-55"
 
 ## Relaciones
 
-- **Padre:** [[FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
-- **has action item:** [[FB-29]] ⚫ DSG - Home - Diseño de concepto visual
+- **Padre:** [[FB-28 - Fontaine Bleau Sitio Web_Etapa 0|FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
+- **has action item:** [[FB-29 - ⚫ DSG - Home - Diseño de concepto visual|FB-29]] ⚫ DSG - Home - Diseño de concepto visual
 
 ## Descripcion
 

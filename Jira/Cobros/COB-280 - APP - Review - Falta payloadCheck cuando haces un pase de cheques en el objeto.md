@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-280"
 
 ## Relaciones
 
-- **Padre:** [[COB-195]] Feat - Pases de cheques
+- **Padre:** [[COB-195 - Feat - Pases de cheques|COB-195]] Feat - Pases de cheques
 
 ## Descripcion
 

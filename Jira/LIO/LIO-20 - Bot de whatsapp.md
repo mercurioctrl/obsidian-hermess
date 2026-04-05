@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-20"
 
 ## Relaciones
 
-- **Padre:** [[LIO-4]] Soporte al Cliente
-- **Subtarea:** [[LIO-32]] Research - Conseguir al menos tres opciones para implementar el bot de whatsapp
-- **Subtarea:** [[LIO-66]] APP - Feat - Agregar Soporte web o chat a libre opcion
-- **Subtarea:** [[LIO-68]] Redacción - Textos predeterminados y color del boton del webchat (Chat Widget)
-- **Subtarea:** [[LIO-78]] APP - Agregar soporte web o chat - Sugerencia de mejora en el menú de opciones
-- **blocks:** [[LIO-45]] API - Research - Averiguar los primeros pasos para integrar un bot con whaticket.com y si es posible  intgrar el bot directo al sitio
+- **Padre:** [[LIO-4 - Soporte al Cliente|LIO-4]] Soporte al Cliente
+- **Subtarea:** [[LIO-32 - Research - Conseguir al menos tres opciones para implementar el bot de whatsapp|LIO-32]] Research - Conseguir al menos tres opciones para implementar el bot de whatsapp
+- **Subtarea:** [[LIO-66 - APP - Feat - Agregar Soporte web o chat a libre opcion|LIO-66]] APP - Feat - Agregar Soporte web o chat a libre opcion
+- **Subtarea:** [[LIO-68 - Redacción - Textos predeterminados y color del boton del webchat (Chat Widget)|LIO-68]] Redacción - Textos predeterminados y color del boton del webchat (Chat Widget)
+- **Subtarea:** [[LIO-78 - APP - Agregar soporte web o chat - Sugerencia de mejora en el menú de opciones|LIO-78]] APP - Agregar soporte web o chat - Sugerencia de mejora en el menú de opciones
+- **blocks:** [[LIO-45 - API - Research - Averiguar los primeros pasos para integrar un bot con|LIO-45]] API - Research - Averiguar los primeros pasos para integrar un bot con whaticket.com y si es posible  intgrar el bot directo al sitio
 
 ## Descripcion
 

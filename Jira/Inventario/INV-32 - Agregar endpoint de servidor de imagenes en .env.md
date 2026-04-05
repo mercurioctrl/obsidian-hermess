@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-32"
 
 ## Relaciones
 
-- **Padre:** [[INV-2]] MS - METADATA - API
+- **Padre:** [[INV-2 - MS - METADATA - API|INV-2]] MS - METADATA - API
 
 ## Descripcion
 

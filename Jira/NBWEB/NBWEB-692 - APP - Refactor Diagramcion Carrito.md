@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-692"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-581]] CMS - Carrito web
+- **Padre:** [[NBWEB-581 - CMS - Carrito web|NBWEB-581]] CMS - Carrito web
 
 ## Descripcion
 

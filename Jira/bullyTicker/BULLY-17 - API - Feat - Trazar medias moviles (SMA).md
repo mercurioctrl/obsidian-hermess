@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-17"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-9]] Grafico de velas / movimientos de precios
+- **Padre:** [[BULLY-9 - Grafico de velas movimientos de precios|BULLY-9]] Grafico de velas / movimientos de precios
 
 ## Descripcion
 

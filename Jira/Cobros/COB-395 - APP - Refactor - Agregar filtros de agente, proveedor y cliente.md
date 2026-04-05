@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-395"
 
 ## Relaciones
 
-- **Padre:** [[COB-218]] Feat - Movimientos bancarios
-- **is blocked by:** [[COB-383]] API - Refactor - Agregar filtro por clientId, agentId y providerId en Listar movimientos bancarios
+- **Padre:** [[COB-218 - Feat - Movimientos bancarios|COB-218]] Feat - Movimientos bancarios
+- **is blocked by:** [[COB-383 - API - Refactor - Agregar filtro por clientId, agentId y providerId en Listar|COB-383]] API - Refactor - Agregar filtro por clientId, agentId y providerId en Listar movimientos bancarios
 
 ## Descripcion
 

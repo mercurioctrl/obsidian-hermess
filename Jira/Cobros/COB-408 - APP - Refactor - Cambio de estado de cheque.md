@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-408"
 
 ## Relaciones
 
-- **Padre:** [[COB-183]] Feat - Listar cheques
-- **is blocked by:** [[COB-407]] API - Refactor - Cambio de estado de cheque 
+- **Padre:** [[COB-183 - Feat - Listar cheques|COB-183]] Feat - Listar cheques
+- **is blocked by:** [[COB-407 - API - Refactor - Cambio de estado de cheque|COB-407]] API - Refactor - Cambio de estado de cheque 
 
 ## Descripcion
 

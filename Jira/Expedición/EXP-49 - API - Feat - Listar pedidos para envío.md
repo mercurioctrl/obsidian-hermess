@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-49"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **blocks:** [[EXP-50]] APP - Feat - Listar pedido para envio
-- **relates to:** [[EXP-240]] API - Feat - Obtener comentarios del vendedor para un pedido determinado
-- **blocks:** [[EXP-267]] API - Refactor - Listar envios: Las busquedas demoran bastante, se debe intentar bajar a <5 segundos
-- **blocks:** [[EXP-405]] API - Feat - Agregar parametro dropShipping al listado de despacho de envios
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **blocks:** [[EXP-50 - APP - Feat - Listar pedido para envio|EXP-50]] APP - Feat - Listar pedido para envio
+- **relates to:** [[EXP-240 - API - Feat - Obtener comentarios del vendedor para un pedido determinado|EXP-240]] API - Feat - Obtener comentarios del vendedor para un pedido determinado
+- **blocks:** [[EXP-267 - API - Refactor - Listar envios Las busquedas demoran bastante, se debe intentar|EXP-267]] API - Refactor - Listar envios: Las busquedas demoran bastante, se debe intentar bajar a <5 segundos
+- **blocks:** [[EXP-405 - API - Feat - Agregar parametro dropShipping al listado de despacho de envios|EXP-405]] API - Feat - Agregar parametro dropShipping al listado de despacho de envios
 
 ## Descripcion
 

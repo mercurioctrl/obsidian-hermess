@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-533"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **Subtarea:** [[NBWEB-534]] APP - Refactor - Agregar FP_TOLERANCIA_DE_PAGO y DIF_COTIZACION_TOLERADA a la lista de medio formas de cobro para su edicion
-- **Subtarea:** [[NBWEB-535]] API - Refactor - Editar Formas de Cobro
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **Subtarea:** [[NBWEB-534 - APP - Refactor - Agregar FP_TOLERANCIA_DE_PAGO y DIF_COTIZACION_TOLERADA a la|NBWEB-534]] APP - Refactor - Agregar FP_TOLERANCIA_DE_PAGO y DIF_COTIZACION_TOLERADA a la lista de medio formas de cobro para su edicion
+- **Subtarea:** [[NBWEB-535 - API - Refactor - Editar Formas de Cobro|NBWEB-535]] API - Refactor - Editar Formas de Cobro
 
 ## Descripcion
 

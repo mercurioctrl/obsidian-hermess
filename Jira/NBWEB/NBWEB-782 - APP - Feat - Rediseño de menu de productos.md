@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-782"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **Subtarea:** [[NBWEB-790]] APP - Refactor - Rediseño selector
-- **Subtarea:** [[NBWEB-827]] APP - Refactor - Segmento perifericos
-- **Subtarea:** [[NBWEB-828]] APP - Refactor - Segmento Electronica
-- **Subtarea:** [[NBWEB-829]] APP - Refactor - Segmento Accesorios
-- **Subtarea:** [[NBWEB-851]] APP - Refactor - Segmento Outlet
-- **is blocked by:** [[NBWEB-791]] API - Refactor - Modificar repositorio de marcas para que tenga un filtro que solo muestre aquellas que tienen items en stock
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **Subtarea:** [[NBWEB-790 - APP - Refactor - Rediseño selector|NBWEB-790]] APP - Refactor - Rediseño selector
+- **Subtarea:** [[NBWEB-827 - APP - Refactor - Segmento perifericos|NBWEB-827]] APP - Refactor - Segmento perifericos
+- **Subtarea:** [[NBWEB-828 - APP - Refactor - Segmento Electronica|NBWEB-828]] APP - Refactor - Segmento Electronica
+- **Subtarea:** [[NBWEB-829 - APP - Refactor - Segmento Accesorios|NBWEB-829]] APP - Refactor - Segmento Accesorios
+- **Subtarea:** [[NBWEB-851 - APP - Refactor - Segmento Outlet|NBWEB-851]] APP - Refactor - Segmento Outlet
+- **is blocked by:** [[NBWEB-791 - API - Refactor - Modificar repositorio de marcas para que tenga un filtro que|NBWEB-791]] API - Refactor - Modificar repositorio de marcas para que tenga un filtro que solo muestre aquellas que tienen items en stock
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-417"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-415]] API - Refactor - Procesar carrito - Guardar ID de la direccion utilizada
+- **relates to:** [[NBWEB-415 - API - Refactor - Procesar carrito - Guardar ID de la direccion utilizada|NBWEB-415]] API - Refactor - Procesar carrito - Guardar ID de la direccion utilizada
 
 ## Descripcion
 

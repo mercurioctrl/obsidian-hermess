@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-1"
 
 ## Relaciones
 
-- **Subtarea:** [[LOCAPP-3]] Qr: Se busca la forma de generar el qr, en principio se pueden hacer pruebas con cualquier info.
-- **Subtarea:** [[LOCAPP-2]] Planteo inicial: Se debe construir el generador de PDF en si mismo, probar el paginado y la separacion de areas en general. Los rectangulos contenedores de las distintas areas.
+- **Subtarea:** [[LOCAPP-3 - Qr Se busca la forma de generar el qr, en principio se pueden hacer pruebas con|LOCAPP-3]] Qr: Se busca la forma de generar el qr, en principio se pueden hacer pruebas con cualquier info.
+- **Subtarea:** [[LOCAPP-2 - Planteo inicial Se debe construir el generador de PDF en si mismo, probar el|LOCAPP-2]] Planteo inicial: Se debe construir el generador de PDF en si mismo, probar el paginado y la separacion de areas en general. Los rectangulos contenedores de las distintas areas.
 
 ## Descripcion
 

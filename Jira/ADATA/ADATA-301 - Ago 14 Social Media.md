@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-301"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-338]] Ago: 1/4 Portada Diseño Social Media
-- **Subtarea:** [[ADATA-339]]  Ago: 1/4 Copys Social Media
-- **Subtarea:** [[ADATA-340]] Ago: 1/4 Programar Social Media
-- **Subtarea:** [[ADATA-341]] Ago: Buscar Contenidos del mes completo 
+- **Subtarea:** [[ADATA-338 - Ago 14 Portada Diseño Social Media|ADATA-338]] Ago: 1/4 Portada Diseño Social Media
+- **Subtarea:** [[ADATA-339 - Ago 14 Copys Social Media|ADATA-339]]  Ago: 1/4 Copys Social Media
+- **Subtarea:** [[ADATA-340 - Ago 14 Programar Social Media|ADATA-340]] Ago: 1/4 Programar Social Media
+- **Subtarea:** [[ADATA-341 - Ago Buscar Contenidos del mes completo|ADATA-341]] Ago: Buscar Contenidos del mes completo 
 
 ## Descripcion
 

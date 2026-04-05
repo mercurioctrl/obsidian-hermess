@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-436"
 
 ## Relaciones
 
-- **Padre:** [[LIO-212]] Perfil de vendedor
+- **Padre:** [[LIO-212 - Perfil de vendedor|LIO-212]] Perfil de vendedor
 
 ## Descripcion
 

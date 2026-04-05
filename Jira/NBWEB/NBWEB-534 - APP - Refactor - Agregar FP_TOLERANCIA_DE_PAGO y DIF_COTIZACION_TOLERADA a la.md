@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-534"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-533]] CMS - Medio de pago
-- **is blocked by:** [[NBWEB-535]] API - Refactor - Editar Formas de Cobro
+- **Padre:** [[NBWEB-533 - CMS - Medio de pago|NBWEB-533]] CMS - Medio de pago
+- **is blocked by:** [[NBWEB-535 - API - Refactor - Editar Formas de Cobro|NBWEB-535]] API - Refactor - Editar Formas de Cobro
 
 ## Descripcion
 

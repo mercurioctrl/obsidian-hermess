@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-213"
 
 ## Relaciones
 
-- **Padre:** [[INV-211]] API - MVP - Feat- Agregar repo con pestaña de producto por depósito
-- **action item from:** [[INV-214]]  APP  - MVP - Feat-  opción para cambiar el producto de depósito
-- **relates to:** [[INV-259]] API - MVP - Refactor - Registro de stock -> Agregar control de stock al snapshot
+- **Padre:** [[INV-211 - API - MVP - Feat- Agregar repo con pestaña de producto por depósito|INV-211]] API - MVP - Feat- Agregar repo con pestaña de producto por depósito
+- **action item from:** [[INV-214 - APP - MVP - Feat- opción para cambiar el producto de depósito|INV-214]]  APP  - MVP - Feat-  opción para cambiar el producto de depósito
+- **relates to:** [[INV-259 - API - MVP - Refactor - Registro de stock - Agregar control de stock al snapshot|INV-259]] API - MVP - Refactor - Registro de stock -> Agregar control de stock al snapshot
 
 ## Descripcion
 

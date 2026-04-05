@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-237"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **action item from:** [[COM-238]] API - MVP  - Refactor - paginar tariffPosition par apoder listar las posiciones arancelarias
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **action item from:** [[COM-238 - API - MVP - Refactor - paginar tariffPosition par apoder listar las posiciones|COM-238]] API - MVP  - Refactor - paginar tariffPosition par apoder listar las posiciones arancelarias
 
 ## Descripcion
 

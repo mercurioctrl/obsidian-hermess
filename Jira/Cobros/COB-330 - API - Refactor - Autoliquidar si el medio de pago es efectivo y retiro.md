@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-330"
 
 ## Relaciones
 
-- **Padre:** [[COB-329]] Refactor - Auto liquidar si el medio de pago es efectivo y retiro
+- **Padre:** [[COB-329 - Refactor - Auto liquidar si el medio de pago es efectivo y retiro|COB-329]] Refactor - Auto liquidar si el medio de pago es efectivo y retiro
 
 ## Descripcion
 

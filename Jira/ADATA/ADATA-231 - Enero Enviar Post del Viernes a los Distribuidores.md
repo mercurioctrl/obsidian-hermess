@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-231"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-232]] Agregar a Activaciones
+- **Subtarea:** [[ADATA-232 - Agregar a Activaciones|ADATA-232]] Agregar a Activaciones
 
 ## Descripcion
 

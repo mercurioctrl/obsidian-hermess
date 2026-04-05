@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-197"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-201]] Blu: Triada 5 Copys
-- **Subtarea:** [[BLUWEB-202]] Blu: Triada 5 Programar Copys
-- **Subtarea:** [[BLUWEB-203]] Blu: Triada 5 Diseño
+- **Subtarea:** [[BLUWEB-201 - Blu Triada 5 Copys|BLUWEB-201]] Blu: Triada 5 Copys
+- **Subtarea:** [[BLUWEB-202 - Blu Triada 5 Programar Copys|BLUWEB-202]] Blu: Triada 5 Programar Copys
+- **Subtarea:** [[BLUWEB-203 - Blu Triada 5 Diseño|BLUWEB-203]] Blu: Triada 5 Diseño
 
 ## Descripcion
 

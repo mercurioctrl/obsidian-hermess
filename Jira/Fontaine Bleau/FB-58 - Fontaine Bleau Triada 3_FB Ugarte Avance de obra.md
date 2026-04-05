@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-58"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-64]] FB: Triada 4_Copys
+- **Subtarea:** [[FB-64 - FB Triada 4_Copys|FB-64]] FB: Triada 4_Copys
 
 ## Descripcion
 

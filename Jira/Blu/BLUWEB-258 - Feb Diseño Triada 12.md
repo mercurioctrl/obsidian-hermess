@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-258"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-257]] Feb: Triada 12
-- **has action item:** [[BLUWEB-260]] Feb: Armar copys Triada 12
+- **Padre:** [[BLUWEB-257 - Feb Triada 12|BLUWEB-257]] Feb: Triada 12
+- **has action item:** [[BLUWEB-260 - Feb Armar copys Triada 12|BLUWEB-260]] Feb: Armar copys Triada 12
 
 ## Descripcion
 

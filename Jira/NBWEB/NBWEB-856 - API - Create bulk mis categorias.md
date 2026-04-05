@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-856"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-857]] APP - Create bulk mis categorias
+- **relates to:** [[NBWEB-857 - APP - Create bulk mis categorias|NBWEB-857]] APP - Create bulk mis categorias
 
 ## Descripcion
 

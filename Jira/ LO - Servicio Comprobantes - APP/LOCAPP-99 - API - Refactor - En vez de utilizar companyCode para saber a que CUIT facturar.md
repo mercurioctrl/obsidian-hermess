@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-99"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-23]] Generar un comprobante
-- **action item from:** [[PED-1283]] API - Refactor - Agregar nuevo parámetro voucherCompanyCode
+- **Padre:** [[LOCAPP-23 - Generar un comprobante|LOCAPP-23]] Generar un comprobante
+- **action item from:** [[PED-1283 - API - Refactor - Agregar nuevo parámetro voucherCompanyCode|PED-1283]] API - Refactor - Agregar nuevo parámetro voucherCompanyCode
 
 ## Descripcion
 

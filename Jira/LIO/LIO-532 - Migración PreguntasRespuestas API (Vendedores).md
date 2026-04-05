@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-532"
 
 ## Relaciones
 
-- **Padre:** [[LIO-531]] Migraciones Legacy a V4
-- **Subtarea:** [[LIO-533]] API - Feat - Listar preguntas del vendedor
-- **Subtarea:** [[LIO-534]] API - Feat - Responder preguntas
+- **Padre:** [[LIO-531 - Migraciones Legacy a V4|LIO-531]] Migraciones Legacy a V4
+- **Subtarea:** [[LIO-533 - API - Feat - Listar preguntas del vendedor|LIO-533]] API - Feat - Listar preguntas del vendedor
+- **Subtarea:** [[LIO-534 - API - Feat - Responder preguntas|LIO-534]] API - Feat - Responder preguntas
 
 ## Descripcion
 

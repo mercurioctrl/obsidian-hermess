@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-2"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-1]] Adata Octubre: Paradise
+- **Padre:** [[ADATA-1 - Adata Octubre Paradise|ADATA-1]] Adata Octubre: Paradise
 
 ## Descripcion
 

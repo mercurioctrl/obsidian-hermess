@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-25"
 
 ## Relaciones
 
-- **relates to:** [[SNB-1654]] DOS FACTURAS PARA UN PEDIDO
+- **relates to:** [[SNB-1654 - DOS FACTURAS PARA UN PEDIDO|SNB-1654]] DOS FACTURAS PARA UN PEDIDO
 
 ## Descripcion
 

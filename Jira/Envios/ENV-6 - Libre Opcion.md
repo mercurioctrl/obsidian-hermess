@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ENV-6"
 
 ## Relaciones
 
-- **Padre:** [[ENV-2]] COTIZACIONES
+- **Padre:** [[ENV-2 - COTIZACIONES|ENV-2]] COTIZACIONES
 
 ## Descripcion
 

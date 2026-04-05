@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-151"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-141]] Refactor primera iteración
-- **has action item:** [[BLUWEB-152]] APP- Refactor - Color Sección Servicios - Cambios de ICONOS de servicio
+- **Padre:** [[BLUWEB-141 - Refactor primera iteración|BLUWEB-141]] Refactor primera iteración
+- **has action item:** [[BLUWEB-152 - APP- Refactor - Color Sección Servicios - Cambios de ICONOS de servicio|BLUWEB-152]] APP- Refactor - Color Sección Servicios - Cambios de ICONOS de servicio
 
 ## Descripcion
 

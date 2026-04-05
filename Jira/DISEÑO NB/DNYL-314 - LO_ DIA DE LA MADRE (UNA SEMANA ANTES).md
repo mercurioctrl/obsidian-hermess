@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-314"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-322]] BANNER HOME Y MOBILE
-- **Subtarea:** [[DNYL-323]] PORTADAS REDES
-- **Subtarea:** [[DNYL-324]] REEL ANIMADO
+- **Subtarea:** [[DNYL-322 - BANNER HOME Y MOBILE|DNYL-322]] BANNER HOME Y MOBILE
+- **Subtarea:** [[DNYL-323 - PORTADAS REDES|DNYL-323]] PORTADAS REDES
+- **Subtarea:** [[DNYL-324 - REEL ANIMADO|DNYL-324]] REEL ANIMADO
 
 ## Descripcion
 

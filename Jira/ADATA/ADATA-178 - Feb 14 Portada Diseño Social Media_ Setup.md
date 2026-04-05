@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-178"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-163]] Adata Feb: 2/4 Social Media_SETUP 
+- **Padre:** [[ADATA-163 - Adata Feb 24 Social Media_SETUP|ADATA-163]] Adata Feb: 2/4 Social Media_SETUP 
 
 ## Descripcion
 

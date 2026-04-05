@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-434"
 
 ## Relaciones
 
-- **is duplicated by:** [[COB-436]] APP - Refactor - Arqueo de caja
+- **is duplicated by:** [[COB-436 - APP - Refactor - Arqueo de caja|COB-436]] APP - Refactor - Arqueo de caja
 
 ## Descripcion
 

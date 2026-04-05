@@ -29,17 +29,17 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-4"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-36]] Clase para generar el objeto precio
-- **Subtarea:** [[NBWEB-67]] Permitir ordenar el recurso, segun el planteo original
-- **Subtarea:** [[NBWEB-69]] Cambio de url de la imagen por checkshum correcto y url completa
-- **Subtarea:** [[NBWEB-232]] API - No se deben ver los productos ocultos, ni lo que son de distribucion externa
-- **Subtarea:** [[NBWEB-251]] TASK - Deprecar campo ocultar de webartcomplement
-- **Subtarea:** [[NBWEB-486]] API - Refactor - Agregar incremento por cliente
-- **Subtarea:** [[NBWEB-628]] API - Refactor - Catálogos de productos - Visibilidad de precios
-- **Subtarea:** [[NBWEB-753]] API - Catálogos de productos - Sugerencia de mejora al filtrar por categoría errónea
-- **Subtarea:** [[NBWEB-760]] API - Refactor - Catálogos de productos - Filtrado por id de producto no coincidente
-- **Subtarea:** [[NBWEB-1004]] API - Refactor - Recurso para leer precios -> Actualizar objeto de respuesta
-- **relates to:** [[NBWEB-727]] API - Catálogos de productos - Oportunidad de mejora en el buscador del sitio
+- **Subtarea:** [[NBWEB-36 - Clase para generar el objeto precio|NBWEB-36]] Clase para generar el objeto precio
+- **Subtarea:** [[NBWEB-67 - Permitir ordenar el recurso, segun el planteo original|NBWEB-67]] Permitir ordenar el recurso, segun el planteo original
+- **Subtarea:** [[NBWEB-69 - Cambio de url de la imagen por checkshum correcto y url completa|NBWEB-69]] Cambio de url de la imagen por checkshum correcto y url completa
+- **Subtarea:** [[NBWEB-232 - API - No se deben ver los productos ocultos, ni lo que son de distribucion|NBWEB-232]] API - No se deben ver los productos ocultos, ni lo que son de distribucion externa
+- **Subtarea:** [[NBWEB-251 - TASK - Deprecar campo ocultar de webartcomplement|NBWEB-251]] TASK - Deprecar campo ocultar de webartcomplement
+- **Subtarea:** [[NBWEB-486 - API - Refactor - Agregar incremento por cliente|NBWEB-486]] API - Refactor - Agregar incremento por cliente
+- **Subtarea:** [[NBWEB-628 - API - Refactor - Catálogos de productos - Visibilidad de precios|NBWEB-628]] API - Refactor - Catálogos de productos - Visibilidad de precios
+- **Subtarea:** [[NBWEB-753 - API - Catálogos de productos - Sugerencia de mejora al filtrar por categoría|NBWEB-753]] API - Catálogos de productos - Sugerencia de mejora al filtrar por categoría errónea
+- **Subtarea:** [[NBWEB-760 - API - Refactor - Catálogos de productos - Filtrado por id de producto no|NBWEB-760]] API - Refactor - Catálogos de productos - Filtrado por id de producto no coincidente
+- **Subtarea:** [[NBWEB-1004 - API - Refactor - Recurso para leer precios - Actualizar objeto de respuesta|NBWEB-1004]] API - Refactor - Recurso para leer precios -> Actualizar objeto de respuesta
+- **relates to:** [[NBWEB-727 - API - Catálogos de productos - Oportunidad de mejora en el buscador del sitio|NBWEB-727]] API - Catálogos de productos - Oportunidad de mejora en el buscador del sitio
 
 ## Descripcion
 

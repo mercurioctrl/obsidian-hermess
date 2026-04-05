@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-411"
 
 ## Relaciones
 
-- **Padre:** [[LIO-410]] Validar identidad
-- **has action item:** [[LIO-412]] APP - Refactor - Conectar nuevo recurso de verificacion de correo en v4
+- **Padre:** [[LIO-410 - Validar identidad|LIO-410]] Validar identidad
+- **has action item:** [[LIO-412 - APP - Refactor - Conectar nuevo recurso de verificacion de correo en v4|LIO-412]] APP - Refactor - Conectar nuevo recurso de verificacion de correo en v4
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-186"
 
 ## Relaciones
 
-- **Padre:** [[EXP-15]] Feat - Serializar salida
-- **is blocked by:** [[EXP-45]] APP - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un pedido
-- **is blocked by:** [[EXP-184]] API - Feat - Agregar posibilidad de serial izar en intervalos, como se hizo para la entrada, pero para la salida
+- **Padre:** [[EXP-15 - Feat - Serializar salida|EXP-15]] Feat - Serializar salida
+- **is blocked by:** [[EXP-45 - APP - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un|EXP-45]] APP - Feat - Ingresar nuevos seriales POR INTERVALO a un producto, dentro de un pedido
+- **is blocked by:** [[EXP-184 - API - Feat - Agregar posibilidad de serial izar en intervalos, como se hizo|EXP-184]] API - Feat - Agregar posibilidad de serial izar en intervalos, como se hizo para la entrada, pero para la salida
 
 ## Descripcion
 

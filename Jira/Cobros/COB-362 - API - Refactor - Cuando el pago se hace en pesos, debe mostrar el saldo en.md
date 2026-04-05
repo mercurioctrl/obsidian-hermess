@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-362"
 
 ## Relaciones
 
-- **Padre:** [[COB-268]] Refactor - Comprobantes de cobro
-- **blocks:** [[COB-363]] APP - Refactor - al agregar dinero a la cta cte de un cliente
+- **Padre:** [[COB-268 - Refactor - Comprobantes de cobro|COB-268]] Refactor - Comprobantes de cobro
+- **blocks:** [[COB-363 - APP - Refactor - al agregar dinero a la cta cte de un cliente|COB-363]] APP - Refactor - al agregar dinero a la cta cte de un cliente
 
 ## Descripcion
 

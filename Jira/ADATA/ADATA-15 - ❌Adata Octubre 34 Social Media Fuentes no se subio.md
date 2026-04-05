@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-15"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-17]] Adata Octubre: Diseño Social Media 3/4 Fuentes
-- **Subtarea:** [[ADATA-18]] Adata Octubre:   Copys Social Media3/4 Fuentes
-- **Subtarea:** [[ADATA-19]] Adata Octubre: Programación Social Media 3/4
+- **Subtarea:** [[ADATA-17 - Adata Octubre Diseño Social Media 34 Fuentes|ADATA-17]] Adata Octubre: Diseño Social Media 3/4 Fuentes
+- **Subtarea:** [[ADATA-18 - Adata Octubre Copys Social Media34 Fuentes|ADATA-18]] Adata Octubre:   Copys Social Media3/4 Fuentes
+- **Subtarea:** [[ADATA-19 - Adata Octubre Programación Social Media 34|ADATA-19]] Adata Octubre: Programación Social Media 3/4
 
 ## Descripcion
 

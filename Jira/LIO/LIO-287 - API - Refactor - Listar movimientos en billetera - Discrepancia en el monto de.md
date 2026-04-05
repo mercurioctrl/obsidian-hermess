@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-287"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
 
 ## Descripcion
 

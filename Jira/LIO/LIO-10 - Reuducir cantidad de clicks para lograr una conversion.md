@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-10"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-140]] APP - Refactor - Cambiar conmutador de "aceptacion de terminos" por una leyenda debajo del boton de "Finalizar Compra"
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-140 - APP - Refactor - Cambiar conmutador de aceptacion de terminos por una leyenda|LIO-140]] APP - Refactor - Cambiar conmutador de "aceptacion de terminos" por una leyenda debajo del boton de "Finalizar Compra"
 
 ## Descripcion
 

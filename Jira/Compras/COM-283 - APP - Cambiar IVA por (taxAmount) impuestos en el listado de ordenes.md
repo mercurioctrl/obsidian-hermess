@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-283"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **action item from:** [[COM-282]] API - Review - al editar  el IVA -> el IVA no se refleja correctamente en el listado
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **action item from:** [[COM-282 - API - Review - al editar el IVA - el IVA no se refleja correctamente en el|COM-282]] API - Review - al editar  el IVA -> el IVA no se refleja correctamente en el listado
 
 ## Descripcion
 

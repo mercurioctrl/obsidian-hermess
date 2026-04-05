@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-39"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-36]] Feed social Media
+- **Padre:** [[BLUWEB-36 - Feed social Media|BLUWEB-36]] Feed social Media
 
 ## Descripcion
 

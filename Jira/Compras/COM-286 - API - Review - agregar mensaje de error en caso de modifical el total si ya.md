@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-286"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **action item from:** [[COM-287]] APP - Review - Mantener cantidades y mostrar mensaje caso de error  al editar total
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **action item from:** [[COM-287 - APP - Review - Mantener cantidades y mostrar mensaje caso de error al editar|COM-287]] APP - Review - Mantener cantidades y mostrar mensaje caso de error  al editar total
 
 ## Descripcion
 

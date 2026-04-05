@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-20"
 
 ## Relaciones
 
-- **Padre:** [[FB-17]] Site- Etapa 0
-- **has action item:** [[FB-25]] APP - Feat - Crear proyecto del sitio fontainebleau.ar y dejar maqueta "proximamente"
+- **Padre:** [[FB-17 - Site- Etapa 0|FB-17]] Site- Etapa 0
+- **has action item:** [[FB-25 - APP - Feat - Crear proyecto del sitio fontainebleau.ar y dejar maqueta|FB-25]] APP - Feat - Crear proyecto del sitio fontainebleau.ar y dejar maqueta "proximamente"
 
 ## Descripcion
 

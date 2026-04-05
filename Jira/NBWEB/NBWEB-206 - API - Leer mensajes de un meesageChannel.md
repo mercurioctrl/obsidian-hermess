@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-206"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
-- **Subtarea:** [[NBWEB-472]] API - Test - Revisar porque el recurso cuendo es solicitado da errores war
-- **relates to:** [[NBWEB-257]] API - Refactor -  Leer mensajes de unm messageChannel
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
+- **Subtarea:** [[NBWEB-472 - API - Test - Revisar porque el recurso cuendo es solicitado da errores war|NBWEB-472]] API - Test - Revisar porque el recurso cuendo es solicitado da errores war
+- **relates to:** [[NBWEB-257 - API - Refactor - Leer mensajes de unm messageChannel|NBWEB-257]] API - Refactor -  Leer mensajes de unm messageChannel
 
 ## Descripcion
 

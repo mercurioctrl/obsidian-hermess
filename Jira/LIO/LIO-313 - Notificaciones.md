@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-313"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-314]] APIv4 - Feat - Migrar repositorios de notificaciones del sitio
-- **Subtarea:** [[LIO-468]] APIv3 - Refactor - Notificaciones -> Prevenir error en primer inicio de sesión
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-314 - APIv4 - Feat - Migrar repositorios de notificaciones del sitio|LIO-314]] APIv4 - Feat - Migrar repositorios de notificaciones del sitio
+- **Subtarea:** [[LIO-468 - APIv3 - Refactor - Notificaciones - Prevenir error en primer inicio de sesión|LIO-468]] APIv3 - Refactor - Notificaciones -> Prevenir error en primer inicio de sesión
 
 ## Descripcion
 

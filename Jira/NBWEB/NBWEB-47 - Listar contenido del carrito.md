@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-47"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-1]] API - Carrito de compras
-- **relates to:** [[NBWEB-919]] API - Listar contenido del carrito - Advertencia al intentar obtener el contenido
+- **Padre:** [[NBWEB-1 - API - Carrito de compras|NBWEB-1]] API - Carrito de compras
+- **relates to:** [[NBWEB-919 - API - Listar contenido del carrito - Advertencia al intentar obtener el|NBWEB-919]] API - Listar contenido del carrito - Advertencia al intentar obtener el contenido
 
 ## Descripcion
 

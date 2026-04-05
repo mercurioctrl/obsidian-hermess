@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-63"
 
 ## Relaciones
 
-- **Padre:** [[FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
-- **clones:** [[FB-62]] APP - Feat - Maqutado de la home con ASTRO
+- **Padre:** [[FB-28 - Fontaine Bleau Sitio Web_Etapa 0|FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
+- **clones:** [[FB-62 - APP - Feat - Maqutado de la home con ASTRO|FB-62]] APP - Feat - Maqutado de la home con ASTRO
 
 ## Descripcion
 

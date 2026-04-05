@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-534"
 
 ## Relaciones
 
-- **Padre:** [[LIO-532]] Migración Preguntas/Respuestas API (Vendedores)
-- **has action item:** [[LIO-510]] APP - Feat - Migrar endpoint “Listado de preguntas para vendedor (corregir paginado)” actualemente en Legacy
+- **Padre:** [[LIO-532 - Migración PreguntasRespuestas API (Vendedores)|LIO-532]] Migración Preguntas/Respuestas API (Vendedores)
+- **has action item:** [[LIO-510 - APP - Feat - Migrar endpoint “Listado de preguntas para vendedor (corregir|LIO-510]] APP - Feat - Migrar endpoint “Listado de preguntas para vendedor (corregir paginado)” actualemente en Legacy
 
 ## Descripcion
 

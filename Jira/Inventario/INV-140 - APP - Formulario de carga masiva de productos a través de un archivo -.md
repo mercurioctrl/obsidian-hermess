@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-140"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-128]] APP - Feat - Formulario de carga masiva de productos a través de un archivo 
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-128 - APP - Feat - Formulario de carga masiva de productos a través de un archivo|INV-128]] APP - Feat - Formulario de carga masiva de productos a través de un archivo 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-139"
 
 ## Relaciones
 
-- **Padre:** [[MKT-137]] LO_CAMPAÑA AMD
+- **Padre:** [[MKT-137 - LO_CAMPAÑA AMD|MKT-137]] LO_CAMPAÑA AMD
 
 ## Descripcion
 

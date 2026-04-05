@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-104"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-164]] Blu: Triada 2 Copys
-- **Subtarea:** [[BLUWEB-170]] 2.Blu: Programar Copys Triada 2 PARA 23-09
-- **has action item:** [[BLUWEB-164]] Blu: Triada 2 Copys
-- **has action item:** [[BLUWEB-170]] 2.Blu: Programar Copys Triada 2 PARA 23-09
+- **Subtarea:** [[BLUWEB-164 - Blu Triada 2 Copys|BLUWEB-164]] Blu: Triada 2 Copys
+- **Subtarea:** [[BLUWEB-170 - 2.Blu Programar Copys Triada 2 PARA 23-09|BLUWEB-170]] 2.Blu: Programar Copys Triada 2 PARA 23-09
+- **has action item:** [[BLUWEB-164 - Blu Triada 2 Copys|BLUWEB-164]] Blu: Triada 2 Copys
+- **has action item:** [[BLUWEB-170 - 2.Blu Programar Copys Triada 2 PARA 23-09|BLUWEB-170]] 2.Blu: Programar Copys Triada 2 PARA 23-09
 
 ## Descripcion
 

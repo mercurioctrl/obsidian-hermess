@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-424"
 
 ## Relaciones
 
-- **Padre:** [[EXP-395]] Control de stock
-- **Subtarea:** [[EXP-425]] APP - Feat - Agregar modal para preguntar si que no tiene el producto en el inventario
-- **Subtarea:** [[EXP-426]] API - Refactor - Si recibo el parametro missing, devo devolver el stock en otra columna
-- **Subtarea:** [[EXP-427]] API - Refactor - Agregar al detalle de la orden el parametro para saber si ese item tiene un control pendiente [IDEA RECHAZADA POR EXP]
-- **Subtarea:** [[EXP-445]] API - Refactor - Cuando se ejecuta la acción de devolución por faltante (que envía el stock a control)
+- **Padre:** [[EXP-395 - Control de stock|EXP-395]] Control de stock
+- **Subtarea:** [[EXP-425 - APP - Feat - Agregar modal para preguntar si que no tiene el producto en el|EXP-425]] APP - Feat - Agregar modal para preguntar si que no tiene el producto en el inventario
+- **Subtarea:** [[EXP-426 - API - Refactor - Si recibo el parametro missing, devo devolver el stock en otra|EXP-426]] API - Refactor - Si recibo el parametro missing, devo devolver el stock en otra columna
+- **Subtarea:** [[EXP-427 - API - Refactor - Agregar al detalle de la orden el parametro para saber si ese|EXP-427]] API - Refactor - Agregar al detalle de la orden el parametro para saber si ese item tiene un control pendiente [IDEA RECHAZADA POR EXP]
+- **Subtarea:** [[EXP-445 - API - Refactor - Cuando se ejecuta la acción de devolución por faltante (que|EXP-445]] API - Refactor - Cuando se ejecuta la acción de devolución por faltante (que envía el stock a control)
 
 ## Descripcion
 

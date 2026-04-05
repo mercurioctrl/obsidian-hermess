@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-500"
 
 ## Relaciones
 
-- **Padre:** [[COB-48]] Comprobantes fiscales
-- **blocks:** [[COB-498]] API - Refactor - Ver comprobante de pago - Apuntar a NB
+- **Padre:** [[COB-48 - Comprobantes fiscales|COB-48]] Comprobantes fiscales
+- **blocks:** [[COB-498 - API - Refactor - Ver comprobante de pago - Apuntar a NB|COB-498]] API - Refactor - Ver comprobante de pago - Apuntar a NB
 
 ## Descripcion
 

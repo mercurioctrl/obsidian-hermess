@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-185"
 
 ## Relaciones
 
-- **Padre:** [[COB-183]] Feat - Listar cheques
-- **blocks:** [[COB-184]] APP - Feat - Pestañas para listar cheques
+- **Padre:** [[COB-183 - Feat - Listar cheques|COB-183]] Feat - Listar cheques
+- **blocks:** [[COB-184 - APP - Feat - Pestañas para listar cheques|COB-184]] APP - Feat - Pestañas para listar cheques
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-383"
 
 ## Relaciones
 
-- **Padre:** [[COB-218]] Feat - Movimientos bancarios
-- **blocks:** [[COB-395]] APP - Refactor  - Agregar filtros de agente, proveedor y cliente
+- **Padre:** [[COB-218 - Feat - Movimientos bancarios|COB-218]] Feat - Movimientos bancarios
+- **blocks:** [[COB-395 - APP - Refactor - Agregar filtros de agente, proveedor y cliente|COB-395]] APP - Refactor  - Agregar filtros de agente, proveedor y cliente
 
 ## Descripcion
 

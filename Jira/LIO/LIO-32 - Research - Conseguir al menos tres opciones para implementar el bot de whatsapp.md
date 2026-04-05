@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-32"
 
 ## Relaciones
 
-- **Padre:** [[LIO-20]] Bot de whatsapp
+- **Padre:** [[LIO-20 - Bot de whatsapp|LIO-20]] Bot de whatsapp
 
 ## Descripcion
 

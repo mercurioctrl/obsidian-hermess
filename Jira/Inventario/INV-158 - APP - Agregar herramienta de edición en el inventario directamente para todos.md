@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-158"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-152]] APP - Refactor - Agregar herramienta de edición en el inventario directamente para todos los productos
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-152 - APP - Refactor - Agregar herramienta de edición en el inventario directamente|INV-152]] APP - Refactor - Agregar herramienta de edición en el inventario directamente para todos los productos
 
 ## Descripcion
 

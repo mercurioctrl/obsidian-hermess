@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-143"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **Subtarea:** [[EXP-144]] DATASET- Feat - Obtener informacion legal y numeraciones (con punto de corte)
-- **Subtarea:** [[EXP-145]] MS - APP - Feat - Maqueta en el ms de comprobantes el remito fiscal
-- **Subtarea:** [[EXP-146]] MS - API - Feat - Conectar objeto para remito fiscal en comprobantes
-- **Subtarea:** [[EXP-147]] API - Feat - Recurso para remito fiscal
-- **Subtarea:** [[EXP-148]] APP - Feat - Se debe poder descargar de ambos listados de pedidos el remito fiscal con preview, imprimir y descarga
-- **Subtarea:** [[EXP-183]] APP - Refactor -  Dejar espacio en blanco para la firma, y mover direccion con los datos del cliente y observaciones a la izquierda
-- **blocks:** [[SNB-478]] sistema nuevo
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **Subtarea:** [[EXP-144 - DATASET- Feat - Obtener informacion legal y numeraciones (con punto de corte)|EXP-144]] DATASET- Feat - Obtener informacion legal y numeraciones (con punto de corte)
+- **Subtarea:** [[EXP-145 - MS - APP - Feat - Maqueta en el ms de comprobantes el remito fiscal|EXP-145]] MS - APP - Feat - Maqueta en el ms de comprobantes el remito fiscal
+- **Subtarea:** [[EXP-146 - MS - API - Feat - Conectar objeto para remito fiscal en comprobantes|EXP-146]] MS - API - Feat - Conectar objeto para remito fiscal en comprobantes
+- **Subtarea:** [[EXP-147 - API - Feat - Recurso para remito fiscal|EXP-147]] API - Feat - Recurso para remito fiscal
+- **Subtarea:** [[EXP-148 - APP - Feat - Se debe poder descargar de ambos listados de pedidos el remito|EXP-148]] APP - Feat - Se debe poder descargar de ambos listados de pedidos el remito fiscal con preview, imprimir y descarga
+- **Subtarea:** [[EXP-183 - APP - Refactor - Dejar espacio en blanco para la firma, y mover direccion con|EXP-183]] APP - Refactor -  Dejar espacio en blanco para la firma, y mover direccion con los datos del cliente y observaciones a la izquierda
+- **blocks:** [[SNB-478 - sistema nuevo|SNB-478]] sistema nuevo
 
 ## Descripcion
 

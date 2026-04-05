@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-307"
 
 ## Relaciones
 
-- **Padre:** [[LIO-166]] Catalogos y sincronizaciones
+- **Padre:** [[LIO-166 - Catalogos y sincronizaciones|LIO-166]] Catalogos y sincronizaciones
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-385"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **is blocked by:** [[EXP-384]] API - Feat - Deben figurar los envios marcados como "Unido a otro envio"
-- **blocks:** [[PED-479]] APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **is blocked by:** [[EXP-384 - API - Feat - Deben figurar los envios marcados como Unido a otro envio|EXP-384]] API - Feat - Deben figurar los envios marcados como "Unido a otro envio"
+- **blocks:** [[PED-479 - APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado|PED-479]] APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado
 
 ## Descripcion
 

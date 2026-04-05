@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-481"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **relates to:** [[EXP-458]] API - Refactor - Ajustar Recurso de Creación de Bultos para Incluir y Guardar Información de Cotización y Diferencia
-- **blocks:** [[STASK-8]] API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **relates to:** [[EXP-458 - API - Refactor - Ajustar Recurso de Creación de Bultos para Incluir y Guardar|EXP-458]] API - Refactor - Ajustar Recurso de Creación de Bultos para Incluir y Guardar Información de Cotización y Diferencia
+- **blocks:** [[STASK-8 - API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos|STASK-8]] API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos
 
 ## Descripcion
 

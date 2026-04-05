@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-189"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-190]] 1. NBE: Triada 22 Diseño Todas las marcas
-- **Subtarea:** [[NBE-191]] NBE: Triada 22 Copys todas las marcas
-- **Subtarea:** [[NBE-192]] 3.NBE: Triada 22 Programar y Pubicar
+- **Subtarea:** [[NBE-190 - 1. NBE Triada 22 Diseño Todas las marcas|NBE-190]] 1. NBE: Triada 22 Diseño Todas las marcas
+- **Subtarea:** [[NBE-191 - NBE Triada 22 Copys todas las marcas|NBE-191]] NBE: Triada 22 Copys todas las marcas
+- **Subtarea:** [[NBE-192 - 3.NBE Triada 22 Programar y Pubicar|NBE-192]] 3.NBE: Triada 22 Programar y Pubicar
 
 ## Descripcion
 

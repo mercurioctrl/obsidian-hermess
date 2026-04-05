@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-271"
 
 ## Relaciones
 
-- **Padre:** [[COB-53]] API - Feat - Listar clientes
-- **is blocked by:** [[COB-277]] APP - Fix - Ajustes en el modal de cobros y busquedas generales
+- **Padre:** [[COB-53 - API - Feat - Listar clientes|COB-53]] API - Feat - Listar clientes
+- **is blocked by:** [[COB-277 - APP - Fix - Ajustes en el modal de cobros y busquedas generales|COB-277]] APP - Fix - Ajustes en el modal de cobros y busquedas generales
 
 ## Descripcion
 

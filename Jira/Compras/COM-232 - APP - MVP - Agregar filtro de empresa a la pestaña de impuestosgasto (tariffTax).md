@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-232"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **action item from:** [[COM-233]] API - MVP - Agregar filtro de empresa a la pestaña de impuestos/gasto (tariffTax)
-- **relates to:** [[COM-249]] APP - Refactor - Detalle de la orden -> Agregar filtro por empresa al obtener los impuestos/gastos
-- **relates to:** [[COM-250]] APP - MVP - Refactor - Crear y editar impuesto/gasto -> agregar selector de empresa
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **action item from:** [[COM-233 - API - MVP - Agregar filtro de empresa a la pestaña de impuestosgasto (tariffTax)|COM-233]] API - MVP - Agregar filtro de empresa a la pestaña de impuestos/gasto (tariffTax)
+- **relates to:** [[COM-249 - APP - Refactor - Detalle de la orden - Agregar filtro por empresa al obtener|COM-249]] APP - Refactor - Detalle de la orden -> Agregar filtro por empresa al obtener los impuestos/gastos
+- **relates to:** [[COM-250 - APP - MVP - Refactor - Crear y editar impuestogasto - agregar selector de|COM-250]] APP - MVP - Refactor - Crear y editar impuesto/gasto -> agregar selector de empresa
 
 ## Descripcion
 

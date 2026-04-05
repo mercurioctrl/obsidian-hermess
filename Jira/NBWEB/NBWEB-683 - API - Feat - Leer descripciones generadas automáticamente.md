@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-683"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **blocks:** [[NBWEB-684]] APP - Feat - Leer descripciones generadas automáticamente 
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **blocks:** [[NBWEB-684 - APP - Feat - Leer descripciones generadas automáticamente|NBWEB-684]] APP - Feat - Leer descripciones generadas automáticamente 
 
 ## Descripcion
 

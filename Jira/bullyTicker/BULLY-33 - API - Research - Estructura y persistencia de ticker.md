@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-33"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-32]] Persistencia del espacio de operacion
+- **Padre:** [[BULLY-32 - Persistencia del espacio de operacion|BULLY-32]] Persistencia del espacio de operacion
 
 ## Descripcion
 

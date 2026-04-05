@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-950"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-777]] Carrito
-- **has action item:** [[NBWEB-951]] API - Refactor - Transportar y procesar "promesa de envio"
+- **Padre:** [[NBWEB-777 - Carrito|NBWEB-777]] Carrito
+- **has action item:** [[NBWEB-951 - API - Refactor - Transportar y procesar promesa de envio|NBWEB-951]] API - Refactor - Transportar y procesar "promesa de envio"
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-3"
 
 ## Relaciones
 
-- **Padre:** [[EXP-2]] Feat - Login y credenciales
+- **Padre:** [[EXP-2 - Feat - Login y credenciales|EXP-2]] Feat - Login y credenciales
 
 ## Descripcion
 

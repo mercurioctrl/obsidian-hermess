@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-705"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-636]] Documentacion publica
-- **is blocked by:** [[NBWEB-703]] API - Refactor - Agregar parametros para guardar correo y nombre del cliente
-- **is blocked by:** [[NBWEB-704]] APP - Refactor - Al "encender" el dropShipping en el carrito, mostrar 2 inputs para el nombre del cliente y su correo electronico
+- **Padre:** [[NBWEB-636 - Documentacion publica|NBWEB-636]] Documentacion publica
+- **is blocked by:** [[NBWEB-703 - API - Refactor - Agregar parametros para guardar correo y nombre del cliente|NBWEB-703]] API - Refactor - Agregar parametros para guardar correo y nombre del cliente
+- **is blocked by:** [[NBWEB-704 - APP - Refactor - Al encender el dropShipping en el carrito, mostrar 2 inputs|NBWEB-704]] APP - Refactor - Al "encender" el dropShipping en el carrito, mostrar 2 inputs para el nombre del cliente y su correo electronico
 
 ## Descripcion
 

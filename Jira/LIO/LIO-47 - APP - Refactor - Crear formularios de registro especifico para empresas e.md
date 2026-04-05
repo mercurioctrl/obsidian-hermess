@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-47"
 
 ## Relaciones
 
-- **Padre:** [[LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
-- **relates to:** [[LIO-46]] API - Refactor - Crear formularios de registro especifico para empresas e individuos - Añadir razón social
-- **has action item:** [[LIO-178]] API - Refactor - Devolver un mensaje concreto cuando el recurso de padron, no encuentra el "cuit" buscado
+- **Padre:** [[LIO-11 - Proceso de registro sencillo para los vendedoresCompradores|LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
+- **relates to:** [[LIO-46 - API - Refactor - Crear formularios de registro especifico para empresas e|LIO-46]] API - Refactor - Crear formularios de registro especifico para empresas e individuos - Añadir razón social
+- **has action item:** [[LIO-178 - API - Refactor - Devolver un mensaje concreto cuando el recurso de padron, no|LIO-178]] API - Refactor - Devolver un mensaje concreto cuando el recurso de padron, no encuentra el "cuit" buscado
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-4"
 
 ## Relaciones
 
-- **Padre:** [[MKT-2]] Nuevo carrousel de productos en la home para la serie de INTEL
-- **blocks:** [[MKT-5]] Maquetado en el sitio
+- **Padre:** [[MKT-2 - Nuevo carrousel de productos en la home para la serie de INTEL|MKT-2]] Nuevo carrousel de productos en la home para la serie de INTEL
+- **blocks:** [[MKT-5 - Maquetado en el sitio|MKT-5]] Maquetado en el sitio
 
 ## Descripcion
 

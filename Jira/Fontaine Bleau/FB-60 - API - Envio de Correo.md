@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-60"
 
 ## Relaciones
 
-- **Padre:** [[FB-59]] Fontaine Bleau: Newsletter 
+- **Padre:** [[FB-59 - Fontaine Bleau Newsletter|FB-59]] Fontaine Bleau: Newsletter 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-190"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-187]] Mar 10:  Cooler Master Master HUB (Blue 1) Mie 1
+- **Padre:** [[LOMKT-187 - Mar 10 Cooler Master Master HUB (Blue 1) Mie 1|LOMKT-187]] Mar 10:  Cooler Master Master HUB (Blue 1) Mie 1
 
 ## Descripcion
 

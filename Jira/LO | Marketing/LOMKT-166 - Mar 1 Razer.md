@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-166"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-175]] Mar: Programar Razer
+- **Subtarea:** [[LOMKT-175 - Mar Programar Razer|LOMKT-175]] Mar: Programar Razer
 
 ## Descripcion
 

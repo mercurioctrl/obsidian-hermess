@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-82"
 
 ## Relaciones
 
-- **Padre:** [[EXP-18]] Feat - Listar pases
-- **is blocked by:** [[POS-97]] API - Feat - Procesar pase de mercadería (Deposito)
-- **blocks:** [[EXP-83]] APP - Feat - Modal procesar pase de mercaderia
+- **Padre:** [[EXP-18 - Feat - Listar pases|EXP-18]] Feat - Listar pases
+- **is blocked by:** [[POS-97 - API - Feat - Procesar pase de mercadería (Deposito)|POS-97]] API - Feat - Procesar pase de mercadería (Deposito)
+- **blocks:** [[EXP-83 - APP - Feat - Modal procesar pase de mercaderia|EXP-83]] APP - Feat - Modal procesar pase de mercaderia
 
 ## Descripcion
 

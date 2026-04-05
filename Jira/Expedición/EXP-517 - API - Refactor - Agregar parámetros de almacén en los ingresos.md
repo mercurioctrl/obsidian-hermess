@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-517"
 
 ## Relaciones
 
-- **Padre:** [[EXP-486]] Ver ingreso
+- **Padre:** [[EXP-486 - Ver ingreso|EXP-486]] Ver ingreso
 
 ## Descripcion
 

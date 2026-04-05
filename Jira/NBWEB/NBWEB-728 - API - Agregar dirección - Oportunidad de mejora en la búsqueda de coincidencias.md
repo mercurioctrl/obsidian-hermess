@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-728"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-724]] API - Feat - Agregaremos como posibilidad enviar la provincia sola, y en lugar de placeId, enviaremos placeTxt
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-724 - API - Feat - Agregaremos como posibilidad enviar la provincia sola, y en lugar|NBWEB-724]] API - Feat - Agregaremos como posibilidad enviar la provincia sola, y en lugar de placeId, enviaremos placeTxt
 
 ## Descripcion
 

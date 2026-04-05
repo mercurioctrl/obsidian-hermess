@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-171"
 
 ## Relaciones
 
-- **Padre:** [[NBE-151]] NBE:Triada 20_APP
-- **has action item:** [[NBE-180]] NBE: Realizar Post en las diferentes Redes
+- **Padre:** [[NBE-151 - NBETriada 20_APP|NBE-151]] NBE:Triada 20_APP
+- **has action item:** [[NBE-180 - NBE Realizar Post en las diferentes Redes|NBE-180]] NBE: Realizar Post en las diferentes Redes
 
 ## Descripcion
 

@@ -33,8 +33,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-338"
 
 ## Relaciones
 
-- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
-- **has action item:** [[LIO-339]] APP - Refactor - Calcular cuotas para el catalogo en base a los intereses del repositorio nuevo de medios de pago
+- **Padre:** [[LIO-8 - Proceso pago sencillo y competitiva a nivel financiamiento|LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **has action item:** [[LIO-339 - APP - Refactor - Calcular cuotas para el catalogo en base a los intereses del|LIO-339]] APP - Refactor - Calcular cuotas para el catalogo en base a los intereses del repositorio nuevo de medios de pago
 
 ## Descripcion
 

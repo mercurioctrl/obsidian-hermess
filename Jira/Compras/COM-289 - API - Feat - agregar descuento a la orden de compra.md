@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-289"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **action item from:** [[COM-288]] APP - Feat - agregar descuento a la orden de compra
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **action item from:** [[COM-288 - APP - Feat - agregar descuento a la orden de compra|COM-288]] APP - Feat - agregar descuento a la orden de compra
 
 ## Descripcion
 

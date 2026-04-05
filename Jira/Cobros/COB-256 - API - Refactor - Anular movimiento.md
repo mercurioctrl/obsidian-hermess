@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-256"
 
 ## Relaciones
 
-- **Padre:** [[COB-5]] API - Feat - Obtener cuenta corriente de un cliente
+- **Padre:** [[COB-5 - API - Feat - Obtener cuenta corriente de un cliente|COB-5]] API - Feat - Obtener cuenta corriente de un cliente
 
 ## Descripcion
 

@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-7"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **blocks:** [[COM-17]] API - Refactor - Listar proveedores -> Agregar pais
-- **blocks:** [[COM-18]] APP - Feat - Listado de proveedores
-- **relates to:** [[COM-37]] API - Refactor - Listar proveedores -> Agregar búsqueda general
-- **relates to:** [[COM-56]] API - Refactor - Listar proveedores -> Buscar por código de proveedor 
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **blocks:** [[COM-17 - API - Refactor - Listar proveedores - Agregar pais|COM-17]] API - Refactor - Listar proveedores -> Agregar pais
+- **blocks:** [[COM-18 - APP - Feat - Listado de proveedores|COM-18]] APP - Feat - Listado de proveedores
+- **relates to:** [[COM-37 - API - Refactor - Listar proveedores - Agregar búsqueda general|COM-37]] API - Refactor - Listar proveedores -> Agregar búsqueda general
+- **relates to:** [[COM-56 - API - Refactor - Listar proveedores - Buscar por código de proveedor|COM-56]] API - Refactor - Listar proveedores -> Buscar por código de proveedor 
 
 ## Descripcion
 

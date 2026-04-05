@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-192"
 
 ## Relaciones
 
-- **relates to:** [[INV-189]] API - Refactor - Volver a conectar repositorio de búsqueda de imágenes a mercadolibre según research
+- **relates to:** [[INV-189 - API - Refactor - Volver a conectar repositorio de búsqueda de imágenes a|INV-189]] API - Refactor - Volver a conectar repositorio de búsqueda de imágenes a mercadolibre según research
 
 ## Descripcion
 

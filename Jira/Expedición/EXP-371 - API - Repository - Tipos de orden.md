@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-371"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **blocks:** [[EXP-369]] API - Refactor - Agrear filtro tipo de pedido
-- **blocks:** [[EXP-370]] APP - Refactor - Agregar filtro y columna tipo de pedido
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **blocks:** [[EXP-369 - API - Refactor - Agrear filtro tipo de pedido|EXP-369]] API - Refactor - Agrear filtro tipo de pedido
+- **blocks:** [[EXP-370 - APP - Refactor - Agregar filtro y columna tipo de pedido|EXP-370]] APP - Refactor - Agregar filtro y columna tipo de pedido
 
 ## Descripcion
 

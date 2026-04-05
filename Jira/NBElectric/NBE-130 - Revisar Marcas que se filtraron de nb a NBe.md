@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-130"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-136]] API - El el repositorio de novedades, aplicar el filtro para NBE si existe
-- **action item from:** [[NBWEB-981]] API - Refactor - Repositorio de marcas sensible a parámetros de ocultamiento
+- **Subtarea:** [[NBE-136 - API - El el repositorio de novedades, aplicar el filtro para NBE si existe|NBE-136]] API - El el repositorio de novedades, aplicar el filtro para NBE si existe
+- **action item from:** [[NBWEB-981 - API - Refactor - Repositorio de marcas sensible a parámetros de ocultamiento|NBWEB-981]] API - Refactor - Repositorio de marcas sensible a parámetros de ocultamiento
 
 ## Descripcion
 

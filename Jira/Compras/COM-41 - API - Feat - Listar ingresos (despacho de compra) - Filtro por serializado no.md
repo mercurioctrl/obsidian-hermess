@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-41"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **blocks:** [[COM-29]] API - Feat - Listar ingresos (despacho de compra)
-- **blocks:** [[COM-13]] APP - Feat - Listar ingresos (despachos de compra)
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **blocks:** [[COM-29 - API - Feat - Listar ingresos (despacho de compra)|COM-29]] API - Feat - Listar ingresos (despacho de compra)
+- **blocks:** [[COM-13 - APP - Feat - Listar ingresos (despachos de compra)|COM-13]] APP - Feat - Listar ingresos (despachos de compra)
 
 ## Descripcion
 

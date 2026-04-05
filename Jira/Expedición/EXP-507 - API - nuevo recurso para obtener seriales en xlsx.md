@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-507"
 
 ## Relaciones
 
-- **relates to:** [[SNB-3304]] agregar al sistema
-- **has action item:** [[EXP-508]] APP - Nuevo boton para obtener seriales en xlsx en Ingresos 
+- **relates to:** [[SNB-3304 - agregar al sistema|SNB-3304]] agregar al sistema
+- **has action item:** [[EXP-508 - APP - Nuevo boton para obtener seriales en xlsx en Ingresos|EXP-508]] APP - Nuevo boton para obtener seriales en xlsx en Ingresos 
 
 ## Descripcion
 

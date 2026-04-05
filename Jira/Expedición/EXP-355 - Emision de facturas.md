@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-355"
 
 ## Relaciones
 
-- **Padre:** [[EXP-7]] Despacho de retiros
-- **Subtarea:** [[EXP-356]] API - Refactor - MS Comprobantes- Objeto tributos
-- **Subtarea:** [[EXP-357]] APP - Feat - Generar factura
-- **Subtarea:** [[EXP-358]] API - Feat - Generar comprobante fiscal (factura)
-- **Subtarea:** [[EXP-359]] API - Refactor - Agregar percepciones a las ordenes
-- **Subtarea:** [[EXP-363]] MS - Refactor - Incorporar regimen MiPymes a la facturacion
-- **blocks:** [[SNB-1033]] mejoras para el sistema
+- **Padre:** [[EXP-7 - Despacho de retiros|EXP-7]] Despacho de retiros
+- **Subtarea:** [[EXP-356 - API - Refactor - MS Comprobantes- Objeto tributos|EXP-356]] API - Refactor - MS Comprobantes- Objeto tributos
+- **Subtarea:** [[EXP-357 - APP - Feat - Generar factura|EXP-357]] APP - Feat - Generar factura
+- **Subtarea:** [[EXP-358 - API - Feat - Generar comprobante fiscal (factura)|EXP-358]] API - Feat - Generar comprobante fiscal (factura)
+- **Subtarea:** [[EXP-359 - API - Refactor - Agregar percepciones a las ordenes|EXP-359]] API - Refactor - Agregar percepciones a las ordenes
+- **Subtarea:** [[EXP-363 - MS - Refactor - Incorporar regimen MiPymes a la facturacion|EXP-363]] MS - Refactor - Incorporar regimen MiPymes a la facturacion
+- **blocks:** [[SNB-1033 - mejoras para el sistema|SNB-1033]] mejoras para el sistema
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-1009"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-1006]] kits y Bundles
+- **Padre:** [[NBWEB-1006 - kits y Bundles|NBWEB-1006]] kits y Bundles
 
 ## Descripcion
 

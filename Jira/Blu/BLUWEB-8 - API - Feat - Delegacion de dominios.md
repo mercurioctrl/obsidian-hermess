@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-8"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-4]] Infraestructura y Servidores
+- **Padre:** [[BLUWEB-4 - Infraestructura y Servidores|BLUWEB-4]] Infraestructura y Servidores
 
 ## Descripcion
 

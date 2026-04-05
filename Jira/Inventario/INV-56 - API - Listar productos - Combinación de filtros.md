@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-56"
 
 ## Relaciones
 
-- **Padre:** [[INV-2]] MS - METADATA - API
-- **relates to:** [[INV-14]] API - Listar productos
+- **Padre:** [[INV-2 - MS - METADATA - API|INV-2]] MS - METADATA - API
+- **relates to:** [[INV-14 - API - Listar productos|INV-14]] API - Listar productos
 
 ## Descripcion
 

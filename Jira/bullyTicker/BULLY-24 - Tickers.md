@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-24"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-1]] Bases y repositorios
-- **Subtarea:** [[BULLY-25]] API - Feat - Repositorio de tickers
-- **Subtarea:** [[BULLY-26]] APP - Feat - Repositorio de tickers
+- **Padre:** [[BULLY-1 - Bases y repositorios|BULLY-1]] Bases y repositorios
+- **Subtarea:** [[BULLY-25 - API - Feat - Repositorio de tickers|BULLY-25]] API - Feat - Repositorio de tickers
+- **Subtarea:** [[BULLY-26 - APP - Feat - Repositorio de tickers|BULLY-26]] APP - Feat - Repositorio de tickers
 
 ## Descripcion
 

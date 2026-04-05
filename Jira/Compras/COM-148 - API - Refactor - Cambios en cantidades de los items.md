@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-148"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **has action item:** [[COM-149]] APP - Refactor - Modal y cantidades de una orden
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **has action item:** [[COM-149 - APP - Refactor - Modal y cantidades de una orden|COM-149]] APP - Refactor - Modal y cantidades de una orden
 
 ## Descripcion
 

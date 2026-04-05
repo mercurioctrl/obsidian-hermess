@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-291"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-292]] BANNER HOME
-- **Subtarea:** [[DNYL-293]] POSTEOS REDES
+- **Subtarea:** [[DNYL-292 - BANNER HOME|DNYL-292]] BANNER HOME
+- **Subtarea:** [[DNYL-293 - POSTEOS REDES|DNYL-293]] POSTEOS REDES
 
 ## Descripcion
 

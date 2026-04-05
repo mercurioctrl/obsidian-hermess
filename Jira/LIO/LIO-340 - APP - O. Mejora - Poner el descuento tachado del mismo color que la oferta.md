@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-340"
 
 ## Relaciones
 
-- **Padre:** [[LIO-119]] Inventario
+- **Padre:** [[LIO-119 - Inventario|LIO-119]] Inventario
 
 ## Descripcion
 

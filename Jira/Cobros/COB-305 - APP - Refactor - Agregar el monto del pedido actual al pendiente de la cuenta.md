@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-305"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
 
 ## Descripcion
 

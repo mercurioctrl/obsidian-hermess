@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-182"
 
 ## Relaciones
 
-- **Padre:** [[EXP-46]] Crear etiquetas con ZEBRA
+- **Padre:** [[EXP-46 - Crear etiquetas con ZEBRA|EXP-46]] Crear etiquetas con ZEBRA
 
 ## Descripcion
 

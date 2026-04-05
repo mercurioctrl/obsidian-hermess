@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-128"
 
 ## Relaciones
 
-- **Padre:** [[LIO-124]] Calificaciones
-- **has action item:** [[LIO-130]] APP - Refactor - Implementar comentarios de calificación en la ficha de los vendedores
+- **Padre:** [[LIO-124 - Calificaciones|LIO-124]] Calificaciones
+- **has action item:** [[LIO-130 - APP - Refactor - Implementar comentarios de calificación en la ficha de los|LIO-130]] APP - Refactor - Implementar comentarios de calificación en la ficha de los vendedores
 
 ## Descripcion
 

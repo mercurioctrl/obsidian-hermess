@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-82"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
-- **has action item:** [[LOCAPP-84]] API - MVP - Servicio de facturación - Feat - implementar packing List
-- **action item from:** [[LOCAPP-85]] APP - MVP - Feat - Conectar packing List  con la api
+- **Padre:** [[LOCAPP-80 - MVP - Vouchers para LASET (eticket, efactura,packingList PL, SLI)|LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
+- **has action item:** [[LOCAPP-84 - API - MVP - Servicio de facturación - Feat - implementar packing List|LOCAPP-84]] API - MVP - Servicio de facturación - Feat - implementar packing List
+- **action item from:** [[LOCAPP-85 - APP - MVP - Feat - Conectar packing List con la api|LOCAPP-85]] APP - MVP - Feat - Conectar packing List  con la api
 
 ## Descripcion
 

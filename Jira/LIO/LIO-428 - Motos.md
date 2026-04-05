@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-428"
 
 ## Relaciones
 
-- **Padre:** [[LIO-3]] Envíos
+- **Padre:** [[LIO-3 - Envíos|LIO-3]] Envíos
 
 ## Descripcion
 

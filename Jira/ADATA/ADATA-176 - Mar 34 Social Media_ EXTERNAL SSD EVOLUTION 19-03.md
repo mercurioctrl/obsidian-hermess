@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-176"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-196]] Mar: 3/4 Portada Diseño Social Media EXTERNAL SSD EVOLUTION
-- **Subtarea:** [[ADATA-197]] Mar: 3/4 Copys Social Media
-- **Subtarea:** [[ADATA-198]] Mar: 3/4 Programar Social Media
-- **Subtarea:** [[ADATA-253]] Buscar videos_EXTERNAL SDD EVOLUTION 
+- **Subtarea:** [[ADATA-196 - Mar 34 Portada Diseño Social Media EXTERNAL SSD EVOLUTION|ADATA-196]] Mar: 3/4 Portada Diseño Social Media EXTERNAL SSD EVOLUTION
+- **Subtarea:** [[ADATA-197 - Mar 34 Copys Social Media|ADATA-197]] Mar: 3/4 Copys Social Media
+- **Subtarea:** [[ADATA-198 - Mar 34 Programar Social Media|ADATA-198]] Mar: 3/4 Programar Social Media
+- **Subtarea:** [[ADATA-253 - Buscar videos_EXTERNAL SDD EVOLUTION|ADATA-253]] Buscar videos_EXTERNAL SDD EVOLUTION 
 
 ## Descripcion
 

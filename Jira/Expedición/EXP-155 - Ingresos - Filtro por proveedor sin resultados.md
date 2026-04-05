@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-155"
 
 ## Relaciones
 
-- **blocks:** [[EXP-10]] Feat - Listar pedidos (despachos) proveedores
+- **blocks:** [[EXP-10 - Feat - Listar pedidos (despachos) proveedores|EXP-10]] Feat - Listar pedidos (despachos) proveedores
 
 ## Descripcion
 

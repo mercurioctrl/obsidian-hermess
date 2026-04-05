@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-45"
 
 ## Relaciones
 
-- **Padre:** [[LAW-44]] LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una empresa determinada
-- **has action item:** [[LAW-46]] APP - PED - Refactor -Filtro companyCode en ShippingMethods
+- **Padre:** [[LAW-44 - LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una|LAW-44]] LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una empresa determinada
+- **has action item:** [[LAW-46 - APP - PED - Refactor -Filtro companyCode en ShippingMethods|LAW-46]] APP - PED - Refactor -Filtro companyCode en ShippingMethods
 
 ## Descripcion
 

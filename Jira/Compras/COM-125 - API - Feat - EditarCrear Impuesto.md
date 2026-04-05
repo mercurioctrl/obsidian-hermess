@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-125"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **blocks:** [[COM-126]] APP - Feat - Editar / Crear impuesto
-- **relates to:** [[COM-127]] API - Editar/Crear Impuesto - Sugerencia de mejora en el mensaje impuesto repetido
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **blocks:** [[COM-126 - APP - Feat - Editar Crear impuesto|COM-126]] APP - Feat - Editar / Crear impuesto
+- **relates to:** [[COM-127 - API - EditarCrear Impuesto - Sugerencia de mejora en el mensaje impuesto|COM-127]] API - Editar/Crear Impuesto - Sugerencia de mejora en el mensaje impuesto repetido
 
 ## Descripcion
 

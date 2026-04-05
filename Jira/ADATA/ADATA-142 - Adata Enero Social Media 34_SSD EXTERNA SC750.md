@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-142"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-157]] Adata Enero: 3/4 Portada Diseño Social Media_  SSDE SC750
-- **Subtarea:** [[ADATA-158]] Adata Enero: 3/4 Copys Social Media_ SC750 SSDE 2
-- **Subtarea:** [[ADATA-159]] 7.Adata Enero: 3/4 Programar Social Media_ SC750 SSDE 21-01
+- **Subtarea:** [[ADATA-157 - Adata Enero 34 Portada Diseño Social Media_ SSDE SC750|ADATA-157]] Adata Enero: 3/4 Portada Diseño Social Media_  SSDE SC750
+- **Subtarea:** [[ADATA-158 - Adata Enero 34 Copys Social Media_ SC750 SSDE 2|ADATA-158]] Adata Enero: 3/4 Copys Social Media_ SC750 SSDE 2
+- **Subtarea:** [[ADATA-159 - 7.Adata Enero 34 Programar Social Media_ SC750 SSDE 21-01|ADATA-159]] 7.Adata Enero: 3/4 Programar Social Media_ SC750 SSDE 21-01
 
 ## Descripcion
 

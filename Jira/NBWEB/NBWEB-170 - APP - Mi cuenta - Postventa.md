@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-170"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
-- **relates to:** [[NBWEB-21]] Postventa
-- **relates to:** [[NBWEB-27]] Detalle Postventa
+- **Padre:** [[NBWEB-59 - APP -Maquetado y Desarrollo - Mi cuenta|NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
+- **relates to:** [[NBWEB-21 - Postventa|NBWEB-21]] Postventa
+- **relates to:** [[NBWEB-27 - Detalle Postventa|NBWEB-27]] Detalle Postventa
 
 ## Descripcion
 

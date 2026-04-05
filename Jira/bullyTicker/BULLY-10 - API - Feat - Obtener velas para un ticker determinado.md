@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-10"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-9]] Grafico de velas / movimientos de precios
-- **is blocked by:** [[BULLY-16]] API - Feat - Objeto user (Login ETNA)
-- **blocks:** [[BULLY-11]] APP - Feat - Mostrar velas para un ticker determinado
+- **Padre:** [[BULLY-9 - Grafico de velas movimientos de precios|BULLY-9]] Grafico de velas / movimientos de precios
+- **is blocked by:** [[BULLY-16 - API - Feat - Objeto user (Login ETNA)|BULLY-16]] API - Feat - Objeto user (Login ETNA)
+- **blocks:** [[BULLY-11 - APP - Feat - Mostrar velas para un ticker determinado|BULLY-11]] APP - Feat - Mostrar velas para un ticker determinado
 
 ## Descripcion
 

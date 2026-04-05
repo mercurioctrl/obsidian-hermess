@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-326"
 
 ## Relaciones
 
-- **duplicates:** [[NBWEB-394]] No aparece mis comprobantes en la barra latearal
+- **duplicates:** [[NBWEB-394 - No aparece mis comprobantes en la barra latearal|NBWEB-394]] No aparece mis comprobantes en la barra latearal
 
 ## Descripcion
 

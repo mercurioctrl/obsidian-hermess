@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-39"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-29]] Adata Noviembre: 1/4 Social Media Memorias
+- **Padre:** [[ADATA-29 - Adata Noviembre 14 Social Media Memorias|ADATA-29]] Adata Noviembre: 1/4 Social Media Memorias
 
 ## Descripcion
 

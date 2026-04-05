@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-79"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-78]] ASUS
+- **Padre:** [[MNB2-78 - ASUS|MNB2-78]] ASUS
 
 ## Descripcion
 

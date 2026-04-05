@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-118"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-122]] ✏️Triada 12_Unitronics_Armar Copy + realizar post en instagram, linkedin y Facebook
-- **Subtarea:** [[NBE-123]] ⚡Triada 17_Unitronics_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-122 - ✏️Triada 12_Unitronics_Armar Copy + realizar post en instagram, linkedin y|NBE-122]] ✏️Triada 12_Unitronics_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-123 - ⚡Triada 17_Unitronics_Desarrollo de piezas Social Media|NBE-123]] ⚡Triada 17_Unitronics_Desarrollo de piezas Social Media
 
 ## Descripcion
 

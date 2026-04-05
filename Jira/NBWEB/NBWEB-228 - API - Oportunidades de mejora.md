@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-228"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-229]] API - Mi cuenta - Mis datos - Validar la contraseña
-- **Subtarea:** [[NBWEB-230]] API - Mover datos de conexion con el servidor de correo al archivo de entorno
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-229 - API - Mi cuenta - Mis datos - Validar la contraseña|NBWEB-229]] API - Mi cuenta - Mis datos - Validar la contraseña
+- **Subtarea:** [[NBWEB-230 - API - Mover datos de conexion con el servidor de correo al archivo de entorno|NBWEB-230]] API - Mover datos de conexion con el servidor de correo al archivo de entorno
 
 ## Descripcion
 

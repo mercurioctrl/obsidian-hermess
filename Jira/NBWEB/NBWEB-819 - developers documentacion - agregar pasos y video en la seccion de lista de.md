@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-819"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **is blocked by:** [[NBWEB-822]] API - Errorres al subir el xlsx de empretienda a "empretienda" y csv de shopify  a "shopify"
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **is blocked by:** [[NBWEB-822 - API - Errorres al subir el xlsx de empretienda a empretienda y csv de shopify a|NBWEB-822]] API - Errorres al subir el xlsx de empretienda a "empretienda" y csv de shopify  a "shopify"
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-261"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **blocks:** [[NBWEB-250]] MS - Research - Obtener la distancia entre dos puntos
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **blocks:** [[NBWEB-250 - MS - Research - Obtener la distancia entre dos puntos|NBWEB-250]] MS - Research - Obtener la distancia entre dos puntos
 
 ## Descripcion
 

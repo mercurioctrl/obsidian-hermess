@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-143"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-160]] Adata Enero: 4/4 Portada Diseño Social Media_PSU PYLON
-- **Subtarea:** [[ADATA-161]] Adata Enero: 4/4 Copys Social Media_ PSU PYLON
-- **Subtarea:** [[ADATA-162]] 8.Adata Enero: 4/4 Programar Social Media_ PYLON PSU 28.01
+- **Subtarea:** [[ADATA-160 - Adata Enero 44 Portada Diseño Social Media_PSU PYLON|ADATA-160]] Adata Enero: 4/4 Portada Diseño Social Media_PSU PYLON
+- **Subtarea:** [[ADATA-161 - Adata Enero 44 Copys Social Media_ PSU PYLON|ADATA-161]] Adata Enero: 4/4 Copys Social Media_ PSU PYLON
+- **Subtarea:** [[ADATA-162 - 8.Adata Enero 44 Programar Social Media_ PYLON PSU 28.01|ADATA-162]] 8.Adata Enero: 4/4 Programar Social Media_ PYLON PSU 28.01
 
 ## Descripcion
 

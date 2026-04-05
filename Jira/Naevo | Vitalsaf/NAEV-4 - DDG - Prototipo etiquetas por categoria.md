@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NAEV-4"
 
 ## Relaciones
 
-- **Padre:** [[NAEV-3]] Etiquetas
+- **Padre:** [[NAEV-3 - Etiquetas|NAEV-3]] Etiquetas
 
 ## Descripcion
 

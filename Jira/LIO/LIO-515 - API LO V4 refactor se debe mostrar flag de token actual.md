@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-515"
 
 ## Relaciones
 
-- **Padre:** [[LIO-504]] Sección Referidos
+- **Padre:** [[LIO-504 - Sección Referidos|LIO-504]] Sección Referidos
 
 ## Descripcion
 

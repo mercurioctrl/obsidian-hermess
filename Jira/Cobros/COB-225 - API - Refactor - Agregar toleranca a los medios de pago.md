@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-225"
 
 ## Relaciones
 
-- **Padre:** [[COB-222]] Refactor - Redondeo al cobrar
-- **blocks:** [[COB-223]] APP - Refactor - Redondeo al cobrar
+- **Padre:** [[COB-222 - Refactor - Redondeo al cobrar|COB-222]] Refactor - Redondeo al cobrar
+- **blocks:** [[COB-223 - APP - Refactor - Redondeo al cobrar|COB-223]] APP - Refactor - Redondeo al cobrar
 
 ## Descripcion
 

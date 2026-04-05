@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-169"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **Subtarea:** [[EXP-176]] API - Feat - Alertar pedidos
-- **Subtarea:** [[EXP-177]] APP - Feat - Alertar pedido
-- **Subtarea:** [[EXP-178]] API - Refactor - Cambiar el orden de las listas "retiros" y "envios" para priorizar los pedidos alertados
-- **Subtarea:** [[EXP-211]] API - Refactor - Al despachar quitar alerta
-- **Subtarea:** [[EXP-506]] API - Refactor - Des-alertar pedido
-- **is blocked by:** [[EXP-212]] Alertar pedido - Alertar pedido ya despachado
-- **is blocked by:** [[EXP-211]] API - Refactor - Al despachar quitar alerta
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **Subtarea:** [[EXP-176 - API - Feat - Alertar pedidos|EXP-176]] API - Feat - Alertar pedidos
+- **Subtarea:** [[EXP-177 - APP - Feat - Alertar pedido|EXP-177]] APP - Feat - Alertar pedido
+- **Subtarea:** [[EXP-178 - API - Refactor - Cambiar el orden de las listas retiros y envios para priorizar|EXP-178]] API - Refactor - Cambiar el orden de las listas "retiros" y "envios" para priorizar los pedidos alertados
+- **Subtarea:** [[EXP-211 - API - Refactor - Al despachar quitar alerta|EXP-211]] API - Refactor - Al despachar quitar alerta
+- **Subtarea:** [[EXP-506 - API - Refactor - Des-alertar pedido|EXP-506]] API - Refactor - Des-alertar pedido
+- **is blocked by:** [[EXP-212 - Alertar pedido - Alertar pedido ya despachado|EXP-212]] Alertar pedido - Alertar pedido ya despachado
+- **is blocked by:** [[EXP-211 - API - Refactor - Al despachar quitar alerta|EXP-211]] API - Refactor - Al despachar quitar alerta
 
 ## Descripcion
 

@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-755"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[NBWEB-754]] API - Feat - Ranking 
-- **is blocked by:** [[PED-750]] API - Feat - Acelerar pedidos liquidados autorizados (syncUp)
-- **blocks:** [[MKT-183]] NB_ Incentivo Resellers 25 años
-- **relates to:** [[NBWEB-758]] APP - Refactor - agregar en las variables de entorno que se vea o no el ranking
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[NBWEB-754 - API - Feat - Ranking|NBWEB-754]] API - Feat - Ranking 
+- **is blocked by:** [[PED-750 - API - Feat - Acelerar pedidos liquidados autorizados (syncUp)|PED-750]] API - Feat - Acelerar pedidos liquidados autorizados (syncUp)
+- **blocks:** [[MKT-183 - NB_ Incentivo Resellers 25 años|MKT-183]] NB_ Incentivo Resellers 25 años
+- **relates to:** [[NBWEB-758 - APP - Refactor - agregar en las variables de entorno que se vea o no el ranking|NBWEB-758]] APP - Refactor - agregar en las variables de entorno que se vea o no el ranking
 
 ## Descripcion
 

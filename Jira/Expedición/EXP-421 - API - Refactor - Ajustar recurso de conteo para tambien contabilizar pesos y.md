@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-421"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **blocks:** [[EXP-422]] APP - Refactor - En el modulo de conteo se deben poder visualizar y editar tambien medidas y pesos
-- **relates to:** [[EXP-423]] API - Ajustar recurso de conteo para tambien contabilizar pesos y medidas - Sugerencia de mejora en el mensaje de respuesta
-- **has action item:** [[EXP-451]] API - Refactor-  Agregar al .env un parametro (true/false) para activar/desactivar la validacion de medidas antes de cargar un producto
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **blocks:** [[EXP-422 - APP - Refactor - En el modulo de conteo se deben poder visualizar y editar|EXP-422]] APP - Refactor - En el modulo de conteo se deben poder visualizar y editar tambien medidas y pesos
+- **relates to:** [[EXP-423 - API - Ajustar recurso de conteo para tambien contabilizar pesos y medidas -|EXP-423]] API - Ajustar recurso de conteo para tambien contabilizar pesos y medidas - Sugerencia de mejora en el mensaje de respuesta
+- **has action item:** [[EXP-451 - API - Refactor- Agregar al .env un parametro (truefalse) para activardesactivar|EXP-451]] API - Refactor-  Agregar al .env un parametro (true/false) para activar/desactivar la validacion de medidas antes de cargar un producto
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-47"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **blocks:** [[COM-46]] APP - Feat - Modificar un proveedor
-- **relates to:** [[COM-58]] API - Ver detalle de un proveedor - Descripción de localidad faltante
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **blocks:** [[COM-46 - APP - Feat - Modificar un proveedor|COM-46]] APP - Feat - Modificar un proveedor
+- **relates to:** [[COM-58 - API - Ver detalle de un proveedor - Descripción de localidad faltante|COM-58]] API - Ver detalle de un proveedor - Descripción de localidad faltante
 
 ## Descripcion
 

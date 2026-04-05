@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-696"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-668]] Envíos bonificados
+- **Padre:** [[NBWEB-668 - Envíos bonificados|NBWEB-668]] Envíos bonificados
 
 ## Descripcion
 

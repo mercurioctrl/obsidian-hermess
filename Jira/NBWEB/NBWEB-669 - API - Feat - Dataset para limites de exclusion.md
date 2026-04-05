@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-669"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-668]] Envíos bonificados
-- **blocks:** [[NBWEB-670]] MS - Feat - Cotizar con la bonificacion desde ms-envios directamente
-- **blocks:** [[NBWEB-671]] APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con condiciones
+- **Padre:** [[NBWEB-668 - Envíos bonificados|NBWEB-668]] Envíos bonificados
+- **blocks:** [[NBWEB-670 - MS - Feat - Cotizar con la bonificacion desde ms-envios directamente|NBWEB-670]] MS - Feat - Cotizar con la bonificacion desde ms-envios directamente
+- **blocks:** [[NBWEB-671 - APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con|NBWEB-671]] APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con condiciones
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-292"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-291]] RECOMENDA LO_Silla Gamer Razer Iskur X
+- **Padre:** [[DNYL-291 - RECOMENDA LO_Silla Gamer Razer Iskur X|DNYL-291]] RECOMENDA LO_Silla Gamer Razer Iskur X
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-350"
 
 ## Relaciones
 
-- **Padre:** [[COB-347]] Poder ver saldo inicial y final de caja en cada día
-- **is blocked by:** [[COB-348]] API - Feat - Hacer arqueo de caja manual
+- **Padre:** [[COB-347 - Poder ver saldo inicial y final de caja en cada día|COB-347]] Poder ver saldo inicial y final de caja en cada día
+- **is blocked by:** [[COB-348 - API - Feat - Hacer arqueo de caja manual|COB-348]] API - Feat - Hacer arqueo de caja manual
 
 ## Descripcion
 

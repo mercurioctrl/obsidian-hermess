@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-52"
 
 ## Relaciones
 
-- **blocks:** [[REDESYNEWS-28]] Notebook G5 LIO
+- **blocks:** [[REDESYNEWS-28 - Notebook G5 LIO|REDESYNEWS-28]] Notebook G5 LIO
 
 ## Descripcion
 

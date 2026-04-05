@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-190"
 
 ## Relaciones
 
-- **Padre:** [[COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
-- **blocks:** [[COM-191]] APP -MVP - Refactor - Elegir si altera o no el costo promedio del item para cada item
-- **relates to:** [[COM-252]] API -MVP - Refactor - Detalle de la orden -> Agregar costo promedio ponderado
-- **has action item:** [[COM-272]] API - MVP - Review - Cuando una orden genera un ingreso que no tiene marcado el costo promedio, el costo debe ser el mismo que lleva la orden directo
+- **Padre:** [[COM-109 - Generar INGRESO o pedido (a partir de una orden de compra)|COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
+- **blocks:** [[COM-191 - APP -MVP - Refactor - Elegir si altera o no el costo promedio del item para|COM-191]] APP -MVP - Refactor - Elegir si altera o no el costo promedio del item para cada item
+- **relates to:** [[COM-252 - API -MVP - Refactor - Detalle de la orden - Agregar costo promedio ponderado|COM-252]] API -MVP - Refactor - Detalle de la orden -> Agregar costo promedio ponderado
+- **has action item:** [[COM-272 - API - MVP - Review - Cuando una orden genera un ingreso que no tiene marcado el|COM-272]] API - MVP - Review - Cuando una orden genera un ingreso que no tiene marcado el costo promedio, el costo debe ser el mismo que lleva la orden directo
 
 ## Descripcion
 

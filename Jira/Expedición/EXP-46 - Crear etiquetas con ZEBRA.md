@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-46"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **Subtarea:** [[EXP-58]] Research - Buscar frameworks o librerias que nos permitan componer plantillas para imprimir etiquetas
-- **Subtarea:** [[EXP-69]] API - Feat - Recurso para imprimir seriales
-- **Subtarea:** [[EXP-70]] APP - Feat - Imprimir codigos en formato zpl
-- **Subtarea:** [[EXP-182]] API - Feat - Marcar cuando los seriales fueron impresos en la tabla de base de datos
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **Subtarea:** [[EXP-58 - Research - Buscar frameworks o librerias que nos permitan componer plantillas|EXP-58]] Research - Buscar frameworks o librerias que nos permitan componer plantillas para imprimir etiquetas
+- **Subtarea:** [[EXP-69 - API - Feat - Recurso para imprimir seriales|EXP-69]] API - Feat - Recurso para imprimir seriales
+- **Subtarea:** [[EXP-70 - APP - Feat - Imprimir codigos en formato zpl|EXP-70]] APP - Feat - Imprimir codigos en formato zpl
+- **Subtarea:** [[EXP-182 - API - Feat - Marcar cuando los seriales fueron impresos en la tabla de base de|EXP-182]] API - Feat - Marcar cuando los seriales fueron impresos en la tabla de base de datos
 
 ## Descripcion
 

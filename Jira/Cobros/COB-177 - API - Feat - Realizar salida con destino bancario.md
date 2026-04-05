@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-177"
 
 ## Relaciones
 
-- **Padre:** [[COB-16]] Cuentas bancarias
-- **blocks:** [[COB-191]] APP - Feat - Realizar modal de salida con destino bancario
+- **Padre:** [[COB-16 - Cuentas bancarias|COB-16]] Cuentas bancarias
+- **blocks:** [[COB-191 - APP - Feat - Realizar modal de salida con destino bancario|COB-191]] APP - Feat - Realizar modal de salida con destino bancario
 
 ## Descripcion
 

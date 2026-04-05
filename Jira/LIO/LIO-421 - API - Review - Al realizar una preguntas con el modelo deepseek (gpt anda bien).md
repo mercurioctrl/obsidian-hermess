@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-421"
 
 ## Relaciones
 
-- **Padre:** [[LIO-391]] Desarrollos IA para LIO (Aleph)
+- **Padre:** [[LIO-391 - Desarrollos IA para LIO (Aleph)|LIO-391]] Desarrollos IA para LIO (Aleph)
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-704"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-581]] CMS - Carrito web
-- **is blocked by:** [[NBWEB-703]] API - Refactor - Agregar parametros para guardar correo y nombre del cliente
-- **blocks:** [[NBWEB-705]] APP - Feat - Agregar nuevos parametros a la explicacion de como se procesa el carrito
+- **Padre:** [[NBWEB-581 - CMS - Carrito web|NBWEB-581]] CMS - Carrito web
+- **is blocked by:** [[NBWEB-703 - API - Refactor - Agregar parametros para guardar correo y nombre del cliente|NBWEB-703]] API - Refactor - Agregar parametros para guardar correo y nombre del cliente
+- **blocks:** [[NBWEB-705 - APP - Feat - Agregar nuevos parametros a la explicacion de como se procesa el|NBWEB-705]] APP - Feat - Agregar nuevos parametros a la explicacion de como se procesa el carrito
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-566"
 
 ## Relaciones
 
-- **Padre:** [[LIO-507]] Login y otros aspectos generales
+- **Padre:** [[LIO-507 - Login y otros aspectos generales|LIO-507]] Login y otros aspectos generales
 
 ## Descripcion
 

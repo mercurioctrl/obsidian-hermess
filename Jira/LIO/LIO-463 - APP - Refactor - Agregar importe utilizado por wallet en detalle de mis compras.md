@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-463"
 
 ## Relaciones
 
-- **Padre:** [[LIO-281]] Compras
-- **has action item:** [[LIO-462]] APIv4 - Refactor - Agregar importe utilizado por wallet en detalle de mis compras
+- **Padre:** [[LIO-281 - Compras|LIO-281]] Compras
+- **has action item:** [[LIO-462 - APIv4 - Refactor - Agregar importe utilizado por wallet en detalle de mis|LIO-462]] APIv4 - Refactor - Agregar importe utilizado por wallet en detalle de mis compras
 
 ## Descripcion
 

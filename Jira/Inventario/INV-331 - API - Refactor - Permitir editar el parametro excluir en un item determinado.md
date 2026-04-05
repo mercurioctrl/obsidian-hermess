@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-331"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **has action item:** [[INV-332]] APP - Refactor - Permitir editar el parametro "excluir" en un item determinado
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **has action item:** [[INV-332 - APP - Refactor - Permitir editar el parametro excluir en un item determinado|INV-332]] APP - Refactor - Permitir editar el parametro "excluir" en un item determinado
 
 ## Descripcion
 

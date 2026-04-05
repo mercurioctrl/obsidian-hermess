@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-466"
 
 ## Relaciones
 
-- **Padre:** [[LIO-465]] Micrositios
+- **Padre:** [[LIO-465 - Micrositios|LIO-465]] Micrositios
 
 ## Descripcion
 

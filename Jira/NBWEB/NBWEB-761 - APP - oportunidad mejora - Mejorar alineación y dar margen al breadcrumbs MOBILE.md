@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-761"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
 
 ## Descripcion
 

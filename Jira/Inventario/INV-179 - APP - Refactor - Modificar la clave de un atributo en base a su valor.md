@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-179"
 
 ## Relaciones
 
-- **Padre:** [[INV-177]] Atributos
-- **action item from:** [[INV-178]] API - Refactor - Modificar la clave de un atributo en base a su valor 
+- **Padre:** [[INV-177 - Atributos|INV-177]] Atributos
+- **action item from:** [[INV-178 - API - Refactor - Modificar la clave de un atributo en base a su valor|INV-178]] API - Refactor - Modificar la clave de un atributo en base a su valor 
 
 ## Descripcion
 

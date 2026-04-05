@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-127"
 
 ## Relaciones
 
-- **Padre:** [[LIO-124]] Calificaciones
-- **has action item:** [[LIO-129]] API - Feat - Recurso "ficha de vendedor"
+- **Padre:** [[LIO-124 - Calificaciones|LIO-124]] Calificaciones
+- **has action item:** [[LIO-129 - API - Feat - Recurso ficha de vendedor|LIO-129]] API - Feat - Recurso "ficha de vendedor"
 
 ## Descripcion
 

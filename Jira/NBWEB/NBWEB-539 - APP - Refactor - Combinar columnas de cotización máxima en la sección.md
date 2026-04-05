@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-539"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-538]] CMS - Cotizacion
+- **Padre:** [[NBWEB-538 - CMS - Cotizacion|NBWEB-538]] CMS - Cotizacion
 
 ## Descripcion
 

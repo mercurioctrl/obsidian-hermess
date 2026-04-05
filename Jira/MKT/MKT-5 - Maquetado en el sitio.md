@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-5"
 
 ## Relaciones
 
-- **Padre:** [[MKT-2]] Nuevo carrousel de productos en la home para la serie de INTEL
-- **is blocked by:** [[MKT-4]] Tarea en static2 para almacenar el archivo estatico
+- **Padre:** [[MKT-2 - Nuevo carrousel de productos en la home para la serie de INTEL|MKT-2]] Nuevo carrousel de productos en la home para la serie de INTEL
+- **is blocked by:** [[MKT-4 - Tarea en static2 para almacenar el archivo estatico|MKT-4]] Tarea en static2 para almacenar el archivo estatico
 
 ## Descripcion
 

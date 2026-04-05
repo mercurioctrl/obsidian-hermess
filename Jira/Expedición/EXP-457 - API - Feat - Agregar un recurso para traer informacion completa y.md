@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-457"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **has action item:** [[SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
-- **has action item:** [[EXP-459]] APP - Refactor - Modificaremos la funcionalidad del modal para generar un envio
-- **has action item:** [[EXP-527]] API - Refactor - Extender informacion para el recurso de envios
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **has action item:** [[SNB-2463 - MS -Envios - Refactor - Implementar cambiar el parametro 'items' por|SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
+- **has action item:** [[EXP-459 - APP - Refactor - Modificaremos la funcionalidad del modal para generar un envio|EXP-459]] APP - Refactor - Modificaremos la funcionalidad del modal para generar un envio
+- **has action item:** [[EXP-527 - API - Refactor - Extender informacion para el recurso de envios|EXP-527]] API - Refactor - Extender informacion para el recurso de envios
 
 ## Descripcion
 

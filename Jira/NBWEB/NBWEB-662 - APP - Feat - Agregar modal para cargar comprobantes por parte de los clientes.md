@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-662"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[NBWEB-660]] API - Feat - Mis ordenes de compra -> Subir comprobante
-- **is blocked by:** [[NBWEB-661]] API - Feat - Agregar comprobante de pago
-- **relates to:** [[NBWEB-674]] API - Feat -Agregar obtener comprobante de pago
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[NBWEB-660 - API - Feat - Mis ordenes de compra - Subir comprobante|NBWEB-660]] API - Feat - Mis ordenes de compra -> Subir comprobante
+- **is blocked by:** [[NBWEB-661 - API - Feat - Agregar comprobante de pago|NBWEB-661]] API - Feat - Agregar comprobante de pago
+- **relates to:** [[NBWEB-674 - API - Feat -Agregar obtener comprobante de pago|NBWEB-674]] API - Feat -Agregar obtener comprobante de pago
 
 ## Descripcion
 

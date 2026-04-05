@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-260"
 
 ## Relaciones
 
-- **Padre:** [[COM-178]] Depositos
-- **has action item:** [[COM-261]] APP - MVP - Refactor - agregar selector de companyCode cuando se crea/edita un depósito
+- **Padre:** [[COM-178 - Depositos|COM-178]] Depositos
+- **has action item:** [[COM-261 - APP - MVP - Refactor - agregar selector de companyCode cuando se creaedita un|COM-261]] APP - MVP - Refactor - agregar selector de companyCode cuando se crea/edita un depósito
 
 ## Descripcion
 

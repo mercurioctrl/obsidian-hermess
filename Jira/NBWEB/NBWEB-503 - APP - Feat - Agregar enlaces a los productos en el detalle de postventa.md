@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-503"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-499]] Refactor - Postventa - Varias mejoras
+- **Padre:** [[NBWEB-499 - Refactor - Postventa - Varias mejoras|NBWEB-499]] Refactor - Postventa - Varias mejoras
 
 ## Descripcion
 

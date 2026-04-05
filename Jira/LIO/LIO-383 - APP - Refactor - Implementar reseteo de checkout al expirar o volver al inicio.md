@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-383"
 
 ## Relaciones
 
-- **Padre:** [[LIO-373]] Seguridad del checkout y protección de transacciones
-- **is blocked by:** [[LIO-381]] API - Feat - Resetear checkout
-- **is blocked by:** [[LIO-382]] API - Refactor - Expirar checkouts y devolver su estado de expiracion
+- **Padre:** [[LIO-373 - Seguridad del checkout y protección de transacciones|LIO-373]] Seguridad del checkout y protección de transacciones
+- **is blocked by:** [[LIO-381 - API - Feat - Resetear checkout|LIO-381]] API - Feat - Resetear checkout
+- **is blocked by:** [[LIO-382 - API - Refactor - Expirar checkouts y devolver su estado de expiracion|LIO-382]] API - Refactor - Expirar checkouts y devolver su estado de expiracion
 
 ## Descripcion
 

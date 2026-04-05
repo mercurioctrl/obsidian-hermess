@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-577"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-116]] API - CMS - Login
+- **Padre:** [[NBWEB-116 - API - CMS - Login|NBWEB-116]] API - CMS - Login
 
 ## Descripcion
 

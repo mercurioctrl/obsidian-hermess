@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-226"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
-- **relates to:** [[NBWEB-212]] API - Crear nuevo sub usuario
+- **Padre:** [[NBWEB-59 - APP -Maquetado y Desarrollo - Mi cuenta|NBWEB-59]] APP -Maquetado y Desarrollo - Mi cuenta
+- **relates to:** [[NBWEB-212 - API - Crear nuevo sub usuario|NBWEB-212]] API - Crear nuevo sub usuario
 
 ## Descripcion
 

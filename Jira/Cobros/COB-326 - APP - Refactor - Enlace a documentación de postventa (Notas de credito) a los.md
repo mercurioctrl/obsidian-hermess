@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-326"
 
 ## Relaciones
 
-- **Padre:** [[COB-323]] Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
-- **is blocked by:** [[COB-5]] API - Feat - Obtener cuenta corriente de un cliente
-- **is blocked by:** [[COB-325]] API - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
+- **Padre:** [[COB-323 - Refactor - Enlace a documentación de postventa (Notas de credito) a los|COB-323]] Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
+- **is blocked by:** [[COB-5 - API - Feat - Obtener cuenta corriente de un cliente|COB-5]] API - Feat - Obtener cuenta corriente de un cliente
+- **is blocked by:** [[COB-325 - API - Refactor - Enlace a documentación de postventa (Notas de credito) a los|COB-325]] API - Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-388"
 
 ## Relaciones
 
-- **Padre:** [[LIO-3]] Envíos
-- **action item from:** [[PED-1051]] API - Agregar "Envio a cargo de NBE" como medio de envio y que al liquidar se pueda combinar con "Efectivo Moto"
+- **Padre:** [[LIO-3 - Envíos|LIO-3]] Envíos
+- **action item from:** [[PED-1051 - API - Agregar Envio a cargo de NBE como medio de envio y que al liquidar se|PED-1051]] API - Agregar "Envio a cargo de NBE" como medio de envio y que al liquidar se pueda combinar con "Efectivo Moto"
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-208"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
-- **is blocked by:** [[NBWEB-205]] API - Enviar mensaje a un messageChannel
-- **is blocked by:** [[NBWEB-257]] API - Refactor -  Leer mensajes de unm messageChannel
-- **is blocked by:** [[NBWEB-204]] API - Crear un message channel con permalink
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
+- **is blocked by:** [[NBWEB-205 - API - Enviar mensaje a un messageChannel|NBWEB-205]] API - Enviar mensaje a un messageChannel
+- **is blocked by:** [[NBWEB-257 - API - Refactor - Leer mensajes de unm messageChannel|NBWEB-257]] API - Refactor -  Leer mensajes de unm messageChannel
+- **is blocked by:** [[NBWEB-204 - API - Crear un message channel con permalink|NBWEB-204]] API - Crear un message channel con permalink
 
 ## Descripcion
 

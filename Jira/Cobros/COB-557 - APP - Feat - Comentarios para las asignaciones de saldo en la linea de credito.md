@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-557"
 
 ## Relaciones
 
-- **Padre:** [[COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
-- **has action item:** [[SNB-3010]] OBSERVACIONES EN FICHA DE LINEA DE CREDITO
+- **Padre:** [[COB-374 - Feat - Editar estado crediticio de la cuenta del cliente|COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
+- **has action item:** [[SNB-3010 - OBSERVACIONES EN FICHA DE LINEA DE CREDITO|SNB-3010]] OBSERVACIONES EN FICHA DE LINEA DE CREDITO
 
 ## Descripcion
 

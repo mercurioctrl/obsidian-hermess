@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-36"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **blocks:** [[COM-18]] APP - Feat - Listado de proveedores
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **blocks:** [[COM-18 - APP - Feat - Listado de proveedores|COM-18]] APP - Feat - Listado de proveedores
 
 ## Descripcion
 

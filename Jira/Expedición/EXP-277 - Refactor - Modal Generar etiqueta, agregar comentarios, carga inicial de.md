@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-277"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **blocks:** [[SNB-807]] mejoras para oca y andreani 
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **blocks:** [[SNB-807 - mejoras para oca y andreani|SNB-807]] mejoras para oca y andreani 
 
 ## Descripcion
 

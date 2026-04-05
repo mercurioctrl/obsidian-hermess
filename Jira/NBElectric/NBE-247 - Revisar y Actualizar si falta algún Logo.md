@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-247"
 
 ## Relaciones
 
-- **Padre:** [[NBE-229]] Marzo: Nbelectric Institucional
-- **has action item:** [[NBE-246]] Presentaciones actualizar marcas
+- **Padre:** [[NBE-229 - Marzo Nbelectric Institucional|NBE-229]] Marzo: Nbelectric Institucional
+- **has action item:** [[NBE-246 - Presentaciones actualizar marcas|NBE-246]] Presentaciones actualizar marcas
 
 ## Descripcion
 

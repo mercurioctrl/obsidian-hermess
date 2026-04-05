@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-119"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-120]] ⚡Triada 18_Rievtech_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-121]] ✏️Triada 18_Rievtech_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-120 - ⚡Triada 18_Rievtech_Desarrollo de piezas Social Media|NBE-120]] ⚡Triada 18_Rievtech_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-121 - ✏️Triada 18_Rievtech_Armar Copy + realizar post en instagram, linkedin y|NBE-121]] ✏️Triada 18_Rievtech_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

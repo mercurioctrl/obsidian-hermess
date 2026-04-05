@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-32"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-2]] Herramientas de analisis
-- **Subtarea:** [[BULLY-33]] API - Research - Estructura y persistencia de ticker
+- **Padre:** [[BULLY-2 - Herramientas de analisis|BULLY-2]] Herramientas de analisis
+- **Subtarea:** [[BULLY-33 - API - Research - Estructura y persistencia de ticker|BULLY-33]] API - Research - Estructura y persistencia de ticker
 
 ## Descripcion
 

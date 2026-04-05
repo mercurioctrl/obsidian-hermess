@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-157"
 
 ## Relaciones
 
-- **Padre:** [[MKT-156]] New Bytes - Recaptar usuarios
+- **Padre:** [[MKT-156 - New Bytes - Recaptar usuarios|MKT-156]] New Bytes - Recaptar usuarios
 
 ## Descripcion
 

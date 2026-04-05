@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-201"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-99]] API - Precarga postventa
-- **relates to:** [[NBWEB-110]] APP - Maquetado y desarrollo Postventa
+- **Padre:** [[NBWEB-99 - API - Precarga postventa|NBWEB-99]] API - Precarga postventa
+- **relates to:** [[NBWEB-110 - APP - Maquetado y desarrollo Postventa|NBWEB-110]] APP - Maquetado y desarrollo Postventa
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-71"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **is blocked by:** [[INV-72]] API - Feat - Editar / Crear Categorias
-- **is blocked by:** [[INV-70]] API - Feat - Repositorio de categorias
-- **relates to:** [[INV-75]] APP - Pestaña de categorías - Sugerencia de mejora en el checkbox mostrar en la web
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **is blocked by:** [[INV-72 - API - Feat - Editar Crear Categorias|INV-72]] API - Feat - Editar / Crear Categorias
+- **is blocked by:** [[INV-70 - API - Feat - Repositorio de categorias|INV-70]] API - Feat - Repositorio de categorias
+- **relates to:** [[INV-75 - APP - Pestaña de categorías - Sugerencia de mejora en el checkbox mostrar en la|INV-75]] APP - Pestaña de categorías - Sugerencia de mejora en el checkbox mostrar en la web
 
 ## Descripcion
 

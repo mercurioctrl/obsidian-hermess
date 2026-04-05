@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-595"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **has action item:** [[COB-596]] APP - Refactor - Orden del estado de balance 
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **has action item:** [[COB-596 - APP - Refactor - Orden del estado de balance|COB-596]] APP - Refactor - Orden del estado de balance 
 
 ## Descripcion
 

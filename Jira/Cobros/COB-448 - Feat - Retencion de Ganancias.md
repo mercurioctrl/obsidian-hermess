@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-448"
 
 ## Relaciones
 
-- **Subtarea:** [[COB-449]] API - Feat - Lista Retencion de Ganancias 
+- **Subtarea:** [[COB-449 - API - Feat - Lista Retencion de Ganancias|COB-449]] API - Feat - Lista Retencion de Ganancias 
 
 ## Descripcion
 

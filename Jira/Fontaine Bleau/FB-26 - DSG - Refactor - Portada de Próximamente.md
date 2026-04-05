@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-26"
 
 ## Relaciones
 
-- **Padre:** [[FB-17]] Site- Etapa 0
-- **action item from:** [[FB-19]] DSG - Feature - Portada de próximamente
+- **Padre:** [[FB-17 - Site- Etapa 0|FB-17]] Site- Etapa 0
+- **action item from:** [[FB-19 - DSG - Feature - Portada de próximamente|FB-19]] DSG - Feature - Portada de próximamente
 
 ## Descripcion
 

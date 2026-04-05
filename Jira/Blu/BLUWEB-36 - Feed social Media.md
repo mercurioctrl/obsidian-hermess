@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-36"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-39]] DSG - Feature - Primer post, instagram, facebook, Linkedin 
-- **Subtarea:** [[BLUWEB-40]] DSG - Feature - Segundo Post Servicios instagram, facebook, Linkedin 
-- **Subtarea:** [[BLUWEB-68]] DSG - Feature -Mockup Feed Instagram
+- **Subtarea:** [[BLUWEB-39 - DSG - Feature - Primer post, instagram, facebook, Linkedin|BLUWEB-39]] DSG - Feature - Primer post, instagram, facebook, Linkedin 
+- **Subtarea:** [[BLUWEB-40 - DSG - Feature - Segundo Post Servicios instagram, facebook, Linkedin|BLUWEB-40]] DSG - Feature - Segundo Post Servicios instagram, facebook, Linkedin 
+- **Subtarea:** [[BLUWEB-68 - DSG - Feature -Mockup Feed Instagram|BLUWEB-68]] DSG - Feature -Mockup Feed Instagram
 
 ## Descripcion
 

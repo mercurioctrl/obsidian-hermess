@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-175"
 
 ## Relaciones
 
-- **Padre:** [[COB-18]] Compra / Venta Dolares
-- **Subtarea:** [[COB-180]] API - Research - Compra / venta dolares
-- **Subtarea:** [[COB-181]] API - Feat - Comprar y vender dolares
-- **blocks:** [[COB-174]] APP - Feat - Modal compra venta de dolares
+- **Padre:** [[COB-18 - Compra Venta Dolares|COB-18]] Compra / Venta Dolares
+- **Subtarea:** [[COB-180 - API - Research - Compra venta dolares|COB-180]] API - Research - Compra / venta dolares
+- **Subtarea:** [[COB-181 - API - Feat - Comprar y vender dolares|COB-181]] API - Feat - Comprar y vender dolares
+- **blocks:** [[COB-174 - APP - Feat - Modal compra venta de dolares|COB-174]] APP - Feat - Modal compra venta de dolares
 
 ## Descripcion
 

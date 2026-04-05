@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-492"
 
 ## Relaciones
 
-- **Padre:** [[COB-354]] Despachados, pendientes a cobrar
+- **Padre:** [[COB-354 - Despachados, pendientes a cobrar|COB-354]] Despachados, pendientes a cobrar
 
 ## Descripcion
 

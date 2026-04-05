@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-134"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **Subtarea:** [[COB-258]] API - Refactor - Incluir interes diario en el objeto cheques
-- **is blocked by:** [[COB-31]] API - Feat - Listar formas de pago
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **Subtarea:** [[COB-258 - API - Refactor - Incluir interes diario en el objeto cheques|COB-258]] API - Refactor - Incluir interes diario en el objeto cheques
+- **is blocked by:** [[COB-31 - API - Feat - Listar formas de pago|COB-31]] API - Feat - Listar formas de pago
 
 ## Descripcion
 

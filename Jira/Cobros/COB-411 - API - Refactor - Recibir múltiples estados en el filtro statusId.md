@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-411"
 
 ## Relaciones
 
-- **Padre:** [[COB-183]] Feat - Listar cheques
-- **blocks:** [[COB-412]] APP - Refactor - Filtro multiples de estado
+- **Padre:** [[COB-183 - Feat - Listar cheques|COB-183]] Feat - Listar cheques
+- **blocks:** [[COB-412 - APP - Refactor - Filtro multiples de estado|COB-412]] APP - Refactor - Filtro multiples de estado
 
 ## Descripcion
 

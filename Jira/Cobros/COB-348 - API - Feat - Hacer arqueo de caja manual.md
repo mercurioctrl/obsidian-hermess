@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-348"
 
 ## Relaciones
 
-- **Padre:** [[COB-347]] Poder ver saldo inicial y final de caja en cada día
-- **blocks:** [[COB-350]] APP - Feat - Modal para hacer arqueo de caja manual
+- **Padre:** [[COB-347 - Poder ver saldo inicial y final de caja en cada día|COB-347]] Poder ver saldo inicial y final de caja en cada día
+- **blocks:** [[COB-350 - APP - Feat - Modal para hacer arqueo de caja manual|COB-350]] APP - Feat - Modal para hacer arqueo de caja manual
 
 ## Descripcion
 

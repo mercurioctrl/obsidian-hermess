@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-582"
 
 ## Relaciones
 
-- **Padre:** [[LIO-2]] Variedad y Calidad de Productos/Catalogos
-- **is cloned by:** [[LIO-589]] API - Review - SYNCP POST / PATCH Para rellenar tabla de productos - Error SQL Server 
+- **Padre:** [[LIO-2 - Variedad y Calidad de ProductosCatalogos|LIO-2]] Variedad y Calidad de Productos/Catalogos
+- **is cloned by:** [[LIO-589 - API - Review - SYNCP POST PATCH Para rellenar tabla de productos - Error SQL|LIO-589]] API - Review - SYNCP POST / PATCH Para rellenar tabla de productos - Error SQL Server 
 
 ## Descripcion
 

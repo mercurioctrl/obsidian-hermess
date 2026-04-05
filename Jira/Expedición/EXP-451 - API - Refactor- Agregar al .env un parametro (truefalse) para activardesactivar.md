@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-451"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **action item from:** [[EXP-421]] API - Refactor - Ajustar recurso de conteo para tambien contabilizar pesos y medidas
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **action item from:** [[EXP-421 - API - Refactor - Ajustar recurso de conteo para tambien contabilizar pesos y|EXP-421]] API - Refactor - Ajustar recurso de conteo para tambien contabilizar pesos y medidas
 
 ## Descripcion
 

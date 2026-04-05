@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-229"
 
 ## Relaciones
 
-- **relates to:** [[DNYL-222]] NB_AMD R5 4500 OEM WPP
+- **relates to:** [[DNYL-222 - NB_AMD R5 4500 OEM WPP|DNYL-222]] NB_AMD R5 4500 OEM WPP
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-382"
 
 ## Relaciones
 
-- **blocks:** [[EXP-381]] API - Refactor - Al hacer la entrega de mercadería, se debe marcar entregado para libre opción
+- **blocks:** [[EXP-381 - API - Refactor - Al hacer la entrega de mercadería, se debe marcar entregado|EXP-381]] API - Refactor - Al hacer la entrega de mercadería, se debe marcar entregado para libre opción
 
 ## Descripcion
 

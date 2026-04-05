@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-214"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-213]] Cumples 2026
+- **Padre:** [[BLUWEB-213 - Cumples 2026|BLUWEB-213]] Cumples 2026
 
 ## Descripcion
 

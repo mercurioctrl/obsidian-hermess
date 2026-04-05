@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-11"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-9]] LO_ 10% OFF BENQ Y ASUS
+- **Padre:** [[MNB2-9 - LO_ 10% OFF BENQ Y ASUS|MNB2-9]] LO_ 10% OFF BENQ Y ASUS
 
 ## Descripcion
 

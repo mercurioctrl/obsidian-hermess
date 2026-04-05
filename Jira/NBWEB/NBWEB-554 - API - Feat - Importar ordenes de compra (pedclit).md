@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-554"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-544]] Refactor - Precios especiales por cliente y para marketplace
-- **blocks:** [[SNB-783]] Integracion - Producteca
+- **Padre:** [[NBWEB-544 - Refactor - Precios especiales por cliente y para marketplace|NBWEB-544]] Refactor - Precios especiales por cliente y para marketplace
+- **blocks:** [[SNB-783 - Integracion - Producteca|SNB-783]] Integracion - Producteca
 
 ## Descripcion
 

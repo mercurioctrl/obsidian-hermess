@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-574"
 
 ## Relaciones
 
-- **Padre:** [[LIO-98]] Inventario resellers
+- **Padre:** [[LIO-98 - Inventario resellers|LIO-98]] Inventario resellers
 
 ## Descripcion
 

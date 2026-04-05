@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-162"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-143]] Adata Enero: Social Media 4/4_PSU PYLON
+- **Padre:** [[ADATA-143 - Adata Enero Social Media 44_PSU PYLON|ADATA-143]] Adata Enero: Social Media 4/4_PSU PYLON
 
 ## Descripcion
 

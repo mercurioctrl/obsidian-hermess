@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-84"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-85]] ✏️Triada 5_Chint_Armar Copy + realizar post en instagram, linkedin y Facebook
-- **Subtarea:** [[NBE-86]] ⚡Triada 5_Chint_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-85 - ✏️Triada 5_Chint_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-85]] ✏️Triada 5_Chint_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-86 - ⚡Triada 5_Chint_Desarrollo de piezas Social Media|NBE-86]] ⚡Triada 5_Chint_Desarrollo de piezas Social Media
 
 ## Descripcion
 

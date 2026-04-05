@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-24"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **Subtarea:** [[INV-25]] APP - Crear el repositorio del proyecto
-- **Subtarea:** [[INV-26]] APP - Feat - Login
-- **Subtarea:** [[INV-195]] APP - INV- agregar el selector de empresa general (en la parte superior derecha como PED o EXP)
-- **Subtarea:** [[INV-196]] API - Refactor - Agregar companyCode al objeto user como en las otras aplicaciones
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **Subtarea:** [[INV-25 - APP - Crear el repositorio del proyecto|INV-25]] APP - Crear el repositorio del proyecto
+- **Subtarea:** [[INV-26 - APP - Feat - Login|INV-26]] APP - Feat - Login
+- **Subtarea:** [[INV-195 - APP - INV- agregar el selector de empresa general (en la parte superior derecha|INV-195]] APP - INV- agregar el selector de empresa general (en la parte superior derecha como PED o EXP)
+- **Subtarea:** [[INV-196 - API - Refactor - Agregar companyCode al objeto user como en las otras|INV-196]] API - Refactor - Agregar companyCode al objeto user como en las otras aplicaciones
 
 ## Descripcion
 

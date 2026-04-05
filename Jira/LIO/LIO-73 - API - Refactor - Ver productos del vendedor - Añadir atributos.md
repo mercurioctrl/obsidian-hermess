@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-73"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **relates to:** [[LIO-62]] API - Review - Hacer que funcione como antes el perfil para ver los productos del vendedor
-- **is blocked by:** [[LIO-75]] API - Refactor - Ver productos del vendedor - Error al buscar atributo 
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **relates to:** [[LIO-62 - API - Review - Hacer que funcione como antes el perfil para ver los productos|LIO-62]] API - Review - Hacer que funcione como antes el perfil para ver los productos del vendedor
+- **is blocked by:** [[LIO-75 - API - Refactor - Ver productos del vendedor - Error al buscar atributo|LIO-75]] API - Refactor - Ver productos del vendedor - Error al buscar atributo 
 
 ## Descripcion
 

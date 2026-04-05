@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-66"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-52]] Adata Diciembre: 2/4 Social Media STARKER AIR TECHRAPTOR 
+- **Padre:** [[ADATA-52 - Adata Diciembre 24 Social Media STARKER AIR TECHRAPTOR|ADATA-52]] Adata Diciembre: 2/4 Social Media STARKER AIR TECHRAPTOR 
 
 ## Descripcion
 

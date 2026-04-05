@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-588"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-584]] API - Feat - Promos especiales
+- **Padre:** [[NBWEB-584 - API - Feat - Promos especiales|NBWEB-584]] API - Feat - Promos especiales
 
 ## Descripcion
 

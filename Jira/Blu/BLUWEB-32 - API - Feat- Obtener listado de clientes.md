@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-32"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-11]] Sistema de clientes del BackOffice
+- **Padre:** [[BLUWEB-11 - Sistema de clientes del BackOffice|BLUWEB-11]] Sistema de clientes del BackOffice
 
 ## Descripcion
 

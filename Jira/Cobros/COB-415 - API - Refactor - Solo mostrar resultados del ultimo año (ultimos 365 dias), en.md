@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-415"
 
 ## Relaciones
 
-- **Padre:** [[COB-48]] Comprobantes fiscales
+- **Padre:** [[COB-48 - Comprobantes fiscales|COB-48]] Comprobantes fiscales
 
 ## Descripcion
 

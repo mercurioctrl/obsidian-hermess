@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-22"
 
 ## Relaciones
 
-- **Subtarea:** [[LAW-25]] Descargar sitio Web https://raidmax.com/
+- **Subtarea:** [[LAW-25 - Descargar sitio Web httpsraidmax.com|LAW-25]] Descargar sitio Web https://raidmax.com/
 
 ## Descripcion
 

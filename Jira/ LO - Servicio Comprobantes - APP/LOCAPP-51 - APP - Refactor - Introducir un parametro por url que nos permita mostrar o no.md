@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-51"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-21]] Mostrar PDF descargable
+- **Padre:** [[LOCAPP-21 - Mostrar PDF descargable|LOCAPP-21]] Mostrar PDF descargable
 
 ## Descripcion
 

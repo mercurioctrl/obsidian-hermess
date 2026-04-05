@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-143"
 
 ## Relaciones
 
-- **Subtarea:** [[COB-144]] API - Feat - CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna forma (tachados por ejemplo)
-- **Subtarea:** [[COB-145]] APP - Feat - CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna forma (tachados por ejemplo)
-- **causes:** [[SNB-337]] CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna forma (tachados por ejemplo)
+- **Subtarea:** [[COB-144 - API - Feat - CAJA - En los movimientos de caja se deben ver los anulados|COB-144]] API - Feat - CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna forma (tachados por ejemplo)
+- **Subtarea:** [[COB-145 - APP - Feat - CAJA - En los movimientos de caja se deben ver los anulados|COB-145]] APP - Feat - CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna forma (tachados por ejemplo)
+- **causes:** [[SNB-337 - CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna|SNB-337]] CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna forma (tachados por ejemplo)
 
 ## Descripcion
 

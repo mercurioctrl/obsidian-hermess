@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-115"
 
 ## Relaciones
 
-- **Padre:** [[MKT-114]] LO_BANNER MAMAS TECNOLOGICAS
+- **Padre:** [[MKT-114 - LO_BANNER MAMAS TECNOLOGICAS|MKT-114]] LO_BANNER MAMAS TECNOLOGICAS
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-430"
 
 ## Relaciones
 
-- **Padre:** [[COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
+- **Padre:** [[COB-374 - Feat - Editar estado crediticio de la cuenta del cliente|COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-439"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **blocks:** [[SNB-822]] Lo que me parece q no anda es la fecha q le coloco q caduca una linea de credito
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **blocks:** [[SNB-822 - Lo que me parece q no anda es la fecha q le coloco q caduca una linea de credito|SNB-822]] Lo que me parece q no anda es la fecha q le coloco q caduca una linea de credito
 
 ## Descripcion
 

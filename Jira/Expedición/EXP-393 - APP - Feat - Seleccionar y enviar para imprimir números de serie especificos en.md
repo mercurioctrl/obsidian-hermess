@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-393"
 
 ## Relaciones
 
-- **Padre:** [[EXP-391]] Imprimir numeros de serie
-- **is blocked by:** [[EXP-394]] APP - Seleccionar y enviar para imprimir números de serie específicos en un payload - Actualizar payload
+- **Padre:** [[EXP-391 - Imprimir numeros de serie|EXP-391]] Imprimir numeros de serie
+- **is blocked by:** [[EXP-394 - APP - Seleccionar y enviar para imprimir números de serie específicos en un|EXP-394]] APP - Seleccionar y enviar para imprimir números de serie específicos en un payload - Actualizar payload
 
 ## Descripcion
 

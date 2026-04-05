@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-252"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **relates to:** [[COM-190]] API -MVP - Refactor - Elegir si altera o no el costo promedio del item para cada item
-- **relates to:** [[COM-39]] API - Feat - Ver una orden de compra determinada
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **relates to:** [[COM-190 - API -MVP - Refactor - Elegir si altera o no el costo promedio del item para|COM-190]] API -MVP - Refactor - Elegir si altera o no el costo promedio del item para cada item
+- **relates to:** [[COM-39 - API - Feat - Ver una orden de compra determinada|COM-39]] API - Feat - Ver una orden de compra determinada
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-397"
 
 ## Relaciones
 
-- **Padre:** [[COB-389]] Refactor - Cobros multiples
+- **Padre:** [[COB-389 - Refactor - Cobros multiples|COB-389]] Refactor - Cobros multiples
 
 ## Descripcion
 

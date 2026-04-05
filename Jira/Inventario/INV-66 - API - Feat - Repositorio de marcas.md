@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-66"
 
 ## Relaciones
 
-- **Padre:** [[INV-65]] Marcas
-- **blocks:** [[INV-67]] APP - Feat - Pestaña de marcas
+- **Padre:** [[INV-65 - Marcas|INV-65]] Marcas
+- **blocks:** [[INV-67 - APP - Feat - Pestaña de marcas|INV-67]] APP - Feat - Pestaña de marcas
 
 ## Descripcion
 

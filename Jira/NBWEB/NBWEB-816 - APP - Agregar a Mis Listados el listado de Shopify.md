@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-816"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **is blocked by:** [[NBWEB-815]] API - Feat - Generar listado CSV Shopify
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **is blocked by:** [[NBWEB-815 - API - Feat - Generar listado CSV Shopify|NBWEB-815]] API - Feat - Generar listado CSV Shopify
 
 ## Descripcion
 

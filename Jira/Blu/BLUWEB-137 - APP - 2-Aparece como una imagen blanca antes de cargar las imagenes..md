@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-137"
 
 ## Relaciones
 
-- **action item from:** [[BLUWEB-132]] Qa - Evaluación pre-lanzamiento como visitante del sitio web
+- **action item from:** [[BLUWEB-132 - Qa - Evaluación pre-lanzamiento como visitante del sitio web|BLUWEB-132]] Qa - Evaluación pre-lanzamiento como visitante del sitio web
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-47"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-31]] Adata Noviembre: Copys 2/4 Fuente
+- **Padre:** [[ADATA-31 - Adata Noviembre Copys 24 Fuente|ADATA-31]] Adata Noviembre: Copys 2/4 Fuente
 
 ## Descripcion
 

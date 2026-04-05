@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-361"
 
 ## Relaciones
 
-- **Padre:** [[LIO-359]] Cancelaciones
-- **action item from:** [[LIO-360]] API - Feat - Cancelación de orden por comprador o vendedor autenticado
+- **Padre:** [[LIO-359 - Cancelaciones|LIO-359]] Cancelaciones
+- **action item from:** [[LIO-360 - API - Feat - Cancelación de orden por comprador o vendedor autenticado|LIO-360]] API - Feat - Cancelación de orden por comprador o vendedor autenticado
 
 ## Descripcion
 

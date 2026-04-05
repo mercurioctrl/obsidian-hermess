@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-247"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **action item from:** [[COM-246]] APP - MVP - Mandar companyCode al crear un proveedor
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **action item from:** [[COM-246 - APP - MVP - Mandar companyCode al crear un proveedor|COM-246]] APP - MVP - Mandar companyCode al crear un proveedor
 
 ## Descripcion
 

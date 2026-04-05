@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-127"
 
 ## Relaciones
 
-- **Padre:** [[INV-125]] Importación de catálogos
-- **blocks:** [[INV-128]] APP - Feat - Formulario de carga masiva de productos a través de un archivo 
-- **is blocked by:** [[INV-137]] API - Importar catalogo a partir de un archivo xlsx - Valores no coincidentes
+- **Padre:** [[INV-125 - Importación de catálogos|INV-125]] Importación de catálogos
+- **blocks:** [[INV-128 - APP - Feat - Formulario de carga masiva de productos a través de un archivo|INV-128]] APP - Feat - Formulario de carga masiva de productos a través de un archivo 
+- **is blocked by:** [[INV-137 - API - Importar catalogo a partir de un archivo xlsx - Valores no coincidentes|INV-137]] API - Importar catalogo a partir de un archivo xlsx - Valores no coincidentes
 
 ## Descripcion
 

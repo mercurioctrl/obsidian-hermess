@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-537"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **is blocked by:** [[COB-536]] API - Feat - Guardar el usuario creador al generar una salida pendiente
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **is blocked by:** [[COB-536 - API - Feat - Guardar el usuario creador al generar una salida pendiente|COB-536]] API - Feat - Guardar el usuario creador al generar una salida pendiente
 
 ## Descripcion
 

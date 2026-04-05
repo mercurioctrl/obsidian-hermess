@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-59"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-120]] Adata Diciembre: 1/2 Armar portada Adata Paradise
-- **Subtarea:** [[ADATA-121]] 7.Adata Diciembre: Armar copy Adata Paradise
-- **Subtarea:** [[ADATA-122]]  5. Adata Diciembre:  Reels Agregar algún video o fotos de los que paso Fabio.
+- **Subtarea:** [[ADATA-120 - Adata Diciembre 12 Armar portada Adata Paradise|ADATA-120]] Adata Diciembre: 1/2 Armar portada Adata Paradise
+- **Subtarea:** [[ADATA-121 - 7.Adata Diciembre Armar copy Adata Paradise|ADATA-121]] 7.Adata Diciembre: Armar copy Adata Paradise
+- **Subtarea:** [[ADATA-122 - 5. Adata Diciembre Reels Agregar algún video o fotos de los que paso Fabio.|ADATA-122]]  5. Adata Diciembre:  Reels Agregar algún video o fotos de los que paso Fabio.
 
 ## Descripcion
 

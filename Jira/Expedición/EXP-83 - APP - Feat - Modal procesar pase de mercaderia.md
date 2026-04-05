@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-83"
 
 ## Relaciones
 
-- **Padre:** [[EXP-18]] Feat - Listar pases
-- **is blocked by:** [[EXP-82]] API - Feat - Procesar pase 
+- **Padre:** [[EXP-18 - Feat - Listar pases|EXP-18]] Feat - Listar pases
+- **is blocked by:** [[EXP-82 - API - Feat - Procesar pase|EXP-82]] API - Feat - Procesar pase 
 
 ## Descripcion
 

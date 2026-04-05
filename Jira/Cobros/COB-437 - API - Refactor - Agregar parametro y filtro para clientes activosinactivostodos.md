@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-437"
 
 ## Relaciones
 
-- **Padre:** [[COB-53]] API - Feat - Listar clientes
-- **blocks:** [[SNB-812]] CLIENTES REPETIDOS - VER EN SISTEMA 
-- **blocks:** [[COB-438]] APP - Refactor - Agregar etiqueta indicativa y filtro para clientes activos/inactivos/todos
+- **Padre:** [[COB-53 - API - Feat - Listar clientes|COB-53]] API - Feat - Listar clientes
+- **blocks:** [[SNB-812 - CLIENTES REPETIDOS - VER EN SISTEMA|SNB-812]] CLIENTES REPETIDOS - VER EN SISTEMA 
+- **blocks:** [[COB-438 - APP - Refactor - Agregar etiqueta indicativa y filtro para clientes|COB-438]] APP - Refactor - Agregar etiqueta indicativa y filtro para clientes activos/inactivos/todos
 
 ## Descripcion
 

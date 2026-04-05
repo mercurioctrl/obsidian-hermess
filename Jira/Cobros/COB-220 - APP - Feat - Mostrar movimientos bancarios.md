@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-220"
 
 ## Relaciones
 
-- **Padre:** [[COB-218]] Feat - Movimientos bancarios
-- **is blocked by:** [[COB-219]] API - Feat - Listar movimientos bancarios
+- **Padre:** [[COB-218 - Feat - Movimientos bancarios|COB-218]] Feat - Movimientos bancarios
+- **is blocked by:** [[COB-219 - API - Feat - Listar movimientos bancarios|COB-219]] API - Feat - Listar movimientos bancarios
 
 ## Descripcion
 

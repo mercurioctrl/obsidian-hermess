@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-13"
 
 ## Relaciones
 
-- **Padre:** [[COB-16]] Cuentas bancarias
+- **Padre:** [[COB-16 - Cuentas bancarias|COB-16]] Cuentas bancarias
 
 ## Descripcion
 

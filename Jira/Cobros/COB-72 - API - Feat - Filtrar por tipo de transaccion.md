@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-72"
 
 ## Relaciones
 
-- **Padre:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **is blocked by:** [[COB-32]] API - Feat - Listar tipos de transacciones
-- **blocks:** [[COB-73]] APP - Feat - Agregar filtro por tipo de transacción 
+- **Padre:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **is blocked by:** [[COB-32 - API - Feat - Listar tipos de transacciones|COB-32]] API - Feat - Listar tipos de transacciones
+- **blocks:** [[COB-73 - APP - Feat - Agregar filtro por tipo de transacción|COB-73]] APP - Feat - Agregar filtro por tipo de transacción 
 
 ## Descripcion
 

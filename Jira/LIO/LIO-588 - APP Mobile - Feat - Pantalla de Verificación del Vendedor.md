@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-588"
 
 ## Relaciones
 
-- **Padre:** [[LIO-502]] Configuración de mi tienda
-- **action item from:** [[LIO-530]] APP - Feat - Pantalla de verificacion del Vendedor
+- **Padre:** [[LIO-502 - Configuración de mi tienda|LIO-502]] Configuración de mi tienda
+- **action item from:** [[LIO-530 - APP - Feat - Pantalla de verificacion del Vendedor|LIO-530]] APP - Feat - Pantalla de verificacion del Vendedor
 
 ## Descripcion
 

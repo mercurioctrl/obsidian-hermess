@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-560"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-559]] Palabra clave visible por el usuario para el apartaado Mi cuenta > Postventa
+- **Padre:** [[NBWEB-559 - Palabra clave visible por el usuario para el apartaado Mi cuenta Postventa|NBWEB-559]] Palabra clave visible por el usuario para el apartaado Mi cuenta > Postventa
 
 ## Descripcion
 

@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-526"
 
 ## Relaciones
 
-- **Padre:** [[LIO-5]] Seguridad y Confianza
-- **Subtarea:** [[LIO-527]] API - Feat - Guardar informacion de verificación de vendedores 
-- **Subtarea:** [[LIO-528]] API - Feat - Comprobar verificación de vendedor
-- **Subtarea:** [[LIO-529]] API - Refactor - Agregar parámetros de verificación al objeto user
-- **Subtarea:** [[LIO-530]] APP - Feat - Pantalla de verificacion del Vendedor
-- **Subtarea:** [[LIO-578]] API/APP - Feat - Validar numero de telefono
-- **Subtarea:** [[LIO-587]] API/APP - Review - Validar numero de telefono - Proceso de verificar vendedor indeterminado y propuesta de mejora
+- **Padre:** [[LIO-5 - Seguridad y Confianza|LIO-5]] Seguridad y Confianza
+- **Subtarea:** [[LIO-527 - API - Feat - Guardar informacion de verificación de vendedores|LIO-527]] API - Feat - Guardar informacion de verificación de vendedores 
+- **Subtarea:** [[LIO-528 - API - Feat - Comprobar verificación de vendedor|LIO-528]] API - Feat - Comprobar verificación de vendedor
+- **Subtarea:** [[LIO-529 - API - Refactor - Agregar parámetros de verificación al objeto user|LIO-529]] API - Refactor - Agregar parámetros de verificación al objeto user
+- **Subtarea:** [[LIO-530 - APP - Feat - Pantalla de verificacion del Vendedor|LIO-530]] APP - Feat - Pantalla de verificacion del Vendedor
+- **Subtarea:** [[LIO-578 - APIAPP - Feat - Validar numero de telefono|LIO-578]] API/APP - Feat - Validar numero de telefono
+- **Subtarea:** [[LIO-587 - APIAPP - Review - Validar numero de telefono - Proceso de verificar vendedor|LIO-587]] API/APP - Review - Validar numero de telefono - Proceso de verificar vendedor indeterminado y propuesta de mejora
 
 ## Descripcion
 

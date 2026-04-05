@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-374"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-356]] XPG - Landing Fidelización (Puntos + Aceleradores + Ranking + Carga Compras)
-- **action item from:** [[ADATA-373]] Adata Rewards
+- **Padre:** [[ADATA-356 - XPG - Landing Fidelización (Puntos + Aceleradores + Ranking + Carga Compras)|ADATA-356]] XPG - Landing Fidelización (Puntos + Aceleradores + Ranking + Carga Compras)
+- **action item from:** [[ADATA-373 - Adata Rewards|ADATA-373]] Adata Rewards
 
 ## Descripcion
 

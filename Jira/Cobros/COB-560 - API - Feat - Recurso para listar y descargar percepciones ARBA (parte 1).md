@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-560"
 
 ## Relaciones
 
-- **Padre:** [[COB-559]] Listar y descargar percepciones
-- **has action item:** [[COB-567]] APP - Feat - Agregar seccion percepciones para visualizar y filtrar y accionables de descarga
-- **relates to:** [[COB-568]] API - Review - Recurso para descargar archivo ARBA, devolucion estudio contable
+- **Padre:** [[COB-559 - Listar y descargar percepciones|COB-559]] Listar y descargar percepciones
+- **has action item:** [[COB-567 - APP - Feat - Agregar seccion percepciones para visualizar y filtrar y|COB-567]] APP - Feat - Agregar seccion percepciones para visualizar y filtrar y accionables de descarga
+- **relates to:** [[COB-568 - API - Review - Recurso para descargar archivo ARBA, devolucion estudio contable|COB-568]] API - Review - Recurso para descargar archivo ARBA, devolucion estudio contable
 
 ## Descripcion
 

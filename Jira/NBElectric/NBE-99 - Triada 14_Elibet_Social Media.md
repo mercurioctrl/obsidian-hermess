@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-99"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-106]]  ⚡Triada 15_Elibet_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-107]] ✏️Triada 10_Elibet_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-106 - ⚡Triada 15_Elibet_Desarrollo de piezas Social Media|NBE-106]]  ⚡Triada 15_Elibet_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-107 - ✏️Triada 10_Elibet_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-107]] ✏️Triada 10_Elibet_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

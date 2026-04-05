@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-963"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-524]] CMS - Parametros varios
-- **action item from:** [[NBWEB-962]] API - Feat - Habilitar o deshabilitar la cotización del dólar mediante el parámetro quoteSiteShow para el sitio web
+- **Padre:** [[NBWEB-524 - CMS - Parametros varios|NBWEB-524]] CMS - Parametros varios
+- **action item from:** [[NBWEB-962 - API - Feat - Habilitar o deshabilitar la cotización del dólar mediante el|NBWEB-962]] API - Feat - Habilitar o deshabilitar la cotización del dólar mediante el parámetro quoteSiteShow para el sitio web
 
 ## Descripcion
 

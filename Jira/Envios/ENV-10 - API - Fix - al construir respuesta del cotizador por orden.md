@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ENV-10"
 
 ## Relaciones
 
-- **action item from:** [[SNB-2677]] NO COTIZA CAMIONETA
+- **action item from:** [[SNB-2677 - NO COTIZA CAMIONETA|SNB-2677]] NO COTIZA CAMIONETA
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-129"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
-- **is blocked by:** [[COB-128]] API - Feat - Mostrar recibo
-- **is blocked by:** [[COB-166]] MS - Feat - Ms comprobantes, recurso de recibo de dinero
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-128 - API - Feat - Mostrar recibo|COB-128]] API - Feat - Mostrar recibo
+- **is blocked by:** [[COB-166 - MS - Feat - Ms comprobantes, recurso de recibo de dinero|COB-166]] MS - Feat - Ms comprobantes, recurso de recibo de dinero
 
 ## Descripcion
 

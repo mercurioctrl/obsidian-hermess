@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-287"
 
 ## Relaciones
 
-- **Padre:** [[EXP-10]] Feat - Listar pedidos (despachos) proveedores
-- **blocks:** [[EXP-288]] API - Refactor - Se deben modificar los filtros de estadO para ser mutliples
+- **Padre:** [[EXP-10 - Feat - Listar pedidos (despachos) proveedores|EXP-10]] Feat - Listar pedidos (despachos) proveedores
+- **blocks:** [[EXP-288 - API - Refactor - Se deben modificar los filtros de estadO para ser mutliples|EXP-288]] API - Refactor - Se deben modificar los filtros de estadO para ser mutliples
 
 ## Descripcion
 

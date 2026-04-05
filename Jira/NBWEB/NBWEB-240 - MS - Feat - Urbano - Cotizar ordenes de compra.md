@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-240"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **relates to:** [[NBWEB-239]] MS - Feat - Urbano - Cotizador de carritos de compra
-- **blocks:** [[NBWEB-488]] MS - Envios - Refactor Cotizador del carrito de compra
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **relates to:** [[NBWEB-239 - MS - Feat - Urbano - Cotizador de carritos de compra|NBWEB-239]] MS - Feat - Urbano - Cotizador de carritos de compra
+- **blocks:** [[NBWEB-488 - MS - Envios - Refactor Cotizador del carrito de compra|NBWEB-488]] MS - Envios - Refactor Cotizador del carrito de compra
 
 ## Descripcion
 

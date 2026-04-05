@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-189"
 
 ## Relaciones
 
-- **relates to:** [[COM-175]] API - Feat - Crear una factura de compra
+- **relates to:** [[COM-175 - API - Feat - Crear una factura de compra|COM-175]] API - Feat - Crear una factura de compra
 
 ## Descripcion
 

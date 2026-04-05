@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-239"
 
 ## Relaciones
 
-- **Padre:** [[LIO-105]] Home
-- **action item from:** [[LIO-234]] API - Refactor - Usar backgrounds personalizados para los sectores personalizados de productos
-- **action item from:** [[LIO-235]] API CMS - Refactor - Permitir que el recurso que lee los banner por zona, tambien los traiga todos juntos cuando no se le pasa el parámetro de zona
+- **Padre:** [[LIO-105 - Home|LIO-105]] Home
+- **action item from:** [[LIO-234 - API - Refactor - Usar backgrounds personalizados para los sectores|LIO-234]] API - Refactor - Usar backgrounds personalizados para los sectores personalizados de productos
+- **action item from:** [[LIO-235 - API CMS - Refactor - Permitir que el recurso que lee los banner por zona,|LIO-235]] API CMS - Refactor - Permitir que el recurso que lee los banner por zona, tambien los traiga todos juntos cuando no se le pasa el parámetro de zona
 
 ## Descripcion
 

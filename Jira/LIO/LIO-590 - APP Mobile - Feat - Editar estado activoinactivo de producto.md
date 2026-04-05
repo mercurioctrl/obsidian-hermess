@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-590"
 
 ## Relaciones
 
-- **Padre:** [[LIO-501]] Catálogo / Inventario de productos
-- **action item from:** [[LIO-571]] APP - Feat - Editar estado activo/inactivo de producto
+- **Padre:** [[LIO-501 - Catálogo Inventario de productos|LIO-501]] Catálogo / Inventario de productos
+- **action item from:** [[LIO-571 - APP - Feat - Editar estado activoinactivo de producto|LIO-571]] APP - Feat - Editar estado activo/inactivo de producto
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-372"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-373]] APP - Refactor - Cambiar endpoint en listado de seguimientos
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-373 - APP - Refactor - Cambiar endpoint en listado de seguimientos|EXP-373]] APP - Refactor - Cambiar endpoint en listado de seguimientos
 
 ## Descripcion
 

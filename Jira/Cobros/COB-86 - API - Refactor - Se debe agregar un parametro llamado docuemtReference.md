@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-86"
 
 ## Relaciones
 
-- **Padre:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **blocks:** [[COB-85]] APP - Refactor - Agregar una columna para agrear un documento
+- **Padre:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **blocks:** [[COB-85 - APP - Refactor - Agregar una columna para agrear un documento|COB-85]] APP - Refactor - Agregar una columna para agrear un documento
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-204"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-200]] Abr 18: Motherbord Aorus rojo dom 19
+- **Padre:** [[LOMKT-200 - Abr 18 Motherbord Aorus rojo dom 19|LOMKT-200]] Abr 18: Motherbord Aorus rojo dom 19
 
 ## Descripcion
 

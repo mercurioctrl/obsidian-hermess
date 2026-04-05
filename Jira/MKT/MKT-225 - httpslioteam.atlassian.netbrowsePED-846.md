@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-225"
 
 ## Relaciones
 
-- **Padre:** [[MKT-222]] NB_ INCENTIVO TRUST
+- **Padre:** [[MKT-222 - NB_ INCENTIVO TRUST|MKT-222]] NB_ INCENTIVO TRUST
 
 ## Descripcion
 

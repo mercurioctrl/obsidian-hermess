@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-920"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
 
 ## Descripcion
 

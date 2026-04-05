@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-6"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-12]] Diseñar header
-- **Subtarea:** [[MKT-13]] Maquetar e implementar
-- **Subtarea:** [[MKT-14]] Subir al sitio de NB el banner
-- **Subtarea:** [[MKT-15]] Diseño banner mobile
+- **Subtarea:** [[MKT-12 - Diseñar header|MKT-12]] Diseñar header
+- **Subtarea:** [[MKT-13 - Maquetar e implementar|MKT-13]] Maquetar e implementar
+- **Subtarea:** [[MKT-14 - Subir al sitio de NB el banner|MKT-14]] Subir al sitio de NB el banner
+- **Subtarea:** [[MKT-15 - Diseño banner mobile|MKT-15]] Diseño banner mobile
 
 ## Descripcion
 

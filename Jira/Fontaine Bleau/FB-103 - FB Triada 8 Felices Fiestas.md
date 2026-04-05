@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-103"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-104]] FB: Triada 8  Copys Felices Fiestas
-- **Subtarea:** [[FB-105]] FB: Triada 8 Programar y postear Felices Fiestas
+- **Subtarea:** [[FB-104 - FB Triada 8 Copys Felices Fiestas|FB-104]] FB: Triada 8  Copys Felices Fiestas
+- **Subtarea:** [[FB-105 - FB Triada 8 Programar y postear Felices Fiestas|FB-105]] FB: Triada 8 Programar y postear Felices Fiestas
 
 ## Descripcion
 

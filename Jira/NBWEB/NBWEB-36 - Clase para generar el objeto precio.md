@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-36"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-4]] API - Catalogos de productos
+- **Padre:** [[NBWEB-4 - API - Catalogos de productos|NBWEB-4]] API - Catalogos de productos
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-495"
 
 ## Relaciones
 
-- **Padre:** [[LIO-162]] Mejoras generales para envios
+- **Padre:** [[LIO-162 - Mejoras generales para envios|LIO-162]] Mejoras generales para envios
 
 ## Descripcion
 

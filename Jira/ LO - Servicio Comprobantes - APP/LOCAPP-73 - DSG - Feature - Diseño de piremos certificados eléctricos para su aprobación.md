@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-73"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-72]] Certificados Electricos
+- **Padre:** [[LOCAPP-72 - Certificados Electricos|LOCAPP-72]] Certificados Electricos
 
 ## Descripcion
 

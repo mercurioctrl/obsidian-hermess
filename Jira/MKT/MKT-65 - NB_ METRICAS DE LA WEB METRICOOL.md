@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-65"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-376]] Aplicar codigos de seguimiento
+- **relates to:** [[NBWEB-376 - Aplicar codigos de seguimiento|NBWEB-376]] Aplicar codigos de seguimiento
 
 ## Descripcion
 

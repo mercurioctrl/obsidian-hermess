@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-192"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-193]] BANNER LINEA HOGAR
-- **Subtarea:** [[DNYL-194]] BANNER EVGA
-- **Subtarea:** [[DNYL-195]] BANNER AMD
-- **Subtarea:** [[DNYL-196]] BANNER GIGABYTE
+- **Subtarea:** [[DNYL-193 - BANNER LINEA HOGAR|DNYL-193]] BANNER LINEA HOGAR
+- **Subtarea:** [[DNYL-194 - BANNER EVGA|DNYL-194]] BANNER EVGA
+- **Subtarea:** [[DNYL-195 - BANNER AMD|DNYL-195]] BANNER AMD
+- **Subtarea:** [[DNYL-196 - BANNER GIGABYTE|DNYL-196]] BANNER GIGABYTE
 
 ## Descripcion
 

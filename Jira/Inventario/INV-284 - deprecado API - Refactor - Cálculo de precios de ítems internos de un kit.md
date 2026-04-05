@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-284"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
 
 ## Descripcion
 

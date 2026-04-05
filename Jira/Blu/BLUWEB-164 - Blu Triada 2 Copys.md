@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-164"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-104]] 2.Triada 2_Blu_Desarrollo de piezas Social Media
-- **action item from:** [[BLUWEB-104]] 2.Triada 2_Blu_Desarrollo de piezas Social Media
-- **has action item:** [[BLUWEB-170]] 2.Blu: Programar Copys Triada 2 PARA 23-09
+- **Padre:** [[BLUWEB-104 - 2.Triada 2_Blu_Desarrollo de piezas Social Media|BLUWEB-104]] 2.Triada 2_Blu_Desarrollo de piezas Social Media
+- **action item from:** [[BLUWEB-104 - 2.Triada 2_Blu_Desarrollo de piezas Social Media|BLUWEB-104]] 2.Triada 2_Blu_Desarrollo de piezas Social Media
+- **has action item:** [[BLUWEB-170 - 2.Blu Programar Copys Triada 2 PARA 23-09|BLUWEB-170]] 2.Blu: Programar Copys Triada 2 PARA 23-09
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-50"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-32]] Adata Noviembre: 4/4 Social Media
+- **Padre:** [[ADATA-32 - Adata Noviembre 44 Social Media|ADATA-32]] Adata Noviembre: 4/4 Social Media
 
 ## Descripcion
 

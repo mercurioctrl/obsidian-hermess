@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-266"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-270]] API - Feat - Enviar mensaje de contacto por correo
-- **is blocked by:** [[NBWEB-265]] APP - Feat -maquetar formulario de contacto
-- **blocks:** [[NBWEB-265]] APP - Feat -maquetar formulario de contacto
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-270 - API - Feat - Enviar mensaje de contacto por correo|NBWEB-270]] API - Feat - Enviar mensaje de contacto por correo
+- **is blocked by:** [[NBWEB-265 - APP - Feat -maquetar formulario de contacto|NBWEB-265]] APP - Feat -maquetar formulario de contacto
+- **blocks:** [[NBWEB-265 - APP - Feat -maquetar formulario de contacto|NBWEB-265]] APP - Feat -maquetar formulario de contacto
 
 ## Descripcion
 

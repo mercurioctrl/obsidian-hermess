@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-499"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **Subtarea:** [[NBWEB-500]] APP - Refactor - Agregar nombre real del tecnico en luigar de usu_identificacion
-- **Subtarea:** [[NBWEB-501]] API - Refactor - Agregar nombre real del tecnico en luigar de usu_identificacion
-- **Subtarea:** [[NBWEB-502]] API - Refactor - Rectificar mayusculas y minusculas
-- **Subtarea:** [[NBWEB-503]] APP - Feat - Agregar enlaces a los productos en el detalle de postventa
-- **Subtarea:** [[NBWEB-504]] APP - Feat - En postventa asociar comprobantes (Solo NC) y permitir descargarlo y visualizarlo
-- **Subtarea:** [[NBWEB-505]] APi - Feat - En postventa asociar comprobantes (Solo NC) y permitir descargarlo y visualizarlo
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **Subtarea:** [[NBWEB-500 - APP - Refactor - Agregar nombre real del tecnico en luigar de usu_identificacion|NBWEB-500]] APP - Refactor - Agregar nombre real del tecnico en luigar de usu_identificacion
+- **Subtarea:** [[NBWEB-501 - API - Refactor - Agregar nombre real del tecnico en luigar de usu_identificacion|NBWEB-501]] API - Refactor - Agregar nombre real del tecnico en luigar de usu_identificacion
+- **Subtarea:** [[NBWEB-502 - API - Refactor - Rectificar mayusculas y minusculas|NBWEB-502]] API - Refactor - Rectificar mayusculas y minusculas
+- **Subtarea:** [[NBWEB-503 - APP - Feat - Agregar enlaces a los productos en el detalle de postventa|NBWEB-503]] APP - Feat - Agregar enlaces a los productos en el detalle de postventa
+- **Subtarea:** [[NBWEB-504 - APP - Feat - En postventa asociar comprobantes (Solo NC) y permitir descargarlo|NBWEB-504]] APP - Feat - En postventa asociar comprobantes (Solo NC) y permitir descargarlo y visualizarlo
+- **Subtarea:** [[NBWEB-505 - APi - Feat - En postventa asociar comprobantes (Solo NC) y permitir descargarlo|NBWEB-505]] APi - Feat - En postventa asociar comprobantes (Solo NC) y permitir descargarlo y visualizarlo
 
 ## Descripcion
 

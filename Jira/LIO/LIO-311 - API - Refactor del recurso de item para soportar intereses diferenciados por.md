@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-311"
 
 ## Relaciones
 
-- **Padre:** [[LIO-119]] Inventario
-- **has action item:** [[LIO-312]] APP - Refactor - Mostrar cuotas diferenciadas por medio de pago en la ficha del producto
+- **Padre:** [[LIO-119 - Inventario|LIO-119]] Inventario
+- **has action item:** [[LIO-312 - APP - Refactor - Mostrar cuotas diferenciadas por medio de pago en la ficha del|LIO-312]] APP - Refactor - Mostrar cuotas diferenciadas por medio de pago en la ficha del producto
 
 ## Descripcion
 

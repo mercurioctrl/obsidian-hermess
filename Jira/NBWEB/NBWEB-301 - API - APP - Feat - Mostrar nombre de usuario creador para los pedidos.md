@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-301"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-304]] API - Feat - Agregar usuario al detalle de la cabecera del carrito
-- **Subtarea:** [[NBWEB-305]] APP - Feat - Que se vea que usuario hizo la orden de compra
+- **Subtarea:** [[NBWEB-304 - API - Feat - Agregar usuario al detalle de la cabecera del carrito|NBWEB-304]] API - Feat - Agregar usuario al detalle de la cabecera del carrito
+- **Subtarea:** [[NBWEB-305 - APP - Feat - Que se vea que usuario hizo la orden de compra|NBWEB-305]] APP - Feat - Que se vea que usuario hizo la orden de compra
 
 ## Descripcion
 

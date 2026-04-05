@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-180"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-182]] APP - Refactor - Agregaremos dos widgets de objetivos para capilaridad, uno en general y otro para trust
-- **Subtarea:** [[MKT-181]] API - Refactor - Crear recurso necesario para llevar el conteo del objetivo
+- **Subtarea:** [[MKT-182 - APP - Refactor - Agregaremos dos widgets de objetivos para capilaridad, uno en|MKT-182]] APP - Refactor - Agregaremos dos widgets de objetivos para capilaridad, uno en general y otro para trust
+- **Subtarea:** [[MKT-181 - API - Refactor - Crear recurso necesario para llevar el conteo del objetivo|MKT-181]] API - Refactor - Crear recurso necesario para llevar el conteo del objetivo
 
 ## Descripcion
 

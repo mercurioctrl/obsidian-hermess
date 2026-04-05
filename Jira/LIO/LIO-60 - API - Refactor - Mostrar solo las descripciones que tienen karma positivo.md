@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-60"
 
 ## Relaciones
 
-- **Padre:** [[LIO-6]] Diseño de una interfaz intuitiva y navegacion
-- **blocks:** [[SNB-2017]] descripción autogenerada
-- **is blocked by:** [[LIO-64]] API - Mostrar solo las descripciones que tienen karma positivo - No se visualizan las descripciones con diferencia cero
+- **Padre:** [[LIO-6 - Diseño de una interfaz intuitiva y navegacion|LIO-6]] Diseño de una interfaz intuitiva y navegacion
+- **blocks:** [[SNB-2017 - descripción autogenerada|SNB-2017]] descripción autogenerada
+- **is blocked by:** [[LIO-64 - API - Mostrar solo las descripciones que tienen karma positivo - No se|LIO-64]] API - Mostrar solo las descripciones que tienen karma positivo - No se visualizan las descripciones con diferencia cero
 
 ## Descripcion
 

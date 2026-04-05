@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-43"
 
 ## Relaciones
 
-- **Padre:** [[COB-48]] Comprobantes fiscales
-- **Subtarea:** [[COB-49]] API - Feat - Filtrar comprobantes
-- **Subtarea:** [[COB-50]] API - Feat - Paginar
-- **Subtarea:** [[COB-118]] API - Refactor - Se hacen algunos cambios en el objeto final
-- **Subtarea:** [[COB-333]] API - Review - Problema al hacer una busqueda de comprobantes
-- **relates to:** [[COB-482]] API - Listar comprobantes de pago - Error al visualizar/descargar comprobantes
+- **Padre:** [[COB-48 - Comprobantes fiscales|COB-48]] Comprobantes fiscales
+- **Subtarea:** [[COB-49 - API - Feat - Filtrar comprobantes|COB-49]] API - Feat - Filtrar comprobantes
+- **Subtarea:** [[COB-50 - API - Feat - Paginar|COB-50]] API - Feat - Paginar
+- **Subtarea:** [[COB-118 - API - Refactor - Se hacen algunos cambios en el objeto final|COB-118]] API - Refactor - Se hacen algunos cambios en el objeto final
+- **Subtarea:** [[COB-333 - API - Review - Problema al hacer una busqueda de comprobantes|COB-333]] API - Review - Problema al hacer una busqueda de comprobantes
+- **relates to:** [[COB-482 - API - Listar comprobantes de pago - Error al visualizardescargar comprobantes|COB-482]] API - Listar comprobantes de pago - Error al visualizar/descargar comprobantes
 
 ## Descripcion
 

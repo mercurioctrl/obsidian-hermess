@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-515"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-453]] APP - CMS - Medios de envio
+- **Padre:** [[NBWEB-453 - APP - CMS - Medios de envio|NBWEB-453]] APP - CMS - Medios de envio
 
 ## Descripcion
 

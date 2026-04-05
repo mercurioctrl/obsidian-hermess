@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-177"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-199]] Mar: 4/4 Portada Diseño Social Media USB EVOLUTION
-- **Subtarea:** [[ADATA-200]] Mar: 4/4 Copys Social Media
-- **Subtarea:** [[ADATA-201]] Mar: 4/4 Programar Social Media
-- **Subtarea:** [[ADATA-254]] Buscar videos_USB EVOLUTION
+- **Subtarea:** [[ADATA-199 - Mar 44 Portada Diseño Social Media USB EVOLUTION|ADATA-199]] Mar: 4/4 Portada Diseño Social Media USB EVOLUTION
+- **Subtarea:** [[ADATA-200 - Mar 44 Copys Social Media|ADATA-200]] Mar: 4/4 Copys Social Media
+- **Subtarea:** [[ADATA-201 - Mar 44 Programar Social Media|ADATA-201]] Mar: 4/4 Programar Social Media
+- **Subtarea:** [[ADATA-254 - Buscar videos_USB EVOLUTION|ADATA-254]] Buscar videos_USB EVOLUTION
 
 ## Descripcion
 

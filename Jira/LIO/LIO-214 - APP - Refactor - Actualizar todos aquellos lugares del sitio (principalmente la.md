@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-214"
 
 ## Relaciones
 
-- **Padre:** [[LIO-212]] Perfil de vendedor
-- **action item from:** [[LIO-213]] API - Feat - Mover recurso "vendedor" de Legacy y V4
+- **Padre:** [[LIO-212 - Perfil de vendedor|LIO-212]] Perfil de vendedor
+- **action item from:** [[LIO-213 - API - Feat - Mover recurso vendedor de Legacy y V4|LIO-213]] API - Feat - Mover recurso "vendedor" de Legacy y V4
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-147"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[LIO-103]] API - DATA - Refactor -> Mover la tabla componentsAttributes a la bd PRODUCTOS
-- **has action item:** [[INV-175]] APP - Feat - Agregar filtro para ver items que aun tienen atributos obligatorios sin satisfacer 
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[LIO-103 - API - DATA - Refactor - Mover la tabla componentsAttributes a la bd PRODUCTOS|LIO-103]] API - DATA - Refactor -> Mover la tabla componentsAttributes a la bd PRODUCTOS
+- **has action item:** [[INV-175 - APP - Feat - Agregar filtro para ver items que aun tienen atributos|INV-175]] APP - Feat - Agregar filtro para ver items que aun tienen atributos obligatorios sin satisfacer 
 
 ## Descripcion
 

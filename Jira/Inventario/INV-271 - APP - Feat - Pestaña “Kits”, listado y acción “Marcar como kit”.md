@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-271"
 
 ## Relaciones
 
-- **Padre:** [[INV-253]] Crear y modificar Kits
-- **action item from:** [[INV-254]] API - Feat - Cear un nuevo kit
-- **action item from:** [[INV-257]] API - Feat - Listar kits y disponibilidad según stock de sus componentes
-- **relates to:** [[INV-308]] APP - Refactor - Marcar articulo como kit -> Considerar companyCode al buscar en items
+- **Padre:** [[INV-253 - Crear y modificar Kits|INV-253]] Crear y modificar Kits
+- **action item from:** [[INV-254 - API - Feat - Cear un nuevo kit|INV-254]] API - Feat - Cear un nuevo kit
+- **action item from:** [[INV-257 - API - Feat - Listar kits y disponibilidad según stock de sus componentes|INV-257]] API - Feat - Listar kits y disponibilidad según stock de sus componentes
+- **relates to:** [[INV-308 - APP - Refactor - Marcar articulo como kit - Considerar companyCode al buscar en|INV-308]] APP - Refactor - Marcar articulo como kit -> Considerar companyCode al buscar en items
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-261"
 
 ## Relaciones
 
-- **Padre:** [[COM-178]] Depositos
-- **action item from:** [[COM-260]] API - MVP - Refactor - al crear/editar un depósito se debe respetar el companyCode que se envía
+- **Padre:** [[COM-178 - Depositos|COM-178]] Depositos
+- **action item from:** [[COM-260 - API - MVP - Refactor - al creareditar un depósito se debe respetar el|COM-260]] API - MVP - Refactor - al crear/editar un depósito se debe respetar el companyCode que se envía
 
 ## Descripcion
 

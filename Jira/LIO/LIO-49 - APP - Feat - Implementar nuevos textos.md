@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-49"
 
 ## Relaciones
 
-- **Padre:** [[LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
-- **is blocked by:** [[LIO-37]] APP - Redaccion/Revision - Corregir y revisar la informacion contenida en la landing hasta alcanzar el contenido definitivo
+- **Padre:** [[LIO-11 - Proceso de registro sencillo para los vendedoresCompradores|LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
+- **is blocked by:** [[LIO-37 - APP - RedaccionRevision - Corregir y revisar la informacion contenida en la|LIO-37]] APP - Redaccion/Revision - Corregir y revisar la informacion contenida en la landing hasta alcanzar el contenido definitivo
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-318"
 
 ## Relaciones
 
-- **Padre:** [[LIO-317]] Ver producto
+- **Padre:** [[LIO-317 - Ver producto|LIO-317]] Ver producto
 
 ## Descripcion
 

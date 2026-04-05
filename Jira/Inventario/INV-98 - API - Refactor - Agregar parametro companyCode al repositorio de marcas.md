@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-98"
 
 ## Relaciones
 
-- **Padre:** [[INV-65]] Marcas
-- **blocks:** [[INV-99]] APP - Refactor - Agregar parametro companyCode al repositorio de marcas
+- **Padre:** [[INV-65 - Marcas|INV-65]] Marcas
+- **blocks:** [[INV-99 - APP - Refactor - Agregar parametro companyCode al repositorio de marcas|INV-99]] APP - Refactor - Agregar parametro companyCode al repositorio de marcas
 
 ## Descripcion
 

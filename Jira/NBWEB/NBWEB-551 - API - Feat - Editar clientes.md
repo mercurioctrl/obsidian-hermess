@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-551"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-548]] CMS - Clientes
+- **Padre:** [[NBWEB-548 - CMS - Clientes|NBWEB-548]] CMS - Clientes
 
 ## Descripcion
 

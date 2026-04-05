@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-232"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-231]] Enero: Enviar Post del Viernes a los Distribuidores
+- **Padre:** [[ADATA-231 - Enero Enviar Post del Viernes a los Distribuidores|ADATA-231]] Enero: Enviar Post del Viernes a los Distribuidores
 
 ## Descripcion
 

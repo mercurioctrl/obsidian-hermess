@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-192"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **has action item:** [[COM-193]] COM-API- Refactor- revisar  tariffpositionexternal ya que ahora falla
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **has action item:** [[COM-193 - COM-API- Refactor- revisar tariffpositionexternal ya que ahora falla|COM-193]] COM-API- Refactor- revisar  tariffpositionexternal ya que ahora falla
 
 ## Descripcion
 

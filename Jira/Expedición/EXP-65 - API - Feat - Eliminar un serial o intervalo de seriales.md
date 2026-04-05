@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-65"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
-- **blocks:** [[EXP-63]] APP - Feat - Herramienta borrar en modale Detalle de seriales por item
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
+- **blocks:** [[EXP-63 - APP - Feat - Herramienta borrar en modale Detalle de seriales por item|EXP-63]] APP - Feat - Herramienta borrar en modale Detalle de seriales por item
 
 ## Descripcion
 

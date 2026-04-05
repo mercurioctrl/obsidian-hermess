@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-52"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-20]] Mostrar comprobante
+- **Padre:** [[LOCAPP-20 - Mostrar comprobante|LOCAPP-20]] Mostrar comprobante
 
 ## Descripcion
 

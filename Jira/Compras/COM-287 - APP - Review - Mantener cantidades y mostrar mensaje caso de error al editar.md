@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-287"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **has action item:** [[COM-286]] API - Review -  agregar mensaje de error en caso de modifical el total si ya fueron escaneados los serials desde EXP
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **has action item:** [[COM-286 - API - Review - agregar mensaje de error en caso de modifical el total si ya|COM-286]] API - Review -  agregar mensaje de error en caso de modifical el total si ya fueron escaneados los serials desde EXP
 
 ## Descripcion
 

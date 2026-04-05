@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-548"
 
 ## Relaciones
 
-- **Padre:** [[COB-48]] Comprobantes fiscales
-- **action item from:** [[SNB-2385]] facturas manuales para ver en caja
+- **Padre:** [[COB-48 - Comprobantes fiscales|COB-48]] Comprobantes fiscales
+- **action item from:** [[SNB-2385 - facturas manuales para ver en caja|SNB-2385]] facturas manuales para ver en caja
 
 ## Descripcion
 

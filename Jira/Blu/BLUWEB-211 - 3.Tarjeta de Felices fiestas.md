@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-211"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-212]] Blu: Tarjeta de Felices Fiestas interna 15x15
+- **Subtarea:** [[BLUWEB-212 - Blu Tarjeta de Felices Fiestas interna 15x15|BLUWEB-212]] Blu: Tarjeta de Felices Fiestas interna 15x15
 
 ## Descripcion
 

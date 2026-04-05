@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-194"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-192]] LO_BANNERS NUEVOS
+- **Padre:** [[DNYL-192 - LO_BANNERS NUEVOS|DNYL-192]] LO_BANNERS NUEVOS
 
 ## Descripcion
 

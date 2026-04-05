@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-113"
 
 ## Relaciones
 
-- **Padre:** [[LIO-111]] Contenido sindicado
-- **action item from:** [[LIO-112]] API - Feat - Leer contenido sindicado en imagenes para un item determinado
-- **is caused by:** [[LIO-121]] APP - Refactor - Mejora - Si no es una imagen no mostrar (validar el formato png, jpg....)
+- **Padre:** [[LIO-111 - Contenido sindicado|LIO-111]] Contenido sindicado
+- **action item from:** [[LIO-112 - API - Feat - Leer contenido sindicado en imagenes para un item determinado|LIO-112]] API - Feat - Leer contenido sindicado en imagenes para un item determinado
+- **is caused by:** [[LIO-121 - APP - Refactor - Mejora - Si no es una imagen no mostrar (validar el formato|LIO-121]] APP - Refactor - Mejora - Si no es una imagen no mostrar (validar el formato png, jpg....)
 
 ## Descripcion
 

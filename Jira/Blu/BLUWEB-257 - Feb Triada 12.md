@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-257"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-258]] Feb: Diseño Triada 12
-- **Subtarea:** [[BLUWEB-260]] Feb: Armar copys Triada 12
-- **Subtarea:** [[BLUWEB-264]] Mar: Programar
+- **Subtarea:** [[BLUWEB-258 - Feb Diseño Triada 12|BLUWEB-258]] Feb: Diseño Triada 12
+- **Subtarea:** [[BLUWEB-260 - Feb Armar copys Triada 12|BLUWEB-260]] Feb: Armar copys Triada 12
+- **Subtarea:** [[BLUWEB-264 - Mar Programar|BLUWEB-264]] Mar: Programar
 
 ## Descripcion
 

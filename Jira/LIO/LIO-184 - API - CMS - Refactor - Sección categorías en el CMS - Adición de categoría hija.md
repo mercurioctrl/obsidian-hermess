@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-184"
 
 ## Relaciones
 
-- **action item from:** [[LIO-176]] API - CMS - Feat - Repositorio de Lectura / Escritura para categorias en el CMS
+- **action item from:** [[LIO-176 - API - CMS - Feat - Repositorio de Lectura Escritura para categorias en el CMS|LIO-176]] API - CMS - Feat - Repositorio de Lectura / Escritura para categorias en el CMS
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-213"
 
 ## Relaciones
 
-- **Padre:** [[EXP-202]] Feat - Pestaña comprobantes
-- **blocks:** [[SNB-591]] La seccion de comprobantes (en todas las aps, no busca correctamente)
+- **Padre:** [[EXP-202 - Feat - Pestaña comprobantes|EXP-202]] Feat - Pestaña comprobantes
+- **blocks:** [[SNB-591 - La seccion de comprobantes (en todas las aps, no busca correctamente)|SNB-591]] La seccion de comprobantes (en todas las aps, no busca correctamente)
 
 ## Descripcion
 

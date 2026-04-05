@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-133"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-136]] 1. Programar Post Linkedin
+- **Subtarea:** [[ADATA-136 - 1. Programar Post Linkedin|ADATA-136]] 1. Programar Post Linkedin
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-420"
 
 ## Relaciones
 
-- **Padre:** [[LIO-419]] Mejoras de pagos
-- **has action item:** [[LIO-429]] APP - Feat - Detalle de pago
+- **Padre:** [[LIO-419 - Mejoras de pagos|LIO-419]] Mejoras de pagos
+- **has action item:** [[LIO-429 - APP - Feat - Detalle de pago|LIO-429]] APP - Feat - Detalle de pago
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-747"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-668]] Envíos bonificados
-- **blocks:** [[NBWEB-748]] APP - Refactor - Solo en los casos que tengamos envios gratis, ocultar (a menos que se desoculten) las otras opciones
+- **Padre:** [[NBWEB-668 - Envíos bonificados|NBWEB-668]] Envíos bonificados
+- **blocks:** [[NBWEB-748 - APP - Refactor - Solo en los casos que tengamos envios gratis, ocultar (a menos|NBWEB-748]] APP - Refactor - Solo en los casos que tengamos envios gratis, ocultar (a menos que se desoculten) las otras opciones
 
 ## Descripcion
 

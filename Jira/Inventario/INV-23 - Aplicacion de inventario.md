@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-23"
 
 ## Relaciones
 
-- **Subtarea:** [[INV-244]] APP - MVP - Refactor - Al crear un producto, mostrar lista de marca/categoria filtrada por companycode - Aprovechar de agregar companyCode a los selectores generales de marca y categoria
+- **Subtarea:** [[INV-244 - APP - MVP - Refactor - Al crear un producto, mostrar lista de marcacategoria|INV-244]] APP - MVP - Refactor - Al crear un producto, mostrar lista de marca/categoria filtrada por companycode - Aprovechar de agregar companyCode a los selectores generales de marca y categoria
 
 ## Descripcion
 

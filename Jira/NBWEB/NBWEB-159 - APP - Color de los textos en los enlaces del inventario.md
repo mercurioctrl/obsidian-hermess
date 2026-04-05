@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-159"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-149]] Oportunidades de mejora
+- **Padre:** [[NBWEB-149 - Oportunidades de mejora|NBWEB-149]] Oportunidades de mejora
 
 ## Descripcion
 

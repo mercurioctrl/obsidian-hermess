@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-125"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-121]] API - Recuperar Contraseña a través de correo electrónico
-- **blocks:** [[NBWEB-128]] APP - Formulario para cambio de contraseña
+- **Padre:** [[NBWEB-121 - API - Recuperar Contraseña a través de correo electrónico|NBWEB-121]] API - Recuperar Contraseña a través de correo electrónico
+- **blocks:** [[NBWEB-128 - APP - Formulario para cambio de contraseña|NBWEB-128]] APP - Formulario para cambio de contraseña
 
 ## Descripcion
 

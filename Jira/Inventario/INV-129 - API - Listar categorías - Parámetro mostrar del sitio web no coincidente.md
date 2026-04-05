@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-129"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-78]] API - Refactor - Editar / Crear Categorías - Ocultar categoría en el sitio web
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-78 - API - Refactor - Editar Crear Categorías - Ocultar categoría en el sitio web|INV-78]] API - Refactor - Editar / Crear Categorías - Ocultar categoría en el sitio web
 
 ## Descripcion
 

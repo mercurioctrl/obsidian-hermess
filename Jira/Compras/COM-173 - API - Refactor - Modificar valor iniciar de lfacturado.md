@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-173"
 
 ## Relaciones
 
-- **Padre:** [[COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
+- **Padre:** [[COM-109 - Generar INGRESO o pedido (a partir de una orden de compra)|COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-1"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-2]] 3 Adata Octubre: Spring Break Flyer de invitación + diseño del Forms + imagen tv
-- **Subtarea:** [[ADATA-90]] Adata Paradise: Banner de pie
-- **Subtarea:** [[ADATA-95]] Adata: Bandera
+- **Subtarea:** [[ADATA-2 - 3 Adata Octubre Spring Break Flyer de invitación + diseño del Forms + imagen tv|ADATA-2]] 3 Adata Octubre: Spring Break Flyer de invitación + diseño del Forms + imagen tv
+- **Subtarea:** [[ADATA-90 - Adata Paradise Banner de pie|ADATA-90]] Adata Paradise: Banner de pie
+- **Subtarea:** [[ADATA-95 - Adata Bandera|ADATA-95]] Adata: Bandera
 
 ## Descripcion
 

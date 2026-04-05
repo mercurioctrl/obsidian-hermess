@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-63"
 
 ## Relaciones
 
-- **Padre:** [[EXP-10]] Feat - Listar pedidos (despachos) proveedores
-- **is blocked by:** [[EXP-65]] API - Feat - Eliminar un serial o intervalo de seriales
+- **Padre:** [[EXP-10 - Feat - Listar pedidos (despachos) proveedores|EXP-10]] Feat - Listar pedidos (despachos) proveedores
+- **is blocked by:** [[EXP-65 - API - Feat - Eliminar un serial o intervalo de seriales|EXP-65]] API - Feat - Eliminar un serial o intervalo de seriales
 
 ## Descripcion
 

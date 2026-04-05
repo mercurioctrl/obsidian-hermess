@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-207"
 
 ## Relaciones
 
-- **blocks:** [[MKT-70]] NB_NUEVA LANDING AMD CAMPAÑA JUGA CON AMD
+- **blocks:** [[MKT-70 - NB_NUEVA LANDING AMD CAMPAÑA JUGA CON AMD|MKT-70]] NB_NUEVA LANDING AMD CAMPAÑA JUGA CON AMD
 
 ## Descripcion
 

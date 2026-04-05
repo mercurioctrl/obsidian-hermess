@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-24"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-23]] Generar un comprobante
+- **Padre:** [[LOCAPP-23 - Generar un comprobante|LOCAPP-23]] Generar un comprobante
 
 ## Descripcion
 

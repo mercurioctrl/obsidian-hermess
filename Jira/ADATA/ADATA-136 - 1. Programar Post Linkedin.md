@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-136"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-133]] Adaptar imagen de instagram para linkedin
+- **Padre:** [[ADATA-133 - Adaptar imagen de instagram para linkedin|ADATA-133]] Adaptar imagen de instagram para linkedin
 
 ## Descripcion
 

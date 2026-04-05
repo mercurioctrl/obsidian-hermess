@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-211"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **relates to:** [[NBWEB-197]] APP - Maquetado y desarrollo - Ficha de producto
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **relates to:** [[NBWEB-197 - APP - Maquetado y desarrollo - Ficha de producto|NBWEB-197]] APP - Maquetado y desarrollo - Ficha de producto
 
 ## Descripcion
 

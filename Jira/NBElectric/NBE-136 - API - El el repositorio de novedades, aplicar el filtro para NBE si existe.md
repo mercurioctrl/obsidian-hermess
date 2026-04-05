@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-136"
 
 ## Relaciones
 
-- **Padre:** [[NBE-130]] Revisar Marcas que se filtraron de nb a NBe
+- **Padre:** [[NBE-130 - Revisar Marcas que se filtraron de nb a NBe|NBE-130]] Revisar Marcas que se filtraron de nb a NBe
 
 ## Descripcion
 

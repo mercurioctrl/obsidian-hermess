@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-102"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-95]] API - Refactor - Agregar nuevo producto
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-95 - API - Refactor - Agregar nuevo producto|INV-95]] API - Refactor - Agregar nuevo producto
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-231"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-211]] API - MVP - Feat- Agregar repo con pestaña de producto por depósito
-- **action item from:** [[INV-223]] API - Refactor - Algunos cambios para el repositorio de stock
-- **has action item:** [[INV-232]] API - Refactor - Repositorio de stock -> Agregar cantidad de productos ingresados
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-211 - API - MVP - Feat- Agregar repo con pestaña de producto por depósito|INV-211]] API - MVP - Feat- Agregar repo con pestaña de producto por depósito
+- **action item from:** [[INV-223 - API - Refactor - Algunos cambios para el repositorio de stock|INV-223]] API - Refactor - Algunos cambios para el repositorio de stock
+- **has action item:** [[INV-232 - API - Refactor - Repositorio de stock - Agregar cantidad de productos ingresados|INV-232]] API - Refactor - Repositorio de stock -> Agregar cantidad de productos ingresados
 
 ## Descripcion
 

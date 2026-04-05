@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-17"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-6]] Login
+- **Padre:** [[NBWEB-6 - Login|NBWEB-6]] Login
 
 ## Descripcion
 

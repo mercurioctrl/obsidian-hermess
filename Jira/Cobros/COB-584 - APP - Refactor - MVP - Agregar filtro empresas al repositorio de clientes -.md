@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-584"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **relates to:** [[COB-580]] APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes
-- **relates to:** [[COB-579]] API - Feat - Agregar repositorio de empresas
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **relates to:** [[COB-580 - APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes|COB-580]] APP - Refctor - MVP - Agregar filtro empresas al repositorio de clientes
+- **relates to:** [[COB-579 - API - Feat - Agregar repositorio de empresas|COB-579]] API - Feat - Agregar repositorio de empresas
 
 ## Descripcion
 

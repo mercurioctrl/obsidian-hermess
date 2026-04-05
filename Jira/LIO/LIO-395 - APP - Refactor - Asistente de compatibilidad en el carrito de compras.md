@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-395"
 
 ## Relaciones
 
-- **Padre:** [[LIO-391]] Desarrollos IA para LIO (Aleph)
-- **action item from:** [[LIO-394]] API - Refactor - Pequeños ajuste de role y otros parametros
-- **action item from:** [[LIO-392]] APIv4 - Research - Investigar integración con OpenAI para verificar compatibilidad de productos (no es lo mismo que el armador)
-- **has action item:** [[LIO-400]] API - Refactor - Ajustes para el asistente de compatibilidad, ejecutar la consulta solo si parece ser relevante
+- **Padre:** [[LIO-391 - Desarrollos IA para LIO (Aleph)|LIO-391]] Desarrollos IA para LIO (Aleph)
+- **action item from:** [[LIO-394 - API - Refactor - Pequeños ajuste de role y otros parametros|LIO-394]] API - Refactor - Pequeños ajuste de role y otros parametros
+- **action item from:** [[LIO-392 - APIv4 - Research - Investigar integración con OpenAI para verificar|LIO-392]] APIv4 - Research - Investigar integración con OpenAI para verificar compatibilidad de productos (no es lo mismo que el armador)
+- **has action item:** [[LIO-400 - API - Refactor - Ajustes para el asistente de compatibilidad, ejecutar la|LIO-400]] API - Refactor - Ajustes para el asistente de compatibilidad, ejecutar la consulta solo si parece ser relevante
 
 ## Descripcion
 

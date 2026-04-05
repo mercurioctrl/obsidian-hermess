@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-129"
 
 ## Relaciones
 
-- **Padre:** [[LIO-124]] Calificaciones
-- **action item from:** [[LIO-127]] APP - Research - Modelar el siguiente recurso con (solo) los requisitos necesarios para mostrar la ficha de vendedor
+- **Padre:** [[LIO-124 - Calificaciones|LIO-124]] Calificaciones
+- **action item from:** [[LIO-127 - APP - Research - Modelar el siguiente recurso con (solo) los requisitos|LIO-127]] APP - Research - Modelar el siguiente recurso con (solo) los requisitos necesarios para mostrar la ficha de vendedor
 
 ## Descripcion
 

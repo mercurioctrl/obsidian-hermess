@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-156"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **has action item:** [[INV-157]] APP - Refactor - Modificar modal de atributos para tener en cuenta atributos obligatorios y herramienta de búsqueda automatica
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **has action item:** [[INV-157 - APP - Refactor - Modificar modal de atributos para tener en cuenta atributos|INV-157]] APP - Refactor - Modificar modal de atributos para tener en cuenta atributos obligatorios y herramienta de búsqueda automatica
 
 ## Descripcion
 

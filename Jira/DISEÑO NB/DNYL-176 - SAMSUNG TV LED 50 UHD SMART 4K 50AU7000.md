@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-176"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-172]] LO_SAMSUNG TV SMART
+- **Padre:** [[DNYL-172 - LO_SAMSUNG TV SMART|DNYL-172]] LO_SAMSUNG TV SMART
 
 ## Descripcion
 

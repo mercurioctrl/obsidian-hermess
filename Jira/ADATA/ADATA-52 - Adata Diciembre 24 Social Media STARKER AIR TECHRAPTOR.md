@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-52"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-64]] Adata Diciembre:   2/4 Diseño Portada Social Media STARKER AIR TECHRAPTOR |
-- **Subtarea:** [[ADATA-65]] 9.Adata Diciembre:  2/4 Copys Social Media  2/4 STARKER AIR TECHRAPTOR |
-- **Subtarea:** [[ADATA-66]] Adata Diciembre: 2/4 Programar Social Media STARKER AIR TECHRAPTOR |
+- **Subtarea:** [[ADATA-64 - Adata Diciembre 24 Diseño Portada Social Media STARKER AIR TECHRAPTOR|ADATA-64]] Adata Diciembre:   2/4 Diseño Portada Social Media STARKER AIR TECHRAPTOR |
+- **Subtarea:** [[ADATA-65 - 9.Adata Diciembre 24 Copys Social Media 24 STARKER AIR TECHRAPTOR|ADATA-65]] 9.Adata Diciembre:  2/4 Copys Social Media  2/4 STARKER AIR TECHRAPTOR |
+- **Subtarea:** [[ADATA-66 - Adata Diciembre 24 Programar Social Media STARKER AIR TECHRAPTOR|ADATA-66]] Adata Diciembre: 2/4 Programar Social Media STARKER AIR TECHRAPTOR |
 
 ## Descripcion
 

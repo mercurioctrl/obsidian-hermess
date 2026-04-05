@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-155"
 
 ## Relaciones
 
-- **Padre:** [[LIO-133]] Ms Envios Libre Opcion
-- **has action item:** [[LIO-158]] APP - Aplicar maqueta de medios de envio con logo en checkout y cotizacion de la ficha
+- **Padre:** [[LIO-133 - Ms Envios Libre Opcion|LIO-133]] Ms Envios Libre Opcion
+- **has action item:** [[LIO-158 - APP - Aplicar maqueta de medios de envio con logo en checkout y cotizacion de|LIO-158]] APP - Aplicar maqueta de medios de envio con logo en checkout y cotizacion de la ficha
 
 ## Descripcion
 

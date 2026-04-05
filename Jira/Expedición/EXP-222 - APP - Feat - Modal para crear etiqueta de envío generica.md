@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-222"
 
 ## Relaciones
 
-- **Padre:** [[EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
-- **is blocked by:** [[EXP-219]] API - Feat- Crear etiqueta
-- **is blocked by:** [[EXP-228]] API - Feat - Crear direcciones
-- **is blocked by:** [[EXP-227]] API - Feat -Crear direccion para el cliente
-- **is blocked by:** [[EXP-221]] API - Feat - Listar direcciones de envio y chequear si no fue preseteada por el vendedor
-- **relates to:** [[EXP-229]] API - Feat - Listar provincias
-- **blocks:** [[EXP-230]] API - Feat - Listar localidades
+- **Padre:** [[EXP-218 - Etiquetas para envíos que no las generan (genericas de ahora en mas)|EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
+- **is blocked by:** [[EXP-219 - API - Feat- Crear etiqueta|EXP-219]] API - Feat- Crear etiqueta
+- **is blocked by:** [[EXP-228 - API - Feat - Crear direcciones|EXP-228]] API - Feat - Crear direcciones
+- **is blocked by:** [[EXP-227 - API - Feat -Crear direccion para el cliente|EXP-227]] API - Feat -Crear direccion para el cliente
+- **is blocked by:** [[EXP-221 - API - Feat - Listar direcciones de envio y chequear si no fue preseteada por el|EXP-221]] API - Feat - Listar direcciones de envio y chequear si no fue preseteada por el vendedor
+- **relates to:** [[EXP-229 - API - Feat - Listar provincias|EXP-229]] API - Feat - Listar provincias
+- **blocks:** [[EXP-230 - API - Feat - Listar localidades|EXP-230]] API - Feat - Listar localidades
 
 ## Descripcion
 

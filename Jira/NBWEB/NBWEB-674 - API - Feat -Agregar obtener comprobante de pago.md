@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-674"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-697]] API - Refactor - En el correo, hacer clickeable el enlace al comprobante
-- **relates to:** [[NBWEB-662]] APP - Feat - Agregar modal para cargar comprobantes por parte de los clientes
-- **is blocked by:** [[NBWEB-691]] API - Agregar/Obtener comprobante de pago - No se visualiza el comprobante
+- **Subtarea:** [[NBWEB-697 - API - Refactor - En el correo, hacer clickeable el enlace al comprobante|NBWEB-697]] API - Refactor - En el correo, hacer clickeable el enlace al comprobante
+- **relates to:** [[NBWEB-662 - APP - Feat - Agregar modal para cargar comprobantes por parte de los clientes|NBWEB-662]] APP - Feat - Agregar modal para cargar comprobantes por parte de los clientes
+- **is blocked by:** [[NBWEB-691 - API - AgregarObtener comprobante de pago - No se visualiza el comprobante|NBWEB-691]] API - Agregar/Obtener comprobante de pago - No se visualiza el comprobante
 
 ## Descripcion
 

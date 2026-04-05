@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-157"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[INV-148]] API - Feat - Tracker (crawler) de atributos (especificaciones)
-- **action item from:** [[INV-156]] API - Refactor - Agregar un parametro dentro del objeto de cada atributo que indique si es obligatorio para el producto (para su categoría)
-- **relates to:** [[INV-161]] APP - Refactor - Mejora cuando se muestran los atributos den ser editables en caso que tenga algun error
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[INV-148 - API - Feat - Tracker (crawler) de atributos (especificaciones)|INV-148]] API - Feat - Tracker (crawler) de atributos (especificaciones)
+- **action item from:** [[INV-156 - API - Refactor - Agregar un parametro dentro del objeto de cada atributo que|INV-156]] API - Refactor - Agregar un parametro dentro del objeto de cada atributo que indique si es obligatorio para el producto (para su categoría)
+- **relates to:** [[INV-161 - APP - Refactor - Mejora cuando se muestran los atributos den ser editables en|INV-161]] APP - Refactor - Mejora cuando se muestran los atributos den ser editables en caso que tenga algun error
 
 ## Descripcion
 

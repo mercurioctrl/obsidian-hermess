@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-31"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **blocks:** [[COM-32]] APP - Feat - Listar ordenes de compra -> Agregar totales
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **blocks:** [[COM-32 - APP - Feat - Listar ordenes de compra - Agregar totales|COM-32]] APP - Feat - Listar ordenes de compra -> Agregar totales
 
 ## Descripcion
 

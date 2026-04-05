@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-212"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-211]] 3.Tarjeta de Felices fiestas
+- **Padre:** [[BLUWEB-211 - 3.Tarjeta de Felices fiestas|BLUWEB-211]] 3.Tarjeta de Felices fiestas
 
 ## Descripcion
 

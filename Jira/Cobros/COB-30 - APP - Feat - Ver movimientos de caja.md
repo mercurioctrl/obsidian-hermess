@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-30"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **Subtarea:** [[COB-89]] APP - Review - Pequeño defecto al mostrar cuenta corriente
-- **Subtarea:** [[COB-99]] APP - Feat - Editar comentario en movimiento de caja
-- **causes:** [[COB-3]] API - Feat - Listar movimiento por caja
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **Subtarea:** [[COB-89 - APP - Review - Pequeño defecto al mostrar cuenta corriente|COB-89]] APP - Review - Pequeño defecto al mostrar cuenta corriente
+- **Subtarea:** [[COB-99 - APP - Feat - Editar comentario en movimiento de caja|COB-99]] APP - Feat - Editar comentario en movimiento de caja
+- **causes:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
 
 ## Descripcion
 

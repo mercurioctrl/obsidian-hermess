@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-339"
 
 ## Relaciones
 
-- **blocks:** [[COB-323]] Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
+- **blocks:** [[COB-323 - Refactor - Enlace a documentación de postventa (Notas de credito) a los|COB-323]] Refactor - Enlace a documentación de postventa (Notas de credito) a los movimientos de CC
 
 ## Descripcion
 

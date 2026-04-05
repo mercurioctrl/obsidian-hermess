@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-483"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-484]] API - Refactor - Etiqueta OCA
-- **causes:** [[SNB-292]] MS - Refactor - Se debe asociar la etiqueta de envío a la empresa de pertenencia que el cliente tiene asignado en el sistema
+- **Subtarea:** [[NBWEB-484 - API - Refactor - Etiqueta OCA|NBWEB-484]] API - Refactor - Etiqueta OCA
+- **causes:** [[SNB-292 - MS - Refactor - Se debe asociar la etiqueta de envío a la empresa de|SNB-292]] MS - Refactor - Se debe asociar la etiqueta de envío a la empresa de pertenencia que el cliente tiene asignado en el sistema
 
 ## Descripcion
 

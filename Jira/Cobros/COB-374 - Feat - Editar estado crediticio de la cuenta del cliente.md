@@ -29,20 +29,20 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-374"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-375]] API - Feat - Listar saldos de credito por cliente
-- **Subtarea:** [[COB-376]] API - Feat - Editar saldo de credito por cliente
-- **Subtarea:** [[COB-377]] APP - Editar saldo de credito por cliente
-- **Subtarea:** [[COB-388]] API - Refactor - Al editar un cliente que no tiene saldo, no hace la inserción de manera correcta
-- **Subtarea:** [[COB-430]] API - Feat - Fecha de vencimiento de la linea de credito
-- **Subtarea:** [[COB-431]] APP - Feat - Fecha de vencimiento de la linea de credito
-- **Subtarea:** [[COB-432]] API - Feat - Días máximos de cheques aceptada para un cliente determinado
-- **Subtarea:** [[COB-459]] API - Refactor - Agregar comentario al correo de edición de crédito
-- **Subtarea:** [[COB-461]] API - Feat - Incluir linea "neutra" en la CC del cliente, cada vez que este reciba una edición en su linea de crédito
-- **Subtarea:** [[COB-485]] APP - Refactor - No coincide el limite real de la observacion con el limite permitido
-- **Subtarea:** [[COB-556]] API - Feat - Comentarios para las asignaciones de saldo en la linea de credito
-- **Subtarea:** [[COB-557]] APP - Feat - Comentarios para las asignaciones de saldo en la linea de credito
-- **Subtarea:** [[COB-572]] APP - Refactor - Agregar accionable para acceder al historial crediticio de CC
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-375 - API - Feat - Listar saldos de credito por cliente|COB-375]] API - Feat - Listar saldos de credito por cliente
+- **Subtarea:** [[COB-376 - API - Feat - Editar saldo de credito por cliente|COB-376]] API - Feat - Editar saldo de credito por cliente
+- **Subtarea:** [[COB-377 - APP - Editar saldo de credito por cliente|COB-377]] APP - Editar saldo de credito por cliente
+- **Subtarea:** [[COB-388 - API - Refactor - Al editar un cliente que no tiene saldo, no hace la inserción|COB-388]] API - Refactor - Al editar un cliente que no tiene saldo, no hace la inserción de manera correcta
+- **Subtarea:** [[COB-430 - API - Feat - Fecha de vencimiento de la linea de credito|COB-430]] API - Feat - Fecha de vencimiento de la linea de credito
+- **Subtarea:** [[COB-431 - APP - Feat - Fecha de vencimiento de la linea de credito|COB-431]] APP - Feat - Fecha de vencimiento de la linea de credito
+- **Subtarea:** [[COB-432 - API - Feat - Días máximos de cheques aceptada para un cliente determinado|COB-432]] API - Feat - Días máximos de cheques aceptada para un cliente determinado
+- **Subtarea:** [[COB-459 - API - Refactor - Agregar comentario al correo de edición de crédito|COB-459]] API - Refactor - Agregar comentario al correo de edición de crédito
+- **Subtarea:** [[COB-461 - API - Feat - Incluir linea neutra en la CC del cliente, cada vez que este|COB-461]] API - Feat - Incluir linea "neutra" en la CC del cliente, cada vez que este reciba una edición en su linea de crédito
+- **Subtarea:** [[COB-485 - APP - Refactor - No coincide el limite real de la observacion con el limite|COB-485]] APP - Refactor - No coincide el limite real de la observacion con el limite permitido
+- **Subtarea:** [[COB-556 - API - Feat - Comentarios para las asignaciones de saldo en la linea de credito|COB-556]] API - Feat - Comentarios para las asignaciones de saldo en la linea de credito
+- **Subtarea:** [[COB-557 - APP - Feat - Comentarios para las asignaciones de saldo en la linea de credito|COB-557]] APP - Feat - Comentarios para las asignaciones de saldo en la linea de credito
+- **Subtarea:** [[COB-572 - APP - Refactor - Agregar accionable para acceder al historial crediticio de CC|COB-572]] APP - Refactor - Agregar accionable para acceder al historial crediticio de CC
 
 ## Descripcion
 

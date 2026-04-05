@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-440"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-158]] API - CMS - Categories
+- **is blocked by:** [[NBWEB-158 - API - CMS - Categories|NBWEB-158]] API - CMS - Categories
 
 ## Descripcion
 

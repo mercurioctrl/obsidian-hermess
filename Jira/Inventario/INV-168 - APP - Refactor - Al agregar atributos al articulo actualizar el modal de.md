@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-168"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-167]] API - Refactor - Al agregar atributos del articulo verificar si este ya lo tiene
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-167 - API - Refactor - Al agregar atributos del articulo verificar si este ya lo tiene|INV-167]] API - Refactor - Al agregar atributos del articulo verificar si este ya lo tiene
 
 ## Descripcion
 

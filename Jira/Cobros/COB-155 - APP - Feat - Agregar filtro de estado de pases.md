@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-155"
 
 ## Relaciones
 
-- **Padre:** [[COB-14]] Pases
+- **Padre:** [[COB-14 - Pases|COB-14]] Pases
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-34"
 
 ## Relaciones
 
-- **Padre:** [[COM-12]] Listar ingresos (despachos de compra)
-- **blocks:** [[COM-57]] API - Listar ingresos -> Referencia a tabla distinta
+- **Padre:** [[COM-12 - Listar ingresos (despachos de compra)|COM-12]] Listar ingresos (despachos de compra)
+- **blocks:** [[COM-57 - API - Listar ingresos - Referencia a tabla distinta|COM-57]] API - Listar ingresos -> Referencia a tabla distinta
 
 ## Descripcion
 

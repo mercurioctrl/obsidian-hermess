@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-630"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **Subtarea:** [[NBWEB-631]] APP - Refactor - Los banners se recortan cuando los ves en QHD
-- **Subtarea:** [[NBWEB-687]] Review - Cuando abro el modal de filtros, no puedo cerrarlo de ninguna forma
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **Subtarea:** [[NBWEB-631 - APP - Refactor - Los banners se recortan cuando los ves en QHD|NBWEB-631]] APP - Refactor - Los banners se recortan cuando los ves en QHD
+- **Subtarea:** [[NBWEB-687 - Review - Cuando abro el modal de filtros, no puedo cerrarlo de ninguna forma|NBWEB-687]] Review - Cuando abro el modal de filtros, no puedo cerrarlo de ninguna forma
 
 ## Descripcion
 

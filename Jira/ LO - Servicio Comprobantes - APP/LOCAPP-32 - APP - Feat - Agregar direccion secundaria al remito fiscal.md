@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-32"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-30]] Direcciones secundarias
-- **is blocked by:** [[LOCAPP-31]] API - Feat - Agregar direccion secundaria al remito fiscal
+- **Padre:** [[LOCAPP-30 - Direcciones secundarias|LOCAPP-30]] Direcciones secundarias
+- **is blocked by:** [[LOCAPP-31 - API - Feat - Agregar direccion secundaria al remito fiscal|LOCAPP-31]] API - Feat - Agregar direccion secundaria al remito fiscal
 
 ## Descripcion
 

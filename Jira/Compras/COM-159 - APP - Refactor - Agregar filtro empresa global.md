@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-159"
 
 ## Relaciones
 
-- **Padre:** [[COM-156]] Filtro Empresa
-- **action item from:** [[COM-157]]   API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
-- **action item from:** [[COM-158]] API - Refactor - Agregar parametro empresa al objeto usuario
-- **action item from:** [[COM-155]] API - Refactor - Incorporar concepto companyCode al repositorio de Proveedores
-- **action item from:** [[COM-154]] API - Refactor - Incorporar concepto companyCode al repositorio de facturas de COMPRA
-- **action item from:** [[COM-153]] API - Refactor - Incorporar concepto companyCode al repositorio de INGRESOS
-- **has action item:** [[COM-219]] APP - MVP -Review - Revisar por que a veces al hacer login con el user aobari aparece NB como predeterminado en algunas veces o al actualizar aparece arriba el logo de NB
+- **Padre:** [[COM-156 - Filtro Empresa|COM-156]] Filtro Empresa
+- **action item from:** [[COM-157 - API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las|COM-157]]   API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
+- **action item from:** [[COM-158 - API - Refactor - Agregar parametro empresa al objeto usuario|COM-158]] API - Refactor - Agregar parametro empresa al objeto usuario
+- **action item from:** [[COM-155 - API - Refactor - Incorporar concepto companyCode al repositorio de Proveedores|COM-155]] API - Refactor - Incorporar concepto companyCode al repositorio de Proveedores
+- **action item from:** [[COM-154 - API - Refactor - Incorporar concepto companyCode al repositorio de facturas de|COM-154]] API - Refactor - Incorporar concepto companyCode al repositorio de facturas de COMPRA
+- **action item from:** [[COM-153 - API - Refactor - Incorporar concepto companyCode al repositorio de INGRESOS|COM-153]] API - Refactor - Incorporar concepto companyCode al repositorio de INGRESOS
+- **has action item:** [[COM-219 - APP - MVP -Review - Revisar por que a veces al hacer login con el user aobari|COM-219]] APP - MVP -Review - Revisar por que a veces al hacer login con el user aobari aparece NB como predeterminado en algunas veces o al actualizar aparece arriba el logo de NB
 
 ## Descripcion
 

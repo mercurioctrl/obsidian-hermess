@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-76"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **blocks:** [[INV-72]] API - Feat - Editar / Crear Categorias
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **blocks:** [[INV-72 - API - Feat - Editar Crear Categorias|INV-72]] API - Feat - Editar / Crear Categorias
 
 ## Descripcion
 

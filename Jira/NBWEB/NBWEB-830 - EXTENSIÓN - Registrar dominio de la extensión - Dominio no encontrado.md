@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-830"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **blocks:** [[NBWEB-795]] EXTENSION - Refactor - En el primer login que hace la extensión, se debe registrar (de ser posible) el dominio putero para golpearlo posteriormente
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **blocks:** [[NBWEB-795 - EXTENSION - Refactor - En el primer login que hace la extensión, se debe|NBWEB-795]] EXTENSION - Refactor - En el primer login que hace la extensión, se debe registrar (de ser posible) el dominio putero para golpearlo posteriormente
 
 ## Descripcion
 

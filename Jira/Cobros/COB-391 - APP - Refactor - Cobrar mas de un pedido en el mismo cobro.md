@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-391"
 
 ## Relaciones
 
-- **Padre:** [[COB-389]] Refactor - Cobros multiples
-- **is blocked by:** [[COB-396]] APi - Refactor - Response Object en Cobros Simultaneos
-- **is blocked by:** [[COB-390]] API - Refactor - Cobrar mas de un pedido en el mismo "cobro"
+- **Padre:** [[COB-389 - Refactor - Cobros multiples|COB-389]] Refactor - Cobros multiples
+- **is blocked by:** [[COB-396 - APi - Refactor - Response Object en Cobros Simultaneos|COB-396]] APi - Refactor - Response Object en Cobros Simultaneos
+- **is blocked by:** [[COB-390 - API - Refactor - Cobrar mas de un pedido en el mismo cobro|COB-390]] API - Refactor - Cobrar mas de un pedido en el mismo "cobro"
 
 ## Descripcion
 

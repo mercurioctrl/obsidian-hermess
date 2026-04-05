@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-13"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-8]] APP - Stack
+- **Padre:** [[BULLY-8 - APP - Stack|BULLY-8]] APP - Stack
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-534"
 
 ## Relaciones
 
-- **Padre:** [[EXP-533]] Permisos de visualizacion
-- **has action item:** [[EXP-535]] APP - Refactor - Mostrar o no pestañas segun el permiso de visualización de la misma para ese usuario
-- **has action item:** [[LAW-56]] Mostrar / Ocultar pestañas 
+- **Padre:** [[EXP-533 - Permisos de visualizacion|EXP-533]] Permisos de visualizacion
+- **has action item:** [[EXP-535 - APP - Refactor - Mostrar o no pestañas segun el permiso de visualización de la|EXP-535]] APP - Refactor - Mostrar o no pestañas segun el permiso de visualización de la misma para ese usuario
+- **has action item:** [[LAW-56 - Mostrar Ocultar pestañas|LAW-56]] Mostrar / Ocultar pestañas 
 
 ## Descripcion
 

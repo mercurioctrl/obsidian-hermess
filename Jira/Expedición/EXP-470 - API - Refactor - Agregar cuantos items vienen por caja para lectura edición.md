@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-470"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **has action item:** [[EXP-471]] APP - Refactor - Agregar cuantos items vienen por caja para lectura / edición
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **has action item:** [[EXP-471 - APP - Refactor - Agregar cuantos items vienen por caja para lectura edición|EXP-471]] APP - Refactor - Agregar cuantos items vienen por caja para lectura / edición
 
 ## Descripcion
 

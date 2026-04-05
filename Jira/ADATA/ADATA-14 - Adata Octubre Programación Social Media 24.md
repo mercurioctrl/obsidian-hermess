@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-14"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-11]] Adata Octubre: 2/4 Social Media Gabinetes
+- **Padre:** [[ADATA-11 - Adata Octubre 24 Social Media Gabinetes|ADATA-11]] Adata Octubre: 2/4 Social Media Gabinetes
 
 ## Descripcion
 

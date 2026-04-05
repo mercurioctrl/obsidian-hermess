@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-103"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **blocks:** [[COM-104]] APP - Refactor - Agregar totales impositivos al modal de la orden
-- **is blocked by:** [[COM-108]] API - Calcular totales de impuestos por línea y subtotales - Valores no coincidentes
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **blocks:** [[COM-104 - APP - Refactor - Agregar totales impositivos al modal de la orden|COM-104]] APP - Refactor - Agregar totales impositivos al modal de la orden
+- **is blocked by:** [[COM-108 - API - Calcular totales de impuestos por línea y subtotales - Valores no|COM-108]] API - Calcular totales de impuestos por línea y subtotales - Valores no coincidentes
 
 ## Descripcion
 

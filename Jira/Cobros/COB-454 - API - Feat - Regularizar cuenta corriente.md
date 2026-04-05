@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-454"
 
 ## Relaciones
 
-- **Padre:** [[COB-453]] Feat - Regularizar cuenta para administradores
-- **blocks:** [[COB-455]] APP - Feat - Regularizar cuentas corriente por administradores
+- **Padre:** [[COB-453 - Feat - Regularizar cuenta para administradores|COB-453]] Feat - Regularizar cuenta para administradores
+- **blocks:** [[COB-455 - APP - Feat - Regularizar cuentas corriente por administradores|COB-455]] APP - Feat - Regularizar cuentas corriente por administradores
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-55"
 
 ## Relaciones
 
-- **Padre:** [[MKT-54]] Sección Hogar - Libre Opción.
+- **Padre:** [[MKT-54 - Sección Hogar - Libre Opción.|MKT-54]] Sección Hogar - Libre Opción.
 
 ## Descripcion
 

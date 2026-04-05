@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-57"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-56]] NB_Ingreso ASUS
+- **Padre:** [[MNB2-56 - NB_Ingreso ASUS|MNB2-56]] NB_Ingreso ASUS
 
 ## Descripcion
 

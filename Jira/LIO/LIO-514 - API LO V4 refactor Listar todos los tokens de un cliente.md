@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-514"
 
 ## Relaciones
 
-- **Padre:** [[LIO-504]] Sección Referidos
-- **is cloned by:** [[LIO-522]] API LO V4 - Review - Listar todos los tokens de un cliente -> Tokens no visibles
+- **Padre:** [[LIO-504 - Sección Referidos|LIO-504]] Sección Referidos
+- **is cloned by:** [[LIO-522 - API LO V4 - Review - Listar todos los tokens de un cliente - Tokens no visibles|LIO-522]] API LO V4 - Review - Listar todos los tokens de un cliente -> Tokens no visibles
 
 ## Descripcion
 

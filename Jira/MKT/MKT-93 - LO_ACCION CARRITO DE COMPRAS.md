@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-93"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-148]] Research - Ver documentacion. Evaluar tipos de implementan (si es front o back), eventos, tareas.
-- **Subtarea:** [[MKT-150]] APP - Feat - Implementar eventos necesarios de abandono de carrito y configuración de envío automático para lo mismo
-- **Subtarea:** [[MKT-151]] Brevo - Feat sincronizacion de lista de contactos Libre Opcion
-- **Subtarea:** [[MKT-152]] Brevo - Feat - Sincronizacion de lista de contactos NB
+- **Subtarea:** [[MKT-148 - Research - Ver documentacion. Evaluar tipos de implementan (si es front o|MKT-148]] Research - Ver documentacion. Evaluar tipos de implementan (si es front o back), eventos, tareas.
+- **Subtarea:** [[MKT-150 - APP - Feat - Implementar eventos necesarios de abandono de carrito y|MKT-150]] APP - Feat - Implementar eventos necesarios de abandono de carrito y configuración de envío automático para lo mismo
+- **Subtarea:** [[MKT-151 - Brevo - Feat sincronizacion de lista de contactos Libre Opcion|MKT-151]] Brevo - Feat sincronizacion de lista de contactos Libre Opcion
+- **Subtarea:** [[MKT-152 - Brevo - Feat - Sincronizacion de lista de contactos NB|MKT-152]] Brevo - Feat - Sincronizacion de lista de contactos NB
 
 ## Descripcion
 

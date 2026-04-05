@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-769"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **is blocked by:** [[NBWEB-768]] API - Refactor - Agregar medidas al catalogo
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **is blocked by:** [[NBWEB-768 - API - Refactor - Agregar medidas al catalogo|NBWEB-768]] API - Refactor - Agregar medidas al catalogo
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-137"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **blocks:** [[INV-127]] API - Feat - Importar catalogo a partir de un archivo xlsx
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **blocks:** [[INV-127 - API - Feat - Importar catalogo a partir de un archivo xlsx|INV-127]] API - Feat - Importar catalogo a partir de un archivo xlsx
 
 ## Descripcion
 

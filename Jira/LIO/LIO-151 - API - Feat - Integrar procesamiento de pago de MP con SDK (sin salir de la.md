@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-151"
 
 ## Relaciones
 
-- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
-- **has action item:** [[LIO-152]] APP - Feat - Integrar procesamiento de pago de MP con SDK (sin salir de la plataforma)
+- **Padre:** [[LIO-8 - Proceso pago sencillo y competitiva a nivel financiamiento|LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **has action item:** [[LIO-152 - APP - Feat - Integrar procesamiento de pago de MP con SDK (sin salir de la|LIO-152]] APP - Feat - Integrar procesamiento de pago de MP con SDK (sin salir de la plataforma)
 
 ## Descripcion
 

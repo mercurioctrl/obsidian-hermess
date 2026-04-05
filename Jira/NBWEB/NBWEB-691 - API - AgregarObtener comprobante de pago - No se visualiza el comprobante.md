@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-691"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **blocks:** [[NBWEB-674]] API - Feat -Agregar obtener comprobante de pago
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **blocks:** [[NBWEB-674 - API - Feat -Agregar obtener comprobante de pago|NBWEB-674]] API - Feat -Agregar obtener comprobante de pago
 
 ## Descripcion
 

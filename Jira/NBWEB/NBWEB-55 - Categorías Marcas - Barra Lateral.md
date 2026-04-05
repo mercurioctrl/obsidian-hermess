@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-55"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-52]] APP - Maquetado y Desarrollo - Home
-- **relates to:** [[NBWEB-37]] Listar Categorias
-- **relates to:** [[NBWEB-38]] Listar Marcas
+- **Padre:** [[NBWEB-52 - APP - Maquetado y Desarrollo - Home|NBWEB-52]] APP - Maquetado y Desarrollo - Home
+- **relates to:** [[NBWEB-37 - Listar Categorias|NBWEB-37]] Listar Categorias
+- **relates to:** [[NBWEB-38 - Listar Marcas|NBWEB-38]] Listar Marcas
 
 ## Descripcion
 

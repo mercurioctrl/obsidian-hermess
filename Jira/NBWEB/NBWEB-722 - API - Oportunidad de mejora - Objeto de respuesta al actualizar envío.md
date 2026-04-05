@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-722"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-720]] API - Refactor - cms permitir actualizar en shipping method dropshipping
-- **relates to:** [[NBWEB-730]] APP - CMS - Actualización de objeto de respuesta al actualizar envío
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-720 - API - Refactor - cms permitir actualizar en shipping method dropshipping|NBWEB-720]] API - Refactor - cms permitir actualizar en shipping method dropshipping
+- **relates to:** [[NBWEB-730 - APP - CMS - Actualización de objeto de respuesta al actualizar envío|NBWEB-730]] APP - CMS - Actualización de objeto de respuesta al actualizar envío
 
 ## Descripcion
 

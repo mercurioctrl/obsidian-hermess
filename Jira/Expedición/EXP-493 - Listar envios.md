@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-493"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-494]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de envios
-- **Subtarea:** [[EXP-495]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes de envio
-- **Subtarea:** [[EXP-496]] API - Refactor - Agregar junto a los indicadores (flags) de intervencion tecnica, la fecha de intervencion tecnica completa
-- **Subtarea:** [[EXP-497]] API - Refactor - Impedir despacho cuando tiene alguna intervención técnica, pero no tiene la intervención técnica completa
-- **Subtarea:** [[EXP-498]] APP - Refactor - Reflejar nueva notificación al momento de despachar/finalizar una orden en expedición
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-494 - API - Refactor - Agregar indicadores (flags) de intervención técnica a las|EXP-494]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de envios
+- **Subtarea:** [[EXP-495 - APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|EXP-495]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes de envio
+- **Subtarea:** [[EXP-496 - API - Refactor - Agregar junto a los indicadores (flags) de intervencion|EXP-496]] API - Refactor - Agregar junto a los indicadores (flags) de intervencion tecnica, la fecha de intervencion tecnica completa
+- **Subtarea:** [[EXP-497 - API - Refactor - Impedir despacho cuando tiene alguna intervención técnica,|EXP-497]] API - Refactor - Impedir despacho cuando tiene alguna intervención técnica, pero no tiene la intervención técnica completa
+- **Subtarea:** [[EXP-498 - APP - Refactor - Reflejar nueva notificación al momento de despacharfinalizar|EXP-498]] APP - Refactor - Reflejar nueva notificación al momento de despachar/finalizar una orden en expedición
 
 ## Descripcion
 

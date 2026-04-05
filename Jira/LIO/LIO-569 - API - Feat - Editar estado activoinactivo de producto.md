@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-569"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **has action item:** [[LIO-571]] APP - Feat - Editar estado activo/inactivo de producto
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **has action item:** [[LIO-571 - APP - Feat - Editar estado activoinactivo de producto|LIO-571]] APP - Feat - Editar estado activo/inactivo de producto
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-163"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-584]] API - Feat - Promos especiales
+- **is blocked by:** [[NBWEB-584 - API - Feat - Promos especiales|NBWEB-584]] API - Feat - Promos especiales
 
 ## Descripcion
 

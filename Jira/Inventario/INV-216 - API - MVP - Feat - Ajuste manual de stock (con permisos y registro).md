@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-216"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-235]] APP - Feat - Ajuste manual de stock 
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-235 - APP - Feat - Ajuste manual de stock|INV-235]] APP - Feat - Ajuste manual de stock 
 
 ## Descripcion
 

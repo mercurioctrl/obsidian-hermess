@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-484"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-483]] MS Envios - Refactor - Se debe asociar la etiqueta de envío a la empresa de pertenencia que el cliente tiene asignado en el sistema
+- **Padre:** [[NBWEB-483 - MS Envios - Refactor - Se debe asociar la etiqueta de envío a la empresa de|NBWEB-483]] MS Envios - Refactor - Se debe asociar la etiqueta de envío a la empresa de pertenencia que el cliente tiene asignado en el sistema
 
 ## Descripcion
 

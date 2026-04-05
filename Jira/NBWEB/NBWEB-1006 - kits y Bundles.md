@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-1006"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **Subtarea:** [[NBWEB-1007]] APP - Feat - Agregar en la homre sección Kits y Bundles
-- **Subtarea:** [[NBWEB-1008]] APP - Refactor - Compactar sección noticias 
-- **Subtarea:** [[NBWEB-1009]] APP - Refactor - Agregar al menu desplegable la nueva seccion Kits y Bundles
-- **Subtarea:** [[NBWEB-1010]] APP - DATASET - Emprolijar el desastre que hicieron con algunos bundles
-- **has action item:** [[SNB-3751]] WEB NB - KITS
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **Subtarea:** [[NBWEB-1007 - APP - Feat - Agregar en la homre sección Kits y Bundles|NBWEB-1007]] APP - Feat - Agregar en la homre sección Kits y Bundles
+- **Subtarea:** [[NBWEB-1008 - APP - Refactor - Compactar sección noticias|NBWEB-1008]] APP - Refactor - Compactar sección noticias 
+- **Subtarea:** [[NBWEB-1009 - APP - Refactor - Agregar al menu desplegable la nueva seccion Kits y Bundles|NBWEB-1009]] APP - Refactor - Agregar al menu desplegable la nueva seccion Kits y Bundles
+- **Subtarea:** [[NBWEB-1010 - APP - DATASET - Emprolijar el desastre que hicieron con algunos bundles|NBWEB-1010]] APP - DATASET - Emprolijar el desastre que hicieron con algunos bundles
+- **has action item:** [[SNB-3751 - WEB NB - KITS|SNB-3751]] WEB NB - KITS
 
 ## Descripcion
 

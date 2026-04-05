@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-380"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-381]] API - Feat - Mover saldo entre cuentas de clientes
-- **Subtarea:** [[COB-384]] APP - Feat - Mover saldo entre cuentas de clientes
-- **is blocked by:** [[COB-394]] Mover saldo entre clientes - Actualizar saldos en el listado de clientes
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-381 - API - Feat - Mover saldo entre cuentas de clientes|COB-381]] API - Feat - Mover saldo entre cuentas de clientes
+- **Subtarea:** [[COB-384 - APP - Feat - Mover saldo entre cuentas de clientes|COB-384]] APP - Feat - Mover saldo entre cuentas de clientes
+- **is blocked by:** [[COB-394 - Mover saldo entre clientes - Actualizar saldos en el listado de clientes|COB-394]] Mover saldo entre clientes - Actualizar saldos en el listado de clientes
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-323"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
 
 ## Descripcion
 

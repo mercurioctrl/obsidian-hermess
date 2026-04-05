@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-500"
 
 ## Relaciones
 
-- **Padre:** [[LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
-- **Subtarea:** [[LIO-592]] APP Mobile - Feat - Migrar liquidaciones v3-legacy a LO-v4
+- **Padre:** [[LIO-497 - App Mobile Vendedores – Gestión integral del seller en Libre Opción|LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
+- **Subtarea:** [[LIO-592 - APP Mobile - Feat - Migrar liquidaciones v3-legacy a LO-v4|LIO-592]] APP Mobile - Feat - Migrar liquidaciones v3-legacy a LO-v4
 
 ## Descripcion
 

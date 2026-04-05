@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-942"
 
 ## Relaciones
 
-- **action item from:** [[SNB-2738]] MANDAR   PEDIDO WEB CON  ENVIO
+- **action item from:** [[SNB-2738 - MANDAR PEDIDO WEB CON ENVIO|SNB-2738]] MANDAR   PEDIDO WEB CON  ENVIO
 
 ## Descripcion
 

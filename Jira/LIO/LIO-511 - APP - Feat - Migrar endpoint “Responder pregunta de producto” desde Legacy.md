@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-511"
 
 ## Relaciones
 
-- **Padre:** [[LIO-498]] Listado de preguntas
-- **action item from:** [[LIO-533]] API - Feat - Listar preguntas del vendedor
+- **Padre:** [[LIO-498 - Listado de preguntas|LIO-498]] Listado de preguntas
+- **action item from:** [[LIO-533 - API - Feat - Listar preguntas del vendedor|LIO-533]] API - Feat - Listar preguntas del vendedor
 
 ## Descripcion
 

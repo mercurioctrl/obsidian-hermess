@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-23"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **Subtarea:** [[EXP-24]] APP - Inicializar proyecto
-- **Subtarea:** [[EXP-25]] API - Inicializar proyecto
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **Subtarea:** [[EXP-24 - APP - Inicializar proyecto|EXP-24]] APP - Inicializar proyecto
+- **Subtarea:** [[EXP-25 - API - Inicializar proyecto|EXP-25]] API - Inicializar proyecto
 
 ## Descripcion
 

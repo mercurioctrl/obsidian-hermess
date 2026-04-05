@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-174"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-173]] Cronograma de actividades
+- **Padre:** [[BLUWEB-173 - Cronograma de actividades|BLUWEB-173]] Cronograma de actividades
 
 ## Descripcion
 

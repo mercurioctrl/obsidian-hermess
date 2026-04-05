@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-270"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
 
 ## Descripcion
 

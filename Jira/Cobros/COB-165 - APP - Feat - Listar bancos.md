@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-165"
 
 ## Relaciones
 
-- **Padre:** [[COB-16]] Cuentas bancarias
-- **is blocked by:** [[COB-9]] API - Feat - Listar bancos
+- **Padre:** [[COB-16 - Cuentas bancarias|COB-16]] Cuentas bancarias
+- **is blocked by:** [[COB-9 - API - Feat - Listar bancos|COB-9]] API - Feat - Listar bancos
 
 ## Descripcion
 

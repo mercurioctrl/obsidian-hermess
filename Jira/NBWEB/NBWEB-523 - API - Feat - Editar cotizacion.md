@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-523"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-73]] API - CMS - ABMS
-- **blocks:** [[NBWEB-522]] APP - Feat - Cotizaciones
+- **Padre:** [[NBWEB-73 - API - CMS - ABMS|NBWEB-73]] API - CMS - ABMS
+- **blocks:** [[NBWEB-522 - APP - Feat - Cotizaciones|NBWEB-522]] APP - Feat - Cotizaciones
 
 ## Descripcion
 

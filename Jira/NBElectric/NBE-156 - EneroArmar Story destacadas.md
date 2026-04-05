@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-156"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-223]] Enero: Subir Historias destacadas 
-- **Subtarea:** [[NBE-224]] 3.Armar Story con whatsapp
-- **Subtarea:** [[NBE-225]] 2.Armar Story con marcas
-- **Subtarea:** [[NBE-226]] 1.Armar story como comprar
-- **Subtarea:** [[NBE-227]] 4.Armar story con Api
+- **Subtarea:** [[NBE-223 - Enero Subir Historias destacadas|NBE-223]] Enero: Subir Historias destacadas 
+- **Subtarea:** [[NBE-224 - 3.Armar Story con whatsapp|NBE-224]] 3.Armar Story con whatsapp
+- **Subtarea:** [[NBE-225 - 2.Armar Story con marcas|NBE-225]] 2.Armar Story con marcas
+- **Subtarea:** [[NBE-226 - 1.Armar story como comprar|NBE-226]] 1.Armar story como comprar
+- **Subtarea:** [[NBE-227 - 4.Armar story con Api|NBE-227]] 4.Armar story con Api
 
 ## Descripcion
 

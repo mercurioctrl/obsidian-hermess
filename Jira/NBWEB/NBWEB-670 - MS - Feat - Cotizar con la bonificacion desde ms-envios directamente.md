@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-670"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-668]] Envíos bonificados
-- **is blocked by:** [[NBWEB-669]] API - Feat - Dataset para limites de exclusion
-- **blocks:** [[NBWEB-671]] APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con condiciones
+- **Padre:** [[NBWEB-668 - Envíos bonificados|NBWEB-668]] Envíos bonificados
+- **is blocked by:** [[NBWEB-669 - API - Feat - Dataset para limites de exclusion|NBWEB-669]] API - Feat - Dataset para limites de exclusion
+- **blocks:** [[NBWEB-671 - APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con|NBWEB-671]] APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con condiciones
 
 ## Descripcion
 

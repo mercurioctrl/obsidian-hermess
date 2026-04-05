@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-313"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-317]] APP - Feat - Repositorio de stock por deposito para un item determinado
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-317 - APP - Feat - Repositorio de stock por deposito para un item determinado|INV-317]] APP - Feat - Repositorio de stock por deposito para un item determinado
 
 ## Descripcion
 

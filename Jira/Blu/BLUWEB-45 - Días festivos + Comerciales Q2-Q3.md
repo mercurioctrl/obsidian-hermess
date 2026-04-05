@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-45"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-46]] DSG - Feature - Junio 2025 Tarjetas digitales + Impresas
-- **Subtarea:** [[BLUWEB-47]]  DSG - Feature - Julio 2025 Tarjetas digitales + Impresas
-- **Subtarea:** [[BLUWEB-48]] DSG - Feature - Agosto 2025 Tarjetas digitales + Impresas
-- **Subtarea:** [[BLUWEB-49]] DSG - Feature - Septiembre 2025 Tarjetas digitales + Impresas
+- **Subtarea:** [[BLUWEB-46 - DSG - Feature - Junio 2025 Tarjetas digitales + Impresas|BLUWEB-46]] DSG - Feature - Junio 2025 Tarjetas digitales + Impresas
+- **Subtarea:** [[BLUWEB-47 - DSG - Feature - Julio 2025 Tarjetas digitales + Impresas|BLUWEB-47]]  DSG - Feature - Julio 2025 Tarjetas digitales + Impresas
+- **Subtarea:** [[BLUWEB-48 - DSG - Feature - Agosto 2025 Tarjetas digitales + Impresas|BLUWEB-48]] DSG - Feature - Agosto 2025 Tarjetas digitales + Impresas
+- **Subtarea:** [[BLUWEB-49 - DSG - Feature - Septiembre 2025 Tarjetas digitales + Impresas|BLUWEB-49]] DSG - Feature - Septiembre 2025 Tarjetas digitales + Impresas
 
 ## Descripcion
 

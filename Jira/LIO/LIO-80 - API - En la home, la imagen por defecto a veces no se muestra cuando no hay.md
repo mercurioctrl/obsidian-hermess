@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-80"
 
 ## Relaciones
 
-- **blocks:** [[LIO-76]] API - Refactor - En la home, a veces no muestra la imagen por defecto como en el catalogo (cuando no tiene imagen)
+- **blocks:** [[LIO-76 - API - Refactor - En la home, a veces no muestra la imagen por defecto como en|LIO-76]] API - Refactor - En la home, a veces no muestra la imagen por defecto como en el catalogo (cuando no tiene imagen)
 
 ## Descripcion
 

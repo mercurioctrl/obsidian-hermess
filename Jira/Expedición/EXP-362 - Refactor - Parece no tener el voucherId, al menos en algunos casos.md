@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-362"
 
 ## Relaciones
 
-- **Padre:** [[EXP-202]] Feat - Pestaña comprobantes
-- **blocks:** [[SNB-1141]] facturacion 
+- **Padre:** [[EXP-202 - Feat - Pestaña comprobantes|EXP-202]] Feat - Pestaña comprobantes
+- **blocks:** [[SNB-1141 - facturacion|SNB-1141]] facturacion 
 
 ## Descripcion
 

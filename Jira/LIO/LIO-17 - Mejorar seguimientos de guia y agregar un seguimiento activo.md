@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-17"
 
 ## Relaciones
 
-- **Padre:** [[LIO-3]] Envíos
-- **Subtarea:** [[LIO-93]] API - Refactor - Migrar recurso de seguimiento 
-- **Subtarea:** [[LIO-102]] APP - Refactor - Conectar nuevo recurso de seguimiento en la ficha de compra 
-- **Subtarea:** [[LIO-131]] API - Legacy - Refactor - Agregar el numero de orden al recurso compas
-- **Subtarea:** [[LIO-294]] API - Feat - Recurso para permitir a usuarios sin login consultar el estado de su envío desde el Centro de Ayuda
+- **Padre:** [[LIO-3 - Envíos|LIO-3]] Envíos
+- **Subtarea:** [[LIO-93 - API - Refactor - Migrar recurso de seguimiento|LIO-93]] API - Refactor - Migrar recurso de seguimiento 
+- **Subtarea:** [[LIO-102 - APP - Refactor - Conectar nuevo recurso de seguimiento en la ficha de compra|LIO-102]] APP - Refactor - Conectar nuevo recurso de seguimiento en la ficha de compra 
+- **Subtarea:** [[LIO-131 - API - Legacy - Refactor - Agregar el numero de orden al recurso compas|LIO-131]] API - Legacy - Refactor - Agregar el numero de orden al recurso compas
+- **Subtarea:** [[LIO-294 - API - Feat - Recurso para permitir a usuarios sin login consultar el estado de|LIO-294]] API - Feat - Recurso para permitir a usuarios sin login consultar el estado de su envío desde el Centro de Ayuda
 
 
 

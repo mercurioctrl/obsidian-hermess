@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-169"
 
 ## Relaciones
 
-- **Padre:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **is blocked by:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **blocks:** [[COB-166]] MS - Feat - Ms comprobantes, recurso de recibo de dinero
+- **Padre:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **is blocked by:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **blocks:** [[COB-166 - MS - Feat - Ms comprobantes, recurso de recibo de dinero|COB-166]] MS - Feat - Ms comprobantes, recurso de recibo de dinero
 
 ## Descripcion
 

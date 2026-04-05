@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-302"
 
 ## Relaciones
 
-- **Padre:** [[EXP-301]] Feat - Mover seriales
-- **blocks:** [[EXP-304]] APP - Feat - Modal "Mover Seriales"
+- **Padre:** [[EXP-301 - Feat - Mover seriales|EXP-301]] Feat - Mover seriales
+- **blocks:** [[EXP-304 - APP - Feat - Modal Mover Seriales|EXP-304]] APP - Feat - Modal "Mover Seriales"
 
 ## Descripcion
 

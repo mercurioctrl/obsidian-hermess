@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-133"
 
 ## Relaciones
 
-- **Padre:** [[MKT-131]] LO_ BANNER NAVIDAD
+- **Padre:** [[MKT-131 - LO_ BANNER NAVIDAD|MKT-131]] LO_ BANNER NAVIDAD
 
 ## Descripcion
 

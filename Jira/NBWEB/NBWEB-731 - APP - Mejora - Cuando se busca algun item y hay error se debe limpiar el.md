@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-731"
 
 ## Relaciones
 
-- **is caused by:** [[SNB-1910]] EL CLIENTE NO VE PRODUCTOS EN LA WEB
+- **is caused by:** [[SNB-1910 - EL CLIENTE NO VE PRODUCTOS EN LA WEB|SNB-1910]] EL CLIENTE NO VE PRODUCTOS EN LA WEB
 
 ## Descripcion
 

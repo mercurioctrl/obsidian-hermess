@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-130"
 
 ## Relaciones
 
-- **Padre:** [[LIO-124]] Calificaciones
-- **action item from:** [[LIO-128]] API - Feat - Recurso para obtener los comentarios de las calificaciones para un vendedor determinado
+- **Padre:** [[LIO-124 - Calificaciones|LIO-124]] Calificaciones
+- **action item from:** [[LIO-128 - API - Feat - Recurso para obtener los comentarios de las calificaciones para un|LIO-128]] API - Feat - Recurso para obtener los comentarios de las calificaciones para un vendedor determinado
 
 ## Descripcion
 

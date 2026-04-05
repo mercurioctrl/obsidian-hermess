@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-835"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **blocks:** [[NBWEB-838]] APP - Refactor - Listar / Editar / Agregar Mis Prodcutos -> Agregar parámetro "ocultar"
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **blocks:** [[NBWEB-838 - APP - Refactor - Listar Editar Agregar Mis Prodcutos - Agregar parámetro ocultar|NBWEB-838]] APP - Refactor - Listar / Editar / Agregar Mis Prodcutos -> Agregar parámetro "ocultar"
 
 ## Descripcion
 

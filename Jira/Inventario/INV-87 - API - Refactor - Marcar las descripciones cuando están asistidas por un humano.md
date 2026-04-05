@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-87"
 
 ## Relaciones
 
-- **Padre:** [[INV-80]] Descripciones
+- **Padre:** [[INV-80 - Descripciones|INV-80]] Descripciones
 
 ## Descripcion
 

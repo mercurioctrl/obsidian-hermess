@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-346"
 
 ## Relaciones
 
-- **relates to:** [[LIO-237]] APP - Review - Solo mostrar formulario de carga de direccion (cuando no esta cargada) si selecciono envio
-- **relates to:** [[LIO-368]] APP - Refactor - Seleccionar domicilio de entrega -> modificar límite de caracteres
-- **relates to:** [[LIO-476]] APP - Refactor - Seleccionar domicilio de entrega -> modificar límite de caracteres a 100
+- **relates to:** [[LIO-237 - APP - Review - Solo mostrar formulario de carga de direccion (cuando no esta|LIO-237]] APP - Review - Solo mostrar formulario de carga de direccion (cuando no esta cargada) si selecciono envio
+- **relates to:** [[LIO-368 - APP - Refactor - Seleccionar domicilio de entrega - modificar límite de|LIO-368]] APP - Refactor - Seleccionar domicilio de entrega -> modificar límite de caracteres
+- **relates to:** [[LIO-476 - APP - Refactor - Seleccionar domicilio de entrega - modificar límite de|LIO-476]] APP - Refactor - Seleccionar domicilio de entrega -> modificar límite de caracteres a 100
 
 ## Descripcion
 

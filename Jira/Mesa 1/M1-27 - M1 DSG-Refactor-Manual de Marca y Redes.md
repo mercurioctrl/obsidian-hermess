@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/M1-27"
 
 ## Relaciones
 
-- **Padre:** [[M1-25]] Mesa 1: iBranding
+- **Padre:** [[M1-25 - Mesa 1 iBranding|M1-25]] Mesa 1: iBranding
 
 ## Descripcion
 

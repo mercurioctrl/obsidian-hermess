@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-956"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-599]] CMS
-- **action item from:** [[NBWEB-954]] API - Refactor - Agregar el parámetro quote a parametros varios
+- **Padre:** [[NBWEB-599 - CMS|NBWEB-599]] CMS
+- **action item from:** [[NBWEB-954 - API - Refactor - Agregar el parámetro quote a parametros varios|NBWEB-954]] API - Refactor - Agregar el parámetro quote a parametros varios
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-27"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-26]] Bases y repositorios
-- **Subtarea:** [[LOCAPP-28]] API - Feat - Poner en las variables de entorno los enlaces punteros para mostrar las imagens y logos
+- **Padre:** [[LOCAPP-26 - Bases y repositorios|LOCAPP-26]] Bases y repositorios
+- **Subtarea:** [[LOCAPP-28 - API - Feat - Poner en las variables de entorno los enlaces punteros para|LOCAPP-28]] API - Feat - Poner en las variables de entorno los enlaces punteros para mostrar las imagens y logos
 
 ## Descripcion
 

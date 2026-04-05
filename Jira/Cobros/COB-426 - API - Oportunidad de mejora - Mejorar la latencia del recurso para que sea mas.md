@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-426"
 
 ## Relaciones
 
-- **Padre:** [[COB-218]] Feat - Movimientos bancarios
+- **Padre:** [[COB-218 - Feat - Movimientos bancarios|COB-218]] Feat - Movimientos bancarios
 
 ## Descripcion
 

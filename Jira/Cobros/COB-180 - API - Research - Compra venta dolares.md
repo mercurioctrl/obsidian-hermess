@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-180"
 
 ## Relaciones
 
-- **Padre:** [[COB-175]] API - Feat - Compra venta de dolares
-- **blocks:** [[COB-181]] API - Feat - Comprar y vender dolares
+- **Padre:** [[COB-175 - API - Feat - Compra venta de dolares|COB-175]] API - Feat - Compra venta de dolares
+- **blocks:** [[COB-181 - API - Feat - Comprar y vender dolares|COB-181]] API - Feat - Comprar y vender dolares
 
 ## Descripcion
 

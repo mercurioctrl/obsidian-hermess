@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-87"
 
 ## Relaciones
 
-- **causes:** [[COM-83]] APP - Feat - Agregar item a una orden de compra
-- **is blocked by:** [[COM-89]] API - Agregar/Editar Item - Posición arancelaría indefinida 
+- **causes:** [[COM-83 - APP - Feat - Agregar item a una orden de compra|COM-83]] APP - Feat - Agregar item a una orden de compra
+- **is blocked by:** [[COM-89 - API - AgregarEditar Item - Posición arancelaría indefinida|COM-89]] API - Agregar/Editar Item - Posición arancelaría indefinida 
 
 ## Descripcion
 

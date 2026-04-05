@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-366"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-367]] API - Feat - Pagar al cliente
-- **Subtarea:** [[COB-368]] APP - Feat - Pagar el cliente desde el modal de cuenta corriente
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-367 - API - Feat - Pagar al cliente|COB-367]] API - Feat - Pagar al cliente
+- **Subtarea:** [[COB-368 - APP - Feat - Pagar el cliente desde el modal de cuenta corriente|COB-368]] APP - Feat - Pagar el cliente desde el modal de cuenta corriente
 
 ## Descripcion
 

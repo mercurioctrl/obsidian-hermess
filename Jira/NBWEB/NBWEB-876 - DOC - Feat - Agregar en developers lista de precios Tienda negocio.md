@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-876"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-879]] DOC - Lista de precios Tienda negocio y Dux Software - Sugerencias de mejora
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-879 - DOC - Lista de precios Tienda negocio y Dux Software - Sugerencias de mejora|NBWEB-879]] DOC - Lista de precios Tienda negocio y Dux Software - Sugerencias de mejora
 
 ## Descripcion
 

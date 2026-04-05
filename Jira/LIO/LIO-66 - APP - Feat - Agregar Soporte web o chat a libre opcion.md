@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-66"
 
 ## Relaciones
 
-- **Padre:** [[LIO-20]] Bot de whatsapp
-- **is blocked by:** [[LIO-68]] Redacción - Textos predeterminados y color del boton del webchat (Chat Widget)
-- **is blocked by:** [[LIO-78]] APP - Agregar soporte web o chat - Sugerencia de mejora en el menú de opciones
+- **Padre:** [[LIO-20 - Bot de whatsapp|LIO-20]] Bot de whatsapp
+- **is blocked by:** [[LIO-68 - Redacción - Textos predeterminados y color del boton del webchat (Chat Widget)|LIO-68]] Redacción - Textos predeterminados y color del boton del webchat (Chat Widget)
+- **is blocked by:** [[LIO-78 - APP - Agregar soporte web o chat - Sugerencia de mejora en el menú de opciones|LIO-78]] APP - Agregar soporte web o chat - Sugerencia de mejora en el menú de opciones
 
 ## Descripcion
 

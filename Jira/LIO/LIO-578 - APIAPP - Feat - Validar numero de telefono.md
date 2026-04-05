@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-578"
 
 ## Relaciones
 
-- **Padre:** [[LIO-526]] Verificar Vendedores
-- **action item from:** [[STASK-32]] API-TASK-V3 feat Integrar Infobip como proveedor SMS por defecto con arquitectura desacoplada
-- **is cloned by:** [[LIO-587]] API/APP - Review - Validar numero de telefono - Proceso de verificar vendedor indeterminado y propuesta de mejora
+- **Padre:** [[LIO-526 - Verificar Vendedores|LIO-526]] Verificar Vendedores
+- **action item from:** [[STASK-32 - API-TASK-V3 feat Integrar Infobip como proveedor SMS por defecto con|STASK-32]] API-TASK-V3 feat Integrar Infobip como proveedor SMS por defecto con arquitectura desacoplada
+- **is cloned by:** [[LIO-587 - APIAPP - Review - Validar numero de telefono - Proceso de verificar vendedor|LIO-587]] API/APP - Review - Validar numero de telefono - Proceso de verificar vendedor indeterminado y propuesta de mejora
 
 ## Descripcion
 

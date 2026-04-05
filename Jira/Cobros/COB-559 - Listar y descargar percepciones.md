@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-559"
 
 ## Relaciones
 
-- **Padre:** [[COB-293]] Retenciones / Percepciones
-- **Subtarea:** [[COB-560]] API - Feat - Recurso para listar y descargar percepciones ARBA (parte 1)
-- **Subtarea:** [[COB-561]] API - Feat - Recurso para listar y descargar percepciones AGIP (parte 2)
-- **Subtarea:** [[COB-566]] API - Refactor - Revision del archivo exportable para presentacion en AGIP
-- **Subtarea:** [[COB-567]] APP - Feat - Agregar seccion percepciones para visualizar y filtrar y accionables de descarga
-- **Subtarea:** [[COB-568]] API - Review - Recurso para descargar archivo ARBA, devolucion estudio contable
-- **Subtarea:** [[COB-571]] API - Refactor  - Nuevo diseño del archivo de ARBA desde Diciembre
+- **Padre:** [[COB-293 - Retenciones Percepciones|COB-293]] Retenciones / Percepciones
+- **Subtarea:** [[COB-560 - API - Feat - Recurso para listar y descargar percepciones ARBA (parte 1)|COB-560]] API - Feat - Recurso para listar y descargar percepciones ARBA (parte 1)
+- **Subtarea:** [[COB-561 - API - Feat - Recurso para listar y descargar percepciones AGIP (parte 2)|COB-561]] API - Feat - Recurso para listar y descargar percepciones AGIP (parte 2)
+- **Subtarea:** [[COB-566 - API - Refactor - Revision del archivo exportable para presentacion en AGIP|COB-566]] API - Refactor - Revision del archivo exportable para presentacion en AGIP
+- **Subtarea:** [[COB-567 - APP - Feat - Agregar seccion percepciones para visualizar y filtrar y|COB-567]] APP - Feat - Agregar seccion percepciones para visualizar y filtrar y accionables de descarga
+- **Subtarea:** [[COB-568 - API - Review - Recurso para descargar archivo ARBA, devolucion estudio contable|COB-568]] API - Review - Recurso para descargar archivo ARBA, devolucion estudio contable
+- **Subtarea:** [[COB-571 - API - Refactor - Nuevo diseño del archivo de ARBA desde Diciembre|COB-571]] API - Refactor  - Nuevo diseño del archivo de ARBA desde Diciembre
 
 ## Descripcion
 

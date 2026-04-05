@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-295"
 
 ## Relaciones
 
-- **Padre:** [[LIO-277]] Centro de ayuda
-- **action item from:** [[LIO-294]] API - Feat - Recurso para permitir a usuarios sin login consultar el estado de su envío desde el Centro de Ayuda
+- **Padre:** [[LIO-277 - Centro de ayuda|LIO-277]] Centro de ayuda
+- **action item from:** [[LIO-294 - API - Feat - Recurso para permitir a usuarios sin login consultar el estado de|LIO-294]] API - Feat - Recurso para permitir a usuarios sin login consultar el estado de su envío desde el Centro de Ayuda
 
 
 

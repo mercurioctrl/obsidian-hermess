@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-305"
 
 ## Relaciones
 
-- **Padre:** [[EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
+- **Padre:** [[EXP-258 - Feat - Autorizar Entrega mediante tarjeta de autorizacion|EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
 
 ## Descripcion
 

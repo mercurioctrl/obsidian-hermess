@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-232"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-231]] API - Refactor - Repositorio de stock -> Agregar cantidad de productos ingresando
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-231 - API - Refactor - Repositorio de stock - Agregar cantidad de productos ingresando|INV-231]] API - Refactor - Repositorio de stock -> Agregar cantidad de productos ingresando
 
 ## Descripcion
 

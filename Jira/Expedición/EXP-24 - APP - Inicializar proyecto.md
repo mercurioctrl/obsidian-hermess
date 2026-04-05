@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-24"
 
 ## Relaciones
 
-- **Padre:** [[EXP-23]] Inicializar proyecto
+- **Padre:** [[EXP-23 - Inicializar proyecto|EXP-23]] Inicializar proyecto
 
 ## Descripcion
 

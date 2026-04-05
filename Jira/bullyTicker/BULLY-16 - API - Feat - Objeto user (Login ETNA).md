@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-16"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-12]] Logins y autenticaciones 
-- **is blocked by:** [[BULLY-14]] API - Feat - Login
-- **blocks:** [[BULLY-10]] API - Feat - Obtener velas para un ticker determinado
+- **Padre:** [[BULLY-12 - Logins y autenticaciones|BULLY-12]] Logins y autenticaciones 
+- **is blocked by:** [[BULLY-14 - API - Feat - Login|BULLY-14]] API - Feat - Login
+- **blocks:** [[BULLY-10 - API - Feat - Obtener velas para un ticker determinado|BULLY-10]] API - Feat - Obtener velas para un ticker determinado
 
 ## Descripcion
 

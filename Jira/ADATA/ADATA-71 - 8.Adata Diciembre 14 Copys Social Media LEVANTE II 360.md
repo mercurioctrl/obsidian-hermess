@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-71"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-54]] Adata Diciembre: 1/4 Social Media Levante II 360
+- **Padre:** [[ADATA-54 - Adata Diciembre 14 Social Media Levante II 360|ADATA-54]] Adata Diciembre: 1/4 Social Media Levante II 360
 
 ## Descripcion
 

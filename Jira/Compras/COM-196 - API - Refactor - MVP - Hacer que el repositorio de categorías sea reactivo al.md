@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-196"
 
 ## Relaciones
 
-- **Padre:** [[COM-116]] Categorias
+- **Padre:** [[COM-116 - Categorias|COM-116]] Categorias
 
 ## Descripcion
 

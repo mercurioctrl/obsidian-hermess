@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-491"
 
 ## Relaciones
 
-- **Padre:** [[EXP-439]] Despacho de retiros LibreOpcion
-- **has action item:** [[SNB-2003]] Agregar opcion para armado de pc y actualizacion de firmware
-- **has action item:** [[EXP-492]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes de retiro
-- **has action item:** [[POS-331]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes dentro de postventa
+- **Padre:** [[EXP-439 - Despacho de retiros LibreOpcion|EXP-439]] Despacho de retiros LibreOpcion
+- **has action item:** [[SNB-2003 - Agregar opcion para armado de pc y actualizacion de firmware|SNB-2003]] Agregar opcion para armado de pc y actualizacion de firmware
+- **has action item:** [[EXP-492 - APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|EXP-492]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes de retiro
+- **has action item:** [[POS-331 - API - Refactor - Agregar indicadores (flags) de intervención técnica a las|POS-331]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes dentro de postventa
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-174"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **has action item:** [[INV-176]] APP - Refactor- Marcar atributos como obligatorios 
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **has action item:** [[INV-176 - APP - Refactor- Marcar atributos como obligatorios|INV-176]] APP - Refactor- Marcar atributos como obligatorios 
 
 ## Descripcion
 

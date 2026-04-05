@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-92"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-93]] Adata:Banner PC Center
-- **Subtarea:** [[ADATA-99]] Adata: Banner Resellers (Revisar Excel y Drive)
+- **Subtarea:** [[ADATA-93 - AdataBanner PC Center|ADATA-93]] Adata:Banner PC Center
+- **Subtarea:** [[ADATA-99 - Adata Banner Resellers (Revisar Excel y Drive)|ADATA-99]] Adata: Banner Resellers (Revisar Excel y Drive)
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-703"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-581]] CMS - Carrito web
-- **blocks:** [[NBWEB-704]] APP - Refactor - Al "encender" el dropShipping en el carrito, mostrar 2 inputs para el nombre del cliente y su correo electronico
-- **blocks:** [[NBWEB-705]] APP - Feat - Agregar nuevos parametros a la explicacion de como se procesa el carrito
+- **Padre:** [[NBWEB-581 - CMS - Carrito web|NBWEB-581]] CMS - Carrito web
+- **blocks:** [[NBWEB-704 - APP - Refactor - Al encender el dropShipping en el carrito, mostrar 2 inputs|NBWEB-704]] APP - Refactor - Al "encender" el dropShipping en el carrito, mostrar 2 inputs para el nombre del cliente y su correo electronico
+- **blocks:** [[NBWEB-705 - APP - Feat - Agregar nuevos parametros a la explicacion de como se procesa el|NBWEB-705]] APP - Feat - Agregar nuevos parametros a la explicacion de como se procesa el carrito
 
 ## Descripcion
 

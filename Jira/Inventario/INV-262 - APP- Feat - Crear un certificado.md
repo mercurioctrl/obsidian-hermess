@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-262"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
-- **action item from:** [[INV-261]] API - Feat - Crear un certificado
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
+- **action item from:** [[INV-261 - API - Feat - Crear un certificado|INV-261]] API - Feat - Crear un certificado
 
 ## Descripcion
 

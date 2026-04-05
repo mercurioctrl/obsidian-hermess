@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-65"
 
 ## Relaciones
 
-- **relates to:** [[LOCAPP-63]] API - Refactor - Procesar Padron ARBA
+- **relates to:** [[LOCAPP-63 - API - Refactor - Procesar Padron ARBA|LOCAPP-63]] API - Refactor - Procesar Padron ARBA
 
 ## Descripcion
 

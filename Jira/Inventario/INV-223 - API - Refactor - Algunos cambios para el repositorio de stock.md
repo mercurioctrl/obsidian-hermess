@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-223"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-222]] APP - MVP - Mover stock entre distintos stocks (columnas)
-- **has action item:** [[INV-231]] API - Refactor - Repositorio de stock -> Agregar cantidad de productos ingresando
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-222 - APP - MVP - Mover stock entre distintos stocks (columnas)|INV-222]] APP - MVP - Mover stock entre distintos stocks (columnas)
+- **has action item:** [[INV-231 - API - Refactor - Repositorio de stock - Agregar cantidad de productos ingresando|INV-231]] API - Refactor - Repositorio de stock -> Agregar cantidad de productos ingresando
 
 ## Descripcion
 

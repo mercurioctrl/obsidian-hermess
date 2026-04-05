@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-44"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-30]] Adata Noviembre: 3/4 Programar Monitores 19-11 19 monitores
+- **Padre:** [[ADATA-30 - Adata Noviembre 34 Programar Monitores 19-11 19 monitores|ADATA-30]] Adata Noviembre: 3/4 Programar Monitores 19-11 19 monitores
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-542"
 
 ## Relaciones
 
-- **Padre:** [[LIO-507]] Login y otros aspectos generales
-- **action item from:** [[LIO-541]] API - Feat - Registrar dispositivos Web para Push (FCM Web)
+- **Padre:** [[LIO-507 - Login y otros aspectos generales|LIO-507]] Login y otros aspectos generales
+- **action item from:** [[LIO-541 - API - Feat - Registrar dispositivos Web para Push (FCM Web)|LIO-541]] API - Feat - Registrar dispositivos Web para Push (FCM Web)
 
 ## Descripcion
 

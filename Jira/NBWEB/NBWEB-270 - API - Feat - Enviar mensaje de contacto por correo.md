@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-270"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-266]] API - Feat - Contacto - Vendedores
+- **Padre:** [[NBWEB-266 - API - Feat - Contacto - Vendedores|NBWEB-266]] API - Feat - Contacto - Vendedores
 
 ## Descripcion
 

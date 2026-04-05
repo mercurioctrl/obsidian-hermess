@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-282"
 
 ## Relaciones
 
-- **Padre:** [[EXP-119]] Feat - Acreditar un pedido parcial o totalmente
+- **Padre:** [[EXP-119 - Feat - Acreditar un pedido parcial o totalmente|EXP-119]] Feat - Acreditar un pedido parcial o totalmente
 
 ## Descripcion
 

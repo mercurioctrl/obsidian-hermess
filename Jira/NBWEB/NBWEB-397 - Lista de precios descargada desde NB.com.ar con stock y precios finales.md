@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-397"
 
 ## Relaciones
 
-- **causes:** [[SNB-188]] Lista de precios descargada desde NB.com.ar con stock y precios finales
+- **causes:** [[SNB-188 - Lista de precios descargada desde NB.com.ar con stock y precios finales|SNB-188]] Lista de precios descargada desde NB.com.ar con stock y precios finales
 
 ## Descripcion
 

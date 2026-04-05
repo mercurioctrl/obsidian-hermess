@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-440"
 
 ## Relaciones
 
-- **Padre:** [[LIO-416]] Intenciones de pago - checkout
+- **Padre:** [[LIO-416 - Intenciones de pago - checkout|LIO-416]] Intenciones de pago - checkout
 
 ## Descripcion
 

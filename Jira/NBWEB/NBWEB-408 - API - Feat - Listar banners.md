@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-408"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-50]] Sitio Web
-- **Subtarea:** [[NBWEB-410]] API - Feat - Agregar esquema de zonas a los banners
+- **Padre:** [[NBWEB-50 - Sitio Web|NBWEB-50]] Sitio Web
+- **Subtarea:** [[NBWEB-410 - API - Feat - Agregar esquema de zonas a los banners|NBWEB-410]] API - Feat - Agregar esquema de zonas a los banners
 
 ## Descripcion
 

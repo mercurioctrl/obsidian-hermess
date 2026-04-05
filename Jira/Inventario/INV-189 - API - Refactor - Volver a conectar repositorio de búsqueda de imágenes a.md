@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-189"
 
 ## Relaciones
 
-- **Padre:** [[INV-35]] Importadores/ Scrappers
-- **action item from:** [[INV-188]] API - Research - Intentar obtener enlace de mercadolibre para una busqueda determinada y luego para esa ficha de producto
-- **relates to:** [[INV-192]] API - Refactor - NewEgg dejo de funcionar para obtener imagenes
-- **relates to:** [[INV-193]] API - Feat - Buscar precio mínimo para un item determinado en mercadolibre
+- **Padre:** [[INV-35 - Importadores Scrappers|INV-35]] Importadores/ Scrappers
+- **action item from:** [[INV-188 - API - Research - Intentar obtener enlace de mercadolibre para una busqueda|INV-188]] API - Research - Intentar obtener enlace de mercadolibre para una busqueda determinada y luego para esa ficha de producto
+- **relates to:** [[INV-192 - API - Refactor - NewEgg dejo de funcionar para obtener imagenes|INV-192]] API - Refactor - NewEgg dejo de funcionar para obtener imagenes
+- **relates to:** [[INV-193 - API - Feat - Buscar precio mínimo para un item determinado en mercadolibre|INV-193]] API - Feat - Buscar precio mínimo para un item determinado en mercadolibre
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-110"
 
 ## Relaciones
 
-- **Padre:** [[EXP-108]] Feat - Burbujas
-- **is blocked by:** [[EXP-109]] API - Feat - Burbujas de pendientes según cada pestaña
+- **Padre:** [[EXP-108 - Feat - Burbujas|EXP-108]] Feat - Burbujas
+- **is blocked by:** [[EXP-109 - API - Feat - Burbujas de pendientes según cada pestaña|EXP-109]] API - Feat - Burbujas de pendientes según cada pestaña
 
 ## Descripcion
 

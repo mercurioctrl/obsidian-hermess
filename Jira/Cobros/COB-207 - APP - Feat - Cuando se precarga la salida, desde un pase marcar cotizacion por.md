@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-207"
 
 ## Relaciones
 
-- **Padre:** [[COB-101]] Feat - Realizar salida de caja
-- **is blocked by:** [[COB-206]] API - Refactor - Agregar cotización (opcional) a los pases
-- **blocks:** [[SNB-351]] Refactor - Guardar cotizacion al momento de hacer un pase, para luego usar esa en los formularios de salida (si esa no esta, pongo la del sia)
+- **Padre:** [[COB-101 - Feat - Realizar salida de caja|COB-101]] Feat - Realizar salida de caja
+- **is blocked by:** [[COB-206 - API - Refactor - Agregar cotización (opcional) a los pases|COB-206]] API - Refactor - Agregar cotización (opcional) a los pases
+- **blocks:** [[SNB-351 - Refactor - Guardar cotizacion al momento de hacer un pase, para luego usar esa|SNB-351]] Refactor - Guardar cotizacion al momento de hacer un pase, para luego usar esa en los formularios de salida (si esa no esta, pongo la del sia)
 
 ## Descripcion
 

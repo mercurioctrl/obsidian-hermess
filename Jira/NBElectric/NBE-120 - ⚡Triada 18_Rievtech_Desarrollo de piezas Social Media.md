@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-120"
 
 ## Relaciones
 
-- **Padre:** [[NBE-119]] Triada 17_Rievtech_Social Media
+- **Padre:** [[NBE-119 - Triada 17_Rievtech_Social Media|NBE-119]] Triada 17_Rievtech_Social Media
 
 ## Descripcion
 

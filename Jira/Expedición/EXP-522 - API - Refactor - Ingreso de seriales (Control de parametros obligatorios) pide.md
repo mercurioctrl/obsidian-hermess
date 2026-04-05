@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-522"
 
 ## Relaciones
 
-- **Padre:** [[EXP-463]] Pedido de informacion para los items que ingresan por primera vez
+- **Padre:** [[EXP-463 - Pedido de informacion para los items que ingresan por primera vez|EXP-463]] Pedido de informacion para los items que ingresan por primera vez
 
 ## Descripcion
 

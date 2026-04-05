@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-295"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-317]] APP - Refactor - Home
+- **relates to:** [[NBWEB-317 - APP - Refactor - Home|NBWEB-317]] APP - Refactor - Home
 
 ## Descripcion
 

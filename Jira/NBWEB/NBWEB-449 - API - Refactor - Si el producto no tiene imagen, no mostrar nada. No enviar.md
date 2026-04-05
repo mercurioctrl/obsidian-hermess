@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-449"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-432]] API - Feat - Descargar CSV
+- **Padre:** [[NBWEB-432 - API - Feat - Descargar CSV|NBWEB-432]] API - Feat - Descargar CSV
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-195"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-196]] 1.NBE: Triada 23 Diseño ABB-Hunnox-Trefi
-- **Subtarea:** [[NBE-197]] 2.NBE: Triada 23 Copys ABB-Hunnox_Trefi (ver comentario de linkedin)
-- **Subtarea:** [[NBE-198]] 5.NBE: Triada 23 Programar  ABB-Hunnox_Trefi miercoles 3-12
+- **Subtarea:** [[NBE-196 - 1.NBE Triada 23 Diseño ABB-Hunnox-Trefi|NBE-196]] 1.NBE: Triada 23 Diseño ABB-Hunnox-Trefi
+- **Subtarea:** [[NBE-197 - 2.NBE Triada 23 Copys ABB-Hunnox_Trefi (ver comentario de linkedin)|NBE-197]] 2.NBE: Triada 23 Copys ABB-Hunnox_Trefi (ver comentario de linkedin)
+- **Subtarea:** [[NBE-198 - 5.NBE Triada 23 Programar ABB-Hunnox_Trefi miercoles 3-12|NBE-198]] 5.NBE: Triada 23 Programar  ABB-Hunnox_Trefi miercoles 3-12
 
 ## Descripcion
 

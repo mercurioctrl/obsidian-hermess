@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-687"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-630]] Responsive
-- **relates to:** [[NBWEB-688]] API - Review -  Corregir listar duplicados en los items
+- **Padre:** [[NBWEB-630 - Responsive|NBWEB-630]] Responsive
+- **relates to:** [[NBWEB-688 - API - Review - Corregir listar duplicados en los items|NBWEB-688]] API - Review -  Corregir listar duplicados en los items
 
 ## Descripcion
 

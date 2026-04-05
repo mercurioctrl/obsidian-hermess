@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-37"
 
 ## Relaciones
 
-- **Padre:** [[LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
-- **blocks:** [[LIO-49]] APP - Feat - Implementar nuevos textos
+- **Padre:** [[LIO-11 - Proceso de registro sencillo para los vendedoresCompradores|LIO-11]] Proceso de registro sencillo para los vendedores/Compradores
+- **blocks:** [[LIO-49 - APP - Feat - Implementar nuevos textos|LIO-49]] APP - Feat - Implementar nuevos textos
 
 ## Descripcion
 

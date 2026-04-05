@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-498"
 
 ## Relaciones
 
-- **Padre:** [[COB-487]] Feat - Cobrables -> Comprobantes de pago
-- **relates to:** [[PED-585]] API - Feat - Agregar comprobantes de pago
-- **relates to:** [[COB-489]] API - Feat - Ver comprobante de pago
-- **is blocked by:** [[COB-500]] API - Ver comprobante de pago - No se encuentra el comprobante
-- **is blocked by:** [[COB-502]] API - Ver comprobante de pago - No se visualiza la imagen
+- **Padre:** [[COB-487 - Feat - Cobrables - Comprobantes de pago|COB-487]] Feat - Cobrables -> Comprobantes de pago
+- **relates to:** [[PED-585 - API - Feat - Agregar comprobantes de pago|PED-585]] API - Feat - Agregar comprobantes de pago
+- **relates to:** [[COB-489 - API - Feat - Ver comprobante de pago|COB-489]] API - Feat - Ver comprobante de pago
+- **is blocked by:** [[COB-500 - API - Ver comprobante de pago - No se encuentra el comprobante|COB-500]] API - Ver comprobante de pago - No se encuentra el comprobante
+- **is blocked by:** [[COB-502 - API - Ver comprobante de pago - No se visualiza la imagen|COB-502]] API - Ver comprobante de pago - No se visualiza la imagen
 
 ## Descripcion
 

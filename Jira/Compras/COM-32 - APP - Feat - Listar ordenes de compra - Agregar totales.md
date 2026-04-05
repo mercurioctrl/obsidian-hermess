@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-32"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **is blocked by:** [[COM-31]] API - Feat - Listar ordenes de compra -> Agregar totales
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **is blocked by:** [[COM-31 - API - Feat - Listar ordenes de compra - Agregar totales|COM-31]] API - Feat - Listar ordenes de compra -> Agregar totales
 
 ## Descripcion
 

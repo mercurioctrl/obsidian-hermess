@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-282"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **has action item:** [[COM-283]] APP - Cambiar IVA por (taxAmount) impuestos en el listado de ordenes
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **has action item:** [[COM-283 - APP - Cambiar IVA por (taxAmount) impuestos en el listado de ordenes|COM-283]] APP - Cambiar IVA por (taxAmount) impuestos en el listado de ordenes
 
 ## Descripcion
 

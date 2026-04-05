@@ -4,7 +4,7 @@ name: "Naevo | Vitalsaf"
 type: "software"
 total_issues: 9
 jira_url: "https://bluinc.atlassian.net/browse/NAEV"
-synced: "2026-04-05 07:55"
+synced: "2026-04-05 07:59"
 ---
 
 # Naevo | Vitalsaf (NAEV)
@@ -22,12 +22,12 @@ synced: "2026-04-05 07:55"
 
 ## Issues
 
-- [[NAEV-1]] — Logo  Vitalsaf (Finalizada)
-- [[NAEV-2]] — Logos NAEVO (REVISIÓN)
-- [[NAEV-3]] — Etiquetas (Tareas por hacer)
-- [[NAEV-4]] — DDG - Prototipo etiquetas por categoria (Finalizada)
-- [[NAEV-5]] — 2.DDG - Editable para muestra envio y prueba de cambios de fuente y color (Finalizada)
-- [[NAEV-6]] — DDG - Diseño final para imprimir (Tareas por hacer)
-- [[NAEV-7]] — DDG - Diseño etiqueta modelo - LUTEINA (En curso)
-- [[NAEV-8]] — Naevo: Social Media (Finalizada)
-- [[NAEV-9]] — LOGO NAEVO (Finalizada)
+- [[NAEV-1 - Logo Vitalsaf|NAEV-1 �� Logo  Vitalsaf]] (Finalizada)
+- [[NAEV-2 - Logos NAEVO|NAEV-2 �� Logos NAEVO]] (REVISIÓN)
+- [[NAEV-3 - Etiquetas|NAEV-3 �� Etiquetas]] (Tareas por hacer)
+- [[NAEV-4 - DDG - Prototipo etiquetas por categoria|NAEV-4 �� DDG - Prototipo etiquetas por categoria]] (Finalizada)
+- [[NAEV-5 - 2.DDG - Editable para muestra envio y prueba de cambios de fuente y color|NAEV-5 �� 2.DDG - Editable para muestra envio y prueba de cambios de fuente y color]] (Finalizada)
+- [[NAEV-6 - DDG - Diseño final para imprimir|NAEV-6 �� DDG - Diseño final para imprimir]] (Tareas por hacer)
+- [[NAEV-7 - DDG - Diseño etiqueta modelo - LUTEINA|NAEV-7 �� DDG - Diseño etiqueta modelo - LUTEINA]] (En curso)
+- [[NAEV-8 - Naevo Social Media|NAEV-8 �� Naevo: Social Media]] (Finalizada)
+- [[NAEV-9 - LOGO NAEVO|NAEV-9 �� LOGO NAEVO]] (Finalizada)

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-707"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-690]] Enviar correo de comporbante adjutnado
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-690 - Enviar correo de comporbante adjutnado|NBWEB-690]] Enviar correo de comporbante adjutnado
 
 ## Descripcion
 

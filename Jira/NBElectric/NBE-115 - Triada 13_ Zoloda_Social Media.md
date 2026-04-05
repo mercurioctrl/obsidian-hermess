@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-115"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-128]] ⚡Triada 14_Zoloda_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-129]] ✏️Triada 14_Zoloda_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-128 - ⚡Triada 14_Zoloda_Desarrollo de piezas Social Media|NBE-128]] ⚡Triada 14_Zoloda_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-129 - ✏️Triada 14_Zoloda_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-129]] ✏️Triada 14_Zoloda_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

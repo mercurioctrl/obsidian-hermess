@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-651"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-647]] NB_ Clinica de PADEL
+- **Padre:** [[DNYL-647 - NB_ Clinica de PADEL|DNYL-647]] NB_ Clinica de PADEL
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-191"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-184]] Mar 11 : Debate de la semana: ¿RTX 5070 o RX 9070?  (Rojo) vie 3
+- **Padre:** [[LOMKT-184 - Mar 11 Debate de la semana ¿RTX 5070 o RX 9070 (Rojo) vie 3|LOMKT-184]] Mar 11 : Debate de la semana: ¿RTX 5070 o RX 9070?  (Rojo) vie 3
 
 ## Descripcion
 

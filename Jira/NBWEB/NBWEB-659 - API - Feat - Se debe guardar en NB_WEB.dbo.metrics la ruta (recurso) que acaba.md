@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-659"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-658]] Metricas
-- **is blocked by:** [[NBWEB-667]] API - Guardar la ruta (recurso) ejecutada - No se visualiza el registro
+- **Padre:** [[NBWEB-658 - Metricas|NBWEB-658]] Metricas
+- **is blocked by:** [[NBWEB-667 - API - Guardar la ruta (recurso) ejecutada - No se visualiza el registro|NBWEB-667]] API - Guardar la ruta (recurso) ejecutada - No se visualiza el registro
 
 ## Descripcion
 

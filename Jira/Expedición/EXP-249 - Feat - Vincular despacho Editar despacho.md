@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-249"
 
 ## Relaciones
 
-- **Padre:** [[EXP-5]] Ingreso de mercaderia
-- **Subtarea:** [[EXP-250]] API - Feat - Leer informacion del despacho
-- **Subtarea:** [[EXP-251]] API - Feat - Editar / Crear despacho en base a un pedido 
-- **Subtarea:** [[EXP-252]] APP - Feat - Modal crear / vincular un despacho
-- **Subtarea:** [[EXP-285]] API - Refactor - Se deben mostrar en el listado de ingresos, aquellos que aun no tienen despacho creado aun
-- **Subtarea:** [[EXP-412]] APP - Refactor - Añadir máscara de entrada al nombre del despacho
-- **Subtarea:** [[EXP-414]] BD - Actualización - Eliminar nombres de despachos incorrectos
-- **Subtarea:** [[EXP-416]] APP - Refactor - Cuando la mercaderia es Nacional, el campo despacho desaparece y no es obligatorio
+- **Padre:** [[EXP-5 - Ingreso de mercaderia|EXP-5]] Ingreso de mercaderia
+- **Subtarea:** [[EXP-250 - API - Feat - Leer informacion del despacho|EXP-250]] API - Feat - Leer informacion del despacho
+- **Subtarea:** [[EXP-251 - API - Feat - Editar Crear despacho en base a un pedido|EXP-251]] API - Feat - Editar / Crear despacho en base a un pedido 
+- **Subtarea:** [[EXP-252 - APP - Feat - Modal crear vincular un despacho|EXP-252]] APP - Feat - Modal crear / vincular un despacho
+- **Subtarea:** [[EXP-285 - API - Refactor - Se deben mostrar en el listado de ingresos, aquellos que aun|EXP-285]] API - Refactor - Se deben mostrar en el listado de ingresos, aquellos que aun no tienen despacho creado aun
+- **Subtarea:** [[EXP-412 - APP - Refactor - Añadir máscara de entrada al nombre del despacho|EXP-412]] APP - Refactor - Añadir máscara de entrada al nombre del despacho
+- **Subtarea:** [[EXP-414 - BD - Actualización - Eliminar nombres de despachos incorrectos|EXP-414]] BD - Actualización - Eliminar nombres de despachos incorrectos
+- **Subtarea:** [[EXP-416 - APP - Refactor - Cuando la mercaderia es Nacional, el campo despacho desaparece|EXP-416]] APP - Refactor - Cuando la mercaderia es Nacional, el campo despacho desaparece y no es obligatorio
 
 ## Descripcion
 

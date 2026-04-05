@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-212"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **blocks:** [[NBWEB-172]] APP - Mi cuenta - Mis ususarios
-- **relates to:** [[NBWEB-226]] APP - Mi cuenta - Mis usuarios - Agregar un usuario nuevo
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **blocks:** [[NBWEB-172 - APP - Mi cuenta - Mis ususarios|NBWEB-172]] APP - Mi cuenta - Mis ususarios
+- **relates to:** [[NBWEB-226 - APP - Mi cuenta - Mis usuarios - Agregar un usuario nuevo|NBWEB-226]] APP - Mi cuenta - Mis usuarios - Agregar un usuario nuevo
 
 ## Descripcion
 

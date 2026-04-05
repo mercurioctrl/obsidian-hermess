@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-5"
 
 ## Relaciones
 
-- **Padre:** [[LAW-1]] Sitio Web Actual_Etapa 1
-- **action item from:** [[LAW-2]] DSG - Feature - Armar Logo de MSI a medida tipo como esta en lasetcorp.com
+- **Padre:** [[LAW-1 - Sitio Web Actual_Etapa 1|LAW-1]] Sitio Web Actual_Etapa 1
+- **action item from:** [[LAW-2 - DSG - Feature - Armar Logo de MSI a medida tipo como esta en lasetcorp.com|LAW-2]] DSG - Feature - Armar Logo de MSI a medida tipo como esta en lasetcorp.com
 
 ## Descripcion
 

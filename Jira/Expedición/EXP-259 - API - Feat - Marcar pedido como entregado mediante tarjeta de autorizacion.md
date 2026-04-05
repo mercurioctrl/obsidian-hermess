@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-259"
 
 ## Relaciones
 
-- **Padre:** [[EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
-- **blocks:** [[EXP-260]] APP - Feat - Marcar pedido como entregado mediante tarjeta de autorizacion
+- **Padre:** [[EXP-258 - Feat - Autorizar Entrega mediante tarjeta de autorizacion|EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
+- **blocks:** [[EXP-260 - APP - Feat - Marcar pedido como entregado mediante tarjeta de autorizacion|EXP-260]] APP - Feat - Marcar pedido como entregado mediante tarjeta de autorizacion
 
 ## Descripcion
 

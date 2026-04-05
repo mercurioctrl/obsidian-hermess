@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-43"
 
 ## Relaciones
 
-- **relates to:** [[LOCAPP-40]] API - Faet - Generar comprobante (fc,nc,db) a un tercero, para un cliente determinado
+- **relates to:** [[LOCAPP-40 - API - Faet - Generar comprobante (fc,nc,db) a un tercero, para un cliente|LOCAPP-40]] API - Faet - Generar comprobante (fc,nc,db) a un tercero, para un cliente determinado
 
 ## Descripcion
 

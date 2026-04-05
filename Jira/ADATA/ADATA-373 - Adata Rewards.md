@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-373"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-375]] Agregar Activaciones Adata Adata Rewards
-- **has action item:** [[ADATA-374]] APP - Review - Ajustes y cambios de estilo segun la marca
+- **Subtarea:** [[ADATA-375 - Agregar Activaciones Adata Adata Rewards|ADATA-375]] Agregar Activaciones Adata Adata Rewards
+- **has action item:** [[ADATA-374 - APP - Review - Ajustes y cambios de estilo segun la marca|ADATA-374]] APP - Review - Ajustes y cambios de estilo segun la marca
 
 ## Descripcion
 

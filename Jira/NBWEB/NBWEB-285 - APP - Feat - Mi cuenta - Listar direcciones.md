@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-285"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-286]] APP - Feat - Agregar direccion
-- **Subtarea:** [[NBWEB-287]] APP - Feat - Eliminar direccion
-- **Subtarea:** [[NBWEB-288]] APP - Feat - Editar direccion
-- **relates to:** [[NBWEB-236]] API - Feat - Agregar direccion
-- **relates to:** [[NBWEB-238]] API - Feat - Eliminar direccion
-- **relates to:** [[NBWEB-245]] API - Feat - Editar direccion
-- **is blocked by:** [[NBWEB-244]] API - Feat - Listar direcciones
-- **is duplicated by:** [[NBWEB-255]] APP - Feat - Mis Direcciones de envio
+- **Subtarea:** [[NBWEB-286 - APP - Feat - Agregar direccion|NBWEB-286]] APP - Feat - Agregar direccion
+- **Subtarea:** [[NBWEB-287 - APP - Feat - Eliminar direccion|NBWEB-287]] APP - Feat - Eliminar direccion
+- **Subtarea:** [[NBWEB-288 - APP - Feat - Editar direccion|NBWEB-288]] APP - Feat - Editar direccion
+- **relates to:** [[NBWEB-236 - API - Feat - Agregar direccion|NBWEB-236]] API - Feat - Agregar direccion
+- **relates to:** [[NBWEB-238 - API - Feat - Eliminar direccion|NBWEB-238]] API - Feat - Eliminar direccion
+- **relates to:** [[NBWEB-245 - API - Feat - Editar direccion|NBWEB-245]] API - Feat - Editar direccion
+- **is blocked by:** [[NBWEB-244 - API - Feat - Listar direcciones|NBWEB-244]] API - Feat - Listar direcciones
+- **is duplicated by:** [[NBWEB-255 - APP - Feat - Mis Direcciones de envio|NBWEB-255]] APP - Feat - Mis Direcciones de envio
 
 ## Descripcion
 

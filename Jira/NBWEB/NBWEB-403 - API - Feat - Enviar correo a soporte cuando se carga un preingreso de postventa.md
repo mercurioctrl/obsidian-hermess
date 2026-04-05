@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-403"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-471]] Revisar mensaje en gamma
-- **is caused by:** [[POS-5]] API - Feat - Enviar correo con el preingreso de postventa
+- **Subtarea:** [[NBWEB-471 - Revisar mensaje en gamma|NBWEB-471]] Revisar mensaje en gamma
+- **is caused by:** [[POS-5 - API - Feat - Enviar correo con el preingreso de postventa|POS-5]] API - Feat - Enviar correo con el preingreso de postventa
 
 ## Descripcion
 

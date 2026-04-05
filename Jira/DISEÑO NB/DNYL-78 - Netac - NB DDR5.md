@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-78"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-79]] Story 
-- **Subtarea:** [[DNYL-80]] Feed
-- **Subtarea:** [[DNYL-81]] Banner NB home y cuadrado chico
-- **Subtarea:** [[DNYL-84]] Twitter
+- **Subtarea:** [[DNYL-79 - Story|DNYL-79]] Story 
+- **Subtarea:** [[DNYL-80 - Feed|DNYL-80]] Feed
+- **Subtarea:** [[DNYL-81 - Banner NB home y cuadrado chico|DNYL-81]] Banner NB home y cuadrado chico
+- **Subtarea:** [[DNYL-84 - Twitter|DNYL-84]] Twitter
 
 ## Descripcion
 

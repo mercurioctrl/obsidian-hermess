@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-18"
 
 ## Relaciones
 
-- **Padre:** [[FB-17]] Site- Etapa 0
+- **Padre:** [[FB-17 - Site- Etapa 0|FB-17]] Site- Etapa 0
 
 ## Descripcion
 

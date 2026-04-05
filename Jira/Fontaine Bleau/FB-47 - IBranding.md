@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-47"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-48]] DSG - Feature - Armar presentacion de Ugarte pero con el Logo de Fontaine Bleau
-- **Subtarea:** [[FB-49]] DSG - Feature - Armar Presentacion de Echeverria con Logo de Fontaine Bleau
-- **Subtarea:** [[FB-50]] DSG - Feature - WHO WE ARE
-- **Subtarea:** [[FB-52]] DSG - Feature -Manual de Marca
+- **Subtarea:** [[FB-48 - DSG - Feature - Armar presentacion de Ugarte pero con el Logo de Fontaine Bleau|FB-48]] DSG - Feature - Armar presentacion de Ugarte pero con el Logo de Fontaine Bleau
+- **Subtarea:** [[FB-49 - DSG - Feature - Armar Presentacion de Echeverria con Logo de Fontaine Bleau|FB-49]] DSG - Feature - Armar Presentacion de Echeverria con Logo de Fontaine Bleau
+- **Subtarea:** [[FB-50 - DSG - Feature - WHO WE ARE|FB-50]] DSG - Feature - WHO WE ARE
+- **Subtarea:** [[FB-52 - DSG - Feature -Manual de Marca|FB-52]] DSG - Feature -Manual de Marca
 
 ## Descripcion
 

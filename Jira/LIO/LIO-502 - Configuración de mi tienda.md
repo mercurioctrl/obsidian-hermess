@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-502"
 
 ## Relaciones
 
-- **Padre:** [[LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
-- **Subtarea:** [[LIO-588]] APP Mobile - Feat - Pantalla de Verificación del Vendedor
+- **Padre:** [[LIO-497 - App Mobile Vendedores – Gestión integral del seller en Libre Opción|LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
+- **Subtarea:** [[LIO-588 - APP Mobile - Feat - Pantalla de Verificación del Vendedor|LIO-588]] APP Mobile - Feat - Pantalla de Verificación del Vendedor
 
 ## Descripcion
 

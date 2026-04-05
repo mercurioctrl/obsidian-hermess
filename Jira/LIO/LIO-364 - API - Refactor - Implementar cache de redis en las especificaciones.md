@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-364"
 
 ## Relaciones
 
-- **Padre:** [[LIO-261]] Implementar Redis
-- **relates to:** [[LIO-365]] Cambiar Ruta de Especificaciones.
+- **Padre:** [[LIO-261 - Implementar Redis|LIO-261]] Implementar Redis
+- **relates to:** [[LIO-365 - Cambiar Ruta de Especificaciones.|LIO-365]] Cambiar Ruta de Especificaciones.
 
 ## Descripcion
 

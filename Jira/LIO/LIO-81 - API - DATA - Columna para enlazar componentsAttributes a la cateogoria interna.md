@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-81"
 
 ## Relaciones
 
-- **blocks:** [[LIO-79]] API - DATA - Refactor - Modificaremos la tabla componentsAttributes para enlazarlo a la cateogoria interna (capa 1) y a partir de ella, a la cateogria de libre opción
+- **blocks:** [[LIO-79 - API - DATA - Refactor - Modificaremos la tabla componentsAttributes para|LIO-79]] API - DATA - Refactor - Modificaremos la tabla componentsAttributes para enlazarlo a la cateogoria interna (capa 1) y a partir de ella, a la cateogria de libre opción
 
 ## Descripcion
 

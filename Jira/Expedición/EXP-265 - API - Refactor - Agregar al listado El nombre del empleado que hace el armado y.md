@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-265"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **blocks:** [[EXP-266]] APP - Refactor - Agregar al listado El nombre del empleado que hace el armado y del que hace la entrega segun el token
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **blocks:** [[EXP-266 - APP - Refactor - Agregar al listado El nombre del empleado que hace el armado y|EXP-266]] APP - Refactor - Agregar al listado El nombre del empleado que hace el armado y del que hace la entrega segun el token
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-104"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **blocks:** [[EXP-105]] APP - Feat - Mostrar trackingNumbers asociados
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **blocks:** [[EXP-105 - APP - Feat - Mostrar trackingNumbers asociados|EXP-105]] APP - Feat - Mostrar trackingNumbers asociados
 
 ## Descripcion
 

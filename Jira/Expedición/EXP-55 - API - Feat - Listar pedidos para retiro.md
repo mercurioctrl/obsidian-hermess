@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-55"
 
 ## Relaciones
 
-- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
-- **blocks:** [[EXP-84]] APP - Listar pedido para retiro
-- **has action item:** [[EXP-479]] API - Listar pedidos para retiro - Error al buscar por cadena de texto
+- **Padre:** [[EXP-14 - Feat - Listar pedidos para retiro|EXP-14]] Feat - Listar pedidos para retiro
+- **blocks:** [[EXP-84 - APP - Listar pedido para retiro|EXP-84]] APP - Listar pedido para retiro
+- **has action item:** [[EXP-479 - API - Listar pedidos para retiro - Error al buscar por cadena de texto|EXP-479]] API - Listar pedidos para retiro - Error al buscar por cadena de texto
 
 ## Descripcion
 

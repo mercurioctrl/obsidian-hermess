@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-54"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-41]] IBranding
+- **Padre:** [[BLUWEB-41 - IBranding|BLUWEB-41]] IBranding
 
 ## Descripcion
 

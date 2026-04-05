@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-94"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **blocks:** [[COB-93]] API - Feat - Filtrar lista clientes
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **blocks:** [[COB-93 - API - Feat - Filtrar lista clientes|COB-93]] API - Feat - Filtrar lista clientes
 
 ## Descripcion
 

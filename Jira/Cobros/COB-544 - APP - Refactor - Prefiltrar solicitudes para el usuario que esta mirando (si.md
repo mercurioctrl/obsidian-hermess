@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-544"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
 
 ## Descripcion
 

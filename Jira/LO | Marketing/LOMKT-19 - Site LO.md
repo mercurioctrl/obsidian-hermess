@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-19"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-20]] Referidos
-- **Subtarea:** [[LOMKT-21]] Redes sociales
-- **Subtarea:** [[LOMKT-149]] Precios relámpago 
-- **Subtarea:** [[LOMKT-150]] Feedback, Centro de ayuda y suscribirse
-- **Subtarea:** [[LOMKT-151]] Link Over
-- **Subtarea:** [[LOMKT-152]] Degrade en sub-banners
-- **Subtarea:** [[LOMKT-156]] Fuente: trataria de usar una diferente de New Bytes parece un micrositio de New bytes perdio identidad 
-- **Subtarea:** [[LOMKT-157]] Look & Feel respeta un estilo de New bytes y no la identidad de LO en cuanto a los colores utilizados
+- **Subtarea:** [[LOMKT-20 - Referidos|LOMKT-20]] Referidos
+- **Subtarea:** [[LOMKT-21 - Redes sociales|LOMKT-21]] Redes sociales
+- **Subtarea:** [[LOMKT-149 - Precios relámpago|LOMKT-149]] Precios relámpago 
+- **Subtarea:** [[LOMKT-150 - Feedback, Centro de ayuda y suscribirse|LOMKT-150]] Feedback, Centro de ayuda y suscribirse
+- **Subtarea:** [[LOMKT-151 - Link Over|LOMKT-151]] Link Over
+- **Subtarea:** [[LOMKT-152 - Degrade en sub-banners|LOMKT-152]] Degrade en sub-banners
+- **Subtarea:** [[LOMKT-156 - Fuente trataria de usar una diferente de New Bytes parece un micrositio de New|LOMKT-156]] Fuente: trataria de usar una diferente de New Bytes parece un micrositio de New bytes perdio identidad 
+- **Subtarea:** [[LOMKT-157 - Look & Feel respeta un estilo de New bytes y no la identidad de LO en cuanto a|LOMKT-157]] Look & Feel respeta un estilo de New bytes y no la identidad de LO en cuanto a los colores utilizados
 
 ## Descripcion
 

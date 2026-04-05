@@ -29,16 +29,16 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-1"
 
 ## Relaciones
 
-- **Subtarea:** [[LAW-2]] DSG - Feature - Armar Logo de MSI a medida tipo como esta en lasetcorp.com
-- **Subtarea:** [[LAW-3]] DSG - Refactor -Propuesta de imagenes nuevas en la Home
-- **Subtarea:** [[LAW-4]] Armar misión y Visión
-- **Subtarea:** [[LAW-5]] APP-Refactor-Agregar Logo MSI a carrousell de marcas 
-- **Subtarea:** [[LAW-6]] APP-Refactor-Agregar accionable flotante de WhatsApp en la esquina inferior derecha 
-- **Subtarea:** [[LAW-7]] APP-Feature-Cambiar en los datos de contactola dirección de Uruguay ubicados en el cuerpo y footer
-- **Subtarea:** [[LAW-27]] Agregar Link de Linkedin
-- **Subtarea:** [[LAW-28]] 2. Laset: DSG - Feature - Logos 
-- **Subtarea:** [[LAW-29]] Laset: DSG - Feature - Armar Vcard 
-- **Subtarea:** [[LAW-38]] APP-Refactor-Agregar Logos ducky + Fenda a carrousell de marcas 
+- **Subtarea:** [[LAW-2 - DSG - Feature - Armar Logo de MSI a medida tipo como esta en lasetcorp.com|LAW-2]] DSG - Feature - Armar Logo de MSI a medida tipo como esta en lasetcorp.com
+- **Subtarea:** [[LAW-3 - DSG - Refactor -Propuesta de imagenes nuevas en la Home|LAW-3]] DSG - Refactor -Propuesta de imagenes nuevas en la Home
+- **Subtarea:** [[LAW-4 - Armar misión y Visión|LAW-4]] Armar misión y Visión
+- **Subtarea:** [[LAW-5 - APP-Refactor-Agregar Logo MSI a carrousell de marcas|LAW-5]] APP-Refactor-Agregar Logo MSI a carrousell de marcas 
+- **Subtarea:** [[LAW-6 - APP-Refactor-Agregar accionable flotante de WhatsApp en la esquina inferior|LAW-6]] APP-Refactor-Agregar accionable flotante de WhatsApp en la esquina inferior derecha 
+- **Subtarea:** [[LAW-7 - APP-Feature-Cambiar en los datos de contactola dirección de Uruguay ubicados en|LAW-7]] APP-Feature-Cambiar en los datos de contactola dirección de Uruguay ubicados en el cuerpo y footer
+- **Subtarea:** [[LAW-27 - Agregar Link de Linkedin|LAW-27]] Agregar Link de Linkedin
+- **Subtarea:** [[LAW-28 - 2. Laset DSG - Feature - Logos|LAW-28]] 2. Laset: DSG - Feature - Logos 
+- **Subtarea:** [[LAW-29 - Laset DSG - Feature - Armar Vcard|LAW-29]] Laset: DSG - Feature - Armar Vcard 
+- **Subtarea:** [[LAW-38 - APP-Refactor-Agregar Logos ducky + Fenda a carrousell de marcas|LAW-38]] APP-Refactor-Agregar Logos ducky + Fenda a carrousell de marcas 
 
 ## Descripcion
 

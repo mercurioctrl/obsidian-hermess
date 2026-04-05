@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-550"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-548]] CMS - Clientes
-- **is blocked by:** [[NBWEB-556]] API - Repositorio empresas
+- **Padre:** [[NBWEB-548 - CMS - Clientes|NBWEB-548]] CMS - Clientes
+- **is blocked by:** [[NBWEB-556 - API - Repositorio empresas|NBWEB-556]] API - Repositorio empresas
 
 ## Descripcion
 

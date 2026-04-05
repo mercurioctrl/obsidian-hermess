@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-36"
 
 ## Relaciones
 
-- **Padre:** [[INV-35]] Importadores/ Scrappers
+- **Padre:** [[INV-35 - Importadores Scrappers|INV-35]] Importadores/ Scrappers
 
 ## Descripcion
 

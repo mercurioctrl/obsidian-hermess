@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-108"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-110]] ⚡Triada 11_Idec_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-111]] ✏️Triada 11_Idec_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-110 - ⚡Triada 11_Idec_Desarrollo de piezas Social Media|NBE-110]] ⚡Triada 11_Idec_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-111 - ✏️Triada 11_Idec_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-111]] ✏️Triada 11_Idec_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

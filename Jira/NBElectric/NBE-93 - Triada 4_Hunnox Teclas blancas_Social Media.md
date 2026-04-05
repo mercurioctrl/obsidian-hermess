@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-93"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-94]] ⚡Triada 4_Hunnox Teclas Blancas_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-95]] ✏️Triada 4_Hunnox_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-94 - ⚡Triada 4_Hunnox Teclas Blancas_Desarrollo de piezas Social Media|NBE-94]] ⚡Triada 4_Hunnox Teclas Blancas_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-95 - ✏️Triada 4_Hunnox_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-95]] ✏️Triada 4_Hunnox_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-53"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-29]] Remito Fiscal
-- **Subtarea:** [[LOCAPP-54]] API - Refactor - Agregar despachos al remito fiscal
-- **Subtarea:** [[LOCAPP-55]] APP - Feat - Agregar despacho al remito fiscal
+- **Padre:** [[LOCAPP-29 - Remito Fiscal|LOCAPP-29]] Remito Fiscal
+- **Subtarea:** [[LOCAPP-54 - API - Refactor - Agregar despachos al remito fiscal|LOCAPP-54]] API - Refactor - Agregar despachos al remito fiscal
+- **Subtarea:** [[LOCAPP-55 - APP - Feat - Agregar despacho al remito fiscal|LOCAPP-55]] APP - Feat - Agregar despacho al remito fiscal
 
 ## Descripcion
 

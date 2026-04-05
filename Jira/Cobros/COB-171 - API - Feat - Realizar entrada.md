@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-171"
 
 ## Relaciones
 
-- **Padre:** [[COB-170]] Feat - Realizar entrada de caja
+- **Padre:** [[COB-170 - Feat - Realizar entrada de caja|COB-170]] Feat - Realizar entrada de caja
 
 ## Descripcion
 

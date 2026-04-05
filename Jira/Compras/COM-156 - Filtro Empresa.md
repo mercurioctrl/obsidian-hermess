@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-156"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **Subtarea:** [[COM-157]]   API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
-- **Subtarea:** [[COM-158]] API - Refactor - Agregar parametro empresa al objeto usuario
-- **Subtarea:** [[COM-159]] APP - Refactor - Agregar filtro empresa global
-- **Subtarea:** [[COM-219]] APP - MVP -Review - Revisar por que a veces al hacer login con el user aobari aparece NB como predeterminado en algunas veces o al actualizar aparece arriba el logo de NB
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **Subtarea:** [[COM-157 - API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las|COM-157]]   API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
+- **Subtarea:** [[COM-158 - API - Refactor - Agregar parametro empresa al objeto usuario|COM-158]] API - Refactor - Agregar parametro empresa al objeto usuario
+- **Subtarea:** [[COM-159 - APP - Refactor - Agregar filtro empresa global|COM-159]] APP - Refactor - Agregar filtro empresa global
+- **Subtarea:** [[COM-219 - APP - MVP -Review - Revisar por que a veces al hacer login con el user aobari|COM-219]] APP - MVP -Review - Revisar por que a veces al hacer login con el user aobari aparece NB como predeterminado en algunas veces o al actualizar aparece arriba el logo de NB
 
 ## Descripcion
 

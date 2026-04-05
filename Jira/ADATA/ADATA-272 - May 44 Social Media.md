@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-272"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-286]] May: 4/4 Portada Diseño Social Media
-- **Subtarea:** [[ADATA-287]] May: 4/4 Copys Social Media
-- **Subtarea:** [[ADATA-288]] May: 4/4 Programar Social Media
+- **Subtarea:** [[ADATA-286 - May 44 Portada Diseño Social Media|ADATA-286]] May: 4/4 Portada Diseño Social Media
+- **Subtarea:** [[ADATA-287 - May 44 Copys Social Media|ADATA-287]] May: 4/4 Copys Social Media
+- **Subtarea:** [[ADATA-288 - May 44 Programar Social Media|ADATA-288]] May: 4/4 Programar Social Media
 
 ## Descripcion
 

@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-80"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **blocks:** [[COM-83]] APP - Feat - Agregar item a una orden de compra
-- **is blocked by:** [[COM-86]] API - Agregar/Editar un producto a una orden de compra abierta - Incidencias varias
-- **blocks:** [[COM-84]] APP - Feat - Editar item en una orden de compra
-- **relates to:** [[COM-90]] API - Refactor  - PATCH provider Order add item
-- **relates to:** [[COM-107]] API - Refactor - Agregar/Editar un producto a una orden de compra abierta - Al cambiar la cantidad de artículos no actualizar los ingresados
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **blocks:** [[COM-83 - APP - Feat - Agregar item a una orden de compra|COM-83]] APP - Feat - Agregar item a una orden de compra
+- **is blocked by:** [[COM-86 - API - AgregarEditar un producto a una orden de compra abierta - Incidencias|COM-86]] API - Agregar/Editar un producto a una orden de compra abierta - Incidencias varias
+- **blocks:** [[COM-84 - APP - Feat - Editar item en una orden de compra|COM-84]] APP - Feat - Editar item en una orden de compra
+- **relates to:** [[COM-90 - API - Refactor - PATCH provider Order add item|COM-90]] API - Refactor  - PATCH provider Order add item
+- **relates to:** [[COM-107 - API - Refactor - AgregarEditar un producto a una orden de compra abierta - Al|COM-107]] API - Refactor - Agregar/Editar un producto a una orden de compra abierta - Al cambiar la cantidad de artículos no actualizar los ingresados
 
 ## Descripcion
 

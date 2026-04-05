@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-44"
 
 ## Relaciones
 
-- **blocks:** [[LOCAPP-37]] MS - Refactor - Trasladar ambos parametros de dropshipping y join shipping al ms de comprobantes
+- **blocks:** [[LOCAPP-37 - MS - Refactor - Trasladar ambos parametros de dropshipping y join shipping al|LOCAPP-37]] MS - Refactor - Trasladar ambos parametros de dropshipping y join shipping al ms de comprobantes
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-295"
 
 ## Relaciones
 
-- **Padre:** [[COB-293]] Retenciones / Percepciones
+- **Padre:** [[COB-293 - Retenciones Percepciones|COB-293]] Retenciones / Percepciones
 
 ## Descripcion
 

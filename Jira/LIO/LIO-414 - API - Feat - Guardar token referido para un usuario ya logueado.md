@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-414"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **has action item:** [[LIO-438]] APP - Feat - Procesar token de referido cuando el usuario lo lleva en la url (con y sin login)
-- **has action item:** [[LIO-456]] API - Referrals - Agregar acreditación en billetera al procesar conversión de referido
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **has action item:** [[LIO-438 - APP - Feat - Procesar token de referido cuando el usuario lo lleva en la url|LIO-438]] APP - Feat - Procesar token de referido cuando el usuario lo lleva en la url (con y sin login)
+- **has action item:** [[LIO-456 - API - Referrals - Agregar acreditación en billetera al procesar conversión de|LIO-456]] API - Referrals - Agregar acreditación en billetera al procesar conversión de referido
 
 ## Descripcion
 

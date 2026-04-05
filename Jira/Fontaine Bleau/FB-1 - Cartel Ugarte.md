@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-1"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-2]] Modificación-Enroque de imagen piscina por balcón
-- **Subtarea:** [[FB-10]] Agregar Logo de M + M
-- **Subtarea:** [[FB-11]] Probar el logo de Bleau Ugarte y Fontaine Bleau con lineas rectas
-- **Subtarea:** [[FB-12]] Enviar por mail la última versión con el logo como lo veníamos utilizando
+- **Subtarea:** [[FB-2 - Modificación-Enroque de imagen piscina por balcón|FB-2]] Modificación-Enroque de imagen piscina por balcón
+- **Subtarea:** [[FB-10 - Agregar Logo de M + M|FB-10]] Agregar Logo de M + M
+- **Subtarea:** [[FB-11 - Probar el logo de Bleau Ugarte y Fontaine Bleau con lineas rectas|FB-11]] Probar el logo de Bleau Ugarte y Fontaine Bleau con lineas rectas
+- **Subtarea:** [[FB-12 - Enviar por mail la última versión con el logo como lo veníamos utilizando|FB-12]] Enviar por mail la última versión con el logo como lo veníamos utilizando
 
 ## Descripcion
 

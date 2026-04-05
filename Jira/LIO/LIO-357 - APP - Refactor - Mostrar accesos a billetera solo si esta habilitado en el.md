@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-357"
 
 ## Relaciones
 
-- **Padre:** [[LIO-231]] Billetera
-- **action item from:** [[LIO-356]] API - Refactor - Agregar al objeto "user" un parámetro para saber si ese usuario tiene habilitada la billetera
+- **Padre:** [[LIO-231 - Billetera|LIO-231]] Billetera
+- **action item from:** [[LIO-356 - API - Refactor - Agregar al objeto user un parámetro para saber si ese usuario|LIO-356]] API - Refactor - Agregar al objeto "user" un parámetro para saber si ese usuario tiene habilitada la billetera
 
 ## Descripcion
 

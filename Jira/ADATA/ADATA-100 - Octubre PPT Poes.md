@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-100"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-104]] Evidenciar AGS
-- **Subtarea:** [[ADATA-105]] Evidenciar Adata Paradise
+- **Subtarea:** [[ADATA-104 - Evidenciar AGS|ADATA-104]] Evidenciar AGS
+- **Subtarea:** [[ADATA-105 - Evidenciar Adata Paradise|ADATA-105]] Evidenciar Adata Paradise
 
 ## Descripcion
 

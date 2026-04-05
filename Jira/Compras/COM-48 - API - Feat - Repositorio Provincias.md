@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-48"
 
 ## Relaciones
 
-- **Padre:** [[COM-14]] Repositorios
+- **Padre:** [[COM-14 - Repositorios|COM-14]] Repositorios
 
 ## Descripcion
 

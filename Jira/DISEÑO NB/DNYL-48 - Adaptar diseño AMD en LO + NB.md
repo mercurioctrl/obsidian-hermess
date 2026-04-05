@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-48"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-49]] REDES
-- **Subtarea:** [[DNYL-50]] BANNER
-- **blocks:** [[REDESYNEWS-27]] Posteo AMD Lanzamiento
+- **Subtarea:** [[DNYL-49 - REDES|DNYL-49]] REDES
+- **Subtarea:** [[DNYL-50 - BANNER|DNYL-50]] BANNER
+- **blocks:** [[REDESYNEWS-27 - Posteo AMD Lanzamiento|REDESYNEWS-27]] Posteo AMD Lanzamiento
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-262"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-263]] 1. Diseño Triada 14_cambiar site
-- **Subtarea:** [[BLUWEB-266]] Mar: Copys Triada 14
-- **Subtarea:** [[BLUWEB-272]] Mar: Programar Triada 14
+- **Subtarea:** [[BLUWEB-263 - 1. Diseño Triada 14_cambiar site|BLUWEB-263]] 1. Diseño Triada 14_cambiar site
+- **Subtarea:** [[BLUWEB-266 - Mar Copys Triada 14|BLUWEB-266]] Mar: Copys Triada 14
+- **Subtarea:** [[BLUWEB-272 - Mar Programar Triada 14|BLUWEB-272]] Mar: Programar Triada 14
 
 ## Descripcion
 

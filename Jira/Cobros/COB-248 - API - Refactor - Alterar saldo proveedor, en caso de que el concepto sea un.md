@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-248"
 
 ## Relaciones
 
-- **Padre:** [[COB-178]] API - Feat - Realizar transferencia entre bancos
-- **blocks:** [[COB-249]] APP - Refactor - Agregar al modal de salida un selector de proveedor si el id del concepto es 3 o 35
+- **Padre:** [[COB-178 - API - Feat - Realizar transferencia entre bancos|COB-178]] API - Feat - Realizar transferencia entre bancos
+- **blocks:** [[COB-249 - APP - Refactor - Agregar al modal de salida un selector de proveedor si el id|COB-249]] APP - Refactor - Agregar al modal de salida un selector de proveedor si el id del concepto es 3 o 35
 
 ## Descripcion
 

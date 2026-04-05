@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-214"
 
 ## Relaciones
 
-- **Padre:** [[COM-178]] Depositos
+- **Padre:** [[COM-178 - Depositos|COM-178]] Depositos
 
 ## Descripcion
 

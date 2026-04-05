@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-29"
 
 ## Relaciones
 
-- **Padre:** [[FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
-- **action item from:** [[FB-55]] ⚫ DSG - Home - Iconografia y fuente
+- **Padre:** [[FB-28 - Fontaine Bleau Sitio Web_Etapa 0|FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
+- **action item from:** [[FB-55 - ⚫ DSG - Home - Iconografia y fuente|FB-55]] ⚫ DSG - Home - Iconografia y fuente
 
 ## Descripcion
 

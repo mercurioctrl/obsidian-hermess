@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-585"
 
 ## Relaciones
 
-- **Padre:** [[COB-581]] Repositorio y Gestión de Billeteras Libre Opción
-- **has action item:** [[COB-586]] APP - Feat - Ver transacciones de billetera por usuario LO
+- **Padre:** [[COB-581 - Repositorio y Gestión de Billeteras Libre Opción|COB-581]] Repositorio y Gestión de Billeteras Libre Opción
+- **has action item:** [[COB-586 - APP - Feat - Ver transacciones de billetera por usuario LO|COB-586]] APP - Feat - Ver transacciones de billetera por usuario LO
 
 ## Descripcion
 

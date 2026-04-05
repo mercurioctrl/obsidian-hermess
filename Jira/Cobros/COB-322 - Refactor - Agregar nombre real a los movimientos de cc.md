@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-322"
 
 ## Relaciones
 
-- **Padre:** [[COB-20]] Cuentas Corrientes
-- **Subtarea:** [[COB-324]] API - Refactor - Agregar nombre real del agente en los movimientos de ccc
-- **is blocked by:** [[COB-5]] API - Feat - Obtener cuenta corriente de un cliente
+- **Padre:** [[COB-20 - Cuentas Corrientes|COB-20]] Cuentas Corrientes
+- **Subtarea:** [[COB-324 - API - Refactor - Agregar nombre real del agente en los movimientos de ccc|COB-324]] API - Refactor - Agregar nombre real del agente en los movimientos de ccc
+- **is blocked by:** [[COB-5 - API - Feat - Obtener cuenta corriente de un cliente|COB-5]] API - Feat - Obtener cuenta corriente de un cliente
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-62"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **is blocked by:** [[BLUWEB-64]] DSG - Feat - Subir logos de servicios cortados sin margen, fondo transparente
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **is blocked by:** [[BLUWEB-64 - DSG - Feat - Subir logos de servicios cortados sin margen, fondo transparente|BLUWEB-64]] DSG - Feat - Subir logos de servicios cortados sin margen, fondo transparente
 
 ## Descripcion
 

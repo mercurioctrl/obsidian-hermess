@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-139"
 
 ## Relaciones
 
-- **Padre:** [[LIO-133]] Ms Envios Libre Opcion
-- **has action item:** [[LIO-138]] APP - Refactor - Se deben transportar los objetos con informacion del paquete (pesos, medidas y bultos) dentro del checkout para poder enviarlo en el payload al procesar la compra
+- **Padre:** [[LIO-133 - Ms Envios Libre Opcion|LIO-133]] Ms Envios Libre Opcion
+- **has action item:** [[LIO-138 - APP - Refactor - Se deben transportar los objetos con informacion del paquete|LIO-138]] APP - Refactor - Se deben transportar los objetos con informacion del paquete (pesos, medidas y bultos) dentro del checkout para poder enviarlo en el payload al procesar la compra
 
 ## Descripcion
 

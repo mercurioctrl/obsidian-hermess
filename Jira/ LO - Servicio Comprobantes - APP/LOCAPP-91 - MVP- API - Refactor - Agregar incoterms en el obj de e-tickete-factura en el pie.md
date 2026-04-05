@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-91"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-88]] FactUru
-- **has action item:** [[LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
+- **Padre:** [[LOCAPP-88 - FactUru|LOCAPP-88]] FactUru
+- **has action item:** [[LOCAPP-80 - MVP - Vouchers para LASET (eticket, efactura,packingList PL, SLI)|LOCAPP-80]] MVP - Vouchers para LASET (eticket, efactura,packingList "PL", SLI)
 
 ## Descripcion
 

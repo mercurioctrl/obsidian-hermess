@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-448"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
-- **action item from:** [[EXP-447]] API - Refactor - No dejar serializar un item que no tiene pesos,medidas y cantidad por bulto
-- **is blocked by:** [[EXP-449]] API - Refactor - Permitir editar pesos y medidas del item igual que ean/sku/gtin
-- **relates to:** [[EXP-450]] APP - Refactor -  comentar paquetes por unidad
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
+- **action item from:** [[EXP-447 - API - Refactor - No dejar serializar un item que no tiene pesos,medidas y|EXP-447]] API - Refactor - No dejar serializar un item que no tiene pesos,medidas y cantidad por bulto
+- **is blocked by:** [[EXP-449 - API - Refactor - Permitir editar pesos y medidas del item igual que eanskugtin|EXP-449]] API - Refactor - Permitir editar pesos y medidas del item igual que ean/sku/gtin
+- **relates to:** [[EXP-450 - APP - Refactor - comentar paquetes por unidad|EXP-450]] APP - Refactor -  comentar paquetes por unidad
 
 ## Descripcion
 

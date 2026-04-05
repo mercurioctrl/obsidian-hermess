@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-53"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-67]] Adata Diciembre:  3/4 Diseño portada Social Media MAESTRO 62 DA COOLER |
-- **Subtarea:** [[ADATA-68]] 10.Adata Diciembre:  3/4Copys Social Media  MAESTRO 62 DA COOLER |
-- **Subtarea:** [[ADATA-69]] Adata Diciembre: 3/4 Programar Social Media MAESTRO 62 DA COOLER |
+- **Subtarea:** [[ADATA-67 - Adata Diciembre 34 Diseño portada Social Media MAESTRO 62 DA COOLER|ADATA-67]] Adata Diciembre:  3/4 Diseño portada Social Media MAESTRO 62 DA COOLER |
+- **Subtarea:** [[ADATA-68 - 10.Adata Diciembre 34Copys Social Media MAESTRO 62 DA COOLER|ADATA-68]] 10.Adata Diciembre:  3/4Copys Social Media  MAESTRO 62 DA COOLER |
+- **Subtarea:** [[ADATA-69 - Adata Diciembre 34 Programar Social Media MAESTRO 62 DA COOLER|ADATA-69]] Adata Diciembre: 3/4 Programar Social Media MAESTRO 62 DA COOLER |
 
 ## Descripcion
 

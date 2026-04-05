@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-81"
 
 ## Relaciones
 
-- **Padre:** [[COB-3]] API - Feat - Listar movimiento por caja
+- **Padre:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
 
 ## Descripcion
 

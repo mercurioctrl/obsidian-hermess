@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-709"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-675]] APP - Refactorizar los pasos de registro de cliente y agregar direccion, codigo postal y whatsapp
-- **relates to:** [[NBWEB-710]] API - Registrar usuario - Fecha no guardada
-- **relates to:** [[NBWEB-714]] API - Refactor - whatsapp telefono 1 y 2 que no sean obligatorios
-- **relates to:** [[PED-672]] App - Quitar obligatorio los telefonos (telefono, telefono 2 y whatsapp)
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-675 - APP - Refactorizar los pasos de registro de cliente y agregar direccion, codigo|NBWEB-675]] APP - Refactorizar los pasos de registro de cliente y agregar direccion, codigo postal y whatsapp
+- **relates to:** [[NBWEB-710 - API - Registrar usuario - Fecha no guardada|NBWEB-710]] API - Registrar usuario - Fecha no guardada
+- **relates to:** [[NBWEB-714 - API - Refactor - whatsapp telefono 1 y 2 que no sean obligatorios|NBWEB-714]] API - Refactor - whatsapp telefono 1 y 2 que no sean obligatorios
+- **relates to:** [[PED-672 - App - Quitar obligatorio los telefonos (telefono, telefono 2 y whatsapp)|PED-672]] App - Quitar obligatorio los telefonos (telefono, telefono 2 y whatsapp)
 
 ## Descripcion
 

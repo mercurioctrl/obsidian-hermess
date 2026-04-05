@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-450"
 
 ## Relaciones
 
-- **relates to:** [[EXP-448]] APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se serializan y no los tienen
+- **relates to:** [[EXP-448 - APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se|EXP-448]] APP - Refactor - Cargar pesos y medidas del producto si no existen cuando se serializan y no los tienen
 
 ## Descripcion
 

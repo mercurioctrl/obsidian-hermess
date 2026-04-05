@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-65"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **blocks:** [[COM-60]] Research - Posiciones arancelarias e impuestos
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **blocks:** [[COM-60 - Research - Posiciones arancelarias e impuestos|COM-60]] Research - Posiciones arancelarias e impuestos
 
 ## Descripcion
 

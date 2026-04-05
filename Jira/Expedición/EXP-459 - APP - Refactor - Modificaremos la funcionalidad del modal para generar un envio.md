@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-459"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **action item from:** [[EXP-457]] API - Feat - Agregar un recurso para traer informacion completa y complementaria de lo referido al envio (para evaluar datos de cotizacion y posteriormente de armado)
-- **is duplicated by:** [[EXP-460]] APP- Refactor en el modal de crear etiqueta
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **action item from:** [[EXP-457 - API - Feat - Agregar un recurso para traer informacion completa y|EXP-457]] API - Feat - Agregar un recurso para traer informacion completa y complementaria de lo referido al envio (para evaluar datos de cotizacion y posteriormente de armado)
+- **is duplicated by:** [[EXP-460 - APP- Refactor en el modal de crear etiqueta|EXP-460]] APP- Refactor en el modal de crear etiqueta
 
 ## Descripcion
 

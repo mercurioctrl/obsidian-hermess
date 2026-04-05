@@ -29,16 +29,16 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-8"
 
 ## Relaciones
 
-- **Subtarea:** [[LAW-9]] Generar Linkedin
-- **Subtarea:** [[LAW-10]] DSG - Refactor -Covers para Linkedin
-- **Subtarea:** [[LAW-11]] DSG - Reactor -Profile Picture Instagram-Facebook-Linkedin
-- **Subtarea:** [[LAW-12]] DSG - Refactor - Covers para Facebook
-- **Subtarea:** [[LAW-19]] Acceso a instagram
-- **Subtarea:** [[LAW-20]] Acceso a Facebook
-- **Subtarea:** [[LAW-23]] Laset: DSG - Feature - Feed Propuesta
-- **Subtarea:** [[LAW-24]] DSG - Feature - Cover Google  Forms
-- **action item from:** [[LAW-14]] Logos Laset
-- **has action item:** [[LAW-37]] 1.Laset: Propuesta Laset Manual de redes
+- **Subtarea:** [[LAW-9 - Generar Linkedin|LAW-9]] Generar Linkedin
+- **Subtarea:** [[LAW-10 - DSG - Refactor -Covers para Linkedin|LAW-10]] DSG - Refactor -Covers para Linkedin
+- **Subtarea:** [[LAW-11 - DSG - Reactor -Profile Picture Instagram-Facebook-Linkedin|LAW-11]] DSG - Reactor -Profile Picture Instagram-Facebook-Linkedin
+- **Subtarea:** [[LAW-12 - DSG - Refactor - Covers para Facebook|LAW-12]] DSG - Refactor - Covers para Facebook
+- **Subtarea:** [[LAW-19 - Acceso a instagram|LAW-19]] Acceso a instagram
+- **Subtarea:** [[LAW-20 - Acceso a Facebook|LAW-20]] Acceso a Facebook
+- **Subtarea:** [[LAW-23 - Laset DSG - Feature - Feed Propuesta|LAW-23]] Laset: DSG - Feature - Feed Propuesta
+- **Subtarea:** [[LAW-24 - DSG - Feature - Cover Google Forms|LAW-24]] DSG - Feature - Cover Google  Forms
+- **action item from:** [[LAW-14 - Logos Laset|LAW-14]] Logos Laset
+- **has action item:** [[LAW-37 - 1.Laset Propuesta Laset Manual de redes|LAW-37]] 1.Laset: Propuesta Laset Manual de redes
 
 ## Descripcion
 

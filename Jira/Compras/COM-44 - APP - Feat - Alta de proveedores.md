@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-44"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **is blocked by:** [[COM-43]] API - Feat - Alta de proveedores
-- **relates to:** [[COM-62]] APP - Refactor - Alta/edición de proveedores -> Agregar moneda
-- **relates to:** [[COM-277]] APP - Refactor - Alta/Edición de Proveedores -> Añadir selector de empresa
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **is blocked by:** [[COM-43 - API - Feat - Alta de proveedores|COM-43]] API - Feat - Alta de proveedores
+- **relates to:** [[COM-62 - APP - Refactor - Altaedición de proveedores - Agregar moneda|COM-62]] APP - Refactor - Alta/edición de proveedores -> Agregar moneda
+- **relates to:** [[COM-277 - APP - Refactor - AltaEdición de Proveedores - Añadir selector de empresa|COM-277]] APP - Refactor - Alta/Edición de Proveedores -> Añadir selector de empresa
 
 ## Descripcion
 

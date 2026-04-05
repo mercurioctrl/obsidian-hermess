@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-724"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **blocks:** [[NBWEB-725]] API - Refactor - Validar direccion completa en caso de tener direccion de envio y dar respuesta en consecuencia
-- **relates to:** [[NBWEB-728]] API - Agregar dirección - Oportunidad de mejora en la búsqueda de coincidencias
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **blocks:** [[NBWEB-725 - API - Refactor - Validar direccion completa en caso de tener direccion de envio|NBWEB-725]] API - Refactor - Validar direccion completa en caso de tener direccion de envio y dar respuesta en consecuencia
+- **relates to:** [[NBWEB-728 - API - Agregar dirección - Oportunidad de mejora en la búsqueda de coincidencias|NBWEB-728]] API - Agregar dirección - Oportunidad de mejora en la búsqueda de coincidencias
 
 ## Descripcion
 

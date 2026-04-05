@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-4"
 
 ## Relaciones
 
-- **Padre:** [[INV-1]] Ms - Metadata - Repositorios
-- **Subtarea:** [[INV-5]] MS - Metadata - Listar Repositories
-- **Subtarea:** [[INV-7]] MS - Metadata - Inicia una API tipo REST
+- **Padre:** [[INV-1 - Ms - Metadata - Repositorios|INV-1]] Ms - Metadata - Repositorios
+- **Subtarea:** [[INV-5 - MS - Metadata - Listar Repositories|INV-5]] MS - Metadata - Listar Repositories
+- **Subtarea:** [[INV-7 - MS - Metadata - Inicia una API tipo REST|INV-7]] MS - Metadata - Inicia una API tipo REST
 
 ## Descripcion
 

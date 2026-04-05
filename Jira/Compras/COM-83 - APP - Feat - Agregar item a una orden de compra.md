@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-83"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **is blocked by:** [[COM-82]] API - Feat - Repositorio de productos
-- **is blocked by:** [[COM-80]] API - Feat - Agregar/Editar un producto a una orden de compra abierta
-- **is caused by:** [[COM-87]] API - Refactor - Agregar/Editar un item no debe tener como campo obligatorio la posicion arancelaria
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **is blocked by:** [[COM-82 - API - Feat - Repositorio de productos|COM-82]] API - Feat - Repositorio de productos
+- **is blocked by:** [[COM-80 - API - Feat - AgregarEditar un producto a una orden de compra abierta|COM-80]] API - Feat - Agregar/Editar un producto a una orden de compra abierta
+- **is caused by:** [[COM-87 - API - Refactor - AgregarEditar un item no debe tener como campo obligatorio la|COM-87]] API - Refactor - Agregar/Editar un item no debe tener como campo obligatorio la posicion arancelaria
 
 ## Descripcion
 

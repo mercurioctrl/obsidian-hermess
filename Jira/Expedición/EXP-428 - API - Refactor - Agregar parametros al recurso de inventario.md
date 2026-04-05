@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-428"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **blocks:** [[EXP-429]] APP - Refactor - Items alertados en el inventario
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **blocks:** [[EXP-429 - APP - Refactor - Items alertados en el inventario|EXP-429]] APP - Refactor - Items alertados en el inventario
 
 ## Descripcion
 

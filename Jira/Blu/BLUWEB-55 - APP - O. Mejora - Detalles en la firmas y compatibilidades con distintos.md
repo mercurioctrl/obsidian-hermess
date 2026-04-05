@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-55"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-2]] Firmas
+- **Padre:** [[BLUWEB-2 - Firmas|BLUWEB-2]] Firmas
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-52"
 
 ## Relaciones
 
-- **Padre:** [[COM-51]] Ver ingreso
-- **blocks:** [[COM-53]] APP - Feat - Ver ingreso
+- **Padre:** [[COM-51 - Ver ingreso|COM-51]] Ver ingreso
+- **blocks:** [[COM-53 - APP - Feat - Ver ingreso|COM-53]] APP - Feat - Ver ingreso
 
 ## Descripcion
 

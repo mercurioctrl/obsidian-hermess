@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-9"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-10]] Imagenes Redes 
-- **Subtarea:** [[MNB2-11]] Newsletter principio de la acción
-- **Subtarea:** [[MNB2-12]] Banner home
-- **Subtarea:** [[MNB2-13]] Historia
-- **Subtarea:** [[MNB2-14]] News Final de la acción
+- **Subtarea:** [[MNB2-10 - Imagenes Redes|MNB2-10]] Imagenes Redes 
+- **Subtarea:** [[MNB2-11 - Newsletter principio de la acción|MNB2-11]] Newsletter principio de la acción
+- **Subtarea:** [[MNB2-12 - Banner home|MNB2-12]] Banner home
+- **Subtarea:** [[MNB2-13 - Historia|MNB2-13]] Historia
+- **Subtarea:** [[MNB2-14 - News Final de la acción|MNB2-14]] News Final de la acción
 
 ## Descripcion
 

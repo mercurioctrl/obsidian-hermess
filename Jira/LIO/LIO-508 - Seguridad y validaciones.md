@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-508"
 
 ## Relaciones
 
-- **Padre:** [[LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
+- **Padre:** [[LIO-497 - App Mobile Vendedores – Gestión integral del seller en Libre Opción|LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
 
 ## Descripcion
 

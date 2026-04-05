@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-50"
 
 ## Relaciones
 
-- **Padre:** [[INV-38]] Feat - Buscar imagenes en repositorios remotos
-- **is blocked by:** [[INV-55]] API - Agregar imagen a un producto y portada, también para libre opción - No se agrega a LO
+- **Padre:** [[INV-38 - Feat - Buscar imagenes en repositorios remotos|INV-38]] Feat - Buscar imagenes en repositorios remotos
+- **is blocked by:** [[INV-55 - API - Agregar imagen a un producto y portada, también para libre opción - No se|INV-55]] API - Agregar imagen a un producto y portada, también para libre opción - No se agrega a LO
 
 ## Descripcion
 

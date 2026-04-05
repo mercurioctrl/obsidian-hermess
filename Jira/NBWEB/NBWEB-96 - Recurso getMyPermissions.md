@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-96"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-60]] API - Esquema de Roles y permisos
+- **Padre:** [[NBWEB-60 - API - Esquema de Roles y permisos|NBWEB-60]] API - Esquema de Roles y permisos
 
 ## Descripcion
 

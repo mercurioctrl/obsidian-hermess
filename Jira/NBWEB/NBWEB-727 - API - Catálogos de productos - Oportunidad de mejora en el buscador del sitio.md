@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-727"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-4]] API - Catalogos de productos
-- **blocks:** [[SNB-1835]] No busca en la web NB celular samsung
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-4 - API - Catalogos de productos|NBWEB-4]] API - Catalogos de productos
+- **blocks:** [[SNB-1835 - No busca en la web NB celular samsung|SNB-1835]] No busca en la web NB celular samsung
 
 ## Descripcion
 

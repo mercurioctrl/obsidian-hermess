@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-566"
 
 ## Relaciones
 
-- **Padre:** [[COB-559]] Listar y descargar percepciones
+- **Padre:** [[COB-559 - Listar y descargar percepciones|COB-559]] Listar y descargar percepciones
 
 ## Descripcion
 

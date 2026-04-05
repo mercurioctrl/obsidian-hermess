@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-84"
 
 ## Relaciones
 
-- **Padre:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **blocks:** [[COB-83]] APP - Refactor - Agregar ambas fechas si el movimiento es un pase
+- **Padre:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **blocks:** [[COB-83 - APP - Refactor - Agregar ambas fechas si el movimiento es un pase|COB-83]] APP - Refactor - Agregar ambas fechas si el movimiento es un pase
 
 ## Descripcion
 

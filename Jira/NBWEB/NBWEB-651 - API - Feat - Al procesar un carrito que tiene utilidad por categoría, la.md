@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-651"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **is blocked by:** [[NBWEB-666]] API - Agregar precio con utilidad final - No se visualiza el articulo 
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **is blocked by:** [[NBWEB-666 - API - Agregar precio con utilidad final - No se visualiza el articulo|NBWEB-666]] API - Agregar precio con utilidad final - No se visualiza el articulo 
 
 ## Descripcion
 

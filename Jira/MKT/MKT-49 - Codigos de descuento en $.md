@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-49"
 
 ## Relaciones
 
-- **Padre:** [[MKT-42]] HOT SALE EN LO
+- **Padre:** [[MKT-42 - HOT SALE EN LO|MKT-42]] HOT SALE EN LO
 
 ## Descripcion
 

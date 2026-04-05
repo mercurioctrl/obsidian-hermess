@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-6"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-7]] DSG - Feature - Cover para Linkedin
-- **Subtarea:** [[NBE-8]] DSG - Feature - Cover para facebook
-- **Subtarea:** [[NBE-9]] DSG - Feature - Profile picture para Linkedin, Instagram y Facebook
-- **Subtarea:** [[NBE-27]] DSG - Features - Who we are
-- **Subtarea:** [[NBE-43]] DSG - Feature - Cover para Youtube
-- **Subtarea:** [[NBE-44]] DSG -Feature - Profile Picture para Youtube
+- **Subtarea:** [[NBE-7 - DSG - Feature - Cover para Linkedin|NBE-7]] DSG - Feature - Cover para Linkedin
+- **Subtarea:** [[NBE-8 - DSG - Feature - Cover para facebook|NBE-8]] DSG - Feature - Cover para facebook
+- **Subtarea:** [[NBE-9 - DSG - Feature - Profile picture para Linkedin, Instagram y Facebook|NBE-9]] DSG - Feature - Profile picture para Linkedin, Instagram y Facebook
+- **Subtarea:** [[NBE-27 - DSG - Features - Who we are|NBE-27]] DSG - Features - Who we are
+- **Subtarea:** [[NBE-43 - DSG - Feature - Cover para Youtube|NBE-43]] DSG - Feature - Cover para Youtube
+- **Subtarea:** [[NBE-44 - DSG -Feature - Profile Picture para Youtube|NBE-44]] DSG -Feature - Profile Picture para Youtube
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-90"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-91]] ⚡Triada 3_Macroled_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-92]] ✏️Triada 3_Macroled_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-91 - ⚡Triada 3_Macroled_Desarrollo de piezas Social Media|NBE-91]] ⚡Triada 3_Macroled_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-92 - ✏️Triada 3_Macroled_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-92]] ✏️Triada 3_Macroled_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

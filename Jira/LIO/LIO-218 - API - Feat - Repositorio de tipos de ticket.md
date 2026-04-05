@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-218"
 
 ## Relaciones
 
-- **Padre:** [[LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
-- **has action item:** [[LIO-226]] APP - Refactor - Conectar sistema de envio de ticket a v4
+- **Padre:** [[LIO-21 - Migrar sistema de tickets para usar el de capa 1 (NB)|LIO-21]] Migrar sistema de tickets para usar el de capa 1 (NB)
+- **has action item:** [[LIO-226 - APP - Refactor - Conectar sistema de envio de ticket a v4|LIO-226]] APP - Refactor - Conectar sistema de envio de ticket a v4
 
 ## Descripcion
 

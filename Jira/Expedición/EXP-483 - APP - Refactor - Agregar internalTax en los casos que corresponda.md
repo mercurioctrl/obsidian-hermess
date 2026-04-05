@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-483"
 
 ## Relaciones
 
-- **Padre:** [[EXP-116]] Devoluciones
-- **is blocked by:** [[EXP-484]] API - Refactor - Agregar internalTax en el objeto de la orden para que el front sepa que debe enviarlo al acreditar
-- **has action item:** [[SNB-2914]] ERROR EN NC CON ART. CON IMP. INTERNO
+- **Padre:** [[EXP-116 - Devoluciones|EXP-116]] Devoluciones
+- **is blocked by:** [[EXP-484 - API - Refactor - Agregar internalTax en el objeto de la orden para que el front|EXP-484]] API - Refactor - Agregar internalTax en el objeto de la orden para que el front sepa que debe enviarlo al acreditar
+- **has action item:** [[SNB-2914 - ERROR EN NC CON ART. CON IMP. INTERNO|SNB-2914]] ERROR EN NC CON ART. CON IMP. INTERNO
 
 ## Descripcion
 

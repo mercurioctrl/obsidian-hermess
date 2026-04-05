@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-91"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **blocks:** [[COM-75]] APP - Feact - Selector de posiciones arancelarias
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **blocks:** [[COM-75 - APP - Feact - Selector de posiciones arancelarias|COM-75]] APP - Feact - Selector de posiciones arancelarias
 
 ## Descripcion
 

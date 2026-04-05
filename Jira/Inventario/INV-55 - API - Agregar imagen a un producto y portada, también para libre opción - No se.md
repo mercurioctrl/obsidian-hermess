@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-55"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **blocks:** [[INV-50]] API - Refactor - Agregar imagen a un producto y portada, tambien para libre opcion
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **blocks:** [[INV-50 - API - Refactor - Agregar imagen a un producto y portada, tambien para libre|INV-50]] API - Refactor - Agregar imagen a un producto y portada, tambien para libre opcion
 
 ## Descripcion
 

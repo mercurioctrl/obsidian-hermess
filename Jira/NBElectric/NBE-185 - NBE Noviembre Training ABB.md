@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-185"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-186]] NBE: Training ABB_Invitación + Forms
-- **Subtarea:** [[NBE-187]] NBE: Training ABB_Banner Rollup
-- **Subtarea:** [[NBE-193]] 1. NBE: Invitación Te esperamos mañana
-- **Subtarea:** [[NBE-194]] 5.NBE: Recordatorio
+- **Subtarea:** [[NBE-186 - NBE Training ABB_Invitación + Forms|NBE-186]] NBE: Training ABB_Invitación + Forms
+- **Subtarea:** [[NBE-187 - NBE Training ABB_Banner Rollup|NBE-187]] NBE: Training ABB_Banner Rollup
+- **Subtarea:** [[NBE-193 - 1. NBE Invitación Te esperamos mañana|NBE-193]] 1. NBE: Invitación Te esperamos mañana
+- **Subtarea:** [[NBE-194 - 5.NBE Recordatorio|NBE-194]] 5.NBE: Recordatorio
 
 ## Descripcion
 

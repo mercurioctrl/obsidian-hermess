@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-931"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-619]] Generar ordenes
+- **Padre:** [[NBWEB-619 - Generar ordenes|NBWEB-619]] Generar ordenes
 
 ## Descripcion
 

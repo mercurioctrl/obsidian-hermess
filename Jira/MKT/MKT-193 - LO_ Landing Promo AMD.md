@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-193"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-195]] API - agregar campaña para promo de AMD
+- **Subtarea:** [[MKT-195 - API - agregar campaña para promo de AMD|MKT-195]] API - agregar campaña para promo de AMD
 
 ## Descripcion
 

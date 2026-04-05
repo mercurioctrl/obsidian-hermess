@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-272"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **action item from:** [[LIO-265]] APP - Refactor - Accionable feedback en el menu horizontal
-- **relates to:** [[LIO-280]] API - Refactor - Enviar por correo el formulario de feedback -> Agregar parámetro success al objeto de respuesta
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **action item from:** [[LIO-265 - APP - Refactor - Accionable feedback en el menu horizontal|LIO-265]] APP - Refactor - Accionable feedback en el menu horizontal
+- **relates to:** [[LIO-280 - API - Refactor - Enviar por correo el formulario de feedback - Agregar|LIO-280]] API - Refactor - Enviar por correo el formulario de feedback -> Agregar parámetro success al objeto de respuesta
 
 ## Descripcion
 

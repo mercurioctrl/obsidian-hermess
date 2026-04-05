@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-66"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-63]] NB_ MSI NOTEBOOKS
+- **Padre:** [[MNB2-63 - NB_ MSI NOTEBOOKS|MNB2-63]] NB_ MSI NOTEBOOKS
 
 ## Descripcion
 

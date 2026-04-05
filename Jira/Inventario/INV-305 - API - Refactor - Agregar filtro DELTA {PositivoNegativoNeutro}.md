@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-305"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-306]] APP - Refactor - Agregar filtro DELTA {Positivo/Negativo/Neutro}
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-306 - APP - Refactor - Agregar filtro DELTA {PositivoNegativoNeutro}|INV-306]] APP - Refactor - Agregar filtro DELTA {Positivo/Negativo/Neutro}
 
 ## Descripcion
 

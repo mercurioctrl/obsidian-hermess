@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-72"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **blocks:** [[COM-66]] API - Refactor - Extracción de datos - posición arancelaria e impuestos 
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **blocks:** [[COM-66 - API - Refactor - Extracción de datos - posición arancelaria e impuestos|COM-66]] API - Refactor - Extracción de datos - posición arancelaria e impuestos 
 
 ## Descripcion
 

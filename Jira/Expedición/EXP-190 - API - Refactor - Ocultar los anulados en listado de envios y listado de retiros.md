@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-190"
 
 ## Relaciones
 
-- **Padre:** [[EXP-15]] Feat - Serializar salida
+- **Padre:** [[EXP-15 - Feat - Serializar salida|EXP-15]] Feat - Serializar salida
 
 ## Descripcion
 

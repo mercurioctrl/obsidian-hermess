@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-401"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-231"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **relates to:** [[COM-255]] API - MPV - Refactor - Ajustar costo por impuestos/gastos y guardar el original para comisiones -> Separar costo distribuido 
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **relates to:** [[COM-255 - API - MPV - Refactor - Ajustar costo por impuestosgastos y guardar el original|COM-255]] API - MPV - Refactor - Ajustar costo por impuestos/gastos y guardar el original para comisiones -> Separar costo distribuido 
 
 ## Descripcion
 

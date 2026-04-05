@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-799"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **is blocked by:** [[NBWEB-812]] API - Agregar utilidad extra al precio que paga el reseller - Advertencias al descargar listado de precios
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **is blocked by:** [[NBWEB-812 - API - Agregar utilidad extra al precio que paga el reseller - Advertencias al|NBWEB-812]] API - Agregar utilidad extra al precio que paga el reseller - Advertencias al descargar listado de precios
 
 ## Descripcion
 

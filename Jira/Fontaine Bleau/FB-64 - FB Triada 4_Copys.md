@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-64"
 
 ## Relaciones
 
-- **Padre:** [[FB-58]] Fontaine Bleau: Triada 3_FB Ugarte Avance de obra
+- **Padre:** [[FB-58 - Fontaine Bleau Triada 3_FB Ugarte Avance de obra|FB-58]] Fontaine Bleau: Triada 3_FB Ugarte Avance de obra
 
 ## Descripcion
 

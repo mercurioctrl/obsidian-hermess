@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-14"
 
 ## Relaciones
 
-- **Padre:** [[INV-9]] API - Listar productos
-- **blocks:** [[INV-28]] APP - Feat - Listar productos (Pestaña productos)
-- **relates to:** [[INV-56]] API - Listar productos - Combinación de filtros
+- **Padre:** [[INV-9 - API - Listar productos|INV-9]] API - Listar productos
+- **blocks:** [[INV-28 - APP - Feat - Listar productos (Pestaña productos)|INV-28]] APP - Feat - Listar productos (Pestaña productos)
+- **relates to:** [[INV-56 - API - Listar productos - Combinación de filtros|INV-56]] API - Listar productos - Combinación de filtros
 
 ## Descripcion
 

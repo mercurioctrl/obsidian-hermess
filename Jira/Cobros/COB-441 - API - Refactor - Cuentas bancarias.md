@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-441"
 
 ## Relaciones
 
-- **Padre:** [[COB-440]] Refactor - Cuentas bancarias
+- **Padre:** [[COB-440 - Refactor - Cuentas bancarias|COB-440]] Refactor - Cuentas bancarias
 
 ## Descripcion
 

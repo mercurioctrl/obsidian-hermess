@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-181"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-189]] Mar 11: COPYS_ PROMO NVIDIA_ EXTENSION (Green)
+- **Subtarea:** [[LOMKT-189 - Mar 11 COPYS_ PROMO NVIDIA_ EXTENSION (Green)|LOMKT-189]] Mar 11: COPYS_ PROMO NVIDIA_ EXTENSION (Green)
 
 ## Descripcion
 

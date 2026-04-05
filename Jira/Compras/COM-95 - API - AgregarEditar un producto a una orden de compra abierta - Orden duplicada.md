@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-95"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **blocks:** [[COM-90]] API - Refactor  - PATCH provider Order add item
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **blocks:** [[COM-90 - API - Refactor - PATCH provider Order add item|COM-90]] API - Refactor  - PATCH provider Order add item
 
 ## Descripcion
 

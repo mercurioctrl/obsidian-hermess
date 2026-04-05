@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-334"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-297]] Jul: 3/4 Social Media
+- **Padre:** [[ADATA-297 - Jul 34 Social Media|ADATA-297]] Jul: 3/4 Social Media
 
 ## Descripcion
 

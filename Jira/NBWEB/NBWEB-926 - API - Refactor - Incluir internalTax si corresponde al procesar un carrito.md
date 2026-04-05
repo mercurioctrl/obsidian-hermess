@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-926"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **action item from:** [[PED-871]] API - Refactor - Al descargar una orden de compra (realiada en el sitio web, etc) se debe guardar pedclil.internalTax si corresponde al producto
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **action item from:** [[PED-871 - API - Refactor - Al descargar una orden de compra (realiada en el sitio web,|PED-871]] API - Refactor - Al descargar una orden de compra (realiada en el sitio web, etc) se debe guardar pedclil.internalTax si corresponde al producto
 
 ## Descripcion
 

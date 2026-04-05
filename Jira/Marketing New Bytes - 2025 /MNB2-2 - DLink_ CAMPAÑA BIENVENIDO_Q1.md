@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-2"
 
 ## Relaciones
 
-- **action item from:** [[DNYL-973]] NB_ BIENVENIDO DLINK
+- **action item from:** [[DNYL-973 - NB_ BIENVENIDO DLINK|DNYL-973]] NB_ BIENVENIDO DLINK
 
 ## Descripcion
 

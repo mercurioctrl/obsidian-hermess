@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-336"
 
 ## Relaciones
 
-- **Padre:** [[LIO-277]] Centro de ayuda
+- **Padre:** [[LIO-277 - Centro de ayuda|LIO-277]] Centro de ayuda
 
 ## Descripcion
 

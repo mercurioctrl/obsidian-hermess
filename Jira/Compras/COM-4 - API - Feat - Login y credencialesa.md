@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-4"
 
 ## Relaciones
 
-- **Padre:** [[COM-3]] Login y credenciales
+- **Padre:** [[COM-3 - Login y credenciales|COM-3]] Login y credenciales
 
 ## Descripcion
 

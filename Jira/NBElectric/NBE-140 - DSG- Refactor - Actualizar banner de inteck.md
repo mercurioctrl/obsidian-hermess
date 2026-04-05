@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-140"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **has action item:** [[NBE-146]] API - Refactor -  Reemplazar Banner de  inteck
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **has action item:** [[NBE-146 - API - Refactor - Reemplazar Banner de inteck|NBE-146]] API - Refactor -  Reemplazar Banner de  inteck
 
 ## Descripcion
 

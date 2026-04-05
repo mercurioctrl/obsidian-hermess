@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-134"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-135]] 1 - ¿Tiene alguna funcionalidad este botón?
-- **action item from:** [[BLUWEB-132]] Qa - Evaluación pre-lanzamiento como visitante del sitio web
+- **Subtarea:** [[BLUWEB-135 - 1 - ¿Tiene alguna funcionalidad este botón|BLUWEB-135]] 1 - ¿Tiene alguna funcionalidad este botón?
+- **action item from:** [[BLUWEB-132 - Qa - Evaluación pre-lanzamiento como visitante del sitio web|BLUWEB-132]] Qa - Evaluación pre-lanzamiento como visitante del sitio web
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-126"
 
 ## Relaciones
 
-- **Padre:** [[NBE-116]] Triada 15_AEA_Social Media
+- **Padre:** [[NBE-116 - Triada 15_AEA_Social Media|NBE-116]] Triada 15_AEA_Social Media
 
 ## Descripcion
 

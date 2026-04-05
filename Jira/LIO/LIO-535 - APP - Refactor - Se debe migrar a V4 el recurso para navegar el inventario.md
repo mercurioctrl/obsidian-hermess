@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-535"
 
 ## Relaciones
 
-- **Padre:** [[LIO-98]] Inventario resellers
-- **action item from:** [[LIO-496]] API - Refactor - Obtener productos para un usuario determinado dentro de su cuenta
+- **Padre:** [[LIO-98 - Inventario resellers|LIO-98]] Inventario resellers
+- **action item from:** [[LIO-496 - API - Refactor - Obtener productos para un usuario determinado dentro de su|LIO-496]] API - Refactor - Obtener productos para un usuario determinado dentro de su cuenta
 
 ## Descripcion
 

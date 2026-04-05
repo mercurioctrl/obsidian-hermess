@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-42"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **Subtarea:** [[COB-110]] APP - Feat - Filtrado y paginado
-- **Subtarea:** [[COB-312]] APP - Feat - En la lista de cobrables, agregar al nombre del cliente el enlace para que cuando haces clic sobre el, ves la cuenta corriente
-- **is blocked by:** [[COB-41]] APP - Feat -  Listar cobrables
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **Subtarea:** [[COB-110 - APP - Feat - Filtrado y paginado|COB-110]] APP - Feat - Filtrado y paginado
+- **Subtarea:** [[COB-312 - APP - Feat - En la lista de cobrables, agregar al nombre del cliente el enlace|COB-312]] APP - Feat - En la lista de cobrables, agregar al nombre del cliente el enlace para que cuando haces clic sobre el, ves la cuenta corriente
+- **is blocked by:** [[COB-41 - APP - Feat - Listar cobrables|COB-41]] APP - Feat -  Listar cobrables
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-109"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[SNB-2272]] modificacion en inventario
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[SNB-2272 - modificacion en inventario|SNB-2272]] modificacion en inventario
 
 ## Descripcion
 

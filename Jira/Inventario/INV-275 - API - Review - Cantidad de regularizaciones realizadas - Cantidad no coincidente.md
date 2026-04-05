@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-275"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **relates to:** [[INV-238]] API - Refactor - Agregar al repositorio de stock la cantidad de regularizaciones realizadas
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **relates to:** [[INV-238 - API - Refactor - Agregar al repositorio de stock la cantidad de|INV-238]] API - Refactor - Agregar al repositorio de stock la cantidad de regularizaciones realizadas
 
 ## Descripcion
 

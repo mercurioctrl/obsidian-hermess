@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-439"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-73]] API - CMS - ABMS
-- **blocks:** [[NBWEB-441]] APP - CMS - Listar medios de envio
+- **Padre:** [[NBWEB-73 - API - CMS - ABMS|NBWEB-73]] API - CMS - ABMS
+- **blocks:** [[NBWEB-441 - APP - CMS - Listar medios de envio|NBWEB-441]] APP - CMS - Listar medios de envio
 
 ## Descripcion
 

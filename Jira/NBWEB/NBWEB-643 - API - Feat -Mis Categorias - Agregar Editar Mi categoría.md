@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-643"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **relates to:** [[SNB-3504]] NBWEB - API - Mis Categorías -> Error al modificar porcentaje de utilidad
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **relates to:** [[SNB-3504 - NBWEB - API - Mis Categorías - Error al modificar porcentaje de utilidad|SNB-3504]] NBWEB - API - Mis Categorías -> Error al modificar porcentaje de utilidad
 
 ## Descripcion
 

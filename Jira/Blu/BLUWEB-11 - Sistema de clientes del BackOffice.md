@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-11"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-31]] API - Feat - Definición y migración de la tabla clients
-- **Subtarea:** [[BLUWEB-32]] API - Feat- Obtener listado de clientes
-- **Subtarea:** [[BLUWEB-33]] API - Feat - Alta de nuevo cliente
-- **Subtarea:** [[BLUWEB-34]] API - Feat - Modificar datos del cliente
-- **Subtarea:** [[BLUWEB-35]] API - Feat - Eliminar cliente
+- **Subtarea:** [[BLUWEB-31 - API - Feat - Definición y migración de la tabla clients|BLUWEB-31]] API - Feat - Definición y migración de la tabla clients
+- **Subtarea:** [[BLUWEB-32 - API - Feat- Obtener listado de clientes|BLUWEB-32]] API - Feat- Obtener listado de clientes
+- **Subtarea:** [[BLUWEB-33 - API - Feat - Alta de nuevo cliente|BLUWEB-33]] API - Feat - Alta de nuevo cliente
+- **Subtarea:** [[BLUWEB-34 - API - Feat - Modificar datos del cliente|BLUWEB-34]] API - Feat - Modificar datos del cliente
+- **Subtarea:** [[BLUWEB-35 - API - Feat - Eliminar cliente|BLUWEB-35]] API - Feat - Eliminar cliente
 
 ## Descripcion
 

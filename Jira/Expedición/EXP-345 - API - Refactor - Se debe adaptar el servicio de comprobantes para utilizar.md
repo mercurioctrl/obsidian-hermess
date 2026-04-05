@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-345"
 
 ## Relaciones
 
-- **Padre:** [[EXP-202]] Feat - Pestaña comprobantes
+- **Padre:** [[EXP-202 - Feat - Pestaña comprobantes|EXP-202]] Feat - Pestaña comprobantes
 
 ## Descripcion
 

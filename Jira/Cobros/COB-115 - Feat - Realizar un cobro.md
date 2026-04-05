@@ -29,35 +29,35 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-115"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **Subtarea:** [[COB-125]] APP - Feat - Modal de cobro
-- **Subtarea:** [[COB-126]] API - Feat - Realizar cobro
-- **Subtarea:** [[COB-127]] API - Feat - Crear recibo
-- **Subtarea:** [[COB-128]] API - Feat - Mostrar recibo
-- **Subtarea:** [[COB-129]] APP - Feat - Mostrar recibo
-- **Subtarea:** [[COB-130]] APP - Feat - Modal cheque
-- **Subtarea:** [[COB-131]] API - Refactor - Realizar cobros con tolerancia en la variación de cotizaciones
-- **Subtarea:** [[COB-166]] MS - Feat - Ms comprobantes, recurso de recibo de dinero
-- **Subtarea:** [[COB-182]] APP - Refactor - Sacar los filtros en busqueda de pedidos en los cobros
-- **Subtarea:** [[COB-239]] APP - Refactor - Agregar informacion sobre el banco donde se hace el cobro
-- **Subtarea:** [[COB-240]] APP - Refactor - Se debe poder cambiar el banco en el contexto de cobro
-- **Subtarea:** [[COB-241]] API - Refactor - Se debe poder cambiar el banco que recibe el pago (leer del payload))
-- **Subtarea:** [[COB-245]] API - Oportunidad de mejora - Agregar la leyenda a el movimiento en la CC del banco cuando es un cobro
-- **Subtarea:** [[COB-250]] API - Review - Al realizar un cobro, parece no estar afectando los saldos de caja.
-- **Subtarea:** [[COB-257]] APP - Refactor - El ABM de cheques debe calcular la linea de cheques automáticamente al cargarse los mismo
-- **Subtarea:** [[COB-261]] API - Refactor - Realizar cobro, agregar nuevos parámetros de cotización
-- **Subtarea:** [[COB-290]] API - Refactor - Cobrar con retencion
-- **Subtarea:** [[COB-291]] API - Feat - Listar provincias (para retención)
-- **Subtarea:** [[COB-292]] APP - Refactor - Cobrar Retencion
-- **Subtarea:** [[COB-304]] API - Refactor - Agregar el monto del pedido actual al pendiente de la cuenta corriente para poder permitir que en en caso de tener dinero disponible, se lo pueda tomar
-- **Subtarea:** [[COB-305]] APP - Refactor - Agregar el monto del pedido actual al pendiente de la cuenta corriente para poder permitir que en en caso de tener dinero disponible, se lo pueda tomar
-- **Subtarea:** [[COB-310]] APP - Refactor - Agregar cotización de la operación y la cotización que surge de la operación.
-- **Subtarea:** [[COB-311]] APP - Refactor - Agregar abajo del saldo disponible, el crédito asignado
-- **Subtarea:** [[COB-313]] APP - Feat - En el modal de cobrables, agregar al nombre del cliente el enlace para que cuando haces clic sobre el, ves la cuenta corriente
-- **Subtarea:** [[COB-320]] APP - Feat - Agregar al modal de cobro una confirmacion por excedente cuando se abona un pedido
-- **Subtarea:** [[COB-334]] API - Refactor - Si se recibe el parametro de excedente, se debe enviar un correo a los administradores
-- **Subtarea:** [[COB-387]] API - Refactor - Integrar nuevos estados "finalizados" al realizar un cobro pendiente
-- **Subtarea:** [[COB-555]] API - Refactor - Al cobrar se debe registrar cotización en operaciones con cuenta corriente (billetera LO)
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **Subtarea:** [[COB-125 - APP - Feat - Modal de cobro|COB-125]] APP - Feat - Modal de cobro
+- **Subtarea:** [[COB-126 - API - Feat - Realizar cobro|COB-126]] API - Feat - Realizar cobro
+- **Subtarea:** [[COB-127 - API - Feat - Crear recibo|COB-127]] API - Feat - Crear recibo
+- **Subtarea:** [[COB-128 - API - Feat - Mostrar recibo|COB-128]] API - Feat - Mostrar recibo
+- **Subtarea:** [[COB-129 - APP - Feat - Mostrar recibo|COB-129]] APP - Feat - Mostrar recibo
+- **Subtarea:** [[COB-130 - APP - Feat - Modal cheque|COB-130]] APP - Feat - Modal cheque
+- **Subtarea:** [[COB-131 - API - Refactor - Realizar cobros con tolerancia en la variación de cotizaciones|COB-131]] API - Refactor - Realizar cobros con tolerancia en la variación de cotizaciones
+- **Subtarea:** [[COB-166 - MS - Feat - Ms comprobantes, recurso de recibo de dinero|COB-166]] MS - Feat - Ms comprobantes, recurso de recibo de dinero
+- **Subtarea:** [[COB-182 - APP - Refactor - Sacar los filtros en busqueda de pedidos en los cobros|COB-182]] APP - Refactor - Sacar los filtros en busqueda de pedidos en los cobros
+- **Subtarea:** [[COB-239 - APP - Refactor - Agregar informacion sobre el banco donde se hace el cobro|COB-239]] APP - Refactor - Agregar informacion sobre el banco donde se hace el cobro
+- **Subtarea:** [[COB-240 - APP - Refactor - Se debe poder cambiar el banco en el contexto de cobro|COB-240]] APP - Refactor - Se debe poder cambiar el banco en el contexto de cobro
+- **Subtarea:** [[COB-241 - API - Refactor - Se debe poder cambiar el banco que recibe el pago (leer del|COB-241]] API - Refactor - Se debe poder cambiar el banco que recibe el pago (leer del payload))
+- **Subtarea:** [[COB-245 - API - Oportunidad de mejora - Agregar la leyenda a el movimiento en la CC del|COB-245]] API - Oportunidad de mejora - Agregar la leyenda a el movimiento en la CC del banco cuando es un cobro
+- **Subtarea:** [[COB-250 - API - Review - Al realizar un cobro, parece no estar afectando los saldos de|COB-250]] API - Review - Al realizar un cobro, parece no estar afectando los saldos de caja.
+- **Subtarea:** [[COB-257 - APP - Refactor - El ABM de cheques debe calcular la linea de cheques|COB-257]] APP - Refactor - El ABM de cheques debe calcular la linea de cheques automáticamente al cargarse los mismo
+- **Subtarea:** [[COB-261 - API - Refactor - Realizar cobro, agregar nuevos parámetros de cotización|COB-261]] API - Refactor - Realizar cobro, agregar nuevos parámetros de cotización
+- **Subtarea:** [[COB-290 - API - Refactor - Cobrar con retencion|COB-290]] API - Refactor - Cobrar con retencion
+- **Subtarea:** [[COB-291 - API - Feat - Listar provincias (para retención)|COB-291]] API - Feat - Listar provincias (para retención)
+- **Subtarea:** [[COB-292 - APP - Refactor - Cobrar Retencion|COB-292]] APP - Refactor - Cobrar Retencion
+- **Subtarea:** [[COB-304 - API - Refactor - Agregar el monto del pedido actual al pendiente de la cuenta|COB-304]] API - Refactor - Agregar el monto del pedido actual al pendiente de la cuenta corriente para poder permitir que en en caso de tener dinero disponible, se lo pueda tomar
+- **Subtarea:** [[COB-305 - APP - Refactor - Agregar el monto del pedido actual al pendiente de la cuenta|COB-305]] APP - Refactor - Agregar el monto del pedido actual al pendiente de la cuenta corriente para poder permitir que en en caso de tener dinero disponible, se lo pueda tomar
+- **Subtarea:** [[COB-310 - APP - Refactor - Agregar cotización de la operación y la cotización que surge|COB-310]] APP - Refactor - Agregar cotización de la operación y la cotización que surge de la operación.
+- **Subtarea:** [[COB-311 - APP - Refactor - Agregar abajo del saldo disponible, el crédito asignado|COB-311]] APP - Refactor - Agregar abajo del saldo disponible, el crédito asignado
+- **Subtarea:** [[COB-313 - APP - Feat - En el modal de cobrables, agregar al nombre del cliente el enlace|COB-313]] APP - Feat - En el modal de cobrables, agregar al nombre del cliente el enlace para que cuando haces clic sobre el, ves la cuenta corriente
+- **Subtarea:** [[COB-320 - APP - Feat - Agregar al modal de cobro una confirmacion por excedente cuando se|COB-320]] APP - Feat - Agregar al modal de cobro una confirmacion por excedente cuando se abona un pedido
+- **Subtarea:** [[COB-334 - API - Refactor - Si se recibe el parametro de excedente, se debe enviar un|COB-334]] API - Refactor - Si se recibe el parametro de excedente, se debe enviar un correo a los administradores
+- **Subtarea:** [[COB-387 - API - Refactor - Integrar nuevos estados finalizados al realizar un cobro|COB-387]] API - Refactor - Integrar nuevos estados "finalizados" al realizar un cobro pendiente
+- **Subtarea:** [[COB-555 - API - Refactor - Al cobrar se debe registrar cotización en operaciones con|COB-555]] API - Refactor - Al cobrar se debe registrar cotización en operaciones con cuenta corriente (billetera LO)
 
 ## Descripcion
 

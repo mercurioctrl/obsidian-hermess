@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-30"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **Subtarea:** [[EXP-35]] APP - Feat - Estructura de pestañas
-- **Subtarea:** [[EXP-36]] APP - Feat - Menu general superior
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **Subtarea:** [[EXP-35 - APP - Feat - Estructura de pestañas|EXP-35]] APP - Feat - Estructura de pestañas
+- **Subtarea:** [[EXP-36 - APP - Feat - Menu general superior|EXP-36]] APP - Feat - Menu general superior
 
 ## Descripcion
 

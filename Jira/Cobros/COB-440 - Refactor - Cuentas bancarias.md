@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-440"
 
 ## Relaciones
 
-- **Padre:** [[COB-16]] Cuentas bancarias
-- **Subtarea:** [[COB-441]] API - Refactor - Cuentas bancarias
-- **Subtarea:** [[COB-442]] APP - Refactor - Cuentas bancarias
+- **Padre:** [[COB-16 - Cuentas bancarias|COB-16]] Cuentas bancarias
+- **Subtarea:** [[COB-441 - API - Refactor - Cuentas bancarias|COB-441]] API - Refactor - Cuentas bancarias
+- **Subtarea:** [[COB-442 - APP - Refactor - Cuentas bancarias|COB-442]] APP - Refactor - Cuentas bancarias
 
 ## Descripcion
 

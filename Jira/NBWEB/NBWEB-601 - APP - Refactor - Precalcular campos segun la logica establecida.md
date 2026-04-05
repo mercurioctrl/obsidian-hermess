@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-601"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-600]] Cotizaciones
+- **Padre:** [[NBWEB-600 - Cotizaciones|NBWEB-600]] Cotizaciones
 
 ## Descripcion
 

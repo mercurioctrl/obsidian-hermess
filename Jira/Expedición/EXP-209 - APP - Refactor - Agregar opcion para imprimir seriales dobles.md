@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-209"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
-- **blocks:** [[SNB-566]] impresión de etiquetas
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
+- **blocks:** [[SNB-566 - impresión de etiquetas|SNB-566]] impresión de etiquetas
 
 ## Descripcion
 

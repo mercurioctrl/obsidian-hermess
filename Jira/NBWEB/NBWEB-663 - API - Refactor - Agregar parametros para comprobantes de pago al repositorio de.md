@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-663"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **relates to:** [[NBWEB-672]] API - Agregar parámetros de pago al repositorio de ordenes - Discrepancia en el tipo de pago
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **relates to:** [[NBWEB-672 - API - Agregar parámetros de pago al repositorio de ordenes - Discrepancia en el|NBWEB-672]] API - Agregar parámetros de pago al repositorio de ordenes - Discrepancia en el tipo de pago
 
 ## Descripcion
 

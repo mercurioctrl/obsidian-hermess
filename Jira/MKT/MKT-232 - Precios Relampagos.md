@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-232"
 
 ## Relaciones
 
-- **Padre:** [[MKT-229]] LO_ CYBER MONDAY CAMPAÑA
+- **Padre:** [[MKT-229 - LO_ CYBER MONDAY CAMPAÑA|MKT-229]] LO_ CYBER MONDAY CAMPAÑA
 
 ## Descripcion
 

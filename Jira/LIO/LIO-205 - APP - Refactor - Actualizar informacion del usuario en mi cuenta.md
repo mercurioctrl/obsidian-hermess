@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-205"
 
 ## Relaciones
 
-- **Padre:** [[LIO-203]] Mi cuenta
-- **action item from:** [[LIO-204]] APIv4 - Feat - Actualizar informacion del usuario en mi cuenta
+- **Padre:** [[LIO-203 - Mi cuenta|LIO-203]] Mi cuenta
+- **action item from:** [[LIO-204 - APIv4 - Feat - Actualizar informacion del usuario en mi cuenta|LIO-204]] APIv4 - Feat - Actualizar informacion del usuario en mi cuenta
 
 ## Descripcion
 

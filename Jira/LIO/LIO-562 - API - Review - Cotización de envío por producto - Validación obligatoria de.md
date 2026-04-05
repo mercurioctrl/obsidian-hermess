@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-562"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **clones:** [[LIO-557]] API - Feat - Cotización de envío por producto
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **clones:** [[LIO-557 - API - Feat - Cotización de envío por producto|LIO-557]] API - Feat - Cotización de envío por producto
 
 ## Descripcion
 

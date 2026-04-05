@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-513"
 
 ## Relaciones
 
-- **Padre:** [[EXP-512]] Almacenes multiples
-- **has action item:** [[EXP-515]] APP - MVP - Feat - Mostrar almacén cuando abrimos una orden para serializar 
+- **Padre:** [[EXP-512 - Almacenes multiples|EXP-512]] Almacenes multiples
+- **has action item:** [[EXP-515 - APP - MVP - Feat - Mostrar almacén cuando abrimos una orden para serializar|EXP-515]] APP - MVP - Feat - Mostrar almacén cuando abrimos una orden para serializar 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-196"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-192]] Abr 19: ¿Cuáles son los 3 procesadores más vendidos en LO? (Degradé Blanco y negro)  mar 21
+- **Padre:** [[LOMKT-192 - Abr 19 ¿Cuáles son los 3 procesadores más vendidos en LO (Degradé Blanco y|LOMKT-192]] Abr 19: ¿Cuáles son los 3 procesadores más vendidos en LO? (Degradé Blanco y negro)  mar 21
 
 ## Descripcion
 

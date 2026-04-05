@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-230"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-228]] API - Oportunidades de mejora
+- **Padre:** [[NBWEB-228 - API - Oportunidades de mejora|NBWEB-228]] API - Oportunidades de mejora
 
 ## Descripcion
 

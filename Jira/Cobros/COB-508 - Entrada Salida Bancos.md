@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-508"
 
 ## Relaciones
 
-- **Padre:** [[COB-505]] Dashboard
+- **Padre:** [[COB-505 - Dashboard|COB-505]] Dashboard
 
 ## Descripcion
 

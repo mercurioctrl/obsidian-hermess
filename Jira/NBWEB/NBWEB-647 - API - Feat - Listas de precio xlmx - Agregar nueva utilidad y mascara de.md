@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-647"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **is blocked by:** [[NBWEB-655]] API - Listas de precio xlsx -> Agregar nueva utilidad y mascara de Categoría - Filtrar categorías por usuario
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **is blocked by:** [[NBWEB-655 - API - Listas de precio xlsx - Agregar nueva utilidad y mascara de Categoría -|NBWEB-655]] API - Listas de precio xlsx -> Agregar nueva utilidad y mascara de Categoría - Filtrar categorías por usuario
 
 ## Descripcion
 

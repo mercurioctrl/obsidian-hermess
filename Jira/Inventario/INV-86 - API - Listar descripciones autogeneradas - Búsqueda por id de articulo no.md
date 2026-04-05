@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-86"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **blocks:** [[INV-81]] API - Feat - Listar descripciones autogeneradas
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **blocks:** [[INV-81 - API - Feat - Listar descripciones autogeneradas|INV-81]] API - Feat - Listar descripciones autogeneradas
 
 ## Descripcion
 

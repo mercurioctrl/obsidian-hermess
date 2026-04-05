@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-61"
 
 ## Relaciones
 
-- **Padre:** [[COB-5]] API - Feat - Obtener cuenta corriente de un cliente
-- **blocks:** [[COB-162]] APP - Feat - Boton derecho > Anular movimiento
+- **Padre:** [[COB-5 - API - Feat - Obtener cuenta corriente de un cliente|COB-5]] API - Feat - Obtener cuenta corriente de un cliente
+- **blocks:** [[COB-162 - APP - Feat - Boton derecho Anular movimiento|COB-162]] APP - Feat - Boton derecho > Anular movimiento
 
 ## Descripcion
 

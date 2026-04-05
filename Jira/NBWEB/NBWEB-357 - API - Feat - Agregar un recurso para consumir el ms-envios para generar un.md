@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-357"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **is caused by:** [[NBWEB-418]] API - Refactor - Alterar el metodo para generar un paquete para que el objeto se genere de manera interna
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **is caused by:** [[NBWEB-418 - API - Refactor - Alterar el metodo para generar un paquete para que el objeto|NBWEB-418]] API - Refactor - Alterar el metodo para generar un paquete para que el objeto se genere de manera interna
 
 ## Descripcion
 

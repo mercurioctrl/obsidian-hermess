@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-572"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **Subtarea:** [[NBWEB-573]] API - Feat - Leer noticias de diferentes fuentes
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **Subtarea:** [[NBWEB-573 - API - Feat - Leer noticias de diferentes fuentes|NBWEB-573]] API - Feat - Leer noticias de diferentes fuentes
 
 ## Descripcion
 

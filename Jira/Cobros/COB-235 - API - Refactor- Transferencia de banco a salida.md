@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-235"
 
 ## Relaciones
 
-- **Padre:** [[COB-208]] Refactor - Transferencias bancarias
+- **Padre:** [[COB-208 - Refactor - Transferencias bancarias|COB-208]] Refactor - Transferencias bancarias
 
 ## Descripcion
 

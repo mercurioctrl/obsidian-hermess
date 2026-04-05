@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-58"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-23]] Generar un comprobante
-- **action item from:** [[LOCAPP-57]] API - Reafactor - Agregar a la lectura del comprobante el parametro "internalTax"
+- **Padre:** [[LOCAPP-23 - Generar un comprobante|LOCAPP-23]] Generar un comprobante
+- **action item from:** [[LOCAPP-57 - API - Reafactor - Agregar a la lectura del comprobante el parametro internalTax|LOCAPP-57]] API - Reafactor - Agregar a la lectura del comprobante el parametro "internalTax"
 
 ## Descripcion
 

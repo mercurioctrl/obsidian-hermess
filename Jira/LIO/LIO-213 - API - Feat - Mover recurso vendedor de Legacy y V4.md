@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-213"
 
 ## Relaciones
 
-- **Padre:** [[LIO-212]] Perfil de vendedor
-- **has action item:** [[LIO-214]] APP - Refactor - Actualizar todos aquellos lugares del sitio (principalmente la ficha de reputacion, que utilizan el recurso vendedor por el nuevo de v4
-- **has action item:** [[LIO-230]] API - Mover recurso "vendedor" de Legacy y V4 - Error de tipeo al filtrar por vendedor
+- **Padre:** [[LIO-212 - Perfil de vendedor|LIO-212]] Perfil de vendedor
+- **has action item:** [[LIO-214 - APP - Refactor - Actualizar todos aquellos lugares del sitio (principalmente la|LIO-214]] APP - Refactor - Actualizar todos aquellos lugares del sitio (principalmente la ficha de reputacion, que utilizan el recurso vendedor por el nuevo de v4
+- **has action item:** [[LIO-230 - API - Mover recurso vendedor de Legacy y V4 - Error de tipeo al filtrar por|LIO-230]] API - Mover recurso "vendedor" de Legacy y V4 - Error de tipeo al filtrar por vendedor
 
 ## Descripcion
 

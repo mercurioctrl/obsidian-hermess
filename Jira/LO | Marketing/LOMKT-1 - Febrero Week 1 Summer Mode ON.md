@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-1"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-2]] Febrero Week 2/3 :  Diseño Tips para que tu PC no pase calor
-- **Subtarea:** [[LOMKT-6]] Febrero Week 3/3 Diseño ¿Team Líquido o Aire?
-- **Subtarea:** [[LOMKT-7]] Febrero Week 1/3 Diseño Envíos sin Cargo
-- **Subtarea:** [[LOMKT-12]] Febrero Week 1: Copys Summer 
-- **Subtarea:** [[LOMKT-4]] Feb Week 1 : Programar Summer
-- **Subtarea:** [[LOMKT-16]] Banners
+- **Subtarea:** [[LOMKT-2 - Febrero Week 23 Diseño Tips para que tu PC no pase calor|LOMKT-2]] Febrero Week 2/3 :  Diseño Tips para que tu PC no pase calor
+- **Subtarea:** [[LOMKT-6 - Febrero Week 33 Diseño ¿Team Líquido o Aire|LOMKT-6]] Febrero Week 3/3 Diseño ¿Team Líquido o Aire?
+- **Subtarea:** [[LOMKT-7 - Febrero Week 13 Diseño Envíos sin Cargo|LOMKT-7]] Febrero Week 1/3 Diseño Envíos sin Cargo
+- **Subtarea:** [[LOMKT-12 - Febrero Week 1 Copys Summer|LOMKT-12]] Febrero Week 1: Copys Summer 
+- **Subtarea:** [[LOMKT-4 - Feb Week 1 Programar Summer|LOMKT-4]] Feb Week 1 : Programar Summer
+- **Subtarea:** [[LOMKT-16 - Banners|LOMKT-16]] Banners
 
 ## Descripcion
 

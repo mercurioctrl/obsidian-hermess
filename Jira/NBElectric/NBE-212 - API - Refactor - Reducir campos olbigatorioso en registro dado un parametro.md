@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-212"
 
 ## Relaciones
 
-- **Padre:** [[NBE-211]] Mejoras de usabilidad para captar clientes
-- **relates to:** [[NBE-213]] APP - Refactor - Minificar a un solo paso reducido al formulario de registro
+- **Padre:** [[NBE-211 - Mejoras de usabilidad para captar clientes|NBE-211]] Mejoras de usabilidad para captar clientes
+- **relates to:** [[NBE-213 - APP - Refactor - Minificar a un solo paso reducido al formulario de registro|NBE-213]] APP - Refactor - Minificar a un solo paso reducido al formulario de registro
 
 ## Descripcion
 

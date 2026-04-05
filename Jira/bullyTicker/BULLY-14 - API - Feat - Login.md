@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-14"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-12]] Logins y autenticaciones 
-- **blocks:** [[BULLY-15]] APP - Feat - Login
-- **blocks:** [[BULLY-16]] API - Feat - Objeto user (Login ETNA)
+- **Padre:** [[BULLY-12 - Logins y autenticaciones|BULLY-12]] Logins y autenticaciones 
+- **blocks:** [[BULLY-15 - APP - Feat - Login|BULLY-15]] APP - Feat - Login
+- **blocks:** [[BULLY-16 - API - Feat - Objeto user (Login ETNA)|BULLY-16]] API - Feat - Objeto user (Login ETNA)
 
 ## Descripcion
 

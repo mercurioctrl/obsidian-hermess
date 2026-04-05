@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-225"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **action item from:** [[COM-228]] APP -MVP - Mandar filtro de companyCode en el recurso de proveedores dentro de "Crear orden"
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **action item from:** [[COM-228 - APP -MVP - Mandar filtro de companyCode en el recurso de proveedores dentro de|COM-228]] APP -MVP - Mandar filtro de companyCode en el recurso de proveedores dentro de "Crear orden"
 
 ## Descripcion
 

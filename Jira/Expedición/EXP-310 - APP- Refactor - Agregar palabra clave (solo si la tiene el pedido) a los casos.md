@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-310"
 
 ## Relaciones
 
-- **Padre:** [[EXP-308]] Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
-- **blocks:** [[SNB-825]] los transportes siguen sin palabra clave
+- **Padre:** [[EXP-308 - Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de|EXP-308]] Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
+- **blocks:** [[SNB-825 - los transportes siguen sin palabra clave|SNB-825]] los transportes siguen sin palabra clave
 
 ## Descripcion
 

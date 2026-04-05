@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-223"
 
 ## Relaciones
 
-- **Padre:** [[COM-81]] Repositorio de productos
+- **Padre:** [[COM-81 - Repositorio de productos|COM-81]] Repositorio de productos
 
 ## Descripcion
 

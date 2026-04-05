@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-194"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-193]] Presupuestos
+- **Padre:** [[BLUWEB-193 - Presupuestos|BLUWEB-193]] Presupuestos
 
 ## Descripcion
 

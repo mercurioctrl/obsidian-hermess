@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-531"
 
 ## Relaciones
 
-- **Padre:** [[COB-506]] Logistica
+- **Padre:** [[COB-506 - Logistica|COB-506]] Logistica
 
 ## Descripcion
 

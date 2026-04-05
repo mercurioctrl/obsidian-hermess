@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-170"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **action item from:** [[INV-169]] API - Refactor - Agregar cuantos items vienen por caja para lectura / edición
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **action item from:** [[INV-169 - API - Refactor - Agregar cuantos items vienen por caja para lectura edición|INV-169]] API - Refactor - Agregar cuantos items vienen por caja para lectura / edición
 
 ## Descripcion
 

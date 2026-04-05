@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-188"
 
 ## Relaciones
 
-- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
-- **blocks:** [[SNB-526]] hola chicos buen día vieron que en su momento se pidió que salga en orden  por familia  la volanta, es posible que cuando aparezca en pantalla para serializar pase lo mismo?
+- **Padre:** [[EXP-14 - Feat - Listar pedidos para retiro|EXP-14]] Feat - Listar pedidos para retiro
+- **blocks:** [[SNB-526 - hola chicos buen día vieron que en su momento se pidió que salga en orden por|SNB-526]] hola chicos buen día vieron que en su momento se pidió que salga en orden  por familia  la volanta, es posible que cuando aparezca en pantalla para serializar pase lo mismo?
 
 ## Descripcion
 

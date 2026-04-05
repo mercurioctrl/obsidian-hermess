@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-174"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-122]] APP - Implementar Pagos
+- **Padre:** [[NBWEB-122 - APP - Implementar Pagos|NBWEB-122]] APP - Implementar Pagos
 
 ## Descripcion
 

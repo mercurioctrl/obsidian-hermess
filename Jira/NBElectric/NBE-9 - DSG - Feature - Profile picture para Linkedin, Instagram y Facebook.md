@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-9"
 
 ## Relaciones
 
-- **Padre:** [[NBE-6]] Ibranding (pfp & covers)
+- **Padre:** [[NBE-6 - Ibranding (pfp & covers)|NBE-6]] Ibranding (pfp & covers)
 
 ## Descripcion
 

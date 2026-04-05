@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-54"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **blocks:** [[COM-55]] APP - Feat - Guardar / Leer comentario
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **blocks:** [[COM-55 - APP - Feat - Guardar Leer comentario|COM-55]] APP - Feat - Guardar / Leer comentario
 
 ## Descripcion
 

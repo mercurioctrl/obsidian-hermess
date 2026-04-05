@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-597"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **action item from:** [[LIO-595]] API - Feat - Migrar resumen de liquidación por mes/año a v4
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **action item from:** [[LIO-595 - API - Feat - Migrar resumen de liquidación por mesaño a v4|LIO-595]] API - Feat - Migrar resumen de liquidación por mes/año a v4
 
 ## Descripcion
 

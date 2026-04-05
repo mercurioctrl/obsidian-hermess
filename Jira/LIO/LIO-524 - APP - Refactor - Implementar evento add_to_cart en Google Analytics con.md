@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-524"
 
 ## Relaciones
 
-- **Padre:** [[LIO-344]] Adwords y Analytics
+- **Padre:** [[LIO-344 - Adwords y Analytics|LIO-344]] Adwords y Analytics
 
 ## Descripcion
 

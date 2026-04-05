@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-181"
 
 ## Relaciones
 
-- **Padre:** [[MKT-180]] NB_ INCENTIVO CAPILARIDAD
-- **blocks:** [[MKT-182]] APP - Refactor - Agregaremos dos widgets de objetivos para capilaridad, uno en general y otro para trust
+- **Padre:** [[MKT-180 - NB_ INCENTIVO CAPILARIDAD|MKT-180]] NB_ INCENTIVO CAPILARIDAD
+- **blocks:** [[MKT-182 - APP - Refactor - Agregaremos dos widgets de objetivos para capilaridad, uno en|MKT-182]] APP - Refactor - Agregaremos dos widgets de objetivos para capilaridad, uno en general y otro para trust
 
 ## Descripcion
 

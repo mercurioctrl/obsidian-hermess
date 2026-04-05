@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-193"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-194]] Cargar menú enviado via mail DE FOGON ASADO + SUMARLE FOTO
+- **Subtarea:** [[BLUWEB-194 - Cargar menú enviado via mail DE FOGON ASADO + SUMARLE FOTO|BLUWEB-194]] Cargar menú enviado via mail DE FOGON ASADO + SUMARLE FOTO
 
 ## Descripcion
 

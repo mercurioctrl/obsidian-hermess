@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-589"
 
 ## Relaciones
 
-- **Padre:** [[COB-581]] Repositorio y Gestión de Billeteras Libre Opción
-- **action item from:** [[COB-588]] API - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo positivo, negativo o neutro (solo wallet, no cc)
+- **Padre:** [[COB-581 - Repositorio y Gestión de Billeteras Libre Opción|COB-581]] Repositorio y Gestión de Billeteras Libre Opción
+- **action item from:** [[COB-588 - API - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo|COB-588]] API - Refactor - Agregar filtro de balance para saber si la cuenta tiene saldo positivo, negativo o neutro (solo wallet, no cc)
 
 ## Descripcion
 

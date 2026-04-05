@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-217"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-218]] Adata Enero: Armar copy general con todos los copys que tenes armar uno que sintetice lo de los 4 dias
-- **Subtarea:** [[ADATA-219]] Adata Enero: Armar post de linkedin de los 4 dias e incluir fotos de las que paso fabio 
-- **Subtarea:** [[ADATA-223]] Programar Linkedin de Adata
+- **Subtarea:** [[ADATA-218 - Adata Enero Armar copy general con todos los copys que tenes armar uno que|ADATA-218]] Adata Enero: Armar copy general con todos los copys que tenes armar uno que sintetice lo de los 4 dias
+- **Subtarea:** [[ADATA-219 - Adata Enero Armar post de linkedin de los 4 dias e incluir fotos de las que|ADATA-219]] Adata Enero: Armar post de linkedin de los 4 dias e incluir fotos de las que paso fabio 
+- **Subtarea:** [[ADATA-223 - Programar Linkedin de Adata|ADATA-223]] Programar Linkedin de Adata
 
 ## Descripcion
 

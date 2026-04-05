@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-309"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
 
 ## Descripcion
 

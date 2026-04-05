@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-410"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **is blocked by:** [[EXP-409]] API - Refactor - Agregar direcciones multiples (destino final) en las direcciones del cliente para UNA ORDEN DETERMINADA
-- **relates to:** [[EXP-482]] APP - Generar etiqueta para seguimiento de envío - No es posible añadir observación
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **is blocked by:** [[EXP-409 - API - Refactor - Agregar direcciones multiples (destino final) en las|EXP-409]] API - Refactor - Agregar direcciones multiples (destino final) en las direcciones del cliente para UNA ORDEN DETERMINADA
+- **relates to:** [[EXP-482 - APP - Generar etiqueta para seguimiento de envío - No es posible añadir|EXP-482]] APP - Generar etiqueta para seguimiento de envío - No es posible añadir observación
 
 ## Descripcion
 

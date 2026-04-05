@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-191"
 
 ## Relaciones
 
-- **Padre:** [[COB-16]] Cuentas bancarias
-- **is blocked by:** [[COB-177]] API - Feat - Realizar salida con destino bancario
+- **Padre:** [[COB-16 - Cuentas bancarias|COB-16]] Cuentas bancarias
+- **is blocked by:** [[COB-177 - API - Feat - Realizar salida con destino bancario|COB-177]] API - Feat - Realizar salida con destino bancario
 
 ## Descripcion
 

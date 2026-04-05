@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-28"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-27]] Configuraciones y valores iniciales
+- **Padre:** [[LOCAPP-27 - Configuraciones y valores iniciales|LOCAPP-27]] Configuraciones y valores iniciales
 
 ## Descripcion
 

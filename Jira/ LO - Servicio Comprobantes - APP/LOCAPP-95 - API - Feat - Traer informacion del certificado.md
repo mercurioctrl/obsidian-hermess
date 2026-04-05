@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-95"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-93]] Certificados
-- **has action item:** [[LOCAPP-96]] APP - Feat - Mostrar Qr de un certificado y descargarlo cuando se recibe el parámetro de descarga
+- **Padre:** [[LOCAPP-93 - Certificados|LOCAPP-93]] Certificados
+- **has action item:** [[LOCAPP-96 - APP - Feat - Mostrar Qr de un certificado y descargarlo cuando se recibe el|LOCAPP-96]] APP - Feat - Mostrar Qr de un certificado y descargarlo cuando se recibe el parámetro de descarga
 
 ## Descripcion
 

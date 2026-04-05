@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-215"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-77]] Implementar Pagos
-- **is blocked by:** [[NBWEB-243]] API - Refactor - Procesar carrito
+- **Padre:** [[NBWEB-77 - Implementar Pagos|NBWEB-77]] Implementar Pagos
+- **is blocked by:** [[NBWEB-243 - API - Refactor - Procesar carrito|NBWEB-243]] API - Refactor - Procesar carrito
 
 ## Descripcion
 

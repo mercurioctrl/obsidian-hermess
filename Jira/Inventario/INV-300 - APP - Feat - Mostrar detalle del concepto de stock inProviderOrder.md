@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-300"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-247]] API - Feat - Visualizar detalles de los distintos conceptos de stock
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-247 - API - Feat - Visualizar detalles de los distintos conceptos de stock|INV-247]] API - Feat - Visualizar detalles de los distintos conceptos de stock
 
 ## Descripcion
 

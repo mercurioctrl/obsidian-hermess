@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-488"
 
 ## Relaciones
 
-- **Padre:** [[COB-487]] Feat - Cobrables -> Comprobantes de pago
-- **blocks:** [[COB-490]] APP - Feat - Agregar accionable para ver comprobante / pago de mp
+- **Padre:** [[COB-487 - Feat - Cobrables - Comprobantes de pago|COB-487]] Feat - Cobrables -> Comprobantes de pago
+- **blocks:** [[COB-490 - APP - Feat - Agregar accionable para ver comprobante pago de mp|COB-490]] APP - Feat - Agregar accionable para ver comprobante / pago de mp
 
 ## Descripcion
 

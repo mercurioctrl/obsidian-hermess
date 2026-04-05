@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-18"
 
 ## Relaciones
 
-- **Padre:** [[EXP-9]] Pases de mercaderia
-- **Subtarea:** [[EXP-26]] API - Feat - Listar pases de mercaderia
-- **Subtarea:** [[EXP-27]] APP - Feat - Listar pases
-- **Subtarea:** [[EXP-80]] API - Feat - Detalle del pase
-- **Subtarea:** [[EXP-81]] APP - Feat - Detalle del pase
-- **Subtarea:** [[EXP-82]] API - Feat - Procesar pase 
-- **Subtarea:** [[EXP-83]] APP - Feat - Modal procesar pase de mercaderia
+- **Padre:** [[EXP-9 - Pases de mercaderia|EXP-9]] Pases de mercaderia
+- **Subtarea:** [[EXP-26 - API - Feat - Listar pases de mercaderia|EXP-26]] API - Feat - Listar pases de mercaderia
+- **Subtarea:** [[EXP-27 - APP - Feat - Listar pases|EXP-27]] APP - Feat - Listar pases
+- **Subtarea:** [[EXP-80 - API - Feat - Detalle del pase|EXP-80]] API - Feat - Detalle del pase
+- **Subtarea:** [[EXP-81 - APP - Feat - Detalle del pase|EXP-81]] APP - Feat - Detalle del pase
+- **Subtarea:** [[EXP-82 - API - Feat - Procesar pase|EXP-82]] API - Feat - Procesar pase 
+- **Subtarea:** [[EXP-83 - APP - Feat - Modal procesar pase de mercaderia|EXP-83]] APP - Feat - Modal procesar pase de mercaderia
 
 ## Descripcion
 

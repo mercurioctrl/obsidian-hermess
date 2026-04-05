@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-479"
 
 ## Relaciones
 
-- **blocks:** [[COB-478]] APP - Feat - Incorporar el sistema de reportes de jira dentro de la app
+- **blocks:** [[COB-478 - APP - Feat - Incorporar el sistema de reportes de jira dentro de la app|COB-478]] APP - Feat - Incorporar el sistema de reportes de jira dentro de la app
 
 ## Descripcion
 

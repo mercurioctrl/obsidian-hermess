@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-550"
 
 ## Relaciones
 
-- **Subtarea:** [[LIO-552]] API - Feat -  Envío de notificaciones pendientes por canal
-- **Subtarea:** [[LIO-553]] API - Feat - Contador de notificaciones pendientes website
-- **Subtarea:** [[LIO-554]] API - Feat - Últimas notificaciones pendientes website
-- **Subtarea:** [[LIO-555]] API - Feat -  Listado paginado de notificaciones website
-- **Subtarea:** [[LIO-556]] API - Feat - Marcar notificación como vista por token
-- **Subtarea:** [[LIO-563]] API -  LO - V4 - Feat - Procesar y despachar las notificaciones pendientes actuando como proxy 
-- **Subtarea:** [[LIO-570]] APP - Refactor -  Migrar de v3 a v4 - notificaciones
+- **Subtarea:** [[LIO-552 - API - Feat - Envío de notificaciones pendientes por canal|LIO-552]] API - Feat -  Envío de notificaciones pendientes por canal
+- **Subtarea:** [[LIO-553 - API - Feat - Contador de notificaciones pendientes website|LIO-553]] API - Feat - Contador de notificaciones pendientes website
+- **Subtarea:** [[LIO-554 - API - Feat - Últimas notificaciones pendientes website|LIO-554]] API - Feat - Últimas notificaciones pendientes website
+- **Subtarea:** [[LIO-555 - API - Feat - Listado paginado de notificaciones website|LIO-555]] API - Feat -  Listado paginado de notificaciones website
+- **Subtarea:** [[LIO-556 - API - Feat - Marcar notificación como vista por token|LIO-556]] API - Feat - Marcar notificación como vista por token
+- **Subtarea:** [[LIO-563 - API - LO - V4 - Feat - Procesar y despachar las notificaciones pendientes|LIO-563]] API -  LO - V4 - Feat - Procesar y despachar las notificaciones pendientes actuando como proxy 
+- **Subtarea:** [[LIO-570 - APP - Refactor - Migrar de v3 a v4 - notificaciones|LIO-570]] APP - Refactor -  Migrar de v3 a v4 - notificaciones
 
 ## Descripcion
 

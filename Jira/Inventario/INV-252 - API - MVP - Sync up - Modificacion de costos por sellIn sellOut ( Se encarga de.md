@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-252"
 
 ## Relaciones
 
-- **Padre:** [[INV-250]] Repositorio de Sell In Sell Out
-- **relates to:** [[INV-273]] API - MVP Refactor - Syncup  Sell In/ Sell Out -> Agregar almacén al historial
+- **Padre:** [[INV-250 - Repositorio de Sell In Sell Out|INV-250]] Repositorio de Sell In Sell Out
+- **relates to:** [[INV-273 - API - MVP Refactor - Syncup Sell In Sell Out - Agregar almacén al historial|INV-273]] API - MVP Refactor - Syncup  Sell In/ Sell Out -> Agregar almacén al historial
 
 ## Descripcion
 

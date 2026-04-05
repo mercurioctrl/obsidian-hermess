@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-30"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-31]] NB_Banner de la serie 9060+FUENTES
-- **Subtarea:** [[MNB2-32]] NB_Newsletter del combo 9060+FUENTE
-- **Subtarea:** [[MNB2-33]] NB_Newsletter de los ingresos generales en ASUS por categoría: MB
-- **Subtarea:** [[MNB2-34]] NB_Newsletter de los ingresos generales en ASUS por categoría: WATERCOOLER
-- **Subtarea:** [[MNB2-35]] NB_Newsletter de los ingresos generales en ASUS por categoría: VGA NVIDIA + RADEON
-- **Subtarea:** [[MNB2-36]] LO_Newsletter de los ingresos de ASUS 
-- **Subtarea:** [[MNB2-37]] LO_Newsletter de VGA NVIDIA+RADEON 
-- **Subtarea:** [[MNB2-38]] LO_Newsletter de WATERCOOLER
+- **Subtarea:** [[MNB2-31 - NB_Banner de la serie 9060+FUENTES|MNB2-31]] NB_Banner de la serie 9060+FUENTES
+- **Subtarea:** [[MNB2-32 - NB_Newsletter del combo 9060+FUENTE|MNB2-32]] NB_Newsletter del combo 9060+FUENTE
+- **Subtarea:** [[MNB2-33 - NB_Newsletter de los ingresos generales en ASUS por categoría MB|MNB2-33]] NB_Newsletter de los ingresos generales en ASUS por categoría: MB
+- **Subtarea:** [[MNB2-34 - NB_Newsletter de los ingresos generales en ASUS por categoría WATERCOOLER|MNB2-34]] NB_Newsletter de los ingresos generales en ASUS por categoría: WATERCOOLER
+- **Subtarea:** [[MNB2-35 - NB_Newsletter de los ingresos generales en ASUS por categoría VGA NVIDIA +|MNB2-35]] NB_Newsletter de los ingresos generales en ASUS por categoría: VGA NVIDIA + RADEON
+- **Subtarea:** [[MNB2-36 - LO_Newsletter de los ingresos de ASUS|MNB2-36]] LO_Newsletter de los ingresos de ASUS 
+- **Subtarea:** [[MNB2-37 - LO_Newsletter de VGA NVIDIA+RADEON|MNB2-37]] LO_Newsletter de VGA NVIDIA+RADEON 
+- **Subtarea:** [[MNB2-38 - LO_Newsletter de WATERCOOLER|MNB2-38]] LO_Newsletter de WATERCOOLER
 
 ## Descripcion
 

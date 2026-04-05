@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-506"
 
 ## Relaciones
 
-- **Padre:** [[EXP-169]] Feat - Alertar pedidos
-- **has action item:** [[SNB-3284]] pedidos alertados
+- **Padre:** [[EXP-169 - Feat - Alertar pedidos|EXP-169]] Feat - Alertar pedidos
+- **has action item:** [[SNB-3284 - pedidos alertados|SNB-3284]] pedidos alertados
 
 ## Descripcion
 

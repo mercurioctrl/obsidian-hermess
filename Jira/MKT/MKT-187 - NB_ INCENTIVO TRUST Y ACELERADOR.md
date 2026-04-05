@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-187"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-771]] APP - Refactor - Ajustar dashboard de objetivos para ver solo incentivo TRUST, dejar el resto oculto para cuando se vuelva a ctivar
+- **is blocked by:** [[PED-771 - APP - Refactor - Ajustar dashboard de objetivos para ver solo incentivo TRUST,|PED-771]] APP - Refactor - Ajustar dashboard de objetivos para ver solo incentivo TRUST, dejar el resto oculto para cuando se vuelva a ctivar
 
 ## Descripcion
 

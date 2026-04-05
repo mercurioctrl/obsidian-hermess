@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-363"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-362]] API - Refactor - Cuando el pago se hace en pesos, debe mostrar el saldo en pesos en el comprobante y el tipo de cambio
+- **is blocked by:** [[COB-362 - API - Refactor - Cuando el pago se hace en pesos, debe mostrar el saldo en|COB-362]] API - Refactor - Cuando el pago se hace en pesos, debe mostrar el saldo en pesos en el comprobante y el tipo de cambio
 
 ## Descripcion
 

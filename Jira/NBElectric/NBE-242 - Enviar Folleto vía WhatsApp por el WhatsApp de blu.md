@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-242"
 
 ## Relaciones
 
-- **Padre:** [[NBE-241]] Feb: Elibet
+- **Padre:** [[NBE-241 - Feb Elibet|NBE-241]] Feb: Elibet
 
 ## Descripcion
 

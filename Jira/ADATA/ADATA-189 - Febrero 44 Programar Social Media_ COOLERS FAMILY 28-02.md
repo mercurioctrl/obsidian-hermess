@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-189"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-166]] Adata Feb: 4/4 Social Media_COOLERS FAMILY 28-02
+- **Padre:** [[ADATA-166 - Adata Feb 44 Social Media_COOLERS FAMILY 28-02|ADATA-166]] Adata Feb: 4/4 Social Media_COOLERS FAMILY 28-02
 
 ## Descripcion
 

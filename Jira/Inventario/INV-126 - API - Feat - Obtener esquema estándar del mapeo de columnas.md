@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-126"
 
 ## Relaciones
 
-- **Padre:** [[INV-125]] Importación de catálogos
-- **blocks:** [[INV-128]] APP - Feat - Formulario de carga masiva de productos a través de un archivo 
+- **Padre:** [[INV-125 - Importación de catálogos|INV-125]] Importación de catálogos
+- **blocks:** [[INV-128 - APP - Feat - Formulario de carga masiva de productos a través de un archivo|INV-128]] APP - Feat - Formulario de carga masiva de productos a través de un archivo 
 
 ## Descripcion
 

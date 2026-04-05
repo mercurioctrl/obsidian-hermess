@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-364"
 
 ## Relaciones
 
-- **Padre:** [[EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
-- **blocks:** [[SNB-1153]] NO SE MARCAN COMO DESPACHADOS LOS PEDIDOS EN LA GRILLA DE LIBRE OPCION
+- **Padre:** [[EXP-258 - Feat - Autorizar Entrega mediante tarjeta de autorizacion|EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
+- **blocks:** [[SNB-1153 - NO SE MARCAN COMO DESPACHADOS LOS PEDIDOS EN LA GRILLA DE LIBRE OPCION|SNB-1153]] NO SE MARCAN COMO DESPACHADOS LOS PEDIDOS EN LA GRILLA DE LIBRE OPCION
 
 ## Descripcion
 

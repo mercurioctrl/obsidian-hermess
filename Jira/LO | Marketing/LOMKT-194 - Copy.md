@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-194"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-170]] Abr 15: Video Router  azul lun 13
+- **Padre:** [[LOMKT-170 - Abr 15 Video Router azul lun 13|LOMKT-170]] Abr 15: Video Router  azul lun 13
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-468"
 
 ## Relaciones
 
-- **Padre:** [[LIO-313]] Notificaciones
+- **Padre:** [[LIO-313 - Notificaciones|LIO-313]] Notificaciones
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-146"
 
 ## Relaciones
 
-- **Subtarea:** [[COB-147]] API - Feat - Solo el destinatario del pase puede aceptarlo o rechazarlo (A menos que tenga administrativos)
-- **Subtarea:** [[COB-148]] APP - Feat - Solo el destinatario del pase peude aceptarlo o rechazarlo
-- **causes:** [[SNB-341]] CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo
+- **Subtarea:** [[COB-147 - API - Feat - Solo el destinatario del pase puede aceptarlo o rechazarlo (A|COB-147]] API - Feat - Solo el destinatario del pase puede aceptarlo o rechazarlo (A menos que tenga administrativos)
+- **Subtarea:** [[COB-148 - APP - Feat - Solo el destinatario del pase peude aceptarlo o rechazarlo|COB-148]] APP - Feat - Solo el destinatario del pase peude aceptarlo o rechazarlo
+- **causes:** [[SNB-341 - CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo|SNB-341]] CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo
 
 ## Descripcion
 

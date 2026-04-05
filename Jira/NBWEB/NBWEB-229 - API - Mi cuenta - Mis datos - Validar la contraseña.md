@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-229"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-228]] API - Oportunidades de mejora
-- **relates to:** [[NBWEB-225]] APP - Mi cuenta - Datos de usuario
+- **Padre:** [[NBWEB-228 - API - Oportunidades de mejora|NBWEB-228]] API - Oportunidades de mejora
+- **relates to:** [[NBWEB-225 - APP - Mi cuenta - Datos de usuario|NBWEB-225]] APP - Mi cuenta - Datos de usuario
 
 ## Descripcion
 

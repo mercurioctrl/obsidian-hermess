@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-25"
 
 ## Relaciones
 
-- **Padre:** [[LIO-5]] Seguridad y Confianza
+- **Padre:** [[LIO-5 - Seguridad y Confianza|LIO-5]] Seguridad y Confianza
 
 ## Descripcion
 

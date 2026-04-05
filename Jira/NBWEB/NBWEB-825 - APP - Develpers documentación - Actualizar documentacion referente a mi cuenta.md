@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-825"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-818]] develpers documentacion - Actualizar documentacion referente a mi cuenta segun como se actualizo el menu del sitio
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-818 - develpers documentacion - Actualizar documentacion referente a mi cuenta segun|NBWEB-818]] develpers documentacion - Actualizar documentacion referente a mi cuenta segun como se actualizo el menu del sitio
 
 ## Descripcion
 

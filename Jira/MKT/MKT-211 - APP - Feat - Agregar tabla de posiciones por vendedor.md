@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-211"
 
 ## Relaciones
 
-- **Padre:** [[MKT-208]] NB_ Incentivo GENIUS
-- **is blocked by:** [[MKT-210]] API - Feat - Agregar repositorio de objtetivo genius por ventas/vendedor
+- **Padre:** [[MKT-208 - NB_ Incentivo GENIUS|MKT-208]] NB_ Incentivo GENIUS
+- **is blocked by:** [[MKT-210 - API - Feat - Agregar repositorio de objtetivo genius por ventasvendedor|MKT-210]] API - Feat - Agregar repositorio de objtetivo genius por ventas/vendedor
 
 ## Descripcion
 

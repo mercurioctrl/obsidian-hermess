@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-746"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-132]] Enviar correo para confirmar cuenta de correo
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-132 - Enviar correo para confirmar cuenta de correo|NBWEB-132]] Enviar correo para confirmar cuenta de correo
 
 ## Descripcion
 

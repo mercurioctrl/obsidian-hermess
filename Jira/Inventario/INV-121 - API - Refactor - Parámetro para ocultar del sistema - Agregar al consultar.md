@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-121"
 
 ## Relaciones
 
-- **relates to:** [[INV-115]] API - Refactor - Agregar parametro para ocultar del sistema
+- **relates to:** [[INV-115 - API - Refactor - Agregar parametro para ocultar del sistema|INV-115]] API - Refactor - Agregar parametro para ocultar del sistema
 
 ## Descripcion
 

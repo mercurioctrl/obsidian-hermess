@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-292"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
-- **is blocked by:** [[COB-291]] API - Feat - Listar provincias (para retención)
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-291 - API - Feat - Listar provincias (para retención)|COB-291]] API - Feat - Listar provincias (para retención)
 
 ## Descripcion
 

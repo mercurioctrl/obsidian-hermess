@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-138"
 
 ## Relaciones
 
-- **Padre:** [[NBE-25]] Sitio Web_Etapa 2
+- **Padre:** [[NBE-25 - Sitio Web_Etapa 2|NBE-25]] Sitio Web_Etapa 2
 
 ## Descripcion
 

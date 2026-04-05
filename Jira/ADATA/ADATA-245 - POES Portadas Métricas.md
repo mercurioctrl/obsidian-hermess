@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-245"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-227]] 3.Ene: Poes
+- **Padre:** [[ADATA-227 - 3.Ene Poes|ADATA-227]] 3.Ene: Poes
 
 ## Descripcion
 

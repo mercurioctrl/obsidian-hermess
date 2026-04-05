@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-228"
 
 ## Relaciones
 
-- **Padre:** [[EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
-- **relates to:** [[EXP-227]] API - Feat -Crear direccion para el cliente
-- **blocks:** [[EXP-222]] APP - Feat - Modal para crear etiqueta de envío generica
+- **Padre:** [[EXP-218 - Etiquetas para envíos que no las generan (genericas de ahora en mas)|EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
+- **relates to:** [[EXP-227 - API - Feat -Crear direccion para el cliente|EXP-227]] API - Feat -Crear direccion para el cliente
+- **blocks:** [[EXP-222 - APP - Feat - Modal para crear etiqueta de envío generica|EXP-222]] APP - Feat - Modal para crear etiqueta de envío generica
 
 ## Descripcion
 

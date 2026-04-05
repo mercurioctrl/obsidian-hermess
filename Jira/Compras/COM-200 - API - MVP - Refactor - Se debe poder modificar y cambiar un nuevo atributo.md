@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-200"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **has action item:** [[COM-201]] APP - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
-- **blocks:** [[PED-1115]] API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
-- **relates to:** [[COM-227]] API - MVP - Review - Al editar una orden no guarda el depósito cuando lo seleccionas y después volves a abrirlo  (da success pero al cerrar y abrir no aparece)
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **has action item:** [[COM-201 - APP - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo|COM-201]] APP - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
+- **blocks:** [[PED-1115 - API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y|PED-1115]] API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
+- **relates to:** [[COM-227 - API - MVP - Review - Al editar una orden no guarda el depósito cuando lo|COM-227]] API - MVP - Review - Al editar una orden no guarda el depósito cuando lo seleccionas y después volves a abrirlo  (da success pero al cerrar y abrir no aparece)
 
 ## Descripcion
 

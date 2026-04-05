@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-814"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-806]] API - Feat - Generar listado de precios para EMPRETIENDA
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-806 - API - Feat - Generar listado de precios para EMPRETIENDA|NBWEB-806]] API - Feat - Generar listado de precios para EMPRETIENDA
 
 ## Descripcion
 

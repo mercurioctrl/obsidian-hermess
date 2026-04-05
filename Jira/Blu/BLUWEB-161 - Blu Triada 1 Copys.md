@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-161"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-103]] 🧬 Triada 1_Blu_Desarrollo de piezas Social Media
-- **action item from:** [[BLUWEB-103]] 🧬 Triada 1_Blu_Desarrollo de piezas Social Media
+- **Padre:** [[BLUWEB-103 - 🧬 Triada 1_Blu_Desarrollo de piezas Social Media|BLUWEB-103]] 🧬 Triada 1_Blu_Desarrollo de piezas Social Media
+- **action item from:** [[BLUWEB-103 - 🧬 Triada 1_Blu_Desarrollo de piezas Social Media|BLUWEB-103]] 🧬 Triada 1_Blu_Desarrollo de piezas Social Media
 
 ## Descripcion
 

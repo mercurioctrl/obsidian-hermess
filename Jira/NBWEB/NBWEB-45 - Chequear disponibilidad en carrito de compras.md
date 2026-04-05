@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-45"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-1]] API - Carrito de compras
+- **Padre:** [[NBWEB-1 - API - Carrito de compras|NBWEB-1]] API - Carrito de compras
 
 ## Descripcion
 

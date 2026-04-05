@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-47"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-45]] Días festivos + Comerciales Q2-Q3
-- **clones:** [[BLUWEB-46]] DSG - Feature - Junio 2025 Tarjetas digitales + Impresas
+- **Padre:** [[BLUWEB-45 - Días festivos + Comerciales Q2-Q3|BLUWEB-45]] Días festivos + Comerciales Q2-Q3
+- **clones:** [[BLUWEB-46 - DSG - Feature - Junio 2025 Tarjetas digitales + Impresas|BLUWEB-46]] DSG - Feature - Junio 2025 Tarjetas digitales + Impresas
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-27"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **relates to:** [[NBWEB-170]] APP - Mi cuenta - Postventa
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **relates to:** [[NBWEB-170 - APP - Mi cuenta - Postventa|NBWEB-170]] APP - Mi cuenta - Postventa
 
 ## Descripcion
 

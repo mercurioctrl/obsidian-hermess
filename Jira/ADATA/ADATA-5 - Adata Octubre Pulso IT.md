@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-5"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-6]] Adata Octubre:  Pulso IT Diseño stand B08
+- **Subtarea:** [[ADATA-6 - Adata Octubre Pulso IT Diseño stand B08|ADATA-6]] Adata Octubre:  Pulso IT Diseño stand B08
 
 ## Descripcion
 

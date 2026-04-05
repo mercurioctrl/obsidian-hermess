@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-47"
 
 ## Relaciones
 
-- **Padre:** [[LAW-44]] LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una empresa determinada
+- **Padre:** [[LAW-44 - LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una|LAW-44]] LASET FUSSY ISSUES - Limpieza da informacion que no es del contexto para una empresa determinada
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-898"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-893]] Developers - Refactor - Actualziacion de la documentacion del plugin de wordpress
+- **Padre:** [[NBWEB-893 - Developers - Refactor - Actualziacion de la documentacion del plugin de|NBWEB-893]] Developers - Refactor - Actualziacion de la documentacion del plugin de wordpress
 
 ## Descripcion
 

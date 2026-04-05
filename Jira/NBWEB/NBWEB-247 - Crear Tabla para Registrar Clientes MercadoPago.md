@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-247"
 
 ## Relaciones
 
-- **blocks:** [[NBWEB-223]] API - Vincular el cliente en mercado pago con el interno al procesar un pago de mp
+- **blocks:** [[NBWEB-223 - API - Vincular el cliente en mercado pago con el interno al procesar un pago de|NBWEB-223]] API - Vincular el cliente en mercado pago con el interno al procesar un pago de mp
 
 ## Descripcion
 

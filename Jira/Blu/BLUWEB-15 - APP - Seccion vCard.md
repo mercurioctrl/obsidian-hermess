@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-15"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **action item from:** [[BLUWEB-14]] DSG - Feature- Diseño de concepto visual para vCard interna
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **action item from:** [[BLUWEB-14 - DSG - Feature- Diseño de concepto visual para vCard interna|BLUWEB-14]] DSG - Feature- Diseño de concepto visual para vCard interna
 
 ## Descripcion
 

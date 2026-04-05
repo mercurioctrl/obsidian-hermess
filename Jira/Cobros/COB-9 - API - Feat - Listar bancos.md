@@ -29,20 +29,20 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-9"
 
 ## Relaciones
 
-- **Padre:** [[COB-16]] Cuentas bancarias
-- **Subtarea:** [[COB-163]] API - Feat - Refactor - Agregar saldo a el recurso
-- **Subtarea:** [[COB-164]] Bancos
-- **Subtarea:** [[COB-196]] API - Refactor - Agregar filtro "con saldo"
-- **Subtarea:** [[COB-606]] API - Refactor - Refactorizar el repositorio de  movimientos de bancos para agregar atributos y filtros referidos a companyCode
-- **Subtarea:** [[COB-607]] APP - Refactor - Agregar Filtro Empresa a el repositorio de movimientos de bancos y mostrarlo en el listado
-- **Subtarea:** [[COB-608]] API - Feat - Listar / Agregar / Editar nuevo banco 
-- **Subtarea:** [[COB-609]] APP - Feat - Listar  Agregar / Editar nuevo banco
-- **Subtarea:** [[COB-610]] .
-- **Subtarea:** [[COB-611]] .
-- **Subtarea:** [[COB-612]] API - Feat - Agregar recurso para crear banco con cuenta bancaria asociada automáticamente   
-- **blocks:** [[COB-40]] APP - Feat - Listar movimientos caja
-- **blocks:** [[COB-163]] API - Feat - Refactor - Agregar saldo a el recurso
-- **blocks:** [[COB-165]] APP - Feat - Listar bancos
+- **Padre:** [[COB-16 - Cuentas bancarias|COB-16]] Cuentas bancarias
+- **Subtarea:** [[COB-163 - API - Feat - Refactor - Agregar saldo a el recurso|COB-163]] API - Feat - Refactor - Agregar saldo a el recurso
+- **Subtarea:** [[COB-164 - Bancos|COB-164]] Bancos
+- **Subtarea:** [[COB-196 - API - Refactor - Agregar filtro con saldo|COB-196]] API - Refactor - Agregar filtro "con saldo"
+- **Subtarea:** [[COB-606 - API - Refactor - Refactorizar el repositorio de movimientos de bancos para|COB-606]] API - Refactor - Refactorizar el repositorio de  movimientos de bancos para agregar atributos y filtros referidos a companyCode
+- **Subtarea:** [[COB-607 - APP - Refactor - Agregar Filtro Empresa a el repositorio de movimientos de|COB-607]] APP - Refactor - Agregar Filtro Empresa a el repositorio de movimientos de bancos y mostrarlo en el listado
+- **Subtarea:** [[COB-608 - API - Feat - Listar Agregar Editar nuevo banco|COB-608]] API - Feat - Listar / Agregar / Editar nuevo banco 
+- **Subtarea:** [[COB-609 - APP - Feat - Listar Agregar Editar nuevo banco|COB-609]] APP - Feat - Listar  Agregar / Editar nuevo banco
+- **Subtarea:** [[COB-610 - .|COB-610]] .
+- **Subtarea:** [[COB-611 - .|COB-611]] .
+- **Subtarea:** [[COB-612 - API - Feat - Agregar recurso para crear banco con cuenta bancaria asociada|COB-612]] API - Feat - Agregar recurso para crear banco con cuenta bancaria asociada automáticamente   
+- **blocks:** [[COB-40 - APP - Feat - Listar movimientos caja|COB-40]] APP - Feat - Listar movimientos caja
+- **blocks:** [[COB-163 - API - Feat - Refactor - Agregar saldo a el recurso|COB-163]] API - Feat - Refactor - Agregar saldo a el recurso
+- **blocks:** [[COB-165 - APP - Feat - Listar bancos|COB-165]] APP - Feat - Listar bancos
 
 ## Descripcion
 

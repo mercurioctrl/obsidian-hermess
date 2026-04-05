@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-66"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **is blocked by:** [[COM-72]] API - Posición arancelaria e impuestos - Posiciones no encontradas
-- **is blocked by:** [[COM-73]] API - Posición arancelaria e impuestos - Resultados de búsqueda no coincidentes
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **is blocked by:** [[COM-72 - API - Posición arancelaria e impuestos - Posiciones no encontradas|COM-72]] API - Posición arancelaria e impuestos - Posiciones no encontradas
+- **is blocked by:** [[COM-73 - API - Posición arancelaria e impuestos - Resultados de búsqueda no coincidentes|COM-73]] API - Posición arancelaria e impuestos - Resultados de búsqueda no coincidentes
 
 ## Descripcion
 

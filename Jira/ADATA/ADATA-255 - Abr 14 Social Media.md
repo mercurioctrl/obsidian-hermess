@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-255"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-260]] Abr: 1/4 Portada Diseño Social Media
-- **Subtarea:** [[ADATA-261]] ABR: 1/4 Copys Social Media
-- **Subtarea:** [[ADATA-262]] ABR: 1/4 Programar Social Media
-- **Subtarea:** [[ADATA-263]] ABR: BUSCAR VIDEOS PARA PUBLICAR  EN ABR
+- **Subtarea:** [[ADATA-260 - Abr 14 Portada Diseño Social Media|ADATA-260]] Abr: 1/4 Portada Diseño Social Media
+- **Subtarea:** [[ADATA-261 - ABR 14 Copys Social Media|ADATA-261]] ABR: 1/4 Copys Social Media
+- **Subtarea:** [[ADATA-262 - ABR 14 Programar Social Media|ADATA-262]] ABR: 1/4 Programar Social Media
+- **Subtarea:** [[ADATA-263 - ABR BUSCAR VIDEOS PARA PUBLICAR EN ABR|ADATA-263]] ABR: BUSCAR VIDEOS PARA PUBLICAR  EN ABR
 
 ## Descripcion
 

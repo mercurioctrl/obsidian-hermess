@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-96"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-100]] ⚡Triada 7_Trefi_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-101]] ✏️Triada 7_Trefi_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-100 - ⚡Triada 7_Trefi_Desarrollo de piezas Social Media|NBE-100]] ⚡Triada 7_Trefi_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-101 - ✏️Triada 7_Trefi_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-101]] ✏️Triada 7_Trefi_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

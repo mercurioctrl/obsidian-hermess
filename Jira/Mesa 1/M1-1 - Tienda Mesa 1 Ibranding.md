@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/M1-1"
 
 ## Relaciones
 
-- **Subtarea:** [[M1-16]] Tienda Mesa 1: DSG - Refactor - Logo 
-- **Subtarea:** [[M1-17]] Tienda Mesa 1: DSG - Refactor _ Favicon 
-- **Subtarea:** [[M1-18]]  Tienda Mesa 1: DSG-Refactor - Profile picture (instagram -  Facebook ) 
+- **Subtarea:** [[M1-16 - Tienda Mesa 1 DSG - Refactor - Logo|M1-16]] Tienda Mesa 1: DSG - Refactor - Logo 
+- **Subtarea:** [[M1-17 - Tienda Mesa 1 DSG - Refactor _ Favicon|M1-17]] Tienda Mesa 1: DSG - Refactor _ Favicon 
+- **Subtarea:** [[M1-18 - Tienda Mesa 1 DSG-Refactor - Profile picture (instagram - Facebook )|M1-18]]  Tienda Mesa 1: DSG-Refactor - Profile picture (instagram -  Facebook ) 
 
 ## Descripcion
 

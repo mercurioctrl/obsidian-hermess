@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-195"
 
 ## Relaciones
 
-- **Padre:** [[INV-24]] Feat - Bases y login
-- **action item from:** [[INV-196]] API - Refactor - Agregar companyCode al objeto user como en las otras aplicaciones
+- **Padre:** [[INV-24 - Feat - Bases y login|INV-24]] Feat - Bases y login
+- **action item from:** [[INV-196 - API - Refactor - Agregar companyCode al objeto user como en las otras|INV-196]] API - Refactor - Agregar companyCode al objeto user como en las otras aplicaciones
 
 ## Descripcion
 

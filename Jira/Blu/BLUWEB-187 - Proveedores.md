@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-187"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-188]] Blu: Locaciones
-- **Subtarea:** [[BLUWEB-189]] Blu: Merchandising
-- **Subtarea:** [[BLUWEB-190]] Blu:Presentes
-- **Subtarea:** [[BLUWEB-191]] Blu: Hoteles
-- **Subtarea:** [[BLUWEB-192]] Blu: Servicios para eventos
+- **Subtarea:** [[BLUWEB-188 - Blu Locaciones|BLUWEB-188]] Blu: Locaciones
+- **Subtarea:** [[BLUWEB-189 - Blu Merchandising|BLUWEB-189]] Blu: Merchandising
+- **Subtarea:** [[BLUWEB-190 - BluPresentes|BLUWEB-190]] Blu:Presentes
+- **Subtarea:** [[BLUWEB-191 - Blu Hoteles|BLUWEB-191]] Blu: Hoteles
+- **Subtarea:** [[BLUWEB-192 - Blu Servicios para eventos|BLUWEB-192]] Blu: Servicios para eventos
 
 ## Descripcion
 

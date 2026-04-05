@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-598"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
 
 ## Descripcion
 

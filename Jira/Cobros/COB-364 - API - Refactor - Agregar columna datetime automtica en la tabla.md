@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-364"
 
 ## Relaciones
 
-- **Padre:** [[COB-347]] Poder ver saldo inicial y final de caja en cada día
+- **Padre:** [[COB-347 - Poder ver saldo inicial y final de caja en cada día|COB-347]] Poder ver saldo inicial y final de caja en cada día
 
 ## Descripcion
 

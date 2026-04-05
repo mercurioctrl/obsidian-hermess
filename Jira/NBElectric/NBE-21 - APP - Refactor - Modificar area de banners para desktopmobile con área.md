@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-21"
 
 ## Relaciones
 
-- **Padre:** [[NBE-1]] Sitio Web_Etapa 1
-- **action item from:** [[NBE-18]] DSG -  Feature -  Propuestas Nuevos Banners
+- **Padre:** [[NBE-1 - Sitio Web_Etapa 1|NBE-1]] Sitio Web_Etapa 1
+- **action item from:** [[NBE-18 - DSG - Feature - Propuestas Nuevos Banners|NBE-18]] DSG -  Feature -  Propuestas Nuevos Banners
 
 ## Descripcion
 

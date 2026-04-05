@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-48"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-5]] Inicializar sitio
+- **Padre:** [[NBWEB-5 - Inicializar sitio|NBWEB-5]] Inicializar sitio
 
 ## Descripcion
 

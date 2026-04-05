@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-246"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **relates to:** [[NBWEB-164]] MS - Envios - Cotizar por peso y medidas
-- **relates to:** [[NBWEB-231]] MS - Research integracion de Urbano
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **relates to:** [[NBWEB-164 - MS - Envios - Cotizar por peso y medidas|NBWEB-164]] MS - Envios - Cotizar por peso y medidas
+- **relates to:** [[NBWEB-231 - MS - Research integracion de Urbano|NBWEB-231]] MS - Research integracion de Urbano
 
 ## Descripcion
 

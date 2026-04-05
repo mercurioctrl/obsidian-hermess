@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-220"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[INV-219]] API - MVP - Refactor - Agregar el depósito del producto
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[INV-219 - API - MVP - Refactor - Agregar el depósito del producto|INV-219]] API - MVP - Refactor - Agregar el depósito del producto
 
 ## Descripcion
 

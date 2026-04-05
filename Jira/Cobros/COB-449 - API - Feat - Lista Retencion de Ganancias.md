@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-449"
 
 ## Relaciones
 
-- **Padre:** [[COB-448]] Feat -  Retencion de Ganancias
+- **Padre:** [[COB-448 - Feat - Retencion de Ganancias|COB-448]] Feat -  Retencion de Ganancias
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-148"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **has action item:** [[INV-157]] APP - Refactor - Modificar modal de atributos para tener en cuenta atributos obligatorios y herramienta de búsqueda automatica
-- **relates to:** [[INV-162]] API - Feat - Tracker (crawler) de atributos (especificaciones) - Error de sintaxis
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **has action item:** [[INV-157 - APP - Refactor - Modificar modal de atributos para tener en cuenta atributos|INV-157]] APP - Refactor - Modificar modal de atributos para tener en cuenta atributos obligatorios y herramienta de búsqueda automatica
+- **relates to:** [[INV-162 - API - Feat - Tracker (crawler) de atributos (especificaciones) - Error de|INV-162]] API - Feat - Tracker (crawler) de atributos (especificaciones) - Error de sintaxis
 
 ## Descripcion
 

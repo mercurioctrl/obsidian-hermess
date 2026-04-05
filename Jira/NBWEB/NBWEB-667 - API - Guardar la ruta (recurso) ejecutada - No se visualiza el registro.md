@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-667"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **blocks:** [[NBWEB-659]] API - Feat - Se debe guardar en [NB_WEB].[dbo].[metrics] la ruta (recurso) que acaba de ser ejecutado
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **blocks:** [[NBWEB-659 - API - Feat - Se debe guardar en NB_WEB.dbo.metrics la ruta (recurso) que acaba|NBWEB-659]] API - Feat - Se debe guardar en [NB_WEB].[dbo].[metrics] la ruta (recurso) que acaba de ser ejecutado
 
 ## Descripcion
 

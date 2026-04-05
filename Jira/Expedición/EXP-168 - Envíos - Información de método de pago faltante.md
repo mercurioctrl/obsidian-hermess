@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-168"
 
 ## Relaciones
 
-- **blocks:** [[EXP-12]] Feat - Listar pedidos para envio
+- **blocks:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
 
 ## Descripcion
 

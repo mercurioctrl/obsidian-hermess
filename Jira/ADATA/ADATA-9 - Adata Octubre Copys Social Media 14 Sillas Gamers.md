@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-9"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-7]] Adata Octubre: 1/4 Social Media sillas
+- **Padre:** [[ADATA-7 - Adata Octubre 14 Social Media sillas|ADATA-7]] Adata Octubre: 1/4 Social Media sillas
 
 ## Descripcion
 

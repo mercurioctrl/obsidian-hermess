@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-34"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-20]] Mostrar comprobante
-- **Subtarea:** [[LOCAPP-35]] API - Refactor - Agregar a la volanta el parametro "dropshipping" y el parametro para saber si esta unido con algun otro pedido
-- **Subtarea:** [[LOCAPP-36]] APP - Refactor - Agregar a la volanta el parametro "dropshipping" y el parametro para saber si esta unido con algun otro pedido
-- **Subtarea:** [[LOCAPP-37]] MS - Refactor - Trasladar ambos parametros de dropshipping y join shipping al ms de comprobantes
-- **Subtarea:** [[LOCAPP-76]] API - Refactor - Agregar parámetros de intervención técnica en la Volanta (operationalOrder)
-- **Subtarea:** [[LOCAPP-77]] APP - Refactor - Agregar parámetros de intervención técnica en la Volanta (operationalOrder)
+- **Padre:** [[LOCAPP-20 - Mostrar comprobante|LOCAPP-20]] Mostrar comprobante
+- **Subtarea:** [[LOCAPP-35 - API - Refactor - Agregar a la volanta el parametro dropshipping y el parametro|LOCAPP-35]] API - Refactor - Agregar a la volanta el parametro "dropshipping" y el parametro para saber si esta unido con algun otro pedido
+- **Subtarea:** [[LOCAPP-36 - APP - Refactor - Agregar a la volanta el parametro dropshipping y el parametro|LOCAPP-36]] APP - Refactor - Agregar a la volanta el parametro "dropshipping" y el parametro para saber si esta unido con algun otro pedido
+- **Subtarea:** [[LOCAPP-37 - MS - Refactor - Trasladar ambos parametros de dropshipping y join shipping al|LOCAPP-37]] MS - Refactor - Trasladar ambos parametros de dropshipping y join shipping al ms de comprobantes
+- **Subtarea:** [[LOCAPP-76 - API - Refactor - Agregar parámetros de intervención técnica en la Volanta|LOCAPP-76]] API - Refactor - Agregar parámetros de intervención técnica en la Volanta (operationalOrder)
+- **Subtarea:** [[LOCAPP-77 - APP - Refactor - Agregar parámetros de intervención técnica en la Volanta|LOCAPP-77]] APP - Refactor - Agregar parámetros de intervención técnica en la Volanta (operationalOrder)
 
 ## Descripcion
 

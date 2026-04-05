@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-30"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **is blocked by:** [[LIO-54]] API - PED - Refactor - Al eliminar un pedido de libre opción en el sistema de pedidos, se debe marcar como "cancelado" en la plataforma libre opción - Orden no cancelada
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **is blocked by:** [[LIO-54 - API - PED - Refactor - Al eliminar un pedido de libre opción en el sistema de|LIO-54]] API - PED - Refactor - Al eliminar un pedido de libre opción en el sistema de pedidos, se debe marcar como "cancelado" en la plataforma libre opción - Orden no cancelada
 
 ## Descripcion
 

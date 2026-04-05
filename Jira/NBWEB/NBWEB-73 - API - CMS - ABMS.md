@@ -29,22 +29,22 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-73"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **Subtarea:** [[NBWEB-113]] API - CMS - Subir Banner
-- **Subtarea:** [[NBWEB-114]] API - CMS - Save Banners
-- **Subtarea:** [[NBWEB-119]] Editar Marca para mostrar u ocultarla en el sitio
-- **Subtarea:** [[NBWEB-120]] Camibar Imagen / Agregar Image Marca
-- **Subtarea:** [[NBWEB-153]] API - CMS - Listar banners
-- **Subtarea:** [[NBWEB-161]] API - CMS - Listar Medio Pago
-- **Subtarea:** [[NBWEB-162]] API - CMS - Listar Marcas
-- **Subtarea:** [[NBWEB-163]] API - CMS - Editar medios pago
-- **Subtarea:** [[NBWEB-412]] API - CMS - Feat - Listar zonas de los baners
-- **Subtarea:** [[NBWEB-438]] API - CMS - Listar medios de envio
-- **Subtarea:** [[NBWEB-439]] API - CMS - Editar medios de envio
-- **Subtarea:** [[NBWEB-441]] APP - CMS - Listar medios de envio
-- **Subtarea:** [[NBWEB-521]] API - Feat - Listar Cotizaciones
-- **Subtarea:** [[NBWEB-522]] APP - Feat - Cotizaciones
-- **Subtarea:** [[NBWEB-523]] API - Feat - Editar cotizacion
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **Subtarea:** [[NBWEB-113 - API - CMS - Subir Banner|NBWEB-113]] API - CMS - Subir Banner
+- **Subtarea:** [[NBWEB-114 - API - CMS - Save Banners|NBWEB-114]] API - CMS - Save Banners
+- **Subtarea:** [[NBWEB-119 - Editar Marca para mostrar u ocultarla en el sitio|NBWEB-119]] Editar Marca para mostrar u ocultarla en el sitio
+- **Subtarea:** [[NBWEB-120 - Camibar Imagen Agregar Image Marca|NBWEB-120]] Camibar Imagen / Agregar Image Marca
+- **Subtarea:** [[NBWEB-153 - API - CMS - Listar banners|NBWEB-153]] API - CMS - Listar banners
+- **Subtarea:** [[NBWEB-161 - API - CMS - Listar Medio Pago|NBWEB-161]] API - CMS - Listar Medio Pago
+- **Subtarea:** [[NBWEB-162 - API - CMS - Listar Marcas|NBWEB-162]] API - CMS - Listar Marcas
+- **Subtarea:** [[NBWEB-163 - API - CMS - Editar medios pago|NBWEB-163]] API - CMS - Editar medios pago
+- **Subtarea:** [[NBWEB-412 - API - CMS - Feat - Listar zonas de los baners|NBWEB-412]] API - CMS - Feat - Listar zonas de los baners
+- **Subtarea:** [[NBWEB-438 - API - CMS - Listar medios de envio|NBWEB-438]] API - CMS - Listar medios de envio
+- **Subtarea:** [[NBWEB-439 - API - CMS - Editar medios de envio|NBWEB-439]] API - CMS - Editar medios de envio
+- **Subtarea:** [[NBWEB-441 - APP - CMS - Listar medios de envio|NBWEB-441]] APP - CMS - Listar medios de envio
+- **Subtarea:** [[NBWEB-521 - API - Feat - Listar Cotizaciones|NBWEB-521]] API - Feat - Listar Cotizaciones
+- **Subtarea:** [[NBWEB-522 - APP - Feat - Cotizaciones|NBWEB-522]] APP - Feat - Cotizaciones
+- **Subtarea:** [[NBWEB-523 - API - Feat - Editar cotizacion|NBWEB-523]] API - Feat - Editar cotizacion
 
 ## Descripcion
 

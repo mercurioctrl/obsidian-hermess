@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-823"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **blocks:** [[PED-787]] APP - Refactor - Agregaremos periodos mas cortos
-- **relates to:** [[NBWEB-348]] mostrar marcas segun los productos que trae la categoría
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **blocks:** [[PED-787 - APP - Refactor - Agregaremos periodos mas cortos|PED-787]] APP - Refactor - Agregaremos periodos mas cortos
+- **relates to:** [[NBWEB-348 - mostrar marcas segun los productos que trae la categoría|NBWEB-348]] mostrar marcas segun los productos que trae la categoría
 
 ## Descripcion
 

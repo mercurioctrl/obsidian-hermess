@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-194"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-196]] API - Agregar campaña para la promo de NVIDIA
+- **Subtarea:** [[MKT-196 - API - Agregar campaña para la promo de NVIDIA|MKT-196]] API - Agregar campaña para la promo de NVIDIA
 
 ## Descripcion
 

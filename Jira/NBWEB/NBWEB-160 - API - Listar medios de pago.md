@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-160"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-77]] Implementar Pagos
-- **relates to:** [[NBWEB-184]] APP - Medio de pago - Componente para el carrito
+- **Padre:** [[NBWEB-77 - Implementar Pagos|NBWEB-77]] Implementar Pagos
+- **relates to:** [[NBWEB-184 - APP - Medio de pago - Componente para el carrito|NBWEB-184]] APP - Medio de pago - Componente para el carrito
 
 ## Descripcion
 

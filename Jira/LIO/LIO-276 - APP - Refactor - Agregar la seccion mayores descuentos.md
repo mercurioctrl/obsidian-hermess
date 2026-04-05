@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-276"
 
 ## Relaciones
 
-- **Padre:** [[LIO-166]] Catalogos y sincronizaciones
-- **action item from:** [[LIO-275]] API - Feat - Agregar al catalogo la sección "Mayores descuentos" 
+- **Padre:** [[LIO-166 - Catalogos y sincronizaciones|LIO-166]] Catalogos y sincronizaciones
+- **action item from:** [[LIO-275 - API - Feat - Agregar al catalogo la sección Mayores descuentos|LIO-275]] API - Feat - Agregar al catalogo la sección "Mayores descuentos" 
 
 ## Descripcion
 

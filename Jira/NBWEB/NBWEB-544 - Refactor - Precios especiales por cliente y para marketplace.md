@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-544"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **Subtarea:** [[NBWEB-545]] API - Refactor - Precio especial desde costo
-- **Subtarea:** [[NBWEB-546]] API - Refactor - Precio especial MarketPlaces
-- **Subtarea:** [[NBWEB-547]] MS - Precios - Agregar utilidades encadenadas a MAY1 para MKP1
-- **Subtarea:** [[NBWEB-552]] API - Refactor - Precio especial desde costo (Cambio de sucursal)
-- **Subtarea:** [[NBWEB-553]] API - Refactor - Recurso ejecutable para actualizar/cargar todo aquello que tenga NPVP2 (MK1)
-- **Subtarea:** [[NBWEB-554]] API - Feat - Importar ordenes de compra (pedclit)
-- **blocks:** [[SNB-784]] Integracion - Mugello
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **Subtarea:** [[NBWEB-545 - API - Refactor - Precio especial desde costo|NBWEB-545]] API - Refactor - Precio especial desde costo
+- **Subtarea:** [[NBWEB-546 - API - Refactor - Precio especial MarketPlaces|NBWEB-546]] API - Refactor - Precio especial MarketPlaces
+- **Subtarea:** [[NBWEB-547 - MS - Precios - Agregar utilidades encadenadas a MAY1 para MKP1|NBWEB-547]] MS - Precios - Agregar utilidades encadenadas a MAY1 para MKP1
+- **Subtarea:** [[NBWEB-552 - API - Refactor - Precio especial desde costo (Cambio de sucursal)|NBWEB-552]] API - Refactor - Precio especial desde costo (Cambio de sucursal)
+- **Subtarea:** [[NBWEB-553 - API - Refactor - Recurso ejecutable para actualizarcargar todo aquello que|NBWEB-553]] API - Refactor - Recurso ejecutable para actualizar/cargar todo aquello que tenga NPVP2 (MK1)
+- **Subtarea:** [[NBWEB-554 - API - Feat - Importar ordenes de compra (pedclit)|NBWEB-554]] API - Feat - Importar ordenes de compra (pedclit)
+- **blocks:** [[SNB-784 - Integracion - Mugello|SNB-784]] Integracion - Mugello
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-539"
 
 ## Relaciones
 
-- **Padre:** [[COB-538]] Oportunidad de Mejora: Mostrar exacto la misma informacion dentro y fuera del estado crediticio del cliente
-- **blocks:** [[COB-540]] APP - Refactor - Mostrar en la lista de clientes exacto el mismo informe crediticio que se obtiene en la cuenta corriente con "balances"
+- **Padre:** [[COB-538 - Oportunidad de Mejora Mostrar exacto la misma informacion dentro y fuera del|COB-538]] Oportunidad de Mejora: Mostrar exacto la misma informacion dentro y fuera del estado crediticio del cliente
+- **blocks:** [[COB-540 - APP - Refactor - Mostrar en la lista de clientes exacto el mismo informe|COB-540]] APP - Refactor - Mostrar en la lista de clientes exacto el mismo informe crediticio que se obtiene en la cuenta corriente con "balances"
 
 ## Descripcion
 

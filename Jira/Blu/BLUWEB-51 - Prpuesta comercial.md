@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-51"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-52]] Propuesta comercial idea + Eventos Distri
-- **Subtarea:** [[BLUWEB-53]] Propuesta comercial Digital Marca
+- **Subtarea:** [[BLUWEB-52 - Propuesta comercial idea + Eventos Distri|BLUWEB-52]] Propuesta comercial idea + Eventos Distri
+- **Subtarea:** [[BLUWEB-53 - Propuesta comercial Digital Marca|BLUWEB-53]] Propuesta comercial Digital Marca
 
 ## Descripcion
 

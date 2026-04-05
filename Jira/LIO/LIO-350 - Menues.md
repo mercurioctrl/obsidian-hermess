@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-350"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **Subtarea:** [[LIO-351]] APP - Refactor - Mejora mobile en menú de filtrado en inventario
-- **Subtarea:** [[LIO-352]] APP - Research - Investigar de que se trata el bloqueo al ingresar sincronicamente a un precio relampago
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **Subtarea:** [[LIO-351 - APP - Refactor - Mejora mobile en menú de filtrado en inventario|LIO-351]] APP - Refactor - Mejora mobile en menú de filtrado en inventario
+- **Subtarea:** [[LIO-352 - APP - Research - Investigar de que se trata el bloqueo al ingresar|LIO-352]] APP - Research - Investigar de que se trata el bloqueo al ingresar sincronicamente a un precio relampago
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-170"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **Subtarea:** [[COB-171]] API - Feat - Realizar entrada
-- **Subtarea:** [[COB-172]] APP - Feat - Realizar entrada
-- **Subtarea:** [[COB-173]] API - Feat - Listar conceptos de entrada
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **Subtarea:** [[COB-171 - API - Feat - Realizar entrada|COB-171]] API - Feat - Realizar entrada
+- **Subtarea:** [[COB-172 - APP - Feat - Realizar entrada|COB-172]] APP - Feat - Realizar entrada
+- **Subtarea:** [[COB-173 - API - Feat - Listar conceptos de entrada|COB-173]] API - Feat - Listar conceptos de entrada
 
 ## Descripcion
 

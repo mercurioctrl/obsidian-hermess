@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-114"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **blocks:** [[COM-111]] API - Feat - Crear orden de compra
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **blocks:** [[COM-111 - API - Feat - Crear orden de compra|COM-111]] API - Feat - Crear orden de compra
 
 ## Descripcion
 

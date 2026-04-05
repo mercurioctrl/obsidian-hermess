@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-321"
 
 ## Relaciones
 
-- **Padre:** [[EXP-289]] Refactor Entregar
+- **Padre:** [[EXP-289 - Refactor Entregar|EXP-289]] Refactor Entregar
 
 ## Descripcion
 

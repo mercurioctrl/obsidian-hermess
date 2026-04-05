@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-243"
 
 ## Relaciones
 
-- **action item from:** [[PED-931]] API - Feat - Cuotas Vendedores (Facturación Total)
-- **action item from:** [[PED-932]] API - Feat - Cuotas Vendedores (Facturación Total)
-- **action item from:** [[NBWEB-940]] API - Refactor - Agregar Objetivo mensual de facturación para los vendedores
-- **action item from:** [[NBWEB-941]] APP - Refactor - Agregar Objetivo mensual de facturación para los vendedores
+- **action item from:** [[PED-931 - API - Feat - Cuotas Vendedores (Facturación Total)|PED-931]] API - Feat - Cuotas Vendedores (Facturación Total)
+- **action item from:** [[PED-932 - API - Feat - Cuotas Vendedores (Facturación Total)|PED-932]] API - Feat - Cuotas Vendedores (Facturación Total)
+- **action item from:** [[NBWEB-940 - API - Refactor - Agregar Objetivo mensual de facturación para los vendedores|NBWEB-940]] API - Refactor - Agregar Objetivo mensual de facturación para los vendedores
+- **action item from:** [[NBWEB-941 - APP - Refactor - Agregar Objetivo mensual de facturación para los vendedores|NBWEB-941]] APP - Refactor - Agregar Objetivo mensual de facturación para los vendedores
 
 ## Descripcion
 

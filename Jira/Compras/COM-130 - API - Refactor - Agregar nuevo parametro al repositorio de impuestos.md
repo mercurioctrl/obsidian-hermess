@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-130"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **blocks:** [[COM-131]] APP - Refactor- Agregar nuevo parámetro al repositorio de impuestos 
-- **blocks:** [[COM-132]] APP - Refactor - Agregar al modal del detalle de la orden los impuestos que son prorrateables abajo
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **blocks:** [[COM-131 - APP - Refactor- Agregar nuevo parámetro al repositorio de impuestos|COM-131]] APP - Refactor- Agregar nuevo parámetro al repositorio de impuestos 
+- **blocks:** [[COM-132 - APP - Refactor - Agregar al modal del detalle de la orden los impuestos que son|COM-132]] APP - Refactor - Agregar al modal del detalle de la orden los impuestos que son prorrateables abajo
 
 ## Descripcion
 

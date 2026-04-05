@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-175"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[INV-147]] API - Refactor - Filtrar productos que no cuentan con todos sus atributos obligatorios
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[INV-147 - API - Refactor - Filtrar productos que no cuentan con todos sus atributos|INV-147]] API - Refactor - Filtrar productos que no cuentan con todos sus atributos obligatorios
 
 ## Descripcion
 

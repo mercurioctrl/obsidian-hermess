@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-228"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **has action item:** [[COM-225]] API - MVP - Review -  Revisar por que se duplican los proveedores (Revisar company code)
-- **is cloned by:** [[COM-279]] APP - Refactor - Mandar filtro de companyCode en el recurso de proveedores dentro de "Crear orden" -> Añadir selector de empresa
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **has action item:** [[COM-225 - API - MVP - Review - Revisar por que se duplican los proveedores (Revisar|COM-225]] API - MVP - Review -  Revisar por que se duplican los proveedores (Revisar company code)
+- **is cloned by:** [[COM-279 - APP - Refactor - Mandar filtro de companyCode en el recurso de proveedores|COM-279]] APP - Refactor - Mandar filtro de companyCode en el recurso de proveedores dentro de "Crear orden" -> Añadir selector de empresa
 
 ## Descripcion
 

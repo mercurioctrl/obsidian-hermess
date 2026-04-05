@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-113"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **is blocked by:** [[COM-99]] API - Feat - Listar repositorio de impuestos para posiciones arancelarias
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **is blocked by:** [[COM-99 - API - Feat - Listar repositorio de impuestos para posiciones arancelarias|COM-99]] API - Feat - Listar repositorio de impuestos para posiciones arancelarias
 
 ## Descripcion
 

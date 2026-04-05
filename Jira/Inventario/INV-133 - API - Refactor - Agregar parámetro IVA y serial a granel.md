@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-133"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[INV-134]] APP - Refactor - Agregar parámetro IVA y serial a granel
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[INV-134 - APP - Refactor - Agregar parámetro IVA y serial a granel|INV-134]] APP - Refactor - Agregar parámetro IVA y serial a granel
 
 ## Descripcion
 

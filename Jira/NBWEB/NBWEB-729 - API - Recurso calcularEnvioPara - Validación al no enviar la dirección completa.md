@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-729"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-272]] API - Feat Agregar String de direccion al final del Recurso calcularEnvioPara
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-272 - API - Feat Agregar String de direccion al final del Recurso calcularEnvioPara|NBWEB-272]] API - Feat Agregar String de direccion al final del Recurso calcularEnvioPara
 
 ## Descripcion
 

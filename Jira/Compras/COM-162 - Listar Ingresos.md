@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-162"
 
 ## Relaciones
 
-- **Padre:** [[COM-11]] Pedidos de compra (Ingresos)
-- **Subtarea:** [[COM-163]] .
+- **Padre:** [[COM-11 - Pedidos de compra (Ingresos)|COM-11]] Pedidos de compra (Ingresos)
+- **Subtarea:** [[COM-163 - .|COM-163]] .
 
 ## Descripcion
 

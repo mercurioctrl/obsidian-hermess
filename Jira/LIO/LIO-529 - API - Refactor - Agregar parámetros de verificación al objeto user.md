@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-529"
 
 ## Relaciones
 
-- **Padre:** [[LIO-526]] Verificar Vendedores
-- **has action item:** [[LIO-530]] APP - Feat - Pantalla de verificacion del Vendedor
+- **Padre:** [[LIO-526 - Verificar Vendedores|LIO-526]] Verificar Vendedores
+- **has action item:** [[LIO-530 - APP - Feat - Pantalla de verificacion del Vendedor|LIO-530]] APP - Feat - Pantalla de verificacion del Vendedor
 
 ## Descripcion
 

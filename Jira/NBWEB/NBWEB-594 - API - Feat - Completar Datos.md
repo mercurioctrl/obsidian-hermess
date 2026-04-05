@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-594"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-592]] Sección Completar Datos
-- **blocks:** [[NBWEB-593]] APP - Feat - Completar Datos
+- **Padre:** [[NBWEB-592 - Sección Completar Datos|NBWEB-592]] Sección Completar Datos
+- **blocks:** [[NBWEB-593 - APP - Feat - Completar Datos|NBWEB-593]] APP - Feat - Completar Datos
 
 ## Descripcion
 

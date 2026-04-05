@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-592"
 
 ## Relaciones
 
-- **action item from:** [[SNB-3443]] Agregar Libre Opcion para las empresas en Cobros /deudas
+- **action item from:** [[SNB-3443 - Agregar Libre Opcion para las empresas en Cobros deudas|SNB-3443]] Agregar Libre Opcion para las empresas en Cobros /deudas
 
 ## Descripcion
 

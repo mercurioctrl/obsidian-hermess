@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-165"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **has action item:** [[COM-166]] APP - Feat - Agregar cotizacion y cotizacion fiscal
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **has action item:** [[COM-166 - APP - Feat - Agregar cotizacion y cotizacion fiscal|COM-166]] APP - Feat - Agregar cotizacion y cotizacion fiscal
 
 ## Descripcion
 

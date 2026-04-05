@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-228"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-234]] APP - Feat - Mostrar seriales para un item/almacen determinado
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-234 - APP - Feat - Mostrar seriales para un itemalmacen determinado|INV-234]] APP - Feat - Mostrar seriales para un item/almacen determinado
 
 ## Descripcion
 

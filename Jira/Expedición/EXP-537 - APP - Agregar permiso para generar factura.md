@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-537"
 
 ## Relaciones
 
-- **Padre:** [[EXP-533]] Permisos de visualizacion
-- **action item from:** [[EXP-538]] API - DATA- feat - Agregar permiso para generar factura (por default todos pueden menos user asilvera
+- **Padre:** [[EXP-533 - Permisos de visualizacion|EXP-533]] Permisos de visualizacion
+- **action item from:** [[EXP-538 - API - DATA- feat - Agregar permiso para generar factura (por default todos|EXP-538]] API - DATA- feat - Agregar permiso para generar factura (por default todos pueden menos user asilvera
 
 ## Descripcion
 

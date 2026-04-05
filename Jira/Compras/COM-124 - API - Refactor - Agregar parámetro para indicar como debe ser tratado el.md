@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-124"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
 
 ## Descripcion
 

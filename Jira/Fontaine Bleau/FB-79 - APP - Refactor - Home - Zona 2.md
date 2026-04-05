@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-79"
 
 ## Relaciones
 
-- **Padre:** [[FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
+- **Padre:** [[FB-28 - Fontaine Bleau Sitio Web_Etapa 0|FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-492"
 
 ## Relaciones
 
-- **Padre:** [[EXP-439]] Despacho de retiros LibreOpcion
-- **action item from:** [[EXP-491]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de retiros
+- **Padre:** [[EXP-439 - Despacho de retiros LibreOpcion|EXP-439]] Despacho de retiros LibreOpcion
+- **action item from:** [[EXP-491 - API - Refactor - Agregar indicadores (flags) de intervención técnica a las|EXP-491]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de retiros
 
 ## Descripcion
 

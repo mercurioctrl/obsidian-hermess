@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-472"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-206]] API - Leer mensajes de un meesageChannel
+- **Padre:** [[NBWEB-206 - API - Leer mensajes de un meesageChannel|NBWEB-206]] API - Leer mensajes de un meesageChannel
 
 ## Descripcion
 

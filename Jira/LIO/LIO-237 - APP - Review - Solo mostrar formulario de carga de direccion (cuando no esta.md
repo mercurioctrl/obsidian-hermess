@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-237"
 
 ## Relaciones
 
-- **Padre:** [[LIO-236]] Checkout
-- **relates to:** [[LIO-346]] APP - Refactor - Seleccionar domicilio de entrega -> Oportunidad de mejora en la validación de campos
+- **Padre:** [[LIO-236 - Checkout|LIO-236]] Checkout
+- **relates to:** [[LIO-346 - APP - Refactor - Seleccionar domicilio de entrega - Oportunidad de mejora en la|LIO-346]] APP - Refactor - Seleccionar domicilio de entrega -> Oportunidad de mejora en la validación de campos
 
 ## Descripcion
 

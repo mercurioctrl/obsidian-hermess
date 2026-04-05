@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-141"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **blocks:** [[INV-134]] APP - Refactor - Agregar parámetro IVA y serial a granel
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **blocks:** [[INV-134 - APP - Refactor - Agregar parámetro IVA y serial a granel|INV-134]] APP - Refactor - Agregar parámetro IVA y serial a granel
 
 ## Descripcion
 

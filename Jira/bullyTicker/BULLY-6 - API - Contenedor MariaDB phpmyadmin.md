@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-6"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-5]] API - Stack
-- **blocks:** [[BULLY-12]] Logins y autenticaciones 
+- **Padre:** [[BULLY-5 - API - Stack|BULLY-5]] API - Stack
+- **blocks:** [[BULLY-12 - Logins y autenticaciones|BULLY-12]] Logins y autenticaciones 
 
 ## Descripcion
 

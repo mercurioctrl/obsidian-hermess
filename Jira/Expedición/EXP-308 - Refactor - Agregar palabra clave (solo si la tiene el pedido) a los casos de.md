@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-308"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-309]] API - Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
-- **Subtarea:** [[EXP-310]] APP- Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-309 - API - Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos|EXP-309]] API - Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
+- **Subtarea:** [[EXP-310 - APP- Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos|EXP-310]] APP- Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
 
 ## Descripcion
 

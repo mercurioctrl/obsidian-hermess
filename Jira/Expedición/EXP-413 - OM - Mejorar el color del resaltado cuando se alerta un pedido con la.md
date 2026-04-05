@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-413"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-407"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
 
 ## Descripcion
 

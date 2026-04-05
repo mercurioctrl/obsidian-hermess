@@ -29,17 +29,17 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-108"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **Subtarea:** [[EXP-109]] API - Feat - Burbujas de pendientes según cada pestaña
-- **Subtarea:** [[EXP-110]] APP - Feat - Burbujas de pendientes según cada pestaña
-- **Subtarea:** [[EXP-531]] API - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas
-- **Subtarea:** [[EXP-532]] APP - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas
-- **Subtarea:** [[EXP-536]] API - Review - Agregar companyCode y las burbujas pendings -> Diferencias entre los pendientes y listados
-- **is blocked by:** [[EXP-133]] Ingresos - Cantidad de pendientes no coincidentes
-- **is blocked by:** [[EXP-194]] Envíos - Cantidad de pendientes no coincidentes
-- **is blocked by:** [[EXP-195]] Pases de mercadería - Error al cargar datos
-- **is blocked by:** [[EXP-136]] Cantidad de pendientes no coincidentes en pases de mercadería
-- **is blocked by:** [[EXP-134]] Retiros - Cantidad de pendientes no coincidentes
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **Subtarea:** [[EXP-109 - API - Feat - Burbujas de pendientes según cada pestaña|EXP-109]] API - Feat - Burbujas de pendientes según cada pestaña
+- **Subtarea:** [[EXP-110 - APP - Feat - Burbujas de pendientes según cada pestaña|EXP-110]] APP - Feat - Burbujas de pendientes según cada pestaña
+- **Subtarea:** [[EXP-531 - API - Refactor - Agregar companyCode y las burbujas pendings y controlar que|EXP-531]] API - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas
+- **Subtarea:** [[EXP-532 - APP - Refactor - Agregar companyCode y las burbujas pendings y controlar que|EXP-532]] APP - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas
+- **Subtarea:** [[EXP-536 - API - Review - Agregar companyCode y las burbujas pendings - Diferencias entre|EXP-536]] API - Review - Agregar companyCode y las burbujas pendings -> Diferencias entre los pendientes y listados
+- **is blocked by:** [[EXP-133 - Ingresos - Cantidad de pendientes no coincidentes|EXP-133]] Ingresos - Cantidad de pendientes no coincidentes
+- **is blocked by:** [[EXP-194 - Envíos - Cantidad de pendientes no coincidentes|EXP-194]] Envíos - Cantidad de pendientes no coincidentes
+- **is blocked by:** [[EXP-195 - Pases de mercadería - Error al cargar datos|EXP-195]] Pases de mercadería - Error al cargar datos
+- **is blocked by:** [[EXP-136 - Cantidad de pendientes no coincidentes en pases de mercadería|EXP-136]] Cantidad de pendientes no coincidentes en pases de mercadería
+- **is blocked by:** [[EXP-134 - Retiros - Cantidad de pendientes no coincidentes|EXP-134]] Retiros - Cantidad de pendientes no coincidentes
 
 ## Descripcion
 

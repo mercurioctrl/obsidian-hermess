@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-318"
 
 ## Relaciones
 
-- **Padre:** [[EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
-- **blocks:** [[EXP-319]] APP - Refactor - Listar direcciones de envio, en el modal enviar al revisar la direccion agregaremos order y branch a la consulta
+- **Padre:** [[EXP-218 - Etiquetas para envíos que no las generan (genericas de ahora en mas)|EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
+- **blocks:** [[EXP-319 - APP - Refactor - Listar direcciones de envio, en el modal enviar al revisar la|EXP-319]] APP - Refactor - Listar direcciones de envio, en el modal enviar al revisar la direccion agregaremos order y branch a la consulta
 
 ## Descripcion
 

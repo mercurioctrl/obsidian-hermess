@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-176"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[INV-174]] API - Refactor - Incorporar parámetro "obligatorio" para un atributo según la categoría de NB (Capa 1) si corresponde
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[INV-174 - API - Refactor - Incorporar parámetro obligatorio para un atributo según la|INV-174]] API - Refactor - Incorporar parámetro "obligatorio" para un atributo según la categoría de NB (Capa 1) si corresponde
 
 ## Descripcion
 

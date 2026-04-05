@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-538"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **Subtarea:** [[NBWEB-539]] APP - Refactor - Combinar columnas de cotización máxima en la sección cotizaciones y desactivar aquellas que no se utilizan 
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **Subtarea:** [[NBWEB-539 - APP - Refactor - Combinar columnas de cotización máxima en la sección|NBWEB-539]] APP - Refactor - Combinar columnas de cotización máxima en la sección cotizaciones y desactivar aquellas que no se utilizan 
 
 ## Descripcion
 

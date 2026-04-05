@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-117"
 
 ## Relaciones
 
-- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
-- **has action item:** [[LIO-116]] APP - Refactor - Agregaremos al checkout la pasarela o iframe de pago para GETNET
+- **Padre:** [[LIO-8 - Proceso pago sencillo y competitiva a nivel financiamiento|LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **has action item:** [[LIO-116 - APP - Refactor - Agregaremos al checkout la pasarela o iframe de pago para|LIO-116]] APP - Refactor - Agregaremos al checkout la pasarela o iframe de pago para GETNET
 
 ## Descripcion
 

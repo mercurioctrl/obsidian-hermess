@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-208"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **action item from:** [[COM-207]] API - MVP - Feat Agregar campo de costo sugerido para que aparezca en el listado (selector) de costos de Pedidos
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **action item from:** [[COM-207 - API - MVP - Feat Agregar campo de costo sugerido para que aparezca en el|COM-207]] API - MVP - Feat Agregar campo de costo sugerido para que aparezca en el listado (selector) de costos de Pedidos
 
 ## Descripcion
 

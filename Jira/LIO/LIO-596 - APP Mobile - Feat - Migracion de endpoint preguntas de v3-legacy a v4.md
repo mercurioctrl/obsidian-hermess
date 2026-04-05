@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-596"
 
 ## Relaciones
 
-- **Padre:** [[LIO-498]] Listado de preguntas
+- **Padre:** [[LIO-498 - Listado de preguntas|LIO-498]] Listado de preguntas
 
 ## Descripcion
 

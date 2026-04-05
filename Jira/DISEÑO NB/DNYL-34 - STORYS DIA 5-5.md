@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-34"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-23]] STARS DAYS LIO
+- **Padre:** [[DNYL-23 - STARS DAYS LIO|DNYL-23]] STARS DAYS LIO
 
 ## Descripcion
 

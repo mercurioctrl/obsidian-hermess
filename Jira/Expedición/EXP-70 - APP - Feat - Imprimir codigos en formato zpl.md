@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-70"
 
 ## Relaciones
 
-- **Padre:** [[EXP-46]] Crear etiquetas con ZEBRA
-- **is blocked by:** [[EXP-69]] API - Feat - Recurso para imprimir seriales
+- **Padre:** [[EXP-46 - Crear etiquetas con ZEBRA|EXP-46]] Crear etiquetas con ZEBRA
+- **is blocked by:** [[EXP-69 - API - Feat - Recurso para imprimir seriales|EXP-69]] API - Feat - Recurso para imprimir seriales
 
 ## Descripcion
 

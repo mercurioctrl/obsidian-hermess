@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-68"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-67]] NB_ASUS PROMOS
+- **Padre:** [[MNB2-67 - NB_ASUS PROMOS|MNB2-67]] NB_ASUS PROMOS
 
 ## Descripcion
 

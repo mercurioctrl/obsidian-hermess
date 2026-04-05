@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-15"
 
 ## Relaciones
 
-- **Padre:** [[LIO-2]] Variedad y Calidad de Productos/Catalogos
+- **Padre:** [[LIO-2 - Variedad y Calidad de ProductosCatalogos|LIO-2]] Variedad y Calidad de Productos/Catalogos
 
 ## Descripcion
 

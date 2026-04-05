@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-11"
 
 ## Relaciones
 
-- **Padre:** [[INV-2]] MS - METADATA - API
-- **Subtarea:** [[INV-19]] API - Feat - Ver detalle de producto
-- **Subtarea:** [[INV-20]] API - Editar detalle de producto
-- **Subtarea:** [[INV-21]] API - Eliminar detalle de producto
-- **Subtarea:** [[INV-209]] API - MVP - Review - Al editar un item si se manda iva 0 dice success pero al abrir de nuevo el producto conserva el anterior
+- **Padre:** [[INV-2 - MS - METADATA - API|INV-2]] MS - METADATA - API
+- **Subtarea:** [[INV-19 - API - Feat - Ver detalle de producto|INV-19]] API - Feat - Ver detalle de producto
+- **Subtarea:** [[INV-20 - API - Editar detalle de producto|INV-20]] API - Editar detalle de producto
+- **Subtarea:** [[INV-21 - API - Eliminar detalle de producto|INV-21]] API - Eliminar detalle de producto
+- **Subtarea:** [[INV-209 - API - MVP - Review - Al editar un item si se manda iva 0 dice success pero al|INV-209]] API - MVP - Review - Al editar un item si se manda iva 0 dice success pero al abrir de nuevo el producto conserva el anterior
 
 ## Descripcion
 

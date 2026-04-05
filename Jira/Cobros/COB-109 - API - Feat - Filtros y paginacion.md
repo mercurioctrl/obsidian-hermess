@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-109"
 
 ## Relaciones
 
-- **Padre:** [[COB-41]] APP - Feat -  Listar cobrables
-- **blocks:** [[COB-110]] APP - Feat - Filtrado y paginado
+- **Padre:** [[COB-41 - APP - Feat - Listar cobrables|COB-41]] APP - Feat -  Listar cobrables
+- **blocks:** [[COB-110 - APP - Feat - Filtrado y paginado|COB-110]] APP - Feat - Filtrado y paginado
 
 ## Descripcion
 

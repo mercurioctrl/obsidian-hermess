@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-368"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-369]] El logo del header y el footer deberian ser del mismo tamaño.  
-- **Subtarea:** [[NBWEB-370]] Registrate va sin tilde en la A, palabra grave terminada en vocal
-- **Subtarea:** [[NBWEB-371]] En el baner central de la api los colores no coincide
-- **Subtarea:** [[NBWEB-372]] En el banner central poner tilde a INTEGRÁ que me la comi cuando te pase el texto
-- **Subtarea:** [[NBWEB-373]] En el footer hay elementos que pueden mejorar su alineacion
-- **Subtarea:** [[NBWEB-374]] En el footer deberia decir Copyright © 1997
+- **Subtarea:** [[NBWEB-369 - El logo del header y el footer deberian ser del mismo tamaño.|NBWEB-369]] El logo del header y el footer deberian ser del mismo tamaño.  
+- **Subtarea:** [[NBWEB-370 - Registrate va sin tilde en la A, palabra grave terminada en vocal|NBWEB-370]] Registrate va sin tilde en la A, palabra grave terminada en vocal
+- **Subtarea:** [[NBWEB-371 - En el baner central de la api los colores no coincide|NBWEB-371]] En el baner central de la api los colores no coincide
+- **Subtarea:** [[NBWEB-372 - En el banner central poner tilde a INTEGRÁ que me la comi cuando te pase el|NBWEB-372]] En el banner central poner tilde a INTEGRÁ que me la comi cuando te pase el texto
+- **Subtarea:** [[NBWEB-373 - En el footer hay elementos que pueden mejorar su alineacion|NBWEB-373]] En el footer hay elementos que pueden mejorar su alineacion
+- **Subtarea:** [[NBWEB-374 - En el footer deberia decir Copyright © 1997|NBWEB-374]] En el footer deberia decir Copyright © 1997
 
 ## Descripcion
 

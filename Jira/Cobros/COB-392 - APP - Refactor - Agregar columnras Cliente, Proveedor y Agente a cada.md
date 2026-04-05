@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-392"
 
 ## Relaciones
 
-- **Padre:** [[COB-218]] Feat - Movimientos bancarios
-- **is blocked by:** [[COB-382]] API - Refactor - Agregar la columna proveedores, cliente y "agente" en la grilla de movimientos bancarios
+- **Padre:** [[COB-218 - Feat - Movimientos bancarios|COB-218]] Feat - Movimientos bancarios
+- **is blocked by:** [[COB-382 - API - Refactor - Agregar la columna proveedores, cliente y agente en la grilla|COB-382]] API - Refactor - Agregar la columna proveedores, cliente y "agente" en la grilla de movimientos bancarios
 
 ## Descripcion
 

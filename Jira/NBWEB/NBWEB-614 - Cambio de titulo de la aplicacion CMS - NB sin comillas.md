@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-614"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-599]] CMS
+- **Padre:** [[NBWEB-599 - CMS|NBWEB-599]] CMS
 
 ## Descripcion
 

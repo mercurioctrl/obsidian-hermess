@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-510"
 
 ## Relaciones
 
-- **Padre:** [[COB-506]] Logistica
-- **is blocked by:** [[COB-509]] API - Feat - Repositorio de gastos logísticos por currier
+- **Padre:** [[COB-506 - Logistica|COB-506]] Logistica
+- **is blocked by:** [[COB-509 - API - Feat - Repositorio de gastos logísticos por currier|COB-509]] API - Feat - Repositorio de gastos logísticos por currier
 
 ## Descripcion
 

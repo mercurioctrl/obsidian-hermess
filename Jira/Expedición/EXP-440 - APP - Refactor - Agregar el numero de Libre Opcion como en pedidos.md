@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-440"
 
 ## Relaciones
 
-- **Padre:** [[EXP-439]] Despacho de retiros LibreOpcion
-- **is blocked by:** [[EXP-439]] Despacho de retiros LibreOpcion
+- **Padre:** [[EXP-439 - Despacho de retiros LibreOpcion|EXP-439]] Despacho de retiros LibreOpcion
+- **is blocked by:** [[EXP-439 - Despacho de retiros LibreOpcion|EXP-439]] Despacho de retiros LibreOpcion
 
 ## Descripcion
 

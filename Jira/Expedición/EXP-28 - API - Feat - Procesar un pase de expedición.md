@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-28"
 
 ## Relaciones
 
-- **Padre:** [[EXP-19]] Feat -Procesar pases de mercadería
+- **Padre:** [[EXP-19 - Feat -Procesar pases de mercadería|EXP-19]] Feat -Procesar pases de mercadería
 
 ## Descripcion
 

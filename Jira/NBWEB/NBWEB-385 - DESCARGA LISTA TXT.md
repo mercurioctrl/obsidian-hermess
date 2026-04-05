@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-385"
 
 ## Relaciones
 
-- **causes:** [[SNB-163]] DESCARGA LISTA TXT
+- **causes:** [[SNB-163 - DESCARGA LISTA TXT|SNB-163]] DESCARGA LISTA TXT
 
 ## Descripcion
 

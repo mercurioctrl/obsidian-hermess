@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-9"
 
 ## Relaciones
 
-- **Padre:** [[FB-3]] Ibranding
+- **Padre:** [[FB-3 - Ibranding|FB-3]] Ibranding
 
 ## Descripcion
 

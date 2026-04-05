@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-74"
 
 ## Relaciones
 
-- **Padre:** [[MKT-71]] LO_ Cambio de banners
+- **Padre:** [[MKT-71 - LO_ Cambio de banners|MKT-71]] LO_ Cambio de banners
 
 ## Descripcion
 

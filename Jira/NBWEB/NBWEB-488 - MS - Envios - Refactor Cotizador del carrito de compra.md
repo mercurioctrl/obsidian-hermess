@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-488"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **is blocked by:** [[NBWEB-240]] MS - Feat - Urbano - Cotizar ordenes de compra
-- **blocks:** [[NBWEB-489]] API - Refactor - Procesar carrito
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **is blocked by:** [[NBWEB-240 - MS - Feat - Urbano - Cotizar ordenes de compra|NBWEB-240]] MS - Feat - Urbano - Cotizar ordenes de compra
+- **blocks:** [[NBWEB-489 - API - Refactor - Procesar carrito|NBWEB-489]] API - Refactor - Procesar carrito
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-97"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **blocks:** [[INV-93]] API - Refactor - Agregar parametro companyCode a los productos
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **blocks:** [[INV-93 - API - Refactor - Agregar parametro companyCode a los productos|INV-93]] API - Refactor - Agregar parametro companyCode a los productos
 
 ## Descripcion
 

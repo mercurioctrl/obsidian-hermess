@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-498"
 
 ## Relaciones
 
-- **Padre:** [[LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
-- **Subtarea:** [[LIO-510]] APP - Feat - Migrar endpoint “Listado de preguntas para vendedor (corregir paginado)” actualemente en Legacy
-- **Subtarea:** [[LIO-511]] APP - Feat - Migrar endpoint “Responder pregunta de producto” desde Legacy
-- **Subtarea:** [[LIO-596]] APP Mobile - Feat -  Migracion de endpoint preguntas de v3-legacy a v4
+- **Padre:** [[LIO-497 - App Mobile Vendedores – Gestión integral del seller en Libre Opción|LIO-497]] App Mobile Vendedores – Gestión integral del seller en Libre Opción
+- **Subtarea:** [[LIO-510 - APP - Feat - Migrar endpoint “Listado de preguntas para vendedor (corregir|LIO-510]] APP - Feat - Migrar endpoint “Listado de preguntas para vendedor (corregir paginado)” actualemente en Legacy
+- **Subtarea:** [[LIO-511 - APP - Feat - Migrar endpoint “Responder pregunta de producto” desde Legacy|LIO-511]] APP - Feat - Migrar endpoint “Responder pregunta de producto” desde Legacy
+- **Subtarea:** [[LIO-596 - APP Mobile - Feat - Migracion de endpoint preguntas de v3-legacy a v4|LIO-596]] APP Mobile - Feat -  Migracion de endpoint preguntas de v3-legacy a v4
 
 ## Descripcion
 

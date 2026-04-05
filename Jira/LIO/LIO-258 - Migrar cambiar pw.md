@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-258"
 
 ## Relaciones
 
-- **relates to:** [[SNB-2855]] Recuperar cuenta no envia correo de recuperacion en API nueva
+- **relates to:** [[SNB-2855 - Recuperar cuenta no envia correo de recuperacion en API nueva|SNB-2855]] Recuperar cuenta no envia correo de recuperacion en API nueva
 
 ## Descripcion
 

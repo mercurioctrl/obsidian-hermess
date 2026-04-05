@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-92"
 
 ## Relaciones
 
-- **Padre:** [[EXP-11]] Feat - Serializar entrada de mercadería
-- **relates to:** [[EXP-447]] API - Refactor - No dejar serializar un item que no tiene pesos,medidas y cantidad por bulto
+- **Padre:** [[EXP-11 - Feat - Serializar entrada de mercadería|EXP-11]] Feat - Serializar entrada de mercadería
+- **relates to:** [[EXP-447 - API - Refactor - No dejar serializar un item que no tiene pesos,medidas y|EXP-447]] API - Refactor - No dejar serializar un item que no tiene pesos,medidas y cantidad por bulto
 
 ## Descripcion
 

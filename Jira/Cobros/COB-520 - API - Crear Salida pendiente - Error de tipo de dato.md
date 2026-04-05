@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-520"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **blocks:** [[COB-511]] API - Feat - Crear Salida pendiente
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **blocks:** [[COB-511 - API - Feat - Crear Salida pendiente|COB-511]] API - Feat - Crear Salida pendiente
 
 ## Descripcion
 

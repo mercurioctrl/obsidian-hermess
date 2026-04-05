@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-527"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-524]] CMS - Parametros varios
-- **is blocked by:** [[NBWEB-526]] API - Feat - Editar Parametros varios
-- **is blocked by:** [[NBWEB-525]] API - Feat - Listar Parametros varios
+- **Padre:** [[NBWEB-524 - CMS - Parametros varios|NBWEB-524]] CMS - Parametros varios
+- **is blocked by:** [[NBWEB-526 - API - Feat - Editar Parametros varios|NBWEB-526]] API - Feat - Editar Parametros varios
+- **is blocked by:** [[NBWEB-525 - API - Feat - Listar Parametros varios|NBWEB-525]] API - Feat - Listar Parametros varios
 
 ## Descripcion
 

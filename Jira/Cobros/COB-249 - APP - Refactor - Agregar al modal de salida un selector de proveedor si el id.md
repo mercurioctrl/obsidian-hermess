@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-249"
 
 ## Relaciones
 
-- **Padre:** [[COB-178]] API - Feat - Realizar transferencia entre bancos
-- **is blocked by:** [[COB-248]] API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un "pago de factura" o "pago proveedor"
+- **Padre:** [[COB-178 - API - Feat - Realizar transferencia entre bancos|COB-178]] API - Feat - Realizar transferencia entre bancos
+- **is blocked by:** [[COB-248 - API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un|COB-248]] API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un "pago de factura" o "pago proveedor"
 
 ## Descripcion
 

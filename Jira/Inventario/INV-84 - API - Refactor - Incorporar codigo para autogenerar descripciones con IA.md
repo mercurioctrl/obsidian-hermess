@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-84"
 
 ## Relaciones
 
-- **Padre:** [[INV-80]] Descripciones
-- **blocks:** [[INV-85]] APP - Refactor - Obtener sugerencia de descripción auto generada con IA
-- **is cloned by:** [[INV-309]] API - Review - Incorporar codigo para autogenerar descripciones con IA - getSuggestDecription no está definido
+- **Padre:** [[INV-80 - Descripciones|INV-80]] Descripciones
+- **blocks:** [[INV-85 - APP - Refactor - Obtener sugerencia de descripción auto generada con IA|INV-85]] APP - Refactor - Obtener sugerencia de descripción auto generada con IA
+- **is cloned by:** [[INV-309 - API - Review - Incorporar codigo para autogenerar descripciones con IA -|INV-309]] API - Review - Incorporar codigo para autogenerar descripciones con IA - getSuggestDecription no está definido
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-45"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-20]] Mostrar comprobante
-- **Subtarea:** [[LOCAPP-46]] DATA - Agregar al detalle de los comprobantes el numero de despacho de importacion
-- **Subtarea:** [[LOCAPP-47]] API - Refactor - Agregar a la visualizacion del comprobante el numero de despacho
+- **Padre:** [[LOCAPP-20 - Mostrar comprobante|LOCAPP-20]] Mostrar comprobante
+- **Subtarea:** [[LOCAPP-46 - DATA - Agregar al detalle de los comprobantes el numero de despacho de|LOCAPP-46]] DATA - Agregar al detalle de los comprobantes el numero de despacho de importacion
+- **Subtarea:** [[LOCAPP-47 - API - Refactor - Agregar a la visualizacion del comprobante el numero de|LOCAPP-47]] API - Refactor - Agregar a la visualizacion del comprobante el numero de despacho
 
 ## Descripcion
 

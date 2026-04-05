@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-520"
 
 ## Relaciones
 
-- **causes:** [[SNB-564]] PALABRA CLAVE PEDIDOS INTERNOS
+- **causes:** [[SNB-564 - PALABRA CLAVE PEDIDOS INTERNOS|SNB-564]] PALABRA CLAVE PEDIDOS INTERNOS
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-13"
 
 ## Relaciones
 
-- **Padre:** [[INV-10]] API - Login
+- **Padre:** [[INV-10 - API - Login|INV-10]] API - Login
 
 ## Descripcion
 

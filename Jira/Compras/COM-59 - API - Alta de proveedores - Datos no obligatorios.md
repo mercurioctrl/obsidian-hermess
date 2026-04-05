@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-59"
 
 ## Relaciones
 
-- **Padre:** [[COM-5]] Proveedores
-- **blocks:** [[COM-43]] API - Feat - Alta de proveedores
+- **Padre:** [[COM-5 - Proveedores|COM-5]] Proveedores
+- **blocks:** [[COM-43 - API - Feat - Alta de proveedores|COM-43]] API - Feat - Alta de proveedores
 
 ## Descripcion
 

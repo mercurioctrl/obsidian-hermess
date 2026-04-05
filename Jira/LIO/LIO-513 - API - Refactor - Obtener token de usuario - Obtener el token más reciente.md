@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-513"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **relates to:** [[LIO-409]] API - Feat - Crear un nuevo token de referidos por parte de un usuario
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **relates to:** [[LIO-409 - API - Feat - Crear un nuevo token de referidos por parte de un usuario|LIO-409]] API - Feat - Crear un nuevo token de referidos por parte de un usuario
 
 ## Descripcion
 

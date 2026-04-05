@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-291"
 
 ## Relaciones
 
-- **Padre:** [[COB-115]] Feat - Realizar un cobro
-- **relates to:** [[COB-290]] API - Refactor - Cobrar con retencion
-- **blocks:** [[COB-292]] APP - Refactor - Cobrar Retencion
-- **blocks:** [[COB-316]] APP - Feat - Agregar proveedor
+- **Padre:** [[COB-115 - Feat - Realizar un cobro|COB-115]] Feat - Realizar un cobro
+- **relates to:** [[COB-290 - API - Refactor - Cobrar con retencion|COB-290]] API - Refactor - Cobrar con retencion
+- **blocks:** [[COB-292 - APP - Refactor - Cobrar Retencion|COB-292]] APP - Refactor - Cobrar Retencion
+- **blocks:** [[COB-316 - APP - Feat - Agregar proveedor|COB-316]] APP - Feat - Agregar proveedor
 
 ## Descripcion
 

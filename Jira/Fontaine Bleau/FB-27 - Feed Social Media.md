@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-27"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-34]] DSG - Feature - Mockup  Instagram, Facebook, Linkedin
-- **Subtarea:** [[FB-35]] Post 1 Facebook_Fontaine Bleau
-- **Subtarea:** [[FB-36]] Triada  1 Instagram
-- **Subtarea:** [[FB-37]] Post 1 Linkedin_Fontaine Bleau
-- **Subtarea:** [[FB-38]] Armar copy 1
-- **Subtarea:** [[FB-39]] Realizar post  1 en Instagram, Linkedin y Facebook
+- **Subtarea:** [[FB-34 - DSG - Feature - Mockup Instagram, Facebook, Linkedin|FB-34]] DSG - Feature - Mockup  Instagram, Facebook, Linkedin
+- **Subtarea:** [[FB-35 - Post 1 Facebook_Fontaine Bleau|FB-35]] Post 1 Facebook_Fontaine Bleau
+- **Subtarea:** [[FB-36 - Triada 1 Instagram|FB-36]] Triada  1 Instagram
+- **Subtarea:** [[FB-37 - Post 1 Linkedin_Fontaine Bleau|FB-37]] Post 1 Linkedin_Fontaine Bleau
+- **Subtarea:** [[FB-38 - Armar copy 1|FB-38]] Armar copy 1
+- **Subtarea:** [[FB-39 - Realizar post 1 en Instagram, Linkedin y Facebook|FB-39]] Realizar post  1 en Instagram, Linkedin y Facebook
 
 ## Descripcion
 

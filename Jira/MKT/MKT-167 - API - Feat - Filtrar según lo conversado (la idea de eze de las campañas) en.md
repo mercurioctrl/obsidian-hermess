@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-167"
 
 ## Relaciones
 
-- **Padre:** [[MKT-166]] LO_ FILTRO CON PRODUCTOS
+- **Padre:** [[MKT-166 - LO_ FILTRO CON PRODUCTOS|MKT-166]] LO_ FILTRO CON PRODUCTOS
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-658"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-495]] API - Features especiales
-- **Subtarea:** [[NBWEB-659]] API - Feat - Se debe guardar en [NB_WEB].[dbo].[metrics] la ruta (recurso) que acaba de ser ejecutado
+- **Padre:** [[NBWEB-495 - API - Features especiales|NBWEB-495]] API - Features especiales
+- **Subtarea:** [[NBWEB-659 - API - Feat - Se debe guardar en NB_WEB.dbo.metrics la ruta (recurso) que acaba|NBWEB-659]] API - Feat - Se debe guardar en [NB_WEB].[dbo].[metrics] la ruta (recurso) que acaba de ser ejecutado
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-56"
 
 ## Relaciones
 
-- **Padre:** [[LAW-55]] Expedicion - limpieza de interface
-- **action item from:** [[EXP-535]] APP - Refactor - Mostrar o no pestañas segun el permiso de visualización de la misma para ese usuario
-- **action item from:** [[EXP-534]] API - DATA - Feat - Agregar permisos de visualización para las distintas pestañas de expedicion
+- **Padre:** [[LAW-55 - Expedicion - limpieza de interface|LAW-55]] Expedicion - limpieza de interface
+- **action item from:** [[EXP-535 - APP - Refactor - Mostrar o no pestañas segun el permiso de visualización de la|EXP-535]] APP - Refactor - Mostrar o no pestañas segun el permiso de visualización de la misma para ese usuario
+- **action item from:** [[EXP-534 - API - DATA - Feat - Agregar permisos de visualización para las distintas|EXP-534]] API - DATA - Feat - Agregar permisos de visualización para las distintas pestañas de expedicion
 
 ## Descripcion
 

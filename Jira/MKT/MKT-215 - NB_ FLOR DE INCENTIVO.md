@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-215"
 
 ## Relaciones
 
-- **blocks:** [[PED-818]] API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo requerimiento
-- **blocks:** [[PED-819]] APP - Refactor - Modificar tabla de posiciones de GetSellerObjectives para cumplir un nuevo requerimiento
-- **blocks:** [[PED-821]] APP - Refactor - nuevo incentivo de capilaridad
-- **blocks:** [[PED-820]] API - Refactor - Incentivo de capilaridad reactivo a cantidad de ventas de las marcas especificadas
+- **blocks:** [[PED-818 - API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo|PED-818]] API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo requerimiento
+- **blocks:** [[PED-819 - APP - Refactor - Modificar tabla de posiciones de GetSellerObjectives para|PED-819]] APP - Refactor - Modificar tabla de posiciones de GetSellerObjectives para cumplir un nuevo requerimiento
+- **blocks:** [[PED-821 - APP - Refactor - nuevo incentivo de capilaridad|PED-821]] APP - Refactor - nuevo incentivo de capilaridad
+- **blocks:** [[PED-820 - API - Refactor - Incentivo de capilaridad reactivo a cantidad de ventas de las|PED-820]] API - Refactor - Incentivo de capilaridad reactivo a cantidad de ventas de las marcas especificadas
 
 ## Descripcion
 

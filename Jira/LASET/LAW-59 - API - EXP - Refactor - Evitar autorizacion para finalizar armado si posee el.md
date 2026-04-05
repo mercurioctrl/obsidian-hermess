@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-59"
 
 ## Relaciones
 
-- **Padre:** [[LAW-43]] Onboarding producción
-- **has action item:** [[LAW-60]] APP - EXP - Refactor - Evitar autorizacion para finalizar armado si posee el permiso expUnlockHand
+- **Padre:** [[LAW-43 - Onboarding producción|LAW-43]] Onboarding producción
+- **has action item:** [[LAW-60 - APP - EXP - Refactor - Evitar autorizacion para finalizar armado si posee el|LAW-60]] APP - EXP - Refactor - Evitar autorizacion para finalizar armado si posee el permiso expUnlockHand
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-998"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-423]] Logistica Envios
-- **action item from:** [[NBWEB-997]] API - Feat - Agregar parametro para destacar "mejor opción"
+- **Padre:** [[NBWEB-423 - Logistica Envios|NBWEB-423]] Logistica Envios
+- **action item from:** [[NBWEB-997 - API - Feat - Agregar parametro para destacar mejor opción|NBWEB-997]] API - Feat - Agregar parametro para destacar "mejor opción"
 
 ## Descripcion
 

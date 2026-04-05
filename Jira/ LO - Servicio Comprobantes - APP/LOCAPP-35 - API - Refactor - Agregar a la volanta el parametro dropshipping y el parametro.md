@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-35"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-34]] Volanta
-- **blocks:** [[LOCAPP-36]] APP - Refactor - Agregar a la volanta el parametro "dropshipping" y el parametro para saber si esta unido con algun otro pedido
+- **Padre:** [[LOCAPP-34 - Volanta|LOCAPP-34]] Volanta
+- **blocks:** [[LOCAPP-36 - APP - Refactor - Agregar a la volanta el parametro dropshipping y el parametro|LOCAPP-36]] APP - Refactor - Agregar a la volanta el parametro "dropshipping" y el parametro para saber si esta unido con algun otro pedido
 
 ## Descripcion
 

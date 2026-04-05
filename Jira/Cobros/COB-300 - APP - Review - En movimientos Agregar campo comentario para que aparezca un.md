@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-300"
 
 ## Relaciones
 
-- **Padre:** [[COB-294]] Feat - Listar provincias (Mas subtotales de retenciones)
+- **Padre:** [[COB-294 - Feat - Listar provincias (Mas subtotales de retenciones)|COB-294]] Feat - Listar provincias (Mas subtotales de retenciones)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-249"
 
 ## Relaciones
 
-- **Padre:** [[LIO-166]] Catalogos y sincronizaciones
-- **has action item:** [[LIO-251]] APP - Refactor - Agregar al catalogo la seccion "Especial para vos" y enlazarla en la home
+- **Padre:** [[LIO-166 - Catalogos y sincronizaciones|LIO-166]] Catalogos y sincronizaciones
+- **has action item:** [[LIO-251 - APP - Refactor - Agregar al catalogo la seccion Especial para vos y enlazarla|LIO-251]] APP - Refactor - Agregar al catalogo la seccion "Especial para vos" y enlazarla en la home
 
 ## Descripcion
 

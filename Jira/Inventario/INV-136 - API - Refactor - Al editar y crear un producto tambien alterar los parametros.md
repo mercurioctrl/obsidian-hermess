@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-136"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-142]] Refactor: Validar sku
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-142 - Refactor Validar sku|INV-142]] Refactor: Validar sku
 
 ## Descripcion
 

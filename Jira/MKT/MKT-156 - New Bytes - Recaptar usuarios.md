@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-156"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-157]] Recordatorio de un mes sin visitar el sitio
-- **Subtarea:** [[MKT-158]] Recordatorio 2 meses sin visitar el sitio
+- **Subtarea:** [[MKT-157 - Recordatorio de un mes sin visitar el sitio|MKT-157]] Recordatorio de un mes sin visitar el sitio
+- **Subtarea:** [[MKT-158 - Recordatorio 2 meses sin visitar el sitio|MKT-158]] Recordatorio 2 meses sin visitar el sitio
 
 ## Descripcion
 

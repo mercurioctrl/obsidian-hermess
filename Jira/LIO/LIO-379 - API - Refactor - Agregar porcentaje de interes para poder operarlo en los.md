@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-379"
 
 ## Relaciones
 
-- **Padre:** [[LIO-373]] Seguridad del checkout y protección de transacciones
-- **blocks:** [[LIO-380]] APP - Refactor - Agregar porcentaje de interes para poder operarlo en los calculos directamente y evitar el bug de cambio de precio
+- **Padre:** [[LIO-373 - Seguridad del checkout y protección de transacciones|LIO-373]] Seguridad del checkout y protección de transacciones
+- **blocks:** [[LIO-380 - APP - Refactor - Agregar porcentaje de interes para poder operarlo en los|LIO-380]] APP - Refactor - Agregar porcentaje de interes para poder operarlo en los calculos directamente y evitar el bug de cambio de precio
 
 ## Descripcion
 

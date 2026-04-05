@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-27"
 
 ## Relaciones
 
-- **Padre:** [[MNB2-25]] NB_INGRESO TT
+- **Padre:** [[MNB2-25 - NB_INGRESO TT|MNB2-25]] NB_INGRESO TT
 
 ## Descripcion
 

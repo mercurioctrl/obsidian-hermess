@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-173"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-176]] 5 tips para armar tu PC en 2026
+- **Subtarea:** [[LOMKT-176 - 5 tips para armar tu PC en 2026|LOMKT-176]] 5 tips para armar tu PC en 2026
 
 ## Descripcion
 

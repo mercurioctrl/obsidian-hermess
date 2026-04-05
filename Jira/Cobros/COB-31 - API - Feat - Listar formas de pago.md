@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-31"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **blocks:** [[COB-134]] API - Feat - Obtener cotizaciones
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **blocks:** [[COB-134 - API - Feat - Obtener cotizaciones|COB-134]] API - Feat - Obtener cotizaciones
 
 ## Descripcion
 

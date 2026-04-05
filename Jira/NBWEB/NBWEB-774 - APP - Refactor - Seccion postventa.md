@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-774"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-781]] APP - Sección postventa - Sugerencia de mejora en el teléfono 
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-781 - APP - Sección postventa - Sugerencia de mejora en el teléfono|NBWEB-781]] APP - Sección postventa - Sugerencia de mejora en el teléfono 
 
 ## Descripcion
 

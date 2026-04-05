@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-44"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-45]] Newsletter del ingreso
-- **Subtarea:** [[MNB2-46]] Imagenes para estado 
+- **Subtarea:** [[MNB2-45 - Newsletter del ingreso|MNB2-45]] Newsletter del ingreso
+- **Subtarea:** [[MNB2-46 - Imagenes para estado|MNB2-46]] Imagenes para estado 
 
 ## Descripcion
 

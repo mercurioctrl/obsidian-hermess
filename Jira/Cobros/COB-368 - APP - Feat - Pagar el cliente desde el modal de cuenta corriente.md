@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-368"
 
 ## Relaciones
 
-- **Padre:** [[COB-366]] Feat - Pagar al cliente con su saldo en cuenta
+- **Padre:** [[COB-366 - Feat - Pagar al cliente con su saldo en cuenta|COB-366]] Feat - Pagar al cliente con su saldo en cuenta
 
 ## Descripcion
 

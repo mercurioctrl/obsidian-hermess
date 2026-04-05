@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-231"
 
 ## Relaciones
 
-- **blocks:** [[EXP-202]] Feat - Pestaña comprobantes
-- **duplicates:** [[EXP-237]] APP - refactor - corregir las opciones sde filtrado de currency para vouchers
+- **blocks:** [[EXP-202 - Feat - Pestaña comprobantes|EXP-202]] Feat - Pestaña comprobantes
+- **duplicates:** [[EXP-237 - APP - refactor - corregir las opciones sde filtrado de currency para vouchers|EXP-237]] APP - refactor - corregir las opciones sde filtrado de currency para vouchers
 
 ## Descripcion
 

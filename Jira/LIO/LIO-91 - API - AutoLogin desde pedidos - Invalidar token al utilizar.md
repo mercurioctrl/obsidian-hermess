@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-91"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **relates to:** [[LIO-85]] API - Feat - AutoLogin desde pedidos
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **relates to:** [[LIO-85 - API - Feat - AutoLogin desde pedidos|LIO-85]] API - Feat - AutoLogin desde pedidos
 
 ## Descripcion
 

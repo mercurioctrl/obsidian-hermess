@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-461"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **is cloned by:** [[EXP-462]] APP - Refactor - Recurso para Detallar Discrepancias entre Pedido y Armado en Depósito
-- **has action item:** [[SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **is cloned by:** [[EXP-462 - APP - Refactor - Recurso para Detallar Discrepancias entre Pedido y Armado en|EXP-462]] APP - Refactor - Recurso para Detallar Discrepancias entre Pedido y Armado en Depósito
+- **has action item:** [[SNB-2463 - MS -Envios - Refactor - Implementar cambiar el parametro 'items' por|SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
 
 ## Descripcion
 

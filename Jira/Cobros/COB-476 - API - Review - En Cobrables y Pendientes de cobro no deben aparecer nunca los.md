@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-476"
 
 ## Relaciones
 
-- **Padre:** [[COB-357]] Feat - Listar Despachados, pendientes a cobrar
-- **blocks:** [[SNB-1151]] En cobrables se ven muchos pedidos
+- **Padre:** [[COB-357 - Feat - Listar Despachados, pendientes a cobrar|COB-357]] Feat - Listar Despachados, pendientes a cobrar
+- **blocks:** [[SNB-1151 - En cobrables se ven muchos pedidos|SNB-1151]] En cobrables se ven muchos pedidos
 
 ## Descripcion
 

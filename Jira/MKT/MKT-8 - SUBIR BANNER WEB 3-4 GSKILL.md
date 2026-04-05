@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-8"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-11]] Instalar micrositio
-- **Subtarea:** [[MKT-10]] Diseñar Header
+- **Subtarea:** [[MKT-11 - Instalar micrositio|MKT-11]] Instalar micrositio
+- **Subtarea:** [[MKT-10 - Diseñar Header|MKT-10]] Diseñar Header
 
 ## Descripcion
 

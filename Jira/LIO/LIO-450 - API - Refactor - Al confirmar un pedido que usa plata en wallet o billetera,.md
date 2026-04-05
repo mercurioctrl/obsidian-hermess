@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-450"
 
 ## Relaciones
 
-- **Padre:** [[LIO-419]] Mejoras de pagos
-- **action item from:** [[LIO-445]] API - Refactor - Al procesar la compra, comprobar y descontar monto de billetera en caso de ser utilizado
+- **Padre:** [[LIO-419 - Mejoras de pagos|LIO-419]] Mejoras de pagos
+- **action item from:** [[LIO-445 - API - Refactor - Al procesar la compra, comprobar y descontar monto de|LIO-445]] API - Refactor - Al procesar la compra, comprobar y descontar monto de billetera en caso de ser utilizado
 
 ## Descripcion
 

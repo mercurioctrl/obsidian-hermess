@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-35"
 
 ## Relaciones
 
-- **Padre:** [[COM-8]] Ordenes de compra
-- **blocks:** [[COM-22]] API - Refactor - Listar ordenes de compra ->Agregados
+- **Padre:** [[COM-8 - Ordenes de compra|COM-8]] Ordenes de compra
+- **blocks:** [[COM-22 - API - Refactor - Listar ordenes de compra -Agregados|COM-22]] API - Refactor - Listar ordenes de compra ->Agregados
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-51"
 
 ## Relaciones
 
-- **Padre:** [[LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
-- **blocks:** [[LIO-52]] APP - PED - Refactor - Agregar filtro para vert cancelados / eliminados
+- **Padre:** [[LIO-28 - El sitio debe funcionar correctamente, sin puntos grises o cosas que no se|LIO-28]] El sitio debe funcionar correctamente, sin puntos grises o cosas que no se entienden
+- **blocks:** [[LIO-52 - APP - PED - Refactor - Agregar filtro para vert cancelados eliminados|LIO-52]] APP - PED - Refactor - Agregar filtro para vert cancelados / eliminados
 
 ## Descripcion
 

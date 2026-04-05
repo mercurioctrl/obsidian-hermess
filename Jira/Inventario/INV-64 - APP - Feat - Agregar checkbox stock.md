@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-64"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **is blocked by:** [[INV-63]] API - Feat - Agregar filtro con stock/sin stock/todos
-- **relates to:** [[INV-122]] APP - Filtrar por stock - Sugerencia de mejora al no seleccionar el filtro
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **is blocked by:** [[INV-63 - API - Feat - Agregar filtro con stocksin stocktodos|INV-63]] API - Feat - Agregar filtro con stock/sin stock/todos
+- **relates to:** [[INV-122 - APP - Filtrar por stock - Sugerencia de mejora al no seleccionar el filtro|INV-122]] APP - Filtrar por stock - Sugerencia de mejora al no seleccionar el filtro
 
 ## Descripcion
 

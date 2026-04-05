@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-96"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **blocks:** [[INV-94]] APP - Refactor - Agregar filtro y parámetro companyCode 
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **blocks:** [[INV-94 - APP - Refactor - Agregar filtro y parámetro companyCode|INV-94]] APP - Refactor - Agregar filtro y parámetro companyCode 
 
 ## Descripcion
 

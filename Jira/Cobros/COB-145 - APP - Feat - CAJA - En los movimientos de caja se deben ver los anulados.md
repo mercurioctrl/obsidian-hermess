@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-145"
 
 ## Relaciones
 
-- **Padre:** [[COB-143]] CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna forma (tachados por ejemplo)
+- **Padre:** [[COB-143 - CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna|COB-143]] CAJA - En los movimientos de caja se deben ver los anulados marcados de alguna forma (tachados por ejemplo)
 
 ## Descripcion
 

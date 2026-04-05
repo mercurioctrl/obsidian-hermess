@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-119"
 
 ## Relaciones
 
-- **Padre:** [[COM-117]] Listar / Editar Categorias
-- **blocks:** [[COM-120]] APP - Feat - Pestaña categorias
+- **Padre:** [[COM-117 - Listar Editar Categorias|COM-117]] Listar / Editar Categorias
+- **blocks:** [[COM-120 - APP - Feat - Pestaña categorias|COM-120]] APP - Feat - Pestaña categorias
 
 ## Descripcion
 

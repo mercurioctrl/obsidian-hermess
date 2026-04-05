@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-46"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-47]] Banner Seagate - LO y NB
+- **is blocked by:** [[DNYL-47 - Banner Seagate - LO y NB|DNYL-47]] Banner Seagate - LO y NB
 
 ## Descripcion
 

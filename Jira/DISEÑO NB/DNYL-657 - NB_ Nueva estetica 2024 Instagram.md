@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-657"
 
 ## Relaciones
 
-- **Subtarea:** [[DNYL-658]] Novedades
-- **Subtarea:** [[DNYL-659]] Recomendado del PM
-- **Subtarea:** [[DNYL-660]] Marcas
-- **Subtarea:** [[DNYL-661]] Recursos NB
-- **Subtarea:** [[DNYL-677]] PROMOCIONES
+- **Subtarea:** [[DNYL-658 - Novedades|DNYL-658]] Novedades
+- **Subtarea:** [[DNYL-659 - Recomendado del PM|DNYL-659]] Recomendado del PM
+- **Subtarea:** [[DNYL-660 - Marcas|DNYL-660]] Marcas
+- **Subtarea:** [[DNYL-661 - Recursos NB|DNYL-661]] Recursos NB
+- **Subtarea:** [[DNYL-677 - PROMOCIONES|DNYL-677]] PROMOCIONES
 
 ## Descripcion
 

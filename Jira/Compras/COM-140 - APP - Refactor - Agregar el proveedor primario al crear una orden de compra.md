@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-140"
 
 ## Relaciones
 
-- **Padre:** [[COM-138]] Crear orden de compra
-- **is blocked by:** [[COM-139]] API - Refactor - Agregar el Proveedor primario al crear una orden de compra
-- **relates to:** [[COM-142]] API - Refactor - Listado de proveedores - Homogeneidad en los parámetros
+- **Padre:** [[COM-138 - Crear orden de compra|COM-138]] Crear orden de compra
+- **is blocked by:** [[COM-139 - API - Refactor - Agregar el Proveedor primario al crear una orden de compra|COM-139]] API - Refactor - Agregar el Proveedor primario al crear una orden de compra
+- **relates to:** [[COM-142 - API - Refactor - Listado de proveedores - Homogeneidad en los parámetros|COM-142]] API - Refactor - Listado de proveedores - Homogeneidad en los parámetros
 
 ## Descripcion
 

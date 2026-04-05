@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-115"
 
 ## Relaciones
 
-- **Padre:** [[INV-69]] Categorias
-- **blocks:** [[INV-116]] APP - Refactor - Cambiar columnas de ocultar para el sistema y mostrar en la web
-- **relates to:** [[INV-121]] API - Refactor - Parámetro para ocultar del sistema - Agregar al consultar
-- **is blocked by:** [[INV-124]] API - Agregar parámetro para ocultar del sistema - Discrepancias al ocultar/mostrar la categoría
+- **Padre:** [[INV-69 - Categorias|INV-69]] Categorias
+- **blocks:** [[INV-116 - APP - Refactor - Cambiar columnas de ocultar para el sistema y mostrar en la web|INV-116]] APP - Refactor - Cambiar columnas de ocultar para el sistema y mostrar en la web
+- **relates to:** [[INV-121 - API - Refactor - Parámetro para ocultar del sistema - Agregar al consultar|INV-121]] API - Refactor - Parámetro para ocultar del sistema - Agregar al consultar
+- **is blocked by:** [[INV-124 - API - Agregar parámetro para ocultar del sistema - Discrepancias al|INV-124]] API - Agregar parámetro para ocultar del sistema - Discrepancias al ocultar/mostrar la categoría
 
 ## Descripcion
 

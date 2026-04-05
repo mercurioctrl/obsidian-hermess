@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-967"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-337]] fixes y sugerencias
+- **Padre:** [[NBWEB-337 - fixes y sugerencias|NBWEB-337]] fixes y sugerencias
 
 ## Descripcion
 

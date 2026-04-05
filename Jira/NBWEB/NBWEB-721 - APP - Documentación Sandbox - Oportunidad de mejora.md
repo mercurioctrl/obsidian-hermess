@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-721"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-56]] API Abierta y Documentacion
-- **relates to:** [[NBWEB-713]] APP - Feat - Agregaremos una seccion para mostrar cual es el sandbox y que es
+- **Padre:** [[NBWEB-56 - API Abierta y Documentacion|NBWEB-56]] API Abierta y Documentacion
+- **relates to:** [[NBWEB-713 - APP - Feat - Agregaremos una seccion para mostrar cual es el sandbox y que es|NBWEB-713]] APP - Feat - Agregaremos una seccion para mostrar cual es el sandbox y que es
 
 ## Descripcion
 

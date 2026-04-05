@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-414"
 
 ## Relaciones
 
-- **Padre:** [[EXP-249]] Feat - Vincular despacho / Editar despacho
-- **relates to:** [[EXP-251]] API - Feat - Editar / Crear despacho en base a un pedido 
+- **Padre:** [[EXP-249 - Feat - Vincular despacho Editar despacho|EXP-249]] Feat - Vincular despacho / Editar despacho
+- **relates to:** [[EXP-251 - API - Feat - Editar Crear despacho en base a un pedido|EXP-251]] API - Feat - Editar / Crear despacho en base a un pedido 
 
 ## Descripcion
 

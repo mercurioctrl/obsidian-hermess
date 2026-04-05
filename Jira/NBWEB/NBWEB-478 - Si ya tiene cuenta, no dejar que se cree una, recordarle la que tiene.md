@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-478"
 
 ## Relaciones
 
-- **causes:** [[SNB-269]] NO FUNCIONA LA PAGINA PARA EL AFUERA
+- **causes:** [[SNB-269 - NO FUNCIONA LA PAGINA PARA EL AFUERA|SNB-269]] NO FUNCIONA LA PAGINA PARA EL AFUERA
 
 ## Descripcion
 

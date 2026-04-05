@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-235"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **has action item:** [[COM-236]] APP -  MVP - Refactor agregar atributo representante al crear/editar un Proveedor
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **has action item:** [[COM-236 - APP - MVP - Refactor agregar atributo representante al creareditar un Proveedor|COM-236]] APP -  MVP - Refactor agregar atributo representante al crear/editar un Proveedor
 
 ## Descripcion
 

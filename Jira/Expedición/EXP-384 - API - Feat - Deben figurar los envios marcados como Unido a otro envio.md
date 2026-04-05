@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-384"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **blocks:** [[EXP-385]] APP - Feat - Mostrar los "Unidos a otro envio" segun lo visto por slack
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **blocks:** [[EXP-385 - APP - Feat - Mostrar los Unidos a otro envio segun lo visto por slack|EXP-385]] APP - Feat - Mostrar los "Unidos a otro envio" segun lo visto por slack
 
 ## Descripcion
 

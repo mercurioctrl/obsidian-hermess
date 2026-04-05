@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-438"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-441]] APP - Refactor - Agregar el numero de Libre Opcion como en pedidos
-- **blocks:** [[EXP-441]] APP - Refactor - Agregar el numero de Libre Opcion como en pedidos
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-441 - APP - Refactor - Agregar el numero de Libre Opcion como en pedidos|EXP-441]] APP - Refactor - Agregar el numero de Libre Opcion como en pedidos
+- **blocks:** [[EXP-441 - APP - Refactor - Agregar el numero de Libre Opcion como en pedidos|EXP-441]] APP - Refactor - Agregar el numero de Libre Opcion como en pedidos
 
 ## Descripcion
 

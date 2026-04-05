@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-322"
 
 ## Relaciones
 
-- **Padre:** [[EXP-294]] Refactor - Devoluciones (pre-despacho)
-- **blocks:** [[SNB-877]] Autorizacion pedido
+- **Padre:** [[EXP-294 - Refactor - Devoluciones (pre-despacho)|EXP-294]] Refactor - Devoluciones (pre-despacho)
+- **blocks:** [[SNB-877 - Autorizacion pedido|SNB-877]] Autorizacion pedido
 
 ## Descripcion
 

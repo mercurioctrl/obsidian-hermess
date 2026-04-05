@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-86"
 
 ## Relaciones
 
-- **Padre:** [[MKT-77]] NB_MICROSITIO AMD_INFO
+- **Padre:** [[MKT-77 - NB_MICROSITIO AMD_INFO|MKT-77]] NB_MICROSITIO AMD_INFO
 
 ## Descripcion
 

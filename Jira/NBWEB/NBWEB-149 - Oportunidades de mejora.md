@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-149"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-150]] APP - Propuesta tablas de informacion
-- **Subtarea:** [[NBWEB-151]] APP - Ancho de las pestañas del menu vertical
-- **Subtarea:** [[NBWEB-159]] APP - Color de los textos en los enlaces del inventario
+- **Subtarea:** [[NBWEB-150 - APP - Propuesta tablas de informacion|NBWEB-150]] APP - Propuesta tablas de informacion
+- **Subtarea:** [[NBWEB-151 - APP - Ancho de las pestañas del menu vertical|NBWEB-151]] APP - Ancho de las pestañas del menu vertical
+- **Subtarea:** [[NBWEB-159 - APP - Color de los textos en los enlaces del inventario|NBWEB-159]] APP - Color de los textos en los enlaces del inventario
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-394"
 
 ## Relaciones
 
-- **Padre:** [[LIO-391]] Desarrollos IA para LIO (Aleph)
-- **has action item:** [[LIO-395]] APP - Refactor - Asistente de compatibilidad en el carrito de compras
+- **Padre:** [[LIO-391 - Desarrollos IA para LIO (Aleph)|LIO-391]] Desarrollos IA para LIO (Aleph)
+- **has action item:** [[LIO-395 - APP - Refactor - Asistente de compatibilidad en el carrito de compras|LIO-395]] APP - Refactor - Asistente de compatibilidad en el carrito de compras
 
 ## Descripcion
 

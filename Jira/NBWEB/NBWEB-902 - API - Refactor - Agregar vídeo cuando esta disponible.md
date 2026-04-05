@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-902"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **has action item:** [[NBWEB-901]] APP - Refactor - Agregar video cuando este esta disponible
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **has action item:** [[NBWEB-901 - APP - Refactor - Agregar video cuando este esta disponible|NBWEB-901]] APP - Refactor - Agregar video cuando este esta disponible
 
 ## Descripcion
 

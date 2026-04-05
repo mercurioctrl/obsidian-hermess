@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-585"
 
 ## Relaciones
 
-- **Padre:** [[LIO-584]] Testing
+- **Padre:** [[LIO-584 - Testing|LIO-584]] Testing
 
 ## Descripcion
 

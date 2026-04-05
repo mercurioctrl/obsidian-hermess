@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-445"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-432]] API - Feat - Descargar CSV
-- **is blocked by:** [[NBWEB-443]] API - Feat - Generar hard token
+- **Padre:** [[NBWEB-432 - API - Feat - Descargar CSV|NBWEB-432]] API - Feat - Descargar CSV
+- **is blocked by:** [[NBWEB-443 - API - Feat - Generar hard token|NBWEB-443]] API - Feat - Generar hard token
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-186"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[NBWEB-934]] API - Feat - Agregar subtitulo a los items
-- **has action item:** [[INV-187]] APP - MVP - Feat - Agregar subitulo o bajada para los productos
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[NBWEB-934 - API - Feat - Agregar subtitulo a los items|NBWEB-934]] API - Feat - Agregar subtitulo a los items
+- **has action item:** [[INV-187 - APP - MVP - Feat - Agregar subitulo o bajada para los productos|INV-187]] APP - MVP - Feat - Agregar subitulo o bajada para los productos
 
 ## Descripcion
 

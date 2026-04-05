@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-206"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **action item from:** [[COM-205]] API - MVP - Feat - Agregar columna con el último precio de venta
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **action item from:** [[COM-205 - API - MVP - Feat - Agregar columna con el último precio de venta|COM-205]] API - MVP - Feat - Agregar columna con el último precio de venta
 
 ## Descripcion
 

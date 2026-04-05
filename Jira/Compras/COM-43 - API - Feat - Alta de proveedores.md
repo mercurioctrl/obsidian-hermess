@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-43"
 
 ## Relaciones
 
-- **Padre:** [[COM-6]] Listar proveedores
-- **blocks:** [[COM-44]] APP - Feat - Alta de proveedores
-- **is blocked by:** [[COM-59]] API - Alta de proveedores - Datos no obligatorios
+- **Padre:** [[COM-6 - Listar proveedores|COM-6]] Listar proveedores
+- **blocks:** [[COM-44 - APP - Feat - Alta de proveedores|COM-44]] APP - Feat - Alta de proveedores
+- **is blocked by:** [[COM-59 - API - Alta de proveedores - Datos no obligatorios|COM-59]] API - Alta de proveedores - Datos no obligatorios
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-948"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-946]] Mi Cuenta
-- **action item from:** [[NBWEB-947]] API - Refactor - Agregar a la lista de pedidos el estado del mismo
+- **Padre:** [[NBWEB-946 - Mi Cuenta|NBWEB-946]] Mi Cuenta
+- **action item from:** [[NBWEB-947 - API - Refactor - Agregar a la lista de pedidos el estado del mismo|NBWEB-947]] API - Refactor - Agregar a la lista de pedidos el estado del mismo
 
 ## Descripcion
 

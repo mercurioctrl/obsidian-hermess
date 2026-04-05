@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-149"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **action item from:** [[NBE-83]] APP - Feature - Banner para la API
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **action item from:** [[NBE-83 - APP - Feature - Banner para la API|NBE-83]] APP - Feature - Banner para la API
 
 ## Descripcion
 

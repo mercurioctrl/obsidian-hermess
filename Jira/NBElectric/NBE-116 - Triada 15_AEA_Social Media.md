@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-116"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-126]] ⚡Triada 16_AEA_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-127]] ✏️Triada 15_KING_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-126 - ⚡Triada 16_AEA_Desarrollo de piezas Social Media|NBE-126]] ⚡Triada 16_AEA_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-127 - ✏️Triada 15_KING_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-127]] ✏️Triada 15_KING_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-457"
 
 ## Relaciones
 
-- **Padre:** [[COB-456]] Refactor - Limitaciones para ingresar dinero "a mano" cuando no selecciono un pedido
-- **blocks:** [[COB-458]] APP - Refactor - Nuevo modal emergente con formulario de ingreso de dinero "a mano" 
+- **Padre:** [[COB-456 - Refactor - Limitaciones para ingresar dinero a mano cuando no selecciono un|COB-456]] Refactor - Limitaciones para ingresar dinero "a mano" cuando no selecciono un pedido
+- **blocks:** [[COB-458 - APP - Refactor - Nuevo modal emergente con formulario de ingreso de dinero a|COB-458]] APP - Refactor - Nuevo modal emergente con formulario de ingreso de dinero "a mano" 
 
 ## Descripcion
 

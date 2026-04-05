@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-201"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-203]] copy
+- **Subtarea:** [[LOMKT-203 - copy|LOMKT-203]] copy
 
 ## Descripcion
 

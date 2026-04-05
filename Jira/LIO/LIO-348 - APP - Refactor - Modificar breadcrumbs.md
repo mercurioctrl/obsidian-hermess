@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-348"
 
 ## Relaciones
 
-- **Padre:** [[LIO-347]] APP - O. Mejora - Centro de ayuda
+- **Padre:** [[LIO-347 - APP - O. Mejora - Centro de ayuda|LIO-347]] APP - O. Mejora - Centro de ayuda
 
 ## Descripcion
 

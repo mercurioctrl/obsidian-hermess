@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-98"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-104]] ⚡Triada 9_Gralf_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-105]]  ✏️Triada 9_Gralf_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-104 - ⚡Triada 9_Gralf_Desarrollo de piezas Social Media|NBE-104]] ⚡Triada 9_Gralf_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-105 - ✏️Triada 9_Gralf_Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-105]]  ✏️Triada 9_Gralf_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

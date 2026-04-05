@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-89"
 
 ## Relaciones
 
-- **Padre:** [[COB-30]] APP - Feat - Ver movimientos de caja
+- **Padre:** [[COB-30 - APP - Feat - Ver movimientos de caja|COB-30]] APP - Feat - Ver movimientos de caja
 
 ## Descripcion
 

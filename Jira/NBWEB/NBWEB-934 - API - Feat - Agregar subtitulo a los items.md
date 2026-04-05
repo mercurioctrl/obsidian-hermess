@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-934"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **has action item:** [[NBWEB-935]] APP - Feat - Agregar subtitulo a los items
-- **has action item:** [[SNB-2642]] AGREGAR ITEM EN WEB POR PROMOCIÓN EN COMBO
-- **has action item:** [[INV-186]] API - MVP - Feat - Agregar subitulo o bajada para los productos
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **has action item:** [[NBWEB-935 - APP - Feat - Agregar subtitulo a los items|NBWEB-935]] APP - Feat - Agregar subtitulo a los items
+- **has action item:** [[SNB-2642 - AGREGAR ITEM EN WEB POR PROMOCIÓN EN COMBO|SNB-2642]] AGREGAR ITEM EN WEB POR PROMOCIÓN EN COMBO
+- **has action item:** [[INV-186 - API - MVP - Feat - Agregar subitulo o bajada para los productos|INV-186]] API - MVP - Feat - Agregar subitulo o bajada para los productos
 
 ## Descripcion
 

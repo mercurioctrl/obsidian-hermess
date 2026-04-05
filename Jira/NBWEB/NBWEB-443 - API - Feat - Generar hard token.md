@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-443"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **blocks:** [[NBWEB-445]] API - Feat - Se tiene que poder descargar el archivo sin login, en caso de tener el token
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **blocks:** [[NBWEB-445 - API - Feat - Se tiene que poder descargar el archivo sin login, en caso de|NBWEB-445]] API - Feat - Se tiene que poder descargar el archivo sin login, en caso de tener el token
 
 ## Descripcion
 

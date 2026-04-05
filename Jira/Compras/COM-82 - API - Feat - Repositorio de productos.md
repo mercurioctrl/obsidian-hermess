@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-82"
 
 ## Relaciones
 
-- **Padre:** [[COM-81]] Repositorio de productos
-- **blocks:** [[COM-83]] APP - Feat - Agregar item a una orden de compra
-- **relates to:** [[COM-92]] API - Repositorio de productos - Categoría no encontrada
-- **has action item:** [[COM-172]] API - Repositorio de productos - Error de tipo de datos al buscar
+- **Padre:** [[COM-81 - Repositorio de productos|COM-81]] Repositorio de productos
+- **blocks:** [[COM-83 - APP - Feat - Agregar item a una orden de compra|COM-83]] APP - Feat - Agregar item a una orden de compra
+- **relates to:** [[COM-92 - API - Repositorio de productos - Categoría no encontrada|COM-92]] API - Repositorio de productos - Categoría no encontrada
+- **has action item:** [[COM-172 - API - Repositorio de productos - Error de tipo de datos al buscar|COM-172]] API - Repositorio de productos - Error de tipo de datos al buscar
 
 ## Descripcion
 

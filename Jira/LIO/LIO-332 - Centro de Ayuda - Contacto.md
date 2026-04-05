@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-332"
 
 ## Relaciones
 
-- **Padre:** [[LIO-4]] Soporte al Cliente
-- **Subtarea:** [[LIO-333]] APP - Feat - Nueva seccion contacto para el centro de ayuda
+- **Padre:** [[LIO-4 - Soporte al Cliente|LIO-4]] Soporte al Cliente
+- **Subtarea:** [[LIO-333 - APP - Feat - Nueva seccion contacto para el centro de ayuda|LIO-333]] APP - Feat - Nueva seccion contacto para el centro de ayuda
 
 ## Descripcion
 

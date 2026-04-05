@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-981"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **has action item:** [[NBE-130]] Revisar Marcas que se filtraron de nb a NBe
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **has action item:** [[NBE-130 - Revisar Marcas que se filtraron de nb a NBe|NBE-130]] Revisar Marcas que se filtraron de nb a NBe
 
 ## Descripcion
 

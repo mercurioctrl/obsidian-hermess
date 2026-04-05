@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-212"
 
 ## Relaciones
 
-- **has action item:** [[INV-211]] API - MVP - Feat- Agregar repo con pestaña de producto por depósito
+- **has action item:** [[INV-211 - API - MVP - Feat- Agregar repo con pestaña de producto por depósito|INV-211]] API - MVP - Feat- Agregar repo con pestaña de producto por depósito
 
 ## Descripcion
 

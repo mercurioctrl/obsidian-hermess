@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-711"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-680]] APP - Refactor - Cambiar como se ve el seguimiento de envios
-- **relates to:** [[NBWEB-254]] API - Feat - Seguimiento de envios
-- **relates to:** [[NBWEB-716]] APP - Seguimiento de envíos - Sin datos de seguimiento
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-680 - APP - Refactor - Cambiar como se ve el seguimiento de envios|NBWEB-680]] APP - Refactor - Cambiar como se ve el seguimiento de envios
+- **relates to:** [[NBWEB-254 - API - Feat - Seguimiento de envios|NBWEB-254]] API - Feat - Seguimiento de envios
+- **relates to:** [[NBWEB-716 - APP - Seguimiento de envíos - Sin datos de seguimiento|NBWEB-716]] APP - Seguimiento de envíos - Sin datos de seguimiento
 
 ## Descripcion
 

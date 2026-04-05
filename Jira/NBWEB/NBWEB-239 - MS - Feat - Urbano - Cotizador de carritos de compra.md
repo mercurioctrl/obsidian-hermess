@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-239"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **relates to:** [[NBWEB-240]] MS - Feat - Urbano - Cotizar ordenes de compra
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **relates to:** [[NBWEB-240 - MS - Feat - Urbano - Cotizar ordenes de compra|NBWEB-240]] MS - Feat - Urbano - Cotizar ordenes de compra
 
 ## Descripcion
 

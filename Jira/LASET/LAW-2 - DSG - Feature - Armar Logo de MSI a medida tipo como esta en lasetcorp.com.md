@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-2"
 
 ## Relaciones
 
-- **Padre:** [[LAW-1]] Sitio Web Actual_Etapa 1
-- **has action item:** [[LAW-5]] APP-Refactor-Agregar Logo MSI a carrousell de marcas 
+- **Padre:** [[LAW-1 - Sitio Web Actual_Etapa 1|LAW-1]] Sitio Web Actual_Etapa 1
+- **has action item:** [[LAW-5 - APP-Refactor-Agregar Logo MSI a carrousell de marcas|LAW-5]] APP-Refactor-Agregar Logo MSI a carrousell de marcas 
 
 ## Descripcion
 

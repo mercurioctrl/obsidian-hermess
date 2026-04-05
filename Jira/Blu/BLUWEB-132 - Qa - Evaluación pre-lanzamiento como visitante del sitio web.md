@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-132"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **has action item:** [[BLUWEB-134]] Respuestas a Qa del sitio etapa 0
-- **action item from:** [[BLUWEB-135]] 1 - ¿Tiene alguna funcionalidad este botón?
-- **has action item:** [[BLUWEB-137]] APP - 2-Aparece como una imagen blanca antes de cargar las imagenes.
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **has action item:** [[BLUWEB-134 - Respuestas a Qa del sitio etapa 0|BLUWEB-134]] Respuestas a Qa del sitio etapa 0
+- **action item from:** [[BLUWEB-135 - 1 - ¿Tiene alguna funcionalidad este botón|BLUWEB-135]] 1 - ¿Tiene alguna funcionalidad este botón?
+- **has action item:** [[BLUWEB-137 - APP - 2-Aparece como una imagen blanca antes de cargar las imagenes.|BLUWEB-137]] APP - 2-Aparece como una imagen blanca antes de cargar las imagenes.
 
 ## Descripcion
 

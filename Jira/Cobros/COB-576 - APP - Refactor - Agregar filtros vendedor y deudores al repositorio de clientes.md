@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-576"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **action item from:** [[COB-574]] API - Refactor - Agregar filtros "vendedor" y "deudores" al repositorio de clientes
-- **action item from:** [[COB-575]] API - Feat - Repositorio vendedores
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **action item from:** [[COB-574 - API - Refactor - Agregar filtros vendedor y deudores al repositorio de clientes|COB-574]] API - Refactor - Agregar filtros "vendedor" y "deudores" al repositorio de clientes
+- **action item from:** [[COB-575 - API - Feat - Repositorio vendedores|COB-575]] API - Feat - Repositorio vendedores
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-470"
 
 ## Relaciones
 
-- **Padre:** [[COB-293]] Retenciones / Percepciones
-- **blocks:** [[SNB-913]] HAY QUE AGREGAR RETENCIONES
-- **blocks:** [[SNB-1026]] TENGO QUE AGREGAR RETENCIONES....
+- **Padre:** [[COB-293 - Retenciones Percepciones|COB-293]] Retenciones / Percepciones
+- **blocks:** [[SNB-913 - HAY QUE AGREGAR RETENCIONES|SNB-913]] HAY QUE AGREGAR RETENCIONES
+- **blocks:** [[SNB-1026 - TENGO QUE AGREGAR RETENCIONES....|SNB-1026]] TENGO QUE AGREGAR RETENCIONES....
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-10"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-27]] API - Feat - Obtener listado de usuarios
-- **Subtarea:** [[BLUWEB-28]] API - Feat - Crear nuevo usuario
-- **Subtarea:** [[BLUWEB-29]] API - Feat - Modificar usuario existente
-- **Subtarea:** [[BLUWEB-30]] API - Feat - Eliminar Usuario
+- **Subtarea:** [[BLUWEB-27 - API - Feat - Obtener listado de usuarios|BLUWEB-27]] API - Feat - Obtener listado de usuarios
+- **Subtarea:** [[BLUWEB-28 - API - Feat - Crear nuevo usuario|BLUWEB-28]] API - Feat - Crear nuevo usuario
+- **Subtarea:** [[BLUWEB-29 - API - Feat - Modificar usuario existente|BLUWEB-29]] API - Feat - Modificar usuario existente
+- **Subtarea:** [[BLUWEB-30 - API - Feat - Eliminar Usuario|BLUWEB-30]] API - Feat - Eliminar Usuario
 
 ## Descripcion
 

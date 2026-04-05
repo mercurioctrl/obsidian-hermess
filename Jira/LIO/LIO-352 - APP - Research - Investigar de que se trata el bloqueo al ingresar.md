@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-352"
 
 ## Relaciones
 
-- **Padre:** [[LIO-350]] Menues
+- **Padre:** [[LIO-350 - Menues|LIO-350]] Menues
 
 ## Descripcion
 

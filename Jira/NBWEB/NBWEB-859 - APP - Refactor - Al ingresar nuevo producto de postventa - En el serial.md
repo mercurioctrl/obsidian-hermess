@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-859"
 
 ## Relaciones
 
-- **relates to:** [[SNB-2279]] Tengo un cliente en mostrador el cual no puede cargar su RMA
+- **relates to:** [[SNB-2279 - Tengo un cliente en mostrador el cual no puede cargar su RMA|SNB-2279]] Tengo un cliente en mostrador el cual no puede cargar su RMA
 
 ## Descripcion
 

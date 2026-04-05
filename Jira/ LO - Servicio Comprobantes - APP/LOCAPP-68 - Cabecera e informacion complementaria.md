@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-68"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-20]] Mostrar comprobante
-- **Subtarea:** [[LOCAPP-69]] API - Refactor - Permitir usar logo personalizado por empresa
-- **Subtarea:** [[LOCAPP-70]] API - Refactor - Permitir usar logo personalizado por empresa en volanta operativa
-- **Subtarea:** [[LOCAPP-71]] APP - Refactor - Permitir usar logo personalizado por empresa en volanta operativa
-- **Subtarea:** [[LOCAPP-75]] API - Refactor - Tanto la informacion complementaria, como el emisor de la factura deben tomar companyCode en comprobante, si es NULL el del cliente
+- **Padre:** [[LOCAPP-20 - Mostrar comprobante|LOCAPP-20]] Mostrar comprobante
+- **Subtarea:** [[LOCAPP-69 - API - Refactor - Permitir usar logo personalizado por empresa|LOCAPP-69]] API - Refactor - Permitir usar logo personalizado por empresa
+- **Subtarea:** [[LOCAPP-70 - API - Refactor - Permitir usar logo personalizado por empresa en volanta|LOCAPP-70]] API - Refactor - Permitir usar logo personalizado por empresa en volanta operativa
+- **Subtarea:** [[LOCAPP-71 - APP - Refactor - Permitir usar logo personalizado por empresa en volanta|LOCAPP-71]] APP - Refactor - Permitir usar logo personalizado por empresa en volanta operativa
+- **Subtarea:** [[LOCAPP-75 - API - Refactor - Tanto la informacion complementaria, como el emisor de la|LOCAPP-75]] API - Refactor - Tanto la informacion complementaria, como el emisor de la factura deben tomar companyCode en comprobante, si es NULL el del cliente
 
 ## Descripcion
 

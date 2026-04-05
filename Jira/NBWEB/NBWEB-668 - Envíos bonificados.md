@@ -29,15 +29,15 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-668"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-495]] API - Features especiales
-- **Subtarea:** [[NBWEB-669]] API - Feat - Dataset para limites de exclusion
-- **Subtarea:** [[NBWEB-670]] MS - Feat - Cotizar con la bonificacion desde ms-envios directamente
-- **Subtarea:** [[NBWEB-671]] APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con condiciones
-- **Subtarea:** [[NBWEB-677]] API - Feat - Agregar variable de env para habilitar o deshabilitar Bonificación de Envio
-- **Subtarea:** [[NBWEB-696]] APP - Refactor - Destacar y dar entidad a los envios gratis
-- **Subtarea:** [[NBWEB-719]] API - Refactor- Envio gratis solo para transportista habilitados para este fin
-- **Subtarea:** [[NBWEB-747]] API - Refactor - En los caso que tengamos envíos gratis solo pondremos como "gratis" la opción que tenga el menor precio de envío.
-- **Subtarea:** [[NBWEB-748]] APP - Refactor - Solo en los casos que tengamos envios gratis, ocultar (a menos que se desoculten) las otras opciones
+- **Padre:** [[NBWEB-495 - API - Features especiales|NBWEB-495]] API - Features especiales
+- **Subtarea:** [[NBWEB-669 - API - Feat - Dataset para limites de exclusion|NBWEB-669]] API - Feat - Dataset para limites de exclusion
+- **Subtarea:** [[NBWEB-670 - MS - Feat - Cotizar con la bonificacion desde ms-envios directamente|NBWEB-670]] MS - Feat - Cotizar con la bonificacion desde ms-envios directamente
+- **Subtarea:** [[NBWEB-671 - APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con|NBWEB-671]] APP - Feat- Mostrar los que tienen precios en cero, como GRATIS y mensaje con condiciones
+- **Subtarea:** [[NBWEB-677 - API - Feat - Agregar variable de env para habilitar o deshabilitar Bonificación|NBWEB-677]] API - Feat - Agregar variable de env para habilitar o deshabilitar Bonificación de Envio
+- **Subtarea:** [[NBWEB-696 - APP - Refactor - Destacar y dar entidad a los envios gratis|NBWEB-696]] APP - Refactor - Destacar y dar entidad a los envios gratis
+- **Subtarea:** [[NBWEB-719 - API - Refactor- Envio gratis solo para transportista habilitados para este fin|NBWEB-719]] API - Refactor- Envio gratis solo para transportista habilitados para este fin
+- **Subtarea:** [[NBWEB-747 - API - Refactor - En los caso que tengamos envíos gratis solo pondremos como|NBWEB-747]] API - Refactor - En los caso que tengamos envíos gratis solo pondremos como "gratis" la opción que tenga el menor precio de envío.
+- **Subtarea:** [[NBWEB-748 - APP - Refactor - Solo en los casos que tengamos envios gratis, ocultar (a menos|NBWEB-748]] APP - Refactor - Solo en los casos que tengamos envios gratis, ocultar (a menos que se desoculten) las otras opciones
 
 ## Descripcion
 

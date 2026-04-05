@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-110"
 
 ## Relaciones
 
-- **Padre:** [[COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
-- **is blocked by:** [[COM-128]] API - Generar un ingreso - Error al crear el detalle del remito
-- **blocks:** [[COM-129]] APP - Refactor - Generar un ingreso en base a una orden
+- **Padre:** [[COM-109 - Generar INGRESO o pedido (a partir de una orden de compra)|COM-109]] Generar INGRESO o pedido (a partir de una orden de compra)
+- **is blocked by:** [[COM-128 - API - Generar un ingreso - Error al crear el detalle del remito|COM-128]] API - Generar un ingreso - Error al crear el detalle del remito
+- **blocks:** [[COM-129 - APP - Refactor - Generar un ingreso en base a una orden|COM-129]] APP - Refactor - Generar un ingreso en base a una orden
 
 ## Descripcion
 

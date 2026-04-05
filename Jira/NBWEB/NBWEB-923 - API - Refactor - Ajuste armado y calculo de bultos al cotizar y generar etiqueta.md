@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-923"
 
 ## Relaciones
 
-- **has action item:** [[SNB-2519]] Revisar calculo de bultos
+- **has action item:** [[SNB-2519 - Revisar calculo de bultos|SNB-2519]] Revisar calculo de bultos
 
 ## Descripcion
 

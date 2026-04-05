@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "215fc7be316b61db",
+        "id": "a1dc445a11f77ee9",
         "type": "tabs",
         "children": [
           {
-            "id": "912ff32531a50967",
+            "id": "b2f6de10b577039c",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "Jira/LO | Marketing/_LOMKT - Indice.md",
-                "bFile": "Jira/LO | Marketing/_LOMKT - Indice.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: _LOMKT - Indice  (Working Tree)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -194,8 +190,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "912ff32531a50967",
+  "active": "b2f6de10b577039c",
   "lastOpenFiles": [
+    "FB-38.md",
+    "Jira/Fontaine Bleau/_FB - Indice.md",
+    "Jira/Fontaine Bleau/FB-4 - Profile picture para Instagram, Facebook y Linkedin.md",
+    "LOCAPP-31.md",
+    "Jira/ LO - Servicio Comprobantes - APP/_LOCAPP - Indice.md",
+    "Jira/_Jira - Indice.md",
     "Jira/Cobros/_COB - Indice.md",
     "COB-49.md",
     "Jira/TABLERO DE ELO/_TDE - Indice.md",
@@ -217,12 +219,6 @@
     "Jira/Service Task v3/STASK-17 - API - Dataset - Modelo de datos para notificaciones y attempts.md",
     "Jira/Service Task v3/STASK-16 - API - Feat – Encolar notificación multicanal (universal).md",
     "Jira/Service Task v3/STASK-15 - Sistema de Notificaciones Multicanal (Queue + Workers).md",
-    "Jira/Service Task v3/STASK-14 - API - Op. Mejora - Agregar razón social al asunto y cabecera del pedido.md",
-    "Jira/Service Task v3/STASK-13 - TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora en la fecha.md",
-    "Jira/Service Task v3/STASK-12 - API - Review - Salida exitosa pese a que los correos no se enviaron.md",
-    "Jira/Service Task v3/STASK-11 - API - Review - Invertir posiciones a branch-order que quedo alrveves en la.md",
-    "Jira/Service Task v3/STASK-10 - API - Refactor - Correo ya disponible para retirar en pedidods pickUp.md",
-    "Jira/Service Task v3/STASK-8 - API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos.md",
     "Jira/Service Task v3",
     "Jira/Servicio de asistencia | BLU",
     "Jira/Redes Sociales NB y LIO",

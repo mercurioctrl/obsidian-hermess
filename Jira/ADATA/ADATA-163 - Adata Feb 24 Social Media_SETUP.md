@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-163"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-178]] Feb: 1/4 Portada Diseño Social Media_ Setup
-- **Subtarea:** [[ADATA-179]] 4.Adata Febrero: 1/4 Copys Social Media_ 
-- **Subtarea:** [[ADATA-180]] Febrero: 1/4 Programar Social Media_  SETUP XPG 15-02
-- **Subtarea:** [[ADATA-233]] 5.Feb: Buscar producto en base a lo que pasaron para comunicar 
+- **Subtarea:** [[ADATA-178 - Feb 14 Portada Diseño Social Media_ Setup|ADATA-178]] Feb: 1/4 Portada Diseño Social Media_ Setup
+- **Subtarea:** [[ADATA-179 - 4.Adata Febrero 14 Copys Social Media_|ADATA-179]] 4.Adata Febrero: 1/4 Copys Social Media_ 
+- **Subtarea:** [[ADATA-180 - Febrero 14 Programar Social Media_ SETUP XPG 15-02|ADATA-180]] Febrero: 1/4 Programar Social Media_  SETUP XPG 15-02
+- **Subtarea:** [[ADATA-233 - 5.Feb Buscar producto en base a lo que pasaron para comunicar|ADATA-233]] 5.Feb: Buscar producto en base a lo que pasaron para comunicar 
 
 ## Descripcion
 

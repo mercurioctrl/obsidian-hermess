@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-298"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-240]] API - Refactor - Agregar al repositorio de stock la cantidad de ventas / resesvas realizadas 
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-240 - API - Refactor - Agregar al repositorio de stock la cantidad de ventas resesvas|INV-240]] API - Refactor - Agregar al repositorio de stock la cantidad de ventas / resesvas realizadas 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-30"
 
 ## Relaciones
 
-- **Padre:** [[COM-27]] Listar facturas de compras 
+- **Padre:** [[COM-27 - Listar facturas de compras|COM-27]] Listar facturas de compras 
 
 ## Descripcion
 

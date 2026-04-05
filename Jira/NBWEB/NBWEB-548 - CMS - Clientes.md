@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-548"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **Subtarea:** [[NBWEB-549]] API - Feat - Listar clientes
-- **Subtarea:** [[NBWEB-550]] APP - Feat - Listar clientes
-- **Subtarea:** [[NBWEB-551]] API - Feat - Editar clientes
-- **Subtarea:** [[NBWEB-556]] API - Repositorio empresas
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **Subtarea:** [[NBWEB-549 - API - Feat - Listar clientes|NBWEB-549]] API - Feat - Listar clientes
+- **Subtarea:** [[NBWEB-550 - APP - Feat - Listar clientes|NBWEB-550]] APP - Feat - Listar clientes
+- **Subtarea:** [[NBWEB-551 - API - Feat - Editar clientes|NBWEB-551]] API - Feat - Editar clientes
+- **Subtarea:** [[NBWEB-556 - API - Repositorio empresas|NBWEB-556]] API - Repositorio empresas
 
 ## Descripcion
 

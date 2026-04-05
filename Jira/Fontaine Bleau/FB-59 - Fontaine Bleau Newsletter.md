@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-59"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-60]] API - Envio de Correo
+- **Subtarea:** [[FB-60 - API - Envio de Correo|FB-60]] API - Envio de Correo
 
 ## Descripcion
 

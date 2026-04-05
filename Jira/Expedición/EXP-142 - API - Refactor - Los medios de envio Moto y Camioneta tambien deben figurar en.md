@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-142"
 
 ## Relaciones
 
-- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
-- **blocks:** [[SNB-478]] sistema nuevo
+- **Padre:** [[EXP-12 - Feat - Listar pedidos para envio|EXP-12]] Feat - Listar pedidos para envio
+- **blocks:** [[SNB-478 - sistema nuevo|SNB-478]] sistema nuevo
 
 ## Descripcion
 

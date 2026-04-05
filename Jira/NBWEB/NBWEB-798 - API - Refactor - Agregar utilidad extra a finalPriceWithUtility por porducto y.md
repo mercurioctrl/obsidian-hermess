@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-798"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-641]] Listas de precio
-- **relates to:** [[NBWEB-802]] API - Agregar utilidad extra por producto y cliente - Sugerencia en los parámetros del detalle de la utilidad agregada
+- **Padre:** [[NBWEB-641 - Listas de precio|NBWEB-641]] Listas de precio
+- **relates to:** [[NBWEB-802 - API - Agregar utilidad extra por producto y cliente - Sugerencia en los|NBWEB-802]] API - Agregar utilidad extra por producto y cliente - Sugerencia en los parámetros del detalle de la utilidad agregada
 
 ## Descripcion
 

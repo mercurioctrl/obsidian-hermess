@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-261"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-255]] Abr: 1/4 Social Media
+- **Padre:** [[ADATA-255 - Abr 14 Social Media|ADATA-255]] Abr: 1/4 Social Media
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-302"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-303]] API - Feat - Mi vendedor
+- **relates to:** [[NBWEB-303 - API - Feat - Mi vendedor|NBWEB-303]] API - Feat - Mi vendedor
 
 ## Descripcion
 

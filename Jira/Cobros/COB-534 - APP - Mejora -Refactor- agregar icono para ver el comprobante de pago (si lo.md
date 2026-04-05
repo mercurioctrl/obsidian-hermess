@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-534"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **is blocked by:** [[COB-541]] APP - Agregar icono para ver el comprobante de pago (si lo tiene) en el modal de cobrar - Pedido indefinido
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **is blocked by:** [[COB-541 - APP - Agregar icono para ver el comprobante de pago (si lo tiene) en el modal|COB-541]] APP - Agregar icono para ver el comprobante de pago (si lo tiene) en el modal de cobrar - Pedido indefinido
 
 ## Descripcion
 

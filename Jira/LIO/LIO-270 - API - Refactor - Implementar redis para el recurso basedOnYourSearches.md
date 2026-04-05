@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-270"
 
 ## Relaciones
 
-- **Padre:** [[LIO-261]] Implementar Redis
+- **Padre:** [[LIO-261 - Implementar Redis|LIO-261]] Implementar Redis
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-69"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **blocks:** [[COM-70]] APP - Refactor - Agregar a el objeto del detalle de la orden la posicion arancelaria y sus impuestos 
-- **is blocked by:** [[COM-74]] API - Añadir posición arancelaria e impuestos al detalle de la orden - Posición de articulo no coincidente 
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **blocks:** [[COM-70 - APP - Refactor - Agregar a el objeto del detalle de la orden la posicion|COM-70]] APP - Refactor - Agregar a el objeto del detalle de la orden la posicion arancelaria y sus impuestos 
+- **is blocked by:** [[COM-74 - API - Añadir posición arancelaria e impuestos al detalle de la orden - Posición|COM-74]] API - Añadir posición arancelaria e impuestos al detalle de la orden - Posición de articulo no coincidente 
 
 ## Descripcion
 

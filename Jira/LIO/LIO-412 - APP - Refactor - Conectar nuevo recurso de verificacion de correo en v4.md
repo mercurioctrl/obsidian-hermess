@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-412"
 
 ## Relaciones
 
-- **Padre:** [[LIO-410]] Validar identidad
-- **action item from:** [[LIO-411]] API - Refactor - Envío de correo electrónico con token de validación al registrar usuario
+- **Padre:** [[LIO-410 - Validar identidad|LIO-410]] Validar identidad
+- **action item from:** [[LIO-411 - API - Refactor - Envío de correo electrónico con token de validación al|LIO-411]] API - Refactor - Envío de correo electrónico con token de validación al registrar usuario
 
 ## Descripcion
 

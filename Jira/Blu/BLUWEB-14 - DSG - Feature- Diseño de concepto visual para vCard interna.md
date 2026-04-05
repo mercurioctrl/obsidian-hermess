@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-14"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **has action item:** [[BLUWEB-15]] APP - Seccion vCard
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **has action item:** [[BLUWEB-15 - APP - Seccion vCard|BLUWEB-15]] APP - Seccion vCard
 
 ## Descripcion
 

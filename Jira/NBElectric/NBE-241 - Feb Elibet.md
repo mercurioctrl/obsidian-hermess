@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-241"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-242]] Enviar Folleto vía WhatsApp por el WhatsApp de blu
-- **Subtarea:** [[NBE-243]] Feb: Banner Nbe Elibet
-- **Subtarea:** [[NBE-245]] Subir Banner en primer Lugar
+- **Subtarea:** [[NBE-242 - Enviar Folleto vía WhatsApp por el WhatsApp de blu|NBE-242]] Enviar Folleto vía WhatsApp por el WhatsApp de blu
+- **Subtarea:** [[NBE-243 - Feb Banner Nbe Elibet|NBE-243]] Feb: Banner Nbe Elibet
+- **Subtarea:** [[NBE-245 - Subir Banner en primer Lugar|NBE-245]] Subir Banner en primer Lugar
 
 ## Descripcion
 

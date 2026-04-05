@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-405"
 
 ## Relaciones
 
-- **Padre:** [[LIO-391]] Desarrollos IA para LIO (Aleph)
-- **relates to:** [[LIO-400]] API - Refactor - Ajustes para el asistente de compatibilidad, ejecutar la consulta solo si parece ser relevante
+- **Padre:** [[LIO-391 - Desarrollos IA para LIO (Aleph)|LIO-391]] Desarrollos IA para LIO (Aleph)
+- **relates to:** [[LIO-400 - API - Refactor - Ajustes para el asistente de compatibilidad, ejecutar la|LIO-400]] API - Refactor - Ajustes para el asistente de compatibilidad, ejecutar la consulta solo si parece ser relevante
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-152"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-172]] NBE: Triada 21_Copys
-- **Subtarea:** [[NBE-181]] NBE: Triada 21 Programar Post  
+- **Subtarea:** [[NBE-172 - NBE Triada 21_Copys|NBE-172]] NBE: Triada 21_Copys
+- **Subtarea:** [[NBE-181 - NBE Triada 21 Programar Post|NBE-181]] NBE: Triada 21 Programar Post  
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-152"
 
 ## Relaciones
 
-- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
+- **Padre:** [[EXP-14 - Feat - Listar pedidos para retiro|EXP-14]] Feat - Listar pedidos para retiro
 
 ## Descripcion
 

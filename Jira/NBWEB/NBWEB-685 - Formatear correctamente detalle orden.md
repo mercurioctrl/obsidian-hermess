@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-685"
 
 ## Relaciones
 
-- **relates to:** [[SNB-1711]] En el sitio web de NB, en el detalle de orden de compras, deberia devolver las cantidades con otro formato
+- **relates to:** [[SNB-1711 - En el sitio web de NB, en el detalle de orden de compras, deberia devolver las|SNB-1711]] En el sitio web de NB, en el detalle de orden de compras, deberia devolver las cantidades con otro formato
 
 ## Descripcion
 

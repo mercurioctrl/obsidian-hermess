@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-19"
 
 ## Relaciones
 
-- **Padre:** [[EXP-9]] Pases de mercaderia
-- **Subtarea:** [[EXP-28]] API - Feat - Procesar un pase de expedición
-- **Subtarea:** [[EXP-29]] APP - Feat -Procesar pases de mercadería
-- **Subtarea:** [[EXP-210]] APP - Refactor - Remover temporalmente campo de token y enviar vacio el parametro
+- **Padre:** [[EXP-9 - Pases de mercaderia|EXP-9]] Pases de mercaderia
+- **Subtarea:** [[EXP-28 - API - Feat - Procesar un pase de expedición|EXP-28]] API - Feat - Procesar un pase de expedición
+- **Subtarea:** [[EXP-29 - APP - Feat -Procesar pases de mercadería|EXP-29]] APP - Feat -Procesar pases de mercadería
+- **Subtarea:** [[EXP-210 - APP - Refactor - Remover temporalmente campo de token y enviar vacio el|EXP-210]] APP - Refactor - Remover temporalmente campo de token y enviar vacio el parametro
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-100"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-101]] Research Actividad / Ideas
-- **Subtarea:** [[MKT-102]] Fork estetico sitio
-- **Subtarea:** [[MKT-103]] Imagenes, colores, estetica
+- **Subtarea:** [[MKT-101 - Research Actividad Ideas|MKT-101]] Research Actividad / Ideas
+- **Subtarea:** [[MKT-102 - Fork estetico sitio|MKT-102]] Fork estetico sitio
+- **Subtarea:** [[MKT-103 - Imagenes, colores, estetica|MKT-103]] Imagenes, colores, estetica
 
 ## Descripcion
 

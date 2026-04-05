@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-137"
 
 ## Relaciones
 
-- **Subtarea:** [[MKT-138]] APP - Colocar mini banner superior
-- **Subtarea:** [[MKT-139]] APP -  Colocar slider principal
+- **Subtarea:** [[MKT-138 - APP - Colocar mini banner superior|MKT-138]] APP - Colocar mini banner superior
+- **Subtarea:** [[MKT-139 - APP - Colocar slider principal|MKT-139]] APP -  Colocar slider principal
 
 ## Descripcion
 

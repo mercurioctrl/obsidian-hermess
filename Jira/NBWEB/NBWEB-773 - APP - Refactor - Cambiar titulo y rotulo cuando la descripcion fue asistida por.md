@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-773"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **is blocked by:** [[NBWEB-772]] API - Refactor - Agregar parametro "copilot" al recurso de descripciones 
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **is blocked by:** [[NBWEB-772 - API - Refactor - Agregar parametro copilot al recurso de descripciones|NBWEB-772]] API - Refactor - Agregar parametro "copilot" al recurso de descripciones 
 
 ## Descripcion
 

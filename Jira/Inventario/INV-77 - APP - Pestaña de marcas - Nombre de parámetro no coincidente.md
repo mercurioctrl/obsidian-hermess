@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-77"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-67]] APP - Feat - Pestaña de marcas
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-67 - APP - Feat - Pestaña de marcas|INV-67]] APP - Feat - Pestaña de marcas
 
 ## Descripcion
 

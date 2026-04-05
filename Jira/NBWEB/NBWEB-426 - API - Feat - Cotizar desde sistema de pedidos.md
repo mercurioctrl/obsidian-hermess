@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-426"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-423]] Logistica Envios
-- **is caused by:** [[PED-1]] API - Feat - Cotizar envios
+- **Padre:** [[NBWEB-423 - Logistica Envios|NBWEB-423]] Logistica Envios
+- **is caused by:** [[PED-1 - API - Feat - Cotizar envios|PED-1]] API - Feat - Cotizar envios
 
 ## Descripcion
 

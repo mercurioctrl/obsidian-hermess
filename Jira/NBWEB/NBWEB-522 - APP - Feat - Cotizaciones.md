@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-522"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-73]] API - CMS - ABMS
-- **is blocked by:** [[NBWEB-521]] API - Feat - Listar Cotizaciones
-- **is blocked by:** [[NBWEB-523]] API - Feat - Editar cotizacion
+- **Padre:** [[NBWEB-73 - API - CMS - ABMS|NBWEB-73]] API - CMS - ABMS
+- **is blocked by:** [[NBWEB-521 - API - Feat - Listar Cotizaciones|NBWEB-521]] API - Feat - Listar Cotizaciones
+- **is blocked by:** [[NBWEB-523 - API - Feat - Editar cotizacion|NBWEB-523]] API - Feat - Editar cotizacion
 
 ## Descripcion
 

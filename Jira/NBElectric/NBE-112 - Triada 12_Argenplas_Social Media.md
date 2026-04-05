@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-112"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-132]] ⚡Triada 13_Argenplas_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-133]]  ✏️Triada 13_Argenplas_Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-132 - ⚡Triada 13_Argenplas_Desarrollo de piezas Social Media|NBE-132]] ⚡Triada 13_Argenplas_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-133 - ✏️Triada 13_Argenplas_Armar Copy + realizar post en instagram, linkedin y|NBE-133]]  ✏️Triada 13_Argenplas_Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

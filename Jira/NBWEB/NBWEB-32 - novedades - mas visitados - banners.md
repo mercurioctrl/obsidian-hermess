@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-32"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-9]] APP - Home
+- **Padre:** [[NBWEB-9 - APP - Home|NBWEB-9]] APP - Home
 
 ## Descripcion
 

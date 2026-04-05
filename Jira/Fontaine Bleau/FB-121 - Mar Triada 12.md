@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-121"
 
 ## Relaciones
 
-- **Subtarea:** [[FB-122]] 2. Diseño crear nueva propuesta a comunicar_Programar
+- **Subtarea:** [[FB-122 - 2. Diseño crear nueva propuesta a comunicar_Programar|FB-122]] 2. Diseño crear nueva propuesta a comunicar_Programar
 
 ## Descripcion
 

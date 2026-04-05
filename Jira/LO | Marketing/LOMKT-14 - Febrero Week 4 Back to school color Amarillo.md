@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-14"
 
 ## Relaciones
 
-- **Subtarea:** [[LOMKT-15]] Feb Week 4/1: Diseño Back to School Vaso de regalo
-- **Subtarea:** [[LOMKT-24]] Feb Week 4 : Banners + Portada de newsletter
-- **Subtarea:** [[LOMKT-67]] Feb Week 4/2: Precios Escritorio( NO VA)
-- **Subtarea:** [[LOMKT-68]] Feb Week 4/3: Precios Flash
-- **Subtarea:** [[LOMKT-69]] Feb Week 4: Copys
-- **Subtarea:** [[LOMKT-70]] Feb Week 4: Programar
+- **Subtarea:** [[LOMKT-15 - Feb Week 41 Diseño Back to School Vaso de regalo|LOMKT-15]] Feb Week 4/1: Diseño Back to School Vaso de regalo
+- **Subtarea:** [[LOMKT-24 - Feb Week 4 Banners + Portada de newsletter|LOMKT-24]] Feb Week 4 : Banners + Portada de newsletter
+- **Subtarea:** [[LOMKT-67 - Feb Week 42 Precios Escritorio( NO VA)|LOMKT-67]] Feb Week 4/2: Precios Escritorio( NO VA)
+- **Subtarea:** [[LOMKT-68 - Feb Week 43 Precios Flash|LOMKT-68]] Feb Week 4/3: Precios Flash
+- **Subtarea:** [[LOMKT-69 - Feb Week 4 Copys|LOMKT-69]] Feb Week 4: Copys
+- **Subtarea:** [[LOMKT-70 - Feb Week 4 Programar|LOMKT-70]] Feb Week 4: Programar
 
 ## Descripcion
 

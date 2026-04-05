@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-79"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-78]] Endpoints especiales
+- **Padre:** [[LOCAPP-78 - Endpoints especiales|LOCAPP-78]] Endpoints especiales
 
 ## Descripcion
 

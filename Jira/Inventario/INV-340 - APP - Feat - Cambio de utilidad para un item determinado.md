@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-340"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-338]] API - Feat - Cambio de precio por utilidad para un item determinado
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-338 - API - Feat - Cambio de precio por utilidad para un item determinado|INV-338]] API - Feat - Cambio de precio por utilidad para un item determinado
 
 ## Descripcion
 

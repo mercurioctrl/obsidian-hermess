@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-257"
 
 ## Relaciones
 
-- **Padre:** [[LIO-1]] Experiencia del Usuario (UX)
-- **is duplicated by:** [[LIO-268]] APP - Refactor - Remplazar el termino "precio/s relampago" por "precio/s flash"
+- **Padre:** [[LIO-1 - Experiencia del Usuario (UX)|LIO-1]] Experiencia del Usuario (UX)
+- **is duplicated by:** [[LIO-268 - APP - Refactor - Remplazar el termino precios relampago por precios flash|LIO-268]] APP - Refactor - Remplazar el termino "precio/s relampago" por "precio/s flash"
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-160"
 
 ## Relaciones
 
-- **Padre:** [[LIO-124]] Calificaciones
-- **has action item:** [[SNB-3192]] Problema reputacion , borrar negativas ya que la mayoria son por factura o fallas de LO
+- **Padre:** [[LIO-124 - Calificaciones|LIO-124]] Calificaciones
+- **has action item:** [[SNB-3192 - Problema reputacion , borrar negativas ya que la mayoria son por factura o|SNB-3192]] Problema reputacion , borrar negativas ya que la mayoria son por factura o fallas de LO
 
 ## Descripcion
 

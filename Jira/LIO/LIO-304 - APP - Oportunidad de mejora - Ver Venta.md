@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-304"
 
 ## Relaciones
 
-- **Padre:** [[LIO-281]] Compras
-- **action item from:** [[LIO-283]] APP - Oportunidad de mejora - Ver compra
-- **action item from:** [[LIO-282]] APIv4 - Feat - Migrar repositorio de compras y liberar una parte para visualizarlo sin login
+- **Padre:** [[LIO-281 - Compras|LIO-281]] Compras
+- **action item from:** [[LIO-283 - APP - Oportunidad de mejora - Ver compra|LIO-283]] APP - Oportunidad de mejora - Ver compra
+- **action item from:** [[LIO-282 - APIv4 - Feat - Migrar repositorio de compras y liberar una parte para|LIO-282]] APIv4 - Feat - Migrar repositorio de compras y liberar una parte para visualizarlo sin login
 
 ## Descripcion
 

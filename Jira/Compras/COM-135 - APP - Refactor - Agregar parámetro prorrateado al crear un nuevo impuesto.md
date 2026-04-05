@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-135"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **blocks:** [[COM-131]] APP - Refactor- Agregar nuevo parámetro al repositorio de impuestos 
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **blocks:** [[COM-131 - APP - Refactor- Agregar nuevo parámetro al repositorio de impuestos|COM-131]] APP - Refactor- Agregar nuevo parámetro al repositorio de impuestos 
 
 ## Descripcion
 

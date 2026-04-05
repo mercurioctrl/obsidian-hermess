@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-112"
 
 ## Relaciones
 
-- **Padre:** [[LIO-111]] Contenido sindicado
-- **has action item:** [[LIO-113]] APP - Feat - Leer contenido sindicado en imagenes para un item determinado
+- **Padre:** [[LIO-111 - Contenido sindicado|LIO-111]] Contenido sindicado
+- **has action item:** [[LIO-113 - APP - Feat - Leer contenido sindicado en imagenes para un item determinado|LIO-113]] APP - Feat - Leer contenido sindicado en imagenes para un item determinado
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-1004"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-4]] API - Catalogos de productos
-- **relates to:** [[NBWEB-574]] API - Feat - Recurso para leer precios
+- **Padre:** [[NBWEB-4 - API - Catalogos de productos|NBWEB-4]] API - Catalogos de productos
+- **relates to:** [[NBWEB-574 - API - Feat - Recurso para leer precios|NBWEB-574]] API - Feat - Recurso para leer precios
 
 ## Descripcion
 

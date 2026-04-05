@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-60"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-131]] 4. Adata Diciembre: Armar Copy Navidad 2/2
-- **Subtarea:** [[ADATA-132]] 6. Adata Diciembre: Programar Navidad 2/2
+- **Subtarea:** [[ADATA-131 - 4. Adata Diciembre Armar Copy Navidad 22|ADATA-131]] 4. Adata Diciembre: Armar Copy Navidad 2/2
+- **Subtarea:** [[ADATA-132 - 6. Adata Diciembre Programar Navidad 22|ADATA-132]] 6. Adata Diciembre: Programar Navidad 2/2
 
 ## Descripcion
 

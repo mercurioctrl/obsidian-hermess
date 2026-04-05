@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-36"
 
 ## Relaciones
 
-- **Padre:** [[EXP-30]] Feat - Estructura del proyecto
+- **Padre:** [[EXP-30 - Feat - Estructura del proyecto|EXP-30]] Feat - Estructura del proyecto
 
 ## Descripcion
 

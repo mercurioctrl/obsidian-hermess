@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-879"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-876]] DOC - Feat - Agregar en developers / lista de precios "Tienda negocio"
+- **relates to:** [[NBWEB-876 - DOC - Feat - Agregar en developers lista de precios Tienda negocio|NBWEB-876]] DOC - Feat - Agregar en developers / lista de precios "Tienda negocio"
 
 ## Descripcion
 

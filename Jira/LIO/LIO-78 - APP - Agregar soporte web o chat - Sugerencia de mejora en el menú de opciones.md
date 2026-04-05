@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-78"
 
 ## Relaciones
 
-- **Padre:** [[LIO-20]] Bot de whatsapp
-- **blocks:** [[LIO-66]] APP - Feat - Agregar Soporte web o chat a libre opcion
+- **Padre:** [[LIO-20 - Bot de whatsapp|LIO-20]] Bot de whatsapp
+- **blocks:** [[LIO-66 - APP - Feat - Agregar Soporte web o chat a libre opcion|LIO-66]] APP - Feat - Agregar Soporte web o chat a libre opcion
 
 ## Descripcion
 

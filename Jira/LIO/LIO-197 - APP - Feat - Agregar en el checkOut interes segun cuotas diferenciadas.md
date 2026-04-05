@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-197"
 
 ## Relaciones
 
-- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
-- **action item from:** [[LIO-182]] API - Feat - Agregar interés de cuotas diferenciado para un mismo medio de pago
+- **Padre:** [[LIO-8 - Proceso pago sencillo y competitiva a nivel financiamiento|LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **action item from:** [[LIO-182 - API - Feat - Agregar interés de cuotas diferenciado para un mismo medio de pago|LIO-182]] API - Feat - Agregar interés de cuotas diferenciado para un mismo medio de pago
 
 ## Descripcion
 

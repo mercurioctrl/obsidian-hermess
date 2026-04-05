@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-555"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-495]] API - Features especiales
+- **Padre:** [[NBWEB-495 - API - Features especiales|NBWEB-495]] API - Features especiales
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-723"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[NBWEB-717]] API - Feat - Generar listado para tienda nube
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[NBWEB-717 - API - Feat - Generar listado para tienda nube|NBWEB-717]] API - Feat - Generar listado para tienda nube
 
 ## Descripcion
 

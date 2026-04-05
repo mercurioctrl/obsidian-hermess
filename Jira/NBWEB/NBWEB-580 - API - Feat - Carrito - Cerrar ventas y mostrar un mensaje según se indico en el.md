@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-580"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-252]] API - Refactor - Procesar carrito
-- **blocks:** [[NBWEB-582]] API - CMS - Feat - Pausar ventas y definir un mensaje para mostrar
-- **is blocked by:** [[NBWEB-582]] API - CMS - Feat - Pausar ventas y definir un mensaje para mostrar
+- **Padre:** [[NBWEB-252 - API - Refactor - Procesar carrito|NBWEB-252]] API - Refactor - Procesar carrito
+- **blocks:** [[NBWEB-582 - API - CMS - Feat - Pausar ventas y definir un mensaje para mostrar|NBWEB-582]] API - CMS - Feat - Pausar ventas y definir un mensaje para mostrar
+- **is blocked by:** [[NBWEB-582 - API - CMS - Feat - Pausar ventas y definir un mensaje para mostrar|NBWEB-582]] API - CMS - Feat - Pausar ventas y definir un mensaje para mostrar
 
 ## Descripcion
 

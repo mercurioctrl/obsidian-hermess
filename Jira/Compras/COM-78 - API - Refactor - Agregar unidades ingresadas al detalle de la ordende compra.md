@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-78"
 
 ## Relaciones
 
-- **Padre:** [[COM-38]] Ver orden de compra
-- **blocks:** [[COM-79]] APP - Refactor - Agregar unidades ingresadas al detalle de la ordende compra
+- **Padre:** [[COM-38 - Ver orden de compra|COM-38]] Ver orden de compra
+- **blocks:** [[COM-79 - APP - Refactor - Agregar unidades ingresadas al detalle de la ordende compra|COM-79]] APP - Refactor - Agregar unidades ingresadas al detalle de la ordende compra
 
 ## Descripcion
 

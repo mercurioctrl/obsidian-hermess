@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-26"
 
 ## Relaciones
 
-- **Padre:** [[LAW-14]] Logos Laset
+- **Padre:** [[LAW-14 - Logos Laset|LAW-14]] Logos Laset
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-853"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-851]] APP - Refactor - Segmento Outlet
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-851 - APP - Refactor - Segmento Outlet|NBWEB-851]] APP - Refactor - Segmento Outlet
 
 ## Descripcion
 

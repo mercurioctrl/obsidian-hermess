@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-104"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-95]] API - Refactor - Agregar nuevo producto
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-95 - API - Refactor - Agregar nuevo producto|INV-95]] API - Refactor - Agregar nuevo producto
 
 ## Descripcion
 

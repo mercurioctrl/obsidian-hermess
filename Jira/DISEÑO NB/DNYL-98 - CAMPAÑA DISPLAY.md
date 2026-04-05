@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-98"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-97]] LIO_Q2 2022_ HOT DAYS _ Banners Google
+- **Padre:** [[DNYL-97 - LIO_Q2 2022_ HOT DAYS _ Banners Google|DNYL-97]] LIO_Q2 2022_ HOT DAYS _ Banners Google
 
 ## Descripcion
 

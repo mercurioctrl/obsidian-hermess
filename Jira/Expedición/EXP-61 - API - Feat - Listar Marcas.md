@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-61"
 
 ## Relaciones
 
-- **Padre:** [[EXP-1]] Base y Repositorios
-- **blocks:** [[EXP-60]] API - Feat - Agregar filtro de marca al listado de pedidos proveedor
-- **blocks:** [[EXP-62]] APP - Feat - Agregar filtro de marca al listado de pedidos proveedor
+- **Padre:** [[EXP-1 - Base y Repositorios|EXP-1]] Base y Repositorios
+- **blocks:** [[EXP-60 - API - Feat - Agregar filtro de marca al listado de pedidos proveedor|EXP-60]] API - Feat - Agregar filtro de marca al listado de pedidos proveedor
+- **blocks:** [[EXP-62 - APP - Feat - Agregar filtro de marca al listado de pedidos proveedor|EXP-62]] APP - Feat - Agregar filtro de marca al listado de pedidos proveedor
 
 ## Descripcion
 

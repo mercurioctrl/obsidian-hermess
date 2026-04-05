@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-574"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **has action item:** [[COB-576]] APP - Refactor - Agregar filtros "vendedor" y "deudores" al repositorio de clientes
-- **relates to:** [[COB-577]] API - Propuesta de mejora - Repositorio de clientes -> Decimales visibles en el saldo
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **has action item:** [[COB-576 - APP - Refactor - Agregar filtros vendedor y deudores al repositorio de clientes|COB-576]] APP - Refactor - Agregar filtros "vendedor" y "deudores" al repositorio de clientes
+- **relates to:** [[COB-577 - API - Propuesta de mejora - Repositorio de clientes - Decimales visibles en el|COB-577]] API - Propuesta de mejora - Repositorio de clientes -> Decimales visibles en el saldo
 
 ## Descripcion
 

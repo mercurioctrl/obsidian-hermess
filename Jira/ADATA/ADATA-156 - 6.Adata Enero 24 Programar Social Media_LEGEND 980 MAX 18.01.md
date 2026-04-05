@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-156"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-141]] Adata Enero: Social Media 2/4_LEGEND 960 MAX
+- **Padre:** [[ADATA-141 - Adata Enero Social Media 24_LEGEND 960 MAX|ADATA-141]] Adata Enero: Social Media 2/4_LEGEND 960 MAX
 
 ## Descripcion
 

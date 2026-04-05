@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-268"
 
 ## Relaciones
 
-- **Padre:** [[COM-265]] Forwarders
-- **action item from:** [[COM-267]] API - Feat - Leer repositorio forwarders
-- **action item from:** [[COM-266]] API - Feat - Crear/Editar/Eliminar forwarder
+- **Padre:** [[COM-265 - Forwarders|COM-265]] Forwarders
+- **action item from:** [[COM-267 - API - Feat - Leer repositorio forwarders|COM-267]] API - Feat - Leer repositorio forwarders
+- **action item from:** [[COM-266 - API - Feat - CrearEditarEliminar forwarder|COM-266]] API - Feat - Crear/Editar/Eliminar forwarder
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BULLY-25"
 
 ## Relaciones
 
-- **Padre:** [[BULLY-24]] Tickers
+- **Padre:** [[BULLY-24 - Tickers|BULLY-24]] Tickers
 
 ## Descripcion
 

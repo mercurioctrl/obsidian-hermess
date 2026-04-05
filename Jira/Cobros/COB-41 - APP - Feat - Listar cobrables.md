@@ -29,18 +29,18 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-41"
 
 ## Relaciones
 
-- **Padre:** [[COB-33]] Cobrar
-- **Subtarea:** [[COB-109]] API - Feat - Filtros y paginacion
-- **Subtarea:** [[COB-111]] API - Feat - Listar Metodos de Pago Remitos Vendedores
-- **Subtarea:** [[COB-112]] API - Feat - Listar Transportes
-- **Subtarea:** [[COB-120]] API - Feat - Listar Tipos de Comprobantes
-- **Subtarea:** [[COB-121]] API - Feat - Listar Tipos de Impuestos
-- **Subtarea:** [[COB-238]] API - Refactor - Se agrega informacion sobre el banco donde el cliente hace el deposito
-- **Subtarea:** [[COB-273]] API - Performance - Mejorar velocidad en la carga del listado de cobrables < 4s
-- **Subtarea:** [[COB-346]] API - Refactor - Mostrar cotizacion especifica en el caso de los pedidos de libre opcion
-- **blocks:** [[COB-42]] APP - Feat -  Listar cobrables
-- **is blocked by:** [[COB-55]] API - Feat - Listar estados cobrarbles
-- **blocks:** [[COB-125]] APP - Feat - Modal de cobro
+- **Padre:** [[COB-33 - Cobrar|COB-33]] Cobrar
+- **Subtarea:** [[COB-109 - API - Feat - Filtros y paginacion|COB-109]] API - Feat - Filtros y paginacion
+- **Subtarea:** [[COB-111 - API - Feat - Listar Metodos de Pago Remitos Vendedores|COB-111]] API - Feat - Listar Metodos de Pago Remitos Vendedores
+- **Subtarea:** [[COB-112 - API - Feat - Listar Transportes|COB-112]] API - Feat - Listar Transportes
+- **Subtarea:** [[COB-120 - API - Feat - Listar Tipos de Comprobantes|COB-120]] API - Feat - Listar Tipos de Comprobantes
+- **Subtarea:** [[COB-121 - API - Feat - Listar Tipos de Impuestos|COB-121]] API - Feat - Listar Tipos de Impuestos
+- **Subtarea:** [[COB-238 - API - Refactor - Se agrega informacion sobre el banco donde el cliente hace el|COB-238]] API - Refactor - Se agrega informacion sobre el banco donde el cliente hace el deposito
+- **Subtarea:** [[COB-273 - API - Performance - Mejorar velocidad en la carga del listado de cobrables 4s|COB-273]] API - Performance - Mejorar velocidad en la carga del listado de cobrables < 4s
+- **Subtarea:** [[COB-346 - API - Refactor - Mostrar cotizacion especifica en el caso de los pedidos de|COB-346]] API - Refactor - Mostrar cotizacion especifica en el caso de los pedidos de libre opcion
+- **blocks:** [[COB-42 - APP - Feat - Listar cobrables|COB-42]] APP - Feat -  Listar cobrables
+- **is blocked by:** [[COB-55 - API - Feat - Listar estados cobrarbles|COB-55]] API - Feat - Listar estados cobrarbles
+- **blocks:** [[COB-125 - APP - Feat - Modal de cobro|COB-125]] APP - Feat - Modal de cobro
 
 ## Descripcion
 

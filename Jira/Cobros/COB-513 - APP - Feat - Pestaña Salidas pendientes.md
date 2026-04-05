@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-513"
 
 ## Relaciones
 
-- **Padre:** [[COB-19]] Cola de salidas
-- **Subtarea:** [[COB-516]] https://lioteam.atlassian.net/browse/COB-512
-- **is blocked by:** [[COB-512]] API - Feat - Leer salidas pendientes
-- **relates to:** [[COB-522]] APP - Pestaña Salidas pendientes - Sugerencias varias en el filtrado
-- **relates to:** [[COB-542]] API - Pestaña salidas pendientes - Paginación no coincidente
+- **Padre:** [[COB-19 - Cola de salidas|COB-19]] Cola de salidas
+- **Subtarea:** [[COB-516 - httpslioteam.atlassian.netbrowseCOB-512|COB-516]] https://lioteam.atlassian.net/browse/COB-512
+- **is blocked by:** [[COB-512 - API - Feat - Leer salidas pendientes|COB-512]] API - Feat - Leer salidas pendientes
+- **relates to:** [[COB-522 - APP - Pestaña Salidas pendientes - Sugerencias varias en el filtrado|COB-522]] APP - Pestaña Salidas pendientes - Sugerencias varias en el filtrado
+- **relates to:** [[COB-542 - API - Pestaña salidas pendientes - Paginación no coincidente|COB-542]] API - Pestaña salidas pendientes - Paginación no coincidente
 
 ## Descripcion
 

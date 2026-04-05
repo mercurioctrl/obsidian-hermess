@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-702"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-636]] Documentacion publica
+- **Padre:** [[NBWEB-636 - Documentacion publica|NBWEB-636]] Documentacion publica
 
 ## Descripcion
 

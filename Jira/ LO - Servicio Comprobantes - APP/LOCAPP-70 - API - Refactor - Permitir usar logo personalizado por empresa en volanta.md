@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-70"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-68]] Cabecera e informacion complementaria
+- **Padre:** [[LOCAPP-68 - Cabecera e informacion complementaria|LOCAPP-68]] Cabecera e informacion complementaria
 
 ## Descripcion
 

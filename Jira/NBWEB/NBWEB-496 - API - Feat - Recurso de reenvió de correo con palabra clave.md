@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-496"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-495]] API - Features especiales
-- **Subtarea:** [[NBWEB-506]] API - Refactor - Se debe enviar una notificacion a la gerencia
+- **Padre:** [[NBWEB-495 - API - Features especiales|NBWEB-495]] API - Features especiales
+- **Subtarea:** [[NBWEB-506 - API - Refactor - Se debe enviar una notificacion a la gerencia|NBWEB-506]] API - Refactor - Se debe enviar una notificacion a la gerencia
 
 ## Descripcion
 

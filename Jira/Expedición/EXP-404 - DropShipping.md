@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-404"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **Subtarea:** [[EXP-405]] API - Feat - Agregar parametro dropShipping al listado de despacho de envios
-- **Subtarea:** [[EXP-406]] APP - Feat - Agregar parametro dropShipping al listado de despacho de envios
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **Subtarea:** [[EXP-405 - API - Feat - Agregar parametro dropShipping al listado de despacho de envios|EXP-405]] API - Feat - Agregar parametro dropShipping al listado de despacho de envios
+- **Subtarea:** [[EXP-406 - APP - Feat - Agregar parametro dropShipping al listado de despacho de envios|EXP-406]] APP - Feat - Agregar parametro dropShipping al listado de despacho de envios
 
 ## Descripcion
 

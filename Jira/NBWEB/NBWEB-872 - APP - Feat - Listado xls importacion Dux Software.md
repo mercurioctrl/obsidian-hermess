@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-872"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **is blocked by:** [[NBWEB-868]] API - Feat - Listado xls importacion Dux Software 
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **is blocked by:** [[NBWEB-868 - API - Feat - Listado xls importacion Dux Software|NBWEB-868]] API - Feat - Listado xls importacion Dux Software 
 
 ## Descripcion
 

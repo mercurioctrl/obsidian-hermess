@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-530"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
 
 ## Descripcion
 

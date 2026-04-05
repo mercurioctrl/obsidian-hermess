@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-148"
 
 ## Relaciones
 
-- **Padre:** [[COB-146]] CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo
+- **Padre:** [[COB-146 - CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo|COB-146]] CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-462"
 
 ## Relaciones
 
-- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
-- **clones:** [[EXP-461]] API - Refactor - Recurso para Detallar Discrepancias entre Pedido y Armado en Depósito
+- **Padre:** [[EXP-13 - Feat - Etiquetas y seguimiento|EXP-13]] Feat - Etiquetas y seguimiento
+- **clones:** [[EXP-461 - API - Refactor - Recurso para Detallar Discrepancias entre Pedido y Armado en|EXP-461]] API - Refactor - Recurso para Detallar Discrepancias entre Pedido y Armado en Depósito
 
 ## Descripcion
 

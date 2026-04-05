@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-154"
 
 ## Relaciones
 
-- **Padre:** [[COM-27]] Listar facturas de compras 
-- **has action item:** [[COM-159]] APP - Refactor - Agregar filtro empresa global
+- **Padre:** [[COM-27 - Listar facturas de compras|COM-27]] Listar facturas de compras 
+- **has action item:** [[COM-159 - APP - Refactor - Agregar filtro empresa global|COM-159]] APP - Refactor - Agregar filtro empresa global
 
 ## Descripcion
 

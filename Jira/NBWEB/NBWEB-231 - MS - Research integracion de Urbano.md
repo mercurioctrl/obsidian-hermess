@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-231"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-76]] API - Implementar MS envios
-- **relates to:** [[NBWEB-246]]  Feat - Urbano - Cotizar bulk
+- **Padre:** [[NBWEB-76 - API - Implementar MS envios|NBWEB-76]] API - Implementar MS envios
+- **relates to:** [[NBWEB-246 - Feat - Urbano - Cotizar bulk|NBWEB-246]]  Feat - Urbano - Cotizar bulk
 
 ## Descripcion
 

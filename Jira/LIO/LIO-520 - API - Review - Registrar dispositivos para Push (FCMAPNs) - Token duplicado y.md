@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-520"
 
 ## Relaciones
 
-- **Padre:** [[LIO-507]] Login y otros aspectos generales
-- **clones:** [[LIO-512]] API - Feat - Registrar dispositivos para Push (FCM/APNs)
+- **Padre:** [[LIO-507 - Login y otros aspectos generales|LIO-507]] Login y otros aspectos generales
+- **clones:** [[LIO-512 - API - Feat - Registrar dispositivos para Push (FCMAPNs)|LIO-512]] API - Feat - Registrar dispositivos para Push (FCM/APNs)
 
 ## Descripcion
 

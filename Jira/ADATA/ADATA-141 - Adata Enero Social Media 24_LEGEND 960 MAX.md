@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-141"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-154]] Adata Enero: 2/4 Portada Diseño Social Media_ LEGEND 960 MAX
-- **Subtarea:** [[ADATA-155]] Adata Enero: 2/4 Copys Social Media_ LEGEND 960 MAX
-- **Subtarea:** [[ADATA-156]] 6.Adata Enero: 2/4 Programar Social Media_LEGEND 980 MAX  18.01
+- **Subtarea:** [[ADATA-154 - Adata Enero 24 Portada Diseño Social Media_ LEGEND 960 MAX|ADATA-154]] Adata Enero: 2/4 Portada Diseño Social Media_ LEGEND 960 MAX
+- **Subtarea:** [[ADATA-155 - Adata Enero 24 Copys Social Media_ LEGEND 960 MAX|ADATA-155]] Adata Enero: 2/4 Copys Social Media_ LEGEND 960 MAX
+- **Subtarea:** [[ADATA-156 - 6.Adata Enero 24 Programar Social Media_LEGEND 980 MAX 18.01|ADATA-156]] 6.Adata Enero: 2/4 Programar Social Media_LEGEND 980 MAX  18.01
 
 ## Descripcion
 

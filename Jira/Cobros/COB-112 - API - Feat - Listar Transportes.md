@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-112"
 
 ## Relaciones
 
-- **Padre:** [[COB-41]] APP - Feat -  Listar cobrables
+- **Padre:** [[COB-41 - APP - Feat - Listar cobrables|COB-41]] APP - Feat -  Listar cobrables
 
 ## Descripcion
 

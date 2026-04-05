@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-31"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-45]] 4. Adata Noviembre: Diseño Social Media 2/4 Fuentes
-- **Subtarea:** [[ADATA-46]] Adata Noviembre: Copys Social Media 2/4 Fuentes
-- **Subtarea:** [[ADATA-47]] Adata Noviembre: Programación  2/4 Fecha de post 12-11 Fuente
+- **Subtarea:** [[ADATA-45 - 4. Adata Noviembre Diseño Social Media 24 Fuentes|ADATA-45]] 4. Adata Noviembre: Diseño Social Media 2/4 Fuentes
+- **Subtarea:** [[ADATA-46 - Adata Noviembre Copys Social Media 24 Fuentes|ADATA-46]] Adata Noviembre: Copys Social Media 2/4 Fuentes
+- **Subtarea:** [[ADATA-47 - Adata Noviembre Programación 24 Fecha de post 12-11 Fuente|ADATA-47]] Adata Noviembre: Programación  2/4 Fecha de post 12-11 Fuente
 
 ## Descripcion
 

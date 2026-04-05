@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-126"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **is blocked by:** [[COM-125]] API - Feat - Editar/Crear Impuesto
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **is blocked by:** [[COM-125 - API - Feat - EditarCrear Impuesto|COM-125]] API - Feat - Editar/Crear Impuesto
 
 ## Descripcion
 

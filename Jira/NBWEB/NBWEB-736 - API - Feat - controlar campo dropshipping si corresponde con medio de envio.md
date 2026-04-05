@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-736"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-1836]] MOTO DROPSHIPPING
-- **causes:** [[NBWEB-737]] APP - Refactor: Al procesar el carrito y recibir el error debe ser posible mostrar el mensaje con el nuevo objeto entregado por la api
+- **is blocked by:** [[SNB-1836 - MOTO DROPSHIPPING|SNB-1836]] MOTO DROPSHIPPING
+- **causes:** [[NBWEB-737 - APP - Refactor Al procesar el carrito y recibir el error debe ser posible|NBWEB-737]] APP - Refactor: Al procesar el carrito y recibir el error debe ser posible mostrar el mensaje con el nuevo objeto entregado por la api
 
 ## Descripcion
 

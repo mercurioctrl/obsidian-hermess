@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-220"
 
 ## Relaciones
 
-- **Padre:** [[COM-138]] Crear orden de compra
+- **Padre:** [[COM-138 - Crear orden de compra|COM-138]] Crear orden de compra
 
 ## Descripcion
 

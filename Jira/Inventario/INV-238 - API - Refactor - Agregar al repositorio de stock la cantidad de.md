@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-238"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **relates to:** [[INV-275]] API - Review - Cantidad de regularizaciones realizadas - Cantidad no coincidente
-- **relates to:** [[INV-285]] API - Review - Se observan regularizaciones en cero, cuando deberían ser mayores a cero
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **relates to:** [[INV-275 - API - Review - Cantidad de regularizaciones realizadas - Cantidad no coincidente|INV-275]] API - Review - Cantidad de regularizaciones realizadas - Cantidad no coincidente
+- **relates to:** [[INV-285 - API - Review - Se observan regularizaciones en cero, cuando deberían ser|INV-285]] API - Review - Se observan regularizaciones en cero, cuando deberían ser mayores a cero
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-21"
 
 ## Relaciones
 
-- **Padre:** [[LAW-16]] Social Media Raidmax
+- **Padre:** [[LAW-16 - Social Media Raidmax|LAW-16]] Social Media Raidmax
 
 ## Descripcion
 

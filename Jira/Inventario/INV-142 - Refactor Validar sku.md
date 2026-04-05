@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-142"
 
 ## Relaciones
 
-- **Subtarea:** [[INV-144]] Validar SKU - Observaciones al validar sin completar los datos
-- **relates to:** [[INV-135]] API - Refactor - Siempre que lo que se edita es un sku, debe chequearse que el mismo no exista en otro producto
-- **blocks:** [[INV-136]] API - Refactor - Al editar y crear un producto tambien alterar los parametros viejos en string
+- **Subtarea:** [[INV-144 - Validar SKU - Observaciones al validar sin completar los datos|INV-144]] Validar SKU - Observaciones al validar sin completar los datos
+- **relates to:** [[INV-135 - API - Refactor - Siempre que lo que se edita es un sku, debe chequearse que el|INV-135]] API - Refactor - Siempre que lo que se edita es un sku, debe chequearse que el mismo no exista en otro producto
+- **blocks:** [[INV-136 - API - Refactor - Al editar y crear un producto tambien alterar los parametros|INV-136]] API - Refactor - Al editar y crear un producto tambien alterar los parametros viejos en string
 
 ## Descripcion
 

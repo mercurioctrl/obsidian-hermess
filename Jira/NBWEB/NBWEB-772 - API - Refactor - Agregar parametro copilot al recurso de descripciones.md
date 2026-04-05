@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-772"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **blocks:** [[NBWEB-773]] APP - Refactor - Cambiar titulo y rotulo cuando la descripcion fue asistida por un humano
-- **relates to:** [[NBWEB-776]] API - Refactor - Agregar parametro "copilot" al recurso de descripciones - Cambiar a tipo de dato bool
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **blocks:** [[NBWEB-773 - APP - Refactor - Cambiar titulo y rotulo cuando la descripcion fue asistida por|NBWEB-773]] APP - Refactor - Cambiar titulo y rotulo cuando la descripcion fue asistida por un humano
+- **relates to:** [[NBWEB-776 - API - Refactor - Agregar parametro copilot al recurso de descripciones -|NBWEB-776]] API - Refactor - Agregar parametro "copilot" al recurso de descripciones - Cambiar a tipo de dato bool
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-245"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **action item from:** [[COM-147]] APP - Feat - Agregar / Editar / Eliminar impuestos distribuidos
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **action item from:** [[COM-147 - APP - Feat - Agregar Editar Eliminar impuestos distribuidos|COM-147]] APP - Feat - Agregar / Editar / Eliminar impuestos distribuidos
 
 ## Descripcion
 

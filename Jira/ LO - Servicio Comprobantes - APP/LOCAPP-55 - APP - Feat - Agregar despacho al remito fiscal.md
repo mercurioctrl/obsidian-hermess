@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-55"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-53]] Agragar despachos de aduana a los remitos fiscales
+- **Padre:** [[LOCAPP-53 - Agragar despachos de aduana a los remitos fiscales|LOCAPP-53]] Agragar despachos de aduana a los remitos fiscales
 
 ## Descripcion
 

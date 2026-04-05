@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-595"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **has action item:** [[LIO-597]] APP - Feat - Migrar resumen de liquidacion por mes/año a v4
-- **has action item:** [[LIO-592]] APP Mobile - Feat - Migrar liquidaciones v3-legacy a LO-v4
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **has action item:** [[LIO-597 - APP - Feat - Migrar resumen de liquidacion por mesaño a v4|LIO-597]] APP - Feat - Migrar resumen de liquidacion por mes/año a v4
+- **has action item:** [[LIO-592 - APP Mobile - Feat - Migrar liquidaciones v3-legacy a LO-v4|LIO-592]] APP Mobile - Feat - Migrar liquidaciones v3-legacy a LO-v4
 
 ## Descripcion
 

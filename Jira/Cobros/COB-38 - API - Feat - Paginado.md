@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-38"
 
 ## Relaciones
 
-- **Padre:** [[COB-28]] API - Feat - Listar saldos de caja
+- **Padre:** [[COB-28 - API - Feat - Listar saldos de caja|COB-28]] API - Feat - Listar saldos de caja
 
 ## Descripcion
 

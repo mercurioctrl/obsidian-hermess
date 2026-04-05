@@ -29,24 +29,24 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-3"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **Subtarea:** [[COB-27]] (deprecado) API - Feat - Filtrar entre fechas
-- **Subtarea:** [[COB-37]] API - Feat - Agregar paginado
-- **Subtarea:** [[COB-39]] API - Feat - Agregar Filtros
-- **Subtarea:** [[COB-72]] API - Feat - Filtrar por tipo de transaccion
-- **Subtarea:** [[COB-81]] API - Review - Filtros de "formas de pago" con comportamiento extraño
-- **Subtarea:** [[COB-82]] API - Review - Filtros de "transactionType" con comportamiento extraño
-- **Subtarea:** [[COB-84]] API - Refactor - Si el movimiento es un pase, agregar un parametro para la fecha en que fue aceptado
-- **Subtarea:** [[COB-86]] API - Refactor - Se debe agregar un parametro llamado docuemtReference
-- **Subtarea:** [[COB-90]] API - Review - Medio de pago/Divisa indefinido
-- **Subtarea:** [[COB-98]] API - Feat - Editar comentario en movimiento de caja
-- **Subtarea:** [[COB-138]] API - Refactor - Agregar permiso administrativo para ver movimientos de caja ajena
-- **Subtarea:** [[COB-169]] API - Refactor - Agregar filtros necesarios para comprobantes
-- **Subtarea:** [[COB-217]] API - Refactor - Cuando estoy viendo un pase en los movimientos de caja, estan invertidos origen y destinatario
-- **is caused by:** [[COB-30]] APP - Feat - Ver movimientos de caja
-- **blocks:** [[COB-169]] API - Refactor - Agregar filtros necesarios para comprobantes
-- **blocks:** [[COB-166]] MS - Feat - Ms comprobantes, recurso de recibo de dinero
-- **relates to:** [[COB-504]] API - Listar movimiento por caja - No se visualiza el cliente
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **Subtarea:** [[COB-27 - (deprecado) API - Feat - Filtrar entre fechas|COB-27]] (deprecado) API - Feat - Filtrar entre fechas
+- **Subtarea:** [[COB-37 - API - Feat - Agregar paginado|COB-37]] API - Feat - Agregar paginado
+- **Subtarea:** [[COB-39 - API - Feat - Agregar Filtros|COB-39]] API - Feat - Agregar Filtros
+- **Subtarea:** [[COB-72 - API - Feat - Filtrar por tipo de transaccion|COB-72]] API - Feat - Filtrar por tipo de transaccion
+- **Subtarea:** [[COB-81 - API - Review - Filtros de formas de pago con comportamiento extraño|COB-81]] API - Review - Filtros de "formas de pago" con comportamiento extraño
+- **Subtarea:** [[COB-82 - API - Review - Filtros de transactionType con comportamiento extraño|COB-82]] API - Review - Filtros de "transactionType" con comportamiento extraño
+- **Subtarea:** [[COB-84 - API - Refactor - Si el movimiento es un pase, agregar un parametro para la|COB-84]] API - Refactor - Si el movimiento es un pase, agregar un parametro para la fecha en que fue aceptado
+- **Subtarea:** [[COB-86 - API - Refactor - Se debe agregar un parametro llamado docuemtReference|COB-86]] API - Refactor - Se debe agregar un parametro llamado docuemtReference
+- **Subtarea:** [[COB-90 - API - Review - Medio de pagoDivisa indefinido|COB-90]] API - Review - Medio de pago/Divisa indefinido
+- **Subtarea:** [[COB-98 - API - Feat - Editar comentario en movimiento de caja|COB-98]] API - Feat - Editar comentario en movimiento de caja
+- **Subtarea:** [[COB-138 - API - Refactor - Agregar permiso administrativo para ver movimientos de caja|COB-138]] API - Refactor - Agregar permiso administrativo para ver movimientos de caja ajena
+- **Subtarea:** [[COB-169 - API - Refactor - Agregar filtros necesarios para comprobantes|COB-169]] API - Refactor - Agregar filtros necesarios para comprobantes
+- **Subtarea:** [[COB-217 - API - Refactor - Cuando estoy viendo un pase en los movimientos de caja, estan|COB-217]] API - Refactor - Cuando estoy viendo un pase en los movimientos de caja, estan invertidos origen y destinatario
+- **is caused by:** [[COB-30 - APP - Feat - Ver movimientos de caja|COB-30]] APP - Feat - Ver movimientos de caja
+- **blocks:** [[COB-169 - API - Refactor - Agregar filtros necesarios para comprobantes|COB-169]] API - Refactor - Agregar filtros necesarios para comprobantes
+- **blocks:** [[COB-166 - MS - Feat - Ms comprobantes, recurso de recibo de dinero|COB-166]] MS - Feat - Ms comprobantes, recurso de recibo de dinero
+- **relates to:** [[COB-504 - API - Listar movimiento por caja - No se visualiza el cliente|COB-504]] API - Listar movimiento por caja - No se visualiza el cliente
 
 ## Descripcion
 

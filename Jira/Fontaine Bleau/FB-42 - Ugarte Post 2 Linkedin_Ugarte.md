@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-42"
 
 ## Relaciones
 
-- **Padre:** [[FB-40]] Triada 2_Social Media_FB Ugarte
+- **Padre:** [[FB-40 - Triada 2_Social Media_FB Ugarte|FB-40]] Triada 2_Social Media_FB Ugarte
 
 ## Descripcion
 

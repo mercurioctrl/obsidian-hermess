@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-181"
 
 ## Relaciones
 
-- **Padre:** [[LIO-180]] Intereses de usuario
-- **is caused by:** [[LIO-190]] APP - Refactor - agregar el token v4 para los dos recursos de LIO-181
+- **Padre:** [[LIO-180 - Intereses de usuario|LIO-180]] Intereses de usuario
+- **is caused by:** [[LIO-190 - APP - Refactor - agregar el token v4 para los dos recursos de LIO-181|LIO-190]] APP - Refactor - agregar el token v4 para los dos recursos de LIO-181
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-64"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-23]] Generar un comprobante
-- **action item from:** [[PED-996]] API - Refactor - Agregar percepción ARBA en la liquidación 
+- **Padre:** [[LOCAPP-23 - Generar un comprobante|LOCAPP-23]] Generar un comprobante
+- **action item from:** [[PED-996 - API - Refactor - Agregar percepción ARBA en la liquidación|PED-996]] API - Refactor - Agregar percepción ARBA en la liquidación 
 
 ## Descripcion
 

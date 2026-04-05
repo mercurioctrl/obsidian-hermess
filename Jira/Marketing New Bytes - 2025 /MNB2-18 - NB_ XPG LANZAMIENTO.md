@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/MNB2-18"
 
 ## Relaciones
 
-- **Subtarea:** [[MNB2-19]] news 
-- **Subtarea:** [[MNB2-20]] banner
+- **Subtarea:** [[MNB2-19 - news|MNB2-19]] news 
+- **Subtarea:** [[MNB2-20 - banner|MNB2-20]] banner
 
 ## Descripcion
 

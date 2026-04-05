@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-88"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **is blocked by:** [[EXP-89]] API - Feat - Pedir control sobre un producto
-- **blocks:** [[EXP-89]] API - Feat - Pedir control sobre un producto
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **is blocked by:** [[EXP-89 - API - Feat - Pedir control sobre un producto|EXP-89]] API - Feat - Pedir control sobre un producto
+- **blocks:** [[EXP-89 - API - Feat - Pedir control sobre un producto|EXP-89]] API - Feat - Pedir control sobre un producto
 
 ## Descripcion
 

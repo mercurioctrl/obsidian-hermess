@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-357"
 
 ## Relaciones
 
-- **Padre:** [[EXP-355]] Emision de facturas
-- **is blocked by:** [[EXP-358]] API - Feat - Generar comprobante fiscal (factura)
-- **is blocked by:** [[EXP-361]] API - Agregar a retiros y envios los parametros para poder ver la factura
+- **Padre:** [[EXP-355 - Emision de facturas|EXP-355]] Emision de facturas
+- **is blocked by:** [[EXP-358 - API - Feat - Generar comprobante fiscal (factura)|EXP-358]] API - Feat - Generar comprobante fiscal (factura)
+- **is blocked by:** [[EXP-361 - API - Agregar a retiros y envios los parametros para poder ver la factura|EXP-361]] API - Agregar a retiros y envios los parametros para poder ver la factura
 
 ## Descripcion
 

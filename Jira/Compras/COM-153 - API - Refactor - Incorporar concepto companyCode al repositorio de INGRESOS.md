@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-153"
 
 ## Relaciones
 
-- **Padre:** [[COM-12]] Listar ingresos (despachos de compra)
-- **has action item:** [[COM-159]] APP - Refactor - Agregar filtro empresa global
+- **Padre:** [[COM-12 - Listar ingresos (despachos de compra)|COM-12]] Listar ingresos (despachos de compra)
+- **has action item:** [[COM-159 - APP - Refactor - Agregar filtro empresa global|COM-159]] APP - Refactor - Agregar filtro empresa global
 
 ## Descripcion
 

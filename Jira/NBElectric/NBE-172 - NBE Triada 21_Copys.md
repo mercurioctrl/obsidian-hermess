@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-172"
 
 ## Relaciones
 
-- **Padre:** [[NBE-152]] NBE: Triada 21_Beneficios
+- **Padre:** [[NBE-152 - NBE Triada 21_Beneficios|NBE-152]] NBE: Triada 21_Beneficios
 
 ## Descripcion
 

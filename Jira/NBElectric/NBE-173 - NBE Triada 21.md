@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-173"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-174]] 8.NBE: Triada 21_DSG 
-- **Subtarea:** [[NBE-175]] 4.NBE: Triada 22_Copys
-- **Subtarea:** [[NBE-184]] NBE: Triada 22_Programar para el 3-10
+- **Subtarea:** [[NBE-174 - 8.NBE Triada 21_DSG|NBE-174]] 8.NBE: Triada 21_DSG 
+- **Subtarea:** [[NBE-175 - 4.NBE Triada 22_Copys|NBE-175]] 4.NBE: Triada 22_Copys
+- **Subtarea:** [[NBE-184 - NBE Triada 22_Programar para el 3-10|NBE-184]] NBE: Triada 22_Programar para el 3-10
 
 ## Descripcion
 

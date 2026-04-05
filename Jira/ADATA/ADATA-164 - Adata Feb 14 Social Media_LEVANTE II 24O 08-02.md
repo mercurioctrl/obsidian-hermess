@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-164"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-181]] Feb: 2/4 Portada Diseño Social Media_ LEVANTE II 24O
-- **Subtarea:** [[ADATA-182]] 4.Adata Febrero: 2/4  Copys Social Media_ 
-- **Subtarea:** [[ADATA-183]] Febrero: 2/4 Programar Social Media_  LEVANTE II 240 08-02
-- **Subtarea:** [[ADATA-234]] 4.Feb: Buscar producto en base a lo que pasaron para comunicar 
+- **Subtarea:** [[ADATA-181 - Feb 24 Portada Diseño Social Media_ LEVANTE II 24O|ADATA-181]] Feb: 2/4 Portada Diseño Social Media_ LEVANTE II 24O
+- **Subtarea:** [[ADATA-182 - 4.Adata Febrero 24 Copys Social Media_|ADATA-182]] 4.Adata Febrero: 2/4  Copys Social Media_ 
+- **Subtarea:** [[ADATA-183 - Febrero 24 Programar Social Media_ LEVANTE II 240 08-02|ADATA-183]] Febrero: 2/4 Programar Social Media_  LEVANTE II 240 08-02
+- **Subtarea:** [[ADATA-234 - 4.Feb Buscar producto en base a lo que pasaron para comunicar|ADATA-234]] 4.Feb: Buscar producto en base a lo que pasaron para comunicar 
 
 ## Descripcion
 

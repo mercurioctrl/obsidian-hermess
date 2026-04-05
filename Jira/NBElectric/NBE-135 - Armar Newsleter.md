@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-135"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-153]] API- ENVIO DE NEWSLETTER
+- **Subtarea:** [[NBE-153 - API- ENVIO DE NEWSLETTER|NBE-153]] API- ENVIO DE NEWSLETTER
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-66"
 
 ## Relaciones
 
-- **Padre:** [[EXP-15]] Feat - Serializar salida
-- **blocks:** [[EXP-85]] APP - Feat - Serializar salida de un pedido
+- **Padre:** [[EXP-15 - Feat - Serializar salida|EXP-15]] Feat - Serializar salida
+- **blocks:** [[EXP-85 - APP - Feat - Serializar salida de un pedido|EXP-85]] APP - Feat - Serializar salida de un pedido
 
 ## Descripcion
 

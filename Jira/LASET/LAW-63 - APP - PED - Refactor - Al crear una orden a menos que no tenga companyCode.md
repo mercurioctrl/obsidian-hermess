@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LAW-63"
 
 ## Relaciones
 
-- **Padre:** [[LAW-43]] Onboarding producción
+- **Padre:** [[LAW-43 - Onboarding producción|LAW-43]] Onboarding producción
 
 ## Descripcion
 

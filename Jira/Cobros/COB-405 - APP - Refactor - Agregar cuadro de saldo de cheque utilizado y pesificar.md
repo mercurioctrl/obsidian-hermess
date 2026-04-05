@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-405"
 
 ## Relaciones
 
-- **Padre:** [[COB-52]] APP - Feat - Visualizar la cuenta corriente de un cliente
+- **Padre:** [[COB-52 - APP - Feat - Visualizar la cuenta corriente de un cliente|COB-52]] APP - Feat - Visualizar la cuenta corriente de un cliente
 
 ## Descripcion
 

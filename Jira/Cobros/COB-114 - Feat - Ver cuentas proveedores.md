@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-114"
 
 ## Relaciones
 
-- **Padre:** [[COB-17]] Pagos a proveedores
-- **Subtarea:** [[COB-123]] API - Feat - Mostrar CC proveedor
-- **Subtarea:** [[COB-124]] APP - Feat - Mostrar CC proveedor
+- **Padre:** [[COB-17 - Pagos a proveedores|COB-17]] Pagos a proveedores
+- **Subtarea:** [[COB-123 - API - Feat - Mostrar CC proveedor|COB-123]] API - Feat - Mostrar CC proveedor
+- **Subtarea:** [[COB-124 - APP - Feat - Mostrar CC proveedor|COB-124]] APP - Feat - Mostrar CC proveedor
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-627"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-626]] Dashboard
+- **Padre:** [[NBWEB-626 - Dashboard|NBWEB-626]] Dashboard
 
 ## Descripcion
 

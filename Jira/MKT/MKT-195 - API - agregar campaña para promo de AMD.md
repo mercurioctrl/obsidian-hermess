@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/MKT-195"
 
 ## Relaciones
 
-- **Padre:** [[MKT-193]] LO_ Landing Promo AMD
+- **Padre:** [[MKT-193 - LO_ Landing Promo AMD|MKT-193]] LO_ Landing Promo AMD
 
 ## Descripcion
 

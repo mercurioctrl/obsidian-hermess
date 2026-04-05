@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-84"
 
 ## Relaciones
 
-- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
-- **is blocked by:** [[EXP-55]] API - Feat - Listar pedidos para retiro
+- **Padre:** [[EXP-14 - Feat - Listar pedidos para retiro|EXP-14]] Feat - Listar pedidos para retiro
+- **is blocked by:** [[EXP-55 - API - Feat - Listar pedidos para retiro|EXP-55]] API - Feat - Listar pedidos para retiro
 
 ## Descripcion
 

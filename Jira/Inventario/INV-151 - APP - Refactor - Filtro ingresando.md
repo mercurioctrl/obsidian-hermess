@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-151"
 
 ## Relaciones
 
-- **Padre:** [[INV-27]] Productos
-- **action item from:** [[INV-150]] API - Refactor - Filtro "ingresando"
+- **Padre:** [[INV-27 - Productos|INV-27]] Productos
+- **action item from:** [[INV-150 - API - Refactor - Filtro ingresando|INV-150]] API - Refactor - Filtro "ingresando"
 
 ## Descripcion
 

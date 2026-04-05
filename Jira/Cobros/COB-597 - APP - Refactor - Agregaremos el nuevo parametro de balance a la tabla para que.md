@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-597"
 
 ## Relaciones
 
-- **Padre:** [[COB-573]] Clientes
-- **action item from:** [[COB-594]] API - Refactor - En el filtro de balance de libre opcion se debe tomar el cero con decimales como un cero entero y agregaremos un nuevo parámetro llamado currentBalance que es el ultimo saldo
+- **Padre:** [[COB-573 - Clientes|COB-573]] Clientes
+- **action item from:** [[COB-594 - API - Refactor - En el filtro de balance de libre opcion se debe tomar el cero|COB-594]] API - Refactor - En el filtro de balance de libre opcion se debe tomar el cero con decimales como un cero entero y agregaremos un nuevo parámetro llamado currentBalance que es el ultimo saldo
 
 ## Descripcion
 

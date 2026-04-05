@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-67"
 
 ## Relaciones
 
-- **Padre:** [[LOCAPP-62]] Descarga y procesamiento de padrones
+- **Padre:** [[LOCAPP-62 - Descarga y procesamiento de padrones|LOCAPP-62]] Descarga y procesamiento de padrones
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-479"
 
 ## Relaciones
 
-- **Padre:** [[LIO-408]] Referidos
-- **has action item:** [[SNB-3525]] Queja referido "lucas"
+- **Padre:** [[LIO-408 - Referidos|LIO-408]] Referidos
+- **has action item:** [[SNB-3525 - Queja referido lucas|SNB-3525]] Queja referido "lucas"
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-219"
 
 ## Relaciones
 
-- **Padre:** [[ADATA-217]] Adata Enero CES compilado Linkedin
+- **Padre:** [[ADATA-217 - Adata Enero CES compilado Linkedin|ADATA-217]] Adata Enero CES compilado Linkedin
 
 ## Descripcion
 

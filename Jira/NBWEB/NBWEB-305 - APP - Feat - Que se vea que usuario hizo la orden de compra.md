@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-305"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-301]] API - APP - Feat - Mostrar nombre de usuario creador para los pedidos
+- **Padre:** [[NBWEB-301 - API - APP - Feat - Mostrar nombre de usuario creador para los pedidos|NBWEB-301]] API - APP - Feat - Mostrar nombre de usuario creador para los pedidos
 
 ## Descripcion
 

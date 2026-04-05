@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-240"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **has action item:** [[INV-298]] API - Review - Debemos obtener salesReserved segun el siguiente concepto y filtrando sucursal solo cuando se indica explicitamente
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **has action item:** [[INV-298 - API - Review - Debemos obtener salesReserved segun el siguiente concepto y|INV-298]] API - Review - Debemos obtener salesReserved segun el siguiente concepto y filtrando sucursal solo cuando se indica explicitamente
 
 ## Descripcion
 

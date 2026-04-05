@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOMKT-154"
 
 ## Relaciones
 
-- **Padre:** [[LOMKT-153]] NUEVA PROMO NVIDIA
+- **Padre:** [[LOMKT-153 - NUEVA PROMO NVIDIA|LOMKT-153]] NUEVA PROMO NVIDIA
 
 ## Descripcion
 

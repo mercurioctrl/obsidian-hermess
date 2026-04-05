@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/FB-104"
 
 ## Relaciones
 
-- **Padre:** [[FB-103]] FB: Triada 8 Felices Fiestas
+- **Padre:** [[FB-103 - FB Triada 8 Felices Fiestas|FB-103]] FB: Triada 8 Felices Fiestas
 
 ## Descripcion
 

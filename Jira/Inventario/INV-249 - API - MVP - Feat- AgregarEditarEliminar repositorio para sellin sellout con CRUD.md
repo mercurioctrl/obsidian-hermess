@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-249"
 
 ## Relaciones
 
-- **Padre:** [[INV-250]] Repositorio de Sell In Sell Out
-- **has action item:** [[INV-251]] APP - MVP - Feat- Agregar repositorio para sellin sellout con CRUD 
+- **Padre:** [[INV-250 - Repositorio de Sell In Sell Out|INV-250]] Repositorio de Sell In Sell Out
+- **has action item:** [[INV-251 - APP - MVP - Feat- Agregar repositorio para sellin sellout con CRUD|INV-251]] APP - MVP - Feat- Agregar repositorio para sellin sellout con CRUD 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-491"
 
 ## Relaciones
 
-- **Padre:** [[COB-487]] Feat - Cobrables -> Comprobantes de pago
-- **is blocked by:** [[COB-489]] API - Feat - Ver comprobante de pago
+- **Padre:** [[COB-487 - Feat - Cobrables - Comprobantes de pago|COB-487]] Feat - Cobrables -> Comprobantes de pago
+- **is blocked by:** [[COB-489 - API - Feat - Ver comprobante de pago|COB-489]] API - Feat - Ver comprobante de pago
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-196"
 
 ## Relaciones
 
-- **Subtarea:** [[BLUWEB-198]] Blu: DSG-Feature-Triada 4 Diseño
-- **Subtarea:** [[BLUWEB-199]] Blu: Triada 4 Copys
-- **Subtarea:** [[BLUWEB-200]] Blu: Triada 4 Programar 
+- **Subtarea:** [[BLUWEB-198 - Blu DSG-Feature-Triada 4 Diseño|BLUWEB-198]] Blu: DSG-Feature-Triada 4 Diseño
+- **Subtarea:** [[BLUWEB-199 - Blu Triada 4 Copys|BLUWEB-199]] Blu: Triada 4 Copys
+- **Subtarea:** [[BLUWEB-200 - Blu Triada 4 Programar|BLUWEB-200]] Blu: Triada 4 Programar 
 
 ## Descripcion
 

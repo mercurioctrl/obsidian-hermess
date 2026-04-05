@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-223"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-216]] Triada 7: Felices fiestas
+- **Padre:** [[BLUWEB-216 - Triada 7 Felices fiestas|BLUWEB-216]] Triada 7: Felices fiestas
 
 ## Descripcion
 

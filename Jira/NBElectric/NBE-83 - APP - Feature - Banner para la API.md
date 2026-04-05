@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-83"
 
 ## Relaciones
 
-- **Padre:** [[NBE-81]] Sitio Web_Etapa 3
-- **has action item:** [[NBE-149]] APP - Refactor - Cambiar benner Home API
+- **Padre:** [[NBE-81 - Sitio Web_Etapa 3|NBE-81]] Sitio Web_Etapa 3
+- **has action item:** [[NBE-149 - APP - Refactor - Cambiar benner Home API|NBE-149]] APP - Refactor - Cambiar benner Home API
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-477"
 
 ## Relaciones
 
-- **Padre:** [[EXP-7]] Despacho de retiros
-- **has action item:** [[SNB-2779]] Muy lento sector expedicion armado finalizado
+- **Padre:** [[EXP-7 - Despacho de retiros|EXP-7]] Despacho de retiros
+- **has action item:** [[SNB-2779 - Muy lento sector expedicion armado finalizado|SNB-2779]] Muy lento sector expedicion armado finalizado
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-341"
 
 ## Relaciones
 
-- **Padre:** [[COB-101]] Feat - Realizar salida de caja
-- **blocks:** [[SNB-612]] Se deben reordenar alfabeticamente los conceptos de salida
-- **blocks:** [[SNB-614]] Agregar "inversion" entre los items de salida
+- **Padre:** [[COB-101 - Feat - Realizar salida de caja|COB-101]] Feat - Realizar salida de caja
+- **blocks:** [[SNB-612 - Se deben reordenar alfabeticamente los conceptos de salida|SNB-612]] Se deben reordenar alfabeticamente los conceptos de salida
+- **blocks:** [[SNB-614 - Agregar inversion entre los items de salida|SNB-614]] Agregar "inversion" entre los items de salida
 
 ## Descripcion
 

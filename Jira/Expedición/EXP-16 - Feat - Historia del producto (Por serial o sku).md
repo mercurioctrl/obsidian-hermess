@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-16"
 
 ## Relaciones
 
-- **Padre:** [[EXP-8]] Inventarios
-- **Subtarea:** [[EXP-21]] API - Feat - Listar historia del producto
-- **Subtarea:** [[EXP-64]] APP - Feat - Hiostoria del producto
-- **Subtarea:** [[EXP-191]] API - Review - Verificar porque no funciona para ningun caso
-- **Subtarea:** [[EXP-197]] APP - Refactor - Se debe agregar id y enlace al producto al desplegar el modal ocn historial
-- **Subtarea:** [[EXP-205]] API - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
-- **Subtarea:** [[EXP-206]] APP - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
+- **Padre:** [[EXP-8 - Inventarios|EXP-8]] Inventarios
+- **Subtarea:** [[EXP-21 - API - Feat - Listar historia del producto|EXP-21]] API - Feat - Listar historia del producto
+- **Subtarea:** [[EXP-64 - APP - Feat - Hiostoria del producto|EXP-64]] APP - Feat - Hiostoria del producto
+- **Subtarea:** [[EXP-191 - API - Review - Verificar porque no funciona para ningun caso|EXP-191]] API - Review - Verificar porque no funciona para ningun caso
+- **Subtarea:** [[EXP-197 - APP - Refactor - Se debe agregar id y enlace al producto al desplegar el modal|EXP-197]] APP - Refactor - Se debe agregar id y enlace al producto al desplegar el modal ocn historial
+- **Subtarea:** [[EXP-205 - API - Refactor - Agregar una flag especifica para saber si esta libre o no en|EXP-205]] API - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
+- **Subtarea:** [[EXP-206 - APP - Refactor - Agregar una flag especifica para saber si esta libre o no en|EXP-206]] APP - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
 
 ## Descripcion
 

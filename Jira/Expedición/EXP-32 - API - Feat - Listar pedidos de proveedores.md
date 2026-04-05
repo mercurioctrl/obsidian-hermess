@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-32"
 
 ## Relaciones
 
-- **Padre:** [[EXP-10]] Feat - Listar pedidos (despachos) proveedores
-- **blocks:** [[EXP-34]] APP - Feat - Listar pedidos de proveedores (Pestaña ingresos)
+- **Padre:** [[EXP-10 - Feat - Listar pedidos (despachos) proveedores|EXP-10]] Feat - Listar pedidos (despachos) proveedores
+- **blocks:** [[EXP-34 - APP - Feat - Listar pedidos de proveedores (Pestaña ingresos)|EXP-34]] APP - Feat - Listar pedidos de proveedores (Pestaña ingresos)
 
 ## Descripcion
 

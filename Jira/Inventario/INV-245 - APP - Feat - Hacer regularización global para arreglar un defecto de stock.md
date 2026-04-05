@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-245"
 
 ## Relaciones
 
-- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
-- **action item from:** [[INV-243]] API - Feat - Hacer regularización global para arreglar un defecto de stock (globalRegularization)
+- **Padre:** [[INV-199 - Control de Stock Stock en general Control de Precios|INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-243 - API - Feat - Hacer regularización global para arreglar un defecto de stock|INV-243]] API - Feat - Hacer regularización global para arreglar un defecto de stock (globalRegularization)
 
 ## Descripcion
 

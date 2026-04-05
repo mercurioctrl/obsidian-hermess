@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-78"
 
 ## Relaciones
 
-- **Padre:** [[INV-23]] Aplicacion de inventario
-- **relates to:** [[INV-72]] API - Feat - Editar / Crear Categorias
-- **relates to:** [[INV-129]] API - Listar categorías - Parámetro mostrar del sitio web no coincidente
+- **Padre:** [[INV-23 - Aplicacion de inventario|INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-72 - API - Feat - Editar Crear Categorias|INV-72]] API - Feat - Editar / Crear Categorias
+- **relates to:** [[INV-129 - API - Listar categorías - Parámetro mostrar del sitio web no coincidente|INV-129]] API - Listar categorías - Parámetro mostrar del sitio web no coincidente
 
 ## Descripcion
 

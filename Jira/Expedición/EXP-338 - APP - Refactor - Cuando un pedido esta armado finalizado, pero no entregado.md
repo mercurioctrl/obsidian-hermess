@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-338"
 
 ## Relaciones
 
-- **Padre:** [[EXP-294]] Refactor - Devoluciones (pre-despacho)
-- **blocks:** [[SNB-970]] Cuando esta el remito en estado "armado finalizado" se tiene que poder sacar un serial. Es asi hasta que este "entregado"
+- **Padre:** [[EXP-294 - Refactor - Devoluciones (pre-despacho)|EXP-294]] Refactor - Devoluciones (pre-despacho)
+- **blocks:** [[SNB-970 - Cuando esta el remito en estado armado finalizado se tiene que poder sacar un|SNB-970]] Cuando esta el remito en estado "armado finalizado" se tiene que poder sacar un serial. Es asi hasta que este "entregado"
 
 ## Descripcion
 

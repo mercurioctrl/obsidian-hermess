@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-84"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-78]] Netac - NB DDR5
+- **Padre:** [[DNYL-78 - Netac - NB DDR5|DNYL-78]] Netac - NB DDR5
 
 ## Descripcion
 

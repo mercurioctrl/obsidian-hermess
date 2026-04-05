@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-234"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-228]] Triada 9: Marketing
+- **Padre:** [[BLUWEB-228 - Triada 9 Marketing|BLUWEB-228]] Triada 9: Marketing
 
 ## Descripcion
 

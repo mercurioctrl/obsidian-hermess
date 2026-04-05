@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-280"
 
 ## Relaciones
 
-- **Padre:** [[EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
-- **blocks:** [[EXP-281]] APP - Refactor - Validar palabra clave, en el caso que exista
+- **Padre:** [[EXP-258 - Feat - Autorizar Entrega mediante tarjeta de autorizacion|EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
+- **blocks:** [[EXP-281 - APP - Refactor - Validar palabra clave, en el caso que exista|EXP-281]] APP - Refactor - Validar palabra clave, en el caso que exista
 
 ## Descripcion
 

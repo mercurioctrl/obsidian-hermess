@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-333"
 
 ## Relaciones
 
-- **Padre:** [[LIO-332]] Centro de Ayuda - > Contacto
+- **Padre:** [[LIO-332 - Centro de Ayuda - Contacto|LIO-332]] Centro de Ayuda - > Contacto
 
 ## Descripcion
 

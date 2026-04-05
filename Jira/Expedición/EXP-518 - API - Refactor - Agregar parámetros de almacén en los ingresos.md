@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-518"
 
 ## Relaciones
 
-- **Padre:** [[EXP-512]] Almacenes multiples
-- **has action item:** [[EXP-519]] APP - Refactor - Agregar almacenes a los ingresos
+- **Padre:** [[EXP-512 - Almacenes multiples|EXP-512]] Almacenes multiples
+- **has action item:** [[EXP-519 - APP - Refactor - Agregar almacenes a los ingresos|EXP-519]] APP - Refactor - Agregar almacenes a los ingresos
 
 ## Descripcion
 

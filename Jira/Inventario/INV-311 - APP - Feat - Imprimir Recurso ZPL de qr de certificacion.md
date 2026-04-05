@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/INV-311"
 
 ## Relaciones
 
-- **Padre:** [[INV-260]] Certificados eléctricos por Qr
-- **action item from:** [[INV-310]] API - Feat - Recurso ZPL para imprimir qr de certificacion
+- **Padre:** [[INV-260 - Certificados eléctricos por Qr|INV-260]] Certificados eléctricos por Qr
+- **action item from:** [[INV-310 - API - Feat - Recurso ZPL para imprimir qr de certificacion|INV-310]] API - Feat - Recurso ZPL para imprimir qr de certificacion
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-99"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **blocks:** [[COM-113]] APP - Feat -Pestaña "Impuestos"
-- **relates to:** [[COM-254]] API - MVP - Refactor - Listar repositorio de impuestos/gastos -> Agregar companyCode y companyDescription
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **blocks:** [[COM-113 - APP - Feat -Pestaña Impuestos|COM-113]] APP - Feat -Pestaña "Impuestos"
+- **relates to:** [[COM-254 - API - MVP - Refactor - Listar repositorio de impuestosgastos - Agregar|COM-254]] API - MVP - Refactor - Listar repositorio de impuestos/gastos -> Agregar companyCode y companyDescription
 
 ## Descripcion
 

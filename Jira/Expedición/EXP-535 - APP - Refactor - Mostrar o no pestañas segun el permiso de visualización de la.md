@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-535"
 
 ## Relaciones
 
-- **Padre:** [[EXP-533]] Permisos de visualizacion
-- **action item from:** [[EXP-534]] API - DATA - Feat - Agregar permisos de visualización para las distintas pestañas de expedicion
-- **has action item:** [[LAW-56]] Mostrar / Ocultar pestañas 
+- **Padre:** [[EXP-533 - Permisos de visualizacion|EXP-533]] Permisos de visualizacion
+- **action item from:** [[EXP-534 - API - DATA - Feat - Agregar permisos de visualización para las distintas|EXP-534]] API - DATA - Feat - Agregar permisos de visualización para las distintas pestañas de expedicion
+- **has action item:** [[LAW-56 - Mostrar Ocultar pestañas|LAW-56]] Mostrar / Ocultar pestañas 
 
 ## Descripcion
 

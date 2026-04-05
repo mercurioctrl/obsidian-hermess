@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-32"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **blocks:** [[COB-72]] API - Feat - Filtrar por tipo de transaccion
-- **blocks:** [[COB-73]] APP - Feat - Agregar filtro por tipo de transacción 
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **blocks:** [[COB-72 - API - Feat - Filtrar por tipo de transaccion|COB-72]] API - Feat - Filtrar por tipo de transaccion
+- **blocks:** [[COB-73 - APP - Feat - Agregar filtro por tipo de transacción|COB-73]] APP - Feat - Agregar filtro por tipo de transacción 
 
 ## Descripcion
 

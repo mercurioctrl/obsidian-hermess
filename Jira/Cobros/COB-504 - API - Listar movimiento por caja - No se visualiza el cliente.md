@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-504"
 
 ## Relaciones
 
-- **Padre:** [[COB-15]] Cajas
-- **relates to:** [[COB-3]] API - Feat - Listar movimiento por caja
-- **blocks:** [[SNB-1844]] no se visualiza el nobre del cliente en arqueo
+- **Padre:** [[COB-15 - Cajas|COB-15]] Cajas
+- **relates to:** [[COB-3 - API - Feat - Listar movimiento por caja|COB-3]] API - Feat - Listar movimiento por caja
+- **blocks:** [[SNB-1844 - no se visualiza el nobre del cliente en arqueo|SNB-1844]] no se visualiza el nobre del cliente en arqueo
 
 ## Descripcion
 

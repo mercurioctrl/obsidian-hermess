@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-622"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-6]] Login
-- **relates to:** [[NBWEB-16]] Crear recurso de login
+- **Padre:** [[NBWEB-6 - Login|NBWEB-6]] Login
+- **relates to:** [[NBWEB-16 - Crear recurso de login|NBWEB-16]] Crear recurso de login
 
 ## Descripcion
 

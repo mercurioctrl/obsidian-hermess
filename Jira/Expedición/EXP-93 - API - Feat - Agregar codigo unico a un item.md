@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-93"
 
 ## Relaciones
 
-- **Padre:** [[EXP-17]] Feat - Listar productos (Control de stock)
-- **blocks:** [[EXP-95]] APP - Feat - Agregar codigo universal a un producto
+- **Padre:** [[EXP-17 - Feat - Listar productos (Control de stock)|EXP-17]] Feat - Listar productos (Control de stock)
+- **blocks:** [[EXP-95 - APP - Feat - Agregar codigo universal a un producto|EXP-95]] APP - Feat - Agregar codigo universal a un producto
 
 ## Descripcion
 

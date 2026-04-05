@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-254"
 
 ## Relaciones
 
-- **Padre:** [[COB-252]] API - Test - Comprobar salud de los saldos de caja
+- **Padre:** [[COB-252 - API - Test - Comprobar salud de los saldos de caja|COB-252]] API - Test - Comprobar salud de los saldos de caja
 
 ## Descripcion
 

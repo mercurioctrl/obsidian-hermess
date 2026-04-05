@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBE-87"
 
 ## Relaciones
 
-- **Subtarea:** [[NBE-88]] ⚡Triada 6_Hunnox Teclas negras_Desarrollo de piezas Social Media
-- **Subtarea:** [[NBE-89]] ✏️Triada 6__Armar Copy + realizar post en instagram, linkedin y Facebook
+- **Subtarea:** [[NBE-88 - ⚡Triada 6_Hunnox Teclas negras_Desarrollo de piezas Social Media|NBE-88]] ⚡Triada 6_Hunnox Teclas negras_Desarrollo de piezas Social Media
+- **Subtarea:** [[NBE-89 - ✏️Triada 6__Armar Copy + realizar post en instagram, linkedin y Facebook|NBE-89]] ✏️Triada 6__Armar Copy + realizar post en instagram, linkedin y Facebook
 
 ## Descripcion
 

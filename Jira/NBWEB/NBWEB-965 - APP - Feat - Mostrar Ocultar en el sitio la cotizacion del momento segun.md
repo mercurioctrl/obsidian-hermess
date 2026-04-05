@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-965"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-524]] CMS - Parametros varios
-- **action item from:** [[NBWEB-964]] API - Feat - Agregar un recurso de cotización para mostrar en el sitio
+- **Padre:** [[NBWEB-524 - CMS - Parametros varios|NBWEB-524]] CMS - Parametros varios
+- **action item from:** [[NBWEB-964 - API - Feat - Agregar un recurso de cotización para mostrar en el sitio|NBWEB-964]] API - Feat - Agregar un recurso de cotización para mostrar en el sitio
 
 ## Descripcion
 

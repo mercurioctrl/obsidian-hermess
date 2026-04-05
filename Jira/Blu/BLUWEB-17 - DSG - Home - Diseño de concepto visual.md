@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-17"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-13]] Sitio Web_Etapa 0
-- **has action item:** [[BLUWEB-37]] APP - Feat - Maqueta codificada y proyecto de front para sitio web 
+- **Padre:** [[BLUWEB-13 - Sitio Web_Etapa 0|BLUWEB-13]] Sitio Web_Etapa 0
+- **has action item:** [[BLUWEB-37 - APP - Feat - Maqueta codificada y proyecto de front para sitio web|BLUWEB-37]] APP - Feat - Maqueta codificada y proyecto de front para sitio web 
 
 ## Descripcion
 

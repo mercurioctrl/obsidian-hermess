@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-413"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-2]] API - Mi cuenta
-- **is caused by:** [[NBWEB-414]] DB - Refactor - Se debe agregar un token que cambie periodicamente y se guarde para el usuarios
+- **Padre:** [[NBWEB-2 - API - Mi cuenta|NBWEB-2]] API - Mi cuenta
+- **is caused by:** [[NBWEB-414 - DB - Refactor - Se debe agregar un token que cambie periodicamente y se guarde|NBWEB-414]] DB - Refactor - Se debe agregar un token que cambie periodicamente y se guarde para el usuarios
 
 ## Descripcion
 

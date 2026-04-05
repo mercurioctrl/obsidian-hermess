@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-158"
 
 ## Relaciones
 
-- **Padre:** [[LIO-133]] Ms Envios Libre Opcion
-- **action item from:** [[LIO-155]] APP - Refactor - Maquetar en el checkoout y opciones de envio como quedaria con los logos
+- **Padre:** [[LIO-133 - Ms Envios Libre Opcion|LIO-133]] Ms Envios Libre Opcion
+- **action item from:** [[LIO-155 - APP - Refactor - Maquetar en el checkoout y opciones de envio como quedaria con|LIO-155]] APP - Refactor - Maquetar en el checkoout y opciones de envio como quedaria con los logos
 
 ## Descripcion
 

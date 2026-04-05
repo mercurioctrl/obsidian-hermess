@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-382"
 
 ## Relaciones
 
-- **Padre:** [[LIO-373]] Seguridad del checkout y protección de transacciones
-- **blocks:** [[LIO-383]] APP - Refactor - Implementar reseteo de checkout al expirar o volver al inicio del mismo
+- **Padre:** [[LIO-373 - Seguridad del checkout y protección de transacciones|LIO-373]] Seguridad del checkout y protección de transacciones
+- **blocks:** [[LIO-383 - APP - Refactor - Implementar reseteo de checkout al expirar o volver al inicio|LIO-383]] APP - Refactor - Implementar reseteo de checkout al expirar o volver al inicio del mismo
 
 ## Descripcion
 

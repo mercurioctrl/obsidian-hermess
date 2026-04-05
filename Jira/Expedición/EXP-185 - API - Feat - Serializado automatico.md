@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-185"
 
 ## Relaciones
 
-- **Padre:** [[EXP-15]] Feat - Serializar salida
-- **has action item:** [[EXP-480]] API - Serializado automático - Serial disponible marcado como ya en uso
+- **Padre:** [[EXP-15 - Feat - Serializar salida|EXP-15]] Feat - Serializar salida
+- **has action item:** [[EXP-480 - API - Serializado automático - Serial disponible marcado como ya en uso|EXP-480]] API - Serializado automático - Serial disponible marcado como ya en uso
 
 ## Descripcion
 

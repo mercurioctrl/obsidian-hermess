@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-69"
 
 ## Relaciones
 
-- **Padre:** [[LIO-6]] Diseño de una interfaz intuitiva y navegacion
-- **duplicates:** [[LIO-67]] APP - Cambiar color primario del sitio
+- **Padre:** [[LIO-6 - Diseño de una interfaz intuitiva y navegacion|LIO-6]] Diseño de una interfaz intuitiva y navegacion
+- **duplicates:** [[LIO-67 - APP - Cambiar color primario del sitio|LIO-67]] APP - Cambiar color primario del sitio
 
 ## Descripcion
 

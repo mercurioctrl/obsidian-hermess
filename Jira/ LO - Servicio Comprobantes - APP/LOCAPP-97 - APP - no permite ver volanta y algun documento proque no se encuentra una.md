@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/LOCAPP-97"
 
 ## Relaciones
 
-- **action item from:** [[SNB-3546]] EXP - No es posible imprimir la volanta
+- **action item from:** [[SNB-3546 - EXP - No es posible imprimir la volanta|SNB-3546]] EXP - No es posible imprimir la volanta
 
 ## Descripcion
 

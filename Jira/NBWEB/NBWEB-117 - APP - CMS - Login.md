@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-117"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-54]] Content Manager
-- **relates to:** [[NBWEB-116]] API - CMS - Login
+- **Padre:** [[NBWEB-54 - Content Manager|NBWEB-54]] Content Manager
+- **relates to:** [[NBWEB-116 - API - CMS - Login|NBWEB-116]] API - CMS - Login
 
 ## Descripcion
 

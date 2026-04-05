@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-177"
 
 ## Relaciones
 
-- **Padre:** [[COM-77]] Editar orden de compra
-- **action item from:** [[COM-176]] API - MVP - Refactor - Agregar trackingNumber y arrivalDate en órdenes de compra
-- **is blocked by:** [[COM-185]] API - MVP - Feat - Recurso para modificar datos de cabecera en Provider Order 
+- **Padre:** [[COM-77 - Editar orden de compra|COM-77]] Editar orden de compra
+- **action item from:** [[COM-176 - API - MVP - Refactor - Agregar trackingNumber y arrivalDate en órdenes de compra|COM-176]] API - MVP - Refactor - Agregar trackingNumber y arrivalDate en órdenes de compra
+- **is blocked by:** [[COM-185 - API - MVP - Feat - Recurso para modificar datos de cabecera en Provider Order|COM-185]] API - MVP - Feat - Recurso para modificar datos de cabecera en Provider Order 
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/ADATA-243"
 
 ## Relaciones
 
-- **Subtarea:** [[ADATA-244]] Buscar videos de productos que puedan comunicarse en esas fechas que esten en argentina
-- **Subtarea:** [[ADATA-247]] Armar Copys Back To school, dia de backup y Mario bross
-- **Subtarea:** [[ADATA-250]] Programar Back to School, Mario Bross, Back up Day
+- **Subtarea:** [[ADATA-244 - Buscar videos de productos que puedan comunicarse en esas fechas que esten en|ADATA-244]] Buscar videos de productos que puedan comunicarse en esas fechas que esten en argentina
+- **Subtarea:** [[ADATA-247 - Armar Copys Back To school, dia de backup y Mario bross|ADATA-247]] Armar Copys Back To school, dia de backup y Mario bross
+- **Subtarea:** [[ADATA-250 - Programar Back to School, Mario Bross, Back up Day|ADATA-250]] Programar Back to School, Mario Bross, Back up Day
 
 ## Descripcion
 

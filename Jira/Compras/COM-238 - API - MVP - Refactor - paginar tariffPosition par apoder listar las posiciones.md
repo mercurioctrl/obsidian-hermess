@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-238"
 
 ## Relaciones
 
-- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
-- **has action item:** [[COM-237]] APP - MVP - Feat - agregar pestaña de posiciones arancelarias con la funcion de editar al igual que se hace en una orden de compra, sacandola de la orden
+- **Padre:** [[COM-98 - Repositorio de impuestos por posicionar arancelaria|COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **has action item:** [[COM-237 - APP - MVP - Feat - agregar pestaña de posiciones arancelarias con la funcion de|COM-237]] APP - MVP - Feat - agregar pestaña de posiciones arancelarias con la funcion de editar al igual que se hace en una orden de compra, sacandola de la orden
 
 ## Descripcion
 

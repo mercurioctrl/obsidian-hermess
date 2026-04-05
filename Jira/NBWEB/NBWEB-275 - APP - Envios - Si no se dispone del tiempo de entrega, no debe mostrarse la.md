@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-275"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-200]] Oportunidad de mejora - Utilizacion de mascaras
+- **relates to:** [[NBWEB-200 - Oportunidad de mejora - Utilizacion de mascaras|NBWEB-200]] Oportunidad de mejora - Utilizacion de mascaras
 
 ## Descripcion
 

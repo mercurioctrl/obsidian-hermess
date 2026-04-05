@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-7"
 
 ## Relaciones
 
-- **Padre:** [[COB-21]] Base del proyecto y formularios
-- **Subtarea:** [[COB-22]] API - Feat - Login - Registrar sesión 
-- **Subtarea:** [[COB-23]] API - Feat - Login - Cerrar sesión
-- **Subtarea:** [[COB-34]] API - Refactor - Agregar al retorno el parámetro que designa la caja del usuario
-- **is caused by:** [[COB-25]] APP - Feat - Login
+- **Padre:** [[COB-21 - Base del proyecto y formularios|COB-21]] Base del proyecto y formularios
+- **Subtarea:** [[COB-22 - API - Feat - Login - Registrar sesión|COB-22]] API - Feat - Login - Registrar sesión 
+- **Subtarea:** [[COB-23 - API - Feat - Login - Cerrar sesión|COB-23]] API - Feat - Login - Cerrar sesión
+- **Subtarea:** [[COB-34 - API - Refactor - Agregar al retorno el parámetro que designa la caja del usuario|COB-34]] API - Refactor - Agregar al retorno el parámetro que designa la caja del usuario
+- **is caused by:** [[COB-25 - APP - Feat - Login|COB-25]] APP - Feat - Login
 
 ## Descripcion
 

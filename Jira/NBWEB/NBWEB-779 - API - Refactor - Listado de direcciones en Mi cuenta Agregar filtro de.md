@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-779"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[NBWEB-778]] API - Refactor - Al procesar una compra que tiene marcado "Dropshipping" entonces debo marcar la direccion como "Dropshipping"
-- **blocks:** [[NBWEB-780]] APP - Refactor - Listado de direcciones en "Mi cuenta": Agregar filtro de dropshipping y mostrar el listado según el filtro
-- **is blocked by:** [[NBWEB-787]] API - Mis direcciones -> Filtro por dropshipping - Agregar parámetro y filtrado
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[NBWEB-778 - API - Refactor - Al procesar una compra que tiene marcado Dropshipping entonces|NBWEB-778]] API - Refactor - Al procesar una compra que tiene marcado "Dropshipping" entonces debo marcar la direccion como "Dropshipping"
+- **blocks:** [[NBWEB-780 - APP - Refactor - Listado de direcciones en Mi cuenta Agregar filtro de|NBWEB-780]] APP - Refactor - Listado de direcciones en "Mi cuenta": Agregar filtro de dropshipping y mostrar el listado según el filtro
+- **is blocked by:** [[NBWEB-787 - API - Mis direcciones - Filtro por dropshipping - Agregar parámetro y filtrado|NBWEB-787]] API - Mis direcciones -> Filtro por dropshipping - Agregar parámetro y filtrado
 
 ## Descripcion
 

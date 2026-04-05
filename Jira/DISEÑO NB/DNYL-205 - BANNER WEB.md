@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/DNYL-205"
 
 ## Relaciones
 
-- **Padre:** [[DNYL-202]] NB_CAMPAÑA NVIDIA
+- **Padre:** [[DNYL-202 - NB_CAMPAÑA NVIDIA|DNYL-202]] NB_CAMPAÑA NVIDIA
 
 ## Descripcion
 

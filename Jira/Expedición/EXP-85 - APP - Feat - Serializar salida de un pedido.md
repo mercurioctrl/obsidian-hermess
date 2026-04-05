@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-85"
 
 ## Relaciones
 
-- **Padre:** [[EXP-15]] Feat - Serializar salida
-- **is blocked by:** [[EXP-66]] API - Feat - Serializar salida
+- **Padre:** [[EXP-15 - Feat - Serializar salida|EXP-15]] Feat - Serializar salida
+- **is blocked by:** [[EXP-66 - API - Feat - Serializar salida|EXP-66]] API - Feat - Serializar salida
 
 ## Descripcion
 

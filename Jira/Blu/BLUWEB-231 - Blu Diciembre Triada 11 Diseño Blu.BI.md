@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/BLUWEB-231"
 
 ## Relaciones
 
-- **Padre:** [[BLUWEB-230]] Triada 11: BI
+- **Padre:** [[BLUWEB-230 - Triada 11 BI|BLUWEB-230]] Triada 11: BI
 
 ## Descripcion
 

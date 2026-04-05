@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-849"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-682]] Productos
-- **is blocked by:** [[NBWEB-848]] API - Refactor - Agregar EAN y UPC al detalle del item
+- **Padre:** [[NBWEB-682 - Productos|NBWEB-682]] Productos
+- **is blocked by:** [[NBWEB-848 - API - Refactor - Agregar EAN y UPC al detalle del item|NBWEB-848]] API - Refactor - Agregar EAN y UPC al detalle del item
 
 ## Descripcion
 

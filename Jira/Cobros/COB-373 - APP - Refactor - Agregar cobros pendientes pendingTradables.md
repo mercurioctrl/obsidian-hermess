@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-373"
 
 ## Relaciones
 
-- **Padre:** [[COB-44]] API - Feat - Contadores para burbujas de cantidad pendientes
+- **Padre:** [[COB-44 - API - Feat - Contadores para burbujas de cantidad pendientes|COB-44]] API - Feat - Contadores para burbujas de cantidad pendientes
 
 ## Descripcion
 

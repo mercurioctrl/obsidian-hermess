@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-741"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **Subtarea:** [[NBWEB-742]] Bajar a 12 px la fuente del menu en desktop
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **Subtarea:** [[NBWEB-742 - Bajar a 12 px la fuente del menu en desktop|NBWEB-742]] Bajar a 12 px la fuente del menu en desktop
 
 ## Descripcion
 

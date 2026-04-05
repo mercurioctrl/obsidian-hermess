@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-623"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **Subtarea:** [[NBWEB-624]] APP - Feat - Agregaremos el icono de github y enlazaremos el perfil publico en los mismos lugares donde aparecen las redes sociales
-- **Subtarea:** [[NBWEB-629]] APP - Refactor - Cambios para la sección "Ultimos ingresos"
-- **Subtarea:** [[NBWEB-640]] APP - Refactor - Maquetar e implementar nuevo banner
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **Subtarea:** [[NBWEB-624 - APP - Feat - Agregaremos el icono de github y enlazaremos el perfil publico en|NBWEB-624]] APP - Feat - Agregaremos el icono de github y enlazaremos el perfil publico en los mismos lugares donde aparecen las redes sociales
+- **Subtarea:** [[NBWEB-629 - APP - Refactor - Cambios para la sección Ultimos ingresos|NBWEB-629]] APP - Refactor - Cambios para la sección "Ultimos ingresos"
+- **Subtarea:** [[NBWEB-640 - APP - Refactor - Maquetar e implementar nuevo banner|NBWEB-640]] APP - Refactor - Maquetar e implementar nuevo banner
 
 ## Descripcion
 

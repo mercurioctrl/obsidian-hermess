@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-479"
 
 ## Relaciones
 
-- **Padre:** [[EXP-6]] Despacho de envios
-- **action item from:** [[EXP-55]] API - Feat - Listar pedidos para retiro
+- **Padre:** [[EXP-6 - Despacho de envios|EXP-6]] Despacho de envios
+- **action item from:** [[EXP-55 - API - Feat - Listar pedidos para retiro|EXP-55]] API - Feat - Listar pedidos para retiro
 
 ## Descripcion
 

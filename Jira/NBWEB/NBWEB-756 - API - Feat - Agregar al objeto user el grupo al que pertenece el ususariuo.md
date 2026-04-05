@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-756"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
-- **is blocked by:** [[PED-752]] DATA - Agregar grupos a los clientes en tabla cliente de DEV y PROD
+- **Padre:** [[NBWEB-610 - API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro|NBWEB-610]] API - Refactor - Agregar internalTax a los montos finales de las ordenes dentro de Mi Cuenta
+- **is blocked by:** [[PED-752 - DATA - Agregar grupos a los clientes en tabla cliente de DEV y PROD|PED-752]] DATA - Agregar grupos a los clientes en tabla cliente de DEV y PROD
 
 ## Descripcion
 

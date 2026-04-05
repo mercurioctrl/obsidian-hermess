@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-764"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-602]] Sitio Web
-- **relates to:** [[NBWEB-762]] API - Feat - Obtener acelerador para un item determinado
+- **Padre:** [[NBWEB-602 - Sitio Web|NBWEB-602]] Sitio Web
+- **relates to:** [[NBWEB-762 - API - Feat - Obtener acelerador para un item determinado|NBWEB-762]] API - Feat - Obtener acelerador para un item determinado
 
 ## Descripcion
 

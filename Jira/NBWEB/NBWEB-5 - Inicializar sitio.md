@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/NBWEB-5"
 
 ## Relaciones
 
-- **Subtarea:** [[NBWEB-48]] Montar Slim con integración para SQL Server
+- **Subtarea:** [[NBWEB-48 - Montar Slim con integración para SQL Server|NBWEB-48]] Montar Slim con integración para SQL Server
 
 ## Descripcion
 

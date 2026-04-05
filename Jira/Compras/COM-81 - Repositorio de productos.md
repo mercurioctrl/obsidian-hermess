@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-81"
 
 ## Relaciones
 
-- **Padre:** [[COM-1]] Bases y repositorios
-- **Subtarea:** [[COM-82]] API - Feat - Repositorio de productos
-- **Subtarea:** [[COM-223]] API - MVP - Review - En el buscador de producto del modal de orden de compra no esta funcionando la busqueda por SKU 
+- **Padre:** [[COM-1 - Bases y repositorios|COM-1]] Bases y repositorios
+- **Subtarea:** [[COM-82 - API - Feat - Repositorio de productos|COM-82]] API - Feat - Repositorio de productos
+- **Subtarea:** [[COM-223 - API - MVP - Review - En el buscador de producto del modal de orden de compra no|COM-223]] API - MVP - Review - En el buscador de producto del modal de orden de compra no esta funcionando la busqueda por SKU 
 
 ## Descripcion
 

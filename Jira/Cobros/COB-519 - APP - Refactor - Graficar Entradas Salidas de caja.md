@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/COB-519"
 
 ## Relaciones
 
-- **Padre:** [[COB-507]] Entrada / Salida Cajas
-- **is blocked by:** [[COB-533]] API - Agrupar por concepto las Entradas / Salidas para graficar - Pases visibles
-- **relates to:** [[COB-518]] API - Refactor - Agrupar por concepto las Entradas / Salidas para graficar
+- **Padre:** [[COB-507 - Entrada Salida Cajas|COB-507]] Entrada / Salida Cajas
+- **is blocked by:** [[COB-533 - API - Agrupar por concepto las Entradas Salidas para graficar - Pases visibles|COB-533]] API - Agrupar por concepto las Entradas / Salidas para graficar - Pases visibles
+- **relates to:** [[COB-518 - API - Refactor - Agrupar por concepto las Entradas Salidas para graficar|COB-518]] API - Refactor - Agrupar por concepto las Entradas / Salidas para graficar
 
 ## Descripcion
 

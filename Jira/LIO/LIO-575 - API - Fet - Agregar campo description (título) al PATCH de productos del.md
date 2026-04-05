@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/LIO-575"
 
 ## Relaciones
 
-- **Padre:** [[LIO-537]] Migración de repositorios previa deprecación de la api legacy
-- **has action item:** [[LIO-576]] APP - Feat - Habilitar edición inline del título en la grilla del catálogo
+- **Padre:** [[LIO-537 - Migración de repositorios previa deprecación de la api legacy|LIO-537]] Migración de repositorios previa deprecación de la api legacy
+- **has action item:** [[LIO-576 - APP - Feat - Habilitar edición inline del título en la grilla del catálogo|LIO-576]] APP - Feat - Habilitar edición inline del título en la grilla del catálogo
 
 ## Descripcion
 

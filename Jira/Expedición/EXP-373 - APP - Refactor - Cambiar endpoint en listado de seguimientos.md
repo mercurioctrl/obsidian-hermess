@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/EXP-373"
 
 ## Relaciones
 
-- **Padre:** [[EXP-372]] Refactor - Seguimientos
+- **Padre:** [[EXP-372 - Refactor - Seguimientos|EXP-372]] Refactor - Seguimientos
 
 ## Descripcion
 

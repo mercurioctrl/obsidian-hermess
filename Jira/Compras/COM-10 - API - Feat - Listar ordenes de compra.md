@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/COM-10"
 
 ## Relaciones
 
-- **Padre:** [[COM-9]] Listar ordenes de compra
-- **blocks:** [[COM-21]] APP - Feat - Listar ordenes de compra
+- **Padre:** [[COM-9 - Listar ordenes de compra|COM-9]] Listar ordenes de compra
+- **blocks:** [[COM-21 - APP - Feat - Listar ordenes de compra|COM-21]] APP - Feat - Listar ordenes de compra
 
 ## Descripcion
 
