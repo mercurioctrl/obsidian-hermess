@@ -4,7 +4,7 @@ name: "Fontaine Bleau"
 type: "business"
 total_issues: 120
 jira_url: "https://bluinc.atlassian.net/browse/FB"
-synced: "2026-04-05 00:56"
+synced: "2026-04-05 01:51"
 ---
 
 # Fontaine Bleau (FB)

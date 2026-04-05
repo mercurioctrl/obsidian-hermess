@@ -4,7 +4,7 @@ name: "PreciosGamer"
 type: "software"
 total_issues: 209
 jira_url: "https://bluinc.atlassian.net/browse/PEGA"
-synced: "2026-04-05 01:24"
+synced: "2026-04-05 01:52"
 ---
 
 # PreciosGamer (PEGA)

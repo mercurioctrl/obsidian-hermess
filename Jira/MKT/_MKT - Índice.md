@@ -4,7 +4,7 @@ name: "MKT"
 type: "business"
 total_issues: 302
 jira_url: "https://bluinc.atlassian.net/browse/MKT"
-synced: "2026-04-05 00:58"
+synced: "2026-04-05 01:51"
 ---
 
 # MKT (MKT)

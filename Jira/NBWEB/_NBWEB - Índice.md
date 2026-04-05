@@ -4,7 +4,7 @@ name: "NBWEB"
 type: "software"
 total_issues: 971
 jira_url: "https://bluinc.atlassian.net/browse/NBWEB"
-synced: "2026-04-05 01:00"
+synced: "2026-04-05 01:52"
 ---
 
 # NBWEB (NBWEB)

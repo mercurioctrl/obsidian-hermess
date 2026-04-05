@@ -4,7 +4,7 @@ name: "Naevo | Vitalsaf"
 type: "software"
 total_issues: 9
 jira_url: "https://bluinc.atlassian.net/browse/NAEV"
-synced: "2026-04-05 00:59"
+synced: "2026-04-05 01:51"
 ---
 
 # Naevo | Vitalsaf (NAEV)

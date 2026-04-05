@@ -4,7 +4,7 @@ name: "Pedidos"
 type: "software"
 total_issues: 1336
 jira_url: "https://bluinc.atlassian.net/browse/PED"
-synced: "2026-04-05 01:02"
+synced: "2026-04-05 01:52"
 ---
 
 # Pedidos (PED)

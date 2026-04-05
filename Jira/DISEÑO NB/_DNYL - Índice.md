@@ -4,7 +4,7 @@ name: "DISEÑO NB"
 type: "business"
 total_issues: 1362
 jira_url: "https://bluinc.atlassian.net/browse/DNYL"
-synced: "2026-04-05 00:55"
+synced: "2026-04-05 01:34"
 ---
 
 # DISEÑO NB (DNYL)

@@ -4,7 +4,7 @@ name: "Postventa"
 type: "software"
 total_issues: 337
 jira_url: "https://bluinc.atlassian.net/browse/POS"
-synced: "2026-04-05 01:29"
+synced: "2026-04-05 01:52"
 ---
 
 # Postventa (POS)

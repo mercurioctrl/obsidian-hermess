@@ -4,7 +4,7 @@ name: "Marketing New Bytes - 2025 "
 type: "business"
 total_issues: 77
 jira_url: "https://bluinc.atlassian.net/browse/MNB2"
-synced: "2026-04-05 00:59"
+synced: "2026-04-05 01:51"
 ---
 
 # Marketing New Bytes - 2025  (MNB2)

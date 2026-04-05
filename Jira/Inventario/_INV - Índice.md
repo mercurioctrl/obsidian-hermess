@@ -4,7 +4,7 @@ name: "Inventario"
 type: "software"
 total_issues: 342
 jira_url: "https://bluinc.atlassian.net/browse/INV"
-synced: "2026-04-05 00:56"
+synced: "2026-04-05 01:51"
 ---
 
 # Inventario (INV)
