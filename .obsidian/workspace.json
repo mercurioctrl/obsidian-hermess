@@ -176,7 +176,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 449.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,7 +190,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b005d136ec7b6c69",
+  "active": "d8ccf2be15c21748",
   "lastOpenFiles": [
     "Jira/Postventa/POS-338.md",
     "Jira/Postventa/POS-337.md",
