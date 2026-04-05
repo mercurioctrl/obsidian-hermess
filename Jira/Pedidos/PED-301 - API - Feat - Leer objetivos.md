@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-301"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
 
 ## Descripcion
 

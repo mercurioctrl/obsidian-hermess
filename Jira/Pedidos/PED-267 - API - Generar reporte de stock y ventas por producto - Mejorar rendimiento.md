@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-267"
 
 ## Relaciones
 
-- **blocks:** [[PED-215]] API - Feat - Generar reporte de stock y ventas por producto
+- **blocks:** [[PED-215 - API - Feat - Generar reporte de stock y ventas por producto|PED-215]] API - Feat - Generar reporte de stock y ventas por producto
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-835"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **action item from:** [[PED-834]] API - Refactor - Agregar parámetro "delivered" 
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **action item from:** [[PED-834 - API - Refactor - Agregar parámetro delivered|PED-834]] API - Refactor - Agregar parámetro "delivered" 
 
 ## Descripcion
 

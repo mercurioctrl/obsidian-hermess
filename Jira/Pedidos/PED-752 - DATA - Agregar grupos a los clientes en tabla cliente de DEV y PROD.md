@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-752"
 
 ## Relaciones
 
-- **Padre:** [[PED-748]] Incentivo 25 años
-- **blocks:** [[NBWEB-756]] API - Feat - Agregar al objeto "user" el grupo al que pertenece el ususariuo
-- **is blocked by:** [[PED-757]]  DATA - Agregar grupos de ranking a los clientes - Cliente repetido
+- **Padre:** [[PED-748 - Incentivo 25 años|PED-748]] Incentivo 25 años
+- **blocks:** [[NBWEB-756 - API - Feat - Agregar al objeto user el grupo al que pertenece el ususariuo|NBWEB-756]] API - Feat - Agregar al objeto "user" el grupo al que pertenece el ususariuo
+- **is blocked by:** [[PED-757 - DATA - Agregar grupos de ranking a los clientes - Cliente repetido|PED-757]]  DATA - Agregar grupos de ranking a los clientes - Cliente repetido
 
 ## Descripcion
 

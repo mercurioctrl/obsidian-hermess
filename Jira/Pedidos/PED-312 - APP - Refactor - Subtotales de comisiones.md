@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-312"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-311]] API - Refactor - Obtener subtotales de comisiones agrupados por listas de precios  -> Agregar coeficientes
-- **is blocked by:** [[PED-321]] APP - Mostrar lista de comisiones - Incidencias varias
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-311 - API - Refactor - Obtener subtotales de comisiones agrupados por listas de|PED-311]] API - Refactor - Obtener subtotales de comisiones agrupados por listas de precios  -> Agregar coeficientes
+- **is blocked by:** [[PED-321 - APP - Mostrar lista de comisiones - Incidencias varias|PED-321]] APP - Mostrar lista de comisiones - Incidencias varias
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-290"
 
 ## Relaciones
 
-- **blocks:** [[PED-259]] API - Feat - Tasa de ractivacion de clientes
+- **blocks:** [[PED-259 - API - Feat - Tasa de ractivacion de clientes|PED-259]] API - Feat - Tasa de ractivacion de clientes
 
 ## Descripcion
 

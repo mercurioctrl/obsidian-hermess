@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-131"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
-- **blocks:** [[PED-125]] APP - Feat - Modal de liquidacion
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
+- **blocks:** [[PED-125 - APP - Feat - Modal de liquidacion|PED-125]] APP - Feat - Modal de liquidacion
 
 ## Descripcion
 

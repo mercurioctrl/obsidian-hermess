@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-925"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **implements:** [[PED-910]] APP - MVP - Refactor - Seleccionar costo para el item de una orden
-- **is blocked by:** [[PED-921]] API - MVP - Refactor - Editar costo en las ordenes de compra
-- **is duplicated by:** [[PED-990]] APP - Refactor - Cambiar parámetro averageCost	por costForSale
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **implements:** [[PED-910 - APP - MVP - Refactor - Seleccionar costo para el item de una orden|PED-910]] APP - MVP - Refactor - Seleccionar costo para el item de una orden
+- **is blocked by:** [[PED-921 - API - MVP - Refactor - Editar costo en las ordenes de compra|PED-921]] API - MVP - Refactor - Editar costo en las ordenes de compra
+- **is duplicated by:** [[PED-990 - APP - Refactor - Cambiar parámetro averageCost por costForSale|PED-990]] APP - Refactor - Cambiar parámetro averageCost	por costForSale
 
 ## Descripcion
 

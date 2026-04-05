@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-110"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **is blocked by:** [[PED-84]] APP - Feat - Agregar / quitar item a una orden
-- **is blocked by:** [[PED-94]] API - Refactor - Agregar/quitar item a una orden -> Parametro opcional de precio
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **is blocked by:** [[PED-84 - APP - Feat - Agregar quitar item a una orden|PED-84]] APP - Feat - Agregar / quitar item a una orden
+- **is blocked by:** [[PED-94 - API - Refactor - Agregarquitar item a una orden - Parametro opcional de precio|PED-94]] API - Refactor - Agregar/quitar item a una orden -> Parametro opcional de precio
 
 ## Descripcion
 

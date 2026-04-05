@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-542"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **blocks:** [[PED-515]] API - Feat - Agregar palabra clave de retiro al recorrer aquellos pedidos que son Retiro en persona y no lo tienen
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **blocks:** [[PED-515 - API - Feat - Agregar palabra clave de retiro al recorrer aquellos pedidos que|PED-515]] API - Feat - Agregar palabra clave de retiro al recorrer aquellos pedidos que son Retiro en persona y no lo tienen
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-69"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
-- **is blocked by:** [[PED-67]] API - Repository - Categorias
-- **is blocked by:** [[PED-68]] API - Repository - Marcas
-- **blocks:** [[PED-72]] APP - Feat - Listar productos 
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
+- **is blocked by:** [[PED-67 - API - Repository - Categorias|PED-67]] API - Repository - Categorias
+- **is blocked by:** [[PED-68 - API - Repository - Marcas|PED-68]] API - Repository - Marcas
+- **blocks:** [[PED-72 - APP - Feat - Listar productos|PED-72]] APP - Feat - Listar productos 
 
 ## Descripcion
 

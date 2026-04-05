@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-90"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **Subtarea:** [[PED-113]] API - Review - No permite generar pedido
-- **Subtarea:** [[PED-129]] API - Refactor - Generar pedido para Libre Opción 
-- **Subtarea:** [[PED-158]] API - Review - Problemas al generar un pedido (albclit)
-- **blocks:** [[PED-91]] APP - Feat - Generar pedido
-- **has action item:** [[PED-1151]] API - MVP - Implementar almacenes al generar pedido (albclit) desde una orden de compra (pedclit)
-- **relates to:** [[PED-1178]] API - Refactor - Generar pedido -> Evitar creación y duplicación de pedidos ante errores en el proceso
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **Subtarea:** [[PED-113 - API - Review - No permite generar pedido|PED-113]] API - Review - No permite generar pedido
+- **Subtarea:** [[PED-129 - API - Refactor - Generar pedido para Libre Opción|PED-129]] API - Refactor - Generar pedido para Libre Opción 
+- **Subtarea:** [[PED-158 - API - Review - Problemas al generar un pedido (albclit)|PED-158]] API - Review - Problemas al generar un pedido (albclit)
+- **blocks:** [[PED-91 - APP - Feat - Generar pedido|PED-91]] APP - Feat - Generar pedido
+- **has action item:** [[PED-1151 - API - MVP - Implementar almacenes al generar pedido (albclit) desde una orden|PED-1151]] API - MVP - Implementar almacenes al generar pedido (albclit) desde una orden de compra (pedclit)
+- **relates to:** [[PED-1178 - API - Refactor - Generar pedido - Evitar creación y duplicación de pedidos ante|PED-1178]] API - Refactor - Generar pedido -> Evitar creación y duplicación de pedidos ante errores en el proceso
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-137"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-136]] APP - Feat - Filtros de ordenes -> Filtrar por tipo de orden
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-136 - APP - Feat - Filtros de ordenes - Filtrar por tipo de orden|PED-136]] APP - Feat - Filtros de ordenes -> Filtrar por tipo de orden
 
 ## Descripcion
 

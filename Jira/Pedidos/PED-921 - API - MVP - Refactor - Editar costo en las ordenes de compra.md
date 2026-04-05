@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-921"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **has action item:** [[PED-922]] API - Refactor - Agregar en el caso que corresponda el costForSale al generar un pedido
-- **blocks:** [[PED-925]] APP - MVP - Refactor - Guardar costo para el item de una orden
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **has action item:** [[PED-922 - API - Refactor - Agregar en el caso que corresponda el costForSale al generar|PED-922]] API - Refactor - Agregar en el caso que corresponda el costForSale al generar un pedido
+- **blocks:** [[PED-925 - APP - MVP - Refactor - Guardar costo para el item de una orden|PED-925]] APP - MVP - Refactor - Guardar costo para el item de una orden
 
 ## Descripcion
 

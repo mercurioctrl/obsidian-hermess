@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-147"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-148]] API - Feat - Leer usuario
-- **is blocked by:** [[PED-146]] API - Feat - Agregar / Editar usuario 
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-148 - API - Feat - Leer usuario|PED-148]] API - Feat - Leer usuario
+- **is blocked by:** [[PED-146 - API - Feat - Agregar Editar usuario|PED-146]] API - Feat - Agregar / Editar usuario 
 
 ## Descripcion
 

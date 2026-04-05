@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-739"
 
 ## Relaciones
 
-- **Padre:** [[PED-329]] Listado de ordenes
+- **Padre:** [[PED-329 - Listado de ordenes|PED-329]] Listado de ordenes
 
 ## Descripcion
 

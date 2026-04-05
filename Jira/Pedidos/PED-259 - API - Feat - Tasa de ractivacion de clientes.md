@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-259"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-290]] API - Tasa de reactivación de clientes - Incidencias varias
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-290 - API - Tasa de reactivación de clientes - Incidencias varias|PED-290]] API - Tasa de reactivación de clientes - Incidencias varias
 
 ## Descripcion
 

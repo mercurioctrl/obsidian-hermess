@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-327"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **relates to:** [[PED-337]] Listar clientes -> Buscar por número de CUIT/DNI - Incidencias varias
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **relates to:** [[PED-337 - Listar clientes - Buscar por número de CUITDNI - Incidencias varias|PED-337]] Listar clientes -> Buscar por número de CUIT/DNI - Incidencias varias
 
 ## Descripcion
 

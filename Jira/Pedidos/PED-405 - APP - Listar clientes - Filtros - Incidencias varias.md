@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-405"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **blocks:** [[PED-390]] APP - Feat - Listar clientes -> Conjunto de filtros ordenar por y sentido del orden
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **blocks:** [[PED-390 - APP - Feat - Listar clientes - Conjunto de filtros ordenar por y sentido del|PED-390]] APP - Feat - Listar clientes -> Conjunto de filtros ordenar por y sentido del orden
 
 ## Descripcion
 

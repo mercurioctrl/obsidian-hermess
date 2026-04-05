@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-846"
 
 ## Relaciones
 
-- **Padre:** [[PED-845]] Incentivos Vendedores
-- **has action item:** [[MKT-222]] NB_ INCENTIVO TRUST
+- **Padre:** [[PED-845 - Incentivos Vendedores|PED-845]] Incentivos Vendedores
+- **has action item:** [[MKT-222 - NB_ INCENTIVO TRUST|MKT-222]] NB_ INCENTIVO TRUST
 
 ## Descripcion
 

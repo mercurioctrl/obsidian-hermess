@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-654"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **is blocked by:** [[PED-653]] API - Feat - Hacer NC y Desvincular para refacturar un comprobante
-- **blocks:** [[SNB-1704]] ERA FACTURA A y salio B 
-- **blocks:** [[SNB-1695]] Por favor Re facturar
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **is blocked by:** [[PED-653 - API - Feat - Hacer NC y Desvincular para refacturar un comprobante|PED-653]] API - Feat - Hacer NC y Desvincular para refacturar un comprobante
+- **blocks:** [[SNB-1704 - ERA FACTURA A y salio B|SNB-1704]] ERA FACTURA A y salio B 
+- **blocks:** [[SNB-1695 - Por favor Re facturar|SNB-1695]] Por favor Re facturar
 
 ## Descripcion
 

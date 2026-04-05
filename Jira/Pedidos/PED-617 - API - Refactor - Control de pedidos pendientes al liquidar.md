@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-617"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **is caused by:** [[PED-619]] APP - Mostrar las ordenes pendientes al liquidar en caso de error
-- **is blocked by:** [[PED-622]] API - Control de pedidos pendientes al liquidar - No es posible liquidar orden pendiente
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **is caused by:** [[PED-619 - APP - Mostrar las ordenes pendientes al liquidar en caso de error|PED-619]] APP - Mostrar las ordenes pendientes al liquidar en caso de error
+- **is blocked by:** [[PED-622 - API - Control de pedidos pendientes al liquidar - No es posible liquidar orden|PED-622]] API - Control de pedidos pendientes al liquidar - No es posible liquidar orden pendiente
 
 ## Descripcion
 

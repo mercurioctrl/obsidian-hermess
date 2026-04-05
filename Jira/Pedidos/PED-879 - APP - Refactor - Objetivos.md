@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-879"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **has action item:** [[MKT-236]] NB_ INCENTIVO PATRIOT
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **has action item:** [[MKT-236 - NB_ INCENTIVO PATRIOT|MKT-236]] NB_ INCENTIVO PATRIOT
 
 ## Descripcion
 

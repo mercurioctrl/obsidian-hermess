@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-938"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **action item from:** [[SNB-2748]] Búsqueda por Guías de correo
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **action item from:** [[SNB-2748 - Búsqueda por Guías de correo|SNB-2748]] Búsqueda por Guías de correo
 
 ## Descripcion
 

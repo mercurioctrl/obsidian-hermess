@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-498"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **blocks:** [[PED-499]] APP - Feat - Agregar prametro para mostrar los acreditados
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **blocks:** [[PED-499 - APP - Feat - Agregar prametro para mostrar los acreditados|PED-499]] APP - Feat - Agregar prametro para mostrar los acreditados
 
 ## Descripcion
 

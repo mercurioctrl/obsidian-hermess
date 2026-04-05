@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-161"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
-- **blocks:** [[PED-162]] API - Feat - Filtrar por tipo de comprobante
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
+- **blocks:** [[PED-162 - API - Feat - Filtrar por tipo de comprobante|PED-162]] API - Feat - Filtrar por tipo de comprobante
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-592"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is blocked by:** [[PED-604]] API - Refactor - Al crear un nuevo cliente la direccion no debe replicarse en el listado de direcciones
-- **is blocked by:** [[PED-615]] API - Problema al cotizar un envío - Después de eliminar direcciones sus datos siguen apareciendo
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is blocked by:** [[PED-604 - API - Refactor - Al crear un nuevo cliente la direccion no debe replicarse en|PED-604]] API - Refactor - Al crear un nuevo cliente la direccion no debe replicarse en el listado de direcciones
+- **is blocked by:** [[PED-615 - API - Problema al cotizar un envío - Después de eliminar direcciones sus datos|PED-615]] API - Problema al cotizar un envío - Después de eliminar direcciones sus datos siguen apareciendo
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-888"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **Subtarea:** [[PED-889]] API - SYNCUP - Enviar aviso con clientes que serán liberados el viernes (10 dias despues) cuando no tengan compras en los ultimos 180 dias
-- **Subtarea:** [[PED-890]] API - SYNCUP - Desvincular clientes que tienen mas de 180 dias sin compras
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **Subtarea:** [[PED-889 - API - SYNCUP - Enviar aviso con clientes que serán liberados el viernes (10|PED-889]] API - SYNCUP - Enviar aviso con clientes que serán liberados el viernes (10 dias despues) cuando no tengan compras en los ultimos 180 dias
+- **Subtarea:** [[PED-890 - API - SYNCUP - Desvincular clientes que tienen mas de 180 dias sin compras|PED-890]] API - SYNCUP - Desvincular clientes que tienen mas de 180 dias sin compras
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-884"
 
 ## Relaciones
 
-- **Padre:** [[PED-132]] Feat - Login / Re Login
-- **has action item:** [[PED-883]] APP - Refactor - Agregar filtro empresa global
+- **Padre:** [[PED-132 - Feat - Login Re Login|PED-132]] Feat - Login / Re Login
+- **has action item:** [[PED-883 - APP - Refactor - Agregar filtro empresa global|PED-883]] APP - Refactor - Agregar filtro empresa global
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-716"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-715]] APP - Búsqueda por AFIP - Oportunidad de mejora al mostrar resultados no encontrados
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-715 - APP - Búsqueda por AFIP - Oportunidad de mejora al mostrar resultados no|PED-715]] APP - Búsqueda por AFIP - Oportunidad de mejora al mostrar resultados no encontrados
 
 ## Descripcion
 

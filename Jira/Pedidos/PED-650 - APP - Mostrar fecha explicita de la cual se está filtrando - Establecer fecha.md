@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-650"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-623]] APP - Feat - FIltros de fecha, mostrar la fecha explicita de la cual estas filtrando en esta pestaña
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-623 - APP - Feat - FIltros de fecha, mostrar la fecha explicita de la cual estas|PED-623]] APP - Feat - FIltros de fecha, mostrar la fecha explicita de la cual estas filtrando en esta pestaña
 
 ## Descripcion
 

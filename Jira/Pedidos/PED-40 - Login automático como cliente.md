@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-40"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **Subtarea:** [[PED-41]] API - Feat - Crear autorizacion en la api de ordenes
-- **Subtarea:** [[PED-42]] API - Feat - Login mediante autorizacion en el sitio web 
-- **Subtarea:** [[PED-43]] APP - Feat - Pedir autorizacion y redirigir 
-- **Subtarea:** [[PED-44]] APP - Feat - Login meidante autorizacion en el sitio web
-- **Subtarea:** [[PED-1290]] APP - Refactor - Agregar al menú "clic derecho" el acceso automático al sitio de NBE
-- **blocks:** [[SNB-1154]] sumar andreani/ oca
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **Subtarea:** [[PED-41 - API - Feat - Crear autorizacion en la api de ordenes|PED-41]] API - Feat - Crear autorizacion en la api de ordenes
+- **Subtarea:** [[PED-42 - API - Feat - Login mediante autorizacion en el sitio web|PED-42]] API - Feat - Login mediante autorizacion en el sitio web 
+- **Subtarea:** [[PED-43 - APP - Feat - Pedir autorizacion y redirigir|PED-43]] APP - Feat - Pedir autorizacion y redirigir 
+- **Subtarea:** [[PED-44 - APP - Feat - Login meidante autorizacion en el sitio web|PED-44]] APP - Feat - Login meidante autorizacion en el sitio web
+- **Subtarea:** [[PED-1290 - APP - Refactor - Agregar al menú clic derecho el acceso automático al sitio de|PED-1290]] APP - Refactor - Agregar al menú "clic derecho" el acceso automático al sitio de NBE
+- **blocks:** [[SNB-1154 - sumar andreani oca|SNB-1154]] sumar andreani/ oca
 
 ## Descripcion
 

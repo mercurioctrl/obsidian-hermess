@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-247"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **is blocked by:** [[PED-265]] API - Al liquidar un pedido, marcar ultima compra - Incidencias varias
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **is blocked by:** [[PED-265 - API - Al liquidar un pedido, marcar ultima compra - Incidencias varias|PED-265]] API - Al liquidar un pedido, marcar ultima compra - Incidencias varias
 
 ## Descripcion
 

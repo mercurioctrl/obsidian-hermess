@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-296"
 
 ## Relaciones
 
-- **blocks:** [[PED-282]] API - Feat - Ventas totales
+- **blocks:** [[PED-282 - API - Feat - Ventas totales|PED-282]] API - Feat - Ventas totales
 
 ## Descripcion
 

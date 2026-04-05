@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-832"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
-- **relates to:** [[PED-827]] APP - Refactor - Agregar stock de postventa
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
+- **relates to:** [[PED-827 - APP - Refactor - Agregar stock de postventa|PED-827]] APP - Refactor - Agregar stock de postventa
 
 ## Descripcion
 

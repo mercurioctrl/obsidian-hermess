@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-979"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **action item from:** [[PED-691]] API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si es de libre opcion
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **action item from:** [[PED-691 - API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si|PED-691]] API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si es de libre opcion
 
 ## Descripcion
 

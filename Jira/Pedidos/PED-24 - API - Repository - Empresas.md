@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-24"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
-- **blocks:** [[PED-25]] APP - Feat - Modal - Seteo de parámetros de cliente 
-- **blocks:** [[PED-793]] API - Feat - Filtrar clientes por empresa
-- **blocks:** [[PED-794]] APP - Feat - Filtrar clientes por empresa
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
+- **blocks:** [[PED-25 - APP - Feat - Modal - Seteo de parámetros de cliente|PED-25]] APP - Feat - Modal - Seteo de parámetros de cliente 
+- **blocks:** [[PED-793 - API - Feat - Filtrar clientes por empresa|PED-793]] API - Feat - Filtrar clientes por empresa
+- **blocks:** [[PED-794 - APP - Feat - Filtrar clientes por empresa|PED-794]] APP - Feat - Filtrar clientes por empresa
 
 ## Descripcion
 

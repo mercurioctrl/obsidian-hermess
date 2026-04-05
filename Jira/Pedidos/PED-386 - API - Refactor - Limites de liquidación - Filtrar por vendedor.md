@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-386"
 
 ## Relaciones
 
-- **relates to:** [[PED-373]] API - Feat - Limites de liquidacion
+- **relates to:** [[PED-373 - API - Feat - Limites de liquidacion|PED-373]] API - Feat - Limites de liquidacion
 
 ## Descripcion
 

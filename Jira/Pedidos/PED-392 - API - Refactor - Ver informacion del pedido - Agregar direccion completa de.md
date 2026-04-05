@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-392"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-537]] API - Refactor - Ver información del pedido -> Agregar dirección de envío del sitio web
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-537 - API - Refactor - Ver información del pedido - Agregar dirección de envío del|PED-537]] API - Refactor - Ver información del pedido -> Agregar dirección de envío del sitio web
 
 ## Descripcion
 

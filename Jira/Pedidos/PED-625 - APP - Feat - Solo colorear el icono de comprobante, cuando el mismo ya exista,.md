@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-625"
 
 ## Relaciones
 
-- **Padre:** [[PED-584]] Comprobantes de pago
-- **is blocked by:** [[PED-624]] API - Feat - Agregar flag para saber si ya tiene o no el comprobante cargado en el repositorio de ordenes
+- **Padre:** [[PED-584 - Comprobantes de pago|PED-584]] Comprobantes de pago
+- **is blocked by:** [[PED-624 - API - Feat - Agregar flag para saber si ya tiene o no el comprobante cargado en|PED-624]] API - Feat - Agregar flag para saber si ya tiene o no el comprobante cargado en el repositorio de ordenes
 
 ## Descripcion
 

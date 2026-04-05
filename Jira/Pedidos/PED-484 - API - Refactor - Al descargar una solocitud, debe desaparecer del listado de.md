@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-484"
 
 ## Relaciones
 
-- **Padre:** [[PED-201]] Solicitudes de Alta
-- **is blocked by:** [[PED-487]] APP - Feat - Cuando descargamos una orden, debemos pasar como un parametro oculto el id de la clientRequest
+- **Padre:** [[PED-201 - Solicitudes de Alta|PED-201]] Solicitudes de Alta
+- **is blocked by:** [[PED-487 - APP - Feat - Cuando descargamos una orden, debemos pasar como un parametro|PED-487]] APP - Feat - Cuando descargamos una orden, debemos pasar como un parametro oculto el id de la clientRequest
 
 ## Descripcion
 

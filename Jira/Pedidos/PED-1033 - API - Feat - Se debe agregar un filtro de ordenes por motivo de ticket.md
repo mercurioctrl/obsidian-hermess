@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1033"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **has action item:** [[PED-1035]] APP - Feat - Se deben poder filtrar las ordenes por tipo y motivo de ticket
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **has action item:** [[PED-1035 - APP - Feat - Se deben poder filtrar las ordenes por tipo y motivo de ticket|PED-1035]] APP - Feat - Se deben poder filtrar las ordenes por tipo y motivo de ticket
 
 ## Descripcion
 

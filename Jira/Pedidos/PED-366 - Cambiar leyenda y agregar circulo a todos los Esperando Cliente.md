@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-366"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
-- **is blocked by:** [[PED-376]] APP - Cambiar leyenda y agregar circulo a todos los "Esperando Cliente" - Incidencias varias
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
+- **is blocked by:** [[PED-376 - APP - Cambiar leyenda y agregar circulo a todos los Esperando Cliente -|PED-376]] APP - Cambiar leyenda y agregar circulo a todos los "Esperando Cliente" - Incidencias varias
 
 ## Descripcion
 

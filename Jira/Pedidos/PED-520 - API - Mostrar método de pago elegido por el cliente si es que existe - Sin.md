@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-520"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-513]] API - Refactor - Mostrar metodo de pago elegido por el cliente si es que existe
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-513 - API - Refactor - Mostrar metodo de pago elegido por el cliente si es que existe|PED-513]] API - Refactor - Mostrar metodo de pago elegido por el cliente si es que existe
 
 ## Descripcion
 

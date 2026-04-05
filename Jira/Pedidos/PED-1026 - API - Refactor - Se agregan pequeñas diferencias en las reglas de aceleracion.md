@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1026"
 
 ## Relaciones
 
-- **Padre:** [[PED-748]] Incentivo 25 años
-- **action item from:** [[PED-750]] API - Feat - Acelerar pedidos liquidados autorizados (syncUp)
+- **Padre:** [[PED-748 - Incentivo 25 años|PED-748]] Incentivo 25 años
+- **action item from:** [[PED-750 - API - Feat - Acelerar pedidos liquidados autorizados (syncUp)|PED-750]] API - Feat - Acelerar pedidos liquidados autorizados (syncUp)
 
 ## Descripcion
 

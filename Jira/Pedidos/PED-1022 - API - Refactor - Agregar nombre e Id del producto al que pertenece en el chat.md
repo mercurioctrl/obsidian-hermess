@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1022"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **has action item:** [[PED-1023]] APP - Refactor - Agregar nombre e Id del producto al que pertenece en el chat de LO
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **has action item:** [[PED-1023 - APP - Refactor - Agregar nombre e Id del producto al que pertenece en el chat|PED-1023]] APP - Refactor - Agregar nombre e Id del producto al que pertenece en el chat de LO
 
 ## Descripcion
 

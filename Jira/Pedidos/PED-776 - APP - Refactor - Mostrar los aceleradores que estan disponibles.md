@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-776"
 
 ## Relaciones
 
-- **Padre:** [[PED-753]] Incentivos Clientes
-- **is blocked by:** [[PED-775]] API - Refactor - Mostrar aceleradores listados
-- **relates to:** [[PED-778]] APP - Mostrar los aceleradores que están disponibles - Sugerencia de mejora en el filtrado por defecto
+- **Padre:** [[PED-753 - Incentivos Clientes|PED-753]] Incentivos Clientes
+- **is blocked by:** [[PED-775 - API - Refactor - Mostrar aceleradores listados|PED-775]] API - Refactor - Mostrar aceleradores listados
+- **relates to:** [[PED-778 - APP - Mostrar los aceleradores que están disponibles - Sugerencia de mejora en|PED-778]] APP - Mostrar los aceleradores que están disponibles - Sugerencia de mejora en el filtrado por defecto
 
 ## Descripcion
 

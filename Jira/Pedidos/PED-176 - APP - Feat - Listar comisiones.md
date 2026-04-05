@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-176"
 
 ## Relaciones
 
-- **Padre:** [[PED-174]] Listar comisiones
-- **is blocked by:** [[PED-175]] API - Feat - Listar comisiones
-- **relates to:** [[PED-534]]  APP - Refactor - Listar comisiones - Selección automática de filtros
+- **Padre:** [[PED-174 - Listar comisiones|PED-174]] Listar comisiones
+- **is blocked by:** [[PED-175 - API - Feat - Listar comisiones|PED-175]] API - Feat - Listar comisiones
+- **relates to:** [[PED-534 - APP - Refactor - Listar comisiones - Selección automática de filtros|PED-534]]  APP - Refactor - Listar comisiones - Selección automática de filtros
 
 ## Descripcion
 

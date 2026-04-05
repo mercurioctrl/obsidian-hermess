@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-25"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-19]] API - Feat - Editar cliente
-- **is blocked by:** [[PED-20]] API - Feat - Obtener informacion completa cliente
-- **is blocked by:** [[PED-23]] API - Repository - Vendedores
-- **is blocked by:** [[PED-24]] API - Repository - Empresas 
-- **is blocked by:** [[PED-27]] API - Feat - Modal - Seteo de parámetros de cliente 
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-19 - API - Feat - Editar cliente|PED-19]] API - Feat - Editar cliente
+- **is blocked by:** [[PED-20 - API - Feat - Obtener informacion completa cliente|PED-20]] API - Feat - Obtener informacion completa cliente
+- **is blocked by:** [[PED-23 - API - Repository - Vendedores|PED-23]] API - Repository - Vendedores
+- **is blocked by:** [[PED-24 - API - Repository - Empresas|PED-24]] API - Repository - Empresas 
+- **is blocked by:** [[PED-27 - API - Feat - Modal - Seteo de parámetros de cliente|PED-27]] API - Feat - Modal - Seteo de parámetros de cliente 
 
 ## Descripcion
 

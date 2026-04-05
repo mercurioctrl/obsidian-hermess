@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-387"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-384]] API - Refactor - Agregar parametros LTV a el repositorio de clientes
-- **is blocked by:** [[PED-388]] API - Refactor - Listar clientes -> Agregar ultima compra tanto en fecha, como en cantidad de dias
-- **relates to:** [[PED-459]] APP - Información del cliente al listado - Ultima compra vacía
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-384 - API - Refactor - Agregar parametros LTV a el repositorio de clientes|PED-384]] API - Refactor - Agregar parametros LTV a el repositorio de clientes
+- **is blocked by:** [[PED-388 - API - Refactor - Listar clientes - Agregar ultima compra tanto en fecha, como|PED-388]] API - Refactor - Listar clientes -> Agregar ultima compra tanto en fecha, como en cantidad de dias
+- **relates to:** [[PED-459 - APP - Información del cliente al listado - Ultima compra vacía|PED-459]] APP - Información del cliente al listado - Ultima compra vacía
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-591"
 
 ## Relaciones
 
-- **is duplicated by:** [[PED-597]] APP - Faltan las percpeciones al hacer el calculo de cheques
+- **is duplicated by:** [[PED-597 - APP - Faltan las percpeciones al hacer el calculo de cheques|PED-597]] APP - Faltan las percpeciones al hacer el calculo de cheques
 
 ## Descripcion
 

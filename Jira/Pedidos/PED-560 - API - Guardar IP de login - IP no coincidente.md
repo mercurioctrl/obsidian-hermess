@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-560"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-717]] API - Feat - Guardar IP de login
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-717 - API - Feat - Guardar IP de login|PED-717]] API - Feat - Guardar IP de login
 
 ## Descripcion
 

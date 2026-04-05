@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-561"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-300]] APP - Refactor - Agregar cotización y percepcion como una columna a la lista de pedidos
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-300 - APP - Refactor - Agregar cotización y percepcion como una columna a la lista de|PED-300]] APP - Refactor - Agregar cotización y percepcion como una columna a la lista de pedidos
 
 ## Descripcion
 

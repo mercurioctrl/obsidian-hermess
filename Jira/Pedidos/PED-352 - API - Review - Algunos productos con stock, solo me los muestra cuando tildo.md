@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-352"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
-- **is blocked by:** [[PED-423]] API - Filtrado por stock no coincidente
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
+- **is blocked by:** [[PED-423 - API - Filtrado por stock no coincidente|PED-423]] API - Filtrado por stock no coincidente
 
 ## Descripcion
 

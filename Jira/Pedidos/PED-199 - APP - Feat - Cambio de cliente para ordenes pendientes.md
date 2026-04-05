@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-199"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **is blocked by:** [[PED-198]] API - Feat - Cambio de cliente para ordenes pendientes
-- **is blocked by:** [[PED-263]] APP - Cambio de cliente para ordenes pendientes - Incidencias varias
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **is blocked by:** [[PED-198 - API - Feat - Cambio de cliente para ordenes pendientes|PED-198]] API - Feat - Cambio de cliente para ordenes pendientes
+- **is blocked by:** [[PED-263 - APP - Cambio de cliente para ordenes pendientes - Incidencias varias|PED-263]] APP - Cambio de cliente para ordenes pendientes - Incidencias varias
 
 ## Descripcion
 

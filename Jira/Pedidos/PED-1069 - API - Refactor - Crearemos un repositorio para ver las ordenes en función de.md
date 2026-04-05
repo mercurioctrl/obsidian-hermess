@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1069"
 
 ## Relaciones
 
-- **Padre:** [[PED-1068]] Periodos logisticos
-- **has action item:** [[PED-1081]] APP - Feat - Estadisticas de ordenes
-- **has action item:** [[PED-1082]] API - Refactor - Cambiar todas las unidades a horas y agregar tiempo total
+- **Padre:** [[PED-1068 - Periodos logisticos|PED-1068]] Periodos logisticos
+- **has action item:** [[PED-1081 - APP - Feat - Estadisticas de ordenes|PED-1081]] APP - Feat - Estadisticas de ordenes
+- **has action item:** [[PED-1082 - API - Refactor - Cambiar todas las unidades a horas y agregar tiempo total|PED-1082]] API - Refactor - Cambiar todas las unidades a horas y agregar tiempo total
 
 ## Descripcion
 

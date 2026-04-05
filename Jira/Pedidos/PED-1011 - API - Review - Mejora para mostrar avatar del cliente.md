@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1011"
 
 ## Relaciones
 
-- **Padre:** [[PED-1005]] Chat General
+- **Padre:** [[PED-1005 - Chat General|PED-1005]] Chat General
 
 ## Descripcion
 

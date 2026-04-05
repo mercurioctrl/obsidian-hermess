@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-298"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-334]] API - Sync Up - Calcular parámetros LTV - Incidencias varias
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-334 - API - Sync Up - Calcular parámetros LTV - Incidencias varias|PED-334]] API - Sync Up - Calcular parámetros LTV - Incidencias varias
 
 ## Descripcion
 

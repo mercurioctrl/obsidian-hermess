@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-449"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-450]] APP - Feat - Agregar percepción en el modal de pedido y al valor final
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-450 - APP - Feat - Agregar percepción en el modal de pedido y al valor final|PED-450]] APP - Feat - Agregar percepción en el modal de pedido y al valor final
 
 ## Descripcion
 

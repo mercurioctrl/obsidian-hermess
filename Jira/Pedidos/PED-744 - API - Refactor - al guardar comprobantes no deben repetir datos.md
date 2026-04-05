@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-744"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-1999]] Liquidaciones que estan duplicadas
+- **is blocked by:** [[SNB-1999 - Liquidaciones que estan duplicadas|SNB-1999]] Liquidaciones que estan duplicadas
 
 ## Descripcion
 

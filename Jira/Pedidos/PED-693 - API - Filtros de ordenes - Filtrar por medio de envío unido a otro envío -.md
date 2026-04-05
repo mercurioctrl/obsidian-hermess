@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-693"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-664]] API - Feat - Filtros de ordenes -> Filtrar por medio de envío "unido a otro envío"
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-664 - API - Feat - Filtros de ordenes - Filtrar por medio de envío unido a otro envío|PED-664]] API - Feat - Filtros de ordenes -> Filtrar por medio de envío "unido a otro envío"
 
 ## Descripcion
 

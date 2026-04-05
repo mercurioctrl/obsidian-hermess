@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-265"
 
 ## Relaciones
 
-- **blocks:** [[PED-247]] API - Refactor - Al liquidar un pedido, marcar [ULTIMA_COMPRA]
+- **blocks:** [[PED-247 - API - Refactor - Al liquidar un pedido, marcar ULTIMA_COMPRA|PED-247]] API - Refactor - Al liquidar un pedido, marcar [ULTIMA_COMPRA]
 
 ## Descripcion
 

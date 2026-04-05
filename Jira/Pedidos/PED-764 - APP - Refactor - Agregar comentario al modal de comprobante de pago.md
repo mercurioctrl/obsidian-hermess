@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-764"
 
 ## Relaciones
 
-- **Padre:** [[PED-761]] Comprobantes de pago
-- **is blocked by:** [[PED-762]] API - Feat - Leer comentario de comprobante de pago
-- **is blocked by:** [[PED-763]] API - Feat - Guardar comentario de comprobante de pago
-- **blocks:** [[SNB-2150]] AGREGAR NOTAS EN LA SECCION DEL COMPROBANTE
-- **is blocked by:** [[PED-779]] APP - Agregar comentario al modal de comprobante de pago - Limpiar comentario al cerrar modal
+- **Padre:** [[PED-761 - Comprobantes de pago|PED-761]] Comprobantes de pago
+- **is blocked by:** [[PED-762 - API - Feat - Leer comentario de comprobante de pago|PED-762]] API - Feat - Leer comentario de comprobante de pago
+- **is blocked by:** [[PED-763 - API - Feat - Guardar comentario de comprobante de pago|PED-763]] API - Feat - Guardar comentario de comprobante de pago
+- **blocks:** [[SNB-2150 - AGREGAR NOTAS EN LA SECCION DEL COMPROBANTE|SNB-2150]] AGREGAR NOTAS EN LA SECCION DEL COMPROBANTE
+- **is blocked by:** [[PED-779 - APP - Agregar comentario al modal de comprobante de pago - Limpiar comentario|PED-779]] APP - Agregar comentario al modal de comprobante de pago - Limpiar comentario al cerrar modal
 
 ## Descripcion
 

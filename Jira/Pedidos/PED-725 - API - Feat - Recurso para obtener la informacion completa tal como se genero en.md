@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-725"
 
 ## Relaciones
 
-- **Padre:** [[PED-724]] Modal "Venta Market Place LO"
-- **relates to:** [[PED-621]] API - Obtener información de como se genero una orden en Marketplace (LO) - Sugerencias de mejora en el objeto
-- **relates to:** [[PED-732]] API - Obtener información de como se genero una orden en Marketplace (LO) - Agregar resellerPhone
+- **Padre:** [[PED-724 - Modal Venta Market Place LO|PED-724]] Modal "Venta Market Place LO"
+- **relates to:** [[PED-621 - API - Obtener información de como se genero una orden en Marketplace (LO) -|PED-621]] API - Obtener información de como se genero una orden en Marketplace (LO) - Sugerencias de mejora en el objeto
+- **relates to:** [[PED-732 - API - Obtener información de como se genero una orden en Marketplace (LO) -|PED-732]] API - Obtener información de como se genero una orden en Marketplace (LO) - Agregar resellerPhone
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-254"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
-- **Subtarea:** [[PED-276]] APP - Crear reporte
-- **Subtarea:** [[PED-708]] APP - Crear reporte - Reportes repetidos 
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
+- **Subtarea:** [[PED-276 - APP - Crear reporte|PED-276]] APP - Crear reporte
+- **Subtarea:** [[PED-708 - APP - Crear reporte - Reportes repetidos|PED-708]] APP - Crear reporte - Reportes repetidos 
 
 ## Descripcion
 

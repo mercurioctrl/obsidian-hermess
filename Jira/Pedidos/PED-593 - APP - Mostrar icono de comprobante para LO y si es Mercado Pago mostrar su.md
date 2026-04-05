@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-593"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-577]] APP - Refactor - Mostrar o no icono de comprobante para LO y en caso de mercado pago mostrar icono de permado pago y redirigir
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-577 - APP - Refactor - Mostrar o no icono de comprobante para LO y en caso de mercado|PED-577]] APP - Refactor - Mostrar o no icono de comprobante para LO y en caso de mercado pago mostrar icono de permado pago y redirigir
 
 ## Descripcion
 

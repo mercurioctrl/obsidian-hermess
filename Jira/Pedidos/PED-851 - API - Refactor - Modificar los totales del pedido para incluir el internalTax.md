@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-851"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-853]] API - Refactor - Al crear/editar una orden se debe agregar el internalTax si corresponde en pedclil
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-853 - API - Refactor - Al creareditar una orden se debe agregar el internalTax si|PED-853]] API - Refactor - Al crear/editar una orden se debe agregar el internalTax si corresponde en pedclil
 
 ## Descripcion
 

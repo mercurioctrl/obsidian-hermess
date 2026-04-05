@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-219"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **is blocked by:** [[PED-218]] API - Refactor - Almacenar en un directorio temporal el archivo para facilitar su descarga
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **is blocked by:** [[PED-218 - API - Refactor - Almacenar en un directorio temporal el archivo para facilitar|PED-218]] API - Refactor - Almacenar en un directorio temporal el archivo para facilitar su descarga
 
 ## Descripcion
 

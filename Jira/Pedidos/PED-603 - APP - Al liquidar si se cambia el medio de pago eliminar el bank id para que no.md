@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-603"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **causes:** [[COB-493]] APP - Refactor - En los liquidado con cuenta corriente, comentar para que me deje usar banco que ahora esta bloqueado para completar una parte del pago
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **causes:** [[COB-493 - APP - Refactor - En los liquidado con cuenta corriente, comentar para que me|COB-493]] APP - Refactor - En los liquidado con cuenta corriente, comentar para que me deje usar banco que ahora esta bloqueado para completar una parte del pago
 
 ## Descripcion
 

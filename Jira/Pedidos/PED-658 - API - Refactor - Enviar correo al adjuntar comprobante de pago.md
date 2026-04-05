@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-658"
 
 ## Relaciones
 
-- **Padre:** [[PED-584]] Comprobantes de pago
+- **Padre:** [[PED-584 - Comprobantes de pago|PED-584]] Comprobantes de pago
 
 ## Descripcion
 

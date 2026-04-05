@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-450"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-449]] API - Refactor - Ver detalle de un pedido / orden -> Agregar percepciones
-- **is blocked by:** [[PED-464]] APP - Agregar percepción en el modal de pedido y al valor final - Finales no coincidentes
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-449 - API - Refactor - Ver detalle de un pedido orden - Agregar percepciones|PED-449]] API - Refactor - Ver detalle de un pedido / orden -> Agregar percepciones
+- **is blocked by:** [[PED-464 - APP - Agregar percepción en el modal de pedido y al valor final - Finales no|PED-464]] APP - Agregar percepción en el modal de pedido y al valor final - Finales no coincidentes
 
 ## Descripcion
 

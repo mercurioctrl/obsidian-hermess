@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1003"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **has action item:** [[PED-1004]] APP - MVP - Feat - Precios de venta anteriores para un cliente y producto especifico
-- **relates to:** [[PED-1010]] API - MVP - Precios de venta anteriores para un cliente y producto predeterminados - Sugerencia de mejora en el orden
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **has action item:** [[PED-1004 - APP - MVP - Feat - Precios de venta anteriores para un cliente y producto|PED-1004]] APP - MVP - Feat - Precios de venta anteriores para un cliente y producto especifico
+- **relates to:** [[PED-1010 - API - MVP - Precios de venta anteriores para un cliente y producto|PED-1010]] API - MVP - Precios de venta anteriores para un cliente y producto predeterminados - Sugerencia de mejora en el orden
 
 ## Descripcion
 

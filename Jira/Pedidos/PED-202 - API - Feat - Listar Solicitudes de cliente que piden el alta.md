@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-202"
 
 ## Relaciones
 
-- **Padre:** [[PED-201]] Solicitudes de Alta
+- **Padre:** [[PED-201 - Solicitudes de Alta|PED-201]] Solicitudes de Alta
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-349"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-350]] APP - Refactor - Agregar informacion complementaria al modal de pedidos
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-350 - APP - Refactor - Agregar informacion complementaria al modal de pedidos|PED-350]] APP - Refactor - Agregar informacion complementaria al modal de pedidos
 
 ## Descripcion
 

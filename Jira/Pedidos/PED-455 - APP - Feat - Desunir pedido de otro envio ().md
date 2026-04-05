@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-455"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **is blocked by:** [[PED-448]] APP - Feat - DESunir pedido a otro envio (pedido)
-- **is blocked by:** [[PED-454]] API - Refactor - Agregar el pedido al cual esta vinculado un pedido, en caso de que exista a las condiciones
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **is blocked by:** [[PED-448 - APP - Feat - DESunir pedido a otro envio (pedido)|PED-448]] APP - Feat - DESunir pedido a otro envio (pedido)
+- **is blocked by:** [[PED-454 - API - Refactor - Agregar el pedido al cual esta vinculado un pedido, en caso de|PED-454]] API - Refactor - Agregar el pedido al cual esta vinculado un pedido, en caso de que exista a las condiciones
 
 ## Descripcion
 

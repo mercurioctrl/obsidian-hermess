@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-646"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **Subtarea:** [[PED-647]] API - Feat - Agregar parametro dropShipping al listado de ordenes
-- **Subtarea:** [[PED-648]] APP - Feat - Agregar parametro dropShipping al listado de ordenes
-- **Subtarea:** [[PED-656]] API - Feat - Marcar una orden como dropShipping
-- **Subtarea:** [[PED-657]] APP - Feat - Marcar una orden como dropShipping
-- **Subtarea:** [[PED-668]] API - Refactor - Agregar nombre y mail al recurso para marcar dropshipping
-- **Subtarea:** [[PED-669]] APP - Refactor - Agregar un modal con la posibilidad de incluir nombre y correo ademas del parametro de dropshipping
-- **Subtarea:** [[PED-670]] API - Fet - Leer parametros compltos de dropshipping
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-647 - API - Feat - Agregar parametro dropShipping al listado de ordenes|PED-647]] API - Feat - Agregar parametro dropShipping al listado de ordenes
+- **Subtarea:** [[PED-648 - APP - Feat - Agregar parametro dropShipping al listado de ordenes|PED-648]] APP - Feat - Agregar parametro dropShipping al listado de ordenes
+- **Subtarea:** [[PED-656 - API - Feat - Marcar una orden como dropShipping|PED-656]] API - Feat - Marcar una orden como dropShipping
+- **Subtarea:** [[PED-657 - APP - Feat - Marcar una orden como dropShipping|PED-657]] APP - Feat - Marcar una orden como dropShipping
+- **Subtarea:** [[PED-668 - API - Refactor - Agregar nombre y mail al recurso para marcar dropshipping|PED-668]] API - Refactor - Agregar nombre y mail al recurso para marcar dropshipping
+- **Subtarea:** [[PED-669 - APP - Refactor - Agregar un modal con la posibilidad de incluir nombre y correo|PED-669]] APP - Refactor - Agregar un modal con la posibilidad de incluir nombre y correo ademas del parametro de dropshipping
+- **Subtarea:** [[PED-670 - API - Fet - Leer parametros compltos de dropshipping|PED-670]] API - Fet - Leer parametros compltos de dropshipping
 
 ## Descripcion
 

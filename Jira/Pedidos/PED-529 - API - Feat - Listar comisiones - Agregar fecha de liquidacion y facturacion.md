@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-529"
 
 ## Relaciones
 
-- **Padre:** [[PED-174]] Listar comisiones
-- **blocks:** [[PED-530]] APP - Feat - Agregar columas fecha de liquidacion y fecha de facturacion
-- **is blocked by:** [[PED-548]] API - Listar comisiones -> Agregar fecha de liquidación y facturación - fechas de facturación y remito faltantes
+- **Padre:** [[PED-174 - Listar comisiones|PED-174]] Listar comisiones
+- **blocks:** [[PED-530 - APP - Feat - Agregar columas fecha de liquidacion y fecha de facturacion|PED-530]] APP - Feat - Agregar columas fecha de liquidacion y fecha de facturacion
+- **is blocked by:** [[PED-548 - API - Listar comisiones - Agregar fecha de liquidación y facturación - fechas|PED-548]] API - Listar comisiones -> Agregar fecha de liquidación y facturación - fechas de facturación y remito faltantes
 
 ## Descripcion
 

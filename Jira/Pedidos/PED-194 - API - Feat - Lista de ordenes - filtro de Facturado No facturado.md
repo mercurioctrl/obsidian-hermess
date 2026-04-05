@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-194"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-195]] APP - Feat - Lista de ordenes -> filtro de Facturado / No facturado
-- **blocks:** [[PED-190]] APP - Feat - Ver informacion del pedido -> Eliminar saltos de linea (Feedback)
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-195 - APP - Feat - Lista de ordenes - filtro de Facturado No facturado|PED-195]] APP - Feat - Lista de ordenes -> filtro de Facturado / No facturado
+- **blocks:** [[PED-190 - APP - Feat - Ver informacion del pedido - Eliminar saltos de linea (Feedback)|PED-190]] APP - Feat - Ver informacion del pedido -> Eliminar saltos de linea (Feedback)
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1007"
 
 ## Relaciones
 
-- **Padre:** [[PED-1005]] Chat General
-- **action item from:** [[PED-1006]] API - Feat - Listar ultimos chats de compras en libreopcion (Cabeceras de los chats)
-- **has action item:** [[PED-1008]] API - Feat - Intervenir en el chat (responder) como libreopcion
-- **has action item:** [[PED-1009]] APP - Mostrar chat general para las ventas de libre opcion
+- **Padre:** [[PED-1005 - Chat General|PED-1005]] Chat General
+- **action item from:** [[PED-1006 - API - Feat - Listar ultimos chats de compras en libreopcion (Cabeceras de los|PED-1006]] API - Feat - Listar ultimos chats de compras en libreopcion (Cabeceras de los chats)
+- **has action item:** [[PED-1008 - API - Feat - Intervenir en el chat (responder) como libreopcion|PED-1008]] API - Feat - Intervenir en el chat (responder) como libreopcion
+- **has action item:** [[PED-1009 - APP - Mostrar chat general para las ventas de libre opcion|PED-1009]] APP - Mostrar chat general para las ventas de libre opcion
 
 ## Descripcion
 

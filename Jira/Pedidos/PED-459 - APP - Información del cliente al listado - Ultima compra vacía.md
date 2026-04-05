@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-459"
 
 ## Relaciones
 
-- **relates to:** [[PED-387]] APP - Refactor - Agregaremos informacion del cliente al listado
+- **relates to:** [[PED-387 - APP - Refactor - Agregaremos informacion del cliente al listado|PED-387]] APP - Refactor - Agregaremos informacion del cliente al listado
 
 ## Descripcion
 

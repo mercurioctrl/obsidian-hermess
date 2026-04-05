@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-805"
 
 ## Relaciones
 
-- **Padre:** [[PED-800]] APP - Refactor - en el modal de comprobantes de pago permitir subir mas comprobantes
-- **relates to:** [[PED-800]] APP - Refactor - en el modal de comprobantes de pago permitir subir mas comprobantes
+- **Padre:** [[PED-800 - APP - Refactor - en el modal de comprobantes de pago permitir subir mas|PED-800]] APP - Refactor - en el modal de comprobantes de pago permitir subir mas comprobantes
+- **relates to:** [[PED-800 - APP - Refactor - en el modal de comprobantes de pago permitir subir mas|PED-800]] APP - Refactor - en el modal de comprobantes de pago permitir subir mas comprobantes
 
 ## Descripcion
 

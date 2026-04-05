@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-342"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-333]] API - Refactor - En el total final no parece estar considerando las percpeciones, solo el iva
-- **blocks:** [[PED-8]] Listar ordenes de compra
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-333 - API - Refactor - En el total final no parece estar considerando las|PED-333]] API - Refactor - En el total final no parece estar considerando las percpeciones, solo el iva
+- **blocks:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
 
 ## Descripcion
 

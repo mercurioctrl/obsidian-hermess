@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-491"
 
 ## Relaciones
 
-- **Padre:** [[PED-490]] Burbujas contadoras para las pestañas
-- **blocks:** [[PED-492]] APP - Feat - Burbujas contadoras
+- **Padre:** [[PED-490 - Burbujas contadoras para las pestañas|PED-490]] Burbujas contadoras para las pestañas
+- **blocks:** [[PED-492 - APP - Feat - Burbujas contadoras|PED-492]] APP - Feat - Burbujas contadoras
 
 ## Descripcion
 

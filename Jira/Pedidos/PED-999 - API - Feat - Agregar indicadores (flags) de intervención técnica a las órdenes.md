@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-999"
 
 ## Relaciones
 
-- **Padre:** [[PED-998]] Intervención Técnica
-- **has action item:** [[SNB-2003]] Agregar opcion para armado de pc y actualizacion de firmware
-- **has action item:** [[PED-1000]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
-- **has action item:** [[POS-331]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes dentro de postventa
+- **Padre:** [[PED-998 - Intervención Técnica|PED-998]] Intervención Técnica
+- **has action item:** [[SNB-2003 - Agregar opcion para armado de pc y actualizacion de firmware|SNB-2003]] Agregar opcion para armado de pc y actualizacion de firmware
+- **has action item:** [[PED-1000 - APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|PED-1000]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
+- **has action item:** [[POS-331 - API - Refactor - Agregar indicadores (flags) de intervención técnica a las|POS-331]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes dentro de postventa
 
 ## Descripcion
 

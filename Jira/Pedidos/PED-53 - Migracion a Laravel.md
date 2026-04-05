@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-53"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **blocks:** [[PED-55]] API - Feat - Mostrar el detalle de una cuenta corriente de cliente
-- **blocks:** [[PED-56]] API - Feat - Mostrar totales de la cuenta del cliente
-- **blocks:** [[PED-57]] API - Feat - Cartera de cheques del cliente
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **blocks:** [[PED-55 - API - Feat - Mostrar el detalle de una cuenta corriente de cliente|PED-55]] API - Feat - Mostrar el detalle de una cuenta corriente de cliente
+- **blocks:** [[PED-56 - API - Feat - Mostrar totales de la cuenta del cliente|PED-56]] API - Feat - Mostrar totales de la cuenta del cliente
+- **blocks:** [[PED-57 - API - Feat - Cartera de cheques del cliente|PED-57]] API - Feat - Cartera de cheques del cliente
 
 ## Descripcion
 

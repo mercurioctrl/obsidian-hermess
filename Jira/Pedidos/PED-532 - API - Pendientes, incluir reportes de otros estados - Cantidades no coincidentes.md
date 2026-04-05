@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-532"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
-- **blocks:** [[PED-524]] API- Feat - Al igual que se hizo con el estado "waiting for customer" contaremos aquellso reportes que estan en otros estados
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
+- **blocks:** [[PED-524 - API- Feat - Al igual que se hizo con el estado waiting for customer contaremos|PED-524]] API- Feat - Al igual que se hizo con el estado "waiting for customer" contaremos aquellso reportes que estan en otros estados
 
 ## Descripcion
 

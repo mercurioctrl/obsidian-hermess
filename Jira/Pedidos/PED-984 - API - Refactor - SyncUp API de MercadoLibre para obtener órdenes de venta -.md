@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-984"
 
 ## Relaciones
 
-- **Padre:** [[PED-915]] MercadoLibre
-- **relates to:** [[PED-969]] API - Feat - SyncUp API de MercadoLibre para obtener órdenes de venta
+- **Padre:** [[PED-915 - MercadoLibre|PED-915]] MercadoLibre
+- **relates to:** [[PED-969 - API - Feat - SyncUp API de MercadoLibre para obtener órdenes de venta|PED-969]] API - Feat - SyncUp API de MercadoLibre para obtener órdenes de venta
 
 ## Descripcion
 

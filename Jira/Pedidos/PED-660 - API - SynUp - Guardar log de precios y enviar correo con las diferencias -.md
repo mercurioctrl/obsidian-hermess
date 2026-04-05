@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-660"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **blocks:** [[PED-631]] API - SynUp - Guardar log de precios y enviar correo con las diferencias
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **blocks:** [[PED-631 - API - SynUp - Guardar log de precios y enviar correo con las diferencias|PED-631]] API - SynUp - Guardar log de precios y enviar correo con las diferencias
 
 ## Descripcion
 

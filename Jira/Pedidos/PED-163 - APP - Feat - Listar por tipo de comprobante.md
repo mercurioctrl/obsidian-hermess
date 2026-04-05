@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-163"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **is blocked by:** [[PED-162]] API - Feat - Filtrar por tipo de comprobante
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **is blocked by:** [[PED-162 - API - Feat - Filtrar por tipo de comprobante|PED-162]] API - Feat - Filtrar por tipo de comprobante
 
 ## Descripcion
 

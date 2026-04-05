@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-281"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-297]]   API - Ticket Promedio - Incidencias varias
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-297 - API - Ticket Promedio - Incidencias varias|PED-297]]   API - Ticket Promedio - Incidencias varias
 
 ## Descripcion
 

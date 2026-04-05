@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-378"
 
 ## Relaciones
 
-- **Padre:** [[PED-256]] Leer un reporte
-- **is blocked by:** [[PED-395]] API - Visualizar enlaces - Incidencias varias
-- **is blocked by:** [[SNB-1411]] APP - Refactor - al enviar una url detectar con regex para enviar con las etiqueta "a" en reportes de todos los sistemas
-- **is blocked by:** [[PED-419]] API - Refactor - Obtener URL del texto insertado
+- **Padre:** [[PED-256 - Leer un reporte|PED-256]] Leer un reporte
+- **is blocked by:** [[PED-395 - API - Visualizar enlaces - Incidencias varias|PED-395]] API - Visualizar enlaces - Incidencias varias
+- **is blocked by:** [[SNB-1411 - APP - Refactor - al enviar una url detectar con regex para enviar con las|SNB-1411]] APP - Refactor - al enviar una url detectar con regex para enviar con las etiqueta "a" en reportes de todos los sistemas
+- **is blocked by:** [[PED-419 - API - Refactor - Obtener URL del texto insertado|PED-419]] API - Refactor - Obtener URL del texto insertado
 
 ## Descripcion
 

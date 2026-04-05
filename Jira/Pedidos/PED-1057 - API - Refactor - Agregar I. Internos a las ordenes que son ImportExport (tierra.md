@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1057"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **has action item:** [[SNB-3260]] ERROR pedido a tierra del fuego impuestos
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **has action item:** [[SNB-3260 - ERROR pedido a tierra del fuego impuestos|SNB-3260]] ERROR pedido a tierra del fuego impuestos
 
 ## Descripcion
 

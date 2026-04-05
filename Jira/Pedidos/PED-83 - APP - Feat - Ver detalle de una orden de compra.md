@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-83"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-82]] API - Feat - Ver detalle de una orden de compra
-- **relates to:** [[PED-367]] APP - Ver detalle de una orden de compra - Incidencias varias
-- **relates to:** [[PED-453]]   APP - Ver detalle de una orden de compra - IVA vacío
-- **relates to:** [[PED-518]] APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-82 - API - Feat - Ver detalle de una orden de compra|PED-82]] API - Feat - Ver detalle de una orden de compra
+- **relates to:** [[PED-367 - APP - Ver detalle de una orden de compra - Incidencias varias|PED-367]] APP - Ver detalle de una orden de compra - Incidencias varias
+- **relates to:** [[PED-453 - APP - Ver detalle de una orden de compra - IVA vacío|PED-453]]   APP - Ver detalle de una orden de compra - IVA vacío
+- **relates to:** [[PED-518 - APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales|PED-518]] APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales
 
 ## Descripcion
 

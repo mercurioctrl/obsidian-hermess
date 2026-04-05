@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-668"
 
 ## Relaciones
 
-- **Padre:** [[PED-646]] Dropshipping
-- **blocks:** [[PED-669]] APP - Refactor - Agregar un modal con la posibilidad de incluir nombre y correo ademas del parametro de dropshipping
+- **Padre:** [[PED-646 - Dropshipping|PED-646]] Dropshipping
+- **blocks:** [[PED-669 - APP - Refactor - Agregar un modal con la posibilidad de incluir nombre y correo|PED-669]] APP - Refactor - Agregar un modal con la posibilidad de incluir nombre y correo ademas del parametro de dropshipping
 
 ## Descripcion
 

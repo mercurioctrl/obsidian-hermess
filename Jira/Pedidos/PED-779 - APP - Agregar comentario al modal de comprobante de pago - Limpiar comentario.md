@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-779"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **blocks:** [[PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **blocks:** [[PED-764 - APP - Refactor - Agregar comentario al modal de comprobante de pago|PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-981"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **relates to:** [[PED-280]] APP - Feat - Dashboard
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **relates to:** [[PED-280 - APP - Feat - Dashboard|PED-280]] APP - Feat - Dashboard
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-806"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **blocks:** [[PED-798]] API - Refactor - En la liquiadacion, solo cuando el pedido queda autorizaco (ID_sTATUS > 1), marcaremos la fecha de aturizacion
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **blocks:** [[PED-798 - API - Refactor - En la liquiadacion, solo cuando el pedido queda autorizaco|PED-798]] API - Refactor - En la liquiadacion, solo cuando el pedido queda autorizaco (ID_sTATUS > 1), marcaremos la fecha de aturizacion
 
 ## Descripcion
 

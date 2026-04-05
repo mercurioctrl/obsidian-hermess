@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-255"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
-- **Subtarea:** [[PED-524]] API- Feat - Al igual que se hizo con el estado "waiting for customer" contaremos aquellso reportes que estan en otros estados
-- **Subtarea:** [[PED-525]] APP - Feat - Devolver debajo de la burbuja, otra burbuja que sean los "Work in progres"
-- **Subtarea:** [[PED-531]] APP - Review - respetar los mismos colores
-- **Subtarea:** [[PED-769]] API - Refactor - Ajustar las notificaciones para cada usuario
-- **Subtarea:** [[PED-828]] API - Refactor - Crear una notificacion en la api de soporte sobre tickets sin leer
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
+- **Subtarea:** [[PED-524 - API- Feat - Al igual que se hizo con el estado waiting for customer contaremos|PED-524]] API- Feat - Al igual que se hizo con el estado "waiting for customer" contaremos aquellso reportes que estan en otros estados
+- **Subtarea:** [[PED-525 - APP - Feat - Devolver debajo de la burbuja, otra burbuja que sean los Work in|PED-525]] APP - Feat - Devolver debajo de la burbuja, otra burbuja que sean los "Work in progres"
+- **Subtarea:** [[PED-531 - APP - Review - respetar los mismos colores|PED-531]] APP - Review - respetar los mismos colores
+- **Subtarea:** [[PED-769 - API - Refactor - Ajustar las notificaciones para cada usuario|PED-769]] API - Refactor - Ajustar las notificaciones para cada usuario
+- **Subtarea:** [[PED-828 - API - Refactor - Crear una notificacion en la api de soporte sobre tickets sin|PED-828]] API - Refactor - Crear una notificacion en la api de soporte sobre tickets sin leer
 
 ## Descripcion
 

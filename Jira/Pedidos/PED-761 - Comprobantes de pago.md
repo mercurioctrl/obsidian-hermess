@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-761"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **Subtarea:** [[PED-762]] API - Feat - Leer comentario de comprobante de pago
-- **Subtarea:** [[PED-763]] API - Feat - Guardar comentario de comprobante de pago
-- **Subtarea:** [[PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
-- **Subtarea:** [[PED-1031]] API - Refactor - Admitir múltiples comprobantes de pago y su validación
-- **Subtarea:** [[PED-1034]] API - Refactor - Admitir multiples comprobantes en la misma carga y tambien en cargas posteriores
-- **Subtarea:** [[PED-1045]] API - Refactor - Agregar al objeto paymentVoucher el total que debe ser pagado
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **Subtarea:** [[PED-762 - API - Feat - Leer comentario de comprobante de pago|PED-762]] API - Feat - Leer comentario de comprobante de pago
+- **Subtarea:** [[PED-763 - API - Feat - Guardar comentario de comprobante de pago|PED-763]] API - Feat - Guardar comentario de comprobante de pago
+- **Subtarea:** [[PED-764 - APP - Refactor - Agregar comentario al modal de comprobante de pago|PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
+- **Subtarea:** [[PED-1031 - API - Refactor - Admitir múltiples comprobantes de pago y su validación|PED-1031]] API - Refactor - Admitir múltiples comprobantes de pago y su validación
+- **Subtarea:** [[PED-1034 - API - Refactor - Admitir multiples comprobantes en la misma carga y tambien en|PED-1034]] API - Refactor - Admitir multiples comprobantes en la misma carga y tambien en cargas posteriores
+- **Subtarea:** [[PED-1045 - API - Refactor - Agregar al objeto paymentVoucher el total que debe ser pagado|PED-1045]] API - Refactor - Agregar al objeto paymentVoucher el total que debe ser pagado
 
 ## Descripcion
 

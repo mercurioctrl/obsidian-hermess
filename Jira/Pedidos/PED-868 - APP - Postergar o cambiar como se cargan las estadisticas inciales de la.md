@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-868"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
 
 ## Descripcion
 

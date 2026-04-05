@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-907"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **Subtarea:** [[PED-908]] RESEARCH - Concepto "prefijo por empresa"
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **Subtarea:** [[PED-908 - RESEARCH - Concepto prefijo por empresa|PED-908]] RESEARCH - Concepto "prefijo por empresa"
 
 ## Descripcion
 

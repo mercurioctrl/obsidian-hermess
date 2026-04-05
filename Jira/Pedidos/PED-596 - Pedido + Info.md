@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-596"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **Subtarea:** [[PED-597]] APP - Faltan las percpeciones al hacer el calculo de cheques
-- **Subtarea:** [[PED-598]] APP - Feat - Agregar las leyenda de ayuda para que se sepan como deben ser los cheques que debe poner el cliente
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-597 - APP - Faltan las percpeciones al hacer el calculo de cheques|PED-597]] APP - Faltan las percpeciones al hacer el calculo de cheques
+- **Subtarea:** [[PED-598 - APP - Feat - Agregar las leyenda de ayuda para que se sepan como deben ser los|PED-598]] APP - Feat - Agregar las leyenda de ayuda para que se sepan como deben ser los cheques que debe poner el cliente
 
 ## Descripcion
 

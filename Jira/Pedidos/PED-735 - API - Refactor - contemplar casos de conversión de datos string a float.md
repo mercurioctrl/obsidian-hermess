@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-735"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-1972]] Autorización post editar operación
+- **is blocked by:** [[SNB-1972 - Autorización post editar operación|SNB-1972]] Autorización post editar operación
 
 ## Descripcion
 

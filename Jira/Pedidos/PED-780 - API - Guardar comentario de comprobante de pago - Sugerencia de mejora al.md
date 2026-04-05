@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-780"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **relates to:** [[PED-763]] API - Feat - Guardar comentario de comprobante de pago
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **relates to:** [[PED-763 - API - Feat - Guardar comentario de comprobante de pago|PED-763]] API - Feat - Guardar comentario de comprobante de pago
 
 ## Descripcion
 

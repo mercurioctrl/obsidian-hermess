@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-282"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-296]]   API - Ventas totales - Incidencias varias
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-296 - API - Ventas totales - Incidencias varias|PED-296]]   API - Ventas totales - Incidencias varias
 
 ## Descripcion
 

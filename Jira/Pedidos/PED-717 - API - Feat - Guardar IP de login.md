@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-717"
 
 ## Relaciones
 
-- **Padre:** [[PED-10]] Login y credenciales 
-- **is blocked by:** [[PED-560]] API - Guardar IP de login - IP no coincidente
-- **relates to:** [[PED-734]] Al iniciar sesion, enviaremos el IP 
+- **Padre:** [[PED-10 - Login y credenciales|PED-10]] Login y credenciales 
+- **is blocked by:** [[PED-560 - API - Guardar IP de login - IP no coincidente|PED-560]] API - Guardar IP de login - IP no coincidente
+- **relates to:** [[PED-734 - Al iniciar sesion, enviaremos el IP|PED-734]] Al iniciar sesion, enviaremos el IP 
 
 ## Descripcion
 

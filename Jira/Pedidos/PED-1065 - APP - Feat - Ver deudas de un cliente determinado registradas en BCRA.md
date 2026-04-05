@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1065"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **action item from:** [[PED-1064]] API - Feat - Ver deudas de un cliente determinado registradas en BCRA
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **action item from:** [[PED-1064 - API - Feat - Ver deudas de un cliente determinado registradas en BCRA|PED-1064]] API - Feat - Ver deudas de un cliente determinado registradas en BCRA
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-611"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
-- **is blocked by:** [[PED-615]] API - Problema al cotizar un envío - Después de eliminar direcciones sus datos siguen apareciendo
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
+- **is blocked by:** [[PED-615 - API - Problema al cotizar un envío - Después de eliminar direcciones sus datos|PED-615]] API - Problema al cotizar un envío - Después de eliminar direcciones sus datos siguen apareciendo
 
 ## Descripcion
 

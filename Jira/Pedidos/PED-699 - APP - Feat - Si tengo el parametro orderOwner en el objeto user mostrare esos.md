@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-699"
 
 ## Relaciones
 
-- **Padre:** [[PED-10]] Login y credenciales 
-- **is blocked by:** [[PED-698]] API - Refactor - Agregar orderOwner como parametro opcional al objeto users
-- **blocks:** [[SNB-1826]] NUMERO DE VENTA
+- **Padre:** [[PED-10 - Login y credenciales|PED-10]] Login y credenciales 
+- **is blocked by:** [[PED-698 - API - Refactor - Agregar orderOwner como parametro opcional al objeto users|PED-698]] API - Refactor - Agregar orderOwner como parametro opcional al objeto users
+- **blocks:** [[SNB-1826 - NUMERO DE VENTA|SNB-1826]] NUMERO DE VENTA
 
 ## Descripcion
 

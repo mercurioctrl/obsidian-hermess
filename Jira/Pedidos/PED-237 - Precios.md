@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-237"
 
 ## Relaciones
 
-- **Padre:** [[PED-64]] Productos
-- **Subtarea:** [[PED-238]] API - Refactor - Precios para sucursal 10
-- **Subtarea:** [[PED-429]] API - Refactor - Precios para cliente Impo / Expo
-- **Subtarea:** [[PED-628]] API - Feat - Repositorio de precios
-- **Subtarea:** [[PED-849]] API - Refactor - Agregar al el calculo de precios el internalTax
-- **Subtarea:** [[PED-861]] APP - Refactor - Agregaremos los impuestos internos a la lista de productos 
-- **Subtarea:** [[PED-1052]] API  - Refactor - Nueva lista de precios E
-- **Subtarea:** [[PED-1090]] API - Research - Como evitar que cualquier usuario elija listas sin permisos
+- **Padre:** [[PED-64 - Productos|PED-64]] Productos
+- **Subtarea:** [[PED-238 - API - Refactor - Precios para sucursal 10|PED-238]] API - Refactor - Precios para sucursal 10
+- **Subtarea:** [[PED-429 - API - Refactor - Precios para cliente Impo Expo|PED-429]] API - Refactor - Precios para cliente Impo / Expo
+- **Subtarea:** [[PED-628 - API - Feat - Repositorio de precios|PED-628]] API - Feat - Repositorio de precios
+- **Subtarea:** [[PED-849 - API - Refactor - Agregar al el calculo de precios el internalTax|PED-849]] API - Refactor - Agregar al el calculo de precios el internalTax
+- **Subtarea:** [[PED-861 - APP - Refactor - Agregaremos los impuestos internos a la lista de productos|PED-861]] APP - Refactor - Agregaremos los impuestos internos a la lista de productos 
+- **Subtarea:** [[PED-1052 - API - Refactor - Nueva lista de precios E|PED-1052]] API  - Refactor - Nueva lista de precios E
+- **Subtarea:** [[PED-1090 - API - Research - Como evitar que cualquier usuario elija listas sin permisos|PED-1090]] API - Research - Como evitar que cualquier usuario elija listas sin permisos
 
 ## Descripcion
 

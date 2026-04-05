@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-279"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-320]] API - Mostrar cotización correspondiente en pedidos cerrados - Incidencias varias
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-320 - API - Mostrar cotización correspondiente en pedidos cerrados - Incidencias|PED-320]] API - Mostrar cotización correspondiente en pedidos cerrados - Incidencias varias
 
 ## Descripcion
 

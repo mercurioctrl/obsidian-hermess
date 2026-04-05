@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-687"
 
 ## Relaciones
 
-- **relates to:** [[SNB-1793]] NO ME DEJA CAMBIARLE DE VENDEDOR A UN CLIENTE
+- **relates to:** [[SNB-1793 - NO ME DEJA CAMBIARLE DE VENDEDOR A UN CLIENTE|SNB-1793]] NO ME DEJA CAMBIARLE DE VENDEDOR A UN CLIENTE
 
 ## Descripcion
 

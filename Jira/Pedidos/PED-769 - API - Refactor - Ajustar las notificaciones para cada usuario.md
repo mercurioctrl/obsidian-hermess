@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-769"
 
 ## Relaciones
 
-- **Padre:** [[PED-255]] Notificaciones
-- **blocks:** [[SNB-2077]] AVISO DE REPORTE
-- **relates to:** [[SNB-2088]] cambio en pendings soporte
+- **Padre:** [[PED-255 - Notificaciones|PED-255]] Notificaciones
+- **blocks:** [[SNB-2077 - AVISO DE REPORTE|SNB-2077]] AVISO DE REPORTE
+- **relates to:** [[SNB-2088 - cambio en pendings soporte|SNB-2088]] cambio en pendings soporte
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-670"
 
 ## Relaciones
 
-- **Padre:** [[PED-646]] Dropshipping
+- **Padre:** [[PED-646 - Dropshipping|PED-646]] Dropshipping
 
 ## Descripcion
 

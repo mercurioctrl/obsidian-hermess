@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-749"
 
 ## Relaciones
 
-- **Padre:** [[PED-748]] Incentivo 25 años
+- **Padre:** [[PED-748 - Incentivo 25 años|PED-748]] Incentivo 25 años
 
 ## Descripcion
 

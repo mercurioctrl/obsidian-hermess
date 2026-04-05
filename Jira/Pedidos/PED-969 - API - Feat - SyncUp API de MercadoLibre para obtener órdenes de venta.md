@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-969"
 
 ## Relaciones
 
-- **Padre:** [[PED-915]] MercadoLibre
-- **relates to:** [[PED-984]] API - Refactor - SyncUp API de MercadoLibre para obtener órdenes de venta -> Mensaje de éxito al no completarse la sincronización
+- **Padre:** [[PED-915 - MercadoLibre|PED-915]] MercadoLibre
+- **relates to:** [[PED-984 - API - Refactor - SyncUp API de MercadoLibre para obtener órdenes de venta -|PED-984]] API - Refactor - SyncUp API de MercadoLibre para obtener órdenes de venta -> Mensaje de éxito al no completarse la sincronización
 
 ## Descripcion
 

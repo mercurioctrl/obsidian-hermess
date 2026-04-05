@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-867"
 
 ## Relaciones
 
-- **causes:** [[PED-866]] API - Refactor - Guardar dimensiones, peso y cantidad de bultos al asignar transportista
+- **causes:** [[PED-866 - API - Refactor - Guardar dimensiones, peso y cantidad de bultos al asignar|PED-866]] API - Refactor - Guardar dimensiones, peso y cantidad de bultos al asignar transportista
 
 ## Descripcion
 

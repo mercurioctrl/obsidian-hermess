@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-394"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-393]] API - Feat - Ver detalle de orden de compra -> Agregar direccion al objeto de la orden
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-393 - API - Feat - Ver detalle de orden de compra - Agregar direccion al objeto de la|PED-393]] API - Feat - Ver detalle de orden de compra -> Agregar direccion al objeto de la orden
 
 ## Descripcion
 

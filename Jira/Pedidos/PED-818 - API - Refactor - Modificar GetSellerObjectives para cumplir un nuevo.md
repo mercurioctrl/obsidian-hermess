@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-818"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[MKT-215]] NB_ FLOR DE INCENTIVO
-- **blocks:** [[PED-819]] APP - Refactor - Modificar tabla de posiciones de GetSellerObjectives para cumplir un nuevo requerimiento
-- **relates to:** [[PED-822]] API - Incentivos de capilaridad para vendedores - Sugerencia de mejora en el total de ventas
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[MKT-215 - NB_ FLOR DE INCENTIVO|MKT-215]] NB_ FLOR DE INCENTIVO
+- **blocks:** [[PED-819 - APP - Refactor - Modificar tabla de posiciones de GetSellerObjectives para|PED-819]] APP - Refactor - Modificar tabla de posiciones de GetSellerObjectives para cumplir un nuevo requerimiento
+- **relates to:** [[PED-822 - API - Incentivos de capilaridad para vendedores - Sugerencia de mejora en el|PED-822]] API - Incentivos de capilaridad para vendedores - Sugerencia de mejora en el total de ventas
 
 ## Descripcion
 

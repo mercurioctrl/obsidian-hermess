@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-792"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **relates to:** [[PED-785]] APP - Refactor - En el modal de pedidos agregaremos algunos datos extra
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **relates to:** [[PED-785 - APP - Refactor - En el modal de pedidos agregaremos algunos datos extra|PED-785]] APP - Refactor - En el modal de pedidos agregaremos algunos datos extra
 
 ## Descripcion
 

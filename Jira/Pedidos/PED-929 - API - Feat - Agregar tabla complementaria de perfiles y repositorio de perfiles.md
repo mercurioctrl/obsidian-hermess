@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-929"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **has action item:** [[PED-930]] APP - Feat - Agregar filtro de perfil en la lista de clientes
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **has action item:** [[PED-930 - APP - Feat - Agregar filtro de perfil en la lista de clientes|PED-930]] APP - Feat - Agregar filtro de perfil en la lista de clientes
 
 ## Descripcion
 

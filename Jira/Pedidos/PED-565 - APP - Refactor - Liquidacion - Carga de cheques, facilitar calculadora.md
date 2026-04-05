@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-565"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **blocks:** [[SNB-1520]] tipo de cambio cheque
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **blocks:** [[SNB-1520 - tipo de cambio cheque|SNB-1520]] tipo de cambio cheque
 
 ## Descripcion
 

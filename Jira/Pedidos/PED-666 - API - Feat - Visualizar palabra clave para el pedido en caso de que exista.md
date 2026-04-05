@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-666"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-667]] APP - Feat - Visualizar palabra clave en caso de que el pedido la tenga
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-667 - APP - Feat - Visualizar palabra clave en caso de que el pedido la tenga|PED-667]] APP - Feat - Visualizar palabra clave en caso de que el pedido la tenga
 
 ## Descripcion
 

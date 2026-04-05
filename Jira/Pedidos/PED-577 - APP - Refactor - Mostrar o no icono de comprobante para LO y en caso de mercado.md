@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-577"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is blocked by:** [[PED-593]] APP - Mostrar icono de comprobante para LO y si es Mercado Pago mostrar su icono y redirigir - Icono MP no visible
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is blocked by:** [[PED-593 - APP - Mostrar icono de comprobante para LO y si es Mercado Pago mostrar su|PED-593]] APP - Mostrar icono de comprobante para LO y si es Mercado Pago mostrar su icono y redirigir - Icono MP no visible
 
 ## Descripcion
 

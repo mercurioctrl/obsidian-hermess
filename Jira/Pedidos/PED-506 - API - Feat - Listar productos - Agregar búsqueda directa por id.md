@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-506"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
 
 ## Descripcion
 

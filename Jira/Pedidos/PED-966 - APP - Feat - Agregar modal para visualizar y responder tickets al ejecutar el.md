@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-966"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **action item from:** [[PED-962]] API - Feat - Leer ticket por numero de orden
-- **action item from:** [[PED-964]] API - Feat - Cerrar ticket 
-- **action item from:** [[PED-963]] API - Feat - Agregar comentario a un ticket
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **action item from:** [[PED-962 - API - Feat - Leer ticket por numero de orden|PED-962]] API - Feat - Leer ticket por numero de orden
+- **action item from:** [[PED-964 - API - Feat - Cerrar ticket|PED-964]] API - Feat - Cerrar ticket 
+- **action item from:** [[PED-963 - API - Feat - Agregar comentario a un ticket|PED-963]] API - Feat - Agregar comentario a un ticket
 
 ## Descripcion
 

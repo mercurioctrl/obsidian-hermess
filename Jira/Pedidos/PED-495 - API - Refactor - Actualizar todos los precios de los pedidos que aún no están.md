@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-495"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **relates to:** [[PED-470]] API - Feat - Actualizar todos los precios de los pedidos que están pendientes 
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **relates to:** [[PED-470 - API - Feat - Actualizar todos los precios de los pedidos que están pendientes|PED-470]] API - Feat - Actualizar todos los precios de los pedidos que están pendientes 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-322"
 
 ## Relaciones
 
-- **blocks:** [[PED-305]] API - Refactor - Ver detalle de una orden de compra -> Se obtiene (en algunos casos) la cotizacion de manera incorrecta
+- **blocks:** [[PED-305 - API - Refactor - Ver detalle de una orden de compra - Se obtiene (en algunos|PED-305]] API - Refactor - Ver detalle de una orden de compra -> Se obtiene (en algunos casos) la cotizacion de manera incorrecta
 
 ## Descripcion
 

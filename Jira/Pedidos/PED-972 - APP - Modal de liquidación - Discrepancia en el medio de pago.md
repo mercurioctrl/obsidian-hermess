@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-972"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-125]] APP - Feat - Modal de liquidacion
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-125 - APP - Feat - Modal de liquidacion|PED-125]] APP - Feat - Modal de liquidacion
 
 ## Descripcion
 

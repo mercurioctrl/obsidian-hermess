@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-164"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
-- **blocks:** [[PED-165]] API - Refactor - filtrar por tipo de comprobante fiscal
-- **blocks:** [[PED-166]] APP - Refactor - Filtrar por tipo de comprobante fiscal
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
+- **blocks:** [[PED-165 - API - Refactor - filtrar por tipo de comprobante fiscal|PED-165]] API - Refactor - filtrar por tipo de comprobante fiscal
+- **blocks:** [[PED-166 - APP - Refactor - Filtrar por tipo de comprobante fiscal|PED-166]] APP - Refactor - Filtrar por tipo de comprobante fiscal
 
 ## Descripcion
 

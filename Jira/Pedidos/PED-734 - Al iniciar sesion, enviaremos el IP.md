@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-734"
 
 ## Relaciones
 
-- **relates to:** [[PED-717]] API - Feat - Guardar IP de login
+- **relates to:** [[PED-717 - API - Feat - Guardar IP de login|PED-717]] API - Feat - Guardar IP de login
 
 ## Descripcion
 

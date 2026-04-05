@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-746"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **blocks:** [[SNB-2009]] FACTURA EXENTA SALE CON RETENCION DE IVA
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **blocks:** [[SNB-2009 - FACTURA EXENTA SALE CON RETENCION DE IVA|SNB-2009]] FACTURA EXENTA SALE CON RETENCION DE IVA
 
 ## Descripcion
 

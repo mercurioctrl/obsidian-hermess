@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-754"
 
 ## Relaciones
 
-- **Padre:** [[PED-753]] Incentivos Clientes
-- **relates to:** [[PED-756]] API - Ranking de aceleradores - Sugerencia de mejora en las descripciones
+- **Padre:** [[PED-753 - Incentivos Clientes|PED-753]] Incentivos Clientes
+- **relates to:** [[PED-756 - API - Ranking de aceleradores - Sugerencia de mejora en las descripciones|PED-756]] API - Ranking de aceleradores - Sugerencia de mejora en las descripciones
 
 ## Descripcion
 

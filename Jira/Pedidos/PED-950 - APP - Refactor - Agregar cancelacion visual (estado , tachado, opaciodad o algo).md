@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-950"
 
 ## Relaciones
 
-- **Padre:** [[PED-948]] Ordenes canceladas/eliminadas
-- **action item from:** [[PED-949]] API - Refactor - Agregar el parametro "cancelled" en el recurso "orders"
+- **Padre:** [[PED-948 - Ordenes canceladaseliminadas|PED-948]] Ordenes canceladas/eliminadas
+- **action item from:** [[PED-949 - API - Refactor - Agregar el parametro cancelled en el recurso orders|PED-949]] API - Refactor - Agregar el parametro "cancelled" en el recurso "orders"
 
 ## Descripcion
 

@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-198"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **blocks:** [[PED-199]] APP - Feat - Cambio de cliente para ordenes pendientes
-- **relates to:** [[PED-217]] API - Review - Revisar al cambiar el cliente de una orden y luego abrir el detalle de la orden, desaparece el nombre del cliente
-- **is blocked by:** [[PED-250]] API - Cambio de cliente para ordenes pendientes - Incidencias varias
-- **relates to:** [[PED-877]] API - Cambio de cliente para ordenes pendientes - Error al intentar cambiar de cliente
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **blocks:** [[PED-199 - APP - Feat - Cambio de cliente para ordenes pendientes|PED-199]] APP - Feat - Cambio de cliente para ordenes pendientes
+- **relates to:** [[PED-217 - API - Review - Revisar al cambiar el cliente de una orden y luego abrir el|PED-217]] API - Review - Revisar al cambiar el cliente de una orden y luego abrir el detalle de la orden, desaparece el nombre del cliente
+- **is blocked by:** [[PED-250 - API - Cambio de cliente para ordenes pendientes - Incidencias varias|PED-250]] API - Cambio de cliente para ordenes pendientes - Incidencias varias
+- **relates to:** [[PED-877 - API - Cambio de cliente para ordenes pendientes - Error al intentar cambiar de|PED-877]] API - Cambio de cliente para ordenes pendientes - Error al intentar cambiar de cliente
 
 ## Descripcion
 

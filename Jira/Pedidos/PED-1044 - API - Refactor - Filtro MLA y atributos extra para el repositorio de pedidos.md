@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1044"
 
 ## Relaciones
 
-- **Padre:** [[PED-915]] MercadoLibre
-- **has action item:** [[PED-1047]] APP - Refactor - Filtrar pedidos de mercadolibre
+- **Padre:** [[PED-915 - MercadoLibre|PED-915]] MercadoLibre
+- **has action item:** [[PED-1047 - APP - Refactor - Filtrar pedidos de mercadolibre|PED-1047]] APP - Refactor - Filtrar pedidos de mercadolibre
 
 ## Descripcion
 

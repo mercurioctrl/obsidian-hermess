@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-229"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **blocks:** [[PED-230]] APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un item determinado
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **blocks:** [[PED-230 - APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un|PED-230]] APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un item determinado
 
 ## Descripcion
 

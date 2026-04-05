@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-82"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-83]] APP - Feat - Ver detalle de una orden de compra
-- **blocks:** [[PED-101]] API - Feat - Ver detalle de una orden de compra -> Agregar cotizacion
-- **relates to:** [[PED-476]] API - Ver detalle de una orden de compra - Creador de la orden vacío
-- **relates to:** [[PED-671]] API - Ver detalle de una orden de compra - Vendedor vacío
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-83 - APP - Feat - Ver detalle de una orden de compra|PED-83]] APP - Feat - Ver detalle de una orden de compra
+- **blocks:** [[PED-101 - API - Feat - Ver detalle de una orden de compra - Agregar cotizacion|PED-101]] API - Feat - Ver detalle de una orden de compra -> Agregar cotizacion
+- **relates to:** [[PED-476 - API - Ver detalle de una orden de compra - Creador de la orden vacío|PED-476]] API - Ver detalle de una orden de compra - Creador de la orden vacío
+- **relates to:** [[PED-671 - API - Ver detalle de una orden de compra - Vendedor vacío|PED-671]] API - Ver detalle de una orden de compra - Vendedor vacío
 
 ## Descripcion
 

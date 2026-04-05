@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-922"
 
 ## Relaciones
 
-- **Padre:** [[PED-91]] APP - Feat - Generar pedido
-- **action item from:** [[PED-921]] API - MVP - Refactor - Editar costo en las ordenes de compra
+- **Padre:** [[PED-91 - APP - Feat - Generar pedido|PED-91]] APP - Feat - Generar pedido
+- **action item from:** [[PED-921 - API - MVP - Refactor - Editar costo en las ordenes de compra|PED-921]] API - MVP - Refactor - Editar costo en las ordenes de compra
 
 ## Descripcion
 

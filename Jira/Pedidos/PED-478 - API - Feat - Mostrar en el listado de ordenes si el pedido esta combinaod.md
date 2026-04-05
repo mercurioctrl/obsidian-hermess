@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-478"
 
 ## Relaciones
 
-- **Padre:** [[PED-477]] Combinar envios
-- **blocks:** [[PED-479]] APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado
+- **Padre:** [[PED-477 - Combinar envios|PED-477]] Combinar envios
+- **blocks:** [[PED-479 - APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado|PED-479]] APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado
 
 ## Descripcion
 

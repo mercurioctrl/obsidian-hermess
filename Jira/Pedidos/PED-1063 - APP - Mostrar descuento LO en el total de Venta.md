@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1063"
 
 ## Relaciones
 
-- **Padre:** [[PED-724]] Modal "Venta Market Place LO"
+- **Padre:** [[PED-724 - Modal Venta Market Place LO|PED-724]] Modal "Venta Market Place LO"
 
 ## Descripcion
 

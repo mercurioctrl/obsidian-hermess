@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-66"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
-- **blocks:** [[PED-72]] APP - Feat - Listar productos 
-- **relates to:** [[PED-375]] API - Listar productos - Incidencias varias
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
+- **blocks:** [[PED-72 - APP - Feat - Listar productos|PED-72]] APP - Feat - Listar productos 
+- **relates to:** [[PED-375 - API - Listar productos - Incidencias varias|PED-375]] API - Listar productos - Incidencias varias
 
 ## Descripcion
 

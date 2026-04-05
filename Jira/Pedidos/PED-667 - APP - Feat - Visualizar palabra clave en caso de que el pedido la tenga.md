@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-667"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-666]] API - Feat - Visualizar palabra clave para el pedido en caso de que exista
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-666 - API - Feat - Visualizar palabra clave para el pedido en caso de que exista|PED-666]] API - Feat - Visualizar palabra clave para el pedido en caso de que exista
 
 ## Descripcion
 

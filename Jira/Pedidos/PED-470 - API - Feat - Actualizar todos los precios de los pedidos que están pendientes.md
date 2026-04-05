@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-470"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **relates to:** [[PED-495]] API - Refactor - Actualizar todos los precios de los pedidos que aún no están liquidados
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **relates to:** [[PED-495 - API - Refactor - Actualizar todos los precios de los pedidos que aún no están|PED-495]] API - Refactor - Actualizar todos los precios de los pedidos que aún no están liquidados
 
 ## Descripcion
 

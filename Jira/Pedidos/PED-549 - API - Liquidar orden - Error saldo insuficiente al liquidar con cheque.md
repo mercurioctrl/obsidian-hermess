@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-549"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **blocks:** [[PED-540]] API - Review - Luego de intentar liquidar, sin saldo de cheque, no puedo volver a liquidar
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **blocks:** [[PED-540 - API - Review - Luego de intentar liquidar, sin saldo de cheque, no puedo volver|PED-540]] API - Review - Luego de intentar liquidar, sin saldo de cheque, no puedo volver a liquidar
 
 ## Descripcion
 

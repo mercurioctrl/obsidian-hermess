@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-814"
 
 ## Relaciones
 
-- **Padre:** [[PED-809]] Notificaciones
+- **Padre:** [[PED-809 - Notificaciones|PED-809]] Notificaciones
 
 ## Descripcion
 

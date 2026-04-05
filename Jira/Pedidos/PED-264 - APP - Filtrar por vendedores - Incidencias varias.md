@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-264"
 
 ## Relaciones
 
-- **blocks:** [[PED-210]] APP - Feat - Filtros de ordenes -> Filtrar por Vendedores en pedido
+- **blocks:** [[PED-210 - APP - Feat - Filtros de ordenes - Filtrar por Vendedores en pedido|PED-210]] APP - Feat - Filtros de ordenes -> Filtrar por Vendedores en pedido
 
 ## Descripcion
 

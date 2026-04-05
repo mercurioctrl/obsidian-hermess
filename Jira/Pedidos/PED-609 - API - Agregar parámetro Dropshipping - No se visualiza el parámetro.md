@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-609"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-594]] API - Feat - Agregar parametro dropshipping
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-594 - API - Feat - Agregar parametro dropshipping|PED-594]] API - Feat - Agregar parametro dropshipping
 
 ## Descripcion
 

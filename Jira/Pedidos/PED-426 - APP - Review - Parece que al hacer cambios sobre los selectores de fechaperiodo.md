@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-426"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-412]] APP - Refactor - Desactivar selectores en ambas pestañas del dashboard segun el rol
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-412 - APP - Refactor - Desactivar selectores en ambas pestañas del dashboard segun el|PED-412]] APP - Refactor - Desactivar selectores en ambas pestañas del dashboard segun el rol
 
 ## Descripcion
 

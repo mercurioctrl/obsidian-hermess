@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-253"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
-- **Subtarea:** [[PED-257]] API - Feat - Listar reportes
-- **Subtarea:** [[PED-258]] APP - Feat - Listar reportes
-- **Subtarea:** [[PED-261]] API - Feat - Ver reporte
-- **Subtarea:** [[PED-262]] APP - Feat - Ver reporte
-- **Subtarea:** [[PED-307]] APP - Feat - Agregar burbuja para alertar cantidad de casos en estado "waiting for customer"
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
+- **Subtarea:** [[PED-257 - API - Feat - Listar reportes|PED-257]] API - Feat - Listar reportes
+- **Subtarea:** [[PED-258 - APP - Feat - Listar reportes|PED-258]] APP - Feat - Listar reportes
+- **Subtarea:** [[PED-261 - API - Feat - Ver reporte|PED-261]] API - Feat - Ver reporte
+- **Subtarea:** [[PED-262 - APP - Feat - Ver reporte|PED-262]] APP - Feat - Ver reporte
+- **Subtarea:** [[PED-307 - APP - Feat - Agregar burbuja para alertar cantidad de casos en estado waiting|PED-307]] APP - Feat - Agregar burbuja para alertar cantidad de casos en estado "waiting for customer"
 
 ## Descripcion
 

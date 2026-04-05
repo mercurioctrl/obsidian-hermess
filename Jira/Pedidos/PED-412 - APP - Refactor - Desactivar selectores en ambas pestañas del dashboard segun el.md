@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-412"
 
 ## Relaciones
 
-- **Padre:** [[PED-149]] Reportes
-- **blocks:** [[PED-426]] APP - Review - Parece que al hacer cambios sobre los selectores de fecha/periodo deje de ver el selector de "agente"
+- **Padre:** [[PED-149 - Reportes|PED-149]] Reportes
+- **blocks:** [[PED-426 - APP - Review - Parece que al hacer cambios sobre los selectores de fechaperiodo|PED-426]] APP - Review - Parece que al hacer cambios sobre los selectores de fecha/periodo deje de ver el selector de "agente"
 
 ## Descripcion
 

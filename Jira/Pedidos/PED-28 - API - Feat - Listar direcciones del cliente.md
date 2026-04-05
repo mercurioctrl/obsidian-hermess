@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-28"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-30]] APP - Feat - Agregar/Editar direcciones
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-30 - APP - Feat - AgregarEditar direcciones|PED-30]] APP - Feat - Agregar/Editar direcciones
 
 ## Descripcion
 

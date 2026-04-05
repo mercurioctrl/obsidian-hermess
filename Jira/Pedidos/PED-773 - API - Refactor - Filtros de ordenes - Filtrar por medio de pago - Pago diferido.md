@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-773"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-36]] API - Feat - Filtros de ordenes de compra
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-36 - API - Feat - Filtros de ordenes de compra|PED-36]] API - Feat - Filtros de ordenes de compra
 
 ## Descripcion
 

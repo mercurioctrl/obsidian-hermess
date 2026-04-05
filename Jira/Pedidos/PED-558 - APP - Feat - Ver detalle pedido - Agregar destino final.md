@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-558"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-557]] API - Feat - Ver detalle del pedido -> Agregar destino Final
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-557 - API - Feat - Ver detalle del pedido - Agregar destino Final|PED-557]] API - Feat - Ver detalle del pedido -> Agregar destino Final
 
 ## Descripcion
 

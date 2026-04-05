@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-562"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-563]] APP -  Refactor - Listar ordenes de compra -> Agregar destino final
-- **causes:** [[PED-567]] API - Listar ordenes de compra -> Agregar destino final - Error al abrir nueva cotización de envío
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-563 - APP - Refactor - Listar ordenes de compra - Agregar destino final|PED-563]] APP -  Refactor - Listar ordenes de compra -> Agregar destino final
+- **causes:** [[PED-567 - API - Listar ordenes de compra - Agregar destino final - Error al abrir nueva|PED-567]] API - Listar ordenes de compra -> Agregar destino final - Error al abrir nueva cotización de envío
 
 ## Descripcion
 

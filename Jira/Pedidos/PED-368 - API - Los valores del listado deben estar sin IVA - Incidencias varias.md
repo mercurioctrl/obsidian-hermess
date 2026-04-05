@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-368"
 
 ## Relaciones
 
-- **blocks:** [[PED-361]] API - Review - Los valores del listado deben estar sin iva
+- **blocks:** [[PED-361 - API - Review - Los valores del listado deben estar sin iva|PED-361]] API - Review - Los valores del listado deben estar sin iva
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-400"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **Subtarea:** [[PED-401]] API - Feat - Ver seriales tomados para un pedido determinado
-- **Subtarea:** [[PED-402]] APP - Feat - Ver seriales tomados para un pedido determinado
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **Subtarea:** [[PED-401 - API - Feat - Ver seriales tomados para un pedido determinado|PED-401]] API - Feat - Ver seriales tomados para un pedido determinado
+- **Subtarea:** [[PED-402 - APP - Feat - Ver seriales tomados para un pedido determinado|PED-402]] APP - Feat - Ver seriales tomados para un pedido determinado
 
 ## Descripcion
 

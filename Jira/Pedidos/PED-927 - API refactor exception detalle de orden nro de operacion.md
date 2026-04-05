@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-927"
 
 ## Relaciones
 
-- **action item from:** [[SNB-2694]] numero de pago
+- **action item from:** [[SNB-2694 - numero de pago|SNB-2694]] numero de pago
 
 ## Descripcion
 

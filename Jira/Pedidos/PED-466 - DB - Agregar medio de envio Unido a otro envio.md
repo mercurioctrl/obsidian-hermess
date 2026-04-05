@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-466"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **blocks:** [[PED-467]] APP - Feat - En el modal de "liquidar pedido" si el pedido esta unido, restringir el medio de envio segun "Unido a otro pedido"
-- **relates to:** [[PED-664]] API - Feat - Filtros de ordenes -> Filtrar por medio de envío "unido a otro envío"
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **blocks:** [[PED-467 - APP - Feat - En el modal de liquidar pedido si el pedido esta unido, restringir|PED-467]] APP - Feat - En el modal de "liquidar pedido" si el pedido esta unido, restringir el medio de envio segun "Unido a otro pedido"
+- **relates to:** [[PED-664 - API - Feat - Filtros de ordenes - Filtrar por medio de envío unido a otro envío|PED-664]] API - Feat - Filtros de ordenes -> Filtrar por medio de envío "unido a otro envío"
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-188"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **is blocked by:** [[PED-227]] API - Mover item entre ordenes de compra - Incidencias varias
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **is blocked by:** [[PED-227 - API - Mover item entre ordenes de compra - Incidencias varias|PED-227]] API - Mover item entre ordenes de compra - Incidencias varias
 
 ## Descripcion
 

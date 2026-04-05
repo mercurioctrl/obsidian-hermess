@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-234"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-233]] API - Feat - Facturar orden
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-233 - API - Feat - Facturar orden|PED-233]] API - Feat - Facturar orden
 
 ## Descripcion
 

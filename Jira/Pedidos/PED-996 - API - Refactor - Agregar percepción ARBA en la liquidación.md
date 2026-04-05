@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-996"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **has action item:** [[LOCAPP-64]] API - Refactor - Agregar Percepcion ARBA al realizar un comprobante
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **has action item:** [[LOCAPP-64 - API - Refactor - Agregar Percepcion ARBA al realizar un comprobante|LOCAPP-64]] API - Refactor - Agregar Percepcion ARBA al realizar un comprobante
 
 ## Descripcion
 

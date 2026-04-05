@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1035"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **action item from:** [[PED-1033]] API - Feat - Se debe agregar un filtro de ordenes por motivo de ticket
-- **action item from:** [[PED-1032]] API - Feat - Se debe agregar un filtro de ordenes por tipo de ticket
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **action item from:** [[PED-1033 - API - Feat - Se debe agregar un filtro de ordenes por motivo de ticket|PED-1033]] API - Feat - Se debe agregar un filtro de ordenes por motivo de ticket
+- **action item from:** [[PED-1032 - API - Feat - Se debe agregar un filtro de ordenes por tipo de ticket|PED-1032]] API - Feat - Se debe agregar un filtro de ordenes por tipo de ticket
 
 ## Descripcion
 

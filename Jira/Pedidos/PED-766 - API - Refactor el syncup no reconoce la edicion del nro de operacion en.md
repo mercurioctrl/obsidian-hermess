@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-766"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-2064]] Se duplican los comprobantes
+- **is blocked by:** [[SNB-2064 - Se duplican los comprobantes|SNB-2064]] Se duplican los comprobantes
 
 ## Descripcion
 

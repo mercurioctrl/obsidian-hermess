@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-967"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[PED-962]] API - Feat - Leer ticket por numero de orden
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[PED-962 - API - Feat - Leer ticket por numero de orden|PED-962]] API - Feat - Leer ticket por numero de orden
 
 ## Descripcion
 

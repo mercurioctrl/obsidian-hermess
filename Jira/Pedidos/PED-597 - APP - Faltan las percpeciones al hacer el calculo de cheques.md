@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-597"
 
 ## Relaciones
 
-- **Padre:** [[PED-596]] Pedido + Info
-- **duplicates:** [[PED-591]] APP - Refactor : problema en la carga de cheque en pedido +info.. queda una diferencia con las percepciones
+- **Padre:** [[PED-596 - Pedido + Info|PED-596]] Pedido + Info
+- **duplicates:** [[PED-591 - APP - Refactor problema en la carga de cheque en pedido +info.. queda una|PED-591]] APP - Refactor : problema en la carga de cheque en pedido +info.. queda una diferencia con las percepciones
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-826"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
-- **blocks:** [[PED-827]] APP - Refactor - Agregar stock de postventa
-- **relates to:** [[PED-830]] API - Agregar articulo a orden - Stock de postventa no coincidente al agregar articulo 
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
+- **blocks:** [[PED-827 - APP - Refactor - Agregar stock de postventa|PED-827]] APP - Refactor - Agregar stock de postventa
+- **relates to:** [[PED-830 - API - Agregar articulo a orden - Stock de postventa no coincidente al agregar|PED-830]] API - Agregar articulo a orden - Stock de postventa no coincidente al agregar articulo 
 
 ## Descripcion
 

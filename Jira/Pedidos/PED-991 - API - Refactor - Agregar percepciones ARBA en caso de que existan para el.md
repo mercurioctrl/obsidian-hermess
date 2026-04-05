@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-991"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **action item from:** [[LOCAPP-62]] Descarga y procesamiento de padrones
-- **has action item:** [[PED-992]] API - Refactor - Agregar percepciones ARBA como un atributo diferenciado al momento de ver el detalle de una orden
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **action item from:** [[LOCAPP-62 - Descarga y procesamiento de padrones|LOCAPP-62]] Descarga y procesamiento de padrones
+- **has action item:** [[PED-992 - API - Refactor - Agregar percepciones ARBA como un atributo diferenciado al|PED-992]] API - Refactor - Agregar percepciones ARBA como un atributo diferenciado al momento de ver el detalle de una orden
 
 ## Descripcion
 

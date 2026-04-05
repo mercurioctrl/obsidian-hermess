@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-639"
 
 ## Relaciones
 
-- **Padre:** [[PED-638]] Agregar "destino final" a detalle del pedido (aboutOrder)
-- **blocks:** [[PED-640]] APP - Refactor - Agregar "destino final" a detalle del pedido (aboutOrder)
+- **Padre:** [[PED-638 - Agregar destino final a detalle del pedido (aboutOrder)|PED-638]] Agregar "destino final" a detalle del pedido (aboutOrder)
+- **blocks:** [[PED-640 - APP - Refactor - Agregar destino final a detalle del pedido (aboutOrder)|PED-640]] APP - Refactor - Agregar "destino final" a detalle del pedido (aboutOrder)
 
 ## Descripcion
 

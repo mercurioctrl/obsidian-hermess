@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1009"
 
 ## Relaciones
 
-- **Padre:** [[PED-1005]] Chat General
-- **action item from:** [[PED-1006]] API - Feat - Listar ultimos chats de compras en libreopcion (Cabeceras de los chats)
-- **action item from:** [[PED-1007]] API - Feat - Crear endpoint para obtener historial completo del chat de un pedido libre opcion
-- **action item from:** [[PED-1008]] API - Feat - Intervenir en el chat (responder) como libreopcion
-- **relates to:** [[PED-1017]] APP - Refactor - Mostrar chat general para las ventas de libre opcion -> Agregar filtro por chats abiertos/cerrados
+- **Padre:** [[PED-1005 - Chat General|PED-1005]] Chat General
+- **action item from:** [[PED-1006 - API - Feat - Listar ultimos chats de compras en libreopcion (Cabeceras de los|PED-1006]] API - Feat - Listar ultimos chats de compras en libreopcion (Cabeceras de los chats)
+- **action item from:** [[PED-1007 - API - Feat - Crear endpoint para obtener historial completo del chat de un|PED-1007]] API - Feat - Crear endpoint para obtener historial completo del chat de un pedido libre opcion
+- **action item from:** [[PED-1008 - API - Feat - Intervenir en el chat (responder) como libreopcion|PED-1008]] API - Feat - Intervenir en el chat (responder) como libreopcion
+- **relates to:** [[PED-1017 - APP - Refactor - Mostrar chat general para las ventas de libre opcion - Agregar|PED-1017]] APP - Refactor - Mostrar chat general para las ventas de libre opcion -> Agregar filtro por chats abiertos/cerrados
 
 ## Descripcion
 

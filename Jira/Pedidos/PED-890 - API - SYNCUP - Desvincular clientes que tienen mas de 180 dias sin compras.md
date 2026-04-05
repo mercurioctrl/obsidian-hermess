@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-890"
 
 ## Relaciones
 
-- **Padre:** [[PED-888]] Liberación de clientes automatica
+- **Padre:** [[PED-888 - Liberación de clientes automatica|PED-888]] Liberación de clientes automatica
 
 ## Descripcion
 

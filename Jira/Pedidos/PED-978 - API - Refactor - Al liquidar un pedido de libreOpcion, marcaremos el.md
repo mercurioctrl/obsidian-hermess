@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-978"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **action item from:** [[LIO-231]] Billetera
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **action item from:** [[LIO-231 - Billetera|LIO-231]] Billetera
 
 ## Descripcion
 

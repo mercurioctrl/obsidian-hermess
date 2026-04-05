@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-190"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-194]] API - Feat - Lista de ordenes -> filtro de Facturado / No facturado
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-194 - API - Feat - Lista de ordenes - filtro de Facturado No facturado|PED-194]] API - Feat - Lista de ordenes -> filtro de Facturado / No facturado
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-908"
 
 ## Relaciones
 
-- **Padre:** [[PED-907]] Prefijos
+- **Padre:** [[PED-907 - Prefijos|PED-907]] Prefijos
 
 ## Descripcion
 

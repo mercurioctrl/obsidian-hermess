@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-218"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **blocks:** [[PED-219]] APP - Refactor- Cambiar metodo de descarga por el utilizado habitualmente (ej: volanta)
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **blocks:** [[PED-219 - APP - Refactor- Cambiar metodo de descarga por el utilizado habitualmente (ej|PED-219]] APP - Refactor- Cambiar metodo de descarga por el utilizado habitualmente (ej: volanta)
 
 ## Descripcion
 

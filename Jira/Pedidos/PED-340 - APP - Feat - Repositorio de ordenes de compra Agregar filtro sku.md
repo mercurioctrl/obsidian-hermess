@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-340"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-338]] API - Feat - Repositorio de ordenes de compra > Agregar filtro sku
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-338 - API - Feat - Repositorio de ordenes de compra Agregar filtro sku|PED-338]] API - Feat - Repositorio de ordenes de compra > Agregar filtro sku
 
 ## Descripcion
 

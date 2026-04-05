@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-427"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **relates to:** [[PED-430]] API - Refactor - Agregar en el listado de cliente el nro de whatsApp
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **relates to:** [[PED-430 - API - Refactor - Agregar en el listado de cliente el nro de whatsApp|PED-430]] API - Refactor - Agregar en el listado de cliente el nro de whatsApp
 
 ## Descripcion
 

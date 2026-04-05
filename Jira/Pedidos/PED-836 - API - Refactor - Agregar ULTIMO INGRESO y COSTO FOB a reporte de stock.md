@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-836"
 
 ## Relaciones
 
-- **Padre:** [[PED-213]] Reportes de ventas
-- **action item from:** [[SNB-2351]] REPORTE DE STOCK
+- **Padre:** [[PED-213 - Reportes de ventas|PED-213]] Reportes de ventas
+- **action item from:** [[SNB-2351 - REPORTE DE STOCK|SNB-2351]] REPORTE DE STOCK
 
 ## Descripcion
 

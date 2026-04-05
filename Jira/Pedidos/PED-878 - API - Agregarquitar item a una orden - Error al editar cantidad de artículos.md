@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-878"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-39]] API - Feat - Agregar/quitar item a una orden
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-39 - API - Feat - Agregarquitar item a una orden|PED-39]] API - Feat - Agregar/quitar item a una orden
 
 ## Descripcion
 

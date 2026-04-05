@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-601"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **is blocked by:** [[PED-606]]   API - Teléfonos no obligatorios - Restricción activa 
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **is blocked by:** [[PED-606 - API - Teléfonos no obligatorios - Restricción activa|PED-606]]   API - Teléfonos no obligatorios - Restricción activa 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1076"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **action item from:** [[LIO-416]] Intenciones de pago - checkout
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **action item from:** [[LIO-416 - Intenciones de pago - checkout|LIO-416]] Intenciones de pago - checkout
 
 ## Descripcion
 

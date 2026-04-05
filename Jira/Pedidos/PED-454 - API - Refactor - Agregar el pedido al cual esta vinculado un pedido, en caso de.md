@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-454"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **blocks:** [[PED-455]] APP - Feat - Desunir pedido de otro envio ()
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **blocks:** [[PED-455 - APP - Feat - Desunir pedido de otro envio ()|PED-455]] APP - Feat - Desunir pedido de otro envio ()
 
 ## Descripcion
 

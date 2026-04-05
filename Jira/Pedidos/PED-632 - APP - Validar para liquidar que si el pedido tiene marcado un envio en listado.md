@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-632"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-633]] API -  Validar para liquidar que si el pedido tiene marcado un envio en listado de ordenes, que este agregado el item de servicio de transporte
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-633 - API - Validar para liquidar que si el pedido tiene marcado un envio en listado|PED-633]] API -  Validar para liquidar que si el pedido tiene marcado un envio en listado de ordenes, que este agregado el item de servicio de transporte
 
 ## Descripcion
 

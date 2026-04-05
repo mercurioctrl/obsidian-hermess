@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-872"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[PED-870]] APP - Refactor - Mejora - En  "pedido +info"  agregar un boton para agregar/quitar la seccion de cheques dependiendo si se necesita
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[PED-870 - APP - Refactor - Mejora - En pedido +info agregar un boton para agregarquitar|PED-870]] APP - Refactor - Mejora - En  "pedido +info"  agregar un boton para agregar/quitar la seccion de cheques dependiendo si se necesita
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-800"
 
 ## Relaciones
 
-- **Subtarea:** [[PED-805]] APP - Permitir subir más comprobantes - Sugerencia de mejora al eliminar un comprobante
-- **causes:** [[SNB-2233]] SUBIR   COMPROBANTE DE PAGO
-- **relates to:** [[PED-805]] APP - Permitir subir más comprobantes - Sugerencia de mejora al eliminar un comprobante
+- **Subtarea:** [[PED-805 - APP - Permitir subir más comprobantes - Sugerencia de mejora al eliminar un|PED-805]] APP - Permitir subir más comprobantes - Sugerencia de mejora al eliminar un comprobante
+- **causes:** [[SNB-2233 - SUBIR COMPROBANTE DE PAGO|SNB-2233]] SUBIR   COMPROBANTE DE PAGO
+- **relates to:** [[PED-805 - APP - Permitir subir más comprobantes - Sugerencia de mejora al eliminar un|PED-805]] APP - Permitir subir más comprobantes - Sugerencia de mejora al eliminar un comprobante
 
 ## Descripcion
 

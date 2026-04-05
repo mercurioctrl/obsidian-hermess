@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-321"
 
 ## Relaciones
 
-- **blocks:** [[PED-293]] APP - Feat - Mostrar lista de comisiones (Agrupado por letra) y un grafico de torta que las represente
-- **blocks:** [[PED-312]] APP - Refactor - Subtotales de comisiones
+- **blocks:** [[PED-293 - APP - Feat - Mostrar lista de comisiones (Agrupado por letra) y un grafico de|PED-293]] APP - Feat - Mostrar lista de comisiones (Agrupado por letra) y un grafico de torta que las represente
+- **blocks:** [[PED-312 - APP - Refactor - Subtotales de comisiones|PED-312]] APP - Refactor - Subtotales de comisiones
 
 ## Descripcion
 

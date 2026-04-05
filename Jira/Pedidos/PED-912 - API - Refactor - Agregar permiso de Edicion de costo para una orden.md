@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-912"
 
 ## Relaciones
 
-- **Padre:** [[PED-911]] Permisos, roles, etc
-- **has action item:** [[PED-910]] APP - MVP - Refactor - Seleccionar costo para el item de una orden
+- **Padre:** [[PED-911 - Permisos, roles, etc|PED-911]] Permisos, roles, etc
+- **has action item:** [[PED-910 - APP - MVP - Refactor - Seleccionar costo para el item de una orden|PED-910]] APP - MVP - Refactor - Seleccionar costo para el item de una orden
 
 ## Descripcion
 

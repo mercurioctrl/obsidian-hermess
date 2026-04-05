@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1053"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
 
 ## Descripcion
 

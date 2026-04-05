@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-765"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-2052]] COMPROBANTES DE PAGO
+- **is blocked by:** [[SNB-2052 - COMPROBANTES DE PAGO|SNB-2052]] COMPROBANTES DE PAGO
 
 ## Descripcion
 

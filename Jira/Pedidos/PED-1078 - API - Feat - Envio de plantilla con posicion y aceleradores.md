@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1078"
 
 ## Relaciones
 
-- **Padre:** [[PED-1077]] NB Travel
-- **has action item:** [[PED-1079]] APP - Feat - Envio de plantilla con posicion y aceleradores
+- **Padre:** [[PED-1077 - NB Travel|PED-1077]] NB Travel
+- **has action item:** [[PED-1079 - APP - Feat - Envio de plantilla con posicion y aceleradores|PED-1079]] APP - Feat - Envio de plantilla con posicion y aceleradores
 
 ## Descripcion
 

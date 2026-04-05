@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-719"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-720]] APP - Refactor - Autorizar comprobante/pago mp (Solo Libre Opcion)
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-720 - APP - Refactor - Autorizar comprobantepago mp (Solo Libre Opcion)|PED-720]] APP - Refactor - Autorizar comprobante/pago mp (Solo Libre Opcion)
 
 ## Descripcion
 

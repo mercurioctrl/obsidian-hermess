@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-442"
 
 ## Relaciones
 
-- **relates to:** [[PED-440]] API - Feat - El "Servicio de tranporte" no se puede ni mover, ni cambiar la cantidad, que siempre debe ser uno
+- **relates to:** [[PED-440 - API - Feat - El Servicio de tranporte no se puede ni mover, ni cambiar la|PED-440]] API - Feat - El "Servicio de tranporte" no se puede ni mover, ni cambiar la cantidad, que siempre debe ser uno
 
 ## Descripcion
 

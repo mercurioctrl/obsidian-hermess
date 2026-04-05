@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-934"
 
 ## Relaciones
 
-- **Padre:** [[PED-933]] Liberacion de ordenes
+- **Padre:** [[PED-933 - Liberacion de ordenes|PED-933]] Liberacion de ordenes
 
 ## Descripcion
 

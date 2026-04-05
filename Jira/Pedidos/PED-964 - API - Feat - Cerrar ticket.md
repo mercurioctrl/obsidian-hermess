@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-964"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **has action item:** [[PED-966]] APP - Feat - Agregar modal para visualizar y responder tickets al ejecutar el accionable en el indicador de ticket para una orden
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **has action item:** [[PED-966 - APP - Feat - Agregar modal para visualizar y responder tickets al ejecutar el|PED-966]] APP - Feat - Agregar modal para visualizar y responder tickets al ejecutar el accionable en el indicador de ticket para una orden
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-567"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is caused by:** [[PED-562]] API - Refactor - Listar ordenes de compra -> Agregar destino final
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is caused by:** [[PED-562 - API - Refactor - Listar ordenes de compra - Agregar destino final|PED-562]] API - Refactor - Listar ordenes de compra -> Agregar destino final
 
 ## Descripcion
 

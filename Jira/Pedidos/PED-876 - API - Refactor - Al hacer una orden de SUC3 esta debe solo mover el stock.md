@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-876"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **has action item:** [[SNB-2535]] no podemos generar pedido para uso internos
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **has action item:** [[SNB-2535 - no podemos generar pedido para uso internos|SNB-2535]] no podemos generar pedido para uso internos
 
 ## Descripcion
 

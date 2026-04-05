@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-837"
 
 ## Relaciones
 
-- **Padre:** [[PED-132]] Feat - Login / Re Login
-- **has action item:** [[PED-838]] APP - Refactor - Agregar generador de firmas
+- **Padre:** [[PED-132 - Feat - Login Re Login|PED-132]] Feat - Login / Re Login
+- **has action item:** [[PED-838 - APP - Refactor - Agregar generador de firmas|PED-838]] APP - Refactor - Agregar generador de firmas
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-829"
 
 ## Relaciones
 
-- **has action item:** [[PED-810]] APP - Feat - Notificaciones (primeras pruebas)
+- **has action item:** [[PED-810 - APP - Feat - Notificaciones (primeras pruebas)|PED-810]] APP - Feat - Notificaciones (primeras pruebas)
 
 ## Descripcion
 

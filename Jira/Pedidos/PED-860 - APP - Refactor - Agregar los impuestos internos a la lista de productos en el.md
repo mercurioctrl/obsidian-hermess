@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-860"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-852]] API - Refactor - Modificar el detalle de una orden/pedido para incluir el internalTax
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-852 - API - Refactor - Modificar el detalle de una ordenpedido para incluir el|PED-852]] API - Refactor - Modificar el detalle de una orden/pedido para incluir el internalTax
 
 ## Descripcion
 

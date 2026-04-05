@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-341"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-339]] API - Feat - Repositorio de ordenes de compra > Agregar filtro serial
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-339 - API - Feat - Repositorio de ordenes de compra Agregar filtro serial|PED-339]] API - Feat - Repositorio de ordenes de compra > Agregar filtro serial
 
 ## Descripcion
 

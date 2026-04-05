@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-522"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-519]] API - Review - Revisar respuesta del recurso /orders/addItem
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-519 - API - Review - Revisar respuesta del recurso ordersaddItem|PED-519]] API - Review - Revisar respuesta del recurso /orders/addItem
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1051"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **has action item:** [[LIO-388]] API - Agregar "Envio a cargo de NBE" como medio de envio
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **has action item:** [[LIO-388 - API - Agregar Envio a cargo de NBE como medio de envio|LIO-388]] API - Agregar "Envio a cargo de NBE" como medio de envio
 
 ## Descripcion
 

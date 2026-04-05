@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1036"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **Subtarea:** [[PED-1037]] API - Feat- Crear un comprobante manual para un cliente determinado
-- **Subtarea:** [[PED-1038]] APP - Feat- Crear un comprobante manual para un cliente determinado
-- **Subtarea:** [[PED-1056]] API - Refactor - Cambiar tipo de movimiento de los CREDITOS manuales (solo creditos)
-- **Subtarea:** [[PED-1104]] API - Refactor - Uso del parámetro cotización al generar comprobantes manuales
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **Subtarea:** [[PED-1037 - API - Feat- Crear un comprobante manual para un cliente determinado|PED-1037]] API - Feat- Crear un comprobante manual para un cliente determinado
+- **Subtarea:** [[PED-1038 - APP - Feat- Crear un comprobante manual para un cliente determinado|PED-1038]] APP - Feat- Crear un comprobante manual para un cliente determinado
+- **Subtarea:** [[PED-1056 - API - Refactor - Cambiar tipo de movimiento de los CREDITOS manuales (solo|PED-1056]] API - Refactor - Cambiar tipo de movimiento de los CREDITOS manuales (solo creditos)
+- **Subtarea:** [[PED-1104 - API - Refactor - Uso del parámetro cotización al generar comprobantes manuales|PED-1104]] API - Refactor - Uso del parámetro cotización al generar comprobantes manuales
 
 ## Descripcion
 

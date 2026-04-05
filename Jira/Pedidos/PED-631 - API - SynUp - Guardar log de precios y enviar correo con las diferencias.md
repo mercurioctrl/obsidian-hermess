@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-631"
 
 ## Relaciones
 
-- **Padre:** [[PED-629]] API - Feat - Historial de cambios de precio por escucha 
-- **is blocked by:** [[PED-660]] API - SynUp - Guardar log de precios y enviar correo con las diferencias - Tabla excede los límites del fondo
+- **Padre:** [[PED-629 - API - Feat - Historial de cambios de precio por escucha|PED-629]] API - Feat - Historial de cambios de precio por escucha 
+- **is blocked by:** [[PED-660 - API - SynUp - Guardar log de precios y enviar correo con las diferencias -|PED-660]] API - SynUp - Guardar log de precios y enviar correo con las diferencias - Tabla excede los límites del fondo
 
 ## Descripcion
 

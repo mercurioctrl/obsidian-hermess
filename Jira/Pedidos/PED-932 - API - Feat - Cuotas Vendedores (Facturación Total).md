@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-932"
 
 ## Relaciones
 
-- **Padre:** [[PED-845]] Incentivos Vendedores
-- **action item from:** [[PED-931]] API - Feat - Cuotas Vendedores (Facturación Total)
-- **has action item:** [[MKT-243]] NB_ INCENTIVO VENDEDORES CUOTA MENSUAL
+- **Padre:** [[PED-845 - Incentivos Vendedores|PED-845]] Incentivos Vendedores
+- **action item from:** [[PED-931 - API - Feat - Cuotas Vendedores (Facturación Total)|PED-931]] API - Feat - Cuotas Vendedores (Facturación Total)
+- **has action item:** [[MKT-243 - NB_ INCENTIVO VENDEDORES CUOTA MENSUAL|MKT-243]] NB_ INCENTIVO VENDEDORES CUOTA MENSUAL
 
 ## Descripcion
 

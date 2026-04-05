@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-587"
 
 ## Relaciones
 
-- **Padre:** [[PED-584]] Comprobantes de pago
-- **is blocked by:** [[PED-585]] API - Feat - Agregar comprobantes de pago
-- **is blocked by:** [[PED-586]] API - Feat - Subir comprobante de pago
-- **is blocked by:** [[PED-588]] APP - Feeat - Agregar comprobante de pago
-- **is blocked by:** [[PED-612]] APP - Subir comprobante de pago - Incidencias varias
+- **Padre:** [[PED-584 - Comprobantes de pago|PED-584]] Comprobantes de pago
+- **is blocked by:** [[PED-585 - API - Feat - Agregar comprobantes de pago|PED-585]] API - Feat - Agregar comprobantes de pago
+- **is blocked by:** [[PED-586 - API - Feat - Subir comprobante de pago|PED-586]] API - Feat - Subir comprobante de pago
+- **is blocked by:** [[PED-588 - APP - Feeat - Agregar comprobante de pago|PED-588]] APP - Feeat - Agregar comprobante de pago
+- **is blocked by:** [[PED-612 - APP - Subir comprobante de pago - Incidencias varias|PED-612]] APP - Subir comprobante de pago - Incidencias varias
 
 ## Descripcion
 

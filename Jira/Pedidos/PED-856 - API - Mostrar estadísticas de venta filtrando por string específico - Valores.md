@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-856"
 
 ## Relaciones
 
-- **Padre:** [[PED-149]] Reportes
-- **blocks:** [[PED-840]] API - Refactor - Mostrar estadisticas de venta filtrando por string especifico
+- **Padre:** [[PED-149 - Reportes|PED-149]] Reportes
+- **blocks:** [[PED-840 - API - Refactor - Mostrar estadisticas de venta filtrando por string especifico|PED-840]] API - Refactor - Mostrar estadisticas de venta filtrando por string especifico
 
 ## Descripcion
 

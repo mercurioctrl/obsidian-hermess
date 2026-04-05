@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-128"
 
 ## Relaciones
 
-- **Padre:** [[PED-91]] APP - Feat - Generar pedido
+- **Padre:** [[PED-91 - APP - Feat - Generar pedido|PED-91]] APP - Feat - Generar pedido
 
 ## Descripcion
 

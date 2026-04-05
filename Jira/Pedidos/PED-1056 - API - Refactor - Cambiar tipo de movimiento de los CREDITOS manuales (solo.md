@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1056"
 
 ## Relaciones
 
-- **Padre:** [[PED-1036]] Generar comprobantes manuales
-- **has action item:** [[SNB-3264]] NC MANUAL
+- **Padre:** [[PED-1036 - Generar comprobantes manuales|PED-1036]] Generar comprobantes manuales
+- **has action item:** [[SNB-3264 - NC MANUAL|SNB-3264]] NC MANUAL
 
 ## Descripcion
 

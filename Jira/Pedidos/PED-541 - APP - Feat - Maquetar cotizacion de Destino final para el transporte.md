@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-541"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **is blocked by:** [[PED-543]] API - Feat - Agregar "Destinlo final para el transporte"
-- **is blocked by:** [[PED-544]] API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el "destino final" que lo acompaña
-- **relates to:** [[PED-554]] API - Destino final para el transporte - Eliminar destino final
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **is blocked by:** [[PED-543 - API - Feat - Agregar Destinlo final para el transporte|PED-543]] API - Feat - Agregar "Destinlo final para el transporte"
+- **is blocked by:** [[PED-544 - API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el|PED-544]] API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el "destino final" que lo acompaña
+- **relates to:** [[PED-554 - API - Destino final para el transporte - Eliminar destino final|PED-554]] API - Destino final para el transporte - Eliminar destino final
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1042"
 
 ## Relaciones
 
-- **Padre:** [[PED-915]] MercadoLibre
-- **blocks:** [[PED-1041]] API - Research - SyncUp API ML - Adjuntar comprobante (factura) automaticamente si esta generada (con un syncUp)
+- **Padre:** [[PED-915 - MercadoLibre|PED-915]] MercadoLibre
+- **blocks:** [[PED-1041 - API - Research - SyncUp API ML - Adjuntar comprobante (factura) automaticamente|PED-1041]] API - Research - SyncUp API ML - Adjuntar comprobante (factura) automaticamente si esta generada (con un syncUp)
 
 ## Descripcion
 

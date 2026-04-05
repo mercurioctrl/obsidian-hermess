@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-479"
 
 ## Relaciones
 
-- **Padre:** [[PED-477]] Combinar envios
-- **is blocked by:** [[EXP-385]] APP - Feat - Mostrar los "Unidos a otro envio" segun lo visto por slack
-- **is blocked by:** [[PED-478]] API - Feat - Mostrar en el listado de ordenes si el pedido esta combinaod
+- **Padre:** [[PED-477 - Combinar envios|PED-477]] Combinar envios
+- **is blocked by:** [[EXP-385 - APP - Feat - Mostrar los Unidos a otro envio segun lo visto por slack|EXP-385]] APP - Feat - Mostrar los "Unidos a otro envio" segun lo visto por slack
+- **is blocked by:** [[PED-478 - API - Feat - Mostrar en el listado de ordenes si el pedido esta combinaod|PED-478]] API - Feat - Mostrar en el listado de ordenes si el pedido esta combinaod
 
 ## Descripcion
 

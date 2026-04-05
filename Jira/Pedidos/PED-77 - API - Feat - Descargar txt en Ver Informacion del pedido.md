@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-77"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-76]] APP - Feat - Ver informacion del pedido
-- **relates to:** [[PED-380]] API - Descargar txt en ver información del pedido - Incidencias varias
-- **relates to:** [[PED-1001]] API - Ver Informacion del pedido -> Descargar TXT - Error de tipo de dato
-- **relates to:** [[PED-1274]] API - Refactor - Ver información del pedido - Descargar txt -> Mostrar kit
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-76 - APP - Feat - Ver informacion del pedido|PED-76]] APP - Feat - Ver informacion del pedido
+- **relates to:** [[PED-380 - API - Descargar txt en ver información del pedido - Incidencias varias|PED-380]] API - Descargar txt en ver información del pedido - Incidencias varias
+- **relates to:** [[PED-1001 - API - Ver Informacion del pedido - Descargar TXT - Error de tipo de dato|PED-1001]] API - Ver Informacion del pedido -> Descargar TXT - Error de tipo de dato
+- **relates to:** [[PED-1274 - API - Refactor - Ver información del pedido - Descargar txt - Mostrar kit|PED-1274]] API - Refactor - Ver información del pedido - Descargar txt -> Mostrar kit
 
 ## Descripcion
 

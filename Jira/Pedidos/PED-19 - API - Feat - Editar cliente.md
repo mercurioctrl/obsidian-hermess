@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-19"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-25]] APP - Feat - Modal - Seteo de parámetros de cliente 
-- **relates to:** [[PED-842]] API - Editar cliente - Oportunidad de mejora en el mensaje de error
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-25 - APP - Feat - Modal - Seteo de parámetros de cliente|PED-25]] APP - Feat - Modal - Seteo de parámetros de cliente 
+- **relates to:** [[PED-842 - API - Editar cliente - Oportunidad de mejora en el mensaje de error|PED-842]] API - Editar cliente - Oportunidad de mejora en el mensaje de error
 
 ## Descripcion
 

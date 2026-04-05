@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-579"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-583]] API - Agregar dirección de envío - Restricción por pedido liquidado
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-583 - API - Agregar dirección de envío - Restricción por pedido liquidado|PED-583]] API - Agregar dirección de envío - Restricción por pedido liquidado
 
 ## Descripcion
 

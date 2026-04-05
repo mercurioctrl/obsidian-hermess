@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-30"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-29]] API - Feat - Editar direcciones del cliente
-- **is blocked by:** [[PED-28]] API - Feat - Listar direcciones del cliente
-- **relates to:** [[PED-997]] APP - Refactor - Agregar/Editar direcciones -> visualizar mensaje de error
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-29 - API - Feat - Editar direcciones del cliente|PED-29]] API - Feat - Editar direcciones del cliente
+- **is blocked by:** [[PED-28 - API - Feat - Listar direcciones del cliente|PED-28]] API - Feat - Listar direcciones del cliente
+- **relates to:** [[PED-997 - APP - Refactor - AgregarEditar direcciones - visualizar mensaje de error|PED-997]] APP - Refactor - Agregar/Editar direcciones -> visualizar mensaje de error
 
 ## Descripcion
 

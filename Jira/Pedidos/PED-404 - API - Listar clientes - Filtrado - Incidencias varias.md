@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-404"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **blocks:** [[PED-389]] API - Refactor - Listar clientes -> Filtro ordenar por
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **blocks:** [[PED-389 - API - Refactor - Listar clientes - Filtro ordenar por|PED-389]] API - Refactor - Listar clientes -> Filtro ordenar por
 
 ## Descripcion
 

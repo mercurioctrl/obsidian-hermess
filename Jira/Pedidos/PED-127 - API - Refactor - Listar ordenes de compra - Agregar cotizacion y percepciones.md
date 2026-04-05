@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-127"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-125]] APP - Feat - Modal de liquidacion
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-125 - APP - Feat - Modal de liquidacion|PED-125]] APP - Feat - Modal de liquidacion
 
 ## Descripcion
 

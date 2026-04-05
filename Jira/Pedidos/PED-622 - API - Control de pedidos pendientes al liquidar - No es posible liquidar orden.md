@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-622"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **blocks:** [[PED-617]] API - Refactor - Control de "pedidos pendientes" al liquidar
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **blocks:** [[PED-617 - API - Refactor - Control de pedidos pendientes al liquidar|PED-617]] API - Refactor - Control de "pedidos pendientes" al liquidar
 
 ## Descripcion
 

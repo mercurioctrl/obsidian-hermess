@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-68"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
-- **blocks:** [[PED-69]] API - Feat - Listar productos -> Filtros
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
+- **blocks:** [[PED-69 - API - Feat - Listar productos - Filtros|PED-69]] API - Feat - Listar productos -> Filtros
 
 ## Descripcion
 

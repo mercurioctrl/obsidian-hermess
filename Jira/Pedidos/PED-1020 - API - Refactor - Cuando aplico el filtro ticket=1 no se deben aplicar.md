@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1020"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **has action item:** [[SNB-3151]] FILTRO DE TICKET
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **has action item:** [[SNB-3151 - FILTRO DE TICKET|SNB-3151]] FILTRO DE TICKET
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-63"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **relates to:** [[PED-655]] API - Refactor - Agregar/Editar cliente -> Limpieza del CUIT
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **relates to:** [[PED-655 - API - Refactor - AgregarEditar cliente - Limpieza del CUIT|PED-655]] API - Refactor - Agregar/Editar cliente -> Limpieza del CUIT
 
 ## Descripcion
 

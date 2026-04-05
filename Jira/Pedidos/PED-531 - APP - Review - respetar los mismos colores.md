@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-531"
 
 ## Relaciones
 
-- **Padre:** [[PED-255]] Notificaciones
+- **Padre:** [[PED-255 - Notificaciones|PED-255]] Notificaciones
 
 ## Descripcion
 

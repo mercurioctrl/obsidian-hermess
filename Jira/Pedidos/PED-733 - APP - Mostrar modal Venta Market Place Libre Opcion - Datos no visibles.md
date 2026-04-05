@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-733"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-726]] APP - Feat - Mostrar modal "Venta Market Place: Libre Opcion"
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-726 - APP - Feat - Mostrar modal Venta Market Place Libre Opcion|PED-726]] APP - Feat - Mostrar modal "Venta Market Place: Libre Opcion"
 
 ## Descripcion
 

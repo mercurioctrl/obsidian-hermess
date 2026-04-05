@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1093"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **Subtarea:** [[PED-1094]] API - Refactor - Agregar estados de la orden al detalle de la misma
-- **Subtarea:** [[PED-1095]] APP - Refactor - Agergar estados de la orden al detalle de la misma
-- **Subtarea:** [[PED-1103]] API - Refactor - Cuando tengo CostForSale en una linea de la orden profit y effectiveness deben usar ese monto para calcular utilidad y no el costopromedio
-- **Subtarea:** [[PED-1275]] APP - Review - Mejorar scrolls horizontales en modal de ordenes
-- **Subtarea:** [[PED-1277]] APP - Review - En este caso ¿porque sucede que se ve el objeto, en lugar del precio directamente? Se puede solucionar?
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-1094 - API - Refactor - Agregar estados de la orden al detalle de la misma|PED-1094]] API - Refactor - Agregar estados de la orden al detalle de la misma
+- **Subtarea:** [[PED-1095 - APP - Refactor - Agergar estados de la orden al detalle de la misma|PED-1095]] APP - Refactor - Agergar estados de la orden al detalle de la misma
+- **Subtarea:** [[PED-1103 - API - Refactor - Cuando tengo CostForSale en una linea de la orden profit y|PED-1103]] API - Refactor - Cuando tengo CostForSale en una linea de la orden profit y effectiveness deben usar ese monto para calcular utilidad y no el costopromedio
+- **Subtarea:** [[PED-1275 - APP - Review - Mejorar scrolls horizontales en modal de ordenes|PED-1275]] APP - Review - Mejorar scrolls horizontales en modal de ordenes
+- **Subtarea:** [[PED-1277 - APP - Review - En este caso ¿porque sucede que se ve el objeto, en lugar del|PED-1277]] APP - Review - En este caso ¿porque sucede que se ve el objeto, en lugar del precio directamente? Se puede solucionar?
 
 ## Descripcion
 

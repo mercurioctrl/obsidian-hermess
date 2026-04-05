@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-838"
 
 ## Relaciones
 
-- **Padre:** [[PED-132]] Feat - Login / Re Login
-- **action item from:** [[PED-837]] API - Refactor - Agregar parametros al objeto user
+- **Padre:** [[PED-132 - Feat - Login Re Login|PED-132]] Feat - Login / Re Login
+- **action item from:** [[PED-837 - API - Refactor - Agregar parametros al objeto user|PED-837]] API - Refactor - Agregar parametros al objeto user
 
 ## Descripcion
 

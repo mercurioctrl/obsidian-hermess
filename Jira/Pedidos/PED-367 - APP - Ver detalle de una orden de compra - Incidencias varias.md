@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-367"
 
 ## Relaciones
 
-- **relates to:** [[PED-83]] APP - Feat - Ver detalle de una orden de compra
+- **relates to:** [[PED-83 - APP - Feat - Ver detalle de una orden de compra|PED-83]] APP - Feat - Ver detalle de una orden de compra
 
 ## Descripcion
 

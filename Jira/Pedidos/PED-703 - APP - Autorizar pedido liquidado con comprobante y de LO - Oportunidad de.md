@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-703"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-692]] APP - Feat - Agregar el boton para autorizar un pedido de libre opcion cuando tiene comprobante de banco
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-692 - APP - Feat - Agregar el boton para autorizar un pedido de libre opcion cuando|PED-692]] APP - Feat - Agregar el boton para autorizar un pedido de libre opcion cuando tiene comprobante de banco
 
 ## Descripcion
 

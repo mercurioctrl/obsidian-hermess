@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-278"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-710]] APP - Refactor - Mejora para conservar linealidad en el filtro de estados cambiar reservas por remitidos
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-710 - APP - Refactor - Mejora para conservar linealidad en el filtro de estados|PED-710]] APP - Refactor - Mejora para conservar linealidad en el filtro de estados cambiar reservas por remitidos
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-261"
 
 ## Relaciones
 
-- **Padre:** [[PED-253]] Listar reportes
-- **blocks:** [[PED-262]] APP - Feat - Ver reporte
+- **Padre:** [[PED-253 - Listar reportes|PED-253]] Listar reportes
+- **blocks:** [[PED-262 - APP - Feat - Ver reporte|PED-262]] APP - Feat - Ver reporte
 
 ## Descripcion
 

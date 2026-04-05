@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-624"
 
 ## Relaciones
 
-- **Padre:** [[PED-584]] Comprobantes de pago
-- **blocks:** [[PED-625]] APP - Feat - Solo colorear el icono de comprobante, cuando el mismo ya exista, sino es gris
+- **Padre:** [[PED-584 - Comprobantes de pago|PED-584]] Comprobantes de pago
+- **blocks:** [[PED-625 - APP - Feat - Solo colorear el icono de comprobante, cuando el mismo ya exista,|PED-625]] APP - Feat - Solo colorear el icono de comprobante, cuando el mismo ya exista, sino es gris
 
 ## Descripcion
 

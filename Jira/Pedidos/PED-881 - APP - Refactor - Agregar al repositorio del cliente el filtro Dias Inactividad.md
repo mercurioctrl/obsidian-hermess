@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-881"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **action item from:** [[PED-880]] API - Refactor - Agregar al repositorio del cliente el filtro "Dias Inactividad"
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **action item from:** [[PED-880 - API - Refactor - Agregar al repositorio del cliente el filtro Dias Inactividad|PED-880]] API - Refactor - Agregar al repositorio del cliente el filtro "Dias Inactividad"
 
 ## Descripcion
 

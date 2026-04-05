@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1041"
 
 ## Relaciones
 
-- **Padre:** [[PED-915]] MercadoLibre
-- **is blocked by:** [[PED-1042]] API - Comprobantes - Agregar metodo para descargar el comprobante automaticamente
+- **Padre:** [[PED-915 - MercadoLibre|PED-915]] MercadoLibre
+- **is blocked by:** [[PED-1042 - API - Comprobantes - Agregar metodo para descargar el comprobante|PED-1042]] API - Comprobantes - Agregar metodo para descargar el comprobante automaticamente
 
 ## Descripcion
 

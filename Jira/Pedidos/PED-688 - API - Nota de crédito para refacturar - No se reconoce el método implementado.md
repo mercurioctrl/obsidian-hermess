@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-688"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **blocks:** [[PED-653]] API - Feat - Hacer NC y Desvincular para refacturar un comprobante
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **blocks:** [[PED-653 - API - Feat - Hacer NC y Desvincular para refacturar un comprobante|PED-653]] API - Feat - Hacer NC y Desvincular para refacturar un comprobante
 
 ## Descripcion
 

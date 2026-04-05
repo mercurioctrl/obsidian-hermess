@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-481"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-483]] APP - Feat - Agrear accionable para buscar todas las ordenes del cliente
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-483 - APP - Feat - Agrear accionable para buscar todas las ordenes del cliente|PED-483]] APP - Feat - Agrear accionable para buscar todas las ordenes del cliente
 
 ## Descripcion
 

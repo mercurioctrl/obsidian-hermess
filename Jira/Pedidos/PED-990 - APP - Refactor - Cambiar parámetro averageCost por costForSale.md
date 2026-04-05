@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-990"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **relates to:** [[PED-989]] API - Review - Probar actualización de renta al cambiar el costo
-- **duplicates:** [[PED-925]] APP - MVP - Refactor - Guardar costo para el item de una orden
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **relates to:** [[PED-989 - API - Review - Probar actualización de renta al cambiar el costo|PED-989]] API - Review - Probar actualización de renta al cambiar el costo
+- **duplicates:** [[PED-925 - APP - MVP - Refactor - Guardar costo para el item de una orden|PED-925]] APP - MVP - Refactor - Guardar costo para el item de una orden
 
 ## Descripcion
 

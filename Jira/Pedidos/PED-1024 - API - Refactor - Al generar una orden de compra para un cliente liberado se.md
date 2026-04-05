@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1024"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **has action item:** [[PED-1025]] API - Refactor - Al liquidar un pedido de para un cliente "liberado" se debe asignar al vendedor que lo esta liquidando
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **has action item:** [[PED-1025 - API - Refactor - Al liquidar un pedido de para un cliente liberado se debe|PED-1025]] API - Refactor - Al liquidar un pedido de para un cliente "liberado" se debe asignar al vendedor que lo esta liquidando
 
 ## Descripcion
 

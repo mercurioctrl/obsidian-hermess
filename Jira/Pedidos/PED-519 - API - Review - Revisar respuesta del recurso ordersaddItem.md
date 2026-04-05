@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-519"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-518]] APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales
-- **is blocked by:** [[PED-522]] API - Revisar respuesta del recurso addItem - Precio a mano no guardado
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-518 - APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales|PED-518]] APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales
+- **is blocked by:** [[PED-522 - API - Revisar respuesta del recurso addItem - Precio a mano no guardado|PED-522]] API - Revisar respuesta del recurso addItem - Precio a mano no guardado
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-692"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **is blocked by:** [[PED-691]] API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si es de libre opcion
-- **relates to:** [[PED-703]] APP - Autorizar pedido liquidado con comprobante y de LO - Oportunidad de mejora en monto
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **is blocked by:** [[PED-691 - API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si|PED-691]] API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si es de libre opcion
+- **relates to:** [[PED-703 - APP - Autorizar pedido liquidado con comprobante y de LO - Oportunidad de|PED-703]] APP - Autorizar pedido liquidado con comprobante y de LO - Oportunidad de mejora en monto
 
 ## Descripcion
 

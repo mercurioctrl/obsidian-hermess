@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-956"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **has action item:** [[PED-957]] APP - Refactor - Modificacion en el indicador  "tasa de reactivacion de clientes"
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **has action item:** [[PED-957 - APP - Refactor - Modificacion en el indicador tasa de reactivacion de clientes|PED-957]] APP - Refactor - Modificacion en el indicador  "tasa de reactivacion de clientes"
 
 ## Descripcion
 

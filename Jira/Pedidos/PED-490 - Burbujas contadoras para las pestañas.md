@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-490"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **Subtarea:** [[PED-491]] API - Feat - Burbujas contadoras
-- **Subtarea:** [[PED-492]] APP - Feat - Burbujas contadoras
-- **Subtarea:** [[PED-504]] APP - Review - Puede ser que las solocitudes no tienen burubja?
-- **Subtarea:** [[PED-556]] API - Review - Fallo en burbujas
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **Subtarea:** [[PED-491 - API - Feat - Burbujas contadoras|PED-491]] API - Feat - Burbujas contadoras
+- **Subtarea:** [[PED-492 - APP - Feat - Burbujas contadoras|PED-492]] APP - Feat - Burbujas contadoras
+- **Subtarea:** [[PED-504 - APP - Review - Puede ser que las solocitudes no tienen burubja|PED-504]] APP - Review - Puede ser que las solocitudes no tienen burubja?
+- **Subtarea:** [[PED-556 - API - Review - Fallo en burbujas|PED-556]] API - Review - Fallo en burbujas
 
 ## Descripcion
 

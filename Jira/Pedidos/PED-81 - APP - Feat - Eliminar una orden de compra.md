@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-81"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **is blocked by:** [[PED-80]] API - Feat - Eliminar una orden de compra
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **is blocked by:** [[PED-80 - API - Feat - Eliminar una orden de compra|PED-80]] API - Feat - Eliminar una orden de compra
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-178"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
-- **blocks:** [[PED-185]] APP - Feat - Filtros de ordenes -> Filtrar por estado de pedido
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
+- **blocks:** [[PED-185 - APP - Feat - Filtros de ordenes - Filtrar por estado de pedido|PED-185]] APP - Feat - Filtros de ordenes -> Filtrar por estado de pedido
 
 ## Descripcion
 

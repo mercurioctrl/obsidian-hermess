@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-373"
 
 ## Relaciones
 
-- **Padre:** [[PED-132]] Feat - Login / Re Login
-- **relates to:** [[PED-381]] App -Feat : Limites de liquidacion
-- **relates to:** [[PED-386]] API - Refactor - Limites de liquidación - Filtrar por vendedor
+- **Padre:** [[PED-132 - Feat - Login Re Login|PED-132]] Feat - Login / Re Login
+- **relates to:** [[PED-381 - App -Feat Limites de liquidacion|PED-381]] App -Feat : Limites de liquidacion
+- **relates to:** [[PED-386 - API - Refactor - Limites de liquidación - Filtrar por vendedor|PED-386]] API - Refactor - Limites de liquidación - Filtrar por vendedor
 
 ## Descripcion
 

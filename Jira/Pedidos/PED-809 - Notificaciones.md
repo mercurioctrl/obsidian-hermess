@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-809"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **Subtarea:** [[PED-810]] APP - Feat - Notificaciones (primeras pruebas)
-- **Subtarea:** [[PED-814]] PED - Feat - Guardar token de notificación para el usuario
-- **Subtarea:** [[PED-816]] MS - Task - Montar servicio tareas 3 con una base para usar Firebase
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **Subtarea:** [[PED-810 - APP - Feat - Notificaciones (primeras pruebas)|PED-810]] APP - Feat - Notificaciones (primeras pruebas)
+- **Subtarea:** [[PED-814 - PED - Feat - Guardar token de notificación para el usuario|PED-814]] PED - Feat - Guardar token de notificación para el usuario
+- **Subtarea:** [[PED-816 - MS - Task - Montar servicio tareas 3 con una base para usar Firebase|PED-816]] MS - Task - Montar servicio tareas 3 con una base para usar Firebase
 
 ## Descripcion
 

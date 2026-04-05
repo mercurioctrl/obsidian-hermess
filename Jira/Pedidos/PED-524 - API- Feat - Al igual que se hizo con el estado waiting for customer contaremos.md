@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-524"
 
 ## Relaciones
 
-- **Padre:** [[PED-255]] Notificaciones
-- **blocks:** [[PED-525]] APP - Feat - Devolver debajo de la burbuja, otra burbuja que sean los "Work in progres"
-- **is blocked by:** [[PED-532]] API - Pendientes, incluir reportes de otros estados - Cantidades no coincidentes
+- **Padre:** [[PED-255 - Notificaciones|PED-255]] Notificaciones
+- **blocks:** [[PED-525 - APP - Feat - Devolver debajo de la burbuja, otra burbuja que sean los Work in|PED-525]] APP - Feat - Devolver debajo de la burbuja, otra burbuja que sean los "Work in progres"
+- **is blocked by:** [[PED-532 - API - Pendientes, incluir reportes de otros estados - Cantidades no coincidentes|PED-532]] API - Pendientes, incluir reportes de otros estados - Cantidades no coincidentes
 
 ## Descripcion
 

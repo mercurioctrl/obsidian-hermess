@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-517"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **relates to:** [[PED-389]] API - Refactor - Listar clientes -> Filtro ordenar por
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **relates to:** [[PED-389 - API - Refactor - Listar clientes - Filtro ordenar por|PED-389]] API - Refactor - Listar clientes -> Filtro ordenar por
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-694"
 
 ## Relaciones
 
-- **Padre:** [[PED-201]] Solicitudes de Alta
-- **blocks:** [[PED-695]] APP - Feat - Eliminar solocitud
+- **Padre:** [[PED-201 - Solicitudes de Alta|PED-201]] Solicitudes de Alta
+- **blocks:** [[PED-695 - APP - Feat - Eliminar solocitud|PED-695]] APP - Feat - Eliminar solocitud
 
 ## Descripcion
 

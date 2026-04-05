@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-615"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-592]] APP - Refactor -  Problema al cotizar un envio
-- **blocks:** [[PED-611]] API - Refactor - condigo postal a mostrar en diferentes casos
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-592 - APP - Refactor - Problema al cotizar un envio|PED-592]] APP - Refactor -  Problema al cotizar un envio
+- **blocks:** [[PED-611 - API - Refactor - condigo postal a mostrar en diferentes casos|PED-611]] API - Refactor - condigo postal a mostrar en diferentes casos
 
 ## Descripcion
 

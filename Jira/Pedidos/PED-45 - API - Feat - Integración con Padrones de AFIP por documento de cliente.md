@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-45"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-50]] MS - Feat - Integracion de padron de afip mediante documento del cliente
-- **blocks:** [[PED-51]] APP - Refactor - Agregar cliente -> Integrar búsqueda automatica según padrón de afip
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-50 - MS - Feat - Integracion de padron de afip mediante documento del cliente|PED-50]] MS - Feat - Integracion de padron de afip mediante documento del cliente
+- **blocks:** [[PED-51 - APP - Refactor - Agregar cliente - Integrar búsqueda automatica según padrón de|PED-51]] APP - Refactor - Agregar cliente -> Integrar búsqueda automatica según padrón de afip
 
 ## Descripcion
 

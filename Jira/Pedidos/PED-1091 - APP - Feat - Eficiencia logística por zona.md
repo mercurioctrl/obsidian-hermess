@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1091"
 
 ## Relaciones
 
-- **Padre:** [[PED-1068]] Periodos logisticos
-- **action item from:** [[PED-1089]] API - Feat - Recurso de eficiencia logística por CP y transportista
+- **Padre:** [[PED-1068 - Periodos logisticos|PED-1068]] Periodos logisticos
+- **action item from:** [[PED-1089 - API - Feat - Recurso de eficiencia logística por CP y transportista|PED-1089]] API - Feat - Recurso de eficiencia logística por CP y transportista
 
 ## Descripcion
 

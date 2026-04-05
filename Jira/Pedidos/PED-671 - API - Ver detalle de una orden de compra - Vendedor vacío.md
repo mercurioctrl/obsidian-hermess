@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-671"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-82]] API - Feat - Ver detalle de una orden de compra
-- **relates to:** [[SNB-1763]] FALTANTE DE DATOS
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-82 - API - Feat - Ver detalle de una orden de compra|PED-82]] API - Feat - Ver detalle de una orden de compra
+- **relates to:** [[SNB-1763 - FALTANTE DE DATOS|SNB-1763]] FALTANTE DE DATOS
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-402"
 
 ## Relaciones
 
-- **Padre:** [[PED-400]] Ver serializacion
-- **is blocked by:** [[PED-401]] API - Feat - Ver seriales tomados para un pedido determinado
+- **Padre:** [[PED-400 - Ver serializacion|PED-400]] Ver serializacion
+- **is blocked by:** [[PED-401 - API - Feat - Ver seriales tomados para un pedido determinado|PED-401]] API - Feat - Ver seriales tomados para un pedido determinado
 
 ## Descripcion
 

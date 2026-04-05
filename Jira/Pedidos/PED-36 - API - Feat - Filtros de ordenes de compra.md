@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-36"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-773]] API - Refactor - Filtros de ordenes -> Filtrar por medio de pago - Pago diferido
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-773 - API - Refactor - Filtros de ordenes - Filtrar por medio de pago - Pago diferido|PED-773]] API - Refactor - Filtros de ordenes -> Filtrar por medio de pago - Pago diferido
 
 ## Descripcion
 

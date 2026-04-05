@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1075"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **has action item:** [[PED-1097]] APP - Feat - Hacer reembolso a la wallet a parir de una devolución en cuenta corriente
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **has action item:** [[PED-1097 - APP - Feat - Hacer reembolso a la wallet a parir de una devolución en cuenta|PED-1097]] APP - Feat - Hacer reembolso a la wallet a parir de una devolución en cuenta corriente
 
 ## Descripcion
 

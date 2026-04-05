@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-49"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-47]] API - Feat - Descargar ordenes de compra
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-47 - API - Feat - Descargar ordenes de compra|PED-47]] API - Feat - Descargar ordenes de compra
 
 ## Descripcion
 

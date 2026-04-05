@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-995"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **action item from:** [[PED-994]] API - Refactor - Agregar percepciones ARBA al "pedido + INFO"
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **action item from:** [[PED-994 - API - Refactor - Agregar percepciones ARBA al pedido + INFO|PED-994]] API - Refactor - Agregar percepciones ARBA al "pedido + INFO"
 
 ## Descripcion
 

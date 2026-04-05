@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-745"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-742]] API - Refactor - validar si el numero de operación de un comprobante ya esta registrado 
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-742 - API - Refactor - validar si el numero de operación de un comprobante ya esta|PED-742]] API - Refactor - validar si el numero de operación de un comprobante ya esta registrado 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-873"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **has action item:** [[SNB-2535]] no podemos generar pedido para uso internos
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **has action item:** [[SNB-2535 - no podemos generar pedido para uso internos|SNB-2535]] no podemos generar pedido para uso internos
 
 ## Descripcion
 

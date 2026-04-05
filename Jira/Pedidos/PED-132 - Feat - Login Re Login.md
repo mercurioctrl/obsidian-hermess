@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-132"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **Subtarea:** [[PED-133]] API - Feat - Login / Re Login
-- **Subtarea:** [[PED-134]] APP - Feat - Login / Re Login
-- **Subtarea:** [[PED-373]] API - Feat - Limites de liquidacion
-- **Subtarea:** [[PED-837]] API - Refactor - Agregar parametros al objeto user
-- **Subtarea:** [[PED-838]] APP - Refactor - Agregar generador de firmas
-- **Subtarea:** [[PED-884]] API - Refactor - Agrgar al objeto "user" la empresa a la que este pertenece
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **Subtarea:** [[PED-133 - API - Feat - Login Re Login|PED-133]] API - Feat - Login / Re Login
+- **Subtarea:** [[PED-134 - APP - Feat - Login Re Login|PED-134]] APP - Feat - Login / Re Login
+- **Subtarea:** [[PED-373 - API - Feat - Limites de liquidacion|PED-373]] API - Feat - Limites de liquidacion
+- **Subtarea:** [[PED-837 - API - Refactor - Agregar parametros al objeto user|PED-837]] API - Refactor - Agregar parametros al objeto user
+- **Subtarea:** [[PED-838 - APP - Refactor - Agregar generador de firmas|PED-838]] APP - Refactor - Agregar generador de firmas
+- **Subtarea:** [[PED-884 - API - Refactor - Agrgar al objeto user la empresa a la que este pertenece|PED-884]] API - Refactor - Agrgar al objeto "user" la empresa a la que este pertenece
 
 ## Descripcion
 

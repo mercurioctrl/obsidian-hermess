@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-729"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **Subtarea:** [[PED-730]] API - Refactor - Que pueda editarse el numero de operacion
-- **Subtarea:** [[PED-731]] APP - Refactor - Que pueda editarse el numero de operacion
-- **Subtarea:** [[PED-796]] API - Refactor - numero de operacion no debe ser obligatorio
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-730 - API - Refactor - Que pueda editarse el numero de operacion|PED-730]] API - Refactor - Que pueda editarse el numero de operacion
+- **Subtarea:** [[PED-731 - APP - Refactor - Que pueda editarse el numero de operacion|PED-731]] APP - Refactor - Que pueda editarse el numero de operacion
+- **Subtarea:** [[PED-796 - API - Refactor - numero de operacion no debe ser obligatorio|PED-796]] API - Refactor - numero de operacion no debe ser obligatorio
 
 ## Descripcion
 

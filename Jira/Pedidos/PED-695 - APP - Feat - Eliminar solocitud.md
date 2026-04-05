@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-695"
 
 ## Relaciones
 
-- **Padre:** [[PED-201]] Solicitudes de Alta
-- **is blocked by:** [[PED-694]] API - Feat - Eliminacion logica de solicitud
+- **Padre:** [[PED-201 - Solicitudes de Alta|PED-201]] Solicitudes de Alta
+- **is blocked by:** [[PED-694 - API - Feat - Eliminacion logica de solicitud|PED-694]] API - Feat - Eliminacion logica de solicitud
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-883"
 
 ## Relaciones
 
-- **Padre:** [[PED-882]] Filtro Empresa
-- **action item from:** [[PED-884]] API - Refactor - Agrgar al objeto "user" la empresa a la que este pertenece
-- **action item from:** [[PED-885]] API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
+- **Padre:** [[PED-882 - Filtro Empresa|PED-882]] Filtro Empresa
+- **action item from:** [[PED-884 - API - Refactor - Agrgar al objeto user la empresa a la que este pertenece|PED-884]] API - Refactor - Agrgar al objeto "user" la empresa a la que este pertenece
+- **action item from:** [[PED-885 - API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las|PED-885]] API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
 
 ## Descripcion
 

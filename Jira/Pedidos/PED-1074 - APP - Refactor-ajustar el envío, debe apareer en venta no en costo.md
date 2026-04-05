@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1074"
 
 ## Relaciones
 
-- **Padre:** [[PED-724]] Modal "Venta Market Place LO"
-- **action item from:** [[SNB-3297]] Diferencia en el total del pedido
+- **Padre:** [[PED-724 - Modal Venta Market Place LO|PED-724]] Modal "Venta Market Place LO"
+- **action item from:** [[SNB-3297 - Diferencia en el total del pedido|SNB-3297]] Diferencia en el total del pedido
 
 ## Descripcion
 

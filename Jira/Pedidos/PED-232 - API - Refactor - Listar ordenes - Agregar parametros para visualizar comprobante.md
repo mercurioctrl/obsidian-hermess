@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-232"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-231]] APP - Feat - Se debe poder ver la factura de la misma forma que se hace en otros sistemas
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-231 - APP - Feat - Se debe poder ver la factura de la misma forma que se hace en|PED-231]] APP - Feat - Se debe poder ver la factura de la misma forma que se hace en otros sistemas
 
 ## Descripcion
 

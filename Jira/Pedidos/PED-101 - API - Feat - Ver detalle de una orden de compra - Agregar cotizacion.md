@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-101"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-82]] API - Feat - Ver detalle de una orden de compra
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-82 - API - Feat - Ver detalle de una orden de compra|PED-82]] API - Feat - Ver detalle de una orden de compra
 
 ## Descripcion
 

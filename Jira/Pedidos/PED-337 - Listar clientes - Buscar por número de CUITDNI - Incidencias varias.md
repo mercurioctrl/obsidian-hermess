@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-337"
 
 ## Relaciones
 
-- **relates to:** [[PED-327]] API - Refactor - Listar clientes -> Buscar por numero de cuit/dni
+- **relates to:** [[PED-327 - API - Refactor - Listar clientes - Buscar por numero de cuitdni|PED-327]] API - Refactor - Listar clientes -> Buscar por numero de cuit/dni
 
 ## Descripcion
 

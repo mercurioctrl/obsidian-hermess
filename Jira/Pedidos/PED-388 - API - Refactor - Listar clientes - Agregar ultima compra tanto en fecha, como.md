@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-388"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-387]] APP - Refactor - Agregaremos informacion del cliente al listado
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-387 - APP - Refactor - Agregaremos informacion del cliente al listado|PED-387]] APP - Refactor - Agregaremos informacion del cliente al listado
 
 ## Descripcion
 

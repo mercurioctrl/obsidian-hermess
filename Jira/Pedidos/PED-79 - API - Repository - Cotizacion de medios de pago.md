@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-79"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
 
 ## Descripcion
 

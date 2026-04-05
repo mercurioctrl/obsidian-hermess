@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-785"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **relates to:** [[PED-792]] APP - Agregar fechas al detalle de la orden - Sugerencia de mejora en el formato
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **relates to:** [[PED-792 - APP - Agregar fechas al detalle de la orden - Sugerencia de mejora en el formato|PED-792]] APP - Agregar fechas al detalle de la orden - Sugerencia de mejora en el formato
 
 ## Descripcion
 

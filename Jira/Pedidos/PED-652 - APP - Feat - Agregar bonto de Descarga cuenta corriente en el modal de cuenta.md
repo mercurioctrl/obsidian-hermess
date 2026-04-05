@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-652"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **is blocked by:** [[PED-651]] Descargar excel cta corriente
-- **blocks:** [[SNB-1691]] EXCEL DE CUENTA CORRIENTE
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **is blocked by:** [[PED-651 - Descargar excel cta corriente|PED-651]] Descargar excel cta corriente
+- **blocks:** [[SNB-1691 - EXCEL DE CUENTA CORRIENTE|SNB-1691]] EXCEL DE CUENTA CORRIENTE
 
 ## Descripcion
 

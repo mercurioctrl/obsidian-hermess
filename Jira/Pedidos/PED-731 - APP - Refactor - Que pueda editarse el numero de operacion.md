@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-731"
 
 ## Relaciones
 
-- **Padre:** [[PED-729]] Comprobante de pago y autorizacion
-- **is blocked by:** [[PED-730]] API - Refactor - Que pueda editarse el numero de operacion
+- **Padre:** [[PED-729 - Comprobante de pago y autorizacion|PED-729]] Comprobante de pago y autorizacion
+- **is blocked by:** [[PED-730 - API - Refactor - Que pueda editarse el numero de operacion|PED-730]] API - Refactor - Que pueda editarse el numero de operacion
 
 ## Descripcion
 

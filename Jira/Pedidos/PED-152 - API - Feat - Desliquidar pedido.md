@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-152"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **has action item:** [[PED-951]] API - Refactor - Validaciones necesarias para desliquidar
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **has action item:** [[PED-951 - API - Refactor - Validaciones necesarias para desliquidar|PED-951]] API - Refactor - Validaciones necesarias para desliquidar
 
 ## Descripcion
 

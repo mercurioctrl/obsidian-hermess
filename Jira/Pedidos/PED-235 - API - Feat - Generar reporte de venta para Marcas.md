@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-235"
 
 ## Relaciones
 
-- **Padre:** [[PED-213]] Reportes de ventas
-- **blocks:** [[PED-248]] APP - Feat - Agregar accionables para descargar reporte de ventas y de marcas
-- **is blocked by:** [[PED-266]] API - Generar reporte de venta para Marcas - Incidencias varias
+- **Padre:** [[PED-213 - Reportes de ventas|PED-213]] Reportes de ventas
+- **blocks:** [[PED-248 - APP - Feat - Agregar accionables para descargar reporte de ventas y de marcas|PED-248]] APP - Feat - Agregar accionables para descargar reporte de ventas y de marcas
+- **is blocked by:** [[PED-266 - API - Generar reporte de venta para Marcas - Incidencias varias|PED-266]] API - Generar reporte de venta para Marcas - Incidencias varias
 
 ## Descripcion
 

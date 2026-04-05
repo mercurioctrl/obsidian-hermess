@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-347"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-348]] APP - Refactor - Listar cliente -> Agregar filtros
-- **is blocked by:** [[PED-358]] API - Listar cliente -> Agregar filtros - Incidencias varias
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-348 - APP - Refactor - Listar cliente - Agregar filtros|PED-348]] APP - Refactor - Listar cliente -> Agregar filtros
+- **is blocked by:** [[PED-358 - API - Listar cliente - Agregar filtros - Incidencias varias|PED-358]] API - Listar cliente -> Agregar filtros - Incidencias varias
 
 ## Descripcion
 

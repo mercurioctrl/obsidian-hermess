@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-125"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **is blocked by:** [[PED-124]] API - Feat - Liquidar pedido
-- **is blocked by:** [[PED-127]] API - Refactor - Listar ordenes de compra -> Agregar cotizacion y percepciones
-- **is blocked by:** [[PED-130]] API - Repository - Bancos
-- **is blocked by:** [[PED-131]] API - Rpository - Medios de cobro
-- **relates to:** [[PED-972]] APP - Modal de liquidación - Discrepancia en el medio de pago
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **is blocked by:** [[PED-124 - API - Feat - Liquidar pedido|PED-124]] API - Feat - Liquidar pedido
+- **is blocked by:** [[PED-127 - API - Refactor - Listar ordenes de compra - Agregar cotizacion y percepciones|PED-127]] API - Refactor - Listar ordenes de compra -> Agregar cotizacion y percepciones
+- **is blocked by:** [[PED-130 - API - Repository - Bancos|PED-130]] API - Repository - Bancos
+- **is blocked by:** [[PED-131 - API - Rpository - Medios de cobro|PED-131]] API - Rpository - Medios de cobro
+- **relates to:** [[PED-972 - APP - Modal de liquidación - Discrepancia en el medio de pago|PED-972]] APP - Modal de liquidación - Discrepancia en el medio de pago
 
 ## Descripcion
 

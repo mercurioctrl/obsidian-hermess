@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1018"
 
 ## Relaciones
 
-- **Padre:** [[PED-998]] Intervención Técnica
-- **has action item:** [[SNB-3152]] urgente
+- **Padre:** [[PED-998 - Intervención Técnica|PED-998]] Intervención Técnica
+- **has action item:** [[SNB-3152 - urgente|SNB-3152]] urgente
 
 ## Descripcion
 

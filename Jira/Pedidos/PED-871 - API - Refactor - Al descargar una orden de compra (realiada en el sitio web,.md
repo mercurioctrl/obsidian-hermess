@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-871"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **has action item:** [[NBWEB-926]] API - Refactor - Incluir internalTax si corresponde al procesar un carrito (crear pedclil)
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **has action item:** [[NBWEB-926 - API - Refactor - Incluir internalTax si corresponde al procesar un carrito|NBWEB-926]] API - Refactor - Incluir internalTax si corresponde al procesar un carrito (crear pedclil)
 
 ## Descripcion
 

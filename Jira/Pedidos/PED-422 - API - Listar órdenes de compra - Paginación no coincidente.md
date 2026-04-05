@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-422"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-8]] Listar ordenes de compra
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
 
 ## Descripcion
 

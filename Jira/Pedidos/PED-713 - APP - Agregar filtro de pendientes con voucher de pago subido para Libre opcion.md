@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-713"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is caused by:** [[SNB-1797]] FILTRO DE COBROS
-- **relates to:** [[PED-714]] APP - Filtro de pendientes con voucher cargado - Oportunidad de mejora en la leyenda
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is caused by:** [[SNB-1797 - FILTRO DE COBROS|SNB-1797]] FILTRO DE COBROS
+- **relates to:** [[PED-714 - APP - Filtro de pendientes con voucher cargado - Oportunidad de mejora en la|PED-714]] APP - Filtro de pendientes con voucher cargado - Oportunidad de mejora en la leyenda
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-911"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **Subtarea:** [[PED-912]] API - Refactor - Agregar permiso de "Edicion de costo para una orden"
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **Subtarea:** [[PED-912 - API - Refactor - Agregar permiso de Edicion de costo para una orden|PED-912]] API - Refactor - Agregar permiso de "Edicion de costo para una orden"
 
 ## Descripcion
 

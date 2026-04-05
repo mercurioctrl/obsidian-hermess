@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-266"
 
 ## Relaciones
 
-- **blocks:** [[PED-235]] API - Feat - Generar reporte de venta para Marcas
+- **blocks:** [[PED-235 - API - Feat - Generar reporte de venta para Marcas|PED-235]] API - Feat - Generar reporte de venta para Marcas
 
 ## Descripcion
 

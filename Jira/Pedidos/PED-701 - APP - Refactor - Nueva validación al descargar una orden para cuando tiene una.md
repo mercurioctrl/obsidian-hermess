@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-701"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is blocked by:** [[NBWEB-725]] API - Refactor - Validar direccion completa en caso de tener direccion de envio y dar respuesta en consecuencia
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is blocked by:** [[NBWEB-725 - API - Refactor - Validar direccion completa en caso de tener direccion de envio|NBWEB-725]] API - Refactor - Validar direccion completa en caso de tener direccion de envio y dar respuesta en consecuencia
 
 ## Descripcion
 

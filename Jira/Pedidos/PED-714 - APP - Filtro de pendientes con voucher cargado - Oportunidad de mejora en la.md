@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-714"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-713]] APP - Agregar filtro de pendientes con voucher de pago subido para Libre opcion
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-713 - APP - Agregar filtro de pendientes con voucher de pago subido para Libre opcion|PED-713]] APP - Agregar filtro de pendientes con voucher de pago subido para Libre opcion
 
 ## Descripcion
 

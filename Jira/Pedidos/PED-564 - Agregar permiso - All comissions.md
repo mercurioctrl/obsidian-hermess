@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-564"
 
 ## Relaciones
 
-- **relates to:** [[SNB-1512]] COMISIONES
+- **relates to:** [[SNB-1512 - COMISIONES|SNB-1512]] COMISIONES
 
 ## Descripcion
 

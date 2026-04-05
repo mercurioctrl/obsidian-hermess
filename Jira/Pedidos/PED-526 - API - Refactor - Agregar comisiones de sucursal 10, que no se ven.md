@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-526"
 
 ## Relaciones
 
-- **Padre:** [[PED-174]] Listar comisiones
-- **is blocked by:** [[PED-175]] API - Feat - Listar comisiones
+- **Padre:** [[PED-174 - Listar comisiones|PED-174]] Listar comisiones
+- **is blocked by:** [[PED-175 - API - Feat - Listar comisiones|PED-175]] API - Feat - Listar comisiones
 
 ## Descripcion
 

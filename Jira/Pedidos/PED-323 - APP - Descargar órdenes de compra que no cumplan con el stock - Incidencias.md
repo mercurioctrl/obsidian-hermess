@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-323"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-318]] APP - Feat - Al descargar ordenes de compra que no cumplan con el stock, abrir la orden para su edicion
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-318 - APP - Feat - Al descargar ordenes de compra que no cumplan con el stock, abrir|PED-318]] APP - Feat - Al descargar ordenes de compra que no cumplan con el stock, abrir la orden para su edicion
 
 ## Descripcion
 

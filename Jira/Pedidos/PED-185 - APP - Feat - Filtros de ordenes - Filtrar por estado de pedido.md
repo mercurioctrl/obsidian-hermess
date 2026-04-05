@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-185"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-184]] API - Feat - Filtros de ordenes -> Filtrar por estado de pedido
-- **is blocked by:** [[PED-178]] API - Repository - Estados de pedido
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-184 - API - Feat - Filtros de ordenes - Filtrar por estado de pedido|PED-184]] API - Feat - Filtros de ordenes -> Filtrar por estado de pedido
+- **is blocked by:** [[PED-178 - API - Repository - Estados de pedido|PED-178]] API - Repository - Estados de pedido
 
 ## Descripcion
 

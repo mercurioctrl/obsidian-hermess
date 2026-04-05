@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-903"
 
 ## Relaciones
 
-- **Padre:** [[PED-1]] API - Feat - Cotizar envios
+- **Padre:** [[PED-1 - API - Feat - Cotizar envios|PED-1]] API - Feat - Cotizar envios
 
 ## Descripcion
 

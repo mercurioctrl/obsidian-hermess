@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-852"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **has action item:** [[PED-860]] APP - Refactor - Agregar los impuestos internos a la lista de productos en el detalle de una orden si es que los tienen
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **has action item:** [[PED-860 - APP - Refactor - Agregar los impuestos internos a la lista de productos en el|PED-860]] APP - Refactor - Agregar los impuestos internos a la lista de productos en el detalle de una orden si es que los tienen
 
 ## Descripcion
 

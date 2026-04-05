@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-845"
 
 ## Relaciones
 
-- **Padre:** [[PED-149]] Reportes
-- **Subtarea:** [[PED-846]] API - Feat - Cuotas Vendedores (match %TRUST%)
-- **Subtarea:** [[PED-931]] API - Feat - Cuotas Vendedores (Facturación Total)
-- **Subtarea:** [[PED-932]] API - Feat - Cuotas Vendedores (Facturación Total)
-- **Subtarea:** [[PED-1289]] APP - Refactor - Dividir rueditas de objetivo de ventas en 3 bloques.
+- **Padre:** [[PED-149 - Reportes|PED-149]] Reportes
+- **Subtarea:** [[PED-846 - API - Feat - Cuotas Vendedores (match %TRUST%)|PED-846]] API - Feat - Cuotas Vendedores (match %TRUST%)
+- **Subtarea:** [[PED-931 - API - Feat - Cuotas Vendedores (Facturación Total)|PED-931]] API - Feat - Cuotas Vendedores (Facturación Total)
+- **Subtarea:** [[PED-932 - API - Feat - Cuotas Vendedores (Facturación Total)|PED-932]] API - Feat - Cuotas Vendedores (Facturación Total)
+- **Subtarea:** [[PED-1289 - APP - Refactor - Dividir rueditas de objetivo de ventas en 3 bloques.|PED-1289]] APP - Refactor - Dividir rueditas de objetivo de ventas en 3 bloques.
 
 ## Descripcion
 

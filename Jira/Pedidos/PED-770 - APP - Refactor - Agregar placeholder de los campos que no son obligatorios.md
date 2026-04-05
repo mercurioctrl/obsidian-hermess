@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-770"
 
 ## Relaciones
 
-- **causes:** [[SNB-2090]] SUGERENCIA
+- **causes:** [[SNB-2090 - SUGERENCIA|SNB-2090]] SUGERENCIA
 
 ## Descripcion
 

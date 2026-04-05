@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-350"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-349]] API -  Refactor - Ver detalle de una orden de compra -> Agregar tracking number
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-349 - API - Refactor - Ver detalle de una orden de compra - Agregar tracking number|PED-349]] API -  Refactor - Ver detalle de una orden de compra -> Agregar tracking number
 
 ## Descripcion
 

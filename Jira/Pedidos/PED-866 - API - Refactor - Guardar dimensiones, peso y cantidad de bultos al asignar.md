@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-866"
 
 ## Relaciones
 
-- **has action item:** [[SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
-- **is caused by:** [[PED-867]] APP - Refactor- Guardar dimensiones, peso y cantidad de bultos al asignar trasnportista
+- **has action item:** [[SNB-2463 - MS -Envios - Refactor - Implementar cambiar el parametro 'items' por|SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
+- **is caused by:** [[PED-867 - APP - Refactor- Guardar dimensiones, peso y cantidad de bultos al asignar|PED-867]] APP - Refactor- Guardar dimensiones, peso y cantidad de bultos al asignar trasnportista
 
 ## Descripcion
 

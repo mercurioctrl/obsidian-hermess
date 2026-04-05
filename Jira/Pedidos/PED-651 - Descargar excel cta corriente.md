@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-651"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **relates to:** [[SNB-1691]] EXCEL DE CUENTA CORRIENTE
-- **blocks:** [[PED-652]] APP - Feat - Agregar bonto de "Descarga cuenta corriente" en el modal de cuenta corriente
-- **is blocked by:** [[PED-662]] API - Descargar cuenta corriente en Excel - Comprobante no coincidente
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **relates to:** [[SNB-1691 - EXCEL DE CUENTA CORRIENTE|SNB-1691]] EXCEL DE CUENTA CORRIENTE
+- **blocks:** [[PED-652 - APP - Feat - Agregar bonto de Descarga cuenta corriente en el modal de cuenta|PED-652]] APP - Feat - Agregar bonto de "Descarga cuenta corriente" en el modal de cuenta corriente
+- **is blocked by:** [[PED-662 - API - Descargar cuenta corriente en Excel - Comprobante no coincidente|PED-662]] API - Descargar cuenta corriente en Excel - Comprobante no coincidente
 
 ## Descripcion
 

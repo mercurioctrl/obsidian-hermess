@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-707"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-704]] APP -Refactor - Mejora - Agreagar al crear y el leer el campo documento como opcional y tambien el banco destino de la transferencia
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-704 - APP -Refactor - Mejora - Agreagar al crear y el leer el campo documento como|PED-704]] APP -Refactor - Mejora - Agreagar al crear y el leer el campo documento como opcional y tambien el banco destino de la transferencia
 
 ## Descripcion
 

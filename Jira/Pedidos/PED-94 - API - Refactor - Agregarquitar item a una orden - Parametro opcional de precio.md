@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-94"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **blocks:** [[PED-110]] APP - Feat - Editar precio de un pedido y cantidad (Solo muestro esto cuando el pedido esta pendiente)
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **blocks:** [[PED-110 - APP - Feat - Editar precio de un pedido y cantidad (Solo muestro esto cuando el|PED-110]] APP - Feat - Editar precio de un pedido y cantidad (Solo muestro esto cuando el pedido esta pendiente)
 
 ## Descripcion
 

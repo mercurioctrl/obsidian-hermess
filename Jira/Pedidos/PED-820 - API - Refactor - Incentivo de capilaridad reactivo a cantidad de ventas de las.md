@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-820"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **blocks:** [[PED-821]] APP - Refactor - nuevo incentivo de capilaridad
-- **is blocked by:** [[MKT-215]] NB_ FLOR DE INCENTIVO
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **blocks:** [[PED-821 - APP - Refactor - nuevo incentivo de capilaridad|PED-821]] APP - Refactor - nuevo incentivo de capilaridad
+- **is blocked by:** [[MKT-215 - NB_ FLOR DE INCENTIVO|MKT-215]] NB_ FLOR DE INCENTIVO
 
 ## Descripcion
 

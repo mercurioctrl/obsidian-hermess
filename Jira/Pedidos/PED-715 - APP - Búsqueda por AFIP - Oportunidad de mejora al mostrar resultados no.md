@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-715"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-709]] APP - Refactor: ajuste para facturar a terceros que marque la ciudad y el tipo de documento correcto al hacer busqueda por AFIP
-- **relates to:** [[PED-716]] API - Búsqueda por AFIP - Oportunidad de mejora en el código de estado al mandar formato incorrecto
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-709 - APP - Refactor ajuste para facturar a terceros que marque la ciudad y el tipo|PED-709]] APP - Refactor: ajuste para facturar a terceros que marque la ciudad y el tipo de documento correcto al hacer busqueda por AFIP
+- **relates to:** [[PED-716 - API - Búsqueda por AFIP - Oportunidad de mejora en el código de estado al|PED-716]] API - Búsqueda por AFIP - Oportunidad de mejora en el código de estado al mandar formato incorrecto
 
 ## Descripcion
 

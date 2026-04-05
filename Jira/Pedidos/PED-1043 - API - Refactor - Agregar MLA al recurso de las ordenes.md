@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1043"
 
 ## Relaciones
 
-- **Padre:** [[PED-915]] MercadoLibre
-- **has action item:** [[PED-1046]] APP - Refactor - Cuando una orden cuenta con el atributo MLA se debe marcar como una compra de mercadolibre
+- **Padre:** [[PED-915 - MercadoLibre|PED-915]] MercadoLibre
+- **has action item:** [[PED-1046 - APP - Refactor - Cuando una orden cuenta con el atributo MLA se debe marcar|PED-1046]] APP - Refactor - Cuando una orden cuenta con el atributo MLA se debe marcar como una compra de mercadolibre
 
 ## Descripcion
 

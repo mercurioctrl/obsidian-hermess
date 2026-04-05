@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-473"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[PED-374]] API - Feat - Leer condiciones de liquidación 
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[PED-374 - API - Feat - Leer condiciones de liquidación|PED-374]] API - Feat - Leer condiciones de liquidación 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-421"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-75]] API - Feat - Ver informacion del pedido
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-75 - API - Feat - Ver informacion del pedido|PED-75]] API - Feat - Ver informacion del pedido
 
 ## Descripcion
 

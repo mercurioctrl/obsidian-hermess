@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1089"
 
 ## Relaciones
 
-- **Padre:** [[PED-1068]] Periodos logisticos
-- **has action item:** [[PED-1091]] APP - Feat - Eficiencia logística por zona
+- **Padre:** [[PED-1068 - Periodos logisticos|PED-1068]] Periodos logisticos
+- **has action item:** [[PED-1091 - APP - Feat - Eficiencia logística por zona|PED-1091]] APP - Feat - Eficiencia logística por zona
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1096"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **action item from:** [[SNB-3374]] Conector NB - Sincronización automática -> Actualización no reflejada
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **action item from:** [[SNB-3374 - Conector NB - Sincronización automática - Actualización no reflejada|SNB-3374]] Conector NB - Sincronización automática -> Actualización no reflejada
 
 ## Descripcion
 

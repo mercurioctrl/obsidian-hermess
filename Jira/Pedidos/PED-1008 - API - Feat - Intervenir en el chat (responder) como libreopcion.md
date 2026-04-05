@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1008"
 
 ## Relaciones
 
-- **Padre:** [[PED-1005]] Chat General
-- **action item from:** [[PED-1007]] API - Feat - Crear endpoint para obtener historial completo del chat de un pedido libre opcion
-- **has action item:** [[PED-1009]] APP - Mostrar chat general para las ventas de libre opcion
+- **Padre:** [[PED-1005 - Chat General|PED-1005]] Chat General
+- **action item from:** [[PED-1007 - API - Feat - Crear endpoint para obtener historial completo del chat de un|PED-1007]] API - Feat - Crear endpoint para obtener historial completo del chat de un pedido libre opcion
+- **has action item:** [[PED-1009 - APP - Mostrar chat general para las ventas de libre opcion|PED-1009]] APP - Mostrar chat general para las ventas de libre opcion
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-314"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-313]] API - Refactor - Ver detalle de una orden -> Agregar Lista de precio (Letra)
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-313 - API - Refactor - Ver detalle de una orden - Agregar Lista de precio (Letra)|PED-313]] API - Refactor - Ver detalle de una orden -> Agregar Lista de precio (Letra)
 
 ## Descripcion
 

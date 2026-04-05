@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-909"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **has action item:** [[PED-910]] APP - MVP - Refactor - Seleccionar costo para el item de una orden
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **has action item:** [[PED-910 - APP - MVP - Refactor - Seleccionar costo para el item de una orden|PED-910]] APP - MVP - Refactor - Seleccionar costo para el item de una orden
 
 ## Descripcion
 

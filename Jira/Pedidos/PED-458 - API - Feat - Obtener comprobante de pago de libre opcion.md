@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-458"
 
 ## Relaciones
 
-- **Padre:** [[PED-329]] Listado de ordenes
-- **blocks:** [[PED-485]] APP - Feat - Mostrar modal con info de comprobante de pago
+- **Padre:** [[PED-329 - Listado de ordenes|PED-329]] Listado de ordenes
+- **blocks:** [[PED-485 - APP - Feat - Mostrar modal con info de comprobante de pago|PED-485]] APP - Feat - Mostrar modal con info de comprobante de pago
 
 ## Descripcion
 

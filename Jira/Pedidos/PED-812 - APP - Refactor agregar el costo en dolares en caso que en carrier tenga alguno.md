@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-812"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **causes:** [[PED-808]] APP - Refactor - Agregar adicional de envió (sobre costos) para moto/camioneta
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **causes:** [[PED-808 - APP - Refactor - Agregar adicional de envió (sobre costos) para motocamioneta|PED-808]] APP - Refactor - Agregar adicional de envió (sobre costos) para moto/camioneta
 
 ## Descripcion
 

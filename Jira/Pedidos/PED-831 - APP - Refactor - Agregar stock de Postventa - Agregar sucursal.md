@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-831"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[INV-95]] API - Refactor - Agregar nuevo producto
-- **relates to:** [[PED-827]] APP - Refactor - Agregar stock de postventa
-- **has action item:** [[SNB-2535]] no podemos generar pedido para uso internos
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[INV-95 - API - Refactor - Agregar nuevo producto|INV-95]] API - Refactor - Agregar nuevo producto
+- **relates to:** [[PED-827 - APP - Refactor - Agregar stock de postventa|PED-827]] APP - Refactor - Agregar stock de postventa
+- **has action item:** [[SNB-2535 - no podemos generar pedido para uso internos|SNB-2535]] no podemos generar pedido para uso internos
 
 ## Descripcion
 

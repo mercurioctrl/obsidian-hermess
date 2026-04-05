@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-395"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
-- **blocks:** [[PED-378]] API - Review - ¿Se puede visualizar cuando pones enlaces? Aca inserte un enlace de dos formas diferentes, pero la primera no aparece
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
+- **blocks:** [[PED-378 - API - Review - ¿Se puede visualizar cuando pones enlaces Aca inserte un enlace|PED-378]] API - Review - ¿Se puede visualizar cuando pones enlaces? Aca inserte un enlace de dos formas diferentes, pero la primera no aparece
 
 ## Descripcion
 

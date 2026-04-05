@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-698"
 
 ## Relaciones
 
-- **Padre:** [[PED-10]] Login y credenciales 
-- **blocks:** [[PED-699]] APP - Feat - Si tengo el parametro orderOwner en el objeto user mostrare esos pedidos/filtros del vendedor
-- **blocks:** [[SNB-1826]] NUMERO DE VENTA
+- **Padre:** [[PED-10 - Login y credenciales|PED-10]] Login y credenciales 
+- **blocks:** [[PED-699 - APP - Feat - Si tengo el parametro orderOwner en el objeto user mostrare esos|PED-699]] APP - Feat - Si tengo el parametro orderOwner en el objeto user mostrare esos pedidos/filtros del vendedor
+- **blocks:** [[SNB-1826 - NUMERO DE VENTA|SNB-1826]] NUMERO DE VENTA
 
 ## Descripcion
 

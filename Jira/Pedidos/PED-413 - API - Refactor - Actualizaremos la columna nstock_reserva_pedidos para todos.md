@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-413"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **blocks:** [[PED-423]] API - Filtrado por stock no coincidente
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **blocks:** [[PED-423 - API - Filtrado por stock no coincidente|PED-423]] API - Filtrado por stock no coincidente
 
 ## Descripcion
 

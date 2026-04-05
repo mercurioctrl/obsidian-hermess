@@ -29,46 +29,46 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-58"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **Subtarea:** [[PED-59]] API - Feat - Cotizar envío a una orden de compra 
-- **Subtarea:** [[PED-60]] APP - Feat - Cotizar envío a una orden de compra
-- **Subtarea:** [[PED-73]] API - Feat - Agregar "item" envío a una orden de compra
-- **Subtarea:** [[PED-97]] API - Review - Me muestra una direccion, pero no la cotiza porque dice que no la tiene
-- **Subtarea:** [[PED-102]] APP - Feat - Cotizar envío de una orden de compra
-- **Subtarea:** [[PED-106]] APP - Review - Al hacer clic en el pedido abierto, abrir el modal de pedido
-- **Subtarea:** [[PED-111]] API- Review -  Al seleccionar un transportista ajustar datos de update/insert
-- **Subtarea:** [[PED-114]] APP - Review en Clientes las acciones parametros y direcciones no responden correctamente
-- **Subtarea:** [[PED-116]] API - Feat - Realizar seguimiento de una orden
-- **Subtarea:** [[PED-140]] API - Feat - Agregar recurso para leer etiquetas
-- **Subtarea:** [[PED-141]] API - Feat - Leer numeros de tracking
-- **Subtarea:** [[PED-159]] API - Review - Al agregar un envio, tengo algunos problemas con la informacion que se muestar
-- **Subtarea:** [[PED-183]] API - Review - En produ solo me aparecen cotizaciones de envio para entregar y camioneta
-- **Subtarea:** [[PED-196]] API - Review - Permite guardar mas unidades de las "disponibles" dejando el valor "disponible" en negativo y no deberia
-- **Subtarea:** [[PED-197]] APP - Review - Permite marcar mas unidades de las "disponibles" dejando el valor "disponible" en negativo y no debería poder aumentarse mas, para que no se bloque
-- **Subtarea:** [[PED-229]] API - Feat - Editar precio, se debe poder ingresar un precio a mano para un item determinado
-- **Subtarea:** [[PED-230]] APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un item determinado
-- **Subtarea:** [[PED-271]] APP - Review - Mantener consistencia entre modal de Nuevo Client y Editar Client
-- **Subtarea:** [[PED-325]] API - Review - Listar tracking Numbers
-- **Subtarea:** [[PED-441]] API - Feat - Eliminar envio de una orden
-- **Subtarea:** [[PED-443]] APP - Feat - Eliminar envio de una orden
-- **Subtarea:** [[PED-472]] API - Refactor - Al agregar un envio a sucursal 10, este debe entrar en pedclil con niva = 0
-- **Subtarea:** [[PED-512]] API - Refactor - Tener en cuenta el costo del envio, para el momento en el que liquidemos
-- **Subtarea:** [[PED-514]] APP - Refactor - Al agregar un envio se debe enviar costo por body
-- **Subtarea:** [[PED-521]] APP - Review - Al hacer cambios en una direccion , parece no recotizar a menos que la selecciones
-- **Subtarea:** [[PED-541]] APP - Feat - Maquetar cotizacion de "Destino final para el transporte"
-- **Subtarea:** [[PED-543]] API - Feat - Agregar "Destinlo final para el transporte"
-- **Subtarea:** [[PED-544]] API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el "destino final" que lo acompaña
-- **Subtarea:** [[PED-566]] API - Feat - Bonificar envio
-- **Subtarea:** [[PED-571]] APP - Feat - Bonificar Envio
-- **Subtarea:** [[PED-663]] APP - Feat - Se pude agregar en este modal quien es el currier?
-- **Subtarea:** [[PED-807]] API - Refactor - Agregar adicional de envió (sobre costos) para moto / camioneta
-- **Subtarea:** [[PED-808]] APP - Refactor - Agregar adicional de envió (sobre costos) para moto/camioneta
-- **Subtarea:** [[PED-811]] API - Refactor - Mejoras en recurso carrier obteniendo mas informacion del transportista asignado 
-- **Subtarea:** [[PED-817]] APP - Refactor - Mostrar estimados de llegada en el cotizador de envio
-- **Subtarea:** [[PED-876]] API - Refactor - Al hacer una orden de SUC3 esta debe solo mover el stock virtualmente como en los otros casos hasta el momento de generar el pedido
-- **Subtarea:** [[PED-946]] APP - Refactor - Transportar y procesar "promesa de envio"
-- **Subtarea:** [[PED-947]] API - Refactor - Transportar y procesar "promesa de envio"
-- **Subtarea:** [[PED-1305]] API - Feat - Agregar informacion de confección de paquetes como lo hicimos ne expedicion, para que los vendedores esten informados y puedan dar pre aviso de problemas graves
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-59 - API - Feat - Cotizar envío a una orden de compra|PED-59]] API - Feat - Cotizar envío a una orden de compra 
+- **Subtarea:** [[PED-60 - APP - Feat - Cotizar envío a una orden de compra|PED-60]] APP - Feat - Cotizar envío a una orden de compra
+- **Subtarea:** [[PED-73 - API - Feat - Agregar item envío a una orden de compra|PED-73]] API - Feat - Agregar "item" envío a una orden de compra
+- **Subtarea:** [[PED-97 - API - Review - Me muestra una direccion, pero no la cotiza porque dice que no|PED-97]] API - Review - Me muestra una direccion, pero no la cotiza porque dice que no la tiene
+- **Subtarea:** [[PED-102 - APP - Feat - Cotizar envío de una orden de compra|PED-102]] APP - Feat - Cotizar envío de una orden de compra
+- **Subtarea:** [[PED-106 - APP - Review - Al hacer clic en el pedido abierto, abrir el modal de pedido|PED-106]] APP - Review - Al hacer clic en el pedido abierto, abrir el modal de pedido
+- **Subtarea:** [[PED-111 - API- Review - Al seleccionar un transportista ajustar datos de updateinsert|PED-111]] API- Review -  Al seleccionar un transportista ajustar datos de update/insert
+- **Subtarea:** [[PED-114 - APP - Review en Clientes las acciones parametros y direcciones no responden|PED-114]] APP - Review en Clientes las acciones parametros y direcciones no responden correctamente
+- **Subtarea:** [[PED-116 - API - Feat - Realizar seguimiento de una orden|PED-116]] API - Feat - Realizar seguimiento de una orden
+- **Subtarea:** [[PED-140 - API - Feat - Agregar recurso para leer etiquetas|PED-140]] API - Feat - Agregar recurso para leer etiquetas
+- **Subtarea:** [[PED-141 - API - Feat - Leer numeros de tracking|PED-141]] API - Feat - Leer numeros de tracking
+- **Subtarea:** [[PED-159 - API - Review - Al agregar un envio, tengo algunos problemas con la informacion|PED-159]] API - Review - Al agregar un envio, tengo algunos problemas con la informacion que se muestar
+- **Subtarea:** [[PED-183 - API - Review - En produ solo me aparecen cotizaciones de envio para entregar y|PED-183]] API - Review - En produ solo me aparecen cotizaciones de envio para entregar y camioneta
+- **Subtarea:** [[PED-196 - API - Review - Permite guardar mas unidades de las disponibles dejando el valor|PED-196]] API - Review - Permite guardar mas unidades de las "disponibles" dejando el valor "disponible" en negativo y no deberia
+- **Subtarea:** [[PED-197 - APP - Review - Permite marcar mas unidades de las disponibles dejando el valor|PED-197]] APP - Review - Permite marcar mas unidades de las "disponibles" dejando el valor "disponible" en negativo y no debería poder aumentarse mas, para que no se bloque
+- **Subtarea:** [[PED-229 - API - Feat - Editar precio, se debe poder ingresar un precio a mano para un|PED-229]] API - Feat - Editar precio, se debe poder ingresar un precio a mano para un item determinado
+- **Subtarea:** [[PED-230 - APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un|PED-230]] APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un item determinado
+- **Subtarea:** [[PED-271 - APP - Review - Mantener consistencia entre modal de Nuevo Client y Editar Client|PED-271]] APP - Review - Mantener consistencia entre modal de Nuevo Client y Editar Client
+- **Subtarea:** [[PED-325 - API - Review - Listar tracking Numbers|PED-325]] API - Review - Listar tracking Numbers
+- **Subtarea:** [[PED-441 - API - Feat - Eliminar envio de una orden|PED-441]] API - Feat - Eliminar envio de una orden
+- **Subtarea:** [[PED-443 - APP - Feat - Eliminar envio de una orden|PED-443]] APP - Feat - Eliminar envio de una orden
+- **Subtarea:** [[PED-472 - API - Refactor - Al agregar un envio a sucursal 10, este debe entrar en pedclil|PED-472]] API - Refactor - Al agregar un envio a sucursal 10, este debe entrar en pedclil con niva = 0
+- **Subtarea:** [[PED-512 - API - Refactor - Tener en cuenta el costo del envio, para el momento en el que|PED-512]] API - Refactor - Tener en cuenta el costo del envio, para el momento en el que liquidemos
+- **Subtarea:** [[PED-514 - APP - Refactor - Al agregar un envio se debe enviar costo por body|PED-514]] APP - Refactor - Al agregar un envio se debe enviar costo por body
+- **Subtarea:** [[PED-521 - APP - Review - Al hacer cambios en una direccion , parece no recotizar a menos|PED-521]] APP - Review - Al hacer cambios en una direccion , parece no recotizar a menos que la selecciones
+- **Subtarea:** [[PED-541 - APP - Feat - Maquetar cotizacion de Destino final para el transporte|PED-541]] APP - Feat - Maquetar cotizacion de "Destino final para el transporte"
+- **Subtarea:** [[PED-543 - API - Feat - Agregar Destinlo final para el transporte|PED-543]] API - Feat - Agregar "Destinlo final para el transporte"
+- **Subtarea:** [[PED-544 - API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el|PED-544]] API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el "destino final" que lo acompaña
+- **Subtarea:** [[PED-566 - API - Feat - Bonificar envio|PED-566]] API - Feat - Bonificar envio
+- **Subtarea:** [[PED-571 - APP - Feat - Bonificar Envio|PED-571]] APP - Feat - Bonificar Envio
+- **Subtarea:** [[PED-663 - APP - Feat - Se pude agregar en este modal quien es el currier|PED-663]] APP - Feat - Se pude agregar en este modal quien es el currier?
+- **Subtarea:** [[PED-807 - API - Refactor - Agregar adicional de envió (sobre costos) para moto camioneta|PED-807]] API - Refactor - Agregar adicional de envió (sobre costos) para moto / camioneta
+- **Subtarea:** [[PED-808 - APP - Refactor - Agregar adicional de envió (sobre costos) para motocamioneta|PED-808]] APP - Refactor - Agregar adicional de envió (sobre costos) para moto/camioneta
+- **Subtarea:** [[PED-811 - API - Refactor - Mejoras en recurso carrier obteniendo mas informacion del|PED-811]] API - Refactor - Mejoras en recurso carrier obteniendo mas informacion del transportista asignado 
+- **Subtarea:** [[PED-817 - APP - Refactor - Mostrar estimados de llegada en el cotizador de envio|PED-817]] APP - Refactor - Mostrar estimados de llegada en el cotizador de envio
+- **Subtarea:** [[PED-876 - API - Refactor - Al hacer una orden de SUC3 esta debe solo mover el stock|PED-876]] API - Refactor - Al hacer una orden de SUC3 esta debe solo mover el stock virtualmente como en los otros casos hasta el momento de generar el pedido
+- **Subtarea:** [[PED-946 - APP - Refactor - Transportar y procesar promesa de envio|PED-946]] APP - Refactor - Transportar y procesar "promesa de envio"
+- **Subtarea:** [[PED-947 - API - Refactor - Transportar y procesar promesa de envio|PED-947]] API - Refactor - Transportar y procesar "promesa de envio"
+- **Subtarea:** [[PED-1305 - API - Feat - Agregar informacion de confección de paquetes como lo hicimos ne|PED-1305]] API - Feat - Agregar informacion de confección de paquetes como lo hicimos ne expedicion, para que los vendedores esten informados y puedan dar pre aviso de problemas graves
 
 ## Descripcion
 

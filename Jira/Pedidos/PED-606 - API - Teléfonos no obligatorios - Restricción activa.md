@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-606"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **blocks:** [[PED-601]] API - Refactor - telefeono 1 y 2 no debe ser obligatorio
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **blocks:** [[PED-601 - API - Refactor - telefeono 1 y 2 no debe ser obligatorio|PED-601]] API - Refactor - telefeono 1 y 2 no debe ser obligatorio
 
 ## Descripcion
 

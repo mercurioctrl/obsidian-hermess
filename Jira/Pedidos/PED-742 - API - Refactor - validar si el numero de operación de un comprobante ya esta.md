@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-742"
 
 ## Relaciones
 
-- **Padre:** [[PED-584]] Comprobantes de pago
-- **is blocked by:** [[PED-745]] API - Agregar comprobantes de pago - Comprobantes guardados no coincidentes
+- **Padre:** [[PED-584 - Comprobantes de pago|PED-584]] Comprobantes de pago
+- **is blocked by:** [[PED-745 - API - Agregar comprobantes de pago - Comprobantes guardados no coincidentes|PED-745]] API - Agregar comprobantes de pago - Comprobantes guardados no coincidentes
 
 ## Descripcion
 

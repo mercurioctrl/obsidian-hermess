@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-677"
 
 ## Relaciones
 
-- **Padre:** [[PED-149]] Reportes
+- **Padre:** [[PED-149 - Reportes|PED-149]] Reportes
 
 ## Descripcion
 

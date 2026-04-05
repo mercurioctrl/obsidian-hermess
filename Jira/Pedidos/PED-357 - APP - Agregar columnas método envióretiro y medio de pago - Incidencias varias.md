@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-357"
 
 ## Relaciones
 
-- **blocks:** [[PED-345]] APP - Feat - Repositorio de ordenes -> Agregar 2 columnas con metodo envio/retiro y medio de pago
+- **blocks:** [[PED-345 - APP - Feat - Repositorio de ordenes - Agregar 2 columnas con metodo envioretiro|PED-345]] APP - Feat - Repositorio de ordenes -> Agregar 2 columnas con metodo envio/retiro y medio de pago
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-933"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **Subtarea:** [[PED-934]] API - Feat - SyncUp - Liberar ordenes de LIBRE OPCION que cumplen mas de 48hs sin ser procesadas
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **Subtarea:** [[PED-934 - API - Feat - SyncUp - Liberar ordenes de LIBRE OPCION que cumplen mas de 48hs|PED-934]] API - Feat - SyncUp - Liberar ordenes de LIBRE OPCION que cumplen mas de 48hs sin ser procesadas
 
 ## Descripcion
 

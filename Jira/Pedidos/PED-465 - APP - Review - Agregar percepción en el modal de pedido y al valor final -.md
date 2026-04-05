@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-465"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
 
 ## Descripcion
 

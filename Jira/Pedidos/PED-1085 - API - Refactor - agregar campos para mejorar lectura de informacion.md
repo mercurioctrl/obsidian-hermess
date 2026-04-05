@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1085"
 
 ## Relaciones
 
-- **Padre:** [[PED-1068]] Periodos logisticos
+- **Padre:** [[PED-1068 - Periodos logisticos|PED-1068]] Periodos logisticos
 
 ## Descripcion
 

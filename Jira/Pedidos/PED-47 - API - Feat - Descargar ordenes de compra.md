@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-47"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-49]] APP - Feat - Descargar ordenes de compra
-- **relates to:** [[SNB-1853]] DESCARGAR PEDIDO WEB
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-49 - APP - Feat - Descargar ordenes de compra|PED-49]] APP - Feat - Descargar ordenes de compra
+- **relates to:** [[SNB-1853 - DESCARGAR PEDIDO WEB|SNB-1853]] DESCARGAR PEDIDO WEB
 
 ## Descripcion
 

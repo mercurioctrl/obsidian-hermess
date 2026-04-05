@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1004"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **action item from:** [[PED-1003]] API - MVP - Feat - Precios de venta anteriores para un cliente y producto predeterminados
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **action item from:** [[PED-1003 - API - MVP - Feat - Precios de venta anteriores para un cliente y producto|PED-1003]] API - MVP - Feat - Precios de venta anteriores para un cliente y producto predeterminados
 
 ## Descripcion
 

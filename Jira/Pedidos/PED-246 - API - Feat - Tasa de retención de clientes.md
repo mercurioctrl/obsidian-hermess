@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-246"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-291]]   API - Tasa de retención de clientes - Incidencias varias
-- **relates to:** [[PED-959]] APP - Refactor- Modificacion en el indicador "Tasa de retención de clientes"
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-291 - API - Tasa de retención de clientes - Incidencias varias|PED-291]]   API - Tasa de retención de clientes - Incidencias varias
+- **relates to:** [[PED-959 - APP - Refactor- Modificacion en el indicador Tasa de retención de clientes|PED-959]] APP - Refactor- Modificacion en el indicador "Tasa de retención de clientes"
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1021"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **has action item:** [[SNB-3166]] EXCEL LISTA DE PRECIOS
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **has action item:** [[SNB-3166 - EXCEL LISTA DE PRECIOS|SNB-3166]] EXCEL LISTA DE PRECIOS
 
 ## Descripcion
 

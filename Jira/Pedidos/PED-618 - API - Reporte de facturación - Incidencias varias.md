@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-618"
 
 ## Relaciones
 
-- **Padre:** [[PED-149]] Reportes
-- **blocks:** [[PED-607]] API - Feat - Reporte de facturacion
+- **Padre:** [[PED-149 - Reportes|PED-149]] Reportes
+- **blocks:** [[PED-607 - API - Feat - Reporte de facturacion|PED-607]] API - Feat - Reporte de facturacion
 
 ## Descripcion
 

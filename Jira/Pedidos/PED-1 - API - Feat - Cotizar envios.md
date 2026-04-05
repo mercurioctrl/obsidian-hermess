@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1"
 
 ## Relaciones
 
-- **Subtarea:** [[PED-903]] API - Refacto - registrar precio final de transportista para clientes exentos de iva
-- **causes:** [[NBWEB-426]] API - Feat - Cotizar desde sistema de pedidos
+- **Subtarea:** [[PED-903 - API - Refacto - registrar precio final de transportista para clientes exentos|PED-903]] API - Refacto - registrar precio final de transportista para clientes exentos de iva
+- **causes:** [[NBWEB-426 - API - Feat - Cotizar desde sistema de pedidos|NBWEB-426]] API - Feat - Cotizar desde sistema de pedidos
 
 ## Descripcion
 

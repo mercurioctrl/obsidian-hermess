@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-334"
 
 ## Relaciones
 
-- **blocks:** [[PED-298]] API - Feat - Sync Up - Calcular parametros LTV
+- **blocks:** [[PED-298 - API - Feat - Sync Up - Calcular parametros LTV|PED-298]] API - Feat - Sync Up - Calcular parametros LTV
 
 ## Descripcion
 

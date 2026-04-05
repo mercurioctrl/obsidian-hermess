@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-227"
 
 ## Relaciones
 
-- **blocks:** [[PED-188]] API - Feat - Mover item entre ordenes de compra
+- **blocks:** [[PED-188 - API - Feat - Mover item entre ordenes de compra|PED-188]] API - Feat - Mover item entre ordenes de compra
 
 ## Descripcion
 

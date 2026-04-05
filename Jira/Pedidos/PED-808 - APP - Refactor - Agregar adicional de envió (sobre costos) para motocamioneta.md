@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-808"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **is blocked by:** [[PED-807]] API - Refactor - Agregar adicional de envió (sobre costos) para moto / camioneta
-- **is caused by:** [[PED-812]] APP - Refactor: agregar el costo en dolares en caso que en carrier tenga alguno asignado y dolares en la tabla de cotizacion de envio
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **is blocked by:** [[PED-807 - API - Refactor - Agregar adicional de envió (sobre costos) para moto camioneta|PED-807]] API - Refactor - Agregar adicional de envió (sobre costos) para moto / camioneta
+- **is caused by:** [[PED-812 - APP - Refactor agregar el costo en dolares en caso que en carrier tenga alguno|PED-812]] APP - Refactor: agregar el costo en dolares en caso que en carrier tenga alguno asignado y dolares en la tabla de cotizacion de envio
 
 ## Descripcion
 

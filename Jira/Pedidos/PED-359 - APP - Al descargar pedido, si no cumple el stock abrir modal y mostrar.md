@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-359"
 
 ## Relaciones
 
-- **Padre:** [[PED-354]] Descarga de pedidos
+- **Padre:** [[PED-354 - Descarga de pedidos|PED-354]] Descarga de pedidos
 
 ## Descripcion
 

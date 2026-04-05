@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-540"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **is blocked by:** [[PED-549]] API - Liquidar orden - Error saldo insuficiente al liquidar con cheque
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **is blocked by:** [[PED-549 - API - Liquidar orden - Error saldo insuficiente al liquidar con cheque|PED-549]] API - Liquidar orden - Error saldo insuficiente al liquidar con cheque
 
 ## Descripcion
 

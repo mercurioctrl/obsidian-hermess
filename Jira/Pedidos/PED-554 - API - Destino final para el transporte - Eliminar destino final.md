@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-554"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[PED-544]] API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el "destino final" que lo acompaña
-- **relates to:** [[PED-541]] APP - Feat - Maquetar cotizacion de "Destino final para el transporte"
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[PED-544 - API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el|PED-544]] API - Refactor - Cuando eliminamos un envio, debemos eliminar tambien el "destino final" que lo acompaña
+- **relates to:** [[PED-541 - APP - Feat - Maquetar cotizacion de Destino final para el transporte|PED-541]] APP - Feat - Maquetar cotizacion de "Destino final para el transporte"
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-310"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
 
 ## Descripcion
 

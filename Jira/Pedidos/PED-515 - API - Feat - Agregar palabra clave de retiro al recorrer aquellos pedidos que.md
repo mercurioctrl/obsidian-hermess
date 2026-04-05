@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-515"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **is blocked by:** [[PED-542]] API - Agregar palabra clave a pedidos que son retiro en persona - Correo inválido 
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **is blocked by:** [[PED-542 - API - Agregar palabra clave a pedidos que son retiro en persona - Correo|PED-542]] API - Agregar palabra clave a pedidos que son retiro en persona - Correo inválido 
 
 ## Descripcion
 

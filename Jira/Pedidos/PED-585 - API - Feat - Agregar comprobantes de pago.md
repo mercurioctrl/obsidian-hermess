@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-585"
 
 ## Relaciones
 
-- **Padre:** [[PED-584]] Comprobantes de pago
-- **blocks:** [[PED-587]] APP - Feat - Subir comprobante de pago
-- **is blocked by:** [[PED-602]] API - Agregar comprobantes de pago - Seguridad y buenas prácticas 
-- **relates to:** [[COB-489]] API - Feat - Ver comprobante de pago
-- **relates to:** [[COB-498]] API - Refactor - Ver comprobante de pago - Apuntar a NB
+- **Padre:** [[PED-584 - Comprobantes de pago|PED-584]] Comprobantes de pago
+- **blocks:** [[PED-587 - APP - Feat - Subir comprobante de pago|PED-587]] APP - Feat - Subir comprobante de pago
+- **is blocked by:** [[PED-602 - API - Agregar comprobantes de pago - Seguridad y buenas prácticas|PED-602]] API - Agregar comprobantes de pago - Seguridad y buenas prácticas 
+- **relates to:** [[COB-489 - API - Feat - Ver comprobante de pago|COB-489]] API - Feat - Ver comprobante de pago
+- **relates to:** [[COB-498 - API - Refactor - Ver comprobante de pago - Apuntar a NB|COB-498]] API - Refactor - Ver comprobante de pago - Apuntar a NB
 
 ## Descripcion
 

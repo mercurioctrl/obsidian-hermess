@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-527"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-533]] APP - Accionable para ver las comisiones directamente - Fechas no coincidentes
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-533 - APP - Accionable para ver las comisiones directamente - Fechas no coincidentes|PED-533]] APP - Accionable para ver las comisiones directamente - Fechas no coincidentes
 
 ## Descripcion
 

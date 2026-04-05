@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-6"
 
 ## Relaciones
 
-- **relates to:** [[PED-546]] APP -  Refactor : el selector de vendedor solo se puede cambiar bajo el mismo criterio del dashboard
+- **relates to:** [[PED-546 - APP - Refactor el selector de vendedor solo se puede cambiar bajo el mismo|PED-546]] APP -  Refactor : el selector de vendedor solo se puede cambiar bajo el mismo criterio del dashboard
 
 ## Descripcion
 

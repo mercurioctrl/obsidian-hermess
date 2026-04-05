@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-136"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-135]] API - Repository - Tipos de pedido
-- **is blocked by:** [[PED-137]] API - Feat - Filtros de ordenes -> Filtrar por tipo de orden
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-135 - API - Repository - Tipos de pedido|PED-135]] API - Repository - Tipos de pedido
+- **is blocked by:** [[PED-137 - API - Feat - Filtros de ordenes - Filtrar por tipo de orden|PED-137]] API - Feat - Filtros de ordenes -> Filtrar por tipo de orden
 
 ## Descripcion
 

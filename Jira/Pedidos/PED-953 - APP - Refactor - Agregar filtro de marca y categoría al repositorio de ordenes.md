@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-953"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-952]] API - Refactor - Agregar filtro de marca y categoría al repositorio de ordenes
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-952 - API - Refactor - Agregar filtro de marca y categoría al repositorio de ordenes|PED-952]] API - Refactor - Agregar filtro de marca y categoría al repositorio de ordenes
 
 ## Descripcion
 

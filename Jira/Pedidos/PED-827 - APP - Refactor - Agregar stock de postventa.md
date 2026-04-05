@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-827"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
-- **is blocked by:** [[PED-826]] API - Refactor - Agregar al repositorio de productos, aquellos productos que tienen stock en postventa y cuanto stock tiene de manera correspondiente
-- **relates to:** [[PED-832]] APP - Refactor - Agregar stock de postventa -> Solo mostrar para roles específicos 
-- **relates to:** [[PED-831]] APP - Refactor - Agregar stock de Postventa -> Agregar sucursal
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
+- **is blocked by:** [[PED-826 - API - Refactor - Agregar al repositorio de productos, aquellos productos que|PED-826]] API - Refactor - Agregar al repositorio de productos, aquellos productos que tienen stock en postventa y cuanto stock tiene de manera correspondiente
+- **relates to:** [[PED-832 - APP - Refactor - Agregar stock de postventa - Solo mostrar para roles|PED-832]] APP - Refactor - Agregar stock de postventa -> Solo mostrar para roles específicos 
+- **relates to:** [[PED-831 - APP - Refactor - Agregar stock de Postventa - Agregar sucursal|PED-831]] APP - Refactor - Agregar stock de Postventa -> Agregar sucursal
 
 ## Descripcion
 

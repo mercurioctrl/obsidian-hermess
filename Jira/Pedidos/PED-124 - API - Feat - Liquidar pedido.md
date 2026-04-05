@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-124"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **blocks:** [[PED-125]] APP - Feat - Modal de liquidacion
-- **relates to:** [[SNB-3569]] PED - API - Liquidar pedido - Error al liquidar y duplicación de la orden
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **blocks:** [[PED-125 - APP - Feat - Modal de liquidacion|PED-125]] APP - Feat - Modal de liquidacion
+- **relates to:** [[SNB-3569 - PED - API - Liquidar pedido - Error al liquidar y duplicación de la orden|SNB-3569]] PED - API - Liquidar pedido - Error al liquidar y duplicación de la orden
 
 ## Descripcion
 

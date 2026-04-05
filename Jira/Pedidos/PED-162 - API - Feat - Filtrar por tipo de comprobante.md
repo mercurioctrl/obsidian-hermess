@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-162"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **is blocked by:** [[PED-161]] API - Repository - Tipos de comprobante
-- **is blocked by:** [[PED-99]] API - Feat - Listar comprobantes
-- **blocks:** [[PED-163]] APP - Feat - Listar por tipo de comprobante
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **is blocked by:** [[PED-161 - API - Repository - Tipos de comprobante|PED-161]] API - Repository - Tipos de comprobante
+- **is blocked by:** [[PED-99 - API - Feat - Listar comprobantes|PED-99]] API - Feat - Listar comprobantes
+- **blocks:** [[PED-163 - APP - Feat - Listar por tipo de comprobante|PED-163]] APP - Feat - Listar por tipo de comprobante
 
 ## Descripcion
 

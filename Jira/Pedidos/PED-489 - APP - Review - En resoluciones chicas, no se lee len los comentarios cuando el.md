@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-489"
 
 ## Relaciones
 
-- **Padre:** [[PED-256]] Leer un reporte
+- **Padre:** [[PED-256 - Leer un reporte|PED-256]] Leer un reporte
 
 ## Descripcion
 

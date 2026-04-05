@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-135"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
-- **blocks:** [[PED-136]] APP - Feat - Filtros de ordenes -> Filtrar por tipo de orden
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
+- **blocks:** [[PED-136 - APP - Feat - Filtros de ordenes - Filtrar por tipo de orden|PED-136]] APP - Feat - Filtros de ordenes -> Filtrar por tipo de orden
 
 ## Descripcion
 

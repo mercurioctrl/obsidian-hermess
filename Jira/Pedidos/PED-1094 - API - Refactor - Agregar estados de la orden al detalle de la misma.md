@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1094"
 
 ## Relaciones
 
-- **Padre:** [[PED-1093]] Ver detalle de orden
-- **has action item:** [[PED-1095]] APP - Refactor - Agergar estados de la orden al detalle de la misma
+- **Padre:** [[PED-1093 - Ver detalle de orden|PED-1093]] Ver detalle de orden
+- **has action item:** [[PED-1095 - APP - Refactor - Agergar estados de la orden al detalle de la misma|PED-1095]] APP - Refactor - Agergar estados de la orden al detalle de la misma
 
 ## Descripcion
 

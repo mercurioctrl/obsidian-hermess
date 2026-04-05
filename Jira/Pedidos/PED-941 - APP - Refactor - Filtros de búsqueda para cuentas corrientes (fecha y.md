@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-941"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **action item from:** [[PED-940]] API - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y observaciones)
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **action item from:** [[PED-940 - API - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y|PED-940]] API - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y observaciones)
 
 ## Descripcion
 

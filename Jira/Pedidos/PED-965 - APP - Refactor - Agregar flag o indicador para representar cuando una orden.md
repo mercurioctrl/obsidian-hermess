@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-965"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **action item from:** [[PED-961]] API - Refactor - Agregar atributo para saber si una orden tiene ticket y un filtro para filtrar las mismas
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **action item from:** [[PED-961 - API - Refactor - Agregar atributo para saber si una orden tiene ticket y un|PED-961]] API - Refactor - Agregar atributo para saber si una orden tiene ticket y un filtro para filtrar las mismas
 
 ## Descripcion
 

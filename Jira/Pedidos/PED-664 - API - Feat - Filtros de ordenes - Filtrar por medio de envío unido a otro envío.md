@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-664"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-466]] DB - Agregar medio de envio "Unido a otro envio"
-- **is blocked by:** [[PED-693]] API - Filtros de ordenes -> Filtrar por medio de envío "unido a otro envío" - Todos los pedidos unidos
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-466 - DB - Agregar medio de envio Unido a otro envio|PED-466]] DB - Agregar medio de envio "Unido a otro envio"
+- **is blocked by:** [[PED-693 - API - Filtros de ordenes - Filtrar por medio de envío unido a otro envío -|PED-693]] API - Filtros de ordenes -> Filtrar por medio de envío "unido a otro envío" - Todos los pedidos unidos
 
 ## Descripcion
 

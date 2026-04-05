@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-295"
 
 ## Relaciones
 
-- **blocks:** [[PED-260]] API - Feat - Tasa de conversion
+- **blocks:** [[PED-260 - API - Feat - Tasa de conversion|PED-260]] API - Feat - Tasa de conversion
 
 ## Descripcion
 

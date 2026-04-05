@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-853"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **has action item:** [[PED-851]] API - Refactor - Modificar los totales del pedido para incluir el internalTax
-- **has action item:** [[PED-854]] API - Refactor - Guardar internalTax en albclil al generar el pedido
-- **has action item:** [[PED-1271]] API - Feat - Ver reservas en una orden de compra, en casos puntuales no coincide la cantidad de afuera, con el resultado del modal
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **has action item:** [[PED-851 - API - Refactor - Modificar los totales del pedido para incluir el internalTax|PED-851]] API - Refactor - Modificar los totales del pedido para incluir el internalTax
+- **has action item:** [[PED-854 - API - Refactor - Guardar internalTax en albclil al generar el pedido|PED-854]] API - Refactor - Guardar internalTax en albclil al generar el pedido
+- **has action item:** [[PED-1271 - API - Feat - Ver reservas en una orden de compra, en casos puntuales no|PED-1271]] API - Feat - Ver reservas en una orden de compra, en casos puntuales no coincide la cantidad de afuera, con el resultado del modal
 
 ## Descripcion
 

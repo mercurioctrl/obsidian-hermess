@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1070"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **has action item:** [[PED-1084]] APP - Refactor - Agregar filtro de Usuario de API en el repositorio de clientes
-- **relates to:** [[PED-1088]] API - Review - Tipo de conexión -> Error al filtrar por apiMode
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **has action item:** [[PED-1084 - APP - Refactor - Agregar filtro de Usuario de API en el repositorio de clientes|PED-1084]] APP - Refactor - Agregar filtro de Usuario de API en el repositorio de clientes
+- **relates to:** [[PED-1088 - API - Review - Tipo de conexión - Error al filtrar por apiMode|PED-1088]] API - Review - Tipo de conexión -> Error al filtrar por apiMode
 
 ## Descripcion
 

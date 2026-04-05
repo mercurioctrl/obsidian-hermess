@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-496"
 
 ## Relaciones
 
-- **blocks:** [[PED-485]] APP - Feat - Mostrar modal con info de comprobante de pago
+- **blocks:** [[PED-485 - APP - Feat - Mostrar modal con info de comprobante de pago|PED-485]] APP - Feat - Mostrar modal con info de comprobante de pago
 
 ## Descripcion
 

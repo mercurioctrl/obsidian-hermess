@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-305"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-322]] API - Ver detalle de una orden de compra -> Cotización incorrecta - Incidencias varias
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-322 - API - Ver detalle de una orden de compra - Cotización incorrecta - Incidencias|PED-322]] API - Ver detalle de una orden de compra -> Cotización incorrecta - Incidencias varias
 
 ## Descripcion
 

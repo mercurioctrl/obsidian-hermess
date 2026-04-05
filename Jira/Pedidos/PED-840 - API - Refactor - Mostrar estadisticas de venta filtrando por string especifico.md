@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-840"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **has action item:** [[PED-841]] APP - Refactor - Filtrar estadisticas tambien por string si esta presente
-- **is blocked by:** [[PED-856]] API - Mostrar estadísticas de venta filtrando por string específico - Valores no coincidentes
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **has action item:** [[PED-841 - APP - Refactor - Filtrar estadisticas tambien por string si esta presente|PED-841]] APP - Refactor - Filtrar estadisticas tambien por string si esta presente
+- **is blocked by:** [[PED-856 - API - Mostrar estadísticas de venta filtrando por string específico - Valores|PED-856]] API - Mostrar estadísticas de venta filtrando por string específico - Valores no coincidentes
 
 ## Descripcion
 

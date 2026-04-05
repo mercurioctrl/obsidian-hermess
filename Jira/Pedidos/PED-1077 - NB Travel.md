@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1077"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **Subtarea:** [[PED-1078]] API - Feat - Envio de plantilla con posicion y aceleradores
-- **Subtarea:** [[PED-1079]] APP - Feat - Envio de plantilla con posicion y aceleradores
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **Subtarea:** [[PED-1078 - API - Feat - Envio de plantilla con posicion y aceleradores|PED-1078]] API - Feat - Envio de plantilla con posicion y aceleradores
+- **Subtarea:** [[PED-1079 - APP - Feat - Envio de plantilla con posicion y aceleradores|PED-1079]] APP - Feat - Envio de plantilla con posicion y aceleradores
 
 ## Descripcion
 

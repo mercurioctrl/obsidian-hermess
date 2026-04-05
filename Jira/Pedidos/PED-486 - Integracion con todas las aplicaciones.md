@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-486"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
 
 ## Descripcion
 

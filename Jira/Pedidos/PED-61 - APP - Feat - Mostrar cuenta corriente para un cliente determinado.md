@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-61"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **is blocked by:** [[PED-56]] API - Feat - Mostrar totales de la cuenta del cliente
-- **is blocked by:** [[PED-55]] API - Feat - Mostrar el detalle de una cuenta corriente de cliente
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **is blocked by:** [[PED-56 - API - Feat - Mostrar totales de la cuenta del cliente|PED-56]] API - Feat - Mostrar totales de la cuenta del cliente
+- **is blocked by:** [[PED-55 - API - Feat - Mostrar el detalle de una cuenta corriente de cliente|PED-55]] API - Feat - Mostrar el detalle de una cuenta corriente de cliente
 
 ## Descripcion
 

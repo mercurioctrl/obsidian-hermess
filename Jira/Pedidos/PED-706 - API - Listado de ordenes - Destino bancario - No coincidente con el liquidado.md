@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-706"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-705]] API - Refactor - agregar campo destino bancario para recurso de comprobante
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-705 - API - Refactor - agregar campo destino bancario para recurso de comprobante|PED-705]] API - Refactor - agregar campo destino bancario para recurso de comprobante
 
 ## Descripcion
 

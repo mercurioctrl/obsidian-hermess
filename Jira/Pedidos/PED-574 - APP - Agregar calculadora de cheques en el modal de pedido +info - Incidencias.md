@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-574"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-570]] APP -  Feat -  Agregar calculadora de cheques en el modal de pedido +i nfo
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-570 - APP - Feat - Agregar calculadora de cheques en el modal de pedido +i nfo|PED-570]] APP -  Feat -  Agregar calculadora de cheques en el modal de pedido +i nfo
 
 ## Descripcion
 

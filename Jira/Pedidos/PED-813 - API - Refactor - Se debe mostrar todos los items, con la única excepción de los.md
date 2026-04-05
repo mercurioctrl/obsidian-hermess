@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-813"
 
 ## Relaciones
 
-- **Padre:** [[PED-214]] Reportes de stock
-- **blocks:** [[SNB-2266]] OCULTOS VS STOCK
+- **Padre:** [[PED-214 - Reportes de stock|PED-214]] Reportes de stock
+- **blocks:** [[SNB-2266 - OCULTOS VS STOCK|SNB-2266]] OCULTOS VS STOCK
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-566"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **blocks:** [[PED-571]] APP - Feat - Bonificar Envio
-- **is blocked by:** [[PED-573]] API - Bonificar envío - Agregar creador al registro
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **blocks:** [[PED-571 - APP - Feat - Bonificar Envio|PED-571]] APP - Feat - Bonificar Envio
+- **is blocked by:** [[PED-573 - API - Bonificar envío - Agregar creador al registro|PED-573]] API - Bonificar envío - Agregar creador al registro
 
 ## Descripcion
 

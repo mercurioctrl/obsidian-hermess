@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-518"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-83]] APP - Feat - Ver detalle de una orden de compra
-- **relates to:** [[SNB-1466]] SALDOS TOTALES ERRONEOS
-- **relates to:** [[PED-519]] API - Review - Revisar respuesta del recurso /orders/addItem
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-83 - APP - Feat - Ver detalle de una orden de compra|PED-83]] APP - Feat - Ver detalle de una orden de compra
+- **relates to:** [[SNB-1466 - SALDOS TOTALES ERRONEOS|SNB-1466]] SALDOS TOTALES ERRONEOS
+- **relates to:** [[PED-519 - API - Review - Revisar respuesta del recurso ordersaddItem|PED-519]] API - Review - Revisar respuesta del recurso /orders/addItem
 
 ## Descripcion
 

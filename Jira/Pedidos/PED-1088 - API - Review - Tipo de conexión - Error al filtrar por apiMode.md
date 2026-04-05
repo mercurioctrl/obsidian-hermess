@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1088"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **relates to:** [[PED-1070]] API - Refactor - Agregaremos un parámetro para leer el tipo de ultima conexión del cliente
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **relates to:** [[PED-1070 - API - Refactor - Agregaremos un parámetro para leer el tipo de ultima conexión|PED-1070]] API - Refactor - Agregaremos un parámetro para leer el tipo de ultima conexión del cliente
 
 ## Descripcion
 

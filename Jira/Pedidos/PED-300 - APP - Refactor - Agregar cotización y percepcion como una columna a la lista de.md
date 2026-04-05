@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-300"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-561]] APP - Listar órdenes de compra - Color en percepciones
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-561 - APP - Listar órdenes de compra - Color en percepciones|PED-561]] APP - Listar órdenes de compra - Color en percepciones
 
 ## Descripcion
 

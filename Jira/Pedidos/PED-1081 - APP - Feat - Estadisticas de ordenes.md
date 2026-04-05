@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1081"
 
 ## Relaciones
 
-- **Padre:** [[PED-1068]] Periodos logisticos
-- **action item from:** [[PED-1069]] API - Refactor - Crearemos un repositorio para ver las ordenes en función de sus estadísticas de periodos logísticos
+- **Padre:** [[PED-1068 - Periodos logisticos|PED-1068]] Periodos logisticos
+- **action item from:** [[PED-1069 - API - Refactor - Crearemos un repositorio para ver las ordenes en función de|PED-1069]] API - Refactor - Crearemos un repositorio para ver las ordenes en función de sus estadísticas de periodos logísticos
 
 ## Descripcion
 

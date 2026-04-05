@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1095"
 
 ## Relaciones
 
-- **Padre:** [[PED-1093]] Ver detalle de orden
-- **action item from:** [[PED-1094]] API - Refactor - Agregar estados de la orden al detalle de la misma
+- **Padre:** [[PED-1093 - Ver detalle de orden|PED-1093]] Ver detalle de orden
+- **action item from:** [[PED-1094 - API - Refactor - Agregar estados de la orden al detalle de la misma|PED-1094]] API - Refactor - Agregar estados de la orden al detalle de la misma
 
 ## Descripcion
 

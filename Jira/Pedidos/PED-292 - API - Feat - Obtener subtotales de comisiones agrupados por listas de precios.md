@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-292"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **blocks:** [[PED-293]] APP - Feat - Mostrar lista de comisiones (Agrupado por letra) y un grafico de torta que las represente
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **blocks:** [[PED-293 - APP - Feat - Mostrar lista de comisiones (Agrupado por letra) y un grafico de|PED-293]] APP - Feat - Mostrar lista de comisiones (Agrupado por letra) y un grafico de torta que las represente
 
 ## Descripcion
 

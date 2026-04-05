@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1016"
 
 ## Relaciones
 
-- **Padre:** [[PED-1005]] Chat General
-- **is blocked by:** [[PED-1015]] API - Refactor - Agregaremos el parámetro lastId para saber si es necesario recargar el chat
+- **Padre:** [[PED-1005 - Chat General|PED-1005]] Chat General
+- **is blocked by:** [[PED-1015 - API - Refactor - Agregaremos el parámetro lastId para saber si es necesario|PED-1015]] API - Refactor - Agregaremos el parámetro lastId para saber si es necesario recargar el chat
 
 ## Descripcion
 

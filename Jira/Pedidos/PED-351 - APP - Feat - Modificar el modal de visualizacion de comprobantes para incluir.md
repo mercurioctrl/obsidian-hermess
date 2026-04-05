@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-351"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-997"
 
 ## Relaciones
 
-- **relates to:** [[SNB-3207]] BORRAR DOMICILIO DE ENVIO
-- **relates to:** [[PED-30]] APP - Feat - Agregar/Editar direcciones
+- **relates to:** [[SNB-3207 - BORRAR DOMICILIO DE ENVIO|SNB-3207]] BORRAR DOMICILIO DE ENVIO
+- **relates to:** [[PED-30 - APP - Feat - AgregarEditar direcciones|PED-30]] APP - Feat - Agregar/Editar direcciones
 
 ## Descripcion
 

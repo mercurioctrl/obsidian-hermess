@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-487"
 
 ## Relaciones
 
-- **Padre:** [[PED-201]] Solicitudes de Alta
-- **blocks:** [[PED-484]] API - Refactor - Al descargar una solocitud, debe desaparecer del listado de solicitudes pendientes
+- **Padre:** [[PED-201 - Solicitudes de Alta|PED-201]] Solicitudes de Alta
+- **blocks:** [[PED-484 - API - Refactor - Al descargar una solocitud, debe desaparecer del listado de|PED-484]] API - Refactor - Al descargar una solocitud, debe desaparecer del listado de solicitudes pendientes
 
 ## Descripcion
 

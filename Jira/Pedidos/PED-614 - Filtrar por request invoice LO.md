@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-614"
 
 ## Relaciones
 
-- **Subtarea:** [[PED-616]] APP - Refactor - Agregar filtro para "Factura solicitada"
-- **relates to:** [[SNB-1624]] FACTURACION
+- **Subtarea:** [[PED-616 - APP - Refactor - Agregar filtro para Factura solicitada|PED-616]] APP - Refactor - Agregar filtro para "Factura solicitada"
+- **relates to:** [[SNB-1624 - FACTURACION|SNB-1624]] FACTURACION
 
 ## Descripcion
 

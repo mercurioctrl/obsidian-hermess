@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-823"
 
 ## Relaciones
 
-- **Padre:** [[PED-6]] Comisiones
+- **Padre:** [[PED-6 - Comisiones|PED-6]] Comisiones
 
 ## Descripcion
 

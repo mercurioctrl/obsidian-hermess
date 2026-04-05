@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-210"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-23]] API - Repository - Vendedores
-- **is blocked by:** [[PED-209]] API - Feat - Filtros de ordenes -> Filtrar por Vendedores en pedido
-- **is blocked by:** [[PED-264]] APP - Filtrar por vendedores - Incidencias varias
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-23 - API - Repository - Vendedores|PED-23]] API - Repository - Vendedores
+- **is blocked by:** [[PED-209 - API - Feat - Filtros de ordenes - Filtrar por Vendedores en pedido|PED-209]] API - Feat - Filtros de ordenes -> Filtrar por Vendedores en pedido
+- **is blocked by:** [[PED-264 - APP - Filtrar por vendedores - Incidencias varias|PED-264]] APP - Filtrar por vendedores - Incidencias varias
 
 ## Descripcion
 

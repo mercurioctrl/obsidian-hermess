@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-536"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-581]] APP - Cambiar el selector de cotizar envío por la favorita si no existe envío - Detalles al abrir el modal de cotización de envío
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-581 - APP - Cambiar el selector de cotizar envío por la favorita si no existe envío -|PED-581]] APP - Cambiar el selector de cotizar envío por la favorita si no existe envío - Detalles al abrir el modal de cotización de envío
 
 ## Descripcion
 

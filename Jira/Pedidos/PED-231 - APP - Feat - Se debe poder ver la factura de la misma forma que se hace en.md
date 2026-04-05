@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-231"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-232]] API - Refactor - Listar ordenes -> Agregar parametros para visualizar comprobante
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-232 - API - Refactor - Listar ordenes - Agregar parametros para visualizar comprobante|PED-232]] API - Refactor - Listar ordenes -> Agregar parametros para visualizar comprobante
 
 ## Descripcion
 

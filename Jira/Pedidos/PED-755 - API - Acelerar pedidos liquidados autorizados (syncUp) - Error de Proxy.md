@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-755"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **blocks:** [[PED-750]] API - Feat - Acelerar pedidos liquidados autorizados (syncUp)
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **blocks:** [[PED-750 - API - Feat - Acelerar pedidos liquidados autorizados (syncUp)|PED-750]] API - Feat - Acelerar pedidos liquidados autorizados (syncUp)
 
 ## Descripcion
 

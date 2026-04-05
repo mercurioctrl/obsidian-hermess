@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-604"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-592]] APP - Refactor -  Problema al cotizar un envio
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-592 - APP - Refactor - Problema al cotizar un envio|PED-592]] APP - Refactor -  Problema al cotizar un envio
 
 ## Descripcion
 

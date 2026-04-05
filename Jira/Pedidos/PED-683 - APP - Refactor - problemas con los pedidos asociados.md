@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-683"
 
 ## Relaciones
 
-- **causes:** [[SNB-1779]] problemas con los pedidos asociados
+- **causes:** [[SNB-1779 - problemas con los pedidos asociados|SNB-1779]] problemas con los pedidos asociados
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-214"
 
 ## Relaciones
 
-- **Padre:** [[PED-149]] Reportes
-- **Subtarea:** [[PED-813]] API - Refactor - Se debe mostrar todos los items, con la única excepción de los excluidos 
+- **Padre:** [[PED-149 - Reportes|PED-149]] Reportes
+- **Subtarea:** [[PED-813 - API - Refactor - Se debe mostrar todos los items, con la única excepción de los|PED-813]] API - Refactor - Se debe mostrar todos los items, con la única excepción de los excluidos 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-728"
 
 ## Relaciones
 
-- **Padre:** [[PED-727]] Descargar comprobantes
+- **Padre:** [[PED-727 - Descargar comprobantes|PED-727]] Descargar comprobantes
 
 ## Descripcion
 

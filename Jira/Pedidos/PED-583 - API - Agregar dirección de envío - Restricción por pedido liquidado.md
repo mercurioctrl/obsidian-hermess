@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-583"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-579]] API - Feat - Eliminar direccion -> Evitar que se editen direcciones vinculadas a pedidos pendietes de ser despachadas
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-579 - API - Feat - Eliminar direccion - Evitar que se editen direcciones vinculadas a|PED-579]] API - Feat - Eliminar direccion -> Evitar que se editen direcciones vinculadas a pedidos pendietes de ser despachadas
 
 ## Descripcion
 

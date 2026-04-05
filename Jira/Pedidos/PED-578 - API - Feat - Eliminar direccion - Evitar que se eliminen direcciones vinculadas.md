@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-578"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-52]] API - Feat - Eliminar direccion
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-52 - API - Feat - Eliminar direccion|PED-52]] API - Feat - Eliminar direccion
 
 ## Descripcion
 

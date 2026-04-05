@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-192"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **blocks:** [[PED-193]] APP - Feat - Descargar listado de precios
-- **is blocked by:** [[PED-240]] API - Descargar listado de precios - Incidencias varias
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **blocks:** [[PED-193 - APP - Feat - Descargar listado de precios|PED-193]] APP - Feat - Descargar listado de precios
+- **is blocked by:** [[PED-240 - API - Descargar listado de precios - Incidencias varias|PED-240]] API - Descargar listado de precios - Incidencias varias
 
 ## Descripcion
 

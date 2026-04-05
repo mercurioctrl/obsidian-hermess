@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1000"
 
 ## Relaciones
 
-- **Padre:** [[PED-998]] Intervención Técnica
-- **action item from:** [[PED-999]] API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
-- **has action item:** [[SNB-2003]] Agregar opcion para armado de pc y actualizacion de firmware
+- **Padre:** [[PED-998 - Intervención Técnica|PED-998]] Intervención Técnica
+- **action item from:** [[PED-999 - API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|PED-999]] API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
+- **has action item:** [[SNB-2003 - Agregar opcion para armado de pc y actualizacion de firmware|SNB-2003]] Agregar opcion para armado de pc y actualizacion de firmware
 
 ## Descripcion
 

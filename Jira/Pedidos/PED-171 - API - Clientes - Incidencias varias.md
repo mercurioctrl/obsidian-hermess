@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-171"
 
 ## Relaciones
 
-- **blocks:** [[PED-16]] Listar clientes
+- **blocks:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
 
 ## Descripcion
 

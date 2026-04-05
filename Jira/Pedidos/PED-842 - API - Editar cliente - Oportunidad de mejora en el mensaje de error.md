@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-842"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **relates to:** [[PED-19]] API - Feat - Editar cliente
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **relates to:** [[PED-19 - API - Feat - Editar cliente|PED-19]] API - Feat - Editar cliente
 
 ## Descripcion
 

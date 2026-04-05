@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-494"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-516]] API - Agregar/Editar cliente - Restricción de duplicados - Incidencias varias
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-516 - API - AgregarEditar cliente - Restricción de duplicados - Incidencias varias|PED-516]] API - Agregar/Editar cliente - Restricción de duplicados - Incidencias varias
 
 ## Descripcion
 

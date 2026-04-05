@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-133"
 
 ## Relaciones
 
-- **Padre:** [[PED-132]] Feat - Login / Re Login
+- **Padre:** [[PED-132 - Feat - Login Re Login|PED-132]] Feat - Login / Re Login
 
 ## Descripcion
 

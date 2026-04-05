@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-784"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **blocks:** [[PED-789]] APP - Feat - Agregar herramienta para listar,crear, eliminar utilidades extra para un producto y cliente determinado
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **blocks:** [[PED-789 - APP - Feat - Agregar herramienta para listar,crear, eliminar utilidades extra|PED-789]] APP - Feat - Agregar herramienta para listar,crear, eliminar utilidades extra para un producto y cliente determinado
 
 ## Descripcion
 

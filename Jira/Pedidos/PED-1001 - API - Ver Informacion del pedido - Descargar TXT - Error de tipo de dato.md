@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1001"
 
 ## Relaciones
 
-- **relates to:** [[PED-77]] API - Feat - Descargar txt en Ver Informacion del pedido
+- **relates to:** [[PED-77 - API - Feat - Descargar txt en Ver Informacion del pedido|PED-77]] API - Feat - Descargar txt en Ver Informacion del pedido
 
 ## Descripcion
 

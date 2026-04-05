@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-499"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **is blocked by:** [[PED-498]] API - Feat - Agregar parametro para mostrar los acreditados
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **is blocked by:** [[PED-498 - API - Feat - Agregar parametro para mostrar los acreditados|PED-498]] API - Feat - Agregar parametro para mostrar los acreditados
 
 ## Descripcion
 

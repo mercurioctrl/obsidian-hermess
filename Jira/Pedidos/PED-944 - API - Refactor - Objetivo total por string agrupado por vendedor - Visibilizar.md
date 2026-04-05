@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-944"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **action item from:** [[PED-943]] APP - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **action item from:** [[PED-943 - APP - Refactor - Objetivo total por string agrupado por vendedor - Agregar|PED-943]] APP - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
 
 ## Descripcion
 

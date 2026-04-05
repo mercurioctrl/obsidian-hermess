@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-440"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **relates to:** [[PED-442]] APP - Feat - El "Servicio de tranporte" no se puede ni mover, ni cambiar la cantidad, que siempre debe ser uno
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **relates to:** [[PED-442 - APP - Feat - El Servicio de tranporte no se puede ni mover, ni cambiar la|PED-442]] APP - Feat - El "Servicio de tranporte" no se puede ni mover, ni cambiar la cantidad, que siempre debe ser uno
 
 ## Descripcion
 

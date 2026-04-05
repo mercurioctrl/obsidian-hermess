@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-381"
 
 ## Relaciones
 
-- **relates to:** [[PED-373]] API - Feat - Limites de liquidacion
-- **relates to:** [[PED-385]] APP - Refactor - Limites de liquidación - Ocultar selector fecha
+- **relates to:** [[PED-373 - API - Feat - Limites de liquidacion|PED-373]] API - Feat - Limites de liquidacion
+- **relates to:** [[PED-385 - APP - Refactor - Limites de liquidación - Ocultar selector fecha|PED-385]] APP - Refactor - Limites de liquidación - Ocultar selector fecha
 
 ## Descripcion
 

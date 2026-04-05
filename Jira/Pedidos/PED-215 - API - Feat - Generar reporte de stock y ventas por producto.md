@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-215"
 
 ## Relaciones
 
-- **Padre:** [[PED-213]] Reportes de ventas
-- **blocks:** [[PED-248]] APP - Feat - Agregar accionables para descargar reporte de ventas y de marcas
-- **is blocked by:** [[PED-267]] API - Generar reporte de stock y ventas por producto - Mejorar rendimiento
-- **relates to:** [[PED-627]]   API - Generar reporte de stock y ventas por producto - Filtrado por fechas no coincidente 
+- **Padre:** [[PED-213 - Reportes de ventas|PED-213]] Reportes de ventas
+- **blocks:** [[PED-248 - APP - Feat - Agregar accionables para descargar reporte de ventas y de marcas|PED-248]] APP - Feat - Agregar accionables para descargar reporte de ventas y de marcas
+- **is blocked by:** [[PED-267 - API - Generar reporte de stock y ventas por producto - Mejorar rendimiento|PED-267]] API - Generar reporte de stock y ventas por producto - Mejorar rendimiento
+- **relates to:** [[PED-627 - API - Generar reporte de stock y ventas por producto - Filtrado por fechas no|PED-627]]   API - Generar reporte de stock y ventas por producto - Filtrado por fechas no coincidente 
 
 ## Descripcion
 

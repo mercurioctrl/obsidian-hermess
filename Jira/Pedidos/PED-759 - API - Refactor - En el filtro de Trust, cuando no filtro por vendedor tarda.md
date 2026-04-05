@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-759"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **is blocked by:** [[PED-768]] API - Limites y Objetivos - Tiempo de espera excedido
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **is blocked by:** [[PED-768 - API - Limites y Objetivos - Tiempo de espera excedido|PED-768]] API - Limites y Objetivos - Tiempo de espera excedido
 
 ## Descripcion
 

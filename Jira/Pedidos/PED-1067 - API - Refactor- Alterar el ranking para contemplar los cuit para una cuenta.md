@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1067"
 
 ## Relaciones
 
-- **Padre:** [[PED-753]] Incentivos Clientes
+- **Padre:** [[PED-753 - Incentivos Clientes|PED-753]] Incentivos Clientes
 
 ## Descripcion
 

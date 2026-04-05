@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-175"
 
 ## Relaciones
 
-- **Padre:** [[PED-174]] Listar comisiones
-- **blocks:** [[PED-176]] APP - Feat - Listar comisiones
-- **blocks:** [[PED-526]] API - Refactor - Agregar comisiones de sucursal 10, que no se ven
+- **Padre:** [[PED-174 - Listar comisiones|PED-174]] Listar comisiones
+- **blocks:** [[PED-176 - APP - Feat - Listar comisiones|PED-176]] APP - Feat - Listar comisiones
+- **blocks:** [[PED-526 - API - Refactor - Agregar comisiones de sucursal 10, que no se ven|PED-526]] API - Refactor - Agregar comisiones de sucursal 10, que no se ven
 
 ## Descripcion
 

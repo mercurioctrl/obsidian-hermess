@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-568"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is blocked by:** [[SNB-1524]] Error al facturar pedido
-- **is blocked by:** [[PED-569]] Listar voucher type by client
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is blocked by:** [[SNB-1524 - Error al facturar pedido|SNB-1524]] Error al facturar pedido
+- **is blocked by:** [[PED-569 - Listar voucher type by client|PED-569]] Listar voucher type by client
 
 ## Descripcion
 

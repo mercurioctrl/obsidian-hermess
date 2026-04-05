@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-165"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **is blocked by:** [[PED-164]] API - Repository - Tipo de comprobante fiscal
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **is blocked by:** [[PED-164 - API - Repository - Tipo de comprobante fiscal|PED-164]] API - Repository - Tipo de comprobante fiscal
 
 ## Descripcion
 

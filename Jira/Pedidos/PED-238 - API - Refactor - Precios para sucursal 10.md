@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-238"
 
 ## Relaciones
 
-- **Padre:** [[PED-237]] Precios
+- **Padre:** [[PED-237 - Precios|PED-237]] Precios
 
 ## Descripcion
 

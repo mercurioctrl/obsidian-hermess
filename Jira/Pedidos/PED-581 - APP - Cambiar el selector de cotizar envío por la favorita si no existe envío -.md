@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-581"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is caused by:** [[PED-576]] APP - Refactor  - Cambiar el selector de cotizar envio por la favorita si no existe envio
-- **relates to:** [[PED-536]] API - Listar ordenes de compra -> Código postal vacío 
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is caused by:** [[PED-576 - APP - Refactor - Cambiar el selector de cotizar envio por la favorita si no|PED-576]] APP - Refactor  - Cambiar el selector de cotizar envio por la favorita si no existe envio
+- **relates to:** [[PED-536 - API - Listar ordenes de compra - Código postal vacío|PED-536]] API - Listar ordenes de compra -> Código postal vacío 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-444"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **blocks:** [[PED-447]] APP - Feat - Unir pedido a otro envío (pedido)
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **blocks:** [[PED-447 - APP - Feat - Unir pedido a otro envío (pedido)|PED-447]] APP - Feat - Unir pedido a otro envío (pedido)
 
 ## Descripcion
 

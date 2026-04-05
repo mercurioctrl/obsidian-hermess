@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-962"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **action item from:** [[LIO-228]] API - Feat - Mostrar un ticket por id de ticket
-- **has action item:** [[PED-966]] APP - Feat - Agregar modal para visualizar y responder tickets al ejecutar el accionable en el indicador de ticket para una orden
-- **relates to:** [[PED-967]] API - Leer ticket por numero de orden - Error en la columna createdAt
-- **relates to:** [[SNB-3635]] PED - Leer ticket por número de orden -> Respuesta sin contenido
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **action item from:** [[LIO-228 - API - Feat - Mostrar un ticket por id de ticket|LIO-228]] API - Feat - Mostrar un ticket por id de ticket
+- **has action item:** [[PED-966 - APP - Feat - Agregar modal para visualizar y responder tickets al ejecutar el|PED-966]] APP - Feat - Agregar modal para visualizar y responder tickets al ejecutar el accionable en el indicador de ticket para una orden
+- **relates to:** [[PED-967 - API - Leer ticket por numero de orden - Error en la columna createdAt|PED-967]] API - Leer ticket por numero de orden - Error en la columna createdAt
+- **relates to:** [[SNB-3635 - PED - Leer ticket por número de orden - Respuesta sin contenido|SNB-3635]] PED - Leer ticket por número de orden -> Respuesta sin contenido
 
 ## Descripcion
 

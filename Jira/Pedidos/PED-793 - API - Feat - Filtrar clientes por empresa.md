@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-793"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **is blocked by:** [[PED-24]] API - Repository - Empresas 
-- **blocks:** [[PED-794]] APP - Feat - Filtrar clientes por empresa
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **is blocked by:** [[PED-24 - API - Repository - Empresas|PED-24]] API - Repository - Empresas 
+- **blocks:** [[PED-794 - APP - Feat - Filtrar clientes por empresa|PED-794]] APP - Feat - Filtrar clientes por empresa
 
 ## Descripcion
 

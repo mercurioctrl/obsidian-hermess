@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-992"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **action item from:** [[PED-991]] API - Refactor - Agregar percepciones ARBA en caso de que existan para el cliente en el repositorio para listar ordenes
-- **has action item:** [[PED-993]] APP - Refactor - Agregar percepciones ARBA como un atributo diferenciado al momento de ver el detalle de la orden
-- **has action item:** [[PED-994]] API - Refactor - Agregar percepciones ARBA al "pedido + INFO"
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **action item from:** [[PED-991 - API - Refactor - Agregar percepciones ARBA en caso de que existan para el|PED-991]] API - Refactor - Agregar percepciones ARBA en caso de que existan para el cliente en el repositorio para listar ordenes
+- **has action item:** [[PED-993 - APP - Refactor - Agregar percepciones ARBA como un atributo diferenciado al|PED-993]] APP - Refactor - Agregar percepciones ARBA como un atributo diferenciado al momento de ver el detalle de la orden
+- **has action item:** [[PED-994 - API - Refactor - Agregar percepciones ARBA al pedido + INFO|PED-994]] API - Refactor - Agregar percepciones ARBA al "pedido + INFO"
 
 ## Descripcion
 

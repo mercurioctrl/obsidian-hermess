@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-50"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-45]] API - Feat - Integración con Padrones de AFIP por documento de cliente
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-45 - API - Feat - Integración con Padrones de AFIP por documento de cliente|PED-45]] API - Feat - Integración con Padrones de AFIP por documento de cliente
 
 ## Descripcion
 

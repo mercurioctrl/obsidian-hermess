@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-798"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **is blocked by:** [[PED-806]] API - Al autorizar un pedido almacenar la fecha y hora - Fecha no guardada
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **is blocked by:** [[PED-806 - API - Al autorizar un pedido almacenar la fecha y hora - Fecha no guardada|PED-806]] API - Al autorizar un pedido almacenar la fecha y hora - Fecha no guardada
 
 ## Descripcion
 

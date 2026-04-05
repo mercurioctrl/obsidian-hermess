@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-740"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-691]] API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si es de libre opcion
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-691 - API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si|PED-691]] API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si es de libre opcion
 
 ## Descripcion
 

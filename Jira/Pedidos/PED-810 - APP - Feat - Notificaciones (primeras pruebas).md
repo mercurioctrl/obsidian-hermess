@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-810"
 
 ## Relaciones
 
-- **Padre:** [[PED-809]] Notificaciones
-- **action item from:** [[PED-829]] APP - Refactor - Al recibir notificacion se debe poder abrir los reportes si el link contiene el parametro
+- **Padre:** [[PED-809 - Notificaciones|PED-809]] Notificaciones
+- **action item from:** [[PED-829 - APP - Refactor - Al recibir notificacion se debe poder abrir los reportes si el|PED-829]] APP - Refactor - Al recibir notificacion se debe poder abrir los reportes si el link contiene el parametro
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-510"
 
 ## Relaciones
 
-- **Padre:** [[PED-328]] Libre Opcion
+- **Padre:** [[PED-328 - Libre Opcion|PED-328]] Libre Opcion
 
 ## Descripcion
 

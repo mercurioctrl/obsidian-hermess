@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-870"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-872]] APP - Pedido + Info - Advertencia al intentar copiar el texto
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-872 - APP - Pedido + Info - Advertencia al intentar copiar el texto|PED-872]] APP - Pedido + Info - Advertencia al intentar copiar el texto
 
 ## Descripcion
 

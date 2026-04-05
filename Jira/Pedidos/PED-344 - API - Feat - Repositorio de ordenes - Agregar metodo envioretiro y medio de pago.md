@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-344"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-345]] APP - Feat - Repositorio de ordenes -> Agregar 2 columnas con metodo envio/retiro y medio de pago
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-345 - APP - Feat - Repositorio de ordenes - Agregar 2 columnas con metodo envioretiro|PED-345]] APP - Feat - Repositorio de ordenes -> Agregar 2 columnas con metodo envio/retiro y medio de pago
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-789"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **is blocked by:** [[PED-784]] API - Refactor - Obtener productos para los cuales el cliente tiene una utilidad extra (se debe poder leer,editar y eliminar)
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **is blocked by:** [[PED-784 - API - Refactor - Obtener productos para los cuales el cliente tiene una|PED-784]] API - Refactor - Obtener productos para los cuales el cliente tiene una utilidad extra (se debe poder leer,editar y eliminar)
 
 ## Descripcion
 

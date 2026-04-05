@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-276"
 
 ## Relaciones
 
-- **Padre:** [[PED-254]] Crear reportes
+- **Padre:** [[PED-254 - Crear reportes|PED-254]] Crear reportes
 
 ## Descripcion
 

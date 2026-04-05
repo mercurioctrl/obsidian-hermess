@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-29"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-30]] APP - Feat - Agregar/Editar direcciones
-- **is blocked by:** [[PED-445]] API - Editar direcciones del cliente - Error al actualizar
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-30 - APP - Feat - AgregarEditar direcciones|PED-30]] APP - Feat - Agregar/Editar direcciones
+- **is blocked by:** [[PED-445 - API - Editar direcciones del cliente - Error al actualizar|PED-445]] API - Editar direcciones del cliente - Error al actualizar
 
 ## Descripcion
 

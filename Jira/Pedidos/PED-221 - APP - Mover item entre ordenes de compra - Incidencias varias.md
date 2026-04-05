@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-221"
 
 ## Relaciones
 
-- **blocks:** [[PED-189]] APP - Feat - Mover item entre ordenes de compra
-- **clones:** [[PED-230]] APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un item determinado
+- **blocks:** [[PED-189 - APP - Feat - Mover item entre ordenes de compra|PED-189]] APP - Feat - Mover item entre ordenes de compra
+- **clones:** [[PED-230 - APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un|PED-230]] APP - Feat - Editar precio, se debe poder ingresar un precio a mano para un item determinado
 
 ## Descripcion
 

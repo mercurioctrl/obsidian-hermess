@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-848"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **has action item:** [[PED-849]] API - Refactor - Agregar al el calculo de precios el internalTax
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **has action item:** [[PED-849 - API - Refactor - Agregar al el calculo de precios el internalTax|PED-849]] API - Refactor - Agregar al el calculo de precios el internalTax
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-35"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **blocks:** [[PED-71]] APP - Feat - Crear un nueva orden para un cliente
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **blocks:** [[PED-71 - APP - Feat - Crear un nueva orden para un cliente|PED-71]] APP - Feat - Crear un nueva orden para un cliente
 
 ## Descripcion
 

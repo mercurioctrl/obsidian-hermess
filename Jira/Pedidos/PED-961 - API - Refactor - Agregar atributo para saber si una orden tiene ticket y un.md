@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-961"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **has action item:** [[PED-965]] APP - Refactor - Agregar "flag" o indicador para representar cuando una orden posee un ticket
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **has action item:** [[PED-965 - APP - Refactor - Agregar flag o indicador para representar cuando una orden|PED-965]] APP - Refactor - Agregar "flag" o indicador para representar cuando una orden posee un ticket
 
 ## Descripcion
 

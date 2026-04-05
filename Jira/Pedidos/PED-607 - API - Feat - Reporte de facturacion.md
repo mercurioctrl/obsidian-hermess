@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-607"
 
 ## Relaciones
 
-- **Padre:** [[PED-213]] Reportes de ventas
-- **blocks:** [[PED-608]] APP - Feat - Reporte de facturacion
-- **is blocked by:** [[PED-618]] API - Reporte de facturación - Incidencias varias
-- **relates to:** [[SNB-3624]] PED - Reporte de facturación -> Error al descargar
+- **Padre:** [[PED-213 - Reportes de ventas|PED-213]] Reportes de ventas
+- **blocks:** [[PED-608 - APP - Feat - Reporte de facturacion|PED-608]] APP - Feat - Reporte de facturacion
+- **is blocked by:** [[PED-618 - API - Reporte de facturación - Incidencias varias|PED-618]] API - Reporte de facturación - Incidencias varias
+- **relates to:** [[SNB-3624 - PED - Reporte de facturación - Error al descargar|SNB-3624]] PED - Reporte de facturación -> Error al descargar
 
 ## Descripcion
 

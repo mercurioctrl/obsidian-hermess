@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-416"
 
 ## Relaciones
 
-- **Padre:** [[PED-213]] Reportes de ventas
-- **blocks:** [[PED-417]] APP - Feat - reporte de stock y ventas -> filtro por marcas
+- **Padre:** [[PED-213 - Reportes de ventas|PED-213]] Reportes de ventas
+- **blocks:** [[PED-417 - APP - Feat - reporte de stock y ventas - filtro por marcas|PED-417]] APP - Feat - reporte de stock y ventas -> filtro por marcas
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-168"
 
 ## Relaciones
 
-- **blocks:** [[PED-10]] Login y credenciales 
+- **blocks:** [[PED-10 - Login y credenciales|PED-10]] Login y credenciales 
 
 ## Descripcion
 

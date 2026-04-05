@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-250"
 
 ## Relaciones
 
-- **blocks:** [[PED-198]] API - Feat - Cambio de cliente para ordenes pendientes
+- **blocks:** [[PED-198 - API - Feat - Cambio de cliente para ordenes pendientes|PED-198]] API - Feat - Cambio de cliente para ordenes pendientes
 
 ## Descripcion
 

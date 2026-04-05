@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1010"
 
 ## Relaciones
 
-- **relates to:** [[PED-1003]] API - MVP - Feat - Precios de venta anteriores para un cliente y producto predeterminados
+- **relates to:** [[PED-1003 - API - MVP - Feat - Precios de venta anteriores para un cliente y producto|PED-1003]] API - MVP - Feat - Precios de venta anteriores para un cliente y producto predeterminados
 
 ## Descripcion
 

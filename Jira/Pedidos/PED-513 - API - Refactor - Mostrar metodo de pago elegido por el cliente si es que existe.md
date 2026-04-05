@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-513"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-520]] API - Mostrar método de pago elegido por el cliente si es que existe - Sin descripción del método de pago
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-520 - API - Mostrar método de pago elegido por el cliente si es que existe - Sin|PED-520]] API - Mostrar método de pago elegido por el cliente si es que existe - Sin descripción del método de pago
 
 ## Descripcion
 

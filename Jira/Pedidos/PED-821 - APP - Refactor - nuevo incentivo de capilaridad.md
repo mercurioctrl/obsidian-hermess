@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-821"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-820]] API - Refactor - Incentivo de capilaridad reactivo a cantidad de ventas de las marcas especificadas
-- **is blocked by:** [[MKT-215]] NB_ FLOR DE INCENTIVO
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-820 - API - Refactor - Incentivo de capilaridad reactivo a cantidad de ventas de las|PED-820]] API - Refactor - Incentivo de capilaridad reactivo a cantidad de ventas de las marcas especificadas
+- **is blocked by:** [[MKT-215 - NB_ FLOR DE INCENTIVO|MKT-215]] NB_ FLOR DE INCENTIVO
 
 ## Descripcion
 

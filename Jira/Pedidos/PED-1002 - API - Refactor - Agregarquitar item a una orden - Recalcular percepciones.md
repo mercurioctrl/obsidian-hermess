@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1002"
 
 ## Relaciones
 
-- **relates to:** [[PED-39]] API - Feat - Agregar/quitar item a una orden
-- **relates to:** [[PED-993]] APP - Refactor - Agregar percepciones ARBA como un atributo diferenciado al momento de ver el detalle de la orden
+- **relates to:** [[PED-39 - API - Feat - Agregarquitar item a una orden|PED-39]] API - Feat - Agregar/quitar item a una orden
+- **relates to:** [[PED-993 - APP - Refactor - Agregar percepciones ARBA como un atributo diferenciado al|PED-993]] APP - Refactor - Agregar percepciones ARBA como un atributo diferenciado al momento de ver el detalle de la orden
 
 ## Descripcion
 

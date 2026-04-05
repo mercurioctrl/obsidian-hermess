@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-598"
 
 ## Relaciones
 
-- **Padre:** [[PED-596]] Pedido + Info
+- **Padre:** [[PED-596 - Pedido + Info|PED-596]] Pedido + Info
 
 ## Descripcion
 

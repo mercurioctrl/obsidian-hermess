@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1092"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **has action item:** [[SNB-3287]] VER LISTA DE CONECTADOS DE LA API
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **has action item:** [[SNB-3287 - VER LISTA DE CONECTADOS DE LA API|SNB-3287]] VER LISTA DE CONECTADOS DE LA API
 
 ## Descripcion
 

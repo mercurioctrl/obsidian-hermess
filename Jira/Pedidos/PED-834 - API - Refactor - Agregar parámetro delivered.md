@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-834"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **has action item:** [[PED-835]] APP - Refactor - Agregar filtro y estado "Envio entregado"
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **has action item:** [[PED-835 - APP - Refactor - Agregar filtro y estado Envio entregado|PED-835]] APP - Refactor - Agregar filtro y estado "Envio entregado"
 
 ## Descripcion
 

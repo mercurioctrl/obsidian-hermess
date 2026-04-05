@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-393"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-394]] APP - Refactor - Agregaremos la direccion completa a el modal de pedido
-- **blocks:** [[PED-431]] API - Review - Revisar calculo de utilidad en "ver detalle de pedido"
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-394 - APP - Refactor - Agregaremos la direccion completa a el modal de pedido|PED-394]] APP - Refactor - Agregaremos la direccion completa a el modal de pedido
+- **blocks:** [[PED-431 - API - Review - Revisar calculo de utilidad en ver detalle de pedido|PED-431]] API - Review - Revisar calculo de utilidad en "ver detalle de pedido"
 
 ## Descripcion
 

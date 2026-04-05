@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-656"
 
 ## Relaciones
 
-- **Padre:** [[PED-646]] Dropshipping
-- **blocks:** [[PED-657]] APP - Feat - Marcar una orden como dropShipping
+- **Padre:** [[PED-646 - Dropshipping|PED-646]] Dropshipping
+- **blocks:** [[PED-657 - APP - Feat - Marcar una orden como dropShipping|PED-657]] APP - Feat - Marcar una orden como dropShipping
 
 ## Descripcion
 

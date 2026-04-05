@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-726"
 
 ## Relaciones
 
-- **Padre:** [[PED-724]] Modal "Venta Market Place LO"
-- **is blocked by:** [[PED-733]] APP - Mostrar modal "Venta Market Place: Libre Opcion" - Datos no visibles
+- **Padre:** [[PED-724 - Modal Venta Market Place LO|PED-724]] Modal "Venta Market Place LO"
+- **is blocked by:** [[PED-733 - APP - Mostrar modal Venta Market Place Libre Opcion - Datos no visibles|PED-733]] APP - Mostrar modal "Venta Market Place: Libre Opcion" - Datos no visibles
 
 ## Descripcion
 

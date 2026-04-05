@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-691"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **blocks:** [[PED-692]] APP - Feat - Agregar el boton para autorizar un pedido de libre opcion cuando tiene comprobante de banco
-- **is blocked by:** [[PED-702]] API - Autorizar pedido liquidado con comprobante y de LO - Datos del comprobante completos
-- **relates to:** [[PED-740]] API - Refactor - Autorizar pedido liquidado con comprobante de LO - Considerar sobrante del monto transferido
-- **blocks:** [[LIO-56]] API - PED - Refactor - Al hacer una autorizacion (ID_STATUS = 2) para un PEDIDO DE LIBRE OPCION debe marcarse como cobrado tambien en libre opcion
-- **has action item:** [[PED-979]] API - Refactor - Al autorizar un pedido de banco (casos especificos de LO) marcaremos el movimiento de billetera
-- **has action item:** [[PED-982]] API - Refactor - Guardar cotización al autorizar un pago de Libre Opción con comprobante (Billetera Lo)
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **blocks:** [[PED-692 - APP - Feat - Agregar el boton para autorizar un pedido de libre opcion cuando|PED-692]] APP - Feat - Agregar el boton para autorizar un pedido de libre opcion cuando tiene comprobante de banco
+- **is blocked by:** [[PED-702 - API - Autorizar pedido liquidado con comprobante y de LO - Datos del|PED-702]] API - Autorizar pedido liquidado con comprobante y de LO - Datos del comprobante completos
+- **relates to:** [[PED-740 - API - Refactor - Autorizar pedido liquidado con comprobante de LO - Considerar|PED-740]] API - Refactor - Autorizar pedido liquidado con comprobante de LO - Considerar sobrante del monto transferido
+- **blocks:** [[LIO-56 - API - PED - Refactor - Al hacer una autorizacion (ID_STATUS = 2) para un PEDIDO|LIO-56]] API - PED - Refactor - Al hacer una autorizacion (ID_STATUS = 2) para un PEDIDO DE LIBRE OPCION debe marcarse como cobrado tambien en libre opcion
+- **has action item:** [[PED-979 - API - Refactor - Al autorizar un pedido de banco (casos especificos de LO)|PED-979]] API - Refactor - Al autorizar un pedido de banco (casos especificos de LO) marcaremos el movimiento de billetera
+- **has action item:** [[PED-982 - API - Refactor - Guardar cotización al autorizar un pago de Libre Opción con|PED-982]] API - Refactor - Guardar cotización al autorizar un pago de Libre Opción con comprobante (Billetera Lo)
 
 ## Descripcion
 

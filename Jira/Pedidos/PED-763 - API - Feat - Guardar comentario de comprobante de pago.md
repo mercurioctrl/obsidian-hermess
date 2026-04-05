@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-763"
 
 ## Relaciones
 
-- **Padre:** [[PED-761]] Comprobantes de pago
-- **blocks:** [[SNB-2150]] AGREGAR NOTAS EN LA SECCION DEL COMPROBANTE
-- **blocks:** [[PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
-- **relates to:** [[PED-780]] API - Guardar comentario de comprobante de pago - Sugerencia de mejora al eliminar comentario
+- **Padre:** [[PED-761 - Comprobantes de pago|PED-761]] Comprobantes de pago
+- **blocks:** [[SNB-2150 - AGREGAR NOTAS EN LA SECCION DEL COMPROBANTE|SNB-2150]] AGREGAR NOTAS EN LA SECCION DEL COMPROBANTE
+- **blocks:** [[PED-764 - APP - Refactor - Agregar comentario al modal de comprobante de pago|PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
+- **relates to:** [[PED-780 - API - Guardar comentario de comprobante de pago - Sugerencia de mejora al|PED-780]] API - Guardar comentario de comprobante de pago - Sugerencia de mejora al eliminar comentario
 
 ## Descripcion
 

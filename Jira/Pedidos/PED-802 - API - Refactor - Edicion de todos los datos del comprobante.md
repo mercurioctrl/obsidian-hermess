@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-802"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **blocks:** [[SNB-2233]] SUBIR   COMPROBANTE DE PAGO
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **blocks:** [[SNB-2233 - SUBIR COMPROBANTE DE PAGO|SNB-2233]] SUBIR   COMPROBANTE DE PAGO
 
 ## Descripcion
 

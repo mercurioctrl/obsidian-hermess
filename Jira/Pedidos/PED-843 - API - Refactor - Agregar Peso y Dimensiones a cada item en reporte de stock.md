@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-843"
 
 ## Relaciones
 
-- **Padre:** [[PED-213]] Reportes de ventas
+- **Padre:** [[PED-213 - Reportes de ventas|PED-213]] Reportes de ventas
 
 ## Descripcion
 

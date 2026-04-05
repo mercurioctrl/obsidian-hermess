@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-209"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-210]] APP - Feat - Filtros de ordenes -> Filtrar por Vendedores en pedido
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-210 - APP - Feat - Filtros de ordenes - Filtrar por Vendedores en pedido|PED-210]] APP - Feat - Filtros de ordenes -> Filtrar por Vendedores en pedido
 
 ## Descripcion
 

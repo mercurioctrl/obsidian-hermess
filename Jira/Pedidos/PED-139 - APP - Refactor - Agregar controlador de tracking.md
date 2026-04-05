@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-139"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-140]] API - Feat - Agregar recurso para leer etiquetas
-- **is blocked by:** [[PED-141]] API - Feat - Leer numeros de tracking
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-140 - API - Feat - Agregar recurso para leer etiquetas|PED-140]] API - Feat - Agregar recurso para leer etiquetas
+- **is blocked by:** [[PED-141 - API - Feat - Leer numeros de tracking|PED-141]] API - Feat - Leer numeros de tracking
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-544"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **blocks:** [[PED-541]] APP - Feat - Maquetar cotizacion de "Destino final para el transporte"
-- **relates to:** [[PED-554]] API - Destino final para el transporte - Eliminar destino final
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **blocks:** [[PED-541 - APP - Feat - Maquetar cotizacion de Destino final para el transporte|PED-541]] APP - Feat - Maquetar cotizacion de "Destino final para el transporte"
+- **relates to:** [[PED-554 - API - Destino final para el transporte - Eliminar destino final|PED-554]] API - Destino final para el transporte - Eliminar destino final
 
 ## Descripcion
 

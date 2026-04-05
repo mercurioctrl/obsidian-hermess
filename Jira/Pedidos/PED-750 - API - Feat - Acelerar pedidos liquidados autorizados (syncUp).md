@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-750"
 
 ## Relaciones
 
-- **Padre:** [[PED-748]] Incentivo 25 años
-- **blocks:** [[NBWEB-755]] APP - Feat - Ranking 
-- **is blocked by:** [[PED-755]] API - Acelerar pedidos liquidados autorizados (syncUp) - Error de Proxy
-- **has action item:** [[PED-1026]] API - Refactor - Se agregan pequeñas diferencias en las reglas de aceleracion para acciones travel
+- **Padre:** [[PED-748 - Incentivo 25 años|PED-748]] Incentivo 25 años
+- **blocks:** [[NBWEB-755 - APP - Feat - Ranking|NBWEB-755]] APP - Feat - Ranking 
+- **is blocked by:** [[PED-755 - API - Acelerar pedidos liquidados autorizados (syncUp) - Error de Proxy|PED-755]] API - Acelerar pedidos liquidados autorizados (syncUp) - Error de Proxy
+- **has action item:** [[PED-1026 - API - Refactor - Se agregan pequeñas diferencias en las reglas de aceleracion|PED-1026]] API - Refactor - Se agregan pequeñas diferencias en las reglas de aceleracion para acciones travel
 
 ## Descripcion
 

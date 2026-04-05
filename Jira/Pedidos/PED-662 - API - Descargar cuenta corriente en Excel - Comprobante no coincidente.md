@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-662"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **blocks:** [[PED-651]] Descargar excel cta corriente
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **blocks:** [[PED-651 - Descargar excel cta corriente|PED-651]] Descargar excel cta corriente
 
 ## Descripcion
 

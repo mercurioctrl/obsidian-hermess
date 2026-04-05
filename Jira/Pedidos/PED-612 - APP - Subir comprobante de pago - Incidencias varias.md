@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-612"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **blocks:** [[PED-587]] APP - Feat - Subir comprobante de pago
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **blocks:** [[PED-587 - APP - Feat - Subir comprobante de pago|PED-587]] APP - Feat - Subir comprobante de pago
 
 ## Descripcion
 

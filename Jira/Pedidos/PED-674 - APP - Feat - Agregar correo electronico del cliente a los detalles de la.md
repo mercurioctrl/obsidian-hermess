@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-674"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **is blocked by:** [[PED-673]] API - Feat - Agregar correo electronico del cliente a los detalles del pedido
-- **blocks:** [[SNB-1768]] PONER PALABRA CLAVE VISIBLE
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **is blocked by:** [[PED-673 - API - Feat - Agregar correo electronico del cliente a los detalles del pedido|PED-673]] API - Feat - Agregar correo electronico del cliente a los detalles del pedido
+- **blocks:** [[SNB-1768 - PONER PALABRA CLAVE VISIBLE|SNB-1768]] PONER PALABRA CLAVE VISIBLE
 
 ## Descripcion
 

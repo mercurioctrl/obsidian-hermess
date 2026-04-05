@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-297"
 
 ## Relaciones
 
-- **blocks:** [[PED-281]] API - Feat - Ticket Promedio
+- **blocks:** [[PED-281 - API - Feat - Ticket Promedio|PED-281]] API - Feat - Ticket Promedio
 
 ## Descripcion
 

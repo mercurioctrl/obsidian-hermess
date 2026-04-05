@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-723"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-1950]] LIQUIDACION DE RETIROS ERROR
+- **is blocked by:** [[SNB-1950 - LIQUIDACION DE RETIROS ERROR|SNB-1950]] LIQUIDACION DE RETIROS ERROR
 
 ## Descripcion
 

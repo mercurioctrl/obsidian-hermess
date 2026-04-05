@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-361"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **is blocked by:** [[PED-368]]   API - Los valores del listado deben estar sin IVA - Incidencias varias
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **is blocked by:** [[PED-368 - API - Los valores del listado deben estar sin IVA - Incidencias varias|PED-368]]   API - Los valores del listado deben estar sin IVA - Incidencias varias
 
 ## Descripcion
 

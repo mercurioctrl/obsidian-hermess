@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1046"
 
 ## Relaciones
 
-- **Padre:** [[PED-915]] MercadoLibre
-- **action item from:** [[PED-1043]] API - Refactor - Agregar MLA al recurso de las ordenes
+- **Padre:** [[PED-915 - MercadoLibre|PED-915]] MercadoLibre
+- **action item from:** [[PED-1043 - API - Refactor - Agregar MLA al recurso de las ordenes|PED-1043]] API - Refactor - Agregar MLA al recurso de las ordenes
 
 ## Descripcion
 

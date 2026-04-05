@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-313"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-314]] APP - Refactor - Ver detalle de una orden -> Agregar lista de prcio
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-314 - APP - Refactor - Ver detalle de una orden - Agregar lista de prcio|PED-314]] APP - Refactor - Ver detalle de una orden -> Agregar lista de prcio
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-453"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-83]] APP - Feat - Ver detalle de una orden de compra
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-83 - APP - Feat - Ver detalle de una orden de compra|PED-83]] APP - Feat - Ver detalle de una orden de compra
 
 ## Descripcion
 

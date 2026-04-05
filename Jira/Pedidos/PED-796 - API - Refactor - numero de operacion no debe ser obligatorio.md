@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-796"
 
 ## Relaciones
 
-- **Padre:** [[PED-729]] Comprobante de pago y autorizacion
+- **Padre:** [[PED-729 - Comprobante de pago y autorizacion|PED-729]] Comprobante de pago y autorizacion
 
 ## Descripcion
 

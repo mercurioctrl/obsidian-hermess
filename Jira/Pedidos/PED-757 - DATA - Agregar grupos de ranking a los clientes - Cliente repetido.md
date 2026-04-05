@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-757"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **blocks:** [[PED-752]] DATA - Agregar grupos a los clientes en tabla cliente de DEV y PROD
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **blocks:** [[PED-752 - DATA - Agregar grupos a los clientes en tabla cliente de DEV y PROD|PED-752]] DATA - Agregar grupos a los clientes en tabla cliente de DEV y PROD
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1045"
 
 ## Relaciones
 
-- **Padre:** [[PED-761]] Comprobantes de pago
+- **Padre:** [[PED-761 - Comprobantes de pago|PED-761]] Comprobantes de pago
 
 ## Descripcion
 

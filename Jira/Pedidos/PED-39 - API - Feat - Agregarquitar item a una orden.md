@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-39"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **blocks:** [[PED-72]] APP - Feat - Listar productos 
-- **blocks:** [[PED-84]] APP - Feat - Agregar / quitar item a una orden
-- **relates to:** [[PED-878]] API - Agregar/quitar item a una orden - Error al editar cantidad de artículos 
-- **relates to:** [[PED-989]] API - Review - Probar actualización de renta al cambiar el costo
-- **relates to:** [[PED-1002]] API - Refactor - Agregar/quitar item a una orden - Recalcular percepciones
-- **relates to:** [[PED-1153]] APP - Review - Agregar/quitar item a una orden -> Error al editar un articulo
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **blocks:** [[PED-72 - APP - Feat - Listar productos|PED-72]] APP - Feat - Listar productos 
+- **blocks:** [[PED-84 - APP - Feat - Agregar quitar item a una orden|PED-84]] APP - Feat - Agregar / quitar item a una orden
+- **relates to:** [[PED-878 - API - Agregarquitar item a una orden - Error al editar cantidad de artículos|PED-878]] API - Agregar/quitar item a una orden - Error al editar cantidad de artículos 
+- **relates to:** [[PED-989 - API - Review - Probar actualización de renta al cambiar el costo|PED-989]] API - Review - Probar actualización de renta al cambiar el costo
+- **relates to:** [[PED-1002 - API - Refactor - Agregarquitar item a una orden - Recalcular percepciones|PED-1002]] API - Refactor - Agregar/quitar item a una orden - Recalcular percepciones
+- **relates to:** [[PED-1153 - APP - Review - Agregarquitar item a una orden - Error al editar un articulo|PED-1153]] APP - Review - Agregar/quitar item a una orden -> Error al editar un articulo
 
 ## Descripcion
 

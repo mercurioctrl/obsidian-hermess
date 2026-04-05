@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-93"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **is blocked by:** [[PED-74]] API - Feat - Obtener datos para editar orden
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **is blocked by:** [[PED-74 - API - Feat - Obtener datos para editar orden|PED-74]] API - Feat - Obtener datos para editar orden
 
 ## Descripcion
 

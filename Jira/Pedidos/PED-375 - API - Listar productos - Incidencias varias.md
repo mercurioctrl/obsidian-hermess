@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-375"
 
 ## Relaciones
 
-- **relates to:** [[PED-66]] API - Feat - Listar productos
+- **relates to:** [[PED-66 - API - Feat - Listar productos|PED-66]] API - Feat - Listar productos
 
 ## Descripcion
 

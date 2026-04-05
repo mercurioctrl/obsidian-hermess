@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-280"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-424]]   APP - Refactor - Dashboard - Tasa de conversión
-- **relates to:** [[PED-981]] APP - Refactor - Dashboard -> Visualizar mensaje de error del total facturado
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-424 - APP - Refactor - Dashboard - Tasa de conversión|PED-424]]   APP - Refactor - Dashboard - Tasa de conversión
+- **relates to:** [[PED-981 - APP - Refactor - Dashboard - Visualizar mensaje de error del total facturado|PED-981]] APP - Refactor - Dashboard -> Visualizar mensaje de error del total facturado
 
 ## Descripcion
 

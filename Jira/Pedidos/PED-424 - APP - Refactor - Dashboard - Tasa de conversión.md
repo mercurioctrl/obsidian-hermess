@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-424"
 
 ## Relaciones
 
-- **blocks:** [[PED-280]] APP - Feat - Dashboard
+- **blocks:** [[PED-280 - APP - Feat - Dashboard|PED-280]] APP - Feat - Dashboard
 
 ## Descripcion
 

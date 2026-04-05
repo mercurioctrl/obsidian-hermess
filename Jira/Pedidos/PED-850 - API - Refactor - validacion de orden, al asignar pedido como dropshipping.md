@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-850"
 
 ## Relaciones
 
-- **action item from:** [[SNB-2452]] Error dropshipping
+- **action item from:** [[SNB-2452 - Error dropshipping|SNB-2452]] Error dropshipping
 
 ## Descripcion
 

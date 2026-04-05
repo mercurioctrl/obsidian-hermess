@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-772"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[SNB-2090]] SUGERENCIA
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[SNB-2090 - SUGERENCIA|SNB-2090]] SUGERENCIA
 
 ## Descripcion
 

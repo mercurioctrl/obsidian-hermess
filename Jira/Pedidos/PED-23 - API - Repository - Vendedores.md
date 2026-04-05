@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-23"
 
 ## Relaciones
 
-- **Padre:** [[PED-7]] Repositorios y base del proyecto
-- **blocks:** [[PED-25]] APP - Feat - Modal - Seteo de parámetros de cliente 
-- **blocks:** [[PED-210]] APP - Feat - Filtros de ordenes -> Filtrar por Vendedores en pedido
+- **Padre:** [[PED-7 - Repositorios y base del proyecto|PED-7]] Repositorios y base del proyecto
+- **blocks:** [[PED-25 - APP - Feat - Modal - Seteo de parámetros de cliente|PED-25]] APP - Feat - Modal - Seteo de parámetros de cliente 
+- **blocks:** [[PED-210 - APP - Feat - Filtros de ordenes - Filtrar por Vendedores en pedido|PED-210]] APP - Feat - Filtros de ordenes -> Filtrar por Vendedores en pedido
 
 ## Descripcion
 

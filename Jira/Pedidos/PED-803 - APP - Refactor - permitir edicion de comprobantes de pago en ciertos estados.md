@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-803"
 
 ## Relaciones
 
-- **causes:** [[SNB-2233]] SUBIR   COMPROBANTE DE PAGO
+- **causes:** [[SNB-2233 - SUBIR COMPROBANTE DE PAGO|SNB-2233]] SUBIR   COMPROBANTE DE PAGO
 
 ## Descripcion
 

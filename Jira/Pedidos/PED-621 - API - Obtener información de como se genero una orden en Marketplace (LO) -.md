@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-621"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-725]] API - Feat - Recurso para obtener la informacion completa tal como se genero en el market place (LO)
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-725 - API - Feat - Recurso para obtener la informacion completa tal como se genero en|PED-725]] API - Feat - Recurso para obtener la informacion completa tal como se genero en el market place (LO)
 
 ## Descripcion
 

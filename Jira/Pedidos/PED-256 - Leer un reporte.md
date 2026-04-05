@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-256"
 
 ## Relaciones
 
-- **Padre:** [[PED-252]] Integración Soporte (Jira)
-- **Subtarea:** [[PED-378]] API - Review - ¿Se puede visualizar cuando pones enlaces? Aca inserte un enlace de dos formas diferentes, pero la primera no aparece
-- **Subtarea:** [[PED-419]] API - Refactor - Obtener URL del texto insertado
-- **Subtarea:** [[PED-488]] APP - Review - Al intentar ampliar una imagen, la borran sin querer.
-- **Subtarea:** [[PED-489]] APP - Review - En resoluciones chicas, no se lee len los comentarios cuando el "issue" es muy largo.
+- **Padre:** [[PED-252 - Integración Soporte (Jira)|PED-252]] Integración Soporte (Jira)
+- **Subtarea:** [[PED-378 - API - Review - ¿Se puede visualizar cuando pones enlaces Aca inserte un enlace|PED-378]] API - Review - ¿Se puede visualizar cuando pones enlaces? Aca inserte un enlace de dos formas diferentes, pero la primera no aparece
+- **Subtarea:** [[PED-419 - API - Refactor - Obtener URL del texto insertado|PED-419]] API - Refactor - Obtener URL del texto insertado
+- **Subtarea:** [[PED-488 - APP - Review - Al intentar ampliar una imagen, la borran sin querer.|PED-488]] APP - Review - Al intentar ampliar una imagen, la borran sin querer.
+- **Subtarea:** [[PED-489 - APP - Review - En resoluciones chicas, no se lee len los comentarios cuando el|PED-489]] APP - Review - En resoluciones chicas, no se lee len los comentarios cuando el "issue" es muy largo.
 
 ## Descripcion
 

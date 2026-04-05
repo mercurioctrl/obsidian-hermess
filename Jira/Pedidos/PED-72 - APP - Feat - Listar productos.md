@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-72"
 
 ## Relaciones
 
-- **Padre:** [[PED-65]] Listado de productos
-- **is blocked by:** [[PED-66]] API - Feat - Listar productos
-- **is blocked by:** [[PED-69]] API - Feat - Listar productos -> Filtros
-- **is blocked by:** [[PED-39]] API - Feat - Agregar/quitar item a una orden
+- **Padre:** [[PED-65 - Listado de productos|PED-65]] Listado de productos
+- **is blocked by:** [[PED-66 - API - Feat - Listar productos|PED-66]] API - Feat - Listar productos
+- **is blocked by:** [[PED-69 - API - Feat - Listar productos - Filtros|PED-69]] API - Feat - Listar productos -> Filtros
+- **is blocked by:** [[PED-39 - API - Feat - Agregarquitar item a una orden|PED-39]] API - Feat - Agregar/quitar item a una orden
 
 ## Descripcion
 

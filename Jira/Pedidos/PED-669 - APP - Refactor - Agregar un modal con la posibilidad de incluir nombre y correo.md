@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-669"
 
 ## Relaciones
 
-- **Padre:** [[PED-646]] Dropshipping
-- **is blocked by:** [[PED-668]] API - Refactor - Agregar nombre y mail al recurso para marcar dropshipping
+- **Padre:** [[PED-646 - Dropshipping|PED-646]] Dropshipping
+- **is blocked by:** [[PED-668 - API - Refactor - Agregar nombre y mail al recurso para marcar dropshipping|PED-668]] API - Refactor - Agregar nombre y mail al recurso para marcar dropshipping
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-441"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **blocks:** [[PED-443]] APP - Feat - Eliminar envio de una orden
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **blocks:** [[PED-443 - APP - Feat - Eliminar envio de una orden|PED-443]] APP - Feat - Eliminar envio de una orden
 
 ## Descripcion
 

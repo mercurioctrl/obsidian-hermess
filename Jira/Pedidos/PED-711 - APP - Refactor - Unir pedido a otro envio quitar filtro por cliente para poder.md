@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-711"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is caused by:** [[SNB-1871]] ASOCIAR PEDIDOS A CAMIONETA
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is caused by:** [[SNB-1871 - ASOCIAR PEDIDOS A CAMIONETA|SNB-1871]] ASOCIAR PEDIDOS A CAMIONETA
 
 ## Descripcion
 

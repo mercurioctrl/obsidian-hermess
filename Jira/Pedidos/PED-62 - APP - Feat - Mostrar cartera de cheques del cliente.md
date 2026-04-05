@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-62"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **is blocked by:** [[PED-57]] API - Feat - Cartera de cheques del cliente
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **is blocked by:** [[PED-57 - API - Feat - Cartera de cheques del cliente|PED-57]] API - Feat - Cartera de cheques del cliente
 
 ## Descripcion
 

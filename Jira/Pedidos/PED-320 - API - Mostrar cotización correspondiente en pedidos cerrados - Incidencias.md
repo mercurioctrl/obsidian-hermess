@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-320"
 
 ## Relaciones
 
-- **blocks:** [[PED-279]] API - Refactor - Mostrar cotización correspondiente en Pedidos Cerrados.
+- **blocks:** [[PED-279 - API - Refactor - Mostrar cotización correspondiente en Pedidos Cerrados.|PED-279]] API - Refactor - Mostrar cotización correspondiente en Pedidos Cerrados.
 
 ## Descripcion
 

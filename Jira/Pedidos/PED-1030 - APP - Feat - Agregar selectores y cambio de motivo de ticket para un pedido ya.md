@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1030"
 
 ## Relaciones
 
-- **Padre:** [[PED-960]] Tickets de pedido
-- **has action item:** [[SNB-3151]] FILTRO DE TICKET
-- **action item from:** [[PED-1027]] API - Feat - Repositorio de motivo de ticket
-- **action item from:** [[PED-1028]] API - Feat - Repositorio de tipos de ticket
-- **action item from:** [[PED-1029]] API - Feat - Cambiar motivo de ticket para un pedido ya realizado
+- **Padre:** [[PED-960 - Tickets de pedido|PED-960]] Tickets de pedido
+- **has action item:** [[SNB-3151 - FILTRO DE TICKET|SNB-3151]] FILTRO DE TICKET
+- **action item from:** [[PED-1027 - API - Feat - Repositorio de motivo de ticket|PED-1027]] API - Feat - Repositorio de motivo de ticket
+- **action item from:** [[PED-1028 - API - Feat - Repositorio de tipos de ticket|PED-1028]] API - Feat - Repositorio de tipos de ticket
+- **action item from:** [[PED-1029 - API - Feat - Cambiar motivo de ticket para un pedido ya realizado|PED-1029]] API - Feat - Cambiar motivo de ticket para un pedido ya realizado
 
 ## Descripcion
 

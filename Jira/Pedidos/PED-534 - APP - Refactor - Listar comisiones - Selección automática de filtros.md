@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-534"
 
 ## Relaciones
 
-- **Padre:** [[PED-174]] Listar comisiones
-- **relates to:** [[PED-176]] APP - Feat - Listar comisiones
-- **relates to:** [[PED-533]] APP - Accionable para ver las comisiones directamente - Fechas no coincidentes
+- **Padre:** [[PED-174 - Listar comisiones|PED-174]] Listar comisiones
+- **relates to:** [[PED-176 - APP - Feat - Listar comisiones|PED-176]] APP - Feat - Listar comisiones
+- **relates to:** [[PED-533 - APP - Accionable para ver las comisiones directamente - Fechas no coincidentes|PED-533]] APP - Accionable para ver las comisiones directamente - Fechas no coincidentes
 
 ## Descripcion
 

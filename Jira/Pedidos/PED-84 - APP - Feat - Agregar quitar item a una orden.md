@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-84"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **is blocked by:** [[PED-39]] API - Feat - Agregar/quitar item a una orden
-- **blocks:** [[PED-110]] APP - Feat - Editar precio de un pedido y cantidad (Solo muestro esto cuando el pedido esta pendiente)
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **is blocked by:** [[PED-39 - API - Feat - Agregarquitar item a una orden|PED-39]] API - Feat - Agregar/quitar item a una orden
+- **blocks:** [[PED-110 - APP - Feat - Editar precio de un pedido y cantidad (Solo muestro esto cuando el|PED-110]] APP - Feat - Editar precio de un pedido y cantidad (Solo muestro esto cuando el pedido esta pendiente)
 
 ## Descripcion
 

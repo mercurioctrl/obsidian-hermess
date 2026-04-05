@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-389"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-390]] APP - Feat - Listar clientes -> Conjunto de filtros ordenar por y sentido del orden
-- **is blocked by:** [[PED-404]]   API - Listar clientes -> Filtrado - Incidencias varias
-- **relates to:** [[PED-463]] API - Refactor - Listar clientes -> Filtro por ultima compra 
-- **relates to:** [[PED-517]] API - Listar clientes -> Filtrado - Error al enlazar columnas
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-390 - APP - Feat - Listar clientes - Conjunto de filtros ordenar por y sentido del|PED-390]] APP - Feat - Listar clientes -> Conjunto de filtros ordenar por y sentido del orden
+- **is blocked by:** [[PED-404 - API - Listar clientes - Filtrado - Incidencias varias|PED-404]]   API - Listar clientes -> Filtrado - Incidencias varias
+- **relates to:** [[PED-463 - API - Refactor - Listar clientes - Filtro por ultima compra|PED-463]] API - Refactor - Listar clientes -> Filtro por ultima compra 
+- **relates to:** [[PED-517 - API - Listar clientes - Filtrado - Error al enlazar columnas|PED-517]] API - Listar clientes -> Filtrado - Error al enlazar columnas
 
 ## Descripcion
 

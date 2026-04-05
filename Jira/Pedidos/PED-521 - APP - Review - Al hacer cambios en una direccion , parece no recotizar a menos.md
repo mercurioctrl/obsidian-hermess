@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-521"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **relates to:** [[PED-535]] APP - No se recotiza al cambiar la dirección predeterminada
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **relates to:** [[PED-535 - APP - No se recotiza al cambiar la dirección predeterminada|PED-535]] APP - No se recotiza al cambiar la dirección predeterminada
 
 ## Descripcion
 

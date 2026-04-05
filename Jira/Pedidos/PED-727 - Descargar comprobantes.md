@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-727"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **Subtarea:** [[PED-728]] APP - Review - No descarga comprobantes desde el listado (si cuando abris el comprobante)
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **Subtarea:** [[PED-728 - APP - Review - No descarga comprobantes desde el listado (si cuando abris el|PED-728]] APP - Review - No descarga comprobantes desde el listado (si cuando abris el comprobante)
 
 ## Descripcion
 

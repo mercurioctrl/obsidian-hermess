@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-623"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-650]] APP - Mostrar fecha explicita de la cual se está filtrando - Establecer fecha estática 
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-650 - APP - Mostrar fecha explicita de la cual se está filtrando - Establecer fecha|PED-650]] APP - Mostrar fecha explicita de la cual se está filtrando - Establecer fecha estática 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-260"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-295]] API - Tasa de conversión - Incidencias varias
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-295 - API - Tasa de conversión - Incidencias varias|PED-295]] API - Tasa de conversión - Incidencias varias
 
 ## Descripcion
 

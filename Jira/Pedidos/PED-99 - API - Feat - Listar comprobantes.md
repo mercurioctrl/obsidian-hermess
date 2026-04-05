@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-99"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **blocks:** [[PED-100]] APP - Feat - Listar comprobantes
-- **blocks:** [[PED-162]] API - Feat - Filtrar por tipo de comprobante
-- **has action item:** [[PED-1166]] API - MVP - Refactor - Agregar companyCode al objeto que devuelve el repositorio de comprobantes
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **blocks:** [[PED-100 - APP - Feat - Listar comprobantes|PED-100]] APP - Feat - Listar comprobantes
+- **blocks:** [[PED-162 - API - Feat - Filtrar por tipo de comprobante|PED-162]] API - Feat - Filtrar por tipo de comprobante
+- **has action item:** [[PED-1166 - API - MVP - Refactor - Agregar companyCode al objeto que devuelve el|PED-1166]] API - MVP - Refactor - Agregar companyCode al objeto que devuelve el repositorio de comprobantes
 
 ## Descripcion
 

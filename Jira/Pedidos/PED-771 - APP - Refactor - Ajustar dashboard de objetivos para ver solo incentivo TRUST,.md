@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-771"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **blocks:** [[MKT-187]] NB_ INCENTIVO TRUST Y ACELERADOR
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **blocks:** [[MKT-187 - NB_ INCENTIVO TRUST Y ACELERADOR|MKT-187]] NB_ INCENTIVO TRUST Y ACELERADOR
 
 ## Descripcion
 

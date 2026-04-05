@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-904"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **has action item:** [[PED-905]] APP - Refactor - Agregar utilidad extra o "specialPrice" al modal de parámetros del cliente
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **has action item:** [[PED-905 - APP - Refactor - Agregar utilidad extra o specialPrice al modal de parámetros|PED-905]] APP - Refactor - Agregar utilidad extra o "specialPrice" al modal de parámetros del cliente
 
 ## Descripcion
 

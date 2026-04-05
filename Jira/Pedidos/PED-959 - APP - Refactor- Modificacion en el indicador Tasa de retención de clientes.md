@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-959"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **relates to:** [[PED-246]] API - Feat - Tasa de retención de clientes
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **relates to:** [[PED-246 - API - Feat - Tasa de retención de clientes|PED-246]] API - Feat - Tasa de retención de clientes
 
 ## Descripcion
 

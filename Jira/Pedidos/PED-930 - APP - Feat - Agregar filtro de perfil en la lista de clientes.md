@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-930"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **action item from:** [[PED-928]] API - Refactor - Agregar el parámetro "perfil" al repositorio de clientes
-- **action item from:** [[PED-929]] API - Feat - Agregar tabla complementaria de perfiles y repositorio de perfiles
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **action item from:** [[PED-928 - API - Refactor - Agregar el parámetro perfil al repositorio de clientes|PED-928]] API - Refactor - Agregar el parámetro "perfil" al repositorio de clientes
+- **action item from:** [[PED-929 - API - Feat - Agregar tabla complementaria de perfiles y repositorio de perfiles|PED-929]] API - Feat - Agregar tabla complementaria de perfiles y repositorio de perfiles
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-704"
 
 ## Relaciones
 
-- **Padre:** [[PED-584]] Comprobantes de pago
-- **is blocked by:** [[PED-705]] API - Refactor - agregar campo destino bancario para recurso de comprobante
-- **relates to:** [[PED-707]] APP - Modal de Comprobante - Oportunidad de mejora en legibilidad del texto
+- **Padre:** [[PED-584 - Comprobantes de pago|PED-584]] Comprobantes de pago
+- **is blocked by:** [[PED-705 - API - Refactor - agregar campo destino bancario para recurso de comprobante|PED-705]] API - Refactor - agregar campo destino bancario para recurso de comprobante
+- **relates to:** [[PED-707 - APP - Modal de Comprobante - Oportunidad de mejora en legibilidad del texto|PED-707]] APP - Modal de Comprobante - Oportunidad de mejora en legibilidad del texto
 
 ## Descripcion
 

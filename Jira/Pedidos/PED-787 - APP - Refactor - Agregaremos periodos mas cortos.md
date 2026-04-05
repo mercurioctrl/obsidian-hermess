@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-787"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[NBWEB-823]] APP - Filtrado de productos - Marcas no visibles por categoría
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[NBWEB-823 - APP - Filtrado de productos - Marcas no visibles por categoría|NBWEB-823]] APP - Filtrado de productos - Marcas no visibles por categoría
 
 ## Descripcion
 

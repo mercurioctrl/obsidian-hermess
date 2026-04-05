@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-329"
 
 ## Relaciones
 
-- **Padre:** [[PED-328]] Libre Opcion
-- **Subtarea:** [[PED-330]] API - Refactor - Agregar atributo idLo a pedclit y al repositorio de ordenes
-- **Subtarea:** [[PED-331]] API - Refactor - Al crear un pedido de libre opcion en pedclit, agregaremos idLo
-- **Subtarea:** [[PED-458]] API - Feat - Obtener comprobante de pago de libre opcion
-- **Subtarea:** [[PED-485]] APP - Feat - Mostrar modal con info de comprobante de pago
-- **Subtarea:** [[PED-575]] API - Feat - Agregar hash de mercadopago para mostrar comprobante
-- **Subtarea:** [[PED-718]] .
-- **Subtarea:** [[PED-739]] APP - Refactor - Mostrar modal con info de comprobante de pago - Ajuste en el texto del comprobante
+- **Padre:** [[PED-328 - Libre Opcion|PED-328]] Libre Opcion
+- **Subtarea:** [[PED-330 - API - Refactor - Agregar atributo idLo a pedclit y al repositorio de ordenes|PED-330]] API - Refactor - Agregar atributo idLo a pedclit y al repositorio de ordenes
+- **Subtarea:** [[PED-331 - API - Refactor - Al crear un pedido de libre opcion en pedclit, agregaremos idLo|PED-331]] API - Refactor - Al crear un pedido de libre opcion en pedclit, agregaremos idLo
+- **Subtarea:** [[PED-458 - API - Feat - Obtener comprobante de pago de libre opcion|PED-458]] API - Feat - Obtener comprobante de pago de libre opcion
+- **Subtarea:** [[PED-485 - APP - Feat - Mostrar modal con info de comprobante de pago|PED-485]] APP - Feat - Mostrar modal con info de comprobante de pago
+- **Subtarea:** [[PED-575 - API - Feat - Agregar hash de mercadopago para mostrar comprobante|PED-575]] API - Feat - Agregar hash de mercadopago para mostrar comprobante
+- **Subtarea:** [[PED-718 - .|PED-718]] .
+- **Subtarea:** [[PED-739 - APP - Refactor - Mostrar modal con info de comprobante de pago - Ajuste en el|PED-739]] APP - Refactor - Mostrar modal con info de comprobante de pago - Ajuste en el texto del comprobante
 
 ## Descripcion
 

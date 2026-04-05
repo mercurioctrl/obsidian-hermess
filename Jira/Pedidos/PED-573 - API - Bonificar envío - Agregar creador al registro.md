@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-573"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-566]] API - Feat - Bonificar envio
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-566 - API - Feat - Bonificar envio|PED-566]] API - Feat - Bonificar envio
 
 ## Descripcion
 

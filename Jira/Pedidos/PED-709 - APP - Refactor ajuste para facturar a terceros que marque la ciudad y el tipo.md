@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-709"
 
 ## Relaciones
 
-- **relates to:** [[PED-715]] APP - Búsqueda por AFIP - Oportunidad de mejora al mostrar resultados no encontrados
+- **relates to:** [[PED-715 - APP - Búsqueda por AFIP - Oportunidad de mejora al mostrar resultados no|PED-715]] APP - Búsqueda por AFIP - Oportunidad de mejora al mostrar resultados no encontrados
 
 ## Descripcion
 

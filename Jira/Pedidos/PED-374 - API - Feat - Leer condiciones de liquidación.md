@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-374"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **blocks:** [[PED-372]] APP - Feat - Guardar condiciones de liquidación (Sin liquidar)
-- **relates to:** [[PED-473]] API - Leer condiciones de liquidación - Condiciones no ingresadas
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **blocks:** [[PED-372 - APP - Feat - Guardar condiciones de liquidación (Sin liquidar)|PED-372]] APP - Feat - Guardar condiciones de liquidación (Sin liquidar)
+- **relates to:** [[PED-473 - API - Leer condiciones de liquidación - Condiciones no ingresadas|PED-473]] API - Leer condiciones de liquidación - Condiciones no ingresadas
 
 ## Descripcion
 

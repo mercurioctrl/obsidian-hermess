@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-360"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-949"
 
 ## Relaciones
 
-- **Padre:** [[PED-948]] Ordenes canceladas/eliminadas
-- **has action item:** [[PED-950]] APP - Refactor - Agregar cancelacion visual (estado , tachado, opaciodad o algo)
+- **Padre:** [[PED-948 - Ordenes canceladaseliminadas|PED-948]] Ordenes canceladas/eliminadas
+- **has action item:** [[PED-950 - APP - Refactor - Agregar cancelacion visual (estado , tachado, opaciodad o algo)|PED-950]] APP - Refactor - Agregar cancelacion visual (estado , tachado, opaciodad o algo)
 
 ## Descripcion
 

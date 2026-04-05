@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-346"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **blocks:** [[PED-315]] APP - Feat - Mostrar facturacion Totales
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **blocks:** [[PED-315 - APP - Feat - Mostrar facturacion Totales|PED-315]] APP - Feat - Mostrar facturacion Totales
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-140"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **blocks:** [[PED-139]] APP - Refactor - Agregar controlador de tracking
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **blocks:** [[PED-139 - APP - Refactor - Agregar controlador de tracking|PED-139]] APP - Refactor - Agregar controlador de tracking
 
 ## Descripcion
 

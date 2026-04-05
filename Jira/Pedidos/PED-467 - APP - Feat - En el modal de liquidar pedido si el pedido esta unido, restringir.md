@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-467"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **is blocked by:** [[PED-466]] DB - Agregar medio de envio "Unido a otro envio"
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **is blocked by:** [[PED-466 - DB - Agregar medio de envio Unido a otro envio|PED-466]] DB - Agregar medio de envio "Unido a otro envio"
 
 ## Descripcion
 

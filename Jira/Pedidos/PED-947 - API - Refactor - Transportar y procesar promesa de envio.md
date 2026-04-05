@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-947"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **action item from:** [[PED-946]] APP - Refactor - Transportar y procesar "promesa de envio"
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **action item from:** [[PED-946 - APP - Refactor - Transportar y procesar promesa de envio|PED-946]] APP - Refactor - Transportar y procesar "promesa de envio"
 
 ## Descripcion
 

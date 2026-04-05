@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-822"
 
 ## Relaciones
 
-- **Padre:** [[PED-6]] Comisiones
-- **relates to:** [[PED-818]] API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo requerimiento
+- **Padre:** [[PED-6 - Comisiones|PED-6]] Comisiones
+- **relates to:** [[PED-818 - API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo|PED-818]] API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo requerimiento
 
 ## Descripcion
 

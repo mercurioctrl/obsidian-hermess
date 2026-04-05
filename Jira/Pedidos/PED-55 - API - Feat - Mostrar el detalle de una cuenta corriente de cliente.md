@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-55"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **is blocked by:** [[PED-53]] Migracion a Laravel
-- **blocks:** [[PED-61]] APP - Feat - Mostrar cuenta corriente para un cliente determinado
-- **relates to:** [[SNB-1872]] me toma el valor en pesos de nota de crédito en dolares.
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **is blocked by:** [[PED-53 - Migracion a Laravel|PED-53]] Migracion a Laravel
+- **blocks:** [[PED-61 - APP - Feat - Mostrar cuenta corriente para un cliente determinado|PED-61]] APP - Feat - Mostrar cuenta corriente para un cliente determinado
+- **relates to:** [[SNB-1872 - me toma el valor en pesos de nota de crédito en dolares.|SNB-1872]] me toma el valor en pesos de nota de crédito en dolares.
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-819"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-818]] API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo requerimiento
-- **is blocked by:** [[MKT-215]] NB_ FLOR DE INCENTIVO
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-818 - API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo|PED-818]] API - Refactor - Modificar GetSellerObjectives para cumplir un nuevo requerimiento
+- **is blocked by:** [[MKT-215 - NB_ FLOR DE INCENTIVO|MKT-215]] NB_ FLOR DE INCENTIVO
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-882"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **Subtarea:** [[PED-883]] APP - Refactor - Agregar filtro empresa global
-- **Subtarea:** [[PED-885]] API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **Subtarea:** [[PED-883 - APP - Refactor - Agregar filtro empresa global|PED-883]] APP - Refactor - Agregar filtro empresa global
+- **Subtarea:** [[PED-885 - API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las|PED-885]] API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
 
 ## Descripcion
 

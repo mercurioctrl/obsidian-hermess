@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-248"
 
 ## Relaciones
 
-- **Padre:** [[PED-242]] Pestaña Estadisticas
-- **is blocked by:** [[PED-235]] API - Feat - Generar reporte de venta para Marcas
-- **is blocked by:** [[PED-215]] API - Feat - Generar reporte de stock y ventas por producto
+- **Padre:** [[PED-242 - Pestaña Estadisticas|PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-235 - API - Feat - Generar reporte de venta para Marcas|PED-235]] API - Feat - Generar reporte de venta para Marcas
+- **is blocked by:** [[PED-215 - API - Feat - Generar reporte de stock y ventas por producto|PED-215]] API - Feat - Generar reporte de stock y ventas por producto
 
 ## Descripcion
 

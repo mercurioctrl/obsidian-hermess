@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1047"
 
 ## Relaciones
 
-- **Padre:** [[PED-915]] MercadoLibre
-- **action item from:** [[PED-1044]] API - Refactor - Filtro MLA y atributos extra para el repositorio de pedidos
+- **Padre:** [[PED-915 - MercadoLibre|PED-915]] MercadoLibre
+- **action item from:** [[PED-1044 - API - Refactor - Filtro MLA y atributos extra para el repositorio de pedidos|PED-1044]] API - Refactor - Filtro MLA y atributos extra para el repositorio de pedidos
 
 ## Descripcion
 

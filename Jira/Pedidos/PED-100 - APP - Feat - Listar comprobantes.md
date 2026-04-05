@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-100"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **is blocked by:** [[PED-99]] API - Feat - Listar comprobantes
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **is blocked by:** [[PED-99 - API - Feat - Listar comprobantes|PED-99]] API - Feat - Listar comprobantes
 
 ## Descripcion
 

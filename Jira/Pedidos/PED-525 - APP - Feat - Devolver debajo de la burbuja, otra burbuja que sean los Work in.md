@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-525"
 
 ## Relaciones
 
-- **Padre:** [[PED-255]] Notificaciones
-- **is blocked by:** [[PED-524]] API- Feat - Al igual que se hizo con el estado "waiting for customer" contaremos aquellso reportes que estan en otros estados
+- **Padre:** [[PED-255 - Notificaciones|PED-255]] Notificaciones
+- **is blocked by:** [[PED-524 - API- Feat - Al igual que se hizo con el estado waiting for customer contaremos|PED-524]] API- Feat - Al igual que se hizo con el estado "waiting for customer" contaremos aquellso reportes que estan en otros estados
 
 ## Descripcion
 

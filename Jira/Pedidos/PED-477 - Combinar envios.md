@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-477"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **Subtarea:** [[PED-478]] API - Feat - Mostrar en el listado de ordenes si el pedido esta combinaod
-- **Subtarea:** [[PED-479]] APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **Subtarea:** [[PED-478 - API - Feat - Mostrar en el listado de ordenes si el pedido esta combinaod|PED-478]] API - Feat - Mostrar en el listado de ordenes si el pedido esta combinaod
+- **Subtarea:** [[PED-479 - APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado|PED-479]] APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado
 
 ## Descripcion
 

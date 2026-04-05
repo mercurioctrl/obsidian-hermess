@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-661"
 
 ## Relaciones
 
-- **Padre:** [[PED-213]] Reportes de ventas
-- **relates to:** [[SNB-1674]] REPORTE DE MEJORAS EN REPORTES DE FACTURACIÓN
+- **Padre:** [[PED-213 - Reportes de ventas|PED-213]] Reportes de ventas
+- **relates to:** [[SNB-1674 - REPORTE DE MEJORAS EN REPORTES DE FACTURACIÓN|SNB-1674]] REPORTE DE MEJORAS EN REPORTES DE FACTURACIÓN
 
 ## Descripcion
 

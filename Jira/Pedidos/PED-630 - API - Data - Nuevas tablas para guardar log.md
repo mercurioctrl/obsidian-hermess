@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-630"
 
 ## Relaciones
 
-- **Padre:** [[PED-629]] API - Feat - Historial de cambios de precio por escucha 
+- **Padre:** [[PED-629 - API - Feat - Historial de cambios de precio por escucha|PED-629]] API - Feat - Historial de cambios de precio por escucha 
 
 ## Descripcion
 

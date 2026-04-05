@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-555"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **blocks:** [[PED-550]] API - Refactor - Ver detalle de orden de compra -> Agregar stocks
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **blocks:** [[PED-550 - API - Refactor - Ver detalle de orden de compra - Agregar stocks|PED-550]] API - Refactor - Ver detalle de orden de compra -> Agregar stocks
 
 ## Descripcion
 

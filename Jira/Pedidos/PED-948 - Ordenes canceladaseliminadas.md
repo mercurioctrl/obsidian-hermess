@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-948"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **Subtarea:** [[PED-949]] API - Refactor - Agregar el parametro "cancelled" en el recurso "orders"
-- **Subtarea:** [[PED-950]] APP - Refactor - Agregar cancelacion visual (estado , tachado, opaciodad o algo)
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-949 - API - Refactor - Agregar el parametro cancelled en el recurso orders|PED-949]] API - Refactor - Agregar el parametro "cancelled" en el recurso "orders"
+- **Subtarea:** [[PED-950 - APP - Refactor - Agregar cancelacion visual (estado , tachado, opaciodad o algo)|PED-950]] APP - Refactor - Agregar cancelacion visual (estado , tachado, opaciodad o algo)
 
 ## Descripcion
 

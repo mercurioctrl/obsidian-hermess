@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-627"
 
 ## Relaciones
 
-- **Padre:** [[PED-149]] Reportes
-- **relates to:** [[PED-215]] API - Feat - Generar reporte de stock y ventas por producto
-- **relates to:** [[SNB-1653]] datos faltantes en reportes
+- **Padre:** [[PED-149 - Reportes|PED-149]] Reportes
+- **relates to:** [[PED-215 - API - Feat - Generar reporte de stock y ventas por producto|PED-215]] API - Feat - Generar reporte de stock y ventas por producto
+- **relates to:** [[SNB-1653 - datos faltantes en reportes|SNB-1653]] datos faltantes en reportes
 
 ## Descripcion
 

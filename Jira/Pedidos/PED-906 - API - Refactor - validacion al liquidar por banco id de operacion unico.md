@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-906"
 
 ## Relaciones
 
-- **action item from:** [[SNB-2654]] Numero de operación MP al liquidar no funciona correctamente
+- **action item from:** [[SNB-2654 - Numero de operación MP al liquidar no funciona correctamente|SNB-2654]] Numero de operación MP al liquidar no funciona correctamente
 
 ## Descripcion
 

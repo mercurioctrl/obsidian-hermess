@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-653"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **blocks:** [[PED-654]] APP - Feat - Hacer NC y Desvincular para refacturar un comprobante
-- **blocks:** [[SNB-1704]] ERA FACTURA A y salio B 
-- **blocks:** [[SNB-1695]] Por favor Re facturar
-- **is blocked by:** [[PED-688]] API - Nota de crédito para refacturar - No se reconoce el método implementado
-- **is blocked by:** [[PED-697]] API - Nota de crédito para refacturar - Registro de usuario
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **blocks:** [[PED-654 - APP - Feat - Hacer NC y Desvincular para refacturar un comprobante|PED-654]] APP - Feat - Hacer NC y Desvincular para refacturar un comprobante
+- **blocks:** [[SNB-1704 - ERA FACTURA A y salio B|SNB-1704]] ERA FACTURA A y salio B 
+- **blocks:** [[SNB-1695 - Por favor Re facturar|SNB-1695]] Por favor Re facturar
+- **is blocked by:** [[PED-688 - API - Nota de crédito para refacturar - No se reconoce el método implementado|PED-688]] API - Nota de crédito para refacturar - No se reconoce el método implementado
+- **is blocked by:** [[PED-697 - API - Nota de crédito para refacturar - Registro de usuario|PED-697]] API - Nota de crédito para refacturar - Registro de usuario
 
 ## Descripcion
 

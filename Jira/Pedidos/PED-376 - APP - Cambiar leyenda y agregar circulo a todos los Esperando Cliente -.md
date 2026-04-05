@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-376"
 
 ## Relaciones
 
-- **blocks:** [[PED-366]] Cambiar leyenda y agregar circulo a todos los "Esperando Cliente"
+- **blocks:** [[PED-366 - Cambiar leyenda y agregar circulo a todos los Esperando Cliente|PED-366]] Cambiar leyenda y agregar circulo a todos los "Esperando Cliente"
 
 ## Descripcion
 

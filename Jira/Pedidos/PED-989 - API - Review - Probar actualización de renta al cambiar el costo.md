@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-989"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **relates to:** [[PED-39]] API - Feat - Agregar/quitar item a una orden
-- **relates to:** [[PED-990]] APP - Refactor - Cambiar parámetro averageCost	por costForSale
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **relates to:** [[PED-39 - API - Feat - Agregarquitar item a una orden|PED-39]] API - Feat - Agregar/quitar item a una orden
+- **relates to:** [[PED-990 - APP - Refactor - Cambiar parámetro averageCost por costForSale|PED-990]] APP - Refactor - Cambiar parámetro averageCost	por costForSale
 
 ## Descripcion
 

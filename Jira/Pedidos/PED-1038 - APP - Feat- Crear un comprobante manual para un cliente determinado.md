@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1038"
 
 ## Relaciones
 
-- **Padre:** [[PED-1036]] Generar comprobantes manuales
-- **is blocked by:** [[PED-1037]] API - Feat- Crear un comprobante manual para un cliente determinado
+- **Padre:** [[PED-1036 - Generar comprobantes manuales|PED-1036]] Generar comprobantes manuales
+- **is blocked by:** [[PED-1037 - API - Feat- Crear un comprobante manual para un cliente determinado|PED-1037]] API - Feat- Crear un comprobante manual para un cliente determinado
 
 ## Descripcion
 

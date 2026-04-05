@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-384"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-387]] APP - Refactor - Agregaremos informacion del cliente al listado
-- **is blocked by:** [[PED-396]]   API - Agregar parámetros LTV al repositorio clientes - Incidencias varias
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-387 - APP - Refactor - Agregaremos informacion del cliente al listado|PED-387]] APP - Refactor - Agregaremos informacion del cliente al listado
+- **is blocked by:** [[PED-396 - API - Agregar parámetros LTV al repositorio clientes - Incidencias varias|PED-396]]   API - Agregar parámetros LTV al repositorio clientes - Incidencias varias
 
 ## Descripcion
 

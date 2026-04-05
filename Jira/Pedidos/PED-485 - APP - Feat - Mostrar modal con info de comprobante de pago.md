@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-485"
 
 ## Relaciones
 
-- **Padre:** [[PED-329]] Listado de ordenes
-- **is blocked by:** [[PED-458]] API - Feat - Obtener comprobante de pago de libre opcion
-- **is blocked by:** [[PED-496]] APP - Feat - Mostrar modal con info de comprobante de pago - Visualización del accionable
+- **Padre:** [[PED-329 - Listado de ordenes|PED-329]] Listado de ordenes
+- **is blocked by:** [[PED-458 - API - Feat - Obtener comprobante de pago de libre opcion|PED-458]] API - Feat - Obtener comprobante de pago de libre opcion
+- **is blocked by:** [[PED-496 - APP - Feat - Mostrar modal con info de comprobante de pago - Visualización del|PED-496]] APP - Feat - Mostrar modal con info de comprobante de pago - Visualización del accionable
 
 ## Descripcion
 

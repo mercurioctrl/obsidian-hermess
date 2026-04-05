@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-414"
 
 ## Relaciones
 
-- **Padre:** [[PED-174]] Listar comisiones
+- **Padre:** [[PED-174 - Listar comisiones|PED-174]] Listar comisiones
 
 ## Descripcion
 

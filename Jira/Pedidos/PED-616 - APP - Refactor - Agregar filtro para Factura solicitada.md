@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-616"
 
 ## Relaciones
 
-- **Padre:** [[PED-614]] Filtrar por request invoice LO 
-- **blocks:** [[SNB-1624]] FACTURACION
+- **Padre:** [[PED-614 - Filtrar por request invoice LO|PED-614]] Filtrar por request invoice LO 
+- **blocks:** [[SNB-1624 - FACTURACION|SNB-1624]] FACTURACION
 
 ## Descripcion
 

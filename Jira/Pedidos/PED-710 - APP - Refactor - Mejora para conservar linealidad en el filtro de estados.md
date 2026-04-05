@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-710"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **relates to:** [[PED-278]] APP - Refactor - Filtro con arreglo "harcodeado" para nuevos estados
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **relates to:** [[PED-278 - APP - Refactor - Filtro con arreglo harcodeado para nuevos estados|PED-278]] APP - Refactor - Filtro con arreglo "harcodeado" para nuevos estados
 
 ## Descripcion
 

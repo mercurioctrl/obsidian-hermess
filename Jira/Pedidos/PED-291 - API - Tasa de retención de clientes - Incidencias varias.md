@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-291"
 
 ## Relaciones
 
-- **blocks:** [[PED-246]] API - Feat - Tasa de retención de clientes
+- **blocks:** [[PED-246 - API - Feat - Tasa de retención de clientes|PED-246]] API - Feat - Tasa de retención de clientes
 
 ## Descripcion
 

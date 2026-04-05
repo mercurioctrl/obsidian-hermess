@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-905"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **action item from:** [[PED-904]] API - Refactor - Agregar specialPrice para visualizar y editar como parametro de los clientes
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **action item from:** [[PED-904 - API - Refactor - Agregar specialPrice para visualizar y editar como parametro|PED-904]] API - Refactor - Agregar specialPrice para visualizar y editar como parametro de los clientes
 
 ## Descripcion
 

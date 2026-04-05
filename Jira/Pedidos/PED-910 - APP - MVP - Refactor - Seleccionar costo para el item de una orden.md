@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-910"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
-- **action item from:** [[PED-909]] API - Feat - Repositorios de costos para un item determinado
-- **action item from:** [[PED-912]] API - Refactor - Agregar permiso de "Edicion de costo para una orden"
-- **action item from:** [[PED-913]] API - Refactor - Incluir costo promedio en el detalle de una orden para cada item
-- **is implemented by:** [[PED-925]] APP - MVP - Refactor - Guardar costo para el item de una orden
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
+- **action item from:** [[PED-909 - API - Feat - Repositorios de costos para un item determinado|PED-909]] API - Feat - Repositorios de costos para un item determinado
+- **action item from:** [[PED-912 - API - Refactor - Agregar permiso de Edicion de costo para una orden|PED-912]] API - Refactor - Agregar permiso de "Edicion de costo para una orden"
+- **action item from:** [[PED-913 - API - Refactor - Incluir costo promedio en el detalle de una orden para cada|PED-913]] API - Refactor - Incluir costo promedio en el detalle de una orden para cada item
+- **is implemented by:** [[PED-925 - APP - MVP - Refactor - Guardar costo para el item de una orden|PED-925]] APP - MVP - Refactor - Guardar costo para el item de una orden
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-550"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-551]] APP - Refactor - Ver detalle de orden de compra -> Marcar faltantes en caso de existir (casillero rojo)
-- **is blocked by:** [[PED-555]] API - Ver detalle de orden de compra -> Agregar stocks - Cantidades no coincidentes
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-551 - APP - Refactor - Ver detalle de orden de compra - Marcar faltantes en caso de|PED-551]] APP - Refactor - Ver detalle de orden de compra -> Marcar faltantes en caso de existir (casillero rojo)
+- **is blocked by:** [[PED-555 - API - Ver detalle de orden de compra - Agregar stocks - Cantidades no|PED-555]] API - Ver detalle de orden de compra -> Agregar stocks - Cantidades no coincidentes
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-951"
 
 ## Relaciones
 
-- **Padre:** [[PED-123]] Feat - Liquidar pedido
-- **action item from:** [[PED-152]] API - Feat - Desliquidar pedido
-- **has action item:** [[SNB-2785]] mejoras para el sistema
+- **Padre:** [[PED-123 - Feat - Liquidar pedido|PED-123]] Feat - Liquidar pedido
+- **action item from:** [[PED-152 - API - Feat - Desliquidar pedido|PED-152]] API - Feat - Desliquidar pedido
+- **has action item:** [[SNB-2785 - mejoras para el sistema|SNB-2785]] mejoras para el sistema
 
 ## Descripcion
 

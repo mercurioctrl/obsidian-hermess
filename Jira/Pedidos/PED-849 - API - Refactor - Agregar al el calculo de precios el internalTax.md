@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-849"
 
 ## Relaciones
 
-- **Padre:** [[PED-237]] Precios
-- **action item from:** [[PED-848]] DATA - Agregar parametros para impuestos internos
+- **Padre:** [[PED-237 - Precios|PED-237]] Precios
+- **action item from:** [[PED-848 - DATA - Agregar parametros para impuestos internos|PED-848]] DATA - Agregar parametros para impuestos internos
 
 ## Descripcion
 

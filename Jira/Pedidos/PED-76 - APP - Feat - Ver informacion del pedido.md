@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-76"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-75]] API - Feat - Ver informacion del pedido
-- **is blocked by:** [[PED-77]] API - Feat - Descargar txt en Ver Informacion del pedido
-- **is blocked by:** [[PED-78]] API - Feat - Enviar por whatsapp en ver informacion del pedido
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-75 - API - Feat - Ver informacion del pedido|PED-75]] API - Feat - Ver informacion del pedido
+- **is blocked by:** [[PED-77 - API - Feat - Descargar txt en Ver Informacion del pedido|PED-77]] API - Feat - Descargar txt en Ver Informacion del pedido
+- **is blocked by:** [[PED-78 - API - Feat - Enviar por whatsapp en ver informacion del pedido|PED-78]] API - Feat - Enviar por whatsapp en ver informacion del pedido
 
 ## Descripcion
 

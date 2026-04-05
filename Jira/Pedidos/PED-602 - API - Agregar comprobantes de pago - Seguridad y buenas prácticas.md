@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-602"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **blocks:** [[PED-585]] API - Feat - Agregar comprobantes de pago
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **blocks:** [[PED-585 - API - Feat - Agregar comprobantes de pago|PED-585]] API - Feat - Agregar comprobantes de pago
 
 ## Descripcion
 

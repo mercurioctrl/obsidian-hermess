@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-778"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **relates to:** [[PED-776]] APP - Refactor - Mostrar los aceleradores que estan disponibles
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **relates to:** [[PED-776 - APP - Refactor - Mostrar los aceleradores que estan disponibles|PED-776]] APP - Refactor - Mostrar los aceleradores que estan disponibles
 
 ## Descripcion
 

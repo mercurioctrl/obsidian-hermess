@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-423"
 
 ## Relaciones
 
-- **Padre:** [[PED-64]] Productos
-- **blocks:** [[PED-352]] API - Review - Algunos productos con stock, solo me los muestra cuando tildo "sin stock"
-- **is blocked by:** [[PED-413]] API - Refactor - Actualizaremos la columna nstock_reserva_pedidos para todos aquellos casos donde hay movimientos entre pedidos pendientes
+- **Padre:** [[PED-64 - Productos|PED-64]] Productos
+- **blocks:** [[PED-352 - API - Review - Algunos productos con stock, solo me los muestra cuando tildo|PED-352]] API - Review - Algunos productos con stock, solo me los muestra cuando tildo "sin stock"
+- **is blocked by:** [[PED-413 - API - Refactor - Actualizaremos la columna nstock_reserva_pedidos para todos|PED-413]] API - Refactor - Actualizaremos la columna nstock_reserva_pedidos para todos aquellos casos donde hay movimientos entre pedidos pendientes
 
 ## Descripcion
 

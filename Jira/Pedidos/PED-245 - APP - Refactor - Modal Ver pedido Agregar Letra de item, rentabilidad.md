@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-245"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-244]] API - Refactor - Ver detalle de una orden de compra -> Agregar "Letra" de item, rentabilidad porcentual y ganancia
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-244 - API - Refactor - Ver detalle de una orden de compra - Agregar Letra de item,|PED-244]] API - Refactor - Ver detalle de una orden de compra -> Agregar "Letra" de item, rentabilidad porcentual y ganancia
 
 ## Descripcion
 

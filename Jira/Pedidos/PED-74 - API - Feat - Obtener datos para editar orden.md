@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-74"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **blocks:** [[PED-93]] APP - Feat - Editar una orden del listado
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **blocks:** [[PED-93 - APP - Feat - Editar una orden del listado|PED-93]] APP - Feat - Editar una orden del listado
 
 ## Descripcion
 

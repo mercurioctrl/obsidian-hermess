@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-483"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **is blocked by:** [[PED-481]] APP - Feat - Acceso directo a los pedidos del cliente
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-481 - APP - Feat - Acceso directo a los pedidos del cliente|PED-481]] APP - Feat - Acceso directo a los pedidos del cliente
 
 ## Descripcion
 

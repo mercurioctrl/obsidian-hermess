@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-533"
 
 ## Relaciones
 
-- **Padre:** [[PED-6]] Comisiones
-- **blocks:** [[PED-527]] APP - Feat - Agregar un accionable para ver las comisiones directamente
-- **relates to:** [[PED-534]]  APP - Refactor - Listar comisiones - Selección automática de filtros
-- **is blocked by:** [[PED-530]] APP - Feat - Agregar columas fecha de liquidacion y fecha de facturacion
+- **Padre:** [[PED-6 - Comisiones|PED-6]] Comisiones
+- **blocks:** [[PED-527 - APP - Feat - Agregar un accionable para ver las comisiones directamente|PED-527]] APP - Feat - Agregar un accionable para ver las comisiones directamente
+- **relates to:** [[PED-534 - APP - Refactor - Listar comisiones - Selección automática de filtros|PED-534]]  APP - Refactor - Listar comisiones - Selección automática de filtros
+- **is blocked by:** [[PED-530 - APP - Feat - Agregar columas fecha de liquidacion y fecha de facturacion|PED-530]] APP - Feat - Agregar columas fecha de liquidacion y fecha de facturacion
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-983"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **action item from:** [[SNB-2744]] pdf proforma formal
-- **has action item:** [[SNB-2744]] pdf proforma formal
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **action item from:** [[SNB-2744 - pdf proforma formal|SNB-2744]] pdf proforma formal
+- **has action item:** [[SNB-2744 - pdf proforma formal|SNB-2744]] pdf proforma formal
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-241"
 
 ## Relaciones
 
-- **blocks:** [[PED-193]] APP - Feat - Descargar listado de precios
+- **blocks:** [[PED-193 - APP - Feat - Descargar listado de precios|PED-193]] APP - Feat - Descargar listado de precios
 
 ## Descripcion
 

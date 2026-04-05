@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-722"
 
 ## Relaciones
 
-- **is blocked by:** [[SNB-1920]] AUTORIZACIONES
+- **is blocked by:** [[SNB-1920 - AUTORIZACIONES|SNB-1920]] AUTORIZACIONES
 
 ## Descripcion
 

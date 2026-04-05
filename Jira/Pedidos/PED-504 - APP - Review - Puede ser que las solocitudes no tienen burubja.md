@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-504"
 
 ## Relaciones
 
-- **Padre:** [[PED-490]] Burbujas contadoras para las pestañas
+- **Padre:** [[PED-490 - Burbujas contadoras para las pestañas|PED-490]] Burbujas contadoras para las pestañas
 
 ## Descripcion
 

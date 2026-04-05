@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-475"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[PED-167]] API - Feat- Eliminar Remito
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[PED-167 - API - Feat- Eliminar Remito|PED-167]] API - Feat- Eliminar Remito
 
 ## Descripcion
 

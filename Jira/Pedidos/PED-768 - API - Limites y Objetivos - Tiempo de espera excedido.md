@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-768"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
-- **blocks:** [[PED-759]] API - Refactor - En el filtro de Trust, cuando no filtro por vendedor tarda bastante, pero ademas suele no traer nada, cuando hay vendedors que si cumplieron el objetivo
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
+- **blocks:** [[PED-759 - API - Refactor - En el filtro de Trust, cuando no filtro por vendedor tarda|PED-759]] API - Refactor - En el filtro de Trust, cuando no filtro por vendedor tarda bastante, pero ademas suele no traer nada, cuando hay vendedors que si cumplieron el objetivo
 
 ## Descripcion
 

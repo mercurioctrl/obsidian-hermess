@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-20"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **blocks:** [[PED-25]] APP - Feat - Modal - Seteo de parámetros de cliente 
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **blocks:** [[PED-25 - APP - Feat - Modal - Seteo de parámetros de cliente|PED-25]] APP - Feat - Modal - Seteo de parámetros de cliente 
 
 ## Descripcion
 

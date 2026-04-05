@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-655"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **relates to:** [[SNB-1665]] borrar cliente
-- **relates to:** [[PED-63]] API - Feat - Agregar Client
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **relates to:** [[SNB-1665 - borrar cliente|SNB-1665]] borrar cliente
+- **relates to:** [[PED-63 - API - Feat - Agregar Client|PED-63]] API - Feat - Agregar Client
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-898"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **action item from:** [[PED-897]] API - Feat - Objetivo total por string agrupado por vendedor
-- **has action item:** [[MKT-240]] NB_ PATRIOT INCENTIVO
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **action item from:** [[PED-897 - API - Feat - Objetivo total por string agrupado por vendedor|PED-897]] API - Feat - Objetivo total por string agrupado por vendedor
+- **has action item:** [[MKT-240 - NB_ PATRIOT INCENTIVO|MKT-240]] NB_ PATRIOT INCENTIVO
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-535"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[PED-521]] APP - Review - Al hacer cambios en una direccion , parece no recotizar a menos que la selecciones
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[PED-521 - APP - Review - Al hacer cambios en una direccion , parece no recotizar a menos|PED-521]] APP - Review - Al hacer cambios en una direccion , parece no recotizar a menos que la selecciones
 
 ## Descripcion
 

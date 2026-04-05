@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1031"
 
 ## Relaciones
 
-- **Padre:** [[PED-761]] Comprobantes de pago
-- **action item from:** [[SNB-2991]] Venta con mas de un cupon no autoriza
+- **Padre:** [[PED-761 - Comprobantes de pago|PED-761]] Comprobantes de pago
+- **action item from:** [[SNB-2991 - Venta con mas de un cupon no autoriza|SNB-2991]] Venta con mas de un cupon no autoriza
 
 ## Descripcion
 

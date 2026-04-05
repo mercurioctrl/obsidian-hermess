@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-43"
 
 ## Relaciones
 
-- **Padre:** [[PED-40]] Login automático como cliente
-- **is blocked by:** [[PED-41]] API - Feat - Crear autorizacion en la api de ordenes
-- **is blocked by:** [[PED-44]] APP - Feat - Login meidante autorizacion en el sitio web
-- **blocks:** [[PED-42]] API - Feat - Login mediante autorizacion en el sitio web 
+- **Padre:** [[PED-40 - Login automático como cliente|PED-40]] Login automático como cliente
+- **is blocked by:** [[PED-41 - API - Feat - Crear autorizacion en la api de ordenes|PED-41]] API - Feat - Crear autorizacion en la api de ordenes
+- **is blocked by:** [[PED-44 - APP - Feat - Login meidante autorizacion en el sitio web|PED-44]] APP - Feat - Login meidante autorizacion en el sitio web
+- **blocks:** [[PED-42 - API - Feat - Login mediante autorizacion en el sitio web|PED-42]] API - Feat - Login mediante autorizacion en el sitio web 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-945"
 
 ## Relaciones
 
-- **Padre:** [[PED-469]] SyncUps e Importaciones
+- **Padre:** [[PED-469 - SyncUps e Importaciones|PED-469]] SyncUps e Importaciones
 
 ## Descripcion
 

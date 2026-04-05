@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-167"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[PED-475]] API - Refactor - Eliminar remito - Eliminar liquidaciones guardadas
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[PED-475 - API - Refactor - Eliminar remito - Eliminar liquidaciones guardadas|PED-475]] API - Refactor - Eliminar remito - Eliminar liquidaciones guardadas
 
 ## Descripcion
 

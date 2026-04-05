@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1058"
 
 ## Relaciones
 
-- **Padre:** [[PED-724]] Modal "Venta Market Place LO"
-- **is blocked by:** [[LIO-387]] API - Refactor - Obtener estado de pago detallado para cada intento
-- **has action item:** [[LIO-389]] API - Refactor - Obtener estado de pago detallado para un usuario determinado
+- **Padre:** [[PED-724 - Modal Venta Market Place LO|PED-724]] Modal "Venta Market Place LO"
+- **is blocked by:** [[LIO-387 - API - Refactor - Obtener estado de pago detallado para cada intento|LIO-387]] API - Refactor - Obtener estado de pago detallado para cada intento
+- **has action item:** [[LIO-389 - API - Refactor - Obtener estado de pago detallado para un usuario determinado|LIO-389]] API - Refactor - Obtener estado de pago detallado para un usuario determinado
 
 ## Descripcion
 

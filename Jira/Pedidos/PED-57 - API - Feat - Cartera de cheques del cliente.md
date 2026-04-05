@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-57"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **is blocked by:** [[PED-53]] Migracion a Laravel
-- **blocks:** [[PED-62]] APP - Feat - Mostrar cartera de cheques del cliente
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **is blocked by:** [[PED-53 - Migracion a Laravel|PED-53]] Migracion a Laravel
+- **blocks:** [[PED-62 - APP - Feat - Mostrar cartera de cheques del cliente|PED-62]] APP - Feat - Mostrar cartera de cheques del cliente
 
 ## Descripcion
 

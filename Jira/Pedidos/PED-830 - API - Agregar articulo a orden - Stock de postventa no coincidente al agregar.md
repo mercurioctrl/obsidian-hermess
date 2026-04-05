@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-830"
 
 ## Relaciones
 
-- **Padre:** [[PED-64]] Productos
-- **relates to:** [[PED-826]] API - Refactor - Agregar al repositorio de productos, aquellos productos que tienen stock en postventa y cuanto stock tiene de manera correspondiente
+- **Padre:** [[PED-64 - Productos|PED-64]] Productos
+- **relates to:** [[PED-826 - API - Refactor - Agregar al repositorio de productos, aquellos productos que|PED-826]] API - Refactor - Agregar al repositorio de productos, aquellos productos que tienen stock en postventa y cuanto stock tiene de manera correspondiente
 
 ## Descripcion
 

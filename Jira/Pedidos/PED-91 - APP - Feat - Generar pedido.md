@@ -29,16 +29,16 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-91"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **Subtarea:** [[PED-128]] API - Refactor - Agregar un item a un pedido de POSTVENTA
-- **Subtarea:** [[PED-211]] API - Review - Generar pedido de una orden de libre opcion
-- **Subtarea:** [[PED-269]] API - Review - Detalles del log al ELIMINAR PEDIDO
-- **Subtarea:** [[PED-501]] APP - Review - Al generar un pedido, el mismo se agrega en el registro de stock como si fuera al vendedor, en lugar de la persona que realmente hizo el movimiento
-- **Subtarea:** [[PED-824]] API - Refactor - Generar orden de POSTVENTA
-- **Subtarea:** [[PED-922]] API - Refactor - Agregar en el caso que corresponda el costForSale al generar un pedido
-- **Subtarea:** [[PED-1109]] API - Refactor - Al generar remito ajustar id de pago de ser necesario en los casos LO
-- **is blocked by:** [[PED-90]] API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)
-- **relates to:** [[PED-1105]] API - Review - Generar pedido -> Ordenes de NBE parecieran duplicarse
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **Subtarea:** [[PED-128 - API - Refactor - Agregar un item a un pedido de POSTVENTA|PED-128]] API - Refactor - Agregar un item a un pedido de POSTVENTA
+- **Subtarea:** [[PED-211 - API - Review - Generar pedido de una orden de libre opcion|PED-211]] API - Review - Generar pedido de una orden de libre opcion
+- **Subtarea:** [[PED-269 - API - Review - Detalles del log al ELIMINAR PEDIDO|PED-269]] API - Review - Detalles del log al ELIMINAR PEDIDO
+- **Subtarea:** [[PED-501 - APP - Review - Al generar un pedido, el mismo se agrega en el registro de stock|PED-501]] APP - Review - Al generar un pedido, el mismo se agrega en el registro de stock como si fuera al vendedor, en lugar de la persona que realmente hizo el movimiento
+- **Subtarea:** [[PED-824 - API - Refactor - Generar orden de POSTVENTA|PED-824]] API - Refactor - Generar orden de POSTVENTA
+- **Subtarea:** [[PED-922 - API - Refactor - Agregar en el caso que corresponda el costForSale al generar|PED-922]] API - Refactor - Agregar en el caso que corresponda el costForSale al generar un pedido
+- **Subtarea:** [[PED-1109 - API - Refactor - Al generar remito ajustar id de pago de ser necesario en los|PED-1109]] API - Refactor - Al generar remito ajustar id de pago de ser necesario en los casos LO
+- **is blocked by:** [[PED-90 - API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)|PED-90]] API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)
+- **relates to:** [[PED-1105 - API - Review - Generar pedido - Ordenes de NBE parecieran duplicarse|PED-1105]] API - Review - Generar pedido -> Ordenes de NBE parecieran duplicarse
 
 ## Descripcion
 

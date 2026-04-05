@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-430"
 
 ## Relaciones
 
-- **relates to:** [[PED-427]] APP - Refactor - Reordenar listado de clientes
+- **relates to:** [[PED-427 - APP - Refactor - Reordenar listado de clientes|PED-427]] APP - Refactor - Reordenar listado de clientes
 
 ## Descripcion
 

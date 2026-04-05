@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-756"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **relates to:** [[PED-754]] API - Feat - Ranking de aceleradores
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **relates to:** [[PED-754 - API - Feat - Ranking de aceleradores|PED-754]] API - Feat - Ranking de aceleradores
 
 ## Descripcion
 

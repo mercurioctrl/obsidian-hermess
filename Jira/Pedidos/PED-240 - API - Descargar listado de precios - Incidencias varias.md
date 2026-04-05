@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-240"
 
 ## Relaciones
 
-- **blocks:** [[PED-192]] API - Feat - Descargar listado de precios
+- **blocks:** [[PED-192 - API - Feat - Descargar listado de precios|PED-192]] API - Feat - Descargar listado de precios
 
 ## Descripcion
 

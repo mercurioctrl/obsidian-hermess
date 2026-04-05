@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-78"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **blocks:** [[PED-76]] APP - Feat - Ver informacion del pedido
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-76 - APP - Feat - Ver informacion del pedido|PED-76]] APP - Feat - Ver informacion del pedido
 
 ## Descripcion
 

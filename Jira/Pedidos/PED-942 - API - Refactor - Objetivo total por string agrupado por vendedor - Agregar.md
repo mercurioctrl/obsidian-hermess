@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-942"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **relates to:** [[PED-897]] API - Feat - Objetivo total por string agrupado por vendedor
-- **has action item:** [[PED-943]] APP - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
-- **has action item:** [[MKT-245]] NB_ INCENTIVO FUERZA DE VENTAS
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **relates to:** [[PED-897 - API - Feat - Objetivo total por string agrupado por vendedor|PED-897]] API - Feat - Objetivo total por string agrupado por vendedor
+- **has action item:** [[PED-943 - APP - Refactor - Objetivo total por string agrupado por vendedor - Agregar|PED-943]] APP - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
+- **has action item:** [[MKT-245 - NB_ INCENTIVO FUERZA DE VENTAS|MKT-245]] NB_ INCENTIVO FUERZA DE VENTAS
 
 ## Descripcion
 

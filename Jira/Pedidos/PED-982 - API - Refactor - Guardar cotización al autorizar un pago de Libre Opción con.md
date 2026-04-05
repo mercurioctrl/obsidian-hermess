@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-982"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
-- **action item from:** [[PED-691]] API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si es de libre opcion
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
+- **action item from:** [[PED-691 - API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si|PED-691]] API - Autorizar pedido (cobrar) liquidado si tiene el comprobante guardado y si es de libre opcion
 
 ## Descripcion
 

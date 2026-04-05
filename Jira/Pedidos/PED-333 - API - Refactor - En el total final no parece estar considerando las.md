@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-333"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **relates to:** [[PED-342]] API - Listar ordenes de compra - Discrepancia en los totales finales
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **relates to:** [[PED-342 - API - Listar ordenes de compra - Discrepancia en los totales finales|PED-342]] API - Listar ordenes de compra - Discrepancia en los totales finales
 
 ## Descripcion
 

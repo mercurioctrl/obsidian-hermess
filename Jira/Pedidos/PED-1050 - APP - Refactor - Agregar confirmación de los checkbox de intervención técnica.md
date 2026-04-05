@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1050"
 
 ## Relaciones
 
-- **Padre:** [[PED-998]] Intervención Técnica
-- **has action item:** [[SNB-3248]] tilde por error en un pedido sistema operativo y no lo pueden cerrar en depo
+- **Padre:** [[PED-998 - Intervención Técnica|PED-998]] Intervención Técnica
+- **has action item:** [[SNB-3248 - tilde por error en un pedido sistema operativo y no lo pueden cerrar en depo|SNB-3248]] tilde por error en un pedido sistema operativo y no lo pueden cerrar en depo
 
 ## Descripcion
 

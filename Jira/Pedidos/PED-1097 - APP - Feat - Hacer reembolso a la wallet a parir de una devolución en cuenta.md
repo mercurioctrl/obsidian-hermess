@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1097"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **action item from:** [[PED-1075]] API - Feat - Hacer reembolso a la wallet a parir de una devolución en cuenta corriente
-- **action item from:** [[PED-1098]] APP - Refactor - Agragar HMAC y showWallet solo cuando esta disponible al objeto de cuenta corriente
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **action item from:** [[PED-1075 - API - Feat - Hacer reembolso a la wallet a parir de una devolución en cuenta|PED-1075]] API - Feat - Hacer reembolso a la wallet a parir de una devolución en cuenta corriente
+- **action item from:** [[PED-1098 - APP - Refactor - Agragar HMAC y showWallet solo cuando esta disponible al|PED-1098]] APP - Refactor - Agragar HMAC y showWallet solo cuando esta disponible al objeto de cuenta corriente
 
 ## Descripcion
 

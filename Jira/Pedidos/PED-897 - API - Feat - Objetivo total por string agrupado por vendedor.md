@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-897"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **has action item:** [[PED-898]] APP - Feat - Objetivo por sting agrupado por vendedor
-- **has action item:** [[MKT-240]] NB_ PATRIOT INCENTIVO
-- **relates to:** [[PED-942]] API - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **has action item:** [[PED-898 - APP - Feat - Objetivo por sting agrupado por vendedor|PED-898]] APP - Feat - Objetivo por sting agrupado por vendedor
+- **has action item:** [[MKT-240 - NB_ PATRIOT INCENTIVO|MKT-240]] NB_ PATRIOT INCENTIVO
+- **relates to:** [[PED-942 - API - Refactor - Objetivo total por string agrupado por vendedor - Agregar|PED-942]] API - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
 
 ## Descripcion
 

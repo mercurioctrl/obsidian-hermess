@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-385"
 
 ## Relaciones
 
-- **relates to:** [[PED-381]] App -Feat : Limites de liquidacion
+- **relates to:** [[PED-381 - App -Feat Limites de liquidacion|PED-381]] App -Feat : Limites de liquidacion
 
 ## Descripcion
 

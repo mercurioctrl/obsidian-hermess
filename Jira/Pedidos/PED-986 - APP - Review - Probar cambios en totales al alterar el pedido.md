@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-986"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
 
 ## Descripcion
 

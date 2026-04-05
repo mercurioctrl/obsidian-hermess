@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-862"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **has action item:** [[PED-863]] APP - Refactor - Agregar "internalTax" al "pedido + info"
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **has action item:** [[PED-863 - APP - Refactor - Agregar internalTax al pedido + info|PED-863]] APP - Refactor - Agregar "internalTax" al "pedido + info"
 
 ## Descripcion
 

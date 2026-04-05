@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-817"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
-- **blocks:** [[SNB-2293]] cuando llega un pedido
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **blocks:** [[SNB-2293 - cuando llega un pedido|SNB-2293]] cuando llega un pedido
 
 ## Descripcion
 

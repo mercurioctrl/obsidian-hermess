@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-60"
 
 ## Relaciones
 
-- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **Padre:** [[PED-58 - Agregar Editar Envío en las ordenes de compra|PED-58]] Agregar / Editar Envío en las ordenes de compra
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-318"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **is blocked by:** [[PED-323]]   APP - Descargar órdenes de compra que no cumplan con el stock - Incidencias varias
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **is blocked by:** [[PED-323 - APP - Descargar órdenes de compra que no cumplan con el stock - Incidencias|PED-323]]   APP - Descargar órdenes de compra que no cumplan con el stock - Incidencias varias
 
 ## Descripcion
 
