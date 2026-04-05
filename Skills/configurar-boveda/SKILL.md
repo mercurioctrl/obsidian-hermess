@@ -86,11 +86,32 @@ Este proyecto tiene su base de conocimiento en la bóveda de Obsidian.
 - Para guardar decisiones de arquitectura o contexto que no pertenece al código
 ```
 
-### 6. Confirmar
+### 6. Actualizar Home.md (SIEMPRE)
+
+Regenerar `Home.md` en la raíz de la bóveda para reflejar la nueva carpeta del proyecto.
+
+```bash
+# 1. Listar toda la bóveda
+curl -sk -H "Authorization: Bearer {TOKEN}" https://localhost:27124/vault/
+
+# 2. Listar cada subdirectorio recursivamente
+#    Iterar sobre cada carpeta raíz y sus subcarpetas
+```
+
+Reconstruir `Home.md` con:
+- Todas las carpetas y notas organizadas por sección
+- `[[wikilinks]]` a cada nota y carpeta index
+- Sección de Skills linkeando al índice de Skills
+- No incluir archivos que no sean `.md`
+
+Esto garantiza que la carpeta recién creada/vinculada aparezca en el índice general.
+
+### 7. Confirmar
 
 Mostrar al usuario:
 - Qué carpeta de Obsidian se vinculó
 - Qué archivo CLAUDE.md se actualizó
+- Que Home.md fue actualizado con la nueva carpeta
 - Cómo verificar (abrir Obsidian y ver la carpeta)
 
 ## Notas
@@ -99,3 +120,9 @@ Mostrar al usuario:
 - Si el CLAUDE.md es compartido (`.claude/CLAUDE.md` en git), usar placeholder para el token
 - Si el CLAUDE.md es privado (en `~/.claude/projects/`), se puede incluir el token directamente
 - Siempre preguntar antes de modificar un CLAUDE.md existente
+
+## Skill relacionado
+
+Una vez configurada la bóveda, usar `/sincronizarBoveda` para mantener las notas
+actualizadas con la documentación, arquitectura y changelog del proyecto.
+Ver `~/.claude/skills/sincronizar-boveda/SKILL.md`.
