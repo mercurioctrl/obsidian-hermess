@@ -4,7 +4,7 @@ name: "Acer"
 type: "software"
 total_issues: 0
 jira_url: "https://bluinc.atlassian.net/browse/ACER"
-synced: "2026-04-05 07:38"
+synced: "2026-04-05 07:54"
 ---
 
 # Acer (ACER)

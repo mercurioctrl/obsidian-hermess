@@ -11,10 +11,10 @@
             "id": "912ff32531a50967",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "icon": "lucide-git-fork",
+              "title": "Vista gráfica"
             }
           }
         ]
@@ -190,8 +190,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d8ccf2be15c21748",
+  "active": "912ff32531a50967",
   "lastOpenFiles": [
+    "Jira/Cobros/_COB - Indice.md",
+    "COB-49.md",
     "Jira/TABLERO DE ELO/_TDE - Indice.md",
     "Jira/TABLERO DE ELO",
     "Jira/Service Task v3/STASK-32 - API-TASK-V3 feat Integrar Infobip como proveedor SMS por defecto con.md",
@@ -217,8 +219,6 @@
     "Jira/Service Task v3/STASK-11 - API - Review - Invertir posiciones a branch-order que quedo alrveves en la.md",
     "Jira/Service Task v3/STASK-10 - API - Refactor - Correo ya disponible para retirar en pedidods pickUp.md",
     "Jira/Service Task v3/STASK-8 - API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos.md",
-    "Jira/Service Task v3/STASK-7 - Tares de evaluacion y estadisticas.md",
-    "Jira/Service Task v3/STASK-6 - TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora - Guardar.md",
     "Jira/Service Task v3",
     "Jira/Servicio de asistencia | BLU",
     "Jira/Redes Sociales NB y LIO",

@@ -4,7 +4,7 @@ name: "Expedición"
 type: "software"
 total_issues: 537
 jira_url: "https://bluinc.atlassian.net/browse/EXP"
-synced: "2026-04-05 07:38"
+synced: "2026-04-05 07:54"
 ---
 
 # Expedición (EXP)

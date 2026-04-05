@@ -4,7 +4,7 @@ name: "bullyTicker"
 type: "software"
 total_issues: 38
 jira_url: "https://bluinc.atlassian.net/browse/BULLY"
-synced: "2026-04-05 07:38"
+synced: "2026-04-05 07:54"
 ---
 
 # bullyTicker (BULLY)

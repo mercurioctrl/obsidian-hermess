@@ -4,7 +4,7 @@ name: "Blu"
 type: "software"
 total_issues: 269
 jira_url: "https://bluinc.atlassian.net/browse/BLUWEB"
-synced: "2026-04-05 07:38"
+synced: "2026-04-05 07:54"
 ---
 
 # Blu (BLUWEB)

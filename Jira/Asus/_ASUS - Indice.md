@@ -4,7 +4,7 @@ name: "Asus"
 type: "software"
 total_issues: 2
 jira_url: "https://bluinc.atlassian.net/browse/ASUS"
-synced: "2026-04-05 07:38"
+synced: "2026-04-05 07:54"
 ---
 
 # Asus (ASUS)

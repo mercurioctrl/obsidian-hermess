@@ -4,7 +4,7 @@ name: "LASET"
 type: "software"
 total_issues: 62
 jira_url: "https://bluinc.atlassian.net/browse/LAW"
-synced: "2026-04-05 07:39"
+synced: "2026-04-05 07:54"
 ---
 
 # LASET (LAW)
