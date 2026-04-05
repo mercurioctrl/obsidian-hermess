@@ -1,0 +1,36 @@
+---
+jira_key: "POS-119"
+aliases: ["POS-119"]
+summary: "APP - Feat - Productos mas falibles"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-09-12 12:30"
+updated: "2022-10-18 14:19"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-119"
+---
+
+# POS-119: APP - Feat - Productos mas falibles
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-09-12 12:30 |
+| Actualizado | 2022-10-18 14:19 |
+| Etiquetas | ninguna |
+| Jira | [POS-119](https://bluinc.atlassian.net/browse/POS-119) |
+
+## Relaciones
+
+- **Padre:** [[POS-117]] APP - Feat - Pestaña de productos
+
+## Descripcion
+
+*Sin descripcion*

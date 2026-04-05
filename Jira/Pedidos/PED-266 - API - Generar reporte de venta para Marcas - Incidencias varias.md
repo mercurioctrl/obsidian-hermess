@@ -1,0 +1,40 @@
+---
+jira_key: "PED-266"
+aliases: ["PED-266"]
+summary: "API - Generar reporte de venta para Marcas - Incidencias varias"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Guillermo Avila"
+reporter: "Guillermo Avila"
+created: "2023-11-14 01:35"
+updated: "2023-11-16 11:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-266"
+---
+
+# PED-266: API - Generar reporte de venta para Marcas - Incidencias varias
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Guillermo Avila |
+| Reportado por | Guillermo Avila |
+| Creado | 2023-11-14 01:35 |
+| Actualizado | 2023-11-16 11:29 |
+| Etiquetas | ninguna |
+| Jira | [PED-266](https://bluinc.atlassian.net/browse/PED-266) |
+
+## Relaciones
+
+- **blocks:** [[PED-235]] API - Feat - Generar reporte de venta para Marcas
+
+## Descripcion
+
+- Al intentar generar el reporte aparece el siguiente error
+
+
+
+[adjunto]

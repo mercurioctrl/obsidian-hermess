@@ -1,0 +1,45 @@
+---
+jira_key: "PED-345"
+aliases: ["PED-345"]
+summary: "APP - Feat - Repositorio de ordenes -> Agregar 2 columnas con metodo envio/retiro y medio de pago"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Guillermo Avila"
+reporter: "Catriel Mercurio"
+created: "2023-12-18 08:39"
+updated: "2023-12-20 15:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-345"
+---
+
+# PED-345: APP - Feat - Repositorio de ordenes -> Agregar 2 columnas con metodo envio/retiro y medio de pago
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Guillermo Avila |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-18 08:39 |
+| Actualizado | 2023-12-20 15:25 |
+| Etiquetas | ninguna |
+| Jira | [PED-345](https://bluinc.atlassian.net/browse/PED-345) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-344]] API - Feat - Repositorio de ordenes -> Agregar metodo envio/retiro y medio de pago
+- **is blocked by:** [[PED-357]] APP - Agregar columnas método envió/retiro y medio de pago - Incidencias varias
+
+## Descripcion
+
+Agregaremos a la grilla de ordenes dos columnas nuevas para incluir los parámetros descriptivos
+
+Usaremos los de parametros 
+
+- shippingMethod
+
+
+- paymentMethod

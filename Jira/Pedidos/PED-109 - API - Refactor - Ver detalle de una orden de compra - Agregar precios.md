@@ -1,0 +1,49 @@
+---
+jira_key: "PED-109"
+aliases: ["PED-109"]
+summary: "API - Refactor - Ver detalle de una orden de compra -> Agregar precios disponibles para el cliente"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-10-02 09:53"
+updated: "2023-10-02 15:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-109"
+---
+
+# PED-109: API - Refactor - Ver detalle de una orden de compra -> Agregar precios disponibles para el cliente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-10-02 09:53 |
+| Actualizado | 2023-10-02 15:21 |
+| Etiquetas | ninguna |
+| Jira | [PED-109](https://bluinc.atlassian.net/browse/PED-109) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+
+## Descripcion
+
+Según lo conversado refactorizaremos el recurso 
+
+```
+GET {API_URL}/v1/orders/{branch-order}
+```
+
+para que tenga disponibles en caso de estar aun “pendiente” los selectores para cambiar el precio.
+
+**Ejemplo viejo sistema:**
+
+[adjunto]
+Se puede ver como se hace una relación entre la letra y el precio y se muestran los precios disponibles. No tiene que ser exactamente así.
+
+Evaluar si hay algún cambio de performance y podemos ver como mejorarlo.

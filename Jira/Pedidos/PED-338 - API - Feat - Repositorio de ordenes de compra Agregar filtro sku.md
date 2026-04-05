@@ -1,0 +1,43 @@
+---
+jira_key: "PED-338"
+aliases: ["PED-338"]
+summary: "API - Feat - Repositorio de ordenes de compra > Agregar filtro sku"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-12-15 08:58"
+updated: "2023-12-18 12:10"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-338"
+---
+
+# PED-338: API - Feat - Repositorio de ordenes de compra > Agregar filtro sku
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-15 08:58 |
+| Actualizado | 2023-12-18 12:10 |
+| Etiquetas | ninguna |
+| Jira | [PED-338](https://bluinc.atlassian.net/browse/PED-338) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-340]] APP - Feat - Repositorio de ordenes de compra > Agregar filtro sku
+
+## Descripcion
+
+Agregaremos un campo especifico para buscar por SKU mediante un LIKE (`[NewBytes_DBF].[dbo].[articulo].ID_PRODUCTO`)
+
+```
+GET {API_URL}/v1/orders?sku={sku}... otros filtros
+```
+
+Es importante que solo si viene el parámetro `sku` agregaremos lo necesario para filtrarlo, de moodo tal de no volver mas lenta la consulta cuando se hace sin el filtro.

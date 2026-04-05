@@ -1,0 +1,37 @@
+---
+jira_key: "PED-407"
+aliases: ["PED-407"]
+summary: "APP - Refactor - Editar cliente modal -> Permitir cualquier código país"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-12-28 13:35"
+updated: "2024-01-26 04:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-407"
+---
+
+# PED-407: APP - Refactor - Editar cliente modal -> Permitir cualquier código país
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-28 13:35 |
+| Actualizado | 2024-01-26 04:35 |
+| Etiquetas | ninguna |
+| Jira | [PED-407](https://bluinc.atlassian.net/browse/PED-407) |
+
+## Relaciones
+
+- **Padre:** [[PED-16]] Listar clientes
+
+## Descripcion
+
+[adjunto]
+Verificar si el problema existe en el sitio tambien

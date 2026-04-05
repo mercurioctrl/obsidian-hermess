@@ -1,0 +1,37 @@
+---
+jira_key: "POS-142"
+aliases: ["POS-142"]
+summary: "APP - Refactor - Agregar al grafico 'soluciones de postventa' las magnitudes de compra y venta"
+status: "Finalizada"
+type: "Historia"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-09-20 17:23"
+updated: "2022-10-18 14:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-142"
+---
+
+# POS-142: APP - Refactor - Agregar al grafico 'soluciones de postventa' las magnitudes de compra y venta
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Historia |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-09-20 17:23 |
+| Actualizado | 2022-10-18 14:21 |
+| Etiquetas | ninguna |
+| Jira | [POS-142](https://bluinc.atlassian.net/browse/POS-142) |
+
+## Relaciones
+
+- **Padre:** [[POS-22]] Dashboard y estadisticas
+- **is blocked by:** [[POS-144]] API - Refactor - Agregar Cantidad de ventas y Costo de la cantidad de ventas
+
+## Descripcion
+
+[adjunto]

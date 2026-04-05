@@ -1,0 +1,64 @@
+---
+jira_key: "PED-234"
+aliases: ["PED-234"]
+summary: "APP - Feat - Facturar orden"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-11-06 10:18"
+updated: "2023-11-07 13:18"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-234"
+---
+
+# PED-234: APP - Feat - Facturar orden
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-11-06 10:18 |
+| Actualizado | 2023-11-07 13:18 |
+| Etiquetas | ninguna |
+| Jira | [PED-234](https://bluinc.atlassian.net/browse/PED-234) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-233]] API - Feat - Facturar orden
+
+## Descripcion
+
+[adjunto]
+Al igual que se hizo en su momento en expedición, debe poderse realizar una factura  a partir de un pedido (Solo puede hacerse esto si esta liquidado)
+
+```
+POST {API_URL}/v1/makeVoucher
+```
+
+```
+{
+"voucherTypeId":1,
+"clientId":53386,
+"pedido":"X000200568377",
+"iibbPerception":"0.00"
+}
+```
+
+Devuelve 
+
+```
+{
+    "msg": "Factura emitida correctamente",
+    "success": true,
+    "CAE": "73458064779943",
+    "voucherId": "518317",
+    "token": "4ea38286523bfefa58151869f9d07f",
+    "cfactura": "B000400039728"
+}
+```

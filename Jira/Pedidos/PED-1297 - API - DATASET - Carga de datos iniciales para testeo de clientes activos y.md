@@ -1,0 +1,41 @@
+---
+jira_key: "PED-1297"
+aliases: ["PED-1297"]
+summary: "API - DATASET - Carga de datos iniciales para testeo de clientes activos y clientes reactivados"
+status: "Finalizada"
+type: "Subtarea"
+priority: "High"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2026-02-03 08:31"
+updated: "2026-02-03 11:13"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1297"
+---
+
+# PED-1297: API - DATASET - Carga de datos iniciales para testeo de clientes activos y clientes reactivados
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | High |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-02-03 08:31 |
+| Actualizado | 2026-02-03 11:13 |
+| Etiquetas | ninguna |
+| Jira | [PED-1297](https://bluinc.atlassian.net/browse/PED-1297) |
+
+## Relaciones
+
+- **Padre:** [[PED-299]] Objetivos y Desafios
+
+## Descripcion
+
+Cargaremos los parámetros con valores de referencia, ligeramente superiores para los mismos agentes que tienen `monthlyTargetAmount` para que el front pueda maquetar con precisión de una manera mas simple
+
+```sql
+[NewBytes_DBF].[dbo].[agentes].[reactivatedClientsTarget]
+[NewBytes_DBF].[dbo].[agentes].[monthlyClientTargetAmount]
+```

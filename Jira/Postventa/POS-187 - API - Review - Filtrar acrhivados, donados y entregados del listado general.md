@@ -1,0 +1,36 @@
+---
+jira_key: "POS-187"
+aliases: ["POS-187"]
+summary: "API - Review - Filtrar acrhivados, donados y entregados del listado general"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2022-10-13 08:39"
+updated: "2022-10-18 14:15"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-187"
+---
+
+# POS-187: API - Review - Filtrar acrhivados, donados y entregados del listado general
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-10-13 08:39 |
+| Actualizado | 2022-10-18 14:15 |
+| Etiquetas | ninguna |
+| Jira | [POS-187](https://bluinc.atlassian.net/browse/POS-187) |
+
+## Relaciones
+
+- **Padre:** [[POS-33]] API - Feat - Listar postventas finalizadas
+
+## Descripcion
+
+*Sin descripcion*

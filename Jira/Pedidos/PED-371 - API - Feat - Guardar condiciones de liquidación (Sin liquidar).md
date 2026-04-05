@@ -1,0 +1,60 @@
+---
+jira_key: "PED-371"
+aliases: ["PED-371"]
+summary: "API - Feat - Guardar condiciones de liquidación (Sin liquidar)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-12-21 09:17"
+updated: "2023-12-22 15:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-371"
+---
+
+# PED-371: API - Feat - Guardar condiciones de liquidación (Sin liquidar)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-21 09:17 |
+| Actualizado | 2023-12-22 15:40 |
+| Etiquetas | ninguna |
+| Jira | [PED-371](https://bluinc.atlassian.net/browse/PED-371) |
+
+## Relaciones
+
+- **Padre:** [[PED-123]] Feat - Liquidar pedido
+- **blocks:** [[PED-372]] APP - Feat - Guardar condiciones de liquidación (Sin liquidar)
+- **is blocked by:** [[PED-377]] API - Guardar condiciones de liquidación (Sin liquidar) - Incidencias varias
+
+## Descripcion
+
+Crearemos un recurso para guardar las condiciones de liquidación y dejarlas prefijadas en caso de ser necesario.
+
+A veces sucede que los vendedores las fijan, y luego viene un PM y solo liquida el pedido con su cupo.
+
+```
+POST {API_URL}/v1/makeSaleConditions/{pedido}
+```
+
+```
+[
+  {
+    "id": 93644,
+    "pedido": "X000200570446",
+    "paymentMethodId": 3,
+    "shippingMethod": 20,
+    "bankId": 13,
+    "manualCurrencyQuote": 10500000000.0,
+    "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem"
+  }
+]
+```
+
+Se deben guardar en la tabla `[NB_WEB].[dbo].[liquidacion_guardada]`

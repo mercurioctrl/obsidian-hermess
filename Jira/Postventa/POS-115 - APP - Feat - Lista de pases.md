@@ -1,0 +1,38 @@
+---
+jira_key: "POS-115"
+aliases: ["POS-115"]
+summary: "APP - Feat - Lista de pases"
+status: "Finalizada"
+type: "Historia"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-09-12 08:24"
+updated: "2022-10-18 14:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-115"
+---
+
+# POS-115: APP - Feat - Lista de pases
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Historia |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-09-12 08:24 |
+| Actualizado | 2022-10-18 14:21 |
+| Etiquetas | ninguna |
+| Jira | [POS-115](https://bluinc.atlassian.net/browse/POS-115) |
+
+## Relaciones
+
+- **Padre:** [[POS-23]] Pases de mercaderia
+- **is blocked by:** [[POS-27]] API - Feat - Listas de pases
+- **is blocked by:** [[POS-54]] API - Refactor - Listas de pases
+
+## Descripcion
+
+Esta historia trata sobre la pestaña pases y su listado. Se intenta dar cuenta de los pases que hay y sus filtros. Ademas de poder abrirlos para ver su detalle y realizar algunas operaciones.

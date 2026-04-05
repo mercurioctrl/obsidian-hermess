@@ -1,0 +1,36 @@
+---
+jira_key: "PED-1322"
+aliases: ["PED-1322"]
+summary: "API - Review - Revisar por qué no descarga lista de precio para LASET"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Marbe Moreno"
+created: "2026-03-04 10:46"
+updated: "2026-03-04 15:37"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1322"
+---
+
+# PED-1322: API - Review - Revisar por qué no descarga lista de precio para LASET
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Marbe Moreno |
+| Creado | 2026-03-04 10:46 |
+| Actualizado | 2026-03-04 15:37 |
+| Etiquetas | ninguna |
+| Jira | [PED-1322](https://bluinc.atlassian.net/browse/PED-1322) |
+
+## Relaciones
+
+- **Padre:** [[PED-191]] Descargar Listado de precios
+
+## Descripcion
+
+[adjunto]

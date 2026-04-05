@@ -1,0 +1,60 @@
+---
+jira_key: "PED-470"
+aliases: ["PED-470"]
+summary: "API - Feat - Actualizar todos los precios de los pedidos que están pendientes "
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-01-11 09:02"
+updated: "2024-01-17 19:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-470"
+---
+
+# PED-470: API - Feat - Actualizar todos los precios de los pedidos que están pendientes 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-01-11 09:02 |
+| Actualizado | 2024-01-17 19:21 |
+| Etiquetas | ninguna |
+| Jira | [PED-470](https://bluinc.atlassian.net/browse/PED-470) |
+
+## Relaciones
+
+- **Padre:** [[PED-469]] SyncUps e Importaciones
+- **relates to:** [[PED-495]] API - Refactor - Actualizar todos los precios de los pedidos que aún no están liquidados
+
+## Descripcion
+
+Con motivo de la alta volatilidad de precios, crearemos un recurso especifico que nos sirve para tomar aquellos pedidos que están pendientes, es decir (`cestado = 'P'` en `[NewBytes_DBF].[dbo].[pedclit]`) 
+
+Para esto modificaremos el parámetro del precio en `[NewBytes_DBF].[dbo].[pedclil].npreunit` según nuestra **función de precios **para cada cliente de modo tal que los cambios que pudiera haber queden reflejados.
+
+Recordar que esto aplica SOLAMENTE a los pedidos PENDIENTES
+
+```
+PATCH /v1/syncUp/pricesPendingOrders
+```
+
+```
+{
+  token: {token en .env para syncups}
+}
+```
+
+Devuelve
+
+```
+{
+    "message":"Se modificaron 34 pedidos"
+    "success": true
+}
+```

@@ -1,0 +1,40 @@
+---
+jira_key: "PED-553"
+aliases: ["PED-553"]
+summary: "APP - Refactor - Al recibir la limitación del envío, mostrar un mensaje y ofrecer la posibilidad de eliminar el envio"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-02-09 14:56"
+updated: "2024-02-14 12:42"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-553"
+---
+
+# PED-553: APP - Refactor - Al recibir la limitación del envío, mostrar un mensaje y ofrecer la posibilidad de eliminar el envio
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-02-09 14:56 |
+| Actualizado | 2024-02-14 12:42 |
+| Etiquetas | ninguna |
+| Jira | [PED-553](https://bluinc.atlassian.net/browse/PED-553) |
+
+## Relaciones
+
+- **Padre:** [[PED-34]] Generar / Editar ordenes
+
+## Descripcion
+
+Usaremos el cambio efectuado en [link](https://lioteam.atlassian.net/browse/PED-552) para mostrar un mensaje cuando intentemos editar un pedido (agregar/eliminar editar un item) y este tenga un envío adentro.
+
+En ese caso mostraremos un mensaje que diga si quiere remover o no el envío (“Este pedido contiene un envio cotizado, si agrega edita los items, debe retirarlo primero para recotizarlo posteriormente. ¿Desea eliminar el envio de este pedidos? si, eliminar el envio | Cancelar). 
+
+En caso de que el usuario elija eliminar el envio, entonces ejecutamos el recurso para removerlo de la orden.

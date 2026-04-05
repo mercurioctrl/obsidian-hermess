@@ -1,0 +1,257 @@
+---
+jira_key: "PED-1180"
+aliases: ["PED-1180"]
+summary: "API - Refactor - Modelaremos el objeto de la orden para incluir relación con kits y su informacion complementaria sin ser disruptivos con el actual funcionamiento"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-12-11 08:18"
+updated: "2025-12-16 13:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1180"
+---
+
+# PED-1180: API - Refactor - Modelaremos el objeto de la orden para incluir relación con kits y su informacion complementaria sin ser disruptivos con el actual funcionamiento
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-11 08:18 |
+| Actualizado | 2025-12-16 13:30 |
+| Etiquetas | ninguna |
+| Jira | [PED-1180](https://bluinc.atlassian.net/browse/PED-1180) |
+
+## Relaciones
+
+- **Padre:** [[PED-1170]] Kits
+- **has action item:** [[PED-1181]] APP - Refactor - Mostrar kits en vista de pedido usando la nueva respuesta del endpoint
+
+## Descripcion
+
+**Endpoint afectado**
+
+```
+GET {API_URL}/v1/orders/{branchNumber}-{orderNumber}
+```
+
+Ejemplo: GET [https://gamma.api.orders.lio.red/v1/orders/0002-10426380](https://gamma.api.orders.lio.red/v1/orders/0002-10426380)
+
+---
+
+### Contexto
+
+Hoy el recurso devuelve la orden con el array `items`, pero el front no puede saber qué items pertenecen a un mismo kit.
+En base a la tabla `[NewBytes_DBF].[dbo].[pedclil]` existe el campo `kitId` que identifica a los kits en cada renglón del pedido.
+
+---
+
+### Objetivo
+
+Refactorizar la respuesta del recurso para:
+
+- Incluir en cada item el `kitId` correspondiente.
+
+
+- Agregar un nuevo array `kits` en la raíz de la respuesta, con la información de cada kit, de forma que el front pueda vincular:
+
+```
+item.kitId === kits.id
+```
+
+
+
+---
+
+### Alcance funcional
+
+- **Agregar **`kitId`** en items**
+
+- En cada elemento de `items[]`, agregar el campo:
+
+```
+"kitId": 125116 // nullable
+```
+
+
+- El valor debe venir de `[NewBytes_DBF].[dbo].[pedclil].kitId` para ese renglón de la orden.
+
+
+- Si el item no pertenece a un kit:
+
+- `kitId` debe ir en `null` (no omitir la propiedad, para mantener un shape estable en el front).
+
+
+
+
+
+
+- **Nuevo array **`kits`** en la raíz**
+
+- Agregar un nuevo campo en el JSON de la orden:
+
+```
+"kits": [ /* … */ ]
+```
+
+
+- Este array debe contener **un elemento por cada **`kitId`** distinto** presente en `items[]` pero con el mismo conjunto de parámetro, ya que a fin de cuentas es un item.
+
+
+- Cada kit debe tener al menos:
+
+```
+{
+  "id": 125116,                     // mismo valor que items[].kitId
+  "title": "KIT AM5 (Ryzen 5 8500G x2 + B840M D2H)",
+  "sku": "KIT-AM5-8500Gx2-B840M",
+  "price": {
+    "value": 361.2086,
+    "iva": 10.5,
+    "finalPrice": 399.135503,
+    "percepcion": null,
+    "letra": "D",
+    "priceList": null,
+    "savedPriceList": "D",
+    "currencyQuote": 1470,
+    "effectiveness": null,
+    "profit": null,
+    "internalTax": 0,
+    "averageCost": null,
+    "costForSale": null,
+    "niva": null
+  },
+  "warranty": "12 meses",
+  "amount": 1,
+  "refundAmount": 0,
+  "stock": null,
+  "stockLio": null,
+  "stockInOrders": null,
+  "availableStock": null
+}
+
+```
+
+
+- La estructura de `price` debe seguir el mismo esquema que ya se usa en `items[].price`.
+
+
+- Donde no haya información real disponible, completar con `null` (no inventar datos).
+
+
+
+
+- **Compatibilidad**
+
+- Ningún campo existente de la respuesta actual debe cambiar de nombre ni de tipo.
+
+
+- El cambio solo agrega:
+
+- `items[].kitId`
+
+
+- `kits: []` (nuevo array en la raíz)
+
+
+
+
+
+
+- **Comportamiento sin kits**
+
+- Si la orden no tiene ningún `kitId` asociado en `[pedclil]`:
+
+- `items[].kitId` debe ir en `null`.
+
+
+- `kits` debe devolverse como array vacío:
+
+```
+"kits": []
+```
+
+
+
+
+
+
+
+---
+
+### Ejemplo simplificado de respuesta esperada
+
+```
+{
+  "orderNumber": "10426380",
+  "branchNumber": "0002",
+  "items": [
+    {
+      "id": 118272,
+      "sku": "F5-6000J3636F16GX2-FX5",
+      "title": "MEMORIA GSKILL FLARE X5 SERIES AMD EXPO DDR5 32GB 6000 MHZ 2X16GB",
+      "kitId": 125116,       // nuevo
+      "price": { ... },
+      "amount": 1,
+      ...
+    },
+    {
+      "id": 118980,
+      "sku": "100-100000931BOX",
+      "title": "PROCESADOR AMD (AM5) RYZEN 5 8500G",
+      "kitId": 125116,       // nuevo
+      "price": { ... },
+      "amount": 1,
+      ...
+    }
+  ],
+  "currencyQuote": 1310,
+  ...,
+  "kits": [
+    {
+      "id": 125116,
+      "title": "KIT AM5 (Ryzen 5 8500G x2 + B840M D2H)",
+      "sku": "KIT-AM5-8500Gx2-B840M",
+      "price": { ... },
+      "warranty": "12 meses",
+      "amount": 1,
+      "refundAmount": 0,
+      "stock": null,
+      "stockLio": null,
+      "stockInOrders": null,
+      "availableStock": null
+    }
+  ]
+}
+
+```
+
+---
+
+### Criterios de aceptación
+
+- Para una orden con items que comparten `kitId`, cada item incluye `kitId` con el valor correcto.
+
+
+- El array `kits` contiene exactamente un elemento por cada `kitId` distinto presente en `items[]`.
+
+
+- Para cada item con `kitId` no nulo se cumple: `kits.some(k => k.id === item.kitId) === true`.
+
+
+- Para órdenes sin kits:
+
+- `items[].kitId === null`.
+
+
+- `kits` se devuelve como `[]` (array vacío).
+
+
+
+
+- No se rompe ningún consumidor actual: la respuesta sigue incluyendo todos los campos previos sin cambios de nombre ni tipo.

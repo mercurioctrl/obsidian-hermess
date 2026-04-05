@@ -1,0 +1,56 @@
+---
+jira_key: "PED-1242"
+aliases: ["PED-1242"]
+summary: "APP - Refactor - Agregar un input para plazo de pago en cada orden "
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2026-01-06 18:00"
+updated: "2026-01-21 11:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1242"
+---
+
+# PED-1242: APP - Refactor - Agregar un input para plazo de pago en cada orden 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2026-01-06 18:00 |
+| Actualizado | 2026-01-21 11:07 |
+| Etiquetas | ninguna |
+| Jira | [PED-1242](https://bluinc.atlassian.net/browse/PED-1242) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **action item from:** [[PED-1243]] API - Refactor - Incluir el paymentTerms en la edicion de la orden
+
+## Descripcion
+
+Por default usar el cargado en el cliente sin modificarlo haciendo uso de 
+
+
+```
+https://gamma.api.orders.lio.red/v1/clients/92303
+```
+
+
+`paymentTerms: 0`
+
+y enviarlo en 
+
+
+```
+PATCH https://gamma.api.orders.lio.red/v1/orders/0002-10426412
+```
+
+(caso parecido a como es en incoterms)
+
+Tal vez tengamos una forma de presentarlo basándonos en el recurso que ya existe

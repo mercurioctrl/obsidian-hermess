@@ -1,0 +1,37 @@
+---
+jira_key: "PED-1124"
+aliases: ["PED-1124"]
+summary: "DEPRECADA - API - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Marbe Moreno"
+created: "2025-09-29 10:05"
+updated: "2025-12-09 17:47"
+labels: ["MVPLaset"]
+jira_url: "https://bluinc.atlassian.net/browse/PED-1124"
+---
+
+# PED-1124: DEPRECADA - API - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-09-29 10:05 |
+| Actualizado | 2025-12-09 17:47 |
+| Etiquetas | MVPLaset |
+| Jira | [PED-1124](https://bluinc.atlassian.net/browse/PED-1124) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **has action item:** [[PED-1123]] APP - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo
+
+## Descripcion
+
+Resuelta desde el front

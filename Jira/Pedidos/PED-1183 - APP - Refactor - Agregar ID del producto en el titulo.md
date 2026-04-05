@@ -1,0 +1,36 @@
+---
+jira_key: "PED-1183"
+aliases: ["PED-1183"]
+summary: "APP - Refactor - Agregar ID del producto en el titulo"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-12-14 18:13"
+updated: "2025-12-16 14:51"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1183"
+---
+
+# PED-1183: APP - Refactor - Agregar ID del producto en el titulo
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-14 18:13 |
+| Actualizado | 2025-12-16 14:51 |
+| Etiquetas | ninguna |
+| Jira | [PED-1183](https://bluinc.atlassian.net/browse/PED-1183) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+
+## Descripcion
+
+[adjunto]

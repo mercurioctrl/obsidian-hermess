@@ -1,0 +1,78 @@
+---
+jira_key: "PED-313"
+aliases: ["PED-313"]
+summary: "API - Refactor - Ver detalle de una orden -> Agregar Lista de precio (Letra)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-12-06 06:37"
+updated: "2023-12-11 14:41"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-313"
+---
+
+# PED-313: API - Refactor - Ver detalle de una orden -> Agregar Lista de precio (Letra)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-06 06:37 |
+| Actualizado | 2023-12-11 14:41 |
+| Etiquetas | ninguna |
+| Jira | [PED-313](https://bluinc.atlassian.net/browse/PED-313) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-314]] APP - Refactor - Ver detalle de una orden -> Agregar lista de prcio
+
+## Descripcion
+
+```
+{
+    "orderNumber": "10310287",
+    "branchNumber": "0002",
+    "albnumNumber": "00555628",
+    "realAlbumNumber": null,
+    "clientName": "NAZ ACOTTO VALENTIN",
+    "clientId": 37392,
+    "observation": null,
+    "status": "s",
+    "invoice": "A000400116771",
+    "token": "e5b8ee51220c44fe9c9fc192f1141d",
+    "voucherId": 500881,
+    "seller": "Altamiranda                          ",
+    "sellerId": "08 ",
+    "sellerCreator": "",
+    "sellerIdCreator": null,
+    "items": [
+        {
+            "title": "FLETE MENSAJERIA",
+            "sku": "",
+            "id": 100502,
+            "price": {
+                "value": 3.88,
+                "iva": 21,
+                "finalPrice": 4.6948,
+                "percepcion": null,
+                "letra": "PM",
+                "priceList": {
+                    "A": 4.2,
+                    "B": 4.1202000000000005,
+                    "C": 4.0656,
+                    "D": 3.9,
+                    "PM": 3.88
+                },
+                "currencyQuote": 223.5,
+                "effectiveness": 129.33,
+                "profit": 0.88,
+                "selectedPriceList":"A", <----
+                
+            },
+```

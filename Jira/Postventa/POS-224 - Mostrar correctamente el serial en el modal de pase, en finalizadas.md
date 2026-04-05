@@ -1,0 +1,36 @@
+---
+jira_key: "POS-224"
+aliases: ["POS-224"]
+summary: "Mostrar correctamente el serial en el modal de pase, en finalizadas"
+status: "CodeReview"
+type: "Error"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2022-11-16 10:18"
+updated: "2022-11-16 11:17"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-224"
+---
+
+# POS-224: Mostrar correctamente el serial en el modal de pase, en finalizadas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2022-11-16 10:18 |
+| Actualizado | 2022-11-16 11:17 |
+| Etiquetas | ninguna |
+| Jira | [POS-224](https://bluinc.atlassian.net/browse/POS-224) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

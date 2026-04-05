@@ -1,0 +1,67 @@
+---
+jira_key: "PED-359"
+aliases: ["PED-359"]
+summary: "APP - Al descargar pedido, si no cumple el stock abrir modal y mostrar disponobles"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-12-19 09:15"
+updated: "2023-12-20 14:53"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-359"
+---
+
+# PED-359: APP - Al descargar pedido, si no cumple el stock abrir modal y mostrar disponobles
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-19 09:15 |
+| Actualizado | 2023-12-20 14:53 |
+| Etiquetas | ninguna |
+| Jira | [PED-359](https://bluinc.atlassian.net/browse/PED-359) |
+
+## Relaciones
+
+- **Padre:** [[PED-354]] Descarga de pedidos
+
+## Descripcion
+
+Cundo se descargan pedidos web, que no son reservas concretas, sucede muchas veces que no se puede satisfacer el stock que piden los clientes.
+
+Para poder resolver esto el vendedor debe ajustar las cantidades de cada item y para poder hacer esto de una forma (mas o menos) cómoda es necesario poder visualizarlo.
+
+¿que vamos a hacer?
+
+Si al Descargar una orden con 
+
+```
+{API_URL}/v1/downloadOrder/{orden}
+```
+
+Recibimos
+
+```
+{
+    "success": false,
+    "msg": "No hay suficiente stock, edita las cantidades para continuar",
+    "items": [
+        {
+            "ID_ARTICULO": 118308,
+            "available": 2
+        }
+    ]
+}
+```
+
+Podemos ver que ademas de el mensaje, obtenemos un array con la disponibilidad de los items.
+
+**Solo en este caso**, que es cuando `succes` es `false` Abriremos el modal y usaremos el array `items` agregaremos una columna extra para la disponibilidad, y dejaremos el color rojo (como cuando cambias el stock y no tenes stock) en el input que tengo que tocar porque el stock ahi seteado es menor a la disponibilidad
+
+[adjunto]

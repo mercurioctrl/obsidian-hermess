@@ -1,0 +1,36 @@
+---
+jira_key: "POS-277"
+aliases: ["POS-277"]
+summary: "Cambio de titulo de la aplicacion: \"POS - NB\" sin comillas"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2024-01-18 11:50"
+updated: "2024-01-30 03:31"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-277"
+---
+
+# POS-277: Cambio de titulo de la aplicacion: "POS - NB" sin comillas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2024-01-18 11:50 |
+| Actualizado | 2024-01-30 03:31 |
+| Etiquetas | ninguna |
+| Jira | [POS-277](https://bluinc.atlassian.net/browse/POS-277) |
+
+## Relaciones
+
+- **Padre:** [[POS-12]] Bases del proyecto y formularios
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,36 @@
+---
+jira_key: "PED-212"
+aliases: ["PED-212"]
+summary: "APP - Review - El filtro de fechas parece tener alguna anomalia, segun el orden que agregamos filtros no lo manda en la request"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-11-02 11:54"
+updated: "2023-11-02 16:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-212"
+---
+
+# PED-212: APP - Review - El filtro de fechas parece tener alguna anomalia, segun el orden que agregamos filtros no lo manda en la request
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-11-02 11:54 |
+| Actualizado | 2023-11-02 16:25 |
+| Etiquetas | ninguna |
+| Jira | [PED-212](https://bluinc.atlassian.net/browse/PED-212) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+
+## Descripcion
+
+*Sin descripcion*

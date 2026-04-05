@@ -1,0 +1,44 @@
+---
+jira_key: "PED-1134"
+aliases: ["PED-1134"]
+summary: "APP - Refactor - MVP - sumar al stock cuando está  el parámetro useStockIncoming la cantidad stockIncoming"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-10-03 14:25"
+updated: "2025-10-24 10:33"
+labels: ["MVPLaset", "esperandoDependencia"]
+jira_url: "https://bluinc.atlassian.net/browse/PED-1134"
+---
+
+# PED-1134: APP - Refactor - MVP - sumar al stock cuando está  el parámetro useStockIncoming la cantidad stockIncoming
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-10-03 14:25 |
+| Actualizado | 2025-10-24 10:33 |
+| Etiquetas | MVPLaset, esperandoDependencia |
+| Jira | [PED-1134](https://bluinc.atlassian.net/browse/PED-1134) |
+
+## Relaciones
+
+- **Padre:** [[PED-64]] Productos
+- **action item from:** [[PED-1133]] API - Refactor - MVP - Agregar al obj items del detalle de una orden stockIncoming (definido por la cantidad del item en compra pendiente menos la cantidad de ingresados en la misma)
+
+## Descripcion
+
+para sumar las cantidades input (cantidad)
+
+
+Limite de compra = `availableStock`+`stockInMyOrder`+`stockIncoming`
+
+Habilitado =`stockIncoming > 0 && availableStock > 0`
+
+[adjunto]

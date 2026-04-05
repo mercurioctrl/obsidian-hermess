@@ -1,0 +1,36 @@
+---
+jira_key: "PED-409"
+aliases: ["PED-409"]
+summary: "API - Review - Crear cliente -> Cuando creas un cliente, debe asignarse al vededor y agente que lo esta creando"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-12-28 16:24"
+updated: "2023-12-29 12:22"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-409"
+---
+
+# PED-409: API - Review - Crear cliente -> Cuando creas un cliente, debe asignarse al vededor y agente que lo esta creando
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-28 16:24 |
+| Actualizado | 2023-12-29 12:22 |
+| Etiquetas | ninguna |
+| Jira | [PED-409](https://bluinc.atlassian.net/browse/PED-409) |
+
+## Relaciones
+
+- **Padre:** [[PED-16]] Listar clientes
+
+## Descripcion
+
+# Cuando creas un cliente, debe asignarse al vededor y agente que lo esta creando

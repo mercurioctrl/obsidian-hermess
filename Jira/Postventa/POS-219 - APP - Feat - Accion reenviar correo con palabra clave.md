@@ -1,0 +1,39 @@
+---
+jira_key: "POS-219"
+aliases: ["POS-219"]
+summary: "APP - Feat - Accion reenviar correo con palabra clave"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-11-01 12:22"
+updated: "2022-11-01 16:05"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-219"
+---
+
+# POS-219: APP - Feat - Accion reenviar correo con palabra clave
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-11-01 12:22 |
+| Actualizado | 2022-11-01 16:05 |
+| Etiquetas | ninguna |
+| Jira | [POS-219](https://bluinc.atlassian.net/browse/POS-219) |
+
+## Relaciones
+
+- **Padre:** [[POS-69]] APP - Feat - Listar postventas finalizadas
+- **is blocked by:** [[POS-218]] API - Feat - Accion reenviar correo con palabra clave
+
+## Descripcion
+
+Se debe agregar en la lista o en botón derecho un clickeable para ejecutar el recurso de reenvió de correo.
+
+Ver con  la ruta para ejecutar el recurso.

@@ -1,0 +1,280 @@
+---
+jira_key: "PED-1058"
+aliases: ["PED-1058"]
+summary: "API - Feat - Crear un recurso para obtener los intentos de pago de un usuario determinado"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2025-07-21 15:16"
+updated: "2025-08-05 19:26"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1058"
+---
+
+# PED-1058: API - Feat - Crear un recurso para obtener los intentos de pago de un usuario determinado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-21 15:16 |
+| Actualizado | 2025-08-05 19:26 |
+| Etiquetas | ninguna |
+| Jira | [PED-1058](https://bluinc.atlassian.net/browse/PED-1058) |
+
+## Relaciones
+
+- **Padre:** [[PED-724]] Modal "Venta Market Place LO"
+- **is blocked by:** [[LIO-387]] API - Refactor - Obtener estado de pago detallado para cada intento
+- **has action item:** [[LIO-389]] API - Refactor - Obtener estado de pago detallado para un usuario determinado
+
+## Descripcion
+
+Con el objeto de tener mas informacion disponible para los operadores  comerciales de libre opción y por la cantidad de intentos de compra con tarjetas “robadas” agregaremos un repositorio que nos permita ver rápidamente aquellos “intentos de pago” realizados por el usuario en el contexto de una venta.
+
+Para esto agregaremos el recurso
+
+```
+GET {API_URL}/v1/aboutMarketPlace/{branch-order}/paymentTransactions
+```
+
+Esto devuelve lo siguiente (ojo,si prestas atención muestro los intentos para todo el usuario, no para el pedido)
+
+```
+[
+  {
+    "id": 8103,
+    "token": "08987aed336b497396cc1cb19d297016",
+    "transaction_amount": 50511486.0,
+    "installments": 1,
+    "payment_method_id": "master",
+    "email": "corvalangabriel82@gmail.com",
+    "identification_type": "DNI",
+    "identification_number": "23107725",
+    "cardholder_name": "Norma linconao ",
+    "payment_gateway": "mercadopago",
+    "status": "rejected",
+    "status_detail": "cc_rejected_high_risk",
+    "response_code": "118863055999",
+    "pedido_cabecera_id": 740935,
+    "created_at": "2025-07-21T11:24:28.07",
+    "interest_amount": 0.0,
+    "financing_fee": 0.0,
+    "installment_rate": 0.0,
+    "bin": 54270243
+  },
+  {
+    "id": 8028,
+    "token": "e119b5123f7b79e41d2d62a739ba76ef",
+    "transaction_amount": 5916200.0,
+    "installments": 1,
+    "payment_method_id": "master",
+    "email": "corvalangabriel82@gmail.com",
+    "identification_type": "DNI",
+    "identification_number": "23278740",
+    "cardholder_name": "Alicia quiroga ",
+    "payment_gateway": "mercadopago",
+    "status": "pending",
+    "status_detail": "cc_rejected_high_risk",    
+    "response_code": null,
+    "pedido_cabecera_id": 740529,
+    "created_at": "2025-07-19T02:19:04.373",
+    "interest_amount": 0.0,
+    "financing_fee": 0.0,
+    "installment_rate": 0.0,
+    "bin": 52392000
+  },
+  {
+    "id": 7968,
+    "token": "d1ef55e216900e7823f1690a43cc55c2",
+    "transaction_amount": 5979400.0,
+    "installments": 1,
+    "payment_method_id": "master",
+    "email": "corvalangabriel82@gmail.com",
+    "identification_type": "DNI",
+    "identification_number": "40583364",
+    "cardholder_name": "Gabriel corvalan",
+    "payment_gateway": "mercadopago",
+    "status": "pending",
+    "status_detail": "cc_rejected_high_risk",    
+    "response_code": null,
+    "pedido_cabecera_id": 740245,
+    "created_at": "2025-07-18T00:40:49.92",
+    "interest_amount": 0.0,
+    "financing_fee": 0.0,
+    "installment_rate": 0.0,
+    "bin": null
+  },
+  ...
+```
+
+Para hacer esto, podremos hacer algo como esto, o cualquier otra variante
+
+```
+SELECT TOP (1000)
+  
+        [token]
+      , [transaction_amount]
+      , [installments]
+      , [payment_method_id]
+      , [email]
+      , [identification_type]
+      , [identification_number]
+      , [cardholder_name]
+      , [payment_gateway]
+      , [status]
+      , [status_detail]
+      , [response_code]
+      , [pedido_cabecera_id]
+      , [created_at]
+      , [interest_amount]
+      , [financing_fee]
+      , [installment_rate]
+      , [bin]
+FROM [LO].[dbo].[payment_gateway_transactions]
+LEFT JOIN LO.dbo.pedidosCabecera ON payment_gateway_transactions.pedido_cabecera_id = pedidosCabecera.id
+where pedidosCabecera.usuarioID in (
+    SELECT usuarioID
+FROM [LO].[dbo].[pedidosCabecera]
+LEFT JOIN LO.dbo.pedidosCabeceraVendedor ON pedidosCabecera.id = pedidosCabeceraVendedor.pedidoCabeceraID
+WHERE pedclitID = '10419964' 
+  )
+ORDER BY pedido_cabecera_id DESC  
+```
+
+
+
+
+
+Extras: ademas de la implementación basica solicitada, se agregaron varios recursos de tipo respositorio y un recurso de estadisca de intensiones de pago del cliente. 
+
+
+
+Se agregaron varios parametro de filtrado.
+
+```
+GET aboutMarketPlace/001-10418424/paymentTransactions?search=corvalangabriel82@gmail.com&paymentMethod=master&installments=1&status=approved&between=01-07-2025_21-07-2025&currentPage=1&itemsPerPage=60
+```
+
+
+
+- Permite realizar busquedas por  `response_code`, `pedido_id`, `email`, `identification_number`, `cardholder_name`
+
+
+
+```
+search=corvalangabriel82@gmail.com
+```
+
+
+
+
+
+- Se puede buscar por las diferentes medios de pagos emitadas por los bancos. (`master`, `visa`, `maestro`)
+
+
+
+```
+&paymentMethod=master
+```
+
+estos tipos se puede obtener del nuevo recurso:
+
+```
+GET aboutMarketPlace/transaction/paymentMethod
+```
+
+```json
+[
+    {
+        "value": "master"
+    },
+    {
+        "value": "cabal"
+    },...
+]
+```
+
+
+
+- Se puede buscar por las cuotas existentes en la tabla.
+
+
+
+```
+&installments=1
+```
+
+estos se puede obtener del nuevo recurso:
+
+```
+GET aboutMarketPlace/transaction/installments
+```
+
+```json
+[
+    {
+        "value": "0"
+    },
+    {
+        "value": "3"
+    },
+    {
+        "value": "6"
+    },...
+]
+```
+
+
+
+
+
+- Se puede filtrar segun los estados registrados en la tabla.
+
+
+
+```
+&status=approved
+```
+
+```
+GET aboutMarketPlace/transaction/status
+```
+
+```json
+[
+    {
+        "value": "in_process"
+    },
+    {
+        "value": "charged_back"
+    },....
+]
+```
+
+
+
+
+
+- Se permite filtrado entre fechas
+
+
+
+```
+&between=01-07-2025_21-07-2025
+```
+
+
+
+- Permite paginación
+
+
+
+```
+&currentPage=1&itemsPerPage=15
+```

@@ -1,0 +1,37 @@
+---
+jira_key: "PED-640"
+aliases: ["PED-640"]
+summary: "APP - Refactor - Agregar \"destino final\" a detalle del pedido (aboutOrder)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-03-26 15:11"
+updated: "2024-04-18 23:12"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-640"
+---
+
+# PED-640: APP - Refactor - Agregar "destino final" a detalle del pedido (aboutOrder)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-03-26 15:11 |
+| Actualizado | 2024-04-18 23:12 |
+| Etiquetas | ninguna |
+| Jira | [PED-640](https://bluinc.atlassian.net/browse/PED-640) |
+
+## Relaciones
+
+- **Padre:** [[PED-638]] Agregar "destino final" a detalle del pedido (aboutOrder)
+- **is blocked by:** [[PED-639]] API - Refactor - Agregar "destino final" a detalle del pedido (aboutOrder)
+
+## Descripcion
+
+*Sin descripcion*

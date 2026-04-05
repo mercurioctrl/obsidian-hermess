@@ -1,0 +1,36 @@
+---
+jira_key: "PED-1324"
+aliases: ["PED-1324"]
+summary: "API - Review - Error a descargar un presupuesto"
+status: "Tareas por hacer"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Marbe Moreno"
+created: "2026-03-04 16:38"
+updated: "2026-03-04 16:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1324"
+---
+
+# PED-1324: API - Review - Error a descargar un presupuesto
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Marbe Moreno |
+| Creado | 2026-03-04 16:38 |
+| Actualizado | 2026-03-04 16:38 |
+| Etiquetas | ninguna |
+| Jira | [PED-1324](https://bluinc.atlassian.net/browse/PED-1324) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

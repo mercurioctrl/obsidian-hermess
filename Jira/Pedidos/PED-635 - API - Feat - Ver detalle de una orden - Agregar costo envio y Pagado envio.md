@@ -1,0 +1,36 @@
+---
+jira_key: "PED-635"
+aliases: ["PED-635"]
+summary: "API - Feat - Ver detalle de una orden -> Agregar costo envio y Pagado envio"
+status: "Tareas por hacer"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2024-03-25 10:52"
+updated: "2024-03-25 10:52"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-635"
+---
+
+# PED-635: API - Feat - Ver detalle de una orden -> Agregar costo envio y Pagado envio
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-03-25 10:52 |
+| Actualizado | 2024-03-25 10:52 |
+| Etiquetas | ninguna |
+| Jira | [PED-635](https://bluinc.atlassian.net/browse/PED-635) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+
+## Descripcion
+
+*Sin descripcion*

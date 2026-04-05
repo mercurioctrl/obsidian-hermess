@@ -1,0 +1,49 @@
+---
+jira_key: "PED-291"
+aliases: ["PED-291"]
+summary: "  API - Tasa de retención de clientes - Incidencias varias"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2023-12-01 01:24"
+updated: "2023-12-11 07:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-291"
+---
+
+# PED-291:   API - Tasa de retención de clientes - Incidencias varias
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2023-12-01 01:24 |
+| Actualizado | 2023-12-11 07:35 |
+| Etiquetas | ninguna |
+| Jira | [PED-291](https://bluinc.atlassian.net/browse/PED-291) |
+
+## Relaciones
+
+- **blocks:** [[PED-246]] API - Feat - Tasa de retención de clientes
+
+## Descripcion
+
+- Si los clientes al inicio del periodo son 93 y al final del periodo son 372 esto me debería de dar una retención de al menos el 400 % de los clientes, por lo que a mi parecer debería de replantearse la formula, mi sugerencia es la siguiente:
+
+**Tasa de retención de clientes** = (Clientes al final del periodo - Nuevos clientes adquiridos durante el periodo) / Clientes al inicio del periodo
+
+
+
+[adjunto]
+
+
+2. Al filtrar por cliente, por ejemplo, el 76712 me aparece que no estuvo activo al final del periodo, sin embargo, en la base de datos observo lo contrario.
+
+
+[adjunto]
+[adjunto]

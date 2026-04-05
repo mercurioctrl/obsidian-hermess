@@ -1,0 +1,38 @@
+---
+jira_key: "PED-312"
+aliases: ["PED-312"]
+summary: "APP - Refactor - Subtotales de comisiones"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-12-06 06:28"
+updated: "2023-12-26 15:49"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-312"
+---
+
+# PED-312: APP - Refactor - Subtotales de comisiones
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-06 06:28 |
+| Actualizado | 2023-12-26 15:49 |
+| Etiquetas | ninguna |
+| Jira | [PED-312](https://bluinc.atlassian.net/browse/PED-312) |
+
+## Relaciones
+
+- **Padre:** [[PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-311]] API - Refactor - Obtener subtotales de comisiones agrupados por listas de precios  -> Agregar coeficientes
+- **is blocked by:** [[PED-321]] APP - Mostrar lista de comisiones - Incidencias varias
+
+## Descripcion
+
+Se agrega una columna extra para mostrar el coeficiente para cada lista y el total de la comision de esa fila

@@ -1,0 +1,51 @@
+---
+jira_key: "PED-543"
+aliases: ["PED-543"]
+summary: "API - Feat - Agregar \"Destinlo final para el transporte\""
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2024-02-07 16:44"
+updated: "2024-02-13 01:39"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-543"
+---
+
+# PED-543: API - Feat - Agregar "Destinlo final para el transporte"
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-02-07 16:44 |
+| Actualizado | 2024-02-13 01:39 |
+| Etiquetas | ninguna |
+| Jira | [PED-543](https://bluinc.atlassian.net/browse/PED-543) |
+
+## Relaciones
+
+- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **blocks:** [[PED-541]] APP - Feat - Maquetar cotizacion de "Destino final para el transporte"
+
+## Descripcion
+
+Agregaremos un nuevo recurso que sirve para poder agregarle un destino final a los trasporten según lo que veníamos conversando los días anteriores
+
+Debemos tener como validación que esto solo se puede hacer si ya tiene un envío principal agregado.
+
+```
+POST {API_URL}/v1/orders/{branch-order}/addFinalShipping
+```
+
+```
+{
+  "customerAddressId":25976
+}
+```
+
+Para guardar el dato crearemos una nueva columna en la tabla `[NewBytes_DBF].[dbo].[pedclit]` llamada medioEnvioIdFinal

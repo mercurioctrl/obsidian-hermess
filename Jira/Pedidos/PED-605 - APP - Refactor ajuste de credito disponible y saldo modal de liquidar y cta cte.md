@@ -1,0 +1,36 @@
+---
+jira_key: "PED-605"
+aliases: ["PED-605"]
+summary: "APP - Refactor: ajuste de credito disponible y saldo modal de liquidar y cta cte de cliente"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2024-03-12 15:13"
+updated: "2024-03-14 19:19"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-605"
+---
+
+# PED-605: APP - Refactor: ajuste de credito disponible y saldo modal de liquidar y cta cte de cliente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2024-03-12 15:13 |
+| Actualizado | 2024-03-14 19:19 |
+| Etiquetas | ninguna |
+| Jira | [PED-605](https://bluinc.atlassian.net/browse/PED-605) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+
+## Descripcion
+
+*Sin descripcion*

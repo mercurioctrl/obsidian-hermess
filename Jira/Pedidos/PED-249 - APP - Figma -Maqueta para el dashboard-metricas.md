@@ -1,0 +1,36 @@
+---
+jira_key: "PED-249"
+aliases: ["PED-249"]
+summary: "APP - Figma -Maqueta para el dashboard-metricas"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2023-11-09 13:29"
+updated: "2023-11-14 09:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-249"
+---
+
+# PED-249: APP - Figma -Maqueta para el dashboard-metricas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2023-11-09 13:29 |
+| Actualizado | 2023-11-14 09:25 |
+| Etiquetas | ninguna |
+| Jira | [PED-249](https://bluinc.atlassian.net/browse/PED-249) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+[link](https://www.figma.com/file/wPBf9JrwwWT9DKLjLD0r2H/Maqueta-boton-metricas%2Festadisticas?type=design&node-id=0-1&mode=design&t=zAj5ELrKxcwdZBki-0)

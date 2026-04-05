@@ -1,0 +1,54 @@
+---
+jira_key: "PED-194"
+aliases: ["PED-194"]
+summary: "API - Feat - Lista de ordenes -> filtro de Facturado / No facturado"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Guillermo Avila"
+reporter: "Catriel Mercurio"
+created: "2023-10-30 13:20"
+updated: "2023-11-08 08:45"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-194"
+---
+
+# PED-194: API - Feat - Lista de ordenes -> filtro de Facturado / No facturado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Guillermo Avila |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-10-30 13:20 |
+| Actualizado | 2023-11-08 08:45 |
+| Etiquetas | ninguna |
+| Jira | [PED-194](https://bluinc.atlassian.net/browse/PED-194) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-195]] APP - Feat - Lista de ordenes -> filtro de Facturado / No facturado
+- **blocks:** [[PED-190]] APP - Feat - Ver informacion del pedido -> Eliminar saltos de linea (Feedback)
+
+## Descripcion
+
+Modificaremos el recurso [https://lioteam.atlassian.net/browse/PED-9](https://lioteam.atlassian.net/browse/PED-9)
+
+```
+GET {API_URL}/v1/orders?voucher=true/false/null
+```
+
+básicamente debemos pesarla a la consulta del repositorio los siguientes criterios
+
+### Criterios de aceptación
+
+- Si voucher es `true`, entonces `[NewBytes_DBF].[dbo].[albclit].lfacturado` = `true`
+
+
+- Si voucher es false, entonces `[NewBytes_DBF].[dbo].[albclit].lfacturado` = `false`
+
+
+- Si voucher es false, entonces muestro todas.

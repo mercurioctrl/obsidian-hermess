@@ -1,0 +1,84 @@
+---
+jira_key: "PED-628"
+aliases: ["PED-628"]
+summary: "API - Feat - Repositorio de precios"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-03-21 16:38"
+updated: "2024-03-26 13:13"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-628"
+---
+
+# PED-628: API - Feat - Repositorio de precios
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-03-21 16:38 |
+| Actualizado | 2024-03-26 13:13 |
+| Etiquetas | ninguna |
+| Jira | [PED-628](https://bluinc.atlassian.net/browse/PED-628) |
+
+## Relaciones
+
+- **Padre:** [[PED-237]] Precios
+
+## Descripcion
+
+Crearemos una tabla `[NewBytes_DBF].[dbo].[priceList]` de referencia pra poder ingresar el detalle de las listas de precio con referencias.
+
+Para esto crearemos la siguiente tabla
+
+- id (int, autonumerico)
+
+
+- natarifappId (int, es el id para enlazar con las tarifas)
+
+
+- name (varchar,es el nombre de la lista)
+
+
+- description (varchar, es la descripcion de la lista).
+
+
+- algorithm (varchar, es el string con la formula explicativa)
+
+
+- commission (decimal, es la comision que paga la lista)
+
+
+
+| - natarifappId | - name | - description | - algorithm | **commission** |
+| --- | --- | --- | --- | --- |
+| 1 | A | Precio de Lista 1 | npvp1 = (may1+may2+may3) + pl1 +pl2 + pl3 | 0.5 |
+| 2 | B | Precio de Lista 2 | npvp2 =(may1+may2+may3) + pl1 +pl2 | 0.4 |
+| 3 | C | Precio de Lista 3 | npvp3 = (may1+may2+may3) + pl1 | 0.3 |
+| 4 | D | Precio Mayorista | npvp5 = (may1+may2+may3) | 0.1 |
+| 4 | PM | Debajo de precio Mayorista | <npvp5 |  |
+| 6 | LO | Libre Opcion | nplo =  [(may1+may2+may3)+lo2] | 0.5 |
+| 7 | E | Precio sin identificar |  | 0 |
+| 9 | CF | Consumidor Final | npvp4 = (may1+may2+may3) + pl1 +pl2 + pl3 +cf |  |
+
+```
+GET {API_URL}/v1/priceLists
+```
+
+```
+[
+  {
+  natarifappId:1,
+  name: A,
+  description: Consumidor final,
+  algorithm: npvp1 (cf1+cf2),
+  commision: 0.5
+  }
+]
+```

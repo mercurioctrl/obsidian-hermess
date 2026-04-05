@@ -1,0 +1,40 @@
+---
+jira_key: "PED-451"
+aliases: ["PED-451"]
+summary: "Los comentarios no se ven en algunos monitores con poco espacio o resolucion"
+status: "Tareas por hacer"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2024-01-05 17:35"
+updated: "2024-01-05 17:37"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-451"
+---
+
+# PED-451: Los comentarios no se ven en algunos monitores con poco espacio o resolucion
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-01-05 17:35 |
+| Actualizado | 2024-01-05 17:37 |
+| Etiquetas | ninguna |
+| Jira | [PED-451](https://bluinc.atlassian.net/browse/PED-451) |
+
+## Relaciones
+
+- **Padre:** [[PED-149]] Reportes
+
+## Descripcion
+
+[adjunto]
+[adjunto]
+
+
+Creo que la mejor opción es colapsar el mensaje original (el reporte) y que se vean solo algunas lineas a menos que le hagas clic

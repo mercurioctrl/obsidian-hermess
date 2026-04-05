@@ -1,0 +1,53 @@
+---
+jira_key: "PED-738"
+aliases: ["PED-738"]
+summary: "API - Refactor - permitir cuit cuil  string de solo caracter numericos"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Emanuel Jesus Ferreyra"
+created: "2024-06-05 13:58"
+updated: "2024-06-06 19:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-738"
+---
+
+# PED-738: API - Refactor - permitir cuit cuil  string de solo caracter numericos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Emanuel Jesus Ferreyra |
+| Creado | 2024-06-05 13:58 |
+| Actualizado | 2024-06-06 19:35 |
+| Etiquetas | ninguna |
+| Jira | [PED-738](https://bluinc.atlassian.net/browse/PED-738) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+
+## Descripcion
+
+En caso de enviarse. 
+
+```
+[
+    {
+        "branch": "0002",
+        "order": "10332806",
+        "fileImg": "bef688996dfc70b63914de3c5f934787.png",
+        "cbu": "1111111111111111111111",
+        "document": "27-37892693-9",
+        "nroOperacion": "12410013",
+        "nameOwner": "E Ferreyra",
+        "internalOperationNumber": "12410013"
+    }
+]
+```
+
+`"document": "27-41892693-9"`  se debe insertar como `27418926939`

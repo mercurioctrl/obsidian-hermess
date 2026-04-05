@@ -1,0 +1,36 @@
+---
+jira_key: "PED-1170"
+aliases: ["PED-1170"]
+summary: "Kits"
+status: "Tareas por hacer"
+type: "Epic"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2025-11-27 09:15"
+updated: "2025-11-27 09:15"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1170"
+---
+
+# PED-1170: Kits
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Epic |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-11-27 09:15 |
+| Actualizado | 2025-11-27 09:15 |
+| Etiquetas | ninguna |
+| Jira | [PED-1170](https://bluinc.atlassian.net/browse/PED-1170) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

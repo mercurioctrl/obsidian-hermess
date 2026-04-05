@@ -1,0 +1,49 @@
+---
+jira_key: "PED-1066"
+aliases: ["PED-1066"]
+summary: "API - Refactor - Nuevo medio de pago \"Pago diferido NBE\" "
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2025-07-28 11:24"
+updated: "2025-08-06 10:24"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1066"
+---
+
+# PED-1066: API - Refactor - Nuevo medio de pago "Pago diferido NBE" 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-28 11:24 |
+| Actualizado | 2025-08-06 10:24 |
+| Etiquetas | ninguna |
+| Jira | [PED-1066](https://bluinc.atlassian.net/browse/PED-1066) |
+
+## Relaciones
+
+- **Padre:** [[PED-123]] Feat - Liquidar pedido
+
+## Descripcion
+
+Agregaremos un nuevo medio de pago, solo permitido en la liquidación para pedidos de NBE
+
+Este medio de pago tiene la particularidad de que en lugar de dejar los pedidos en `ID_STATUS = 1` por defecto, en caso de que el pedido no supere el limite establecido para el mismo medio de pago (se puede agregar el parámetro en la misma tabla de medios de pago), entonces lo pone directamente en `ID_STATUS = 2`
+
+```
+POST {API_URL}/v1/closeSale
+```
+
+**Condiciones para ID_STATUS = 2**
+
+- Que sea de NBE, sino no puede liquidar con este metodo de pago
+
+
+- Que el monto sea menor o igual al maximo definido

@@ -1,0 +1,49 @@
+---
+jira_key: "PED-670"
+aliases: ["PED-670"]
+summary: "API - Fet - Leer parametros compltos de dropshipping"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-04-15 14:41"
+updated: "2024-04-19 20:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-670"
+---
+
+# PED-670: API - Fet - Leer parametros compltos de dropshipping
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-04-15 14:41 |
+| Actualizado | 2024-04-19 20:35 |
+| Etiquetas | ninguna |
+| Jira | [PED-670](https://bluinc.atlassian.net/browse/PED-670) |
+
+## Relaciones
+
+- **Padre:** [[PED-646]] Dropshipping
+
+## Descripcion
+
+```
+GET {API_URL}/v1/setDropShupping/{order}
+```
+
+Usaremos el recurso para leer todos los datos del dropshipping, en prinicpio mostraremos:
+
+```
+{
+    "response": [
+        {
+            "clientName": "Nombre del cliente",
+            "clientEmail": "Correo del cliente",
+            "dropshipping":true,
+```

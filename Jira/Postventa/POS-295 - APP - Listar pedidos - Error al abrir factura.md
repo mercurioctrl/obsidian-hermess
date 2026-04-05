@@ -1,0 +1,54 @@
+---
+jira_key: "POS-295"
+aliases: ["POS-295"]
+summary: "APP - Listar pedidos - Error al abrir factura"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Guillermo Avila"
+created: "2024-04-24 17:35"
+updated: "2024-04-30 13:54"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-295"
+---
+
+# POS-295: APP - Listar pedidos - Error al abrir factura
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-04-24 17:35 |
+| Actualizado | 2024-04-30 13:54 |
+| Etiquetas | ninguna |
+| Jira | [POS-295](https://bluinc.atlassian.net/browse/POS-295) |
+
+## Relaciones
+
+- **Padre:** [[POS-280]] Pedidos
+- **relates to:** [[POS-283]] APP - Feat - Listar pedidos
+
+## Descripcion
+
+Al intentar visualizar una factura me aparece el mensaje “El token es inválido“
+
+[adjunto]
+```
+curl 'https://gamma.ms-comprobantes.lio.red/v2/F/522541/undefined' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: es-419,es;q=0.9' \
+  -H 'Connection: keep-alive' \
+  -H 'Origin: https://gamma.comprobantes.lio.red' \
+  -H 'Referer: https://gamma.comprobantes.lio.red/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0' \
+  -H 'sec-ch-ua: "Opera";v="109", "Not:A-Brand";v="8", "Chromium";v="123"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Windows"'
+```

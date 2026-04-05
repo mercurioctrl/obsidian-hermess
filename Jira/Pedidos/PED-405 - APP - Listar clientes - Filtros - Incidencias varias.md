@@ -1,0 +1,41 @@
+---
+jira_key: "PED-405"
+aliases: ["PED-405"]
+summary: "APP - Listar clientes -> Filtros - Incidencias varias"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Guillermo Avila"
+created: "2023-12-27 21:26"
+updated: "2023-12-29 11:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-405"
+---
+
+# PED-405: APP - Listar clientes -> Filtros - Incidencias varias
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Guillermo Avila |
+| Creado | 2023-12-27 21:26 |
+| Actualizado | 2023-12-29 11:30 |
+| Etiquetas | ninguna |
+| Jira | [PED-405](https://bluinc.atlassian.net/browse/PED-405) |
+
+## Relaciones
+
+- **Padre:** [[PED-15]] Clientes
+- **blocks:** [[PED-390]] APP - Feat - Listar clientes -> Conjunto de filtros ordenar por y sentido del orden
+
+## Descripcion
+
+1. El nombre de la opción de filtrado debe ser la misma que el nombre de la columna a filtrar.
+
+2. Falta agregar el filtro por `date` que es la fecha en la que se dio de alta el cliente.
+
+[adjunto]

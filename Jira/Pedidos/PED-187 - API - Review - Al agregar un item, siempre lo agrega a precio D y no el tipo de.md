@@ -1,0 +1,40 @@
+---
+jira_key: "PED-187"
+aliases: ["PED-187"]
+summary: "API - Review - Al agregar un item, siempre lo agrega a precio \"D\" y no el tipo de lista indicado para el cliente"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-10-28 15:56"
+updated: "2023-10-30 10:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-187"
+---
+
+# PED-187: API - Review - Al agregar un item, siempre lo agrega a precio "D" y no el tipo de lista indicado para el cliente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-10-28 15:56 |
+| Actualizado | 2023-10-30 10:25 |
+| Etiquetas | ninguna |
+| Jira | [PED-187](https://bluinc.atlassian.net/browse/PED-187) |
+
+## Relaciones
+
+- **Padre:** [[PED-34]] Generar / Editar ordenes
+
+## Descripcion
+
+Recordar que segun la clse de precios que planteamos, las columnas `ntarifapp,ndto,precioAMano,perfil` peuden influir para determinar que tipo de precio le toca al cliente.
+
+De esta forma, segun sea mi cliente, o bien el cliente “propietario” del pedido que estoy editando, entonces ese debe ser el precio que se introduce. 
+
+Adicionalmente, debemos siempre almacenar el string con la letra en la columna `l[NewBytes_DBF].[dbo].[pedclil].istaPrecio`

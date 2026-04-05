@@ -1,0 +1,39 @@
+---
+jira_key: "POS-257"
+aliases: ["POS-257"]
+summary: "APP- Refactor -El boton de descarga de los reportes, no parece estar aplicando los filtros"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-05-19 09:54"
+updated: "2023-06-12 07:01"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-257"
+---
+
+# POS-257: APP- Refactor -El boton de descarga de los reportes, no parece estar aplicando los filtros
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-05-19 09:54 |
+| Actualizado | 2023-06-12 07:01 |
+| Etiquetas | ninguna |
+| Jira | [POS-257](https://bluinc.atlassian.net/browse/POS-257) |
+
+## Relaciones
+
+- **Padre:** [[POS-22]] Dashboard y estadisticas
+
+## Descripcion
+
+Parece estar sacando siempre todo el reporte aunque le pases filtros
+
+[adjunto]
+[adjunto]

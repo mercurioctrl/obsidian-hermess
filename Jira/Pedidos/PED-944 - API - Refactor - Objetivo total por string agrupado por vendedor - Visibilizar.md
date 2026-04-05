@@ -1,0 +1,37 @@
+---
+jira_key: "PED-944"
+aliases: ["PED-944"]
+summary: "API - Refactor - Objetivo total por string agrupado por vendedor -> Visibilizar para poder mostrar cuando aun no hicieron ventas"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-02-05 16:53"
+updated: "2025-02-17 10:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-944"
+---
+
+# PED-944: API - Refactor - Objetivo total por string agrupado por vendedor -> Visibilizar para poder mostrar cuando aun no hicieron ventas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-02-05 16:53 |
+| Actualizado | 2025-02-17 10:43 |
+| Etiquetas | ninguna |
+| Jira | [PED-944](https://bluinc.atlassian.net/browse/PED-944) |
+
+## Relaciones
+
+- **Padre:** [[PED-299]] Objetivos y Desafios
+- **action item from:** [[PED-943]] APP - Refactor - Objetivo total por string agrupado por vendedor -> Agregar "monto por unidad vendida" y parámetro "mostrar"
+
+## Descripcion
+
+Esta tarea es de lo que conversamos recién sobre la oportunidad de mejora para mostrar cuando aun no se hicieron ventas

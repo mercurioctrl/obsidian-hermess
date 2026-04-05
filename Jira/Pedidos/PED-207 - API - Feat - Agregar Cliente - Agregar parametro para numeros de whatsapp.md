@@ -1,0 +1,40 @@
+---
+jira_key: "PED-207"
+aliases: ["PED-207"]
+summary: "API - Feat - Agregar Cliente -> Agregar parametro para numeros de whatsapp"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-11-01 10:22"
+updated: "2024-01-18 20:09"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-207"
+---
+
+# PED-207: API - Feat - Agregar Cliente -> Agregar parametro para numeros de whatsapp
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-11-01 10:22 |
+| Actualizado | 2024-01-18 20:09 |
+| Etiquetas | ninguna |
+| Jira | [PED-207](https://bluinc.atlassian.net/browse/PED-207) |
+
+## Relaciones
+
+- **Padre:** [[PED-16]] Listar clientes
+
+## Descripcion
+
+Agregaremos a los recursos de Editar y Agregar Cliente un nuevo parámetro para almacenar los números de Whatsapp
+
+[link](https://lioteam.atlassian.net/browse/PED-63) [link](https://lioteam.atlassian.net/browse/PED-19)  
+
+Lo agregaremos en la columna que crearemos como `[NewBytes_DBF].[dbo].[clientes].whaPhone`

@@ -1,0 +1,51 @@
+---
+jira_key: "PED-624"
+aliases: ["PED-624"]
+summary: "API - Feat - Agregar flag para saber si ya tiene o no el comprobante cargado en el repositorio de ordenes"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-03-20 14:39"
+updated: "2024-03-25 02:42"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-624"
+---
+
+# PED-624: API - Feat - Agregar flag para saber si ya tiene o no el comprobante cargado en el repositorio de ordenes
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-03-20 14:39 |
+| Actualizado | 2024-03-25 02:42 |
+| Etiquetas | ninguna |
+| Jira | [PED-624](https://bluinc.atlassian.net/browse/PED-624) |
+
+## Relaciones
+
+- **Padre:** [[PED-584]] Comprobantes de pago
+- **blocks:** [[PED-625]] APP - Feat - Solo colorear el icono de comprobante, cuando el mismo ya exista, sino es gris
+
+## Descripcion
+
+Agregar al recurso
+
+```
+GET {API_URL}/v1/orders
+```
+
+agregaremos el parametro
+
+`paymentVoucher: true `
+
+en el caso de que ya tenga cargada la info del comprobante.
+
+```
+LEFT JOIN NB_WEB.dbo.pedidosCabeceraComprobantePago AS PCCP ON PCCP.order = pedclit.order AND PCCP.branch = pedclit.branch
+```

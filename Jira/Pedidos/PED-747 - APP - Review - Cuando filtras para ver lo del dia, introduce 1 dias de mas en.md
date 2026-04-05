@@ -1,0 +1,37 @@
+---
+jira_key: "PED-747"
+aliases: ["PED-747"]
+summary: "APP - Review - Cuando filtras  para ver lo del dia, introduce 1 dias de mas en la comparacion con el periodo anterior"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-06-19 13:20"
+updated: "2024-06-24 18:00"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-747"
+---
+
+# PED-747: APP - Review - Cuando filtras  para ver lo del dia, introduce 1 dias de mas en la comparacion con el periodo anterior
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-06-19 13:20 |
+| Actualizado | 2024-06-24 18:00 |
+| Etiquetas | ninguna |
+| Jira | [PED-747](https://bluinc.atlassian.net/browse/PED-747) |
+
+## Relaciones
+
+- **Padre:** [[PED-242]] Pestaña Estadisticas
+
+## Descripcion
+
+[adjunto]
+Fijate que en algunos te pone de 18 a 19 y en otros de 19 a 19

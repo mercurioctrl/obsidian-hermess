@@ -1,0 +1,43 @@
+---
+jira_key: "PED-339"
+aliases: ["PED-339"]
+summary: "API - Feat - Repositorio de ordenes de compra > Agregar filtro serial"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-12-15 08:59"
+updated: "2023-12-18 12:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-339"
+---
+
+# PED-339: API - Feat - Repositorio de ordenes de compra > Agregar filtro serial
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-15 08:59 |
+| Actualizado | 2023-12-18 12:30 |
+| Etiquetas | ninguna |
+| Jira | [PED-339](https://bluinc.atlassian.net/browse/PED-339) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **blocks:** [[PED-341]] APP - Feat - Repositorio de ordenes de compra > Agregar filtro serial
+
+## Descripcion
+
+Agregaremos un campo especifico para buscar por SERIAL mediante un = (`[NEW_BYTES].[dbo].[ST_REMITOS_VENTA_DETALLE_SALIDA]`)
+
+```
+GET {API_URL}/v1/orders?serial={serial}... otros filtros
+```
+
+Es importante que solo si viene el parámetro `sku` agregaremos lo necesario para filtrarlo, de moodo tal de no volver mas lenta la consulta cuando se hace sin el filtro.

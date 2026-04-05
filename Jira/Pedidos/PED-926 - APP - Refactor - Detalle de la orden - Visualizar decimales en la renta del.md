@@ -1,0 +1,38 @@
+---
+jira_key: "PED-926"
+aliases: ["PED-926"]
+summary: "APP - Refactor - Detalle de la orden -> Visualizar decimales en la renta del artículo "
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Guillermo Avila"
+created: "2025-01-03 19:07"
+updated: "2025-01-21 16:23"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-926"
+---
+
+# PED-926: APP - Refactor - Detalle de la orden -> Visualizar decimales en la renta del artículo 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Guillermo Avila |
+| Creado | 2025-01-03 19:07 |
+| Actualizado | 2025-01-21 16:23 |
+| Etiquetas | ninguna |
+| Jira | [PED-926](https://bluinc.atlassian.net/browse/PED-926) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+
+## Descripcion
+
+Realizaremos una refactorización para que dato porcentual de la renta pueda visualizarse con dos de sus decimales.
+
+[adjunto]

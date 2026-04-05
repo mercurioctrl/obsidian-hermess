@@ -1,0 +1,38 @@
+---
+jira_key: "PED-411"
+aliases: ["PED-411"]
+summary: "APP - Ver seriales tomados para un pedido determinado - Incidencias varias"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Guillermo Avila"
+reporter: "Guillermo Avila"
+created: "2023-12-28 17:37"
+updated: "2023-12-28 18:01"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-411"
+---
+
+# PED-411: APP - Ver seriales tomados para un pedido determinado - Incidencias varias
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Guillermo Avila |
+| Reportado por | Guillermo Avila |
+| Creado | 2023-12-28 17:37 |
+| Actualizado | 2023-12-28 18:01 |
+| Etiquetas | ninguna |
+| Jira | [PED-411](https://bluinc.atlassian.net/browse/PED-411) |
+
+## Relaciones
+
+- **Padre:** [[PED-4]] Pedidos
+
+## Descripcion
+
+Solo faltaría agregar la columna fecha exacta.
+
+[adjunto]

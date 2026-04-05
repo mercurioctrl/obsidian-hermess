@@ -1,0 +1,37 @@
+---
+jira_key: "PED-586"
+aliases: ["PED-586"]
+summary: "API - Feat - Subir comprobante de pago"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-03-07 12:57"
+updated: "2024-03-12 04:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-586"
+---
+
+# PED-586: API - Feat - Subir comprobante de pago
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-03-07 12:57 |
+| Actualizado | 2024-03-12 04:25 |
+| Etiquetas | ninguna |
+| Jira | [PED-586](https://bluinc.atlassian.net/browse/PED-586) |
+
+## Relaciones
+
+- **Padre:** [[PED-584]] Comprobantes de pago
+- **blocks:** [[PED-587]] APP - Feat - Subir comprobante de pago
+
+## Descripcion
+
+[adjunto]

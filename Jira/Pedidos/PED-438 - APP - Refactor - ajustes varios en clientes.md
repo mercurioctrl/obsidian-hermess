@@ -1,0 +1,45 @@
+---
+jira_key: "PED-438"
+aliases: ["PED-438"]
+summary: "APP - Refactor - ajustes varios en clientes"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2024-01-04 11:20"
+updated: "2024-01-06 16:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-438"
+---
+
+# PED-438: APP - Refactor - ajustes varios en clientes
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2024-01-04 11:20 |
+| Actualizado | 2024-01-06 16:21 |
+| Etiquetas | ninguna |
+| Jira | [PED-438](https://bluinc.atlassian.net/browse/PED-438) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+- ver/editar telefono al editar una direccion
+
+
+- No muestra el mensaje de succes o error correctamente
+
+
+- agregar validaciones en los modal de crear / editar direccion
+
+
+- cambiar estilo de boton de wp en clientes y agregarle boton copiar

@@ -1,0 +1,41 @@
+---
+jira_key: "PED-717"
+aliases: ["PED-717"]
+summary: "API - Feat - Guardar IP de login"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-05-17 10:29"
+updated: "2024-06-11 16:09"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-717"
+---
+
+# PED-717: API - Feat - Guardar IP de login
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-05-17 10:29 |
+| Actualizado | 2024-06-11 16:09 |
+| Etiquetas | ninguna |
+| Jira | [PED-717](https://bluinc.atlassian.net/browse/PED-717) |
+
+## Relaciones
+
+- **Padre:** [[PED-10]] Login y credenciales 
+- **is blocked by:** [[PED-560]] API - Guardar IP de login - IP no coincidente
+- **relates to:** [[PED-734]] Al iniciar sesion, enviaremos el IP 
+
+## Descripcion
+
+Guardaremos siempre la utlima IP de login en 
+`[NB_WEB].[dbo].[usuarios_nb].ip`
+
+Adicionalmente la agregaremos al objeto users [link](https://lioteam.atlassian.net/browse/PED-406)

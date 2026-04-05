@@ -1,0 +1,43 @@
+---
+jira_key: "PED-922"
+aliases: ["PED-922"]
+summary: "API - Refactor - Agregar en el caso que corresponda el costForSale al generar un pedido"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-12-30 07:56"
+updated: "2025-01-27 17:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-922"
+---
+
+# PED-922: API - Refactor - Agregar en el caso que corresponda el costForSale al generar un pedido
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-12-30 07:56 |
+| Actualizado | 2025-01-27 17:29 |
+| Etiquetas | ninguna |
+| Jira | [PED-922](https://bluinc.atlassian.net/browse/PED-922) |
+
+## Relaciones
+
+- **Padre:** [[PED-91]] APP - Feat - Generar pedido
+- **action item from:** [[PED-921]] API - MVP - Refactor - Editar costo en las ordenes de compra
+
+## Descripcion
+
+Así como lo hacemos en otros casos, cuando tenemos en nuestra orden el parámetro 
+
+`[NewBytes_DBF].[dbo].[pedclil].costForSale`
+
+al realizar el pase de orden de compra a pedido lo trasladaremos a 
+
+`[NewBytes_DBF].[dbo].[albclil].costForSale`

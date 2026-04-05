@@ -1,0 +1,58 @@
+---
+jira_key: "PED-1159"
+aliases: ["PED-1159"]
+summary: "API - Review - MVP - revisar porque hay ordenes repetidas y en cero como remitidas"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Marbe Moreno"
+created: "2025-10-17 17:06"
+updated: "2025-11-20 16:24"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1159"
+---
+
+# PED-1159: API - Review - MVP - revisar porque hay ordenes repetidas y en cero como remitidas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-10-17 17:06 |
+| Actualizado | 2025-11-20 16:24 |
+| Etiquetas | ninguna |
+| Jira | [PED-1159](https://bluinc.atlassian.net/browse/PED-1159) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+
+## Descripcion
+
+0002-10425814
+
+[adjunto]
+```
+curl 'https://gamma.api.orders.lio.red/v1/orders?between=02-10-2025_17-10-2025&currentPage=2&itemsPerPage=15' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: en-US,en;q=0.9,es-ES;q=0.8,es;q=0.7' \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NjA3MzQ5NjUsImF1ZCI6IjcyNjk0YWZmNzM3NGYxZmI3N2I1MThhMjgzYWM3ZWNjZjllZDg5ZTIiLCJ1c2VyIjp7ImlkIjo3NDYzLCJjb2RlRlAiOiIwMTkyMjciLCJhZ2VudElkIjoxMiwidXN1SWRlbnRpZmljYWNpb24iOiJTZWJhIiwicm9sZURlc2NyaXB0aW9uIjoiQWRtaW5pc3RyYWRvciIsInBlZGlkb3MiOjEsInBtIjoxLCJkaXNjb3VudFNoaXBwaW5nIjoxLCJyZWJpbGwiOjEsImlzUG0iOjEsImlzR2VyZW5jaWEiOjEsImVkaXRDb3N0Rm9yU2FsZSI6MSwicGVkX2Z1bGxfYmVuZWZpdHMiOjEsImRlc2xpcXVpZGFyIjoxLCJ1bmxpbWl0ZWRSZXBvcnRzIjpudWxsLCJjcmVhdGVNYW51YWxWb3VjaGVyIjoxLCJiYW5MaXN0UHJpY2UiOiJDIiwidXNlU3RvY2tJbmNvbWluZyI6MX0sImlhdCI6MTc2MDczMTM2NSwibmJmIjoxNzYwNzMxMzY1fQ.b9GJc07_IFL8qaxTiTmE092jLSWNQ1QjAX4PmdBCLJs' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Origin: http://localhost:3006' \
+  -H 'Pragma: no-cache' \
+  -H 'Referer: http://localhost:3006/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Not;A=Brand";v="99", "Google Chrome";v="139", "Chromium";v="139"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Linux"'
+```
+
+[adjunto]

@@ -1,0 +1,88 @@
+---
+jira_key: "POS-327"
+aliases: ["POS-327"]
+summary: "APP - Feat - ermitir solicitud de excepción para ingreso de RMA fuera de garantía con revalidación de usuario y motivo obligatorio"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-04-23 07:58"
+updated: "2025-05-07 10:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-327"
+---
+
+# POS-327: APP - Feat - ermitir solicitud de excepción para ingreso de RMA fuera de garantía con revalidación de usuario y motivo obligatorio
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-04-23 07:58 |
+| Actualizado | 2025-05-07 10:07 |
+| Etiquetas | ninguna |
+| Jira | [POS-327](https://bluinc.atlassian.net/browse/POS-327) |
+
+## Relaciones
+
+- **Padre:** [[POS-325]] Excepciones de garantía
+- **action item from:** [[POS-326]] API - Refactor - Agregar excepción para ingreso de RMA fuera de garantía con validación de usuario y registro 
+
+## Descripcion
+
+[adjunto]
+Agregar en el modal de ingreso de serial (cuando el backend responda `"currentWarranty": false`) una opción para realizar un ingreso por excepción, que debe cumplir con:
+
+- Mostrar un botón: **"Ingresar RMA bajo excepción (requiere autorización)"**.
+
+
+- Al hacer clic, pedir:
+
+- Reingreso de la contraseña del usuario.
+
+
+- Comentario/observación obligatoria explicando el motivo de la excepción.
+
+
+
+
+- Enviar esta información al backend mediante el recurso [link](https://lioteam.atlassian.net/browse/POS-326) 
+
+```
+POST {API_URL}/v1/makeSerialExcpetion
+```
+
+```
+{
+  "serialNumber": "TR500CAGMU000277",
+  "observation": "Cliente solicita excepción por compra institucional con acuerdo especial.",
+  "password": "contraseña_del_usuario"
+}
+```
+
+
+- Si el backend responde correctamente, continuar el flujo de ingreso como si el producto tuviera garantía activa volviendo a buscar el serial que ahora nos dará `"currentWarranty": true`
+
+
+- Mostrar un mensaje al usuario:
+
+✅ Excepción registrada. La gerencia fue notificada. Esta acción quedará registrada en tu historial.
+
+
+
+**Criterios de aceptación:**
+
+- La opción sólo aparece si `"currentWarranty": false`.
+
+
+- No permite avanzar sin contraseña y observación.
+
+
+- Maneja correctamente errores como contraseña incorrecta o problemas de red.
+
+
+- El flujo es el mismo que el de un ingreso normal después de la aprobación.

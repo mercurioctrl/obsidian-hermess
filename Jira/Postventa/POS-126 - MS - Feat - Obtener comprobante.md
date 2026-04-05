@@ -1,0 +1,155 @@
+---
+jira_key: "POS-126"
+aliases: ["POS-126"]
+summary: "MS - Feat - Obtener comprobante"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2022-09-13 09:13"
+updated: "2022-10-18 14:20"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-126"
+---
+
+# POS-126: MS - Feat - Obtener comprobante
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-09-13 09:13 |
+| Actualizado | 2022-10-18 14:20 |
+| Etiquetas | ninguna |
+| Jira | [POS-126](https://bluinc.atlassian.net/browse/POS-126) |
+
+## Relaciones
+
+- **Padre:** [[POS-123]] MS - Servicio de emision de comprobantes
+
+## Descripcion
+
+Este recurso devuelve un objeto a partir del cual, se puede hacer la representación completa de un comprobante.
+
+Este recurso puede visualizar todos los comprobantes is esta logueado con cuenta administrativa.
+
+Ademas, se puede visualizar un comprobante de un cliente determinado, sin estar logueado, siempre y cuando este el token acompañado y coincida con su token diario. (Cualquier cosa consultarme sobre esto).
+
+```
+GET {API_URL}/v2/obtenerComprobante/{idComprobante}
+```
+
+```
+GET {API_URL}/v2/obtenerComprobante/{idComprobante}/{tokenDiario}
+```
+
+
+
+Ambos devuelven
+
+[adjunto]
+
+
+
+
+SQL
+
+```sql
+
+        SELECT
+        FP_Empresas.CNOMBRE AS emisorNombre,
+        FP_Empresas.CDOMICILIO AS domicilioEmpresa,
+        FP_CategoriasIVA.Descripcion as emisorCondicionFiscal,
+        'Ciudad de Buenos Aires' as emisorLocalidad,
+        FP_FactWebCliEncabezado.CSERIE as letraComprobante,
+        TIPODOCU.Descripcion as tipoComprobante,
+        TIPODOCU.[cod_A] as cod_A,
+        TIPODOCU.[cod_B] as cod_B,
+        TIPODOCU.[cod_C] as cod_C,
+        TIPODOCU.[cod_E] as cod_E,
+        FP_FactWebCliEncabezado.CNUMFAC AS numeroComprobante,
+        FP_PuntosVenta.Descripcion AS numeroPuntoVenta,
+        CONVERT(VARCHAR,FP_FactWebCliEncabezado.DFECFAC, 103)  AS fechaComprobante,
+        FP_Empresas.CCODIB AS emisorIngresosBrutos,
+        FP_Empresas.CNIF AS emisorCuit,
+        DETALLE.NCANENT,
+        PRODUCTO.ID_ARTICULO,
+            PRODUCTO.ID_PRODUCTO,
+            PRODUCTO.cDetalle,
+            PRODUCTO.cpredef2,
+            DETALLE.NPREUNIT,
+             FP_FactWebCliEncabezado.CAE,
+                 PRODUCTO.cpredef1,
+                 DETALLE.niva,
+        CONVERT(VARCHAR,  FP_Empresas.DFECINI, 103) AS emisorFechaInicio,
+        REPLACE(clientes.cnomcli, 'ñ', 'ñ') AS receptorNombre,
+        REPLACE(clientes.cdircli, 'ñ', 'ñ') as receptorDireccion,
+        FP_Ciudades.Descripcion AS receptorLocalidad,
+        FP_CategoriasIVA.Descripcion as receptorCondicionFiscal,
+        ( (SELECT CNUMSUC FROM NewBytes_DBF.dbo.albclit WHERE albclit.ID_NROREMCLI_ENC  =FP_FactWebCliEncabezado.ID_NROREMCLI_ENC) + ' - '+FP_FactWebCliEncabezado.cnumalb) AS reserva,
+        clientes.cdnicif as receptorCuit,
+        clientes.cdircli as receptorDireccion,
+        DETALLE.cref,
+        FP_FormasPagos.Descripcion AS condicionVenta,
+        MS_REMITO_CABECERA.IMPPERCEP,
+        MS_REMITO_CABECERA.COTIZACION,
+        FP_FactWebCliEncabezado.CCODDIV,
+        (SELECT ID_ComprobanteAFIP FROM [NewBytes_DBF].[dbo].[FP_ComprobantesAFIP] WHERE ID_TiposDocumentosCobro = FP_FactWebCliEncabezado.NTIPODOCU AND FP_ComprobantesAFIP.CSerie = FP_FactWebCliEncabezado.CSERIE) as tipoCmp
+        ,[TOTIMP_EnviadoAFIP]
+        ,[TOTNETO_EnvidoAFIP]
+        ,[TOTIVAS_EnviadoAFIP]
+        , (SELECT tipoDocRec FROM     [NewBytes_DBF].[dbo].FP_TiposDocumentos WHERE ndocidenti = clientes.niva) as tipoDocRec,
+        CONVERT(VARCHAR,  FP_FactWebCliEncabezado.FecVencimiento, 103) AS vtoCae,
+        (SELECT  top(1) fotos.checksum
+        FROM NewBytes_DBF.dbo.albclit
+        LEFT JOIN NewBytes_DBF.dbo.pedclit
+        ON albclit.cnumped = pedclit.cnumped
+        LEFT JOIN LO.dbo.pedidosCabeceraVendedor
+        ON pedidosCabeceraVendedor.pedclitID = NewBytes_DBF.dbo.pedclit.cnumped
+        LEFT JOIN [LO].[dbo].[vendedores]
+        ON vendedores.id = pedidosCabeceraVendedor.vendedorID
+        LEFT JOIN PRODUCTOS.dbo.fotos
+        ON vendedores.logoID = fotos.id
+        WHERE ID_NROREMCLI_ENC = FP_FactWebCliEncabezado.ID_NROREMCLI_ENC
+        AND pedclit.cobserv = 'PEDIDO LIBRE OPCION'
+        ORDER BY  dfecalb ASC) as logoTienda
+        FROM NewBytes_DBF.dbo.FP_CategoriasIVA AS FP_CategoriasIVA
+        LEFT JOIN NewBytes_DBF.dbo.FP_DocumentosAFIP AS FP_DocumentosAFIP
+        LEFT JOIN NewBytes_DBF.dbo.FP_FormasPagos AS FP_FormasPagos
+        LEFT JOIN NewBytes_DBF.dbo.FP_Empresas AS FP_Empresas
+        LEFT JOIN NewBytes_DBF.dbo.FP_PuntosVenta AS FP_PuntosVenta
+        LEFT JOIN NewBytes_DBF.dbo.FP_FactWebCliEncabezado AS FP_FactWebCliEncabezado
+        ON FP_PuntosVenta.Id_PuntoVenta = FP_FactWebCliEncabezado.ID_PUNTOVENTA
+        ON FP_Empresas.SUCFacturaPlus = FP_FactWebCliEncabezado.CNUMSUC
+        ON FP_FormasPagos.Id_FormaPago = FP_FactWebCliEncabezado.ID_FORMADEPAGO
+        ON FP_DocumentosAFIP.ndocidenti = FP_FactWebCliEncabezado.ID_DocumentoAFIP
+        ON FP_CategoriasIVA.NIVA = FP_FactWebCliEncabezado.ID_TIPOCATEGORIA
+        LEFT JOIN [NB_WEB].[dbo].[detalle_facturas_sustitutas] AS articulo
+        RIGHT JOIN [NB_WEB].[dbo].FP_FactWebCliDetalle_SUSTI AS FP_FactWebCliDetalle
+        ON articulo.id = FP_FactWebCliDetalle.ID_ARTICULO
+        LEFT JOIN NewBytes_DBF.dbo.ivas AS ivas
+        ON articulo.Id_TipoIVAV = ivas.Id_TipoIVA
+        ON FP_FactWebCliEncabezado.ID_NROFACCLI_ENC = FP_FactWebCliDetalle.ID_NROFACCLI_ENC
+        LEFT JOIN NewBytes_DBF.dbo.clientes AS clientes
+        ON FP_FactWebCliEncabezado.ID_CLIENTE = clientes.ID_CLIENTE
+        LEFT JOIN NewBytes_DBF.dbo.FP_Sucursales AS FP_Sucursales
+        ON FP_FactWebCliEncabezado.ID_Sucursal = FP_Sucursales.Id_sucursal
+        LEFT JOIN NewBytes_DBF.dbo.transpor AS transpor
+        ON FP_FactWebCliEncabezado.ID_TRANSPORTISTA = transpor.ID_TRANSPORTISTA
+        LEFT JOIN NewBytes_DBF.dbo.FP_Monedas AS FP_Monedas
+        ON FP_FactWebCliEncabezado.ID_MONEDA = FP_Monedas.Id_Moneda
+        LEFT JOIN NewBytes_DBF.dbo.FP_Ciudades AS FP_Ciudades
+        ON clientes.ID_CIUDAD = FP_Ciudades.Id_Ciudad
+        LEFT JOIN NewBytes_DBF.dbo.FP_FactWebCliDetalle AS DETALLE ON DETALLE.ID_NROFACCLI_ENC = FP_FactWebCliEncabezado.ID_NROFACCLI_ENC
+        LEFT JOIN NewBytes_DBF.dbo.FP_TiposDocumentosCobro AS TIPODOCU
+        ON  TIPODOCU.Id_TipoDocCobro = FP_FactWebCliEncabezado.NTIPODOCU
+        LEFT JOIN [NewBytes_DBF].[dbo].[articulo] AS PRODUCTO ON PRODUCTO.id_articulo = DETALLE.id_articulo
+        LEFT JOIN NewBytes_DBF.DBO.albclit ON  albclit.ID_NROREMCLI_ENC =  FP_FactWebCliEncabezado.ID_NROREMCLI_ENC
+        LEFT JOIN NEW_BYTES.DBO.MS_REMITO_CABECERA ON MS_REMITO_CABECERA.REMITO_FP = ALBCLIT.cnumalb AND MS_REMITO_CABECERA.SUCURSAL_REMITO = ALBCLIT.CNUMSUC
+        WHERE FP_FactWebCliEncabezado.ID_NROFACCLI_ENC = ?
+        ORDER BY  FP_FactWebCliEncabezado.ID_NROFACCLI_ENC
+```

@@ -1,0 +1,54 @@
+---
+jira_key: "PED-283"
+aliases: ["PED-283"]
+summary: "API - Review - Al liquidar algunos pedidos, rompen los listados en expedicion"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-11-27 09:06"
+updated: "2023-12-04 20:18"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-283"
+---
+
+# PED-283: API - Review - Al liquidar algunos pedidos, rompen los listados en expedicion
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-11-27 09:06 |
+| Actualizado | 2023-12-04 20:18 |
+| Etiquetas | ninguna |
+| Jira | [PED-283](https://bluinc.atlassian.net/browse/PED-283) |
+
+## Relaciones
+
+- **Padre:** [[PED-4]] Pedidos
+
+## Descripcion
+
+Por alguna razon, al realizar la liquidacion de ciertos pedidos, o todos, se rompen la consulta que se hace en los repositorios de expedicion.
+
+Para esto se realizo un ejemplo en DEV 
+
+El 
+
+| X000200568854 | 0002-10332323 |  |
+| --- | --- | --- |
+
+Y luego de eso se fue al reposiotior DEV de expedicion obteniendo el siguiente mensaje
+
+```
+https://gamma.api.warehouse.lio.red/v1/pickUp?currentPage=1&itemsPerPage=300&status=2,11,10
+```
+
+```
+SQLSTATE[22018]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error de conversión al convertir el valor varchar '*' al tipo de datos int. SQL: SELECT CONVERT(VARCHAR, dfecalb, 20) as date, albclit.ID_NROREMCLI_ENC as pedido, clientes.ID_CLIENTE as clientId, cnomcli as clientName, agentes.ccodage as sellerId, CASE WHEN capeage IS NULL AND cnbrage IS NULL THEN NULL ELSE CONCAT(RTRIM(capeage), ' ', RTRIM(cnbrage)) END AS sellerName, MS_STATUS_REMITO.DESCRIPCION as statusDescription, RTRIM(transpor.DESCRIPCION) as dispatch, MS_VENTAS_REMITOS.ID_STATUS as statusId, pedclit.cnumped as 'order', pedclit.cnumsuc as branch, pedclit.tracking as tracking, FP_FactWebCliEncabezado.cfactura as cfactura, albclit.cnumalb as cnumalb, ISNULL(ST_REMITOS_VENTA_CABECERA_SALIDA.fullSerialized,0) as fullSerialized, FP_FactWebCliEncabezado.token, FP_FactWebCliEncabezado.ID_NROFACCLI_ENC as voucherIdFactura, MS_REMITO_CABECERA.alert, pedclit.secret_key, lfacturado as facturado, U2.UserName as whoAuthorized, U1.UserName as whoBuild FROM [NewBytes_DBF].[dbo].[albclit] LEFT JOIN NewBytes_DBF.dbo.clientes on clientes.ID_CLIENTE = albclit.ID_CLIENTE LEFT JOIN NewBytes_DBF.dbo.agentes on agentes.ID_VENDEDOR = albclit.ID_VENDEDOR LEFT JOIN NewBytes_DBF.dbo.albclil ON albclil.ID_NROREMCLI_ENC = albclit.ID_NROREMCLI_ENC LEFT JOIN NewBytes_DBF.dbo.pedclit ON albclit.cnumped = pedclit.cnumped AND albclit.cnumsuc = pedclit.cnumsuc LEFT JOIN NEW_BYTES.dbo.MS_REMITO_CABECERA ON MS_REMITO_CABECERA.REMITO_FP = albclit.cnumalb and MS_REMITO_CABECERA.SUCURSAL_REMITO = albclit.cnumsuc LEFT JOIN NEW_BYTES.dbo.MS_VENTAS_REMITOS ON MS_REMITO_CABECERA.REMITO_FP = MS_VENTAS_REMITOS.REMITO_FP AND MS_REMITO_CABECERA.SUCURSAL_REMITO = MS_VENTAS_REMITOS.SUCURSAL_REMITO LEFT JOIN NEW_BYTES.dbo.MS_STATUS_REMITO ON MS_STATUS_REMITO.ID_STATUS = MS_VENTAS_REMITOS.ID_STATUS LEFT JOIN NewBytes_DBF.dbo.transpor ON transpor.ID_TRANSPORTISTA = MS_VENTAS_REMITOS.TRANSPORTE_FP LEFT JOIN [NewBytes_DBF].[dbo].[FP_FactWebCliEncabezado] ON FP_FactWebCliEncabezado.ID_NROREMCLI_ENC = albclit.ID_NROREMCLI_ENC AND FP_FactWebCliEncabezado.CAE IS NOT NULL AND FP_FactWebCliEncabezado.NTIPODOCU=1 LEFT JOIN NEW_BYTES.dbo.ST_REMITOS_VENTA_CABECERA_SALIDA ON ST_REMITOS_VENTA_CABECERA_SALIDA.REMITO_FP = albclit.cnumalb AND ST_REMITOS_VENTA_CABECERA_SALIDA.SUCURSAL_REMITO = albclit.cnumsuc LEFT JOIN NB_WEB.dbo.usuarios_nb AS U1 ON ST_REMITOS_VENTA_CABECERA_SALIDA.handedId = U1.UserId LEFT JOIN NB_WEB.dbo.usuarios_nb U2 ON ST_REMITOS_VENTA_CABECERA_SALIDA.authorizedId = U2.UserId WHERE ALBCLIT.ID_NROREMCLI_ENC IS NOT NULL AND MS_VENTAS_REMITOS.ANULADO = 'NO' AND MS_REMITO_CABECERA.ANULADO = 'NO' AND pedclit.medioEnvioId IS NULL AND transpor.ID_TRANSPORTISTA NOT IN (9,12,13,17,18,20) AND dfecalb > DATEDIFF(d,365, GETDATE()) AND MS_VENTAS_REMITOS.ID_STATUS IN (2,11,10) GROUP BY dfecalb, albclit.ID_NROREMCLI_ENC, clientes.ID_CLIENTE, cnomcli, agentes.ccodage, capeage, cnbrage, albclit.ntipoalb, MS_STATUS_REMITO.DESCRIPCION, transpor.DESCRIPCION, MS_VENTAS_REMITOS.ID_STATUS, pedclit.cnumped, pedclit.cnumsuc, pedclit.tracking, FP_FactWebCliEncabezado.cfactura, FP_FactWebCliEncabezado.ID_NROFACCLI_ENC, albclit.cnumalb, albclit.cnumsuc, FP_FactWebCliEncabezado.token, MS_REMITO_CABECERA.alertDate, MS_REMITO_CABECERA.alert, ST_REMITOS_VENTA_CABECERA_SALIDA.fullSerialized, U1.UserName, U2.UserName, pedclit.secret_key, lfacturado ORDER BY MS_REMITO_CABECERA.alertDAte DESC, dfecalb DESC OFFSET 0 rows FETCH next 300 rows only
+
+```

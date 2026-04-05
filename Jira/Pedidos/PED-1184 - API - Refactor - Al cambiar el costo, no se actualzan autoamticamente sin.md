@@ -1,0 +1,36 @@
+---
+jira_key: "PED-1184"
+aliases: ["PED-1184"]
+summary: "API - Refactor - Al cambiar el costo, no se actualzan autoamticamente sin recargar ganancia y renta"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-12-14 18:32"
+updated: "2025-12-17 12:03"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1184"
+---
+
+# PED-1184: API - Refactor - Al cambiar el costo, no se actualzan autoamticamente sin recargar ganancia y renta
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-14 18:32 |
+| Actualizado | 2025-12-17 12:03 |
+| Etiquetas | ninguna |
+| Jira | [PED-1184](https://bluinc.atlassian.net/browse/PED-1184) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+
+## Descripcion
+
+[adjunto]

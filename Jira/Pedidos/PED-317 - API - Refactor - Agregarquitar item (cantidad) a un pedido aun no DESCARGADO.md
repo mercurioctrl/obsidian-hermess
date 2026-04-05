@@ -1,0 +1,100 @@
+---
+jira_key: "PED-317"
+aliases: ["PED-317"]
+summary: "API - Refactor - Agregar/quitar item (cantidad) a un pedido aun no DESCARGADO"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-12-06 12:03"
+updated: "2023-12-11 10:08"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-317"
+---
+
+# PED-317: API - Refactor - Agregar/quitar item (cantidad) a un pedido aun no DESCARGADO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-06 12:03 |
+| Actualizado | 2023-12-11 10:08 |
+| Etiquetas | ninguna |
+| Jira | [PED-317](https://bluinc.atlassian.net/browse/PED-317) |
+
+## Relaciones
+
+- **Padre:** [[PED-34]] Generar / Editar ordenes
+
+## Descripcion
+
+Dado el ejemplo que hablamos ayer, donde existen momento donde nos entra una orden por un portal (libre opción, pedido de internet, etc) y no podemos satisfacer el stock al 100% en necesario poder hacer una edicion sobre la cantidad de ese item.
+
+Ver orden en gamma: 0002-10332350
+
+Para esto modificaremos el recurso para que nos permita editar las ordenes que estan en este estado, ya que al hacerlo actualmente recibimos lo siguiente.
+
+```
+{
+    "errors": {
+        "status": 500,
+        "title": "La orden no existe",
+        "file": "\/var\/www\/app\/app\/Services\/Order\/OrderService.php",
+        "line": 216
+    }
+}
+```
+
+Curl:
+
+```
+curl 'https://gamma.api.orders.lio.red/v1/orders/addItem' \
+  -X 'PATCH' \
+  -H 'Accept: application/json, text/plain, */*' \
+  -H 'Accept-Language: es-US,es-419;q=0.9,es;q=0.8,gl;q=0.7,en;q=0.6' \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDE4NzYxNzUsImF1ZCI6IjJlMThhNDI3MTczNDdjMDFhODdkYTdkN2ExN2FiZWFlNTczMGI1N2QiLCJ1c2VyIjp7ImlkIjo3NDYzLCJjb2RlRlAiOiIwMTkyMjciLCJhZ2VudElkIjoxMiwidXN1SWRlbnRpZmljYWNpb24iOiJTZWJhIiwicGVkaWRvcyI6MSwicG0iOjF9LCJpYXQiOjE3MDE4NzI1NzUsIm5iZiI6MTcwMTg3MjU3NX0.njAX-yrOb99t72VftJTDTaR5YTjEKzzBGETUZsW3H28' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Type: application/json' \
+  -H 'Origin: https://gamma.pedidos.saftel.com' \
+  -H 'Referer: https://gamma.pedidos.saftel.com/' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Site: cross-site' \
+  -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36' \
+  -H 'sec-ch-ua: "Google Chrome";v="119", "Chromium";v="119", "Not?A_Brand";v="24"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Linux"' \
+  --data-raw '{"order":"10332350","branch":"0002","itemId":118308,"amount":"234"}' \
+  --compressed
+```
+
+Finalmente para mejorar la experiencia y no tener que “ir probando” hasta que me permita poner el stock, cuando se da el caso que no se puede satisfacer y recibo el mensaje 
+
+```
+{
+    "errors": {
+        "status": 500,
+        "title": "No hay stock suficiente para el articulo",
+        "file": "\/var\/www\/app\/app\/Services\/Order\/OrderService.php",
+        "line": 237
+    }
+}
+```
+
+Mostraremos algo como 
+
+```
+{
+    "errors": {
+        "status": 500,
+        "title": "No hay stock suficiente, solo quedan 34 unidades.",
+        "file": "\/var\/www\/app\/app\/Services\/Order\/OrderService.php",
+        "line": 237
+    }
+}
+```

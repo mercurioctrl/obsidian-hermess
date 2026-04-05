@@ -1,0 +1,50 @@
+---
+jira_key: "PED-965"
+aliases: ["PED-965"]
+summary: "APP - Refactor - Agregar \"flag\" o indicador para representar cuando una orden posee un ticket"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-03-05 07:13"
+updated: "2025-03-10 18:37"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-965"
+---
+
+# PED-965: APP - Refactor - Agregar "flag" o indicador para representar cuando una orden posee un ticket
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-03-05 07:13 |
+| Actualizado | 2025-03-10 18:37 |
+| Etiquetas | ninguna |
+| Jira | [PED-965](https://bluinc.atlassian.net/browse/PED-965) |
+
+## Relaciones
+
+- **Padre:** [[PED-960]] Tickets de pedido
+- **action item from:** [[PED-961]] API - Refactor - Agregar atributo para saber si una orden tiene ticket y un filtro para filtrar las mismas
+
+## Descripcion
+
+Siguiendo lo realizado en [link](https://lioteam.atlassian.net/browse/PED-961)  haremos un refactor en nuestra pantalla de ordenes para mostrar un indicador que nos muestre si esa orden posee o no posee un ticket.
+
+Si` ticketStatus= NULL` → No tiene ticket
+
+Si` ticketStatus= 0` →Tiene ticket, perno no requiere atencion
+
+Si` ticketStatus= 1` → tiene ticket pendiente de respuest
+
+[adjunto]
+Se debe buscar la forma mas simple de mostrar esto con un icono o similar, que puede colorearse en rojo si requiere atención y sino permanecer gris.
+
+Debe aparecer en la parte visible de la pantalla para que no se pierda la indicación a la que debemos prestar atención.
+
+Algunas columnas como “unido” pueden ir mas atrás si es necesario.

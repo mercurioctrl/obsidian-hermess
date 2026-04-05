@@ -1,0 +1,41 @@
+---
+jira_key: "PED-421"
+aliases: ["PED-421"]
+summary: "API - Ver información del pedido - Obtener WhatsApp"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2024-01-02 17:06"
+updated: "2024-01-03 16:53"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-421"
+---
+
+# PED-421: API - Ver información del pedido - Obtener WhatsApp
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-01-02 17:06 |
+| Actualizado | 2024-01-03 16:53 |
+| Etiquetas | ninguna |
+| Jira | [PED-421](https://bluinc.atlassian.net/browse/PED-421) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **blocks:** [[PED-75]] API - Feat - Ver informacion del pedido
+
+## Descripcion
+
+Actualmente al consultar el recurso `aboutOrder` trae como parámetro `telephone` el cual es utilizado en el front para mandar la información por WhatsApp, sin embargo, este número no es de WhatsApp, por lo que habría que considerar cambiarlo o agregar un nuevo parámetro.
+
+[adjunto]
+[adjunto]
+[adjunto]

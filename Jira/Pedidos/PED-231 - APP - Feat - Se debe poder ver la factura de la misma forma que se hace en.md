@@ -1,0 +1,37 @@
+---
+jira_key: "PED-231"
+aliases: ["PED-231"]
+summary: "APP - Feat - Se debe poder ver la factura de la misma forma que se hace en otros sistemas"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-11-06 09:50"
+updated: "2023-11-06 15:18"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-231"
+---
+
+# PED-231: APP - Feat - Se debe poder ver la factura de la misma forma que se hace en otros sistemas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-11-06 09:50 |
+| Actualizado | 2023-11-06 15:18 |
+| Etiquetas | ninguna |
+| Jira | [PED-231](https://bluinc.atlassian.net/browse/PED-231) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-232]] API - Refactor - Listar ordenes -> Agregar parametros para visualizar comprobante
+
+## Descripcion
+
+Debe ser clickeable de tal modo que se pueda visualizar en el modal como en otros sistemas.

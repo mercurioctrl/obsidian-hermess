@@ -1,0 +1,42 @@
+---
+jira_key: "PED-545"
+aliases: ["PED-545"]
+summary: "API - Refactor - Mostrar comisiones para todos los vendedores"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-02-07 17:04"
+updated: "2024-02-09 17:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-545"
+---
+
+# PED-545: API - Refactor - Mostrar comisiones para todos los vendedores
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-02-07 17:04 |
+| Actualizado | 2024-02-09 17:21 |
+| Etiquetas | ninguna |
+| Jira | [PED-545](https://bluinc.atlassian.net/browse/PED-545) |
+
+## Relaciones
+
+- **Padre:** [[PED-174]] Listar comisiones
+
+## Descripcion
+
+Permitiremos que se puedan ver las comisiones de todos los vendedores juntos para los administradores
+
+```
+GET {API_URL}/v1/statistics/groupedCommision?between={fecha}
+```
+
+Modificaremos el recurso para que pueda funcionar sin recibir el id del vendedor

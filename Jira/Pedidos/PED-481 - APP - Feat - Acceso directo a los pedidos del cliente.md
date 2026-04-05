@@ -1,0 +1,41 @@
+---
+jira_key: "PED-481"
+aliases: ["PED-481"]
+summary: "APP - Feat - Acceso directo a los pedidos del cliente"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-01-16 09:06"
+updated: "2024-01-17 19:37"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-481"
+---
+
+# PED-481: APP - Feat - Acceso directo a los pedidos del cliente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-01-16 09:06 |
+| Actualizado | 2024-01-17 19:37 |
+| Etiquetas | ninguna |
+| Jira | [PED-481](https://bluinc.atlassian.net/browse/PED-481) |
+
+## Relaciones
+
+- **Padre:** [[PED-16]] Listar clientes
+- **blocks:** [[PED-483]] APP - Feat - Agrear accionable para buscar todas las ordenes del cliente
+
+## Descripcion
+
+Agregaremos junto al nombre del cliente un “accionable” que nos permita ver sus pedidos en  (podemos hacerlo junto al de ver su cuenta corriente)
+
+[adjunto]
+Se debe redirigir a la lista de ordenes filtradas
+/orders?currentPage=1&itemsPerPage=15&search=MERCURIO_CATRIEL_EDUARDO

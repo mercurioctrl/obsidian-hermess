@@ -1,0 +1,37 @@
+---
+jira_key: "PED-478"
+aliases: ["PED-478"]
+summary: "API - Feat - Mostrar en el listado de ordenes si el pedido esta combinaod"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2024-01-15 09:15"
+updated: "2024-01-17 02:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-478"
+---
+
+# PED-478: API - Feat - Mostrar en el listado de ordenes si el pedido esta combinaod
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-01-15 09:15 |
+| Actualizado | 2024-01-17 02:40 |
+| Etiquetas | ninguna |
+| Jira | [PED-478](https://bluinc.atlassian.net/browse/PED-478) |
+
+## Relaciones
+
+- **Padre:** [[PED-477]] Combinar envios
+- **blocks:** [[PED-479]] APP - Feat - Mostrar en el pedido de ordenes si el pedido esta combinado
+
+## Descripcion
+
+Al igual que se realizo en el listado de envíos de expedición, agregaremos los recursos necesarios al listado de ordenes, para mostrar cuando tiene o no un pedido combinado, ademas del recurso para levantar el modal que nos muestra cueles son sus combinaciones.

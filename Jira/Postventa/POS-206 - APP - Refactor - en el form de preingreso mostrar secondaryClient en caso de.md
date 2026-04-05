@@ -1,0 +1,36 @@
+---
+jira_key: "POS-206"
+aliases: ["POS-206"]
+summary: "APP - Refactor -  en el form de preingreso mostrar secondaryClient en caso de tenerlo (LO)"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2022-10-24 16:05"
+updated: "2022-10-27 17:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-206"
+---
+
+# POS-206: APP - Refactor -  en el form de preingreso mostrar secondaryClient en caso de tenerlo (LO)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2022-10-24 16:05 |
+| Actualizado | 2022-10-27 17:38 |
+| Etiquetas | ninguna |
+| Jira | [POS-206](https://bluinc.atlassian.net/browse/POS-206) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

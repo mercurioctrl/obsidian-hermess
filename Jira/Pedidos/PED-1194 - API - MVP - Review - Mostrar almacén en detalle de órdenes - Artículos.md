@@ -1,0 +1,53 @@
+---
+jira_key: "PED-1194"
+aliases: ["PED-1194"]
+summary: "API - MVP - Review - Mostrar almacén en detalle de órdenes -> Artículos duplicados"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Guillermo Avila"
+created: "2025-12-18 14:06"
+updated: "2025-12-23 15:45"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1194"
+---
+
+# PED-1194: API - MVP - Review - Mostrar almacén en detalle de órdenes -> Artículos duplicados
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Guillermo Avila |
+| Creado | 2025-12-18 14:06 |
+| Actualizado | 2025-12-23 15:45 |
+| Etiquetas | ninguna |
+| Jira | [PED-1194](https://bluinc.atlassian.net/browse/PED-1194) |
+
+## Relaciones
+
+- **Padre:** [[PED-1107]] Almacenes Multiples
+
+## Descripcion
+
+Al ver el detalle de una orden, me aparecen 6 artículos, en lugar de los 4 que había introducido. Adicional a esto, aparece un error de SQL.
+
+[adjunto]
+[adjunto]
+```
+curl.exe ^"https://gamma.api.orders.lio.red/v1/orders/0002-10426400^" ^
+  -H ^"User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0^" ^
+  -H ^"Accept: application/json, text/plain, */*^" ^
+  -H ^"Accept-Language: es-MX^" ^
+  -H ^"Accept-Encoding: gzip, deflate, br, zstd^" ^
+  -H ^"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NjYwODE0NzUsImF1ZCI6IjBiZmVmY2FiNzYyYWU4ZDAzMzcxYmU2M2Y5NWNhMjE3NmFlMWZhZjMiLCJ1c2VyIjp7ImlkIjo3NDYzLCJjb2RlRlAiOiIwMTkyMjciLCJhZ2VudElkIjoxMiwidXN1SWRlbnRpZmljYWNpb24iOiJTZWJhIiwicm9sZURlc2NyaXB0aW9uIjoiQWRtaW5pc3RyYWRvciIsInBlZGlkb3MiOjEsInBtIjoxLCJkaXNjb3VudFNoaXBwaW5nIjoxLCJyZWJpbGwiOjEsImlzUG0iOjEsImlzR2VyZW5jaWEiOjEsImVkaXRDb3N0Rm9yU2FsZSI6MSwicGVkX2Z1bGxfYmVuZWZpdHMiOjEsImRlc2xpcXVpZGFyIjoxLCJ1bmxpbWl0ZWRSZXBvcnRzIjpudWxsLCJjcmVhdGVNYW51YWxWb3VjaGVyIjoxLCJiYW5MaXN0UHJpY2UiOiJDIiwidW5sb2NrZWRTZWxsZXJGaWx0ZXIiOjEsInVzZVN0b2NrSW5jb21pbmciOjF9LCJpYXQiOjE3NjYwNzc4NzUsIm5iZiI6MTc2NjA3Nzg3NX0.QArR5kqfD6rHMSC5eG7Q3YVJSBStvSeZF9je9pT6IIM^" ^
+  -H ^"Origin: https://gamma.pedidos.saftel.com^" ^
+  -H ^"Connection: keep-alive^" ^
+  -H ^"Referer: https://gamma.pedidos.saftel.com/^" ^
+  -H ^"Sec-Fetch-Dest: empty^" ^
+  -H ^"Sec-Fetch-Mode: cors^" ^
+  -H ^"Sec-Fetch-Site: cross-site^"
+```

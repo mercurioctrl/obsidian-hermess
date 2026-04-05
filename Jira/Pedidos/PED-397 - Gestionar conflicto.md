@@ -1,0 +1,36 @@
+---
+jira_key: "PED-397"
+aliases: ["PED-397"]
+summary: "Gestionar conflicto"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-12-27 07:53"
+updated: "2023-12-27 09:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-397"
+---
+
+# PED-397: Gestionar conflicto
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-27 07:53 |
+| Actualizado | 2023-12-27 09:25 |
+| Etiquetas | ninguna |
+| Jira | [PED-397](https://bluinc.atlassian.net/browse/PED-397) |
+
+## Relaciones
+
+- **Padre:** [[PED-2]] Bases y repositorios
+
+## Descripcion
+
+[link](https://github.com/New-Bytes/api-rest-pedidos-laravel/pull/264)

@@ -1,0 +1,40 @@
+---
+jira_key: "PED-806"
+aliases: ["PED-806"]
+summary: "API - Al autorizar un pedido almacenar la fecha y hora - Fecha no guardada"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Guillermo Avila"
+created: "2024-08-25 23:37"
+updated: "2024-08-27 04:06"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-806"
+---
+
+# PED-806: API - Al autorizar un pedido almacenar la fecha y hora - Fecha no guardada
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-08-25 23:37 |
+| Actualizado | 2024-08-27 04:06 |
+| Etiquetas | ninguna |
+| Jira | [PED-806](https://bluinc.atlassian.net/browse/PED-806) |
+
+## Relaciones
+
+- **Padre:** [[PED-4]] Pedidos
+- **blocks:** [[PED-798]] API - Refactor - En la liquiadacion, solo cuando el pedido queda autorizaco (ID_sTATUS > 1), marcaremos la fecha de aturizacion
+
+## Descripcion
+
+Al autorizar un pedido de libre opción con comprobante de pago, no se visualiza la fecha guardada.
+
+[adjunto]
+[adjunto]

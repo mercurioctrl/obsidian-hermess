@@ -1,0 +1,38 @@
+---
+jira_key: "PED-488"
+aliases: ["PED-488"]
+summary: "APP - Review - Al intentar ampliar una imagen, la borran sin querer."
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-01-17 07:40"
+updated: "2024-01-18 13:00"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-488"
+---
+
+# PED-488: APP - Review - Al intentar ampliar una imagen, la borran sin querer.
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-01-17 07:40 |
+| Actualizado | 2024-01-18 13:00 |
+| Etiquetas | ninguna |
+| Jira | [PED-488](https://bluinc.atlassian.net/browse/PED-488) |
+
+## Relaciones
+
+- **Padre:** [[PED-256]] Leer un reporte
+
+## Descripcion
+
+Me reportaron 2 o 3 veces que borran sin querer los archivos porque al querer visualizarlos presionan el tachito de basura directamente. (Esta muy pegado al ojo y ocupa mucho en la imagen)
+
+[adjunto]

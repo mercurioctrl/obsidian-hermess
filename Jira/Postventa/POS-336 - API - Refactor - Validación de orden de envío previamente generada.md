@@ -1,0 +1,68 @@
+---
+jira_key: "POS-336"
+aliases: ["POS-336"]
+summary: "API - Refactor -> Validación de orden de envío previamente generada"
+status: "Tareas por hacer"
+type: "Subtarea"
+priority: "Lowest"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2025-06-12 11:21"
+updated: "2025-06-12 11:41"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-336"
+---
+
+# POS-336: API - Refactor -> Validación de orden de envío previamente generada
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Lowest |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2025-06-12 11:21 |
+| Actualizado | 2025-06-12 11:41 |
+| Etiquetas | ninguna |
+| Jira | [POS-336](https://bluinc.atlassian.net/browse/POS-336) |
+
+## Relaciones
+
+- **Padre:** [[POS-328]] Ordenes de devolucion de postventa
+
+## Descripcion
+
+Según lo conversado en la daily, esta tarea se evaluará en el futuro para su definición, por lo tanto, no debe ejecutarse por el momento; se registra únicamente como evidencia.
+
+Realizaremos una validación para evitar la generación de una orden de envío sobre una Postventa que ya cuente con una previamente generada.
+
+```
+{{API_URL}}/v1/afterSales/{Id}/finalized/createReturnOrder
+```
+
+
+
+Adicionalmente, sugiero una mejora para que el objeto de respuesta incluya un indicador que señale si ya se ha generado una orden de envío para la Postventa correspondiente. Esto permitiría que visualmente se identifique cuáles Postventas ya cuentan con una orden de envío.
+
+```
+{{API_URL}}/v1/afterSalesFinalized/find
+```
+
+```
+{
+  "afterSaleId": 35055,
+  "clientId": 29531,
+  "clientName": "Grupo Maximus S.r.l.",
+  "admissionDate": "2024-07-04 10:01:17",
+  "status": "Revisado",
+  "dispatched": false,
+  "dispatchedDate": null,
+  "agentName": "Juan Tama",
+  "agentId": "JTAMA",
+  "shippingOrder": true|false <--------------------------------------- Se agrega  
+}
+```
+
+[adjunto]
+[adjunto]

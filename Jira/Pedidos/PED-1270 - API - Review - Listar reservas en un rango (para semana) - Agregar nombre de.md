@@ -1,0 +1,62 @@
+---
+jira_key: "PED-1270"
+aliases: ["PED-1270"]
+summary: "API - Review - Listar reservas en un rango (para semana) - Agregar nombre de usuario -> Usuario guardado no coincidente"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Guillermo Avila"
+created: "2026-01-20 14:47"
+updated: "2026-01-26 12:28"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1270"
+---
+
+# PED-1270: API - Review - Listar reservas en un rango (para semana) - Agregar nombre de usuario -> Usuario guardado no coincidente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Guillermo Avila |
+| Creado | 2026-01-20 14:47 |
+| Actualizado | 2026-01-26 12:28 |
+| Etiquetas | ninguna |
+| Jira | [PED-1270](https://bluinc.atlassian.net/browse/PED-1270) |
+
+## Relaciones
+
+- **Padre:** [[PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
+- **clones:** [[PED-1226]] API - Refactor - Listar reservas en un rango (para semana) -> Agregar nombre de usuario
+- **relates to:** [[PED-1278]] API - Review - Siempre pone como que lo crea el mismo usuario de manera fija (parece estar harcodeado)
+
+## Descripcion
+
+Parece no estar guardando/retornando el usuario que realizo la reserva. 
+
+
+
+```
+GET/POST {{API_URL}}/v1/rooms/{roomId}/reservations
+```
+
+[adjunto]
+[adjunto]
+Datos del usuario con el que fue creada la reserva:
+
+```
+GET https://gamma.api.orders.lio.red/v1/auth/user
+{
+	"user": {
+		"id": 66369,
+		"codeFP": 75980,
+		"username": "gprueba_nb",
+		"email": "gavila@nb.com.ar",
+		"codeAgent": 61,
+		...
+	}
+}
+```

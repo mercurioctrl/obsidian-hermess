@@ -1,0 +1,36 @@
+---
+jira_key: "PED-118"
+aliases: ["PED-118"]
+summary: "APP - Review - En la pestaña ordenes están invertidas las columnas ordenes y pedidos. "
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-10-04 09:39"
+updated: "2023-10-04 16:44"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-118"
+---
+
+# PED-118: APP - Review - En la pestaña ordenes están invertidas las columnas ordenes y pedidos. 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-10-04 09:39 |
+| Actualizado | 2023-10-04 16:44 |
+| Etiquetas | ninguna |
+| Jira | [PED-118](https://bluinc.atlassian.net/browse/PED-118) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+
+## Descripcion
+
+*Sin descripcion*

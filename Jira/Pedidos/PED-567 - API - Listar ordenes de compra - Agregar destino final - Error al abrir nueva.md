@@ -1,0 +1,54 @@
+---
+jira_key: "PED-567"
+aliases: ["PED-567"]
+summary: "API - Listar ordenes de compra -> Agregar destino final - Error al abrir nueva cotización de envío"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2024-02-22 14:03"
+updated: "2024-02-26 23:51"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-567"
+---
+
+# PED-567: API - Listar ordenes de compra -> Agregar destino final - Error al abrir nueva cotización de envío
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-02-22 14:03 |
+| Actualizado | 2024-02-26 23:51 |
+| Etiquetas | ninguna |
+| Jira | [PED-567](https://bluinc.atlassian.net/browse/PED-567) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **is caused by:** [[PED-562]] API - Refactor - Listar ordenes de compra -> Agregar destino final
+
+## Descripcion
+
+- Al abrir la cotización de envío de una orden sin asignación previa de envío, produce un error.
+
+
+
+```
+{{API_URL}}/v1/shippingAddress/{order}/order
+```
+
+[adjunto]
+Dato extra:
+
+El error puede deberse a que no se está validando si ya existe un envío asignado a esa orden.
+
+---
+
+Dejo esta decisión a tu criterio, pero creo que `predetermined`no es el nombre más apropiado, ya que no representa la dirección predeterminada
+
+[adjunto]

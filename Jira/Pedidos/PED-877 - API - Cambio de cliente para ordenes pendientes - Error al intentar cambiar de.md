@@ -1,0 +1,49 @@
+---
+jira_key: "PED-877"
+aliases: ["PED-877"]
+summary: "API - Cambio de cliente para ordenes pendientes - Error al intentar cambiar de cliente"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Guillermo Avila"
+created: "2024-11-20 15:42"
+updated: "2024-11-27 16:22"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-877"
+---
+
+# PED-877: API - Cambio de cliente para ordenes pendientes - Error al intentar cambiar de cliente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-11-20 15:42 |
+| Actualizado | 2024-11-27 16:22 |
+| Etiquetas | ninguna |
+| Jira | [PED-877](https://bluinc.atlassian.net/browse/PED-877) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **relates to:** [[PED-198]] API - Feat - Cambio de cliente para ordenes pendientes
+
+## Descripcion
+
+Al intentar cambiar de cliente de una orden me aparece el siguiente error.
+
+```
+curl 'https://gamma.api.orders.lio.red/v1/orders/changeClient' -X PATCH -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0' -H 'Accept: application/json, text/plain, */*' -H 'Accept-Language: es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3' -H 'Accept-Encoding: gzip, deflate, br, zstd' -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MzIxMjg2NDUsImF1ZCI6IjdjY2U5YTU3Y2E2N2Q2Yjc5YTc5MjAzNGJmOTc5Mzg5ZDVmZDgxOWUiLCJ1c2VyIjp7ImlkIjo3NDYzLCJjb2RlRlAiOiIwMTkyMjciLCJhZ2VudElkIjoxMiwidXN1SWRlbnRpZmljYWNpb24iOiJTZWJhIiwicm9sZURlc2NyaXB0aW9uIjoiUHJvZHVjdCBNYW5hZ2VyIiwicGVkaWRvcyI6MSwicG0iOjEsImRpc2NvdW50U2hpcHBpbmciOjEsInJlYmlsbCI6MX0sImlhdCI6MTczMjEyNTA0NSwibmJmIjoxNzMyMTI1MDQ1fQ.LbdgExqD49n6N-YyU1OyWPaIMpY66BkDEgtKr8PZpUM' -H 'Content-Type: application/json' -H 'Origin: https://gamma.pedidos.saftel.com' -H 'Connection: keep-alive' -H 'Referer: https://gamma.pedidos.saftel.com/' -H 'Sec-Fetch-Dest: empty' -H 'Sec-Fetch-Mode: cors' -H 'Sec-Fetch-Site: cross-site' -H 'Priority: u=0' --data-raw '{"newClientId":75980,"order":"10337028","branch":"0000"}'
+```
+
+[adjunto]
+Información adicional
+
+Platicando con Ema me comenta que el error se encuentra en lo siguiente:
+
+`LEFT JOIN [NewBytes_DBF].[dbo].[userItems] AS UI ON CAST(UI.clientId AS INT) = CAST(C.ID_CLIENTE as INT) AND UI.itemID = A.ID_ARTICULO`
+en el archivo. `ChangeClientOrderRepository` en el método. `getProductById`

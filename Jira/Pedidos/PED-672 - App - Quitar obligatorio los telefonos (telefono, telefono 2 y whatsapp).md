@@ -1,0 +1,36 @@
+---
+jira_key: "PED-672"
+aliases: ["PED-672"]
+summary: "App - Quitar obligatorio los telefonos (telefono, telefono 2 y whatsapp)"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2024-04-16 15:47"
+updated: "2024-04-17 20:28"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-672"
+---
+
+# PED-672: App - Quitar obligatorio los telefonos (telefono, telefono 2 y whatsapp)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2024-04-16 15:47 |
+| Actualizado | 2024-04-17 20:28 |
+| Etiquetas | ninguna |
+| Jira | [PED-672](https://bluinc.atlassian.net/browse/PED-672) |
+
+## Relaciones
+
+- **relates to:** [[NBWEB-709]] APP - Registrar usuario - Teléfono invalido
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,42 @@
+---
+jira_key: "POS-209"
+aliases: ["POS-209"]
+summary: "Columnas Entrega de mercadería "
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Ezequiel manzano"
+created: "2022-10-25 17:08"
+updated: "2022-10-27 17:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-209"
+---
+
+# POS-209: Columnas Entrega de mercadería 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Ezequiel manzano |
+| Creado | 2022-10-25 17:08 |
+| Actualizado | 2022-10-27 17:38 |
+| Etiquetas | ninguna |
+| Jira | [POS-209](https://bluinc.atlassian.net/browse/POS-209) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Juan nos bajó este cambio.
+
+Adjunto imagen de como quieren ellos que sea el pdf para entregar mercadería.
+
+Cualquier cosa q necesites de mi me avisas.
+
+[adjunto]

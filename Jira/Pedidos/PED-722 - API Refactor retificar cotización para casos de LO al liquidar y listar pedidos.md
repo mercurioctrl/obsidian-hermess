@@ -1,0 +1,36 @@
+---
+jira_key: "PED-722"
+aliases: ["PED-722"]
+summary: "API Refactor  retificar cotización para casos de LO al liquidar y listar pedidos"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Emanuel Jesus Ferreyra"
+created: "2024-05-23 09:57"
+updated: "2024-05-28 23:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-722"
+---
+
+# PED-722: API Refactor  retificar cotización para casos de LO al liquidar y listar pedidos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Emanuel Jesus Ferreyra |
+| Creado | 2024-05-23 09:57 |
+| Actualizado | 2024-05-28 23:30 |
+| Etiquetas | ninguna |
+| Jira | [PED-722](https://bluinc.atlassian.net/browse/PED-722) |
+
+## Relaciones
+
+- **is blocked by:** [[SNB-1920]] AUTORIZACIONES
+
+## Descripcion
+
+*Sin descripcion*

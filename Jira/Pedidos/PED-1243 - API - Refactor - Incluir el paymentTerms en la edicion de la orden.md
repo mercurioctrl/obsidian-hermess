@@ -1,0 +1,66 @@
+---
+jira_key: "PED-1243"
+aliases: ["PED-1243"]
+summary: "API - Refactor - Incluir el paymentTerms en la edicion de la orden"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Marbe Moreno"
+created: "2026-01-06 18:05"
+updated: "2026-01-21 15:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1243"
+---
+
+# PED-1243: API - Refactor - Incluir el paymentTerms en la edicion de la orden
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Marbe Moreno |
+| Creado | 2026-01-06 18:05 |
+| Actualizado | 2026-01-21 15:46 |
+| Etiquetas | ninguna |
+| Jira | [PED-1243](https://bluinc.atlassian.net/browse/PED-1243) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **has action item:** [[PED-1242]] APP - Refactor - Agregar un input para plazo de pago en cada orden 
+
+## Descripcion
+
+Se realizará un refactor para permitir asociar a una orden la **cantidad de días de pago** (payment terms).
+
+El comportamiento será consistente con el de otros parámetros editables de la orden.
+
+Para ello, se agregará la columna `paymentTerms` (entero, opcional) en la tabla
+`[NewBytes_DBF].[dbo].[pedclit]`, donde se almacenará la cantidad de días de pago de la orden.
+
+Se habilitará su modificación mediante el endpoint:
+
+```
+PATCH /v1/orders/{branch}-{order}
+```
+
+**Payload:**
+
+```
+{
+  "paymentTerms": 45
+}
+```
+
+El campo deberá:
+
+- Aceptar valores enteros.
+
+
+- No ser obligatorio.
+
+
+- Ser correctamente persistido y devuelto en las respuestas del recurso.

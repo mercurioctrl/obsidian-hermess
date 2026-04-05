@@ -1,0 +1,92 @@
+---
+jira_key: "PED-932"
+aliases: ["PED-932"]
+summary: "API - Feat - Cuotas Vendedores (Facturación Total)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "High"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-01-19 17:43"
+updated: "2025-01-27 17:20"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-932"
+---
+
+# PED-932: API - Feat - Cuotas Vendedores (Facturación Total)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | High |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-01-19 17:43 |
+| Actualizado | 2025-01-27 17:20 |
+| Etiquetas | ninguna |
+| Jira | [PED-932](https://bluinc.atlassian.net/browse/PED-932) |
+
+## Relaciones
+
+- **Padre:** [[PED-845]] Incentivos Vendedores
+- **action item from:** [[PED-931]] API - Feat - Cuotas Vendedores (Facturación Total)
+- **has action item:** [[MKT-243]] NB_ INCENTIVO VENDEDORES CUOTA MENSUAL
+
+## Descripcion
+
+Crearemos un repositorio similar al anterior por objetivos “via matcheo” pero esta vez mensual y global (es decir de toda la facturación para cada vendedor). A diferencia de la tabla lo que nos interesa mostrar es cuan cerca están los distintos vendedores de alcanzar el objetivo y por tanto usaremos otro elemento.
+
+[adjunto]
+
+
+```
+GET {API_URL}/v1/objectives/totalSale
+```
+
+## **Parámetros de la API y sus descripciones:**
+
+- **sellerId** (número): Identificador único del vendedor en el sistema.
+
+
+- **sellerDescription** (texto): Nombre y descripción del vendedor.
+
+
+- **amount** (número decimal): Monto total de ventas realizadas por el vendedor en el periodo actual.
+
+
+- **targetAmount** (número decimal): Cuota mensual asignada al vendedor, calculada automáticamente o configurada manualmente.
+
+
+- **percentageAchieved** (número decimal): Porcentaje alcanzado del objetivo mensual, calculado como `(amount / targetAmount) * 100`.
+
+
+
+```
+[
+  ...
+  {
+    "sellerId": 8,
+    "sellerDescription": "Altamiranda Andrea",
+    "totalSold": 48537.48428, <<-- Para el vendedor logueado o si tiene ped_full_benefits
+    "totalCost": 30343.45
+    "profit": 18194.03
+    "targetAmount": 16000, <<-- Para el vendedor logueado o si tiene ped_full_benefits
+    "percentageAchieved": 62.51
+  },
+  {
+    "sellerId": 30,
+    "sellerDescription": "Albarracin Julian",
+    "percentageAchieved": 80.43
+  }
+  ...
+]
+```
+
+- Se debe tener en cuenta el mes en curso completo, es decir que cada mes se reinicia
+
+
+- En los casos donde un vendedor visualiza información de otros, solo se devuelve el `sellerId`, `sellerDescription` y `percentageAchieved` para proteger datos sensibles como `amount` y `targetAmount`. También puede verlos el usuario que tenga el permiso `ped_full_benefits` que ve el de todos.
+
+
+- Agregaremos el parámetro `NewBytes_DBF.dbo.agentes.monthlyTargetAmount` para almacenar mensualmente el objetivo

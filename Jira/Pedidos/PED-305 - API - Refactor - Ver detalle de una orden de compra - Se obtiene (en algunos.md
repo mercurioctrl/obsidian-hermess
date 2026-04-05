@@ -1,0 +1,53 @@
+---
+jira_key: "PED-305"
+aliases: ["PED-305"]
+summary: "API - Refactor - Ver detalle de una orden de compra -> Se obtiene (en algunos casos) la cotizacion de manera incorrecta"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-12-05 13:52"
+updated: "2023-12-12 21:12"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-305"
+---
+
+# PED-305: API - Refactor - Ver detalle de una orden de compra -> Se obtiene (en algunos casos) la cotizacion de manera incorrecta
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-05 13:52 |
+| Actualizado | 2023-12-12 21:12 |
+| Etiquetas | ninguna |
+| Jira | [PED-305](https://bluinc.atlassian.net/browse/PED-305) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-322]] API - Ver detalle de una orden de compra -> Cotización incorrecta - Incidencias varias
+
+## Descripcion
+
+```
+GET /v1/orders/{pedido}
+```
+
+Por alguna razon existen casos donde se obtiene la cotizacion incorrecta.
+
+Ejemplo:
+
+[https://gamma.api.orders.lio.red/v1/orders/0002-10332346](https://gamma.api.orders.lio.red/v1/orders/0002-10332346)
+
+En esta operacion, se muestra  `"currencyQuote": 410`
+
+Cuando en realidad debería mostrar `"currencyQuote": 910`
+
+que es lo que se obtiene de `[NEW_BYTES].[dbo].[MS_REMITO_CABECERA].COTIZACION` por estar esta presente (Esta liquidado).
+
+En caso contrario, es decir que no se encuentre presente `[NEW_BYTES].[dbo].[MS_REMITO_CABECERA].COTIZACION`, tampoco seria correcta. Se debe tomar la cotización del día basandonos en ` [NEW_BYTES].[dbo].[MS_COTIZACIONES]`

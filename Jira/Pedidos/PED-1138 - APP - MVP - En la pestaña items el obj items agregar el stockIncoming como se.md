@@ -1,0 +1,37 @@
+---
+jira_key: "PED-1138"
+aliases: ["PED-1138"]
+summary: "APP - MVP - En la pestaña items el obj items agregar el stockIncoming  como se hizo con stockAfterSale"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-10-03 14:35"
+updated: "2025-10-24 10:45"
+labels: ["MVPLaset"]
+jira_url: "https://bluinc.atlassian.net/browse/PED-1138"
+---
+
+# PED-1138: APP - MVP - En la pestaña items el obj items agregar el stockIncoming  como se hizo con stockAfterSale
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-10-03 14:35 |
+| Actualizado | 2025-10-24 10:45 |
+| Etiquetas | MVPLaset |
+| Jira | [PED-1138](https://bluinc.atlassian.net/browse/PED-1138) |
+
+## Relaciones
+
+- **Padre:** [[PED-64]] Productos
+- **action item from:** [[PED-1133]] API - Refactor - MVP - Agregar al obj items del detalle de una orden stockIncoming (definido por la cantidad del item en compra pendiente menos la cantidad de ingresados en la misma)
+
+## Descripcion
+
+[adjunto]

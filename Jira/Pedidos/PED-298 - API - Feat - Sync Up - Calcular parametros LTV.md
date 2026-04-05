@@ -1,0 +1,111 @@
+---
+jira_key: "PED-298"
+aliases: ["PED-298"]
+summary: "API - Feat - Sync Up - Calcular parametros LTV"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-12-04 07:30"
+updated: "2023-12-18 19:39"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-298"
+---
+
+# PED-298: API - Feat - Sync Up - Calcular parametros LTV
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-04 07:30 |
+| Actualizado | 2023-12-18 19:39 |
+| Etiquetas | ninguna |
+| Jira | [PED-298](https://bluinc.atlassian.net/browse/PED-298) |
+
+## Relaciones
+
+- **Padre:** [[PED-242]] Pestaña Estadisticas
+- **is blocked by:** [[PED-334]] API - Sync Up - Calcular parámetros LTV - Incidencias varias
+
+## Descripcion
+
+El LTV, o "Lifetime Value" (Valor de Vida Útil), es una métrica usada en marketing y negocios para estimar el valor total que una empresa espera obtener de un cliente a lo largo de toda su relación con él. Este valor es importante porque ayuda a las empresas a entender cuánto pueden invertir razonablemente para adquirir un nuevo cliente y mantener a los existentes, manteniendo la rentabilidad.
+
+¿Como es la formula?
+
+```
+LTV = (Valor promedio de compra) X (Frecuencia de Compra) X (Duración De La Relación)
+```
+
+Explicacion:
+
+Claro, voy a darte un ejemplo práctico para calcular el LTV (Lifetime Value) de un cliente.
+
+Supongamos que tienes una tienda en línea de ropa. Aquí están los datos que necesitarás:
+
+- **Valor Promedio de Compra (VPC)**: Digamos que en promedio, un cliente gasta 100 dólares en cada compra.
+
+
+- **Frecuencia de Compra (FC)**: Los clientes compran en tu tienda 4 veces al año.
+
+
+- **Duración de la Relación con el Cliente (DRC)**: En promedio, los clientes continúan comprando en tu tienda durante 5 años.
+
+
+
+```
+LTV = (100 Dolares) X (4 Veces por año) x (5 años)
+```
+
+¿De donde sacaremos los datos?
+
+**Valor promedio de compra: **
+
+Tomaremos para esto la informacion disponible en `[NewBytes_DBF].[dbo].[albclil]` y `[NewBytes_DBF].[dbo].[albclit]` para cuando `[NewBytes_DBF].[dbo].[albclit].ntipoalb > 1` y tomaremos los valores sin iva (Recordar multiplciar por la cantidad). 
+
+**Frecuencia de compra:**
+
+Tomaremos la cantidad de compras que el cliente hace en un año, es decir cuantas veces aparece `[NewBytes_DBF].[dbo].[albclit].ntipoalb > 1` **pero solo en los ultimos dos años** y la dividiremos por esos dos años.
+
+**Duracion de la relacion con el cliente:**
+
+Tomaremos desde `[NewBytes_DBF].[dbo].[clientes].[FECHA_ALTA]` hasta la fecha actual en años.
+
+**¿Donde se guardan estos datos?**
+
+Crearemos una Tabla dedicada para almacenar estos datos cada vez que se calculan
+
+`[NewBytes_DBF].[dbo].[clientesLvm]`
+
+- id
+
+
+- fecha
+
+
+- ValorPromedioCompra
+
+
+- FrecuenciaCompra
+
+
+- DuracionRelacion
+
+
+- Lvm
+
+
+- idCliente
+
+
+
+
+
+```
+POST {{API_URL}}/v1/syncUp/clientLvm
+```

@@ -1,0 +1,37 @@
+---
+jira_key: "POS-223"
+aliases: ["POS-223"]
+summary: "APP - Refactor - Agregar factura de compra a la informacion de compra en aboutSerial"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-11-15 18:08"
+updated: "2023-03-07 09:08"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-223"
+---
+
+# POS-223: APP - Refactor - Agregar factura de compra a la informacion de compra en aboutSerial
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-11-15 18:08 |
+| Actualizado | 2023-03-07 09:08 |
+| Etiquetas | ninguna |
+| Jira | [POS-223](https://bluinc.atlassian.net/browse/POS-223) |
+
+## Relaciones
+
+- **Padre:** [[POS-12]] Bases del proyecto y formularios
+- **is blocked by:** [[POS-222]] API - Refactor - Agregar factura de compra a la informacion de compra en aboutSerial
+
+## Descripcion
+
+*Sin descripcion*

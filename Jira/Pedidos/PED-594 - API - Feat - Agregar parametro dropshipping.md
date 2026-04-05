@@ -1,0 +1,37 @@
+---
+jira_key: "PED-594"
+aliases: ["PED-594"]
+summary: "API - Feat - Agregar parametro dropshipping"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-03-11 11:03"
+updated: "2024-03-14 19:09"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-594"
+---
+
+# PED-594: API - Feat - Agregar parametro dropshipping
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-03-11 11:03 |
+| Actualizado | 2024-03-14 19:09 |
+| Etiquetas | ninguna |
+| Jira | [PED-594](https://bluinc.atlassian.net/browse/PED-594) |
+
+## Relaciones
+
+- **Padre:** [[PED-8]] Listar ordenes de compra
+- **is blocked by:** [[PED-609]]   API - Agregar parámetro Dropshipping - No se visualiza el parámetro
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,59 @@
+---
+jira_key: "PED-1039"
+aliases: ["PED-1039"]
+summary: "API - Refactor - SyncUP API ML - sincronizar lo que antes era el sku, con nuestro id interno"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-07-07 19:36"
+updated: "2025-07-16 10:42"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1039"
+---
+
+# PED-1039: API - Refactor - SyncUP API ML - sincronizar lo que antes era el sku, con nuestro id interno
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-07 19:36 |
+| Actualizado | 2025-07-16 10:42 |
+| Etiquetas | ninguna |
+| Jira | [PED-1039](https://bluinc.atlassian.net/browse/PED-1039) |
+
+## Relaciones
+
+- **Padre:** [[PED-915]] MercadoLibre
+
+## Descripcion
+
+Finalmente después 50 mil reuniones la gente de reply termino el laburo y ya hicieron las publicaciones y todo eso  
+
+Cuando fui a probar el syncUP andaba perfecto para las pruebas que hicimos, pero fallaba para las publicaciones que crearon ellos. 
+
+Conclusión: Pusieron el id interno nuestro, donde nosotros esperamos el sku del producto. No pasa nada, solo habría que hacer ese refactor.
+
+```
+"manufacturing_ending_date": null,
+      "order_items": [
+        {
+          "item": {
+            "id": "MLA1506009159",
+            "title": "Borne De Paso Verde 6mm Para Conductor Bpn-06",
+            "category_id": "MLA411423",
+            "variation_id": null,
+            "seller_custom_field": null,
+            "global_price": null,
+            "net_weight": null,
+            "variation_attributes": [],
+            "warranty": "Garantía de fábrica: 6 meses",
+            "condition": "new",
+            "seller_sku": "119313" <---- ACA PUSIERON NUESTRO itemId al final es decir [NewBytes_DBF].[dbo].[articulo].id_articulo
+          },
+```

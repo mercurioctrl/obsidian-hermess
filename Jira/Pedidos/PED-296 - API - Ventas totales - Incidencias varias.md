@@ -1,0 +1,43 @@
+---
+jira_key: "PED-296"
+aliases: ["PED-296"]
+summary: "  API - Ventas totales - Incidencias varias"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2023-12-01 23:52"
+updated: "2023-12-11 09:08"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-296"
+---
+
+# PED-296:   API - Ventas totales - Incidencias varias
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2023-12-01 23:52 |
+| Actualizado | 2023-12-11 09:08 |
+| Etiquetas | ninguna |
+| Jira | [PED-296](https://bluinc.atlassian.net/browse/PED-296) |
+
+## Relaciones
+
+- **blocks:** [[PED-282]] API - Feat - Ventas totales
+
+## Descripcion
+
+- No está filtrando por marca.
+
+
+
+[adjunto]
+2. No está filtrando por categoría. 
+
+[adjunto]

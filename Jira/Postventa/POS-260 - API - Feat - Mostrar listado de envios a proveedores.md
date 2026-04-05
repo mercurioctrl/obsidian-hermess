@@ -1,0 +1,50 @@
+---
+jira_key: "POS-260"
+aliases: ["POS-260"]
+summary: "API - Feat - Mostrar listado de \"envios a proveedores\""
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-06-16 09:42"
+updated: "2023-06-16 12:53"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-260"
+---
+
+# POS-260: API - Feat - Mostrar listado de "envios a proveedores"
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-06-16 09:42 |
+| Actualizado | 2023-06-16 12:53 |
+| Etiquetas | ninguna |
+| Jira | [POS-260](https://bluinc.atlassian.net/browse/POS-260) |
+
+## Relaciones
+
+- **Padre:** [[POS-235]] Postventa Proveedores Recepcion
+
+## Descripcion
+
+Basandonos en la historia [link](https://lioteam.atlassian.net/browse/POS-244)  crearemos un repositorio para ver aquellos envíos que ya le hicimos a los proveedores
+
+```
+GET {API_URL}/v1/sendToProvider
+```
+
+```
+{
+providerId: 4,
+providerDescription: 'NB INC'
+comment: "Cualquier comentario",
+date: '01/01/2023 15:44' fecha que se realizo
+shippingOnProvider: true
+}
+```

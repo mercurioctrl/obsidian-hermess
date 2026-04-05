@@ -1,0 +1,95 @@
+---
+jira_key: "POS-232"
+aliases: ["POS-232"]
+summary: "API - Feat - Depósitos"
+status: "Gamma"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-03-07 09:14"
+updated: "2023-03-13 16:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-232"
+---
+
+# POS-232: API - Feat - Depósitos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Gamma (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-03-07 09:14 |
+| Actualizado | 2023-03-13 16:07 |
+| Etiquetas | ninguna |
+| Jira | [POS-232](https://bluinc.atlassian.net/browse/POS-232) |
+
+## Relaciones
+
+- **Padre:** [[POS-231]] Repositorios
+
+## Descripcion
+
+Se creara un repositorio para mostrar los distintos depósitos de proveedores basándose en la tabla `[NewBytes_DBF].[dbo].[FP_Depositos]`
+
+```
+GET {API_URL}/v1/providerWarehouse
+```
+
+```
+  {
+    "id": 1,
+    "description": "Expedicion",
+    "type": 1,
+    "default": 1
+  },
+  {
+    "id": 2,
+    "description": "Servicio Técnico",
+    "type": 1,
+    "default": null
+  },
+  {
+    "id": 3,
+    "description": "Dario RMA Prov",
+    "type": 1,
+    "default": null
+  },
+  {
+    "id": 4,
+    "description": "Armado PC",
+    "type": 1,
+    "default": null
+  },
+  {
+    "id": 5,
+    "description": "Uso Interno",
+    "type": 2,
+    "default": null
+  },
+  {
+    "id": 6,
+    "description": "Pérdida",
+    "type": 2,
+    "default": null
+  }
+```
+
+### Se debe poder filtrar por
+
+- Descripción
+
+
+- id
+
+
+- tipo
+
+
+
+### Se debe ordenar por
+
+- Nombre alfabetico

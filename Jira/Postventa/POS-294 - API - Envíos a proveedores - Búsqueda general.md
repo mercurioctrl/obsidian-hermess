@@ -1,0 +1,48 @@
+---
+jira_key: "POS-294"
+aliases: ["POS-294"]
+summary: "API - Envíos a proveedores - Búsqueda general "
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Guillermo Avila"
+created: "2024-04-24 13:16"
+updated: "2024-05-02 20:51"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/POS-294"
+---
+
+# POS-294: API - Envíos a proveedores - Búsqueda general 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-04-24 13:16 |
+| Actualizado | 2024-05-02 20:51 |
+| Etiquetas | ninguna |
+| Jira | [POS-294](https://bluinc.atlassian.net/browse/POS-294) |
+
+## Relaciones
+
+- **Padre:** [[POS-292]] POS APP - Filtros en recuperos
+- **relates to:** [[POS-292]] POS APP - Filtros en recuperos
+- **is blocked by:** [[POS-298]] API - Envíos a proveedores - Búsqueda general por id de proveedor y descripción
+
+## Descripcion
+
+Realizaremos un refactor para que sea posible buscar por los parámetros de fecha y texto.
+
+```
+{{API_URL}}/v1/sendToProvider?search=123&between=24-04-2024_24-04-2024
+```
+
+
+
+Estás son las búsquedas por texto que hace la sección de Recuperos:
+
+[adjunto]

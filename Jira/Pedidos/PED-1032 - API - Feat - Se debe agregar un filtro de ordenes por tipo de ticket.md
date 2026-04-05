@@ -1,0 +1,43 @@
+---
+jira_key: "PED-1032"
+aliases: ["PED-1032"]
+summary: "API - Feat - Se debe agregar un filtro de ordenes por tipo de ticket"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-07-01 12:54"
+updated: "2025-07-14 10:31"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1032"
+---
+
+# PED-1032: API - Feat - Se debe agregar un filtro de ordenes por tipo de ticket
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-01 12:54 |
+| Actualizado | 2025-07-14 10:31 |
+| Etiquetas | ninguna |
+| Jira | [PED-1032](https://bluinc.atlassian.net/browse/PED-1032) |
+
+## Relaciones
+
+- **Padre:** [[PED-960]] Tickets de pedido
+- **has action item:** [[PED-1035]] APP - Feat - Se deben poder filtrar las ordenes por tipo y motivo de ticket
+
+## Descripcion
+
+Agregaremos un filtro para ver las ordenes que cuenten con un ticket de un tipo determinado
+
+```
+GET {API_URL}/v1/orders?typeId={typeId}
+```
+
+Toda los joins y logica necesarios, solo se agregan  si esta el parámetro `typeId` presente de modo tal que el repositorio no vea afectada su performance por esta lógica a menos que sea necesario. Se debe buscar la forma mas performativa de realizarlo.

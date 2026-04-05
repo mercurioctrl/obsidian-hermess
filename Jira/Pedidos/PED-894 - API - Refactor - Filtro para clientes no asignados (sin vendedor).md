@@ -1,0 +1,46 @@
+---
+jira_key: "PED-894"
+aliases: ["PED-894"]
+summary: "API - Refactor - Filtro para clientes no asignados (sin vendedor)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-12-04 07:47"
+updated: "2024-12-18 11:13"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-894"
+---
+
+# PED-894: API - Refactor - Filtro para clientes no asignados (sin vendedor)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-12-04 07:47 |
+| Actualizado | 2024-12-18 11:13 |
+| Etiquetas | ninguna |
+| Jira | [PED-894](https://bluinc.atlassian.net/browse/PED-894) |
+
+## Relaciones
+
+- **Padre:** [[PED-16]] Listar clientes
+
+## Descripcion
+
+Agregaremos un parámetro para mostrar aquellos clientes que fueron desvinculados de su vendedor 
+
+```
+GET {API_URL}/v1/clients?unassignedClients={unassignedClients}
+```
+
+Si `unassignedClients=1` entonces muestro solo los que NO tienen vendedor asignado
+
+Si `unassignedClients=0` entonces muestro solo los que SI tienen vendedor asignado
+
+Si `unassignedClients=null (o no esta disponible)` entonces muestro todos los clientes

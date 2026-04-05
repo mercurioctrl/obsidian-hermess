@@ -1,0 +1,39 @@
+---
+jira_key: "PED-593"
+aliases: ["PED-593"]
+summary: "APP - Mostrar icono de comprobante para LO y si es Mercado Pago mostrar su icono y redirigir - Icono MP no visible"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Guillermo Avila"
+created: "2024-03-10 22:01"
+updated: "2024-03-12 18:02"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-593"
+---
+
+# PED-593: APP - Mostrar icono de comprobante para LO y si es Mercado Pago mostrar su icono y redirigir - Icono MP no visible
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-03-10 22:01 |
+| Actualizado | 2024-03-12 18:02 |
+| Etiquetas | ninguna |
+| Jira | [PED-593](https://bluinc.atlassian.net/browse/PED-593) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **blocks:** [[PED-577]] APP - Refactor - Mostrar o no icono de comprobante para LO y en caso de mercado pago mostrar icono de permado pago y redirigir
+
+## Descripcion
+
+No se visualiza el icono de mercado pago 
+
+[adjunto]

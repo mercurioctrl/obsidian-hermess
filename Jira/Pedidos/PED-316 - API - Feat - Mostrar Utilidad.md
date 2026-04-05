@@ -1,0 +1,36 @@
+---
+jira_key: "PED-316"
+aliases: ["PED-316"]
+summary: "API - Feat - Mostrar Utilidad"
+status: "Tareas por hacer"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2023-12-06 09:36"
+updated: "2023-12-06 09:36"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-316"
+---
+
+# PED-316: API - Feat - Mostrar Utilidad
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-06 09:36 |
+| Actualizado | 2023-12-06 09:36 |
+| Etiquetas | ninguna |
+| Jira | [PED-316](https://bluinc.atlassian.net/browse/PED-316) |
+
+## Relaciones
+
+- **Padre:** [[PED-242]] Pestaña Estadisticas
+
+## Descripcion
+
+*Sin descripcion*

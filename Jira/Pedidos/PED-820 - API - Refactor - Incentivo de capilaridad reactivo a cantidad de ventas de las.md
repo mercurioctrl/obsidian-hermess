@@ -1,0 +1,46 @@
+---
+jira_key: "PED-820"
+aliases: ["PED-820"]
+summary: "API - Refactor - Incentivo de capilaridad reactivo a cantidad de ventas de las marcas especificadas"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Highest"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-09-16 07:56"
+updated: "2024-10-01 18:45"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-820"
+---
+
+# PED-820: API - Refactor - Incentivo de capilaridad reactivo a cantidad de ventas de las marcas especificadas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Highest |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-09-16 07:56 |
+| Actualizado | 2024-10-01 18:45 |
+| Etiquetas | ninguna |
+| Jira | [PED-820](https://bluinc.atlassian.net/browse/PED-820) |
+
+## Relaciones
+
+- **Padre:** [[PED-242]] Pestaña Estadisticas
+- **blocks:** [[PED-821]] APP - Refactor - nuevo incentivo de capilaridad
+- **is blocked by:** [[MKT-215]] NB_ FLOR DE INCENTIVO
+
+## Descripcion
+
+```
+GET /v1/objectives/capillarityIncentive
+```
+
+Para el vendedor por cada venta de USD300 + iva de las siguientes marcas sumás 20 dólares!
+
+Aureox, Raidmax, F&D Fenda, Ducky
+
+Es hasta que finaliza el 30 de septiembre

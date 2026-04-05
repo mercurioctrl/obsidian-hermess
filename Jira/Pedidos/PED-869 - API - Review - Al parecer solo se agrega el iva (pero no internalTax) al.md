@@ -1,0 +1,36 @@
+---
+jira_key: "PED-869"
+aliases: ["PED-869"]
+summary: "API - Review - Al parecer solo se agrega el iva (pero no internalTax) al impactar un debito de un pedido en la cuenta corriente"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-11-07 23:47"
+updated: "2024-11-19 16:57"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-869"
+---
+
+# PED-869: API - Review - Al parecer solo se agrega el iva (pero no internalTax) al impactar un debito de un pedido en la cuenta corriente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-11-07 23:47 |
+| Actualizado | 2024-11-19 16:57 |
+| Etiquetas | ninguna |
+| Jira | [PED-869](https://bluinc.atlassian.net/browse/PED-869) |
+
+## Relaciones
+
+- **Padre:** [[PED-4]] Pedidos
+
+## Descripcion
+
+**El internalTax **ebe estar incluido en `[NEW_BYTES].[dbo].MC_CCORRIENTES_MOVIMIENTOS.CC_IMPORTEUSD` que es lo que se le guarda en la cuenta corriente al cliente y se le cobra (paga el impuesto interno ) Ademas, lo guardaremos en una columna `NEW_BYTES].[dbo].MC_CCORRIENTES_MOVIMIENTOS.PORC_INTTAX` (como se hace en `PORC_PERCEPCION`)

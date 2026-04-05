@@ -1,0 +1,47 @@
+---
+jira_key: "PED-941"
+aliases: ["PED-941"]
+summary: "APP - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y observaciones)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-01-30 16:30"
+updated: "2025-02-04 17:14"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-941"
+---
+
+# PED-941: APP - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y observaciones)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-01-30 16:30 |
+| Actualizado | 2025-02-04 17:14 |
+| Etiquetas | ninguna |
+| Jira | [PED-941](https://bluinc.atlassian.net/browse/PED-941) |
+
+## Relaciones
+
+- **Padre:** [[PED-54]] Cuenta corriente de clientes
+- **action item from:** [[PED-940]] API - Refactor - Filtros de búsqueda para cuentas corrientes (fecha y observaciones)
+
+## Descripcion
+
+Según lo conversado y como ya hemos hablado en otro momento, se busca agilizar la navegacion por las cuentas corrientesd e clientes para facilitar el trabajo de la operación diaria
+
+Para esto agregaremos los filtros de busqueda y fechas
+
+```
+GET {API_URL}/v1/currentAccount/{clientId}?search={terminosDeObservaciones}&between=01-05-2024_30-01-2025
+```
+
+
+
+[adjunto]

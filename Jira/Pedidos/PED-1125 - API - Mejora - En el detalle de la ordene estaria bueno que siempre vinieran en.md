@@ -1,0 +1,44 @@
+---
+jira_key: "PED-1125"
+aliases: ["PED-1125"]
+summary: "API - Mejora - En el detalle de la ordene estaria bueno que siempre vinieran en el mismo orden los productos"
+status: "Tareas por hacer"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Marbe Moreno"
+created: "2025-09-29 18:26"
+updated: "2025-09-29 18:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1125"
+---
+
+# PED-1125: API - Mejora - En el detalle de la ordene estaria bueno que siempre vinieran en el mismo orden los productos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-09-29 18:26 |
+| Actualizado | 2025-09-29 18:29 |
+| Etiquetas | ninguna |
+| Jira | [PED-1125](https://bluinc.atlassian.net/browse/PED-1125) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+GET  [https://gamma.api.orders.lio.red/v1/orders/0002-10425805](https://gamma.api.orders.lio.red/v1/orders/0002-10425805)
+ordenar alfabeticamente o por precio que siempre tengan el mismo orden cuando se trae items
+`items`
+
+Misma orden abriendola y cerrandola
+
+
+[adjunto]
+[adjunto]

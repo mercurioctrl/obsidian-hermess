@@ -1,0 +1,79 @@
+---
+jira_key: "PED-1258"
+aliases: ["PED-1258"]
+summary: "API - Refactor - Agregar el filtro companyCode al repositorio bancos"
+status: "Finalizada"
+type: "Subtarea"
+priority: "High"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2026-01-14 07:58"
+updated: "2026-01-14 11:55"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1258"
+---
+
+# PED-1258: API - Refactor - Agregar el filtro companyCode al repositorio bancos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | High |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-01-14 07:58 |
+| Actualizado | 2026-01-14 11:55 |
+| Etiquetas | ninguna |
+| Jira | [PED-1258](https://bluinc.atlassian.net/browse/PED-1258) |
+
+## Relaciones
+
+- **Padre:** [[PED-1257]] Repositorio Bancos y medios de pago
+- **has action item:** [[PED-1261]] APP - Refactor - En el modal de liquidacion, filtrar los bancos según el companyCode definido para el pedido
+
+## Descripcion
+
+Agregaremos el filtro `companyCode` al repositorio de bancos, de tal modo que podamos recortar el listado que ve cada uno, según la empresa, para si mismos.
+
+Si el parametro esta definido, filtramos por el. Si no esta definido o es `NULL` mostraremos todos.
+
+```
+GET {API_URL}/v1/banks?currentPage=1&itemsPerPage=100&positiveBalance=1&available=1&companyCode{companyCode}
+```
+
+Adicionalmente tambien lo agregaremos al objeto
+
+```
+[
+    {
+        "id": 65204,
+        "description": "MercadoPago",
+        "oldId": 15,
+        "accountId": 15,
+        "balanceAmountDollar": 16617.8173,
+        "balanceAmountPesos": 24077867298.848003,
+        "initialBalance": 0,
+        "balanceAmountCheck": 0,
+        "companyCode": NULL
+    },
+    {
+        "id": 72,
+        "description": "BANCO SANTANDER RIO S.A.",
+        "oldId": 1,
+        "accountId": 3,
+        "balanceAmountDollar": 368419.22000000003,
+        "balanceAmountPesos": 7595461062.351999,
+        "initialBalance": 0,
+        "balanceAmountCheck": 0,
+        "companyCode": 4
+    },
+....
+]
+```
+
+---
+
+Actualización de la tarea
+
+El refactor consiste en que no se filtrará por el `companyCode` del usuario, sino únicamente por el filtro seleccionado.

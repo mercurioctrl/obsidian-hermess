@@ -1,0 +1,36 @@
+---
+jira_key: "PED-1235"
+aliases: ["PED-1235"]
+summary: "APP - OM - Agregar boton de generar pedido desde el detalle de la orden"
+status: "Finalizada"
+type: "Tarea"
+priority: "Low"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2026-01-06 14:57"
+updated: "2026-01-27 14:17"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1235"
+---
+
+# PED-1235: APP - OM - Agregar boton de generar pedido desde el detalle de la orden
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Low |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2026-01-06 14:57 |
+| Actualizado | 2026-01-27 14:17 |
+| Etiquetas | ninguna |
+| Jira | [PED-1235](https://bluinc.atlassian.net/browse/PED-1235) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+
+## Descripcion
+
+*Sin descripcion*

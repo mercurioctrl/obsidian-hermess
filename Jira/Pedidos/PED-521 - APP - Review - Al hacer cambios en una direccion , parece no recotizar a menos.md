@@ -1,0 +1,43 @@
+---
+jira_key: "PED-521"
+aliases: ["PED-521"]
+summary: "APP - Review - Al hacer cambios en una direccion , parece no recotizar a menos que la selecciones"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-01-31 14:52"
+updated: "2024-02-06 17:52"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-521"
+---
+
+# PED-521: APP - Review - Al hacer cambios en una direccion , parece no recotizar a menos que la selecciones
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-01-31 14:52 |
+| Actualizado | 2024-02-06 17:52 |
+| Etiquetas | ninguna |
+| Jira | [PED-521](https://bluinc.atlassian.net/browse/PED-521) |
+
+## Relaciones
+
+- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
+- **relates to:** [[PED-535]] APP - No se recotiza al cambiar la dirección predeterminada
+
+## Descripcion
+
+parece que si solo tenes 1 dirección, y cambias algo no se aplica la recotizacion, es como que tenes que seleccionar/crear otra dirección como favorita y volver a la que queres para que se aplique
+
+  porque solo re cotiza cuando cambias de favorito, pero cuando cambia un dato de la dirección predeterminada no se dispara la recotizacion 
+
+
+
+[adjunto]

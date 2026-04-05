@@ -1,0 +1,46 @@
+---
+jira_key: "PED-734"
+aliases: ["PED-734"]
+summary: "Al iniciar sesion, enviaremos el IP "
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Ezequiel manzano"
+created: "2024-06-04 10:07"
+updated: "2024-06-04 15:27"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-734"
+---
+
+# PED-734: Al iniciar sesion, enviaremos el IP 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Ezequiel manzano |
+| Creado | 2024-06-04 10:07 |
+| Actualizado | 2024-06-04 15:27 |
+| Etiquetas | ninguna |
+| Jira | [PED-734](https://bluinc.atlassian.net/browse/PED-734) |
+
+## Relaciones
+
+- **relates to:** [[PED-717]] API - Feat - Guardar IP de login
+
+## Descripcion
+
+Al iniciar sesion, se enviará el ip por parametro junto al user y la pw. 
+
+
+
+```
+{
+    "username": "master",
+    "password": "npm8956",
+    "ip" : "192.123.123.12"
+}
+```

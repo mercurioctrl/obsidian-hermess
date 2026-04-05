@@ -1,0 +1,52 @@
+---
+jira_key: "PED-514"
+aliases: ["PED-514"]
+summary: "APP - Refactor - Al agregar un envio se debe enviar costo por body"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Emanuel Jesus Ferreyra"
+created: "2024-01-24 15:05"
+updated: "2024-01-26 05:47"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-514"
+---
+
+# PED-514: APP - Refactor - Al agregar un envio se debe enviar costo por body
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Emanuel Jesus Ferreyra |
+| Creado | 2024-01-24 15:05 |
+| Actualizado | 2024-01-26 05:47 |
+| Etiquetas | ninguna |
+| Jira | [PED-514](https://bluinc.atlassian.net/browse/PED-514) |
+
+## Relaciones
+
+- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
+
+## Descripcion
+
+Actualmente se manda el precio que genero la cotización de un envio.
+
+debemos enviar tambien el costo del mismo.
+
+```
+{
+    "shippingMethodId": 4065,
+    "shippingName": "Andreani a domicilio",
+    "shippingPrice": 9594.14,
+    "shippingCost": 9594.14,
+    "customerAddressId": 26485
+}
+```
+
+
+
+se agrega, `shippingCost`

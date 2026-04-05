@@ -1,0 +1,36 @@
+---
+jira_key: "PED-987"
+aliases: ["PED-987"]
+summary: "APP - Refactor - Agregar \"herramienta\" de copiar texto"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-04-22 09:42"
+updated: "2025-04-23 03:57"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-987"
+---
+
+# PED-987: APP - Refactor - Agregar "herramienta" de copiar texto
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-04-22 09:42 |
+| Actualizado | 2025-04-23 03:57 |
+| Etiquetas | ninguna |
+| Jira | [PED-987](https://bluinc.atlassian.net/browse/PED-987) |
+
+## Relaciones
+
+- **Padre:** [[PED-65]] Listado de productos
+
+## Descripcion
+
+[adjunto]

@@ -1,0 +1,36 @@
+---
+jira_key: "PED-917"
+aliases: ["PED-917"]
+summary: "API - Feat - Sincronizar MLA con Id interno"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-12-23 08:17"
+updated: "2025-01-27 17:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-917"
+---
+
+# PED-917: API - Feat - Sincronizar MLA con Id interno
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-12-23 08:17 |
+| Actualizado | 2025-01-27 17:29 |
+| Etiquetas | ninguna |
+| Jira | [PED-917](https://bluinc.atlassian.net/browse/PED-917) |
+
+## Relaciones
+
+- **Padre:** [[PED-915]] MercadoLibre
+
+## Descripcion
+
+Este paso solo es importante si en el objeto de las compras, no tengo manera de vincular el `itemId` con el producto vendido en mercadolibre

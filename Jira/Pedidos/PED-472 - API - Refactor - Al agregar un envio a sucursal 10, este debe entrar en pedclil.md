@@ -1,0 +1,39 @@
+---
+jira_key: "PED-472"
+aliases: ["PED-472"]
+summary: "API - Refactor - Al agregar un envio a sucursal 10, este debe entrar en pedclil con niva = 0"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2024-01-11 12:23"
+updated: "2024-01-17 02:16"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-472"
+---
+
+# PED-472: API - Refactor - Al agregar un envio a sucursal 10, este debe entrar en pedclil con niva = 0
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-01-11 12:23 |
+| Actualizado | 2024-01-17 02:16 |
+| Etiquetas | ninguna |
+| Jira | [PED-472](https://bluinc.atlassian.net/browse/PED-472) |
+
+## Relaciones
+
+- **Padre:** [[PED-58]] Agregar / Editar Envío en las ordenes de compra
+
+## Descripcion
+
+Dado que en un pedido de este tipo, todos los items entran con IVA cero, lo mismo debe pasar con el envio para que no llegue al final con ningun componente que produzca iva
+
+[adjunto]
+`[NewBytes_DBF].[dbo].[pedclil].niva =0 `

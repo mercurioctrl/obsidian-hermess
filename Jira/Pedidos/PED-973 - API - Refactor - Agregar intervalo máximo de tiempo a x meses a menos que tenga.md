@@ -1,0 +1,57 @@
+---
+jira_key: "PED-973"
+aliases: ["PED-973"]
+summary: "API - Refactor - Agregar intervalo máximo de tiempo a x meses a menos que tenga el permiso especifico a \"totalBilled\""
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-03-26 08:28"
+updated: "2025-03-29 17:03"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-973"
+---
+
+# PED-973: API - Refactor - Agregar intervalo máximo de tiempo a x meses a menos que tenga el permiso especifico a "totalBilled"
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-03-26 08:28 |
+| Actualizado | 2025-03-29 17:03 |
+| Etiquetas | ninguna |
+| Jira | [PED-973](https://bluinc.atlassian.net/browse/PED-973) |
+
+## Relaciones
+
+- **Padre:** [[PED-242]] Pestaña Estadisticas
+
+## Descripcion
+
+Refactor de recurso
+
+```
+ GET {API_URL}/v1/statistics/totalBilled
+```
+
+para limitar intervalo de fechas**:**
+Se realizará un refactor del recurso  con el objetivo de agregar una validación de intervalo máximo de fechas permitido.
+
+### Cambios a implementar:
+
+- Se permitirá consultar estadísticas de **cualquier rango de fechas**, pero el intervalo **no podrá exceder los X meses**.
+
+
+- El valor de **X será configurable** a través de una variable de entorno (`.env`), con valor por defecto 3 meses si no esta disponible.
+
+
+- Esta restricción **no aplicará a usuarios que cuenten con el permiso **`unlimitedReports`.
+
+
+
+###

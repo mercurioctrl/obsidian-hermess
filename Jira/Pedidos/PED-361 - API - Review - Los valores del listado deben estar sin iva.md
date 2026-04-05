@@ -1,0 +1,40 @@
+---
+jira_key: "PED-361"
+aliases: ["PED-361"]
+summary: "API - Review - Los valores del listado deben estar sin iva"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-12-19 10:13"
+updated: "2023-12-22 17:24"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-361"
+---
+
+# PED-361: API - Review - Los valores del listado deben estar sin iva
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-12-19 10:13 |
+| Actualizado | 2023-12-22 17:24 |
+| Etiquetas | ninguna |
+| Jira | [PED-361](https://bluinc.atlassian.net/browse/PED-361) |
+
+## Relaciones
+
+- **Padre:** [[PED-191]] Descargar Listado de precios
+- **is blocked by:** [[PED-368]]   API - Los valores del listado deben estar sin IVA - Incidencias varias
+
+## Descripcion
+
+[adjunto]
+Por lo que pude ver, esta sacando los valores finales, y debemos mostrarlos sin iva.
+
+En este caso por ejemplo deberia mostrar 273.75

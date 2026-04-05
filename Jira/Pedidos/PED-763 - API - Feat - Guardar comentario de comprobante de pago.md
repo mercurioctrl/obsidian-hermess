@@ -1,0 +1,59 @@
+---
+jira_key: "PED-763"
+aliases: ["PED-763"]
+summary: "API - Feat - Guardar comentario de comprobante de pago"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-07-02 10:23"
+updated: "2024-07-26 19:54"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-763"
+---
+
+# PED-763: API - Feat - Guardar comentario de comprobante de pago
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-07-02 10:23 |
+| Actualizado | 2024-07-26 19:54 |
+| Etiquetas | ninguna |
+| Jira | [PED-763](https://bluinc.atlassian.net/browse/PED-763) |
+
+## Relaciones
+
+- **Padre:** [[PED-761]] Comprobantes de pago
+- **blocks:** [[SNB-2150]] AGREGAR NOTAS EN LA SECCION DEL COMPROBANTE
+- **blocks:** [[PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
+- **relates to:** [[PED-780]] API - Guardar comentario de comprobante de pago - Sugerencia de mejora al eliminar comentario
+
+## Descripcion
+
+Crearemos o guardaremos los comentarios como hacemos en los otros casos ver recurso (/v1/sellerComments/{order})  `[NB_WEB].[dbo].[comentariosPedidosComprobantePago]`
+
+```
+POST {API_URL}/v1/paymentVoucherComments/{branch-order}
+```
+
+```
+{
+"order":"10360675",
+"branch":"0002",
+"comment":"test test test"
+}
+```
+
+```
+SELECT TOP (1000) [pedido]
+      ,[comentario]
+      ,[id]
+      ,[sucursal]
+  FROM [NB_WEB].[dbo].[comentariosPedidosComprobantePago]
+```

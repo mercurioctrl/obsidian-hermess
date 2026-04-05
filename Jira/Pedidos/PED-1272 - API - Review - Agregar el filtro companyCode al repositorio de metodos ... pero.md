@@ -1,0 +1,36 @@
+---
+jira_key: "PED-1272"
+aliases: ["PED-1272"]
+summary: "API - Review - Agregar el filtro companyCode  al repositorio de metodos ... pero los medio de pago que tienen companyCode en NULL vienen siempre"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2026-01-20 17:03"
+updated: "2026-01-23 16:04"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1272"
+---
+
+# PED-1272: API - Review - Agregar el filtro companyCode  al repositorio de metodos ... pero los medio de pago que tienen companyCode en NULL vienen siempre
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-01-20 17:03 |
+| Actualizado | 2026-01-23 16:04 |
+| Etiquetas | ninguna |
+| Jira | [PED-1272](https://bluinc.atlassian.net/browse/PED-1272) |
+
+## Relaciones
+
+- **Padre:** [[PED-1257]] Repositorio Bancos y medios de pago
+
+## Descripcion
+
+API - Review - Agregar el filtro companyCode  al repositorio de metodos ... pero los medio de pago que tienen companyCode en NULL vienen siempre

@@ -1,0 +1,36 @@
+---
+jira_key: "PED-598"
+aliases: ["PED-598"]
+summary: "APP - Feat - Agregar las leyenda de ayuda para que se sepan como deben ser los cheques que debe poner el cliente"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-03-11 13:55"
+updated: "2024-03-18 17:36"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-598"
+---
+
+# PED-598: APP - Feat - Agregar las leyenda de ayuda para que se sepan como deben ser los cheques que debe poner el cliente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-03-11 13:55 |
+| Actualizado | 2024-03-18 17:36 |
+| Etiquetas | ninguna |
+| Jira | [PED-598](https://bluinc.atlassian.net/browse/PED-598) |
+
+## Relaciones
+
+- **Padre:** [[PED-596]] Pedido + Info
+
+## Descripcion
+
+*Sin descripcion*

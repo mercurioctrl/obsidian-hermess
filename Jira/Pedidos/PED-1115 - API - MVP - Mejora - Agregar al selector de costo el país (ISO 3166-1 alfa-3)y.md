@@ -1,0 +1,74 @@
+---
+jira_key: "PED-1115"
+aliases: ["PED-1115"]
+summary: "API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Marbe Moreno"
+created: "2025-09-29 09:47"
+updated: "2025-10-08 10:47"
+labels: ["MVPLaset"]
+jira_url: "https://bluinc.atlassian.net/browse/PED-1115"
+---
+
+# PED-1115: API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-09-29 09:47 |
+| Actualizado | 2025-10-08 10:47 |
+| Etiquetas | MVPLaset |
+| Jira | [PED-1115](https://bluinc.atlassian.net/browse/PED-1115) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-1176]] API - MVP- Refactor - Modificar recurso de costHistory
+- **has action item:** [[PED-1116]] APP - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
+- **is blocked by:** [[COM-200]] API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
+
+## Descripcion
+
+Dado que es necesario según algunos casos mostrar origen de la orden de compra y almacén donde esta la mercadería para que se asocien visualmente al costo elegido, los agregaremos como un dato mas en el repositorio
+
+```
+GET {API_URL}/v1/items/118151/costHistory
+```
+
+```
+[
+    {
+        "cost": 600,
+        "currencyQuote": 1085,
+        "invoiceDate": "2025-03-31 15:16:58",
+        "cnompro": "RMA",
+        "warehouseId": 1, << NUEVO
+        "warehouseName": "DEPOSITO 1" << NUEVO
+        "warehouseCode": "DE1", << NUEVO
+        "countryId": 2, << NUEVO
+        "countryDescription": "España", << NUEVO
+        "countryCode": "Es" << NUEVO
+    },
+    {
+        "cost": 403.5,
+        "currencyQuote": 1078.25,
+        "invoiceDate": "2025-03-26 20:07:17",
+        "cnompro": "LASET S.A.",
+        "warehouseId": 1, << NUEVO
+        "warehouseName": "DEPOSITO 1" << NUEVO
+        "warehouseCode": "DE1", << NUEVO
+        "countryId": 2, << NUEVO
+        "countryDescription": "España", << NUEVO
+        "countryCode": "Es" << NUEVO
+        
+    },
+  ...
+]
+```

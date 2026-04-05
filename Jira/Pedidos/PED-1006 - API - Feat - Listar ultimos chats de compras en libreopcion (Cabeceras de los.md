@@ -1,0 +1,112 @@
+---
+jira_key: "PED-1006"
+aliases: ["PED-1006"]
+summary: "API - Feat - Listar ultimos chats de compras en libreopcion (Cabeceras de los chats)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Highest"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-05-26 08:54"
+updated: "2025-06-10 10:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-1006"
+---
+
+# PED-1006: API - Feat - Listar ultimos chats de compras en libreopcion (Cabeceras de los chats)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Highest |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-05-26 08:54 |
+| Actualizado | 2025-06-10 10:30 |
+| Etiquetas | ninguna |
+| Jira | [PED-1006](https://bluinc.atlassian.net/browse/PED-1006) |
+
+## Relaciones
+
+- **Padre:** [[PED-1005]] Chat General
+- **has action item:** [[PED-1007]] API - Feat - Crear endpoint para obtener historial completo del chat de un pedido libre opcion
+- **has action item:** [[PED-1009]] APP - Mostrar chat general para las ventas de libre opcion
+- **has action item:** [[PED-1017]] APP - Refactor - Mostrar chat general para las ventas de libre opcion -> Agregar filtro por chats abiertos/cerrados
+
+## Descripcion
+
+Se debe desarrollar un nuevo recurso en el módulo de pedidos basado en la tabla `LO.dbo.pedidosDetalleChat`, que permita consultar los chats asociados a los ultimos pedidos.
+Basicamente se trata de las cabeceras de los chat, donde se ve una especie de vista previa con el avatar de la contraparte (el comprador), como si fuese un feed de whatsaap o cualquier sistemad e mensajeria.
+
+ Para esto crearemos un recurso como el siguiente
+
+```
+GET {API_URL}/v1/chatLo?currentPage=2&itemsPerPage=15&open=true&idLo=123456
+```
+
+### Funcionalidad:
+
+- El recurso debe retornar todos los chats agrupados por pedido, paginados utilizando los parámetros `currentPage` e `itemsPerPage`.
+
+
+- Si se incluye el parámetro `open=true|false`, debe filtrar:
+
+- `open=true`: mostrar solo aquellos pedidos no liquidados (condición: `albclit.ntipoalb = 1`).
+
+
+- `open=false`: mostrar todos los pedidos independientemente de su estado.
+
+
+- Se puede filtrar por `idLo`
+
+
+
+
+
+### Formato de respuesta:
+
+Cada ítem en la lista representa un chat de pedido
+
+
+```
+{
+  "idLo": 123456,                  // Número de pedido en Libre Opción
+  "pedidoDetalleId":34343         //Detalle del pedido
+  "order": 100234,                // Número de pedido (orden comercial)
+  "branch": "0002",               // Sucursal de Libre Opción
+  "message": "Último mensaje...", // Último mensaje enviado
+  "orderDate": "2025-05-26",      // Fecha del pedido
+  "lastMessageDate": "2025-05-27 12:30", // Fecha del último mensaje
+  "avatar": "https://...jpg",     // URL del avatar del cliente o usuario interno
+  "clientName": "Juan Pérez",     // Nombre del cliente
+  "resellerId": 35,               // ID del vendedor
+  "resellerName": "Reseller X",   // Nombre del vendedor
+  "priority": true                // Si el cliente pidió soporte (flag de asistencia prioritaria)
+}
+```
+
+### Notas adicionales:
+
+- El avatar debe obtenerse del cliente o usuario relacionado al pedido.
+
+
+- El último mensaje y su fecha deben tomarse del mensaje más reciente del `pedidosDetalleChat` correspondiente a ese pedido.
+
+
+
+**Criterios de aceptación:**
+
+-  Devuelve resultados paginados correctamente.
+
+
+-  Filtra por pedidos abiertos o todos, según el valor de `open`.
+
+
+-  Muestra el último mensaje del chat correctamente agrupado.
+
+
+-  Incluye todos los campos en inglés, en formato camelCase.
+
+
+-  Implementado con validación de parámetros y control de errores.

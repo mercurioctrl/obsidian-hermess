@@ -1,0 +1,571 @@
+---
+jira_key: "PED-1120"
+aliases: ["PED-1120"]
+summary: "API - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los datos bancarios de Laset)"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Marbe Moreno"
+created: "2025-09-29 09:55"
+updated: "2025-10-20 16:23"
+labels: ["MVPLaset"]
+jira_url: "https://bluinc.atlassian.net/browse/PED-1120"
+---
+
+# PED-1120: API - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los datos bancarios de Laset)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-09-29 09:55 |
+| Actualizado | 2025-10-20 16:23 |
+| Etiquetas | MVPLaset |
+| Jira | [PED-1120](https://bluinc.atlassian.net/browse/PED-1120) |
+
+## Relaciones
+
+- **Padre:** [[PED-3]] Ordenes de compra
+- **has action item:** [[PED-1119]] APP - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los datos bancarios de Laset)
+- **has action item:** [[PED-1122]] API - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
+
+## Descripcion
+
+Agregaremos una feature para **visualizar y guardar la adenda**.
+Una adenda es un **anexo o complemento** que se adjunta al documento original sin reemplazarlo, sino que lo amplía con información importante.
+
+Se creará la tabla `[NB_WEB].[dbo].[addendum]` con los siguientes campos:
+
+- `id` (auto incremental)
+
+
+- `companyCode` (INT)
+
+
+- `text` (NVARCHAR(MAX))
+
+
+
+La API expone el endpoint:
+
+```
+GET {API_URL}/v1/addendum?companyCode={companyCode}
+```
+
+que devuelve algo como esto
+
+```
+{
+    "id": 3123,
+    "companyCode": 11,
+    "text": "
+     DATOS BANCARIOS DE LASET Y OTRAS TONTERIAS
+    "
+}
+```
+
+---
+
+```
+PATCH {API_URL}/v1/addendum?companyCode={int}
+```
+
+```
+{
+  "text": "DATOS BANCARIOS DE LASET (actualizado)"
+}
+```
+
+- Campos permitidos en PATCH:
+
+- `text` (string, requerido en este PATCH).
+
+
+
+
+- **No** se permite cambiar `companyCode` con PATCH.
+
+
+- Si la adenda **no existe**, devuelve `404`. (La creación va por `PUT` o `POST`.)
+
+
+
+### Respuestas
+
+- **200 OK** – devuelve la adenda actualizada.
+
+
+- **400 Bad Request** – `companyCode` inválido (faltante/no numérico/<1).
+
+
+- **401/403** – no autenticado / sin permiso.
+
+
+- **404 Not Found** – no existe adenda para ese `companyCode`.
+
+
+- **422 Unprocessable Entity** – validación (por ejemplo, `text` vacío/solo espacios).
+
+
+
+### Criterios de Aceptación
+
+- **GET adenda existente**
+
+- Entonces recibo `200 OK` con el objeto `{id, companyCode, text}`.
+
+
+
+
+- **GET adenda inexistente**
+
+- Entonces recibo `404 Not Found` con un mensaje claro de error.
+
+
+
+
+- **Guardar o actualizar adenda**
+200 OK – devuelve la adenda actualizada.
+
+
+- 400 Bad Request – companyCode inválido (faltante/no numérico/<1).
+
+
+- 401/403 – no autenticado / sin permiso.
+
+
+- 404 Not Found – no existe adenda para ese companyCode.
+
+
+- 422 Unprocessable Entity – validación (por ejemplo, text vacío/solo espacios).
+
+
+
+- **Validaciones**
+
+- Si `text` está vacío o solo contiene espacios → `422 Unprocessable Entity`.
+
+
+- Si `companyCode` no es numérico o es menor a 1 → `400 Bad Request`.
+
+
+
+
+- **Seguridad**
+
+- Solo usuarios autenticados crear/editar.
+
+
+- Usuarios sin permisos reciben `401/403`.
+
+
+
+
+
+
+
+Importante: Se revisó esta tarea para permitir que la adenda sea configurable, ya sea como global o personalizada por orden.
+
+
+
+- **Cada compañía tiene su propia plantilla por defecto** (datos bancarios específicos)
+
+
+- **Todas las órdenes nuevas** heredan automáticamente la plantilla de su compañía
+
+
+- **Al editar cualquier parte** de la adenda de una orden, se crea una **copia independiente** (copy-on-write)
+
+
+- **Las plantillas por compañía** permanecen intactas y siguen aplicándose a nuevas órdenes
+
+
+- **Órdenes con copia** son inmunes a cambios futuros en la plantilla de su compañía
+
+
+- **Las órdenes se identifican por **`branch-orderId` en la URL (ej: `0002-12212345`)
+
+
+
+
+
+Tablas a agrergar:
+
+```sql
+create table addendum_template
+(
+    id          int identity
+        primary key,
+    companyCode varchar(10)                 not null
+        unique,
+    companyName nvarchar(200)               not null,
+    text        nvarchar(max)               not null,
+    version     int       default 1         not null,
+    isActive    bit       default 1         not null,
+    createdAt   datetime2 default getdate() not null,
+    updatedAt   datetime2 default getdate() not null,
+    createdBy   int,
+    updatedBy   int
+)
+```
+
+
+
+```sql
+create table order_addendum
+(
+    id                    int identity
+        primary key,
+    branch                varchar(4),
+    orderId               varchar(8),
+    companyCode           varchar(10)                 not null,
+    text                  nvarchar(max)               not null,
+    isCustomCopy          bit       default 1         not null,
+    templateVersionAtCopy int,
+    createdAt             datetime2 default getdate() not null,
+    updatedAt             datetime2 default getdate() not null,
+    createdBy             int,
+    updatedBy             int
+)
+```
+
+
+
+Recursos:
+
+### 1. Plantillas por Compañía (Solo Administradores)
+
+#### `GET /v1/addendum/templates`
+
+Lista todas las plantillas de todas las compañías.
+
+**Query params opcionales:**
+
+- `companyCode` (string) - Filtrar por código de compañía
+
+
+- `isActive` (boolean) - Filtrar por estado activo/inactivo
+
+
+
+**Respuesta 200 OK:**
+
+```json
+{
+    "success": true,
+    "message": "Listado de Plantillas Globales",
+    "data": [
+        {
+            "id": 8,
+            "companyCode": 8,
+            "companyName": "MUGELLO SRL",
+            "text": "Plantilla pendiente de configuración",
+            "version": 1,
+            "isActive": true,
+            "updatedAt": "2025-10-08 16:10:22",
+            "updatedBy": null
+        },
+        {
+            "id": 4,
+            "companyCode": 4,
+            "companyName": "NB DISTRIBUIDORA MAYORISTA SRL",
+            "text": "Plantilla pendiente de configuración 22",
+            "version": 5,
+            "isActive": true,
+            "updatedAt": "2025-10-09 09:49:53",
+            "updatedBy": {
+                "userId": 62811,
+                "userName": "emanzano"
+            }
+        },...
+      ]
+}
+```
+
+**Respuestas:**
+
+- `200 OK` – Lista de plantillas
+
+
+- `401/403` – No autorizado (solo admin)
+
+
+
+
+
+#### `GET /v1/addendum/templates/{companyCode}`
+
+Obtiene la plantilla de una compañía específica.
+
+**Ejemplo:** `GET /v1/addendum/templates/11`
+
+**Respuesta 200 OK:**
+
+
+
+```json
+{
+    "success": true,
+    "message": "Template obtenido exitosamente",
+    "data": {
+        "id": 4,
+        "companyCode": 4,
+        "companyName": "NB DISTRIBUIDORA MAYORISTA SRL",
+        "text": "Plantilla pendiente de configuración 22",
+        "version": 5,
+        "isActive": true,
+        "updatedAt": "2025-10-09 09:49:53",
+        "updatedBy": {
+            "userId": 62811,
+            "userName": "emanzano"
+        }
+    }
+}
+```
+
+**Respuestas:**
+
+- `200 OK` – Plantilla encontrada
+
+
+- `401/403` – No autorizado
+
+
+- `404 Not Found` – Compañía no existe o no tiene plantilla
+
+
+
+
+
+#### `PATCH /v1/addendum/templates/{companyCode}`
+
+Actualiza la plantilla de una compañía (solo admin).
+
+**Body:**
+
+```json
+{
+  "text": "informacion de la empresa descripcion general al instanciar una orden"
+}
+```
+
+**Comportamiento:**
+
+- Incrementa `version`
+
+
+- Actualiza `updatedAt` y `updatedBy`
+
+
+- **NO afecta** órdenes que ya tienen copia personalizada (`order_addendum`)
+
+
+- **SÍ afecta** órdenes nuevas y órdenes sin copia
+
+
+
+**Respuesta 200 OK:**
+
+```json
+{
+    "success": true,
+    "message": "Template actualizado exitosamente",
+    "data": {
+        "id": 4,
+        "companyCode": 4,
+        "companyName": "NB DISTRIBUIDORA MAYORISTA SRL",
+        "text": "Plantilla pendiente de configuración 22",
+        "version": 6,
+        "isActive": true,
+        "updatedAt": "2025-10-09 10:19:19",
+        "updatedBy": {
+            "userId": 62811,
+            "userName": "emanzano"
+        }
+    }
+}
+```
+
+**Respuestas:**
+
+- `200 OK` – Plantilla actualizada
+
+
+- `400 Bad Request` – `companyCode` inválido o `text` vacío
+
+
+- `401/403` – No autorizado (solo admin)
+
+
+- `404 Not Found` – Compañía no existe
+
+
+- `422 Unprocessable Entity` – `text` vacío o solo espacios
+
+
+
+
+
+### Adendas por Orden
+
+#### `GET /v1/addendum/{branch-orderId}/orders`
+
+Obtiene la adenda de una orden específica.
+
+**Ejemplo:** `GET /v1/addendum/0002-10425227/orders`
+
+Respuesta 200 ok.
+
+```json
+{
+    "success": true,
+    "message": "Adenda del pedido obtenido exitosamente",
+    "data": {
+        "branch": "0002",
+        "orderId": "10425227",
+        "companyCode": 11,
+        "companyName": "LASET",
+        "text": "Bank: Ocean Bank\nBank Address: 780 NW 42nd Ave, Miami Florida 33162, USA\nABA: 066011392\nSWIFT: OCBKUS3M\nBeneficiary Name: Laset Sociedad Anonima\nBeneficiary Address: Pradines Clemente 1795 (CP 11500)\nBeneficiary Account #: 2538098205",
+        "isCustomCopy": false,
+        "templateVersion": 1,
+        "templateVersionAtCopy": null,
+        "source": "template",
+        "canEdit": true,
+        "updatedAt": null,
+        "updatedBy": null
+    }
+}
+```
+
+**Respuestas:**
+
+- `200 OK` – Siempre devuelve algo (plantilla o copia)
+
+
+- `400 Bad Request` – Formato de `branch-orderId` inválido (no cumple patrón `XXXX-XXXXXXXX`)
+
+
+- `401` – No autenticado
+
+
+- `403` – Sin permisos para ver la orden
+
+
+- `404 Not Found` – La orden no existe
+
+
+- `422 Unprocessable Entity` – La orden no tiene `companyCode` o la compañía no tiene plantilla
+
+
+
+
+
+#### `PATCH /v1/orders/{branch-orderId}/addendum`
+
+**Crea una copia** de la plantilla de la compañía y la modifica (copy-on-write).
+
+**Ejemplo:** `PATCH /v1/addendum/0001-00012345/orders`
+
+**Body:**
+
+```json
+{
+  "text": "Bank: Ocean BanknBank Address: ...."
+}
+```
+
+**Respuesta 200 OK:**
+
+```json
+{
+    "success": true,
+    "message": "Adenda del pedido actualizado exitosamente",
+    "data": {
+        "branch": "0002",
+        "orderId": "10425227",
+        "companyCode": 11,
+        "companyName": "LASET",
+        "text": "Bank: Ocean Bank Bank Address: 780 NW 42nd Ave, Miami Florida 33162, USA ABA: 066011392 SWIFT: OCBKUS3M Beneficiary Name: Laset Sociedad Anonima Beneficiary Address: Pradines Clemente 1795 (CP 11500) Beneficiary Account #: 2538098205",
+        "isCustomCopy": true,
+        "templateVersion": 1,
+        "templateVersionAtCopy": 1,
+        "source": "custom",
+        "canEdit": true,
+        "updatedAt": "2025-10-09 10:22:10",
+        "updatedBy": {
+            "id": 62811,
+            "name": "emanzano"
+        }
+    }
+}
+```
+
+**Respuestas:**
+
+- `200 OK` – Adenda actualizada (copia creada o modificada)
+
+
+- `400 Bad Request` – Formato de `branch-orderId` inválido o `text` vacío
+
+
+- `401` – No autenticado
+
+
+- `403` – Sin permisos para editar la orden
+
+
+- `404 Not Found` – La orden no existe
+
+
+- `422 Unprocessable Entity` – `text` vacío, solo espacios, o la compañía no tiene plantilla
+
+
+
+
+
+#### `DELETE /v1/addendum/{branch-orderId}/orders`
+
+Elimina la copia personalizada y vuelve a usar la plantilla de la compañía.
+
+**Respuesta 200 OK:**
+
+```json
+{
+    "success": true,
+    "message": "Adenda del pedido eliminado exitosamente",
+    "data": {
+        "branch": "0002",
+        "orderId": "10425227",
+        "companyCode": 11,
+        "companyName": "LASET",
+        "text": "Bank: Ocean Bank\nBank Address: 780 NW 42nd Ave, Miami Florida 33162, USA\nABA: 066011392\nSWIFT: OCBKUS3M\nBeneficiary Name: Laset Sociedad Anonima\nBeneficiary Address: Pradines Clemente 1795 (CP 11500)\nBeneficiary Account #: 2538098205",
+        "isCustomCopy": false,
+        "templateVersion": 1,
+        "templateVersionAtCopy": null,
+        "source": "template",
+        "canEdit": true,
+        "updatedAt": null,
+        "updatedBy": null
+    }
+}
+```
+
+**Respuestas:**
+
+- `200 OK` – Copia eliminada, vuelve a plantilla
+
+
+- `400 Bad Request` – Formato de `branch-orderId` inválido
+
+
+- `401` – No autenticado
+
+
+- `403` – Sin permisos
+
+
+- `404 Not Found` – No había copia personalizada (ya usa plantilla)

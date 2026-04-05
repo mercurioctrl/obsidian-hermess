@@ -1,0 +1,43 @@
+---
+jira_key: "PED-910"
+aliases: ["PED-910"]
+summary: "APP - MVP - Refactor - Seleccionar costo para el item de una orden"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-12-20 08:02"
+updated: "2025-01-06 09:20"
+labels: ["MVPLaset"]
+jira_url: "https://bluinc.atlassian.net/browse/PED-910"
+---
+
+# PED-910: APP - MVP - Refactor - Seleccionar costo para el item de una orden
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-12-20 08:02 |
+| Actualizado | 2025-01-06 09:20 |
+| Etiquetas | MVPLaset |
+| Jira | [PED-910](https://bluinc.atlassian.net/browse/PED-910) |
+
+## Relaciones
+
+- **Padre:** [[PED-497]] Ver orden de compra
+- **action item from:** [[PED-909]] API - Feat - Repositorios de costos para un item determinado
+- **action item from:** [[PED-912]] API - Refactor - Agregar permiso de "Edicion de costo para una orden"
+- **action item from:** [[PED-913]] API - Refactor - Incluir costo promedio en el detalle de una orden para cada item
+- **is implemented by:** [[PED-925]] APP - MVP - Refactor - Guardar costo para el item de una orden
+
+## Descripcion
+
+Utilizando el recurso en [link](https://lioteam.atlassian.net/browse/PED-909)  mostraremos solo cuando tenemos el permiso `editCostForSale` dentro del objeto `user`
+
+[adjunto]
+Es un selector que tiene lo que trae el recurso y una opción para personalizar el costo, al igual que lo hacemos con los precios

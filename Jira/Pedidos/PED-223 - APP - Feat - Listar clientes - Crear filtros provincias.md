@@ -1,0 +1,36 @@
+---
+jira_key: "PED-223"
+aliases: ["PED-223"]
+summary: "APP - Feat - Listar clientes -> Crear filtros provincias"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-11-03 09:56"
+updated: "2023-11-17 17:23"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/PED-223"
+---
+
+# PED-223: APP - Feat - Listar clientes -> Crear filtros provincias
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-11-03 09:56 |
+| Actualizado | 2023-11-17 17:23 |
+| Etiquetas | ninguna |
+| Jira | [PED-223](https://bluinc.atlassian.net/browse/PED-223) |
+
+## Relaciones
+
+- **Padre:** [[PED-16]] Listar clientes
+
+## Descripcion
+
+*Sin descripcion*
