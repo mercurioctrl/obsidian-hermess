@@ -1,0 +1,44 @@
+---
+jira_key: "DNYL-1371"
+aliases: ["DNYL-1371"]
+summary: "NB_ INGRESO GIGA"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2026-03-09 17:45"
+updated: "2026-03-11 09:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1371"
+---
+
+# DNYL-1371: NB_ INGRESO GIGA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2026-03-09 17:45 |
+| Actualizado | 2026-03-11 09:43 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1371](https://bluinc.atlassian.net/browse/DNYL-1371) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+En una historia los 4 ingresos: 
+
+MONITOR GAMER GIGABYTE 24.5 GS25F2
+
+MONITOR GAMER GIGABYTE 27 GS27FA-SA
+
+GIGABYTE NOTEBOOK AMD RYZEN AI 7 350 16GB DDR5 1TB GEN4 RTX 5060 QHD WIN11
+
+PLACA DE VIDEO GIGABYTE RADEON RX 7600 GAMING OC 8GB

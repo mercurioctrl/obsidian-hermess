@@ -1,0 +1,113 @@
+---
+jira_key: "INV-186"
+aliases: ["INV-186"]
+summary: "API - MVP - Feat - Agregar subitulo o bajada para los productos"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-05-13 10:04"
+updated: "2025-06-02 18:34"
+labels: ["MVPLaset"]
+jira_url: "https://bluinc.atlassian.net/browse/INV-186"
+---
+
+# INV-186: API - MVP - Feat - Agregar subitulo o bajada para los productos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-05-13 10:04 |
+| Actualizado | 2025-06-02 18:34 |
+| Etiquetas | MVPLaset |
+| Jira | [INV-186](https://bluinc.atlassian.net/browse/INV-186) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+- **action item from:** [[NBWEB-934]] API - Feat - Agregar subtitulo a los items
+- **has action item:** [[INV-187]] APP - MVP - Feat - Agregar subitulo o bajada para los productos
+
+## Descripcion
+
+Agregaremos la posibilidad de crear un subtitulo o bajada para los items con fines
+
+```
+GET /item/{itemId}
+```
+
+```
+{
+    "list": [
+    
+    ...
+        {
+            "title": "MONITOR LG LED 24 BORDERLESS 24MS500",
+            "subheading": "Consulta por el combo con xxx de este producto",
+            "sku": "24MS500",
+            "id": 6451,
+            "category": "MONITORES        ",
+            "categoryId": 7,
+            "brand": "LG                                                ",
+            "brandId": 28,
+            "brandImage": "https://static.nb.com.ar/img/a7c3fe6fee95157018930b65f7f2e49b.jpg",
+            "mainImage": null,
+            "stock": 30.0,
+            "warranty": "36 meses",
+            "description": "",
+            "attributes": 6,
+            "images": [
+                {
+                    "checksum": "http://static.nb.com.ar/img/ab3f0b99d781a38b5b21c2138d2e851d.png",
+                    "order": 0
+                },
+                {
+                    "checksum": "http://static.nb.com.ar/img/972c066f9f96c8464bc77c7f01b095c2.png",
+                    "order": 1
+                },
+                {
+                    "checksum": "http://static.nb.com.ar/img/0e25e7ad7099aadfd40e1c569994992a.png",
+                    "order": 2
+                }
+            ],
+            "ean": "8806096071829",
+            "upc": null,
+            "videoId": null,
+            "companyCode": 4,
+            "companyName": "NB DISTRIBUIDORA MAYORISTA SRL",
+            "officialSiteUrl": null,
+            "sindicateContentImg": null,
+            "iva": 21.0,
+            "notSerializable": 0,
+            "iaDescription": "El monitor LG LED 24 Borderless 24MS500 es una excelente adición a tu configuración de computadora, ofreciendo una experiencia visual inmersiva y de alta calidad. Con un diseño elegante y moderno, este monitor cuenta con una serie de características que lo hacen destacar en el mercado.\n\nEn cuanto a sus dimensiones y peso, el monitor tiene unas dimensiones de 539.9 x 414.4 x 190 mm con peana, y de 539.9 x 321.4 x 56.2 mm sin peana. Con un peso de 2.6 kg con peana y 2.3 kg sin peana, es un monitor liviano y fácil de transportar. Además, su peso empaquetado es de 3.9 kg, lo que lo hace ideal para enviar o transportar de un lugar a otro de forma segura.\n\nEntre sus características destacadas se encuentran la protección anti-parpadeo, el modo de lectura, la debilidad de color, Super Resolution+ para una calidad de imagen superior, estabilizador de negros para negros más profundos, Dynamic Action Sync para una experiencia de juego más fluida, cruceta para una navegación sencilla, y auto input switch para una conectividad sin complicaciones. Además, cuenta con ahorro inteligente de energía para un menor consumo.\n\nEn cuanto a la potencia, este monitor cuenta con un adaptador de corriente externo y tiene un consumo de potencia de 16W en modo estrella energética, menos de 0.5W en modo suspensión y menos de 0.3W en modo de apagado, lo que lo hace eficiente en términos de energía.\n\nCon una pantalla de 23.8 pulgadas y una resolución de 1920 x 1080, este monitor ofrece una calidad de imagen nítida y detallada. Con tecnología IPS, el monitor garantiza colores precisos y ángulos de visión amplios. Además, cuenta con un brillo de 250 cd/m², una gama de colores NTSC del 72%, un ratio de contraste de 1000:1 y un tiempo de respuesta de 5ms, lo que lo hace ideal para juegos, trabajo y entretenimiento multimedia.\n\nEn cuanto a la conectividad, el monitor cuenta con dos puertos HDMI para una fácil conexión con tus dispositivos, así como una salida para auriculares de 3 polos para una experiencia de audio inmersiva.\n\nEn resumen, el monitor LG LED 24 Borderless 24MS500 es una excelente opción para aquellos que buscan un monitor de alta calidad, con características avanzadas y un diseño elegante. Ya sea para trabajar, jugar o ver contenido multimedia, este monitor ofrece una experiencia visual excepcional que satisfará tus necesidades. ¡No esperes más y lleva tu experiencia de visualización al siguiente nivel con este increíble monitor LG!",
+            "national": 1
+        }
+    ],
+    "pagination": {
+        "total": 1,
+        "pageSize": 300,
+        "current": 1
+    }
+}
+```
+
+Para esto usaremos la tabla `[PRODUCTOS].[dbo].[subheadline]` como ya lo venimos haciendo para mostrarla.
+
+```
+PATCH /item/{itemId}
+```
+
+```
+{
+"subheading":"Consulta por el combo con xxx de este producto"
+}
+```
+
+En description puede venir código html para poder hacer enlaces o negritas. Por ejemplo:
+
+En combo con  <a href=”sitio”>AMD 8600g</a> obtenes un duescuento de 2 % sobre este producto.

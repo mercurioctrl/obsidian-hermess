@@ -1,0 +1,71 @@
+---
+jira_key: "COM-152"
+aliases: ["COM-152"]
+summary: "API - Refactor - Incorporar concepto companyCode al repositorio de ordenes de compra"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-12-09 07:45"
+updated: "2025-10-02 15:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-152"
+---
+
+# COM-152: API - Refactor - Incorporar concepto companyCode al repositorio de ordenes de compra
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-12-09 07:45 |
+| Actualizado | 2025-10-02 15:46 |
+| Etiquetas | ninguna |
+| Jira | [COM-152](https://bluinc.atlassian.net/browse/COM-152) |
+
+## Relaciones
+
+- **Padre:** [[COM-9]] Listar ordenes de compra
+- **relates to:** [[COM-211]] API - MVP - Refactor - Recurso para modificar datos de cabecera en Provider Order -> Eliminar país
+
+## Descripcion
+
+Al igual que lo realizado en ventas, incorporaremos el concepto `companyCode` a la parte de compras
+
+Para esto lo agregaremos en la tabla `[NewBytes_DBF].[dbo].[PedProT].companyCode`
+
+Y de esta forma lo filtraremos en el recurso 
+
+```
+GET {API_URL}/v1/providerOrder?companyCode={companyCode}
+```
+
+A su vez, tambien lo agregaremos en el objeto de respuesta del recurso
+
+```
+{
+    "response": [
+        {
+            "status": "P",
+            "date": "2024-12-06 21:23:32",
+            "orderNumber": 11412,
+            "providerId": 13108,
+            "providerCode": "001088",
+            "providerName": "RUBI\u00d1O ANABEL ROMINA",
+            "currencyId": "PSO",
+            "label": "",
+            "currencyAmount": 1,
+            "warehouse": "SAF",
+            "warehouseDescription": "SAFcom",
+            "total": 617200,
+            "totalFinal": 746812,
+            "iva": 21,
+            "companyCode": 4 <<-- SE AGREGA
+        },
+```
+
+Para evitar concurrencias indeseadas dado que somos tres tirando codigo a este repo, se aconseja trabajar una rama aparte por feature a partir de development

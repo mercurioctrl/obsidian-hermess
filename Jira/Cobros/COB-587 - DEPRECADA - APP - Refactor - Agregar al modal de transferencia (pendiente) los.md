@@ -1,0 +1,47 @@
+---
+jira_key: "COB-587"
+aliases: ["COB-587"]
+summary: "DEPRECADA - APP - Refactor - Agregar al modal de transferencia (pendiente) los datos para realizar la misma en el contexto del modal"
+status: "Finalizada"
+type: "Tarea"
+priority: "High"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-11-03 10:21"
+updated: "2025-11-03 16:32"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-587"
+---
+
+# COB-587: DEPRECADA - APP - Refactor - Agregar al modal de transferencia (pendiente) los datos para realizar la misma en el contexto del modal
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | High |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-11-03 10:21 |
+| Actualizado | 2025-11-03 16:32 |
+| Etiquetas | ninguna |
+| Jira | [COB-587](https://bluinc.atlassian.net/browse/COB-587) |
+
+## Relaciones
+
+- **Padre:** [[COB-19]] Cola de salidas
+
+## Descripcion
+
+[adjunto]
+Se debe mostrar 
+
+```
+bankCBU
+bankAlias
+clientName
+clientsBankAccountId
+clientsBankAccountDescription
+```
+
+En un apartado resaltado de modo texto debajo, similar a este, para que se sepa a quien hay que hacerle la transferencia

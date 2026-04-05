@@ -1,0 +1,46 @@
+---
+jira_key: "DNYL-1060"
+aliases: ["DNYL-1060"]
+summary: "NB_ CENA COMERCIAL"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-04-24 11:45"
+updated: "2025-04-29 17:54"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1060"
+---
+
+# DNYL-1060: NB_ CENA COMERCIAL
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-04-24 11:45 |
+| Actualizado | 2025-04-29 17:54 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1060](https://bluinc.atlassian.net/browse/DNYL-1060) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Estética de NB (formato Historia): 
+
+CENA COMERCIAL 
+
+La próxmia reunión comercial la haremos diferente, te invitamos a participar de una cena. 
+
+¿Cuándo? Miércoles 7 de Mayo a las 19:30 hs
+
+¿Dónde? Vitte Grill & Wine, Caballito. 
+
+Te esperamos.

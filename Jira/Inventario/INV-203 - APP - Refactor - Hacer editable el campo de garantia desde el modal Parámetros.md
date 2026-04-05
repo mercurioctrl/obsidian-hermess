@@ -1,0 +1,36 @@
+---
+jira_key: "INV-203"
+aliases: ["INV-203"]
+summary: "APP - Refactor - Hacer editable el campo de garantia desde el modal Parámetros secundarios"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-09-04 18:17"
+updated: "2025-09-05 10:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-203"
+---
+
+# INV-203: APP - Refactor - Hacer editable el campo de garantia desde el modal Parámetros secundarios
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-09-04 18:17 |
+| Actualizado | 2025-09-05 10:43 |
+| Etiquetas | ninguna |
+| Jira | [INV-203](https://bluinc.atlassian.net/browse/INV-203) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,47 @@
+---
+jira_key: "COB-536"
+aliases: ["COB-536"]
+summary: "API - Feat - Guardar el usuario creador al generar una salida pendiente"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-08-12 14:49"
+updated: "2024-08-15 03:22"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-536"
+---
+
+# COB-536: API - Feat - Guardar el usuario creador al generar una salida pendiente
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-08-12 14:49 |
+| Actualizado | 2024-08-15 03:22 |
+| Etiquetas | ninguna |
+| Jira | [COB-536](https://bluinc.atlassian.net/browse/COB-536) |
+
+## Relaciones
+
+- **Padre:** [[COB-19]] Cola de salidas
+- **blocks:** [[COB-537]] APP - Refactor - Agregar a los formularios de solicitudes, a nombre de quien es la solicitud (elegir agente)
+
+## Descripcion
+
+Siguiendo la linea de lo realizado en [link](https://lioteam.atlassian.net/browse/COB-535)  debemos guardar el usuario que genera la solocitud (en este caso el que esta logueado) cada vez que ejecuto
+
+```
+POST {API_URL}/v1/pendingCashOut
+```
+
+Por otro lado para los parametros
+
+`"userId", "agentName", "agentId":`
+
+Me vendrá en la carga util el parámetro `userId` directamente, para que desde el front se pueda elegir a quien queres crearle la solicitud

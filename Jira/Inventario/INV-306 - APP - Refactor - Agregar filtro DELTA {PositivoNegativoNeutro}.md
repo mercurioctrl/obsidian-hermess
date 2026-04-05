@@ -1,0 +1,89 @@
+---
+jira_key: "INV-306"
+aliases: ["INV-306"]
+summary: "APP - Refactor - Agregar filtro DELTA {Positivo/Negativo/Neutro}"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-12-26 09:48"
+updated: "2026-01-09 13:27"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-306"
+---
+
+# INV-306: APP - Refactor - Agregar filtro DELTA {Positivo/Negativo/Neutro}
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-26 09:48 |
+| Actualizado | 2026-01-09 13:27 |
+| Etiquetas | ninguna |
+| Jira | [INV-306](https://bluinc.atlassian.net/browse/INV-306) |
+
+## Relaciones
+
+- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-305]] API - Refactor - Agregar filtro DELTA {Positivo/Negativo/Neutro}
+
+## Descripcion
+
+Incorporar en el frontend un nuevo filtro “Delta” junto al resto de filtros existentes para permitir filtrar rápidamente por DELTA positivo, negativo o cero.
+
+**Comportamiento esperado**
+
+- Agregar un control de filtro (ej. select/dropdown o segmented control) con estas opciones:
+
+- **Positivo** → envía `delta=positive`
+
+
+- **Negativo** → envía `delta=negative`
+
+
+- **Cero** → envía `delta=neutral`
+
+
+
+
+- El filtro debe ser **combinable** con los demás filtros actuales.
+
+
+- Si el usuario no selecciona ninguna opción de Delta (o lo deja en “Todos”), **no** se debe enviar el parámetro `delta` en la querystring.
+
+
+
+**Integración API**
+
+- Request: `GET {API_URL}/itemsStocks?...&delta=positive|negative|neutral`
+
+
+- Si el filtro está inactivo: `GET {API_URL}/itemsStocks?...` (sin `delta`)
+
+
+
+**Criterios de aceptación**
+
+- El filtro “Delta” aparece junto a los filtros actuales y respeta el layout/UX existente.
+
+
+- Seleccionar una opción aplica el filtro y refresca el listado con el parámetro correcto.
+
+
+- Desactivar / volver a “Todos” elimina `delta` de la request.
+
+
+- El filtro funciona en combinación con otros filtros (no se pisan entre sí).
+
+
+- La UI refleja el estado actual del filtro (persistencia en el estado de la pantalla mientras el usuario navega dentro de la vista).
+
+
+- Se debe mostrar junto al filtro una (i) explicando el concepto de delta en funcion del stock. 
+ej:* El ****delta**** representa la ****diferencia entre el stock esperado (teórico)**** y el ****stock real registrado****.*
+*Indica si hay ****sobrantes, faltantes o coincidencia exacta**** de unidades en inventario*

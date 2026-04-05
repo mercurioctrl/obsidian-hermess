@@ -1,0 +1,562 @@
+---
+jira_key: "LIO-120"
+aliases: ["LIO-120"]
+summary: "API - Refactor - Migrar el detalle de la ficha de Legacy a V4"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-10-30 10:26"
+updated: "2024-12-30 13:56"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-120"
+---
+
+# LIO-120: API - Refactor - Migrar el detalle de la ficha de Legacy a V4
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-10-30 10:26 |
+| Actualizado | 2024-12-30 13:56 |
+| Etiquetas | ninguna |
+| Jira | [LIO-120](https://bluinc.atlassian.net/browse/LIO-120) |
+
+## Relaciones
+
+- **Padre:** [[LIO-119]] Inventario
+- **has action item:** [[LIO-169]] APP - Refactor - Migrar el detalle de la ficha de Legacy a V4
+
+## Descripcion
+
+Migraremos
+
+```
+GET {API_LEGACY}/productos/ficha/{itemLoid}
+```
+
+Estaría bueno primero revisar el siguiente objeto con marbe para ver si podemos deprecar cosas que no se usan
+
+```json
+{
+"id": 344979,
+"idInterno": 103094,
+"idVendedor": 447,
+"idDistribuidora": 1,
+"idFabricante": "YD3200C5FHBOX",
+"calificacion": 5,
+"limiteCompra": 99999,
+"esNativo": true,
+"imagenPrincipal": "c39621c8b7d6496567406e7e63e164c9.jpg",
+"titulo": "PROCESADOR AMD (AM4) RYZEN 3 3200G",
+"descripcion": "",
+"garantia": {
+"meses": 36,
+"terminos": ""
+},
+"estados": {
+"stock": true,
+"revision": false,
+"rechazado": false,
+"usado": false,
+"preventa": false,
+"instantFlash": false
+},
+"precios": {
+"precioLO": 79840,
+"precioLista": 85828,
+"precioSinDescuento": 79840,
+"cotizacion": 1004.5,
+"descuentoLO": 0,
+"descuentoDolares": 0
+},
+"cuotas": {
+"nroMaximoMercadoPago": 12,
+"nroMaximoSucursal": 1
+},
+"envios": {
+"activo": true,
+"gratis": false,
+"rapido": false,
+"codigoPostalOrigen": "1229",
+"cotizar": true
+},
+"retiro": {
+"activo": true,
+"direccion": "Libre Opción Express, CABA",
+"horario": "Lunes a Viernes de 9:00 a 17:00 hs",
+"fechaEntrega": "Miércoles 30"
+},
+"marca": {
+"id": 3169,
+"nombre": "AMD",
+"img": "266f407b98b3c0721710b6c651d4108f.jpg",
+"activa": true,
+"uri": "amd",
+"svg": "images/logos/marcas/amd.svg",
+"key": 3169
+},
+"categoria": {
+"id": 44,
+"key": 44,
+"nombre": "Procesadores",
+"img": "icon-procesador.svg",
+"uri": "procesadores",
+"total": 0
+},
+"vendedor": {
+"id": 447,
+"nombre": "Gears Store",
+"esReseller": true,
+"reputacion": {
+"tiempoRespuestaChatPromedio": "Rápida",
+"tiempoRespuestaPreguntasPromedio": "Muy Rápida",
+"puntajeChat": 5,
+"puntajePreguntas": 5,
+"puntajeCalificacion": 5,
+"puntajeSeguimiento": 0,
+"puntajeGlobal": 5,
+"ventas": true,
+"tasaDeRespuesta": "1.000",
+"productosDisponibles": 1238,
+"ventasConcretadas": 2312,
+"tiempoDeRespuesta": 1
+}
+},
+"mediosPago": [
+{
+"id": 5073,
+"key": 5073,
+"activo": false,
+"nombre": "",
+"descripcion": "",
+"interes": 0,
+"soloSucursal": false,
+"cuotas": 1,
+"total": 0
+},
+{
+"id": 5075,
+"key": 5075,
+"activo": true,
+"nombre": "Ahora 12 cuotas",
+"descripcion": "12 cuotas simples",
+"interes": 62,
+"soloSucursal": false,
+"cuotas": 12,
+"total": 0
+},
+{
+"id": 5072,
+"key": 5072,
+"activo": true,
+"nombre": "Ahora 3 cuotas",
+"descripcion": "3 cuotas simples",
+"interes": 23,
+"soloSucursal": false,
+"cuotas": 3,
+"total": 0
+},
+{
+"id": 5071,
+"key": 5071,
+"activo": true,
+"nombre": "Ahora 6 cuotas",
+"descripcion": "6 cuotas simples",
+"interes": 30,
+"soloSucursal": false,
+"cuotas": 6,
+"total": 0
+},
+{
+"id": 5074,
+"key": 5074,
+"activo": true,
+"nombre": "Ahora 9 cuotas",
+"descripcion": "9 cuotas simples",
+"interes": 45,
+"soloSucursal": false,
+"cuotas": 9,
+"total": 0
+},
+{
+"id": 4004,
+"key": 4004,
+"activo": true,
+"nombre": "Efectivo",
+"descripcion": "Efectivo",
+"interes": 0,
+"soloSucursal": true,
+"cuotas": 1,
+"total": 0
+},
+{
+"id": 5045,
+"key": 5045,
+"activo": true,
+"nombre": "Mercado Pago",
+"descripcion": "Mercado Pago",
+"interes": 7.5,
+"soloSucursal": false,
+"cuotas": 1,
+"total": 0
+},
+{
+"id": 4005,
+"key": 4005,
+"activo": true,
+"nombre": "Transferencia",
+"descripcion": "Transferencia bancaria",
+"interes": 0,
+"soloSucursal": false,
+"cuotas": 1,
+"total": 0
+}
+],
+"mediosEnvio": [
+{
+"id": 3030,
+"activo": true,
+"nombre": "Moto",
+"descripcion": "Moto (Capital Federal)",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4041,
+"activo": true,
+"nombre": "OCA",
+"descripcion": "A domicilio por OCA",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4046,
+"activo": false,
+"nombre": "Mercado Envíos",
+"descripcion": "Mercado Envios (Solo pagos de MercadoPago)",
+"tipo": {
+"key": 1,
+"nombre": "Simil correo",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe"
+]
+}
+},
+{
+"id": 4050,
+"activo": false,
+"nombre": "OCA (Retiro Sucursal)",
+"descripcion": "OCA con retiro en sucursal",
+"tipo": {
+"key": 1,
+"nombre": "Simil correo",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe"
+]
+}
+},
+{
+"id": 4052,
+"activo": false,
+"nombre": "A convenir",
+"descripcion": "A convenir con el vendedor",
+"tipo": {
+"key": 1,
+"nombre": "Simil correo",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe"
+]
+}
+},
+{
+"id": 4053,
+"activo": false,
+"nombre": "Transporte Vientosweb",
+"descripcion": "",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4055,
+"activo": true,
+"nombre": "Combinar Envio",
+"descripcion": "Moto coordinada en otro pedido",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4056,
+"activo": false,
+"nombre": "Miniflete (Capital Federal)",
+"descripcion": "Miniflete (Capital Federal)",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4057,
+"activo": false,
+"nombre": "Chaco",
+"descripcion": "",
+"tipo": 0
+},
+{
+"id": 4058,
+"activo": false,
+"nombre": "Uber",
+"descripcion": "",
+"tipo": {
+"key": 1,
+"nombre": "Simil correo",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe"
+]
+}
+},
+{
+"id": 4059,
+"activo": false,
+"nombre": "Uber",
+"descripcion": "",
+"tipo": {
+"key": 1,
+"nombre": "Simil correo",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe"
+]
+}
+},
+{
+"id": 4060,
+"activo": false,
+"nombre": "Uber",
+"descripcion": "",
+"tipo": {
+"key": 1,
+"nombre": "Simil correo",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe"
+]
+}
+},
+{
+"id": 4063,
+"activo": false,
+"nombre": "Rappi",
+"descripcion": "",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4064,
+"activo": false,
+"nombre": "Uber",
+"descripcion": "",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4065,
+"activo": false,
+"nombre": "Andreani",
+"descripcion": "A domicilio por Andreani",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4066,
+"activo": false,
+"nombre": "Urbano",
+"descripcion": "Urbano a domicilio",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4068,
+"activo": false,
+"nombre": "Retira transportista",
+"descripcion": "Retira transportista",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4069,
+"activo": false,
+"nombre": "Entregar",
+"descripcion": "A domicilio por Entregar",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 3031,
+"activo": true,
+"nombre": "Camioneta",
+"descripcion": "Camioneta",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4061,
+"activo": false,
+"nombre": "uber",
+"descripcion": "",
+"tipo": {
+"key": 1,
+"nombre": "Simil correo",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe"
+]
+}
+},
+{
+"id": 4067,
+"activo": false,
+"nombre": "1",
+"descripcion": "Transporte Camioneta",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4071,
+"activo": true,
+"nombre": "Unido a otro envio",
+"descripcion": "Unido a otro envio",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+},
+{
+"id": 4062,
+"activo": false,
+"nombre": "uber",
+"descripcion": "",
+"tipo": {
+"key": 2,
+"nombre": "Simil moto",
+"datos": [
+"DNI",
+"Nombre y apellido del que recibe",
+"Horario de entrega"
+]
+}
+}
+],
+"fotos": [
+"https://static.libreopcion.com.ar/img/3349eabf990c5d9e34da01989d046c6e.jpg",
+"https://static.libreopcion.com.ar/img/1523bb7e3e3c5ec35b6064a695c403b9.jpg",
+"https://static.libreopcion.com.ar/img/a8c470405277f871c7cd8baea66f549e.jpg",
+"https://static.libreopcion.com.ar/img/c39621c8b7d6496567406e7e63e164c9.jpg"
+],
+"videos": [],
+"cantidad": 1
+}
+```

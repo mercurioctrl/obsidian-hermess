@@ -1,0 +1,38 @@
+---
+jira_key: "EXP-341"
+aliases: ["EXP-341"]
+summary: "API - O. Mejora - Asi como hicimos en pickUp, acomodaremos el conteo de la burbuja y optimizaremos el repositorio"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-07-13 13:33"
+updated: "2023-07-13 15:57"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-341"
+---
+
+# EXP-341: API - O. Mejora - Asi como hicimos en pickUp, acomodaremos el conteo de la burbuja y optimizaremos el repositorio
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-07-13 13:33 |
+| Actualizado | 2023-07-13 15:57 |
+| Etiquetas | ninguna |
+| Jira | [EXP-341](https://bluinc.atlassian.net/browse/EXP-341) |
+
+## Relaciones
+
+- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
+
+## Descripcion
+
+Asi como hicimos en pickUp, acomodaremos el conteo de la burbuja y optimizaremos el repositorio  
+
+[link](https://lioteam.atlassian.net/browse/SNB-973)

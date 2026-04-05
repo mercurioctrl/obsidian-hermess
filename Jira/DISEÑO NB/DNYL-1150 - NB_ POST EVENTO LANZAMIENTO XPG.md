@@ -1,0 +1,47 @@
+---
+jira_key: "DNYL-1150"
+aliases: ["DNYL-1150"]
+summary: "NB_ POST EVENTO LANZAMIENTO XPG"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-07-24 13:14"
+updated: "2025-07-30 12:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1150"
+---
+
+# DNYL-1150: NB_ POST EVENTO LANZAMIENTO XPG
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-24 13:14 |
+| Actualizado | 2025-07-30 12:43 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1150](https://bluinc.atlassian.net/browse/DNYL-1150) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola marce! 
+
+Te paso las fotos que tenemos del evento de ayer.
+
+[link](https://drive.google.com/drive/folders/1oPGth5_HlDrdnDH5YRg0GJMk6TpxCnYx?usp=sharing) 
+[link](https://drive.google.com/drive/folders/1MtbI1B-frsX9LIcl_zwa7D0lUjZfLoUg?usp=sharing) 
+
+armamos algo lindo para subir a instagram? 
+
+Tratemos de ajustar el texto de la imagen que generalmente hacemos un poco más al centro, porque en las que ya publicamos queda muy justo en la miniatura y da como la sensación de cortado. 
+
+[adjunto]

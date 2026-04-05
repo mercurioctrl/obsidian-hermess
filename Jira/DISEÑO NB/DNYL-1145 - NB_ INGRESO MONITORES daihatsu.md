@@ -1,0 +1,39 @@
+---
+jira_key: "DNYL-1145"
+aliases: ["DNYL-1145"]
+summary: "NB_ INGRESO MONITORES daihatsu"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-07-18 10:49"
+updated: "2025-07-24 14:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1145"
+---
+
+# DNYL-1145: NB_ INGRESO MONITORES daihatsu
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-18 10:49 |
+| Actualizado | 2025-07-24 14:29 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1145](https://bluinc.atlassian.net/browse/DNYL-1145) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+[adjunto]
+Ingresan los monis de 19 y de 22 de daihatsu. me armas las imagenes?

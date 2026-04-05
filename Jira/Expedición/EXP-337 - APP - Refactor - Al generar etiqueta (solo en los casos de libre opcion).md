@@ -1,0 +1,37 @@
+---
+jira_key: "EXP-337"
+aliases: ["EXP-337"]
+summary: "APP - Refactor - Al generar etiqueta (solo en los casos de libre opcion) autocompletar comentario"
+status: "CodeReview"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-07-10 15:57"
+updated: "2023-07-11 10:50"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-337"
+---
+
+# EXP-337: APP - Refactor - Al generar etiqueta (solo en los casos de libre opcion) autocompletar comentario
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-07-10 15:57 |
+| Actualizado | 2023-07-11 10:50 |
+| Etiquetas | ninguna |
+| Jira | [EXP-337](https://bluinc.atlassian.net/browse/EXP-337) |
+
+## Relaciones
+
+- **Padre:** [[EXP-6]] Despacho de envios
+
+## Descripcion
+
+[adjunto]
+**Solo cuando el pedido es de libre opcion,** se debe precargar el textarea “observacion” con el mismo contenido que se encuentra en “comentario de la orden”

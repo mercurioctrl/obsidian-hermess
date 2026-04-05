@@ -1,0 +1,38 @@
+---
+jira_key: "EXP-343"
+aliases: ["EXP-343"]
+summary: "API - Research - Se debe investigar sobre la eliminación del token en AFIP SDK para ámbitos productivos o vías de acción para solucionar su dependencia"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-07-17 06:52"
+updated: "2024-03-13 12:48"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-343"
+---
+
+# EXP-343: API - Research - Se debe investigar sobre la eliminación del token en AFIP SDK para ámbitos productivos o vías de acción para solucionar su dependencia
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-07-17 06:52 |
+| Actualizado | 2024-03-13 12:48 |
+| Etiquetas | ninguna |
+| Jira | [EXP-343](https://bluinc.atlassian.net/browse/EXP-343) |
+
+## Relaciones
+
+- **Padre:** [[EXP-202]] Feat - Pestaña comprobantes
+
+## Descripcion
+
+Se debe investigar sobre la eliminación del token en AFIP SDK para ámbitos productivos o vías de acción para solucionar su dependencia.
+
+De ser necesario podemos emitir para realizar pruebas, facturas o créditos de 0.1 centavos a cualquier DNI consumidor final.

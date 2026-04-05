@@ -1,0 +1,45 @@
+---
+jira_key: "EXP-313"
+aliases: ["EXP-313"]
+summary: "API - Refactor - Buscar seriales, parece no ser reactivo a los seriales, o encuentra demasiados."
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-06-12 07:35"
+updated: "2023-06-21 07:13"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-313"
+---
+
+# EXP-313: API - Refactor - Buscar seriales, parece no ser reactivo a los seriales, o encuentra demasiados.
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-06-12 07:35 |
+| Actualizado | 2023-06-21 07:13 |
+| Etiquetas | ninguna |
+| Jira | [EXP-313](https://bluinc.atlassian.net/browse/EXP-313) |
+
+## Relaciones
+
+- **Padre:** [[EXP-301]] Feat - Mover seriales
+
+## Descripcion
+
+Dos problemas que vi al probar bien la feature son que no busca bien por serial….
+
+Por ejemplo buscas `W2MK011189T` devuelve muchos resultados, pero parece no haber coincidencias
+
+[adjunto]
+Por otro lado, al marcar el checkbox “posee un pedido cabecera” me arroja un erro de sintaxis del siguiente tipo. 
+
+```
+SQLSTATE[42000]: [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Sintaxis incorrecta cerca de 'asda'. SQL: SELECT S.serial,S.FECHA_INGRESO, ER.REMITO_PRV_FP as providerOrder FROM [NEW_BYTES].[dbo].[ST_DETALLE_STOCK] AS S LEFT JOIN NewBytes_DBF.dbo.articulo AS A ON S.CREF = A.cRef LEFT JOIN [NEW_BYTES].[dbo].[ST_ENL_DESPACHOS_ENTRADAS_REMITOS] AS ER ON ER.ID_COMPRA = S.ID_COMPRA WHERE S.FECHA_EGRESO IS NULL AND ID_MOVIMIENTO = 1 AND ID_DEPOSITO = 1 asda ORDER BY A.ID_ARTICULO DESC OFFSET 0 rows FETCH next 15 rows only
+```

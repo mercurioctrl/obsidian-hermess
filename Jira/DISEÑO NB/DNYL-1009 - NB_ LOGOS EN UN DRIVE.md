@@ -1,0 +1,44 @@
+---
+jira_key: "DNYL-1009"
+aliases: ["DNYL-1009"]
+summary: "NB_ LOGOS EN UN DRIVE"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-03-05 16:44"
+updated: "2025-03-07 10:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1009"
+---
+
+# DNYL-1009: NB_ LOGOS EN UN DRIVE
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-03-05 16:44 |
+| Actualizado | 2025-03-07 10:21 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1009](https://bluinc.atlassian.net/browse/DNYL-1009) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Me armas un drive con Logos de: 
+
+AMD
+GIGABYTE
+DLINK
+TRUST
+GENIUS
+
+en PNG

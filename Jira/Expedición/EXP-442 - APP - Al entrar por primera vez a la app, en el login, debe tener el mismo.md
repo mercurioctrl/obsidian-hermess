@@ -1,0 +1,36 @@
+---
+jira_key: "EXP-442"
+aliases: ["EXP-442"]
+summary: "APP - Al entrar por primera vez a la app, en el login, debe tener el mismo filtrado de las pestañas"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2024-09-06 13:45"
+updated: "2024-09-10 10:45"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-442"
+---
+
+# EXP-442: APP - Al entrar por primera vez a la app, en el login, debe tener el mismo filtrado de las pestañas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2024-09-06 13:45 |
+| Actualizado | 2024-09-10 10:45 |
+| Etiquetas | ninguna |
+| Jira | [EXP-442](https://bluinc.atlassian.net/browse/EXP-442) |
+
+## Relaciones
+
+- **Padre:** [[EXP-7]] Despacho de retiros
+
+## Descripcion
+
+*Sin descripcion*

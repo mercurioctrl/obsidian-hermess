@@ -1,0 +1,38 @@
+---
+jira_key: "EXP-285"
+aliases: ["EXP-285"]
+summary: "API - Refactor - Se deben mostrar en el listado de ingresos, aquellos que aun no tienen despacho creado aun"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-05-17 09:14"
+updated: "2023-06-21 07:12"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-285"
+---
+
+# EXP-285: API - Refactor - Se deben mostrar en el listado de ingresos, aquellos que aun no tienen despacho creado aun
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-05-17 09:14 |
+| Actualizado | 2023-06-21 07:12 |
+| Etiquetas | ninguna |
+| Jira | [EXP-285](https://bluinc.atlassian.net/browse/EXP-285) |
+
+## Relaciones
+
+- **Padre:** [[EXP-249]] Feat - Vincular despacho / Editar despacho
+
+## Descripcion
+
+Según lo conversado, Dani necesita ver los pedidos, ya cuando se crean en `NewBytes_DBF.dbo.PedProT` que seria “el paso uno” que hacen. Desde ahí necesita poder editar/crear un despacho ([link](https://lioteam.atlassian.net/browse/EXP-252) ).
+
+Pero al estar el repositorio de ordenes de proveedor basado en `ST_DESPACHOS_ENTRADAS_CABECERA` no se muestran en el listado.

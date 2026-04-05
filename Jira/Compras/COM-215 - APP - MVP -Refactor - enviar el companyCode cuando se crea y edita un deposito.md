@@ -1,0 +1,36 @@
+---
+jira_key: "COM-215"
+aliases: ["COM-215"]
+summary: "APP - MVP -Refactor - enviar el companyCode cuando se crea y edita un deposito"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-10-09 15:44"
+updated: "2025-11-12 10:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-215"
+---
+
+# COM-215: APP - MVP -Refactor - enviar el companyCode cuando se crea y edita un deposito
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-10-09 15:44 |
+| Actualizado | 2025-11-12 10:40 |
+| Etiquetas | ninguna |
+| Jira | [COM-215](https://bluinc.atlassian.net/browse/COM-215) |
+
+## Relaciones
+
+- **Padre:** [[COM-178]] Depositos
+
+## Descripcion
+
+*Sin descripcion*

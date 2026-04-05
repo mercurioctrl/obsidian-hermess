@@ -1,0 +1,36 @@
+---
+jira_key: "COB-570"
+aliases: ["COB-570"]
+summary: "Refactor- Pestaña de percepciones -  al descargar voucher debe ser reactivo al select de fecha y no a la ruta."
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-07-07 11:43"
+updated: "2025-07-15 19:45"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-570"
+---
+
+# COB-570: Refactor- Pestaña de percepciones -  al descargar voucher debe ser reactivo al select de fecha y no a la ruta.
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-07-07 11:43 |
+| Actualizado | 2025-07-15 19:45 |
+| Etiquetas | ninguna |
+| Jira | [COB-570](https://bluinc.atlassian.net/browse/COB-570) |
+
+## Relaciones
+
+- **has action item:** [[SNB-3222]] Los montos parecen venir en cero en la presentacion jurada de ARBA (caba salio perfecto)
+
+## Descripcion
+
+2 opciones o en esta pestaña al cambiar de checha se cambia sin necesidad del mostrar o se toma del seleccionador de fecha directamente sin necesidad de usar el route.query.between

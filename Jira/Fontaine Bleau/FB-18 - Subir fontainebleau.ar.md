@@ -1,0 +1,36 @@
+---
+jira_key: "FB-18"
+aliases: ["FB-18"]
+summary: "Subir fontainebleau.ar"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Alejandra Guidobono"
+created: "2025-05-07 17:13"
+updated: "2025-05-16 16:55"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-18"
+---
+
+# FB-18: Subir fontainebleau.ar
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-05-07 17:13 |
+| Actualizado | 2025-05-16 16:55 |
+| Etiquetas | ninguna |
+| Jira | [FB-18](https://bluinc.atlassian.net/browse/FB-18) |
+
+## Relaciones
+
+- **Padre:** [[FB-17]] Site- Etapa 0
+
+## Descripcion
+
+*Sin descripcion*

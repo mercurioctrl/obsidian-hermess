@@ -1,0 +1,50 @@
+---
+jira_key: "DNYL-1283"
+aliases: ["DNYL-1283"]
+summary: "NB_ BANDERA NB TRAVEL"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2025-10-27 11:20"
+updated: "2025-11-12 09:34"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1283"
+---
+
+# DNYL-1283: NB_ BANDERA NB TRAVEL
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-10-27 11:20 |
+| Actualizado | 2025-11-12 09:34 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1283](https://bluinc.atlassian.net/browse/DNYL-1283) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+me ayudas haciendo dos banderas  una AZUL y la otra blanca con logo de NB TRAVEL BLANCO en una y en la otra logo negro y logos de las marcas que nos acompañaron en toda la campaña: 
+
+AMD 
+ASUS
+ADATA
+TRUST
+PATRIOT
+RAZER
+GENIUS
+GIGABYTE
+HUNNOX 
+
+LA idea es que sea del tamaño similar al del año pasado. (quizás una es azul y la otra es blanca con logos en negro)

@@ -1,0 +1,55 @@
+---
+jira_key: "DNYL-1258"
+aliases: ["DNYL-1258"]
+summary: "NB_ PRIMAVERA TECH ASUS"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2025-09-30 13:37"
+updated: "2025-10-24 09:27"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1258"
+---
+
+# DNYL-1258: NB_ PRIMAVERA TECH ASUS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-09-30 13:37 |
+| Actualizado | 2025-10-24 09:27 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1258](https://bluinc.atlassian.net/browse/DNYL-1258) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+Primavera Tech
+
+Precios UNICOS en Monitores ASUS
+
+PA278QV-J
+VA27EHF-J
+VG249QL3A-J
+VG279Q3A-J
+
+Envios gratis a todo el país. 
+
+Garantia oficial
+
+(historia + news + feed + Banner home) 
+
+El banner Home : Precios UNICOS en Monitores ASUS (pero hacelo lo más original ASUS Posible)
+
+gracias!

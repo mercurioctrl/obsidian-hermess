@@ -1,0 +1,43 @@
+---
+jira_key: "DNYL-1146"
+aliases: ["DNYL-1146"]
+summary: "NB_ POST CHANNEL TALKS BS AS"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-07-18 12:10"
+updated: "2025-07-23 11:18"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1146"
+---
+
+# DNYL-1146: NB_ POST CHANNEL TALKS BS AS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-18 12:10 |
+| Actualizado | 2025-07-23 11:18 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1146](https://bluinc.atlassian.net/browse/DNYL-1146) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! armamos un carrusell de las fotos de ayer.. poner estuvimos presentes en COPY: 
+
+Paso el Channel Talks de Buenos Aires y nos dejó estas hermosas pics. 
+
+Gracias a todos los clientes que se acercaron a conocer las novedades de las marcas que nos acompañaron 
+(etiqueta: AMD, Dlink, Trust, MSI, Thermal) 
+
+Exclente organización (etiqueta a enfasys)

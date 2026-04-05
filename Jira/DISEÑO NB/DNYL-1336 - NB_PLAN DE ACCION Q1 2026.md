@@ -1,0 +1,36 @@
+---
+jira_key: "DNYL-1336"
+aliases: ["DNYL-1336"]
+summary: "NB_PLAN DE ACCION Q1 2026"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "md_mnuble"
+created: "2026-01-09 13:28"
+updated: "2026-02-03 11:55"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1336"
+---
+
+# DNYL-1336: NB_PLAN DE ACCION Q1 2026
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | md_mnuble |
+| Creado | 2026-01-09 13:28 |
+| Actualizado | 2026-02-03 11:55 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1336](https://bluinc.atlassian.net/browse/DNYL-1336) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

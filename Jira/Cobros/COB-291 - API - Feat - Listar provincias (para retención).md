@@ -1,0 +1,76 @@
+---
+jira_key: "COB-291"
+aliases: ["COB-291"]
+summary: "API - Feat - Listar provincias (para retención)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-01-05 09:44"
+updated: "2023-01-30 09:14"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-291"
+---
+
+# COB-291: API - Feat - Listar provincias (para retención)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-01-05 09:44 |
+| Actualizado | 2023-01-30 09:14 |
+| Etiquetas | ninguna |
+| Jira | [COB-291](https://bluinc.atlassian.net/browse/COB-291) |
+
+## Relaciones
+
+- **Padre:** [[COB-115]] Feat - Realizar un cobro
+- **relates to:** [[COB-290]] API - Refactor - Cobrar con retencion
+- **blocks:** [[COB-292]] APP - Refactor - Cobrar Retencion
+- **blocks:** [[COB-316]] APP - Feat - Agregar proveedor
+
+## Descripcion
+
+Source:
+
+```
+GET {{API_URL}}/v1/provinces
+```
+
+Return:
+
+```json
+  {
+    "id": 4,
+    "description": "CHUBUT                        ",
+    "countryId": 7,
+    "fiscalId": 17
+  },
+  {
+    "id": 5,
+    "description": "ENTRE RIOS                    ",
+    "countryId": 7,
+    "fiscalId": 5
+  },
+  {
+    "id": 6,
+    "description": "CORDOBA                       ",
+    "countryId": 7,
+    "fiscalId": 3
+  },
+```
+
+Data:
+
+```sql
+SELECT [Id_Provincia] 
+,[Descripcion] 
+,[Id_Pais] 
+,[ID_AFIP]  
+FROM [NewBytes_DBF].[dbo].[FP_Provincias]
+```

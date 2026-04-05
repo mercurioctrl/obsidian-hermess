@@ -1,0 +1,38 @@
+---
+jira_key: "EXP-160"
+aliases: ["EXP-160"]
+summary: "Envíos - Filtro por serializado resultados no coincidentes"
+status: "Finalizada"
+type: "Error"
+priority: "High"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2023-01-23 15:54"
+updated: "2023-02-08 11:31"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-160"
+---
+
+# EXP-160: Envíos - Filtro por serializado resultados no coincidentes
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | High |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2023-01-23 15:54 |
+| Actualizado | 2023-02-08 11:31 |
+| Etiquetas | ninguna |
+| Jira | [EXP-160](https://bluinc.atlassian.net/browse/EXP-160) |
+
+## Relaciones
+
+- **blocks:** [[EXP-12]] Feat - Listar pedidos para envio
+
+## Descripcion
+
+Al utilizar el filtro de serializado con la opción si, se visualizan elementos que no están serializados.
+
+[adjunto]

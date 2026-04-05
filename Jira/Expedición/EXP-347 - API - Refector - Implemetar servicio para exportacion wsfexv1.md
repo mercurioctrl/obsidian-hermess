@@ -1,0 +1,36 @@
+---
+jira_key: "EXP-347"
+aliases: ["EXP-347"]
+summary: "API - Refector - Implemetar servicio para exportacion wsfexv1"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-07-20 10:11"
+updated: "2023-07-25 16:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-347"
+---
+
+# EXP-347: API - Refector - Implemetar servicio para exportacion wsfexv1
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-07-20 10:11 |
+| Actualizado | 2023-07-25 16:38 |
+| Etiquetas | ninguna |
+| Jira | [EXP-347](https://bluinc.atlassian.net/browse/EXP-347) |
+
+## Relaciones
+
+- **Padre:** [[EXP-202]] Feat - Pestaña comprobantes
+
+## Descripcion
+
+*Sin descripcion*

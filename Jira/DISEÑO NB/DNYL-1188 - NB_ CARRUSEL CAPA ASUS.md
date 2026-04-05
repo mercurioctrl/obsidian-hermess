@@ -1,0 +1,42 @@
+---
+jira_key: "DNYL-1188"
+aliases: ["DNYL-1188"]
+summary: "NB_ CARRUSEL CAPA ASUS"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-08-14 11:39"
+updated: "2025-08-18 10:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1188"
+---
+
+# DNYL-1188: NB_ CARRUSEL CAPA ASUS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-08-14 11:39 |
+| Actualizado | 2025-08-18 10:21 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1188](https://bluinc.atlassian.net/browse/DNYL-1188) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Marce! 
+
+Me armas un carrusel para subir a IG de NB con las fotos de ayer? 
+
+Fijate de las que tenes grupales una que están todos mirando al frente jaja el resto salieron mirando a cualquier lado  
+
+gracias! dsp sumá alguna que se vea a sergio dando la capa. te paso las mejores por wpp

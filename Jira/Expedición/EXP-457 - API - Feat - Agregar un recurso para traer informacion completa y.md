@@ -1,0 +1,72 @@
+---
+jira_key: "EXP-457"
+aliases: ["EXP-457"]
+summary: "API - Feat - Agregar un recurso para traer informacion completa y complementaria de lo referido al envio (para evaluar datos de cotizacion y posteriormente de armado)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2024-10-31 09:41"
+updated: "2026-02-02 09:53"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-457"
+---
+
+# EXP-457: API - Feat - Agregar un recurso para traer informacion completa y complementaria de lo referido al envio (para evaluar datos de cotizacion y posteriormente de armado)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-10-31 09:41 |
+| Actualizado | 2026-02-02 09:53 |
+| Etiquetas | ninguna |
+| Jira | [EXP-457](https://bluinc.atlassian.net/browse/EXP-457) |
+
+## Relaciones
+
+- **Padre:** [[EXP-13]] Feat - Etiquetas y seguimiento
+- **has action item:** [[SNB-2463]] MS -Envios - Refactor - Implementar cambiar el parametro 'items' por 'package_dimensions' par Entregar
+- **has action item:** [[EXP-459]] APP - Refactor - Modificaremos la funcionalidad del modal para generar un envio
+- **has action item:** [[EXP-527]] API - Refactor - Extender informacion para el recurso de envios
+
+## Descripcion
+
+Fijate como esta armado y editalo a tu parecer antes de que armemos las tareas del front
+
+```
+GET {{API_URL}}/v1/shipments/{branch}-{order}/details?amountPackages=5&zipCode=1039
+```
+
+```
+{
+   "shipmentId": 4069,
+   "quotedDetails": {
+      "quoteAmount": 36976.389952,
+      "package": {
+         "amount": 2,
+         "weight": 5.68,
+         "dimensions": "18.65x18.65x18.65"
+      }
+   },
+   "finalDispatchDetails": {
+      "finalCost": 22446,
+      "adjustedPackage": {
+         "amount": 1,
+         "weight": 11.45,
+         "dimensions": "37.31x37.31x37.31"
+      },
+      "costVariance": {
+         "differenceAmount": -14530.39,
+         "percentageDifference": -39.3,
+         "allowedPercentageDifference": 30,
+         "isAllowed": true
+      },
+      "dispatchTimestamp": "2024-11-05 17:02:00"
+   }
+}
+```

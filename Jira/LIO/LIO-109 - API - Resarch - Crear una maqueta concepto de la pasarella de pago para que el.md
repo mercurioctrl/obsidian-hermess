@@ -1,0 +1,37 @@
+---
+jira_key: "LIO-109"
+aliases: ["LIO-109"]
+summary: "API - Resarch - Crear una \"maqueta\" concepto de la pasarella de pago para que el front evalue como hara la implementaicon"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2024-10-18 08:50"
+updated: "2024-10-25 03:20"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-109"
+---
+
+# LIO-109: API - Resarch - Crear una "maqueta" concepto de la pasarella de pago para que el front evalue como hara la implementaicon
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-10-18 08:50 |
+| Actualizado | 2024-10-25 03:20 |
+| Etiquetas | ninguna |
+| Jira | [LIO-109](https://bluinc.atlassian.net/browse/LIO-109) |
+
+## Relaciones
+
+- **Padre:** [[LIO-8]] Proceso pago sencillo y competitiva a nivel financiamiento
+- **action item from:** [[LIO-97]] Resarch - Revisar la documentacion para poder implementar plataforma de pagos GETNET (santander) dentro del sitio (sin salir) para pago con tarjeta y promociones bancarias
+
+## Descripcion
+
+Adjunto collection de getnet para generar payment_intent_id

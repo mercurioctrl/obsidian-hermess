@@ -1,0 +1,91 @@
+---
+jira_key: "DNYL-1166"
+aliases: ["DNYL-1166"]
+summary: "NB_ INGRESO ASUS "
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2025-07-30 17:56"
+updated: "2025-09-19 14:08"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1166"
+---
+
+# DNYL-1166: NB_ INGRESO ASUS 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-30 17:56 |
+| Actualizado | 2025-09-19 14:08 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1166](https://bluinc.atlassian.net/browse/DNYL-1166) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+### 🔥 **¡Nuevo Mega Ingreso ASUS! Todo lo que necesitás para armar setups AM4, AM5 y LGA: mothers, gráficas y refrigeración premium**
+
+---
+
+### 🧠 **Mothers destacadas:**
+
+- **🔝 ROG CROSSHAIR X870E HERO (AM5):** el tope de gama para entusiastas, overclock y setups de elite.
+
+
+- **🚀 PRIME X870-P WIFI (AM5):** conectividad, estabilidad y soporte extendido.
+
+
+- **💪 TUF GAMING B550-PLUS WI-FI II (AM4):** clásica, robusta, con Wi-Fi integrado.
+
+
+- **📶 PRIME B650M-A AX6 II (AM5):** balance ideal entre precio y prestaciones, con Wi-Fi.
+
+
+- **⚙️ PRIME H610M-K D4 CSM (LGA1700):** opción económica para 12/13va gen Intel.
+
+
+
+---
+
+### 🎮 **Nuevas placas de video ASUS:**
+
+- **DUAL RTX 5060 OC 8GB**
+
+
+- **DUAL RTX 5060TI 16GB**
+
+
+- **DUAL RX 9060XT 8GB / PRIME RX 9060XT 16GB / TUF RX 9060XT OC 16GB GAMING**
+💥 Ideal para gaming competitivo, creators y builds potentes.
+
+
+
+---
+
+### 💧 **Water Coolers:**
+
+- **ROG RYUJIN III 360 ARGB EXTREME** – refrigeración extrema con pantalla integrada.
+
+
+- **ROG STRIX LC III 360 ARGB LCD (BLACK & WHITE)** – diseño premium con estética full RGB.
+
+
+- **PRIME LC 240 / 360 ARGB** – performance sólida con estética cuidada.
+
+
+
+---
+
+### 🖱️ Extra:
+
+- **Mouse ASUS TUF GAMING M4 Wireless (P306)** – diseño liviano, sin cables, y con resistencia TUF.

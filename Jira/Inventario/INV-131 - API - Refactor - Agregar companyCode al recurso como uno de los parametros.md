@@ -1,0 +1,36 @@
+---
+jira_key: "INV-131"
+aliases: ["INV-131"]
+summary: "API - Refactor - Agregar \"companyCode\" al recurso como uno de los parametros generales, como se hizo con distributorId"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-09-13 07:18"
+updated: "2024-09-21 19:42"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-131"
+---
+
+# INV-131: API - Refactor - Agregar "companyCode" al recurso como uno de los parametros generales, como se hizo con distributorId
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-09-13 07:18 |
+| Actualizado | 2024-09-21 19:42 |
+| Etiquetas | ninguna |
+| Jira | [INV-131](https://bluinc.atlassian.net/browse/INV-131) |
+
+## Relaciones
+
+- **Padre:** [[INV-125]] Importación de catálogos
+
+## Descripcion
+
+*Sin descripcion*

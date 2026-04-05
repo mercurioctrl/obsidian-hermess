@@ -1,0 +1,51 @@
+---
+jira_key: "COB-533"
+aliases: ["COB-533"]
+summary: "API - Agrupar por concepto las Entradas / Salidas para graficar - Pases visibles"
+status: "En curso"
+type: "Error"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Guillermo Avila"
+created: "2024-07-31 15:54"
+updated: "2024-11-01 11:47"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-533"
+---
+
+# COB-533: API - Agrupar por concepto las Entradas / Salidas para graficar - Pases visibles
+
+| Campo | Valor |
+|-------|-------|
+| Estado | En curso (En curso) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-07-31 15:54 |
+| Actualizado | 2024-11-01 11:47 |
+| Etiquetas | ninguna |
+| Jira | [COB-533](https://bluinc.atlassian.net/browse/COB-533) |
+
+## Relaciones
+
+- **Padre:** [[COB-505]] Dashboard
+- **blocks:** [[COB-518]] API - Refactor - Agrupar por concepto las Entradas / Salidas para graficar
+- **blocks:** [[COB-519]] APP - Refactor - Graficar Entradas / Salidas de caja
+
+## Descripcion
+
+Un par de detalles que note:
+
+- Pases visibles, lo cual tengo entendido no deberían. 
+
+
+- Aparece este movimiento en las entradas y salidas y en los movimientos de caja no.
+
+
+
+| Salidas Varias - Gastos Directivos | PESOS | 06-06-2024_06-06-2024 | -582,52 | -540.000,00 | Seba |
+| --- | --- | --- | --- | --- | --- |
+
+[adjunto]
+[adjunto]

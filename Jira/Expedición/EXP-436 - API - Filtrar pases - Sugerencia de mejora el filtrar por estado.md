@@ -1,0 +1,38 @@
+---
+jira_key: "EXP-436"
+aliases: ["EXP-436"]
+summary: "API - Filtrar pases - Sugerencia de mejora el filtrar por estado"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Guillermo Avila"
+created: "2024-08-28 11:50"
+updated: "2024-08-29 14:33"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-436"
+---
+
+# EXP-436: API - Filtrar pases - Sugerencia de mejora el filtrar por estado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-08-28 11:50 |
+| Actualizado | 2024-08-29 14:33 |
+| Etiquetas | ninguna |
+| Jira | [EXP-436](https://bluinc.atlassian.net/browse/EXP-436) |
+
+## Relaciones
+
+- **Padre:** [[EXP-430]] Refactorizar pases
+
+## Descripcion
+
+Me gustaría proponer que, al eliminar el filtro de estado del pase, se muestren todos los pases sin importar su estado.
+
+[adjunto]

@@ -1,0 +1,117 @@
+---
+jira_key: "COB-257"
+aliases: ["COB-257"]
+summary: "APP - Refactor - El ABM de cheques debe calcular la linea de cheques automáticamente al cargarse los mismo"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-12-15 12:20"
+updated: "2022-12-16 16:14"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-257"
+---
+
+# COB-257: APP - Refactor - El ABM de cheques debe calcular la linea de cheques automáticamente al cargarse los mismo
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-12-15 12:20 |
+| Actualizado | 2022-12-16 16:14 |
+| Etiquetas | ninguna |
+| Jira | [COB-257](https://bluinc.atlassian.net/browse/COB-257) |
+
+## Relaciones
+
+- **Padre:** [[COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-258]] API - Refactor - Incluir interes diario en el objeto cheques
+- **is blocked by:** [[COB-259]] API - Refactor - Cargar nuevo cheque
+
+## Descripcion
+
+Agregamos 2 inputs nuevos (No editables), que serán para poner dos cosas:
+
+- Interés
+
+
+- Cotización Calculada
+
+
+
+**Interés:**
+
+El mismo se puede calcular multiplicando la cantidad de días por el interés diario. La cantidad de días la tomo de “la diferencia entre fechas” entre emisión y vencimiento. El interés diario vendrá ahora junto al recurso paymentmethods con las cotizaciones según [link](https://lioteam.atlassian.net/browse/COB-258)
+
+```
+InterésDelCheque = InteresDiario * cantidadDias
+```
+
+**Cotización calculada**
+
+Se trata de agregar a la cotización del día el interés aplicado con una formula de este tipo:
+
+```
+CotizacionCheque = CotizacionDiaria + (CotizacionDiaria * InterésDelCheque)
+```
+
+[adjunto]
+De esta forma, en principio al guardar el cheque, sumaríamos al recurso [link](https://lioteam.atlassian.net/browse/COB-189) dos parámetros nuevos `interest` y `checkQuote`
+
+Seguimos…
+
+Una vez realzado, en la tabla de visualización de los cheques cargados agregaremos 3 columnas: Total en pesos, Cotización, Total en dolares.
+
+[adjunto]
+Lo que haremos sera simplemente tomar el monto en pesos que se ingreso en el chque y dividirlo por la cotización (que es resultado de la cotización diaria mas el interés como vimos arriba) y obtendremos su equivalente en dolares.
+
+Obtenemos asi, por cada chque que ingresamos un monto en pesos y su equivalente en dolares según la cotización.
+
+**¿Como obtener la linea de pago de cheques?**
+
+[adjunto]
+Es importante mencionar, que a partir de ahora, esta linea no puede cargarse mas a mano. Es el resultado de los cheques cargados para el pedido y no tendrá ningún campo editable, ya que todo los datos provienen de los “cheques cargados”.
+
+Para poder obtener esa linea tendremos al menos 2 incógnitas, la cotización y cuanto paga en pesos.
+
+**Lo que paga en pesos: **Es la suma lineal de todos los montos de los cheques en pesos.
+
+**Cotización**: Para obtener esta cotización sumaremos todos los montos en pesos de los cheques y todos los montos en dolares (cada uno con su cotización según el interés por días). Luego Dividiremos todo el monto en pesos sobre todo el monto en dolares obteniendo una nueva cotización única que es el resultado exacto y representativo de toda la operacion.
+
+Finalmente ejecutamos el recurso con [link](https://lioteam.atlassian.net/browse/COB-126) pero incluyendo dentro de cada medio de pago ingresado en “nuestra tablita” la cotizacion
+
+```
+[{
+"clientId":4543, 
+"pedido": 'X000234234324', //opcional
+"finalAmount": 1214,
+"comment":"Algun comentario opcional"
+  "payments":[
+ {
+   "paymentMethodsId": 1,
+   "amountPaid": "300",
+   "quote": 165.45 <--Nuvo parametro
+ },
+ {
+  "paymentMethodsId": 2,
+   "amountPaid": "5000",
+   "quote": 165.45 <--Nuvo parametro
+ },
+ {
+  "paymentMethodsId": 3,
+   "amountPaid": "150",
+   "quote": 155.45 <--Nuvo parametro
+ },
+ {
+ "paymentMethodsId": 4,
+   "amountPaid": "50000",
+   "quote": 175.45 <--Nuvo parametro
+ }
+]
+}]
+```

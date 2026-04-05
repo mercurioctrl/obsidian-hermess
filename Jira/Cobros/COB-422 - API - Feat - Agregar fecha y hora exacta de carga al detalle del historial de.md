@@ -1,0 +1,36 @@
+---
+jira_key: "COB-422"
+aliases: ["COB-422"]
+summary: "API - Feat - Agregar fecha y hora exacta de carga al detalle del historial de cheques"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Guillermo Avila"
+reporter: "Catriel Mercurio"
+created: "2023-04-27 16:00"
+updated: "2023-05-23 15:49"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-422"
+---
+
+# COB-422: API - Feat - Agregar fecha y hora exacta de carga al detalle del historial de cheques
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Guillermo Avila |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-04-27 16:00 |
+| Actualizado | 2023-05-23 15:49 |
+| Etiquetas | ninguna |
+| Jira | [COB-422](https://bluinc.atlassian.net/browse/COB-422) |
+
+## Relaciones
+
+- **Padre:** [[COB-183]] Feat - Listar cheques
+
+## Descripcion
+
+Adicionalmente, agregar interes

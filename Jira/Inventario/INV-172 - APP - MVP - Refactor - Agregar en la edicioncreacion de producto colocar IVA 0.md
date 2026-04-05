@@ -1,0 +1,36 @@
+---
+jira_key: "INV-172"
+aliases: ["INV-172"]
+summary: "APP - MVP -  Refactor - Agregar en la edicion/creacion de producto colocar IVA 0 "
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-12-27 09:48"
+updated: "2025-01-27 17:29"
+labels: ["MVPLaset"]
+jira_url: "https://bluinc.atlassian.net/browse/INV-172"
+---
+
+# INV-172: APP - MVP -  Refactor - Agregar en la edicion/creacion de producto colocar IVA 0 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-12-27 09:48 |
+| Actualizado | 2025-01-27 17:29 |
+| Etiquetas | MVPLaset |
+| Jira | [INV-172](https://bluinc.atlassian.net/browse/INV-172) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+
+## Descripcion
+
+*Sin descripcion*

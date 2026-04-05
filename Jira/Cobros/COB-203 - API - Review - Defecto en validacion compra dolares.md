@@ -1,0 +1,36 @@
+---
+jira_key: "COB-203"
+aliases: ["COB-203"]
+summary: "API - Review - Defecto en validacion compra dolares"
+status: "CodeReview"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2022-10-26 13:15"
+updated: "2022-11-23 16:19"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-203"
+---
+
+# COB-203: API - Review - Defecto en validacion compra dolares
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-10-26 13:15 |
+| Actualizado | 2022-11-23 16:19 |
+| Etiquetas | ninguna |
+| Jira | [COB-203](https://bluinc.atlassian.net/browse/COB-203) |
+
+## Relaciones
+
+- **Padre:** [[COB-18]] Compra / Venta Dolares
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,47 @@
+---
+jira_key: "DNYL-1026"
+aliases: ["DNYL-1026"]
+summary: "NB_ NEWS THERMAL"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-03-12 09:52"
+updated: "2025-03-25 10:26"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1026"
+---
+
+# DNYL-1026: NB_ NEWS THERMAL
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-03-12 09:52 |
+| Actualizado | 2025-03-25 10:26 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1026](https://bluinc.atlassian.net/browse/DNYL-1026) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Marce! 
+
+Me ayudas mandando un news de Thermal que sea sobre el combo:
+
+VIEW 170 BLACK
+10 combos disponibles con tr2 500 y 600w
+VIEW 170 SNOW
+10 combos disponibles tr2 500 y 600w
+
+O sea: El gabinete puede ser blanco o Negro y ambos modelos vienen con fuentes o de 500 o de 600.
+
+Las imagenes, los precios y todo ya lo hiciste.. no se como podriamos mandar el news.. se te ocurre algo?

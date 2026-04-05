@@ -1,0 +1,36 @@
+---
+jira_key: "FB-14"
+aliases: ["FB-14"]
+summary: "Cover Facebook"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2025-05-05 12:24"
+updated: "2025-05-07 16:34"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-14"
+---
+
+# FB-14: Cover Facebook
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-05-05 12:24 |
+| Actualizado | 2025-05-07 16:34 |
+| Etiquetas | ninguna |
+| Jira | [FB-14](https://bluinc.atlassian.net/browse/FB-14) |
+
+## Relaciones
+
+- **Padre:** [[FB-3]] Ibranding
+
+## Descripcion
+
+*Sin descripcion*

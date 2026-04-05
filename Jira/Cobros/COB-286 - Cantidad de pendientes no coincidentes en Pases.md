@@ -1,0 +1,40 @@
+---
+jira_key: "COB-286"
+aliases: ["COB-286"]
+summary: "Cantidad de pendientes no coincidentes en Pases"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2023-01-02 16:55"
+updated: "2023-01-18 17:12"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-286"
+---
+
+# COB-286: Cantidad de pendientes no coincidentes en Pases
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2023-01-02 16:55 |
+| Actualizado | 2023-01-18 17:12 |
+| Etiquetas | ninguna |
+| Jira | [COB-286](https://bluinc.atlassian.net/browse/COB-286) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+En la pestaña de Pases, la cantidad en la burbuja de pendientes no es la misma cantidad que de los elementos listados.
+
+
+
+[adjunto]

@@ -1,0 +1,49 @@
+---
+jira_key: "COB-350"
+aliases: ["COB-350"]
+summary: "APP - Feat - Modal para hacer arqueo de caja manual"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-03-10 08:30"
+updated: "2023-03-13 15:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-350"
+---
+
+# COB-350: APP - Feat - Modal para hacer arqueo de caja manual
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-03-10 08:30 |
+| Actualizado | 2023-03-13 15:40 |
+| Etiquetas | ninguna |
+| Jira | [COB-350](https://bluinc.atlassian.net/browse/COB-350) |
+
+## Relaciones
+
+- **Padre:** [[COB-347]] Poder ver saldo inicial y final de caja en cada día
+- **is blocked by:** [[COB-348]] API - Feat - Hacer arqueo de caja manual
+
+## Descripcion
+
+Agregaremos un modal que nos permita contabilizar para cada tipo de valor (dalares, pesos, cheques) la cantidad contabilizada en el momento usando el recurso [link](https://lioteam.atlassian.net/browse/COB-348) 
+
+El mismo debe tener un formulario con tres input numéricos, con dos decimales que deben completarse si o si.
+
+Arriba debe tener una leyenda que diga “Por favor, cuenta cuidadosamente los valores que tienes en la caja e ingrésalos a continuación.”.
+
+**¿Cuando aparece el modal?**
+
+Según la historia [link](https://lioteam.atlassian.net/browse/COB-349)  tendremos un nuevo parámetro llamado `lastCashRegister`
+
+Si el parámetro es `true`, quiere decir que para el día de la fecha, ya existe el registro. De lo contrario informara `false`.
+
+Entonces diremos que si tengo un false, debo mostrar el modal y no dejar hacer mas nada en la pantalla (poner un velo o algo)

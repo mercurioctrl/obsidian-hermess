@@ -1,0 +1,36 @@
+---
+jira_key: "COM-257"
+aliases: ["COM-257"]
+summary: "APP - Review - al editar el pais de la orden se borra el depósito que tenía guardado"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-12-10 18:54"
+updated: "2025-12-16 12:12"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-257"
+---
+
+# COM-257: APP - Review - al editar el pais de la orden se borra el depósito que tenía guardado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-12-10 18:54 |
+| Actualizado | 2025-12-16 12:12 |
+| Etiquetas | ninguna |
+| Jira | [COM-257](https://bluinc.atlassian.net/browse/COM-257) |
+
+## Relaciones
+
+- **Padre:** [[COM-9]] Listar ordenes de compra
+
+## Descripcion
+
+*Sin descripcion*

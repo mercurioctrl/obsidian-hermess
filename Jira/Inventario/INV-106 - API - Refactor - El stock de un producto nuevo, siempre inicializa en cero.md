@@ -1,0 +1,36 @@
+---
+jira_key: "INV-106"
+aliases: ["INV-106"]
+summary: "API - Refactor - El stock de un producto nuevo, siempre inicializa en cero"
+status: "Finalizada"
+type: "Subtarea"
+priority: "High"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-08-29 10:09"
+updated: "2024-08-30 01:36"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-106"
+---
+
+# INV-106: API - Refactor - El stock de un producto nuevo, siempre inicializa en cero
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | High |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-08-29 10:09 |
+| Actualizado | 2024-08-30 01:36 |
+| Etiquetas | ninguna |
+| Jira | [INV-106](https://bluinc.atlassian.net/browse/INV-106) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+
+## Descripcion
+
+*Sin descripcion*

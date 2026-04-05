@@ -1,0 +1,49 @@
+---
+jira_key: "DNYL-1162"
+aliases: ["DNYL-1162"]
+summary: "NB_ THERMAL COOLERS"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-07-30 17:50"
+updated: "2025-08-04 15:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1162"
+---
+
+# DNYL-1162: NB_ THERMAL COOLERS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-30 17:50 |
+| Actualizado | 2025-08-04 15:29 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1162](https://bluinc.atlassian.net/browse/DNYL-1162) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+### ❄️ **¡Nuevo ingreso! ASTRIA 600 AIR — máxima refrigeración de alto rendimiento**
+
+Diseño con **6 heatpipes**, gran capacidad de disipación y compatibilidad **ARGB SYNC**. Disponible en versión **negra y blanca** para que combine con cualquier setup.
+Ideal para CPUs de alta demanda y builds exigentes.
+
+---
+
+**También ingresaron:**
+
+- 🔧 **ASTRIA 400 AIR 6 PIPE SYNC** – gran equilibrio entre performance y tamaño.
+
+
+- 🌀 **ASTRIA 200 AIR 4 PIPE SYNC** – compacto, ideal para builds más contenidas.
+💡 Todos los modelos disponibles en **negro y blanco**.

@@ -1,0 +1,82 @@
+---
+jira_key: "COM-214"
+aliases: ["COM-214"]
+summary: "API - MVP - Review - no esta trayendo el pais correctamente trae 0 aunque se cree con otro id"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Marbe Moreno"
+created: "2025-10-09 15:41"
+updated: "2025-11-12 10:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-214"
+---
+
+# COM-214: API - MVP - Review - no esta trayendo el pais correctamente trae 0 aunque se cree con otro id
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-10-09 15:41 |
+| Actualizado | 2025-11-12 10:38 |
+| Etiquetas | ninguna |
+| Jira | [COM-214](https://bluinc.atlassian.net/browse/COM-214) |
+
+## Relaciones
+
+- **Padre:** [[COM-178]] Depositos
+
+## Descripcion
+
+revisar el parametro `countryId`
+Ejemplo payload de de creacion
+
+
+```
+{
+    "name": "msi co",
+    "code": "mso",
+    "address": "",
+    "countryId": 13,// se envia 
+    "provinceId": null,
+    "cityId": null,
+    "default": false,
+    "phone": ""
+}
+```
+
+y al crearse devuelve
+
+
+```
+{
+    "id": 9,
+    "code": "mso",
+    "name": "msi co",
+    "address": "",
+    "phone": "",
+    "default": false,
+    "cityCode": "",
+    "cityId": 0,
+    "cityName": "",
+    "provinceId": 0,
+    "provinceCode": 0,
+    "provinceName": "",
+    "countryDescription": "",
+    "countryId": 0, //  Viene siempre en 0
+    "prefixFlag": "",
+    "companyCode": 0
+}
+```
+
+Sucede en el POST y GET
+
+
+```
+https://gamma.api.purchases.lio.red/v1/warehouses
+```

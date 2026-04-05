@@ -1,0 +1,36 @@
+---
+jira_key: "COB-273"
+aliases: ["COB-273"]
+summary: "API - Performance - Mejorar velocidad en la carga del listado de cobrables < 4s"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2022-12-27 09:23"
+updated: "2023-01-23 18:32"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-273"
+---
+
+# COB-273: API - Performance - Mejorar velocidad en la carga del listado de cobrables < 4s
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-12-27 09:23 |
+| Actualizado | 2023-01-23 18:32 |
+| Etiquetas | ninguna |
+| Jira | [COB-273](https://bluinc.atlassian.net/browse/COB-273) |
+
+## Relaciones
+
+- **Padre:** [[COB-41]] APP - Feat -  Listar cobrables
+
+## Descripcion
+
+*Sin descripcion*

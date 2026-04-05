@@ -1,0 +1,37 @@
+---
+jira_key: "INV-330"
+aliases: ["INV-330"]
+summary: "APP - Refactor - Agregar nuevo parámetro sales a la resta y las columnas"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2026-01-19 18:02"
+updated: "2026-01-23 12:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-330"
+---
+
+# INV-330: APP - Refactor - Agregar nuevo parámetro sales a la resta y las columnas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-01-19 18:02 |
+| Actualizado | 2026-01-23 12:38 |
+| Etiquetas | ninguna |
+| Jira | [INV-330](https://bluinc.atlassian.net/browse/INV-330) |
+
+## Relaciones
+
+- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-328]] API - Refactor - A pedido del owner separaremos en dos conceptos salesReserved
+
+## Descripcion
+
+[adjunto]

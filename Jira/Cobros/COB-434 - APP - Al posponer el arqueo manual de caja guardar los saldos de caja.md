@@ -1,0 +1,36 @@
+---
+jira_key: "COB-434"
+aliases: ["COB-434"]
+summary: "APP - Al posponer el arqueo manual de caja guardar los saldos de caja"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2023-05-22 10:59"
+updated: "2023-06-12 07:02"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-434"
+---
+
+# COB-434: APP - Al posponer el arqueo manual de caja guardar los saldos de caja
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2023-05-22 10:59 |
+| Actualizado | 2023-06-12 07:02 |
+| Etiquetas | ninguna |
+| Jira | [COB-434](https://bluinc.atlassian.net/browse/COB-434) |
+
+## Relaciones
+
+- **is duplicated by:** [[COB-436]] APP - Refactor - Arqueo de caja
+
+## Descripcion
+
+*Sin descripcion*

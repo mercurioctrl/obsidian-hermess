@@ -1,0 +1,41 @@
+---
+jira_key: "EXP-538"
+aliases: ["EXP-538"]
+summary: "API - DATA- feat - Agregar permiso para generar factura (por default todos pueden menos user asilvera"
+status: "Ready for QA"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Marbe Moreno"
+created: "2026-04-01 13:40"
+updated: "2026-04-01 17:08"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-538"
+---
+
+# EXP-538: API - DATA- feat - Agregar permiso para generar factura (por default todos pueden menos user asilvera
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Ready for QA (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Marbe Moreno |
+| Creado | 2026-04-01 13:40 |
+| Actualizado | 2026-04-01 17:08 |
+| Etiquetas | ninguna |
+| Jira | [EXP-538](https://bluinc.atlassian.net/browse/EXP-538) |
+
+## Relaciones
+
+- **Padre:** [[EXP-533]] Permisos de visualizacion
+- **has action item:** [[EXP-537]] APP - Agregar permiso para generar factura
+
+## Descripcion
+
+Se agrego `expMakeVoucher` en:
+
+```
+GET auth/user
+```

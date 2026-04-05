@@ -1,0 +1,36 @@
+---
+jira_key: "FB-11"
+aliases: ["FB-11"]
+summary: "Probar el logo de Bleau Ugarte y Fontaine Bleau con lineas rectas"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2025-05-05 10:00"
+updated: "2025-05-05 11:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-11"
+---
+
+# FB-11: Probar el logo de Bleau Ugarte y Fontaine Bleau con lineas rectas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-05-05 10:00 |
+| Actualizado | 2025-05-05 11:38 |
+| Etiquetas | ninguna |
+| Jira | [FB-11](https://bluinc.atlassian.net/browse/FB-11) |
+
+## Relaciones
+
+- **Padre:** [[FB-1]] Cartel Ugarte
+
+## Descripcion
+
+*Sin descripcion*

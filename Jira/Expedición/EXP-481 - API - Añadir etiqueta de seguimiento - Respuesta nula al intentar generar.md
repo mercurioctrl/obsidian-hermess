@@ -1,0 +1,47 @@
+---
+jira_key: "EXP-481"
+aliases: ["EXP-481"]
+summary: "API - Añadir etiqueta de seguimiento - Respuesta nula al intentar generar"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2025-03-14 14:57"
+updated: "2025-03-28 12:44"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-481"
+---
+
+# EXP-481: API - Añadir etiqueta de seguimiento - Respuesta nula al intentar generar
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2025-03-14 14:57 |
+| Actualizado | 2025-03-28 12:44 |
+| Etiquetas | ninguna |
+| Jira | [EXP-481](https://bluinc.atlassian.net/browse/EXP-481) |
+
+## Relaciones
+
+- **Padre:** [[EXP-6]] Despacho de envios
+- **relates to:** [[EXP-458]] API - Refactor - Ajustar Recurso de Creación de Bultos para Incluir y Guardar Información de Cotización y Diferencia
+- **blocks:** [[STASK-8]] API - Feat - Task - Relevamiento de datos para evaluar tiempos logisticos
+
+## Descripcion
+
+Al intentar generar la etiqueta de envío me retorna la siguiente respuesta.
+
+```
+POST /v1/shipments/addTrackingOrder  
+```
+
+[adjunto]
+```
+curl "https://gamma.api.warehouse.lio.red/v1/shipments/addTrackingOrder" -X POST -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0" -H "Accept: application/json, text/plain, */*" -H "Accept-Language: es-MX" -H "Accept-Encoding: gzip, deflate, br, zstd" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDIwMDk2MTMsImF1ZCI6ImQ5NmQ5OWRiNTJhNzQ5ZjdjM2RjZTFjNjUxZjAzMjk0YWQwY2Y2YjIiLCJ1c2VyIjp7ImlkIjoiNzQ2MyIsImNvZGVGUCI6IjAxOTIyNyIsImFnZW50SWQiOiIxMiIsInVzdUlkZW50aWZpY2FjaW9uIjoiU2ViYSIsImV4cGVkaWNpb24iOiIxIiwiZXhwZWRpY2lvbkFkbWluIjoiMSIsIm1hbmFnZW1lbnQiOiIxIiwiZXhwX3VwbG9hZF9zZXJpYWxzIjoiMSIsImV4cF9pdGVtcyI6IjEiLCJjb21wYW55Q29kZSI6IjQifSwiaWF0IjoxNzQxOTczMzEzLCJuYmYiOjE3NDE5NzMzMTN9.ZS6cjVX_3zN5hQigyEyK0o4KNKs4TafUryNkuzCn0JU" -H "Content-Type: application/json" -H "Origin: https://gamma.expedicion.saftel.com" -H "Connection: keep-alive" -H "Referer: https://gamma.expedicion.saftel.com/" -H "Sec-Fetch-Dest: empty" -H "Sec-Fetch-Mode: cors" -H "Sec-Fetch-Site: cross-site" -H "Priority: u=0" --data-raw "{""branch"":""0002"",""order"":""10356368"",""packageGroup"":1,""idDirCliNbWeb"":39509,""comment"":""""}"
+```

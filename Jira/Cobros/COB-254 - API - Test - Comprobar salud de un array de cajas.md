@@ -1,0 +1,36 @@
+---
+jira_key: "COB-254"
+aliases: ["COB-254"]
+summary: "API - Test - Comprobar salud de un array de cajas"
+status: "Tareas por hacer"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2022-12-14 10:26"
+updated: "2022-12-14 10:26"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-254"
+---
+
+# COB-254: API - Test - Comprobar salud de un array de cajas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-12-14 10:26 |
+| Actualizado | 2022-12-14 10:26 |
+| Etiquetas | ninguna |
+| Jira | [COB-254](https://bluinc.atlassian.net/browse/COB-254) |
+
+## Relaciones
+
+- **Padre:** [[COB-252]] API - Test - Comprobar salud de los saldos de caja
+
+## Descripcion
+
+*Sin descripcion*

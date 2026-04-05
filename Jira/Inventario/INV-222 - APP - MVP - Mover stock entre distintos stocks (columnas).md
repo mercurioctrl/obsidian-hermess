@@ -1,0 +1,80 @@
+---
+jira_key: "INV-222"
+aliases: ["INV-222"]
+summary: "APP - MVP - Mover stock entre distintos stocks (columnas)"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-11-04 08:17"
+updated: "2025-12-06 06:05"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-222"
+---
+
+# INV-222: APP - MVP - Mover stock entre distintos stocks (columnas)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-11-04 08:17 |
+| Actualizado | 2025-12-06 06:05 |
+| Etiquetas | ninguna |
+| Jira | [INV-222](https://bluinc.atlassian.net/browse/INV-222) |
+
+## Relaciones
+
+- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **action item from:** [[INV-223]] API - Refactor - Algunos cambios para el repositorio de stock
+
+## Descripcion
+
+Lo primero que haremos sera re ordenar las columnas en el siguiente orden (es importante porque tiene una lógica de quien a quien puede pasarle stock)
+
+- `stockControl`
+
+
+- `nstockHide`
+
+
+- `stock`
+
+
+- `stockLio`
+
+
+- `stockLoQueue`
+
+
+
+Una vez que los tengamos ordenados, crearemos una configuración como la siguiente
+
+[adjunto]
+¿Que se debe agregar?
+
+Si observamos la imagen veremos “flechitas” que indican direcciones en la que el stock puede moverse, de un stock a otro de manera lineal y ordenada (por eso es importante el orden).
+
+Es decir que por poner un ejemplo, si tengo 10 unidades en  `stockControl` y quiero mover 3 unidades a `stockLio` entonces debo presionar la flechita a la derecha para moverlo primero a `nstockHide`.
+
+Al presionar la flechita a la derecha con destino a `nstockHide` se levantara un modal que me pregunta cuantas unidades quiero pasar y si estoy seguro, de la siguiente manera
+
+[adjunto]
+Una vez fijada la cantidad puedo presionar en “Mover” lo que finalmente ejecutara el recurso [link](https://bluinc.atlassian.net/browse/INV-217)  con una carga útil similar a esta
+
+```
+{
+  "itemId":323,
+  "warehouseStockId": 2,              // ID del registro de stock en depósito (si corresponde a tu modelo)
+  "from_column": "stockControl",                  // columna origen (enum)
+  "to_column": "nstockHide",                    // columna destino (enum)
+  "amount": 1,                          // unidades a mover
+  "reason": "Movimiento de stock"     // opcional: motivo/auditoría
+}
+```
+
+El usuario debe repetir el proceso el proceso hasta llegar a `stockLio` pasando por cada stock intermedio (esta fricción es intencional)

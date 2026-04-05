@@ -1,0 +1,62 @@
+---
+jira_key: "COB-449"
+aliases: ["COB-449"]
+summary: "API - Feat - Lista Retencion de Ganancias "
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Emanuel Jesus Ferreyra"
+created: "2023-07-06 17:28"
+updated: "2023-07-07 10:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-449"
+---
+
+# COB-449: API - Feat - Lista Retencion de Ganancias 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Emanuel Jesus Ferreyra |
+| Creado | 2023-07-06 17:28 |
+| Actualizado | 2023-07-07 10:46 |
+| Etiquetas | ninguna |
+| Jira | [COB-449](https://bluinc.atlassian.net/browse/COB-449) |
+
+## Relaciones
+
+- **Padre:** [[COB-448]] Feat -  Retencion de Ganancias
+
+## Descripcion
+
+Repositorio encargado de retornar todos los datos sobre Retencion de Ganancias al procesar un Cobro.
+
+GET /v1/profit
+
+
+
+Tabla a usar: NEW_BYTES.dbo.ganancias
+
+```
+[
+{
+    "id": 21,
+    "province_id": null,
+    "user_id": "Seba",
+    "client_id": 32103,
+    "branch": "0002",
+    "cnumalb": "00543691",
+    "cuit": "00-00000000-00",
+    "business_name": "Libre Opcion",
+    "observation": "Pedido: X000200543691 Client: 32103 ",
+    "quotation": 143.25,
+    "order_amount": 4634.74273125,
+    "profit_amount": 635,
+    "created_at": "2023-07-04T16:22:17.910Z"
+}...
+]
+```

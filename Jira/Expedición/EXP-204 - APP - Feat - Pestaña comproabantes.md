@@ -1,0 +1,37 @@
+---
+jira_key: "EXP-204"
+aliases: ["EXP-204"]
+summary: "APP - Feat - Pestaña comproabantes"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-02-07 12:42"
+updated: "2024-01-18 20:13"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-204"
+---
+
+# EXP-204: APP - Feat - Pestaña comproabantes
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-02-07 12:42 |
+| Actualizado | 2024-01-18 20:13 |
+| Etiquetas | ninguna |
+| Jira | [EXP-204](https://bluinc.atlassian.net/browse/EXP-204) |
+
+## Relaciones
+
+- **Padre:** [[EXP-202]] Feat - Pestaña comprobantes
+- **is blocked by:** [[EXP-203]] API - Feat - Pestaña comprobantes
+
+## Descripcion
+
+Replicaremos la seccion exacta de comprobantes, tal cual lo hicimos en cobros, pero usando el recurso especifico para expedicion [link](https://lioteam.atlassian.net/browse/EXP-203)

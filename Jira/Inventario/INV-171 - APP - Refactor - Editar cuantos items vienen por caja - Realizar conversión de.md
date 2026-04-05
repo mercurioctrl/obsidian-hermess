@@ -1,0 +1,44 @@
+---
+jira_key: "INV-171"
+aliases: ["INV-171"]
+summary: "APP - Refactor - Editar cuantos items vienen por caja -> Realizar conversión de unidades por caja"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Guillermo Avila"
+created: "2024-12-02 12:46"
+updated: "2024-12-04 04:23"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-171"
+---
+
+# INV-171: APP - Refactor - Editar cuantos items vienen por caja -> Realizar conversión de unidades por caja
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-12-02 12:46 |
+| Actualizado | 2024-12-04 04:23 |
+| Etiquetas | ninguna |
+| Jira | [INV-171](https://bluinc.atlassian.net/browse/INV-171) |
+
+## Relaciones
+
+- **Padre:** [[INV-69]] Categorias
+
+## Descripcion
+
+Con base en lo discutido el día de hoy, realizaremos una refactorización para que, al enviar las unidades por caja, se realice la conversión correspondiente.
+
+La fórmula de conversión es la siguiente:
+
+**1 / cantidad por caja.**
+
+En este caso, la cantidad por caja que se debe enviar es **0.5**.
+
+[adjunto]

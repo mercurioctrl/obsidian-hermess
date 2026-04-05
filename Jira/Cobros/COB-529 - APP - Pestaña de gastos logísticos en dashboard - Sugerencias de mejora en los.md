@@ -1,0 +1,45 @@
+---
+jira_key: "COB-529"
+aliases: ["COB-529"]
+summary: "APP - Pestaña de gastos logísticos en dashboard - Sugerencias de mejora en los nombres"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Guillermo Avila"
+created: "2024-07-23 04:56"
+updated: "2024-07-23 20:48"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-529"
+---
+
+# COB-529: APP - Pestaña de gastos logísticos en dashboard - Sugerencias de mejora en los nombres
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-07-23 04:56 |
+| Actualizado | 2024-07-23 20:48 |
+| Etiquetas | ninguna |
+| Jira | [COB-529](https://bluinc.atlassian.net/browse/COB-529) |
+
+## Relaciones
+
+- **Padre:** [[COB-506]] Logistica
+
+## Descripcion
+
+Solo me gustaría hacer las algunas sugerencias:
+
+- En la historia principal se menciona que la pestaña debería llamarse “Gastos logística“
+
+
+- Creo que podríamos mejorar el nombre de “Filtro por estados” por algún otro relacionado al servicio de envío
+
+
+
+[adjunto]

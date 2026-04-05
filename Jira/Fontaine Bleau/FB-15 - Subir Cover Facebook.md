@@ -1,0 +1,36 @@
+---
+jira_key: "FB-15"
+aliases: ["FB-15"]
+summary: "Subir Cover Facebook"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Belu Ontivero"
+reporter: "Alejandra Guidobono"
+created: "2025-05-07 16:48"
+updated: "2025-05-07 16:49"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-15"
+---
+
+# FB-15: Subir Cover Facebook
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Belu Ontivero |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-05-07 16:48 |
+| Actualizado | 2025-05-07 16:49 |
+| Etiquetas | ninguna |
+| Jira | [FB-15](https://bluinc.atlassian.net/browse/FB-15) |
+
+## Relaciones
+
+- **Padre:** [[FB-3]] Ibranding
+
+## Descripcion
+
+*Sin descripcion*

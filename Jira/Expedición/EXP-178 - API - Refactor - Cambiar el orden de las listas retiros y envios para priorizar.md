@@ -1,0 +1,54 @@
+---
+jira_key: "EXP-178"
+aliases: ["EXP-178"]
+summary: "API - Refactor - Cambiar el orden de las listas \"retiros\" y \"envios\" para priorizar los pedidos alertados"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-01-25 09:08"
+updated: "2023-02-23 09:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-178"
+---
+
+# EXP-178: API - Refactor - Cambiar el orden de las listas "retiros" y "envios" para priorizar los pedidos alertados
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-01-25 09:08 |
+| Actualizado | 2023-02-23 09:40 |
+| Etiquetas | ninguna |
+| Jira | [EXP-178](https://bluinc.atlassian.net/browse/EXP-178) |
+
+## Relaciones
+
+- **Padre:** [[EXP-169]] Feat - Alertar pedidos
+
+## Descripcion
+
+El refactor podría dividirse de la siguiente manera.
+
+**Mostrar alertas en pedidos**
+
+Agregaremos a los objetos de ambos listados el parámetro para saber si están o no alertados, de esta forma la aplicación de usuario tendrá noción de que debe hacer para mostrar este pedido.
+
+Para hacerlo agregaremos el parámetro `alert` a los objetos descritos en las siguientes historias mostrando `true` o `false` según corresponde
+
+[link](https://lioteam.atlassian.net/browse/EXP-49) [link](https://lioteam.atlassian.net/browse/EXP-55) 
+
+**Ordenar la lista de retiros o envíos**
+
+Debemos enviar los prioritarios arriba de todo en la lista, para evitar que pasen desapercibidos o queden en otra pagina.
+
+Para esto mostraremos el siguiente orden:
+
+1- Los que fueron mas recientemente alertados
+
+2- El orden por fecha de liquidación descendente (me parece que esta en `MS_VENTAS_REMITOS`)

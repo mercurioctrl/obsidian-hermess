@@ -1,0 +1,48 @@
+---
+jira_key: "DNYL-1124"
+aliases: ["DNYL-1124"]
+summary: "NB_ INGRESO GIGA"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-07-04 13:38"
+updated: "2025-07-15 12:55"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1124"
+---
+
+# DNYL-1124: NB_ INGRESO GIGA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-04 13:38 |
+| Actualizado | 2025-07-15 12:55 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1124](https://bluinc.atlassian.net/browse/DNYL-1124) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Placas de video GIGA: 
+
+Nvidia: 
+
+GV-N5090AORUS M-32GD
+GV-N5080GAMING OC-16GD
+
+Radeon:
+
+GV-R9060XTGAMING OC-16GD
+GV-R9060XTGAMING OC-8GD
+
+Estos dos modelos de Radeon se pueden armar en una sola imagen, ya que es la misma placa, version de 8GB y 16GB

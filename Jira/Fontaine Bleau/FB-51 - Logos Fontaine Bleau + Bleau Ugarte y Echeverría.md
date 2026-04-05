@@ -1,0 +1,36 @@
+---
+jira_key: "FB-51"
+aliases: ["FB-51"]
+summary: "Logos Fontaine Bleau + Bleau Ugarte y Echeverría"
+status: "Listo"
+type: "Tarea"
+priority: "High"
+assignee: "Belu Ontivero"
+reporter: "Belu Ontivero"
+created: "2025-06-24 10:12"
+updated: "2025-07-01 16:57"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-51"
+---
+
+# FB-51: Logos Fontaine Bleau + Bleau Ugarte y Echeverría
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Tarea |
+| Prioridad | High |
+| Asignado | Belu Ontivero |
+| Reportado por | Belu Ontivero |
+| Creado | 2025-06-24 10:12 |
+| Actualizado | 2025-07-01 16:57 |
+| Etiquetas | ninguna |
+| Jira | [FB-51](https://bluinc.atlassian.net/browse/FB-51) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Cargar los logos de Fontaine Bleau

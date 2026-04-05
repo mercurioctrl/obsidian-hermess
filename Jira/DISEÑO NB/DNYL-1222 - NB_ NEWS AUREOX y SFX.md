@@ -1,0 +1,56 @@
+---
+jira_key: "DNYL-1222"
+aliases: ["DNYL-1222"]
+summary: "NB_ NEWS AUREOX y SFX"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-09-03 12:31"
+updated: "2025-09-18 10:01"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1222"
+---
+
+# DNYL-1222: NB_ NEWS AUREOX y SFX
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-09-03 12:31 |
+| Actualizado | 2025-09-18 10:01 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1222](https://bluinc.atlassian.net/browse/DNYL-1222) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+Bajo la PROMO WINTER SALE
+
+armar dos news uno para SFX y el otro para AUREOX
+
+NEWS SFX:
+
+GABINETE SFX KIT 782 BLACK
+GABINETE SFX KIT 783 BLACK
+FUENTE SFX 500W 20+4 SATA
+CABLE UTP SFX CAT5e 100M INTERIOR
+
+NEWS AUREOX
+
+GABINETE GAMER AUREOX SKOLL ARX 200G
+GABINETE GAMER AUREOX VANTH ARX 205G
+GABINETE GAMER AUREOX VOLANS ARX360G
+GABINETE GAMER AUREOX SCULPTOR ARX380G
+
+gracias!

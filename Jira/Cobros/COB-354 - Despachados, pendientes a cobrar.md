@@ -1,0 +1,36 @@
+---
+jira_key: "COB-354"
+aliases: ["COB-354"]
+summary: "Despachados, pendientes a cobrar"
+status: "Tareas por hacer"
+type: "Epic"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2023-03-10 16:20"
+updated: "2024-03-01 16:08"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-354"
+---
+
+# COB-354: Despachados, pendientes a cobrar
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Epic |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-03-10 16:20 |
+| Actualizado | 2024-03-01 16:08 |
+| Etiquetas | ninguna |
+| Jira | [COB-354](https://bluinc.atlassian.net/browse/COB-354) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

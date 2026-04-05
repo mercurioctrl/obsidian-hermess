@@ -1,0 +1,37 @@
+---
+jira_key: "EXP-229"
+aliases: ["EXP-229"]
+summary: "API - Feat - Listar provincias"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-03-06 12:25"
+updated: "2023-03-13 16:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-229"
+---
+
+# EXP-229: API - Feat - Listar provincias
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-03-06 12:25 |
+| Actualizado | 2023-03-13 16:07 |
+| Etiquetas | ninguna |
+| Jira | [EXP-229](https://bluinc.atlassian.net/browse/EXP-229) |
+
+## Relaciones
+
+- **Padre:** [[EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
+- **relates to:** [[EXP-222]] APP - Feat - Modal para crear etiqueta de envío generica
+
+## Descripcion
+
+Basándose en [link](https://lioteam.atlassian.net/browse/NBWEB-195) se debe agregar el recurso en expedición para poder listar provincias como un requerimiento para el formulario de agregar direcciones ([link](https://lioteam.atlassian.net/browse/EXP-222) )

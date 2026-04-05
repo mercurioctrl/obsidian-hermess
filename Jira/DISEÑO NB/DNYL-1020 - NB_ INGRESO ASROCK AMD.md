@@ -1,0 +1,46 @@
+---
+jira_key: "DNYL-1020"
+aliases: ["DNYL-1020"]
+summary: "NB_ INGRESO ASROCK AMD"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Low"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-03-11 11:12"
+updated: "2025-03-26 09:26"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1020"
+---
+
+# DNYL-1020: NB_ INGRESO ASROCK AMD
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Low |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-03-11 11:12 |
+| Actualizado | 2025-03-26 09:26 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1020](https://bluinc.atlassian.net/browse/DNYL-1020) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+[link](https://www.asrock.com/mb/AMD/B650M-CW/index.us.asp) 
+
+Hola Marce! 
+
+ingresó este mother, necesito que me des una mano armando una linda historia. 
+
+Es compatible con Ryzen (pongamos el loguito de ryzen tmb en algun lado) además de alguna otra caracteristica que se  destaque en la web de asrock. 
+
+TITULO: INGRESO CON PRECIO IMBATIBLE
+
+gracias!

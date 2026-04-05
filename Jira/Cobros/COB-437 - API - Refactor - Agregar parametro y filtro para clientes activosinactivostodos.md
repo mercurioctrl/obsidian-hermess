@@ -1,0 +1,76 @@
+---
+jira_key: "COB-437"
+aliases: ["COB-437"]
+summary: "API - Refactor - Agregar parametro y filtro para clientes activos/inactivos/todos"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-06-05 07:50"
+updated: "2023-06-07 16:48"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-437"
+---
+
+# COB-437: API - Refactor - Agregar parametro y filtro para clientes activos/inactivos/todos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-06-05 07:50 |
+| Actualizado | 2023-06-07 16:48 |
+| Etiquetas | ninguna |
+| Jira | [COB-437](https://bluinc.atlassian.net/browse/COB-437) |
+
+## Relaciones
+
+- **Padre:** [[COB-53]] API - Feat - Listar clientes
+- **blocks:** [[SNB-812]] CLIENTES REPETIDOS - VER EN SISTEMA 
+- **blocks:** [[COB-438]] APP - Refactor - Agregar etiqueta indicativa y filtro para clientes activos/inactivos/todos
+
+## Descripcion
+
+Basándonos en el requerimiento [link](https://lioteam.atlassian.net/browse/SNB-812) agregaremos el filtro y parámetros necesarios para mostrar el estado del cliente y poder filtrarlo
+
+Haremos un refactor del objeto [link](https://lioteam.atlassian.net/browse/COB-53) 
+
+```
+GET {API_RUL}/v1/clients
+```
+
+Y agregaremos al objeto el parámetro `desactive`
+
+```json
+{
+    "clientId": "026887",
+    "clientName": "PIGNANI MATIAS NICOLAS",
+    "clientBusinessName": "PIGNANI MATIAS NICOLAS",
+    "clientTaxNumber": "20-33947793-1",
+    "clientPerception": 0.0,
+    "limitCheckBalanceAmount": 2004252.04,
+    "usedCheckBalanceAmount": 2004252.04,
+    "limitBalanceAmount": 2000.0,
+    "usedBalanceAmount": 122.06,
+    "desactive": {true/false} < SE AGREGA UN NUEVO PARAMETRO
+    }
+```
+
+Adicional mente modificaremos el repositorio para agregar un filtro
+
+```
+GET {API_RUL}/v1/clients?desactive={true/false/}
+```
+
+Si no se agrega `desactive` muestra todos, sin el filtro porque pediremos al front que lo envíe filtrado
+
+Dataset
+
+```
+SELECT inactivo
+FROM [NewBytes_DBF].[dbo].[clientes]
+```

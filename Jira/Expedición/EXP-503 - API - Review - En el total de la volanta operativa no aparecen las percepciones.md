@@ -1,0 +1,41 @@
+---
+jira_key: "EXP-503"
+aliases: ["EXP-503"]
+summary: "API - Review - En el total de la volanta operativa no aparecen las percepciones de ARBA"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-07-11 16:05"
+updated: "2025-07-28 00:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-503"
+---
+
+# EXP-503: API - Review - En el total de la volanta operativa no aparecen las percepciones de ARBA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-07-11 16:05 |
+| Actualizado | 2025-07-28 00:35 |
+| Etiquetas | ninguna |
+| Jira | [EXP-503](https://bluinc.atlassian.net/browse/EXP-503) |
+
+## Relaciones
+
+- **Padre:** [[EXP-137]] Feat - Volanta operativa
+
+## Descripcion
+
+En este caso se ve claramente:
+
+[https://ms-comprobantes.lio.red/v2/operationalOrder/X000200624068](https://ms-comprobantes.lio.red/v2/operationalOrder/X000200624068)
+
+[adjunto]
+[adjunto]

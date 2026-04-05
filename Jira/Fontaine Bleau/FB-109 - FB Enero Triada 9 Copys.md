@@ -1,0 +1,58 @@
+---
+jira_key: "FB-109"
+aliases: ["FB-109"]
+summary: "FB Enero: Triada 9 Copys"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "barbara"
+reporter: "Alejandra Guidobono"
+created: "2026-01-16 09:34"
+updated: "2026-01-22 17:35"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-109"
+---
+
+# FB-109: FB Enero: Triada 9 Copys
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | barbara |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2026-01-16 09:34 |
+| Actualizado | 2026-01-22 17:35 |
+| Etiquetas | ninguna |
+| Jira | [FB-109](https://bluinc.atlassian.net/browse/FB-109) |
+
+## Relaciones
+
+- **Padre:** [[FB-107]] FB Enero: Triada 9
+
+## Descripcion
+
+- Pieza de linkedin + Facebook 1200x627
+
+
+- Feed de instagram 1920x1080
+
+
+- Story o Reel  1080x1920
+
+
+
+
+
+Piscina
+Solarium
+Terraza con Fogonero
+
+Fotos
+[link](https://drive.google.com/drive/folders/15DonVOjRV2HH3zk0p9cGVdl31JOWtpJj) 
+
+[link](https://drive.google.com/drive/folders/1zPlUkTH-af0ZMcNGjjYCc96ZXen30ZPQ) 
+
+[adjunto]
+## Copys: [FB_COPYS](https://docs.google.com/document/d/1xZTjLYpWWlDTs7RS7R3HNvcnjpjakeRo/edit?usp=drive_link&ouid=112495056956472674371&rtpof=true&sd=true)

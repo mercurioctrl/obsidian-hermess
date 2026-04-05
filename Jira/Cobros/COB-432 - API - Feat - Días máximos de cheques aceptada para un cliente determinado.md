@@ -1,0 +1,36 @@
+---
+jira_key: "COB-432"
+aliases: ["COB-432"]
+summary: "API - Feat - Días máximos de cheques aceptada para un cliente determinado"
+status: "Tareas por hacer"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2023-05-03 10:27"
+updated: "2023-05-03 10:27"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-432"
+---
+
+# COB-432: API - Feat - Días máximos de cheques aceptada para un cliente determinado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-05-03 10:27 |
+| Actualizado | 2023-05-03 10:27 |
+| Etiquetas | ninguna |
+| Jira | [COB-432](https://bluinc.atlassian.net/browse/COB-432) |
+
+## Relaciones
+
+- **Padre:** [[COB-374]] Feat - Editar estado crediticio de la cuenta del cliente
+
+## Descripcion
+
+*Sin descripcion*

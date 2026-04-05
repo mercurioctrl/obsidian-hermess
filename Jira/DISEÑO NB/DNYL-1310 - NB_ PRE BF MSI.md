@@ -1,0 +1,43 @@
+---
+jira_key: "DNYL-1310"
+aliases: ["DNYL-1310"]
+summary: "NB_ PRE BF MSI"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2025-11-26 13:14"
+updated: "2025-12-12 10:51"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1310"
+---
+
+# DNYL-1310: NB_ PRE BF MSI
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-11-26 13:14 |
+| Actualizado | 2025-12-12 10:51 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1310](https://bluinc.atlassian.net/browse/DNYL-1310) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+PRE BLACK FRIDAY en MSI:
+Notebook MSI Cyborg A13UDX 15.6" i5-13420H + 16gb (2x8) + 512gb + rtx 3050 6GB Win11 a 952,07+
+Notebook MSI Cyborg 15 A13VE 15.6" + i5-13420H + 16gb (2x8) + 512gb + RTX 4050 6GB Win11 a 1090,1+
+Notebook MSI Katana B8VF A15 15.6" + Ryzen 7 8845HS + 16gb (2x8) + 512gb + RTX 4060 8GB Win11 a 1459,15+
+
+
+
+historias y NEWS

@@ -1,0 +1,36 @@
+---
+jira_key: "EXP-152"
+aliases: ["EXP-152"]
+summary: "APP - Feat - Mostrar alertas de pedidos"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-01-18 10:40"
+updated: "2023-01-30 10:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-152"
+---
+
+# EXP-152: APP - Feat - Mostrar alertas de pedidos
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-01-18 10:40 |
+| Actualizado | 2023-01-30 10:07 |
+| Etiquetas | ninguna |
+| Jira | [EXP-152](https://bluinc.atlassian.net/browse/EXP-152) |
+
+## Relaciones
+
+- **Padre:** [[EXP-14]] Feat - Listar pedidos para retiro
+
+## Descripcion
+
+*Sin descripcion*

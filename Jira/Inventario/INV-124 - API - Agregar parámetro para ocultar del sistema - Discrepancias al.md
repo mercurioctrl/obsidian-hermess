@@ -1,0 +1,49 @@
+---
+jira_key: "INV-124"
+aliases: ["INV-124"]
+summary: "API - Agregar parámetro para ocultar del sistema - Discrepancias al ocultar/mostrar la categoría"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Guillermo Avila"
+created: "2024-09-11 23:09"
+updated: "2024-09-13 03:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-124"
+---
+
+# INV-124: API - Agregar parámetro para ocultar del sistema - Discrepancias al ocultar/mostrar la categoría
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-09-11 23:09 |
+| Actualizado | 2024-09-13 03:43 |
+| Etiquetas | ninguna |
+| Jira | [INV-124](https://bluinc.atlassian.net/browse/INV-124) |
+
+## Relaciones
+
+- **Padre:** [[INV-23]] Aplicacion de inventario
+- **blocks:** [[INV-115]] API - Refactor - Agregar parametro para ocultar del sistema
+
+## Descripcion
+
+- Al crear una categoría como oculta para el sistema, se marca la columna `hide_internal`, sin embargo, no se desactiva la columna `mostrar` ¿No debería afectar a la columna mostrar?
+
+
+
+[adjunto]
+[adjunto]
+-  Al editar la categoría y marcar como no oculta
+
+
+
+[adjunto]
+[adjunto]
+Nota: Como sugerencia, si el caso fuera que los valores enviados no fueran los correctos 1/0 o True/False hay que indicarlos en la respuesta del objeto.

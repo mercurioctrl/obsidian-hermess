@@ -1,0 +1,68 @@
+---
+jira_key: "DNYL-1180"
+aliases: ["DNYL-1180"]
+summary: "NB_ ACELERADORES SEGUNDA SEMANA"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-08-07 10:13"
+updated: "2025-08-18 10:22"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1180"
+---
+
+# DNYL-1180: NB_ ACELERADORES SEGUNDA SEMANA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-08-07 10:13 |
+| Actualizado | 2025-08-18 10:22 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1180](https://bluinc.atlassian.net/browse/DNYL-1180) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+- ASUS x 1.2 del 10 hasta el 14 inclusive  
+
+
+- ADATA x 1.3  del 10 hasta el 14 inclusive 
+
+
+- GENIUS x 1.2  del 10 hasta el 14 inclusive 
+
+
+
+--
+
+Me armás 3 imagenes de Feed que se conecten entre si para subir las tres y que queden fijadas arriba en instagram que durnate el incentivo las voy a ir cambiando de frese por mes. 
+
+Ahora ponele: 
+
+**NB TRAVEL Segunda edición**
+
+**¡Órale, esto recién empieza!**
+Cada compra de las marcas participantes suma… ¡y cada milla te acerca al viaje!
+
+ADATA AMD ASUS GENIUS GIGABYTE NETAC PATRIOT TRUST
+
+
+
+– 
+Armame una segunda versión Tmb de ADATA que tenga NB TRAVEL y lo de su viaje a Punta Cana 
+
+¡ADATA EN NB SUMA DOBLE! 
+
+SUMÁS MILLAS PARA VIAJAR CON NOSOTROS Y ADEMÁS SUMAS PARA EL VIAJE DE ADATA A PUNTA CANA!

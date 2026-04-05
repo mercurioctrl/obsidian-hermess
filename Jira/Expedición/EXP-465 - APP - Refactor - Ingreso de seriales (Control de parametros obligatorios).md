@@ -1,0 +1,43 @@
+---
+jira_key: "EXP-465"
+aliases: ["EXP-465"]
+summary: "APP - Refactor - Ingreso de seriales (Control de parametros obligatorios)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-11-11 13:30"
+updated: "2024-11-22 00:09"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-465"
+---
+
+# EXP-465: APP - Refactor - Ingreso de seriales (Control de parametros obligatorios)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-11-11 13:30 |
+| Actualizado | 2024-11-22 00:09 |
+| Etiquetas | ninguna |
+| Jira | [EXP-465](https://bluinc.atlassian.net/browse/EXP-465) |
+
+## Relaciones
+
+- **Padre:** [[EXP-463]] Pedido de informacion para los items que ingresan por primera vez
+- **action item from:** [[EXP-464]] API - Refactor - Ingreso de seriales (Control de parametros obligatorios)
+
+## Descripcion
+
+Utilizando el recurso [link](https://lioteam.atlassian.net/browse/EXP-464)  agregaremos un nuevo parámetro si nos viene como obligatorio y sino como no obligatorio.
+
+El parámetro se llama “cantidad por caja” y su valor máximo es 100. Solo permite números enteros.
+
+Lo ideal es meter una pequeña explicación del parámetro que diga algo como “Complete con la cantidad que viene en cada caja del producto al por mayor. Utilizaremos esta informacion para deducir cuantos bultos se conforman con cada item al hacer un envio”
+
+[adjunto]

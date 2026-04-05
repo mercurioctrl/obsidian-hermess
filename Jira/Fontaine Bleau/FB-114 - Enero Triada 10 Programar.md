@@ -1,0 +1,36 @@
+---
+jira_key: "FB-114"
+aliases: ["FB-114"]
+summary: "Enero: Triada 10 Programar"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "barbara"
+reporter: "Alejandra Guidobono"
+created: "2026-01-16 09:52"
+updated: "2026-01-28 11:24"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-114"
+---
+
+# FB-114: Enero: Triada 10 Programar
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | barbara |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2026-01-16 09:52 |
+| Actualizado | 2026-01-28 11:24 |
+| Etiquetas | ninguna |
+| Jira | [FB-114](https://bluinc.atlassian.net/browse/FB-114) |
+
+## Relaciones
+
+- **Padre:** [[FB-111]] Enero: Triada 10
+
+## Descripcion
+
+*Sin descripcion*

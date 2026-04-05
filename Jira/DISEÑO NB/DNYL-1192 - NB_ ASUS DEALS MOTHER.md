@@ -1,0 +1,44 @@
+---
+jira_key: "DNYL-1192"
+aliases: ["DNYL-1192"]
+summary: "NB_ ASUS DEALS MOTHER"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2025-08-14 16:23"
+updated: "2025-09-18 10:16"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1192"
+---
+
+# DNYL-1192: NB_ ASUS DEALS MOTHER
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-08-14 16:23 |
+| Actualizado | 2025-09-18 10:16 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1192](https://bluinc.atlassian.net/browse/DNYL-1192) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Bajo el concepto de ASUS DEALS 
+
+Crear imagen del
+
+| MOTHER ASUS (AM4) PRIME A520M-K CSM |
+| --- |
+
+En promoción disponible hasta el 31-08. 
+Precio: 49,9+

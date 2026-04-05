@@ -1,0 +1,39 @@
+---
+jira_key: "INV-122"
+aliases: ["INV-122"]
+summary: "APP - Filtrar por stock - Sugerencia de mejora al no seleccionar el filtro"
+status: "Finalizada"
+type: "Tarea"
+priority: "Lowest"
+assignee: "Marbe Moreno"
+reporter: "Guillermo Avila"
+created: "2024-09-11 21:38"
+updated: "2024-09-13 03:47"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-122"
+---
+
+# INV-122: APP - Filtrar por stock - Sugerencia de mejora al no seleccionar el filtro
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Lowest |
+| Asignado | Marbe Moreno |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-09-11 21:38 |
+| Actualizado | 2024-09-13 03:47 |
+| Etiquetas | ninguna |
+| Jira | [INV-122](https://bluinc.atlassian.net/browse/INV-122) |
+
+## Relaciones
+
+- **Padre:** [[INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-64]] APP - Feat - Agregar checkbox stock
+
+## Descripcion
+
+Después de quitar los filtros por defecto y realizar una búsqueda, me aparece el valor Not a Number en el filtrado de stock.
+
+[adjunto]

@@ -1,0 +1,53 @@
+---
+jira_key: "COM-157"
+aliases: ["COM-157"]
+summary: "  API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-12-09 08:23"
+updated: "2024-12-22 23:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-157"
+---
+
+# COM-157:   API - Refactor - Agregar filtro al recurso de empresas para mostrar solo las que queremos visualizar en el menu
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-12-09 08:23 |
+| Actualizado | 2024-12-22 23:25 |
+| Etiquetas | ninguna |
+| Jira | [COM-157](https://bluinc.atlassian.net/browse/COM-157) |
+
+## Relaciones
+
+- **Padre:** [[COM-156]] Filtro Empresa
+- **has action item:** [[COM-159]] APP - Refactor - Agregar filtro empresa global
+
+## Descripcion
+
+Agregeramos el repositorio de empresas tal como lo hicimos en pedidos
+
+```
+GET {API_URL}/v1/companies
+```
+
+Agregaremos el filtro “show” para poder visualizar aquellas empresas que son visibles para los menues segun el parametro `[NewBytes_DBF].[dbo].[FP_Empresas].LACTIVA`
+
+```
+GET {API_URL}/v1/companies?show=1 
+```
+
+Esto quiere decir que cuando `[NewBytes_DBF].[dbo].[FP_Empresas].LACTIVA = 1` entonces mostrare solo los que tienen en 1
+
+Si `[NewBytes_DBF].[dbo].[FP_Empresas].LACTIVA = 0` entonces solo los que lo tienen en cero.
+
+Y si `[NewBytes_DBF].[dbo].[FP_Empresas].LACTIVA = null` o no esta disponible, mostrare ambos.

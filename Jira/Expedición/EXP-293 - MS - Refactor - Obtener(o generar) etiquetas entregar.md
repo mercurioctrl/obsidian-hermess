@@ -1,0 +1,50 @@
+---
+jira_key: "EXP-293"
+aliases: ["EXP-293"]
+summary: "MS - Refactor - Obtener(o generar) etiquetas entregar"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-05-22 09:23"
+updated: "2023-05-23 13:05"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-293"
+---
+
+# EXP-293: MS - Refactor - Obtener(o generar) etiquetas entregar
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-05-22 09:23 |
+| Actualizado | 2023-05-23 13:05 |
+| Etiquetas | ninguna |
+| Jira | [EXP-293](https://bluinc.atlassian.net/browse/EXP-293) |
+
+## Relaciones
+
+- **Padre:** [[EXP-289]] Refactor Entregar
+
+## Descripcion
+
+Refactorizaremos los siguientes recursos para obtener las etiquetas de entregar
+
+```
+GET {{API_URL}}/getLabel{XXXX}/jpg
+```
+
+```
+GET {{API_URL}}/getLabel{XXXX}/pdf
+```
+
+```
+GET {{API_URL}}/getLabel{XXXX}/zpl
+```
+
+En los casos donde el proveedor de servicio no ofrece la etiqueta, debe generarse desde la plantilla genérica (ya lo hacemos en algunos casos, si queres lo charlamos)

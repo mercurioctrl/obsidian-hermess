@@ -1,0 +1,51 @@
+---
+jira_key: "DNYL-1051"
+aliases: ["DNYL-1051"]
+summary: "NB_ INGRESOS GIGA"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-04-11 11:59"
+updated: "2025-04-24 15:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1051"
+---
+
+# DNYL-1051: NB_ INGRESOS GIGA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-04-11 11:59 |
+| Actualizado | 2025-04-24 15:38 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1051](https://bluinc.atlassian.net/browse/DNYL-1051) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+necesito Story (serian 4 por familia de producto) Feed armate un par para subir en carrusel.
+
+GABINETE GAMER GIGABYTE C102G M-ATX BLACK
+GABINETE GAMER GIGABYTE C102G M-ATX WHITE
+
+
+
+FUENTE GAMER GIGABYTE 650W 80 PLUS SILVER ATX 3.0
+FUENTE GAMER GIGABYTE 650W ICE 80 PLUS SILVER ATX 3.0 WHITE
+
+WATER COOLER GIGABYTE AORUS WATERFORCE X II 360
+WATER COOLER GIGABYTE AORUS WATERFORCE X II 360I ICE (BLANCO)
+
+MONITOR GAMER GIGABYTE 27 GS27FA-SA
+MONITOR GAMER GIGABYTE 27 GS27FC-SA
+MONITOR GAMER GIGABYTE LED 26.5 AORUS FO27Q2 SA

@@ -1,0 +1,36 @@
+---
+jira_key: "INV-160"
+aliases: ["INV-160"]
+summary: "APP - Refactor - Agregar parametros serializable y nacional"
+status: "Tareas por hacer"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2024-10-16 09:21"
+updated: "2024-10-16 09:21"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-160"
+---
+
+# INV-160: APP - Refactor - Agregar parametros serializable y nacional
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-10-16 09:21 |
+| Actualizado | 2024-10-16 09:21 |
+| Etiquetas | ninguna |
+| Jira | [INV-160](https://bluinc.atlassian.net/browse/INV-160) |
+
+## Relaciones
+
+- **Padre:** [[INV-125]] Importación de catálogos
+
+## Descripcion
+
+*Sin descripcion*

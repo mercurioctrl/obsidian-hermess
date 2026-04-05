@@ -1,0 +1,38 @@
+---
+jira_key: "DNYL-1250"
+aliases: ["DNYL-1250"]
+summary: "NB_ TRUCHANDO PARA SOBREVIVIR"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2025-09-25 11:34"
+updated: "2025-09-29 14:25"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1250"
+---
+
+# DNYL-1250: NB_ TRUCHANDO PARA SOBREVIVIR
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-09-25 11:34 |
+| Actualizado | 2025-09-29 14:25 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1250](https://bluinc.atlassian.net/browse/DNYL-1250) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Te acordas de esta imagen? podrás sumarle el logo de Razer? 
+
+[adjunto]

@@ -1,0 +1,42 @@
+---
+jira_key: "DNYL-1320"
+aliases: ["DNYL-1320"]
+summary: "NB_ PROMO MOTHER GIGA"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2025-12-12 10:46"
+updated: "2025-12-19 18:08"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1320"
+---
+
+# DNYL-1320: NB_ PROMO MOTHER GIGA
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-12-12 10:46 |
+| Actualizado | 2025-12-19 18:08 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1320](https://bluinc.atlassian.net/browse/DNYL-1320) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+(formato historia) 
+Promo Navidad! 
+Aprovechá el **precio especial** hasta el miércoles 17/12 
+
+MOTHER GIGABYTE (AM4) A520M K V2
+
+¡No te duermas!

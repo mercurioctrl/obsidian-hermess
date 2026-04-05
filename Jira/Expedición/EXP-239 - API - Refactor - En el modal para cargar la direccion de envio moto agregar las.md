@@ -1,0 +1,37 @@
+---
+jira_key: "EXP-239"
+aliases: ["EXP-239"]
+summary: "API - Refactor - En el modal para cargar la direccion de \"envio moto\" agregar las observaciones escritas por el vendedor"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-03-09 13:47"
+updated: "2023-05-29 06:34"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-239"
+---
+
+# EXP-239: API - Refactor - En el modal para cargar la direccion de "envio moto" agregar las observaciones escritas por el vendedor
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-03-09 13:47 |
+| Actualizado | 2023-05-29 06:34 |
+| Etiquetas | ninguna |
+| Jira | [EXP-239](https://bluinc.atlassian.net/browse/EXP-239) |
+
+## Relaciones
+
+- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
+- **is blocked by:** [[EXP-240]] API - Feat - Obtener comentarios del vendedor para un pedido determinado
+
+## Descripcion
+
+API - Refactor - En el modal para cargar la dirección de "envío moto" agregar las observaciones escritas por el vendedor. Muchas veces el dato en el que se tienen que basar para determinar la dirección, esta aca.

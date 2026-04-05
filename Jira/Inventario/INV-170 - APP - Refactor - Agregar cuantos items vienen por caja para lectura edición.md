@@ -1,0 +1,67 @@
+---
+jira_key: "INV-170"
+aliases: ["INV-170"]
+summary: "APP - Refactor - Agregar cuantos items vienen por caja para lectura / edición"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-11-25 15:00"
+updated: "2024-11-30 05:59"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-170"
+---
+
+# INV-170: APP - Refactor - Agregar cuantos items vienen por caja para lectura / edición
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-11-25 15:00 |
+| Actualizado | 2024-11-30 05:59 |
+| Etiquetas | ninguna |
+| Jira | [INV-170](https://bluinc.atlassian.net/browse/INV-170) |
+
+## Relaciones
+
+- **Padre:** [[INV-69]] Categorias
+- **action item from:** [[INV-169]] API - Refactor - Agregar cuantos items vienen por caja para lectura / edición
+
+## Descripcion
+
+Agregaremos dentro del formulario de edicion de productos un campo para poder editar la cantidad que vienen por caja, adicional mente mostraremos el parámetro cuando viene en el recurso [link](https://lioteam.atlassian.net/browse/INV-169) 
+
+```
+GET {API_URL}/categories
+```
+
+```
+PATCH {API_URL}/categories
+```
+
+```
+{
+    "id": 20,
+    "description": "ACCESORIOS",
+    "webShow": 1,
+    "alphaCode": "0020",
+    "highAverage": 145,
+    "widthAverage": "242",
+    "lengthAverage": 140,
+    "weightAverage": 500,
+    "initStockMedium": 5,
+    "initStockLarge": 325,
+    "packagePerUnit": 0.5, <--- Se agrega
+    "companyCode": null,
+    "hide": 1
+}
+```
+
+
+
+[adjunto]

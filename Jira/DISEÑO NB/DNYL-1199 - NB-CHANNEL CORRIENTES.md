@@ -1,0 +1,36 @@
+---
+jira_key: "DNYL-1199"
+aliases: ["DNYL-1199"]
+summary: "NB-CHANNEL CORRIENTES"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "md_mnuble"
+created: "2025-08-19 14:00"
+updated: "2025-08-19 16:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1199"
+---
+
+# DNYL-1199: NB-CHANNEL CORRIENTES
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | md_mnuble |
+| Creado | 2025-08-19 14:00 |
+| Actualizado | 2025-08-19 16:46 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1199](https://bluinc.atlassian.net/browse/DNYL-1199) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

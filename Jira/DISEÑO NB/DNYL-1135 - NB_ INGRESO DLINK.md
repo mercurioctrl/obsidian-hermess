@@ -1,0 +1,42 @@
+---
+jira_key: "DNYL-1135"
+aliases: ["DNYL-1135"]
+summary: "NB_ INGRESO DLINK"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-07-14 14:42"
+updated: "2025-07-21 13:14"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1135"
+---
+
+# DNYL-1135: NB_ INGRESO DLINK
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-14 14:42 |
+| Actualizado | 2025-07-21 13:14 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1135](https://bluinc.atlassian.net/browse/DNYL-1135) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+D-LINK R03 N300 SMART ROUTER 2 ANTENAS (Router economico para hogar)
+
+Placas de red Wifi internas:
+
+D-LINK [[DWA-548]] PCI-E WIFI 4 N300 CON 2 ANTENAS
+D-LINK [[DWA-582]] PCI-E WIFI 5 AC1200 DUAL BAND CON 2 ANTENAS
+D-LINK DWA-X582 AX3000 DUAL BAND PCI EXPRESS

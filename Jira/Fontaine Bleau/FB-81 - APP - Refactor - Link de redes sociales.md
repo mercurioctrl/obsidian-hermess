@@ -1,0 +1,43 @@
+---
+jira_key: "FB-81"
+aliases: ["FB-81"]
+summary: "APP - Refactor - Link de redes sociales"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-10-27 06:16"
+updated: "2025-12-29 08:20"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-81"
+---
+
+# FB-81: APP - Refactor - Link de redes sociales
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-10-27 06:16 |
+| Actualizado | 2025-12-29 08:20 |
+| Etiquetas | ninguna |
+| Jira | [FB-81](https://bluinc.atlassian.net/browse/FB-81) |
+
+## Relaciones
+
+- **Padre:** [[FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
+
+## Descripcion
+
+Como hicimos mas arriba cambiaremos los enlaces de redes en el footer
+
+```
+Youtube: https://www.youtube.com/@FontaineBleauar
+Instagram: https://www.instagram.com/fontainebleau.ar
+Facebook: https://www.facebook.com/profile.php?id=61576195734054&sk=about
+Linkedin: https://www.linkedin.com/company/fontainebleauar/
+```

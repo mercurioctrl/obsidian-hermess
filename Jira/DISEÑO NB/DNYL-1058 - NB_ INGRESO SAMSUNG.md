@@ -1,0 +1,36 @@
+---
+jira_key: "DNYL-1058"
+aliases: ["DNYL-1058"]
+summary: "NB_ INGRESO SAMSUNG"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-04-21 12:56"
+updated: "2025-04-24 15:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1058"
+---
+
+# DNYL-1058: NB_ INGRESO SAMSUNG
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-04-21 12:56 |
+| Actualizado | 2025-04-24 15:40 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1058](https://bluinc.atlassian.net/browse/DNYL-1058) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola! tenemos que armar una story con este moni: MONITOR SAMSUNG LED 24 T350H XZB ingresaron!

@@ -1,0 +1,38 @@
+---
+jira_key: "COB-146"
+aliases: ["COB-146"]
+summary: "CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo"
+status: "Gamma"
+type: "Historia"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2022-10-05 17:55"
+updated: "2022-10-10 12:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-146"
+---
+
+# COB-146: CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Gamma (Listo) |
+| Tipo | Historia |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-10-05 17:55 |
+| Actualizado | 2022-10-10 12:30 |
+| Etiquetas | ninguna |
+| Jira | [COB-146](https://bluinc.atlassian.net/browse/COB-146) |
+
+## Relaciones
+
+- **Subtarea:** [[COB-147]] API - Feat - Solo el destinatario del pase puede aceptarlo o rechazarlo (A menos que tenga administrativos)
+- **Subtarea:** [[COB-148]] APP - Feat - Solo el destinatario del pase peude aceptarlo o rechazarlo
+- **causes:** [[SNB-341]] CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo
+
+## Descripcion
+
+[adjunto]

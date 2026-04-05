@@ -1,0 +1,62 @@
+---
+jira_key: "COB-125"
+aliases: ["COB-125"]
+summary: "APP - Feat - Modal de cobro"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-09-28 22:09"
+updated: "2022-10-27 08:36"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-125"
+---
+
+# COB-125: APP - Feat - Modal de cobro
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-09-28 22:09 |
+| Actualizado | 2022-10-27 08:36 |
+| Etiquetas | ninguna |
+| Jira | [COB-125](https://bluinc.atlassian.net/browse/COB-125) |
+
+## Relaciones
+
+- **Padre:** [[COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-54]] APP - Feat - Listar clientes
+- **is blocked by:** [[COB-41]] APP - Feat -  Listar cobrables
+- **blocks:** [[COB-126]] API - Feat - Realizar cobro
+
+## Descripcion
+
+Vamos a maquetar el siguiente modal para realizar cobros.
+
+La idea es poder seleccionar un pedido o cliente y poder describir como es la transacción (o cobro) desde el formulario.
+
+Para esto debemos tener en cuenta que existen al menos 4 formas de pago y que cada una tiene su propia cotización.
+
+Consideraremos siempre que el monto Final (Monto del pedido + Iva + Percepción) en dolares, es el valor al que debemos llegar para considerar el cobro como realizado.
+
+Para esto debemos operar de la siguiente manera:
+
+**Saldo Pendiente Pedido** = Total Final - [(Paga1 / Cotizacion1)+(Paga2 / Cotizacion2)+(Paga2 / Cotizacion2)+(Paga2 / Cotizacion2)]
+
+Solo cuando “**Saldo Pendiente Pedido**” es igual o menor a cero (en ese caso le queda plata a favor), es posible realizar el cobro.
+
+Es importante que la tabla haga los cálculos de manera dinámica para darla versatilidad al modulo.
+
+[adjunto]
+Algunos detalles sobre los input del formulario
+
+**Pedido**: Es un selector que busca usando el recurso [link](https://lioteam.atlassian.net/browse/COB-41) De ahi se toman los totales y se carga el cliente.
+
+**Cliente**: Solo puede usarse si no esta ya cargado el selector de pedido. En ese caso usaremos un match con el recurso [link](https://lioteam.atlassian.net/browse/COB-54)
+
+**Disponible**: Es el saldo que tiene el cliente en la cuenta, se puede usar el recurso [link](https://lioteam.atlassian.net/browse/COB-54) o bien refactorear el de cobrables para que traiga el dato.

@@ -1,0 +1,53 @@
+---
+jira_key: "COM-274"
+aliases: ["COM-274"]
+summary: "APP - Review - solventar error de al intentar editar costo, cantidad o IVA en una orden de companycode11 no edita correctamente las cantidades"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2026-01-16 16:21"
+updated: "2026-01-22 13:10"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-274"
+---
+
+# COM-274: APP - Review - solventar error de al intentar editar costo, cantidad o IVA en una orden de companycode11 no edita correctamente las cantidades
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2026-01-16 16:21 |
+| Actualizado | 2026-01-22 13:10 |
+| Etiquetas | ninguna |
+| Jira | [COM-274](https://bluinc.atlassian.net/browse/COM-274) |
+
+## Relaciones
+
+- **Padre:** [[COM-8]] Ordenes de compra
+
+## Descripcion
+
+Revisar  ( en edicion de una orden)
+
+- se marca en gris el item como si fuera el resumen de la compra
+
+
+- al modificar un item no cambia correctamente los valores (subtotales), coloca 0 si es el ultimo item y si hay mas de un item no  actualiza bien el subtotal
+
+
+
+[adjunto]
+
+
+[adjunto]
+- Revisar en companycode !== 11 por que no se esta editando correctamente las cotizaciones
+
+
+
+[adjunto]

@@ -1,0 +1,48 @@
+---
+jira_key: "DNYL-1266"
+aliases: ["DNYL-1266"]
+summary: "NB_ Precios especiales Giga"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2025-10-08 10:01"
+updated: "2025-10-21 11:11"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1266"
+---
+
+# DNYL-1266: NB_ Precios especiales Giga
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-10-08 10:01 |
+| Actualizado | 2025-10-21 11:11 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1266](https://bluinc.atlassian.net/browse/DNYL-1266) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Historias: 
+
+Titulo de la campaña: lo mejor de Gigabyte los encontras en New Bytes
+
+Productos destacados: 
+
+PLACA DE VIDEO GIGABYTE RADEON RX 9070 XT GAMING OC 16GB
+FUENTE GAMER GIGABYTE 650W 80 PLUS SILVER ATX 3.0
+MOTHER GIGABYTE (AM5) B650M D3HP AX
+MOTHER GIGABYTE (AM5) B650 A ELITE AX ICE
+MOTHER GIGABYTE (LGA1700) B760M DS3H AX
+
+Mandemos news (creo que mañana vuelven, usemos los que tenemos disponibles hasta mañana creo que queda para un envio)

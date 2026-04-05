@@ -1,0 +1,100 @@
+---
+jira_key: "COB-219"
+aliases: ["COB-219"]
+summary: "API - Feat - Listar movimientos bancarios"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2022-11-01 11:21"
+updated: "2023-04-28 08:59"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-219"
+---
+
+# COB-219: API - Feat - Listar movimientos bancarios
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-11-01 11:21 |
+| Actualizado | 2023-04-28 08:59 |
+| Etiquetas | ninguna |
+| Jira | [COB-219](https://bluinc.atlassian.net/browse/COB-219) |
+
+## Relaciones
+
+- **Padre:** [[COB-218]] Feat - Movimientos bancarios
+- **blocks:** [[COB-220]] APP - Feat - Mostrar movimientos bancarios
+
+## Descripcion
+
+```
+GET {API_RUL}/v1/currentBankAccount/{BankId}
+```
+
+Basándonos en `[BA_BP_MOVIMIENTOS_SALIDAS]` y `[BA_BP_MOVIMIENTOS_ENTRADAS]` debemos mostrar la cuenta corriente del banco, de una manera muy parecida a como lo hacemos con los clientes en [link](https://lioteam.atlassian.net/browse/COB-5)
+
+Se debe mostrar
+
+- Fecha de la operacion
+
+
+- Monto del movimiento
+
+
+- Operadores que lo realizo
+
+
+- Observación
+
+
+- Saldo total
+
+
+
+Recordar las particularidades del modal que cuentas corrientes de subtotales y su paginacion
+
+
+
+### GET /currentBankAccount/**72**?currentPage=1&itemsPerPage=15**&currency=2**
+
+##### **&currency=1 → Dolares **
+
+##### **&currency=2 → Pesos.**
+
+Caso de Dolares.
+
+```
+{
+"dateOperation": "2022-10-24 00:00:00.000",
+"amount": 1,
+"subTotal": 57380.99489887009,
+"symbolCurrency": "u$s",
+"nameCurrency": "Dolares",
+"agent": "Dario",
+"observation": "EJEMPLO DE BANCO A BANCO",
+"balanceTotal": 57380.994898870165
+}
+        
+```
+
+Caso de Pesos.
+
+```
+{
+"dateOperation": "2022-11-02 00:00:00.000",
+"amount": 64582.62,
+"subTotal": 1709378101.9794693,
+"symbolCurrency": "$",
+"nameCurrency": "Pesos",
+"agent": "CAJA1",
+"observation": "0002-00547430",
+"balanceTotal": 1709378101.9794686
+}
+```

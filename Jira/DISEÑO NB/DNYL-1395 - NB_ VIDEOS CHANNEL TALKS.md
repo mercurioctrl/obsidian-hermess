@@ -1,0 +1,96 @@
+---
+jira_key: "DNYL-1395"
+aliases: ["DNYL-1395"]
+summary: "NB_ VIDEOS CHANNEL TALKS"
+status: "Tareas por hacer"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2026-04-01 16:06"
+updated: "2026-04-01 16:36"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1395"
+---
+
+# DNYL-1395: NB_ VIDEOS CHANNEL TALKS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2026-04-01 16:06 |
+| Actualizado | 2026-04-01 16:36 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1395](https://bluinc.atlassian.net/browse/DNYL-1395) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Tenemos que armar un video para una pantalla que estará en el Stand de Channel Talks.  (pueden ser imagenes con una animación sútil) 
+
+Es una TV horizontal de 65”
+
+- LOGO NEW BYTES
+TECNOLOGIA Y SOPORTE PARA TU NEGOCIO
+
+
+
+- CON NUESTRA API OBTENÉ STOCK EN TIEMPO REAL
+(notebook + Celular + tablet con imagen de la web de NB) 
+
+
+
+- ¡Envío gratis a todo el país! 
+Logo New Bytes imagenes de logistica. 
+
+
+- ¡SOPORTE POSTVENTA GARANTIZADO EN TODAS TUS COMPRAS! 
+
+
+
+- TODO EL STOCK DE AMD RADEON DISPONIBLE EN NUESTRA WEB
+LOGO AMD RADEON 
+(estilo de AMD con logo de NB) 
+
+
+- LOGO NEW BYTES | AMD RADEON
+
+
+
+- JUEGA A TODO CON LA NOTEBOOK GIGABYTE GAMING A16 
+[link](https://www.gigabyte.com/ar/Laptop/GIGABYTE-GAMING-A16-GA6H) 
+
+
+- LOGO NEW BYTES | GIGABYTE 
+
+
+
+- PRODUCTOS ERGONOMICOS DE TRUST 
+(imagenes de los productos ergonomicos) 
+
+
+- LOGO NEW BYTES | TRUST 
+
+
+
+- RAIDMAX - POTENCIÁ TU SETUP 
+(imagen de fuente, gabinete y Cooler)
+
+
+
+- LOGO NEW BYTES | RAIDMAX
+
+
+
+- HUNNOX - TU HOGAR INTELIGENTE (simil al banner de la web) 
+(los productos que siempre usamos)
+
+
+- LOGO NEW BYTES | HUNNOX

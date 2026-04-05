@@ -1,0 +1,46 @@
+---
+jira_key: "COB-276"
+aliases: ["COB-276"]
+summary: "Subtotal en pesos no coincidente con movimientos del proveedor"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Guillermo Avila"
+created: "2022-12-27 18:33"
+updated: "2023-01-03 16:47"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-276"
+---
+
+# COB-276: Subtotal en pesos no coincidente con movimientos del proveedor
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Guillermo Avila |
+| Creado | 2022-12-27 18:33 |
+| Actualizado | 2023-01-03 16:47 |
+| Etiquetas | ninguna |
+| Jira | [COB-276](https://bluinc.atlassian.net/browse/COB-276) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+El ultimo subtotal solamente se está considerando la cotización del último movimiento con respecto a los dólares, e ignora los pesos que tiene debajo junto con sus cotizaciones.
+
+El criterio de aceptación es que el subtotal en pesos debe de ser coincidente con las operaciones que tiene debajo (anteriores), así como el subtotal en dólares.
+
+
+
+
+
+
+
+[adjunto]

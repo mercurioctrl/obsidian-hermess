@@ -1,0 +1,85 @@
+---
+jira_key: "INV-119"
+aliases: ["INV-119"]
+summary: "API - Refactor - Agregar parámetro sindicateContentImg"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-09-10 07:32"
+updated: "2024-09-11 22:40"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-119"
+---
+
+# INV-119: API - Refactor - Agregar parámetro sindicateContentImg
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-09-10 07:32 |
+| Actualizado | 2024-09-11 22:40 |
+| Etiquetas | ninguna |
+| Jira | [INV-119](https://bluinc.atlassian.net/browse/INV-119) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+- **blocks:** [[INV-120]] APP - Refactor - Agregar parámetro sindicateContentImg
+
+## Descripcion
+
+Agregaremos un parámetro a el listado y para editar (PATCH) donde sea posible agregar una URL que aloja una imagen (esto se encuentra en un servidor externo de imágenes, ej: [link](https://i.imgur.com/bzJgKy9.jpeg) )
+
+Este parámetro se almacena en una tabla similar a 
+
+```
+SELECT 
+  [id]
+  ,[itemId]
+  ,[accepted]
+  ,[refused]
+  ,[sindicateContentImg]
+FROM 
+  [PRODUCTOS].[dbo].[sindicateContentImg]
+```
+
+```
+GET {API_URL}/item/{itemId}
+```
+
+```
+{
+    "list": [
+        {
+            "title": "TECLADO GAMER DUCKY SESALWWT1",
+            "sku": "DKON1967ST-SESALWWT1",
+            "id": 111699,
+            "category": "TECLADOS                      ",
+            "categoryId": 34,
+            "sindicateContentImg":"https://i.imgur.com/bzJgKy9.jpeg" <---
+            ...
+        },
+```
+
+```
+PATCH {API_URL}/item/{itemId}
+```
+
+```
+{
+  ...
+  "sindicateContentImg":"https://i.imgur.com/bzJgKy9.jpeg"
+}
+```
+
+
+
+La idea es usar el contenido sindicado que genera la marca para agregar aun mas valor aprovechando la imagen generada por las marcas y mejorar el brandeo producto por producto. 
+
+[adjunto]

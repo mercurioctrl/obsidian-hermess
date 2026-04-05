@@ -1,0 +1,36 @@
+---
+jira_key: "COB-215"
+aliases: ["COB-215"]
+summary: "API - Refactor - Listar cheques"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2022-10-28 14:56"
+updated: "2022-11-01 09:04"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-215"
+---
+
+# COB-215: API - Refactor - Listar cheques
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-10-28 14:56 |
+| Actualizado | 2022-11-01 09:04 |
+| Etiquetas | ninguna |
+| Jira | [COB-215](https://bluinc.atlassian.net/browse/COB-215) |
+
+## Relaciones
+
+- **Padre:** [[COB-183]] Feat - Listar cheques
+
+## Descripcion
+
+Se debe refactorizar [link](https://lioteam.atlassian.net/browse/COB-185) para mostrar una fila que indique el ultimo movimiento

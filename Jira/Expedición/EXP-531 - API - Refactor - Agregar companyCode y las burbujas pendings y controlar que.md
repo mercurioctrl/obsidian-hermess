@@ -1,0 +1,92 @@
+---
+jira_key: "EXP-531"
+aliases: ["EXP-531"]
+summary: "API - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas"
+status: "Ready for QA"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2026-03-27 09:11"
+updated: "2026-03-30 11:31"
+labels: ["esperandoDependencia"]
+jira_url: "https://bluinc.atlassian.net/browse/EXP-531"
+---
+
+# EXP-531: API - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Ready for QA (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-03-27 09:11 |
+| Actualizado | 2026-03-30 11:31 |
+| Etiquetas | esperandoDependencia |
+| Jira | [EXP-531](https://bluinc.atlassian.net/browse/EXP-531) |
+
+## Relaciones
+
+- **Padre:** [[EXP-108]] Feat - Burbujas
+- **has action item:** [[EXP-532]] APP - Refactor - Agregar companyCode y las burbujas pendings y controlar que quede alineado con las cantidades de las pestañas
+- **is cloned by:** [[EXP-536]] API - Review - Agregar companyCode y las burbujas pendings -> Diferencias entre los pendientes y listados
+
+## Descripcion
+
+Como usuario del sistema de expedición, quiero que las burbujas de pendientes reflejen exactamente la misma cantidad que el listado correspondiente filtrado por empresa, para que los contadores sean confiables y no muestren datos de otras compañías.
+
+## Endpoint existente a extender
+
+```
+GET /v1/pendings
+```
+
+Hoy retorna 5 contadores globales (sin filtrar por empresa). Se agrega el query param opcional `companyCode` para que cada contador aplique el mismo filtro que su listado correspondiente.
+
+## Request de ejemplo
+
+```
+GET /v1/pendings?companyCode=4
+​
+Authorization: Bearer {token}
+```
+
+## Response esperada
+
+Sin cambios en la estructura, solo los valores reflejan ahora el filtro por empresa:
+
+```
+{
+  "passes": 3,
+  "pickUp": 12,
+  "shipments": 47,
+  "items": 8,
+  "providersOrders": 5
+}
+```
+
+---
+
+## Criterios de aceptación
+
+- `GET /v1/pendings` sin `companyCode` sigue funcionando igual que hoy (backwards compatible)
+
+
+- `GET /v1/pendings?companyCode=4` retorna el mismo número que el listado de pickUp filtrado por `companyCode=4`
+
+
+- `GET /v1/pendings?companyCode=4` retorna el mismo número que el listado de shipments filtrado por `companyCode=4`
+
+
+- `GET /v1/pendings?companyCode=4` retorna el mismo número que el listado de providersOrders filtrado por `companyCode=4`
+
+
+- El contador `passes` queda documentado si `passesHeader` no soporta filtro por empresa
+
+
+- El contador `items` queda documentado si `stocksControl`/`articulo` no soporta filtro por empresa
+
+
+- No se rompen otros endpoints existentes

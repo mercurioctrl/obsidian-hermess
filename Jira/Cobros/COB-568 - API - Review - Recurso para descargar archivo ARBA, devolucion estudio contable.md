@@ -1,0 +1,51 @@
+---
+jira_key: "COB-568"
+aliases: ["COB-568"]
+summary: "API - Review - Recurso para descargar archivo ARBA, devolucion estudio contable"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-06-11 09:40"
+updated: "2025-07-07 11:08"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-568"
+---
+
+# COB-568: API - Review - Recurso para descargar archivo ARBA, devolucion estudio contable
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-06-11 09:40 |
+| Actualizado | 2025-07-07 11:08 |
+| Etiquetas | ninguna |
+| Jira | [COB-568](https://bluinc.atlassian.net/browse/COB-568) |
+
+## Relaciones
+
+- **Padre:** [[COB-559]] Listar y descargar percepciones
+- **relates to:** [[COB-560]] API - Feat - Recurso para listar y descargar percepciones ARBA (parte 1)
+
+## Descripcion
+
+Según lo reportado parece que les devolvió el archivo, cuando terminamos de ver CABA lo miramos juntos
+
+```
+Hola…
+
+Salio un error cuando cargue el txt… dice que la longitud de línea es incorrecto en todas. Te adjunto el repore.
+
+ Saludos,
+
+Flor
+```
+
+ 
+
+[adjunto]

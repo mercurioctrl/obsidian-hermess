@@ -1,0 +1,41 @@
+---
+jira_key: "COM-126"
+aliases: ["COM-126"]
+summary: "APP - Feat - Editar / Crear impuesto"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-07-02 08:51"
+updated: "2024-07-05 10:05"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-126"
+---
+
+# COM-126: APP - Feat - Editar / Crear impuesto
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-07-02 08:51 |
+| Actualizado | 2024-07-05 10:05 |
+| Etiquetas | ninguna |
+| Jira | [COM-126](https://bluinc.atlassian.net/browse/COM-126) |
+
+## Relaciones
+
+- **Padre:** [[COM-98]] Repositorio de impuestos por posicionar arancelaria
+- **is blocked by:** [[COM-125]] API - Feat - Editar/Crear Impuesto
+
+## Descripcion
+
+Agregaremos a la sección impuestos un accionable que despliegue un modal para poder crear un nuevo impuesto.
+
+Adicionalmente agregaremos la posibilidad de editar los impuestos ya creados. 
+
+Para esto no basaremos en la historia [link](https://lioteam.atlassian.net/browse/COM-125)

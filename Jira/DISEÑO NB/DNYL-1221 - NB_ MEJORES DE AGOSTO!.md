@@ -1,0 +1,62 @@
+---
+jira_key: "DNYL-1221"
+aliases: ["DNYL-1221"]
+summary: "NB_ MEJORES DE AGOSTO!"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-09-03 11:17"
+updated: "2025-09-18 09:52"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1221"
+---
+
+# DNYL-1221: NB_ MEJORES DE AGOSTO!
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-09-03 11:17 |
+| Actualizado | 2025-09-18 09:52 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1221](https://bluinc.atlassian.net/browse/DNYL-1221) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+FORMATO NB TRAVEL. 
+
+¡LOS MEJORES DE AGOSTO! 
+
+ARMY TECHNOLOGIES SA	
+
+SEGAL GABRIEL ALEJANDRO	
+
+GRUPO MAXIMUS S.R.L.	
+
+COMPUFAN SRL
+
+GRUPO GALMES S.R.L.	
+
+GHERTNER SEBASTIAN	
+
+MARSRO GAMING S.R.L
+
+ARENA ALEJANDRO PABLO
+
+NG TECHNOLOGIES S.R.L.
+
+FEDERICI AGUSTIN
+
+¡Proximamente les estaremos enviando el premio! 
+
+Sigan asi el viaje está cada vez mas cerca!

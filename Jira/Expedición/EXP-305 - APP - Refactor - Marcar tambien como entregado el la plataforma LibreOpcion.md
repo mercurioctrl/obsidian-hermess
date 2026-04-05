@@ -1,0 +1,44 @@
+---
+jira_key: "EXP-305"
+aliases: ["EXP-305"]
+summary: "APP - Refactor - Marcar tambien como entregado el la plataforma LibreOpcion"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-06-06 14:31"
+updated: "2023-06-23 08:34"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-305"
+---
+
+# EXP-305: APP - Refactor - Marcar tambien como entregado el la plataforma LibreOpcion
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-06-06 14:31 |
+| Actualizado | 2023-06-23 08:34 |
+| Etiquetas | ninguna |
+| Jira | [EXP-305](https://bluinc.atlassian.net/browse/EXP-305) |
+
+## Relaciones
+
+- **Padre:** [[EXP-258]] Feat - Autorizar Entrega mediante tarjeta de autorizacion
+
+## Descripcion
+
+Cuando se realiza la accion de entregar mercaderia introduciendo la tarjeta, debe marcarse tambien en libre opcion como entregado, que esta en otra tabla.
+
+Para esto, una vez que se realizo correctamente para NB, nos fijamos si es un pedido de libre opción y marcamos la columna “entregado” en 1 para la siguiente consulta.
+
+```
+SELECT entregado FROM [LO].[dbo].[pedidosCabeceraVendedor] A
+LEFT JOIN NewBytes_DBF.dbo.pedclit B ON A.pedclitID = B.cnumped
+WHERE B.cnumped = ? and B.cnumsuc = ?
+```

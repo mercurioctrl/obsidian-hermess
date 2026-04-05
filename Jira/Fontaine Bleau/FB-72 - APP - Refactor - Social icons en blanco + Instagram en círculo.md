@@ -1,0 +1,41 @@
+---
+jira_key: "FB-72"
+aliases: ["FB-72"]
+summary: "APP - Refactor - Social icons en blanco + Instagram en círculo"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-09-22 13:11"
+updated: "2025-10-27 06:47"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-72"
+---
+
+# FB-72: APP - Refactor - Social icons en blanco + Instagram en círculo
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-09-22 13:11 |
+| Actualizado | 2025-10-27 06:47 |
+| Etiquetas | ninguna |
+| Jira | [FB-72](https://bluinc.atlassian.net/browse/FB-72) |
+
+## Relaciones
+
+- **Padre:** [[FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
+
+## Descripcion
+
+Necesitamos unificar estilo: **todos los íconos en blanco** y **el de Instagram dentro de un círculo** (como la referencia adjunta).
+
+## 
+
+[adjunto]
+[adjunto]

@@ -1,0 +1,44 @@
+---
+jira_key: "LIO-146"
+aliases: ["LIO-146"]
+summary: "Research - Optimización SEO"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Lowest"
+assignee: "Guillermo Avila"
+reporter: "Catriel Mercurio"
+created: "2024-11-27 10:16"
+updated: "2026-02-25 11:20"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-146"
+---
+
+# LIO-146: Research - Optimización SEO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Lowest |
+| Asignado | Guillermo Avila |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-11-27 10:16 |
+| Actualizado | 2026-02-25 11:20 |
+| Etiquetas | ninguna |
+| Jira | [LIO-146](https://bluinc.atlassian.net/browse/LIO-146) |
+
+## Relaciones
+
+- **Padre:** [[LIO-145]] Google Search Console
+
+## Descripcion
+
+Se buscaran problemáticas en los siguientes apartados para sugerir estrategias de mejora a los desarrolladores
+
+- **Detectar palabras clave relevantes:** Identifica qué términos de búsqueda usan los usuarios para encontrar tu sitio.
+
+
+- **Mejorar la experiencia en dispositivos móviles:** Informa sobre problemas de usabilidad móvil, como botones pequeños o contenido no ajustado a la pantalla.
+
+
+- **Evaluar velocidad y Core Web Vitals:** Ofrece métricas relacionadas con la velocidad de carga y la experiencia del usuario.

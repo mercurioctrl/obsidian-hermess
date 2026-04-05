@@ -1,0 +1,40 @@
+---
+jira_key: "EXP-433"
+aliases: ["EXP-433"]
+summary: "API - Refactor - Conectar expedicion a postventa"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Ezequiel manzano"
+created: "2024-08-19 15:42"
+updated: "2024-08-27 02:59"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-433"
+---
+
+# EXP-433: API - Refactor - Conectar expedicion a postventa
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Ezequiel manzano |
+| Creado | 2024-08-19 15:42 |
+| Actualizado | 2024-08-27 02:59 |
+| Etiquetas | ninguna |
+| Jira | [EXP-433](https://bluinc.atlassian.net/browse/EXP-433) |
+
+## Relaciones
+
+- **Padre:** [[EXP-430]] Refactorizar pases
+
+## Descripcion
+
+Vamos a centralizar toda la operacion sobre la api de postventa para evitar codigo similar duplicado.
+
+
+
+PAra esto utilziaremos los recusos de postventa haciedno una conexion interapi.

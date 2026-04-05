@@ -1,0 +1,36 @@
+---
+jira_key: "EXP-446"
+aliases: ["EXP-446"]
+summary: "APP - Refactor - habilitar el input para editar las medidas de la pestaña de inventario aunque ya existan las medidas"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2024-09-16 17:28"
+updated: "2024-09-24 02:44"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-446"
+---
+
+# EXP-446: APP - Refactor - habilitar el input para editar las medidas de la pestaña de inventario aunque ya existan las medidas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2024-09-16 17:28 |
+| Actualizado | 2024-09-24 02:44 |
+| Etiquetas | ninguna |
+| Jira | [EXP-446](https://bluinc.atlassian.net/browse/EXP-446) |
+
+## Relaciones
+
+- **Padre:** [[EXP-395]] Control de stock
+
+## Descripcion
+
+*Sin descripcion*

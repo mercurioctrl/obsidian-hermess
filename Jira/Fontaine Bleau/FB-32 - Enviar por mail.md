@@ -1,0 +1,36 @@
+---
+jira_key: "FB-32"
+aliases: ["FB-32"]
+summary: "Enviar por mail"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Alejandra Guidobono"
+created: "2025-05-29 09:13"
+updated: "2025-05-30 09:48"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-32"
+---
+
+# FB-32: Enviar por mail
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-05-29 09:13 |
+| Actualizado | 2025-05-30 09:48 |
+| Etiquetas | ninguna |
+| Jira | [FB-32](https://bluinc.atlassian.net/browse/FB-32) |
+
+## Relaciones
+
+- **Padre:** [[FB-30]] Cerco Perimetral Ugarte
+
+## Descripcion
+
+*Sin descripcion*

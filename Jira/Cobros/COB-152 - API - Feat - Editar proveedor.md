@@ -1,0 +1,100 @@
+---
+jira_key: "COB-152"
+aliases: ["COB-152"]
+summary: "API - Feat - Editar proveedor"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2022-10-11 10:03"
+updated: "2022-10-13 14:24"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-152"
+---
+
+# COB-152: API - Feat - Editar proveedor
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-10-11 10:03 |
+| Actualizado | 2022-10-13 14:24 |
+| Etiquetas | ninguna |
+| Jira | [COB-152](https://bluinc.atlassian.net/browse/COB-152) |
+
+## Relaciones
+
+- **Padre:** [[COB-150]] Feat - Proveedores
+
+## Descripcion
+
+```
+PATCH {{API_URL}}/v1/providers
+```
+
+o
+
+```
+PATCH {{API_URL}}/v1/providers/edit (o similar)
+```
+
+Se deben editar (solo cuando aparecen en el payload):
+
+- Nombre
+
+
+- Razon Social
+
+
+- Direccion
+
+
+- Contacto
+
+
+- Saldo inicial
+
+
+- Si perscibe o no Iva
+
+
+- El porcentaje de iva percibe
+
+
+- Ingresos brutos
+
+
+- Correo
+
+
+- Provincia
+
+
+- Pais
+
+
+
+Payload:
+
+```
+  {
+    "id": 14646,
+    "name": "TRENDSETTERS - DA PALACE SRL",
+    "businessName": "TRENDSETTERS - DA PALACE SRL",
+    "Addres": "CARLOS TEJEDOR 890",
+    "countryId": 7,
+    "provicenId": 2,
+    "localitieId": 14233,
+    "Contact": "",
+    "SaldoInicialCTA": null,
+    "AgentePercIVA": 0,
+    "ivaPercepction": false,
+    "correo": "",
+    "aliquotIbb": 1
+  },
+```

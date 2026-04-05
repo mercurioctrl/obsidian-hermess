@@ -1,0 +1,44 @@
+---
+jira_key: "DNYL-1231"
+aliases: ["DNYL-1231"]
+summary: "NB_ ADATA PUNTA CANA :D"
+status: "TAREAS PARA VOLCAR INFO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sofía Melograna"
+reporter: "Eloy Passarella"
+created: "2025-09-12 11:30"
+updated: "2025-09-15 17:23"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1231"
+---
+
+# DNYL-1231: NB_ ADATA PUNTA CANA :D
+
+| Campo | Valor |
+|-------|-------|
+| Estado | TAREAS PARA VOLCAR INFO (Por hacer) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sofía Melograna |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-09-12 11:30 |
+| Actualizado | 2025-09-15 17:23 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1231](https://bluinc.atlassian.net/browse/DNYL-1231) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola marce! cómo va? 
+
+te paso la campaña de Adata, ponele el logo de NB.. 
+
+Armamos un news que tenga ese flyer y además diga lo de NB TRAVEL. titulo: 
+
+New Bytes + ADATA = Doble chance de ganar
+
+Punta Cana y Riviera Maya

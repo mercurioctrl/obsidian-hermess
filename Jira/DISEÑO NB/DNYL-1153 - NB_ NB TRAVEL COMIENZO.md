@@ -1,0 +1,59 @@
+---
+jira_key: "DNYL-1153"
+aliases: ["DNYL-1153"]
+summary: "NB_ NB TRAVEL COMIENZO"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-07-28 09:30"
+updated: "2025-08-25 15:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1153"
+---
+
+# DNYL-1153: NB_ NB TRAVEL COMIENZO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-28 09:30 |
+| Actualizado | 2025-08-25 15:07 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1153](https://bluinc.atlassian.net/browse/DNYL-1153) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Formato Feed + Story. (si es mucha info armemos formato carrusel) 
+
+
+Logo NB TRAVEL segunda edición
+
+UN NUEVO VIAJE TE ESPERA
+¡TUS COMPRAS SUMAN MILLAS PARA VIAJAR CON NOSOTROS!
+
+DEL 1/08 al 31/10 inclusive las compras de las marcas participantes suman millas. 
+
+Por cada 150 dólares obtendrás 10 millas.
+
+Sponsors
+ADATA - AMD - ASUS - GENIUS - GIGABYTE - NETAC - PATRIOT - TRUST
+
+--
+BANNER HOME: 
+NB TRAVEL Segunda Edición
+Titulo: UN NUEVO VIAJE TE ESPERA
+¡TUS COMPRAS SUMAN MILLAS PARA VIAJAR CON NOSOTROS!
+del 1/08 al 31/10.
+
+
+Sponsors.

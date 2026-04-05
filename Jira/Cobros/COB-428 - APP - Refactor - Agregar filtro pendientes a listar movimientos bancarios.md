@@ -1,0 +1,36 @@
+---
+jira_key: "COB-428"
+aliases: ["COB-428"]
+summary: "APP - Refactor - Agregar filtro pendientes a listar movimientos bancarios"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Guillermo Avila"
+reporter: "Catriel Mercurio"
+created: "2023-04-28 09:03"
+updated: "2024-04-16 12:17"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-428"
+---
+
+# COB-428: APP - Refactor - Agregar filtro pendientes a listar movimientos bancarios
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Guillermo Avila |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-04-28 09:03 |
+| Actualizado | 2024-04-16 12:17 |
+| Etiquetas | ninguna |
+| Jira | [COB-428](https://bluinc.atlassian.net/browse/COB-428) |
+
+## Relaciones
+
+- **Padre:** [[COB-218]] Feat - Movimientos bancarios
+
+## Descripcion
+
+*Sin descripcion*

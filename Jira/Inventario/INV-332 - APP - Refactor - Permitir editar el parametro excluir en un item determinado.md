@@ -1,0 +1,40 @@
+---
+jira_key: "INV-332"
+aliases: ["INV-332"]
+summary: "APP - Refactor - Permitir editar el parametro \"excluir\" en un item determinado"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2026-01-28 08:44"
+updated: "2026-01-29 14:17"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-332"
+---
+
+# INV-332: APP - Refactor - Permitir editar el parametro "excluir" en un item determinado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-01-28 08:44 |
+| Actualizado | 2026-01-29 14:17 |
+| Etiquetas | ninguna |
+| Jira | [INV-332](https://bluinc.atlassian.net/browse/INV-332) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+- **action item from:** [[INV-333]] API - Refactor - Agregar el parámetro "excluir" al repositorio de items 
+- **action item from:** [[INV-331]] API - Refactor - Permitir editar el parametro "excluir" en un item determinado
+
+## Descripcion
+
+Agregaremos el parámetro para su edición con un checkbox. El valor inicial del parámetro proviene de [link](https://bluinc.atlassian.net/browse/INV-333)  y se puede editar con el parámetro [link](https://bluinc.atlassian.net/browse/INV-331) 
+
+[adjunto]

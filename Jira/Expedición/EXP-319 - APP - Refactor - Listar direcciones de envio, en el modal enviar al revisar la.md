@@ -1,0 +1,50 @@
+---
+jira_key: "EXP-319"
+aliases: ["EXP-319"]
+summary: "APP - Refactor - Listar direcciones de envio, en el modal enviar al revisar la direccion agregaremos order y branch a la consulta"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-06-23 13:58"
+updated: "2023-07-17 06:28"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-319"
+---
+
+# EXP-319: APP - Refactor - Listar direcciones de envio, en el modal enviar al revisar la direccion agregaremos order y branch a la consulta
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-06-23 13:58 |
+| Actualizado | 2023-07-17 06:28 |
+| Etiquetas | ninguna |
+| Jira | [EXP-319](https://bluinc.atlassian.net/browse/EXP-319) |
+
+## Relaciones
+
+- **Padre:** [[EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
+- **is blocked by:** [[EXP-318]] API - Refactor - Listar direcciones de envio por cliente y por pedido especifico
+
+## Descripcion
+
+En el modal 
+
+[adjunto]
+Al momento de realizar la peticion 
+
+```
+{{API_URL}}/v1/shipments/getAddress?clientId=25955
+```
+
+se debe de realizar de la misma manera, pero agregando `order` y `branch`
+
+```
+{{API_URL}}/v1/shipments/getAddress?clientId=25955&branch=0002&order=10318145
+```

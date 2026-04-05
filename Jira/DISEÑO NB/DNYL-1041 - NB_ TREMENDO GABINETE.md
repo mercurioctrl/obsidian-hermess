@@ -1,0 +1,40 @@
+---
+jira_key: "DNYL-1041"
+aliases: ["DNYL-1041"]
+summary: "NB_ TREMENDO GABINETE"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-03-27 15:22"
+updated: "2025-04-24 15:37"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1041"
+---
+
+# DNYL-1041: NB_ TREMENDO GABINETE
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-03-27 15:22 |
+| Actualizado | 2025-04-24 15:37 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1041](https://bluinc.atlassian.net/browse/DNYL-1041) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+GABINETES ASUS DISPONIBLES 
+
+(trataría de adaptar el diseño adentro de lo que estamos haciendo en NB) 
+
+Se podrá?

@@ -1,0 +1,95 @@
+---
+jira_key: "EXP-497"
+aliases: ["EXP-497"]
+summary: "API - Refactor - Impedir despacho cuando tiene alguna intervención técnica, pero no tiene la intervención técnica completa"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Low"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2025-05-22 08:25"
+updated: "2025-05-29 10:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-497"
+---
+
+# EXP-497: API - Refactor - Impedir despacho cuando tiene alguna intervención técnica, pero no tiene la intervención técnica completa
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Low |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-05-22 08:25 |
+| Actualizado | 2025-05-29 10:30 |
+| Etiquetas | ninguna |
+| Jira | [EXP-497](https://bluinc.atlassian.net/browse/EXP-497) |
+
+## Relaciones
+
+- **Padre:** [[EXP-493]] Listar envios
+- **has action item:** [[EXP-498]] APP - Refactor - Reflejar nueva notificación al momento de despachar/finalizar una orden en expedición
+
+## Descripcion
+
+Antes de permitir el despacho de un pedido, el sistema debe validar si requiere una intervención técnica (ensamblado, BIOS o instalación de SO). En caso afirmativo, debe comprobar que la intervención técnica se haya completado (fecha en `tiSucces`). Si no está completada, debe bloquear el despacho.
+
+```
+PATCH /v1/orders/{pedido}/dispatch
+```
+
+```
+{
+"authorizeUser":"...",
+"secretKey":false
+}
+```
+
+### Criterios de aceptación:
+
+- Si alguno de los siguientes flags del pedido está en `true`:
+
+- `assemblePc`
+
+
+- `updateBios`
+
+
+- `installOS`
+
+
+
+
+- Entonces se debe verificar que el campo `tiSucces` no sea `null` ni esté vacío. Este campo representa la fecha de finalización del trabajo técnico.
+
+
+- Si `tiSucces` es `null` o vacío, **NO** se debe permitir el despacho del pedido.
+
+
+- En ese caso, devolver un mensaje de error que indique que la intervención técnica aún está pendiente.
+
+
+- Si `tiSucces` tiene una fecha válida, continuar con el flujo habitual de despacho.
+
+
+
+**Caso exitoso (técnica ya realizada): **`200 OK `
+
+```
+{   
+"message": "Pedido despachado correctamente.",   
+...
+}
+```
+
+**Caso con intervención técnica pendiente: **409
+
+```
+{
+  ...
+  "message": "No se puede despachar el pedido hasta que el departamento técnico complete la intervención técnica."
+}
+
+```

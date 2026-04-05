@@ -1,0 +1,48 @@
+---
+jira_key: "DNYL-1080"
+aliases: ["DNYL-1080"]
+summary: "NB_ INCENTIVO NETAC"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-05-08 13:54"
+updated: "2025-05-26 17:56"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1080"
+---
+
+# DNYL-1080: NB_ INCENTIVO NETAC
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-05-08 13:54 |
+| Actualizado | 2025-05-26 17:56 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1080](https://bluinc.atlassian.net/browse/DNYL-1080) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+¡NETAC PARA TODOS! 
+
+Objetivo Capilaridad.
+
+FECHA: Mayo 12 al 23
+
+Por cada cliente que compre USD200+IVA obtendrás USD 5
+
+Si conseguis que la orden sea de USD400+IVA ganarás USD12
+
+El vendedor que más clientes Consigue ganará USD100
+
+Buenas ventas!

@@ -1,0 +1,53 @@
+---
+jira_key: "EXP-412"
+aliases: ["EXP-412"]
+summary: "APP - Refactor - Añadir máscara de entrada al nombre del despacho"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Guillermo Avila"
+created: "2024-04-25 14:06"
+updated: "2024-06-07 19:23"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-412"
+---
+
+# EXP-412: APP - Refactor - Añadir máscara de entrada al nombre del despacho
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-04-25 14:06 |
+| Actualizado | 2024-06-07 19:23 |
+| Etiquetas | ninguna |
+| Jira | [EXP-412](https://bluinc.atlassian.net/browse/EXP-412) |
+
+## Relaciones
+
+- **Padre:** [[EXP-249]] Feat - Vincular despacho / Editar despacho
+
+## Descripcion
+
+Debido a que en ocasiones se ingresa erróneamente la ubicación del despacho en lugar del nombre de éste, surge la necesidad de añadir una máscara la cual permita guardar el nombre del despacho correctamente.
+
+El nombre de despacho está compuesto por 20 caracteres como los ejemplos siguientes:
+
+- `23 001 IC04 077633 S`
+
+
+- `24 073 IC04 038854 H`
+
+
+
+
+
+```
+POST {API_URL}/v1/linkDispatch/
+```
+
+[adjunto]

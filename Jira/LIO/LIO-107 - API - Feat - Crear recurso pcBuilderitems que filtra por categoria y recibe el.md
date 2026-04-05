@@ -1,0 +1,36 @@
+---
+jira_key: "LIO-107"
+aliases: ["LIO-107"]
+summary: "API - Feat - Crear recurso pcBuilder/items que filtra por categoria y recibe el payload de productos seleccionados"
+status: "Backlog"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-10-18 08:10"
+updated: "2024-10-18 08:23"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-107"
+---
+
+# LIO-107: API - Feat - Crear recurso pcBuilder/items que filtra por categoria y recibe el payload de productos seleccionados
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Backlog (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-10-18 08:10 |
+| Actualizado | 2024-10-18 08:23 |
+| Etiquetas | ninguna |
+| Jira | [LIO-107](https://bluinc.atlassian.net/browse/LIO-107) |
+
+## Relaciones
+
+- **Padre:** [[LIO-71]] Armador de equipos
+
+## Descripcion
+
+Segun lo conversado se debe agregar el recurso y lugo describirlo

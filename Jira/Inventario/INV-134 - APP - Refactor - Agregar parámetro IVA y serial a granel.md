@@ -1,0 +1,48 @@
+---
+jira_key: "INV-134"
+aliases: ["INV-134"]
+summary: "APP - Refactor - Agregar parámetro IVA y serial a granel"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-09-13 16:36"
+updated: "2024-10-01 18:44"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-134"
+---
+
+# INV-134: APP - Refactor - Agregar parámetro IVA y serial a granel
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-09-13 16:36 |
+| Actualizado | 2024-10-01 18:44 |
+| Etiquetas | ninguna |
+| Jira | [INV-134](https://bluinc.atlassian.net/browse/INV-134) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+- **is blocked by:** [[INV-133]] API - Refactor - Agregar parámetro IVA y serial a granel
+- **is blocked by:** [[INV-141]] APP - Agregar parámetro IVA y serial a granel - No es posible editar la serialización
+
+## Descripcion
+
+Según lo realizado en la tarea [link](https://lioteam.atlassian.net/browse/INV-133)  agregaremos para poder hacer editables/crear en los productos los nuevos parámetros `notSerializable`, `iva`
+
+Ninguno de los parámetros puede estar vació 
+
+En el caso del **IVA** agregaremos un SELECT, que solo te deje elegir entre 10.5 y 21 por el momento.
+
+En el caso de **notSerializable **enviaremos un 1 o un 0 según corresponda, y en el front seria un checkbox
+
+Cuando lo creamos debe estar en el formulario general.
+
+Cuando lo editamos, debe estar en el “lapiz de edición”

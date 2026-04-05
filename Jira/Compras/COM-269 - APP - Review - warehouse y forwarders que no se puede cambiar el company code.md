@@ -1,0 +1,36 @@
+---
+jira_key: "COM-269"
+aliases: ["COM-269"]
+summary: "APP - Review - warehouse y forwarders que no se puede cambiar el company code"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2026-01-09 12:22"
+updated: "2026-01-22 11:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-269"
+---
+
+# COM-269: APP - Review - warehouse y forwarders que no se puede cambiar el company code
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2026-01-09 12:22 |
+| Actualizado | 2026-01-22 11:29 |
+| Etiquetas | ninguna |
+| Jira | [COM-269](https://bluinc.atlassian.net/browse/COM-269) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

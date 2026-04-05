@@ -1,0 +1,38 @@
+---
+jira_key: "FB-84"
+aliases: ["FB-84"]
+summary: "FB: Noviembre Triada 5"
+status: "Listo"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Alejandra Guidobono"
+created: "2025-11-17 09:09"
+updated: "2026-01-16 09:59"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-84"
+---
+
+# FB-84: FB: Noviembre Triada 5
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-11-17 09:09 |
+| Actualizado | 2026-01-16 09:59 |
+| Etiquetas | ninguna |
+| Jira | [FB-84](https://bluinc.atlassian.net/browse/FB-84) |
+
+## Relaciones
+
+- **Subtarea:** [[FB-85]] 1.FB: Triada 5 Diseño LOCAL
+- **Subtarea:** [[FB-86]] 4. FB: Triada 5 Copys LOCAL
+- **Subtarea:** [[FB-87]] 3. FB: Triada 5 Programar Post LOCAL
+
+## Descripcion
+
+*Sin descripcion*

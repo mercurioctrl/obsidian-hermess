@@ -1,0 +1,37 @@
+---
+jira_key: "EXP-105"
+aliases: ["EXP-105"]
+summary: "APP - Feat - Mostrar trackingNumbers asociados"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-12-16 14:12"
+updated: "2023-05-29 06:34"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-105"
+---
+
+# EXP-105: APP - Feat - Mostrar trackingNumbers asociados
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-12-16 14:12 |
+| Actualizado | 2023-05-29 06:34 |
+| Etiquetas | ninguna |
+| Jira | [EXP-105](https://bluinc.atlassian.net/browse/EXP-105) |
+
+## Relaciones
+
+- **Padre:** [[EXP-12]] Feat - Listar pedidos para envio
+- **is blocked by:** [[EXP-104]] API - Feat - Ver tracking numbers de un pedido
+
+## Descripcion
+
+Usando el recurso [link](https://lioteam.atlassian.net/browse/EXP-104)se debe abrir un modal para mostrar todos los números de seguimientos asociados a un pedido.

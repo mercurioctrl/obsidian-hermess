@@ -1,0 +1,36 @@
+---
+jira_key: "FB-39"
+aliases: ["FB-39"]
+summary: "Realizar post  1 en Instagram, Linkedin y Facebook"
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Alejandra Guidobono"
+reporter: "Alejandra Guidobono"
+created: "2025-06-12 10:54"
+updated: "2025-07-17 21:58"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-39"
+---
+
+# FB-39: Realizar post  1 en Instagram, Linkedin y Facebook
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Alejandra Guidobono |
+| Reportado por | Alejandra Guidobono |
+| Creado | 2025-06-12 10:54 |
+| Actualizado | 2025-07-17 21:58 |
+| Etiquetas | ninguna |
+| Jira | [FB-39](https://bluinc.atlassian.net/browse/FB-39) |
+
+## Relaciones
+
+- **Padre:** [[FB-27]] Feed Social Media
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,364 @@
+---
+jira_key: "INV-249"
+aliases: ["INV-249"]
+summary: "API - MVP - Feat- Agregar/Editar/Eliminar repositorio para sellin sellout con CRUD "
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Marbe Moreno"
+created: "2025-10-17 11:23"
+updated: "2025-12-02 03:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-249"
+---
+
+# INV-249: API - MVP - Feat- Agregar/Editar/Eliminar repositorio para sellin sellout con CRUD 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-10-17 11:23 |
+| Actualizado | 2025-12-02 03:29 |
+| Etiquetas | ninguna |
+| Jira | [INV-249](https://bluinc.atlassian.net/browse/INV-249) |
+
+## Relaciones
+
+- **Padre:** [[INV-250]] Repositorio de Sell In Sell Out
+- **has action item:** [[INV-251]] APP - MVP - Feat- Agregar repositorio para sellin sellout con CRUD 
+
+## Descripcion
+
+Se deberá crear un repositorio en la API para administrar los descuentos de tipo **sell-in / sell-out** asociados a productos y acuerdos con proveedores.
+
+La idea es hacer un registro de este tipo de descuentos, que aplican al costo de un producto por tiempo determinado, hasta alcanzar a stock o lo que pase primero. Este repositorio solo tiene el registro funcional de las acciones de descuento que se van dando de alta, pero la tarea de realizar cambios sobre los costos y expirar la acción, se darán después en un syncUp.
+
+Estos descuentos se aplican **por producto y depósito** y se almacenan en la estructura de artículos existente.
+
+---
+
+### Modelo de negocio
+
+- El **costo original** del producto se toma de
+`[NewBytes_DBF].[dbo].[articulo].ncosteprom`
+y debe quedar **guardado como snapshot** dentro del registro de descuento.
+
+
+- La información de los descuentos se guardará en
+`[NewBytes_DBF].[dbo].[articulo].sellDiscount`.
+
+
+- La clave de selección de los productos para este repositorio será:
+
+- `itemId`
+
+
+- `stockWarehouseId`
+
+
+
+
+
+Características de cada descuento:
+
+- Puede ser **por porcentaje** (`percentageDiscount`) o **por monto fijo** (`amountDiscount`), pero **solo uno puede tener valor** (el otro debe ser `null` o no existir).
+
+
+- Debe guardar:
+
+- `originalCost` (copia de `ncosteprom` al momento de crear el descuento).
+
+
+- Opcionalmente una **fecha de finalización** (`endDate`).
+
+
+- Opcionalmente una **cantidad máxima de stock** (`maxStockQty`) hasta la que se aplica.
+
+
+- Si bien `endDate` y `maxStockQty` son opcionales, como mínimo tiene que estar uno o tiene que estar el otro.
+
+
+
+
+- Tiene un flag booleano `paused`:
+
+- `paused = false` → el descuento está activo.
+
+
+- `paused = true` → el descuento está pausado y no debe usarse en cálculos.
+
+
+
+
+
+---
+
+### Endpoints a implementar
+
+#### 1) Listar descuentos (GET)
+
+```
+GET {API_URL}/sellDiscount?currentPage=1&itemsPerPage=500&companyCode=4&brandId=43&categoryId=3&between=05-11-2025_12-11-2025&search={itemId|string|sku}
+```
+
+**Parámetros soportados:**
+
+- `currentPage`
+
+
+- `itemsPerPage`
+
+
+- `companyCode`
+
+
+- `brandId` (opcional)
+
+
+- `categoryId` (opcional)
+
+
+- `between` (rango de fechas `dd-mm-YYYY_dd-mm-YYYY`, por ejemplo de creación o vigencia)
+
+
+- `search` (por `itemId`, `sku` o texto)
+
+
+
+**Respuesta (ejemplo simplificado):**
+
+```
+{
+  "currentPage": 1,
+  "itemsPerPage": 500,
+  "totalItems": 23,
+  "items": [
+    {
+      "id": 123,
+      "itemId": 4567,
+      "title": "PROCESADOR AMD (AM5) RYZEN 7 9800X3D",
+      "sku": "100-100001084WOF",
+      "stockWarehouseCode": "SAF",
+      "stockWarehouseId": 2,
+      "companyCode": 4,
+      "brandId": 43,
+      "categoryId": 3,
+      "originalCost": 1000.00,
+      "percentageDiscount": 10.0,
+      "amountDiscount": null,
+      "maxStockQty": 50,
+      "endDate": "2025-11-12T23:59:59",
+      "startDate": "2025-11-12T23:59:59",
+      "paused": false,
+      "createdAt": "2025-11-05T10:00:00",
+      "updatedAt": "2025-11-05T10:00:00"
+    }
+  ]
+}
+
+```
+
+---
+
+#### 2) Crear descuento (POST)
+
+```
+POST {API_URL}/sellDiscount
+```
+
+**Body (ejemplo):**
+
+```
+{
+  "itemId": 4567, <-- obligatorio
+  "stockWarehouseId": 2,  <-- obligatorio
+  "percentageDiscount": 10.0, <-- solo se permite si no viene amountDiscount
+  "amountDiscount": null,   <-- solo se permite si no viene percentageDiscount
+  "maxStockQty": 50,  <- Opcional si viene endDate
+  "endDate": "2025-11-12T23:59:59",  <- Opcional si viene maxStockQty
+  "startDate": "2025-11-12T23:59:59",  <- Fecha de iniciio
+  "paused": false
+}
+```
+
+**Reglas:**
+
+- El backend debe:
+
+- Resolver `originalCost` leyendo `[NewBytes_DBF].[dbo].[articulo].ncosteprom` para ese `itemId`y `stockWarehouseId`.
+
+
+- Persistir el registro en `[NewBytes_DBF].[dbo].[articulo].sellDiscount` asociado a `itemId` y `stockWarehouseId`.
+
+
+
+
+- Debe existir **exactamente uno** de:
+
+- `percentageDiscount` **o**
+
+
+- `amountDiscount`.
+
+
+
+
+
+**Respuesta (ejemplo):**
+
+```
+{
+  "success": true,
+  "id": 123,
+  "message": "Descuento sell-in/sell-out creado correctamente."
+}
+```
+
+---
+
+#### 3) Actualizar / pausar / editar descuento (PATCH)
+
+```
+PATCH {API_URL}/sellDiscount/{id}
+```
+
+Permite modificar parcialmente:
+
+- `paused` (pausar / reactivar).
+
+
+- `endDate`.
+
+
+- `maxStockQty`.
+
+
+- `percentageDiscount` / `amountDiscount` (respetando la regla de exclusividad).
+
+
+
+**Body (ejemplo):**
+
+```
+{
+  "paused": true,
+  "endDate": "2025-11-20T23:59:59",
+  "maxStockQty": 80,
+  "percentageDiscount": null,
+  "amountDiscount": 150.0
+}
+```
+
+---
+
+#### 4) Eliminar descuento (soft DELETE)
+
+```
+DELETE {API_URL}/sellDiscount/{id}
+```
+
+Elimina (o marca como eliminado) un descuento. No debe aparecer en los listados por defecto.
+
+**Respuesta (ejemplo):**
+
+```
+{
+  "success": true,
+  "message": "Descuento sell-in/sell-out eliminado correctamente."
+}
+```
+
+---
+
+### Detalles técnicos de persistencia
+
+- Tabla principal de artículos:
+`[NewBytes_DBF].[dbo].[articulo]`
+
+- Campo de costo original: `ncosteprom`
+
+
+- Campo donde se almacenarán los datos de descuentos: `sellDiscount`
+
+
+
+
+- La lógica del repositorio debe:
+
+- Leer `ncosteprom` al momento de crear el descuento y guardarlo como `originalCost` dentro del registro de descuento.
+
+
+- Asociar los descuentos a las claves `itemId` + `stockWarehouseId`.
+
+
+- Exponerlos vía los endpoints indicados.
+
+
+
+
+
+---
+
+### Criterios de aceptación
+
+- **Persistencia**
+
+- Al crear un descuento, el sistema lee `ncosteprom` y lo guarda como `originalCost` dentro del registro.
+
+
+- Los datos quedan almacenados en `[NewBytes_DBF].[dbo].[articulo].sellDiscount` asociados a `itemId` y `stockWarehouseId`.
+
+
+- No se crea ni actualiza ningún descuento con valores negativos en `percentageDiscount`, `amountDiscount` o `maxStockQty`.
+
+
+
+
+- **Regla de exclusividad**
+
+- El backend valida que solo uno de `percentageDiscount` / `amountDiscount` tenga valor distinto de `null`.
+
+
+- Si ambos vienen con valor o ambos vienen nulos, devuelve error de validación claro.
+
+
+- No se puede agregar otro descuento para un mismo `itemId` y `stockWarehouseId` en la mismo intervalo de fecha.
+
+
+
+
+- **GET /sellDiscount**
+
+- Devuelve resultados paginados y filtrados según `companyCode`, `brandId`, `categoryId`, `between` y `search`.
+
+
+- En cada ítem se incluyen `itemId`, `stockWarehouseId`, `originalCost`, descuentos, `maxStockQty`, `endDate`, `paused`, `createdAt`, `updatedAt`.
+
+
+
+
+- **POST /sellDiscount**
+
+- Crea correctamente el registro, resolviendo `originalCost` desde `ncosteprom` sin que el cliente tenga que enviarlo.
+
+
+
+
+- **PATCH /sellDiscount/{id}**
+
+- Permite pausar/reactivar (`paused`), ajustar límites (`endDate`, `maxStockQty`) y cambiar tipo/valor de descuento respetando reglas.
+
+
+
+
+- **DELETE /sellDiscount/{id}**
+
+- El descuento deja de ser devuelto por el listado estándar.
+
+
+- Si el `id` no existe, se devuelve un error tipo 404 o equivalente.

@@ -1,0 +1,44 @@
+---
+jira_key: "DNYL-1194"
+aliases: ["DNYL-1194"]
+summary: "NB_ NUEVOS ACELERADORES"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2025-08-14 16:28"
+updated: "2025-08-25 15:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1194"
+---
+
+# DNYL-1194: NB_ NUEVOS ACELERADORES
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-08-14 16:28 |
+| Actualizado | 2025-08-25 15:07 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1194](https://bluinc.atlassian.net/browse/DNYL-1194) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+- Patriot x 1.5 del 18 al 22 inclusive
+
+
+- Trust x 1.5  del 18 al 22 inclusive
+
+
+
+Frase; **¡Cada compra, una milla más cerca de la aventura! ✈️**
+Seguimos sumando, y vos también.

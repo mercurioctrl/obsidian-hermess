@@ -1,0 +1,40 @@
+---
+jira_key: "LIO-169"
+aliases: ["LIO-169"]
+summary: "APP - Refactor - Migrar el detalle de la ficha de Legacy a V4"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-12-30 13:56"
+updated: "2025-01-29 11:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/LIO-169"
+---
+
+# LIO-169: APP - Refactor - Migrar el detalle de la ficha de Legacy a V4
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-12-30 13:56 |
+| Actualizado | 2025-01-29 11:29 |
+| Etiquetas | ninguna |
+| Jira | [LIO-169](https://bluinc.atlassian.net/browse/LIO-169) |
+
+## Relaciones
+
+- **Padre:** [[LIO-119]] Inventario
+- **action item from:** [[LIO-120]] API - Refactor - Migrar el detalle de la ficha de Legacy a V4
+- **causes:** [[LIO-191]] APP - Fix - Arreglar que se pueda ver los videos de un item  porque se rompe la ficha
+
+## Descripcion
+
+Con el objetivo de migrar todos los recursos a v4 de a poco, se migraran todos los elementos que componen la ficha a partir del refactor [link](https://lioteam.atlassian.net/browse/LIO-120) 
+
+Adicionalmente se hará un “recuento” para ver que otros recursos e la “ficha del prodocuto” aun estan conectados a LEGACY

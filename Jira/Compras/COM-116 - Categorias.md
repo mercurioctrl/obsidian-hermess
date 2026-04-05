@@ -1,0 +1,36 @@
+---
+jira_key: "COM-116"
+aliases: ["COM-116"]
+summary: "Categorias"
+status: "Tareas por hacer"
+type: "Epic"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Catriel Mercurio"
+created: "2024-06-26 08:55"
+updated: "2024-06-28 15:13"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-116"
+---
+
+# COM-116: Categorias
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Epic |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-06-26 08:55 |
+| Actualizado | 2024-06-28 15:13 |
+| Etiquetas | ninguna |
+| Jira | [COM-116](https://bluinc.atlassian.net/browse/COM-116) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

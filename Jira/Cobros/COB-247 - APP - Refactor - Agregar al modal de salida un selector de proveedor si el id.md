@@ -1,0 +1,59 @@
+---
+jira_key: "COB-247"
+aliases: ["COB-247"]
+summary: "APP - Refactor - Agregar al modal de salida un selector de proveedor si el id del concepto es 3 o 35"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2022-12-05 14:28"
+updated: "2024-02-13 03:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-247"
+---
+
+# COB-247: APP - Refactor - Agregar al modal de salida un selector de proveedor si el id del concepto es 3 o 35
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-12-05 14:28 |
+| Actualizado | 2024-02-13 03:46 |
+| Etiquetas | ninguna |
+| Jira | [COB-247](https://bluinc.atlassian.net/browse/COB-247) |
+
+## Relaciones
+
+- **Padre:** [[COB-101]] Feat - Realizar salida de caja
+- **blocks:** [[COB-246]] API - Refactor - Alterar saldo proveedor, en caso de que el concepto sea un "pago de factura" o "pago proveedor"
+
+## Descripcion
+
+Basándonos en el repositorio de [link](https://lioteam.atlassian.net/browse/COB-68) agregaremos un selector “con matcheo” por string y numero de proveedor en los casos que el id sea `3` o sea `35`
+
+Adicionalmente debemos agregar el parámetros providerId, en consecuencia de ser seleccionado al objeto de la siguiente manera
+
+```
+[
+{
+  ammount: 250.33,
+  paymentMethodId:2,
+  outputConceptId: 3,
+  reference: "Este es un texto de referencia.",
+  currencyQuote: 140.5,
+  ---> providerId: 4  <---
+},
+{
+  ammount: 250.33,
+  paymentMethodId:2,
+  outputConceptId: 2,
+  reference: "Este es un texto de referencia.",
+  currencyQuote: 140.5
+}
+]
+```

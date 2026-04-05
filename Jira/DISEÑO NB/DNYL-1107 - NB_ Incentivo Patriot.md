@@ -1,0 +1,50 @@
+---
+jira_key: "DNYL-1107"
+aliases: ["DNYL-1107"]
+summary: "NB_ Incentivo Patriot"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-06-24 10:41"
+updated: "2025-06-25 10:00"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1107"
+---
+
+# DNYL-1107: NB_ Incentivo Patriot
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-06-24 10:41 |
+| Actualizado | 2025-06-25 10:00 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1107](https://bluinc.atlassian.net/browse/DNYL-1107) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! cómo va? 
+
+Tenemos que armar una imagen para comunicar el incentivo de Patriot. 
+
+¡Patriot para todos! 
+
+Cada venta de USD 500+ IVA te sumará USD10 a tu cuenta.
+
+Cuantos más clientes compren PATRIOT Más ganas!
+
+Habrá un premio de USD 100 para el que más clientes consiga. 
+
+Válido del 23/06 al 4/07
+
+Buenas ventas!

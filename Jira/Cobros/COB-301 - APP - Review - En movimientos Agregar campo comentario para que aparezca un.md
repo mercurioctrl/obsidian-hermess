@@ -1,0 +1,36 @@
+---
+jira_key: "COB-301"
+aliases: ["COB-301"]
+summary: "APP - Review - En movimientos Agregar campo comentario para que aparezca un string que indique de que pedido es la retencion"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-01-06 16:21"
+updated: "2023-01-06 17:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-301"
+---
+
+# COB-301: APP - Review - En movimientos Agregar campo comentario para que aparezca un string que indique de que pedido es la retencion
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-01-06 16:21 |
+| Actualizado | 2023-01-06 17:38 |
+| Etiquetas | ninguna |
+| Jira | [COB-301](https://bluinc.atlassian.net/browse/COB-301) |
+
+## Relaciones
+
+- **Padre:** [[COB-294]] Feat - Listar provincias (Mas subtotales de retenciones)
+
+## Descripcion
+
+*Sin descripcion*

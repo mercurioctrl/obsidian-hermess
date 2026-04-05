@@ -1,0 +1,38 @@
+---
+jira_key: "COB-310"
+aliases: ["COB-310"]
+summary: "APP - Refactor - Agregar cotización de la operación y la cotización que surge de la operación."
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-01-26 08:45"
+updated: "2023-02-23 17:20"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-310"
+---
+
+# COB-310: APP - Refactor - Agregar cotización de la operación y la cotización que surge de la operación.
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-01-26 08:45 |
+| Actualizado | 2023-02-23 17:20 |
+| Etiquetas | ninguna |
+| Jira | [COB-310](https://bluinc.atlassian.net/browse/COB-310) |
+
+## Relaciones
+
+- **Padre:** [[COB-115]] Feat - Realizar un cobro
+
+## Descripcion
+
+Donde estala informacion del pedido, agregaríamos la cotización del pedido.
+
+Debajo de donde están las cotización de los medios de pago, agregaría la cotización del cobro que estoy haciendo (decime si tenes dudas con esto y lo vemos).

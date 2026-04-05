@@ -1,0 +1,36 @@
+---
+jira_key: "COB-194"
+aliases: ["COB-194"]
+summary: "API - Review - La burbuja de pases, debe mostrar solo los pases recibido pendientes para esa cuenta."
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2022-10-24 09:26"
+updated: "2022-10-27 16:07"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-194"
+---
+
+# COB-194: API - Review - La burbuja de pases, debe mostrar solo los pases recibido pendientes para esa cuenta.
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-10-24 09:26 |
+| Actualizado | 2022-10-27 16:07 |
+| Etiquetas | ninguna |
+| Jira | [COB-194](https://bluinc.atlassian.net/browse/COB-194) |
+
+## Relaciones
+
+- **Padre:** [[COB-44]] API - Feat - Contadores para burbujas de cantidad pendientes
+
+## Descripcion
+
+*Sin descripcion*

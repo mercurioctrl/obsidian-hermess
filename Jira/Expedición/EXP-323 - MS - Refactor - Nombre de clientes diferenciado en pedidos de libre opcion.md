@@ -1,0 +1,83 @@
+---
+jira_key: "EXP-323"
+aliases: ["EXP-323"]
+summary: "MS - Refactor - Nombre de clientes diferenciado en pedidos de libre opcion"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-06-27 13:03"
+updated: "2023-06-27 16:39"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-323"
+---
+
+# EXP-323: MS - Refactor - Nombre de clientes diferenciado en pedidos de libre opcion
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-06-27 13:03 |
+| Actualizado | 2023-06-27 16:39 |
+| Etiquetas | ninguna |
+| Jira | [EXP-323](https://bluinc.atlassian.net/browse/EXP-323) |
+
+## Relaciones
+
+- **Padre:** [[EXP-289]] Refactor Entregar
+
+## Descripcion
+
+Modificaremos el recurso que genera las etiquetas (no solo las de entregar sino cualquiera), para contemplar en el repositorio los clientes que el pedido esta a nombre de libre opción, pero mostrar los datos verdaderos del cliente.
+
+Para eso dejaremos el repositorio de forma similar a 
+
+```
+SELECT top 10
+            U.UserEmail as userEmail,
+            rtrim(C.cnomcli) as razonSocial,
+            I.nombre as nombre,
+            I.apellido as apellido,
+            I.cuit as cuit,
+            I.dni as dni,
+            C.ctfo1cli as telefono1,
+            C.ctfo2cli as telefono2,
+            CASE WHEN pedclit.medioEnvioId IS NULL THEN T.medioEnvioId  ELSE pedclit.medioEnvioId END as medioEnvioId,
+            d.cdircli as direccion,
+            rtrim(City.Descripcion) as localidad,
+            rtrim(P.Descripcion) as provincia,
+            -----
+            secondaryClientNb,
+            rtrim(CLIO.cnomcli) as razonSocialLIO,
+            pedclit.idDirCliNbWeb,
+            CLIO.ctfo1cli as telefono1CLIO,
+            CLIO.ctfo2cli as telefono2CLIO
+            ------
+            FROM
+                [NewBytes_DBF].[dbo].[pedclit]
+            LEFT JOIN NB_WEB.dbo.dircli d ON d.IdDirCli = pedclit.idDirCliNbWeb
+            LEFT JOIN NewBytes_DBF.dbo.FP_Ciudades as City ON City.CCODPOBL = d.ccodpobl AND activo = 1
+            LEFT JOIN NewBytes_DBF.dbo.FP_Provincias as P ON P.Id_Provincia = City.Id_Provincia
+            LEFT JOIN [NewBytes_DBF].[dbo].[dircli] as dd ON CAST(dd.ccodcli AS INT) = CAST(d.ccodcli AS INT)
+            LEFT JOIN NewBytes_DBF.dbo.albclit ON albclit.cnumped = pedclit.cnumped AND albclit.cnumsuc = pedclit.cnumsuc
+            LEFT JOIN NEW_BYTES.dbo.MS_REMITO_CABECERA ON MS_REMITO_CABECERA.REMITO_FP = albclit.cnumalb and MS_REMITO_CABECERA.SUCURSAL_REMITO = albclit.cnumsuc
+            LEFT JOIN NEW_BYTES.dbo.MS_VENTAS_REMITOS ON MS_REMITO_CABECERA.REMITO_FP = MS_VENTAS_REMITOS.REMITO_FP AND MS_REMITO_CABECERA.SUCURSAL_REMITO = MS_VENTAS_REMITOS.SUCURSAL_REMITO
+            LEFT JOIN NB_WEB.dbo.usuarios_nb AS U ON CAST(U.codigoFP AS INT) = CAST(pedclit.ccodcli AS INT)
+            LEFT JOIN NewBytes_DBF.dbo.clientes as C ON CAST(U.codigoFP AS INT) = CAST(C.ccodcli AS INT)
+            LEFT JOIN NewBytes_DBF.dbo.clientes as CLIO ON CAST(secondaryClientNb AS INT) = CAST(CLIO.ccodcli AS INT)
+
+            LEFT JOIN NB_WEB.dbo.info_usuarios AS I ON I.UserLogId = U.UserId
+            
+            LEFT JOIN NewBytes_DBF.dbo.transpor AS T ON T.ID_TRANSPORTISTA = MS_VENTAS_REMITOS.TRANSPORTE_FP
+            WHERE pedclit.cnumped = '10318217'
+```
+
+De esa forma evitaremos este problema
+
+[adjunto]
+Este es un parche, porque el plan de corto plazo es que desde libre opción ya salgan generados al cliente correcto por lo tanto puede dejarse un comentario referido a eso para removerlo mas adelante

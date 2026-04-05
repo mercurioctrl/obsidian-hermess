@@ -1,0 +1,51 @@
+---
+jira_key: "DNYL-1314"
+aliases: ["DNYL-1314"]
+summary: "NB_ PROMO A620 10 + 1"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2025-12-03 10:19"
+updated: "2026-01-20 10:20"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1314"
+---
+
+# DNYL-1314: NB_ PROMO A620 10 + 1
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-12-03 10:19 |
+| Actualizado | 2026-01-20 10:20 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1314](https://bluinc.atlassian.net/browse/DNYL-1314) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Nueva campaña de Giga por todo diciembre Exclusiva en NEW BYTES
+¡Mothers Deals Gigabyte! 
+
+¡Llevate la 11va GRATIS en A620! 💸 
+
+[link](https://www.nb.com.ar/a620?available_stock=1&brand=gigabyte) 
+
+---
+
+¡Mother Gigabyte A520m K V2 al  mejor precio!
+
+[link](https://www.nb.com.ar/mother-gigabyte-am4-a520m-k-v2_-_118172) 
+
+
+
+Feed + Story + News

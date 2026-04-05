@@ -1,0 +1,39 @@
+---
+jira_key: "INV-103"
+aliases: ["INV-103"]
+summary: "API - Editar / Crear marcas - Error al subir imagen "
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Guillermo Avila"
+created: "2024-08-27 03:24"
+updated: "2024-10-01 18:43"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-103"
+---
+
+# INV-103: API - Editar / Crear marcas - Error al subir imagen 
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Guillermo Avila |
+| Creado | 2024-08-27 03:24 |
+| Actualizado | 2024-10-01 18:43 |
+| Etiquetas | ninguna |
+| Jira | [INV-103](https://bluinc.atlassian.net/browse/INV-103) |
+
+## Relaciones
+
+- **Padre:** [[INV-23]] Aplicacion de inventario
+- **relates to:** [[INV-68]] API - Feat - Editar / Crear marcas
+
+## Descripcion
+
+Al intentar crear una marca y subir su imagen, me aparece el siguiente error.
+
+[adjunto]

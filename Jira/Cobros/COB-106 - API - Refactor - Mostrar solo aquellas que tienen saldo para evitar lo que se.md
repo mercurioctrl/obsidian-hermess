@@ -1,0 +1,36 @@
+---
+jira_key: "COB-106"
+aliases: ["COB-106"]
+summary: "API - Refactor - Mostrar solo aquellas que tienen saldo para evitar lo que se muestra en las imagenes"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2022-09-19 08:54"
+updated: "2022-12-05 14:44"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-106"
+---
+
+# COB-106: API - Refactor - Mostrar solo aquellas que tienen saldo para evitar lo que se muestra en las imagenes
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-09-19 08:54 |
+| Actualizado | 2022-12-05 14:44 |
+| Etiquetas | ninguna |
+| Jira | [COB-106](https://bluinc.atlassian.net/browse/COB-106) |
+
+## Relaciones
+
+- **Padre:** [[COB-28]] API - Feat - Listar saldos de caja
+
+## Descripcion
+
+[adjunto]

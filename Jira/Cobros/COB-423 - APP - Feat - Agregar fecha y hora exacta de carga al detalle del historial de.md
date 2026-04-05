@@ -1,0 +1,36 @@
+---
+jira_key: "COB-423"
+aliases: ["COB-423"]
+summary: "APP - Feat - Agregar fecha y hora exacta de carga al detalle del historial de cheques para obtener el orden cronologico mas claro"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Guillermo Avila"
+reporter: "Catriel Mercurio"
+created: "2023-04-27 16:04"
+updated: "2023-05-23 15:49"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-423"
+---
+
+# COB-423: APP - Feat - Agregar fecha y hora exacta de carga al detalle del historial de cheques para obtener el orden cronologico mas claro
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Guillermo Avila |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-04-27 16:04 |
+| Actualizado | 2023-05-23 15:49 |
+| Etiquetas | ninguna |
+| Jira | [COB-423](https://bluinc.atlassian.net/browse/COB-423) |
+
+## Relaciones
+
+- **Padre:** [[COB-183]] Feat - Listar cheques
+
+## Descripcion
+
+Adicionalmente, agregar interes

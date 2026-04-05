@@ -1,0 +1,56 @@
+---
+jira_key: "DNYL-1092"
+aliases: ["DNYL-1092"]
+summary: "NB_ INGRESO MSI"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2025-05-23 10:36"
+updated: "2025-07-08 16:03"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1092"
+---
+
+# DNYL-1092: NB_ INGRESO MSI
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-05-23 10:36 |
+| Actualizado | 2025-07-08 16:03 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1092](https://bluinc.atlassian.net/browse/DNYL-1092) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+Tenemos que armar imagenes con estas notebooks: 
+
+[link](https://docs.google.com/spreadsheets/d/1ZbyFDOK2sKn_0rEAWQg94PpxQ3RORs1lO1YXtlrRVB4/edit?gid=1275748372#gid=1275748372) 
+
+historias (3 y 3) 
+
+Feed carrusel con caracteristicas principales y uso recomendado. 
+
+Newsletter como son solo 6 pongamos todas. 
+
+y armemos banners para NB y Enfasys (importante que en los banners de enfasys figure el logo de NB) 
+
+---
+
+Titulo: 🔥 ¡NOVEDADES GAMER MSI! 🔥
+Acaban de ingresar notebooks MSI de alto rendimiento 🎮💻
+¡Equipos potentes listos para llevar tu juego (o trabajo) al próximo nivel!
+
+o lo que entre. ajaja

@@ -1,0 +1,88 @@
+---
+jira_key: "DNYL-1394"
+aliases: ["DNYL-1394"]
+summary: "NB_ BANNERS CHANNEL TALKS"
+status: "Tareas por hacer"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2026-04-01 15:26"
+updated: "2026-04-01 16:37"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1394"
+---
+
+# DNYL-1394: NB_ BANNERS CHANNEL TALKS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2026-04-01 15:26 |
+| Actualizado | 2026-04-01 16:37 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1394](https://bluinc.atlassian.net/browse/DNYL-1394) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+Tenemos que armar banners para el medio Channel Talks:  Siempre usá nuestro logo. 
+
+| Banner exclusivo en Newsletter | 728x200 |
+| --- | --- |
+| Banner Sidebar Home | 300x250 px |
+
+esa son las medidas. 
+
+- Titulo: Tu web. Nuestro Stock. Todo en tiempo real. 
+Integrá ya nuestra API (formato de botón).
+
+
+- Envios gratis a todo el pais
+Más info (formato de botón)
+
+
+- (formato GIF) El mayorista gamer de Argentina
+Logos animados que se desplacen: AMD, ASUS, GIGABYTE, Thermaltake
+Abrí hoy mismo tu cuenta (formato de botón)
+
+
+- Pedís hoy. Llega GRATIS a todo el país
+Ir a la web (formato de botón)
+
+
+- Vendé sin Stock -
+¿Conocés el dropshipping de NB?
+Más info (formato de botón)
+
+
+- Todo el stock de AMD RADEON (logo) en NB!
+Ver productos (formato de botón)
+
+
+-  NB TRAVEL 3era Edición
+Se viene el MUNDIAL DE RESELLERS
+¿Estás preparado?
+
+
+- Stock en tiempo real, operaciones rápidas
+Conectá nuestra API 
+Más info>> 
+
+
+- Vendé sin Stock con nuestra opción de dropshipping
+Más Info>> 
+
+
+- JUGÁ A TODO CON GIGABYTE 
+Notebook A16 
+[link](https://www.gigabyte.com/ar/Laptop/GIGABYTE-GAMING-A16-GA6H)

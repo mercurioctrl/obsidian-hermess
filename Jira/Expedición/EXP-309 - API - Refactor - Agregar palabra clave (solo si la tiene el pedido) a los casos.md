@@ -1,0 +1,36 @@
+---
+jira_key: "EXP-309"
+aliases: ["EXP-309"]
+summary: "API - Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-06-08 06:29"
+updated: "2023-06-13 15:29"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-309"
+---
+
+# EXP-309: API - Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-06-08 06:29 |
+| Actualizado | 2023-06-13 15:29 |
+| Etiquetas | ninguna |
+| Jira | [EXP-309](https://bluinc.atlassian.net/browse/EXP-309) |
+
+## Relaciones
+
+- **Padre:** [[EXP-308]] Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
+
+## Descripcion
+
+Basandonos en el caso [link](https://lioteam.atlassian.net/jira/servicedesk/projects/SNB/queues/custom/63/[[SNB-825]])

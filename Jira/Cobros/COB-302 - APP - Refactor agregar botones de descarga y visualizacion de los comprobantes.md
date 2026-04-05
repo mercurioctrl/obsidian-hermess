@@ -1,0 +1,36 @@
+---
+jira_key: "COB-302"
+aliases: ["COB-302"]
+summary: "APP - Refactor: agregar botones de descarga y visualizacion de los comprobantes individuales para  cta cte y retenciones"
+status: "Finalizada"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2023-01-06 18:10"
+updated: "2023-01-31 13:52"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-302"
+---
+
+# COB-302: APP - Refactor: agregar botones de descarga y visualizacion de los comprobantes individuales para  cta cte y retenciones
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2023-01-06 18:10 |
+| Actualizado | 2023-01-31 13:52 |
+| Etiquetas | ninguna |
+| Jira | [COB-302](https://bluinc.atlassian.net/browse/COB-302) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

@@ -1,0 +1,58 @@
+---
+jira_key: "COM-140"
+aliases: ["COM-140"]
+summary: "APP - Refactor - Agregar el proveedor primario al crear una orden de compra"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2024-09-02 08:15"
+updated: "2024-09-06 11:22"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COM-140"
+---
+
+# COM-140: APP - Refactor - Agregar el proveedor primario al crear una orden de compra
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-09-02 08:15 |
+| Actualizado | 2024-09-06 11:22 |
+| Etiquetas | ninguna |
+| Jira | [COM-140](https://bluinc.atlassian.net/browse/COM-140) |
+
+## Relaciones
+
+- **Padre:** [[COM-138]] Crear orden de compra
+- **is blocked by:** [[COM-139]] API - Refactor - Agregar el Proveedor primario al crear una orden de compra
+- **relates to:** [[COM-142]] API - Refactor - Listado de proveedores - Homogeneidad en los parámetros
+
+## Descripcion
+
+Dado que muchas veces el proveedor para nosotros es en realidad una empresa intermediaria, entonces debemos dejar cuenta de cual es el proveedor original (esto se hace con fines de tramitar garantías y demás).
+
+
+
+Agregaremos otro selector debajo, con la leyenda “Proveedor Primario”. En este caso no es obligatorio, aunque el “Proveedor” que usamos siempre si lo es.
+
+[adjunto]
+
+
+Usaremos el recurso de la siguiente forma
+
+```
+POST {API_URL}/v1/providerOrder
+```
+
+```
+{
+"provider":13175
+"primaryProvider": 3456 <<< -NUEVO PARAMETRO
+}
+```

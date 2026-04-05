@@ -1,0 +1,52 @@
+---
+jira_key: "DNYL-1018"
+aliases: ["DNYL-1018"]
+summary: "NB_ INCENTIVO ADATA DISCOS EXTERNOS"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-03-10 09:55"
+updated: "2025-04-04 13:26"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1018"
+---
+
+# DNYL-1018: NB_ INCENTIVO ADATA DISCOS EXTERNOS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-03-10 09:55 |
+| Actualizado | 2025-04-04 13:26 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1018](https://bluinc.atlassian.net/browse/DNYL-1018) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+Tenemos que armar una img para comunicar el incentivo de adata internamente. 
+
+Vigencia de incentivo desde el lunes 10 al 31 de  marzo inclusive. 
+
+
+Los productos que entran en el incentivo son: 
+DISCO EXTERNO ADATA HD330 1TB 3.1 BLACK 14 DISCO EXTERNO ADATA HD330 2TB 3.1 BLACK 21 DISCO EXTERNO ADATA HV320 1 TB 3.1 BLACK 307 DISCO EXTERNO ADATA HV320 2 TB 3.1 BLACK 151 DISCO EXTERNO ADATA HV320 4 TB 3.1 BLACK 73 
+
+Premios: 
+si venden 50 unidades ganan 50 dólares y si venden 100 ganarán 100.  
+Si se venden un minimo de 300 unidades, se habilitan premios extras. 
+Para el que más clientes consiga USD50 y USD50 para el que más unidades venda. 
+
+
+avisame si algo no se entiende.

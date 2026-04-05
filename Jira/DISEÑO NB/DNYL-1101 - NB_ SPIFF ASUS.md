@@ -1,0 +1,49 @@
+---
+jira_key: "DNYL-1101"
+aliases: ["DNYL-1101"]
+summary: "NB_ SPIFF ASUS"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-06-02 14:31"
+updated: "2025-06-03 16:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1101"
+---
+
+# DNYL-1101: NB_ SPIFF ASUS
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-06-02 14:31 |
+| Actualizado | 2025-06-03 16:46 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1101](https://bluinc.atlassian.net/browse/DNYL-1101) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+ASUS TE DA MÁS !! 
+
+- Vendé 50 Gabinetes y ganá USD100
+
+
+- Vendé 50 Fuentes y Gana USD100
+
+
+
+Válido por todo JUNIO
+
+EXITOS!  
+
+(formato historia)

@@ -1,0 +1,36 @@
+---
+jira_key: "COB-306"
+aliases: ["COB-306"]
+summary: "APP - Solventar error de cotizacion del cheque"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2023-01-11 14:09"
+updated: "2023-01-31 15:11"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-306"
+---
+
+# COB-306: APP - Solventar error de cotizacion del cheque
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2023-01-11 14:09 |
+| Actualizado | 2023-01-31 15:11 |
+| Etiquetas | ninguna |
+| Jira | [COB-306](https://bluinc.atlassian.net/browse/COB-306) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

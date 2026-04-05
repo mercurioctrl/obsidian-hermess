@@ -1,0 +1,168 @@
+---
+jira_key: "EXP-125"
+aliases: ["EXP-125"]
+summary: "API - Feat - Acreditacion parcial o total de un pedido"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2022-12-22 12:02"
+updated: "2023-05-23 09:06"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-125"
+---
+
+# EXP-125: API - Feat - Acreditacion parcial o total de un pedido
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2022-12-22 12:02 |
+| Actualizado | 2023-05-23 09:06 |
+| Etiquetas | ninguna |
+| Jira | [EXP-125](https://bluinc.atlassian.net/browse/EXP-125) |
+
+## Relaciones
+
+- **Padre:** [[EXP-119]] Feat - Acreditar un pedido parcial o totalmente
+- **blocks:** [[EXP-126]] APP - Feat - Acreditacion parcial o total de un pedido
+
+## Descripcion
+
+```
+POST {API_URL}/v1/ordersRefund/{pedido}
+```
+
+Esta feature es la encargada de procesar las devoluciones de mercadería.
+
+Existen 2 tipos de operaciones principalmente, las que son fiscales y las que no son fiscales.
+
+**En el primer caso “Las fiscales” realizaremos los siguientes pasos (todas las branch, menos 10).**
+
+- Realizar el crédito Fiscal en AFIP (A)
+
+
+- Imputar el saldo (o crédito) en la cuenta corriente del cliente (B)
+
+
+- Liberar los números de serie asociados al stock que estamos acreditando (de la tabla de stock PERO NO DE LA DEL REMITO) (C)
+
+
+- Devolver los productos a stock que estamos acreditando (y registro en el historial de stock) (D)
+
+
+- Marcar en el pedido (albclil) cuantas unidades de cada producto fueron acreditadas (E)
+
+
+
+**En el segundo caso “NO FISCALES” realizaremos los siguientes pasos (branch 10).**
+
+- Imputar el saldo (o crédito) en la cuenta corriente del cliente (B)
+
+
+- Liberar los números de serie asociados al stock que estamos acreditando (de la tabla de stock PERO NO DE LA DEL REMITO) (C)
+
+
+- Devolver los productos a stock que estamos acreditando (y registro en el historial de stock) (D)
+
+
+- Marcar en el pedido (albclil) cuantas unidades de cada producto fueron acreditadas (E)
+
+
+
+Como vemos, la única diferencia concreta es que no se realiza el comprobante por AFIP, y el resto de los pasos no depende de ello.
+
+**Paso A - Realizar el crédito Fiscal en AFIP **
+
+Lo que se hace en este caso es crear el comprobante fiscal. Haciendo uso de [link](https://lioteam.atlassian.net/browse/POS-132) generaremos la carga útil en base al pedido original y el objeto que el front nos envía en [link](https://lioteam.atlassian.net/browse/EXP-126) que sera un objeto del siguiente tipo
+
+```
+{
+  "autorizaUser": "d0ed291960a4fa39007468f855ce4823",
+  "voucherTypeId": 2,
+  "clientId": 36823,
+  "pedido":"X000200543640",
+  "trade":[
+          {
+          "units":1,
+          "price": 30.58,
+          "ivaTax":10.5,
+          "internalId": 102813
+          }
+  ],
+  "serials": [
+      "2L502LQ6C1WC"
+  ]
+}
+```
+
+Luego de eso solo debemos verificar el `autorizaUser: {token} `que es obligatorio para ejecutar este recurso.
+
+```
+{
+    autorizaUser: {token}
+}
+```
+
+ El parámetro para el token es solo para ver que tarjeta autorizo el movimiento.
+
+Para esto podemos usar el hard token que esta en la tabla `nb_web.dbo.usuarios_nb`
+
+Y a partir de ella crearemos un objeto `autorizaUser`
+
+**Paso B - Imputar el saldo (o crédito) en la cuenta corriente del cliente**
+
+¿como realzar el crédito en la cuenta corriente del cliente?
+
+Se hace mediante una inserción en la tabla `[NEW_BYTES].[dbo].[MC_CCORRIENTES_MOVIMIENTOS]` para ese cliente.
+
+```
+POST {API_RUL}/v1/currentAccount/{clientId}
+```
+
+Para esto se utiliza `[NEW_BYTES].[dbo].[MC_CCORRIENTES_MOVIMIENTOS]`
+
+Vamos a inspeccionar la tabla para ver que valores son obligatorios. Pero los parámetros mas importantes son:
+
+- El monto `CC_IMPORTEUSD`
+
+
+- Las fechas
+
+
+- el Id del cliente
+
+
+- El código TR (en ese caso se usa hardcodeado el 30 que es “creditos varios”)
+
+
+- Como adicional, agregaremos en `CC_OBSERVACIONES` la inscripción “NC Expedición N{pedido}”
+
+
+
+
+
+**Paso C - Liberar los números de serie asociados al stock que estamos acreditando (de la tabla de stock PERO NO DE LA DEL REMITO)**
+
+Para poder volver a tomar esta mercadería el día de mañana una ves que reingreso mediante una devolución, se debe inicializar el serial como disponible para poder volver a ser utilizado.
+
+Los seriales implicados en la transacción deben marcarse correctamente en la tabla de seriales para que puedan ser tomados en una venta  nueva.
+
+Para esto utilizaremos la tabla `[NEW_BYTES].[dbo].[ST_DETALLE_STOCK]` y volveremos la columna de estado, la fecha de egreso y deposito a su estado inicial.
+
+**Paso D - Devolver los productos a stock que estamos acreditando (y registro en el historial de stock)**
+
+Usando la tabla `[NB_WEB].[dbo].[registro_stock]` registro el movimiento sumando la mayor cantidad posible de información al respecto del movimiento. El usuario es aquel que detecte con el token de autorización.
+
+**Paso E - Marcar en el pedido (albclil) cuantas unidades de cada producto fueron acreditadas**
+
+Dentro de la tabla `[NewBytes_DBF].[dbo].[albclil]` existe la columna `[ACREDITADO]`, dicha columna es la encargada de almacenar la suma de la cantidad de unidades que fueron devueltas o acreditadas.
+
+Es decir que si la columna esta en cero y se me pide acreditar `2` unidades, entonces ahora el valor de la columna pasara a ser `2`. Y si vuelvo mañana y acredito 3 unidades, entonces la columna pasara a tener 5 como valor.
+
+Esta columna jamas puede contener un numero mayor a la columna `ncanent` de la misma tabla, ya que es imposible acreditar mas cantidad de la que se compro originalmente.

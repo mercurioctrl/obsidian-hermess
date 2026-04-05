@@ -1,0 +1,43 @@
+---
+jira_key: "EXP-134"
+aliases: ["EXP-134"]
+summary: "Retiros - Cantidad de pendientes no coincidentes"
+status: "Finalizada"
+type: "Error"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Guillermo Avila"
+created: "2023-01-17 11:42"
+updated: "2023-02-06 15:52"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-134"
+---
+
+# EXP-134: Retiros - Cantidad de pendientes no coincidentes
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Error |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Guillermo Avila |
+| Creado | 2023-01-17 11:42 |
+| Actualizado | 2023-02-06 15:52 |
+| Etiquetas | ninguna |
+| Jira | [EXP-134](https://bluinc.atlassian.net/browse/EXP-134) |
+
+## Relaciones
+
+- **blocks:** [[EXP-108]] Feat - Burbujas
+
+## Descripcion
+
+La cantidad en la burbuja de pendientes no es la misma que la cantidad de los retiros aún no despachados.
+
+[adjunto]
+
+
+31/01/23
+
+[adjunto]

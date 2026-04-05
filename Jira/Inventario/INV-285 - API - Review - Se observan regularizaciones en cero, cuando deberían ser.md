@@ -1,0 +1,80 @@
+---
+jira_key: "INV-285"
+aliases: ["INV-285"]
+summary: "API - Review - Se observan regularizaciones en cero, cuando deberían ser mayores a cero"
+status: "Tareas por hacer"
+type: "Tarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Catriel Mercurio"
+created: "2025-12-16 15:39"
+updated: "2025-12-16 15:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-285"
+---
+
+# INV-285: API - Review - Se observan regularizaciones en cero, cuando deberían ser mayores a cero
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-12-16 15:39 |
+| Actualizado | 2025-12-16 15:46 |
+| Etiquetas | ninguna |
+| Jira | [INV-285](https://bluinc.atlassian.net/browse/INV-285) |
+
+## Relaciones
+
+- **Padre:** [[INV-199]] Control de Stock / Stock en general  / Control de Precios
+- **relates to:** [[INV-238]] API - Refactor - Agregar al repositorio de stock la cantidad de regularizaciones realizadas
+
+## Descripcion
+
+```
+GET {API_URL}/itemsStocks?currentPage=1&itemsPerPage=500&search=athlon_3000g&between=01-12-2000_31-01-2026
+```
+
+Al indagar con   sobre el `item` `118820` se obtiene el objeto `"regularizations": 0` cuando debería ser `"regularizations": 3`pero eso se debe simplemente a la falta de un procedimiento de llenado para la base de datos.
+
+```
+        {
+            "title": "PROCESADOR AMD (AM4) ATHLON 3000G",
+            "sku": "YD3000C6FHSBX",
+            "id": 118820,
+            "category": "PROCESADORES",
+            "categoryId": 3,
+            "brand": "AMD                                               ",
+            "brandId": 43,
+            "mainImage": "http://static.nb.com.ar/img/847e39f4c80c83af68d18c34c2cdf672.jpg",
+            "globalRegularization": 0.0,
+            "stock": 1.0,
+            "virtualStock": 0,
+            "stockLio": 0,
+            "stockInOrders": 1.0,
+            "stockAfterSale": 0,
+            "nstockHide": 0,
+            "stockWarehouseId": 2,
+            "stockWarehouseDescription": "SAFcom",
+            "stockWarehouseCode": "SAF",
+            "WarehouseSensitive": false,
+            "usedSerialNumbers": 0,
+            "totalSerialNumbers": 0,
+            "companyCode": 4,
+            "companyName": "NB DISTRIBUIDORA MAYORISTA SRL",
+            "notSerializable": 0,
+            "distributorId": 1,
+            "stockCtrl": 0,
+            "stockLoQueue": 0,
+            "inProviderOrder": 0,
+            "inProviderOrderInbound": 2600.0,
+            "creditNoteReturn": 3,
+            "aftersalesCreditNote": 2,
+            "regularizations": 0,
+            "salesReserved": 2599.0,
+            "stockDelta": -5.0
+        }
+```

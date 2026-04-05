@@ -1,0 +1,72 @@
+---
+jira_key: "DNYL-1134"
+aliases: ["DNYL-1134"]
+summary: "NB_ THERMAL DISPONIBLE EN NB"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Marcela Nuble"
+reporter: "Eloy Passarella"
+created: "2025-07-11 11:55"
+updated: "2025-07-24 12:42"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1134"
+---
+
+# DNYL-1134: NB_ THERMAL DISPONIBLE EN NB
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Marcela Nuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-11 11:55 |
+| Actualizado | 2025-07-24 12:42 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1134](https://bluinc.atlassian.net/browse/DNYL-1134) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! 
+
+tenemos que armar dos historias de Thermal + dos imagenes de Feed en carrusel con los siguientes productos: 
+
+¡LOS PRODUCTOS THERMALTAKE DISPONIBLES EN NB! 
+
+**Fuentes de Alimentación (Power Supplies):**
+
+- FUENTE GAMER THERMALTAKE TP GT 850W ANALOG 80 PLUS GOLD (USA LA IMAGEN DE ESTA) 
+Otros modelos de fuentes disponibles: 
+
+
+
+- TP GF A3 1050W ANALOG 80 PLUS GOLD FULL MODULAR 
+
+
+-  TP GF A3 1200W ANALOG 80 PLUS GOLD FULL MODULAR
+
+
+- TP GT 750W ANALOG 80 PLUS GOLD
+
+
+
+**Gabinetes (Cases):**
+
+- GABINETE GAMER THERMALTAKE VERSA H16 TG ARGB SNOW WHITE TEMP GLASS (USA LA IMAGEN DE ESTE)
+Otros modelos de Gabinetes disponibles:  
+
+
+
+- GABINETE THERMALTAKE S200 PLUS TG ARGB BLACK TEMPERED GLASS
+
+
+- GABINETE THERMALTAKE VIEW 170 TG ARGB BLACK TEMPERED GLASS
+
+
+- GABINETE THERMALTAKE THE TOWER 300 PEACH FUZZ TEMPERED GLASS

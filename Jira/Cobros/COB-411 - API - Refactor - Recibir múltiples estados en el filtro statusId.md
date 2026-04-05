@@ -1,0 +1,41 @@
+---
+jira_key: "COB-411"
+aliases: ["COB-411"]
+summary: "API - Refactor - Recibir múltiples estados en el filtro statusId"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-04-21 10:09"
+updated: "2023-04-26 09:14"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-411"
+---
+
+# COB-411: API - Refactor - Recibir múltiples estados en el filtro statusId
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-04-21 10:09 |
+| Actualizado | 2023-04-26 09:14 |
+| Etiquetas | ninguna |
+| Jira | [COB-411](https://bluinc.atlassian.net/browse/COB-411) |
+
+## Relaciones
+
+- **Padre:** [[COB-183]] Feat - Listar cheques
+- **blocks:** [[COB-412]] APP - Refactor - Filtro multiples de estado
+
+## Descripcion
+
+Segun lo conversado en slack, alteraremos el siguiente recurso [link](https://lioteam.atlassian.net/browse/COB-185) para pasar filtros de estado múltiples 
+
+```
+{{API_URL}}/v1/checks?currentPage=1&itemsPerPage=15&statusId=2,3,4
+```

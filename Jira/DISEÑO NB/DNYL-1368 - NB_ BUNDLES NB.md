@@ -1,0 +1,51 @@
+---
+jira_key: "DNYL-1368"
+aliases: ["DNYL-1368"]
+summary: "NB_ BUNDLES NB"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "md_mnuble"
+reporter: "Eloy Passarella"
+created: "2026-02-26 19:36"
+updated: "2026-03-11 15:42"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1368"
+---
+
+# DNYL-1368: NB_ BUNDLES NB
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | md_mnuble |
+| Reportado por | Eloy Passarella |
+| Creado | 2026-02-26 19:36 |
+| Actualizado | 2026-03-11 15:42 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1368](https://bluinc.atlassian.net/browse/DNYL-1368) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Tenemos una nueva función en la web, hicimos muchos bundles. 
+
+
+¡Marzo el mes de los bundles! 
+
+En historias arma 2 con 3 y 4 bundles cada uno. (bundles GRAL) 
+
+mandamos un news  linkeando a: 
+
+[link](https://www.nb.com.ar/categories/kits-y-bundles?available_stock=1) 
+
+Acá deberian verse. Armate un Banner de bundles con el titulo que te puse.. 
+
+Subi las historias y pasale a sofi cuando las vayas teniendo. Siempre con nuestros diseños y con precio (en amarillo). 
+
+cualquier cosa me avisas dale? gracias!!

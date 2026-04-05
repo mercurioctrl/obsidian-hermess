@@ -1,0 +1,36 @@
+---
+jira_key: "INV-246"
+aliases: ["INV-246"]
+summary: "API - MVP - Refactor - En la edicion de productos - bloquear los cambios de marca y categoria, cuando no pertenecen a la empresa a la que pertenece el producto"
+status: "Tareas por hacer"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Catriel Mercurio"
+reporter: "Marbe Moreno"
+created: "2025-11-12 17:29"
+updated: "2025-11-12 17:30"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-246"
+---
+
+# INV-246: API - MVP - Refactor - En la edicion de productos - bloquear los cambios de marca y categoria, cuando no pertenecen a la empresa a la que pertenece el producto
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Tareas por hacer (Por hacer) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Catriel Mercurio |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-11-12 17:29 |
+| Actualizado | 2025-11-12 17:30 |
+| Etiquetas | ninguna |
+| Jira | [INV-246](https://bluinc.atlassian.net/browse/INV-246) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+
+## Descripcion
+
+*Sin descripcion*

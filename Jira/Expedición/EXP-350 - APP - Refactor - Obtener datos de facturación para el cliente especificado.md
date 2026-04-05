@@ -1,0 +1,62 @@
+---
+jira_key: "EXP-350"
+aliases: ["EXP-350"]
+summary: "APP - Refactor - Obtener datos de facturación para el cliente especificado"
+status: "CodeReview"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-07-26 08:42"
+updated: "2023-10-19 11:26"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/EXP-350"
+---
+
+# EXP-350: APP - Refactor - Obtener datos de facturación para el cliente especificado
+
+| Campo | Valor |
+|-------|-------|
+| Estado | CodeReview (En curso) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-07-26 08:42 |
+| Actualizado | 2023-10-19 11:26 |
+| Etiquetas | ninguna |
+| Jira | [EXP-350](https://bluinc.atlassian.net/browse/EXP-350) |
+
+## Relaciones
+
+- **Padre:** [[EXP-119]] Feat - Acreditar un pedido parcial o totalmente
+
+## Descripcion
+
+Al momento de hacer cualquier devolución (u otro comprobante fiscal, ya veremos mas adelante) es necesario enviar el tipo de comprobante que queremos hacer, pero esto no es fácil de saber ya que si bien venimos utilizando  `voucherType`= 2 es posible que exitan clientes con condiciones diferentes.
+
+Un ejemplo de esto son los clientes “exportadores” donde `voucherType`= 5 en lugar de `voucherType`= 2
+
+También hay casos similares para regímenes fiscales especiales como facturas de crédito electrónico, cuenta y orden, etc.
+
+Para poder conocer este dato, al construir el request debemos primero consultar sobre `voucherType` en el recurso provisto [link](https://lioteam.atlassian.net/browse/EXP-349) pasandole el tipo de accion que deseo hacer (credito,debito,factura). En el caso de las devoluciones usaremos “credito”.
+
+```
+{
+   "voucherTypeId":"5", <--- este es el dato que se desea obtener / cambiar
+   "clientId":19690,
+   "pedido":"X000200561946",
+   "autorizaUser":"*",
+   "serials":[
+      
+   ],
+   "trade":[
+      {
+         "units":3,
+         "price":9.59784,
+         "ivaTax":0,
+         "internalId":104344
+      }
+   ]
+}
+```

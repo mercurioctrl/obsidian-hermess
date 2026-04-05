@@ -1,0 +1,42 @@
+---
+jira_key: "DNYL-1128"
+aliases: ["DNYL-1128"]
+summary: "NB_ TARJETA PERSONAL ANTO"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2025-07-10 10:55"
+updated: "2025-07-21 10:49"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1128"
+---
+
+# DNYL-1128: NB_ TARJETA PERSONAL ANTO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-07-10 10:55 |
+| Actualizado | 2025-07-21 10:49 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1128](https://bluinc.atlassian.net/browse/DNYL-1128) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola Marce! me ayudas haciendo tarjetas personales para Antonella Garcia? 
+
+Ejecutiva de cuentas
+
+Telefono: +54 9 11 4011-8812
+
+Email: [agarcia@nb.com.ar](mailto:agarcia@nb.com.ar)

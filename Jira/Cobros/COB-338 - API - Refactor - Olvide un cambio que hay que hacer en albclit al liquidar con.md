@@ -1,0 +1,40 @@
+---
+jira_key: "COB-338"
+aliases: ["COB-338"]
+summary: "API - Refactor - Olvide un cambio que hay que hacer en albclit al liquidar con exito"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Emanuel Jesus Ferreyra"
+reporter: "Catriel Mercurio"
+created: "2023-03-06 09:51"
+updated: "2023-03-22 08:58"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-338"
+---
+
+# COB-338: API - Refactor - Olvide un cambio que hay que hacer en albclit al liquidar con exito
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Emanuel Jesus Ferreyra |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-03-06 09:51 |
+| Actualizado | 2023-03-22 08:58 |
+| Etiquetas | ninguna |
+| Jira | [COB-338](https://bluinc.atlassian.net/browse/COB-338) |
+
+## Relaciones
+
+- **Padre:** [[COB-329]] Refactor - Auto liquidar si el medio de pago es efectivo y retiro
+
+## Descripcion
+
+En caso de que el pedido pudo liquidarse con éxito, entonces se debe marcar en `[NewBytes_DBF].[dbo].[albclit]` la columna `ntipoalb` que en ese punto estará en `1` y una vez liquidado con éxito debe pasar a `2`.
+
+Esto permite que aparezca en los listados para facturar, y una vez facturado, ser despachado.
+
+Lo había olvidado y recién cuando vale hizo un reporte me acorde.

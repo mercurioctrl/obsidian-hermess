@@ -1,0 +1,48 @@
+---
+jira_key: "INV-148"
+aliases: ["INV-148"]
+summary: "API - Feat - Tracker (crawler) de atributos (especificaciones)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2024-10-04 08:31"
+updated: "2024-10-16 22:28"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-148"
+---
+
+# INV-148: API - Feat - Tracker (crawler) de atributos (especificaciones)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2024-10-04 08:31 |
+| Actualizado | 2024-10-16 22:28 |
+| Etiquetas | ninguna |
+| Jira | [INV-148](https://bluinc.atlassian.net/browse/INV-148) |
+
+## Relaciones
+
+- **Padre:** [[INV-27]] Productos
+- **has action item:** [[INV-157]] APP - Refactor - Modificar modal de atributos para tener en cuenta atributos obligatorios y herramienta de búsqueda automatica
+- **relates to:** [[INV-162]] API - Feat - Tracker (crawler) de atributos (especificaciones) - Error de sintaxis
+
+## Descripcion
+
+Lo que haremos sera diseñar una feature que nos permita mediante una carga útil que contiene el id del item y una url, buscar en ella la informacion necesaria para poder acomodar las especificaciones.
+
+Esto sera un esquema de varias etapas:
+
+1 - Obtener todo el código de la url que contiene las especificaciones
+
+2 - Convertir el código html en texto plano de tal forma que sea mas económico en tokens 
+
+3 - Obtener las caractereisticas obligatorias de la categoria para ese item y pedirte a TurboGPT3.5 que las extraiga de mi texto plano y las haga coincider con nuestros parametros internos de  `componentsAttributes` (Se le dara la instruccion y el cotexto o ejemplos que le permitan generarlo en unidades constantes y en el mismo formato)
+
+4 - Guardar los atributos para el producto en el formato correcto en nuestra DB PRODUCTOS

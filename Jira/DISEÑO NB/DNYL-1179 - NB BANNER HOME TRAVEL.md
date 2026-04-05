@@ -1,0 +1,36 @@
+---
+jira_key: "DNYL-1179"
+aliases: ["DNYL-1179"]
+summary: "NB BANNER HOME TRAVEL"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Highest"
+assignee: "Sin asignar"
+reporter: "md_mnuble"
+created: "2025-08-06 12:49"
+updated: "2025-08-08 09:46"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1179"
+---
+
+# DNYL-1179: NB BANNER HOME TRAVEL
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Highest |
+| Asignado | Sin asignar |
+| Reportado por | md_mnuble |
+| Creado | 2025-08-06 12:49 |
+| Actualizado | 2025-08-08 09:46 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1179](https://bluinc.atlassian.net/browse/DNYL-1179) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+*Sin descripcion*

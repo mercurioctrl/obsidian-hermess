@@ -1,0 +1,90 @@
+---
+jira_key: "COB-292"
+aliases: ["COB-292"]
+summary: "APP - Refactor - Cobrar Retencion"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2023-01-05 09:44"
+updated: "2023-01-31 13:51"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-292"
+---
+
+# COB-292: APP - Refactor - Cobrar Retencion
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-01-05 09:44 |
+| Actualizado | 2023-01-31 13:51 |
+| Etiquetas | ninguna |
+| Jira | [COB-292](https://bluinc.atlassian.net/browse/COB-292) |
+
+## Relaciones
+
+- **Padre:** [[COB-115]] Feat - Realizar un cobro
+- **is blocked by:** [[COB-291]] API - Feat - Listar provincias (para retención)
+
+## Descripcion
+
+Agregaremos un nuevo tipo de cobro llamado “Retencion IIBB”. El mismo es como un pago comun. El tipo de pago mas parecido a este es el pago bancario, solo que en lugar de un banco se utiliza una caja por cada provincia.
+
+Por esto agregaremos, en caso de elegirse este medio, un selector de provincias para obtener el Id que luego pondremos en el payload [link](https://lioteam.atlassian.net/browse/COB-291)
+
+¿que quiere decir esto?
+
+Por ejemplo, puede pasar que un cliente viene y me paga:
+
+a) $1000 (pesos) con retenciones de Ciudad de Buenos Aires
+
+b) $1500 (pesos) con retenciones de Santa Fe
+
+c) $400 (pesos) con retenciones de Cordoba.
+
+d) $1000 (pesos) en efectivo.
+
+De esta forma acreditaremos $3900 en la cuenta del cliente en concepto por el pago de pedido. (Como siempre hacemos con el monto total del pedido y el excedente en una linea aparte).
+
+El pago (d) que es en pesos, como siempre ira a la caja que esta realizando el cobro.
+
+Mientras que los pagos (a), (b), (c) se imputaran en una especie de cuenta (parecido a banco) para cada provincia.
+
+Las provincias llegaran agregadas al objeto de cobro, así como lo hace el pago de una transferencia bancaria
+
+```
+[{
+"clientId":4543, 
+"pedido": 'X000234234324', //opcional
+"finalAmount": 1214,
+"comment":"Algun comentario opcional"
+  "payments":[
+ {
+   "paymentMethodsId": {idNuevoParaElNuevoMetododePago},
+   "amountPaid": "1000"
+   "provinceId": 2,
+ },
+ {
+   "paymentMethodsId": {idNuevoParaElNuevoMetododePago},
+   "amountPaid": "1500"
+   "provinceId": 4,
+ },
+ {
+   "paymentMethodsId": {idNuevoParaElNuevoMetododePago},
+   "amountPaid": "400"
+   "provinceId": 12,
+ },
+ {
+ "paymentMethodsId": 2,
+   "amountPaid": "1000",
+ }
+]
+}]
+
+```

@@ -1,0 +1,53 @@
+---
+jira_key: "COM-209"
+aliases: ["COM-209"]
+summary: "APP - MVP - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Marbe Moreno"
+created: "2025-10-01 18:07"
+updated: "2025-12-12 11:02"
+labels: ["MVPLaset"]
+jira_url: "https://bluinc.atlassian.net/browse/COM-209"
+---
+
+# COM-209: APP - MVP - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Marbe Moreno |
+| Creado | 2025-10-01 18:07 |
+| Actualizado | 2025-12-12 11:02 |
+| Etiquetas | MVPLaset |
+| Jira | [COM-209](https://bluinc.atlassian.net/browse/COM-209) |
+
+## Relaciones
+
+- **Padre:** [[COM-9]] Listar ordenes de compra
+- **action item from:** [[COM-210]] API - Feat - agregar filtro para buscar por nro de invoice y proforma (voucherNumber y proformaInvoice)
+
+## Descripcion
+
+Relacionada con tarea 32 [link](https://docs.google.com/spreadsheets/d/18TUSaVG3bY_lMLunZ3kDCRlLnKpQV-_BPfrtbL4pHNA/edit?gid=723483997#gid=723483997) 
+
+agregar filtros
+
+`voucherNumber`
+
+`proformaInvoice`
+
+```
+https://gamma.api.purchases.lio.red/v1/providerOrder?companyCode=4&proformaInvocie=5555
+```
+
+```
+https://gamma.api.purchases.lio.red/v1/providerOrder?companyCode=4&voucherNumber=5555
+```
+
+ Avance con esta descripción separandolo del search general para no realentizar la busqueda, si ves que esta mal, a la vuelta lo corrijo segun la nueva descripcion de la tarea

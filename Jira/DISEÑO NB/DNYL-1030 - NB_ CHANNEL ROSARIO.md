@@ -1,0 +1,38 @@
+---
+jira_key: "DNYL-1030"
+aliases: ["DNYL-1030"]
+summary: "NB_ CHANNEL ROSARIO"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Eloy Passarella"
+created: "2025-03-14 11:13"
+updated: "2025-03-31 11:57"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-1030"
+---
+
+# DNYL-1030: NB_ CHANNEL ROSARIO
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Eloy Passarella |
+| Creado | 2025-03-14 11:13 |
+| Actualizado | 2025-03-31 11:57 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-1030](https://bluinc.atlassian.net/browse/DNYL-1030) |
+
+## Relaciones
+
+*Sin relaciones*
+
+## Descripcion
+
+Hola! 
+
+Armas una historia con nuestra estética y en donde ponemos los productos podemos poner la imagen del chanel que te adjunto.

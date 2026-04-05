@@ -1,0 +1,269 @@
+---
+jira_key: "INV-341"
+aliases: ["INV-341"]
+summary: "APP - Refactor - Cambios en la creacion/edición de kits"
+status: "Finalizada"
+type: "Tarea"
+priority: "Highest"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2026-02-19 08:34"
+updated: "2026-02-24 10:34"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/INV-341"
+---
+
+# INV-341: APP - Refactor - Cambios en la creacion/edición de kits
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Tarea |
+| Prioridad | Highest |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2026-02-19 08:34 |
+| Actualizado | 2026-02-24 10:34 |
+| Etiquetas | ninguna |
+| Jira | [INV-341](https://bluinc.atlassian.net/browse/INV-341) |
+
+## Relaciones
+
+- **Padre:** [[PED-1170]] Kits
+- **action item from:** [[PED-1309]] API - Feedback MVP - Alcance del cambio para mejroar la interpretacion de la relacion costo - beneficio en el armado de kits
+
+## Descripcion
+
+El flujo de kits y bundles ya existía.
+Se podía agregar/editar componentes de un kit desde un modal que solicitaba:
+
+- Producto
+
+
+- Cantidad
+
+
+- Pausado
+
+
+
+Se incorporaron nuevas columnas en el backend que permiten configurar **costos sustitutos** y **utilidades por lista de precios** por cada componente del kit.
+
+El frontend debe **extender el modal existente** para capturar, mostrar y enviar estos nuevos valores.
+
+---
+
+### Endpoints involucrados
+
+### 
+
+```
+GET /itemsKits/{kitId}/components
+```
+
+Obtiene los componentes actuales de un kit.
+Se utiliza para **pre-cargar el modal** al editar un componente existente.
+
+*La respuesta ahora incluye los nuevos campos de bundle.*
+
+Ejemplo de respuesta:
+
+```
+[
+  {
+    "id": 98765,
+    "title": "MOTHER ASUS (AM5) TUF GAMING B850M-PLUS WIFI",
+    "sku": "...",
+    "quantityNeeded": 1.0,
+    "paused": false,
+    "bundleCostSubstitute": 0.0,
+    "bundleUtilityMAY1": 0.0,
+    "bundleUtilityMAY2": 0.0,
+    "bundleUtilityLO1": 0.0,
+    "bundleUtilityLO2": 0.0,
+    "bundleUtilityMK1": 0.0,
+    "bundleUtilityPL": 0.0,
+    "bundleUtilityPL1": 0.0
+  }
+]
+
+```
+
+*Nota:*
+Los campos `bundle*` pueden venir como `null` si nunca fueron configurados.
+El frontend debe tratarlos como `0`.
+
+---
+
+```
+PATCH /itemsKits/{itemId}
+```
+
+Agrega o actualiza la relación entre un kit y uno de sus componentes.
+Se ejecuta al presionar **Aceptar** en el modal.
+
+**Path param**
+
+- `itemId`: ID del kit padre
+
+
+
+**Body (JSON)**
+*Ahora requiere todos los campos de bundle:*
+
+```
+{
+  "itemIdInKit": 98765,
+  "quantityNeeded": 2.0,
+  "stockWarehouseId": 3,
+  "paused": false,
+  "bundleCostSubstitute": 1500.00,
+  "bundleUtilityMAY1": 10.5,
+  "bundleUtilityMAY2": 8.0,
+  "bundleUtilityLO1": 12.0,
+  "bundleUtilityLO2": 9.0,
+  "bundleUtilityMK1": 11.0,
+  "bundleUtilityPL": 7.5,
+  "bundleUtilityPL1": 6.0
+}
+
+```
+
+*Todos los campos *`bundle*`* son requeridos.*
+Si el usuario no los completa, se debe enviar `0`.
+
+---
+
+### Cambios en el modal *Editar componente*
+
+---
+
+### Estado actual del modal
+
+```
+Editar componente [x]
+
+Producto:
+[ selector ]
+
+Cantidad:
+[ 1 ]
+
+Pausado:
+[ toggle ]
+
+[Cancelar] [Aceptar]
+
+```
+
+---
+
+### Estado nuevo del modal
+
+Agregar una sección debajo de **Pausado** con los campos de configuración de bundle:
+
+```
+Editar componente [x]
+
+Producto:
+[ selector ]
+
+Cantidad:
+[ 1 ]
+
+Pausado:
+[ toggle ]
+
+── Configuración de bundle ──
+
+Costo sustituto:
+[ 0 ]
+
+Utilidades por lista:
+MAY1 [ 0 ]   MAY2 [ 0 ]
+LO1  [ 0 ]   LO2  [ 0 ]
+MK1  [ 0 ]   PL   [ 0 ]
+             PL1  [ 0 ]
+
+[Cancelar] [Aceptar]
+
+```
+
+---
+
+### Descripción de los campos nuevos
+
+|| Campo en UI || Key en API || Tipo || Descripción ||
+| Costo sustituto | bundleCostSubstitute | float | Costo alternativo del componente dentro del bundle |
+| Utilidad MAY1 | bundleUtilityMAY1 | float | % de utilidad para lista mayorista 1 |
+| Utilidad MAY2 | bundleUtilityMAY2 | float | % de utilidad para lista mayorista 2 |
+| Utilidad LO1 | bundleUtilityLO1 | float | % de utilidad para lista libre opcion 1 |
+| Utilidad LO2 | bundleUtilityLO2 | float | % de utilidad para lista  libre opcion 2 |
+| Utilidad MK1 | bundleUtilityMK1 | float | % de utilidad para lista MK1 |
+| Utilidad PL | bundleUtilityPL | float | % de utilidad para lista minorista 1 |
+| Utilidad PL1 | bundleUtilityPL1 | float | % de utilidad para lista minorista 2 |
+
+---
+
+### Comportamiento esperado
+
+---
+
+### Al abrir el modal (editar componente existente)
+
+- Llamar a `GET /itemsKits/{kitId}/components`.
+
+
+- Identificar el componente por `id`.
+
+
+- Pre-cargar:
+
+- `quantityNeeded`
+
+
+- `paused`
+
+
+- todos los campos `bundle*`.
+
+
+
+
+- Si algún campo `bundle*` viene `null`, inicializarlo en `0`.
+
+
+
+---
+
+### Al abrir el modal (agregar componente nuevo)
+
+- Inicializar todos los campos `bundle*` en `0`.
+
+
+
+---
+
+### Al presionar *Aceptar*
+
+- Llamar a `PATCH /itemsKits/{kitId}`.
+
+
+- Enviar **todos los campos**, incluidos los 8 `bundle*`.
+
+
+- Si algún campo `bundle*` quedó vacío, enviar `0` (nunca `null` ni string vacío).
+
+
+
+---
+
+### Validaciones en el frontend
+
+- `quantityNeeded`: requerido, número > 0.
+
+
+- `bundleCostSubstitute`: requerido, número > 0.
+
+
+- `bundleUtility*` (todos): requeridos, número > 0.

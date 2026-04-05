@@ -1,0 +1,52 @@
+---
+jira_key: "FB-74"
+aliases: ["FB-74"]
+summary: "APP - Refactor - Ajustar sección \"PARTNERS\""
+status: "Listo"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Marbe Moreno"
+reporter: "Catriel Mercurio"
+created: "2025-09-22 13:37"
+updated: "2025-10-27 06:47"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/FB-74"
+---
+
+# FB-74: APP - Refactor - Ajustar sección "PARTNERS"
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Listo (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Marbe Moreno |
+| Reportado por | Catriel Mercurio |
+| Creado | 2025-09-22 13:37 |
+| Actualizado | 2025-10-27 06:47 |
+| Etiquetas | ninguna |
+| Jira | [FB-74](https://bluinc.atlassian.net/browse/FB-74) |
+
+## Relaciones
+
+- **Padre:** [[FB-28]] Fontaine Bleau: Sitio  Web_Etapa 0
+
+## Descripcion
+
+En la sección de socios estratégicos, el título **“PARTNERS”** se ve demasiado grande en relación con los logos y genera un desbalance visual. Además, los logos ocupan demasiado espacio, restando armonía al bloque
+
+
+- Reducir el tamaño de la palabra **“PARTNERS”** al **50% del tamaño actual** (mínimo la mitad).
+
+
+- Reducir proporcionalmente el tamaño de **todos los logos** dentro del bloque.
+
+
+- Mantener la alineación central del bloque y la consistencia de espaciado entre título, subtítulo y logos.
+
+
+- Ajustar también en **mobile y tablet** para evitar que los logos se vean demasiado grandes en pantallas pequeñas.
+
+
+
+[adjunto]

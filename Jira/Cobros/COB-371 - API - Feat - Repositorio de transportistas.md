@@ -1,0 +1,36 @@
+---
+jira_key: "COB-371"
+aliases: ["COB-371"]
+summary: "API - Feat - Repositorio de transportistas"
+status: "Finalizada"
+type: "Subtarea"
+priority: "Medium"
+assignee: "Ezequiel manzano"
+reporter: "Catriel Mercurio"
+created: "2023-03-20 09:16"
+updated: "2023-04-10 16:38"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/COB-371"
+---
+
+# COB-371: API - Feat - Repositorio de transportistas
+
+| Campo | Valor |
+|-------|-------|
+| Estado | Finalizada (Listo) |
+| Tipo | Subtarea |
+| Prioridad | Medium |
+| Asignado | Ezequiel manzano |
+| Reportado por | Catriel Mercurio |
+| Creado | 2023-03-20 09:16 |
+| Actualizado | 2023-04-10 16:38 |
+| Etiquetas | ninguna |
+| Jira | [COB-371](https://bluinc.atlassian.net/browse/COB-371) |
+
+## Relaciones
+
+- **Padre:** [[COB-357]] Feat - Listar Despachados, pendientes a cobrar
+
+## Descripcion
+
+Basado en [link](https://lioteam.atlassian.net/browse/EXP-243) se debe generar el mismo repositorio.
