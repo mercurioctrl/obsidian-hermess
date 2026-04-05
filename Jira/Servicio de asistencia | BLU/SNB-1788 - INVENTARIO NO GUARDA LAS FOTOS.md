@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1788"
 
 ## Relaciones
 
-- **relates to:** [[INV-62]] Fix : arreglo al subir imagen
+- **relates to:** [[INV-62 - Fix arreglo al subir imagen|INV-62]] Fix : arreglo al subir imagen
 
 ## Descripcion
 

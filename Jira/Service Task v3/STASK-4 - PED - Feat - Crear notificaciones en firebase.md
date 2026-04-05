@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-4"
 
 ## Relaciones
 
-- **Padre:** [[STASK-3]] Crear notificaciones
+- **Padre:** [[STASK-3 - Crear notificaciones|STASK-3]] Crear notificaciones
 
 ## Descripcion
 

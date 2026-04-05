@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-26"
 
 ## Relaciones
 
-- **Padre:** [[STASK-20]] API - Workers - Preparación para SMS y WhatsApp (sin ejecución)
+- **Padre:** [[STASK-20 - API - Workers - Preparación para SMS y WhatsApp (sin ejecución)|STASK-20]] API - Workers - Preparación para SMS y WhatsApp (sin ejecución)
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3135"
 
 ## Relaciones
 
-- **action item from:** [[LIO-367]] API - Refactor - SyncUp (POST Y PATCH) de items, no deben importarse productos que no cuentan con imagen al catalogo de libreopcion
+- **action item from:** [[LIO-367 - API - Refactor - SyncUp (POST Y PATCH) de items, no deben importarse productos|LIO-367]] API - Refactor - SyncUp (POST Y PATCH) de items, no deben importarse productos que no cuentan con imagen al catalogo de libreopcion
 
 ## Descripcion
 

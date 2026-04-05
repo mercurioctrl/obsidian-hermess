@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-784"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-544]] Refactor - Precios especiales por cliente y para marketplace
+- **is blocked by:** [[NBWEB-544 - Refactor - Precios especiales por cliente y para marketplace|NBWEB-544]] Refactor - Precios especiales por cliente y para marketplace
 
 ## Descripcion
 

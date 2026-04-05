@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-566"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-209]] APP - Refactor - Agregar opcion para imprimir seriales dobles
+- **is blocked by:** [[EXP-209 - APP - Refactor - Agregar opcion para imprimir seriales dobles|EXP-209]] APP - Refactor - Agregar opcion para imprimir seriales dobles
 
 ## Descripcion
 

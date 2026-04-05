@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2914"
 
 ## Relaciones
 
-- **action item from:** [[EXP-484]] API - Refactor - Agregar internalTax en el objeto de la orden para que el front sepa que debe enviarlo al acreditar
-- **action item from:** [[EXP-483]] APP - Refactor - Agregar internalTax en los casos que corresponda
+- **action item from:** [[EXP-484 - API - Refactor - Agregar internalTax en el objeto de la orden para que el front|EXP-484]] API - Refactor - Agregar internalTax en el objeto de la orden para que el front sepa que debe enviarlo al acreditar
+- **action item from:** [[EXP-483 - APP - Refactor - Agregar internalTax en los casos que corresponda|EXP-483]] APP - Refactor - Agregar internalTax en los casos que corresponda
 
 ## Descripcion
 

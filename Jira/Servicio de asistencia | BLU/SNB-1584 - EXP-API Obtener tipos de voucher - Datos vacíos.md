@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1584"
 
 ## Relaciones
 
-- **blocks:** [[EXP-402]] API - Obtener tipos de voucher - Datos vacíos
+- **blocks:** [[EXP-402 - API - Obtener tipos de voucher - Datos vacíos|EXP-402]] API - Obtener tipos de voucher - Datos vacíos
 
 ## Descripcion
 

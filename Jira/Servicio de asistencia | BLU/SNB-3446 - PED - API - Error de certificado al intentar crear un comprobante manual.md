@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3446"
 
 ## Relaciones
 
-- **blocks:** [[PED-1104]] API - Refactor - Uso del parámetro cotización al generar comprobantes manuales
+- **blocks:** [[PED-1104 - API - Refactor - Uso del parámetro cotización al generar comprobantes manuales|PED-1104]] API - Refactor - Uso del parámetro cotización al generar comprobantes manuales
 
 ## Descripcion
 

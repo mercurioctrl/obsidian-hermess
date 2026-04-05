@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2779"
 
 ## Relaciones
 
-- **action item from:** [[EXP-477]] API - Refactor - Mejorar performance en el repositorio de ordenes para retiro
+- **action item from:** [[EXP-477 - API - Refactor - Mejorar performance en el repositorio de ordenes para retiro|EXP-477]] API - Refactor - Mejorar performance en el repositorio de ordenes para retiro
 
 ## Descripcion
 

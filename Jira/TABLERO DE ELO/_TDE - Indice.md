@@ -4,7 +4,7 @@ name: "TABLERO DE ELO"
 type: "business"
 total_issues: 0
 jira_url: "https://bluinc.atlassian.net/browse/TDE"
-synced: "2026-04-05 07:55"
+synced: "2026-04-05 08:00"
 ---
 
 # TABLERO DE ELO (TDE)

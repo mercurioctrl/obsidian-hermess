@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-350"
 
 ## Relaciones
 
-- **relates to:** [[COB-103]] API - Feat - Repositorio de conceptos de salida
+- **relates to:** [[COB-103 - API - Feat - Repositorio de conceptos de salida|COB-103]] API - Feat - Repositorio de conceptos de salida
 
 ## Descripcion
 

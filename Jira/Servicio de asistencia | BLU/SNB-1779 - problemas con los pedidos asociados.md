@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1779"
 
 ## Relaciones
 
-- **is caused by:** [[PED-683]] APP - Refactor - problemas con los pedidos asociados
+- **is caused by:** [[PED-683 - APP - Refactor - problemas con los pedidos asociados|PED-683]] APP - Refactor - problemas con los pedidos asociados
 
 ## Descripcion
 

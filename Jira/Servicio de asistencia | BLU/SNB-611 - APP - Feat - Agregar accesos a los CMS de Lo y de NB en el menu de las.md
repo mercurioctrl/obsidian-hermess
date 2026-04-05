@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-611"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-340]] API - Feat - Agregar al objeto user el parametro gerencia de la tabla permisosUsuarios
-- **is blocked by:** [[EXP-234]] API - Feat - Agregar al objeto user el parametro gerencia de la tabla permisosUsuarios
-- **is blocked by:** [[POS-233]] API - Feat - Agregar al objeto user el parametro gerencia de la tabla permisosUsuarios
+- **is blocked by:** [[COB-340 - API - Feat - Agregar al objeto user el parametro gerencia de la tabla|COB-340]] API - Feat - Agregar al objeto user el parametro gerencia de la tabla permisosUsuarios
+- **is blocked by:** [[EXP-234 - API - Feat - Agregar al objeto user el parametro gerencia de la tabla|EXP-234]] API - Feat - Agregar al objeto user el parametro gerencia de la tabla permisosUsuarios
+- **is blocked by:** [[POS-233 - API - Feat - Agregar al objeto user el parametro gerencia de la tabla|POS-233]] API - Feat - Agregar al objeto user el parametro gerencia de la tabla permisosUsuarios
 
 ## Descripcion
 

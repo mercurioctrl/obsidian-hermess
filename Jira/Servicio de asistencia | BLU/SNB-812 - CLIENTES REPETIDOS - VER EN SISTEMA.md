@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-812"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-437]] API - Refactor - Agregar parametro y filtro para clientes activos/inactivos/todos
-- **is blocked by:** [[COB-438]] APP - Refactor - Agregar etiqueta indicativa y filtro para clientes activos/inactivos/todos
+- **is blocked by:** [[COB-437 - API - Refactor - Agregar parametro y filtro para clientes activosinactivostodos|COB-437]] API - Refactor - Agregar parametro y filtro para clientes activos/inactivos/todos
+- **is blocked by:** [[COB-438 - APP - Refactor - Agregar etiqueta indicativa y filtro para clientes|COB-438]] APP - Refactor - Agregar etiqueta indicativa y filtro para clientes activos/inactivos/todos
 
 ## Descripcion
 

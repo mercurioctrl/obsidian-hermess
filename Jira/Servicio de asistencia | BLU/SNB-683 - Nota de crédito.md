@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-683"
 
 ## Relaciones
 
-- **is caused by:** [[EXP-270]] Se debe poder realizar NC, tambien en el estado 'Entregado Cobrado'
+- **is caused by:** [[EXP-270 - Se debe poder realizar NC, tambien en el estado 'Entregado Cobrado'|EXP-270]] Se debe poder realizar NC, tambien en el estado 'Entregado Cobrado'
 
 ## Descripcion
 

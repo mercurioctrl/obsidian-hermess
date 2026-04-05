@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-558"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-206]] APP - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
-- **is blocked by:** [[EXP-205]] API - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
+- **is blocked by:** [[EXP-206 - APP - Refactor - Agregar una flag especifica para saber si esta libre o no en|EXP-206]] APP - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
+- **is blocked by:** [[EXP-205 - API - Refactor - Agregar una flag especifica para saber si esta libre o no en|EXP-205]] API - Refactor - Agregar una flag especifica para saber si esta libre o no en el sistema para ser tomado
 
 ## Descripcion
 

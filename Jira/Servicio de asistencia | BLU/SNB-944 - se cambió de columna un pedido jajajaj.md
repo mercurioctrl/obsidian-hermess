@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-944"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-451]] API - Review - Listado de cobrables, aparecen algunos que irian en "cobros pendientes"
-- **is blocked by:** [[COB-450]] API - Review - Listado de cobros pendientes algunos problemas
-- **is blocked by:** [[COB-452]] APP - Review - Algunos pedidos que deberian poder hacer "clic derecho, cobrar" no lo esta permitiendo
+- **is blocked by:** [[COB-451 - API - Review - Listado de cobrables, aparecen algunos que irian en cobros|COB-451]] API - Review - Listado de cobrables, aparecen algunos que irian en "cobros pendientes"
+- **is blocked by:** [[COB-450 - API - Review - Listado de cobros pendientes algunos problemas|COB-450]] API - Review - Listado de cobros pendientes algunos problemas
+- **is blocked by:** [[COB-452 - APP - Review - Algunos pedidos que deberian poder hacer clic derecho, cobrar no|COB-452]] APP - Review - Algunos pedidos que deberian poder hacer "clic derecho, cobrar" no lo esta permitiendo
 
 ## Descripcion
 

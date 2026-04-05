@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1151"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-476]] API - Review - En Cobrables y Pendientes de cobro no deben aparecer nunca los que ya estan cobrados
+- **is blocked by:** [[COB-476 - API - Review - En Cobrables y Pendientes de cobro no deben aparecer nunca los|COB-476]] API - Review - En Cobrables y Pendientes de cobro no deben aparecer nunca los que ya estan cobrados
 
 ## Descripcion
 

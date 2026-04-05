@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3280"
 
 ## Relaciones
 
-- **relates to:** [[POS-337]] API - Refactor - Agregar internalTax en creditos RMA
+- **relates to:** [[POS-337 - API - Refactor - Agregar internalTax en creditos RMA|POS-337]] API - Refactor - Agregar internalTax en creditos RMA
 
 ## Descripcion
 

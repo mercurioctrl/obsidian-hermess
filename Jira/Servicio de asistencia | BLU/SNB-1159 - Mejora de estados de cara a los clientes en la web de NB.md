@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1159"
 
 ## Relaciones
 
-- **is blocked by:** [[POS-306]] API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso 
-- **is blocked by:** [[POS-307]] APP - Refactor - Permitir introducir una fecha futura (no olbigatoria) cuando se notifica un ingreso
-- **is blocked by:** [[POS-308]] API - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de ingresos
-- **is blocked by:** [[POS-309]] APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de ingresos
-- **is blocked by:** [[NBWEB-770]] API - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de postventa
-- **is blocked by:** [[NBWEB-771]] APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de postventa
-- **is blocked by:** [[NBWEB-775]] API - Refactor - En la seccion de Mis Postventa, mostraremos "AUTORIZADO" en lugar de "EN ESPERA" cuando ya el cliente fue "notificado" y esta "EN ESPERA"
+- **is blocked by:** [[POS-306 - API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso|POS-306]] API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso 
+- **is blocked by:** [[POS-307 - APP - Refactor - Permitir introducir una fecha futura (no olbigatoria) cuando|POS-307]] APP - Refactor - Permitir introducir una fecha futura (no olbigatoria) cuando se notifica un ingreso
+- **is blocked by:** [[POS-308 - API - Refactor- Agregar la fecha de entrada si es que esta disponible en el|POS-308]] API - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de ingresos
+- **is blocked by:** [[POS-309 - APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el|POS-309]] APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de ingresos
+- **is blocked by:** [[NBWEB-770 - API - Refactor- Agregar la fecha de entrada si es que esta disponible en el|NBWEB-770]] API - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de postventa
+- **is blocked by:** [[NBWEB-771 - APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el|NBWEB-771]] APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de postventa
+- **is blocked by:** [[NBWEB-775 - API - Refactor - En la seccion de Mis Postventa, mostraremos AUTORIZADO en|NBWEB-775]] API - Refactor - En la seccion de Mis Postventa, mostraremos "AUTORIZADO" en lugar de "EN ESPERA" cuando ya el cliente fue "notificado" y esta "EN ESPERA"
 
 ## Descripcion
 

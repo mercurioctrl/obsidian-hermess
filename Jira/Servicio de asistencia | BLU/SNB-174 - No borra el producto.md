@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-174"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-365]] No borra el producto
+- **is caused by:** [[NBWEB-365 - No borra el producto|NBWEB-365]] No borra el producto
 
 ## Descripcion
 

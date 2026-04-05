@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2748"
 
 ## Relaciones
 
-- **has action item:** [[PED-938]] API - Refactor - Permitir busqueda por nro de seguimiento en ordenes
+- **has action item:** [[PED-938 - API - Refactor - Permitir busqueda por nro de seguimiento en ordenes|PED-938]] API - Refactor - Permitir busqueda por nro de seguimiento en ordenes
 
 ## Descripcion
 

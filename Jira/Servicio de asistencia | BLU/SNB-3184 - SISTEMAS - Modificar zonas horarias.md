@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3184"
 
 ## Relaciones
 
-- **blocks:** [[PEGA-193]] API - Feat - Registro de nuevo reseller
+- **blocks:** [[PEGA-193 - API - Feat - Registro de nuevo reseller|PEGA-193]] API - Feat - Registro de nuevo reseller
 
 ## Descripcion
 

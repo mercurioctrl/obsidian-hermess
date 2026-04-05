@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-247"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-461]] Error en carga de direcciones 
+- **is caused by:** [[NBWEB-461 - Error en carga de direcciones|NBWEB-461]] Error en carga de direcciones 
 
 ## Descripcion
 

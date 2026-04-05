@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1466"
 
 ## Relaciones
 
-- **relates to:** [[PED-518]] APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales
+- **relates to:** [[PED-518 - APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales|PED-518]] APP - Refactor - Ver detalle de una orden de compra - Actualizar subtotales
 
 ## Descripcion
 

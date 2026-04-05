@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2272"
 
 ## Relaciones
 
-- **is blocked by:** [[INV-109]] APP - Refactor - Modificaciones del listado general
+- **is blocked by:** [[INV-109 - APP - Refactor - Modificaciones del listado general|INV-109]] APP - Refactor - Modificaciones del listado general
 
 ## Descripcion
 

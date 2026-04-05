@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-180"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-392]] Cliente = 026040 no le aparece el carrito cuando se loguea.
+- **is caused by:** [[NBWEB-392 - Cliente = 026040 no le aparece el carrito cuando se loguea.|NBWEB-392]] Cliente = 026040 no le aparece el carrito cuando se loguea.
 
 ## Descripcion
 

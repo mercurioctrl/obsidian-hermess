@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-500"
 
 ## Relaciones
 
-- **causes:** [[SNB-491]] No aparece en envios los que son Andrani pickup de libre opcion
+- **causes:** [[SNB-491 - No aparece en envios los que son Andrani pickup de libre opcion|SNB-491]] No aparece en envios los que son Andrani pickup de libre opcion
 
 ## Descripcion
 

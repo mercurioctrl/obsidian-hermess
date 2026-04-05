@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-568"
 
 ## Relaciones
 
-- **is caused by:** [[EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
+- **is caused by:** [[EXP-218 - Etiquetas para envíos que no las generan (genericas de ahora en mas)|EXP-218]] Etiquetas para envíos que no las generan (genericas de ahora en mas)
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-785"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-433]] API - Refactor - Cheques filtrados por fechas
+- **is blocked by:** [[COB-433 - API - Refactor - Cheques filtrados por fechas|COB-433]] API - Refactor - Cheques filtrados por fechas
 
 ## Descripcion
 

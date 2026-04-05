@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-478"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-142]] API - Refactor - Los medios de envio "Moto" y "Camioneta" tambien deben figurar en este recurso
-- **is blocked by:** [[EXP-137]] Feat - Volanta operativa
-- **is blocked by:** [[EXP-143]] Feat - Remito fiscal
+- **is blocked by:** [[EXP-142 - API - Refactor - Los medios de envio Moto y Camioneta tambien deben figurar en|EXP-142]] API - Refactor - Los medios de envio "Moto" y "Camioneta" tambien deben figurar en este recurso
+- **is blocked by:** [[EXP-137 - Feat - Volanta operativa|EXP-137]] Feat - Volanta operativa
+- **is blocked by:** [[EXP-143 - Feat - Remito fiscal|EXP-143]] Feat - Remito fiscal
 
 ## Descripcion
 

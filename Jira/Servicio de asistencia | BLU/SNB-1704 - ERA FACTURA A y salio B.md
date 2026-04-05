@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1704"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-654]] APP - Feat - Hacer NC y Desvincular para refacturar un comprobante
-- **is blocked by:** [[PED-653]] API - Feat - Hacer NC y Desvincular para refacturar un comprobante
+- **is blocked by:** [[PED-654 - APP - Feat - Hacer NC y Desvincular para refacturar un comprobante|PED-654]] APP - Feat - Hacer NC y Desvincular para refacturar un comprobante
+- **is blocked by:** [[PED-653 - API - Feat - Hacer NC y Desvincular para refacturar un comprobante|PED-653]] API - Feat - Hacer NC y Desvincular para refacturar un comprobante
 
 ## Descripcion
 

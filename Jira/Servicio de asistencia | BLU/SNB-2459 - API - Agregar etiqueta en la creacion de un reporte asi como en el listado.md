@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2459"
 
 ## Relaciones
 
-- **causes:** [[SNB-2457]] APP - Agregar etiqueta en la creacion de un reporte en los proyectos: PED,EXP,INV, COB, COM y POS  
+- **causes:** [[SNB-2457 - APP - Agregar etiqueta en la creacion de un reporte en los proyectos|SNB-2457]] APP - Agregar etiqueta en la creacion de un reporte en los proyectos: PED,EXP,INV, COB, COM y POS  
 
 ## Descripcion
 

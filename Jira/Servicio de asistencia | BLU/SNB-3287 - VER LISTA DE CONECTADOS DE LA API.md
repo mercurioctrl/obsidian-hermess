@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3287"
 
 ## Relaciones
 
-- **action item from:** [[PED-1092]] API - Review - Intentaremos buscar alguna estrategia para que el recurso se produ sea mas performativo
+- **action item from:** [[PED-1092 - API - Review - Intentaremos buscar alguna estrategia para que el recurso se|PED-1092]] API - Review - Intentaremos buscar alguna estrategia para que el recurso se produ sea mas performativo
 
 ## Descripcion
 

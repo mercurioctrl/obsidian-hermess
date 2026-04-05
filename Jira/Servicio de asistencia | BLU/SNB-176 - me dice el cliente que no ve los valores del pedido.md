@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-176"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-364]] me dice el cliente que no ve los valores del pedido
+- **is caused by:** [[NBWEB-364 - me dice el cliente que no ve los valores del pedido|NBWEB-364]] me dice el cliente que no ve los valores del pedido
 
 ## Descripcion
 

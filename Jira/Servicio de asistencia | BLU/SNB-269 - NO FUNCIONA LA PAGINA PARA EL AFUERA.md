@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-269"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-478]] Si ya tiene cuenta, no dejar que se cree una, recordarle la que tiene
+- **is caused by:** [[NBWEB-478 - Si ya tiene cuenta, no dejar que se cree una, recordarle la que tiene|NBWEB-478]] Si ya tiene cuenta, no dejar que se cree una, recordarle la que tiene
 
 ## Descripcion
 

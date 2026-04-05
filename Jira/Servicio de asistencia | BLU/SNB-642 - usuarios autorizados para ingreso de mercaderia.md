@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-642"
 
 ## Relaciones
 
-- **is blocked by:** [[POS-248]] API - Refactor - Permiso especifico para ver la seccion ingresos
+- **is blocked by:** [[POS-248 - API - Refactor - Permiso especifico para ver la seccion ingresos|POS-248]] API - Refactor - Permiso especifico para ver la seccion ingresos
 
 ## Descripcion
 

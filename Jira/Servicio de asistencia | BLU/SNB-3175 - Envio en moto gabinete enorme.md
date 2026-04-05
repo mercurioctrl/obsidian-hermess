@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3175"
 
 ## Relaciones
 
-- **has action item:** [[LIO-370]] API - Refactor - Excluir ítems con ciertas dimensiones (Moto CABA)
+- **has action item:** [[LIO-370 - API - Refactor - Excluir ítems con ciertas dimensiones (Moto CABA)|LIO-370]] API - Refactor - Excluir ítems con ciertas dimensiones (Moto CABA)
 
 ## Descripcion
 

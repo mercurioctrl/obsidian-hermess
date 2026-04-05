@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-591"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-213]] API - Review - Problema al hacer una busqueda de comprobantes
-- **is blocked by:** [[COB-333]] API - Review - Problema al hacer una busqueda de comprobantes
+- **is blocked by:** [[EXP-213 - API - Review - Problema al hacer una busqueda de comprobantes|EXP-213]] API - Review - Problema al hacer una busqueda de comprobantes
+- **is blocked by:** [[COB-333 - API - Review - Problema al hacer una busqueda de comprobantes|COB-333]] API - Review - Problema al hacer una busqueda de comprobantes
 
 ## Descripcion
 

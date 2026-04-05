@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3525"
 
 ## Relaciones
 
-- **action item from:** [[LIO-479]] API - Refactor - Al pagar una conversion de referido, esta debe hacerse sobre el precio final (creo que se esta haciendo sobre el precio sin IVA)
+- **action item from:** [[LIO-479 - API - Refactor - Al pagar una conversion de referido, esta debe hacerse sobre|LIO-479]] API - Refactor - Al pagar una conversion de referido, esta debe hacerse sobre el precio final (creo que se esta haciendo sobre el precio sin IVA)
 
 ## Descripcion
 

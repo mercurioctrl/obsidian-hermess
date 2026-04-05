@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2457"
 
 ## Relaciones
 
-- **is caused by:** [[SNB-2459]] API - Agregar etiqueta en la creacion de un reporte asi como en el listado
+- **is caused by:** [[SNB-2459 - API - Agregar etiqueta en la creacion de un reporte asi como en el listado|SNB-2459]] API - Agregar etiqueta en la creacion de un reporte asi como en el listado
 
 ## Descripcion
 

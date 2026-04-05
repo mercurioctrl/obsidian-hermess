@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3374"
 
 ## Relaciones
 
-- **has action item:** [[PED-1096]] API - Refactor - Autorizacion  para los pedidos NBE pagos en mercadopago
+- **has action item:** [[PED-1096 - API - Refactor - Autorizacion para los pedidos NBE pagos en mercadopago|PED-1096]] API - Refactor - Autorizacion  para los pedidos NBE pagos en mercadopago
 
 ## Descripcion
 

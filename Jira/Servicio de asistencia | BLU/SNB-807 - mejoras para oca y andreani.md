@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-807"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-277]] Refactor - Modal "Generar etiqueta", agregar comentarios, carga inicial de dirección, dirección completa
-- **is blocked by:** [[EXP-307]] API - Refactor - Agregar numero de pedido (ex remito) y orden en algún lugar de la etiqueta y comentarios
-- **is blocked by:** [[EXP-311]] API - Feat - Contador de impresiones de etiqueta ZPL
+- **is blocked by:** [[EXP-277 - Refactor - Modal Generar etiqueta, agregar comentarios, carga inicial de|EXP-277]] Refactor - Modal "Generar etiqueta", agregar comentarios, carga inicial de dirección, dirección completa
+- **is blocked by:** [[EXP-307 - API - Refactor - Agregar numero de pedido (ex remito) y orden en algún lugar de|EXP-307]] API - Refactor - Agregar numero de pedido (ex remito) y orden en algún lugar de la etiqueta y comentarios
+- **is blocked by:** [[EXP-311 - API - Feat - Contador de impresiones de etiqueta ZPL|EXP-311]] API - Feat - Contador de impresiones de etiqueta ZPL
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3557"
 
 ## Relaciones
 
-- **relates to:** [[LIO-240]] API - Feat - Obtener balance de billetera
+- **relates to:** [[LIO-240 - API - Feat - Obtener balance de billetera|LIO-240]] API - Feat - Obtener balance de billetera
 
 ## Descripcion
 

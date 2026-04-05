@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1411"
 
 ## Relaciones
 
-- **blocks:** [[PED-378]] API - Review - ¿Se puede visualizar cuando pones enlaces? Aca inserte un enlace de dos formas diferentes, pero la primera no aparece
+- **blocks:** [[PED-378 - API - Review - ¿Se puede visualizar cuando pones enlaces Aca inserte un enlace|PED-378]] API - Review - ¿Se puede visualizar cuando pones enlaces? Aca inserte un enlace de dos formas diferentes, pero la primera no aparece
 
 ## Descripcion
 

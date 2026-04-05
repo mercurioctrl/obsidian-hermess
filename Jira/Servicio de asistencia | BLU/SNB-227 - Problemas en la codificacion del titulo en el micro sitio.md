@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-227"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-437]] Problemas en la codificacion del titulo en el micro sitio
+- **is caused by:** [[NBWEB-437 - Problemas en la codificacion del titulo en el micro sitio|NBWEB-437]] Problemas en la codificacion del titulo en el micro sitio
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1691"
 
 ## Relaciones
 
-- **relates to:** [[PED-651]] Descargar excel cta corriente
-- **is blocked by:** [[PED-652]] APP - Feat - Agregar bonto de "Descarga cuenta corriente" en el modal de cuenta corriente
+- **relates to:** [[PED-651 - Descargar excel cta corriente|PED-651]] Descargar excel cta corriente
+- **is blocked by:** [[PED-652 - APP - Feat - Agregar bonto de Descarga cuenta corriente en el modal de cuenta|PED-652]] APP - Feat - Agregar bonto de "Descarga cuenta corriente" en el modal de cuenta corriente
 
 ## Descripcion
 

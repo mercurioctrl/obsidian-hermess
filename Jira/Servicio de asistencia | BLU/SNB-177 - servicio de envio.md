@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-177"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-384]] servicio de envio
+- **is caused by:** [[NBWEB-384 - servicio de envio|NBWEB-384]] servicio de envio
 
 ## Descripcion
 

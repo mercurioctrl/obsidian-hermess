@@ -1,12 +1,12 @@
 ---
-synced: "2026-04-05 07:55"
+synced: "2026-04-05 08:00"
 total_projects: 31
 total_issues: 12364
 ---
 
 # Jira — bluinc
 
-**Proyectos:** 31 | **Issues totales:** 12364 | Ultima sync: 2026-04-05 07:55
+**Proyectos:** 31 | **Issues totales:** 12364 | Ultima sync: 2026-04-05 08:00
 
 ## Proyectos
 

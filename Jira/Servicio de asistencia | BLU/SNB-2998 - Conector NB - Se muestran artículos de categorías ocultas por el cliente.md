@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2998"
 
 ## Relaciones
 
-- **action item from:** [[NBWEB-970]] API - Refactor - Cambiar claves de redis para que sean facilmente alcanzables por usuario
-- **action item from:** [[NBWEB-971]] API - Refactor - Agregaremos a la edición que hacen los clientes en integraciones para categorias y prodcutos para hacer flush de cache de redis para ese cliente
+- **action item from:** [[NBWEB-970 - API - Refactor - Cambiar claves de redis para que sean facilmente alcanzables|NBWEB-970]] API - Refactor - Cambiar claves de redis para que sean facilmente alcanzables por usuario
+- **action item from:** [[NBWEB-971 - API - Refactor - Agregaremos a la edición que hacen los clientes en|NBWEB-971]] API - Refactor - Agregaremos a la edición que hacen los clientes en integraciones para categorias y prodcutos para hacer flush de cache de redis para ese cliente
 
 ## Descripcion
 

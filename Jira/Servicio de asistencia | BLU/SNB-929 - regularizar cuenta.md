@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-929"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-453]] Feat - Regularizar cuenta para administradores
-- **causes:** [[COB-453]] Feat - Regularizar cuenta para administradores
+- **is blocked by:** [[COB-453 - Feat - Regularizar cuenta para administradores|COB-453]] Feat - Regularizar cuenta para administradores
+- **causes:** [[COB-453 - Feat - Regularizar cuenta para administradores|COB-453]] Feat - Regularizar cuenta para administradores
 
 ## Descripcion
 

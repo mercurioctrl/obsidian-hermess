@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2203"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-538]] Oportunidad de Mejora: Mostrar exacto la misma informacion dentro y fuera del estado crediticio del cliente
+- **is blocked by:** [[COB-538 - Oportunidad de Mejora Mostrar exacto la misma informacion dentro y fuera del|COB-538]] Oportunidad de Mejora: Mostrar exacto la misma informacion dentro y fuera del estado crediticio del cliente
 
 ## Descripcion
 

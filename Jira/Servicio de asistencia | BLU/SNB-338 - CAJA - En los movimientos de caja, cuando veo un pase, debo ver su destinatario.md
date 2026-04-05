@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-338"
 
 ## Relaciones
 
-- **is caused by:** [[COB-140]] CAJA - En los movimientos de caja, cuando veo un pase, debo ver su destinatario
+- **is caused by:** [[COB-140 - CAJA - En los movimientos de caja, cuando veo un pase, debo ver su destinatario|COB-140]] CAJA - En los movimientos de caja, cuando veo un pase, debo ver su destinatario
 
 ## Descripcion
 

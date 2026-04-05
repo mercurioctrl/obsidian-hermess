@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-770"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-284]] API - Refactor - Se agrega un estado especifico para cuando el producto fue entregado y posteriormente acreditado parcial o totalmente
+- **is blocked by:** [[EXP-284 - API - Refactor - Se agrega un estado especifico para cuando el producto fue|EXP-284]] API - Refactor - Se agrega un estado especifico para cuando el producto fue entregado y posteriormente acreditado parcial o totalmente
 
 ## Descripcion
 

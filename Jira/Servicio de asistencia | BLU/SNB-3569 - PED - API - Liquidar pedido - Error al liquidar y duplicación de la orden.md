@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3569"
 
 ## Relaciones
 
-- **relates to:** [[PED-124]] API - Feat - Liquidar pedido
+- **relates to:** [[PED-124 - API - Feat - Liquidar pedido|PED-124]] API - Feat - Liquidar pedido
 
 ## Descripcion
 

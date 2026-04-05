@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-272"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-482]] API - Refactor - Agregar columna faltante de precio en el xlsx
+- **is caused by:** [[NBWEB-482 - API - Refactor - Agregar columna faltante de precio en el xlsx|NBWEB-482]] API - Refactor - Agregar columna faltante de precio en el xlsx
 
 ## Descripcion
 

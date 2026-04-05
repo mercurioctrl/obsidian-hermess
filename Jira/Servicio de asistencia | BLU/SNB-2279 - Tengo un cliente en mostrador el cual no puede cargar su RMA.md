@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2279"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-859]] APP - Refactor - Al ingresar nuevo producto de postventa - En el serial reemplazar ' \s' por '_' 
+- **relates to:** [[NBWEB-859 - APP - Refactor - Al ingresar nuevo producto de postventa - En el serial|NBWEB-859]] APP - Refactor - Al ingresar nuevo producto de postventa - En el serial reemplazar ' \s' por '_' 
 
 ## Descripcion
 

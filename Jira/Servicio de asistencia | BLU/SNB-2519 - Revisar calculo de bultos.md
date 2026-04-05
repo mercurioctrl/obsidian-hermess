@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2519"
 
 ## Relaciones
 
-- **action item from:** [[NBWEB-923]] API - Refactor - Ajuste armado y calculo de bultos al cotizar y generar etiqueta
+- **action item from:** [[NBWEB-923 - API - Refactor - Ajuste armado y calculo de bultos al cotizar y generar etiqueta|NBWEB-923]] API - Refactor - Ajuste armado y calculo de bultos al cotizar y generar etiqueta
 
 ## Descripcion
 

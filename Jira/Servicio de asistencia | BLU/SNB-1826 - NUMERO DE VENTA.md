@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1826"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-699]] APP - Feat - Si tengo el parametro orderOwner en el objeto user mostrare esos pedidos/filtros del vendedor
-- **is blocked by:** [[PED-698]] API - Refactor - Agregar orderOwner como parametro opcional al objeto users
+- **is blocked by:** [[PED-699 - APP - Feat - Si tengo el parametro orderOwner en el objeto user mostrare esos|PED-699]] APP - Feat - Si tengo el parametro orderOwner en el objeto user mostrare esos pedidos/filtros del vendedor
+- **is blocked by:** [[PED-698 - API - Refactor - Agregar orderOwner como parametro opcional al objeto users|PED-698]] API - Refactor - Agregar orderOwner como parametro opcional al objeto users
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3751"
 
 ## Relaciones
 
-- **has action item:** [[NBWEB-1007]] APP - Feat - Agregar en la homre sección Kits y Bundles
-- **action item from:** [[NBWEB-1006]] kits y Bundles
+- **has action item:** [[NBWEB-1007 - APP - Feat - Agregar en la homre sección Kits y Bundles|NBWEB-1007]] APP - Feat - Agregar en la homre sección Kits y Bundles
+- **action item from:** [[NBWEB-1006 - kits y Bundles|NBWEB-1006]] kits y Bundles
 
 ## Descripcion
 

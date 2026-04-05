@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2266"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-813]] API - Refactor - Se debe mostrar todos los items, con la única excepción de los excluidos 
+- **is blocked by:** [[PED-813 - API - Refactor - Se debe mostrar todos los items, con la única excepción de los|PED-813]] API - Refactor - Se debe mostrar todos los items, con la única excepción de los excluidos 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3253"
 
 ## Relaciones
 
-- **relates to:** [[LIO-38]] API - Feat - Recurso de consulta en AFIP por cuit
+- **relates to:** [[LIO-38 - API - Feat - Recurso de consulta en AFIP por cuit|LIO-38]] API - Feat - Recurso de consulta en AFIP por cuit
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-10"
 
 ## Relaciones
 
-- **Padre:** [[STASK-2]] Correos
+- **Padre:** [[STASK-2 - Correos|STASK-2]] Correos
 
 ## Descripcion
 

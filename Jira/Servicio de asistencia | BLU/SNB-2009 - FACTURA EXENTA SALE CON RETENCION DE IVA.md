@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2009"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-746]] API - Refactor - Los clientes que son "extentos" generan pedidos con IVA = 0 como suelen hacerlo los de "exportacion"
+- **is blocked by:** [[PED-746 - API - Refactor - Los clientes que son extentos generan pedidos con IVA = 0 como|PED-746]] API - Refactor - Los clientes que son "extentos" generan pedidos con IVA = 0 como suelen hacerlo los de "exportacion"
 
 ## Descripcion
 

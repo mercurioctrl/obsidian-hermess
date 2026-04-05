@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3550"
 
 ## Relaciones
 
-- **relates to:** [[COB-571]] API - Refactor  - Nuevo diseño del archivo de ARBA desde Diciembre
+- **relates to:** [[COB-571 - API - Refactor - Nuevo diseño del archivo de ARBA desde Diciembre|COB-571]] API - Refactor  - Nuevo diseño del archivo de ARBA desde Diciembre
 
 ## Descripcion
 

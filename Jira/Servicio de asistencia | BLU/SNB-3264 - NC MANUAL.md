@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3264"
 
 ## Relaciones
 
-- **action item from:** [[PED-1056]] API - Refactor - Cambiar tipo de movimiento de los CREDITOS manuales (solo creditos)
+- **action item from:** [[PED-1056 - API - Refactor - Cambiar tipo de movimiento de los CREDITOS manuales (solo|PED-1056]] API - Refactor - Cambiar tipo de movimiento de los CREDITOS manuales (solo creditos)
 
 ## Descripcion
 

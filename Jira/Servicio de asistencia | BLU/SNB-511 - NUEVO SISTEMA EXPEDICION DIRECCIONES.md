@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-511"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-179]] API - Refactor - Agregar direccion de envio al objeto cliente dentro de la volanta
-- **is blocked by:** [[EXP-181]] APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la volanta
+- **is blocked by:** [[EXP-179 - API - Refactor - Agregar direccion de envio al objeto cliente dentro de la|EXP-179]] API - Refactor - Agregar direccion de envio al objeto cliente dentro de la volanta
+- **is blocked by:** [[EXP-181 - APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la|EXP-181]] APP - Refactor - Agregar dirección de envío al objeto cliente dentro de la volanta
 
 ## Descripcion
 

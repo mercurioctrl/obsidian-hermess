@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1685"
 
 ## Relaciones
 
-- **relates to:** [[PED-642]] Error en query comporbantes
-- **relates to:** [[EXP-403]] Error en query comporbantes
+- **relates to:** [[PED-642 - Error en query comporbantes|PED-642]] Error en query comporbantes
+- **relates to:** [[EXP-403 - Error en query comporbantes|EXP-403]] Error en query comporbantes
 
 ## Descripcion
 

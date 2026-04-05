@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-913"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-469]] Feat - Retencion de aportes patronales
-- **is blocked by:** [[COB-470]] Feat - Retencion iva
+- **is blocked by:** [[COB-469 - Feat - Retencion de aportes patronales|COB-469]] Feat - Retencion de aportes patronales
+- **is blocked by:** [[COB-470 - Feat - Retencion iva|COB-470]] Feat - Retencion iva
 
 ## Descripcion
 

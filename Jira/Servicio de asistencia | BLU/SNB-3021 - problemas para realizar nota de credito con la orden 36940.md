@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3021"
 
 ## Relaciones
 
-- **relates to:** [[POS-324]] Buscar la forma de bypasear la garantía cuando la marca aprueba un RMA fuera de garantía.
+- **relates to:** [[POS-324 - Buscar la forma de bypasear la garantía cuando la marca aprueba un RMA fuera de|POS-324]] Buscar la forma de bypasear la garantía cuando la marca aprueba un RMA fuera de garantía.
 
 ## Descripcion
 

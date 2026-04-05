@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1950"
 
 ## Relaciones
 
-- **blocks:** [[PED-723]] API - refactor - se contempla la posibilidad de que medio envio id sea  0
+- **blocks:** [[PED-723 - API - refactor - se contempla la posibilidad de que medio envio id sea 0|PED-723]] API - refactor - se contempla la posibilidad de que medio envio id sea  0
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3443"
 
 ## Relaciones
 
-- **has action item:** [[COB-592]] API - Feat - implementar filtro Libre Opción en recurso de clientes
+- **has action item:** [[COB-592 - API - Feat - implementar filtro Libre Opción en recurso de clientes|COB-592]] API - Feat - implementar filtro Libre Opción en recurso de clientes
 
 ## Descripcion
 

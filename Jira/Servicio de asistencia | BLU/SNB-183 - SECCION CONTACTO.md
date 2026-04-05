@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-183"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-395]] SECCION CONTACTO 
+- **is caused by:** [[NBWEB-395 - SECCION CONTACTO|NBWEB-395]] SECCION CONTACTO 
 
 ## Descripcion
 

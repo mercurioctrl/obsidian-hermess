@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1768"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-674]] APP - Feat - Agregar correo electronico del cliente a los detalles de la liquidacion
-- **is blocked by:** [[PED-673]] API - Feat - Agregar correo electronico del cliente a los detalles del pedido
+- **is blocked by:** [[PED-674 - APP - Feat - Agregar correo electronico del cliente a los detalles de la|PED-674]] APP - Feat - Agregar correo electronico del cliente a los detalles de la liquidacion
+- **is blocked by:** [[PED-673 - API - Feat - Agregar correo electronico del cliente a los detalles del pedido|PED-673]] API - Feat - Agregar correo electronico del cliente a los detalles del pedido
 
 ## Descripcion
 

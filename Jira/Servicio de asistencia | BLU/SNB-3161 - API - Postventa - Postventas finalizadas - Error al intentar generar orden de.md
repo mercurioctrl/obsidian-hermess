@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3161"
 
 ## Relaciones
 
-- **relates to:** [[POS-335]] API - Crear endpoint para generar orden de envio desde postventa -> Error al intentar generar orden
+- **relates to:** [[POS-335 - API - Crear endpoint para generar orden de envio desde postventa - Error al|POS-335]] API - Crear endpoint para generar orden de envio desde postventa -> Error al intentar generar orden
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2017"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-765]] API - Refactor - Solo mostrar descripciones que tienen carma positivo
-- **is blocked by:** [[LIO-60]] API - Refactor - Mostrar solo las descripciones que tienen karma positivo
-- **is blocked by:** [[INV-81]] API - Feat - Listar descripciones autogeneradas
+- **is blocked by:** [[NBWEB-765 - API - Refactor - Solo mostrar descripciones que tienen carma positivo|NBWEB-765]] API - Refactor - Solo mostrar descripciones que tienen carma positivo
+- **is blocked by:** [[LIO-60 - API - Refactor - Mostrar solo las descripciones que tienen karma positivo|LIO-60]] API - Refactor - Mostrar solo las descripciones que tienen karma positivo
+- **is blocked by:** [[INV-81 - API - Feat - Listar descripciones autogeneradas|INV-81]] API - Feat - Listar descripciones autogeneradas
 
 ## Descripcion
 

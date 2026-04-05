@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1835"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-727]] API - Catálogos de productos - Oportunidad de mejora en el buscador del sitio
+- **is blocked by:** [[NBWEB-727 - API - Catálogos de productos - Oportunidad de mejora en el buscador del sitio|NBWEB-727]] API - Catálogos de productos - Oportunidad de mejora en el buscador del sitio
 
 ## Descripcion
 

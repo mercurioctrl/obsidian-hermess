@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-6"
 
 ## Relaciones
 
-- **Padre:** [[STASK-3]] Crear notificaciones
-- **action item from:** [[STASK-5]] TASK - Marcar envíos que llegaron a destino
-- **action item from:** [[NBWEB-929]] RESEARCH - Datos importantes para planificar envios
+- **Padre:** [[STASK-3 - Crear notificaciones|STASK-3]] Crear notificaciones
+- **action item from:** [[STASK-5 - TASK - Marcar envíos que llegaron a destino|STASK-5]] TASK - Marcar envíos que llegaron a destino
+- **action item from:** [[NBWEB-929 - RESEARCH - Datos importantes para planificar envios|NBWEB-929]] RESEARCH - Datos importantes para planificar envios
 
 ## Descripcion
 

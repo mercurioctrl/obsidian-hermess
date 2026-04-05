@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2052"
 
 ## Relaciones
 
-- **blocks:** [[PED-765]] API - Refactor ajuste en syncup de comprobante de pago entre LO y NB
+- **blocks:** [[PED-765 - API - Refactor ajuste en syncup de comprobante de pago entre LO y NB|PED-765]] API - Refactor ajuste en syncup de comprobante de pago entre LO y NB
 
 ## Descripcion
 

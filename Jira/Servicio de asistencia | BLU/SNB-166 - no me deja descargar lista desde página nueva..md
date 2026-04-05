@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-166"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-361]] API - Feat - Listado de precios 
-- **is caused by:** [[NBWEB-393]] APP - Feat - Lista de precios
+- **is blocked by:** [[NBWEB-361 - API - Feat - Listado de precios|NBWEB-361]] API - Feat - Listado de precios 
+- **is caused by:** [[NBWEB-393 - APP - Feat - Lista de precios|NBWEB-393]] APP - Feat - Lista de precios
 
 ## Descripcion
 

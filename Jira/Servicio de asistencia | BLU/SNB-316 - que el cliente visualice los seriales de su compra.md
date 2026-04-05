@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-316"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-518]] que el cliente visualice los seriales de su compra
-- **is blocked by:** [[NBWEB-519]] APP - Feat - Mostrar seriales por producto
+- **is caused by:** [[NBWEB-518 - que el cliente visualice los seriales de su compra|NBWEB-518]] que el cliente visualice los seriales de su compra
+- **is blocked by:** [[NBWEB-519 - APP - Feat - Mostrar seriales por producto|NBWEB-519]] APP - Feat - Mostrar seriales por producto
 
 ## Descripcion
 

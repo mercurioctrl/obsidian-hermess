@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2825"
 
 ## Relaciones
 
-- **is blocked by:** [[INV-180]] APP - Refactor - Listar productos (Pestaña productos) - Portada no visible tras selección
+- **is blocked by:** [[INV-180 - APP - Refactor - Listar productos (Pestaña productos) - Portada no visible tras|INV-180]] APP - Refactor - Listar productos (Pestaña productos) - Portada no visible tras selección
 
 ## Descripcion
 

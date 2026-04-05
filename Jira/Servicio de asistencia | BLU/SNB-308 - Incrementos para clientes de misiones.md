@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-308"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-486]] API - Refactor - Agregar incremento por cliente
+- **is blocked by:** [[NBWEB-486 - API - Refactor - Agregar incremento por cliente|NBWEB-486]] API - Refactor - Agregar incremento por cliente
 
 ## Descripcion
 

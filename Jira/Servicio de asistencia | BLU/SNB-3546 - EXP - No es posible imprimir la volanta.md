@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3546"
 
 ## Relaciones
 
-- **has action item:** [[LOCAPP-97]] APP - no permite ver volanta y algun documento proque no se encuentra una funcion
+- **has action item:** [[LOCAPP-97 - APP - no permite ver volanta y algun documento proque no se encuentra una|LOCAPP-97]] APP - no permite ver volanta y algun documento proque no se encuentra una funcion
 
 ## Descripcion
 

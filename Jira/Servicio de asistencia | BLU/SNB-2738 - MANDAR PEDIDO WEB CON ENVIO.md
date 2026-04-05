@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2738"
 
 ## Relaciones
 
-- **has action item:** [[NBWEB-942]] API Envios fix estructura tarifas cotizacion
+- **has action item:** [[NBWEB-942 - API Envios fix estructura tarifas cotizacion|NBWEB-942]] API Envios fix estructura tarifas cotizacion
 
 ## Descripcion
 

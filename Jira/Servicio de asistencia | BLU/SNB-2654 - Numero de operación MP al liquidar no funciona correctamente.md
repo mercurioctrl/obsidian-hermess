@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2654"
 
 ## Relaciones
 
-- **has action item:** [[PED-906]] API - Refactor - validacion al liquidar por banco id de operacion unico
+- **has action item:** [[PED-906 - API - Refactor - validacion al liquidar por banco id de operacion unico|PED-906]] API - Refactor - validacion al liquidar por banco id de operacion unico
 
 ## Descripcion
 

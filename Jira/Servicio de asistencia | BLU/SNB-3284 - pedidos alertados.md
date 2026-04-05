@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3284"
 
 ## Relaciones
 
-- **action item from:** [[EXP-506]] API - Refactor - Des-alertar pedido
+- **action item from:** [[EXP-506 - API - Refactor - Des-alertar pedido|EXP-506]] API - Refactor - Des-alertar pedido
 
 ## Descripcion
 

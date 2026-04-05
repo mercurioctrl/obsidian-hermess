@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3248"
 
 ## Relaciones
 
-- **action item from:** [[PED-1050]] APP - Refactor - Agregar confirmación de los checkbox de intervención técnica para usuarios con problemas de motricidad  
+- **action item from:** [[PED-1050 - APP - Refactor - Agregar confirmación de los checkbox de intervención técnica|PED-1050]] APP - Refactor - Agregar confirmación de los checkbox de intervención técnica para usuarios con problemas de motricidad  
 
 ## Descripcion
 

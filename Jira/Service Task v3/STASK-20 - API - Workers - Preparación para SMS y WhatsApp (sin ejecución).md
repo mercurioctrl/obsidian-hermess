@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-20"
 
 ## Relaciones
 
-- **Padre:** [[STASK-15]] Sistema de Notificaciones Multicanal (Queue + Workers)
-- **Subtarea:** [[STASK-23]] API - Feat - Implementar Twilio configuracion e implemetancion de sms queue works.
-- **Subtarea:** [[STASK-24]] API - Feat - Implementar Twilio configuracion e implemetancion de whatsapp queue works.
-- **Subtarea:** [[STASK-25]] API - Refactor - implementar Rate Limiting, Throttling y Middleware en POST queueNotification
-- **Subtarea:** [[STASK-26]] API - DB - Migración y normalización de números telefónicos legacy a repositorio unificado de usuarios
-- **Subtarea:** [[STASK-27]] API - DB - Migración y depuración de tokens FCM/APNs legacy a UserPushDevices
-- **Subtarea:** [[STASK-32]] API-TASK-V3 feat Integrar Infobip como proveedor SMS por defecto con arquitectura desacoplada
+- **Padre:** [[STASK-15 - Sistema de Notificaciones Multicanal (Queue + Workers)|STASK-15]] Sistema de Notificaciones Multicanal (Queue + Workers)
+- **Subtarea:** [[STASK-23 - API - Feat - Implementar Twilio configuracion e implemetancion de sms queue|STASK-23]] API - Feat - Implementar Twilio configuracion e implemetancion de sms queue works.
+- **Subtarea:** [[STASK-24 - API - Feat - Implementar Twilio configuracion e implemetancion de whatsapp|STASK-24]] API - Feat - Implementar Twilio configuracion e implemetancion de whatsapp queue works.
+- **Subtarea:** [[STASK-25 - API - Refactor - implementar Rate Limiting, Throttling y Middleware en POST|STASK-25]] API - Refactor - implementar Rate Limiting, Throttling y Middleware en POST queueNotification
+- **Subtarea:** [[STASK-26 - API - DB - Migración y normalización de números telefónicos legacy a|STASK-26]] API - DB - Migración y normalización de números telefónicos legacy a repositorio unificado de usuarios
+- **Subtarea:** [[STASK-27 - API - DB - Migración y depuración de tokens FCMAPNs legacy a UserPushDevices|STASK-27]] API - DB - Migración y depuración de tokens FCM/APNs legacy a UserPushDevices
+- **Subtarea:** [[STASK-32 - API-TASK-V3 feat Integrar Infobip como proveedor SMS por defecto con|STASK-32]] API-TASK-V3 feat Integrar Infobip como proveedor SMS por defecto con arquitectura desacoplada
 
 ## Descripcion
 

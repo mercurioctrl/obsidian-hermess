@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3304"
 
 ## Relaciones
 
-- **relates to:** [[EXP-507]] API - nuevo recurso para obtener seriales en xlsx
+- **relates to:** [[EXP-507 - API - nuevo recurso para obtener seriales en xlsx|EXP-507]] API - nuevo recurso para obtener seriales en xlsx
 
 ## Descripcion
 

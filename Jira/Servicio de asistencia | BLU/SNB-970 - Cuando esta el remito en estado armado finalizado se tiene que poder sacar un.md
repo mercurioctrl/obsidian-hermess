@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-970"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-338]] APP - Refactor - Cuando un pedido esta "armado finalizado", pero no "entregado: verificar validación que aparezca el tachito para eliminar un serial
+- **is blocked by:** [[EXP-338 - APP - Refactor - Cuando un pedido esta armado finalizado, pero no entregado|EXP-338]] APP - Refactor - Cuando un pedido esta "armado finalizado", pero no "entregado: verificar validación que aparezca el tachito para eliminar un serial
 
 ## Descripcion
 

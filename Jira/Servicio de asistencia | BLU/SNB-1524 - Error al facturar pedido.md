@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1524"
 
 ## Relaciones
 
-- **relates to:** [[PED-569]] Listar voucher type by client
-- **blocks:** [[PED-568]] APP - Refactor -  obtener el voucherType segun el cliente al generar una factura
+- **relates to:** [[PED-569 - Listar voucher type by client|PED-569]] Listar voucher type by client
+- **blocks:** [[PED-568 - APP - Refactor - obtener el voucherType segun el cliente al generar una factura|PED-568]] APP - Refactor -  obtener el voucherType segun el cliente al generar una factura
 
 ## Descripcion
 

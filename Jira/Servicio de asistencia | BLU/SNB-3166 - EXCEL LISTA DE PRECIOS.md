@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3166"
 
 ## Relaciones
 
-- **action item from:** [[PED-1021]] API - Refactor - Lista de precios (interna) debe filtrar por companyCode del cliente, si no esta el cliente del usuario que la pida
+- **action item from:** [[PED-1021 - API - Refactor - Lista de precios (interna) debe filtrar por companyCode del|PED-1021]] API - Refactor - Lista de precios (interna) debe filtrar por companyCode del cliente, si no esta el cliente del usuario que la pida
 
 ## Descripcion
 

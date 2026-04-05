@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-984"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-557]] API - Refactor - Al procesar el carrito devolver la palabra clave (cuando la tenga)
-- **is blocked by:** [[NBWEB-558]] APP - Refactor - Al procesar el carrito devolver la palabra clave (cuando la tenga)
+- **is blocked by:** [[NBWEB-557 - API - Refactor - Al procesar el carrito devolver la palabra clave (cuando la|NBWEB-557]] API - Refactor - Al procesar el carrito devolver la palabra clave (cuando la tenga)
+- **is blocked by:** [[NBWEB-558 - APP - Refactor - Al procesar el carrito devolver la palabra clave (cuando la|NBWEB-558]] APP - Refactor - Al procesar el carrito devolver la palabra clave (cuando la tenga)
 
 ## Descripcion
 

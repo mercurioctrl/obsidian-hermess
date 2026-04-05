@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3295"
 
 ## Relaciones
 
-- **has action item:** [[PED-1109]] API - Refactor - Al generar remito ajustar id de pago de ser necesario en los casos LO
+- **has action item:** [[PED-1109 - API - Refactor - Al generar remito ajustar id de pago de ser necesario en los|PED-1109]] API - Refactor - Al generar remito ajustar id de pago de ser necesario en los casos LO
 
 ## Descripcion
 

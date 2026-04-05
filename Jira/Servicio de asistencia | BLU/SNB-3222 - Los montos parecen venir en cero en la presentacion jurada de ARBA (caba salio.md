@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3222"
 
 ## Relaciones
 
-- **action item from:** [[COB-570]] Refactor- Pestaña de percepciones -  al descargar voucher debe ser reactivo al select de fecha y no a la ruta.
-- **action item from:** [[COB-571]] API - Refactor  - Nuevo diseño del archivo de ARBA desde Diciembre
+- **action item from:** [[COB-570 - Refactor- Pestaña de percepciones - al descargar voucher debe ser reactivo al|COB-570]] Refactor- Pestaña de percepciones -  al descargar voucher debe ser reactivo al select de fecha y no a la ruta.
+- **action item from:** [[COB-571 - API - Refactor - Nuevo diseño del archivo de ARBA desde Diciembre|COB-571]] API - Refactor  - Nuevo diseño del archivo de ARBA desde Diciembre
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2642"
 
 ## Relaciones
 
-- **action item from:** [[NBWEB-935]] APP - Feat - Agregar subtitulo a los items
-- **action item from:** [[NBWEB-934]] API - Feat - Agregar subtitulo a los items
+- **action item from:** [[NBWEB-935 - APP - Feat - Agregar subtitulo a los items|NBWEB-935]] APP - Feat - Agregar subtitulo a los items
+- **action item from:** [[NBWEB-934 - API - Feat - Agregar subtitulo a los items|NBWEB-934]] API - Feat - Agregar subtitulo a los items
 
 ## Descripcion
 

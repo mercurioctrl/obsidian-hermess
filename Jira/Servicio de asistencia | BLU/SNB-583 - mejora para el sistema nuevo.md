@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-583"
 
 ## Relaciones
 
-- **is caused by:** [[EXP-216]] mejora para el sistema nuevo
+- **is caused by:** [[EXP-216 - mejora para el sistema nuevo|EXP-216]] mejora para el sistema nuevo
 
 ## Descripcion
 

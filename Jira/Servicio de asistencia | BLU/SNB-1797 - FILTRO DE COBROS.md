@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1797"
 
 ## Relaciones
 
-- **causes:** [[PED-713]] APP - Agregar filtro de pendientes con voucher de pago subido para Libre opcion
+- **causes:** [[PED-713 - APP - Agregar filtro de pendientes con voucher de pago subido para Libre opcion|PED-713]] APP - Agregar filtro de pendientes con voucher de pago subido para Libre opcion
 
 ## Descripcion
 

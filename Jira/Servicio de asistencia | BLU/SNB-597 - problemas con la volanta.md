@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-597"
 
 ## Relaciones
 
-- **is caused by:** [[EXP-217]] Evitar duplicados
+- **is caused by:** [[EXP-217 - Evitar duplicados|EXP-217]] Evitar duplicados
 
 ## Descripcion
 

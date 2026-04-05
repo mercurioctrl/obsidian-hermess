@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1973"
 
 ## Relaciones
 
-- **is blocked by:** [[INV-65]] Marcas
+- **is blocked by:** [[INV-65 - Marcas|INV-65]] Marcas
 
 ## Descripcion
 

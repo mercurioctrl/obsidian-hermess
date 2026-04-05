@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2064"
 
 ## Relaciones
 
-- **blocks:** [[PED-766]] API - Refactor el syncup no reconoce la edicion del nro de operacion en comprobantes 
+- **blocks:** [[PED-766 - API - Refactor el syncup no reconoce la edicion del nro de operacion en|PED-766]] API - Refactor el syncup no reconoce la edicion del nro de operacion en comprobantes 
 
 ## Descripcion
 

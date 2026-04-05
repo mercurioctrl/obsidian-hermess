@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3398"
 
 ## Relaciones
 
-- **action item from:** [[PED-1140]] APP - Refactor - Agregar al repositorio de clientes los balances de cuentas
-- **action item from:** [[PED-1139]] API - Refactor - Agregar al repositorio de clientes los balances de cuentas
+- **action item from:** [[PED-1140 - APP - Refactor - Agregar al repositorio de clientes los balances de cuentas|PED-1140]] APP - Refactor - Agregar al repositorio de clientes los balances de cuentas
+- **action item from:** [[PED-1139 - API - Refactor - Agregar al repositorio de clientes los balances de cuentas|PED-1139]] API - Refactor - Agregar al repositorio de clientes los balances de cuentas
 
 ## Descripcion
 

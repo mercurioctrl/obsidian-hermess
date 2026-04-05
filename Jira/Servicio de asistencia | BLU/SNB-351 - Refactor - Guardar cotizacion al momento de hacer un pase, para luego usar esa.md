@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-351"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-207]] APP - Feat - Cuando se precarga la salida, desde un pase marcar cotizacion por parametro
-- **is blocked by:** [[COB-206]] API - Refactor - Agregar cotización (opcional) a los pases
+- **is blocked by:** [[COB-207 - APP - Feat - Cuando se precarga la salida, desde un pase marcar cotizacion por|COB-207]] APP - Feat - Cuando se precarga la salida, desde un pase marcar cotizacion por parametro
+- **is blocked by:** [[COB-206 - API - Refactor - Agregar cotización (opcional) a los pases|COB-206]] API - Refactor - Agregar cotización (opcional) a los pases
 
 ## Descripcion
 

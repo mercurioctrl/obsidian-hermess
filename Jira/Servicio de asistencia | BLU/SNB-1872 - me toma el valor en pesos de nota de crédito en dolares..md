@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1872"
 
 ## Relaciones
 
-- **relates to:** [[PED-55]] API - Feat - Mostrar el detalle de una cuenta corriente de cliente
+- **relates to:** [[PED-55 - API - Feat - Mostrar el detalle de una cuenta corriente de cliente|PED-55]] API - Feat - Mostrar el detalle de una cuenta corriente de cliente
 
 ## Descripcion
 

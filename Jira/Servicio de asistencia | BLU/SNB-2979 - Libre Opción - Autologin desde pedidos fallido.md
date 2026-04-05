@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2979"
 
 ## Relaciones
 
-- **relates to:** [[LIO-85]] API - Feat - AutoLogin desde pedidos
-- **action item from:** [[LIO-320]] Cambiar URL a v4 en autologin 
+- **relates to:** [[LIO-85 - API - Feat - AutoLogin desde pedidos|LIO-85]] API - Feat - AutoLogin desde pedidos
+- **action item from:** [[LIO-320 - Cambiar URL a v4 en autologin|LIO-320]] Cambiar URL a v4 en autologin 
 
 ## Descripcion
 

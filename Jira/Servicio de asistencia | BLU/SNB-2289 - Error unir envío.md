@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2289"
 
 ## Relaciones
 
-- **causes:** [[SNB-2290]] PASE DE MERCADERIA
+- **causes:** [[SNB-2290 - PASE DE MERCADERIA|SNB-2290]] PASE DE MERCADERIA
 
 ## Descripcion
 

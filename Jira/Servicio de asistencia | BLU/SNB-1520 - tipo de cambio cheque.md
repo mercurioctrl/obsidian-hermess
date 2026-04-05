@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1520"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-565]] APP - Refactor - Liquidacion -> Carga de cheques, facilitar calculadora eliminando campos necesarios
+- **is blocked by:** [[PED-565 - APP - Refactor - Liquidacion - Carga de cheques, facilitar calculadora|PED-565]] APP - Refactor - Liquidacion -> Carga de cheques, facilitar calculadora eliminando campos necesarios
 
 ## Descripcion
 

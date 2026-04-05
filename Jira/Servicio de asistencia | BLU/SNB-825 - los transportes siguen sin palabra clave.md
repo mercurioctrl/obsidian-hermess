@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-825"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-310]] APP- Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
+- **is blocked by:** [[EXP-310 - APP- Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos|EXP-310]] APP- Refactor - Agregar palabra clave (solo si la tiene el pedido) a los casos de retira trasnportista
 
 ## Descripcion
 

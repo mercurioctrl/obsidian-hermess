@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-705"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-416]] APP - Refactor - Refactor en modal de agregar cheques
+- **is blocked by:** [[COB-416 - APP - Refactor - Refactor en modal de agregar cheques|COB-416]] APP - Refactor - Refactor en modal de agregar cheques
 
 ## Descripcion
 

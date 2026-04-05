@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2366"
 
 ## Relaciones
 
-- **action item from:** [[INV-146]] API - Refactor - Carga masiva de productos - Cambiar donde se guarda "price" debe ser ncosteprom
+- **action item from:** [[INV-146 - API - Refactor - Carga masiva de productos - Cambiar donde se guarda price debe|INV-146]] API - Refactor - Carga masiva de productos - Cambiar donde se guarda "price" debe ser ncosteprom
 
 ## Descripcion
 

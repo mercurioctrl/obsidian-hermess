@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1793"
 
 ## Relaciones
 
-- **relates to:** [[PED-687]] Al actualizar cliente - no muestra el error
+- **relates to:** [[PED-687 - Al actualizar cliente - no muestra el error|PED-687]] Al actualizar cliente - no muestra el error
 
 ## Descripcion
 

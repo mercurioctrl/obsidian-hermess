@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-526"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-188]] API - Refactor - Reordenar listado en pantalla para copiar el orden de la volanta
+- **is blocked by:** [[EXP-188 - API - Refactor - Reordenar listado en pantalla para copiar el orden de la|EXP-188]] API - Refactor - Reordenar listado en pantalla para copiar el orden de la volanta
 
 ## Descripcion
 

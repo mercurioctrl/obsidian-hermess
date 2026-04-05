@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-218"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-427]] Poder elegir cantidad de bultos oca/andreani
+- **is caused by:** [[NBWEB-427 - Poder elegir cantidad de bultos ocaandreani|NBWEB-427]] Poder elegir cantidad de bultos oca/andreani
 
 ## Descripcion
 

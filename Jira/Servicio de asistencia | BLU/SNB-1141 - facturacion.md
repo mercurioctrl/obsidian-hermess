@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1141"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-362]] Refactor - Parece no tener el voucherId, al menos en algunos casos
-- **is blocked by:** [[EXP-363]] MS - Refactor - Incorporar regimen MiPymes a la facturacion
+- **is blocked by:** [[EXP-362 - Refactor - Parece no tener el voucherId, al menos en algunos casos|EXP-362]] Refactor - Parece no tener el voucherId, al menos en algunos casos
+- **is blocked by:** [[EXP-363 - MS - Refactor - Incorporar regimen MiPymes a la facturacion|EXP-363]] MS - Refactor - Incorporar regimen MiPymes a la facturacion
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1512"
 
 ## Relaciones
 
-- **relates to:** [[PED-564]] Agregar permiso - All comissions
+- **relates to:** [[PED-564 - Agregar permiso - All comissions|PED-564]] Agregar permiso - All comissions
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1033"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-355]] Emision de facturas
+- **is blocked by:** [[EXP-355 - Emision de facturas|EXP-355]] Emision de facturas
 
 ## Descripcion
 

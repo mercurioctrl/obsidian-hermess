@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1658"
 
 ## Relaciones
 
-- **is blocked by:** [[INV-61]] API - Refactor - Atributos -> Eliminar atributo - Respuesta ambigua
+- **is blocked by:** [[INV-61 - API - Refactor - Atributos - Eliminar atributo - Respuesta ambigua|INV-61]] API - Refactor - Atributos -> Eliminar atributo - Respuesta ambigua
 
 ## Descripcion
 

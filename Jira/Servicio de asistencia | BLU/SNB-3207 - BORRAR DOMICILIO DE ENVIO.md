@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3207"
 
 ## Relaciones
 
-- **relates to:** [[PED-997]] APP - Refactor - Agregar/Editar direcciones -> visualizar mensaje de error
+- **relates to:** [[PED-997 - APP - Refactor - AgregarEditar direcciones - visualizar mensaje de error|PED-997]] APP - Refactor - Agregar/Editar direcciones -> visualizar mensaje de error
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3651"
 
 ## Relaciones
 
-- **is duplicated by:** [[SNB-3652]] LO - Referidos -> Error al intentar registrar un referido
+- **is duplicated by:** [[SNB-3652 - LO - Referidos - Error al intentar registrar un referido|SNB-3652]] LO - Referidos -> Error al intentar registrar un referido
 
 ## Descripcion
 

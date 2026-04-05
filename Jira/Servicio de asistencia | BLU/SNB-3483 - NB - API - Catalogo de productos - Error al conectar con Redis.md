@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3483"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-958]] API - Feat -  Implementación de Redis en API NB con control vía .env de activacion y TTL
+- **relates to:** [[NBWEB-958 - API - Feat - Implementación de Redis en API NB con control vía .env de|NBWEB-958]] API - Feat -  Implementación de Redis en API NB con control vía .env de activacion y TTL
 
 ## Descripcion
 

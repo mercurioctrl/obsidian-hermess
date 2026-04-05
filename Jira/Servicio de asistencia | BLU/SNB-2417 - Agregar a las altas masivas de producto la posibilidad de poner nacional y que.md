@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2417"
 
 ## Relaciones
 
-- **action item from:** [[INV-163]] API - Refactor - Agregar los parametros "notSerializable" Y "national"
-- **action item from:** [[INV-164]] APP - Refactor - Agregar los parametros "notSerializable" y "national" a la carga masiva
+- **action item from:** [[INV-163 - API - Refactor - Agregar los parametros notSerializable Y national|INV-163]] API - Refactor - Agregar los parametros "notSerializable" Y "national"
+- **action item from:** [[INV-164 - APP - Refactor - Agregar los parametros notSerializable y national a la carga|INV-164]] APP - Refactor - Agregar los parametros "notSerializable" y "national" a la carga masiva
 
 ## Descripcion
 

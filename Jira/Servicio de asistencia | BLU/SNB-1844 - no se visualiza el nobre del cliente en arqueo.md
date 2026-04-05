@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1844"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-504]] API - Listar movimiento por caja - No se visualiza el cliente
+- **is blocked by:** [[COB-504 - API - Listar movimiento por caja - No se visualiza el cliente|COB-504]] API - Listar movimiento por caja - No se visualiza el cliente
 
 ## Descripcion
 

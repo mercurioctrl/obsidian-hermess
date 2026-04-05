@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-485"
 
 ## Relaciones
 
-- **is caused by:** [[EXP-156]] Me dice "no se puede despachar el pedido, el estado del pedido no es valido"
+- **is caused by:** [[EXP-156 - Me dice no se puede despachar el pedido, el estado del pedido no es valido|EXP-156]] Me dice "no se puede despachar el pedido, el estado del pedido no es valido"
 
 ## Descripcion
 

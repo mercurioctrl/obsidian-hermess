@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-173"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-366]] no están apareciéndo los mails cuando hacen los pedidos los clientes
+- **is caused by:** [[NBWEB-366 - no están apareciéndo los mails cuando hacen los pedidos los clientes|NBWEB-366]] no están apareciéndo los mails cuando hacen los pedidos los clientes
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1569"
 
 ## Relaciones
 
-- **is caused by:** [[COB-486]] no toma retencion patronal
+- **is caused by:** [[COB-486 - no toma retencion patronal|COB-486]] no toma retencion patronal
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3635"
 
 ## Relaciones
 
-- **relates to:** [[PED-962]] API - Feat - Leer ticket por numero de orden
+- **relates to:** [[PED-962 - API - Feat - Leer ticket por numero de orden|PED-962]] API - Feat - Leer ticket por numero de orden
 
 ## Descripcion
 

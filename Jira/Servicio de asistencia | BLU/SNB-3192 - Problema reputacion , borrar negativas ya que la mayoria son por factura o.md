@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3192"
 
 ## Relaciones
 
-- **action item from:** [[LIO-160]] API - Feat - Reclamar calificacion por parte de los vendedores
-- **action item from:** [[LIO-371]] APP - Feat - Reclamar calificacion por parte de los vendedores
+- **action item from:** [[LIO-160 - API - Feat - Reclamar calificacion por parte de los vendedores|LIO-160]] API - Feat - Reclamar calificacion por parte de los vendedores
+- **action item from:** [[LIO-371 - APP - Feat - Reclamar calificacion por parte de los vendedores|LIO-371]] APP - Feat - Reclamar calificacion por parte de los vendedores
 
 ## Descripcion
 

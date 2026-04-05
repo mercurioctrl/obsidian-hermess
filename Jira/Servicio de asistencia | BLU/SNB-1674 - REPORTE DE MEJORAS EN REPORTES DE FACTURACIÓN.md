@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1674"
 
 ## Relaciones
 
-- **relates to:** [[PED-661]] API - Refactor - Reporte de facturación -> Agregar sucursal 
+- **relates to:** [[PED-661 - API - Refactor - Reporte de facturación - Agregar sucursal|PED-661]] API - Refactor - Reporte de facturación -> Agregar sucursal 
 
 ## Descripcion
 

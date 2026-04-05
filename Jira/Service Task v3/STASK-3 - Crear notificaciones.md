@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-3"
 
 ## Relaciones
 
-- **Padre:** [[STASK-1]] Notificaciones
-- **Subtarea:** [[STASK-4]] PED - Feat - Crear notificaciones en firebase
-- **Subtarea:** [[STASK-5]] TASK - Marcar envíos que llegaron a destino
-- **Subtarea:** [[STASK-6]] TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora -> Guardar tiempo desde que lo tomo el currier hasta que lo entregaron
+- **Padre:** [[STASK-1 - Notificaciones|STASK-1]] Notificaciones
+- **Subtarea:** [[STASK-4 - PED - Feat - Crear notificaciones en firebase|STASK-4]] PED - Feat - Crear notificaciones en firebase
+- **Subtarea:** [[STASK-5 - TASK - Marcar envíos que llegaron a destino|STASK-5]] TASK - Marcar envíos que llegaron a destino
+- **Subtarea:** [[STASK-6 - TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora - Guardar|STASK-6]] TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora -> Guardar tiempo desde que lo tomo el currier hasta que lo entregaron
 
 ## Descripcion
 

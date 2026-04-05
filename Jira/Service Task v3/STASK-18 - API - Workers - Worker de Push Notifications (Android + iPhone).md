@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-18"
 
 ## Relaciones
 
-- **Padre:** [[STASK-15]] Sistema de Notificaciones Multicanal (Queue + Workers)
+- **Padre:** [[STASK-15 - Sistema de Notificaciones Multicanal (Queue + Workers)|STASK-15]] Sistema de Notificaciones Multicanal (Queue + Workers)
 
 ## Descripcion
 

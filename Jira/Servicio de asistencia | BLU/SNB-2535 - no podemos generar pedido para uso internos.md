@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2535"
 
 ## Relaciones
 
-- **action item from:** [[PED-831]] APP - Refactor - Agregar stock de Postventa -> Agregar sucursal
-- **action item from:** [[PED-873]] API - Refactor - Al intentar editar (seleccionar para editar) una orden SUC 3, no me deja hacerlo
-- **action item from:** [[PED-876]] API - Refactor - Al hacer una orden de SUC3 esta debe solo mover el stock virtualmente como en los otros casos hasta el momento de generar el pedido
+- **action item from:** [[PED-831 - APP - Refactor - Agregar stock de Postventa - Agregar sucursal|PED-831]] APP - Refactor - Agregar stock de Postventa -> Agregar sucursal
+- **action item from:** [[PED-873 - API - Refactor - Al intentar editar (seleccionar para editar) una orden SUC 3,|PED-873]] API - Refactor - Al intentar editar (seleccionar para editar) una orden SUC 3, no me deja hacerlo
+- **action item from:** [[PED-876 - API - Refactor - Al hacer una orden de SUC3 esta debe solo mover el stock|PED-876]] API - Refactor - Al hacer una orden de SUC3 esta debe solo mover el stock virtualmente como en los otros casos hasta el momento de generar el pedido
 
 ## Descripcion
 

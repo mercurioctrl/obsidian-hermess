@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-341"
 
 ## Relaciones
 
-- **is caused by:** [[COB-146]] CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo
+- **is caused by:** [[COB-146 - CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo|COB-146]] CAJA - Solo el destinatario del pase puede aceptar un pase o rechazarlo
 
 ## Descripcion
 

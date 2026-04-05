@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-680"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-271]] API - Refactor - Confirmar despacho (siin factura) cuando es Libre Opcion
+- **is blocked by:** [[EXP-271 - API - Refactor - Confirmar despacho (siin factura) cuando es Libre Opcion|EXP-271]] API - Refactor - Confirmar despacho (siin factura) cuando es Libre Opcion
 
 ## Descripcion
 

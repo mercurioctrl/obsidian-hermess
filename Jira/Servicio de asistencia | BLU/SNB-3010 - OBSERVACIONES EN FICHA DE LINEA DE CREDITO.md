@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3010"
 
 ## Relaciones
 
-- **action item from:** [[COB-556]] API - Feat - Comentarios para las asignaciones de saldo en la linea de credito
-- **action item from:** [[COB-557]] APP - Feat - Comentarios para las asignaciones de saldo en la linea de credito
+- **action item from:** [[COB-556 - API - Feat - Comentarios para las asignaciones de saldo en la linea de credito|COB-556]] API - Feat - Comentarios para las asignaciones de saldo en la linea de credito
+- **action item from:** [[COB-557 - APP - Feat - Comentarios para las asignaciones de saldo en la linea de credito|COB-557]] APP - Feat - Comentarios para las asignaciones de saldo en la linea de credito
 
 ## Descripcion
 

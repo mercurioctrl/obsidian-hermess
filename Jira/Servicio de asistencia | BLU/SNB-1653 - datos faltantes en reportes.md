@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1653"
 
 ## Relaciones
 
-- **relates to:** [[PED-627]]   API - Generar reporte de stock y ventas por producto - Filtrado por fechas no coincidente 
+- **relates to:** [[PED-627 - API - Generar reporte de stock y ventas por producto - Filtrado por fechas no|PED-627]]   API - Generar reporte de stock y ventas por producto - Filtrado por fechas no coincidente 
 
 ## Descripcion
 

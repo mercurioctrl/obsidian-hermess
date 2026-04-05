@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2744"
 
 ## Relaciones
 
-- **has action item:** [[PED-983]] APP - Feat - Agregar proforma formal
-- **action item from:** [[PED-983]] APP - Feat - Agregar proforma formal
+- **has action item:** [[PED-983 - APP - Feat - Agregar proforma formal|PED-983]] APP - Feat - Agregar proforma formal
+- **action item from:** [[PED-983 - APP - Feat - Agregar proforma formal|PED-983]] APP - Feat - Agregar proforma formal
 
 ## Descripcion
 

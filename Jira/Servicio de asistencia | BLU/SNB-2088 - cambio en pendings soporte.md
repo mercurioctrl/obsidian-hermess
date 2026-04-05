@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2088"
 
 ## Relaciones
 
-- **relates to:** [[PED-769]] API - Refactor - Ajustar las notificaciones para cada usuario
+- **relates to:** [[PED-769 - API - Refactor - Ajustar las notificaciones para cada usuario|PED-769]] API - Refactor - Ajustar las notificaciones para cada usuario
 
 ## Descripcion
 

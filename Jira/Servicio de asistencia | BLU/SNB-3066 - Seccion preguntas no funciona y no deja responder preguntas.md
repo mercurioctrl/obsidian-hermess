@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3066"
 
 ## Relaciones
 
-- **action item from:** [[LIO-358]] APP - Review - Problema para mostrar las preguntas cuando se carga la pagina de manera sincronica
+- **action item from:** [[LIO-358 - APP - Review - Problema para mostrar las preguntas cuando se carga la pagina de|LIO-358]] APP - Review - Problema para mostrar las preguntas cuando se carga la pagina de manera sincronica
 
 ## Descripcion
 

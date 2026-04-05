@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-587"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-335]] Feat - Anulacion de compra de dolares/pesos
+- **is blocked by:** [[COB-335 - Feat - Anulacion de compra de dolarespesos|COB-335]] Feat - Anulacion de compra de dolares/pesos
 
 ## Descripcion
 

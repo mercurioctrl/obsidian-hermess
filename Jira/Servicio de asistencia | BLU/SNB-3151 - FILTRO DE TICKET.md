@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3151"
 
 ## Relaciones
 
-- **action item from:** [[PED-1020]] API - Refactor - Cuando aplico el filtro ticket=1 no se deben aplicar intervalos de fecha
-- **action item from:** [[PED-1027]] API - Feat - Repositorio de motivo de ticket
-- **action item from:** [[PED-1028]] API - Feat - Repositorio de tipos de ticket
-- **action item from:** [[PED-1029]] API - Feat - Cambiar motivo de ticket para un pedido ya realizado
-- **action item from:** [[PED-1030]] APP - Feat - Agregar selectores y cambio de motivo de ticket para un pedido ya realizado
+- **action item from:** [[PED-1020 - API - Refactor - Cuando aplico el filtro ticket=1 no se deben aplicar|PED-1020]] API - Refactor - Cuando aplico el filtro ticket=1 no se deben aplicar intervalos de fecha
+- **action item from:** [[PED-1027 - API - Feat - Repositorio de motivo de ticket|PED-1027]] API - Feat - Repositorio de motivo de ticket
+- **action item from:** [[PED-1028 - API - Feat - Repositorio de tipos de ticket|PED-1028]] API - Feat - Repositorio de tipos de ticket
+- **action item from:** [[PED-1029 - API - Feat - Cambiar motivo de ticket para un pedido ya realizado|PED-1029]] API - Feat - Cambiar motivo de ticket para un pedido ya realizado
+- **action item from:** [[PED-1030 - APP - Feat - Agregar selectores y cambio de motivo de ticket para un pedido ya|PED-1030]] APP - Feat - Agregar selectores y cambio de motivo de ticket para un pedido ya realizado
 
 ## Descripcion
 

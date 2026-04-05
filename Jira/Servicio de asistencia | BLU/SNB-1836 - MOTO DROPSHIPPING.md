@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1836"
 
 ## Relaciones
 
-- **blocks:** [[NBWEB-736]] API - Feat - controlar campo dropshipping si corresponde con medio de envio habilitado
+- **blocks:** [[NBWEB-736 - API - Feat - controlar campo dropshipping si corresponde con medio de envio|NBWEB-736]] API - Feat - controlar campo dropshipping si corresponde con medio de envio habilitado
 
 ## Descripcion
 

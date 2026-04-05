@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1920"
 
 ## Relaciones
 
-- **blocks:** [[PED-722]] API Refactor  retificar cotización para casos de LO al liquidar y listar pedidos
+- **blocks:** [[PED-722 - API Refactor retificar cotización para casos de LO al liquidar y listar pedidos|PED-722]] API Refactor  retificar cotización para casos de LO al liquidar y listar pedidos
 
 ## Descripcion
 

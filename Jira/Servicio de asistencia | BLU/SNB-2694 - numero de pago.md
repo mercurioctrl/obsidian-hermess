@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2694"
 
 ## Relaciones
 
-- **has action item:** [[PED-927]] API refactor exception detalle de orden nro de operacion 
+- **has action item:** [[PED-927 - API refactor exception detalle de orden nro de operacion|PED-927]] API refactor exception detalle de orden nro de operacion 
 
 ## Descripcion
 

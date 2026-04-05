@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-8"
 
 ## Relaciones
 
-- **Padre:** [[STASK-7]] Tares de evaluacion y estadisticas
-- **action item from:** [[NBWEB-929]] RESEARCH - Datos importantes para planificar envios
-- **is blocked by:** [[EXP-481]] API - Añadir etiqueta de seguimiento - Respuesta nula al intentar generar
+- **Padre:** [[STASK-7 - Tares de evaluacion y estadisticas|STASK-7]] Tares de evaluacion y estadisticas
+- **action item from:** [[NBWEB-929 - RESEARCH - Datos importantes para planificar envios|NBWEB-929]] RESEARCH - Datos importantes para planificar envios
+- **is blocked by:** [[EXP-481 - API - Añadir etiqueta de seguimiento - Respuesta nula al intentar generar|EXP-481]] API - Añadir etiqueta de seguimiento - Respuesta nula al intentar generar
 
 ## Descripcion
 

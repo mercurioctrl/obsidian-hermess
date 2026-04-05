@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3702"
 
 ## Relaciones
 
-- **action item from:** [[PED-1312]] Filtrar clientes por localidad
+- **action item from:** [[PED-1312 - Filtrar clientes por localidad|PED-1312]] Filtrar clientes por localidad
 
 ## Descripcion
 

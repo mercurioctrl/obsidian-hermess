@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2351"
 
 ## Relaciones
 
-- **has action item:** [[PED-836]] API - Refactor  - Agregar ULTIMO INGRESO y COSTO FOB a reporte de stock
+- **has action item:** [[PED-836 - API - Refactor - Agregar ULTIMO INGRESO y COSTO FOB a reporte de stock|PED-836]] API - Refactor  - Agregar ULTIMO INGRESO y COSTO FOB a reporte de stock
 
 ## Descripcion
 

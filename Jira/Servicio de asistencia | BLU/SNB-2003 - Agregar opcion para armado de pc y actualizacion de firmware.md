@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2003"
 
 ## Relaciones
 
-- **action item from:** [[PED-999]] API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
-- **action item from:** [[PED-1000]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
-- **action item from:** [[EXP-491]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de retiros
+- **action item from:** [[PED-999 - API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|PED-999]] API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
+- **action item from:** [[PED-1000 - APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|PED-1000]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
+- **action item from:** [[EXP-491 - API - Refactor - Agregar indicadores (flags) de intervención técnica a las|EXP-491]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de retiros
 
 ## Descripcion
 

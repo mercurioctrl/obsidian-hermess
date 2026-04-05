@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2233"
 
 ## Relaciones
 
-- **is caused by:** [[PED-800]] APP - Refactor - en el modal de comprobantes de pago permitir subir mas comprobantes
-- **is blocked by:** [[PED-801]] API - Feat - Permitir remover comprobantes de pedido no autorizados
-- **is blocked by:** [[PED-802]] API - Refactor - Edicion de todos los datos del comprobante
-- **is caused by:** [[PED-803]] APP - Refactor - permitir edicion de comprobantes de pago en ciertos  estados con medio de pago diferido
-- **is blocked by:** [[PED-804]] API - Refactor - permitir edicion de comprobantes de pago en ciertos  estados con medio de pago diferido
+- **is caused by:** [[PED-800 - APP - Refactor - en el modal de comprobantes de pago permitir subir mas|PED-800]] APP - Refactor - en el modal de comprobantes de pago permitir subir mas comprobantes
+- **is blocked by:** [[PED-801 - API - Feat - Permitir remover comprobantes de pedido no autorizados|PED-801]] API - Feat - Permitir remover comprobantes de pedido no autorizados
+- **is blocked by:** [[PED-802 - API - Refactor - Edicion de todos los datos del comprobante|PED-802]] API - Refactor - Edicion de todos los datos del comprobante
+- **is caused by:** [[PED-803 - APP - Refactor - permitir edicion de comprobantes de pago en ciertos estados|PED-803]] APP - Refactor - permitir edicion de comprobantes de pago en ciertos  estados con medio de pago diferido
+- **is blocked by:** [[PED-804 - API - Refactor - permitir edicion de comprobantes de pago en ciertos estados|PED-804]] API - Refactor - permitir edicion de comprobantes de pago en ciertos  estados con medio de pago diferido
 
 ## Descripcion
 

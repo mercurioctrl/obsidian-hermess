@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1798"
 
 ## Relaciones
 
-- **is blocked by:** [[LIO-59]] APP - Refactor - Se debe poder editar el codigo de operacion antes de liquidar inclusive
+- **is blocked by:** [[LIO-59 - APP - Refactor - Se debe poder editar el codigo de operacion antes de liquidar|LIO-59]] APP - Refactor - Se debe poder editar el codigo de operacion antes de liquidar inclusive
 
 ## Descripcion
 

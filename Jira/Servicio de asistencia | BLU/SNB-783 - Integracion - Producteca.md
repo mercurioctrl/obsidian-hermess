@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-783"
 
 ## Relaciones
 
-- **is blocked by:** [[NBWEB-545]] API - Refactor - Precio especial desde costo
-- **is blocked by:** [[NBWEB-546]] API - Refactor - Precio especial MarketPlaces
-- **is blocked by:** [[NBWEB-547]] MS - Precios - Agregar utilidades encadenadas a MAY1 para MKP1
-- **is blocked by:** [[NBWEB-552]] API - Refactor - Precio especial desde costo (Cambio de sucursal)
-- **is blocked by:** [[NBWEB-553]] API - Refactor - Recurso ejecutable para actualizar/cargar todo aquello que tenga NPVP2 (MK1)
-- **is blocked by:** [[NBWEB-554]] API - Feat - Importar ordenes de compra (pedclit)
+- **is blocked by:** [[NBWEB-545 - API - Refactor - Precio especial desde costo|NBWEB-545]] API - Refactor - Precio especial desde costo
+- **is blocked by:** [[NBWEB-546 - API - Refactor - Precio especial MarketPlaces|NBWEB-546]] API - Refactor - Precio especial MarketPlaces
+- **is blocked by:** [[NBWEB-547 - MS - Precios - Agregar utilidades encadenadas a MAY1 para MKP1|NBWEB-547]] MS - Precios - Agregar utilidades encadenadas a MAY1 para MKP1
+- **is blocked by:** [[NBWEB-552 - API - Refactor - Precio especial desde costo (Cambio de sucursal)|NBWEB-552]] API - Refactor - Precio especial desde costo (Cambio de sucursal)
+- **is blocked by:** [[NBWEB-553 - API - Refactor - Recurso ejecutable para actualizarcargar todo aquello que|NBWEB-553]] API - Refactor - Recurso ejecutable para actualizar/cargar todo aquello que tenga NPVP2 (MK1)
+- **is blocked by:** [[NBWEB-554 - API - Feat - Importar ordenes de compra (pedclit)|NBWEB-554]] API - Feat - Importar ordenes de compra (pedclit)
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3297"
 
 ## Relaciones
 
-- **has action item:** [[PED-1074]] APP - Refactor-ajustar el envío, debe apareer en venta no en costo
+- **has action item:** [[PED-1074 - APP - Refactor-ajustar el envío, debe apareer en venta no en costo|PED-1074]] APP - Refactor-ajustar el envío, debe apareer en venta no en costo
 
 ## Descripcion
 

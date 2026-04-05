@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-13"
 
 ## Relaciones
 
-- **Padre:** [[STASK-7]] Tares de evaluacion y estadisticas
-- **action item from:** [[STASK-5]] TASK - Marcar envíos que llegaron a destino
+- **Padre:** [[STASK-7 - Tares de evaluacion y estadisticas|STASK-7]] Tares de evaluacion y estadisticas
+- **action item from:** [[STASK-5 - TASK - Marcar envíos que llegaron a destino|STASK-5]] TASK - Marcar envíos que llegaron a destino
 
 ## Descripcion
 

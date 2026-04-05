@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1665"
 
 ## Relaciones
 
-- **relates to:** [[PED-655]] API - Refactor - Agregar/Editar cliente -> Limpieza del CUIT
+- **relates to:** [[PED-655 - API - Refactor - AgregarEditar cliente - Limpieza del CUIT|PED-655]] API - Refactor - Agregar/Editar cliente -> Limpieza del CUIT
 
 ## Descripcion
 

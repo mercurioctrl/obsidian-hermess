@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2991"
 
 ## Relaciones
 
-- **has action item:** [[PED-1031]] API - Refactor - Admitir múltiples comprobantes de pago y su validación
-- **action item from:** [[PED-1034]] API - Refactor - Admitir multiples comprobantes en la misma carga y tambien en cargas posteriores
+- **has action item:** [[PED-1031 - API - Refactor - Admitir múltiples comprobantes de pago y su validación|PED-1031]] API - Refactor - Admitir múltiples comprobantes de pago y su validación
+- **action item from:** [[PED-1034 - API - Refactor - Admitir multiples comprobantes en la misma carga y tambien en|PED-1034]] API - Refactor - Admitir multiples comprobantes en la misma carga y tambien en cargas posteriores
 
 ## Descripcion
 

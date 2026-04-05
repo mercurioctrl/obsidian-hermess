@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1972"
 
 ## Relaciones
 
-- **blocks:** [[PED-735]] API - Refactor - contemplar casos de conversión de datos  string a float
+- **blocks:** [[PED-735 - API - Refactor - contemplar casos de conversión de datos string a float|PED-735]] API - Refactor - contemplar casos de conversión de datos  string a float
 
 ## Descripcion
 

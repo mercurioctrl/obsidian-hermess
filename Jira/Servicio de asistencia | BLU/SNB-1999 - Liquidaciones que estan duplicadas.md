@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1999"
 
 ## Relaciones
 
-- **blocks:** [[PED-744]] API - Refactor - al guardar comprobantes no deben repetir datos
+- **blocks:** [[PED-744 - API - Refactor - al guardar comprobantes no deben repetir datos|PED-744]] API - Refactor - al guardar comprobantes no deben repetir datos
 
 ## Descripcion
 

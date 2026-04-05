@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2090"
 
 ## Relaciones
 
-- **is caused by:** [[PED-770]] APP - Refactor - Agregar placeholder de los campos que no son obligatorios
-- **is blocked by:** [[PED-772]] APP - Refactor - Agregar el modal para adjuntar comprobante tambien a "cheque" y a "pago diferido"
+- **is caused by:** [[PED-770 - APP - Refactor - Agregar placeholder de los campos que no son obligatorios|PED-770]] APP - Refactor - Agregar placeholder de los campos que no son obligatorios
+- **is blocked by:** [[PED-772 - APP - Refactor - Agregar el modal para adjuntar comprobante tambien a cheque y|PED-772]] APP - Refactor - Agregar el modal para adjuntar comprobante tambien a "cheque" y a "pago diferido"
 
 ## Descripcion
 

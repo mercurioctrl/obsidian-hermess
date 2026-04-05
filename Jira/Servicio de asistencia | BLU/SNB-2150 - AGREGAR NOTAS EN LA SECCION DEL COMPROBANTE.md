@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2150"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-762]] API - Feat - Leer comentario de comprobante de pago
-- **is blocked by:** [[PED-763]] API - Feat - Guardar comentario de comprobante de pago
-- **is blocked by:** [[PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
+- **is blocked by:** [[PED-762 - API - Feat - Leer comentario de comprobante de pago|PED-762]] API - Feat - Leer comentario de comprobante de pago
+- **is blocked by:** [[PED-763 - API - Feat - Guardar comentario de comprobante de pago|PED-763]] API - Feat - Guardar comentario de comprobante de pago
+- **is blocked by:** [[PED-764 - APP - Refactor - Agregar comentario al modal de comprobante de pago|PED-764]] APP - Refactor - Agregar comentario al modal de comprobante de pago
 
 ## Descripcion
 

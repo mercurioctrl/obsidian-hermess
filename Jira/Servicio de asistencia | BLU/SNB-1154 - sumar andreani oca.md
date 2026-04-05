@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1154"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-40]] Login automático como cliente
+- **is blocked by:** [[PED-40 - Login automático como cliente|PED-40]] Login automático como cliente
 
 ## Descripcion
 

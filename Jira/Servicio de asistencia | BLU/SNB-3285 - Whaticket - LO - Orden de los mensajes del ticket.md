@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3285"
 
 ## Relaciones
 
-- **relates to:** [[LIO-228]] API - Feat - Mostrar un ticket por id de ticket
+- **relates to:** [[LIO-228 - API - Feat - Mostrar un ticket por id de ticket|LIO-228]] API - Feat - Mostrar un ticket por id de ticket
 
 ## Descripcion
 

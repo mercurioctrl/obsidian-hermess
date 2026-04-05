@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3624"
 
 ## Relaciones
 
-- **relates to:** [[PED-607]] API - Feat - Reporte de facturacion
+- **relates to:** [[PED-607 - API - Feat - Reporte de facturacion|PED-607]] API - Feat - Reporte de facturacion
 
 ## Descripcion
 

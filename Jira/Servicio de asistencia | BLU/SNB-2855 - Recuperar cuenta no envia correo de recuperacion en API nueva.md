@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2855"
 
 ## Relaciones
 
-- **relates to:** [[LIO-258]] Migrar cambiar pw 
+- **relates to:** [[LIO-258 - Migrar cambiar pw|LIO-258]] Migrar cambiar pw 
 
 ## Descripcion
 

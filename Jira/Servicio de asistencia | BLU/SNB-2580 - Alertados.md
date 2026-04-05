@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2580"
 
 ## Relaciones
 
-- **action item from:** [[EXP-472]] API - Refactor - Enviar notificación a todos los expedicionistas cuando se alerta un pedido
+- **action item from:** [[EXP-472 - API - Refactor - Enviar notificación a todos los expedicionistas cuando se|EXP-472]] API - Refactor - Enviar notificación a todos los expedicionistas cuando se alerta un pedido
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-491"
 
 ## Relaciones
 
-- **is caused by:** [[SNB-500]] Algunos "Andreani Pick Up" aparecen en la lista de retiros
+- **is caused by:** [[SNB-500 - Algunos Andreani Pick Up aparecen en la lista de retiros|SNB-500]] Algunos "Andreani Pick Up" aparecen en la lista de retiros
 
 ## Descripcion
 

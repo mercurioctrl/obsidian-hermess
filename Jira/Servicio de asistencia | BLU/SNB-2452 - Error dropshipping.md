@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2452"
 
 ## Relaciones
 
-- **has action item:** [[PED-850]] API  - Refactor - validacion de orden, al asignar pedido como dropshipping
+- **has action item:** [[PED-850 - API - Refactor - validacion de orden, al asignar pedido como dropshipping|PED-850]] API  - Refactor - validacion de orden, al asignar pedido como dropshipping
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-186"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-396]] PROBLEMA CON GARANTIA EN LA NUEVA WEB
+- **is caused by:** [[NBWEB-396 - PROBLEMA CON GARANTIA EN LA NUEVA WEB|NBWEB-396]] PROBLEMA CON GARANTIA EN LA NUEVA WEB
 
 ## Descripcion
 

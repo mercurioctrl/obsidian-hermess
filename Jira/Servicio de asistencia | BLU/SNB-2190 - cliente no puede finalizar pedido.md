@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2190"
 
 ## Relaciones
 
-- **blocks:** [[LIO-83]] APP - Revisar errores que suceden respecto a carrito express o carrito normal al abandonar alguno de ellos y querer procesar una nueva compra
+- **blocks:** [[LIO-83 - APP - Revisar errores que suceden respecto a carrito express o carrito normal|LIO-83]] APP - Revisar errores que suceden respecto a carrito express o carrito normal al abandonar alguno de ellos y querer procesar una nueva compra
 
 ## Descripcion
 

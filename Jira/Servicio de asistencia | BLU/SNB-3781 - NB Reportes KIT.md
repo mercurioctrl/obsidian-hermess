@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3781"
 
 ## Relaciones
 
-- **has action item:** [[PED-1335]] API - Feat - Billing Kit Report
+- **has action item:** [[PED-1335 - API - Feat - Billing Kit Report|PED-1335]] API - Feat - Billing Kit Report
 
 ## Descripcion
 

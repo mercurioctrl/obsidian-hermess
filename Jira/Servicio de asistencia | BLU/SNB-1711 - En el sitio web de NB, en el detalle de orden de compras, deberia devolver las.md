@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1711"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-685]] Formatear correctamente detalle orden
+- **relates to:** [[NBWEB-685 - Formatear correctamente detalle orden|NBWEB-685]] Formatear correctamente detalle orden
 
 ## Descripcion
 

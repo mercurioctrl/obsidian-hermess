@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2785"
 
 ## Relaciones
 
-- **action item from:** [[PED-951]] API - Refactor - Validaciones necesarias para desliquidar
+- **action item from:** [[PED-951 - API - Refactor - Validaciones necesarias para desliquidar|PED-951]] API - Refactor - Validaciones necesarias para desliquidar
 
 ## Descripcion
 

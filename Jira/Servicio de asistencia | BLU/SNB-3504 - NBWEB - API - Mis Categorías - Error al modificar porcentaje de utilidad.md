@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3504"
 
 ## Relaciones
 
-- **relates to:** [[NBWEB-643]] API - Feat -Mis Categorias -> Agregar / Editar "Mi categoría"
+- **relates to:** [[NBWEB-643 - API - Feat -Mis Categorias - Agregar Editar Mi categoría|NBWEB-643]] API - Feat -Mis Categorias -> Agregar / Editar "Mi categoría"
 
 ## Descripcion
 

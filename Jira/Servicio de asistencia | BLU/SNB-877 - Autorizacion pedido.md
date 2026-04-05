@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-877"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-322]] API - Refactor - Devolución, excepciones de cambio de estado
+- **is blocked by:** [[EXP-322 - API - Refactor - Devolución, excepciones de cambio de estado|EXP-322]] API - Refactor - Devolución, excepciones de cambio de estado
 
 ## Descripcion
 

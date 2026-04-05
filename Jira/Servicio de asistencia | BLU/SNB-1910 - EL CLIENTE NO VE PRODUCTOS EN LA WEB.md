@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1910"
 
 ## Relaciones
 
-- **causes:** [[NBWEB-731]] APP - Mejora -  Cuando se busca algun item y hay error se debe limpiar el listado anterior para no dejar busquedas anteroriores  que no coincidan con la busqueda
+- **causes:** [[NBWEB-731 - APP - Mejora - Cuando se busca algun item y hay error se debe limpiar el|NBWEB-731]] APP - Mejora -  Cuando se busca algun item y hay error se debe limpiar el listado anterior para no dejar busquedas anteroriores  que no coincidan con la busqueda
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2293"
 
 ## Relaciones
 
-- **is blocked by:** [[PED-817]] APP - Refactor - Mostrar estimados de llegada en el cotizador de envio
+- **is blocked by:** [[PED-817 - APP - Refactor - Mostrar estimados de llegada en el cotizador de envio|PED-817]] APP - Refactor - Mostrar estimados de llegada en el cotizador de envio
 
 ## Descripcion
 

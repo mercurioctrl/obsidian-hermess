@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-206"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-420]] API - Fix - Revisar posible problema a listar los comprobantes luego del cambio de los token
-- **is caused by:** [[NBWEB-421]] API - Feat - Que se peuda buscar por SKU, EAN y UPC
+- **is caused by:** [[NBWEB-420 - API - Fix - Revisar posible problema a listar los comprobantes luego del cambio|NBWEB-420]] API - Fix - Revisar posible problema a listar los comprobantes luego del cambio de los token
+- **is caused by:** [[NBWEB-421 - API - Feat - Que se peuda buscar por SKU, EAN y UPC|NBWEB-421]] API - Feat - Que se peuda buscar por SKU, EAN y UPC
 
 ## Descripcion
 

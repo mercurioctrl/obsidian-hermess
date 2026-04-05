@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1853"
 
 ## Relaciones
 
-- **relates to:** [[PED-47]] API - Feat - Descargar ordenes de compra
+- **relates to:** [[PED-47 - API - Feat - Descargar ordenes de compra|PED-47]] API - Feat - Descargar ordenes de compra
 
 ## Descripcion
 

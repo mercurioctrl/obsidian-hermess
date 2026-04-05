@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-612"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-341]] API - Refactor - Ordenar alfabeticamente los conceptos de salida
+- **is blocked by:** [[COB-341 - API - Refactor - Ordenar alfabeticamente los conceptos de salida|COB-341]] API - Refactor - Ordenar alfabeticamente los conceptos de salida
 
 ## Descripcion
 

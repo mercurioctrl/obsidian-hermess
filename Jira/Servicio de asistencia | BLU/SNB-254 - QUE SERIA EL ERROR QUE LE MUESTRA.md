@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-254"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-465]] QUE SERIA EL ERROR QUE LE MUESTRA?
+- **is caused by:** [[NBWEB-465 - QUE SERIA EL ERROR QUE LE MUESTRA|NBWEB-465]] QUE SERIA EL ERROR QUE LE MUESTRA?
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-199"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-404]] APP - Refactor - Dar mas visibilidad a los titulos
+- **is caused by:** [[NBWEB-404 - APP - Refactor - Dar mas visibilidad a los titulos|NBWEB-404]] APP - Refactor - Dar mas visibilidad a los titulos
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-838"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-316]] API - Feat - Filtro especifico por id, sku en parámetros separados
-- **is blocked by:** [[EXP-317]] APP - Feat - Filtro especifico por id, sku en parámetros separados
+- **is blocked by:** [[EXP-316 - API - Feat - Filtro especifico por id, sku en parámetros separados|EXP-316]] API - Feat - Filtro especifico por id, sku en parámetros separados
+- **is blocked by:** [[EXP-317 - APP - Feat - Filtro especifico por id, sku en parámetros separados|EXP-317]] APP - Feat - Filtro especifico por id, sku en parámetros separados
 
 ## Descripcion
 

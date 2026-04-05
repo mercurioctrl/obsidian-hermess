@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1931"
 
 ## Relaciones
 
-- **blocks:** [[ENV-8]] API - Refactor - comparacion de subtotal sin iva
+- **blocks:** [[ENV-8 - API - Refactor - comparacion de subtotal sin iva|ENV-8]] API - Refactor - comparacion de subtotal sin iva
 
 ## Descripcion
 

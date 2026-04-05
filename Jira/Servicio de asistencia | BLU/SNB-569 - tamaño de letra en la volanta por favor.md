@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-569"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-207]] APP - Refactor - Volanta operativa, aumentar tamaño del listado de productos
+- **is blocked by:** [[EXP-207 - APP - Refactor - Volanta operativa, aumentar tamaño del listado de productos|EXP-207]] APP - Refactor - Volanta operativa, aumentar tamaño del listado de productos
 
 ## Descripcion
 

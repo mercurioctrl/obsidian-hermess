@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-822"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-439]] API - Feat - Recurso para expirar cuentas corrientes
+- **is blocked by:** [[COB-439 - API - Feat - Recurso para expirar cuentas corrientes|COB-439]] API - Feat - Recurso para expirar cuentas corrientes
 
 ## Descripcion
 

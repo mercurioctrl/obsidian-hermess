@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3652"
 
 ## Relaciones
 
-- **duplicates:** [[SNB-3651]] Error en los referidos BitBayres
+- **duplicates:** [[SNB-3651 - Error en los referidos BitBayres|SNB-3651]] Error en los referidos BitBayres
 
 ## Descripcion
 

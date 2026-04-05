@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2224"
 
 ## Relaciones
 
-- **relates to:** [[EXP-443]] APP - Refactor PickUps y Shipments
+- **relates to:** [[EXP-443 - APP - Refactor PickUps y Shipments|EXP-443]] APP - Refactor PickUps y Shipments
 
 ## Descripcion
 

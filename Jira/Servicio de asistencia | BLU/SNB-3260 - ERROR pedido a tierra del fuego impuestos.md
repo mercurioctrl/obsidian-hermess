@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3260"
 
 ## Relaciones
 
-- **action item from:** [[PED-1057]] API - Refactor - Agregar I. Internos a las ordenes que son Import/Export (tierra del fuego), pero no el IVA, solo impuesto interno.
+- **action item from:** [[PED-1057 - API - Refactor - Agregar I. Internos a las ordenes que son ImportExport (tierra|PED-1057]] API - Refactor - Agregar I. Internos a las ordenes que son Import/Export (tierra del fuego), pero no el IVA, solo impuesto interno.
 
 ## Descripcion
 

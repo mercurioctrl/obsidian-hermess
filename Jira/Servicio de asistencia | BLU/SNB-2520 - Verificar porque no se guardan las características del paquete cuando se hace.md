@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2520"
 
 ## Relaciones
 
-- **action item from:** [[NBWEB-924]] API - FIX - asignación de parametro bultos al procesar carrito
+- **action item from:** [[NBWEB-924 - API - FIX - asignación de parametro bultos al procesar carrito|NBWEB-924]] API - FIX - asignación de parametro bultos al procesar carrito
 
 ## Descripcion
 

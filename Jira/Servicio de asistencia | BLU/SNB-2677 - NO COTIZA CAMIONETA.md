@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2677"
 
 ## Relaciones
 
-- **has action item:** [[ENV-10]] API - Fix - al construir respuesta del cotizador por orden
+- **has action item:** [[ENV-10 - API - Fix - al construir respuesta del cotizador por orden|ENV-10]] API - Fix - al construir respuesta del cotizador por orden
 
 ## Descripcion
 

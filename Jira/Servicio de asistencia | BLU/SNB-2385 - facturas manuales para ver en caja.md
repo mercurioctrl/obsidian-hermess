@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2385"
 
 ## Relaciones
 
-- **has action item:** [[COB-548]] API - Refactor - mostrar comprobantes manuales
+- **has action item:** [[COB-548 - API - Refactor - mostrar comprobantes manuales|COB-548]] API - Refactor - mostrar comprobantes manuales
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1153"
 
 ## Relaciones
 
-- **is blocked by:** [[EXP-364]] API - Refactor - Marcar como despachado para libre opción tambien
+- **is blocked by:** [[EXP-364 - API - Refactor - Marcar como despachado para libre opción tambien|EXP-364]] API - Refactor - Marcar como despachado para libre opción tambien
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-5"
 
 ## Relaciones
 
-- **Padre:** [[STASK-3]] Crear notificaciones
-- **has action item:** [[STASK-6]] TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora -> Guardar tiempo desde que lo tomo el currier hasta que lo entregaron
-- **has action item:** [[STASK-13]] TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora en la fecha almacenada
+- **Padre:** [[STASK-3 - Crear notificaciones|STASK-3]] Crear notificaciones
+- **has action item:** [[STASK-6 - TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora - Guardar|STASK-6]] TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora -> Guardar tiempo desde que lo tomo el currier hasta que lo entregaron
+- **has action item:** [[STASK-13 - TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora en la fecha|STASK-13]] TASK - Marcar envíos que llegaron a destino - Oportunidad de mejora en la fecha almacenada
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2297"
 
 ## Relaciones
 
-- **relates to:** [[POS-318]] API - Funcionalidad "rollback"
+- **relates to:** [[POS-318 - API - Funcionalidad rollback|POS-318]] API - Funcionalidad "rollback"
 
 ## Descripcion
 

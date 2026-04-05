@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/STASK-32"
 
 ## Relaciones
 
-- **Padre:** [[STASK-20]] API - Workers - Preparación para SMS y WhatsApp (sin ejecución)
-- **has action item:** [[LIO-578]] API/APP - Feat - Validar numero de telefono
+- **Padre:** [[STASK-20 - API - Workers - Preparación para SMS y WhatsApp (sin ejecución)|STASK-20]] API - Workers - Preparación para SMS y WhatsApp (sin ejecución)
+- **has action item:** [[LIO-578 - APIAPP - Feat - Validar numero de telefono|LIO-578]] API/APP - Feat - Validar numero de telefono
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-679"
 
 ## Relaciones
 
-- **is blocked by:** [[COB-400]] Feat - Descargar Reportes
+- **is blocked by:** [[COB-400 - Feat - Descargar Reportes|COB-400]] Feat - Descargar Reportes
 
 ## Descripcion
 

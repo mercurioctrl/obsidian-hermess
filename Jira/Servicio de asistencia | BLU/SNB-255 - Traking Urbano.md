@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-255"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-466]] Traking Urbano
-- **blocks:** [[NBWEB-466]] Traking Urbano
+- **is caused by:** [[NBWEB-466 - Traking Urbano|NBWEB-466]] Traking Urbano
+- **blocks:** [[NBWEB-466 - Traking Urbano|NBWEB-466]] Traking Urbano
 
 ## Descripcion
 

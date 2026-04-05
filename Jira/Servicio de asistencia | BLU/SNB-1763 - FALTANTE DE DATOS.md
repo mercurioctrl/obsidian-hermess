@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1763"
 
 ## Relaciones
 
-- **relates to:** [[PED-671]] API - Ver detalle de una orden de compra - Vendedor vacío
+- **relates to:** [[PED-671 - API - Ver detalle de una orden de compra - Vendedor vacío|PED-671]] API - Ver detalle de una orden de compra - Vendedor vacío
 
 ## Descripcion
 

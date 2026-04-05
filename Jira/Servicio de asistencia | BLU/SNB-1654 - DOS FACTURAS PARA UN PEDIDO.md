@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1654"
 
 ## Relaciones
 
-- **relates to:** [[LOCAPP-25]] Ver porque se están facturando dos veces los pedidso
+- **relates to:** [[LOCAPP-25 - Ver porque se están facturando dos veces los pedidso|LOCAPP-25]] Ver porque se están facturando dos veces los pedidso
 
 ## Descripcion
 

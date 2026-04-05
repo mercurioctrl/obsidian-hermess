@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-3152"
 
 ## Relaciones
 
-- **action item from:** [[PED-1018]] API - Review - Al intentar alcanzar el recurso en produccion genera un error de orden no encontrada
+- **action item from:** [[PED-1018 - API - Review - Al intentar alcanzar el recurso en produccion genera un error de|PED-1018]] API - Review - Al intentar alcanzar el recurso en produccion genera un error de orden no encontrada
 
 ## Descripcion
 

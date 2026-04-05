@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-2290"
 
 ## Relaciones
 
-- **is caused by:** [[SNB-2289]] Error unir envío
+- **is caused by:** [[SNB-2289 - Error unir envío|SNB-2289]] Error unir envío
 
 ## Descripcion
 

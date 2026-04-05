@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-167"
 
 ## Relaciones
 
-- **is caused by:** [[NBWEB-361]] API - Feat - Listado de precios 
+- **is caused by:** [[NBWEB-361 - API - Feat - Listado de precios|NBWEB-361]] API - Feat - Listado de precios 
 
 ## Descripcion
 

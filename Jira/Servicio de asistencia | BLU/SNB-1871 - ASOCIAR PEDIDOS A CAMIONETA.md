@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/SNB-1871"
 
 ## Relaciones
 
-- **causes:** [[PED-711]] APP - Refactor - Unir pedido a otro envio quitar filtro por cliente para poder asociar a otros clientes
+- **causes:** [[PED-711 - APP - Refactor - Unir pedido a otro envio quitar filtro por cliente para poder|PED-711]] APP - Refactor - Unir pedido a otro envio quitar filtro por cliente para poder asociar a otros clientes
 
 ## Descripcion
 
