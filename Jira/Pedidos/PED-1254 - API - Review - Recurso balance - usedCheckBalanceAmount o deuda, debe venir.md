@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1254"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **action item from:** [[PED-1206]] API - Refactor - Agreegar currentBalance al recurso balance
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **action item from:** [[PED-1206 - API - Refactor - Agreegar currentBalance al recurso balance|PED-1206]] API - Refactor - Agreegar currentBalance al recurso balance
 
 ## Descripcion
 

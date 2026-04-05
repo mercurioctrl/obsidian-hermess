@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1325"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **action item from:** [[PED-1320]] APP - Feat - Ver detalle pedido -> Agregar nro proforma (ver/editar)
-- **action item from:** [[PED-1321]] API - Feat - Ver detalle pedido -> Agregar nro proforma (ver/editar)
-- **action item from:** [[PED-1326]] APP - Refactor - Nro de proforma
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **action item from:** [[PED-1320 - APP - Feat - Ver detalle pedido - Agregar nro proforma (vereditar)|PED-1320]] APP - Feat - Ver detalle pedido -> Agregar nro proforma (ver/editar)
+- **action item from:** [[PED-1321 - API - Feat - Ver detalle pedido - Agregar nro proforma (vereditar)|PED-1321]] API - Feat - Ver detalle pedido -> Agregar nro proforma (ver/editar)
+- **action item from:** [[PED-1326 - APP - Refactor - Nro de proforma|PED-1326]] APP - Refactor - Nro de proforma
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-202"
 
 ## Relaciones
 
-- **Padre:** [[POS-56]] API - Feat - Ver detalle ingreso
-- **blocks:** [[POS-203]] APP - Review - Agregar fechas a los precios historico y de venta
+- **Padre:** [[POS-56 - API - Feat - Ver detalle ingreso|POS-56]] API - Feat - Ver detalle ingreso
+- **blocks:** [[POS-203 - APP - Review - Agregar fechas a los precios historico y de venta|POS-203]] APP - Review - Agregar fechas a los precios historico y de venta
 
 ## Descripcion
 

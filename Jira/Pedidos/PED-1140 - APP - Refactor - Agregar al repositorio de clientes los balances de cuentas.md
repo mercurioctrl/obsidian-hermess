@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1140"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **is blocked by:** [[PED-1139]] API - Refactor - Agregar al repositorio de clientes los balances de cuentas
-- **has action item:** [[SNB-3398]] Agregar Caja a Pedidos
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **is blocked by:** [[PED-1139 - API - Refactor - Agregar al repositorio de clientes los balances de cuentas|PED-1139]] API - Refactor - Agregar al repositorio de clientes los balances de cuentas
+- **has action item:** [[SNB-3398 - Agregar Caja a Pedidos|SNB-3398]] Agregar Caja a Pedidos
 
 ## Descripcion
 

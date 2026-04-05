@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-84"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **relates to:** [[PEGA-79]] APP - Review - Corregir aquellos donde falla al mostrar la ficha
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **relates to:** [[PEGA-79 - APP - Review - Corregir aquellos donde falla al mostrar la ficha|PEGA-79]] APP - Review - Corregir aquellos donde falla al mostrar la ficha
 
 ## Descripcion
 

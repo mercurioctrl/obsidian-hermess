@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1166"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **action item from:** [[PED-99]] API - Feat - Listar comprobantes
-- **has action item:** [[PED-1167]] APP - MVP - Refactor - Cambiar la ruta para mostrar el comprobante según companyCode
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **action item from:** [[PED-99 - API - Feat - Listar comprobantes|PED-99]] API - Feat - Listar comprobantes
+- **has action item:** [[PED-1167 - APP - MVP - Refactor - Cambiar la ruta para mostrar el comprobante según|PED-1167]] APP - MVP - Refactor - Cambiar la ruta para mostrar el comprobante según companyCode
 
 ## Descripcion
 

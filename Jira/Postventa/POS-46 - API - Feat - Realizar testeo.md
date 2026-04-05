@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-46"
 
 ## Relaciones
 
-- **Padre:** [[POS-20]] Diagnoistico
-- **relates to:** [[POS-53]] APP - Feat - Modal Realizar testeo
+- **Padre:** [[POS-20 - Diagnoistico|POS-20]] Diagnoistico
+- **relates to:** [[POS-53 - APP - Feat - Modal Realizar testeo|POS-53]] APP - Feat - Modal Realizar testeo
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-146"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
 
 ## Descripcion
 

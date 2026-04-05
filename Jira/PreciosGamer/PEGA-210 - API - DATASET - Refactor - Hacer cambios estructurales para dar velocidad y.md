@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-210"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-209]] Optimización de Experiencia por Performance
+- **Padre:** [[PEGA-209 - Optimización de Experiencia por Performance|PEGA-209]] Optimización de Experiencia por Performance
 
 ## Descripcion
 

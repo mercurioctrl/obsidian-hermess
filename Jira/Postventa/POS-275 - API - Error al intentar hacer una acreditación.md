@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-275"
 
 ## Relaciones
 
-- **blocks:** [[POS-273]] Al finalizar una postventa - Los items en credito y cambio se van a recupero automaticamente
+- **blocks:** [[POS-273 - Al finalizar una postventa - Los items en credito y cambio se van a recupero|POS-273]] Al finalizar una postventa - Los items en credito y cambio se van a recupero automaticamente
 
 ## Descripcion
 

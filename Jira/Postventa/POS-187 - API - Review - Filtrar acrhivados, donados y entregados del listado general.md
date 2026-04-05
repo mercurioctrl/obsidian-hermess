@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-187"
 
 ## Relaciones
 
-- **Padre:** [[POS-33]] API - Feat - Listar postventas finalizadas
+- **Padre:** [[POS-33 - API - Feat - Listar postventas finalizadas|POS-33]] API - Feat - Listar postventas finalizadas
 
 ## Descripcion
 

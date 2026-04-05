@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1153"
 
 ## Relaciones
 
-- **Padre:** [[PED-34]] Generar / Editar ordenes
-- **relates to:** [[PED-39]] API - Feat - Agregar/quitar item a una orden
-- **relates to:** [[PED-1150]] API - MVP - Refactor - Incluir stockWarehouseCode junto a stockWarehouseId y stockWarehouseDescription
-- **action item from:** [[PED-1149]] APP - MVP - Refacotor - Mostrar almacén en detalle de órdenes
+- **Padre:** [[PED-34 - Generar Editar ordenes|PED-34]] Generar / Editar ordenes
+- **relates to:** [[PED-39 - API - Feat - Agregarquitar item a una orden|PED-39]] API - Feat - Agregar/quitar item a una orden
+- **relates to:** [[PED-1150 - API - MVP - Refactor - Incluir stockWarehouseCode junto a stockWarehouseId y|PED-1150]] API - MVP - Refactor - Incluir stockWarehouseCode junto a stockWarehouseId y stockWarehouseDescription
+- **action item from:** [[PED-1149 - APP - MVP - Refacotor - Mostrar almacén en detalle de órdenes|PED-1149]] APP - MVP - Refacotor - Mostrar almacén en detalle de órdenes
 
 ## Descripcion
 

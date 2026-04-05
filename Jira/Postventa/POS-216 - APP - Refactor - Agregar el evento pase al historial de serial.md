@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-216"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **is blocked by:** [[POS-213]] API - Refactor - Agregar el evento "pase" al historial de serial
-- **is blocked by:** [[POS-196]] Feat - Obtener informacion completa de un serial
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **is blocked by:** [[POS-213 - API - Refactor - Agregar el evento pase al historial de serial|POS-213]] API - Refactor - Agregar el evento "pase" al historial de serial
+- **is blocked by:** [[POS-196 - Feat - Obtener informacion completa de un serial|POS-196]] Feat - Obtener informacion completa de un serial
 
 ## Descripcion
 

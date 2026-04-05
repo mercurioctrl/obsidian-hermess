@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-10"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **Subtarea:** [[PEGA-11]] API - Feat - Slider principal
-- **Subtarea:** [[PEGA-12]] APP - Feat - Slider principal
-- **Subtarea:** [[PEGA-78]] APP - Feat - Arreglar defecto al cargar los banner
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **Subtarea:** [[PEGA-11 - API - Feat - Slider principal|PEGA-11]] API - Feat - Slider principal
+- **Subtarea:** [[PEGA-12 - APP - Feat - Slider principal|PEGA-12]] APP - Feat - Slider principal
+- **Subtarea:** [[PEGA-78 - APP - Feat - Arreglar defecto al cargar los banner|PEGA-78]] APP - Feat - Arreglar defecto al cargar los banner
 
 ## Descripcion
 

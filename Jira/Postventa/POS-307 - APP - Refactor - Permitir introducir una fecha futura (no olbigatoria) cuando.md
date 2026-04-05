@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-307"
 
 ## Relaciones
 
-- **Padre:** [[POS-305]] Mejorar como se muestra cuando se acepta para que traigan mercaderia
-- **is blocked by:** [[POS-306]] API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso 
-- **blocks:** [[SNB-1159]] Mejora de estados de cara a los clientes en la web de NB
+- **Padre:** [[POS-305 - Mejorar como se muestra cuando se acepta para que traigan mercaderia|POS-305]] Mejorar como se muestra cuando se acepta para que traigan mercaderia
+- **is blocked by:** [[POS-306 - API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso|POS-306]] API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso 
+- **blocks:** [[SNB-1159 - Mejora de estados de cara a los clientes en la web de NB|SNB-1159]] Mejora de estados de cara a los clientes en la web de NB
 
 ## Descripcion
 

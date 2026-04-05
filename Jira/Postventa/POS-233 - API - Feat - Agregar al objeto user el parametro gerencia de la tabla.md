@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-233"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **blocks:** [[SNB-611]] APP - Feat - Agregar accesos a los CMS de Lo y de NB en el menu de las eplicaciones: Expedicion, postventa y cobros.
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **blocks:** [[SNB-611 - APP - Feat - Agregar accesos a los CMS de Lo y de NB en el menu de las|SNB-611]] APP - Feat - Agregar accesos a los CMS de Lo y de NB en el menu de las eplicaciones: Expedicion, postventa y cobros.
 
 ## Descripcion
 

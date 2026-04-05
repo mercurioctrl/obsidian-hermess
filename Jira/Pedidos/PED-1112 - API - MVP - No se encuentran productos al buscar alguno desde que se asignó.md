@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1112"
 
 ## Relaciones
 
-- **Padre:** [[PED-64]] Productos
+- **Padre:** [[PED-64 - Productos|PED-64]] Productos
 
 ## Descripcion
 

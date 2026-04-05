@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-97"
 
 ## Relaciones
 
-- **Padre:** [[POS-95]] API - Feat - Pedir un pase de mercaderia
-- **blocks:** [[POS-98]] API - Feat - Aceptar pase de mercadería (Postventa)
-- **blocks:** [[POS-156]] APP - Feat - Aplicativo para responder pase desde el deposito
-- **blocks:** [[EXP-82]] API - Feat - Procesar pase 
+- **Padre:** [[POS-95 - API - Feat - Pedir un pase de mercaderia|POS-95]] API - Feat - Pedir un pase de mercaderia
+- **blocks:** [[POS-98 - API - Feat - Aceptar pase de mercadería (Postventa)|POS-98]] API - Feat - Aceptar pase de mercadería (Postventa)
+- **blocks:** [[POS-156 - APP - Feat - Aplicativo para responder pase desde el deposito|POS-156]] APP - Feat - Aplicativo para responder pase desde el deposito
+- **blocks:** [[EXP-82 - API - Feat - Procesar pase|EXP-82]] API - Feat - Procesar pase 
 
 ## Descripcion
 

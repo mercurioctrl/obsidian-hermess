@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-222"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **blocks:** [[POS-223]] APP - Refactor - Agregar factura de compra a la informacion de compra en aboutSerial
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **blocks:** [[POS-223 - APP - Refactor - Agregar factura de compra a la informacion de compra en|POS-223]] APP - Refactor - Agregar factura de compra a la informacion de compra en aboutSerial
 
 ## Descripcion
 

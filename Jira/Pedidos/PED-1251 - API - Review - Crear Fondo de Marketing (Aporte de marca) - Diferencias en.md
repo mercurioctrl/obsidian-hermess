@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1251"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **clones:** [[PED-1209]] API - Feat - Crear Fondo de Marketing (Aporte de marca)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **clones:** [[PED-1209 - API - Feat - Crear Fondo de Marketing (Aporte de marca)|PED-1209]] API - Feat - Crear Fondo de Marketing (Aporte de marca)
 
 ## Descripcion
 

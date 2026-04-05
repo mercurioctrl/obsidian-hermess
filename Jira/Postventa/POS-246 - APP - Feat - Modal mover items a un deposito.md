@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-246"
 
 ## Relaciones
 
-- **Padre:** [[POS-235]] Postventa Proveedores Recepcion
-- **relates to:** [[POS-247]] APP - Refactor - Cambiar pestaña "proveedores" por "Recuperos"
+- **Padre:** [[POS-235 - Postventa Proveedores Recepcion|POS-235]] Postventa Proveedores Recepcion
+- **relates to:** [[POS-247 - APP - Refactor - Cambiar pestaña proveedores por Recuperos|POS-247]] APP - Refactor - Cambiar pestaña "proveedores" por "Recuperos"
 
 ## Descripcion
 

@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-231"
 
 ## Relaciones
 
-- **Padre:** [[POS-230]] Postventa Proveedores
-- **Subtarea:** [[POS-232]] API - Feat - Depósitos
-- **Subtarea:** [[POS-237]] API - Feat - Crear deposito
-- **Subtarea:** [[POS-238]] API - Feat - Eliminar deposito (logico)
-- **Subtarea:** [[POS-242]] API - Feat - Listar proveedores
+- **Padre:** [[POS-230 - Postventa Proveedores|POS-230]] Postventa Proveedores
+- **Subtarea:** [[POS-232 - API - Feat - Depósitos|POS-232]] API - Feat - Depósitos
+- **Subtarea:** [[POS-237 - API - Feat - Crear deposito|POS-237]] API - Feat - Crear deposito
+- **Subtarea:** [[POS-238 - API - Feat - Eliminar deposito (logico)|POS-238]] API - Feat - Eliminar deposito (logico)
+- **Subtarea:** [[POS-242 - API - Feat - Listar proveedores|POS-242]] API - Feat - Listar proveedores
 
 ## Descripcion
 

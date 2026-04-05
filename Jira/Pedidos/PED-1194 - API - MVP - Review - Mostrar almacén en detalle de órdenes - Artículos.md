@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1194"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
 
 ## Descripcion
 

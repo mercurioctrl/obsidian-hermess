@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1210"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **has action item:** [[PED-1218]] APP - Feat - Detalle de Fondos por Marca
-- **is cloned by:** [[PED-1252]] API - Refactor - Listar Fondos (con saldos) -> Modificación y adición de Currency y filtros generales
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **has action item:** [[PED-1218 - APP - Feat - Detalle de Fondos por Marca|PED-1218]] APP - Feat - Detalle de Fondos por Marca
+- **is cloned by:** [[PED-1252 - API - Refactor - Listar Fondos (con saldos) - Modificación y adición de|PED-1252]] API - Refactor - Listar Fondos (con saldos) -> Modificación y adición de Currency y filtros generales
 
 ## Descripcion
 

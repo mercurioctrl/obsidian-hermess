@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1338"
 
 ## Relaciones
 
-- **Padre:** [[PED-1337]] Incentivo Especial Gigabyte
-- **has action item:** [[MKT-301]] NB_ INCENTIVO ESPECIAL GIGA
+- **Padre:** [[PED-1337 - Incentivo Especial Gigabyte|PED-1337]] Incentivo Especial Gigabyte
+- **has action item:** [[MKT-301 - NB_ INCENTIVO ESPECIAL GIGA|MKT-301]] NB_ INCENTIVO ESPECIAL GIGA
 
 ## Descripcion
 

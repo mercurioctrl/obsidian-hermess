@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-57"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-64]] Recolección y guardados de informacion
-- **Subtarea:** [[POS-65]] API - Feat - Filtros estadisticas productos
-- **Subtarea:** [[POS-93]] API - Feat - fixRate
-- **Subtarea:** [[POS-136]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-64 - Recolección y guardados de informacion|POS-64]] Recolección y guardados de informacion
+- **Subtarea:** [[POS-65 - API - Feat - Filtros estadisticas productos|POS-65]] API - Feat - Filtros estadisticas productos
+- **Subtarea:** [[POS-93 - API - Feat - fixRate|POS-93]] API - Feat - fixRate
+- **Subtarea:** [[POS-136 - API - Feat - Generar xlsx descargable desde el front (mediante una url alojada|POS-136]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
 
 ## Descripcion
 

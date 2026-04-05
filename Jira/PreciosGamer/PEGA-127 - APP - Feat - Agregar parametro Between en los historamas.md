@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-127"
 
 ## Relaciones
 
-- **relates to:** [[PEGA-126]] APP - Refactor - Dividir en 3 recursos el detalle del producto
+- **relates to:** [[PEGA-126 - APP - Refactor - Dividir en 3 recursos el detalle del producto|PEGA-126]] APP - Refactor - Dividir en 3 recursos el detalle del producto
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-112"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **is duplicated by:** [[PEGA-111]] APP - Refactor- Cambio de color para los enlaces "narnanjas"
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **is duplicated by:** [[PEGA-111 - APP - Refactor- Cambio de color para los enlaces narnanjas|PEGA-111]] APP - Refactor- Cambio de color para los enlaces "narnanjas"
 
 ## Descripcion
 

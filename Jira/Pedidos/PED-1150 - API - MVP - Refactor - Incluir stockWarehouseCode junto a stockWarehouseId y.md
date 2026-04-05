@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1150"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **has action item:** [[PED-1149]] APP - MVP - Refacotor - Mostrar almacén en detalle de órdenes
-- **relates to:** [[PED-1153]] APP - Review - Agregar/quitar item a una orden -> Error al editar un articulo
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **has action item:** [[PED-1149 - APP - MVP - Refacotor - Mostrar almacén en detalle de órdenes|PED-1149]] APP - MVP - Refacotor - Mostrar almacén en detalle de órdenes
+- **relates to:** [[PED-1153 - APP - Review - Agregarquitar item a una orden - Error al editar un articulo|PED-1153]] APP - Review - Agregar/quitar item a una orden -> Error al editar un articulo
 
 ## Descripcion
 

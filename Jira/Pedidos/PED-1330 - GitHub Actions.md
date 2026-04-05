@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1330"
 
 ## Relaciones
 
-- **Padre:** [[PED-1331]] Tests
-- **Subtarea:** [[PED-1333]] Autodeploy - Feat - Validación básica post-deploy
-- **Subtarea:** [[PED-1334]] Autodeploy - Feat - Checks post-deploy en Gamma
+- **Padre:** [[PED-1331 - Tests|PED-1331]] Tests
+- **Subtarea:** [[PED-1333 - Autodeploy - Feat - Validación básica post-deploy|PED-1333]] Autodeploy - Feat - Validación básica post-deploy
+- **Subtarea:** [[PED-1334 - Autodeploy - Feat - Checks post-deploy en Gamma|PED-1334]] Autodeploy - Feat - Checks post-deploy en Gamma
 
 ## Descripcion
 

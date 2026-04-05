@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-18"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **blocks:** [[PEGA-60]] APP - Refactor - En el menú vertical de la izquierda permitir un filtro por producto para poder mostrar contenido reactivo a la busqueda
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **blocks:** [[PEGA-60 - APP - Refactor - En el menú vertical de la izquierda permitir un filtro por|PEGA-60]] APP - Refactor - En el menú vertical de la izquierda permitir un filtro por producto para poder mostrar contenido reactivo a la busqueda
 
 ## Descripcion
 

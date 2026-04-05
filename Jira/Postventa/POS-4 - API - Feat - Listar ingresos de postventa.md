@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-4"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
-- **Subtarea:** [[POS-49]] API - Feat - Agregar filtros en lista de postventa
-- **Subtarea:** [[POS-191]] API - Refactor - Cliente secundario para libre opción
-- **Subtarea:** [[POS-200]] API - Refactor - Agregar token para leer comprobante
-- **Subtarea:** [[POS-248]] API - Refactor - Permiso especifico para ver la seccion ingresos
-- **Subtarea:** [[POS-249]] APP - Refactor - Ocultar ingresos segun permiso especifico
-- **blocks:** [[POS-35]] APP - Feat - Listar ingresos de postventa
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
+- **Subtarea:** [[POS-49 - API - Feat - Agregar filtros en lista de postventa|POS-49]] API - Feat - Agregar filtros en lista de postventa
+- **Subtarea:** [[POS-191 - API - Refactor - Cliente secundario para libre opción|POS-191]] API - Refactor - Cliente secundario para libre opción
+- **Subtarea:** [[POS-200 - API - Refactor - Agregar token para leer comprobante|POS-200]] API - Refactor - Agregar token para leer comprobante
+- **Subtarea:** [[POS-248 - API - Refactor - Permiso especifico para ver la seccion ingresos|POS-248]] API - Refactor - Permiso especifico para ver la seccion ingresos
+- **Subtarea:** [[POS-249 - APP - Refactor - Ocultar ingresos segun permiso especifico|POS-249]] APP - Refactor - Ocultar ingresos segun permiso especifico
+- **blocks:** [[POS-35 - APP - Feat - Listar ingresos de postventa|POS-35]] APP - Feat - Listar ingresos de postventa
 
 ## Descripcion
 

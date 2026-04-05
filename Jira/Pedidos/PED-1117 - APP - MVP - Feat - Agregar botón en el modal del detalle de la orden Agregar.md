@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1117"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-1118]] API  - MVP - Feat - Agregar botón en el modal del detalle de la orden "Agregar etiqueta" . Se abrirá otro modal con el nombre del producto y al lado un campo etiqueta por ejemplo :'Origen China' para poder incluir esto en la facturación
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-1118 - API - MVP - Feat - Agregar botón en el modal del detalle de la orden Agregar|PED-1118]] API  - MVP - Feat - Agregar botón en el modal del detalle de la orden "Agregar etiqueta" . Se abrirá otro modal con el nombre del producto y al lado un campo etiqueta por ejemplo :'Origen China' para poder incluir esto en la facturación
 
 ## Descripcion
 

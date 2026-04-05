@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1131"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **has action item:** [[PED-1132]] API- MVP - Refactor seleccionar tipo de lista de precio (LAset / NB ) (ver adjunto lista de precio)
-- **is cloned by:** [[PED-1129]] APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de precio
-- **has action item:** [[PED-1255]] APP - Review - Ocultar descarga de laset cuando es otro companyCode
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **has action item:** [[PED-1132 - API- MVP - Refactor seleccionar tipo de lista de precio (LAset NB ) (ver|PED-1132]] API- MVP - Refactor seleccionar tipo de lista de precio (LAset / NB ) (ver adjunto lista de precio)
+- **is cloned by:** [[PED-1129 - APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de|PED-1129]] APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de precio
+- **has action item:** [[PED-1255 - APP - Review - Ocultar descarga de laset cuando es otro companyCode|PED-1255]] APP - Review - Ocultar descarga de laset cuando es otro companyCode
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1285"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **is cloned by:** [[PED-1291]] API - Review - Clientes nuevos Vs Clientes nuevos Objetivo -> Filtros no coincidentes
-- **has action item:** [[PED-1294]] APP - Feat - Agregar objetivo de clientes en el mes actual, por vendedor
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **is cloned by:** [[PED-1291 - API - Review - Clientes nuevos Vs Clientes nuevos Objetivo - Filtros no|PED-1291]] API - Review - Clientes nuevos Vs Clientes nuevos Objetivo -> Filtros no coincidentes
+- **has action item:** [[PED-1294 - APP - Feat - Agregar objetivo de clientes en el mes actual, por vendedor|PED-1294]] APP - Feat - Agregar objetivo de clientes en el mes actual, por vendedor
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-21"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
-- **blocks:** [[PEGA-20]] APP - Feat - Detalle del producto
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
+- **blocks:** [[PEGA-20 - APP - Feat - Detalle del producto|PEGA-20]] APP - Feat - Detalle del producto
 
 ## Descripcion
 

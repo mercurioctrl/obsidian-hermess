@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1175"
 
 ## Relaciones
 
-- **Padre:** [[PED-1170]] Kits
-- **relates to:** [[INV-258]] API - Feat - SyncUp para actualizar el stock (nstock) de kits según el stock de sus componentes
+- **Padre:** [[PED-1170 - Kits|PED-1170]] Kits
+- **relates to:** [[INV-258 - API - Feat - SyncUp para actualizar el stock (nstock) de kits según el stock de|INV-258]] API - Feat - SyncUp para actualizar el stock (nstock) de kits según el stock de sus componentes
 
 ## Descripcion
 

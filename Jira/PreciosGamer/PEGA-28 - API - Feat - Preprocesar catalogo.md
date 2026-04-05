@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-28"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-3]] Scraping y procesamientos
+- **Padre:** [[PEGA-3 - Scraping y procesamientos|PEGA-3]] Scraping y procesamientos
 
 ## Descripcion
 

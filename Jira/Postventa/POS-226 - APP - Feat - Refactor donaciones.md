@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-226"
 
 ## Relaciones
 
-- **Padre:** [[POS-167]] APP - Feat - Archivar Donar
+- **Padre:** [[POS-167 - APP - Feat - Archivar Donar|POS-167]] APP - Feat - Archivar Donar
 
 ## Descripcion
 

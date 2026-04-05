@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-249"
 
 ## Relaciones
 
-- **Padre:** [[POS-4]] API - Feat - Listar ingresos de postventa
-- **is blocked by:** [[POS-248]] API - Refactor - Permiso especifico para ver la seccion ingresos
+- **Padre:** [[POS-4 - API - Feat - Listar ingresos de postventa|POS-4]] API - Feat - Listar ingresos de postventa
+- **is blocked by:** [[POS-248 - API - Refactor - Permiso especifico para ver la seccion ingresos|POS-248]] API - Refactor - Permiso especifico para ver la seccion ingresos
 
 ## Descripcion
 

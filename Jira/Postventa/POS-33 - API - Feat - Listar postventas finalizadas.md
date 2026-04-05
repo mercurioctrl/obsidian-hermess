@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-33"
 
 ## Relaciones
 
-- **Padre:** [[POS-21]] Solucion de postventa
-- **Subtarea:** [[POS-76]] API - Feat - Filtros postventa finalizadas
-- **Subtarea:** [[POS-82]] API - Test - Revisar porque no carga correctamente la grilla (falla hace poco, antes funcionaba)
-- **Subtarea:** [[POS-187]] API - Review - Filtrar acrhivados, donados y entregados del listado general
-- **Subtarea:** [[POS-201]] API - Refactor - Agregar token para leer comprobante
-- **Subtarea:** [[POS-218]] API - Feat - Accion reenviar correo con palabra clave
-- **Subtarea:** [[POS-220]] API - Refactor - Se debe enviar una notificacion a la gerencia
-- **blocks:** [[POS-69]] APP - Feat - Listar postventas finalizadas
+- **Padre:** [[POS-21 - Solucion de postventa|POS-21]] Solucion de postventa
+- **Subtarea:** [[POS-76 - API - Feat - Filtros postventa finalizadas|POS-76]] API - Feat - Filtros postventa finalizadas
+- **Subtarea:** [[POS-82 - API - Test - Revisar porque no carga correctamente la grilla (falla hace poco,|POS-82]] API - Test - Revisar porque no carga correctamente la grilla (falla hace poco, antes funcionaba)
+- **Subtarea:** [[POS-187 - API - Review - Filtrar acrhivados, donados y entregados del listado general|POS-187]] API - Review - Filtrar acrhivados, donados y entregados del listado general
+- **Subtarea:** [[POS-201 - API - Refactor - Agregar token para leer comprobante|POS-201]] API - Refactor - Agregar token para leer comprobante
+- **Subtarea:** [[POS-218 - API - Feat - Accion reenviar correo con palabra clave|POS-218]] API - Feat - Accion reenviar correo con palabra clave
+- **Subtarea:** [[POS-220 - API - Refactor - Se debe enviar una notificacion a la gerencia|POS-220]] API - Refactor - Se debe enviar una notificacion a la gerencia
+- **blocks:** [[POS-69 - APP - Feat - Listar postventas finalizadas|POS-69]] APP - Feat - Listar postventas finalizadas
 
 ## Descripcion
 

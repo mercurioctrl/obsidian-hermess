@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1241"
 
 ## Relaciones
 
-- **Padre:** [[PED-1237]] MVP -  Forwarder
-- **is cloned by:** [[PED-1301]] API - Review - al guardar el forwarder de una orden, debe quedar como default para próximas ordenes de ese cliente -> Guardado no coincidente
+- **Padre:** [[PED-1237 - MVP - Forwarder|PED-1237]] MVP -  Forwarder
+- **is cloned by:** [[PED-1301 - API - Review - al guardar el forwarder de una orden, debe quedar como default|PED-1301]] API - Review - al guardar el forwarder de una orden, debe quedar como default para próximas ordenes de ese cliente -> Guardado no coincidente
 
 ## Descripcion
 

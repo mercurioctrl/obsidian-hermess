@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-327"
 
 ## Relaciones
 
-- **Padre:** [[POS-325]] Excepciones de garantía
-- **action item from:** [[POS-326]] API - Refactor - Agregar excepción para ingreso de RMA fuera de garantía con validación de usuario y registro 
+- **Padre:** [[POS-325 - Excepciones de garantía|POS-325]] Excepciones de garantía
+- **action item from:** [[POS-326 - API - Refactor - Agregar excepción para ingreso de RMA fuera de garantía con|POS-326]] API - Refactor - Agregar excepción para ingreso de RMA fuera de garantía con validación de usuario y registro 
 
 ## Descripcion
 

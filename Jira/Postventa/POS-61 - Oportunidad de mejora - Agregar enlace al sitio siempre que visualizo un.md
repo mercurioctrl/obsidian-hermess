@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-61"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **Subtarea:** [[POS-62]] API - Refactor - Agregar enlace para los productos
-- **Subtarea:** [[POS-63]] APP - Refactor - Agregar enlace a los productos 
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **Subtarea:** [[POS-62 - API - Refactor - Agregar enlace para los productos|POS-62]] API - Refactor - Agregar enlace para los productos
+- **Subtarea:** [[POS-63 - APP - Refactor - Agregar enlace a los productos|POS-63]] APP - Refactor - Agregar enlace a los productos 
 
 ## Descripcion
 

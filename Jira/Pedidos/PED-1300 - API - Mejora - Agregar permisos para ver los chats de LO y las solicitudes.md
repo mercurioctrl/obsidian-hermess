@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1300"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **has action item:** [[PED-1299]] APP - Mejora - Agregar permiso para ver los chats de LO y las solicitudes
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **has action item:** [[PED-1299 - APP - Mejora - Agregar permiso para ver los chats de LO y las solicitudes|PED-1299]] APP - Mejora - Agregar permiso para ver los chats de LO y las solicitudes
 
 ## Descripcion
 

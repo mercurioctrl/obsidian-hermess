@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-245"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
 
 ## Descripcion
 

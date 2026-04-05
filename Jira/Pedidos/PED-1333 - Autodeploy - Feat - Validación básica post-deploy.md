@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1333"
 
 ## Relaciones
 
-- **Padre:** [[PED-1330]] GitHub Actions
+- **Padre:** [[PED-1330 - GitHub Actions|PED-1330]] GitHub Actions
 
 ## Descripcion
 

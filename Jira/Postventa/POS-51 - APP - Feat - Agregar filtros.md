@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-51"
 
 ## Relaciones
 
-- **Padre:** [[POS-35]] APP - Feat - Listar ingresos de postventa
-- **relates to:** [[POS-49]] API - Feat - Agregar filtros en lista de postventa
+- **Padre:** [[POS-35 - APP - Feat - Listar ingresos de postventa|POS-35]] APP - Feat - Listar ingresos de postventa
+- **relates to:** [[POS-49 - API - Feat - Agregar filtros en lista de postventa|POS-49]] API - Feat - Agregar filtros en lista de postventa
 
 ## Descripcion
 

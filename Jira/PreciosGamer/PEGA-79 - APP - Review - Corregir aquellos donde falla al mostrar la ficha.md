@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-79"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
-- **relates to:** [[PEGA-84]] APP - Ficha del artículo - Histograma vacío 
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
+- **relates to:** [[PEGA-84 - APP - Ficha del artículo - Histograma vacío|PEGA-84]] APP - Ficha del artículo - Histograma vacío 
 
 ## Descripcion
 

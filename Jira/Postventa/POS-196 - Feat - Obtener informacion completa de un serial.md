@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-196"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **Subtarea:** [[POS-197]] API - Feat - Obtener informacion completa de un serial
-- **Subtarea:** [[POS-198]] APP - Feat - Obtener informacion completa de un serial
-- **Subtarea:** [[POS-228]] API - Review - Ver porque este caso (y tal vez otros) no traen informacion
-- **relates to:** [[POS-213]] API - Refactor - Agregar el evento "pase" al historial de serial
-- **blocks:** [[POS-216]] APP - Refactor - Agregar el evento "pase" al historial de serial
-- **blocks:** [[POS-217]] APP - Refactor - Agregar el evento "Postventa" al historial de serial
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **Subtarea:** [[POS-197 - API - Feat - Obtener informacion completa de un serial|POS-197]] API - Feat - Obtener informacion completa de un serial
+- **Subtarea:** [[POS-198 - APP - Feat - Obtener informacion completa de un serial|POS-198]] APP - Feat - Obtener informacion completa de un serial
+- **Subtarea:** [[POS-228 - API - Review - Ver porque este caso (y tal vez otros) no traen informacion|POS-228]] API - Review - Ver porque este caso (y tal vez otros) no traen informacion
+- **relates to:** [[POS-213 - API - Refactor - Agregar el evento pase al historial de serial|POS-213]] API - Refactor - Agregar el evento "pase" al historial de serial
+- **blocks:** [[POS-216 - APP - Refactor - Agregar el evento pase al historial de serial|POS-216]] APP - Refactor - Agregar el evento "pase" al historial de serial
+- **blocks:** [[POS-217 - APP - Refactor - Agregar el evento Postventa al historial de serial|POS-217]] APP - Refactor - Agregar el evento "Postventa" al historial de serial
 
 ## Descripcion
 

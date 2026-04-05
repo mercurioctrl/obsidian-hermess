@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-292"
 
 ## Relaciones
 
-- **Subtarea:** [[POS-294]] API - Envíos a proveedores - Búsqueda general 
-- **relates to:** [[POS-294]] API - Envíos a proveedores - Búsqueda general 
+- **Subtarea:** [[POS-294 - API - Envíos a proveedores - Búsqueda general|POS-294]] API - Envíos a proveedores - Búsqueda general 
+- **relates to:** [[POS-294 - API - Envíos a proveedores - Búsqueda general|POS-294]] API - Envíos a proveedores - Búsqueda general 
 
 ## Descripcion
 

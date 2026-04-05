@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1266"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **clones:** [[PED-1211]] API - Feat - Crear Acción de Marketing
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **clones:** [[PED-1211 - API - Feat - Crear Acción de Marketing|PED-1211]] API - Feat - Crear Acción de Marketing
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1265"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **clones:** [[PED-1213]] API - Feat - Listar Acciones (con asignado/gastado por moneda)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **clones:** [[PED-1213 - API - Feat - Listar Acciones (con asignadogastado por moneda)|PED-1213]] API - Feat - Listar Acciones (con asignado/gastado por moneda)
 
 ## Descripcion
 

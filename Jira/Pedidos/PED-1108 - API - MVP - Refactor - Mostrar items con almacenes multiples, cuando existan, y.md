@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1108"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **action item from:** [[PED-1141]] API - MVP - Feat - Repositorio Almacén (Deposito)
-- **has action item:** [[PED-1142]] APP - MVP - Refactor - Mostrar deposito e id de deposito en el listado de productos
-- **has action item:** [[PED-1143]] API - MVP - Refactor - Filtro de deposito para el recurso items
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **action item from:** [[PED-1141 - API - MVP - Feat - Repositorio Almacén (Deposito)|PED-1141]] API - MVP - Feat - Repositorio Almacén (Deposito)
+- **has action item:** [[PED-1142 - APP - MVP - Refactor - Mostrar deposito e id de deposito en el listado de|PED-1142]] APP - MVP - Refactor - Mostrar deposito e id de deposito en el listado de productos
+- **has action item:** [[PED-1143 - API - MVP - Refactor - Filtro de deposito para el recurso items|PED-1143]] API - MVP - Refactor - Filtro de deposito para el recurso items
 
 ## Descripcion
 

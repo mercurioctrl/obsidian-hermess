@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-136"
 
 ## Relaciones
 
-- **Padre:** [[POS-57]] API - Feat - Estadisticas de productos
-- **blocks:** [[POS-151]] APP - Feat - Descargar informacion completa de los graficos de productos
+- **Padre:** [[POS-57 - API - Feat - Estadisticas de productos|POS-57]] API - Feat - Estadisticas de productos
+- **blocks:** [[POS-151 - APP - Feat - Descargar informacion completa de los graficos de productos|POS-151]] APP - Feat - Descargar informacion completa de los graficos de productos
 
 ## Descripcion
 

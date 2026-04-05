@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-139"
 
 ## Relaciones
 
-- **Padre:** [[POS-60]] API - Feat - Estadisticas de tecnicos
+- **Padre:** [[POS-60 - API - Feat - Estadisticas de tecnicos|POS-60]] API - Feat - Estadisticas de tecnicos
 
 ## Descripcion
 

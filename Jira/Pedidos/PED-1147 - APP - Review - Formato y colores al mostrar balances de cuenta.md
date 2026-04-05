@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1147"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
 
 ## Descripcion
 

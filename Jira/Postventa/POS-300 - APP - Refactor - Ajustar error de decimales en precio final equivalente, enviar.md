@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-300"
 
 ## Relaciones
 
-- **Padre:** [[POS-24]] Creditos
-- **relates to:** [[POS-303]] APP - Créditos Pendientes - Sugerencia de mejora en otro valor a acreditar 
+- **Padre:** [[POS-24 - Creditos|POS-24]] Creditos
+- **relates to:** [[POS-303 - APP - Créditos Pendientes - Sugerencia de mejora en otro valor a acreditar|POS-303]] APP - Créditos Pendientes - Sugerencia de mejora en otro valor a acreditar 
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1332"
 
 ## Relaciones
 
-- **Padre:** [[PED-1331]] Tests
+- **Padre:** [[PED-1331 - Tests|PED-1331]] Tests
 
 ## Descripcion
 

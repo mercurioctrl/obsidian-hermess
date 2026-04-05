@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-115"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **is blocked by:** [[PEGA-113]] API - Refactor - Filtro limites de precio
-- **relates to:** [[PEGA-114]] APP - Refactor - Filtro "ver solo los que subieron/bajaron de precio"
-- **relates to:** [[PEGA-120]] APP - Agregar margenes con respecto al footer tanto filtros como productos dependiendo del caso y agregar filtro de producto en mobile
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **is blocked by:** [[PEGA-113 - API - Refactor - Filtro limites de precio|PEGA-113]] API - Refactor - Filtro limites de precio
+- **relates to:** [[PEGA-114 - APP - Refactor - Filtro ver solo los que subieronbajaron de precio|PEGA-114]] APP - Refactor - Filtro "ver solo los que subieron/bajaron de precio"
+- **relates to:** [[PEGA-120 - APP - Agregar margenes con respecto al footer tanto filtros como productos|PEGA-120]] APP - Agregar margenes con respecto al footer tanto filtros como productos dependiendo del caso y agregar filtro de producto en mobile
 
 ## Descripcion
 

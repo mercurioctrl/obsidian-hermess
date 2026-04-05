@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-14"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **blocks:** [[PEGA-16]] APP - Feat - Listado de productos y buscador
-- **relates to:** [[PEGA-66]] API - Listar productos - Oportunidad de mejora en la búsqueda
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **blocks:** [[PEGA-16 - APP - Feat - Listado de productos y buscador|PEGA-16]] APP - Feat - Listado de productos y buscador
+- **relates to:** [[PEGA-66 - API - Listar productos - Oportunidad de mejora en la búsqueda|PEGA-66]] API - Listar productos - Oportunidad de mejora en la búsqueda
 
 ## Descripcion
 

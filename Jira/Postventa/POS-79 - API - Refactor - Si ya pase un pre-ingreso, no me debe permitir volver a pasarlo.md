@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-79"
 
 ## Relaciones
 
-- **Padre:** [[POS-5]] API - Feat - Enviar correo con el preingreso de postventa
+- **Padre:** [[POS-5 - API - Feat - Enviar correo con el preingreso de postventa|POS-5]] API - Feat - Enviar correo con el preingreso de postventa
 
 ## Descripcion
 

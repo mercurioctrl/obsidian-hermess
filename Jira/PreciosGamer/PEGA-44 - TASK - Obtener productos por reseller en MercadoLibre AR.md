@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-44"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-26]] API - Feat - Recoger catalogos por reseller/marketplace
+- **Padre:** [[PEGA-26 - API - Feat - Recoger catalogos por resellermarketplace|PEGA-26]] API - Feat - Recoger catalogos por reseller/marketplace
 
 ## Descripcion
 

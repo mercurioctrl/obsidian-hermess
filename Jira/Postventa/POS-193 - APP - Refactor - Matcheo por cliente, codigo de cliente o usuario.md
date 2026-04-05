@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-193"
 
 ## Relaciones
 
-- **Padre:** [[POS-178]] Feat - Crear un pre ingreso manual
-- **is blocked by:** [[POS-192]] APP - Refactor - Matcheo por cliente, codigo de cliente o usuario
+- **Padre:** [[POS-178 - Feat - Crear un pre ingreso manual|POS-178]] Feat - Crear un pre ingreso manual
+- **is blocked by:** [[POS-192 - APP - Refactor - Matcheo por cliente, codigo de cliente o usuario|POS-192]] APP - Refactor - Matcheo por cliente, codigo de cliente o usuario
 
 ## Descripcion
 

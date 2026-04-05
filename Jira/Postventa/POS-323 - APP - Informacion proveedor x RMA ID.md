@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-323"
 
 ## Relaciones
 
-- **relates to:** [[POS-322]] Feat : Agregar recurso en send to provider, para buscar x rma 
+- **relates to:** [[POS-322 - Feat Agregar recurso en send to provider, para buscar x rma|POS-322]] Feat : Agregar recurso en send to provider, para buscar x rma 
 
 ## Descripcion
 

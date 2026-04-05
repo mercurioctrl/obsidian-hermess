@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-167"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **action item from:** [[PEGA-165]] API - Refactor - Nuevo parámetro para filtrar limite de días desde la ultima modificación de precio
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **action item from:** [[PEGA-165 - API - Refactor - Nuevo parámetro para filtrar limite de días desde la ultima|PEGA-165]] API - Refactor - Nuevo parámetro para filtrar limite de días desde la ultima modificación de precio
 
 ## Descripcion
 

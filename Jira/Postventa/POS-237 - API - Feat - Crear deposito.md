@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-237"
 
 ## Relaciones
 
-- **Padre:** [[POS-231]] Repositorios
+- **Padre:** [[POS-231 - Repositorios|POS-231]] Repositorios
 
 ## Descripcion
 

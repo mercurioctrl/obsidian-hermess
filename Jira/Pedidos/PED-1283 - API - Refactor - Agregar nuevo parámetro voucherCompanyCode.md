@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1283"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **has action item:** [[PED-1284]] APP - Refactor - Agregar selector de empresa de facturación con nuevo parámetro
-- **has action item:** [[LOCAPP-99]] API - Refactor - En vez de utilizar companyCode para saber a que CUIT facturar es voucherCompanyCode
-- **has action item:** [[PED-1287]] API - Refactor - Agregar voucherCompanyCode para lectura
-- **is cloned by:** [[PED-1288]] API - Review - Agregar nuevo parámetro voucherCompanyCode -> Clientes por migrar
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **has action item:** [[PED-1284 - APP - Refactor - Agregar selector de empresa de facturación con nuevo parámetro|PED-1284]] APP - Refactor - Agregar selector de empresa de facturación con nuevo parámetro
+- **has action item:** [[LOCAPP-99 - API - Refactor - En vez de utilizar companyCode para saber a que CUIT facturar|LOCAPP-99]] API - Refactor - En vez de utilizar companyCode para saber a que CUIT facturar es voucherCompanyCode
+- **has action item:** [[PED-1287 - API - Refactor - Agregar voucherCompanyCode para lectura|PED-1287]] API - Refactor - Agregar voucherCompanyCode para lectura
+- **is cloned by:** [[PED-1288 - API - Review - Agregar nuevo parámetro voucherCompanyCode - Clientes por migrar|PED-1288]] API - Review - Agregar nuevo parámetro voucherCompanyCode -> Clientes por migrar
 
 ## Descripcion
 

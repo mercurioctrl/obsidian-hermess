@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-48"
 
 ## Relaciones
 
-- **Padre:** [[POS-35]] APP - Feat - Listar ingresos de postventa
-- **is blocked by:** [[POS-25]] API - Feat - Asignar técnico 
-- **is blocked by:** [[POS-26]] API - Feat - Listar técnicos
+- **Padre:** [[POS-35 - APP - Feat - Listar ingresos de postventa|POS-35]] APP - Feat - Listar ingresos de postventa
+- **is blocked by:** [[POS-25 - API - Feat - Asignar técnico|POS-25]] API - Feat - Asignar técnico 
+- **is blocked by:** [[POS-26 - API - Feat - Listar técnicos|POS-26]] API - Feat - Listar técnicos
 
 ## Descripcion
 

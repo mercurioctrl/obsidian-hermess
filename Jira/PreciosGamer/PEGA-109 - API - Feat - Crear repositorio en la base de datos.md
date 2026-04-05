@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-109"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-108]] API - Feat - Repositorio dolar paralelo
+- **Padre:** [[PEGA-108 - API - Feat - Repositorio dolar paralelo|PEGA-108]] API - Feat - Repositorio dolar paralelo
 
 ## Descripcion
 

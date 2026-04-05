@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-155"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
 
 ## Descripcion
 

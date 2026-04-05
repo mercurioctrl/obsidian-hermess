@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-200"
 
 ## Relaciones
 
-- **Padre:** [[POS-4]] API - Feat - Listar ingresos de postventa
+- **Padre:** [[POS-4 - API - Feat - Listar ingresos de postventa|POS-4]] API - Feat - Listar ingresos de postventa
 
 ## Descripcion
 

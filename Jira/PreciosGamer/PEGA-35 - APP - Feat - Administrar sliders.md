@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-35"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-33]] Feat - Administrar sliders
-- **is blocked by:** [[PEGA-48]] API - Feat - Listar banners
-- **is blocked by:** [[PEGA-49]] API - Feat - Guardar banners
-- **is blocked by:** [[PEGA-47]] API - Feat - Listar zonas de banner
-- **is blocked by:** [[PEGA-46]] API - Feat - Subir banner
+- **Padre:** [[PEGA-33 - Feat - Administrar sliders|PEGA-33]] Feat - Administrar sliders
+- **is blocked by:** [[PEGA-48 - API - Feat - Listar banners|PEGA-48]] API - Feat - Listar banners
+- **is blocked by:** [[PEGA-49 - API - Feat - Guardar banners|PEGA-49]] API - Feat - Guardar banners
+- **is blocked by:** [[PEGA-47 - API - Feat - Listar zonas de banner|PEGA-47]] API - Feat - Listar zonas de banner
+- **is blocked by:** [[PEGA-46 - API - Feat - Subir banner|PEGA-46]] API - Feat - Subir banner
 
 ## Descripcion
 

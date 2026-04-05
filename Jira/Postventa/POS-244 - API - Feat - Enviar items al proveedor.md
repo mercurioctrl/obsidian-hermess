@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-244"
 
 ## Relaciones
 
-- **Padre:** [[POS-235]] Postventa Proveedores Recepcion
+- **Padre:** [[POS-235 - Postventa Proveedores Recepcion|POS-235]] Postventa Proveedores Recepcion
 
 ## Descripcion
 

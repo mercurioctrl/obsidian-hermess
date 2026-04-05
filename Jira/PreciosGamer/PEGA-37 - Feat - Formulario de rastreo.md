@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-37"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **Subtarea:** [[PEGA-38]] API - Feat - Formulario de rastreo
-- **Subtarea:** [[PEGA-39]] APP - Feat - Formulario de rastreo
-- **Subtarea:** [[PEGA-57]] API - Feat - Repositorio de cms de comercion mas comunes
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **Subtarea:** [[PEGA-38 - API - Feat - Formulario de rastreo|PEGA-38]] API - Feat - Formulario de rastreo
+- **Subtarea:** [[PEGA-39 - APP - Feat - Formulario de rastreo|PEGA-39]] APP - Feat - Formulario de rastreo
+- **Subtarea:** [[PEGA-57 - API - Feat - Repositorio de cms de comercion mas comunes|PEGA-57]] API - Feat - Repositorio de cms de comercion mas comunes
 
 ## Descripcion
 

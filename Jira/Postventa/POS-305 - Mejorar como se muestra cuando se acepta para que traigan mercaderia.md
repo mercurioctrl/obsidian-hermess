@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-305"
 
 ## Relaciones
 
-- **Padre:** [[POS-18]] Pre-Ingresos
-- **Subtarea:** [[POS-306]] API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso 
-- **Subtarea:** [[POS-307]] APP - Refactor - Permitir introducir una fecha futura (no olbigatoria) cuando se notifica un ingreso
-- **Subtarea:** [[POS-308]] API - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de ingresos
-- **Subtarea:** [[POS-309]] APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de ingresos
+- **Padre:** [[POS-18 - Pre-Ingresos|POS-18]] Pre-Ingresos
+- **Subtarea:** [[POS-306 - API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso|POS-306]] API - Refactor - Guardar fecha (no obligatorio) cuando se notifica un ingreso 
+- **Subtarea:** [[POS-307 - APP - Refactor - Permitir introducir una fecha futura (no olbigatoria) cuando|POS-307]] APP - Refactor - Permitir introducir una fecha futura (no olbigatoria) cuando se notifica un ingreso
+- **Subtarea:** [[POS-308 - API - Refactor- Agregar la fecha de entrada si es que esta disponible en el|POS-308]] API - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de ingresos
+- **Subtarea:** [[POS-309 - APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el|POS-309]] APP - Refactor- Agregar la fecha de entrada si es que esta disponible en el repositorio de ingresos
 
 ## Descripcion
 

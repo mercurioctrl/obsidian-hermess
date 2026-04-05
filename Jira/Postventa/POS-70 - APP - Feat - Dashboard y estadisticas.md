@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-70"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-83]] APP - Feat - Grafico por marcas
-- **Subtarea:** [[POS-84]] APP - Feat - Grafico por categorias
-- **Subtarea:** [[POS-85]] APP - Feat - Grafico por producto
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-83 - APP - Feat - Grafico por marcas|POS-83]] APP - Feat - Grafico por marcas
+- **Subtarea:** [[POS-84 - APP - Feat - Grafico por categorias|POS-84]] APP - Feat - Grafico por categorias
+- **Subtarea:** [[POS-85 - APP - Feat - Grafico por producto|POS-85]] APP - Feat - Grafico por producto
 
 ## Descripcion
 

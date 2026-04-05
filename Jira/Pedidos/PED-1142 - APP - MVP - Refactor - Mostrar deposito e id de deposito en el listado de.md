@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1142"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **action item from:** [[PED-1108]] API - MVP - Refactor - Mostrar items con almacenes multiples, cuando existan, y agregar el parametro stockWarehouseId
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **action item from:** [[PED-1108 - API - MVP - Refactor - Mostrar items con almacenes multiples, cuando existan, y|PED-1108]] API - MVP - Refactor - Mostrar items con almacenes multiples, cuando existan, y agregar el parametro stockWarehouseId
 
 ## Descripcion
 

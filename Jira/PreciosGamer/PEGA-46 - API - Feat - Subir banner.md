@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-46"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-33]] Feat - Administrar sliders
-- **blocks:** [[PEGA-35]] APP - Feat - Administrar sliders
+- **Padre:** [[PEGA-33 - Feat - Administrar sliders|PEGA-33]] Feat - Administrar sliders
+- **blocks:** [[PEGA-35 - APP - Feat - Administrar sliders|PEGA-35]] APP - Feat - Administrar sliders
 
 ## Descripcion
 

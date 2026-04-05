@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-329"
 
 ## Relaciones
 
-- **Padre:** [[POS-328]] Ordenes de devolucion de postventa
-- **has action item:** [[POS-330]] APP - Feat - Se debe agregar un accionable para crear una orden de envio de postventa
-- **relates to:** [[POS-335]] API - Crear endpoint para generar orden de envio desde postventa -> Error al intentar generar orden
+- **Padre:** [[POS-328 - Ordenes de devolucion de postventa|POS-328]] Ordenes de devolucion de postventa
+- **has action item:** [[POS-330 - APP - Feat - Se debe agregar un accionable para crear una orden de envio de|POS-330]] APP - Feat - Se debe agregar un accionable para crear una orden de envio de postventa
+- **relates to:** [[POS-335 - API - Crear endpoint para generar orden de envio desde postventa - Error al|POS-335]] API - Crear endpoint para generar orden de envio desde postventa -> Error al intentar generar orden
 
 ## Descripcion
 

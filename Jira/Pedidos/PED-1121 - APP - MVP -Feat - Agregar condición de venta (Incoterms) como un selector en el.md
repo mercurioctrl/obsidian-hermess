@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1121"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-1122]] API - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
-- **action item from:** [[PED-1161]] API - MVP - Repositorio incoterms
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-1122 - API - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el|PED-1122]] API - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
+- **action item from:** [[PED-1161 - API - MVP - Repositorio incoterms|PED-1161]] API - MVP - Repositorio incoterms
 
 ## Descripcion
 

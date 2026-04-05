@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-156"
 
 ## Relaciones
 
-- **Padre:** [[POS-95]] API - Feat - Pedir un pase de mercaderia
-- **blocks:** [[POS-155]] API - Feat - Enviar correo al crear un pase
-- **is blocked by:** [[POS-97]] API - Feat - Procesar pase de mercadería (Deposito)
+- **Padre:** [[POS-95 - API - Feat - Pedir un pase de mercaderia|POS-95]] API - Feat - Pedir un pase de mercaderia
+- **blocks:** [[POS-155 - API - Feat - Enviar correo al crear un pase|POS-155]] API - Feat - Enviar correo al crear un pase
+- **is blocked by:** [[POS-97 - API - Feat - Procesar pase de mercadería (Deposito)|POS-97]] API - Feat - Procesar pase de mercadería (Deposito)
 
 ## Descripcion
 

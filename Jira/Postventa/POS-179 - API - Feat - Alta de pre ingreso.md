@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-179"
 
 ## Relaciones
 
-- **Padre:** [[POS-178]] Feat - Crear un pre ingreso manual
-- **blocks:** [[POS-180]] APP - Feat - Modal alta de pre ingreso
+- **Padre:** [[POS-178 - Feat - Crear un pre ingreso manual|POS-178]] Feat - Crear un pre ingreso manual
+- **blocks:** [[POS-180 - APP - Feat - Modal alta de pre ingreso|POS-180]] APP - Feat - Modal alta de pre ingreso
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-103"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-102]] Optmizar home
+- **Padre:** [[PEGA-102 - Optmizar home|PEGA-102]] Optmizar home
 
 ## Descripcion
 

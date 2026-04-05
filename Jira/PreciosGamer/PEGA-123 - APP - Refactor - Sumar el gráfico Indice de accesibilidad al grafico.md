@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-123"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **action item from:** [[PEGA-122]] API - Refactor - Agregar Signature permitiendo mostrar o ocultar indices
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **action item from:** [[PEGA-122 - API - Refactor - Agregar Signature permitiendo mostrar o ocultar indices|PEGA-122]] API - Refactor - Agregar Signature permitiendo mostrar o ocultar indices
 
 ## Descripcion
 

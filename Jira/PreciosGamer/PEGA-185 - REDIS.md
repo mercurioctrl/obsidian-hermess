@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-185"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-3]] Scraping y procesamientos
-- **Subtarea:** [[PEGA-186]] API - Feat - Agregar syncup para liberar la cache de redis en términos generales 
+- **Padre:** [[PEGA-3 - Scraping y procesamientos|PEGA-3]] Scraping y procesamientos
+- **Subtarea:** [[PEGA-186 - API - Feat - Agregar syncup para liberar la cache de redis en términos generales|PEGA-186]] API - Feat - Agregar syncup para liberar la cache de redis en términos generales 
 
 ## Descripcion
 

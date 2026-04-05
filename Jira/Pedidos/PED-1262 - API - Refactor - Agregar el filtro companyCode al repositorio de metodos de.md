@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1262"
 
 ## Relaciones
 
-- **Padre:** [[PED-1257]] Repositorio Bancos y medios de pago
-- **has action item:** [[PED-1264]] APP - Refactor - Mostrar selector de bancos solo cuando se indica para el metodo de pago seleccionado
-- **has action item:** [[PED-1263]] APP - Refactor - En el modal de liquidacion, filtrar los medios de pago según el companyCode definido para el pedido
+- **Padre:** [[PED-1257 - Repositorio Bancos y medios de pago|PED-1257]] Repositorio Bancos y medios de pago
+- **has action item:** [[PED-1264 - APP - Refactor - Mostrar selector de bancos solo cuando se indica para el|PED-1264]] APP - Refactor - Mostrar selector de bancos solo cuando se indica para el metodo de pago seleccionado
+- **has action item:** [[PED-1263 - APP - Refactor - En el modal de liquidacion, filtrar los medios de pago según|PED-1263]] APP - Refactor - En el modal de liquidacion, filtrar los medios de pago según el companyCode definido para el pedido
 
 ## Descripcion
 

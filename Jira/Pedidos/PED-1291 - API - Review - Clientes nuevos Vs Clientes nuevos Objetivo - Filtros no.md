@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1291"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **clones:** [[PED-1285]] API - Feat - Clientes nuevos Vs Clientes nuevos Objetivo
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **clones:** [[PED-1285 - API - Feat - Clientes nuevos Vs Clientes nuevos Objetivo|PED-1285]] API - Feat - Clientes nuevos Vs Clientes nuevos Objetivo
 
 ## Descripcion
 

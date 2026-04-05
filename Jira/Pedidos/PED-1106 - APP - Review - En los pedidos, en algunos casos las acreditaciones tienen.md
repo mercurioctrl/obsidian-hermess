@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1106"
 
 ## Relaciones
 
-- **Padre:** [[PED-497]] Ver orden de compra
+- **Padre:** [[PED-497 - Ver orden de compra|PED-497]] Ver orden de compra
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1267"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
 
 ## Descripcion
 

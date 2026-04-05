@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1213"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **has action item:** [[PED-1220]] APP - Feat - Listado de Acciones (con estado por moneda)
-- **is cloned by:** [[PED-1265]] API - Refactor - Listar Acciones (con asignado/gastado por moneda) - Actualización objeto de respuesta y review de totalItems
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **has action item:** [[PED-1220 - APP - Feat - Listado de Acciones (con estado por moneda)|PED-1220]] APP - Feat - Listado de Acciones (con estado por moneda)
+- **is cloned by:** [[PED-1265 - API - Refactor - Listar Acciones (con asignadogastado por moneda) -|PED-1265]] API - Refactor - Listar Acciones (con asignado/gastado por moneda) - Actualización objeto de respuesta y review de totalItems
 
 ## Descripcion
 

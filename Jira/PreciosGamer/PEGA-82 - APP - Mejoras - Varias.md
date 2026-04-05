@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-82"
 
 ## Relaciones
 
-- **relates to:** [[PEGA-87]] APP - Mejoras - Sugerencias varias
+- **relates to:** [[PEGA-87 - APP - Mejoras - Sugerencias varias|PEGA-87]] APP - Mejoras - Sugerencias varias
 
 ## Descripcion
 

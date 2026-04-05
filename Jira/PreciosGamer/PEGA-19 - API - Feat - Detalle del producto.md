@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-19"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
-- **blocks:** [[PEGA-20]] APP - Feat - Detalle del producto
-- **relates to:** [[PEGA-71]] API - Detalle del producto - Mejora en los parámetros de precios
-- **is blocked by:** [[PEGA-94]] API - Detalle del producto - Ultimo precio no visible
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
+- **blocks:** [[PEGA-20 - APP - Feat - Detalle del producto|PEGA-20]] APP - Feat - Detalle del producto
+- **relates to:** [[PEGA-71 - API - Detalle del producto - Mejora en los parámetros de precios|PEGA-71]] API - Detalle del producto - Mejora en los parámetros de precios
+- **is blocked by:** [[PEGA-94 - API - Detalle del producto - Ultimo precio no visible|PEGA-94]] API - Detalle del producto - Ultimo precio no visible
 
 ## Descripcion
 

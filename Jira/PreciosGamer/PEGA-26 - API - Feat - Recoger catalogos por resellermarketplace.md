@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-26"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-3]] Scraping y procesamientos
-- **Subtarea:** [[PEGA-43]] TASK - Obtener productos por reseller en hardgamers
-- **Subtarea:** [[PEGA-44]] TASK - Obtener productos por reseller en MercadoLibre AR
-- **Subtarea:** [[PEGA-45]] TASK - Obtener productos por reseller en TiendaMia o TiendaMia
-- **Subtarea:** [[PEGA-56]] TASK - Refactor - Guardar en la tabla repository, el id que es receptor de la data en la tabla items
-- **Subtarea:** [[PEGA-61]] TASK - Recorrer keywords del catalogo
-- **Subtarea:** [[PEGA-62]] TASK - Obtener productos por reseller Libre Opcion
+- **Padre:** [[PEGA-3 - Scraping y procesamientos|PEGA-3]] Scraping y procesamientos
+- **Subtarea:** [[PEGA-43 - TASK - Obtener productos por reseller en hardgamers|PEGA-43]] TASK - Obtener productos por reseller en hardgamers
+- **Subtarea:** [[PEGA-44 - TASK - Obtener productos por reseller en MercadoLibre AR|PEGA-44]] TASK - Obtener productos por reseller en MercadoLibre AR
+- **Subtarea:** [[PEGA-45 - TASK - Obtener productos por reseller en TiendaMia o TiendaMia|PEGA-45]] TASK - Obtener productos por reseller en TiendaMia o TiendaMia
+- **Subtarea:** [[PEGA-56 - TASK - Refactor - Guardar en la tabla repository, el id que es receptor de la|PEGA-56]] TASK - Refactor - Guardar en la tabla repository, el id que es receptor de la data en la tabla items
+- **Subtarea:** [[PEGA-61 - TASK - Recorrer keywords del catalogo|PEGA-61]] TASK - Recorrer keywords del catalogo
+- **Subtarea:** [[PEGA-62 - TASK - Obtener productos por reseller Libre Opcion|PEGA-62]] TASK - Obtener productos por reseller Libre Opcion
 
 ## Descripcion
 

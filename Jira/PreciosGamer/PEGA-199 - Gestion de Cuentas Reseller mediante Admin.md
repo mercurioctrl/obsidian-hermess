@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-199"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-190]] Implementación del sistema de autenticación y panel de gestión para usuarios tipo reseller
+- **Padre:** [[PEGA-190 - Implementación del sistema de autenticación y panel de gestión para usuarios|PEGA-190]] Implementación del sistema de autenticación y panel de gestión para usuarios tipo reseller
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-27"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-3]] Scraping y procesamientos
-- **Subtarea:** [[PEGA-98]] API - Refactor - Modificar el importador de LIBRE OPCION para usar las dos bases de datos ORIGEN-DESTINO
+- **Padre:** [[PEGA-3 - Scraping y procesamientos|PEGA-3]] Scraping y procesamientos
+- **Subtarea:** [[PEGA-98 - API - Refactor - Modificar el importador de LIBRE OPCION para usar las dos|PEGA-98]] API - Refactor - Modificar el importador de LIBRE OPCION para usar las dos bases de datos ORIGEN-DESTINO
 
 ## Descripcion
 

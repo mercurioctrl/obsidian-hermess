@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-166"
 
 ## Relaciones
 
-- **Padre:** [[POS-24]] Creditos
-- **is blocked by:** [[POS-132]] MS - Feat - Emitir comprobante
-- **is blocked by:** [[POS-164]] API - Refactor - Agregar precios posibles del producto
+- **Padre:** [[POS-24 - Creditos|POS-24]] Creditos
+- **is blocked by:** [[POS-132 - MS - Feat - Emitir comprobante|POS-132]] MS - Feat - Emitir comprobante
+- **is blocked by:** [[POS-164 - API - Refactor - Agregar precios posibles del producto|POS-164]] API - Refactor - Agregar precios posibles del producto
 
 ## Descripcion
 

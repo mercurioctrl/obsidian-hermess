@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1272"
 
 ## Relaciones
 
-- **Padre:** [[PED-1257]] Repositorio Bancos y medios de pago
+- **Padre:** [[PED-1257 - Repositorio Bancos y medios de pago|PED-1257]] Repositorio Bancos y medios de pago
 
 ## Descripcion
 

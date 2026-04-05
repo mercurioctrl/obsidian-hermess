@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-200"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-198]] Autenticacion para Administradores
+- **Padre:** [[PEGA-198 - Autenticacion para Administradores|PEGA-198]] Autenticacion para Administradores
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-304"
 
 ## Relaciones
 
-- **Padre:** [[POS-24]] Creditos
-- **blocks:** [[POS-301]] API - Refactor - Agregar "order" y "branch" al detalle del ingreso de ser posible
+- **Padre:** [[POS-24 - Creditos|POS-24]] Creditos
+- **blocks:** [[POS-301 - API - Refactor - Agregar order y branch al detalle del ingreso de ser posible|POS-301]] API - Refactor - Agregar "order" y "branch" al detalle del ingreso de ser posible
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-23"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
-- **blocks:** [[PEGA-24]] APP - Feat - Avisarme cuando baja el precio
-- **is blocked by:** [[PEGA-76]] API - Avisarme cuando cambie el precio - No se envía el correo
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
+- **blocks:** [[PEGA-24 - APP - Feat - Avisarme cuando baja el precio|PEGA-24]] APP - Feat - Avisarme cuando baja el precio
+- **is blocked by:** [[PEGA-76 - API - Avisarme cuando cambie el precio - No se envía el correo|PEGA-76]] API - Avisarme cuando cambie el precio - No se envía el correo
 
 ## Descripcion
 

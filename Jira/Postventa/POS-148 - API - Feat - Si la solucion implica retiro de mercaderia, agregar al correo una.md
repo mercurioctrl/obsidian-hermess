@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-148"
 
 ## Relaciones
 
-- **Padre:** [[POS-147]] API - Feat - Finalizar una postventa
+- **Padre:** [[POS-147 - API - Feat - Finalizar una postventa|POS-147]] API - Feat - Finalizar una postventa
 
 ## Descripcion
 

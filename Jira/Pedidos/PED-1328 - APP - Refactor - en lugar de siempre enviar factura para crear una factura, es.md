@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1328"
 
 ## Relaciones
 
-- **Padre:** [[PED-5]] Comprobantes
+- **Padre:** [[PED-5 - Comprobantes|PED-5]] Comprobantes
 
 ## Descripcion
 

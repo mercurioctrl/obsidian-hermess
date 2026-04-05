@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1164"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-1161]] API - MVP - Repositorio incoterms
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-1161 - API - MVP - Repositorio incoterms|PED-1161]] API - MVP - Repositorio incoterms
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-72"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-50]] Feat - Update catalogos
+- **Padre:** [[PEGA-50 - Feat - Update catalogos|PEGA-50]] Feat - Update catalogos
 
 ## Descripcion
 

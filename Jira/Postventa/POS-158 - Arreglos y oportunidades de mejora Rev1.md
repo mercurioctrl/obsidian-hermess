@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-158"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-160]] API - Feat - Agregar a los graficos de torta, tambien totales de venta y de compra (cuando corresponde monto, y cuando correspodne cantidad)
-- **Subtarea:** [[POS-161]] APP - Feat - API - Feat - Agregar a los graficos de torta, tambien totales de venta y de compra (cuando corresponde monto, y cuando correspodne cantidad)
-- **Subtarea:** [[POS-162]] API - Review - Revisar y corregir totales
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-160 - API - Feat - Agregar a los graficos de torta, tambien totales de venta y de|POS-160]] API - Feat - Agregar a los graficos de torta, tambien totales de venta y de compra (cuando corresponde monto, y cuando correspodne cantidad)
+- **Subtarea:** [[POS-161 - APP - Feat - API - Feat - Agregar a los graficos de torta, tambien totales de|POS-161]] APP - Feat - API - Feat - Agregar a los graficos de torta, tambien totales de venta y de compra (cuando corresponde monto, y cuando correspodne cantidad)
+- **Subtarea:** [[POS-162 - API - Review - Revisar y corregir totales|POS-162]] API - Review - Revisar y corregir totales
 
 ## Descripcion
 

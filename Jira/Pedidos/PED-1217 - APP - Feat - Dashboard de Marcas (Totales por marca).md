@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1217"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **action item from:** [[PED-1216]] API - Feat - Listar marcas con fondos (totales disponibles)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **action item from:** [[PED-1216 - API - Feat - Listar marcas con fondos (totales disponibles)|PED-1216]] API - Feat - Listar marcas con fondos (totales disponibles)
 
 ## Descripcion
 

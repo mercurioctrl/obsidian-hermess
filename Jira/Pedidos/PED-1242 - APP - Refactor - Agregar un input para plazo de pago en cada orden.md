@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1242"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-1243]] API - Refactor - Incluir el paymentTerms en la edicion de la orden
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-1243 - API - Refactor - Incluir el paymentTerms en la edicion de la orden|PED-1243]] API - Refactor - Incluir el paymentTerms en la edicion de la orden
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-331"
 
 ## Relaciones
 
-- **Padre:** [[POS-281]] Listar pedidos
-- **action item from:** [[PED-999]] API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
-- **action item from:** [[EXP-491]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de retiros
-- **has action item:** [[POS-332]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes de postventa
+- **Padre:** [[POS-281 - Listar pedidos|POS-281]] Listar pedidos
+- **action item from:** [[PED-999 - API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|PED-999]] API - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes
+- **action item from:** [[EXP-491 - API - Refactor - Agregar indicadores (flags) de intervención técnica a las|EXP-491]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes de retiros
+- **has action item:** [[POS-332 - APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes|POS-332]] APP - Feat - Agregar indicadores (flags) de intervención técnica a las órdenes de postventa
 
 ## Descripcion
 

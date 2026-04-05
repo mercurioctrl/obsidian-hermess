@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1167"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **action item from:** [[PED-1166]] API - MVP - Refactor - Agregar companyCode al objeto que devuelve el repositorio de comprobantes
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **action item from:** [[PED-1166 - API - MVP - Refactor - Agregar companyCode al objeto que devuelve el|PED-1166]] API - MVP - Refactor - Agregar companyCode al objeto que devuelve el repositorio de comprobantes
 
 ## Descripcion
 

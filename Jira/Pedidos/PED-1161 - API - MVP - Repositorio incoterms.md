@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1161"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **has action item:** [[PED-1122]] API - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
-- **has action item:** [[PED-1121]] APP - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
-- **has action item:** [[PED-1164]] API - Refactor - Al crear una orden, esta debe tener un incoterm pedeterminado 
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **has action item:** [[PED-1122 - API - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el|PED-1122]] API - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
+- **has action item:** [[PED-1121 - APP - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el|PED-1121]] APP - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
+- **has action item:** [[PED-1164 - API - Refactor - Al crear una orden, esta debe tener un incoterm pedeterminado|PED-1164]] API - Refactor - Al crear una orden, esta debe tener un incoterm pedeterminado 
 
 ## Descripcion
 

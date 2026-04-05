@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1187"
 
 ## Relaciones
 
-- **Padre:** [[PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
-- **is cloned by:** [[PED-1199]] API - Review - Listar reservas en un rango (para semana) - QA Observaciones
-- **has action item:** [[PED-1203]] APP - Feat - Reservas de salas de reunion
-- **relates to:** [[PED-1225]] API - Refactor - Listar/Crear reservas en un rango -> Agregar 'notes' al listar las reservas y al crearla
-- **relates to:** [[PED-1226]] API - Refactor - Listar reservas en un rango (para semana) -> Agregar nombre de usuario
+- **Padre:** [[PED-1186 - Sistema de reservas de salas de reuniones (vista semanal)|PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
+- **is cloned by:** [[PED-1199 - API - Review - Listar reservas en un rango (para semana) - QA Observaciones|PED-1199]] API - Review - Listar reservas en un rango (para semana) - QA Observaciones
+- **has action item:** [[PED-1203 - APP - Feat - Reservas de salas de reunion|PED-1203]] APP - Feat - Reservas de salas de reunion
+- **relates to:** [[PED-1225 - API - Refactor - ListarCrear reservas en un rango - Agregar 'notes' al listar|PED-1225]] API - Refactor - Listar/Crear reservas en un rango -> Agregar 'notes' al listar las reservas y al crearla
+- **relates to:** [[PED-1226 - API - Refactor - Listar reservas en un rango (para semana) - Agregar nombre de|PED-1226]] API - Refactor - Listar reservas en un rango (para semana) -> Agregar nombre de usuario
 
 ## Descripcion
 

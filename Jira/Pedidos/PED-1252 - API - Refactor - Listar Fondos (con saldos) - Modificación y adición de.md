@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1252"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **clones:** [[PED-1210]] API - Feat - Listar Fondos (con saldos)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **clones:** [[PED-1210 - API - Feat - Listar Fondos (con saldos)|PED-1210]] API - Feat - Listar Fondos (con saldos)
 
 ## Descripcion
 

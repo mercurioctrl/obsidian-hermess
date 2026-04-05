@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-50"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **Subtarea:** [[PEGA-51]] API - Feat - Actualizar marcas
-- **Subtarea:** [[PEGA-52]] API - Feat - Actualizar resellers
-- **Subtarea:** [[PEGA-53]] API - Feat - Actualizar Items
-- **Subtarea:** [[PEGA-72]] API - Feat - Marcar aquellos que dejan de estar disponibles para no mostrarlos
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **Subtarea:** [[PEGA-51 - API - Feat - Actualizar marcas|PEGA-51]] API - Feat - Actualizar marcas
+- **Subtarea:** [[PEGA-52 - API - Feat - Actualizar resellers|PEGA-52]] API - Feat - Actualizar resellers
+- **Subtarea:** [[PEGA-53 - API - Feat - Actualizar Items|PEGA-53]] API - Feat - Actualizar Items
+- **Subtarea:** [[PEGA-72 - API - Feat - Marcar aquellos que dejan de estar disponibles para no mostrarlos|PEGA-72]] API - Feat - Marcar aquellos que dejan de estar disponibles para no mostrarlos
 
 ## Descripcion
 

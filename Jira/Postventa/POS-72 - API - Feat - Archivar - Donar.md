@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-72"
 
 ## Relaciones
 
-- **Padre:** [[POS-21]] Solucion de postventa
-- **Subtarea:** [[POS-225]] API - Feat - Refactor donaciones
+- **Padre:** [[POS-21 - Solucion de postventa|POS-21]] Solucion de postventa
+- **Subtarea:** [[POS-225 - API - Feat - Refactor donaciones|POS-225]] API - Feat - Refactor donaciones
 
 ## Descripcion
 

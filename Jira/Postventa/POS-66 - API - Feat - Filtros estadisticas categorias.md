@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-66"
 
 ## Relaciones
 
-- **Padre:** [[POS-58]] API - Feat - Estadisticas de categorias
-- **blocks:** [[POS-99]] APP - Feat - Pestaña estadística por categorías 
+- **Padre:** [[POS-58 - API - Feat - Estadisticas de categorias|POS-58]] API - Feat - Estadisticas de categorias
+- **blocks:** [[POS-99 - APP - Feat - Pestaña estadística por categorías|POS-99]] APP - Feat - Pestaña estadística por categorías 
 
 ## Descripcion
 

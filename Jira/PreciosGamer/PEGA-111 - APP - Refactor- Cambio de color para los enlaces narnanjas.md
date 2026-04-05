@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-111"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **duplicates:** [[PEGA-112]] Pequeños cambios
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **duplicates:** [[PEGA-112 - Pequeños cambios|PEGA-112]] Pequeños cambios
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1190"
 
 ## Relaciones
 
-- **Padre:** [[PED-1170]] Kits
+- **Padre:** [[PED-1170 - Kits|PED-1170]] Kits
 
 ## Descripcion
 

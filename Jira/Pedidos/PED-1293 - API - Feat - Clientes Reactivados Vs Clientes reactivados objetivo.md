@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1293"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **action item from:** [[PED-1286]] API - Research - Clientes reactivados ¿cual es la mejor forma de obtener esta métrica?
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **action item from:** [[PED-1286 - API - Research - Clientes reactivados ¿cual es la mejor forma de obtener esta|PED-1286]] API - Research - Clientes reactivados ¿cual es la mejor forma de obtener esta métrica?
 
 ## Descripcion
 

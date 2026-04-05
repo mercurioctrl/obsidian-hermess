@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-137"
 
 ## Relaciones
 
-- **Padre:** [[POS-58]] API - Feat - Estadisticas de categorias
-- **blocks:** [[POS-153]] APP - Feat - Descargar informacion completa de los graficos de categorias
+- **Padre:** [[POS-58 - API - Feat - Estadisticas de categorias|POS-58]] API - Feat - Estadisticas de categorias
+- **blocks:** [[POS-153 - APP - Feat - Descargar informacion completa de los graficos de categorias|POS-153]] APP - Feat - Descargar informacion completa de los graficos de categorias
 
 ## Descripcion
 

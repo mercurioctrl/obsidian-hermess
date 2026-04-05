@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-60"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **is blocked by:** [[PEGA-59]] API - Refactor - En el repositorio de marcas, permitir un filtro por producto
-- **is blocked by:** [[PEGA-18]] API - Refactor - En el repositorio de resellers, permitir un filtro de producto
-- **duplicates:** [[PEGA-16]] APP - Feat - Listado de productos y buscador
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **is blocked by:** [[PEGA-59 - API - Refactor - En el repositorio de marcas, permitir un filtro por producto|PEGA-59]] API - Refactor - En el repositorio de marcas, permitir un filtro por producto
+- **is blocked by:** [[PEGA-18 - API - Refactor - En el repositorio de resellers, permitir un filtro de producto|PEGA-18]] API - Refactor - En el repositorio de resellers, permitir un filtro de producto
+- **duplicates:** [[PEGA-16 - APP - Feat - Listado de productos y buscador|PEGA-16]] APP - Feat - Listado de productos y buscador
 
 ## Descripcion
 

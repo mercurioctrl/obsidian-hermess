@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1124"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **has action item:** [[PED-1123]] APP - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **has action item:** [[PED-1123 - APP - MVP - Refactor - agregar otra opción en el selector de costo para|PED-1123]] APP - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo
 
 ## Descripcion
 

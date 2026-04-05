@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-204"
 
 ## Relaciones
 
-- **Padre:** [[POS-178]] Feat - Crear un pre ingreso manual
+- **Padre:** [[POS-178 - Feat - Crear un pre ingreso manual|POS-178]] Feat - Crear un pre ingreso manual
 
 ## Descripcion
 

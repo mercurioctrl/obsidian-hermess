@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-257"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
 
 ## Descripcion
 

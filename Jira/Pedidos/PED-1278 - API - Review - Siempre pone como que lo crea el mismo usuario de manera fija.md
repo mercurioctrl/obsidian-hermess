@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1278"
 
 ## Relaciones
 
-- **Padre:** [[PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
-- **relates to:** [[PED-1270]] API - Review - Listar reservas en un rango (para semana) - Agregar nombre de usuario -> Usuario guardado no coincidente
+- **Padre:** [[PED-1186 - Sistema de reservas de salas de reuniones (vista semanal)|PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
+- **relates to:** [[PED-1270 - API - Review - Listar reservas en un rango (para semana) - Agregar nombre de|PED-1270]] API - Review - Listar reservas en un rango (para semana) - Agregar nombre de usuario -> Usuario guardado no coincidente
 
 ## Descripcion
 

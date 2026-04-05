@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-11"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-10]] Feat - Slider principal
+- **Padre:** [[PEGA-10 - Feat - Slider principal|PEGA-10]] Feat - Slider principal
 
 ## Descripcion
 

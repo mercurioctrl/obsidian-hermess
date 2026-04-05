@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-321"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
-- **relates to:** [[POS-318]] API - Funcionalidad "rollback"
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
+- **relates to:** [[POS-318 - API - Funcionalidad rollback|POS-318]] API - Funcionalidad "rollback"
 
 ## Descripcion
 

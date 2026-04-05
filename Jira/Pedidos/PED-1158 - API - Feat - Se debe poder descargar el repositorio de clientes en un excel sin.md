@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1158"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **blocks:** [[PED-1160]] APP - Feat - Agregar boton de descarga para el repositorio de clientes
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **blocks:** [[PED-1160 - APP - Feat - Agregar boton de descarga para el repositorio de clientes|PED-1160]] APP - Feat - Agregar boton de descarga para el repositorio de clientes
 
 ## Descripcion
 

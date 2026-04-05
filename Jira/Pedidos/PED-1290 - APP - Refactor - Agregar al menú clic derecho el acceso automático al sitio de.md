@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1290"
 
 ## Relaciones
 
-- **Padre:** [[PED-40]] Login automático como cliente
+- **Padre:** [[PED-40 - Login automático como cliente|PED-40]] Login automático como cliente
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-31"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-30]] Feat - Login
+- **Padre:** [[PEGA-30 - Feat - Login|PEGA-30]] Feat - Login
 
 ## Descripcion
 

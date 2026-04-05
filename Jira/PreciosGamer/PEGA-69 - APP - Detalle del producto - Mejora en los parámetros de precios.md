@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-69"
 
 ## Relaciones
 
-- **Padre:** [[NBWEB-498]] Oportunidades de mejora
-- **relates to:** [[PEGA-20]] APP - Feat - Detalle del producto
-- **relates to:** [[PEGA-71]] API - Detalle del producto - Mejora en los parámetros de precios
+- **Padre:** [[NBWEB-498 - Oportunidades de mejora|NBWEB-498]] Oportunidades de mejora
+- **relates to:** [[PEGA-20 - APP - Feat - Detalle del producto|PEGA-20]] APP - Feat - Detalle del producto
+- **relates to:** [[PEGA-71 - API - Detalle del producto - Mejora en los parámetros de precios|PEGA-71]] API - Detalle del producto - Mejora en los parámetros de precios
 
 ## Descripcion
 

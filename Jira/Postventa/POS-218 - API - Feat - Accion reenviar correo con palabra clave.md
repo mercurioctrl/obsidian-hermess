@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-218"
 
 ## Relaciones
 
-- **Padre:** [[POS-33]] API - Feat - Listar postventas finalizadas
-- **blocks:** [[POS-219]] APP - Feat - Accion reenviar correo con palabra clave
+- **Padre:** [[POS-33 - API - Feat - Listar postventas finalizadas|POS-33]] API - Feat - Listar postventas finalizadas
+- **blocks:** [[POS-219 - APP - Feat - Accion reenviar correo con palabra clave|POS-219]] APP - Feat - Accion reenviar correo con palabra clave
 
 ## Descripcion
 

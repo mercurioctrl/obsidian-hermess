@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-57"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-37]] Feat - Formulario de rastreo
-- **blocks:** [[PEGA-39]] APP - Feat - Formulario de rastreo
+- **Padre:** [[PEGA-37 - Feat - Formulario de rastreo|PEGA-37]] Feat - Formulario de rastreo
+- **blocks:** [[PEGA-39 - APP - Feat - Formulario de rastreo|PEGA-39]] APP - Feat - Formulario de rastreo
 
 ## Descripcion
 

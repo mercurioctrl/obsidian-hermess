@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-298"
 
 ## Relaciones
 
-- **Padre:** [[POS-230]] Postventa Proveedores
-- **blocks:** [[POS-294]] API - Envíos a proveedores - Búsqueda general 
+- **Padre:** [[POS-230 - Postventa Proveedores|POS-230]] Postventa Proveedores
+- **blocks:** [[POS-294 - API - Envíos a proveedores - Búsqueda general|POS-294]] API - Envíos a proveedores - Búsqueda general 
 
 ## Descripcion
 

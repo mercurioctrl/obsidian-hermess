@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-263"
 
 ## Relaciones
 
-- **Padre:** [[POS-235]] Postventa Proveedores Recepcion
-- **blocks:** [[POS-264]] APP - Feat - Listar articulos -> Mostrar informacion del deposito actual 
+- **Padre:** [[POS-235 - Postventa Proveedores Recepcion|POS-235]] Postventa Proveedores Recepcion
+- **blocks:** [[POS-264 - APP - Feat - Listar articulos - Mostrar informacion del deposito actual|POS-264]] APP - Feat - Listar articulos -> Mostrar informacion del deposito actual 
 
 ## Descripcion
 

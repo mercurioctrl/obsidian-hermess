@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-33"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-5]] Cms
-- **Subtarea:** [[PEGA-34]] API - Feat - Administrar sliders
-- **Subtarea:** [[PEGA-35]] APP - Feat - Administrar sliders
-- **Subtarea:** [[PEGA-46]] API - Feat - Subir banner
-- **Subtarea:** [[PEGA-47]] API - Feat - Listar zonas de banner
-- **Subtarea:** [[PEGA-48]] API - Feat - Listar banners
-- **Subtarea:** [[PEGA-49]] API - Feat - Guardar banners
-- **Subtarea:** [[PEGA-99]] API - Refactor - ajuste de carga de imagen con laravel 
+- **Padre:** [[PEGA-5 - Cms|PEGA-5]] Cms
+- **Subtarea:** [[PEGA-34 - API - Feat - Administrar sliders|PEGA-34]] API - Feat - Administrar sliders
+- **Subtarea:** [[PEGA-35 - APP - Feat - Administrar sliders|PEGA-35]] APP - Feat - Administrar sliders
+- **Subtarea:** [[PEGA-46 - API - Feat - Subir banner|PEGA-46]] API - Feat - Subir banner
+- **Subtarea:** [[PEGA-47 - API - Feat - Listar zonas de banner|PEGA-47]] API - Feat - Listar zonas de banner
+- **Subtarea:** [[PEGA-48 - API - Feat - Listar banners|PEGA-48]] API - Feat - Listar banners
+- **Subtarea:** [[PEGA-49 - API - Feat - Guardar banners|PEGA-49]] API - Feat - Guardar banners
+- **Subtarea:** [[PEGA-99 - API - Refactor - ajuste de carga de imagen con laravel|PEGA-99]] API - Refactor - ajuste de carga de imagen con laravel 
 
 ## Descripcion
 

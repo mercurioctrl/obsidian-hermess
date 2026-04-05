@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-141"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **Subtarea:** [[PEGA-154]] API - Refactor - Problema con la validacion de envio de correo
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **Subtarea:** [[PEGA-154 - API - Refactor - Problema con la validacion de envio de correo|PEGA-154]] API - Refactor - Problema con la validacion de envio de correo
 
 ## Descripcion
 

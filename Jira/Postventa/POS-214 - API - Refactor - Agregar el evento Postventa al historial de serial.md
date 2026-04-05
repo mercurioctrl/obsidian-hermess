@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-214"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **blocks:** [[POS-217]] APP - Refactor - Agregar el evento "Postventa" al historial de serial
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **blocks:** [[POS-217 - APP - Refactor - Agregar el evento Postventa al historial de serial|POS-217]] APP - Refactor - Agregar el evento "Postventa" al historial de serial
 
 ## Descripcion
 

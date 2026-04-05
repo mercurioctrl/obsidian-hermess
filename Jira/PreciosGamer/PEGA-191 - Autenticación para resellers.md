@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-191"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-190]] Implementación del sistema de autenticación y panel de gestión para usuarios tipo reseller
-- **Subtarea:** [[PEGA-193]] API - Feat - Registro de nuevo reseller
-- **Subtarea:** [[PEGA-194]] API - Feat -  Login con email y contraseña y Logout
-- **Subtarea:** [[PEGA-195]] API - Feat -  Obtener datos del reseller autenticado
+- **Padre:** [[PEGA-190 - Implementación del sistema de autenticación y panel de gestión para usuarios|PEGA-190]] Implementación del sistema de autenticación y panel de gestión para usuarios tipo reseller
+- **Subtarea:** [[PEGA-193 - API - Feat - Registro de nuevo reseller|PEGA-193]] API - Feat - Registro de nuevo reseller
+- **Subtarea:** [[PEGA-194 - API - Feat - Login con email y contraseña y Logout|PEGA-194]] API - Feat -  Login con email y contraseña y Logout
+- **Subtarea:** [[PEGA-195 - API - Feat - Obtener datos del reseller autenticado|PEGA-195]] API - Feat -  Obtener datos del reseller autenticado
 
 ## Descripcion
 

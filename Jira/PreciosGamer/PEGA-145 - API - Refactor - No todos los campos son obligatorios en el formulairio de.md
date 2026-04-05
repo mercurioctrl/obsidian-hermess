@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-145"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-143]] APP - Refactor - No todos los campos son obligatorios en el formulario de contacto
-- **action item from:** [[PEGA-143]] APP - Refactor - No todos los campos son obligatorios en el formulario de contacto
+- **Padre:** [[PEGA-143 - APP - Refactor - No todos los campos son obligatorios en el formulario de|PEGA-143]] APP - Refactor - No todos los campos son obligatorios en el formulario de contacto
+- **action item from:** [[PEGA-143 - APP - Refactor - No todos los campos son obligatorios en el formulario de|PEGA-143]] APP - Refactor - No todos los campos son obligatorios en el formulario de contacto
 
 ## Descripcion
 

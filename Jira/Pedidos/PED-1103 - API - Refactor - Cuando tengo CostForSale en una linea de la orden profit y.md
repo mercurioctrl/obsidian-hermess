@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1103"
 
 ## Relaciones
 
-- **Padre:** [[PED-1093]] Ver detalle de orden
+- **Padre:** [[PED-1093 - Ver detalle de orden|PED-1093]] Ver detalle de orden
 
 ## Descripcion
 

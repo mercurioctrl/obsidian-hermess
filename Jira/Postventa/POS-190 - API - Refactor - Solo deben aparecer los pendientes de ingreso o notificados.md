@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-190"
 
 ## Relaciones
 
-- **Padre:** [[POS-34]] APP - Feat - Listar pre ingresos
+- **Padre:** [[POS-34 - APP - Feat - Listar pre ingresos|POS-34]] APP - Feat - Listar pre ingresos
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1181"
 
 ## Relaciones
 
-- **Padre:** [[PED-1170]] Kits
-- **action item from:** [[PED-1180]] API - Refactor - Modelaremos el objeto de la orden para incluir relación con kits y su informacion complementaria sin ser disruptivos con el actual funcionamiento
+- **Padre:** [[PED-1170 - Kits|PED-1170]] Kits
+- **action item from:** [[PED-1180 - API - Refactor - Modelaremos el objeto de la orden para incluir relación con|PED-1180]] API - Refactor - Modelaremos el objeto de la orden para incluir relación con kits y su informacion complementaria sin ser disruptivos con el actual funcionamiento
 
 ## Descripcion
 

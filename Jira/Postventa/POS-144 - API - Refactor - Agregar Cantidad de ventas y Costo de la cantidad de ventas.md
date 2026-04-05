@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-144"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **blocks:** [[POS-142]] APP - Refactor - Agregar al grafico 'soluciones de postventa' las magnitudes de compra y venta
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **blocks:** [[POS-142 - APP - Refactor - Agregar al grafico 'soluciones de postventa' las magnitudes de|POS-142]] APP - Refactor - Agregar al grafico 'soluciones de postventa' las magnitudes de compra y venta
 
 ## Descripcion
 

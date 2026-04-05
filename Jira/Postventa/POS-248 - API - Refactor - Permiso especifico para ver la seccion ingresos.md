@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-248"
 
 ## Relaciones
 
-- **Padre:** [[POS-4]] API - Feat - Listar ingresos de postventa
-- **blocks:** [[SNB-642]] usuarios autorizados para ingreso de mercaderia
-- **blocks:** [[POS-249]] APP - Refactor - Ocultar ingresos segun permiso especifico
+- **Padre:** [[POS-4 - API - Feat - Listar ingresos de postventa|POS-4]] API - Feat - Listar ingresos de postventa
+- **blocks:** [[SNB-642 - usuarios autorizados para ingreso de mercaderia|SNB-642]] usuarios autorizados para ingreso de mercaderia
+- **blocks:** [[POS-249 - APP - Refactor - Ocultar ingresos segun permiso especifico|POS-249]] APP - Refactor - Ocultar ingresos segun permiso especifico
 
 ## Descripcion
 

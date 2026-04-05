@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-8"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
 
 ## Descripcion
 

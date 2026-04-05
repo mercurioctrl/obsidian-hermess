@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-93"
 
 ## Relaciones
 
-- **Padre:** [[POS-57]] API - Feat - Estadisticas de productos
+- **Padre:** [[POS-57 - API - Feat - Estadisticas de productos|POS-57]] API - Feat - Estadisticas de productos
 
 ## Descripcion
 

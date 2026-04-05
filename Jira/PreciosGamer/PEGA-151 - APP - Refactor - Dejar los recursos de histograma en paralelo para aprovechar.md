@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-151"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
 
 ## Descripcion
 

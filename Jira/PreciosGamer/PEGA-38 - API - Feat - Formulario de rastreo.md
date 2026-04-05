@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-38"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-37]] Feat - Formulario de rastreo
-- **blocks:** [[PEGA-39]] APP - Feat - Formulario de rastreo
-- **is blocked by:** [[PEGA-70]] API - Formulario de rastreo - Correo no enviado
-- **relates to:** [[PEGA-130]] API - Formulario de rastreo - Sin respuesta al hacer la petición 
-- **relates to:** [[PEGA-162]] API - Formulario de rastreo - Valores enviados y almacenados no coincidentes
+- **Padre:** [[PEGA-37 - Feat - Formulario de rastreo|PEGA-37]] Feat - Formulario de rastreo
+- **blocks:** [[PEGA-39 - APP - Feat - Formulario de rastreo|PEGA-39]] APP - Feat - Formulario de rastreo
+- **is blocked by:** [[PEGA-70 - API - Formulario de rastreo - Correo no enviado|PEGA-70]] API - Formulario de rastreo - Correo no enviado
+- **relates to:** [[PEGA-130 - API - Formulario de rastreo - Sin respuesta al hacer la petición|PEGA-130]] API - Formulario de rastreo - Sin respuesta al hacer la petición 
+- **relates to:** [[PEGA-162 - API - Formulario de rastreo - Valores enviados y almacenados no coincidentes|PEGA-162]] API - Formulario de rastreo - Valores enviados y almacenados no coincidentes
 
 ## Descripcion
 

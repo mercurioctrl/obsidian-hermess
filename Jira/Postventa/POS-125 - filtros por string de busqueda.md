@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-125"
 
 ## Relaciones
 
-- **Padre:** [[POS-117]] APP - Feat - Pestaña de productos
+- **Padre:** [[POS-117 - APP - Feat - Pestaña de productos|POS-117]] APP - Feat - Pestaña de productos
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1156"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **has action item:** [[PED-1168]] API - MVP - Feat - Agregar permiso para bloquear el cambio de vendedor en los filtros al objeto user
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **has action item:** [[PED-1168 - API - MVP - Feat - Agregar permiso para bloquear el cambio de vendedor en los|PED-1168]] API - MVP - Feat - Agregar permiso para bloquear el cambio de vendedor en los filtros al objeto user
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1177"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **duplicates:** [[PED-1176]] API - MVP- Refactor - Modificar recurso de costHistory
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **duplicates:** [[PED-1176 - API - MVP- Refactor - Modificar recurso de costHistory|PED-1176]] API - MVP- Refactor - Modificar recurso de costHistory
 
 ## Descripcion
 

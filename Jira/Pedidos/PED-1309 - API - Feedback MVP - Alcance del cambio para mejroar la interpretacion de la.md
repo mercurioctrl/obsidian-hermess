@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1309"
 
 ## Relaciones
 
-- **Padre:** [[PED-1170]] Kits
-- **has action item:** [[INV-341]] APP - Refactor - Cambios en la creacion/edición de kits
+- **Padre:** [[PED-1170 - Kits|PED-1170]] Kits
+- **has action item:** [[INV-341 - APP - Refactor - Cambios en la creacionedición de kits|INV-341]] APP - Refactor - Cambios en la creacion/edición de kits
 
 ## Descripcion
 

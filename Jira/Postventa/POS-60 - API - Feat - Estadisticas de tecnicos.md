@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-60"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-139]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-139 - API - Feat - Generar xlsx descargable desde el front (mediante una url alojada|POS-139]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
 
 ## Descripcion
 

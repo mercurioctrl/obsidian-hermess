@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-164"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-3]] Scraping y procesamientos
-- **has action item:** [[PEGA-165]] API - Refactor - Nuevo parámetro para filtrar limite de días desde la ultima modificación de precio
+- **Padre:** [[PEGA-3 - Scraping y procesamientos|PEGA-3]] Scraping y procesamientos
+- **has action item:** [[PEGA-165 - API - Refactor - Nuevo parámetro para filtrar limite de días desde la ultima|PEGA-165]] API - Refactor - Nuevo parámetro para filtrar limite de días desde la ultima modificación de precio
 
 ## Descripcion
 

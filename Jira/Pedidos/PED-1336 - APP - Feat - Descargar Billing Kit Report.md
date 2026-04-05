@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1336"
 
 ## Relaciones
 
-- **Padre:** [[PED-213]] Reportes de ventas
-- **action item from:** [[PED-1335]] API - Feat - Billing Kit Report
+- **Padre:** [[PED-213 - Reportes de ventas|PED-213]] Reportes de ventas
+- **action item from:** [[PED-1335 - API - Feat - Billing Kit Report|PED-1335]] API - Feat - Billing Kit Report
 
 ## Descripcion
 

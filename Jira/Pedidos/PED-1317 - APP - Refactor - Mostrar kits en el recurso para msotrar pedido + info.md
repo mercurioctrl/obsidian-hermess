@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1317"
 
 ## Relaciones
 
-- **Padre:** [[PED-1170]] Kits
-- **is blocked by:** [[PED-1316]] API - Refactor - Mostrar kits en el recurso para msotrar pedido + info
+- **Padre:** [[PED-1170 - Kits|PED-1170]] Kits
+- **is blocked by:** [[PED-1316 - API - Refactor - Mostrar kits en el recurso para msotrar pedido + info|PED-1316]] API - Refactor - Mostrar kits en el recurso para msotrar pedido + info
 
 ## Descripcion
 

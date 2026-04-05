@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-16"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **is blocked by:** [[PEGA-17]] API - Feat - Bajaron de precios / Subieron de precio
-- **is blocked by:** [[PEGA-15]] API - Feat - Listar productos filtros
-- **is blocked by:** [[PEGA-14]] API - Feat - Listar productos
-- **is duplicated by:** [[PEGA-60]] APP - Refactor - En el menú vertical de la izquierda permitir un filtro por producto para poder mostrar contenido reactivo a la busqueda
-- **is blocked by:** [[PEGA-68]] APP - Listado de productos y buscador - Búsqueda con espaciado 
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **is blocked by:** [[PEGA-17 - API - Feat - Bajaron de precios Subieron de precio|PEGA-17]] API - Feat - Bajaron de precios / Subieron de precio
+- **is blocked by:** [[PEGA-15 - API - Feat - Listar productos filtros|PEGA-15]] API - Feat - Listar productos filtros
+- **is blocked by:** [[PEGA-14 - API - Feat - Listar productos|PEGA-14]] API - Feat - Listar productos
+- **is duplicated by:** [[PEGA-60 - APP - Refactor - En el menú vertical de la izquierda permitir un filtro por|PEGA-60]] APP - Refactor - En el menú vertical de la izquierda permitir un filtro por producto para poder mostrar contenido reactivo a la busqueda
+- **is blocked by:** [[PEGA-68 - APP - Listado de productos y buscador - Búsqueda con espaciado|PEGA-68]] APP - Listado de productos y buscador - Búsqueda con espaciado 
 
 ## Descripcion
 

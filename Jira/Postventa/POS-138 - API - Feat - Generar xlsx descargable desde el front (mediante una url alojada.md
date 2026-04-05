@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-138"
 
 ## Relaciones
 
-- **Padre:** [[POS-59]] API - Feat - Estadisticas de marcas
-- **blocks:** [[POS-152]] APP - Feat - Descargar informacion completa de los graficos de marcas
+- **Padre:** [[POS-59 - API - Feat - Estadisticas de marcas|POS-59]] API - Feat - Estadisticas de marcas
+- **blocks:** [[POS-152 - APP - Feat - Descargar informacion completa de los graficos de marcas|POS-152]] APP - Feat - Descargar informacion completa de los graficos de marcas
 
 ## Descripcion
 

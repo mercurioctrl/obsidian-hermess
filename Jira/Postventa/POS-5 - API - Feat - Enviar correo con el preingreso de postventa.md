@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-5"
 
 ## Relaciones
 
-- **Padre:** [[POS-18]] Pre-Ingresos
-- **Subtarea:** [[POS-7]] API - Feat - Pasar de pre ingreso a postventa
-- **Subtarea:** [[POS-79]] API - Refactor - Si ya pase un pre-ingreso, no me debe permitir volver a pasarlo
-- **causes:** [[NBWEB-403]] API - Feat - Enviar correo a soporte cuando se carga un preingreso de postventa
+- **Padre:** [[POS-18 - Pre-Ingresos|POS-18]] Pre-Ingresos
+- **Subtarea:** [[POS-7 - API - Feat - Pasar de pre ingreso a postventa|POS-7]] API - Feat - Pasar de pre ingreso a postventa
+- **Subtarea:** [[POS-79 - API - Refactor - Si ya pase un pre-ingreso, no me debe permitir volver a pasarlo|POS-79]] API - Refactor - Si ya pase un pre-ingreso, no me debe permitir volver a pasarlo
+- **causes:** [[NBWEB-403 - API - Feat - Enviar correo a soporte cuando se carga un preingreso de postventa|NBWEB-403]] API - Feat - Enviar correo a soporte cuando se carga un preingreso de postventa
 
 ## Descripcion
 

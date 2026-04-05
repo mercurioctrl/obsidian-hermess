@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-70"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **blocks:** [[PEGA-38]] API - Feat - Formulario de rastreo
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **blocks:** [[PEGA-38 - API - Feat - Formulario de rastreo|PEGA-38]] API - Feat - Formulario de rastreo
 
 ## Descripcion
 

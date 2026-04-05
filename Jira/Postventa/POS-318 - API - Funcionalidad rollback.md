@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-318"
 
 ## Relaciones
 
-- **relates to:** [[SNB-2297]] RMA 35378 retroceder orden
-- **relates to:** [[POS-319]] APP - Rollback order
-- **relates to:** [[POS-321]] API - Refactor - Rollback order - No regresar a ingresos ordenes entregadas
+- **relates to:** [[SNB-2297 - RMA 35378 retroceder orden|SNB-2297]] RMA 35378 retroceder orden
+- **relates to:** [[POS-319 - APP - Rollback order|POS-319]] APP - Rollback order
+- **relates to:** [[POS-321 - API - Refactor - Rollback order - No regresar a ingresos ordenes entregadas|POS-321]] API - Refactor - Rollback order - No regresar a ingresos ordenes entregadas
 
 ## Descripcion
 

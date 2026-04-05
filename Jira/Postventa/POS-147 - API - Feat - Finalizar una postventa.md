@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-147"
 
 ## Relaciones
 
-- **Padre:** [[POS-21]] Solucion de postventa
-- **Subtarea:** [[POS-148]] API - Feat - Si la solucion implica retiro de mercaderia, agregar al correo una palabra clave usando el servicio para este fin
-- **is blocked by:** [[POS-146]] API - Feat - Comprobar finalizacion pendiente / posible
-- **blocks:** [[POS-163]] APP - Feat - Finalizar una postventa
+- **Padre:** [[POS-21 - Solucion de postventa|POS-21]] Solucion de postventa
+- **Subtarea:** [[POS-148 - API - Feat - Si la solucion implica retiro de mercaderia, agregar al correo una|POS-148]] API - Feat - Si la solucion implica retiro de mercaderia, agregar al correo una palabra clave usando el servicio para este fin
+- **is blocked by:** [[POS-146 - API - Feat - Comprobar finalizacion pendiente posible|POS-146]] API - Feat - Comprobar finalizacion pendiente / posible
+- **blocks:** [[POS-163 - APP - Feat - Finalizar una postventa|POS-163]] APP - Feat - Finalizar una postventa
 
 ## Descripcion
 

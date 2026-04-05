@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-83"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **blocks:** [[PEGA-64]] API - Feat - Listar destacados para la home
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **blocks:** [[PEGA-64 - API - Feat - Listar destacados para la home|PEGA-64]] API - Feat - Listar destacados para la home
 
 ## Descripcion
 

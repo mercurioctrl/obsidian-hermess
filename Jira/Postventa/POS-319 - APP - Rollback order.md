@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-319"
 
 ## Relaciones
 
-- **relates to:** [[POS-318]] API - Funcionalidad "rollback"
-- **relates to:** [[POS-320]] APP - Refactor - Rollback order - No regresar a ingresos ordenes entregadas
+- **relates to:** [[POS-318 - API - Funcionalidad rollback|POS-318]] API - Funcionalidad "rollback"
+- **relates to:** [[POS-320 - APP - Refactor - Rollback order - No regresar a ingresos ordenes entregadas|POS-320]] APP - Refactor - Rollback order - No regresar a ingresos ordenes entregadas
 
 ## Descripcion
 

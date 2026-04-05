@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-151"
 
 ## Relaciones
 
-- **Padre:** [[POS-117]] APP - Feat - Pestaña de productos
-- **is blocked by:** [[POS-136]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
+- **Padre:** [[POS-117 - APP - Feat - Pestaña de productos|POS-117]] APP - Feat - Pestaña de productos
+- **is blocked by:** [[POS-136 - API - Feat - Generar xlsx descargable desde el front (mediante una url alojada|POS-136]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
 
 ## Descripcion
 

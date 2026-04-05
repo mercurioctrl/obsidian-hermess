@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-36"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-5]] Cms
+- **Padre:** [[PEGA-5 - Cms|PEGA-5]] Cms
 
 ## Descripcion
 

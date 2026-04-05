@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-164"
 
 ## Relaciones
 
-- **Padre:** [[POS-56]] API - Feat - Ver detalle ingreso
-- **blocks:** [[POS-166]] APP - Feat - Realizar credito de item de postventa
+- **Padre:** [[POS-56 - API - Feat - Ver detalle ingreso|POS-56]] API - Feat - Ver detalle ingreso
+- **blocks:** [[POS-166 - APP - Feat - Realizar credito de item de postventa|POS-166]] APP - Feat - Realizar credito de item de postventa
 
 ## Descripcion
 

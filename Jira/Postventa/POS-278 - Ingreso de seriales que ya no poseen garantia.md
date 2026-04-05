@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-278"
 
 ## Relaciones
 
-- **Padre:** [[POS-18]] Pre-Ingresos
-- **Subtarea:** [[POS-279]] APP - Feat - Permitir ingresar seriales que ya no estan en garantia, interponiendo un mensaje de apercibimiento 
+- **Padre:** [[POS-18 - Pre-Ingresos|POS-18]] Pre-Ingresos
+- **Subtarea:** [[POS-279 - APP - Feat - Permitir ingresar seriales que ya no estan en garantia,|POS-279]] APP - Feat - Permitir ingresar seriales que ya no estan en garantia, interponiendo un mensaje de apercibimiento 
 
 ## Descripcion
 

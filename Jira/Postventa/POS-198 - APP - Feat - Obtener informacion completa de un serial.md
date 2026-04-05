@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-198"
 
 ## Relaciones
 
-- **Padre:** [[POS-196]] Feat - Obtener informacion completa de un serial
-- **is blocked by:** [[POS-197]] API - Feat - Obtener informacion completa de un serial
+- **Padre:** [[POS-196 - Feat - Obtener informacion completa de un serial|POS-196]] Feat - Obtener informacion completa de un serial
+- **is blocked by:** [[POS-197 - API - Feat - Obtener informacion completa de un serial|POS-197]] API - Feat - Obtener informacion completa de un serial
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-198"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-190]] Implementación del sistema de autenticación y panel de gestión para usuarios tipo reseller
-- **Subtarea:** [[PEGA-200]] API - Feat - Crear autenticación necesaria para adminstrador
+- **Padre:** [[PEGA-190 - Implementación del sistema de autenticación y panel de gestión para usuarios|PEGA-190]] Implementación del sistema de autenticación y panel de gestión para usuarios tipo reseller
+- **Subtarea:** [[PEGA-200 - API - Feat - Crear autenticación necesaria para adminstrador|PEGA-200]] API - Feat - Crear autenticación necesaria para adminstrador
 
 ## Descripcion
 

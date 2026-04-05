@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1104"
 
 ## Relaciones
 
-- **Padre:** [[PED-1036]] Generar comprobantes manuales
-- **is blocked by:** [[SNB-3446]] PED - API - Error de certificado al intentar crear un comprobante manual
+- **Padre:** [[PED-1036 - Generar comprobantes manuales|PED-1036]] Generar comprobantes manuales
+- **is blocked by:** [[SNB-3446 - PED - API - Error de certificado al intentar crear un comprobante manual|SNB-3446]] PED - API - Error de certificado al intentar crear un comprobante manual
 
 ## Descripcion
 

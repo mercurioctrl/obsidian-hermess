@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-152"
 
 ## Relaciones
 
-- **Padre:** [[POS-105]] APP - Feat - Pestaña estadística por marcas
-- **is blocked by:** [[POS-138]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
+- **Padre:** [[POS-105 - APP - Feat - Pestaña estadística por marcas|POS-105]] APP - Feat - Pestaña estadística por marcas
+- **is blocked by:** [[POS-138 - API - Feat - Generar xlsx descargable desde el front (mediante una url alojada|POS-138]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
 
 ## Descripcion
 

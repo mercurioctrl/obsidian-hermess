@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-40"
 
 ## Relaciones
 
-- **Padre:** [[POS-20]] Diagnoistico
-- **Subtarea:** [[POS-73]] API - Feat - Permiso administrativo para 'marcar' una solución técnica 
-- **Subtarea:** [[POS-81]] API - Test - Revisar el fallo al intentar definir una solucion tecnica
-- **Subtarea:** [[POS-186]] API - Review - Verificar instancia irreversible de una accion
+- **Padre:** [[POS-20 - Diagnoistico|POS-20]] Diagnoistico
+- **Subtarea:** [[POS-73 - API - Feat - Permiso administrativo para 'marcar' una solución técnica|POS-73]] API - Feat - Permiso administrativo para 'marcar' una solución técnica 
+- **Subtarea:** [[POS-81 - API - Test - Revisar el fallo al intentar definir una solucion tecnica|POS-81]] API - Test - Revisar el fallo al intentar definir una solucion tecnica
+- **Subtarea:** [[POS-186 - API - Review - Verificar instancia irreversible de una accion|POS-186]] API - Review - Verificar instancia irreversible de una accion
 
 ## Descripcion
 

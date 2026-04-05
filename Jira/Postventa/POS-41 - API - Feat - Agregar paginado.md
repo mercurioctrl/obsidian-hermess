@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-41"
 
 ## Relaciones
 
-- **Padre:** [[POS-3]] API - Feat - Listar pre ingresos
+- **Padre:** [[POS-3 - API - Feat - Listar pre ingresos|POS-3]] API - Feat - Listar pre ingresos
 
 ## Descripcion
 

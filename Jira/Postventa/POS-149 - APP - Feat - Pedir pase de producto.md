@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-149"
 
 ## Relaciones
 
-- **Padre:** [[POS-95]] API - Feat - Pedir un pase de mercaderia
+- **Padre:** [[POS-95 - API - Feat - Pedir un pase de mercaderia|POS-95]] API - Feat - Pedir un pase de mercaderia
 
 ## Descripcion
 

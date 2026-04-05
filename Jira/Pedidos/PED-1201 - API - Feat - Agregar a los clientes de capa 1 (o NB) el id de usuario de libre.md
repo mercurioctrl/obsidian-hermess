@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1201"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **relates to:** [[PED-1202]] API - Feat - Editar parametros de usuario de libre opcion para un cliente de NB (Capa 1)
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **relates to:** [[PED-1202 - API - Feat - Editar parametros de usuario de libre opcion para un cliente de NB|PED-1202]] API - Feat - Editar parametros de usuario de libre opcion para un cliente de NB (Capa 1)
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-117"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
-- **is blocked by:** [[PEGA-110]] API - Refactor - Histograma en dolares paralelos
-- **is blocked by:** [[PEGA-118]] API - Refactor - Agregar dolar oficial
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
+- **is blocked by:** [[PEGA-110 - API - Refactor - Histograma en dolares paralelos|PEGA-110]] API - Refactor - Histograma en dolares paralelos
+- **is blocked by:** [[PEGA-118 - API - Refactor - Agregar dolar oficial|PEGA-118]] API - Refactor - Agregar dolar oficial
 
 ## Descripcion
 

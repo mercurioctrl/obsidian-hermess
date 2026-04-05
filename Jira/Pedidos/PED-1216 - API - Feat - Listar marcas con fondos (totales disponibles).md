@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1216"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **has action item:** [[PED-1217]] APP - Feat - Dashboard de Marcas (Totales por marca)
-- **is cloned by:** [[PED-1248]] API - Refactor - Listar marcas con fondos (totales disponibles) - Eliminar espacios vacíos en marcas
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **has action item:** [[PED-1217 - APP - Feat - Dashboard de Marcas (Totales por marca)|PED-1217]] APP - Feat - Dashboard de Marcas (Totales por marca)
+- **is cloned by:** [[PED-1248 - API - Refactor - Listar marcas con fondos (totales disponibles) - Eliminar|PED-1248]] API - Refactor - Listar marcas con fondos (totales disponibles) - Eliminar espacios vacíos en marcas
 
 ## Descripcion
 

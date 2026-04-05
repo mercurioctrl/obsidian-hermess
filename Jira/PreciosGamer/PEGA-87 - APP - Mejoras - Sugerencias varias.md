@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-87"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **relates to:** [[PEGA-82]] APP - Mejoras - Varias
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **relates to:** [[PEGA-82 - APP - Mejoras - Varias|PEGA-82]] APP - Mejoras - Varias
 
 ## Descripcion
 

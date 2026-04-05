@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-192"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-190]] Implementación del sistema de autenticación y panel de gestión para usuarios tipo reseller
-- **Subtarea:** [[PEGA-196]] API - Feat - Implementar envío de datos por parte del reseller
-- **Subtarea:** [[PEGA-197]] API - Feat -  	Implementar historial de datos enviados
-- **Subtarea:** [[PEGA-201]] API - Feat - Crear Syncup para importar catalogo de resellers por feet xml
+- **Padre:** [[PEGA-190 - Implementación del sistema de autenticación y panel de gestión para usuarios|PEGA-190]] Implementación del sistema de autenticación y panel de gestión para usuarios tipo reseller
+- **Subtarea:** [[PEGA-196 - API - Feat - Implementar envío de datos por parte del reseller|PEGA-196]] API - Feat - Implementar envío de datos por parte del reseller
+- **Subtarea:** [[PEGA-197 - API - Feat - Implementar historial de datos enviados|PEGA-197]] API - Feat -  	Implementar historial de datos enviados
+- **Subtarea:** [[PEGA-201 - API - Feat - Crear Syncup para importar catalogo de resellers por feet xml|PEGA-201]] API - Feat - Crear Syncup para importar catalogo de resellers por feet xml
 
 ## Descripcion
 

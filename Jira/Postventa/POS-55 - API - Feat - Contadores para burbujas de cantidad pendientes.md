@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-55"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **blocks:** [[POS-78]] APP - Feat - Contadores para burbujas de cantidad pendientes
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **blocks:** [[POS-78 - APP - Feat - Contadores para burbujas de cantidad pendientes|POS-78]] APP - Feat - Contadores para burbujas de cantidad pendientes
 
 ## Descripcion
 

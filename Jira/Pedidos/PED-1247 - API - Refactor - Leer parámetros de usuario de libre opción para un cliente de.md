@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1247"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **clones:** [[PED-1204]] API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB (Capa 1)
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **clones:** [[PED-1204 - API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB|PED-1204]] API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB (Capa 1)
 
 ## Descripcion
 

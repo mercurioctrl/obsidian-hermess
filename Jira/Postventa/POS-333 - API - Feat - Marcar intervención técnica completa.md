@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-333"
 
 ## Relaciones
 
-- **Padre:** [[POS-281]] Listar pedidos
+- **Padre:** [[POS-281 - Listar pedidos|POS-281]] Listar pedidos
 
 ## Descripcion
 

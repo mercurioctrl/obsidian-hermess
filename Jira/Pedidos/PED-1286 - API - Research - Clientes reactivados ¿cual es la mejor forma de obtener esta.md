@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1286"
 
 ## Relaciones
 
-- **Padre:** [[PED-299]] Objetivos y Desafios
-- **has action item:** [[PED-1293]] API - Feat - Clientes Reactivados Vs Clientes reactivados objetivo
+- **Padre:** [[PED-299 - Objetivos y Desafios|PED-299]] Objetivos y Desafios
+- **has action item:** [[PED-1293 - API - Feat - Clientes Reactivados Vs Clientes reactivados objetivo|PED-1293]] API - Feat - Clientes Reactivados Vs Clientes reactivados objetivo
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-286"
 
 ## Relaciones
 
-- **Padre:** [[POS-280]] Pedidos
-- **blocks:** [[POS-282]] API - Feat - Listar pedidos
-- **relates to:** [[POS-287]] APP - Listar pedidos - Incidencias varias
+- **Padre:** [[POS-280 - Pedidos|POS-280]] Pedidos
+- **blocks:** [[POS-282 - API - Feat - Listar pedidos|POS-282]] API - Feat - Listar pedidos
+- **relates to:** [[POS-287 - APP - Listar pedidos - Incidencias varias|POS-287]] APP - Listar pedidos - Incidencias varias
 
 ## Descripcion
 

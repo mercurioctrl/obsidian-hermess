@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-225"
 
 ## Relaciones
 
-- **Padre:** [[POS-72]] API - Feat - Archivar - Donar
+- **Padre:** [[POS-72 - API - Feat - Archivar - Donar|POS-72]] API - Feat - Archivar - Donar
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-324"
 
 ## Relaciones
 
-- **relates to:** [[SNB-3021]] problemas para realizar nota de credito con la orden 36940
+- **relates to:** [[SNB-3021 - problemas para realizar nota de credito con la orden 36940|SNB-3021]] problemas para realizar nota de credito con la orden 36940
 
 ## Descripcion
 

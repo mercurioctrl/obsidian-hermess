@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1123"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-1124]] DEPRECADA - API - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo
-- **action item from:** [[PED-1176]] API - MVP- Refactor - Modificar recurso de costHistory
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-1124 - DEPRECADA - API - MVP - Refactor - agregar otra opción en el selector de costo|PED-1124]] DEPRECADA - API - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo
+- **action item from:** [[PED-1176 - API - MVP- Refactor - Modificar recurso de costHistory|PED-1176]] API - MVP- Refactor - Modificar recurso de costHistory
 
 ## Descripcion
 

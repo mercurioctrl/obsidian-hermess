@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-94"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **blocks:** [[PEGA-19]] API - Feat - Detalle del producto
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **blocks:** [[PEGA-19 - API - Feat - Detalle del producto|PEGA-19]] API - Feat - Detalle del producto
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1168"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **action item from:** [[PED-1156]] APP - MVP - Trabar filtro asignado por vendedor (no se puede deseleccionar el vendedor)
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **action item from:** [[PED-1156 - APP - MVP - Trabar filtro asignado por vendedor (no se puede deseleccionar el|PED-1156]] APP - MVP - Trabar filtro asignado por vendedor (no se puede deseleccionar el vendedor)
 
 ## Descripcion
 

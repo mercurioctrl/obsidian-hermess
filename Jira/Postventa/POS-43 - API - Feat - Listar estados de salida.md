@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-43"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **blocks:** [[POS-35]] APP - Feat - Listar ingresos de postventa
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **blocks:** [[POS-35 - APP - Feat - Listar ingresos de postventa|POS-35]] APP - Feat - Listar ingresos de postventa
 
 ## Descripcion
 

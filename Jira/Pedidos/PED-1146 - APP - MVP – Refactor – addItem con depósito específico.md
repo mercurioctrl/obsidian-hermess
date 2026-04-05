@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1146"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **action item from:** [[PED-1145]] API - MVP – Refactor – addItem con depósito específico y reserva por almacén
-- **has action item:** [[PED-1145]] API - MVP – Refactor – addItem con depósito específico y reserva por almacén
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **action item from:** [[PED-1145 - API - MVP – Refactor – addItem con depósito específico y reserva por almacén|PED-1145]] API - MVP – Refactor – addItem con depósito específico y reserva por almacén
+- **has action item:** [[PED-1145 - API - MVP – Refactor – addItem con depósito específico y reserva por almacén|PED-1145]] API - MVP – Refactor – addItem con depósito específico y reserva por almacén
 
 ## Descripcion
 

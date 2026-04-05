@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1130"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **action item from:** [[PED-1129]] APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de precio
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **action item from:** [[PED-1129 - APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de|PED-1129]] APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de precio
 
 ## Descripcion
 

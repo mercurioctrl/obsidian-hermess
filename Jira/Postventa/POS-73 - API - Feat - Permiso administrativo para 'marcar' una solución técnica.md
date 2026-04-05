@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-73"
 
 ## Relaciones
 
-- **Padre:** [[POS-40]] API - Feat - Definir solucion tecnica
+- **Padre:** [[POS-40 - API - Feat - Definir solucion tecnica|POS-40]] API - Feat - Definir solucion tecnica
 
 ## Descripcion
 

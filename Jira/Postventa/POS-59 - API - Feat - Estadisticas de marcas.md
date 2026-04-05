@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-59"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-67]] API - Feat - Filtros estadisticas marcas
-- **Subtarea:** [[POS-138]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-67 - API - Feat - Filtros estadisticas marcas|POS-67]] API - Feat - Filtros estadisticas marcas
+- **Subtarea:** [[POS-138 - API - Feat - Generar xlsx descargable desde el front (mediante una url alojada|POS-138]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
 
 ## Descripcion
 

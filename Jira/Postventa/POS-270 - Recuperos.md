@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-270"
 
 ## Relaciones
 
-- **Padre:** [[POS-230]] Postventa Proveedores
-- **Subtarea:** [[POS-271]] API - Refactor - Agregar el proveedor de compra
+- **Padre:** [[POS-230 - Postventa Proveedores|POS-230]] Postventa Proveedores
+- **Subtarea:** [[POS-271 - API - Refactor - Agregar el proveedor de compra|POS-271]] API - Refactor - Agregar el proveedor de compra
 
 ## Descripcion
 

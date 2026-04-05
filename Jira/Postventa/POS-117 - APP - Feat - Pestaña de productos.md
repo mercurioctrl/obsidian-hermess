@@ -29,15 +29,15 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-117"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-118]] APP - Feat - Productos mas costosos
-- **Subtarea:** [[POS-119]] APP - Feat - Productos mas falibles
-- **Subtarea:** [[POS-120]] APP - Feat - Productos por ingreso
-- **Subtarea:** [[POS-121]] APP - Feat - Productos por demora
-- **Subtarea:** [[POS-122]] APP - Feat - Productos por solucion de postventa
-- **Subtarea:** [[POS-125]] filtros por string de busqueda
-- **Subtarea:** [[POS-151]] APP - Feat - Descargar informacion completa de los graficos de productos
-- **is blocked by:** [[POS-65]] API - Feat - Filtros estadisticas productos
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-118 - APP - Feat - Productos mas costosos|POS-118]] APP - Feat - Productos mas costosos
+- **Subtarea:** [[POS-119 - APP - Feat - Productos mas falibles|POS-119]] APP - Feat - Productos mas falibles
+- **Subtarea:** [[POS-120 - APP - Feat - Productos por ingreso|POS-120]] APP - Feat - Productos por ingreso
+- **Subtarea:** [[POS-121 - APP - Feat - Productos por demora|POS-121]] APP - Feat - Productos por demora
+- **Subtarea:** [[POS-122 - APP - Feat - Productos por solucion de postventa|POS-122]] APP - Feat - Productos por solucion de postventa
+- **Subtarea:** [[POS-125 - filtros por string de busqueda|POS-125]] filtros por string de busqueda
+- **Subtarea:** [[POS-151 - APP - Feat - Descargar informacion completa de los graficos de productos|POS-151]] APP - Feat - Descargar informacion completa de los graficos de productos
+- **is blocked by:** [[POS-65 - API - Feat - Filtros estadisticas productos|POS-65]] API - Feat - Filtros estadisticas productos
 
 ## Descripcion
 

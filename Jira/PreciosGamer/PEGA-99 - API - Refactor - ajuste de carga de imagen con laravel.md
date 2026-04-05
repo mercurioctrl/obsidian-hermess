@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-99"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-33]] Feat - Administrar sliders
+- **Padre:** [[PEGA-33 - Feat - Administrar sliders|PEGA-33]] Feat - Administrar sliders
 
 ## Descripcion
 

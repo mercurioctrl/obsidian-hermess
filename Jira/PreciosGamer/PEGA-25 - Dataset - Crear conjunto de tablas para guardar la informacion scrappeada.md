@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-25"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-3]] Scraping y procesamientos
-- **Subtarea:** [[PEGA-41]] DATASET - Tabla repository
-- **Subtarea:** [[PEGA-42]] DATASET - Tabla importers
+- **Padre:** [[PEGA-3 - Scraping y procesamientos|PEGA-3]] Scraping y procesamientos
+- **Subtarea:** [[PEGA-41 - DATASET - Tabla repository|PEGA-41]] DATASET - Tabla repository
+- **Subtarea:** [[PEGA-42 - DATASET - Tabla importers|PEGA-42]] DATASET - Tabla importers
 
 ## Descripcion
 

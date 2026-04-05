@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1284"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **action item from:** [[PED-1283]] API - Refactor - Agregar nuevo parámetro voucherCompanyCode
-- **has action item:** [[PED-1287]] API - Refactor - Agregar voucherCompanyCode para lectura
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **action item from:** [[PED-1283 - API - Refactor - Agregar nuevo parámetro voucherCompanyCode|PED-1283]] API - Refactor - Agregar nuevo parámetro voucherCompanyCode
+- **has action item:** [[PED-1287 - API - Refactor - Agregar voucherCompanyCode para lectura|PED-1287]] API - Refactor - Agregar voucherCompanyCode para lectura
 
 ## Descripcion
 

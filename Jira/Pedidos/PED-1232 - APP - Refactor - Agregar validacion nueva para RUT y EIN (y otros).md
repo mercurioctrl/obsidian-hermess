@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1232"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **action item from:** [[PED-1231]] API - Refactor - Agregar RUT y EIN al dataset de tipos de documento
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **action item from:** [[PED-1231 - API - Refactor - Agregar RUT y EIN al dataset de tipos de documento|PED-1231]] API - Refactor - Agregar RUT y EIN al dataset de tipos de documento
 
 ## Descripcion
 

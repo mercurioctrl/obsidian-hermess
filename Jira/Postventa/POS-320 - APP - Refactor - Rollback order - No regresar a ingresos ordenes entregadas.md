@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-320"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
-- **relates to:** [[POS-319]] APP - Rollback order
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
+- **relates to:** [[POS-319 - APP - Rollback order|POS-319]] APP - Rollback order
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-183"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-177]] Envios Gratis
+- **Padre:** [[PEGA-177 - Envios Gratis|PEGA-177]] Envios Gratis
 
 ## Descripcion
 

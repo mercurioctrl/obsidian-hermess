@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-180"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-177]] Envios Gratis
-- **action item from:** [[PEGA-179]] API - Feat - Feedback sobre informacion especifica de los productos (arrancaremos con envios)
+- **Padre:** [[PEGA-177 - Envios Gratis|PEGA-177]] Envios Gratis
+- **action item from:** [[PEGA-179 - API - Feat - Feedback sobre informacion especifica de los productos|PEGA-179]] API - Feat - Feedback sobre informacion especifica de los productos (arrancaremos con envios)
 
 ## Descripcion
 

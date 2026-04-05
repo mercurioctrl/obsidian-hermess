@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-150"
 
 ## Relaciones
 
-- **Padre:** [[POS-20]] Diagnoistico
+- **Padre:** [[POS-20 - Diagnoistico|POS-20]] Diagnoistico
 
 ## Descripcion
 

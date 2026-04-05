@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-96"
 
 ## Relaciones
 
-- **Padre:** [[POS-25]] API - Feat - Asignar técnico 
+- **Padre:** [[POS-25 - API - Feat - Asignar técnico|POS-25]] API - Feat - Asignar técnico 
 
 ## Descripcion
 

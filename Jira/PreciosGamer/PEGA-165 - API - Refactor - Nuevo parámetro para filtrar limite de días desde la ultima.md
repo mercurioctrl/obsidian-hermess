@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-165"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **action item from:** [[PEGA-164]] API - Refactor - Modificar SyncUp para guardar la fecha del ultimo cambio de precios
-- **has action item:** [[PEGA-167]] APP - Refactor - Agregar "fecha de cambio" en los repositorios de baja de precio de la home
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **action item from:** [[PEGA-164 - API - Refactor - Modificar SyncUp para guardar la fecha del ultimo cambio de|PEGA-164]] API - Refactor - Modificar SyncUp para guardar la fecha del ultimo cambio de precios
+- **has action item:** [[PEGA-167 - APP - Refactor - Agregar fecha de cambio en los repositorios de baja de precio|PEGA-167]] APP - Refactor - Agregar "fecha de cambio" en los repositorios de baja de precio de la home
 
 ## Descripcion
 

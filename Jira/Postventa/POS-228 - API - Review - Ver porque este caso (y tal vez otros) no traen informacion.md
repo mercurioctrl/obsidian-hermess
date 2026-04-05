@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-228"
 
 ## Relaciones
 
-- **Padre:** [[POS-196]] Feat - Obtener informacion completa de un serial
+- **Padre:** [[POS-196 - Feat - Obtener informacion completa de un serial|POS-196]] Feat - Obtener informacion completa de un serial
 
 ## Descripcion
 

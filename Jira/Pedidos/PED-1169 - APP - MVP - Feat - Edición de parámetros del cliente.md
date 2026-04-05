@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1169"
 
 ## Relaciones
 
-- **Padre:** [[PED-16]] Listar clientes
-- **relates to:** [[PED-1128]] APP - MVP - Refactor - agregar opción a la edicion de parametros de un cliente 'plazo de pago'
-- **relates to:** [[PED-1127]] API - Refactor - agregar opción a la edicion de parametros de un cliente 'plazo de pago'
+- **Padre:** [[PED-16 - Listar clientes|PED-16]] Listar clientes
+- **relates to:** [[PED-1128 - APP - MVP - Refactor - agregar opción a la edicion de parametros de un cliente|PED-1128]] APP - MVP - Refactor - agregar opción a la edicion de parametros de un cliente 'plazo de pago'
+- **relates to:** [[PED-1127 - API - Refactor - agregar opción a la edicion de parametros de un cliente 'plazo|PED-1127]] API - Refactor - agregar opción a la edicion de parametros de un cliente 'plazo de pago'
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1144"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **action item from:** [[PED-1143]] API - MVP - Refactor - Filtro de deposito para el recurso items
-- **action item from:** [[PED-1141]] API - MVP - Feat - Repositorio Almacén (Deposito)
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **action item from:** [[PED-1143 - API - MVP - Refactor - Filtro de deposito para el recurso items|PED-1143]] API - MVP - Refactor - Filtro de deposito para el recurso items
+- **action item from:** [[PED-1141 - API - MVP - Feat - Repositorio Almacén (Deposito)|PED-1141]] API - MVP - Feat - Repositorio Almacén (Deposito)
 
 ## Descripcion
 

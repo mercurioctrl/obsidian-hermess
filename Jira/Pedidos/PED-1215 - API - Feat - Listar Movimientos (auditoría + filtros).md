@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1215"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **has action item:** [[PED-1224]] APP - Feat - Screen - Auditoría de Movimientos (Listado + filtros)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **has action item:** [[PED-1224 - APP - Feat - Screen - Auditoría de Movimientos (Listado + filtros)|PED-1224]] APP - Feat - Screen - Auditoría de Movimientos (Listado + filtros)
 
 ## Descripcion
 

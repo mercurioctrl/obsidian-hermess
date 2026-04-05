@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-279"
 
 ## Relaciones
 
-- **Padre:** [[POS-278]] Ingreso de seriales que ya no poseen garantia
+- **Padre:** [[POS-278 - Ingreso de seriales que ya no poseen garantia|POS-278]] Ingreso de seriales que ya no poseen garantia
 
 ## Descripcion
 

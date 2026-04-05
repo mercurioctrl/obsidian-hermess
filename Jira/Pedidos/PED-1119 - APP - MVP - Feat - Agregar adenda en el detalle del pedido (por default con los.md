@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1119"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-1120]] API - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los datos bancarios de Laset)
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-1120 - API - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los|PED-1120]] API - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los datos bancarios de Laset)
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-41"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-25]] Dataset - Crear conjunto de tablas para guardar la informacion scrappeada
+- **Padre:** [[PEGA-25 - Dataset - Crear conjunto de tablas para guardar la informacion scrappeada|PEGA-25]] Dataset - Crear conjunto de tablas para guardar la informacion scrappeada
 
 ## Descripcion
 

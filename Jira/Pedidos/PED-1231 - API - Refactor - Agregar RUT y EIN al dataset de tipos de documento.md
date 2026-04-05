@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1231"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **has action item:** [[PED-1232]] APP - Refactor - Agregar validacion nueva para RUT y EIN (y otros)
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **has action item:** [[PED-1232 - APP - Refactor - Agregar validacion nueva para RUT y EIN (y otros)|PED-1232]] APP - Refactor - Agregar validacion nueva para RUT y EIN (y otros)
 
 ## Descripcion
 

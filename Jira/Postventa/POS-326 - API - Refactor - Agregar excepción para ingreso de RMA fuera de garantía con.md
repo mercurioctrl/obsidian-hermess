@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-326"
 
 ## Relaciones
 
-- **Padre:** [[POS-325]] Excepciones de garantía
-- **has action item:** [[POS-327]] APP - Feat - ermitir solicitud de excepción para ingreso de RMA fuera de garantía con revalidación de usuario y motivo obligatorio
+- **Padre:** [[POS-325 - Excepciones de garantía|POS-325]] Excepciones de garantía
+- **has action item:** [[POS-327 - APP - Feat - ermitir solicitud de excepción para ingreso de RMA fuera de|POS-327]] APP - Feat - ermitir solicitud de excepción para ingreso de RMA fuera de garantía con revalidación de usuario y motivo obligatorio
 
 ## Descripcion
 

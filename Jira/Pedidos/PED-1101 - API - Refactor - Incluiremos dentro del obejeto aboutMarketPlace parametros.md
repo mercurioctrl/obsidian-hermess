@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1101"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **has action item:** [[PED-1110]] APP - Refactor - Agrear al modulo de marketplace el importe utilizado para llegar al monto del pedido
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **has action item:** [[PED-1110 - APP - Refactor - Agrear al modulo de marketplace el importe utilizado para|PED-1110]] APP - Refactor - Agrear al modulo de marketplace el importe utilizado para llegar al monto del pedido
 
 ## Descripcion
 

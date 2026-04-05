@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-89"
 
 ## Relaciones
 
-- **Padre:** [[POS-87]] Feat - Autorizar y rechazar un preingreso
-- **is blocked by:** [[POS-88]] API - Feat - Autorizar o rechazar un pre ingreso
+- **Padre:** [[POS-87 - Feat - Autorizar y rechazar un preingreso|POS-87]] Feat - Autorizar y rechazar un preingreso
+- **is blocked by:** [[POS-88 - API - Feat - Autorizar o rechazar un pre ingreso|POS-88]] API - Feat - Autorizar o rechazar un pre ingreso
 
 ## Descripcion
 

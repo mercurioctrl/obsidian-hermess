@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-188"
 
 ## Relaciones
 
-- **Padre:** [[POS-69]] APP - Feat - Listar postventas finalizadas
+- **Padre:** [[POS-69 - APP - Feat - Listar postventas finalizadas|POS-69]] APP - Feat - Listar postventas finalizadas
 
 ## Descripcion
 

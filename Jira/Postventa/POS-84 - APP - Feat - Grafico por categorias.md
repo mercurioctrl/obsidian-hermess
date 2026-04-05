@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-84"
 
 ## Relaciones
 
-- **Padre:** [[POS-70]] APP - Feat - Dashboard y estadisticas
-- **is blocked by:** [[POS-58]] API - Feat - Estadisticas de categorias
+- **Padre:** [[POS-70 - APP - Feat - Dashboard y estadisticas|POS-70]] APP - Feat - Dashboard y estadisticas
+- **is blocked by:** [[POS-58 - API - Feat - Estadisticas de categorias|POS-58]] API - Feat - Estadisticas de categorias
 
 ## Descripcion
 

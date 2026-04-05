@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1302"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **has action item:** [[PED-1304]] APP - Refactor - Editar Clientes, cambios en casos internacionales
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **has action item:** [[PED-1304 - APP - Refactor - Editar Clientes, cambios en casos internacionales|PED-1304]] APP - Refactor - Editar Clientes, cambios en casos internacionales
 
 ## Descripcion
 

@@ -29,16 +29,16 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-99"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-101]] APP - Feat - Mas costosos: Muestra informacion sobre las categorias que tienen mayor costo de postventa
-- **Subtarea:** [[POS-100]] APP - Feat - Mas Falibles: Se trata de mostrar aquellas categorías que mas fallan.
-- **Subtarea:** [[POS-102]] APP - Feat - Falsos positivos: Que categorías ingresan mas a postventa, pero no fallan.
-- **Subtarea:** [[POS-104]] APP - Feat - Ingresos es un grafico de barras...
-- **Subtarea:** [[POS-103]] APP - Feat - Demoras: Las cateogiras que mas tiempo permanecen dentro del departamenteo de postventa
-- **Subtarea:** [[POS-111]] APP - Feat - Soluciones de posventa: Muestra la comparativa de si se reparo, se se cambio o se acredito
-- **Subtarea:** [[POS-153]] APP - Feat - Descargar informacion completa de los graficos de categorias
-- **is blocked by:** [[POS-66]] API - Feat - Filtros estadisticas categorias
-- **is blocked by:** [[POS-58]] API - Feat - Estadisticas de categorias
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-101 - APP - Feat - Mas costosos Muestra informacion sobre las categorias que tienen|POS-101]] APP - Feat - Mas costosos: Muestra informacion sobre las categorias que tienen mayor costo de postventa
+- **Subtarea:** [[POS-100 - APP - Feat - Mas Falibles Se trata de mostrar aquellas categorías que mas|POS-100]] APP - Feat - Mas Falibles: Se trata de mostrar aquellas categorías que mas fallan.
+- **Subtarea:** [[POS-102 - APP - Feat - Falsos positivos Que categorías ingresan mas a postventa, pero no|POS-102]] APP - Feat - Falsos positivos: Que categorías ingresan mas a postventa, pero no fallan.
+- **Subtarea:** [[POS-104 - APP - Feat - Ingresos es un grafico de barras...|POS-104]] APP - Feat - Ingresos es un grafico de barras...
+- **Subtarea:** [[POS-103 - APP - Feat - Demoras Las cateogiras que mas tiempo permanecen dentro del|POS-103]] APP - Feat - Demoras: Las cateogiras que mas tiempo permanecen dentro del departamenteo de postventa
+- **Subtarea:** [[POS-111 - APP - Feat - Soluciones de posventa Muestra la comparativa de si se reparo, se|POS-111]] APP - Feat - Soluciones de posventa: Muestra la comparativa de si se reparo, se se cambio o se acredito
+- **Subtarea:** [[POS-153 - APP - Feat - Descargar informacion completa de los graficos de categorias|POS-153]] APP - Feat - Descargar informacion completa de los graficos de categorias
+- **is blocked by:** [[POS-66 - API - Feat - Filtros estadisticas categorias|POS-66]] API - Feat - Filtros estadisticas categorias
+- **is blocked by:** [[POS-58 - API - Feat - Estadisticas de categorias|POS-58]] API - Feat - Estadisticas de categorias
 
 ## Descripcion
 

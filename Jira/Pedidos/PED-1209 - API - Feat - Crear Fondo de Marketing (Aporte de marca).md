@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1209"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **has action item:** [[PED-1219]] APP - Feat - Form Crear Fondo
-- **is cloned by:** [[PED-1251]] API - Review - Crear Fondo de Marketing (Aporte de marca) - Diferencias en CreatedAt, CreateByUserId y respuesta del error
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **has action item:** [[PED-1219 - APP - Feat - Form Crear Fondo|PED-1219]] APP - Feat - Form Crear Fondo
+- **is cloned by:** [[PED-1251 - API - Review - Crear Fondo de Marketing (Aporte de marca) - Diferencias en|PED-1251]] API - Review - Crear Fondo de Marketing (Aporte de marca) - Diferencias en CreatedAt, CreateByUserId y respuesta del error
 
 ## Descripcion
 

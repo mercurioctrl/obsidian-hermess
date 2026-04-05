@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-272"
 
 ## Relaciones
 
-- **is blocked by:** [[POS-274]] Jira - Integración de reportes a la app - Cambio de estado
+- **is blocked by:** [[POS-274 - Jira - Integración de reportes a la app - Cambio de estado|POS-274]] Jira - Integración de reportes a la app - Cambio de estado
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-297"
 
 ## Relaciones
 
-- **Padre:** [[POS-24]] Creditos
-- **blocks:** [[POS-291]] API - Refactor - en logica al realizar nota de credito según sucursal asignada al pedido
+- **Padre:** [[POS-24 - Creditos|POS-24]] Creditos
+- **blocks:** [[POS-291 - API - Refactor - en logica al realizar nota de credito según sucursal asignada|POS-291]] API - Refactor - en logica al realizar nota de credito según sucursal asignada al pedido
 
 ## Descripcion
 

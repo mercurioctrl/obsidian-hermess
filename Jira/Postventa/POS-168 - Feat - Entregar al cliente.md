@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-168"
 
 ## Relaciones
 
-- **Padre:** [[POS-21]] Solucion de postventa
+- **Padre:** [[POS-21 - Solucion de postventa|POS-21]] Solucion de postventa
 
 ## Descripcion
 

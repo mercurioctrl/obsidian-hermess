@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1340"
 
 ## Relaciones
 
-- **Padre:** [[PED-1337]] Incentivo Especial Gigabyte
+- **Padre:** [[PED-1337 - Incentivo Especial Gigabyte|PED-1337]] Incentivo Especial Gigabyte
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-115"
 
 ## Relaciones
 
-- **Padre:** [[POS-23]] Pases de mercaderia
-- **is blocked by:** [[POS-27]] API - Feat - Listas de pases
-- **is blocked by:** [[POS-54]] API - Refactor - Listas de pases
+- **Padre:** [[POS-23 - Pases de mercaderia|POS-23]] Pases de mercaderia
+- **is blocked by:** [[POS-27 - API - Feat - Listas de pases|POS-27]] API - Feat - Listas de pases
+- **is blocked by:** [[POS-54 - API - Refactor - Listas de pases|POS-54]] API - Refactor - Listas de pases
 
 ## Descripcion
 

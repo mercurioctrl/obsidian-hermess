@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1193"
 
 ## Relaciones
 
-- **Padre:** [[PED-8]] Listar ordenes de compra
-- **has action item:** [[PED-86]] APP - Feat - Ver reservas de una orden de compra
-- **action item from:** [[PED-1192]] API - Refactor - Ver reservas en una orden de compra
+- **Padre:** [[PED-8 - Listar ordenes de compra|PED-8]] Listar ordenes de compra
+- **has action item:** [[PED-86 - APP - Feat - Ver reservas de una orden de compra|PED-86]] APP - Feat - Ver reservas de una orden de compra
+- **action item from:** [[PED-1192 - API - Refactor - Ver reservas en una orden de compra|PED-1192]] API - Refactor - Ver reservas en una orden de compra
 
 ## Descripcion
 

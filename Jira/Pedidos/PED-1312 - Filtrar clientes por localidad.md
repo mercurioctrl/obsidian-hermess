@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1312"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **Subtarea:** [[PED-1313]] API - Feat - Filtro de clientes por localidad mediante localityId
-- **Subtarea:** [[PED-1314]] APP - Feat - Filtro de clientes por localidad en pantalla de búsqueda
-- **has action item:** [[SNB-3702]] LOCALIDAD DEL CLIENTE
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **Subtarea:** [[PED-1313 - API - Feat - Filtro de clientes por localidad mediante localityId|PED-1313]] API - Feat - Filtro de clientes por localidad mediante localityId
+- **Subtarea:** [[PED-1314 - APP - Feat - Filtro de clientes por localidad en pantalla de búsqueda|PED-1314]] APP - Feat - Filtro de clientes por localidad en pantalla de búsqueda
+- **has action item:** [[SNB-3702 - LOCALIDAD DEL CLIENTE|SNB-3702]] LOCALIDAD DEL CLIENTE
 
 ## Descripcion
 

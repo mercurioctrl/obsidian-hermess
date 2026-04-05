@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-122"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **has action item:** [[PEGA-123]] APP - Refactor - Sumar el gráfico "Indice de accesibilidad" al grafico
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **has action item:** [[PEGA-123 - APP - Refactor - Sumar el gráfico Indice de accesibilidad al grafico|PEGA-123]] APP - Refactor - Sumar el gráfico "Indice de accesibilidad" al grafico
 
 ## Descripcion
 

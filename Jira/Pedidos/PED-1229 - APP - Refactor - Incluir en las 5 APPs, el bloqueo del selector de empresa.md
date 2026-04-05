@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1229"
 
 ## Relaciones
 
-- **Padre:** [[PED-1227]] Permiso de cambio de empresa para las 5 APPs
-- **action item from:** [[PED-1228]] API - Refactor - Incluir en las 5 APPs el objeto user el permiso unlockedCompanyFilter
+- **Padre:** [[PED-1227 - Permiso de cambio de empresa para las 5 APPs|PED-1227]] Permiso de cambio de empresa para las 5 APPs
+- **action item from:** [[PED-1228 - API - Refactor - Incluir en las 5 APPs el objeto user el permiso|PED-1228]] API - Refactor - Incluir en las 5 APPs el objeto user el permiso unlockedCompanyFilter
 
 ## Descripcion
 

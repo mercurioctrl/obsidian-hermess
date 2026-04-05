@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-25"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
-- **Subtarea:** [[POS-96]] API - Refactor - Lógica de asignación de los técnicos
-- **blocks:** [[POS-48]] APP - Feat -  Selector de técnicos para asignar técnico
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
+- **Subtarea:** [[POS-96 - API - Refactor - Lógica de asignación de los técnicos|POS-96]] API - Refactor - Lógica de asignación de los técnicos
+- **blocks:** [[POS-48 - APP - Feat - Selector de técnicos para asignar técnico|POS-48]] APP - Feat -  Selector de técnicos para asignar técnico
 
 ## Descripcion
 

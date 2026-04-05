@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-217"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **is blocked by:** [[POS-196]] Feat - Obtener informacion completa de un serial
-- **is blocked by:** [[POS-214]] API - Refactor - Agregar el evento "Postventa" al historial de serial
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **is blocked by:** [[POS-196 - Feat - Obtener informacion completa de un serial|POS-196]] Feat - Obtener informacion completa de un serial
+- **is blocked by:** [[POS-214 - API - Refactor - Agregar el evento Postventa al historial de serial|POS-214]] API - Refactor - Agregar el evento "Postventa" al historial de serial
 
 ## Descripcion
 

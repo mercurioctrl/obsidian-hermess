@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-6"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
 
 ## Descripcion
 

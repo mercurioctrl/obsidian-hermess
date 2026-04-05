@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-56"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
-- **Subtarea:** [[POS-77]] API - Refactor - Agregar al recurso la descripción de la falla
-- **Subtarea:** [[POS-80]] APP - Refactor - Mejorar la forma en la que se visualizan las descripciones largas en el modal
-- **Subtarea:** [[POS-140]] API - Refactor - Agregar stocks disponibles
-- **Subtarea:** [[POS-141]] APP - Refactor - Agregar stocks disponibles
-- **Subtarea:** [[POS-164]] API - Refactor - Agregar precios posibles del producto
-- **Subtarea:** [[POS-202]] API - Review - Mostrar precios históricos completos y revisar precio de venta
-- **Subtarea:** [[POS-203]] APP - Review - Agregar fechas a los precios historico y de venta
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
+- **Subtarea:** [[POS-77 - API - Refactor - Agregar al recurso la descripción de la falla|POS-77]] API - Refactor - Agregar al recurso la descripción de la falla
+- **Subtarea:** [[POS-80 - APP - Refactor - Mejorar la forma en la que se visualizan las descripciones|POS-80]] APP - Refactor - Mejorar la forma en la que se visualizan las descripciones largas en el modal
+- **Subtarea:** [[POS-140 - API - Refactor - Agregar stocks disponibles|POS-140]] API - Refactor - Agregar stocks disponibles
+- **Subtarea:** [[POS-141 - APP - Refactor - Agregar stocks disponibles|POS-141]] APP - Refactor - Agregar stocks disponibles
+- **Subtarea:** [[POS-164 - API - Refactor - Agregar precios posibles del producto|POS-164]] API - Refactor - Agregar precios posibles del producto
+- **Subtarea:** [[POS-202 - API - Review - Mostrar precios históricos completos y revisar precio de venta|POS-202]] API - Review - Mostrar precios históricos completos y revisar precio de venta
+- **Subtarea:** [[POS-203 - APP - Review - Agregar fechas a los precios historico y de venta|POS-203]] APP - Review - Agregar fechas a los precios historico y de venta
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-110"
 
 ## Relaciones
 
-- **Padre:** [[POS-105]] APP - Feat - Pestaña estadística por marcas
+- **Padre:** [[POS-105 - APP - Feat - Pestaña estadística por marcas|POS-105]] APP - Feat - Pestaña estadística por marcas
 
 ## Descripcion
 

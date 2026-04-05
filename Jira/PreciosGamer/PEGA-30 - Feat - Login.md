@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-30"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-5]] Cms
-- **Subtarea:** [[PEGA-31]] API - Feat - Login
-- **Subtarea:** [[PEGA-32]] APP - Feat - Login
+- **Padre:** [[PEGA-5 - Cms|PEGA-5]] Cms
+- **Subtarea:** [[PEGA-31 - API - Feat - Login|PEGA-31]] API - Feat - Login
+- **Subtarea:** [[PEGA-32 - APP - Feat - Login|PEGA-32]] APP - Feat - Login
 
 ## Descripcion
 

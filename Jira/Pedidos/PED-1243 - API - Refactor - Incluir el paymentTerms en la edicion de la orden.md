@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1243"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **has action item:** [[PED-1242]] APP - Refactor - Agregar un input para plazo de pago en cada orden 
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **has action item:** [[PED-1242 - APP - Refactor - Agregar un input para plazo de pago en cada orden|PED-1242]] APP - Refactor - Agregar un input para plazo de pago en cada orden 
 
 ## Descripcion
 

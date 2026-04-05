@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-13"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **Subtarea:** [[POS-14]] API - Feat - Login - Iniciar sesión
-- **Subtarea:** [[POS-15]] API - Feat - Login - Registrar sesión
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **Subtarea:** [[POS-14 - API - Feat - Login - Iniciar sesión|POS-14]] API - Feat - Login - Iniciar sesión
+- **Subtarea:** [[POS-15 - API - Feat - Login - Registrar sesión|POS-15]] API - Feat - Login - Registrar sesión
 
 ## Descripcion
 

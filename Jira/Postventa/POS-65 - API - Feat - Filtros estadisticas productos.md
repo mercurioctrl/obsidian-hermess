@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-65"
 
 ## Relaciones
 
-- **Padre:** [[POS-57]] API - Feat - Estadisticas de productos
-- **blocks:** [[POS-117]] APP - Feat - Pestaña de productos
+- **Padre:** [[POS-57 - API - Feat - Estadisticas de productos|POS-57]] API - Feat - Estadisticas de productos
+- **blocks:** [[POS-117 - APP - Feat - Pestaña de productos|POS-117]] APP - Feat - Pestaña de productos
 
 ## Descripcion
 

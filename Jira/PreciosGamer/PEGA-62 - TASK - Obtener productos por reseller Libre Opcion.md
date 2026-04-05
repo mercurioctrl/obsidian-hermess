@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-62"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-26]] API - Feat - Recoger catalogos por reseller/marketplace
-- **is blocked by:** [[PEGA-80]] TASK - Obtener productos por reseller Libre Opcion - producto/precio no coincidente
+- **Padre:** [[PEGA-26 - API - Feat - Recoger catalogos por resellermarketplace|PEGA-26]] API - Feat - Recoger catalogos por reseller/marketplace
+- **is blocked by:** [[PEGA-80 - TASK - Obtener productos por reseller Libre Opcion - productoprecio no|PEGA-80]] TASK - Obtener productos por reseller Libre Opcion - producto/precio no coincidente
 
 ## Descripcion
 

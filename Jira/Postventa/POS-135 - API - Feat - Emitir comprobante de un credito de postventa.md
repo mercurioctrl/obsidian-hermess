@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-135"
 
 ## Relaciones
 
-- **Padre:** [[POS-123]] MS - Servicio de emision de comprobantes
-- **is blocked by:** [[POS-132]] MS - Feat - Emitir comprobante
+- **Padre:** [[POS-123 - MS - Servicio de emision de comprobantes|POS-123]] MS - Servicio de emision de comprobantes
+- **is blocked by:** [[POS-132 - MS - Feat - Emitir comprobante|POS-132]] MS - Feat - Emitir comprobante
 
 ## Descripcion
 

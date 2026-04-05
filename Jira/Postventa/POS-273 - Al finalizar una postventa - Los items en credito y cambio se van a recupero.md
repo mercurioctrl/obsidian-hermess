@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-273"
 
 ## Relaciones
 
-- **is blocked by:** [[POS-275]] API - Error al intentar hacer una acreditación
+- **is blocked by:** [[POS-275 - API - Error al intentar hacer una acreditación|POS-275]] API - Error al intentar hacer una acreditación
 
 ## Descripcion
 

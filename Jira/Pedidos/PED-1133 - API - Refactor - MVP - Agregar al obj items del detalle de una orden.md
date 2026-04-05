@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1133"
 
 ## Relaciones
 
-- **Padre:** [[PED-64]] Productos
-- **has action item:** [[PED-1134]] APP - Refactor - MVP - sumar al stock cuando está  el parámetro useStockIncoming la cantidad stockIncoming
-- **has action item:** [[PED-1137]] APP - Feat - MVP - agregar una columna al detalle de la orden sólo si useStockIncoming   y stockIncoming >0 marcar una etiqueta de en camino
-- **relates to:** [[PED-1107]] Almacenes Multiples
-- **has action item:** [[PED-1138]] APP - MVP - En la pestaña items el obj items agregar el stockIncoming  como se hizo con stockAfterSale
+- **Padre:** [[PED-64 - Productos|PED-64]] Productos
+- **has action item:** [[PED-1134 - APP - Refactor - MVP - sumar al stock cuando está el parámetro useStockIncoming|PED-1134]] APP - Refactor - MVP - sumar al stock cuando está  el parámetro useStockIncoming la cantidad stockIncoming
+- **has action item:** [[PED-1137 - APP - Feat - MVP - agregar una columna al detalle de la orden sólo si|PED-1137]] APP - Feat - MVP - agregar una columna al detalle de la orden sólo si useStockIncoming   y stockIncoming >0 marcar una etiqueta de en camino
+- **relates to:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **has action item:** [[PED-1138 - APP - MVP - En la pestaña items el obj items agregar el stockIncoming como se|PED-1138]] APP - MVP - En la pestaña items el obj items agregar el stockIncoming  como se hizo con stockAfterSale
 
 ## Descripcion
 

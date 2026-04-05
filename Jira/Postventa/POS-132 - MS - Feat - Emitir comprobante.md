@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-132"
 
 ## Relaciones
 
-- **Padre:** [[POS-123]] MS - Servicio de emision de comprobantes
-- **is blocked by:** [[POS-134]] MS - Feat - Repositorio de tipos de comprobante que podemos emitir
-- **is blocked by:** [[POS-133]] MS - Feat - Obtener parámetros del cliente para emitir comprobante
-- **blocks:** [[POS-135]] API - Feat - Emitir comprobante de un credito de postventa
-- **blocks:** [[POS-166]] APP - Feat - Realizar credito de item de postventa
+- **Padre:** [[POS-123 - MS - Servicio de emision de comprobantes|POS-123]] MS - Servicio de emision de comprobantes
+- **is blocked by:** [[POS-134 - MS - Feat - Repositorio de tipos de comprobante que podemos emitir|POS-134]] MS - Feat - Repositorio de tipos de comprobante que podemos emitir
+- **is blocked by:** [[POS-133 - MS - Feat - Obtener parámetros del cliente para emitir comprobante|POS-133]] MS - Feat - Obtener parámetros del cliente para emitir comprobante
+- **blocks:** [[POS-135 - API - Feat - Emitir comprobante de un credito de postventa|POS-135]] API - Feat - Emitir comprobante de un credito de postventa
+- **blocks:** [[POS-166 - APP - Feat - Realizar credito de item de postventa|POS-166]] APP - Feat - Realizar credito de item de postventa
 
 ## Descripcion
 

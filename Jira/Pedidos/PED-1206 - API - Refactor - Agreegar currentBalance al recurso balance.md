@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1206"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **action item from:** [[PED-1205]] APP - Refactor - Replicar como en Cobros -  agregar columna balance en la pestaña de clientes y en la cta cte de clientes y en disponible usar usedBalanceAmount
-- **has action item:** [[PED-1254]] API - Review - Recurso balance  -> usedCheckBalanceAmount o deuda, debe venir  negativo cuando es menor a cero
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **action item from:** [[PED-1205 - APP - Refactor - Replicar como en Cobros - agregar columna balance en la|PED-1205]] APP - Refactor - Replicar como en Cobros -  agregar columna balance en la pestaña de clientes y en la cta cte de clientes y en disponible usar usedBalanceAmount
+- **has action item:** [[PED-1254 - API - Review - Recurso balance - usedCheckBalanceAmount o deuda, debe venir|PED-1254]] API - Review - Recurso balance  -> usedCheckBalanceAmount o deuda, debe venir  negativo cuando es menor a cero
 
 ## Descripcion
 

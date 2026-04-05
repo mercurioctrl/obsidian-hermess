@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1107"
 
 ## Relaciones
 
-- **relates to:** [[PED-1133]] API - Refactor - MVP - Agregar al obj items del detalle de una orden stockIncoming (definido por la cantidad del item en compra pendiente menos la cantidad de ingresados en la misma)
+- **relates to:** [[PED-1133 - API - Refactor - MVP - Agregar al obj items del detalle de una orden|PED-1133]] API - Refactor - MVP - Agregar al obj items del detalle de una orden stockIncoming (definido por la cantidad del item en compra pendiente menos la cantidad de ingresados en la misma)
 
 ## Descripcion
 

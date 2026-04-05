@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-285"
 
 ## Relaciones
 
-- **Padre:** [[POS-281]] Listar pedidos
-- **is blocked by:** [[POS-284]] API - Feat - Ver serializacion de un pedido
+- **Padre:** [[POS-281 - Listar pedidos|POS-281]] Listar pedidos
+- **is blocked by:** [[POS-284 - API - Feat - Ver serializacion de un pedido|POS-284]] API - Feat - Ver serializacion de un pedido
 
 ## Descripcion
 

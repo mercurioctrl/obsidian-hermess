@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-209"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-208]] Etapa 2 - Optimizacion (Fase de Consolidación Operativa)
-- **Subtarea:** [[PEGA-210]] API - DATASET - Refactor - Hacer cambios estructurales para dar velocidad y estabilidad al utilizar el sitio
+- **Padre:** [[PEGA-208 - Etapa 2 - Optimizacion (Fase de Consolidación Operativa)|PEGA-208]] Etapa 2 - Optimizacion (Fase de Consolidación Operativa)
+- **Subtarea:** [[PEGA-210 - API - DATASET - Refactor - Hacer cambios estructurales para dar velocidad y|PEGA-210]] API - DATASET - Refactor - Hacer cambios estructurales para dar velocidad y estabilidad al utilizar el sitio
 
 ## Descripcion
 

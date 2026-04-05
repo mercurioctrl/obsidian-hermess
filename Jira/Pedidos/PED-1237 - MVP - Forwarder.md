@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1237"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **Subtarea:** [[PED-1238]] API - Feat - Leer repositorio forwarders
-- **Subtarea:** [[PED-1239]] .
-- **Subtarea:** [[PED-1240]] APP - Feat - Agregar un selector en el detalle de la orden de compra para seleccionar el forwarder similar a incoterms (editable solo en pendiente)
-- **Subtarea:** [[PED-1241]] API - Feat - al guardar el forwarder de una orden, debe quedar como default para proximas ordenes de ese cliente
-- **Subtarea:** [[PED-1246]] API - Refactor - Mostrar/Guardar el forwarder en una orden especifica
-- **Subtarea:** [[PED-1253]] API - MVP - Refactor edición de forwarder-> si mandas null lo tiene que vaciar si la orden esta en pendiente
-- **Subtarea:** [[PED-1301]] API - Review - al guardar el forwarder de una orden, debe quedar como default para próximas ordenes de ese cliente -> Guardado no coincidente
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-1238 - API - Feat - Leer repositorio forwarders|PED-1238]] API - Feat - Leer repositorio forwarders
+- **Subtarea:** [[PED-1239 - .|PED-1239]] .
+- **Subtarea:** [[PED-1240 - APP - Feat - Agregar un selector en el detalle de la orden de compra para|PED-1240]] APP - Feat - Agregar un selector en el detalle de la orden de compra para seleccionar el forwarder similar a incoterms (editable solo en pendiente)
+- **Subtarea:** [[PED-1241 - API - Feat - al guardar el forwarder de una orden, debe quedar como default|PED-1241]] API - Feat - al guardar el forwarder de una orden, debe quedar como default para proximas ordenes de ese cliente
+- **Subtarea:** [[PED-1246 - API - Refactor - MostrarGuardar el forwarder en una orden especifica|PED-1246]] API - Refactor - Mostrar/Guardar el forwarder en una orden especifica
+- **Subtarea:** [[PED-1253 - API - MVP - Refactor edición de forwarder- si mandas null lo tiene que vaciar|PED-1253]] API - MVP - Refactor edición de forwarder-> si mandas null lo tiene que vaciar si la orden esta en pendiente
+- **Subtarea:** [[PED-1301 - API - Review - al guardar el forwarder de una orden, debe quedar como default|PED-1301]] API - Review - al guardar el forwarder de una orden, debe quedar como default para próximas ordenes de ese cliente -> Guardado no coincidente
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1270"
 
 ## Relaciones
 
-- **Padre:** [[PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
-- **clones:** [[PED-1226]] API - Refactor - Listar reservas en un rango (para semana) -> Agregar nombre de usuario
-- **relates to:** [[PED-1278]] API - Review - Siempre pone como que lo crea el mismo usuario de manera fija (parece estar harcodeado)
+- **Padre:** [[PED-1186 - Sistema de reservas de salas de reuniones (vista semanal)|PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
+- **clones:** [[PED-1226 - API - Refactor - Listar reservas en un rango (para semana) - Agregar nombre de|PED-1226]] API - Refactor - Listar reservas en un rango (para semana) -> Agregar nombre de usuario
+- **relates to:** [[PED-1278 - API - Review - Siempre pone como que lo crea el mismo usuario de manera fija|PED-1278]] API - Review - Siempre pone como que lo crea el mismo usuario de manera fija (parece estar harcodeado)
 
 ## Descripcion
 

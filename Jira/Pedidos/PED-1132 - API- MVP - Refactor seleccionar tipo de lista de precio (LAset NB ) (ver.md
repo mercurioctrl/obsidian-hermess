@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1132"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **action item from:** [[PED-1131]] APP- MVP - Refactor seleccionar tipo de lista de precio (Laset / NB ) (ver adjunto lista de precio)
-- **has action item:** [[PED-1157]] API - MVP - Refactor - Agregar columna de "reserva"
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **action item from:** [[PED-1131 - APP- MVP - Refactor seleccionar tipo de lista de precio (Laset NB ) (ver|PED-1131]] APP- MVP - Refactor seleccionar tipo de lista de precio (Laset / NB ) (ver adjunto lista de precio)
+- **has action item:** [[PED-1157 - API - MVP - Refactor - Agregar columna de reserva|PED-1157]] API - MVP - Refactor - Agregar columna de "reserva"
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1337"
 
 ## Relaciones
 
-- **Padre:** [[PED-149]] Reportes
-- **Subtarea:** [[PED-1338]] API - Feat - Incentivo gigabyte reutilizable
-- **Subtarea:** [[PED-1339]] APP - Feat - Incentivo gigabyte reutilizable
-- **Subtarea:** [[PED-1340]] API - Feat - Incentivo gigabyte reutilizable -> CAMBIOS 
+- **Padre:** [[PED-149 - Reportes|PED-149]] Reportes
+- **Subtarea:** [[PED-1338 - API - Feat - Incentivo gigabyte reutilizable|PED-1338]] API - Feat - Incentivo gigabyte reutilizable
+- **Subtarea:** [[PED-1339 - APP - Feat - Incentivo gigabyte reutilizable|PED-1339]] APP - Feat - Incentivo gigabyte reutilizable
+- **Subtarea:** [[PED-1340 - API - Feat - Incentivo gigabyte reutilizable - CAMBIOS|PED-1340]] API - Feat - Incentivo gigabyte reutilizable -> CAMBIOS 
 
 ## Descripcion
 

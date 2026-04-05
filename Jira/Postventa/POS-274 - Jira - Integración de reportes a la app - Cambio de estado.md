@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-274"
 
 ## Relaciones
 
-- **blocks:** [[POS-272]] APP - Feat - Incorporar el sistema de reportes de jira dentro de la app
+- **blocks:** [[POS-272 - APP - Feat - Incorporar el sistema de reportes de jira dentro de la app|POS-272]] APP - Feat - Incorporar el sistema de reportes de jira dentro de la app
 
 ## Descripcion
 

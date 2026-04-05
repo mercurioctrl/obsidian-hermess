@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-126"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
-- **is blocked by:** [[PEGA-125]] API - Refactor - Dividir en 3 recursos el detalle del producto
-- **relates to:** [[PEGA-127]] APP - Feat - Agregar parametro Between en los historamas
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
+- **is blocked by:** [[PEGA-125 - API - Refactor - Dividir en 3 recursos el detalle del producto|PEGA-125]] API - Refactor - Dividir en 3 recursos el detalle del producto
+- **relates to:** [[PEGA-127 - APP - Feat - Agregar parametro Between en los historamas|PEGA-127]] APP - Feat - Agregar parametro Between en los historamas
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-322"
 
 ## Relaciones
 
-- **relates to:** [[POS-323]] APP - Informacion proveedor x RMA ID
+- **relates to:** [[POS-323 - APP - Informacion proveedor x RMA ID|POS-323]] APP - Informacion proveedor x RMA ID
 
 ## Descripcion
 

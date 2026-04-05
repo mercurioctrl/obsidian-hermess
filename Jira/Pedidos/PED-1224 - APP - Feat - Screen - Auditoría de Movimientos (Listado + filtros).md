@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1224"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **action item from:** [[PED-1215]] API - Feat - Listar Movimientos (auditoría + filtros)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **action item from:** [[PED-1215 - API - Feat - Listar Movimientos (auditoría + filtros)|PED-1215]] API - Feat - Listar Movimientos (auditoría + filtros)
 
 ## Descripcion
 

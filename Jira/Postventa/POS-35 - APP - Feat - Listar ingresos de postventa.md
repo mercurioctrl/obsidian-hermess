@@ -29,14 +29,14 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-35"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
-- **Subtarea:** [[POS-48]] APP - Feat -  Selector de técnicos para asignar técnico
-- **Subtarea:** [[POS-51]] APP - Feat - Agregar filtros
-- **is blocked by:** [[POS-4]] API - Feat - Listar ingresos de postventa
-- **is blocked by:** [[POS-49]] API - Feat - Agregar filtros en lista de postventa
-- **is blocked by:** [[POS-44]] API - Feat - Listar soluciones de testeo de producto
-- **is blocked by:** [[POS-43]] API - Feat - Listar estados de salida
-- **is blocked by:** [[POS-42]] API - Feat - Listar estados de testeo
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
+- **Subtarea:** [[POS-48 - APP - Feat - Selector de técnicos para asignar técnico|POS-48]] APP - Feat -  Selector de técnicos para asignar técnico
+- **Subtarea:** [[POS-51 - APP - Feat - Agregar filtros|POS-51]] APP - Feat - Agregar filtros
+- **is blocked by:** [[POS-4 - API - Feat - Listar ingresos de postventa|POS-4]] API - Feat - Listar ingresos de postventa
+- **is blocked by:** [[POS-49 - API - Feat - Agregar filtros en lista de postventa|POS-49]] API - Feat - Agregar filtros en lista de postventa
+- **is blocked by:** [[POS-44 - API - Feat - Listar soluciones de testeo de producto|POS-44]] API - Feat - Listar soluciones de testeo de producto
+- **is blocked by:** [[POS-43 - API - Feat - Listar estados de salida|POS-43]] API - Feat - Listar estados de salida
+- **is blocked by:** [[POS-42 - API - Feat - Listar estados de testeo|POS-42]] API - Feat - Listar estados de testeo
 
 ## Descripcion
 

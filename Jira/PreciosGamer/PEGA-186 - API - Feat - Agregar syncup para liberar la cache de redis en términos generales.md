@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-186"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-185]] REDIS
+- **Padre:** [[PEGA-185 - REDIS|PEGA-185]] REDIS
 
 ## Descripcion
 

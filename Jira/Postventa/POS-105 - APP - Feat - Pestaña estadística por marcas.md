@@ -29,15 +29,15 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-105"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-106]] APP - Feat - Mas costosas: Muestra informacion sobre las marcas que tienen mayor costo de postventa
-- **Subtarea:** [[POS-107]] APP - Feat - Mas falibles: Se trada de mostrar aquellas marcas que presentaron mas fallas
-- **Subtarea:** [[POS-108]] APP - Feat - Falsos positivos: Que categorias ingresan mas a posventa pero no fallan.
-- **Subtarea:** [[POS-109]] APP - Feat - Ingresos es un grafico de barras...
-- **Subtarea:** [[POS-110]] APP - Feat - Demoras: Las marcas que mas tiempo permanecen dentro del departamenteo de postventa
-- **Subtarea:** [[POS-114]] APP - Feat - Soluciones de posventa: Muestra la comparativa de si se reparo, se se cambio o se acredito
-- **Subtarea:** [[POS-152]] APP - Feat - Descargar informacion completa de los graficos de marcas
-- **is blocked by:** [[POS-67]] API - Feat - Filtros estadisticas marcas
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-106 - APP - Feat - Mas costosas Muestra informacion sobre las marcas que tienen mayor|POS-106]] APP - Feat - Mas costosas: Muestra informacion sobre las marcas que tienen mayor costo de postventa
+- **Subtarea:** [[POS-107 - APP - Feat - Mas falibles Se trada de mostrar aquellas marcas que presentaron|POS-107]] APP - Feat - Mas falibles: Se trada de mostrar aquellas marcas que presentaron mas fallas
+- **Subtarea:** [[POS-108 - APP - Feat - Falsos positivos Que categorias ingresan mas a posventa pero no|POS-108]] APP - Feat - Falsos positivos: Que categorias ingresan mas a posventa pero no fallan.
+- **Subtarea:** [[POS-109 - APP - Feat - Ingresos es un grafico de barras...|POS-109]] APP - Feat - Ingresos es un grafico de barras...
+- **Subtarea:** [[POS-110 - APP - Feat - Demoras Las marcas que mas tiempo permanecen dentro del|POS-110]] APP - Feat - Demoras: Las marcas que mas tiempo permanecen dentro del departamenteo de postventa
+- **Subtarea:** [[POS-114 - APP - Feat - Soluciones de posventa Muestra la comparativa de si se reparo, se|POS-114]] APP - Feat - Soluciones de posventa: Muestra la comparativa de si se reparo, se se cambio o se acredito
+- **Subtarea:** [[POS-152 - APP - Feat - Descargar informacion completa de los graficos de marcas|POS-152]] APP - Feat - Descargar informacion completa de los graficos de marcas
+- **is blocked by:** [[POS-67 - API - Feat - Filtros estadisticas marcas|POS-67]] API - Feat - Filtros estadisticas marcas
 
 ## Descripcion
 

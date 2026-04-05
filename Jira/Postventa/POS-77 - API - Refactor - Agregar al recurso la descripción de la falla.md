@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-77"
 
 ## Relaciones
 
-- **Padre:** [[POS-56]] API - Feat - Ver detalle ingreso
+- **Padre:** [[POS-56 - API - Feat - Ver detalle ingreso|POS-56]] API - Feat - Ver detalle ingreso
 
 ## Descripcion
 

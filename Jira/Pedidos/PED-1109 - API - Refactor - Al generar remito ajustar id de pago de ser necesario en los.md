@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1109"
 
 ## Relaciones
 
-- **Padre:** [[PED-91]] APP - Feat - Generar pedido
-- **action item from:** [[SNB-3295]] Error en el Medio de Pago
+- **Padre:** [[PED-91 - APP - Feat - Generar pedido|PED-91]] APP - Feat - Generar pedido
+- **action item from:** [[SNB-3295 - Error en el Medio de Pago|SNB-3295]] Error en el Medio de Pago
 
 ## Descripcion
 

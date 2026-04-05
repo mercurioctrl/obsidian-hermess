@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-283"
 
 ## Relaciones
 
-- **Padre:** [[POS-281]] Listar pedidos
-- **is blocked by:** [[POS-282]] API - Feat - Listar pedidos
-- **is blocked by:** [[POS-287]] APP - Listar pedidos - Incidencias varias
-- **relates to:** [[POS-295]] APP - Listar pedidos - Error al abrir factura
+- **Padre:** [[POS-281 - Listar pedidos|POS-281]] Listar pedidos
+- **is blocked by:** [[POS-282 - API - Feat - Listar pedidos|POS-282]] API - Feat - Listar pedidos
+- **is blocked by:** [[POS-287 - APP - Listar pedidos - Incidencias varias|POS-287]] APP - Listar pedidos - Incidencias varias
+- **relates to:** [[POS-295 - APP - Listar pedidos - Error al abrir factura|POS-295]] APP - Listar pedidos - Error al abrir factura
 
 ## Descripcion
 

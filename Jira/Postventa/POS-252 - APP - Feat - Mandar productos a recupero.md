@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-252"
 
 ## Relaciones
 
-- **Padre:** [[POS-235]] Postventa Proveedores Recepcion
-- **is blocked by:** [[POS-251]] API - Feat - Mandar productos a recupero
+- **Padre:** [[POS-235 - Postventa Proveedores Recepcion|POS-235]] Postventa Proveedores Recepcion
+- **is blocked by:** [[POS-251 - API - Feat - Mandar productos a recupero|POS-251]] API - Feat - Mandar productos a recupero
 
 ## Descripcion
 

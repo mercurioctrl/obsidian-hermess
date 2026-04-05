@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1195"
 
 ## Relaciones
 
-- **Padre:** [[PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
-- **has action item:** [[PED-1203]] APP - Feat - Reservas de salas de reunion
+- **Padre:** [[PED-1186 - Sistema de reservas de salas de reuniones (vista semanal)|PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
+- **has action item:** [[PED-1203 - APP - Feat - Reservas de salas de reunion|PED-1203]] APP - Feat - Reservas de salas de reunion
 
 ## Descripcion
 

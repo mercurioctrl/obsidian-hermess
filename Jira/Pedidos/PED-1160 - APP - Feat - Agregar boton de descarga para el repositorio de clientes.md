@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1160"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **is blocked by:** [[PED-1158]] API - Feat - Se debe poder descargar el repositorio de clientes en un excel sin mas particualridades
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **is blocked by:** [[PED-1158 - API - Feat - Se debe poder descargar el repositorio de clientes en un excel sin|PED-1158]] API - Feat - Se debe poder descargar el repositorio de clientes en un excel sin mas particualridades
 
 ## Descripcion
 

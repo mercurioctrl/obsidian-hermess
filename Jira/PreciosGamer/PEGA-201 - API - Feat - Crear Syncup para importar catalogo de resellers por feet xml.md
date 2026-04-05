@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-201"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-192]] Envío de información de los resellers
+- **Padre:** [[PEGA-192 - Envío de información de los resellers|PEGA-192]] Envío de información de los resellers
 
 ## Descripcion
 

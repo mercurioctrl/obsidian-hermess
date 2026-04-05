@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-205"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-3]] Scraping y procesamientos
-- **Subtarea:** [[PEGA-206]] API - Feat - Mejorar tamaño de repositorio reduciendo a al ultimo registro del producto por día con un script de limpieza
-- **Subtarea:** [[PEGA-207]] API - Research - Busqueda de estrategias para que el syncUp corra sin romperse por el volumen de datos
+- **Padre:** [[PEGA-3 - Scraping y procesamientos|PEGA-3]] Scraping y procesamientos
+- **Subtarea:** [[PEGA-206 - API - Feat - Mejorar tamaño de repositorio reduciendo a al ultimo registro del|PEGA-206]] API - Feat - Mejorar tamaño de repositorio reduciendo a al ultimo registro del producto por día con un script de limpieza
+- **Subtarea:** [[PEGA-207 - API - Research - Busqueda de estrategias para que el syncUp corra sin romperse|PEGA-207]] API - Research - Busqueda de estrategias para que el syncUp corra sin romperse por el volumen de datos
 
 ## Descripcion
 

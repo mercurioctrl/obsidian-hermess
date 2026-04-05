@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-175"
 
 ## Relaciones
 
-- **Padre:** [[POS-24]] Creditos
+- **Padre:** [[POS-24 - Creditos|POS-24]] Creditos
 
 ## Descripcion
 

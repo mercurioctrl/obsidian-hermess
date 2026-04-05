@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-98"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-27]] API - Feat - Actualizar catalogo
+- **Padre:** [[PEGA-27 - API - Feat - Actualizar catalogo|PEGA-27]] API - Feat - Actualizar catalogo
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-328"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
-- **Subtarea:** [[POS-329]] API - Feat - Crear endpoint para generar orden de envio desde postventa
-- **Subtarea:** [[POS-330]] APP - Feat - Se debe agregar un accionable para crear una orden de envio de postventa
-- **Subtarea:** [[POS-336]] API - Refactor -> Validación de orden de envío previamente generada
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
+- **Subtarea:** [[POS-329 - API - Feat - Crear endpoint para generar orden de envio desde postventa|POS-329]] API - Feat - Crear endpoint para generar orden de envio desde postventa
+- **Subtarea:** [[POS-330 - APP - Feat - Se debe agregar un accionable para crear una orden de envio de|POS-330]] APP - Feat - Se debe agregar un accionable para crear una orden de envio de postventa
+- **Subtarea:** [[POS-336 - API - Refactor - Validación de orden de envío previamente generada|POS-336]] API - Refactor -> Validación de orden de envío previamente generada
 
 ## Descripcion
 

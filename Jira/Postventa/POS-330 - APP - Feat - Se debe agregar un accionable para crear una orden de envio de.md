@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-330"
 
 ## Relaciones
 
-- **Padre:** [[POS-328]] Ordenes de devolucion de postventa
-- **action item from:** [[POS-329]] API - Feat - Crear endpoint para generar orden de envio desde postventa
+- **Padre:** [[POS-328 - Ordenes de devolucion de postventa|POS-328]] Ordenes de devolucion de postventa
+- **action item from:** [[POS-329 - API - Feat - Crear endpoint para generar orden de envio desde postventa|POS-329]] API - Feat - Crear endpoint para generar orden de envio desde postventa
 
 ## Descripcion
 

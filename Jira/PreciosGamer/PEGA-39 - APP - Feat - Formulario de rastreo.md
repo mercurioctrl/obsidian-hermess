@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-39"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-37]] Feat - Formulario de rastreo
-- **is blocked by:** [[PEGA-38]] API - Feat - Formulario de rastreo
-- **is blocked by:** [[PEGA-57]] API - Feat - Repositorio de cms de comercion mas comunes
+- **Padre:** [[PEGA-37 - Feat - Formulario de rastreo|PEGA-37]] Feat - Formulario de rastreo
+- **is blocked by:** [[PEGA-38 - API - Feat - Formulario de rastreo|PEGA-38]] API - Feat - Formulario de rastreo
+- **is blocked by:** [[PEGA-57 - API - Feat - Repositorio de cms de comercion mas comunes|PEGA-57]] API - Feat - Repositorio de cms de comercion mas comunes
 
 ## Descripcion
 

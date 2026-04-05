@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-264"
 
 ## Relaciones
 
-- **Padre:** [[POS-235]] Postventa Proveedores Recepcion
-- **is blocked by:** [[POS-263]] API - Refactor - Listar articulos -> mostrar informacion del deposito actual
+- **Padre:** [[POS-235 - Postventa Proveedores Recepcion|POS-235]] Postventa Proveedores Recepcion
+- **is blocked by:** [[POS-263 - API - Refactor - Listar articulos - mostrar informacion del deposito actual|POS-263]] API - Refactor - Listar articulos -> mostrar informacion del deposito actual
 
 ## Descripcion
 

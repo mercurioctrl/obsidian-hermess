@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1149"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **action item from:** [[PED-1150]] API - MVP - Refactor - Incluir stockWarehouseCode junto a stockWarehouseId y stockWarehouseDescription
-- **has action item:** [[PED-1153]] APP - Review - Agregar/quitar item a una orden -> Error al editar un articulo
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **action item from:** [[PED-1150 - API - MVP - Refactor - Incluir stockWarehouseCode junto a stockWarehouseId y|PED-1150]] API - MVP - Refactor - Incluir stockWarehouseCode junto a stockWarehouseId y stockWarehouseDescription
+- **has action item:** [[PED-1153 - APP - Review - Agregarquitar item a una orden - Error al editar un articulo|PED-1153]] APP - Review - Agregar/quitar item a una orden -> Error al editar un articulo
 
 ## Descripcion
 

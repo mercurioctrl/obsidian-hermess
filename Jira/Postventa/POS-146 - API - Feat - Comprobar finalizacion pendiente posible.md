@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-146"
 
 ## Relaciones
 
-- **Padre:** [[POS-21]] Solucion de postventa
-- **blocks:** [[POS-147]] API - Feat - Finalizar una postventa
+- **Padre:** [[POS-21 - Solucion de postventa|POS-21]] Solucion de postventa
+- **blocks:** [[POS-147 - API - Feat - Finalizar una postventa|POS-147]] API - Feat - Finalizar una postventa
 
 ## Descripcion
 

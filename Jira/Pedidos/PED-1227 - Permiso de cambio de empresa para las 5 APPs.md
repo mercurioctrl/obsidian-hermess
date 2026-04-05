@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1227"
 
 ## Relaciones
 
-- **Padre:** [[PED-2]] Bases y repositorios
-- **Subtarea:** [[PED-1228]] API - Refactor - Incluir en las 5 APPs el objeto user el permiso unlockedCompanyFilter
-- **Subtarea:** [[PED-1229]] APP - Refactor - Incluir en las 5 APPs, el bloqueo del selector de empresa segun unlockedCompanyFilter
+- **Padre:** [[PED-2 - Bases y repositorios|PED-2]] Bases y repositorios
+- **Subtarea:** [[PED-1228 - API - Refactor - Incluir en las 5 APPs el objeto user el permiso|PED-1228]] API - Refactor - Incluir en las 5 APPs el objeto user el permiso unlockedCompanyFilter
+- **Subtarea:** [[PED-1229 - APP - Refactor - Incluir en las 5 APPs, el bloqueo del selector de empresa|PED-1229]] APP - Refactor - Incluir en las 5 APPs, el bloqueo del selector de empresa segun unlockedCompanyFilter
 
 ## Descripcion
 

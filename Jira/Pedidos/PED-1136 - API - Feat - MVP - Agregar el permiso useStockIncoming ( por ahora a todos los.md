@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1136"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **has action item:** [[PED-1137]] APP - Feat - MVP - agregar una columna al detalle de la orden sólo si useStockIncoming   y stockIncoming >0 marcar una etiqueta de en camino
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **has action item:** [[PED-1137 - APP - Feat - MVP - agregar una columna al detalle de la orden sólo si|PED-1137]] APP - Feat - MVP - agregar una columna al detalle de la orden sólo si useStockIncoming   y stockIncoming >0 marcar una etiqueta de en camino
 
 ## Descripcion
 

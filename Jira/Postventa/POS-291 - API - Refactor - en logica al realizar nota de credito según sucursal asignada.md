@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-291"
 
 ## Relaciones
 
-- **Padre:** [[POS-123]] MS - Servicio de emision de comprobantes
-- **is blocked by:** [[POS-297]] API - Créditos pendientes - Error al acreditar
+- **Padre:** [[POS-123 - MS - Servicio de emision de comprobantes|POS-123]] MS - Servicio de emision de comprobantes
+- **is blocked by:** [[POS-297 - API - Créditos pendientes - Error al acreditar|POS-297]] API - Créditos pendientes - Error al acreditar
 
 ## Descripcion
 

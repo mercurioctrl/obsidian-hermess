@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-336"
 
 ## Relaciones
 
-- **Padre:** [[POS-328]] Ordenes de devolucion de postventa
+- **Padre:** [[POS-328 - Ordenes de devolucion de postventa|POS-328]] Ordenes de devolucion de postventa
 
 ## Descripcion
 

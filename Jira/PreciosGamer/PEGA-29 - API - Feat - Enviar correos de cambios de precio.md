@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-29"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-4]] Alertas
+- **Padre:** [[PEGA-4 - Alertas|PEGA-4]] Alertas
 
 ## Descripcion
 

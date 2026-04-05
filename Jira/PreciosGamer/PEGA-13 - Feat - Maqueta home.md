@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-13"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **Subtarea:** [[PEGA-40]] APP - Feat - breaf de maqueta para la home
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **Subtarea:** [[PEGA-40 - APP - Feat - breaf de maqueta para la home|PEGA-40]] APP - Feat - breaf de maqueta para la home
 
 ## Descripcion
 

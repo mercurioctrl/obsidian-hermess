@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-206"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-205]] Mejoras de performance y mantenimiento
+- **Padre:** [[PEGA-205 - Mejoras de performance y mantenimiento|PEGA-205]] Mejoras de performance y mantenimiento
 
 ## Descripcion
 

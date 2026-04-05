@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1212"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **has action item:** [[PED-1222]] APP - Feat -  Modal/Screen Asignar Presupuesto (Fondo → Acción)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **has action item:** [[PED-1222 - APP - Feat - ModalScreen Asignar Presupuesto (Fondo → Acción)|PED-1222]] APP - Feat -  Modal/Screen Asignar Presupuesto (Fondo → Acción)
 
 ## Descripcion
 

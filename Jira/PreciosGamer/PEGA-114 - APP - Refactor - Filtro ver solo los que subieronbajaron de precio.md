@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-114"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **relates to:** [[PEGA-115]] APP - Refactor - Agregar filtro limite de precios
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **relates to:** [[PEGA-115 - APP - Refactor - Agregar filtro limite de precios|PEGA-115]] APP - Refactor - Agregar filtro limite de precios
 
 ## Descripcion
 

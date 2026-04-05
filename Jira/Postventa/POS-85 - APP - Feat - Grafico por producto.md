@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-85"
 
 ## Relaciones
 
-- **Padre:** [[POS-70]] APP - Feat - Dashboard y estadisticas
+- **Padre:** [[POS-70 - APP - Feat - Dashboard y estadisticas|POS-70]] APP - Feat - Dashboard y estadisticas
 
 ## Descripcion
 

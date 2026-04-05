@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1116"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-1115]] API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-1115 - API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y|PED-1115]] API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
 
 ## Descripcion
 

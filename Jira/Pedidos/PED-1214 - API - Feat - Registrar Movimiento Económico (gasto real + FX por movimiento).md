@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1214"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **has action item:** [[PED-1223]] APP - Feat - Registrar Gasto (Movimiento)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **has action item:** [[PED-1223 - APP - Feat - Registrar Gasto (Movimiento)|PED-1223]] APP - Feat - Registrar Gasto (Movimiento)
 
 ## Descripcion
 

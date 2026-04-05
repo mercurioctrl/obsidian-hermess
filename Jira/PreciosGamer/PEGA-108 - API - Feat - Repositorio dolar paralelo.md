@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-108"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **Subtarea:** [[PEGA-109]] API - Feat - Crear repositorio en la base de datos
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **Subtarea:** [[PEGA-109 - API - Feat - Crear repositorio en la base de datos|PEGA-109]] API - Feat - Crear repositorio en la base de datos
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-154"
 
 ## Relaciones
 
-- **Padre:** [[POS-95]] API - Feat - Pedir un pase de mercaderia
-- **is blocked by:** [[POS-98]] API - Feat - Aceptar pase de mercadería (Postventa)
+- **Padre:** [[POS-95 - API - Feat - Pedir un pase de mercaderia|POS-95]] API - Feat - Pedir un pase de mercaderia
+- **is blocked by:** [[POS-98 - API - Feat - Aceptar pase de mercadería (Postventa)|POS-98]] API - Feat - Aceptar pase de mercadería (Postventa)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1151"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **action item from:** [[PED-90]] API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **action item from:** [[PED-90 - API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)|PED-90]] API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-301"
 
 ## Relaciones
 
-- **Padre:** [[POS-19]] Ingresos
-- **is blocked by:** [[POS-304]] API- Agregar order y branch al detalle del ingreso - Remito no visible
+- **Padre:** [[POS-19 - Ingresos|POS-19]] Ingresos
+- **is blocked by:** [[POS-304 - API- Agregar order y branch al detalle del ingreso - Remito no visible|POS-304]] API- Agregar order y branch al detalle del ingreso - Remito no visible
 
 ## Descripcion
 

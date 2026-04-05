@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-337"
 
 ## Relaciones
 
-- **relates to:** [[SNB-3280]] consulta NC inmpuestos internos
+- **relates to:** [[SNB-3280 - consulta NC inmpuestos internos|SNB-3280]] consulta NC inmpuestos internos
 
 ## Descripcion
 

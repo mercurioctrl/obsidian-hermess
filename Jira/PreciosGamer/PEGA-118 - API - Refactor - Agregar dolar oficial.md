@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-118"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
-- **blocks:** [[PEGA-117]] APP - Refactor - Hisotograma de dolar oficial / paralelo 
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
+- **blocks:** [[PEGA-117 - APP - Refactor - Hisotograma de dolar oficial paralelo|PEGA-117]] APP - Refactor - Hisotograma de dolar oficial / paralelo 
 
 ## Descripcion
 

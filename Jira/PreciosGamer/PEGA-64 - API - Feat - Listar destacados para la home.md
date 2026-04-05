@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-64"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **blocks:** [[PEGA-65]] APP - Feat  Listar destacados para la home
-- **is blocked by:** [[PEGA-83]] API - Listar destacados para la home - Validación del parámetro featured
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **blocks:** [[PEGA-65 - APP - Feat Listar destacados para la home|PEGA-65]] APP - Feat  Listar destacados para la home
+- **is blocked by:** [[PEGA-83 - API - Listar destacados para la home - Validación del parámetro featured|PEGA-83]] API - Listar destacados para la home - Validación del parámetro featured
 
 ## Descripcion
 

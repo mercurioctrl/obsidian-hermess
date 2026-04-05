@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-204"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-6]] Feat - Listar productos
-- **action item from:** [[MKT-269]] PEGA_ FEEDBACK NICO FISHMANN
+- **Padre:** [[PEGA-6 - Feat - Listar productos|PEGA-6]] Feat - Listar productos
+- **action item from:** [[MKT-269 - PEGA_ FEEDBACK NICO FISHMANN|MKT-269]] PEGA_ FEEDBACK NICO FISHMANN
 
 ## Descripcion
 

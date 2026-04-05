@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-183"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **blocks:** [[POS-180]] APP - Feat - Modal alta de pre ingreso
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **blocks:** [[POS-180 - APP - Feat - Modal alta de pre ingreso|POS-180]] APP - Feat - Modal alta de pre ingreso
 
 ## Descripcion
 

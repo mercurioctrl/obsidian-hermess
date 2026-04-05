@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-141"
 
 ## Relaciones
 
-- **Padre:** [[POS-56]] API - Feat - Ver detalle ingreso
-- **is blocked by:** [[POS-140]] API - Refactor - Agregar stocks disponibles
+- **Padre:** [[POS-56 - API - Feat - Ver detalle ingreso|POS-56]] API - Feat - Ver detalle ingreso
+- **is blocked by:** [[POS-140 - API - Refactor - Agregar stocks disponibles|POS-140]] API - Refactor - Agregar stocks disponibles
 
 ## Descripcion
 

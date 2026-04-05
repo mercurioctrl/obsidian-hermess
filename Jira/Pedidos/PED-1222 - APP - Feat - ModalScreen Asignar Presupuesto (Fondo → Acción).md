@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1222"
 
 ## Relaciones
 
-- **Padre:** [[PED-1208]] Gestión de Aportes y Gastos de Marketing
-- **action item from:** [[PED-1212]] API - Feat - Asignar Fondo a Acción (presupuesto máximo)
+- **Padre:** [[PED-1208 - Gestión de Aportes y Gastos de Marketing|PED-1208]] Gestión de Aportes y Gastos de Marketing
+- **action item from:** [[PED-1212 - API - Feat - Asignar Fondo a Acción (presupuesto máximo)|PED-1212]] API - Feat - Asignar Fondo a Acción (presupuesto máximo)
 
 ## Descripcion
 

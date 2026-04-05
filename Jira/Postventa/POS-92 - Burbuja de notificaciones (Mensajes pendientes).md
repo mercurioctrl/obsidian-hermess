@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-92"
 
 ## Relaciones
 
-- **Padre:** [[POS-90]] Canal de mensajería
+- **Padre:** [[POS-90 - Canal de mensajería|POS-90]] Canal de mensajería
 
 ## Descripcion
 

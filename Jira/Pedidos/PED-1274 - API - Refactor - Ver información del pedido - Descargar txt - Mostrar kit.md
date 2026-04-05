@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1274"
 
 ## Relaciones
 
-- **relates to:** [[PED-77]] API - Feat - Descargar txt en Ver Informacion del pedido
-- **relates to:** [[PED-1316]] API - Refactor - Mostrar kits en el recurso para msotrar pedido + info
+- **relates to:** [[PED-77 - API - Feat - Descargar txt en Ver Informacion del pedido|PED-77]] API - Feat - Descargar txt en Ver Informacion del pedido
+- **relates to:** [[PED-1316 - API - Refactor - Mostrar kits en el recurso para msotrar pedido + info|PED-1316]] API - Refactor - Mostrar kits en el recurso para msotrar pedido + info
 
 ## Descripcion
 

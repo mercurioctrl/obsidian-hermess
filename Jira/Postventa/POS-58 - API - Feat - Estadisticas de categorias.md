@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-58"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **Subtarea:** [[POS-66]] API - Feat - Filtros estadisticas categorias
-- **Subtarea:** [[POS-137]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
-- **blocks:** [[POS-84]] APP - Feat - Grafico por categorias
-- **blocks:** [[POS-99]] APP - Feat - Pestaña estadística por categorías 
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **Subtarea:** [[POS-66 - API - Feat - Filtros estadisticas categorias|POS-66]] API - Feat - Filtros estadisticas categorias
+- **Subtarea:** [[POS-137 - API - Feat - Generar xlsx descargable desde el front (mediante una url alojada|POS-137]] API - Feat - Generar xlsx descargable desde el front (mediante una url alojada en la api como ya hicimos)
+- **blocks:** [[POS-84 - APP - Feat - Grafico por categorias|POS-84]] APP - Feat - Grafico por categorias
+- **blocks:** [[POS-99 - APP - Feat - Pestaña estadística por categorías|POS-99]] APP - Feat - Pestaña estadística por categorías 
 
 ## Descripcion
 

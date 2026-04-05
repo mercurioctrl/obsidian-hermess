@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-202"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **Subtarea:** [[PEGA-203]] APP - Feta - Agregar GTM
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **Subtarea:** [[PEGA-203 - APP - Feta - Agregar GTM|PEGA-203]] APP - Feta - Agregar GTM
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-161"
 
 ## Relaciones
 
-- **Padre:** [[POS-158]] Arreglos y oportunidades de mejora Rev1
+- **Padre:** [[POS-158 - Arreglos y oportunidades de mejora Rev1|POS-158]] Arreglos y oportunidades de mejora Rev1
 
 ## Descripcion
 

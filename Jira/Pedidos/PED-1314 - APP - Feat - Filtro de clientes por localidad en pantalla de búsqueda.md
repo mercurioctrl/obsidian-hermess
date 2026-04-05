@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1314"
 
 ## Relaciones
 
-- **Padre:** [[PED-1312]] Filtrar clientes por localidad
+- **Padre:** [[PED-1312 - Filtrar clientes por localidad|PED-1312]] Filtrar clientes por localidad
 
 ## Descripcion
 

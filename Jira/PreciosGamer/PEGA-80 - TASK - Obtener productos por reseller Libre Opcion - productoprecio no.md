@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-80"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-3]] Scraping y procesamientos
-- **blocks:** [[PEGA-62]] TASK - Obtener productos por reseller Libre Opcion
+- **Padre:** [[PEGA-3 - Scraping y procesamientos|PEGA-3]] Scraping y procesamientos
+- **blocks:** [[PEGA-62 - TASK - Obtener productos por reseller Libre Opcion|PEGA-62]] TASK - Obtener productos por reseller Libre Opcion
 
 ## Descripcion
 

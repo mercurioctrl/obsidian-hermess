@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-95"
 
 ## Relaciones
 
-- **Padre:** [[POS-23]] Pases de mercaderia
-- **Subtarea:** [[POS-97]] API - Feat - Procesar pase de mercadería (Deposito)
-- **Subtarea:** [[POS-98]] API - Feat - Aceptar pase de mercadería (Postventa)
-- **Subtarea:** [[POS-149]] APP - Feat - Pedir pase de producto
-- **Subtarea:** [[POS-154]] APP - Feat - Aceptar pase de mercadería (Postventa)
-- **Subtarea:** [[POS-155]] API - Feat - Enviar correo al crear un pase
-- **Subtarea:** [[POS-156]] APP - Feat - Aplicativo para responder pase desde el deposito
+- **Padre:** [[POS-23 - Pases de mercaderia|POS-23]] Pases de mercaderia
+- **Subtarea:** [[POS-97 - API - Feat - Procesar pase de mercadería (Deposito)|POS-97]] API - Feat - Procesar pase de mercadería (Deposito)
+- **Subtarea:** [[POS-98 - API - Feat - Aceptar pase de mercadería (Postventa)|POS-98]] API - Feat - Aceptar pase de mercadería (Postventa)
+- **Subtarea:** [[POS-149 - APP - Feat - Pedir pase de producto|POS-149]] APP - Feat - Pedir pase de producto
+- **Subtarea:** [[POS-154 - APP - Feat - Aceptar pase de mercadería (Postventa)|POS-154]] APP - Feat - Aceptar pase de mercadería (Postventa)
+- **Subtarea:** [[POS-155 - API - Feat - Enviar correo al crear un pase|POS-155]] API - Feat - Enviar correo al crear un pase
+- **Subtarea:** [[POS-156 - APP - Feat - Aplicativo para responder pase desde el deposito|POS-156]] APP - Feat - Aplicativo para responder pase desde el deposito
 
 ## Descripcion
 

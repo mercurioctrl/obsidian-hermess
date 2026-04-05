@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-180"
 
 ## Relaciones
 
-- **Padre:** [[POS-178]] Feat - Crear un pre ingreso manual
-- **is blocked by:** [[POS-179]] API - Feat - Alta de pre ingreso 
-- **is blocked by:** [[POS-183]] API - Feat - Listar clientes
-- **is blocked by:** [[POS-182]] API - Feat - Matcheo de producto por cliente
+- **Padre:** [[POS-178 - Feat - Crear un pre ingreso manual|POS-178]] Feat - Crear un pre ingreso manual
+- **is blocked by:** [[POS-179 - API - Feat - Alta de pre ingreso|POS-179]] API - Feat - Alta de pre ingreso 
+- **is blocked by:** [[POS-183 - API - Feat - Listar clientes|POS-183]] API - Feat - Listar clientes
+- **is blocked by:** [[POS-182 - API - Feat - Matcheo de producto por cliente|POS-182]] API - Feat - Matcheo de producto por cliente
 
 ## Descripcion
 

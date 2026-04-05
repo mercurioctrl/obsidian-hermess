@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-69"
 
 ## Relaciones
 
-- **Padre:** [[POS-21]] Solucion de postventa
-- **Subtarea:** [[POS-188]] APP - Review - El filtro por defecto debe mostrar solo los que no estan ingresados
-- **Subtarea:** [[POS-219]] APP - Feat - Accion reenviar correo con palabra clave
-- **is blocked by:** [[POS-33]] API - Feat - Listar postventas finalizadas
+- **Padre:** [[POS-21 - Solucion de postventa|POS-21]] Solucion de postventa
+- **Subtarea:** [[POS-188 - APP - Review - El filtro por defecto debe mostrar solo los que no estan|POS-188]] APP - Review - El filtro por defecto debe mostrar solo los que no estan ingresados
+- **Subtarea:** [[POS-219 - APP - Feat - Accion reenviar correo con palabra clave|POS-219]] APP - Feat - Accion reenviar correo con palabra clave
+- **is blocked by:** [[POS-33 - API - Feat - Listar postventas finalizadas|POS-33]] API - Feat - Listar postventas finalizadas
 
 ## Descripcion
 

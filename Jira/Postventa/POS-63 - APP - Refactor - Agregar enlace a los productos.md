@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-63"
 
 ## Relaciones
 
-- **Padre:** [[POS-61]] Oportunidad de mejora - Agregar enlace al sitio siempre que visualizo un producto
-- **is blocked by:** [[POS-62]] API - Refactor - Agregar enlace para los productos
+- **Padre:** [[POS-61 - Oportunidad de mejora - Agregar enlace al sitio siempre que visualizo un|POS-61]] Oportunidad de mejora - Agregar enlace al sitio siempre que visualizo un producto
+- **is blocked by:** [[POS-62 - API - Refactor - Agregar enlace para los productos|POS-62]] API - Refactor - Agregar enlace para los productos
 
 ## Descripcion
 

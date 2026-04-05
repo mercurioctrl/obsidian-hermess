@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-142"
 
 ## Relaciones
 
-- **Padre:** [[POS-22]] Dashboard y estadisticas
-- **is blocked by:** [[POS-144]] API - Refactor - Agregar Cantidad de ventas y Costo de la cantidad de ventas
+- **Padre:** [[POS-22 - Dashboard y estadisticas|POS-22]] Dashboard y estadisticas
+- **is blocked by:** [[POS-144 - API - Refactor - Agregar Cantidad de ventas y Costo de la cantidad de ventas|POS-144]] API - Refactor - Agregar Cantidad de ventas y Costo de la cantidad de ventas
 
 ## Descripcion
 

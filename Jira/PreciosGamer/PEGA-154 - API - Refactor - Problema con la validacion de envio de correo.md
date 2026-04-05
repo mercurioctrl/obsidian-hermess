@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-154"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-141]] El formulario de envio, usa el formulario para enviarle un correo al propio enviante, en lugar de anostoros mismos
+- **Padre:** [[PEGA-141 - El formulario de envio, usa el formulario para enviarle un correo al propio|PEGA-141]] El formulario de envio, usa el formulario para enviarle un correo al propio enviante, en lugar de anostoros mismos
 
 ## Descripcion
 

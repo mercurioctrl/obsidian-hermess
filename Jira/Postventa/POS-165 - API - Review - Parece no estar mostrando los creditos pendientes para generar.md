@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-165"
 
 ## Relaciones
 
-- **Padre:** [[POS-32]] API - Feat - Listar postventas para credito
+- **Padre:** [[POS-32 - API - Feat - Listar postventas para credito|POS-32]] API - Feat - Listar postventas para credito
 
 ## Descripcion
 

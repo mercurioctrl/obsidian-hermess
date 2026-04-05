@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-169"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **action item from:** [[PEGA-166]] API - Feat - Repositorio "Mas buscados"
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **action item from:** [[PEGA-166 - API - Feat - Repositorio Mas buscados|PEGA-166]] API - Feat - Repositorio "Mas buscados"
 
 ## Descripcion
 

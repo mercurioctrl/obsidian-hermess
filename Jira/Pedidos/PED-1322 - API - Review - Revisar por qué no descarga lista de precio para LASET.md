@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1322"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
 
 ## Descripcion
 

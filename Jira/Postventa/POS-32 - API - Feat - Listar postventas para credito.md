@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-32"
 
 ## Relaciones
 
-- **Padre:** [[POS-24]] Creditos
-- **Subtarea:** [[POS-165]] API - Review - Parece no estar mostrando los creditos pendientes para generar
-- **blocks:** [[POS-68]] APP - Feat - Listar postventas para credito
+- **Padre:** [[POS-24 - Creditos|POS-24]] Creditos
+- **Subtarea:** [[POS-165 - API - Review - Parece no estar mostrando los creditos pendientes para generar|POS-165]] API - Review - Parece no estar mostrando los creditos pendientes para generar
+- **blocks:** [[POS-68 - APP - Feat - Listar postventas para credito|POS-68]] APP - Feat - Listar postventas para credito
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-332"
 
 ## Relaciones
 
-- **Padre:** [[POS-281]] Listar pedidos
-- **action item from:** [[POS-331]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes dentro de postventa
+- **Padre:** [[POS-281 - Listar pedidos|POS-281]] Listar pedidos
+- **action item from:** [[POS-331 - API - Refactor - Agregar indicadores (flags) de intervención técnica a las|POS-331]] API - Refactor - Agregar indicadores (flags) de intervención técnica a las órdenes dentro de postventa
 
 ## Descripcion
 

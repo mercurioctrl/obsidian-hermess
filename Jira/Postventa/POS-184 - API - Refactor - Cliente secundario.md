@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-184"
 
 ## Relaciones
 
-- **Padre:** [[POS-36]] API - Feat - Ver detalle de pre ingreso
+- **Padre:** [[POS-36 - API - Feat - Ver detalle de pre ingreso|POS-36]] API - Feat - Ver detalle de pre ingreso
 
 ## Descripcion
 

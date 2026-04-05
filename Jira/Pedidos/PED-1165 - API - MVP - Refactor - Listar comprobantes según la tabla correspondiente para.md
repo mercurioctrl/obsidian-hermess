@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1165"
 
 ## Relaciones
 
-- **Padre:** [[PED-98]] Feat - Listar comprobantes
-- **action item from:** [[PED-998]] Intervención Técnica
+- **Padre:** [[PED-98 - Feat - Listar comprobantes|PED-98]] Feat - Listar comprobantes
+- **action item from:** [[PED-998 - Intervención Técnica|PED-998]] Intervención Técnica
 
 ## Descripcion
 

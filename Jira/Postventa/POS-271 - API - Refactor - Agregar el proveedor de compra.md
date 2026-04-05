@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-271"
 
 ## Relaciones
 
-- **Padre:** [[POS-270]] Recuperos
+- **Padre:** [[POS-270 - Recuperos|POS-270]] Recuperos
 
 ## Descripcion
 

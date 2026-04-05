@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1253"
 
 ## Relaciones
 
-- **Padre:** [[PED-1237]] MVP -  Forwarder
-- **action item from:** [[PED-1246]] API - Refactor - Mostrar/Guardar el forwarder en una orden especifica
+- **Padre:** [[PED-1237 - MVP - Forwarder|PED-1237]] MVP -  Forwarder
+- **action item from:** [[PED-1246 - API - Refactor - MostrarGuardar el forwarder en una orden especifica|PED-1246]] API - Refactor - Mostrar/Guardar el forwarder en una orden especifica
 
 ## Descripcion
 

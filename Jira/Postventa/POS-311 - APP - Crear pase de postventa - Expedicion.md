@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-311"
 
 ## Relaciones
 
-- **Padre:** [[POS-310]] Refactor: Refactorizar pases
+- **Padre:** [[POS-310 - Refactor Refactorizar pases|POS-310]] Refactor: Refactorizar pases
 
 ## Descripcion
 

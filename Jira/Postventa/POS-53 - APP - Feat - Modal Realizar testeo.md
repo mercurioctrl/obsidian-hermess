@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-53"
 
 ## Relaciones
 
-- **Padre:** [[POS-20]] Diagnoistico
-- **relates to:** [[POS-46]] API - Feat - Realizar testeo
+- **Padre:** [[POS-20 - Diagnoistico|POS-20]] Diagnoistico
+- **relates to:** [[POS-46 - API - Feat - Realizar testeo|POS-46]] API - Feat - Realizar testeo
 
 ## Descripcion
 

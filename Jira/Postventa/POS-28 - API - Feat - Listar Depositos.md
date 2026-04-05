@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-28"
 
 ## Relaciones
 
-- **Padre:** [[POS-23]] Pases de mercaderia
+- **Padre:** [[POS-23 - Pases de mercaderia|POS-23]] Pases de mercaderia
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-40"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-13]] Feat - Maqueta home
+- **Padre:** [[PEGA-13 - Feat - Maqueta home|PEGA-13]] Feat - Maqueta home
 
 ## Descripcion
 

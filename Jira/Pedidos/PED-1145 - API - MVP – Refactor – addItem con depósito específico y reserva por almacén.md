@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1145"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **has action item:** [[PED-1146]] APP - MVP – Refactor – addItem con depósito específico
-- **action item from:** [[PED-1146]] APP - MVP – Refactor – addItem con depósito específico
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **has action item:** [[PED-1146 - APP - MVP – Refactor – addItem con depósito específico|PED-1146]] APP - MVP – Refactor – addItem con depósito específico
+- **action item from:** [[PED-1146 - APP - MVP – Refactor – addItem con depósito específico|PED-1146]] APP - MVP – Refactor – addItem con depósito específico
 
 ## Descripcion
 

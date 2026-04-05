@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1255"
 
 ## Relaciones
 
-- **Padre:** [[PED-191]] Descargar Listado de precios
-- **action item from:** [[PED-1131]] APP- MVP - Refactor seleccionar tipo de lista de precio (Laset / NB ) (ver adjunto lista de precio)
+- **Padre:** [[PED-191 - Descargar Listado de precios|PED-191]] Descargar Listado de precios
+- **action item from:** [[PED-1131 - APP- MVP - Refactor seleccionar tipo de lista de precio (Laset NB ) (ver|PED-1131]] APP- MVP - Refactor seleccionar tipo de lista de precio (Laset / NB ) (ver adjunto lista de precio)
 
 ## Descripcion
 

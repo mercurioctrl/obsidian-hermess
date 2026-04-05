@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1180"
 
 ## Relaciones
 
-- **Padre:** [[PED-1170]] Kits
-- **has action item:** [[PED-1181]] APP - Refactor - Mostrar kits en vista de pedido usando la nueva respuesta del endpoint
+- **Padre:** [[PED-1170 - Kits|PED-1170]] Kits
+- **has action item:** [[PED-1181 - APP - Refactor - Mostrar kits en vista de pedido usando la nueva respuesta del|PED-1181]] APP - Refactor - Mostrar kits en vista de pedido usando la nueva respuesta del endpoint
 
 ## Descripcion
 

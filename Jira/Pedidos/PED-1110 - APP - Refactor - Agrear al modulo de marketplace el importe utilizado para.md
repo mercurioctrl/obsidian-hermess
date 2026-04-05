@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1110"
 
 ## Relaciones
 
-- **Padre:** [[PED-54]] Cuenta corriente de clientes
-- **action item from:** [[PED-1101]] API - Refactor - Incluiremos dentro del obejeto  aboutMarketPlace parametros relativos al dinero usado en wallet para mostrar como fue la operacion
+- **Padre:** [[PED-54 - Cuenta corriente de clientes|PED-54]] Cuenta corriente de clientes
+- **action item from:** [[PED-1101 - API - Refactor - Incluiremos dentro del obejeto aboutMarketPlace parametros|PED-1101]] API - Refactor - Incluiremos dentro del obejeto  aboutMarketPlace parametros relativos al dinero usado en wallet para mostrar como fue la operacion
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-127"
 
 ## Relaciones
 
-- **Padre:** [[POS-123]] MS - Servicio de emision de comprobantes
+- **Padre:** [[POS-123 - MS - Servicio de emision de comprobantes|POS-123]] MS - Servicio de emision de comprobantes
 
 ## Descripcion
 

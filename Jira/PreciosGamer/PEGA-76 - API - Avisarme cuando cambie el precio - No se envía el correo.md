@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-76"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-4]] Alertas
-- **blocks:** [[PEGA-23]] API - Feat - Avisarme cuando cambie el precio
+- **Padre:** [[PEGA-4 - Alertas|PEGA-4]] Alertas
+- **blocks:** [[PEGA-23 - API - Feat - Avisarme cuando cambie el precio|PEGA-23]] API - Feat - Avisarme cuando cambie el precio
 
 ## Descripcion
 

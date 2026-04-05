@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-78"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **is blocked by:** [[POS-55]] API - Feat - Contadores para burbujas de cantidad pendientes
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **is blocked by:** [[POS-55 - API - Feat - Contadores para burbujas de cantidad pendientes|POS-55]] API - Feat - Contadores para burbujas de cantidad pendientes
 
 ## Descripcion
 

@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1203"
 
 ## Relaciones
 
-- **Padre:** [[PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
-- **action item from:** [[PED-1187]] API - Feat - Listar reservas en un rango (para semana)
-- **action item from:** [[PED-1188]] API - Feat - Crear reserva (con control anti-solape)
-- **action item from:** [[PED-1195]] API - Feat - Salas de reunión: Alta y listado
-- **action item from:** [[PED-1189]] API - Feat - Cancelar reserva (soft delete)
-- **action item from:** [[PED-1199]] API - Review - Listar reservas en un rango (para semana) - QA Observaciones
-- **action item from:** [[PED-1225]] API - Refactor - Listar/Crear reservas en un rango -> Agregar 'notes' al listar las reservas y al crearla
+- **Padre:** [[PED-1186 - Sistema de reservas de salas de reuniones (vista semanal)|PED-1186]] Sistema de reservas de salas de reuniones (vista semanal)
+- **action item from:** [[PED-1187 - API - Feat - Listar reservas en un rango (para semana)|PED-1187]] API - Feat - Listar reservas en un rango (para semana)
+- **action item from:** [[PED-1188 - API - Feat - Crear reserva (con control anti-solape)|PED-1188]] API - Feat - Crear reserva (con control anti-solape)
+- **action item from:** [[PED-1195 - API - Feat - Salas de reunión Alta y listado|PED-1195]] API - Feat - Salas de reunión: Alta y listado
+- **action item from:** [[PED-1189 - API - Feat - Cancelar reserva (soft delete)|PED-1189]] API - Feat - Cancelar reserva (soft delete)
+- **action item from:** [[PED-1199 - API - Review - Listar reservas en un rango (para semana) - QA Observaciones|PED-1199]] API - Review - Listar reservas en un rango (para semana) - QA Observaciones
+- **action item from:** [[PED-1225 - API - Refactor - ListarCrear reservas en un rango - Agregar 'notes' al listar|PED-1225]] API - Refactor - Listar/Crear reservas en un rango -> Agregar 'notes' al listar las reservas y al crearla
 
 ## Descripcion
 

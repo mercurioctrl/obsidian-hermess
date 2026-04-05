@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-203"
 
 ## Relaciones
 
-- **Padre:** [[POS-56]] API - Feat - Ver detalle ingreso
-- **is blocked by:** [[POS-202]] API - Review - Mostrar precios históricos completos y revisar precio de venta
+- **Padre:** [[POS-56 - API - Feat - Ver detalle ingreso|POS-56]] API - Feat - Ver detalle ingreso
+- **is blocked by:** [[POS-202 - API - Review - Mostrar precios históricos completos y revisar precio de venta|POS-202]] API - Review - Mostrar precios históricos completos y revisar precio de venta
 
 ## Descripcion
 

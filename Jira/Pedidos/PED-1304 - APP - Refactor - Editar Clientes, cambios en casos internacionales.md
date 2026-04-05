@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1304"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
-- **Subtarea:** [[PED-1318]] APP - Review - Mejoras de ubicacion de los campos del formulario
-- **action item from:** [[PED-1303]] API - Refactor Clientes
-- **action item from:** [[PED-1302]] Crear repositorio de Paises.
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
+- **Subtarea:** [[PED-1318 - APP - Review - Mejoras de ubicacion de los campos del formulario|PED-1318]] APP - Review - Mejoras de ubicacion de los campos del formulario
+- **action item from:** [[PED-1303 - API - Refactor Clientes|PED-1303]] API - Refactor Clientes
+- **action item from:** [[PED-1302 - Crear repositorio de Paises.|PED-1302]] Crear repositorio de Paises.
 
 ## Descripcion
 

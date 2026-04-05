@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-162"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **relates to:** [[PEGA-38]] API - Feat - Formulario de rastreo
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **relates to:** [[PEGA-38 - API - Feat - Formulario de rastreo|PEGA-38]] API - Feat - Formulario de rastreo
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-247"
 
 ## Relaciones
 
-- **Padre:** [[POS-235]] Postventa Proveedores Recepcion
-- **relates to:** [[POS-246]] APP - Feat - Modal mover items a un deposito
+- **Padre:** [[POS-235 - Postventa Proveedores Recepcion|POS-235]] Postventa Proveedores Recepcion
+- **relates to:** [[POS-246 - APP - Feat - Modal mover items a un deposito|POS-246]] APP - Feat - Modal mover items a un deposito
 
 ## Descripcion
 

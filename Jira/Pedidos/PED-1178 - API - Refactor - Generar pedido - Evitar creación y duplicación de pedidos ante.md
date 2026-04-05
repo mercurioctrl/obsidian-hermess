@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1178"
 
 ## Relaciones
 
-- **Padre:** [[PED-4]] Pedidos
-- **relates to:** [[PED-90]] API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)
+- **Padre:** [[PED-4 - Pedidos|PED-4]] Pedidos
+- **relates to:** [[PED-90 - API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)|PED-90]] API - Feat- Generar pedido (albclit) desde una orden de compra (pedclit)
 
 ## Descripcion
 

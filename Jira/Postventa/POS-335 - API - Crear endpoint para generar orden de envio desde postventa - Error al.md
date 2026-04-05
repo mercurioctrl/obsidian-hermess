@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-335"
 
 ## Relaciones
 
-- **relates to:** [[POS-329]] API - Feat - Crear endpoint para generar orden de envio desde postventa
-- **relates to:** [[SNB-3161]] API - Postventa - Postventas finalizadas -> Error al intentar generar orden de envío 
+- **relates to:** [[POS-329 - API - Feat - Crear endpoint para generar orden de envio desde postventa|POS-329]] API - Feat - Crear endpoint para generar orden de envio desde postventa
+- **relates to:** [[SNB-3161 - API - Postventa - Postventas finalizadas - Error al intentar generar orden de|SNB-3161]] API - Postventa - Postventas finalizadas -> Error al intentar generar orden de envío 
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-193"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-191]] Autenticación para resellers
-- **is blocked by:** [[SNB-3184]] SISTEMAS - Modificar zonas horarias
+- **Padre:** [[PEGA-191 - Autenticación para resellers|PEGA-191]] Autenticación para resellers
+- **is blocked by:** [[SNB-3184 - SISTEMAS - Modificar zonas horarias|SNB-3184]] SISTEMAS - Modificar zonas horarias
 
 ## Descripcion
 

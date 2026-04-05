@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1202"
 
 ## Relaciones
 
-- **Padre:** [[PED-600]] Edicion/Alta de cliente
-- **relates to:** [[PED-1201]] API - Feat - Agregar a los clientes de capa 1 (o NB) el id de usuario de libre opción
-- **action item from:** [[PED-1204]] API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB (Capa 1)
-- **has action item:** [[PED-1204]] API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB (Capa 1)
-- **is cloned by:** [[PED-1233]] API - Refactor - Editar parametros de usuario de libre opcion para un cliente de NB (Capa 1) -> Mejora en el objeto de respuesta
+- **Padre:** [[PED-600 - EdicionAlta de cliente|PED-600]] Edicion/Alta de cliente
+- **relates to:** [[PED-1201 - API - Feat - Agregar a los clientes de capa 1 (o NB) el id de usuario de libre|PED-1201]] API - Feat - Agregar a los clientes de capa 1 (o NB) el id de usuario de libre opción
+- **action item from:** [[PED-1204 - API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB|PED-1204]] API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB (Capa 1)
+- **has action item:** [[PED-1204 - API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB|PED-1204]] API - Feat - Leer parametros de usuario de libre opcion para un cliente de NB (Capa 1)
+- **is cloned by:** [[PED-1233 - API - Refactor - Editar parametros de usuario de libre opcion para un cliente|PED-1233]] API - Refactor - Editar parametros de usuario de libre opcion para un cliente de NB (Capa 1) -> Mejora en el objeto de respuesta
 
 ## Descripcion
 

@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-66"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **relates to:** [[PEGA-14]] API - Feat - Listar productos
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **relates to:** [[PEGA-14 - API - Feat - Listar productos|PEGA-14]] API - Feat - Listar productos
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-194"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-191]] Autenticación para resellers
+- **Padre:** [[PEGA-191 - Autenticación para resellers|PEGA-191]] Autenticación para resellers
 
 ## Descripcion
 

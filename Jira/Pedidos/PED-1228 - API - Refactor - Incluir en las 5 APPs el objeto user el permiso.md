@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1228"
 
 ## Relaciones
 
-- **Padre:** [[PED-1227]] Permiso de cambio de empresa para las 5 APPs
-- **has action item:** [[PED-1229]] APP - Refactor - Incluir en las 5 APPs, el bloqueo del selector de empresa segun unlockedCompanyFilter
+- **Padre:** [[PED-1227 - Permiso de cambio de empresa para las 5 APPs|PED-1227]] Permiso de cambio de empresa para las 5 APPs
+- **has action item:** [[PED-1229 - APP - Refactor - Incluir en las 5 APPs, el bloqueo del selector de empresa|PED-1229]] APP - Refactor - Incluir en las 5 APPs, el bloqueo del selector de empresa segun unlockedCompanyFilter
 
 ## Descripcion
 

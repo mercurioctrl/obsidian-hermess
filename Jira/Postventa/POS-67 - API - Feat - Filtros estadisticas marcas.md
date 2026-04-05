@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-67"
 
 ## Relaciones
 
-- **Padre:** [[POS-59]] API - Feat - Estadisticas de marcas
-- **blocks:** [[POS-83]] APP - Feat - Grafico por marcas
-- **blocks:** [[POS-105]] APP - Feat - Pestaña estadística por marcas
+- **Padre:** [[POS-59 - API - Feat - Estadisticas de marcas|POS-59]] API - Feat - Estadisticas de marcas
+- **blocks:** [[POS-83 - APP - Feat - Grafico por marcas|POS-83]] APP - Feat - Grafico por marcas
+- **blocks:** [[POS-105 - APP - Feat - Pestaña estadística por marcas|POS-105]] APP - Feat - Pestaña estadística por marcas
 
 ## Descripcion
 

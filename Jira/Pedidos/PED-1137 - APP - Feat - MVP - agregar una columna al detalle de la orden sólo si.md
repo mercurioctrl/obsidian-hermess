@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1137"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **action item from:** [[PED-1136]] API - Feat - MVP - Agregar el permiso useStockIncoming ( por ahora a todos los companyCode == 11)
-- **action item from:** [[PED-1133]] API - Refactor - MVP - Agregar al obj items del detalle de una orden stockIncoming (definido por la cantidad del item en compra pendiente menos la cantidad de ingresados en la misma)
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **action item from:** [[PED-1136 - API - Feat - MVP - Agregar el permiso useStockIncoming ( por ahora a todos los|PED-1136]] API - Feat - MVP - Agregar el permiso useStockIncoming ( por ahora a todos los companyCode == 11)
+- **action item from:** [[PED-1133 - API - Refactor - MVP - Agregar al obj items del detalle de una orden|PED-1133]] API - Refactor - MVP - Agregar al obj items del detalle de una orden stockIncoming (definido por la cantidad del item en compra pendiente menos la cantidad de ingresados en la misma)
 
 ## Descripcion
 

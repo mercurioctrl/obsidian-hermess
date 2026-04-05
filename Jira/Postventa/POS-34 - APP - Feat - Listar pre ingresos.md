@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-34"
 
 ## Relaciones
 
-- **Padre:** [[POS-18]] Pre-Ingresos
-- **Subtarea:** [[POS-50]] APP - Feat - Agregar Filtros
-- **Subtarea:** [[POS-190]] API - Refactor - Solo deben aparecer los pendientes de ingreso o notificados
-- **is blocked by:** [[POS-3]] API - Feat - Listar pre ingresos
+- **Padre:** [[POS-18 - Pre-Ingresos|POS-18]] Pre-Ingresos
+- **Subtarea:** [[POS-50 - APP - Feat - Agregar Filtros|POS-50]] APP - Feat - Agregar Filtros
+- **Subtarea:** [[POS-190 - API - Refactor - Solo deben aparecer los pendientes de ingreso o notificados|POS-190]] API - Refactor - Solo deben aparecer los pendientes de ingreso o notificados
+- **is blocked by:** [[POS-3 - API - Feat - Listar pre ingresos|POS-3]] API - Feat - Listar pre ingresos
 
 ## Descripcion
 

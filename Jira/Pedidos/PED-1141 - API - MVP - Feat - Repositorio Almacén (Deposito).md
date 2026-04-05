@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1141"
 
 ## Relaciones
 
-- **Padre:** [[PED-1107]] Almacenes Multiples
-- **has action item:** [[PED-1108]] API - MVP - Refactor - Mostrar items con almacenes multiples, cuando existan, y agregar el parametro stockWarehouseId
-- **has action item:** [[PED-1144]] APP - MVP - Feat - Filtro de deposito para el recurso items
-- **has action item:** [[PED-1129]] APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de precio
+- **Padre:** [[PED-1107 - Almacenes Multiples|PED-1107]] Almacenes Multiples
+- **has action item:** [[PED-1108 - API - MVP - Refactor - Mostrar items con almacenes multiples, cuando existan, y|PED-1108]] API - MVP - Refactor - Mostrar items con almacenes multiples, cuando existan, y agregar el parametro stockWarehouseId
+- **has action item:** [[PED-1144 - APP - MVP - Feat - Filtro de deposito para el recurso items|PED-1144]] APP - MVP - Feat - Filtro de deposito para el recurso items
+- **has action item:** [[PED-1129 - APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de|PED-1129]] APP - MVP - Refactor - Agregar lista de depósito a la descarga de lista de precio
 
 ## Descripcion
 

@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1122"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **has action item:** [[PED-1121]] APP - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
-- **action item from:** [[PED-1120]] API - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los datos bancarios de Laset)
-- **action item from:** [[PED-1161]] API - MVP - Repositorio incoterms
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **has action item:** [[PED-1121 - APP - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el|PED-1121]] APP - MVP -Feat - Agregar condición de venta (Incoterms) como un selector en el detalle de la orden
+- **action item from:** [[PED-1120 - API - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los|PED-1120]] API - MVP - Feat - Agregar adenda en el detalle del pedido (por default con los datos bancarios de Laset)
+- **action item from:** [[PED-1161 - API - MVP - Repositorio incoterms|PED-1161]] API - MVP - Repositorio incoterms
 
 ## Descripcion
 

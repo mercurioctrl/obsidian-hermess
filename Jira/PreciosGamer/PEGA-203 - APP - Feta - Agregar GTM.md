@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-203"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-202]] Seguimientos y trackeo
+- **Padre:** [[PEGA-202 - Seguimientos y trackeo|PEGA-202]] Seguimientos y trackeo
 
 ## Descripcion
 

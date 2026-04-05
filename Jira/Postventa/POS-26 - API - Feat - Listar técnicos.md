@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-26"
 
 ## Relaciones
 
-- **Padre:** [[POS-12]] Bases del proyecto y formularios
-- **blocks:** [[POS-48]] APP - Feat -  Selector de técnicos para asignar técnico
+- **Padre:** [[POS-12 - Bases del proyecto y formularios|POS-12]] Bases del proyecto y formularios
+- **blocks:** [[POS-48 - APP - Feat - Selector de técnicos para asignar técnico|POS-48]] APP - Feat -  Selector de técnicos para asignar técnico
 
 ## Descripcion
 

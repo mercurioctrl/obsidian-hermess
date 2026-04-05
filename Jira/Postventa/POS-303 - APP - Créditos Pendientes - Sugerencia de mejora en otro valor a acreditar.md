@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-303"
 
 ## Relaciones
 
-- **Padre:** [[POS-24]] Creditos
-- **relates to:** [[POS-300]] APP - Refactor - Ajustar error de decimales en precio final equivalente, enviar siempre precio en dolares y ajustar colores segun currency
+- **Padre:** [[POS-24 - Creditos|POS-24]] Creditos
+- **relates to:** [[POS-300 - APP - Refactor - Ajustar error de decimales en precio final equivalente, enviar|POS-300]] APP - Refactor - Ajustar error de decimales en precio final equivalente, enviar siempre precio en dolares y ajustar colores segun currency
 
 ## Descripcion
 

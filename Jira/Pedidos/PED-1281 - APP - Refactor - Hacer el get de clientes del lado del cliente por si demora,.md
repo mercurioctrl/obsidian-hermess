@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1281"
 
 ## Relaciones
 
-- **Padre:** [[PED-15]] Clientes
+- **Padre:** [[PED-15 - Clientes|PED-15]] Clientes
 
 ## Descripcion
 

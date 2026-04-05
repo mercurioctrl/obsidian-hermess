@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-143"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **Subtarea:** [[PEGA-145]] API - Refactor  - No todos los campos son obligatorios en el formulairio de contacto
-- **has action item:** [[PEGA-145]] API - Refactor  - No todos los campos son obligatorios en el formulairio de contacto
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **Subtarea:** [[PEGA-145 - API - Refactor - No todos los campos son obligatorios en el formulairio de|PEGA-145]] API - Refactor  - No todos los campos son obligatorios en el formulairio de contacto
+- **has action item:** [[PEGA-145 - API - Refactor - No todos los campos son obligatorios en el formulairio de|PEGA-145]] API - Refactor  - No todos los campos son obligatorios en el formulairio de contacto
 
 ## Descripcion
 

@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-294"
 
 ## Relaciones
 
-- **Padre:** [[POS-292]] POS APP - Filtros en recuperos
-- **relates to:** [[POS-292]] POS APP - Filtros en recuperos
-- **is blocked by:** [[POS-298]] API - Envíos a proveedores - Búsqueda general por id de proveedor y descripción
+- **Padre:** [[POS-292 - POS APP - Filtros en recuperos|POS-292]] POS APP - Filtros en recuperos
+- **relates to:** [[POS-292 - POS APP - Filtros en recuperos|POS-292]] POS APP - Filtros en recuperos
+- **is blocked by:** [[POS-298 - API - Envíos a proveedores - Búsqueda general por id de proveedor y descripción|POS-298]] API - Envíos a proveedores - Búsqueda general por id de proveedor y descripción
 
 ## Descripcion
 

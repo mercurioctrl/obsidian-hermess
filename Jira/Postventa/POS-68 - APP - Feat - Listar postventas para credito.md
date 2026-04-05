@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-68"
 
 ## Relaciones
 
-- **Padre:** [[POS-24]] Creditos
-- **is blocked by:** [[POS-32]] API - Feat - Listar postventas para credito
+- **Padre:** [[POS-24 - Creditos|POS-24]] Creditos
+- **is blocked by:** [[POS-32 - API - Feat - Listar postventas para credito|POS-32]] API - Feat - Listar postventas para credito
 
 ## Descripcion
 

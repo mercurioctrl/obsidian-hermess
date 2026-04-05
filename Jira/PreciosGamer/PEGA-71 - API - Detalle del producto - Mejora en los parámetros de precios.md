@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-71"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **relates to:** [[PEGA-19]] API - Feat - Detalle del producto
-- **relates to:** [[PEGA-69]] APP - Detalle del producto - Mejora en los parámetros de precios
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **relates to:** [[PEGA-19 - API - Feat - Detalle del producto|PEGA-19]] API - Feat - Detalle del producto
+- **relates to:** [[PEGA-69 - APP - Detalle del producto - Mejora en los parámetros de precios|PEGA-69]] APP - Detalle del producto - Mejora en los parámetros de precios
 
 ## Descripcion
 

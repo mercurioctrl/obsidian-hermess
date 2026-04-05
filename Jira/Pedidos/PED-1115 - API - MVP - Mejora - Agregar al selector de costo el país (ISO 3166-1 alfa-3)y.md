@@ -29,10 +29,10 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1115"
 
 ## Relaciones
 
-- **Padre:** [[PED-3]] Ordenes de compra
-- **Subtarea:** [[PED-1176]] API - MVP- Refactor - Modificar recurso de costHistory
-- **has action item:** [[PED-1116]] APP - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
-- **is blocked by:** [[COM-200]] API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
+- **Padre:** [[PED-3 - Ordenes de compra|PED-3]] Ordenes de compra
+- **Subtarea:** [[PED-1176 - API - MVP- Refactor - Modificar recurso de costHistory|PED-1176]] API - MVP- Refactor - Modificar recurso de costHistory
+- **has action item:** [[PED-1116 - APP - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y|PED-1116]] APP - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
+- **is blocked by:** [[COM-200 - API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo|COM-200]] API - MVP - Refactor - Se debe poder modificar y cambiar un nuevo atributo warehousesId asociado a las ordenes
 
 ## Descripcion
 

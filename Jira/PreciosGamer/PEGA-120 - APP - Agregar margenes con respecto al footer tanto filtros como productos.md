@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-120"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-2]] Catalogos y Buscador
-- **relates to:** [[PEGA-115]] APP - Refactor - Agregar filtro limite de precios
+- **Padre:** [[PEGA-2 - Catalogos y Buscador|PEGA-2]] Catalogos y Buscador
+- **relates to:** [[PEGA-115 - APP - Refactor - Agregar filtro limite de precios|PEGA-115]] APP - Refactor - Agregar filtro limite de precios
 
 ## Descripcion
 

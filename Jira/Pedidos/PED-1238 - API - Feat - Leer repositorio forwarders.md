@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1238"
 
 ## Relaciones
 
-- **Padre:** [[PED-1237]] MVP -  Forwarder
-- **has action item:** [[PED-1240]] APP - Feat - Agregar un selector en el detalle de la orden de compra para seleccionar el forwarder similar a incoterms (editable solo en pendiente)
+- **Padre:** [[PED-1237 - MVP - Forwarder|PED-1237]] MVP -  Forwarder
+- **has action item:** [[PED-1240 - APP - Feat - Agregar un selector en el detalle de la orden de compra para|PED-1240]] APP - Feat - Agregar un selector en el detalle de la orden de compra para seleccionar el forwarder similar a incoterms (editable solo en pendiente)
 
 ## Descripcion
 

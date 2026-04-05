@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-102"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-1]] Bases y repositorios
-- **Subtarea:** [[PEGA-103]] API - Feat - Revisar recursos home
+- **Padre:** [[PEGA-1 - Bases y repositorios|PEGA-1]] Bases y repositorios
+- **Subtarea:** [[PEGA-103 - API - Feat - Revisar recursos home|PEGA-103]] API - Feat - Revisar recursos home
 
 ## Descripcion
 

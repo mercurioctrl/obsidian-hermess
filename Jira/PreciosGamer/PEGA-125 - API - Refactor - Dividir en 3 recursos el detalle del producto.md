@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PEGA-125"
 
 ## Relaciones
 
-- **Padre:** [[PEGA-7]] Feat - Detalle del producto (Ficha)
-- **blocks:** [[PEGA-126]] APP - Refactor - Dividir en 3 recursos el detalle del producto
+- **Padre:** [[PEGA-7 - Feat - Detalle del producto (Ficha)|PEGA-7]] Feat - Detalle del producto (Ficha)
+- **blocks:** [[PEGA-126 - APP - Refactor - Dividir en 3 recursos el detalle del producto|PEGA-126]] APP - Refactor - Dividir en 3 recursos el detalle del producto
 
 ## Descripcion
 

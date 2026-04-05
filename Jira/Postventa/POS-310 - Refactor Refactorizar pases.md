@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-310"
 
 ## Relaciones
 
-- **Subtarea:** [[POS-311]] APP - Crear pase de postventa - Expedicion
-- **Subtarea:** [[POS-313]] APP - Validar serial al finalizaar pase
-- **Subtarea:** [[POS-312]] API - Validar serial al finalizar pase
-- **Subtarea:** [[POS-314]] Eliminar boton de rechazar pase 
-- **Subtarea:** [[POS-315]] API - Realizar pase - Sugerencia de mejora al concretar un pase
-- **Subtarea:** [[POS-316]] APP - Refactor -  Ajuste cuando se crea un pase se cierra el modal y abre de nuevo tiene un error en el selector de producto
+- **Subtarea:** [[POS-311 - APP - Crear pase de postventa - Expedicion|POS-311]] APP - Crear pase de postventa - Expedicion
+- **Subtarea:** [[POS-313 - APP - Validar serial al finalizaar pase|POS-313]] APP - Validar serial al finalizaar pase
+- **Subtarea:** [[POS-312 - API - Validar serial al finalizar pase|POS-312]] API - Validar serial al finalizar pase
+- **Subtarea:** [[POS-314 - Eliminar boton de rechazar pase|POS-314]] Eliminar boton de rechazar pase 
+- **Subtarea:** [[POS-315 - API - Realizar pase - Sugerencia de mejora al concretar un pase|POS-315]] API - Realizar pase - Sugerencia de mejora al concretar un pase
+- **Subtarea:** [[POS-316 - APP - Refactor - Ajuste cuando se crea un pase se cierra el modal y abre de|POS-316]] APP - Refactor -  Ajuste cuando se crea un pase se cierra el modal y abre de nuevo tiene un error en el selector de producto
 
 ## Descripcion
 

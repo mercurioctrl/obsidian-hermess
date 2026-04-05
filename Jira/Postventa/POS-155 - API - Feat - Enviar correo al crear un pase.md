@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-155"
 
 ## Relaciones
 
-- **Padre:** [[POS-95]] API - Feat - Pedir un pase de mercaderia
-- **is blocked by:** [[POS-156]] APP - Feat - Aplicativo para responder pase desde el deposito
+- **Padre:** [[POS-95 - API - Feat - Pedir un pase de mercaderia|POS-95]] API - Feat - Pedir un pase de mercaderia
+- **is blocked by:** [[POS-156 - APP - Feat - Aplicativo para responder pase desde el deposito|POS-156]] APP - Feat - Aplicativo para responder pase desde el deposito
 
 ## Descripcion
 

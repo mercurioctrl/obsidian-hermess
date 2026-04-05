@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-15"
 
 ## Relaciones
 
-- **Padre:** [[POS-13]] API - Feat - Login
+- **Padre:** [[POS-13 - API - Feat - Login|POS-13]] API - Feat - Login
 
 ## Descripcion
 

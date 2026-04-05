@@ -29,12 +29,12 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-3"
 
 ## Relaciones
 
-- **Padre:** [[POS-18]] Pre-Ingresos
-- **Subtarea:** [[POS-38]] API - Feat - Filtros
-- **Subtarea:** [[POS-39]] API - Refactor -  Agregar parametro para mostrar si ya fue procesado
-- **Subtarea:** [[POS-41]] API - Feat - Agregar paginado
-- **Subtarea:** [[POS-74]] Revisar Filtro de pre ingreso
-- **blocks:** [[POS-34]] APP - Feat - Listar pre ingresos
+- **Padre:** [[POS-18 - Pre-Ingresos|POS-18]] Pre-Ingresos
+- **Subtarea:** [[POS-38 - API - Feat - Filtros|POS-38]] API - Feat - Filtros
+- **Subtarea:** [[POS-39 - API - Refactor - Agregar parametro para mostrar si ya fue procesado|POS-39]] API - Refactor -  Agregar parametro para mostrar si ya fue procesado
+- **Subtarea:** [[POS-41 - API - Feat - Agregar paginado|POS-41]] API - Feat - Agregar paginado
+- **Subtarea:** [[POS-74 - Revisar Filtro de pre ingreso|POS-74]] Revisar Filtro de pre ingreso
+- **blocks:** [[POS-34 - APP - Feat - Listar pre ingresos|POS-34]] APP - Feat - Listar pre ingresos
 
 ## Descripcion
 

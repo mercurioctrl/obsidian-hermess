@@ -29,9 +29,9 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1176"
 
 ## Relaciones
 
-- **Padre:** [[PED-1115]] API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
-- **has action item:** [[PED-1123]] APP - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo
-- **is duplicated by:** [[PED-1177]] Deprecada - API - Refactor - Agregar al repositorio costHistory la información de "cantidad" para esa compra
+- **Padre:** [[PED-1115 - API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y|PED-1115]] API - MVP - Mejora - Agregar al selector de costo el país (ISO 3166-1 alfa-3)y depósito
+- **has action item:** [[PED-1123 - APP - MVP - Refactor - agregar otra opción en el selector de costo para|PED-1123]] APP - MVP - Refactor - agregar otra opción  en el selector de costo para promediar desde 2 “órdenes distintas” teniendo como campos cantidad y costo
+- **is duplicated by:** [[PED-1177 - Deprecada - API - Refactor - Agregar al repositorio costHistory la información|PED-1177]] Deprecada - API - Refactor - Agregar al repositorio costHistory la información de "cantidad" para esa compra
 
 ## Descripcion
 

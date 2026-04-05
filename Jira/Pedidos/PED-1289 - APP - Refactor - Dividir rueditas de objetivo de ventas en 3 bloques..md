@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1289"
 
 ## Relaciones
 
-- **Padre:** [[PED-845]] Incentivos Vendedores
+- **Padre:** [[PED-845 - Incentivos Vendedores|PED-845]] Incentivos Vendedores
 
 ## Descripcion
 

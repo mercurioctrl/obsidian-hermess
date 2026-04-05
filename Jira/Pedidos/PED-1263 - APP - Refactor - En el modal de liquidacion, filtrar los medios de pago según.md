@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/PED-1263"
 
 ## Relaciones
 
-- **Padre:** [[PED-1257]] Repositorio Bancos y medios de pago
-- **action item from:** [[PED-1262]] API - Refactor - Agregar el filtro companyCode  al repositorio de metodos de pago y parámetro que indica si es o no un banco
+- **Padre:** [[PED-1257 - Repositorio Bancos y medios de pago|PED-1257]] Repositorio Bancos y medios de pago
+- **action item from:** [[PED-1262 - API - Refactor - Agregar el filtro companyCode al repositorio de metodos de|PED-1262]] API - Refactor - Agregar el filtro companyCode  al repositorio de metodos de pago y parámetro que indica si es o no un banco
 
 ## Descripcion
 

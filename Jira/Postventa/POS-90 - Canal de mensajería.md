@@ -29,8 +29,8 @@ jira_url: "https://bluinc.atlassian.net/browse/POS-90"
 
 ## Relaciones
 
-- **Subtarea:** [[POS-91]] Pantalla  Leer mensajes / Enviar Mensaje
-- **Subtarea:** [[POS-92]] Burbuja de notificaciones (Mensajes pendientes)
+- **Subtarea:** [[POS-91 - Pantalla Leer mensajes Enviar Mensaje|POS-91]] Pantalla  Leer mensajes / Enviar Mensaje
+- **Subtarea:** [[POS-92 - Burbuja de notificaciones (Mensajes pendientes)|POS-92]] Burbuja de notificaciones (Mensajes pendientes)
 
 ## Descripcion
 
