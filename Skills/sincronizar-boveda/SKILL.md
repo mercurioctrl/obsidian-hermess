@@ -175,23 +175,62 @@ curl -sk -X PUT "https://localhost:27124/vault/{CARPETA}/{nota}.md" \
 
 Subir en paralelo cuando sea posible (múltiples curl en paralelo).
 
-### 7. Actualizar Home.md (SIEMPRE)
+### 7. Actualizar índices recursivamente (SIEMPRE)
 
-Regenerar `Home.md` en la raíz de la bóveda para reflejar la estructura actual.
+La actualización de índices es **recursiva hacia arriba**: desde la carpeta del proyecto
+hasta `Home.md`, pasando por cada carpeta padre que tenga un `index.md`.
+
+**Ejemplo:** si el proyecto está en `NB/expedicion/`, se actualizan:
+1. `NB/expedicion/index.md` — ya actualizado en paso 4.1
+2. `NB/index.md` — debe listar `expedicion/` con sus notas
+3. `Home.md` — debe listar `NB/` con sus subcarpetas
+
+#### Algoritmo
+
+```
+carpeta_proyecto = "NB/expedicion"
+segmentos = carpeta_proyecto.split("/")  # ["NB", "expedicion"]
+
+# Subir desde el padre del proyecto hasta la raíz
+for i in range(len(segmentos) - 1, 0, -1):
+    carpeta_padre = "/".join(segmentos[:i])  # "NB"
+    # 1. Listar contenido de carpeta_padre
+    # 2. Para cada subcarpeta, listar sus notas
+    # 3. Leer index.md actual de carpeta_padre (si existe)
+    # 4. Regenerar index.md con wikilinks a todas las subcarpetas y notas
+
+# Finalmente, actualizar Home.md (raíz de la bóveda)
+```
+
+#### Para cada `index.md` padre:
+
+1. Listar subcarpetas y notas del directorio:
+   ```bash
+   curl -sk -H "Authorization: Bearer {TOKEN}" https://localhost:27124/vault/{CARPETA_PADRE}/
+   ```
+2. Para cada subcarpeta, listar su contenido (notas):
+   ```bash
+   curl -sk -H "Authorization: Bearer {TOKEN}" https://localhost:27124/vault/{CARPETA_PADRE}/{SUB}/
+   ```
+3. Regenerar el `index.md` con:
+   - Título y descripción breve de la carpeta
+   - Wikilinks a cada subcarpeta (via su `index.md`) y sus notas principales
+   - No incluir archivos que no sean `.md`
+
+#### Para `Home.md` (último paso):
 
 ```bash
 # 1. Listar toda la bóveda
 curl -sk -H "Authorization: Bearer {TOKEN}" https://localhost:27124/vault/
 
-# 2. Listar cada subdirectorio recursivamente para descubrir nuevas carpetas/notas
-#    Iterar sobre cada carpeta raíz y sus subcarpetas
+# 2. Listar cada subdirectorio recursivamente
 ```
 
 Reconstruir `Home.md` con:
-- Todas las carpetas y notas de la bóveda organizadas por sección
+- Todas las carpetas y notas organizadas por sección
 - `[[wikilinks]]` a cada nota y carpeta index
 - Sección de Skills linkeando al índice de Skills
-- No incluir archivos que no sean `.md` (ignorar .js, imágenes, etc.)
+- No incluir archivos que no sean `.md`
 
 **Formato de Home.md:**
 
@@ -202,9 +241,11 @@ Reconstruir `Home.md` con:
 
 ---
 
-## Proyectos
+## {Carpeta raíz}
 
-### {Carpeta}
+- [[{Carpeta}/index|{Título}]]
+
+### {Subcarpeta}
 {Descripción breve inferida del contenido}
 - [[{path/nota}|{título legible}]]
   - [[{sub-nota}]]
@@ -218,10 +259,10 @@ Ver [[Skills/index|índice de Skills]].
 ---
 
 ## Otros
-- [[Bienvenido]]
+- [[nota-suelta]]
 ```
 
-Esto garantiza que cualquier carpeta nueva aparezca automáticamente en el índice.
+Esto garantiza que cualquier carpeta o nota nueva aparezca en toda la cadena de índices.
 
 ### 8. Confirmar
 

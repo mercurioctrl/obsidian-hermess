@@ -11,10 +11,14 @@
             "id": "b005d136ec7b6c69",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "markdown",
+              "state": {
+                "file": "NB/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ]
@@ -192,22 +196,32 @@
   },
   "active": "b005d136ec7b6c69",
   "lastOpenFiles": [
-    "NB/Sin título.canvas",
-    "Sin título 1.canvas",
-    "Sin título.base",
     "2026-04-04.md",
+    "NB/index.md",
+    "Blu/blu-web-v1/base-de-conocimiento.md",
+    "Skills/sincronizar-boveda/SKILL.md",
+    "Sin título 1.canvas",
+    "Home.md",
+    "NB/pedidos/stack.md",
+    "NB/expedicion/stack.md",
+    "NB/expedicion/changelog.md",
+    "NB/expedicion/memoria.md",
+    "NB/expedicion/index.md",
+    "NB/expedicion/arquitectura.md",
+    "NB/expedicion/documentacion.md",
+    "NB/expedicion/contexto.md",
+    "NB/pedidos/arquitectura.md",
+    "NB/expedicion",
+    "NB/pedidos/changelog.md",
+    "NB/Sin título.canvas",
+    "Sin título.base",
     "Sin título.canvas",
     "NB/pedidos/contexto.md",
     "NB/pedidos/memoria.md",
-    "Home.md",
     "NB/pedidos/index.md",
     "NB/pedidos/modulo-removesale.md",
     "NB/pedidos/modulo-makesale.md",
-    "NB/pedidos/changelog.md",
-    "NB/pedidos/arquitectura.md",
     "Blu/index.md",
-    "NB/pedidos/stack.md",
-    "NB/index.md",
     "Blu/bluMiniErp/Dashboard UI Skill.md",
     "NB/pedidos",
     "NB",
@@ -216,19 +230,10 @@
     "Sin nombre",
     "Blu/bluMiniErp/index.md",
     "Blu/bluMiniErp/Reglas de Negocio.md",
-    "Blu/bluMiniErp/Page Templates.md",
-    "Blu/bluMiniErp/Medios de Pago.md",
-    "Blu/bluMiniErp/Frontend.md",
-    "Blu/bluMiniErp/memoria.md",
-    "Blu/bluMiniErp/changelog.md",
-    "Bienvenido.md",
-    "Blu/bluMiniErp/Stack e Infraestructura.md",
-    "Blu/bluMiniErp/Modulo Personal.md",
     "Skills/sincronizar-boveda",
     "Blu/bluMiniErp",
     "Blu/blu-web-v1",
     "Blu",
-    "Skills/configurar-boveda",
-    "Skills/fullstack-docker-app/templates"
+    "Skills/configurar-boveda"
   ]
 }

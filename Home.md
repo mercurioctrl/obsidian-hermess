@@ -1,82 +1,105 @@
 # Home
 
-Índice general de la bóveda de Obsidian.
+Índice general de la bóveda.
 
 ---
 
 ## Asus
 
-- [[Asus/Contrataciones/Contrataciones MOC|Contrataciones MOC]]
-  - [[Asus/Contrataciones/Modelo de Liquidación CCT 130-75|Modelo de Liquidación CCT 130-75]]
-  - [[Asus/Contrataciones/Escenarios de Contratación|Escenarios de Contratación]]
-  - [[Asus/Contrataciones/Coeficientes de Facturación|Coeficientes de Facturación]]
-  - [[Asus/Contrataciones/Fórmulas del Modelo|Fórmulas del Modelo]]
-  - [[Asus/Contrataciones/Calculadora Excel - Instrucciones|Calculadora Excel - Instrucciones]]
+### Contrataciones
+- [[Contrataciones MOC]]
+- [[Calculadora Excel - Instrucciones]]
+- [[Coeficientes de Facturación]]
+- [[Escenarios de Contratación]]
+- [[Fórmulas del Modelo]]
+- [[Modelo de Liquidación CCT 130-75]]
+
+---
 
 ## Blu
 
 - [[Blu/index|Blu]]
-  - [[Blu/blu-web-v1/index|blu-web-v1]] — Sitio web Blu
-    - [[Blu/blu-web-v1/arquitectura|Arquitectura]]
-    - [[Blu/blu-web-v1/stack|Stack]]
-    - [[Blu/blu-web-v1/base-de-conocimiento|Base de conocimiento]]
-    - [[Blu/blu-web-v1/changelog|Changelog]]
-  - [[Blu/bluMiniErp/index|bluMiniErp]] — Mini ERP Blu
-    - [[Blu/bluMiniErp/Frontend|Frontend]]
-    - [[Blu/bluMiniErp/Backend - API|Backend - API]]
-    - [[Blu/bluMiniErp/Backend - Modelos|Backend - Modelos]]
-    - [[Blu/bluMiniErp/Base de Datos|Base de Datos]]
-    - [[Blu/bluMiniErp/Stack e Infraestructura|Stack e Infraestructura]]
-    - [[Blu/bluMiniErp/Componentes UI|Componentes UI]]
-    - [[Blu/bluMiniErp/Layout System|Layout System]]
-    - [[Blu/bluMiniErp/Page Templates|Page Templates]]
-    - [[Blu/bluMiniErp/Design Tokens|Design Tokens]]
-    - [[Blu/bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
-    - [[Blu/bluMiniErp/Modulo Permisos|Módulo Permisos]]
-    - [[Blu/bluMiniErp/Modulo Personal|Módulo Personal]]
-    - [[Blu/bluMiniErp/Medios de Pago|Medios de Pago]]
-    - [[Blu/bluMiniErp/Reglas de Negocio|Reglas de Negocio]]
-    - [[Blu/bluMiniErp/Errores Comunes|Errores Comunes]]
-    - [[Blu/bluMiniErp/changelog|Changelog]]
-    - [[Blu/bluMiniErp/memoria|Memoria]]
 
-## Libre Opcion
+### blu-web-v1
+- [[Blu/blu-web-v1/index|blu-web-v1]]
+  - [[Blu/blu-web-v1/arquitectura|Arquitectura]]
+  - [[Blu/blu-web-v1/base-de-conocimiento|Base de conocimiento]]
+  - [[Blu/blu-web-v1/changelog|Changelog]]
+  - [[Blu/blu-web-v1/stack|Stack]]
 
-- [[Libre Opcion/00-resumen-diagnostico-seo-performance|Resumen diagnóstico SEO/Performance]]
-- [[Libre Opcion/01-fix-cls-imagenes|Fix CLS imágenes]]
-- [[Libre Opcion/02-fix-lcp-render-blocking|Fix LCP render blocking]]
-- [[Libre Opcion/03-fix-header-min-height|Fix header min-height]]
-- [[Libre Opcion/04-fix-fuentes-innecesarias|Fix fuentes innecesarias]]
-- [[Libre Opcion/05-fix-fouc-css-tardio|Fix FOUC CSS tardío]]
+### bluMiniErp
+- [[Blu/bluMiniErp/index|bluMiniErp]]
+  - [[Blu/bluMiniErp/Backend - API|Backend - API]]
+  - [[Blu/bluMiniErp/Backend - Modelos|Backend - Modelos]]
+  - [[Blu/bluMiniErp/Base de Datos|Base de Datos]]
+  - [[Blu/bluMiniErp/Componentes UI|Componentes UI]]
+  - [[Blu/bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
+  - [[Blu/bluMiniErp/Design Tokens|Design Tokens]]
+  - [[Blu/bluMiniErp/Errores Comunes|Errores Comunes]]
+  - [[Blu/bluMiniErp/Frontend|Frontend]]
+  - [[Blu/bluMiniErp/Layout System|Layout System]]
+  - [[Blu/bluMiniErp/Medios de Pago|Medios de Pago]]
+  - [[Blu/bluMiniErp/Modulo Permisos|Módulo Permisos]]
+  - [[Blu/bluMiniErp/Modulo Personal|Módulo Personal]]
+  - [[Blu/bluMiniErp/Page Templates|Page Templates]]
+  - [[Blu/bluMiniErp/Reglas de Negocio|Reglas de Negocio]]
+  - [[Blu/bluMiniErp/Stack e Infraestructura|Stack e Infraestructura]]
+  - [[Blu/bluMiniErp/changelog|Changelog]]
+  - [[Blu/bluMiniErp/memoria|Memoria]]
+
+---
 
 ## NB
 
 - [[NB/index|NB]]
-  - [[NB/pedidos/index|Pedidos]] — Sistema de gestión de pedidos
-    - [[NB/pedidos/arquitectura|Arquitectura]]
-    - [[NB/pedidos/stack|Stack e infraestructura]]
-    - [[NB/pedidos/changelog|Changelog]]
-    - [[NB/pedidos/contexto|Contexto y reglas de negocio]]
-    - [[NB/pedidos/modulo-makesale|MakeSale]]
-    - [[NB/pedidos/modulo-removesale|RemoveSale]]
-    - [[NB/pedidos/memoria|Memoria]]
+
+### expedicion
+Sistema de expedición y logística de warehouse.
+- [[NB/expedicion/index|Expedición]]
+  - [[NB/expedicion/contexto|Contexto]]
+  - [[NB/expedicion/arquitectura|Arquitectura]]
+  - [[NB/expedicion/stack|Stack]]
+  - [[NB/expedicion/documentacion|Documentación]]
+  - [[NB/expedicion/changelog|Changelog]]
+  - [[NB/expedicion/memoria|Memoria]]
+
+### pedidos
+Sistema de gestión de pedidos.
+- [[NB/pedidos/index|Pedidos]]
+  - [[NB/pedidos/contexto|Contexto]]
+  - [[NB/pedidos/arquitectura|Arquitectura]]
+  - [[NB/pedidos/stack|Stack]]
+  - [[NB/pedidos/changelog|Changelog]]
+  - [[NB/pedidos/memoria|Memoria]]
+  - [[NB/pedidos/modulo-makesale|Módulo MakeSale]]
+  - [[NB/pedidos/modulo-removesale|Módulo RemoveSale]]
+
+---
 
 ## Planilla Acciones Bully
 
-- [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Documentación Apps Script - Opciones API]]
-- Código:
-  - [[Planilla Acciones Bully/codigo/Code_gs_original.js|Code.gs original]]
-  - [[Planilla Acciones Bully/codigo/Code_gs_v4_optimizado.js|Code.gs v4 optimizado]]
+*(Carpeta vacía)*
 
-## Skills
+---
 
-- [[Skills/index|Índice de Skills]]
-  - [[Skills/configurar-boveda/|configurar-boveda]]
-  - [[Skills/sincronizar-boveda/|sincronizar-boveda]]
-  - [[Skills/fullstack-docker-app/|fullstack-docker-app]]
-  - [[Skills/skill-creator/|skill-creator]]
-  - [[Skills/schedule/|schedule]]
-  - [[Skills/pdf/|pdf]]
-  - [[Skills/docx/|docx]]
-  - [[Skills/xlsx/|xlsx]]
-  - [[Skills/pptx/|pptx]]
+## Skills de Claude Code
+
+Ver [[Skills/index|índice de Skills]].
+
+| Skill | Descripción |
+|-------|-------------|
+| [[Skills/configurar-boveda/SKILL|configurar-boveda]] | Vincular proyecto con Obsidian |
+| [[Skills/sincronizar-boveda/SKILL|sincronizar-boveda]] | Sincronizar proyecto con Obsidian |
+| [[Skills/fullstack-docker-app/SKILL|fullstack-docker-app]] | Infraestructura Docker fullstack |
+| [[Skills/skill-creator/SKILL|skill-creator]] | Creador de skills |
+| [[Skills/pdf/SKILL|pdf]] | Generación y edición de PDF |
+| [[Skills/docx/SKILL|docx]] | Generación de documentos Word |
+| [[Skills/pptx/SKILL|pptx]] | Generación de presentaciones |
+| [[Skills/xlsx/SKILL|xlsx]] | Generación de hojas de cálculo |
+| [[Skills/schedule/SKILL|schedule]] | Agentes programados |
+
+---
+
+## Notas sueltas
+
+- [[2026-04-04]]
