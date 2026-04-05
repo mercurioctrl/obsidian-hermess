@@ -1,0 +1,203 @@
+---
+jira_key: "DNYL-602"
+summary: "NB_PRECIOS ESPECIALES"
+status: "COMUNICADO"
+type: "Tarea"
+priority: "Medium"
+assignee: "Sin asignar"
+reporter: "Sofía Melograna"
+created: "2023-10-03 17:43"
+updated: "2023-12-07 16:39"
+labels: []
+jira_url: "https://bluinc.atlassian.net/browse/DNYL-602"
+---
+
+# DNYL-602: NB_PRECIOS ESPECIALES
+
+| Campo | Valor |
+|-------|-------|
+| Estado | COMUNICADO (Listo) |
+| Tipo | Tarea |
+| Prioridad | Medium |
+| Asignado | Sin asignar |
+| Reportado por | Sofía Melograna |
+| Creado | 2023-10-03 17:43 |
+| Actualizado | 2023-12-07 16:39 |
+| Etiquetas | ninguna |
+| Jira | [DNYL-602](https://bluinc.atlassian.net/browse/DNYL-602) |
+
+## Descripción
+
+Elo, buenas tardes.
+Te podré pedir armar una imagen unica de cada producto donde resalte EL PRECIO en promo?
+
+
+PRODUCTOS
+
+USD SIN IVA
+
+OBSERVACIONES
+
+MSI NOTEBOOK GAMER ALPHA 15 B5EEK-229AR
+
+1743,3
+
+
+
+MSI NOTEBOOK PRESTIGE 14 EVO A11M-643AR
+
+1414,4
+
+
+
+PLACA DE VIDEO ASUS TUF-RTX 3080 TI 12 GB GAMING
+
+2046,24
+
+
+
+PLACA DE VIDEO ASUS TUF RTX 3070 TI OC 8 GB GAMING
+
+827,41
+
+
+
+PLACA DE VIDEO ASUS DUAL RX 6700 XT OC 12 GB
+
+823,75
+
+
+
+PLACA DE VIDEO ASUS DUAL RX 6500 XT O 4GB
+
+468,96
+
+
+
+MONITOR 24 ASUS VA24EHE BK
+
+178,62
+
+
+
+ADATA NOTEBOOK XENIA 14I5G11GXELX-BKCAR
+
+982,52
+
+
+
+ADATA NOTEBOOK XENIA XE 15TI7G11GXELX-SGCAR
+
+1232,62
+
+
+
+MONITOR BENQ LED 27 GW2780 TPR BLACK
+
+280,5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PLACA DE VIDEO GIGABYTE RX 6900 XT AORUS M-16G
+
+1104,45
+
+
+
+PLACA DE VIDEO GIGABYTE RTX 3080 TI EAGLE OC 12 GB
+
+1422,18
+
+
+
+PLACA DE VIDEO GIGABYTE RTX 3080 GAMING OC 12GB
+
+1174,47
+
+
+
+PLACA DE VIDEO GIGABYTE GTX 1660 OC 6 GB
+
+456,51
+
+
+
+PLACA DE VIDEO GIGABYTE RTX 2060 D6 12GB
+
+577,25
+
+
+
+PLACA DE VIDEO GIGABYTE RTX 2060 D6 6 GB
+
+564,55
+
+
+
+MONITOR GAMER GIGABYTE 24 G24F-SA
+
+399,92
+
+ACLARAR: IMPUESTO INTERNO INCLUIDO
+
+PROCESADOR AMD (AM4) RYZEN 5 PRO 4650G PRO (12 UNIDADES)
+
+3130,68
+
+
+
+GIGABYTE NOTEBOOK 14 FHD 60HZ I5 INTEL IRIS XE
+
+1427,65
+
+
+
+
+
+
+
+
+
+FUENTE EVGA 750W SUPERNOVA GOLD MODULAR
+
+197,32
+
+
+
+FUENTE EVGA 850W SUPERNOVA GOLD MODULAR
+
+211,35
+
+
+
+PLACA DE VIDEO EVGA GTX 1660 SC ULTRA GAMING 6GB
+
+481,67
+
+
+
+PLACA DE VIDEO EVGA RTX 3070TI FTW3 ULTRA 8GB
+
+1163,38
+
+
+
+PLACA DE VIDEO EVGA RTX 3080TI XC3 ULTRA 12GB
+
+1617,27
+
+
+
+Gracias!!
