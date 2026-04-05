@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-12"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-27]] VIDEO REVIEW LIO - PORTADA
+- **is blocked by:** [[DNYL-27 - VIDEO REVIEW LIO - PORTADA|DNYL-27]] VIDEO REVIEW LIO - PORTADA
 
 ## Descripcion
 

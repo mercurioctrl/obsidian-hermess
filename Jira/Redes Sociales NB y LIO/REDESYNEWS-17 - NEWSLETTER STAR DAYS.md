@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-17"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-30]] NEWS LIO - Promoción Star Days
+- **is blocked by:** [[DNYL-30 - NEWS LIO - Promoción Star Days|DNYL-30]] NEWS LIO - Promoción Star Days
 
 ## Descripcion
 

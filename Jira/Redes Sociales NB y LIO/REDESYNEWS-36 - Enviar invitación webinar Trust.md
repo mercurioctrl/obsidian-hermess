@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-36"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-26]] 45 MINUTOS CON TRUST - WEBINAR CLIENTES
+- **is blocked by:** [[DNYL-26 - 45 MINUTOS CON TRUST - WEBINAR CLIENTES|DNYL-26]] 45 MINUTOS CON TRUST - WEBINAR CLIENTES
 
 ## Descripcion
 

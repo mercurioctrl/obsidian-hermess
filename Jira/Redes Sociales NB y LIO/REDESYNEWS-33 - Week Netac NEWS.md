@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-33"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-45]] NETAC WEEK - NB
+- **is blocked by:** [[DNYL-45 - NETAC WEEK - NB|DNYL-45]] NETAC WEEK - NB
 
 ## Descripcion
 

@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-9"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-19]] Notebooks NB + LO GIGABYTE G5
+- **is blocked by:** [[DNYL-19 - Notebooks NB + LO GIGABYTE G5|DNYL-19]] Notebooks NB + LO GIGABYTE G5
 
 ## Descripcion
 

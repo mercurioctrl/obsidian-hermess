@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-13"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-22]] SMARTPHONES - LIBRE OPCIÓN
+- **is blocked by:** [[DNYL-22 - SMARTPHONES - LIBRE OPCIÓN|DNYL-22]] SMARTPHONES - LIBRE OPCIÓN
 
 ## Descripcion
 

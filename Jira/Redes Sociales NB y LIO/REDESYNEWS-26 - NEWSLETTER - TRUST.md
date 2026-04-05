@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-26"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-8]] NEWSLETTER - TRUST
+- **is blocked by:** [[DNYL-8 - NEWSLETTER - TRUST|DNYL-8]] NEWSLETTER - TRUST
 
 ## Descripcion
 

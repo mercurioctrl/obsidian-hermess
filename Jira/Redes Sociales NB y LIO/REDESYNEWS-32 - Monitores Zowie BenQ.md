@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-32"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-54]] BENQ - NB Monitores
+- **is blocked by:** [[DNYL-54 - BENQ - NB Monitores|DNYL-54]] BENQ - NB Monitores
 
 ## Descripcion
 

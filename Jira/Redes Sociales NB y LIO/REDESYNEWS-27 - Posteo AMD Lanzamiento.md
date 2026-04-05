@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-27"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-48]] Adaptar diseño AMD en LO + NB
+- **is blocked by:** [[DNYL-48 - Adaptar diseño AMD en LO + NB|DNYL-48]] Adaptar diseño AMD en LO + NB
 
 ## Descripcion
 

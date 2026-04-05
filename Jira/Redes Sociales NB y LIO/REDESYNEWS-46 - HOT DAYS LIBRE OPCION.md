@@ -29,11 +29,11 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-46"
 
 ## Relaciones
 
-- **Subtarea:** [[REDESYNEWS-47]] Posteo 30/05 - 5 % de descuento en Smartphones
-- **Subtarea:** [[REDESYNEWS-48]] 31/05 - Por la mañana - 15 % de descuento en sillas Raidmax
-- **Subtarea:** [[REDESYNEWS-49]] 31/05 - Por la tarde 10% en procesadores 
-- **Subtarea:** [[REDESYNEWS-50]] 1/06 - 5% televisores (por la mañana)
-- **Subtarea:** [[REDESYNEWS-51]] 1/06 (por la tarde) - 10% Linea electro. 
+- **Subtarea:** [[REDESYNEWS-47 - Posteo 3005 - 5 % de descuento en Smartphones|REDESYNEWS-47]] Posteo 30/05 - 5 % de descuento en Smartphones
+- **Subtarea:** [[REDESYNEWS-48 - 3105 - Por la mañana - 15 % de descuento en sillas Raidmax|REDESYNEWS-48]] 31/05 - Por la mañana - 15 % de descuento en sillas Raidmax
+- **Subtarea:** [[REDESYNEWS-49 - 3105 - Por la tarde 10% en procesadores|REDESYNEWS-49]] 31/05 - Por la tarde 10% en procesadores 
+- **Subtarea:** [[REDESYNEWS-50 - 106 - 5% televisores (por la mañana)|REDESYNEWS-50]] 1/06 - 5% televisores (por la mañana)
+- **Subtarea:** [[REDESYNEWS-51 - 106 (por la tarde) - 10% Linea electro.|REDESYNEWS-51]] 1/06 (por la tarde) - 10% Linea electro. 
 
 ## Descripcion
 

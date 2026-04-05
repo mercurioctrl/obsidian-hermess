@@ -29,13 +29,13 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-16"
 
 ## Relaciones
 
-- **Subtarea:** [[REDESYNEWS-19]] POSTEO 4-5
-- **Subtarea:** [[REDESYNEWS-23]] Story 4 - 5
-- **Subtarea:** [[REDESYNEWS-18]] Story 5-4
-- **Subtarea:** [[REDESYNEWS-22]] Posteo 6-5
-- **Subtarea:** [[REDESYNEWS-20]] Story 7-4
-- **Subtarea:** [[REDESYNEWS-21]] Story 8-4
-- **is blocked by:** [[DNYL-23]] STARS DAYS LIO
+- **Subtarea:** [[REDESYNEWS-19 - POSTEO 4-5|REDESYNEWS-19]] POSTEO 4-5
+- **Subtarea:** [[REDESYNEWS-23 - Story 4 - 5|REDESYNEWS-23]] Story 4 - 5
+- **Subtarea:** [[REDESYNEWS-18 - Story 5-4|REDESYNEWS-18]] Story 5-4
+- **Subtarea:** [[REDESYNEWS-22 - Posteo 6-5|REDESYNEWS-22]] Posteo 6-5
+- **Subtarea:** [[REDESYNEWS-20 - Story 7-4|REDESYNEWS-20]] Story 7-4
+- **Subtarea:** [[REDESYNEWS-21 - Story 8-4|REDESYNEWS-21]] Story 8-4
+- **is blocked by:** [[DNYL-23 - STARS DAYS LIO|DNYL-23]] STARS DAYS LIO
 
 ## Descripcion
 

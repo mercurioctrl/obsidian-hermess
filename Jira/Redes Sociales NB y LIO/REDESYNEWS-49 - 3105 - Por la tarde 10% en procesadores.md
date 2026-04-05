@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-49"
 
 ## Relaciones
 
-- **Padre:** [[REDESYNEWS-46]] HOT DAYS LIBRE OPCION
+- **Padre:** [[REDESYNEWS-46 - HOT DAYS LIBRE OPCION|REDESYNEWS-46]] HOT DAYS LIBRE OPCION
 
 ## Descripcion
 

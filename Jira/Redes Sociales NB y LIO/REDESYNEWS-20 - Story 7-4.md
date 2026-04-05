@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-20"
 
 ## Relaciones
 
-- **Padre:** [[REDESYNEWS-16]] STAR DAYS
+- **Padre:** [[REDESYNEWS-16 - STAR DAYS|REDESYNEWS-16]] STAR DAYS
 
 ## Descripcion
 

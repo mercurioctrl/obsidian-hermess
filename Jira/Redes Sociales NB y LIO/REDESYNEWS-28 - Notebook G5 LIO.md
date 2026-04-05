@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-28"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-52]] Post Review Notebook G5
+- **is blocked by:** [[DNYL-52 - Post Review Notebook G5|DNYL-52]] Post Review Notebook G5
 
 ## Descripcion
 

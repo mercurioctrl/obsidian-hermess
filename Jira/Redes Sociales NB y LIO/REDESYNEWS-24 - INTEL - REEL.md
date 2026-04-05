@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-24"
 
 ## Relaciones
 
-- **causes:** [[DNYL-32]] INTEL - REEL
+- **causes:** [[DNYL-32 - INTEL - REEL|DNYL-32]] INTEL - REEL
 
 ## Descripcion
 

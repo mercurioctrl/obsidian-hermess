@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-14"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-21]] ASUS - PLACAS DE VIDEO
+- **is blocked by:** [[DNYL-21 - ASUS - PLACAS DE VIDEO|DNYL-21]] ASUS - PLACAS DE VIDEO
 
 ## Descripcion
 

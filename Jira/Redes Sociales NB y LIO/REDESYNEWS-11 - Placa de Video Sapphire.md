@@ -29,7 +29,7 @@ jira_url: "https://bluinc.atlassian.net/browse/REDESYNEWS-11"
 
 ## Relaciones
 
-- **is blocked by:** [[DNYL-18]] BANNER WEB SAPPHIRE LIO + POST
+- **is blocked by:** [[DNYL-18 - BANNER WEB SAPPHIRE LIO + POST|DNYL-18]] BANNER WEB SAPPHIRE LIO + POST
 
 ## Descripcion
 
