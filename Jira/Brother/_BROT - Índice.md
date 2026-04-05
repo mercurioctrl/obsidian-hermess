@@ -4,7 +4,7 @@ name: "Brother"
 type: "software"
 total_issues: 9
 jira_url: "https://bluinc.atlassian.net/browse/BROT"
-synced: "2026-04-05 00:55"
+synced: "2026-04-05 01:17"
 ---
 
 # Brother (BROT)

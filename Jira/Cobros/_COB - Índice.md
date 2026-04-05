@@ -4,7 +4,7 @@ name: "Cobros"
 type: "software"
 total_issues: 612
 jira_url: "https://bluinc.atlassian.net/browse/COB"
-synced: "2026-04-05 00:55"
+synced: "2026-04-05 01:19"
 ---
 
 # Cobros (COB)
