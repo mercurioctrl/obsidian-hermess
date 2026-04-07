@@ -54,4 +54,4 @@ Historial de cambios del proyecto Compras, basado en los commits de ambos reposi
 
 ---
 
-Ver también: [[arquitectura|Arquitectura]] · [[stack|Stack]] · [[Jira/Compras/_COM - Indice|Tickets Jira]]
+Ver también: [[arquitectura|Arquitectura]] · [[stack|Stack]]

@@ -24,7 +24,7 @@ Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 
 - [[NB/expedicion/tareas/API - Feat - Permisos por agente para saltear validaciones de serials|API - Feat - Permisos por agente para saltear validaciones de serials]]
 - [[NB/expedicion/tareas/API - Feat - Incluir permisos de bypass en objeto user|API - Feat - Incluir permisos de bypass en objeto user]]
-- [[NB/expedicion/tareas/APP - Feat - Separar campos obligatorios y opcionales en modal de medidas|APP - Feat - Separar campos obligatorios y opcionales en modal de medidas]]
+- [[NB/expedicion/tareas/APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas|APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas]]
 
 ---
 
@@ -39,4 +39,4 @@ Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 - Frontend local: `http://localhost:4149`
 - Repo API: `New-Bytes/api-rest-expedicion` (GitHub)
 - Repo Frontend: `New-Bytes/expedicion-web-app-v1` (GitHub)
-- Jira Tareas: [[_EXP - Indice]]
+- Jira Tareas: prefijo `EXP-`

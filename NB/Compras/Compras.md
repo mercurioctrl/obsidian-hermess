@@ -21,7 +21,7 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 
 ## Proyecto Jira
 
-Las tareas se trackean con prefijo `COM-` en Jira. Ver [[Jira/Compras/_COM - Indice|índice de tickets]].
+Las tareas se trackean con prefijo `COM-` en Jira.
 
 ---
 *Última sincronización: 2026-04-06*

@@ -95,4 +95,3 @@ SQL Server externo. No hay migraciones Laravel — el schema es gestionado fuera
 
 - [[stack|Stack tecnológico]]
 - [[changelog|Changelog]]
-- [[Jira/Compras/_COM - Indice|Tickets Jira]]

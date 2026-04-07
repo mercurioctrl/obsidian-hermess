@@ -52,11 +52,16 @@
 
 ## Catirel
 
+- [[Catirel/Catirel|Catirel]]
+
 ### Proyectos / It
 
 #### Jira Chrome Extension
 Extensión Chrome MV3 para crear issues de Jira rápidamente desde la barra del navegador.
 - [[Catirel/Proyectos/It/Jira-Chrome-extension/Jira-Chrome-extension|Jira Chrome Extension]]
+
+### Recursos
+- [[Catirel/Modelos de archivo/Historia de usuario para Jira - Modelo|Historia de usuario para Jira - Modelo]]
 
 ---
 
@@ -69,6 +74,12 @@ Extensión Chrome MV3 para crear issues de Jira rápidamente desde la barra del 
 - [[Libre Opcion/03-fix-header-min-height|Fix Header Min Height]]
 - [[Libre Opcion/04-fix-fuentes-innecesarias|Fix Fuentes Innecesarias]]
 - [[Libre Opcion/05-fix-fouc-css-tardio|Fix FOUC CSS Tardío]]
+
+### Tareas
+- [[Libre Opcion/tareas/tareas|Tareas]]
+- [[Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto|APP - Feat - Gestión de imágenes del reseller]]
+- [[Libre Opcion/tareas/APP - Refactor - Migrar cotización de envíos de API legacy a v4|APP - Refactor - Migrar cotización de envíos]]
+- [[Libre Opcion/tareas/API - Feat - Imágenes personalizadas del reseller por producto|API - Feat - Imágenes personalizadas del reseller]]
 
 ---
 
@@ -91,6 +102,7 @@ Sistema de gestión de compras a proveedores. Laravel 9 + Nuxt 2.
 - [[NB/expedicion/documentacion|Documentación]]
 - [[NB/expedicion/memoria|Memoria]]
 - [[NB/expedicion/changelog|Changelog]]
+- [[NB/expedicion/tareas/tareas|Tareas]]
 
 ### Pedidos
 - [[NB/pedidos/pedidos|Pedidos]]
@@ -106,7 +118,10 @@ Sistema de gestión de compras a proveedores. Laravel 9 + Nuxt 2.
 
 ## Planilla Acciones Bully
 
+- [[Planilla Acciones Bully/Planilla Acciones Bully|Planilla Acciones Bully]]
 - [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Documentación Apps Script - Opciones API]]
+- [[Planilla Acciones Bully/prompt-agregar-stock-data-api|Prompt - Agregar stock data API]]
+- [[Planilla Acciones Bully/prompt-optimizar-api|Prompt - Optimizar API]]
 
 ---
 
