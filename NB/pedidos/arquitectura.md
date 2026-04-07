@@ -34,10 +34,13 @@ En la práctica, la mayoría de la lógica está directamente en los **controlle
 | Addendum | 5 | Addendums de pedidos |
 | Client | 5 | Gestión de clientes |
 | Marketing | 5 | Fondos, acciones, movimientos |
+| ShippingMethod | 1 | Métodos de envío (list, carrier, dropshipping) |
 | MakeSale / RemoveSale | 2 | [[modulo-makesale|Ejecutar]] y [[modulo-removesale|revertir]] pedidos |
 
 ### Capas de soporte
 
+- **Services/** — ShippingMethodService, ClientProfileService, ClientService, MercadoLibreService, TotalSalesService, MercadoLibreOrdersService
+- **Repositories/** — ShippingMethodRepository, ClientProfileRepository, MercadoLibreRepository, TotalSalesRepository
 - **Support/** — 6 clases utilitarias: Price, TemplateMail, TokenManager, UploadFile, emails
 - **Helper/** — Filter, Pagination
 - **ValueObjects/** — DateRangeFilter
@@ -45,16 +48,21 @@ En la práctica, la mayoría de la lógica está directamente en los **controlle
 - **ExternalApi/** — BcraApiExternal, VoucherApiExternal
 - **Console Commands** — ProcessSalesObjectives, RefreshMercadoLibreTokens, SendWeeklyEmails
 
-### Middleware custom
+### Autenticación y middleware
 
-- **TokenAuthenticate** — Autenticación JWT para API
+- **TokenAuthenticate** — JWT para endpoints de usuario (header `Authorization: Bearer`)
 - **PermissionMiddleware** — RBAC por endpoint
+- **Rutas SyncUp** — Sin middleware; validan `?token=` contra `env('TOKEN_SYNCUP')` manualmente
 - **CorsMiddleware** — Headers CORS
 - **RebillMiddleware** — Middleware de refacturación
 
 ### Rutas
 
-~234 rutas en `routes/api.php`, todas bajo `/v1`. Auth via JWT (Laravel Sanctum).
+~234 rutas en `routes/api.php`, todas bajo `/v1`. Las rutas `syncUp/*` están fuera del middleware de auth.
+
+### Dato: ShippingMethods
+
+El endpoint `/v1/shippingMethods` consulta `[LO].[dbo].[mediosEnvio]` y siempre agrega un método "Retiro" hardcodeado (id 3999) al final, sin importar el `companyCode`.
 
 ## Frontend
 
@@ -78,16 +86,17 @@ api.js (Axios wrapper), permissions.js (RBAC), firebase-messaging.js (push), api
 
 ## Base de datos
 
-SQL Server (SQLSRV via ODBC). Dos bases:
-- **NewBytes_DBF** — Datos transaccionales (pedidos, remitos, stock, clientes)
-- **NB_WEB** — Datos web (registro_stock, users)
+SQL Server (SQLSRV via ODBC). Tres bases de datos:
+- **NewBytes_DBF** — Datos transaccionales (pedidos, remitos, stock, clientes, agentes)
+- **NB_WEB** — Datos web (registro_stock, users) — conexión default en Laravel
+- **LO** — Datos de logística (mediosEnvio)
 
 Ver detalles de tablas y gotchas en [[contexto#Base de datos|Contexto]].
 
 ## Deploy
 
-- **Backend:** Docker (Ubuntu 22.04, PHP 8.1, Apache) en puerto 8093
-- **Frontend:** PM2 en puerto 3002
+- **Backend:** Docker Compose → container `api-rest-pedidos-apirest-laravel` (8093:80)
+- **Frontend:** PM2 (scripts en `start-example.sh` / `stop-example.sh`)
 - **CI/CD:** GitHub Actions para frontend → branch `gamma` triggerea deploy via SSH
 - **DB:** SQL Server externo (no containerizado)
 

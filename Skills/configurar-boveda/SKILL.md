@@ -42,14 +42,17 @@ Mostrar las carpetas disponibles al usuario y preguntar:
 
 ### 3. Crear carpeta si no existe
 
-Si la carpeta elegida no existe, crear una nota índice para que Obsidian la reconozca:
+Si la carpeta elegida no existe, crear una nota índice para que Obsidian la reconozca.
+**El archivo se llama igual que la carpeta** (NO `index.md`), para que el graph view muestre el nombre real del proyecto:
 
 ```bash
-curl -sk -X PUT "https://localhost:27124/vault/{CARPETA}/index.md" \
+curl -sk -X PUT "https://localhost:27124/vault/{CARPETA}/{NOMBRE_CARPETA}.md" \
   -H "Authorization: Bearer ..." \
   -H "Content-Type: text/markdown" \
   --data-binary "# {Nombre Proyecto}\n\nBase de conocimiento del proyecto."
 ```
+
+Ejemplo: si la carpeta es `bluMiniErp`, el archivo índice es `bluMiniErp/bluMiniErp.md`.
 
 ### 4. Detectar CLAUDE.md del proyecto
 
@@ -100,7 +103,7 @@ curl -sk -H "Authorization: Bearer {TOKEN}" https://localhost:27124/vault/
 
 Reconstruir `Home.md` con:
 - Todas las carpetas y notas organizadas por sección
-- `[[wikilinks]]` a cada nota y carpeta index
+- `[[wikilinks]]` a cada nota y carpeta (el índice de cada carpeta se llama `{NombreCarpeta}.md`, NO `index.md`)
 - Sección de Skills linkeando al índice de Skills
 - No incluir archivos que no sean `.md`
 

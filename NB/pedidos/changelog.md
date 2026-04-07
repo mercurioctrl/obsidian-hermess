@@ -2,6 +2,14 @@
 
 Registro de cambios del proyecto, agrupado por fecha.
 
+## 2026-04-06
+
+- fix: **Retiro siempre visible en shippingMethods** — eliminado early return que impedía agregar "Retiro" (id 3999) cuando la query por `companyCode` no devolvía resultados de la DB
+- docs: nuevas memorias de proyecto (syncUp auth, múltiples DBs, branching)
+
+Archivos: `ShippingMethodService.php`
+Branch: `hotfix/shipping-retiro-always`
+
 ## 2026-03-31
 
 - feat: **Billing Kit Report** — nuevo reporte Excel de kits facturados (controller, service, repository, export)

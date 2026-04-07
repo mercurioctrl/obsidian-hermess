@@ -22,12 +22,12 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 
 ## Repos
 
-- Backend: `New-Bytes/api-rest-pedidos-laravel` (branch principal: `Gamma`)
-- Frontend: `New-Bytes/pedidos-web-app-v1` (branch principal: `Gamma`)
+- Backend: `New-Bytes/api-rest-pedidos-laravel` (branch principal: `Development`)
+- Frontend: `New-Bytes/pedidos-web-app-v1` (branch principal: `Development`)
 
 ## Multi-marca
 
 El sistema soporta tres marcas: **NB**, **NBElectric** y **Libreopción**. Se filtran por `companyCode` en la mayoría de endpoints y tablas.
 
 ---
-*Última sincronización: 2026-04-04*
+*Última sincronización: 2026-04-06*

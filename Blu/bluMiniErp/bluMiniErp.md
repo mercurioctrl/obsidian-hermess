@@ -6,13 +6,13 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 
 ## Arquitectura
 
-| Documento | Contenido |
-|-----------|-----------|
+| Documento                   | Contenido                                                 |
+| --------------------------- | --------------------------------------------------------- |
 | [[Stack e Infraestructura]] | Docker, puertos, variables de entorno, comandos de deploy |
-| [[Base de Datos]] | 22 tablas, columnas, relaciones y migraciones |
-| [[Backend - Modelos]] | Modelos Eloquent: fillable, casts, relaciones, metodos |
-| [[Backend - API]] | Todas las rutas API y controllers |
-| [[Frontend]] | Paginas, stores, composables, layout, convenciones |
+| [[Base de Datos]]           | 22 tablas, columnas, relaciones y migraciones             |
+| [[Backend - Modelos]]       | Modelos Eloquent: fillable, casts, relaciones, metodos    |
+| [[Backend - API]]           | Todas las rutas API y controllers                         |
+| [[Frontend]]                | Paginas, stores, composables, layout, convenciones        |
 
 ## Modulos
 

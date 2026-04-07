@@ -78,9 +78,14 @@ Leer las notas existentes para saber qué actualizar vs crear.
 Crear o actualizar las siguientes notas según corresponda. NO crear notas vacías ni
 con información genérica — solo crear si hay contenido real y útil.
 
-#### 4.1 — `index.md` (siempre)
+#### 4.1 — `{NombreCarpeta}.md` (siempre)
 
-Nota índice del proyecto con:
+Nota índice del proyecto. **El nombre del archivo debe coincidir con el nombre de la carpeta**
+(NO usar `index.md`), para que el graph view de Obsidian muestre el nombre real del proyecto.
+
+Ejemplo: si la carpeta es `bluMiniErp`, el índice es `bluMiniErp/bluMiniErp.md`.
+
+Contenido:
 - Nombre y descripción breve del proyecto
 - Stack tecnológico
 - Links a todas las demás notas del proyecto (`[[nota]]`)
@@ -160,7 +165,7 @@ Este paso es **obligatorio** en cada sincronización. Para cada nota del proyect
 - El nombre del link debe coincidir con el nombre del archivo sin extensión
 - Usar `[[nota#Sección]]` para links a secciones específicas
 - No crear links circulares innecesarios (A→B→A está ok si ambos son relevantes)
-- El index.md debe ser el hub central conectado a todas las notas
+- El archivo índice (`{NombreCarpeta}.md`) debe ser el hub central conectado a todas las notas
 
 ### 6. Subir notas a Obsidian
 
@@ -178,11 +183,11 @@ Subir en paralelo cuando sea posible (múltiples curl en paralelo).
 ### 7. Actualizar índices recursivamente (SIEMPRE)
 
 La actualización de índices es **recursiva hacia arriba**: desde la carpeta del proyecto
-hasta `Home.md`, pasando por cada carpeta padre que tenga un `index.md`.
+hasta `Home.md`, pasando por cada carpeta padre que tenga un archivo índice (`{NombreCarpeta}.md`).
 
 **Ejemplo:** si el proyecto está en `NB/expedicion/`, se actualizan:
-1. `NB/expedicion/index.md` — ya actualizado en paso 4.1
-2. `NB/index.md` — debe listar `expedicion/` con sus notas
+1. `NB/expedicion/expedicion.md` — ya actualizado en paso 4.1
+2. `NB/NB.md` — debe listar `expedicion/` con sus notas
 3. `Home.md` — debe listar `NB/` con sus subcarpetas
 
 #### Algoritmo
@@ -196,13 +201,13 @@ for i in range(len(segmentos) - 1, 0, -1):
     carpeta_padre = "/".join(segmentos[:i])  # "NB"
     # 1. Listar contenido de carpeta_padre
     # 2. Para cada subcarpeta, listar sus notas
-    # 3. Leer index.md actual de carpeta_padre (si existe)
-    # 4. Regenerar index.md con wikilinks a todas las subcarpetas y notas
+    # 3. Leer {carpeta_padre}.md actual (si existe)
+    # 4. Regenerar {carpeta_padre}.md con wikilinks a todas las subcarpetas y notas
 
 # Finalmente, actualizar Home.md (raíz de la bóveda)
 ```
 
-#### Para cada `index.md` padre:
+#### Para cada índice padre:
 
 1. Listar subcarpetas y notas del directorio:
    ```bash
@@ -212,9 +217,9 @@ for i in range(len(segmentos) - 1, 0, -1):
    ```bash
    curl -sk -H "Authorization: Bearer {TOKEN}" https://localhost:27124/vault/{CARPETA_PADRE}/{SUB}/
    ```
-3. Regenerar el `index.md` con:
+3. Regenerar `{NOMBRE_CARPETA_PADRE}.md` con:
    - Título y descripción breve de la carpeta
-   - Wikilinks a cada subcarpeta (via su `index.md`) y sus notas principales
+   - Wikilinks a cada subcarpeta (via su `{NombreSubcarpeta}.md`) y sus notas principales
    - No incluir archivos que no sean `.md`
 
 #### Para `Home.md` (último paso):
@@ -243,7 +248,7 @@ Reconstruir `Home.md` con:
 
 ## {Carpeta raíz}
 
-- [[{Carpeta}/index|{Título}]]
+- [[{Carpeta}/{NombreCarpeta}|{Título}]]
 
 ### {Subcarpeta}
 {Descripción breve inferida del contenido}
@@ -253,7 +258,7 @@ Reconstruir `Home.md` con:
 ---
 
 ## Skills de Claude Code
-Ver [[Skills/index|índice de Skills]].
+Ver [[Skills/Skills|Skills]].
 - [[Skills/{skill}/SKILL|{nombre}]] — {descripción corta}
 
 ---

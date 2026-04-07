@@ -1,105 +1,126 @@
 # Home
 
-Índice general de la bóveda.
+Índice general de la bóveda de conocimiento.
 
 ---
 
 ## Asus
 
 ### Contrataciones
-- [[Contrataciones MOC]]
-- [[Calculadora Excel - Instrucciones]]
-- [[Coeficientes de Facturación]]
-- [[Escenarios de Contratación]]
-- [[Fórmulas del Modelo]]
-- [[Modelo de Liquidación CCT 130-75]]
+- [[Asus/Contrataciones/Contrataciones|Contrataciones]]
+- [[Asus/Contrataciones/Contrataciones MOC|Contrataciones MOC]]
+- [[Asus/Contrataciones/Modelo de Liquidación CCT 130-75|Modelo de Liquidación CCT 130-75]]
+- [[Asus/Contrataciones/Coeficientes de Facturación|Coeficientes de Facturación]]
+- [[Asus/Contrataciones/Escenarios de Contratación|Escenarios de Contratación]]
+- [[Asus/Contrataciones/Fórmulas del Modelo|Fórmulas del Modelo]]
+- [[Asus/Contrataciones/Calculadora Excel - Instrucciones|Calculadora Excel - Instrucciones]]
 
 ---
 
 ## Blu
 
-- [[Blu/index|Blu]]
+- [[Blu/Blu|Blu]]
 
 ### blu-web-v1
-- [[Blu/blu-web-v1/index|blu-web-v1]]
-  - [[Blu/blu-web-v1/arquitectura|Arquitectura]]
-  - [[Blu/blu-web-v1/base-de-conocimiento|Base de conocimiento]]
-  - [[Blu/blu-web-v1/changelog|Changelog]]
-  - [[Blu/blu-web-v1/stack|Stack]]
+- [[Blu/blu-web-v1/blu-web-v1|blu-web-v1]]
+- [[Blu/blu-web-v1/arquitectura|Arquitectura]]
+- [[Blu/blu-web-v1/stack|Stack]]
+- [[Blu/blu-web-v1/base-de-conocimiento|Base de Conocimiento]]
+- [[Blu/blu-web-v1/changelog|Changelog]]
 
 ### bluMiniErp
-- [[Blu/bluMiniErp/index|bluMiniErp]]
-  - [[Blu/bluMiniErp/Backend - API|Backend - API]]
-  - [[Blu/bluMiniErp/Backend - Modelos|Backend - Modelos]]
-  - [[Blu/bluMiniErp/Base de Datos|Base de Datos]]
-  - [[Blu/bluMiniErp/Componentes UI|Componentes UI]]
-  - [[Blu/bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
-  - [[Blu/bluMiniErp/Design Tokens|Design Tokens]]
-  - [[Blu/bluMiniErp/Errores Comunes|Errores Comunes]]
-  - [[Blu/bluMiniErp/Frontend|Frontend]]
-  - [[Blu/bluMiniErp/Layout System|Layout System]]
-  - [[Blu/bluMiniErp/Medios de Pago|Medios de Pago]]
-  - [[Blu/bluMiniErp/Modulo Permisos|Módulo Permisos]]
-  - [[Blu/bluMiniErp/Modulo Personal|Módulo Personal]]
-  - [[Blu/bluMiniErp/Page Templates|Page Templates]]
-  - [[Blu/bluMiniErp/Reglas de Negocio|Reglas de Negocio]]
-  - [[Blu/bluMiniErp/Stack e Infraestructura|Stack e Infraestructura]]
-  - [[Blu/bluMiniErp/changelog|Changelog]]
-  - [[Blu/bluMiniErp/memoria|Memoria]]
+- [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]]
+- [[Blu/bluMiniErp/Frontend|Frontend]]
+- [[Blu/bluMiniErp/Backend - API|Backend - API]]
+- [[Blu/bluMiniErp/Backend - Modelos|Backend - Modelos]]
+- [[Blu/bluMiniErp/Base de Datos|Base de Datos]]
+- [[Blu/bluMiniErp/Stack e Infraestructura|Stack e Infraestructura]]
+- [[Blu/bluMiniErp/Componentes UI|Componentes UI]]
+- [[Blu/bluMiniErp/Layout System|Layout System]]
+- [[Blu/bluMiniErp/Page Templates|Page Templates]]
+- [[Blu/bluMiniErp/Design Tokens|Design Tokens]]
+- [[Blu/bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
+- [[Blu/bluMiniErp/Reglas de Negocio|Reglas de Negocio]]
+- [[Blu/bluMiniErp/Medios de Pago|Medios de Pago]]
+- [[Blu/bluMiniErp/Modulo Permisos|Módulo Permisos]]
+- [[Blu/bluMiniErp/Modulo Personal|Módulo Personal]]
+- [[Blu/bluMiniErp/Errores Comunes|Errores Comunes]]
+- [[Blu/bluMiniErp/memoria|Memoria]]
+- [[Blu/bluMiniErp/changelog|Changelog]]
 
 ---
 
-## NB
+## Catirel
 
-- [[NB/index|NB]]
+### Proyectos / It
 
-### expedicion
-Sistema de expedición y logística de warehouse.
-- [[NB/expedicion/index|Expedición]]
-  - [[NB/expedicion/contexto|Contexto]]
-  - [[NB/expedicion/arquitectura|Arquitectura]]
-  - [[NB/expedicion/stack|Stack]]
-  - [[NB/expedicion/documentacion|Documentación]]
-  - [[NB/expedicion/changelog|Changelog]]
-  - [[NB/expedicion/memoria|Memoria]]
+#### Jira Chrome Extension
+Extensión Chrome MV3 para crear issues de Jira rápidamente desde la barra del navegador.
+- [[Catirel/Proyectos/It/Jira-Chrome-extension/Jira-Chrome-extension|Jira Chrome Extension]]
 
-### pedidos
-Sistema de gestión de pedidos.
-- [[NB/pedidos/index|Pedidos]]
-  - [[NB/pedidos/contexto|Contexto]]
-  - [[NB/pedidos/arquitectura|Arquitectura]]
-  - [[NB/pedidos/stack|Stack]]
-  - [[NB/pedidos/changelog|Changelog]]
-  - [[NB/pedidos/memoria|Memoria]]
-  - [[NB/pedidos/modulo-makesale|Módulo MakeSale]]
-  - [[NB/pedidos/modulo-removesale|Módulo RemoveSale]]
+---
+
+## Libre Opcion
+
+- [[Libre Opcion/Libre Opcion|Libre Opción]]
+- [[Libre Opcion/00-resumen-diagnostico-seo-performance|Resumen Diagnóstico SEO/Performance]]
+- [[Libre Opcion/01-fix-cls-imagenes|Fix CLS Imágenes]]
+- [[Libre Opcion/02-fix-lcp-render-blocking|Fix LCP Render Blocking]]
+- [[Libre Opcion/03-fix-header-min-height|Fix Header Min Height]]
+- [[Libre Opcion/04-fix-fuentes-innecesarias|Fix Fuentes Innecesarias]]
+- [[Libre Opcion/05-fix-fouc-css-tardio|Fix FOUC CSS Tardío]]
+
+---
+
+## NB — New Bytes
+
+- [[NB/NB|NB]]
+
+### Compras
+Sistema de gestión de compras a proveedores. Laravel 9 + Nuxt 2.
+- [[NB/Compras/Compras|Compras]]
+- [[NB/Compras/arquitectura|Arquitectura]]
+- [[NB/Compras/stack|Stack]]
+- [[NB/Compras/changelog|Changelog]]
+
+### Expedición
+- [[NB/expedicion/expedicion|Expedición]]
+- [[NB/expedicion/arquitectura|Arquitectura]]
+- [[NB/expedicion/stack|Stack]]
+- [[NB/expedicion/contexto|Contexto]]
+- [[NB/expedicion/documentacion|Documentación]]
+- [[NB/expedicion/memoria|Memoria]]
+- [[NB/expedicion/changelog|Changelog]]
+
+### Pedidos
+- [[NB/pedidos/pedidos|Pedidos]]
+- [[NB/pedidos/arquitectura|Arquitectura]]
+- [[NB/pedidos/stack|Stack]]
+- [[NB/pedidos/contexto|Contexto]]
+- [[NB/pedidos/modulo-makesale|Módulo MakeSale]]
+- [[NB/pedidos/modulo-removesale|Módulo RemoveSale]]
+- [[NB/pedidos/memoria|Memoria]]
+- [[NB/pedidos/changelog|Changelog]]
 
 ---
 
 ## Planilla Acciones Bully
 
-*(Carpeta vacía)*
+- [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Documentación Apps Script - Opciones API]]
 
 ---
 
 ## Skills de Claude Code
 
-Ver [[Skills/index|índice de Skills]].
+Ver [[Skills/Skills|Skills]].
 
-| Skill | Descripción |
-|-------|-------------|
-| [[Skills/configurar-boveda/SKILL|configurar-boveda]] | Vincular proyecto con Obsidian |
-| [[Skills/sincronizar-boveda/SKILL|sincronizar-boveda]] | Sincronizar proyecto con Obsidian |
-| [[Skills/fullstack-docker-app/SKILL|fullstack-docker-app]] | Infraestructura Docker fullstack |
-| [[Skills/skill-creator/SKILL|skill-creator]] | Creador de skills |
-| [[Skills/pdf/SKILL|pdf]] | Generación y edición de PDF |
-| [[Skills/docx/SKILL|docx]] | Generación de documentos Word |
-| [[Skills/pptx/SKILL|pptx]] | Generación de presentaciones |
-| [[Skills/xlsx/SKILL|xlsx]] | Generación de hojas de cálculo |
-| [[Skills/schedule/SKILL|schedule]] | Agentes programados |
-
----
-
-## Notas sueltas
-
-- [[2026-04-04]]
+- [[Skills/configurar-boveda/SKILL|Configurar Bóveda]] — Vincula proyectos con Obsidian
+- [[Skills/sincronizar-boveda/SKILL|Sincronizar Bóveda]] — Sincroniza docs del proyecto
+- [[Skills/tarea-boveda/SKILL|Tarea Bóveda]] — Crea notas de tareas (APP/API) en el proyecto
+- [[Skills/fullstack-docker-app/SKILL|Fullstack Docker App]] — Genera infra Docker completa
+- [[Skills/skill-creator/SKILL|Skill Creator]] — Crea nuevos skills
+- [[Skills/pdf/SKILL|PDF]] — Generación de PDFs
+- [[Skills/docx/SKILL|DOCX]] — Generación de documentos Word
+- [[Skills/xlsx/SKILL|XLSX]] — Generación de hojas de cálculo
+- [[Skills/pptx/SKILL|PPTX]] — Generación de presentaciones
+- [[Skills/schedule/SKILL|Schedule]] — Agentes programados

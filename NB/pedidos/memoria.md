@@ -27,5 +27,20 @@ No configurado. Plugin usa stub vacío. Verificar guards antes de llamar a `getM
 - Frontend: local, puerto 3002, proxy `/v1/` → localhost:8093
 - DB: SQL Server externo
 
+### SyncUp — autenticación por TOKEN_SYNCUP
+Las rutas `/v1/syncUp/*` (mercadolibreOrders, pricesPendingOrders, clientLtv, etc.) no usan JWT ni middleware de auth. Cada controller valida manualmente con `$request->input('token') != env('TOKEN_SYNCUP')`. Son endpoints para cron jobs y procesos internos.
+
+### Múltiples bases de datos
+El backend consulta varias DBs SQL Server, no solo NB_WEB:
+- **[LO].[dbo]** — mediosEnvio (métodos de envío)
+- **NewBytes_DBF.dbo** — pedclit/pedclil (pedidos), stocks, albclit/albclil (remitos), agentes
+- **NB_WEB** — registro_stock, users (base default en config)
+
+### Branching
+- Rama base: `Development`
+- Hotfixes: `hotfix/{descripcion}` (ej: `hotfix/shipping-retiro-always`)
+- Features: `PED-{ticket}-{descripcion}`
+- Deploy frontend: PR a `gamma` → GitHub Actions
+
 ---
-*Sincronizado: 2026-04-04*
+*Sincronizado: 2026-04-06*

@@ -4,20 +4,92 @@
     "type": "split",
     "children": [
       {
-        "id": "a1dc445a11f77ee9",
-        "type": "tabs",
+        "id": "882152bc3a7f01b1",
+        "type": "split",
         "children": [
           {
-            "id": "b2f6de10b577039c",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
-            }
+            "id": "91be81ccd8df0465",
+            "type": "tabs",
+            "dimension": 55.41211519364448,
+            "children": [
+              {
+                "id": "0778c52da332ceb1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Jira/Servicio de asistencia | BLU/_SNB - Indice.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_SNB - Indice"
+                }
+              },
+              {
+                "id": "b097bda5b02e6d1e",
+                "type": "leaf",
+                "state": {
+                  "type": "graph",
+                  "state": {},
+                  "icon": "lucide-git-fork",
+                  "title": "Vista gráfica"
+                }
+              }
+            ],
+            "currentTab": 1
+          },
+          {
+            "id": "1e132dc5b54d17ae",
+            "type": "tabs",
+            "dimension": 44.58788480635551,
+            "children": [
+              {
+                "id": "f0d9a10bdef3624e",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/hermess/www/obsidian-hermess/obsidian-hermess",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: ✳ Check Blu directory index status"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -49,7 +121,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#N",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,11 +142,12 @@
               "title": "Marcadores"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 405.5
   },
   "right": {
     "id": "0e915724376836fd",
@@ -109,12 +182,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Libre Opcion/00-resumen-diagnostico-seo-performance.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de 00-resumen-diagnostico-seo-performance"
+              "title": "Enlaces salientes"
             }
           },
           {
@@ -187,47 +259,48 @@
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "b2f6de10b577039c",
+  "active": "f0d9a10bdef3624e",
   "lastOpenFiles": [
-    "FB-38.md",
-    "Jira/Fontaine Bleau/_FB - Indice.md",
-    "Jira/Fontaine Bleau/FB-4 - Profile picture para Instagram, Facebook y Linkedin.md",
-    "LOCAPP-31.md",
-    "Jira/ LO - Servicio Comprobantes - APP/_LOCAPP - Indice.md",
-    "Jira/_Jira - Indice.md",
-    "Jira/Cobros/_COB - Indice.md",
-    "COB-49.md",
-    "Jira/TABLERO DE ELO/_TDE - Indice.md",
-    "Jira/TABLERO DE ELO",
-    "Jira/Service Task v3/STASK-32 - API-TASK-V3 feat Integrar Infobip como proveedor SMS por defecto con.md",
-    "Jira/Service Task v3/STASK-31 - API - Task - Feat - Implementación Endpoint Legacy Notifications - POST.md",
-    "Jira/Service Task v3/STASK-30 - API - Task V3 - Refactor - Resolver emailteléfono al encolar notificaciones.md",
-    "Jira/Service Task v3/STASK-29 - API - Task v3 -Feat - Implementación para procesar envío de notificaciones.md",
-    "Jira/Service Task v3/STASK-28 - API - feat Limpieza automática de tokens push inválidos (FCMAPNS).md",
-    "Jira/Service Task v3/STASK-27 - API - DB - Migración y depuración de tokens FCMAPNs legacy a UserPushDevices.md",
-    "Jira/Service Task v3/STASK-26 - API - DB - Migración y normalización de números telefónicos legacy a.md",
-    "Jira/Service Task v3/STASK-25 - API - Refactor - implementar Rate Limiting, Throttling y Middleware en POST.md",
-    "Jira/Service Task v3/STASK-24 - API - Feat - Implementar Twilio configuracion e implemetancion de whatsapp.md",
-    "Jira/Service Task v3/STASK-23 - API - Feat - Implementar Twilio configuracion e implemetancion de sms queue.md",
-    "Jira/Service Task v3/STASK-21 - API - Readme - Documentacion y reglas operativas.md",
-    "Jira/Service Task v3/STASK-20 - API - Workers - Preparación para SMS y WhatsApp (sin ejecución).md",
-    "Jira/Service Task v3/STASK-19 - API - Workers - Worker de Emails.md",
-    "Jira/Service Task v3/STASK-18 - API - Workers - Worker de Push Notifications (Android + iPhone).md",
-    "Jira/Service Task v3/STASK-17 - API - Dataset - Modelo de datos para notificaciones y attempts.md",
-    "Jira/Service Task v3/STASK-16 - API - Feat – Encolar notificación multicanal (universal).md",
-    "Jira/Service Task v3/STASK-15 - Sistema de Notificaciones Multicanal (Queue + Workers).md",
-    "Jira/Service Task v3",
-    "Jira/Servicio de asistencia | BLU",
-    "Jira/Redes Sociales NB y LIO",
-    "Jira/Postventa",
-    "Jira/PreciosGamer",
-    "Jira/Pedidos",
-    "Jira/NBWEB",
-    "Jira/NBElectric",
-    "Jira/Naevo | Vitalsaf",
+    "NB/expedicion/documentacion.md",
+    "NB/expedicion/stack.md",
+    "Planilla Acciones Bully/prompt-agregar-stock-data-api.md",
+    "Planilla Acciones Bully/Documentacion Apps Script - Opciones API.md",
+    "Planilla Acciones Bully/prompt-optimizar-api.md",
+    "Planilla Acciones Bully/codigo/Code_gs_v5_sin_googlefinance.js",
+    "Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto.md",
+    "Libre Opcion/tareas/API - Feat - Imágenes personalizadas del reseller por producto.md",
+    "Asus/Contrataciones/lu2111d6e6z.tmp",
+    "Asus/Contrataciones/Calculadora_Costos_Comercio.xlsx",
+    "Libre Opcion/tareas/APP - Refactor - Migrar cotización de envíos de API legacy a v4.md",
+    "NB/expedicion/tareas/APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas.md",
+    "Libre Opcion/tareas",
+    "Catirel/Modelos de archivo/Historia de usuario para Jira - Modelo.md",
+    "Catirel/Modelos de archivo",
+    "NB/expedicion/tareas/API - Feat - Incluir permisos de bypass en objeto user.md",
+    "NB/expedicion/tareas/API - Feat - Permisos por agente para saltear validaciones de serials.md",
+    "Skills/tarea-boveda/SKILL.md",
+    "Skills/tarea-boveda",
+    "NB/expedicion/tareas",
+    "Catirel/Proyectos/It/Jira-Chrome-extension/Jira-Chrome-extension.md",
+    "Asus/Contrataciones/Contrataciones.md",
+    "Libre Opcion/Libre Opcion.md",
+    "NB/NB.md",
+    "NB/Compras/Compras.md",
+    "NB/expedicion/expedicion.md",
+    "NB/pedidos/pedidos.md",
+    "Skills/Skills.md",
+    "Blu/Blu.md",
+    "Blu/bluMiniErp/bluMiniErp.md",
+    "Blu/blu-web-v1/blu-web-v1.md",
+    "Catirel/Proyectos/It/Jira-Chrome-extension/index.md",
+    "Catirel/Proyectos/It/Jira-Chrome-extension",
+    "Catirel/Proyectos/It",
+    "Catirel/Proyectos",
+    "NB/Compras/index.md",
     "Sin título 1.canvas",
     "NB/Sin título.canvas",
     "Sin título.canvas"

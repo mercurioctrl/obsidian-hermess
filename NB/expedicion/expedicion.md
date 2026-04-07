@@ -11,12 +11,20 @@ Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 
 | Nota | Descripción |
 |------|-------------|
-| [[NB/expedicion/contexto\|Contexto]] | Qué es, dominios de negocio, autenticación, entornos |
-| [[NB/expedicion/arquitectura\|Arquitectura]] | Diagramas, capas backend, flujo frontend, Docker, CI/CD |
-| [[NB/expedicion/stack\|Stack]] | Tecnologías, versiones, dependencias, servicios externos |
-| [[NB/expedicion/documentacion\|Documentación]] | Setup local, variables de entorno, comandos, endpoints |
-| [[NB/expedicion/changelog\|Changelog]] | Historial de cambios (API + Frontend) |
-| [[NB/expedicion/memoria\|Memoria]] | Problemas resueltos, decisiones, gotchas |
+| [[NB/expedicion/contexto|Contexto]] | Qué es, dominios de negocio, autenticación, entornos |
+| [[NB/expedicion/arquitectura|Arquitectura]] | Diagramas, capas backend, flujo frontend, Docker, CI/CD |
+| [[NB/expedicion/stack|Stack]] | Tecnologías, versiones, dependencias, servicios externos |
+| [[NB/expedicion/documentacion|Documentación]] | Setup local, variables de entorno, comandos, endpoints |
+| [[NB/expedicion/changelog|Changelog]] | Historial de cambios (API + Frontend) |
+| [[NB/expedicion/memoria|Memoria]] | Problemas resueltos, decisiones, gotchas |
+
+---
+
+## Tareas
+
+- [[NB/expedicion/tareas/API - Feat - Permisos por agente para saltear validaciones de serials|API - Feat - Permisos por agente para saltear validaciones de serials]]
+- [[NB/expedicion/tareas/API - Feat - Incluir permisos de bypass en objeto user|API - Feat - Incluir permisos de bypass en objeto user]]
+- [[NB/expedicion/tareas/APP - Feat - Separar campos obligatorios y opcionales en modal de medidas|APP - Feat - Separar campos obligatorios y opcionales en modal de medidas]]
 
 ---
 
@@ -31,3 +39,4 @@ Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 - Frontend local: `http://localhost:4149`
 - Repo API: `New-Bytes/api-rest-expedicion` (GitHub)
 - Repo Frontend: `New-Bytes/expedicion-web-app-v1` (GitHub)
+- Jira Tareas: [[_EXP - Indice]]
