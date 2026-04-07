@@ -1,81 +1,157 @@
-Actualmente el endpoint
-
-`GET /inventories/categories`
-
-del **API REST v3** actúa como **proxy** hacia el microservicio microservicio-inventory-v1, el cual consulta **SQL Server**.  
-El objetivo es **migrar** este recurso a la **nueva API v4**, consultando la base de datos **directamente** y eliminando la dependencia del microservicio intermediario.
+Migrar el endpoint de preguntas y respuestas de la ficha de producto desde **omega-api** a la **nueva API**, manteniendo el contrato de respuesta **exactamente igual** para que el front **no requiera cambios**.
 
 ---
 
-#### Recurso
+### Endpoint
+
+`GET /productos/ficha/{id}/preguntas-respuestas`
+
+### Tabla de definición del recurso
 
 |   |   |
 |---|---|
-|Ítem|Valor|
-|Verbo|GET|
-|Path|/inventories/categories|
-|Autenticación|**Bearer JWT requerido**|
+|Campo|Detalle|
+|**Método**|GET|
+|**Autenticación**|No requerida (público)|
+|**Path param**|id _(integer)_ — ID del producto|
+|**Query params**|Ninguno|
+|**Request body**|Ninguno|
+
+### Ejemplo de llamada
+
+`GET /productos/ficha/573936/preguntas-respuestas`
 
 ---
 
-#### Filtros / Query params
+## Respuesta esperada
 
-Actualmente el endpoint **no acepta ni reenvía parámetros**.  
-En la migración se mantiene el mismo comportamiento: **sin filtros**, debe devolver **todas las categorías activas**.
+### Status y Content-Type
 
----
+`200 OK Content-Type: application/json`
 
-#### Query a ejecutar (SQL Server)
+### Estructura de respuesta
 
-`SELECT     C.id,     C.nombre AS name FROM LO.dbo.categorias C WHERE C.activa = 1   AND C.eliminada = 0 ORDER BY C.nombre ASC;`
+Array de preguntas con sus respuestas.
 
-**Notas**
+### Ejemplo de respuesta (copiar/pegar)
 
-- Base de datos: **SQL Server**
+`[   {     "id": 1021,     "texto": "¿Tiene garantía oficial?",     "fecha": "2024-11-15 10:32:00",     "usuario": {       "id": 84,       "nombre": "Juan Pérez",       "avatar": 3,       "bloqueado": false     },     "producto": {       "id": 573936,       "nombre": "Notebook Lenovo IdeaPad 15",       "img": "https://cdn.libreopcion.com.ar/productos/573936/foto-0.jpg"     },     "vendedor": {       "id": 12,       "usuarioId": 55,       "nombre": "TechStore"     },     "respuesta": {       "id": 408,       "texto": "Sí, tiene 12 meses de garantía oficial.",       "fecha": "2024-11-15 14:05:00",       "usuario_id": 55,       "respuesta_util": null     }   },   {     "id": 998,     "texto": "¿Tiene stock disponible?",     "fecha": "2024-11-10 09:15:00",     "usuario": {       "id": 91,       "nombre": "María González",       "avatar": 1,       "bloqueado": false     },     "producto": {       "id": 573936,       "nombre": "Notebook Lenovo IdeaPad 15",       "img": "https://cdn.libreopcion.com.ar/productos/573936/foto-0.jpg"     },     "vendedor": {       "id": 12,       "usuarioId": 55,       "nombre": "TechStore"     },     "respuesta": null   } ]`
+
+### Casos especiales
+
+- **Si no hay preguntas:** responde array vacío
     
-- Tabla: **LO.dbo.categorias**
+
+`[]`
+
+- **Si el producto no existe o hay error interno:**
     
-- **Sin JOINs** ni subconsultas
-    
+
+`500 Internal Server Error`
+
+`{ "error": { "code": 500, "message": "..." } }`
 
 ---
 
-#### Payload de request
+## Esquema de campos
 
-No aplica (GET sin body).
-
----
-
-#### Respuesta exitosa — 200 OK
-
-`[   { "id": 1, "name": "Laptops" },   { "id": 2, "name": "Mouses" },   { "id": 3, "name": "Teclados" } ]`
+### ProductoPreguntaDTO
 
 |   |   |   |
 |---|---|---|
 |Campo|Tipo|Descripción|
-|id|integer|ID de la categoría|
-|name|string|Nombre de la categoría|
+|id|integer|ID de la pregunta|
+|texto|string|Contenido de la pregunta|
+|fecha|datetime|Fecha de creación (YYYY-MM-DD HH:mm:ss)|
+|usuario.id|integer|ID del usuario que preguntó|
+|usuario.nombre|string|Nombre del usuario|
+|usuario.avatar|integer|ID del avatar|
+|usuario.bloqueado|boolean|Si el usuario fue bloqueado en este producto|
+|producto.id|integer|ID del producto|
+|producto.nombre|string|Título del producto|
+|producto.img|string|URL de la imagen principal normalizada|
+|vendedor.id|integer|ID del vendedor|
+|vendedor.usuarioId|integer|ID del usuario asociado al vendedor|
+|vendedor.nombre|string|Nombre del vendedor|
+|respuesta|object \| null|Respuesta del vendedor, null si no respondió|
 
 ---
 
-#### Respuestas de error
+### respuesta (ProductoRespuestaDTO)
 
-|   |   |
-|---|---|
-|Código|Caso|
-|401|Token ausente o inválido|
-|500|Error interno al consultar la base de datos|
+|   |   |   |
+|---|---|---|
+|Campo|Tipo|Descripción|
+|id|integer|ID de la respuesta|
+|texto|string|Contenido de la respuesta|
+|fecha|datetime|Fecha de la respuesta|
+|usuario_id|integer|ID del vendedor que respondió|
+|respuesta_util|boolean \| null|null = sin calificar, true = útil, false = no útil|
+
+El endpoint ejecuta **2 queries secuenciales**.
 
 ---
 
-#### Criterios de aceptación
+### Query 1 — Preguntas y respuestas del producto
 
-- El endpoint responde en **GET** /inventories/categories
+Obtener las preguntas del producto, sus respuestas (si existen), datos del usuario que pregunta, vendedor y nombre del producto.
+
+`SELECT     [PP].id,     [PP].texto,     [PP].fecha,      [PP].usuario_id,     [U].nombre              AS usuario_nombre,     [U].avatar              AS usuario_avatar,     ISNULL([PPUB].id, 0)    AS usuario_bloqueado,      [PP].producto_id,     [P].titulo              AS producto_nombre,      [PP].vendedor_id,     [V].usuarioID           AS vendedor_usuario_id,     [V].nombre              AS vendedor_nombre,      [PR].id                 AS respuesta_id,     [PR].texto              AS respuesta_texto,     [PR].fecha              AS respuesta_fecha,     [PR].usuario_id         AS respuesta_usuario,     [PR].respuesta_util     AS respuesta_util  FROM [LO].[dbo].[productosPreguntas] PP  LEFT JOIN [LO].[dbo].[productosRespuestas] PR     ON [PR].pregunta_id = [PP].id  LEFT JOIN [LO].[dbo].[vendedores] V     ON [V].id = [PP].vendedor_id  LEFT JOIN [LO].[dbo].[usuarios] U     ON [U].id = [PP].usuario_id  LEFT JOIN [CS].[dbo].[productos] P     ON [P].id = [PP].producto_id  LEFT JOIN [LO].[dbo].[productosPreguntasUsuariosBloqueados] PPUB     ON [P].id = [PPUB].producto_id  WHERE [PP].ocultar = 0   AND [PP].producto_id = 573936   -- :id del path param  ORDER BY [PP].fecha DESC`
+
+### Notas clave
+
+- Filtra únicamente preguntas visibles: PP.ocultar = 0
     
-- Requiere **autenticación JWT** válida
+- Filtra por el id del producto recibido por path param
     
-- Devuelve solo categorías con activa = 1 y eliminada = 0
+- Ordena por fecha descendente (más recientes primero)
     
-- Respuesta **ordenada alfabéticamente** por nombre
+- La respuesta puede venir nula si no existe fila en productosRespuestas (por LEFT JOIN)
     
-- **No depende** del microservicio microservicio-inventory-v1 ni de llamadas HTTP internas
+
+---
+
+### Query 2 — Fotos del producto (para construir producto.img)
+
+#### Base de datos
+
+- **PRODUCTOS**
+    
+- **CS**
+    
+
+### Objetivo
+
+Obtener las fotos válidas del/los productos involucrados para construir producto.img usando la imagen principal (portada).
+
+### SQL (copiar/pegar)
+
+`SELECT     [F].id,     [F].checksum,     [PF].id_producto  FROM [PRODUCTOS].[dbo].[fotos] F  LEFT JOIN [CS].[dbo].[productosFotos] PF     ON [F].id = [PF].id_foto  WHERE [PF].id_producto IN (573936)   -- ids únicos de la query 1   AND [F].checksum <> 'd41d8cd98f00b204e9800998ecf8427e.jpg'   AND [F].excluir_imagen <> 1   AND [PF].eliminado_usuario <> 1  ORDER BY [PF].portada DESC, [PF].orden ASC`
+
+### Notas clave
+
+- Se ejecuta con los **IDs únicos de producto** obtenidos en la query 1
+    
+- Excluye imágenes inválidas/vacías (checksum placeholder)
+    
+- Excluye imágenes marcadas para no mostrar
+    
+- Prioriza:
+    
+    1. portada DESC (primero portada)
+        
+    2. orden ASC (orden natural)
+        
+
+---
+
+## Construcción de producto.img
+
+La **primera foto resultante** por producto (checksum) se:
+
+1. normaliza con Utils::normalizarImagen()
+    
+2. y se expone como:
+    
+
+`"producto": {   "img": "https://..." }`

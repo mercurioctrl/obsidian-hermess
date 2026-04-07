@@ -16,10 +16,14 @@
                 "id": "0778c52da332ceb1",
                 "type": "leaf",
                 "state": {
-                  "type": "graph",
-                  "state": {},
-                  "icon": "lucide-git-fork",
-                  "title": "Vista gráfica"
+                  "type": "markdown",
+                  "state": {
+                    "file": "NB/expedicion/tareas/API - Feat - Confirmar ingreso manualmente y notificar por email.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "API - Feat - Confirmar ingreso manualmente y notificar por email"
                 }
               },
               {
@@ -180,11 +184,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "NB/expedicion/tareas/API - Feat - Confirmar ingreso manualmente y notificar por email.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes"
+              "title": "Enlaces salientes de API - Feat - Confirmar ingreso manualmente y notificar por email"
             }
           },
           {
@@ -261,8 +266,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "f0d9a10bdef3624e",
+  "active": "0778c52da332ceb1",
   "lastOpenFiles": [
+    "NB/expedicion/tareas/API - Feat - Confirmar ingreso manualmente y notificar por email.md",
+    "Catirel/Modelos de archivo/Historia de usuario para Jira - Modelo.md",
     "NB/Compras/stack.md",
     "NB/expedicion/tareas/tareas.md",
     "Libre Opcion/tareas/tareas.md",
@@ -281,7 +288,6 @@
     "Libre Opcion/tareas/APP - Refactor - Migrar cotización de envíos de API legacy a v4.md",
     "NB/expedicion/tareas/APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas.md",
     "Libre Opcion/tareas",
-    "Catirel/Modelos de archivo/Historia de usuario para Jira - Modelo.md",
     "Catirel/Modelos de archivo",
     "NB/expedicion/tareas/API - Feat - Incluir permisos de bypass en objeto user.md",
     "NB/expedicion/tareas/API - Feat - Permisos por agente para saltear validaciones de serials.md",
@@ -295,7 +301,6 @@
     "NB/Compras/Compras.md",
     "NB/expedicion/expedicion.md",
     "NB/pedidos/pedidos.md",
-    "Skills/Skills.md",
     "Catirel/Proyectos/It/Jira-Chrome-extension",
     "Catirel/Proyectos/It",
     "Catirel/Proyectos",

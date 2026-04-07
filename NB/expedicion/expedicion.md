@@ -25,6 +25,7 @@ Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 - [[NB/expedicion/tareas/API - Feat - Permisos por agente para saltear validaciones de serials|API - Feat - Permisos por agente para saltear validaciones de serials]]
 - [[NB/expedicion/tareas/API - Feat - Incluir permisos de bypass en objeto user|API - Feat - Incluir permisos de bypass en objeto user]]
 - [[NB/expedicion/tareas/APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas|APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas]]
+- [[NB/expedicion/tareas/API - Feat - Confirmar ingreso manualmente y notificar por email|API - Feat - Confirmar ingreso manualmente y notificar por email]]
 
 ---
 

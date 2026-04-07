@@ -214,6 +214,7 @@ function processRowsOneByOne_(hoja, filasArray) {
   rangeList.setFontColor('#CC6600');
   rangeList.setFontWeight('normal');
   rangeList.setFontStyle('italic');
+  rangeList.setHorizontalAlignment('left');
   SpreadsheetApp.flush();
 
   // --- PROCESO UNO POR UNO ---
