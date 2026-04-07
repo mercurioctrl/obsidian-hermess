@@ -30,10 +30,14 @@
                 "id": "b097bda5b02e6d1e",
                 "type": "leaf",
                 "state": {
-                  "type": "graph",
-                  "state": {},
-                  "icon": "lucide-git-fork",
-                  "title": "Vista gráfica"
+                  "type": "split-diff-view",
+                  "state": {
+                    "aFile": ".obsidian/workspace.json",
+                    "bFile": ".obsidian/workspace.json",
+                    "aRef": ""
+                  },
+                  "icon": "diff",
+                  "title": "Diff: workspace.json  (Working Tree)"
                 }
               }
             ],
@@ -263,7 +267,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "f0d9a10bdef3624e",
+  "active": "b097bda5b02e6d1e",
   "lastOpenFiles": [
     "NB/expedicion/documentacion.md",
     "NB/expedicion/stack.md",
