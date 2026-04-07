@@ -118,10 +118,14 @@ Sistema de gestión de compras a proveedores. Laravel 9 + Nuxt 2.
 
 ## Planilla Acciones Bully
 
+Planilla de opciones financieras con Apps Script + API Bully.
+
 - [[Planilla Acciones Bully/Planilla Acciones Bully|Planilla Acciones Bully]]
-- [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Documentación Apps Script - Opciones API]]
-- [[Planilla Acciones Bully/prompt-agregar-stock-data-api|Prompt - Agregar stock data API]]
+- [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Documentacion Apps Script - Opciones API]]
+
+### Prompts
 - [[Planilla Acciones Bully/prompt-optimizar-api|Prompt - Optimizar API]]
+- [[Planilla Acciones Bully/prompt-agregar-stock-data-api|Prompt - Agregar stock data API]]
 
 ---
 

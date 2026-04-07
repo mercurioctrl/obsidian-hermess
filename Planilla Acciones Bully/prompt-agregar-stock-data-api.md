@@ -62,3 +62,10 @@ results.append({
 - Si el cache de sesion ya esta implementado, `ticker.info` deberia ser rapido porque reutiliza la sesion.
 - Si `ticker.info` falla, los campos nuevos deben ser `None` (no romper el request).
 - Cachear `ticker.info` con TTL de 60 segundos por simbolo (igual que fair_data) para que si se piden varias opciones del mismo stock no haga multiples llamadas.
+
+---
+
+## Ver tambien
+
+- [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Documentacion Apps Script]] — Referencia del script (v5 implementa estos campos)
+- [[Planilla Acciones Bully/prompt-optimizar-api|Prompt - Optimizar API]] — Paso previo: cache y optimizacion de la API

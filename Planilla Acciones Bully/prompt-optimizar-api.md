@@ -98,3 +98,10 @@ class DataCache:
 ```
 
 Hacelo paso a paso, probando que compile. Mantene las funciones que SI se usan (como `fetch_fair_data`, `fetch_yahoo_options_data`, el endpoint `/options`) pero optimizadas con cache.
+
+---
+
+## Ver tambien
+
+- [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Documentacion Apps Script]] — Referencia del script que consume esta API
+- [[Planilla Acciones Bully/prompt-agregar-stock-data-api|Prompt - Agregar stock data API]] — Siguiente paso: agregar datos de stock
