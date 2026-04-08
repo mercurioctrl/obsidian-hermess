@@ -10,6 +10,8 @@ Diagnóstico y mejoras de SEO y performance para libreopcion.com.ar.
 - [[03-fix-header-min-height]] — Fix header sin min-height
 - [[04-fix-fuentes-innecesarias]] — Fix fuentes web innecesarias
 - [[05-fix-fouc-css-tardio]] — Fix FOUC (flash sin estilos)
+- [[06-fix-cls-tbt-ronda-2]] — Ronda 2: CLS 0.283 + TBT 1030ms + 134 animaciones no compuestas (commit 00185f1c6)
+- [[07-fix-cls-mobile-h1-sr-only-ronda-3]] — Ronda 3: CLS mobile 0.519 (h1 sr-only colapsando) + tabular-nums cronómetro (commit 02ebadd1e)
 
 ## Tareas
 

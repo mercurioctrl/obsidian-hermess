@@ -1,4 +1,4 @@
-# Fix CLS adicional — Header fijo sin min-height
+# Fix CLS adicional — Header fijo sin min-height ✅ IMPLEMENTADO
 
 > Volver a [[00-resumen-diagnostico-seo-performance|Resumen General]]
 > Relacionado: [[01-fix-cls-imagenes]] (fix principal de CLS, implementar primero)
@@ -29,6 +29,13 @@ banner [role="banner" / <header>]
 ├── button "Recibílo en: Capital Federal..."
 └── nav (Categorías, Precios flash, Vender, Favoritos, Historial)
 ```
+
+## Solución aplicada
+
+- Desktop.vue: agregado `min-height: 89.92px` (coincide con margin-top del layout desktop)
+- Simple.vue: agregado `min-height: 58.92px` (coincide con margin-top del layout simple)
+- Mobile.vue: ya tenía `min-height: 57.09px`, no requirió cambios
+- **Branch:** `fix/fouc-critical-css-critters`
 
 ## Tareas a realizar
 

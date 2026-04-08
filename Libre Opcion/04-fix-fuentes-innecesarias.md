@@ -1,4 +1,4 @@
-# Fix Fuentes web — Eliminar Roboto no utilizada y optimizar carga
+# Fix Fuentes web — Eliminar Roboto no utilizada y optimizar carga ✅ REVISADO (sin cambios necesarios)
 
 > Volver a [[00-resumen-diagnostico-seo-performance|Resumen General]]
 > Relacionado: [[03-fix-header-min-height]] (las fuentes causan el shift del header)
@@ -10,6 +10,15 @@
 El sitio libreopcion.com.ar carga múltiples familias de fuentes web que compiten por ancho de banda y pueden causar FOUT (Flash of Unstyled Text) que contribuye al CLS. Se detectaron fuentes declaradas pero no cargadas ("unloaded"), lo que indica que se descargan innecesariamente.
 
 El sitio está construido con **Nuxt.js**.
+
+## Resultado de la revisión (Abril 2026)
+
+- **Roboto**: No existe en el código fuente. Solo aparecía en build artifacts/cache. El módulo `@nuxtjs/google-fonts` solo carga Inter. No hay nada que eliminar.
+- **Inter**: Ya configurado con solo 3 pesos (400, 500, 700) + `display: "swap"`. Óptimo.
+- **Slick font**: Es base64 inline (~2KB) en el CSS de vue-slick-carousel. Se usa en 23 componentes (Home, Producto, Búsquedas, Carrito). No vale la pena hacerla condicional.
+- **Font Awesome**: Ya se carga async con `media="print"` + `onload="this.media='all'"`. Óptimo.
+
+**Conclusión**: Las fuentes ya estaban optimizadas. No se requirieron cambios.
 
 ## Datos del diagnóstico
 

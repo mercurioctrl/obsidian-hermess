@@ -10,7 +10,7 @@
           {
             "id": "91be81ccd8df0465",
             "type": "tabs",
-            "dimension": 55.41211519364448,
+            "dimension": 55.21350546176763,
             "children": [
               {
                 "id": "0778c52da332ceb1",
@@ -30,22 +30,21 @@
                 "id": "b097bda5b02e6d1e",
                 "type": "leaf",
                 "state": {
-                  "type": "split-diff-view",
+                  "type": "pdf",
                   "state": {
-                    "aFile": "NB/NB.md",
-                    "bFile": "NB/NB.md",
-                    "aRef": ""
+                    "file": "Libre Opcion/Informe-Semanal-SEO-LibreOpcion-2026-04-07.pdf"
                   },
-                  "icon": "diff",
-                  "title": "Diff: NB  (Working Tree)"
+                  "icon": "lucide-file-text",
+                  "title": "Informe-Semanal-SEO-LibreOpcion-2026-04-07"
                 }
               }
-            ]
+            ],
+            "currentTab": 1
           },
           {
             "id": "1e132dc5b54d17ae",
             "type": "tabs",
-            "dimension": 44.58788480635551,
+            "dimension": 44.786494538232375,
             "children": [
               {
                 "id": "f0d9a10bdef3624e",
@@ -86,7 +85,7 @@
                   },
                   "pinned": true,
                   "icon": "terminal",
-                  "title": "Terminal: ✳ Organize Bully action spreadsheet in vault"
+                  "title": "Terminal: zsh"
                 }
               }
             ]
@@ -184,12 +183,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NB/expedicion/tareas/API - Feat - Confirmar ingreso manualmente y notificar por email.md",
+                "file": "Libre Opcion/05-fix-fouc-css-tardio.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de API - Feat - Confirmar ingreso manualmente y notificar por email"
+              "title": "Enlaces salientes de 05-fix-fouc-css-tardio"
             }
           },
           {
@@ -266,9 +265,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "0778c52da332ceb1",
+  "active": "f0d9a10bdef3624e",
   "lastOpenFiles": [
+    "Libre Opcion/Informe-Semanal-SEO-LibreOpcion-2026-04-07.pdf",
+    "Libre Opcion/07-fix-cls-mobile-h1-sr-only-ronda-3.md",
+    "Libre Opcion/05-fix-fouc-css-tardio.md",
+    "Libre Opcion/04-fix-fuentes-innecesarias.md",
+    "Libre Opcion/03-fix-header-min-height.md",
     "NB/expedicion/tareas/API - Feat - Confirmar ingreso manualmente y notificar por email.md",
+    "NB/expedicion/tareas/API - Feat - Incluir permisos de bypass en objeto user.md",
     "Catirel/Modelos de archivo/Historia de usuario para Jira - Modelo.md",
     "NB/Compras/stack.md",
     "NB/expedicion/tareas/tareas.md",
@@ -289,21 +294,14 @@
     "NB/expedicion/tareas/APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas.md",
     "Libre Opcion/tareas",
     "Catirel/Modelos de archivo",
-    "NB/expedicion/tareas/API - Feat - Incluir permisos de bypass en objeto user.md",
     "NB/expedicion/tareas/API - Feat - Permisos por agente para saltear validaciones de serials.md",
     "Skills/tarea-boveda/SKILL.md",
     "Skills/tarea-boveda",
     "NB/expedicion/tareas",
     "Catirel/Proyectos/It/Jira-Chrome-extension/Jira-Chrome-extension.md",
     "Asus/Contrataciones/Contrataciones.md",
-    "Libre Opcion/Libre Opcion.md",
-    "NB/NB.md",
-    "NB/Compras/Compras.md",
-    "NB/expedicion/expedicion.md",
-    "NB/pedidos/pedidos.md",
     "Catirel/Proyectos/It/Jira-Chrome-extension",
     "Catirel/Proyectos/It",
-    "Catirel/Proyectos",
     "Sin título 1.canvas",
     "NB/Sin título.canvas",
     "Sin título.canvas"

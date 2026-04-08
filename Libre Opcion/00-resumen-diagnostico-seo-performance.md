@@ -83,16 +83,19 @@ Se inició una **validación de CLS** en Search Console el 28/3/26 (tarda hasta 
 - 6 scripts de terceros compitiendo por ancho de banda
 - **Instrucciones:** [[02-fix-lcp-render-blocking]]
 
-#### 3. Header fijo sin min-height (MEDIO)
+#### 3. Header fijo sin min-height (MEDIO) ✅ IMPLEMENTADO
 - Header con `position: fixed` y 91px de altura pero sin `min-height`
 - Puede causar CLS al cargar fuentes web
-- **Instrucciones:** [[03-fix-header-min-height]]
+- **Solución aplicada:** Agregado `min-height` a Desktop.vue (89.92px) y Simple.vue (58.92px). Mobile.vue ya lo tenía (57.09px).
+- **Branch:** `fix/fouc-critical-css-critters`
+- **Instrucciones y detalle:** [[03-fix-header-min-height]]
 
-#### 4. Fuentes web innecesarias (MEDIO)
-- Roboto declarada en 3 pesos pero ninguno se usa (unloaded)
-- Inter con 18 variantes declaradas, solo 3 en uso
-- Slick font cargada en páginas sin carrusel
-- **Instrucciones:** [[04-fix-fuentes-innecesarias]]
+#### 4. Fuentes web innecesarias (MEDIO) ✅ REVISADO (sin cambios necesarios)
+- Roboto: no existe en código fuente, solo aparecía en cache/build artifacts
+- Inter: ya carga solo 3 pesos (400, 500, 700) con `display: swap`
+- Slick font: base64 inline (~2KB), usada en 23 componentes — no vale la pena hacerla condicional
+- Font Awesome: ya se carga async con `media="print"` + `onload`
+- **Instrucciones y detalle:** [[04-fix-fuentes-innecesarias]]
 
 #### 5. FOUC — Flash of Unstyled Content (ALTO) ✅ IMPLEMENTADO
 - Al cargar el sitio, se veía "desarmado" por ~700ms antes de que se apliquen los estilos
@@ -106,10 +109,48 @@ Se inició una **validación de CLS** en Search Console el 28/3/26 (tarda hasta 
 
 1. ~~**Inmediato:** Implementar fix #5 (FOUC) — el usuario lo ve en cada visita~~ ✅ Implementado
 2. ~~**Inmediato:** Implementar fix #1 (imágenes) — mayor impacto en CLS~~ ✅ Implementado
-3. **Corto plazo:** Fix #3 (header) y #4 (fuentes) — cambios simples
-4. **Mediano plazo:** Fix #2 (render-blocking) — requiere más testing
+3. ~~**Corto plazo:** Fix #3 (header) y #4 (fuentes) — cambios simples~~ ✅ Implementado / Revisado
+4. **Mediano plazo:** Fix #2 (render-blocking):
+   - ~~Sub-tarea A: diferir scripts de terceros (Metricool, FB Pixel, Brevo)~~ ✅
+   - ~~Sub-tarea B: deferir CSS render-blocking de Nuxt~~ ✅ (~440ms)
+   - ~~Sub-tarea C: diferir GTM con bootstrap:false~~ ✅ (~158ms)
+   - Sub-tarea D: consolidar CSS splitting — **descartado**
+   - ~~Sub-tarea E: lazy-load Firebase SDK~~ ✅ (-196KB del vendor inicial)
+   - ~~Sub-tarea F: fix CLS desktop (animaciones no compuestas)~~ ✅ + revisión ronda 2 (box-shadow)
+   - ~~Sub-tarea G: LCP preload del banner principal~~ ✅
+   - ~~Sub-tarea H: width/height en imgs above-the-fold + min-height carousels~~ ✅ ronda 2
+   - ~~Sub-tarea I: diferir push-notification.js al evento load (anulaba lazy-load Firebase)~~ ✅ ronda 2
+7. **Cloudflare:** ✅ Rocket Loader desactivado + BIC rule en home (3,636ms → 7ms)
 5. **Monitoreo:** Esperar 2-4 semanas para que Google recoja datos de campo actualizados
 6. **Seguimiento:** Revisar Core Web Vitals en Search Console después de los cambios
+
+## Última ronda de cambios — commit `02ebadd1e` (2026-04-08, ronda 3)
+
+Detalle completo en [[07-fix-cls-mobile-h1-sr-only-ronda-3]].
+
+### Resultado de la ronda 2 (commit `00185f1c6`)
+
+| Métrica mobile | Antes | Después | Δ |
+|---|---|---|---|
+| LCP | 9.0s | 6.8s | ✅ |
+| TBT | 550ms | 260ms | ✅ |
+| Speed Index | 4.6s | 2.9s | ✅ |
+| **CLS** | **0** | **0.519** | ❌ |
+| Score | 54 | 46 | ❌ por el CLS |
+
+Casi todo mejoró pero el CLS mobile se disparó. Causa identificada: `<h1 class="sr-only">` en `pages/index.vue:3` colapsando porque Bootstrap CSS está en chunk deferido.
+
+### Pendiente medir (ronda 3)
+- CLS mobile: bajaba a ~0? (era 0.519)
+- Score mobile: bajaba a 70-80+? (era 46)
+
+### Pendiente atacar (próxima ronda)
+- (Opcional, no urgente) `.sr-only` global en `app/layouts/desktop.vue` y `mobile.vue` para eliminar deuda latente
+- (Solo si CLS lab queda >0.1) FOUT Inter: preload + display:optional + size-adjust
+- BootstrapVue tree-shake en `app/plugins/bootstrap.js`
+- VeeValidate lazy (importado global aunque solo lo usan formularios)
+- vendor splitChunks granular en `nuxt.config.js` (`vendor: true` mete todo en un chunk)
+- Migrar Firebase v8 → v9 modular para tree-shaking real
 
 ## Archivos en esta carpeta
 
@@ -121,3 +162,5 @@ Se inició una **validación de CLS** en Search Console el 28/3/26 (tarda hasta 
 | [[03-fix-header-min-height]] | Instrucciones para Claude Code: fix header sin min-height |
 | [[04-fix-fuentes-innecesarias]] | Instrucciones para Claude Code: fix fuentes innecesarias |
 | [[05-fix-fouc-css-tardio]] | Instrucciones para Claude Code: fix FOUC (flash sin estilos) |
+| [[06-fix-cls-tbt-ronda-2]] | Ronda 2: width/height imgs, box-shadow fuera de mixins, push-notification diferido |
+| [[07-fix-cls-mobile-h1-sr-only-ronda-3]] | Ronda 3: CLS mobile 0.519 (h1 sr-only colapsando) + tabular-nums cronómetro |

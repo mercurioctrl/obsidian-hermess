@@ -20,7 +20,61 @@ El sitio está construido con **Nuxt.js** y usa **Cloudflare** (rocket-loader.mi
 - **CSS no utilizado: 70 KiB** de ahorro potencial
 - **7 tareas largas** en el hilo principal
 
-## Tareas a realizar
+## Solución parcial aplicada (Abril 2026)
+
+### Sub-tarea A: Diferir scripts de terceros ✅
+- `metricool.client.js` — `loadScript()` envuelto en `window.addEventListener("load", ...)`
+- `pixel-fb.client.js` — inicialización de FB Pixel envuelta en `load`
+- `brevo.client.js` — queue sib/sendinblue inmediato + carga de sa.js diferida a `load`
+- `whaticket.js` — ya estaba optimizado (solo carga en `/ayuda`)
+- **Branch:** `fix/fouc-critical-css-critters`
+
+### Sub-tarea B: Deferir CSS render-blocking de Nuxt ✅
+- Módulo critters actualizado: convierte `<link rel="stylesheet" href="/_nuxt/css/*">` a `media="print"` + `onload="this.media='all'"` con fallback `<noscript>`
+- CSS crítico sigue inline via `<style>` (13 de 216 hojas)
+- Ahorro estimado: ~440ms de render-blocking
+- **Branch:** `fix/fouc-critical-css-critters`
+
+### Sub-tarea C: Diferir GTM (vue-gtag) ✅
+- `vue-gtag.js` actualizado: `bootstrap: false` + `bootstrap()` en evento `load`
+- gtag.js ya no bloquea el hilo principal durante carga inicial
+- Ahorro estimado: ~158ms
+- **Branch:** `fix/fouc-critical-css-critters`
+
+### Sub-tarea D: Consolidar CSS splitting — DESCARTADO
+- Critters ya defiere CSS no-crítico
+- Tocar splitChunks puede romper estilos, causar FOUC, o interferir con Critters
+
+### Sub-tarea E: Code-splitting Firebase ✅
+- Firebase v8 (auth + messaging) se cargaba eagerly en TODAS las páginas (~200KB en vendor inicial)
+- `plugins/firebase.js`: convertido a `initFirebase()` async con dynamic import
+- `plugins/firebaseAuth.js`: usa `await initFirebase()` solo cuando se llama login social
+- `plugins/push-notification.js`: usa `await initFirebase()` solo para FCM
+- Resultado: vendor chunk inicial 915KB → 719KB (-196KB)
+- Firebase ahora vive en chunks separados (180KB+37KB+56KB) que solo se descargan on-demand
+
+### Sub-tarea F: Fix CLS desktop — animaciones no compuestas ✅
+- **Problema:** CLS desktop = 0.803 (49 animaciones no compuestas)
+- **Causa:** `transition: all` en placeholders SCSS (`%transition`, `%transition-lenta`, etc.) usado en 84 lugares
+- **Fix:** Cambiar a propiedades específicas (color, background-color, border-color, opacity, transform, box-shadow) en `transitions.scss` y `_shared-vars.scss`
+- También: `efectoDestello` keyframe de `left` → `transform: translateX` (composited)
+
+### Sub-tarea G: LCP preload del banner ✅
+- **Problema:** El LCP element del home era la imagen del banner principal, pero NO era discoverable en el HTML inicial (`requestDiscoverable: false`) porque el carousel usa `v-if="showCarousel"` que solo se activa client-side
+- **Fix:** Agregar `<link rel="preload" as="image" fetchpriority="high">` dinámico en `head()` de `pages/index.vue` leyendo `banners[5][0].checksum` (la data está disponible en SSR via `created()`)
+
+### Configuración Cloudflare (hecho manualmente)
+- Rocket Loader desactivado
+- Configuration Rule para BIC (Bot Intelligence Check) en home
+- Resultado: challenge script de 3,636ms → 7ms
+
+## Pendiente próxima ronda
+- Reducir JS sin usar restante (~206KB en vendor)
+- Migrar Firebase v8 → v9 modular (mejor tree-shaking)
+- Investigar TBT alto (1,820ms en mobile)
+- Optimizar imágenes a WebP/AVIF (~147KB ahorro)
+
+## Tareas originales del diagnóstico
 
 ### 1. Reducir archivos CSS render-blocking
 
