@@ -65,6 +65,20 @@ Extensión Chrome MV3 para crear issues de Jira rápidamente desde la barra del 
 
 ---
 
+## Hogar
+
+Reformas en el hogar.
+
+### Lavadero
+- [[Hogar/Lavadero/Lavadero|Reforma Lavadero]]
+- [[Hogar/Lavadero/01-mesada-presupuestos|Mesada — Presupuestos]]
+- [[Hogar/Lavadero/02-bachas|Bachas — Opciones]]
+
+### Oficina
+- [[Hogar/Oficina/Oficina|Reforma Oficina]]
+
+---
+
 ## Libre Opcion
 
 - [[Libre Opcion/Libre Opcion|Libre Opción]]
