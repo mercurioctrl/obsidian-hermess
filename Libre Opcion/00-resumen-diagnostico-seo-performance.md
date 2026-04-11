@@ -124,29 +124,37 @@ Se inició una **validación de CLS** en Search Console el 28/3/26 (tarda hasta 
 5. **Monitoreo:** Esperar 2-4 semanas para que Google recoja datos de campo actualizados
 6. **Seguimiento:** Revisar Core Web Vitals en Search Console después de los cambios
 
-## Última ronda de cambios — commit `02ebadd1e` (2026-04-08, ronda 3)
+## Última ronda de cambios — commit `274bce6ee` (2026-04-08, ronda 4)
 
-Detalle completo en [[07-fix-cls-mobile-h1-sr-only-ronda-3]].
+Detalle completo en [[08-fix-cls-listings-ronda-4]].
 
-### Resultado de la ronda 2 (commit `00185f1c6`)
+### Hallazgo crítico de CrUX field (28 días, usuarios reales)
 
-| Métrica mobile | Antes | Después | Δ |
+**La home está perfecta. El problema son las listings.**
+
+| URL | Desktop CLS | Mobile CLS | Estado |
 |---|---|---|---|
-| LCP | 9.0s | 6.8s | ✅ |
-| TBT | 550ms | 260ms | ✅ |
-| Speed Index | 4.6s | 2.9s | ✅ |
-| **CLS** | **0** | **0.519** | ❌ |
-| Score | 54 | 46 | ❌ por el CLS |
+| `/` (home) | 0.00 | 0.06 | ✅ |
+| `/placas-de-video` (listing) | **0.45** | **0.37** | ❌ deficiente |
+| Origin completo | **0.34** | **0.35** | ❌ |
 
-Casi todo mejoró pero el CLS mobile se disparó. Causa identificada: `<h1 class="sr-only">` en `pages/index.vue:3` colapsando porque Bootstrap CSS está en chunk deferido.
+Los productos individuales no tienen muestra suficiente para CrUX (caen a "origen"), pero las listings sí dominan el promedio. Si arreglamos las listings, baja el origin completo.
 
-### Pendiente medir (ronda 3)
-- CLS mobile: bajaba a ~0? (era 0.519)
-- Score mobile: bajaba a 70-80+? (era 46)
+### Causa raíz identificada
+
+`ModuloCCargando` (skeleton, 289px) era ~90px más bajo que `ModuloC` real (~380px). Al hidratar `/placas-de-video`, cada fila del masonry crecía 90px → con 4-6 filas visibles = ~360-540px de shift acumulado por viewport = CLS 0.37-0.45.
+
+Más bugs complementarios: sidebar `.left` con altura 0 en SSR, banner "Recibílo en" cambiando width, FOUT de Inter.
+
+### Pendiente medir (ronda 4)
+- CLS desktop `/placas-de-video`: bajaba a <0.1? (era 0.45)
+- CLS mobile `/placas-de-video`: bajaba a <0.1? (era 0.37)
+- CrUX origin (esperar 2-4 semanas)
+- Verificar que `npm run build` regenera `app/assets/fonts/Inter-*-latin*.woff2`
 
 ### Pendiente atacar (próxima ronda)
 - (Opcional, no urgente) `.sr-only` global en `app/layouts/desktop.vue` y `mobile.vue` para eliminar deuda latente
-- (Solo si CLS lab queda >0.1) FOUT Inter: preload + display:optional + size-adjust
+- Sacar `<ClientOnly>` del wrap de productos en `general.vue:103-131` (riesgoso, hay que verificar Masonry SSR)
 - BootstrapVue tree-shake en `app/plugins/bootstrap.js`
 - VeeValidate lazy (importado global aunque solo lo usan formularios)
 - vendor splitChunks granular en `nuxt.config.js` (`vendor: true` mete todo en un chunk)
@@ -164,3 +172,4 @@ Casi todo mejoró pero el CLS mobile se disparó. Causa identificada: `<h1 class
 | [[05-fix-fouc-css-tardio]] | Instrucciones para Claude Code: fix FOUC (flash sin estilos) |
 | [[06-fix-cls-tbt-ronda-2]] | Ronda 2: width/height imgs, box-shadow fuera de mixins, push-notification diferido |
 | [[07-fix-cls-mobile-h1-sr-only-ronda-3]] | Ronda 3: CLS mobile 0.519 (h1 sr-only colapsando) + tabular-nums cronómetro |
+| [[08-fix-cls-listings-ronda-4]] | Ronda 4: CLS listings /placas-de-video (skeleton vs card mismatch) + Inter font config |

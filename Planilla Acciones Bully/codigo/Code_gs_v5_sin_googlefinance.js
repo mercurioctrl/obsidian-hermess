@@ -138,10 +138,8 @@ function writeRowResults_(hoja, fila, rowBlockValues, markText, stockData) {
   hoja.getRange(fila, CONFIG.MARK_COLUMN).setValue(markText);
 
   // Datos de stock (si vienen de la API)
+  // NOTA: stockPrice (columna A) NO se escribe desde la API - se mantiene tal cual
   if (stockData) {
-    if (stockData.stockPrice != null) {
-      hoja.getRange(fila, CONFIG.STOCK_PRICE_COL).setValue(stockData.stockPrice);
-    }
     if (stockData.changePct != null) {
       hoja.getRange(fila, CONFIG.CHANGE_PCT_COL).setValue(stockData.changePct);
     }
@@ -476,7 +474,7 @@ function onEditTrigger(e) {
   try {
     var rangoEditado = e.range;
     var hoja = rangoEditado.getSheet();
-    var columnasObjetivo = [2, 3, 4, 5];
+    var columnasObjetivo = [2, 3, 4, 5, 25];
 
     if (columnasObjetivo.indexOf(rangoEditado.getColumn()) !== -1) {
       var filaEditada = rangoEditado.getRow();

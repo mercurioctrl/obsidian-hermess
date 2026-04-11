@@ -39,7 +39,9 @@ GET    /api/clientes-export/csv
 
 ## Presupuestos
 ```
-GET    /api/presupuestos              -> index (filtros: estado, cliente_id, search, etiqueta_id)
+GET    /api/presupuestos              -> index
+         filtros: estado, cliente_id, search, etiqueta_id, mes, anio
+         (mes y anio filtran sobre presupuestos.fecha)
 POST   /api/presupuestos              -> store [con wrapper data:]
 GET    /api/presupuestos/{id}         -> show [con wrapper data:]
 PUT    /api/presupuestos/{id}         -> update [con wrapper data:]
@@ -54,9 +56,13 @@ Ver [[Reglas de Negocio#Presupuestos - Flujo de estados]] para transiciones y ef
 
 **Transicion a COBRADO** requiere `banco_caja_id` + `email` + `password` en el body. Ver [[Reglas de Negocio#Operaciones que requieren credenciales admin]].
 
+> Nota sobre el param `anio`: se usa ASCII (no `año`) en query params para evitar issues de encoding URL/PHP. Ver [[memoria#Query params sin caracteres no-ASCII]].
+
 ## Proyectos
 ```
-GET    /api/proyectos                        -> index (sin wrapper, filtro: etiqueta_id)
+GET    /api/proyectos                        -> index (sin wrapper)
+         filtros: etiqueta_id, cliente_id, mes, anio
+         (mes y anio filtran sobre proyectos.fecha_inicio)
 GET    /api/proyectos/{id}                   -> show (sin wrapper, incluye empleados, jira_boards)
 PUT    /api/proyectos/{id}                   -> update
 POST   /api/proyectos/{id}/empleados         -> asignarEmpleado
@@ -141,7 +147,11 @@ Auth Jira: Basic Auth con `email:api_token` de Atlassian. Configurado en tabla `
 
 ## Evidencias / Activaciones
 ```
-GET|POST   /api/evidencias                 -> listado/crear
+GET    /api/evidencias                      -> index
+         filtros: proyecto_id, etiqueta_id, cliente_id, mes, anio
+         (mes y anio filtran sobre pruebas_ejecucion.periodo_desde)
+         (cliente_id filtra via proyecto.presupuesto.cliente_id)
+POST   /api/evidencias                      -> store
 GET|PUT|DELETE /api/evidencias/{evidencia}  -> CRUD
 POST   /api/evidencias/{evidencia}/generar-descripcion -> IA con DeepSeek
 POST   /api/evidencias-copiar              -> copiar entre proyectos
@@ -195,3 +205,4 @@ Ver [[Errores Comunes#Olvidar el wrapper data en endpoints que usan API Resource
 - [[Modulo Permisos]] - Enmascaramiento de campos sensibles
 - [[Medios de Pago]] - Endpoints de MP, Stripe, Mercury
 - [[Errores Comunes]] - Bugs frecuentes de API
+- [[memoria]] - Convenciones de filtros y query params

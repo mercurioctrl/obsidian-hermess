@@ -2,7 +2,7 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-04-04
+**Ultima sincronizacion:** 2026-04-08
 
 ## Arquitectura
 
@@ -38,8 +38,8 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 
 | Documento | Contenido |
 |-----------|-----------|
-| [[Changelog]] | Registro de commits y features por fecha |
-| [[Memoria]] | Feedback, decisiones y contexto del proyecto |
+| [[changelog\|Changelog]] | Registro de commits y features por fecha |
+| [[memoria\|Memoria]] | Feedback, decisiones y contexto del proyecto |
 
 ## Stack
 

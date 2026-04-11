@@ -1,4 +1,4 @@
-# Ronda 3 — Fix CLS mobile 0.519 (h1 sr-only) + tabular-nums + width/height pin envíos
+	# Ronda 3 — Fix CLS mobile 0.519 (h1 sr-only) + tabular-nums + width/height pin envíos
 
 ## Fecha
 2026-04-08

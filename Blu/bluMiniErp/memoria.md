@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-04-04
+Ultima sincronizacion: 2026-04-08
 
 ---
 
@@ -25,6 +25,19 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **useApi.delete con body:** Usar `{ data: {...} }`, no `{ body: {...} }`
 - **useApi errores:** Los catch reciben Error estandar. Usar `e.message`, no `e?.data?.message`
 
+### Convenciones de API
+
+#### Query params sin caracteres no-ASCII
+**Regla:** En query params (URL del API), usar siempre nombres ASCII. Ejemplo concreto: filtro de año va como `?anio=2026`, no `?año=2026`.
+
+**Por que:** Aunque PHP moderno soporta keys UTF-8 en `$_GET`, el encoding URL (`a%C3%B1o`) introduce un punto de fragilidad innecesario: depende de que cada cliente HTTP encode bien, que el servidor decode bien, y que cualquier proxy/log intermedio no rompa los bytes. Es trivial evitarlo usando ASCII.
+
+**Como aplicar:**
+- En el state del frontend podes mantener nombres descriptivos en español (`filtroAño`, `filtroMes`) para legibilidad
+- Al serializar a `URLSearchParams`, traducir a ASCII: `params.set('anio', String(filtroAño.value))`
+- En el backend, leer con `$request->anio` / `$request->filled('anio')`
+- Aplica tambien a otros campos potenciales: usar `descripcion` no `descripción`, etc.
+
 ---
 
 ## Proyecto (features y decisiones)
@@ -34,10 +47,32 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **Storage uploads:** Volumen `uploads_storage` + symlink en Dockerfile. PDFs en `pdf_storage`. Ver [[Stack e Infraestructura#Volumenes Docker]]
 - **Backup/Restore:** Scripts bash `backup.sh` y `restore.sh` para backup completo (DB, PDFs, uploads, .env)
 
+### Listados - filtros de fecha y cliente
+**Convención (2026-04-08):** Los listados de **presupuestos**, **proyectos** y **activaciones** soportan filtros de mes, año y cliente. Default = mes/año actual; cada filtro tiene opción "Todos" para deshabilitarlo.
+
+**Por que:** El usuario trabaja por períodos mensuales. Sin default al mes actual los listados se llenaban de histórico irrelevante.
+
+**Patrón:**
+- Backend usa `whereMonth(...)` + `whereYear(...)` con `$request->filled(...)`
+- Param wire es `anio` (no `año`) — ver sección de query params ASCII arriba
+- Frontend: dos dropdowns separados de mes (1-12) y año (rango actual+1 hasta -5)
+- Cargar lista de clientes con `api.get('/clientes?activo=true&per_page=200')`, normalizar `cli?.data ?? cli ?? []`
+- Watch sobre cada filtro → refetch
+
+**Columna de fecha por entidad** (importante para futuros reportes/dashboards/exports):
+- **Presupuestos** → `presupuestos.fecha` (PresupuestoController::index)
+- **Proyectos** → `proyectos.fecha_inicio` (ProyectoController::index)
+- **Activaciones / pruebas_ejecucion** → `pruebas_ejecucion.periodo_desde` (PruebaEjecucionController::index)
+
+Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin período no aparecen cuando hay filtro de mes/año.
+
+**Cliente en activaciones:** la cadena de relaciones es `PruebaEjecucion → proyecto → presupuesto.cliente_id`. El controller usa `whereHas('proyecto.presupuesto', fn($q) => $q->where('cliente_id', ...))`.
+
 ### Presupuestos
 - **Edicion:** Editables en cualquier estado excepto COBRADO/FACTURADO. Moneda editable. Movimientos CC se actualizan al guardar. Ver [[Reglas de Negocio#Presupuestos - Flujo de estados]]
 - **Suscripciones:** Renovacion automatica mensual. Campos: `es_suscripcion`, `suscripcion_inicio`, `suscripcion_meses`, `suscripcion_frecuencia`. Scheduler `monthlyOn(1,'03:00')`
 - **Etiquetas:** Etiquetas de colores asignables desde presupuesto y proyecto. Pivot migraciones 0044-0045. Filtrable en ambos listados. Ver [[Reglas de Negocio#Etiquetas de Presupuestos]]
+- **Dominio invoice:** PDF de presupuesto usa `blustudioinc.com` (cambio desde `blu.inc` el 2026-03-30)
 
 ### Gastos
 - **Cotizacion e IVA:** Cada gasto registra tasa_cambio (BCRA) e IVA (0/10.5/21/27%). Monto final = subtotal + IVA. Migracion 0047. Ver [[Reglas de Negocio#IVA en Gastos]]
@@ -53,7 +88,8 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **Copiar:** Copiar activaciones entre proyectos del mismo cliente. Periodo opcional. Estructura copiada, datos de ejecucion vacios
 - **Eliminacion:** Requiere credenciales admin. Modal email+password. Backend valida rol ADMIN
 - **PDFs:** TCPDF+FPDI sobre membretada Blu (portrait A4). Presupuestos siguen con DomPDF. Plantilla en `storage/app/templates/membretada.pdf`
-- **DeepSeek IA:** Descripciones automaticas con DeepSeek API. Config en `services.php`. Campos `descripcion_ia` y `descripcion_ia_cant_hitos`
+- **DeepSeek IA:** Descripciones automaticas con DeepSeek API. Config en `services.php`. Campos `descripcion_ia` y `descripcion_ia_cant_hitos`. Frontend muestra "Desactualizada" si cambia la cantidad de hitos
+- **DeepSeek longitud escalada (2026-03-30):** Longitud variable segun cantidad de hitos — ≤5 hitos: 2-3 oraciones / `max_tokens: 300`; 6-15 hitos: 3-5 oraciones / `max_tokens: 500`; +15 hitos: 5-7 oraciones / `max_tokens: 700`. Prompt dice "cubriendo todas las actividades listadas" (NO "breve") para evitar omisiones del modelo
 
 ### Integraciones
 - **MercadoPago:** Access token + banco vinculado. Movimientos via `/v1/payments/search`. Sync saldo manual. Conversion USD->ARS. Limitaciones API (balance 403, movements requiere permisos especiales). Ver [[Medios de Pago#MercadoPago]]
@@ -70,7 +106,7 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 
 ## Ver tambien
 
-- [[Changelog]] - Registro de commits recientes
+- [[changelog|Changelog]] - Registro de commits recientes
 - [[Reglas de Negocio]] - Reglas de dominio
 - [[Errores Comunes]] - Bugs conocidos
 - [[Backend - API]] - Endpoints del sistema

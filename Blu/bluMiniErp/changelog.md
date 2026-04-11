@@ -4,6 +4,27 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-04-08
+
+- feat: Filtros de mes, año y cliente en listados de presupuestos, proyectos y activaciones. Default al mes/año actual con opción "Todos" para deshabilitar cada filtro. Ver [[memoria#Listados - filtros de fecha y cliente]] y [[Backend - API#Presupuestos]]
+- refactor: Listado de proyectos migrado de filtrado client-side a fetch server-side con query params (consistente con presupuestos y activaciones)
+- convención: Param wire usa `anio` (ASCII) en lugar de `año` para evitar fragilidad de encoding URL/PHP. State frontend mantiene nombres en español. Ver [[memoria#Query params sin caracteres no-ASCII]]
+
+Campos de fecha por listado:
+- Presupuestos → `presupuestos.fecha`
+- Proyectos → `proyectos.fecha_inicio`
+- Activaciones → `pruebas_ejecucion.periodo_desde`
+
+Archivos: `PresupuestoController.php`, `ProyectoController.php`, `PruebaEjecucionController.php`, `presupuestos/index.vue`, `proyectos/index.vue`, `evidencias/index.vue`
+
+## 2026-03-30
+
+- feat: Descripcion IA de activaciones escalada segun cantidad de hitos. ≤5 hitos -> 2-3 oraciones (`max_tokens: 300`), 6-15 hitos -> 3-5 oraciones (`max_tokens: 500`), +15 hitos -> 5-7 oraciones (`max_tokens: 700`). Prompt dice "cubriendo todas las actividades listadas" (no "breve") para evitar omisiones del modelo. Ver [[Reglas de Negocio]] y [[Backend - API#DeepSeek]]
+- fix: Actualizar dominio `blu.inc` -> `blustudioinc.com` en invoice (PDF de presupuestos)
+- docs: Reglas de longitud escalada DeepSeek en CLAUDE.md
+
+Archivos: `PruebaEjecucionController.php`, `presupuesto-preview.blade.php`, `CLAUDE.md`
+
 ## 2026-03-29
 
 - feat: Campo `realizado` en gastos para indicar si el pago al acreedor fue cancelado (migracion 0048). Toggle con PATCH, desmarcar requiere credenciales admin. Ver [[Reglas de Negocio#Gastos - Campo realizado]]
@@ -58,3 +79,4 @@ Archivos: `PruebaEjecucionController.php`, `Dockerfile`, `docker-entrypoint.sh`,
 - [[Backend - API]] - Endpoints modificados
 - [[Reglas de Negocio]] - Reglas de dominio agregadas
 - [[Errores Comunes]] - Bugs descubiertos y resueltos
+- [[memoria]] - Convenciones y feedback acumulado
