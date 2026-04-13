@@ -48,13 +48,19 @@ PUT    /api/presupuestos/{id}         -> update [con wrapper data:]
 DELETE /api/presupuestos/{id}         -> destroy (solo BORRADOR)
 POST   /api/presupuestos/{id}/transicion -> cambio de estado
 GET    /api/presupuestos/{id}/pdf
-POST   /api/presupuestos/{id}/etiquetas  -> syncEtiquetas
+POST   /api/presupuestos/{id}/etiquetas      -> syncEtiquetas
 POST   /api/presupuestos/{id}/crear-proyecto
+POST   /api/presupuestos/{id}/enviar-invoice -> enviarInvoice
+         body: email (required|email)
+         efecto: guarda email en cliente si cambió, envía Mailable con PDF adjunto
+         BCC automático a payments@blustudioinc.com (MAIL_PAYMENTS_BCC)
 ```
 
 Ver [[Reglas de Negocio#Presupuestos - Flujo de estados]] para transiciones y efectos automaticos.
 
 **Transicion a COBRADO** requiere `banco_caja_id` + `email` + `password` en el body. Ver [[Reglas de Negocio#Operaciones que requieren credenciales admin]].
+
+**Envío de invoice:** El Mailable `PresupuestoInvoiceMail` genera el PDF in-memory con `Pdf::loadView(...)->output()` (no toca filesystem) y lo adjunta. El BCC se setea en el `Envelope()` del Mailable, no en el controller. Ver [[Stack e Infraestructura#Mail SMTP]] y [[memoria#Mail SMTP y envío de invoices]].
 
 > Nota sobre el param `anio`: se usa ASCII (no `año`) en query params para evitar issues de encoding URL/PHP. Ver [[memoria#Query params sin caracteres no-ASCII]].
 

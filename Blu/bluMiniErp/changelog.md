@@ -4,6 +4,16 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-04-13
+
+- feat: **Envío de invoice por email** desde detalle de presupuesto. Nuevo botón "Enviar invoice" junto al de PDF, modal con email precargado desde `cliente.email` y vista previa del mensaje. Al enviar, el mail queda guardado en la ficha del cliente ("se acuerda el mail"). Ver [[Backend - API#Presupuestos]] y [[Stack e Infraestructura#Mail SMTP]]
+- infra: Configurado SMTP de `box.lio.red:465` (SSL) con remitente `payments@blustudioinc.com`. `MAIL_PASSWORD` queda vacía en el `.env` commiteado, cada entorno la setea. BCC automático a `payments@blustudioinc.com` (`MAIL_PAYMENTS_BCC`). Ver [[memoria#Mail SMTP y envío de invoices]]
+- infra: Creado `config/mail.php` a mano — Laravel 11 en este repo no lo trae en el skeleton por default (solo app, auth, cache, cors, database, sanctum, services, session). Sin ese archivo el Mail facade no funciona aunque estén las env vars. Ver [[Errores Comunes#Laravel 11 sin config mail php por default]]
+- feat: Mailable `PresupuestoInvoiceMail` con **PDF adjunto in-memory** (`Pdf::loadView(...)->output()`) — no toca filesystem. El Envelope setea el BCC, no el controller
+- feat: Vista `resources/views/emails/presupuesto-invoice.blade.php` con estilo consistente con el sistema de diseño (fondo `#F5F5F0`, cards blancos, texto `#1A1A1A`, totales formateados `es-AR`)
+
+Archivos: `app/Mail/PresupuestoInvoiceMail.php`, `app/Http/Controllers/PresupuestoController.php` (método `enviarInvoice`), `config/mail.php`, `resources/views/emails/presupuesto-invoice.blade.php`, `routes/api.php`, `frontend/pages/presupuestos/[id].vue`, `.env`, `CLAUDE.md`
+
 ## 2026-04-08
 
 - feat: Filtros de mes, año y cliente en listados de presupuestos, proyectos y activaciones. Default al mes/año actual con opción "Todos" para deshabilitar cada filtro. Ver [[memoria#Listados - filtros de fecha y cliente]] y [[Backend - API#Presupuestos]]

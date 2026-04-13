@@ -2,7 +2,7 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-04-08
+**Ultima sincronizacion:** 2026-04-13
 
 ## Arquitectura
 
@@ -52,6 +52,7 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | Auth | Laravel Sanctum (Bearer token) |
 | PDF | barryvdh/laravel-dompdf + TCPDF + FPDI |
 | IA | DeepSeek API |
+| Mail | SMTP (box.lio.red, cuenta `payments@blustudioinc.com`) |
 | Proxy | Nginx |
 | Infraestructura | Docker Compose |
 

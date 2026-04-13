@@ -182,6 +182,18 @@ Iterar gastos y convertir a la moneda del presupuesto usando `tasa_cambio`. Ver 
 
 ---
 
+## Laravel 11 sin config mail php por default
+
+**Síntoma:** Al intentar enviar un mail con `Mail::to(...)->send(...)`, se obtiene un error tipo "Driver [] is not supported" o "Unable to resolve mailer", incluso con las variables `MAIL_*` correctamente seteadas en el `.env`.
+
+**Causa:** El skeleton de Laravel 11 **no incluye** `config/mail.php` en `config/` por default (solo `app`, `auth`, `cache`, `cors`, `database`, `sanctum`, `services`, `session`). Laravel solo lee los archivos `.php` que existen en `config/` — si `mail.php` no está ahí, `config('mail.default')` devuelve `null` y el Mail facade no puede resolver el transporte aunque las env vars estén perfectas.
+
+**Solución:** Crear `config/mail.php` a mano con la plantilla estándar de Laravel (mailers smtp/log/array/failover + from). Luego `docker cp` al container y `php artisan optimize:clear`. Ver la configuración aplicada en [[Stack e Infraestructura#Mail SMTP]].
+
+**Cómo detectarlo rápido:** `docker exec minisaas-backend php -r "... var_export([config('mail.default'), config('mail.mailers.smtp.host')]);"` — si devuelve `null`, falta el archivo de config.
+
+---
+
 ## Ver tambien
 
 - [[Stack e Infraestructura]] - Errores de Docker y deploy

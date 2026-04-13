@@ -13,6 +13,7 @@
 | PDF (presupuestos) | barryvdh/laravel-dompdf | - |
 | PDF (activaciones) | TCPDF + FPDI sobre membretada | - |
 | IA | DeepSeek API (deepseek-chat) | - |
+| Mail | SMTP (symfony/mailer via Laravel) | - |
 | Proxy | Nginx | alpine |
 | Containerizacion | Docker Compose | - |
 
@@ -84,9 +85,20 @@ CACHE_STORE=redis
 SESSION_DRIVER=redis
 NUXT_PUBLIC_API_BASE=http://localhost:8823/api
 DEEPSEEK_API_KEY=sk-...
+
+# Mail SMTP (pagos)
+MAIL_MAILER=smtp
+MAIL_HOST=box.lio.red
+MAIL_PORT=465
+MAIL_USERNAME=payments@blustudioinc.com
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=payments@blustudioinc.com
+MAIL_FROM_NAME="BluStudio Payments"
+MAIL_PAYMENTS_BCC=payments@blustudioinc.com
 ```
 
-> `DEEPSEEK_API_KEY` debe estar en el `.env` del container backend. Ver [[Errores Comunes#env no lee variables de entorno del container en PHP-FPM]].
+> `DEEPSEEK_API_KEY` y `MAIL_PASSWORD` deben estar en el `.env` del container backend. Ver [[Errores Comunes#env no lee variables de entorno del container en PHP-FPM]]. `MAIL_PASSWORD` queda vacía en el repo — cada entorno la completa a mano.
 
 ## Volumenes Docker
 
@@ -98,6 +110,51 @@ DEEPSEEK_API_KEY=sk-...
 ## Plantilla PDF membretada
 
 La hoja membretada de Blu (`membretadaBlu.pdf`) se usa como fondo para los PDFs de activaciones. Se almacena en `backend/storage/app/templates/membretada.pdf`.
+
+## Mail SMTP
+
+El proyecto envía mails transaccionales vía SMTP de BluStudio. Por ahora solo invoices de presupuestos (`POST /api/presupuestos/{id}/enviar-invoice`), con BCC automático a `payments@blustudioinc.com`.
+
+### Configuración
+
+| Opción | Valor |
+|--------|-------|
+| Host | `box.lio.red` |
+| Puerto SMTP | `465` |
+| Encriptación | SSL/TLS |
+| Username / From | `payments@blustudioinc.com` |
+| BCC automático | `payments@blustudioinc.com` (via `MAIL_PAYMENTS_BCC`) |
+| Puerto IMAP | 993 SSL (no usado por la app — solo referencia) |
+
+### `config/mail.php` creado a mano
+
+Laravel 11 en este repo **no trae** `config/mail.php` en el skeleton (solo `app`, `auth`, `cache`, `cors`, `database`, `sanctum`, `services`, `session`). Hubo que crearlo — sin ese archivo el Mail facade no funciona aunque estén las env vars, porque Laravel solo lee los `.php` que existen en `config/`. Ver [[Errores Comunes#Laravel 11 sin config mail php por default]].
+
+### Patrón de Mailable con PDF adjunto
+
+`app/Mail/PresupuestoInvoiceMail.php` es la referencia canónica para cualquier futuro Mailable que adjunte PDFs generados con DomPDF:
+
+```php
+public function attachments(): array
+{
+    $pdf = Pdf::loadView('pdf.presupuesto', [...])->setPaper('a4');
+
+    return [
+        Attachment::fromData(fn () => $pdf->output(), "invoice-{$numero}.pdf")
+            ->withMime('application/pdf'),
+    ];
+}
+```
+
+- **PDF in-memory:** `$pdf->output()` devuelve el binario como string, no toca filesystem ni volumen Docker
+- **BCC en el `Envelope()`:** Leído de `config('mail.payments_bcc')` con fallback a env. El controller no necesita conocer el BCC
+- **No reutilizar `PdfService`:** `PdfService->generarPresupuesto()` devuelve un `Response` (download), no un string, así que el Mailable duplica la carga de la view con `Pdf::loadView(...)`
+
+### Futuro: múltiples transportes
+
+Cuando aparezcan credenciales de otras cuentas (no-pagos), agregar un nuevo mailer en `config/mail.php` (`mailers.notifications`, etc.) en lugar de pisar el SMTP de pagos. Cada Mailable puede elegir transporte con `->mailer('notifications')`.
+
+Ver [[Backend - API#Presupuestos]] para el endpoint `enviar-invoice` y [[memoria#Mail SMTP y envío de invoices]] para el contexto de la decisión.
 
 ## Entrypoint del backend
 

@@ -1,6 +1,6 @@
 # Stack Técnico — blu-web-v1
 
-> Ver también: [[arquitectura]] · [[base-de-conocimiento]]
+> Ver también: [[arquitectura]] · [[base-de-conocimiento]] · [[changelog]]
 
 ## Core
 - **Framework:** Nuxt 3.16 + Vue 3.5 → [[arquitectura#Contexto en el monorepo|contexto monorepo]]
@@ -37,9 +37,28 @@
 > Estructura del backend en [[arquitectura#Contexto en el monorepo|monorepo]]
 > Admin consume estos endpoints via `apiFetch()` → [[base-de-conocimiento#Admin Panel cmsadmin|panel admin]]
 
-- Laravel 10 en `localhost:8060`
+- Laravel 10 en `localhost:8060` (container `blu-api-laravel`, branch `gamma`)
 - Auth: Sanctum (Bearer token)
-- Endpoints: `/api/contact`, `/api/calendar/timeslots`, `/api/appointment`, `/api/vCard`, `/api/login`, `/api/backOffice/*`
+- **IMPORTANTE:** `APP_URL=http://localhost:8060` en el `.env` del container
+  (ver [[arquitectura#Trampa del APP_URL|trampa del APP_URL]])
+
+### Endpoints públicos
+- `POST /api/contact` — formulario de contacto (con reCAPTCHA v3)
+- `POST /api/job-application` — postulación desde [[base-de-conocimiento#JobBoard Búsquedas activas de Recruiting|JobBoard]]
+- `POST /api/appointment` — agendar cita
+- `GET /api/calendar/timeslots` — horarios disponibles
+- `GET /api/catalog/products` — [[arquitectura#Catálogo de merch|catálogo de merch]] (acepta `?category=X` y `?include_inactive=1`)
+- `GET /api/vCard?email=` — vCard dinámica
+- `POST /api/login` — login admin
+
+### Endpoints protegidos (`/api/backOffice/*`)
+- `user`, `client`, `service` — CRUD de usuarios, clientes, servicios
+- `contact`, `appointment` — lectura y gestión
+- `time-slot/generate`, `time-slot/generate/weekly`, `time-slot/{id}` — generación y borrado de horarios
+- `catalog/products` — CRUD productos del [[arquitectura#Catálogo de merch|catálogo]]
+- `catalog/products/{id}/images` — upload múltiple (multipart `images[]`, mimes jpg/jpeg/png/webp, max 8MB)
+- `catalog/images/{imageId}` — delete imagen (promueve siguiente portada si era cover)
+- `catalog/images/{imageId}/cover` — set cover
 
 ## Colores de servicios
 
@@ -47,7 +66,7 @@
 > Páginas que los usan: [[arquitectura#Sitio público|mapa de servicios]]
 
 - IT: `#00D985` (verde)
-- Marketing: `#FF00D0` (magenta)
+- Marketing: `#FF00D0` (magenta) — también se usa en el [[arquitectura#Catálogo de merch|catálogo de merch]]
 - BI: `#9c44ff` (violeta)
 - Recruiting: `#00CFCE` (cyan)
 - Azul principal: `#0474f4`

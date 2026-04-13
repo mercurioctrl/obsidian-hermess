@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-04-08
+Ultima sincronizacion: 2026-04-13
 
 ---
 
@@ -19,6 +19,7 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **Gasto.categoria:** Es string plano, NO relacion Eloquent. Nunca usar `with('categoria')`
 - **RolUsuario:** Es enum casteado. Comparar con `RolUsuario::ADMIN`, no con string ni `->value`. Ver [[Backend - Modelos#Usuario]]
 - **Rutas apiResource:** Las rutas especificas (`/gastos/categorias`) deben registrarse ANTES del `apiResource`. Ver [[Errores Comunes#Rutas especificas despues de apiResource colisionan con id]]
+- **Laravel 11 sin `config/mail.php`:** El skeleton de este repo no incluye `config/mail.php`. Hay que crearlo a mano para que el Mail facade funcione. Ver [[Errores Comunes#Laravel 11 sin config mail php por default]] y [[Stack e Infraestructura#Mail SMTP]]
 
 ### Frontend / Vue
 - **Modal:** Siempre usar `v-model`, nunca `v-if` + `@close`. Ver [[Frontend#Componentes UI]]
@@ -95,6 +96,19 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 - **MercadoPago:** Access token + banco vinculado. Movimientos via `/v1/payments/search`. Sync saldo manual. Conversion USD->ARS. Limitaciones API (balance 403, movements requiere permisos especiales). Ver [[Medios de Pago#MercadoPago]]
 - **Stripe:** Secret key + banco vinculado. Montos en centavos. Checkout Sessions. Conversion moneda. Ver [[Medios de Pago#Stripe]]
 - **Conversion monedas:** Dolar oficial BCRA venta (dolarapi.com). USD->ARS multiplica, ARS->USD divide
+
+### Mail SMTP y envío de invoices
+**Añadido (2026-04-13):** El proyecto envía mails transaccionales vía SMTP de BluStudio. Config completa en [[Stack e Infraestructura#Mail SMTP]].
+
+**Contexto de la decisión:**
+- Transporte: SMTP directo a `box.lio.red:465` SSL, remitente `payments@blustudioinc.com`
+- BCC automático a la misma cuenta via `MAIL_PAYMENTS_BCC` → el equipo de pagos tiene copia de todo
+- `MAIL_PASSWORD` queda vacía en el `.env` commiteado — cada entorno la setea a mano. Decisión explícita del usuario para no trackear la password
+- Por ahora solo se usa para **invoices de presupuestos** (endpoint `POST /api/presupuestos/{id}/enviar-invoice`). El día de mañana habrá otras cuentas para otros tipos de mails — cuando lleguen, agregar un segundo mailer en `config/mail.php` (`mailers.notifications`, etc.) en lugar de pisar el SMTP de pagos
+
+**"Se acuerda el mail":** cuando el usuario envía un invoice con un email, el endpoint actualiza `cliente.email` si difiere. La próxima vez el modal viene precargado con ese valor. La persistencia vive en la ficha del cliente, no en una tabla aparte de historial.
+
+**Patrón canónico de Mailable con PDF:** Ver `app/Mail/PresupuestoInvoiceMail.php`. Adjunta el PDF **in-memory** con `Pdf::loadView(...)->output()` — no se toca filesystem. Reutilizar este patrón para cualquier Mailable futuro con adjunto.
 
 ### Otros
 - **Busqueda global:** Buscador en topbar. GET `/api/busqueda?q=`. Busca en clientes, presupuestos, proyectos, gastos. Max 5 por tipo. Ver [[Frontend#Busqueda global]]
