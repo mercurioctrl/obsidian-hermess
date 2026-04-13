@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 360" font-family="system-ui, sans-serif" font-size="10">
+  <rect width="540" height="360" fill="#ffffff"/>
+
+  <text x="270" y="20" text-anchor="middle" font-size="15" font-weight="bold">Lavadero — Planta (vista cenital)</text>
+  <text x="270" y="34" text-anchor="middle" font-size="10" fill="#666">Escala ~1:10 · Medidas en cm · 4,05 × 2,35 m, alto 2,20 m</text>
+
+  <g transform="translate(60, 60)">
+    <!-- Piso 405 x 235 cm (1 SVG unit ≈ 1 cm) -->
+    <rect x="0" y="0" width="405" height="235" fill="#fafaf8"/>
+    <rect x="0" y="0" width="405" height="235" fill="none" stroke="#2a2a2a" stroke-width="6"/>
+
+    <!-- Pared superior (larga, 405): pared 145 + puerta 79 + pared 181 -->
+    <!-- Abrir puerta entre x=145 y x=224 -->
+    <rect x="145" y="-3" width="79" height="6" fill="#fafaf8" stroke="none"/>
+    <line x1="145" y1="0" x2="145" y2="-4" stroke="#2a2a2a" stroke-width="3"/>
+    <line x1="224" y1="0" x2="224" y2="-4" stroke="#2a2a2a" stroke-width="3"/>
+    <path d="M 145 0 A 79 79 0 0 1 224 -3" fill="none" stroke="#aaa" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <line x1="145" y1="0" x2="145" y2="18" stroke="#8b5a2b" stroke-width="1.5"/>
+    <text x="184" y="-7" text-anchor="middle" font-size="8" fill="#555">Puerta 79 cm</text>
+
+    <!-- Pared inferior (larga, 405): 67 + ventana 120 + 65 + puerta 77 + 76 -->
+    <!-- Ventana entre x=67 y x=187 -->
+    <rect x="67" y="232" width="120" height="6" fill="#d6e8f0" stroke="#2a5a7a" stroke-width="1"/>
+    <line x1="67" y1="232" x2="187" y2="232" stroke="#2a5a7a" stroke-width="0.8"/>
+    <line x1="67" y1="238" x2="187" y2="238" stroke="#2a5a7a" stroke-width="0.8"/>
+    <line x1="127" y1="232" x2="127" y2="238" stroke="#2a5a7a" stroke-width="0.5"/>
+    <text x="127" y="252" text-anchor="middle" font-size="8" fill="#2a5a7a">Ventana 120 cm</text>
+    <!-- Puerta entre x=252 y x=329 -->
+    <rect x="252" y="232" width="77" height="6" fill="#fafaf8" stroke="none"/>
+    <line x1="252" y1="235" x2="252" y2="239" stroke="#2a2a2a" stroke-width="3"/>
+    <line x1="329" y1="235" x2="329" y2="239" stroke="#2a2a2a" stroke-width="3"/>
+    <path d="M 252 235 A 77 77 0 0 0 329 238" fill="none" stroke="#aaa" stroke-width="0.8" stroke-dasharray="2,2"/>
+    <line x1="329" y1="235" x2="329" y2="217" stroke="#8b5a2b" stroke-width="1.5"/>
+    <text x="290" y="252" text-anchor="middle" font-size="8" fill="#555">Puerta 77 cm</text>
+
+    <!-- Pared húmeda destacada (pared DERECHA de 235) -->
+    <line x1="405" y1="0" x2="405" y2="235" stroke="#c00" stroke-width="3" stroke-dasharray="6,3"/>
+    <text x="445" y="120" text-anchor="middle" font-size="9" font-weight="bold" fill="#c00" transform="rotate(-90 445 120)">pared húmeda 2,35 m</text>
+
+    <!-- Base de cemento 5 cm (bajo mesada + lavarropas) -->
+    <rect x="340" y="0" width="65" height="224" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="340" y="-8" font-size="7" fill="#555">base cemento 5 cm ↓</text>
+
+    <!-- Lavarropas NEGRO 60 x 60 arrimado al ángulo de la pared con puerta sola (z=0) -->
+    <rect x="345" y="0" width="60" height="60" fill="#1a1a1a" stroke="#000" stroke-width="1.2"/>
+    <circle cx="375" cy="30" r="17" fill="none" stroke="#555" stroke-width="1"/>
+    <circle cx="375" cy="30" r="11" fill="#2a2a2a"/>
+    <text x="375" y="53" text-anchor="middle" font-size="7" fill="#ddd">Lavarropas</text>
+
+    <!-- Mesada 164 x 65 cm contra pared derecha, después del lavarropas -->
+    <rect x="340" y="60" width="65" height="164" fill="#d4ad7a" stroke="#6b4220" stroke-width="1.5"/>
+    <text x="372" y="135" text-anchor="middle" font-size="9" font-weight="bold" fill="#3a2408">Mesada</text>
+    <text x="372" y="148" text-anchor="middle" font-size="7" fill="#5a3810">164 × 65 cm</text>
+
+    <!-- Bacha NEGRA (ocupa el traforo 45 × 70) — arrimada al lavarropas con 5 cm de lip -->
+    <!-- Mesada va de y=60 a y=224. Lavarropas arriba (y=0-60). Traforo empieza en y=65 -->
+    <rect x="350" y="65" width="45" height="70" fill="#0a0a0a" stroke="#000" stroke-width="1"/>
+    <text x="372" y="105" text-anchor="middle" font-size="6" fill="#ddd">bacha</text>
+
+    <!-- Espacio libre ~11 cm al fondo (lado ventana+puerta) -->
+    <rect x="340" y="224" width="65" height="11" fill="#fff8e8" stroke="#c9a832" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="372" y="232" text-anchor="middle" font-size="5" fill="#8b6a10">hueco 11 cm</text>
+
+    <!-- Pileta del lavadero (dibujo interno marcado en el papel del usuario) -->
+    <rect x="180" y="105" width="30" height="25" fill="#eaeaea" stroke="#888" stroke-width="1"/>
+    <text x="195" y="121" text-anchor="middle" font-size="5" fill="#555">pileta?</text>
+
+    <!-- Dimensión 405 (arriba) -->
+    <g stroke="#2a2a2a" stroke-width="0.8" fill="none">
+      <line x1="0" y1="-35" x2="405" y2="-35"/>
+      <line x1="0" y1="-40" x2="0" y2="-30"/>
+      <line x1="405" y1="-40" x2="405" y2="-30"/>
+    </g>
+    <text x="202" y="-42" text-anchor="middle" font-size="11" font-weight="bold">4,05 m</text>
+
+    <!-- Sub-dimensiones pared superior: 145 + 79 + 181 -->
+    <g stroke="#666" stroke-width="0.5" fill="none">
+      <line x1="0" y1="-22" x2="145" y2="-22"/>
+      <line x1="145" y1="-22" x2="224" y2="-22"/>
+      <line x1="224" y1="-22" x2="405" y2="-22"/>
+      <line x1="0" y1="-18" x2="0" y2="-26"/>
+      <line x1="145" y1="-18" x2="145" y2="-26"/>
+      <line x1="224" y1="-18" x2="224" y2="-26"/>
+      <line x1="405" y1="-18" x2="405" y2="-26"/>
+    </g>
+    <text x="72" y="-13" text-anchor="middle" font-size="7" fill="#666">145</text>
+    <text x="184" y="-13" text-anchor="middle" font-size="7" fill="#666">79</text>
+    <text x="314" y="-13" text-anchor="middle" font-size="7" fill="#666">181</text>
+
+    <!-- Dimensión 2,35 m (izquierda) -->
+    <g stroke="#2a2a2a" stroke-width="0.8" fill="none">
+      <line x1="-35" y1="0" x2="-35" y2="235"/>
+      <line x1="-40" y1="0" x2="-30" y2="0"/>
+      <line x1="-40" y1="235" x2="-30" y2="235"/>
+    </g>
+    <text x="-47" y="117" text-anchor="middle" font-size="11" font-weight="bold" transform="rotate(-90 -47 117)">2,35 m</text>
+
+    <!-- Sub-dimensiones pared inferior: 67 + 120 + 65 + 77 + 76 -->
+    <g stroke="#666" stroke-width="0.5" fill="none">
+      <line x1="0" y1="270" x2="67" y2="270"/>
+      <line x1="67" y1="270" x2="187" y2="270"/>
+      <line x1="187" y1="270" x2="252" y2="270"/>
+      <line x1="252" y1="270" x2="329" y2="270"/>
+      <line x1="329" y1="270" x2="405" y2="270"/>
+      <line x1="0" y1="266" x2="0" y2="274"/>
+      <line x1="67" y1="266" x2="67" y2="274"/>
+      <line x1="187" y1="266" x2="187" y2="274"/>
+      <line x1="252" y1="266" x2="252" y2="274"/>
+      <line x1="329" y1="266" x2="329" y2="274"/>
+      <line x1="405" y1="266" x2="405" y2="274"/>
+    </g>
+    <text x="33" y="280" text-anchor="middle" font-size="7" fill="#666">67</text>
+    <text x="127" y="280" text-anchor="middle" font-size="7" fill="#666">120</text>
+    <text x="219" y="280" text-anchor="middle" font-size="7" fill="#666">65</text>
+    <text x="290" y="280" text-anchor="middle" font-size="7" fill="#666">77</text>
+    <text x="367" y="280" text-anchor="middle" font-size="7" fill="#666">76</text>
+  </g>
+
+  <!-- Leyenda -->
+  <g transform="translate(60, 330)" font-size="9">
+    <rect x="0" y="0" width="14" height="10" fill="#d4ad7a" stroke="#6b4220" stroke-width="1"/>
+    <text x="20" y="9">Mesada</text>
+
+    <rect x="80" y="0" width="14" height="10" fill="#e8eaf0" stroke="#444" stroke-width="1"/>
+    <text x="100" y="9">Lavarropas</text>
+
+    <rect x="170" y="0" width="14" height="10" fill="#d6e8f0" stroke="#2a5a7a" stroke-width="1"/>
+    <text x="190" y="9">Ventana</text>
+
+    <rect x="240" y="0" width="14" height="10" fill="#f5f5f5" stroke="#c00" stroke-width="1" stroke-dasharray="2,1"/>
+    <text x="260" y="9">Bacha</text>
+
+    <line x1="300" y1="5" x2="318" y2="5" stroke="#c00" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="324" y="9">Pared húmeda</text>
+  </g>
+</svg>

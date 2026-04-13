@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lavadero — Render 3D</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; font-family: system-ui, -apple-system, sans-serif; background: #1a1c20; color: #eee; overflow: hidden; }
+  canvas { display: block; }
+  #info { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.65); padding: 12px 16px; border-radius: 8px; font-size: 12px; max-width: 260px; pointer-events: none; }
+  #info h1 { margin: 0 0 6px; font-size: 14px; letter-spacing: 0.3px; }
+  #info p { margin: 3px 0; color: #c9c9c9; line-height: 1.4; }
+  #legend { position: absolute; bottom: 12px; left: 12px; background: rgba(0,0,0,0.65); padding: 10px 14px; border-radius: 8px; font-size: 11px; }
+  #legend div { margin: 3px 0; }
+  .swatch { display: inline-block; width: 12px; height: 12px; vertical-align: middle; margin-right: 8px; border: 1px solid #777; border-radius: 2px; }
+  #views { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.65); padding: 8px; border-radius: 8px; display: flex; gap: 6px; flex-wrap: wrap; max-width: 260px; }
+  #views button { background: #2a2f38; color: #eee; border: 1px solid #444; padding: 6px 10px; border-radius: 4px; font-size: 11px; cursor: pointer; font-family: inherit; }
+  #views button:hover { background: #3a4250; border-color: #666; }
+</style>
+</head>
+<body>
+
+<div id="info">
+  <h1>Lavadero — Render 3D</h1>
+  <p><b>Dimensiones:</b> 4,05 × 2,35 × 2,20 m</p>
+  <p><b>Rotar:</b> arrastrar · <b>zoom:</b> rueda · <b>pan:</b> shift + arrastrar</p>
+</div>
+
+<div id="views">
+  <button data-view="iso">Iso</button>
+  <button data-view="front">Frente</button>
+  <button data-view="wet">Pared húmeda</button>
+  <button data-view="top">Planta</button>
+  <button data-view="fachada">Fachada WPC</button>
+</div>
+
+<div id="legend">
+  <div><span class="swatch" style="background:#f4f4f4"></span>Azulejo subway 7,5×15 blanco</div>
+  <div><span class="swatch" style="background:#ffffff;border-color:#999"></span>Durlock + paredes blancas</div>
+  <div><span class="swatch" style="background:#c9a876"></span>Mesada paraíso</div>
+  <div><span class="swatch" style="background:#1a1a1a"></span>Lavarropas / bacha negros</div>
+  <div><span class="swatch" style="background:#0c0c0e"></span>WPC negro fachada exterior</div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// === Dimensiones (metros) ===
+const ROOM_W = 4.05;   // largo (x) - paredes largas superior/inferior
+const ROOM_D = 2.35;   // profundidad (z) - paredes cortas, una es la pared húmeda
+const ROOM_H = 2.20;   // alto (y)
+const MESADA_H = 0.90;
+const MESADA_TH = 0.04;
+const MESADA_L = 1.64;
+const MESADA_W = 0.65;
+const LAV_W = 0.60;
+const LAV_L = 0.60;
+const LAV_H = 0.85;
+
+// Features en paredes largas
+// Pared superior (z=0): pared 1.45 + puerta 0.79 + pared 1.81
+const DOOR1_X = 1.45;       // comienzo
+const DOOR1_W = 0.79;       // ancho
+// Pared inferior (z=ROOM_D): pared 0.67 + ventana 1.20 + pared 0.65 + puerta 0.77 + pared 0.76
+const WINDOW_X = 0.67;
+const WINDOW_W = 1.20;
+const WINDOW_H = 0.80;      // altura estimada
+const WINDOW_SILL = 1.10;   // alféizar a 1.10 m del piso
+const DOOR2_X = 2.52;       // 0.67+1.20+0.65
+const DOOR2_W = 0.77;
+
+// === Escena ===
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x1a1c20);
+scene.fog = new THREE.Fog(0x1a1c20, 12, 24);
+
+// === Cámara ===
+const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 100);
+const TARGET = new THREE.Vector3(ROOM_W / 2, ROOM_H / 2.4, ROOM_D / 2);
+
+// === Renderer ===
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+// === Controles ===
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.copy(TARGET);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+controls.minDistance = 1.5;
+controls.maxDistance = 15;
+
+// === Luces ===
+scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+
+const key = new THREE.DirectionalLight(0xffffff, 1.15);
+key.position.set(6, 8, 6);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+key.shadow.camera.near = 1;
+key.shadow.camera.far = 30;
+key.shadow.camera.left = -8;
+key.shadow.camera.right = 8;
+key.shadow.camera.top = 8;
+key.shadow.camera.bottom = -8;
+key.shadow.bias = -0.0005;
+scene.add(key);
+
+const fill = new THREE.DirectionalLight(0xfff4e0, 0.35);
+fill.position.set(-3, 5, -2);
+scene.add(fill);
+
+// Ceiling bulb
+const bulb = new THREE.PointLight(0xfff2c8, 0.8, 6, 1.2);
+bulb.position.set(ROOM_W / 2, ROOM_H - 0.15, ROOM_D / 2);
+scene.add(bulb);
+
+// === Texturas procedurales ===
+function makeSubwayTexture() {
+  const c = document.createElement('canvas');
+  c.width = 512;
+  c.height = 512;
+  const ctx = c.getContext('2d');
+
+  // Junta blanca como fondo — los tiles tapan lo que va adentro
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, 512, 512);
+
+  // Subway 7,5 × 15: 4 tiles ancho × 8 tiles alto por canvas
+  const tw = 128, th = 64;
+  const gap = 3;       // grosor de la junta en px
+  const bevel = 7;     // grosor del bisel
+
+  for (let row = 0; row < 8; row++) {
+    const y = row * th;
+    const xOff = (row % 2) * (tw / 2);
+    for (let col = -1; col <= 4; col++) {
+      const x = col * tw + xOff;
+      const tx = x + gap / 2;
+      const ty = y + gap / 2;
+      const tlw = tw - gap;
+      const tlh = th - gap;
+
+      // Cuerpo del tile (gris muy clarito, casi blanco)
+      ctx.fillStyle = '#ededef';
+      ctx.fillRect(tx, ty, tlw, tlh);
+
+      // Cara central plana del tile (la parte "alta" del bisel) — blanco brillante
+      ctx.fillStyle = '#f8f8fa';
+      ctx.fillRect(tx + bevel, ty + bevel, tlw - 2 * bevel, tlh - 2 * bevel);
+
+      // Bisel SUPERIOR (highlight fuerte)
+      ctx.fillStyle = '#fcfcfe';
+      ctx.beginPath();
+      ctx.moveTo(tx, ty);
+      ctx.lineTo(tx + tlw, ty);
+      ctx.lineTo(tx + tlw - bevel, ty + bevel);
+      ctx.lineTo(tx + bevel, ty + bevel);
+      ctx.closePath();
+      ctx.fill();
+
+      // Bisel IZQUIERDO (highlight suave)
+      ctx.fillStyle = '#f4f4f6';
+      ctx.beginPath();
+      ctx.moveTo(tx, ty);
+      ctx.lineTo(tx + bevel, ty + bevel);
+      ctx.lineTo(tx + bevel, ty + tlh - bevel);
+      ctx.lineTo(tx, ty + tlh);
+      ctx.closePath();
+      ctx.fill();
+
+      // Bisel DERECHO (sombra media)
+      ctx.fillStyle = '#d6d6d9';
+      ctx.beginPath();
+      ctx.moveTo(tx + tlw, ty);
+      ctx.lineTo(tx + tlw, ty + tlh);
+      ctx.lineTo(tx + tlw - bevel, ty + tlh - bevel);
+      ctx.lineTo(tx + tlw - bevel, ty + bevel);
+      ctx.closePath();
+      ctx.fill();
+
+      // Bisel INFERIOR (sombra más oscura)
+      ctx.fillStyle = '#c6c6ca';
+      ctx.beginPath();
+      ctx.moveTo(tx, ty + tlh);
+      ctx.lineTo(tx + tlw, ty + tlh);
+      ctx.lineTo(tx + tlw - bevel, ty + tlh - bevel);
+      ctx.lineTo(tx + bevel, ty + tlh - bevel);
+      ctx.closePath();
+      ctx.fill();
+
+      // Línea fina de contorno entre bisel y cara (para marcar el quiebre)
+      ctx.strokeStyle = 'rgba(100, 100, 110, 0.15)';
+      ctx.lineWidth = 0.5;
+      ctx.strokeRect(tx + bevel, ty + bevel, tlw - 2 * bevel, tlh - 2 * bevel);
+    }
+  }
+
+  const tex = new THREE.CanvasTexture(c);
+  tex.wrapS = THREE.RepeatWrapping;
+  tex.wrapT = THREE.RepeatWrapping;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+}
+
+function makeDurlockTexture() {
+  const c = document.createElement('canvas');
+  c.width = 256;
+  c.height = 256;
+  const ctx = c.getContext('2d');
+  // Blanco puro
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, 256, 256);
+  // Textura muy sutil (casi imperceptible) para que no parezca cartón plano
+  for (let i = 0; i < 300; i++) {
+    ctx.fillStyle = `rgba(230, 232, 235, ${Math.random() * 0.09})`;
+    ctx.fillRect(Math.random() * 256, Math.random() * 256, 1 + Math.random() * 2, 1 + Math.random() * 2);
+  }
+  const tex = new THREE.CanvasTexture(c);
+  tex.wrapS = THREE.RepeatWrapping;
+  tex.wrapT = THREE.RepeatWrapping;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+}
+
+function makeWpcTexture() {
+  const c = document.createElement('canvas');
+  c.width = 256;
+  c.height = 1024;
+  const ctx = c.getContext('2d');
+
+  // Fondo negro profundo (los surcos en V entre listones)
+  ctx.fillStyle = '#040406';
+  ctx.fillRect(0, 0, 256, 1024);
+
+  // 8 listones angostos por canvas
+  // Cada unidad = 3 cm listón + 1 cm surco = 4 cm
+  // Canvas 256 px = 8 unidades × 32 px = 32 cm real
+  // Listón: 24 px (3 cm), surco: 8 px (1 cm)
+  const unit = 32;
+  const slatW = 24;
+  const gap = 8;
+
+  for (let col = 0; col < 8; col++) {
+    const xs = col * unit + gap / 2; // posición del listón en x (centrado en su unit)
+
+    // Variación sutil de tono entre listones
+    const shade = 0.88 + Math.random() * 0.24;
+    const r = Math.round(22 * shade);
+    const g = Math.round(22 * shade);
+    const b = Math.round(24 * shade);
+
+    // Cuerpo del listón
+    ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+    ctx.fillRect(xs, 0, slatW, 1024);
+
+    // Highlight en el borde IZQUIERDO del listón (luz desde arriba-izq)
+    const gradL = ctx.createLinearGradient(xs, 0, xs + 5, 0);
+    gradL.addColorStop(0, 'rgba(255, 255, 255, 0.10)');
+    gradL.addColorStop(0.5, 'rgba(255, 255, 255, 0.04)');
+    gradL.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    ctx.fillStyle = gradL;
+    ctx.fillRect(xs, 0, 5, 1024);
+
+    // Sombra en el borde DERECHO del listón
+    const gradR = ctx.createLinearGradient(xs + slatW - 5, 0, xs + slatW, 0);
+    gradR.addColorStop(0, 'rgba(0, 0, 0, 0)');
+    gradR.addColorStop(0.5, 'rgba(0, 0, 0, 0.25)');
+    gradR.addColorStop(1, 'rgba(0, 0, 0, 0.55)');
+    ctx.fillStyle = gradR;
+    ctx.fillRect(xs + slatW - 5, 0, 5, 1024);
+
+    // Vetas de madera muy sutiles (verticales)
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(xs, 0, slatW, 1024);
+    ctx.clip();
+    for (let i = 0; i < 6; i++) {
+      ctx.strokeStyle = `rgba(${48 + Math.random() * 20}, ${40 + Math.random() * 18}, ${34 + Math.random() * 14}, ${0.04 + Math.random() * 0.08})`;
+      ctx.lineWidth = 0.4 + Math.random() * 0.6;
+      ctx.beginPath();
+      const gx = xs + slatW * 0.2 + Math.random() * slatW * 0.6;
+      ctx.moveTo(gx, 0);
+      for (let gy = 0; gy <= 1024; gy += 8) {
+        ctx.lineTo(gx + Math.sin(gy * 0.018 + i * 2 + col) * 0.4, gy);
+      }
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  const tex = new THREE.CanvasTexture(c);
+  tex.wrapS = THREE.RepeatWrapping;
+  tex.wrapT = THREE.RepeatWrapping;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+}
+
+function makeParquetTexture() {
+  const c = document.createElement('canvas');
+  c.width = 512;
+  c.height = 256;
+  const ctx = c.getContext('2d');
+
+  // Base madera clara
+  ctx.fillStyle = '#b8885a';
+  ctx.fillRect(0, 0, 512, 256);
+
+  // Grid de tablones: 4 columnas × 8 filas, con offset (running bond)
+  const plankW = 128;
+  const plankH = 32;
+
+  for (let row = 0; row < 8; row++) {
+    const xOff = (row % 2) * (plankW / 2);
+    for (let col = -1; col <= 4; col++) {
+      const x = col * plankW + xOff;
+      const y = row * plankH;
+
+      // Variación de tono entre tablones
+      const shade = 0.80 + Math.random() * 0.40;
+      const hueR = Math.round(188 * shade);
+      const hueG = Math.round(140 * shade);
+      const hueB = Math.round(92 * shade);
+      ctx.fillStyle = `rgb(${hueR}, ${hueG}, ${hueB})`;
+      ctx.fillRect(x, y, plankW, plankH);
+
+      // Vetas de madera (líneas longitudinales con ruido)
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(x, y, plankW, plankH);
+      ctx.clip();
+      for (let i = 0; i < 14; i++) {
+        ctx.strokeStyle = `rgba(${60 + Math.random() * 25}, ${35 + Math.random() * 20}, ${12 + Math.random() * 14}, ${0.08 + Math.random() * 0.22})`;
+        ctx.lineWidth = 0.4 + Math.random() * 1.1;
+        ctx.beginPath();
+        const gy = y + Math.random() * plankH;
+        ctx.moveTo(x, gy);
+        for (let gx = 0; gx <= plankW; gx += 6) {
+          ctx.lineTo(x + gx, gy + Math.sin(gx * 0.04 + i * 2 + row) * 0.7);
+        }
+        ctx.stroke();
+      }
+      // Nudos ocasionales
+      if (Math.random() < 0.15) {
+        const nx = x + plankW * (0.2 + Math.random() * 0.6);
+        const ny = y + plankH * (0.3 + Math.random() * 0.4);
+        const nr = 1 + Math.random() * 2;
+        ctx.fillStyle = `rgba(50, 25, 8, 0.5)`;
+        ctx.beginPath();
+        ctx.ellipse(nx, ny, nr * 1.5, nr, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+
+      // Borde del tablón (oscuro)
+      ctx.strokeStyle = 'rgba(20, 10, 3, 0.75)';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(x + 0.5, y + 0.5, plankW - 1, plankH - 1);
+    }
+  }
+
+  const tex = new THREE.CanvasTexture(c);
+  tex.wrapS = THREE.RepeatWrapping;
+  tex.wrapT = THREE.RepeatWrapping;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+}
+
+function makeWoodTexture() {
+  const c = document.createElement('canvas');
+  c.width = 512;
+  c.height = 256;
+  const ctx = c.getContext('2d');
+  const base = ctx.createLinearGradient(0, 0, 512, 0);
+  base.addColorStop(0, '#c9a876');
+  base.addColorStop(0.5, '#d4b284');
+  base.addColorStop(1, '#b99368');
+  ctx.fillStyle = base;
+  ctx.fillRect(0, 0, 512, 256);
+  // vetas
+  for (let i = 0; i < 30; i++) {
+    ctx.strokeStyle = `rgba(90, 55, 20, ${0.08 + Math.random() * 0.12})`;
+    ctx.lineWidth = 0.5 + Math.random() * 1.2;
+    ctx.beginPath();
+    const y = Math.random() * 256;
+    ctx.moveTo(0, y);
+    for (let x = 0; x < 512; x += 10) {
+      ctx.lineTo(x, y + Math.sin(x * 0.02 + i) * 3);
+    }
+    ctx.stroke();
+  }
+  const tex = new THREE.CanvasTexture(c);
+  tex.wrapS = THREE.RepeatWrapping;
+  tex.wrapT = THREE.RepeatWrapping;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+}
+
+const tileTex = makeSubwayTexture();
+const durlockTex = makeDurlockTexture();
+const woodTex = makeWoodTexture();
+const parquetTex = makeParquetTexture();
+parquetTex.repeat.set(1.7, 3);
+const wpcTex = makeWpcTexture();
+
+// === Materiales ===
+const tileMat = new THREE.MeshStandardMaterial({ map: tileTex, roughness: 0.12, metalness: 0.25 });
+const durlockMat = new THREE.MeshStandardMaterial({ map: durlockTex, roughness: 0.88 });
+const floorMat = new THREE.MeshStandardMaterial({ map: parquetTex, roughness: 0.45, metalness: 0.1 });
+const ceilingMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.9 });
+const concreteMat = new THREE.MeshStandardMaterial({ color: 0x8e8a82, roughness: 0.92, metalness: 0.02 });
+const blackBachaMat = new THREE.MeshStandardMaterial({ color: 0x0e0e0e, roughness: 0.35, metalness: 0.15 });
+const wpcMat = new THREE.MeshStandardMaterial({ map: wpcTex, roughness: 0.55, metalness: 0.08 });
+const woodMat = new THREE.MeshStandardMaterial({ map: woodTex, roughness: 0.55, metalness: 0.05 });
+const lavMat = new THREE.MeshStandardMaterial({ color: 0x141414, roughness: 0.28, metalness: 0.35 });
+const lavPanelMat = new THREE.MeshStandardMaterial({ color: 0x2a2a2a, roughness: 0.25, metalness: 0.3 });
+const darkPlasticMat = new THREE.MeshStandardMaterial({ color: 0x2a2d34, roughness: 0.4 });
+const bachaMat = new THREE.MeshStandardMaterial({ color: 0xa8a8a8, roughness: 0.2, metalness: 0.9 });
+const glassMat = new THREE.MeshPhysicalMaterial({ color: 0xccd0d6, roughness: 0.08, metalness: 0, transmission: 0.7, transparent: true, opacity: 0.75 });
+const doorMat = new THREE.MeshStandardMaterial({ color: 0x5a3820, roughness: 0.65 });
+
+// === Helpers ===
+function setRepeat(mat, rx, ry) {
+  mat.map = mat.map.clone();
+  mat.map.wrapS = THREE.RepeatWrapping;
+  mat.map.wrapT = THREE.RepeatWrapping;
+  mat.map.repeat.set(rx, ry);
+  mat.map.colorSpace = THREE.SRGBColorSpace;
+  mat.map.needsUpdate = true;
+  mat.needsUpdate = true;
+  return mat;
+}
+
+// === Piso ===
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(ROOM_W, ROOM_D), floorMat);
+floor.rotation.x = -Math.PI / 2;
+floor.position.set(ROOM_W / 2, 0, ROOM_D / 2);
+floor.receiveShadow = true;
+scene.add(floor);
+
+// === Cielorraso ===
+const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(ROOM_W, ROOM_D), ceilingMat);
+ceiling.rotation.x = Math.PI / 2;
+ceiling.position.set(ROOM_W / 2, ROOM_H, ROOM_D / 2);
+scene.add(ceiling);
+
+// === Helper: build a wall panel facing +z (at z=0 or translated) ===
+function addDurlockPanel(w, h, x, y, z, rotY = 0) {
+  const mat = setRepeat(durlockMat.clone(), Math.max(0.5, w / 1.2), Math.max(0.5, h / 1.2));
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), mat);
+  m.position.set(x, y, z);
+  m.rotation.y = rotY;
+  m.receiveShadow = true;
+  scene.add(m);
+  return m;
+}
+
+// === Pared larga SUPERIOR (z=0) con puerta 1 ===
+// Segmento 1: x=0 a 1.45
+addDurlockPanel(DOOR1_X, ROOM_H, DOOR1_X / 2, ROOM_H / 2, 0, 0);
+// Segmento 2: x=2.24 a 4.05
+const seg1End = DOOR1_X + DOOR1_W;
+addDurlockPanel(ROOM_W - seg1End, ROOM_H, seg1End + (ROOM_W - seg1End) / 2, ROOM_H / 2, 0, 0);
+// Dintel arriba de la puerta
+addDurlockPanel(DOOR1_W, ROOM_H - 2.05, DOOR1_X + DOOR1_W / 2, 2.05 + (ROOM_H - 2.05) / 2, 0, 0);
+
+// === Helper: puerta tablero con vidrios repartidos en 4 ===
+// Mitad inferior maciza (madera), mitad superior con 4 vidrios (cruz central de madera)
+function makePaneledDoor(width, height) {
+  const group = new THREE.Group();
+  const solidH = 0.90;                  // parte maciza (hasta 90 cm del piso)
+  const topH = height - solidH;         // parte con vidrios
+  const m = 0.035;                      // grosor de los travesaños
+
+  // Panel macizo de madera (caja delgada)
+  const solid = new THREE.Mesh(new THREE.BoxGeometry(width, solidH, 0.035), doorMat);
+  solid.position.set(0, -height / 2 + solidH / 2, 0);
+  solid.castShadow = true;
+  group.add(solid);
+
+  // Vidrio (plano único que después es cruzado por la cruz de madera)
+  const glassY = -height / 2 + solidH + topH / 2;
+  const glass = new THREE.Mesh(new THREE.PlaneGeometry(width - 2 * m, topH - 2 * m), glassMat);
+  glass.position.set(0, glassY, 0);
+  group.add(glass);
+
+  // Marco perimetral de la parte alta (arriba, abajo, izq, der)
+  const topBar = new THREE.Mesh(new THREE.BoxGeometry(width, m, 0.035), doorMat);
+  topBar.position.set(0, -height / 2 + height - m / 2, 0.002);
+  group.add(topBar);
+  const botBar = new THREE.Mesh(new THREE.BoxGeometry(width, m, 0.035), doorMat);
+  botBar.position.set(0, -height / 2 + solidH + m / 2, 0.002);
+  group.add(botBar);
+  const leftBar = new THREE.Mesh(new THREE.BoxGeometry(m, topH - 2 * m, 0.035), doorMat);
+  leftBar.position.set(-width / 2 + m / 2, glassY, 0.002);
+  group.add(leftBar);
+  const rightBar = new THREE.Mesh(new THREE.BoxGeometry(m, topH - 2 * m, 0.035), doorMat);
+  rightBar.position.set(width / 2 - m / 2, glassY, 0.002);
+  group.add(rightBar);
+
+  // Cruz central: horizontal + vertical divide los 4 vidrios
+  const crossH = new THREE.Mesh(new THREE.BoxGeometry(width - 2 * m, m, 0.035), doorMat);
+  crossH.position.set(0, glassY, 0.003);
+  group.add(crossH);
+  const crossV = new THREE.Mesh(new THREE.BoxGeometry(m, topH - 2 * m, 0.035), doorMat);
+  crossV.position.set(0, glassY, 0.003);
+  group.add(crossV);
+
+  // Picaporte
+  const handleMat2 = new THREE.MeshStandardMaterial({ color: 0xb0a070, roughness: 0.35, metalness: 0.6 });
+  const handleKnob = new THREE.Mesh(new THREE.SphereGeometry(0.025, 16, 12), handleMat2);
+  handleKnob.position.set(width / 2 - 0.08, -height / 2 + 1.00, 0.025);
+  group.add(handleKnob);
+
+  return group;
+}
+
+// Hoja de puerta 1 (pared larga superior, z=0, mirando hacia +z)
+const door1 = makePaneledDoor(DOOR1_W - 0.02, 2.05);
+door1.position.set(DOOR1_X + DOOR1_W / 2, 1.025, 0.02);
+scene.add(door1);
+
+// === Pared larga INFERIOR (z=ROOM_D) con ventana + puerta 2 ===
+// Segmento 1: x=0 a 0.67
+addDurlockPanel(WINDOW_X, ROOM_H, WINDOW_X / 2, ROOM_H / 2, ROOM_D, Math.PI);
+// Alrededor de la ventana (x=0.67 a 1.87, ventana entre y=1.10 y y=1.90)
+// Abajo ventana
+addDurlockPanel(WINDOW_W, WINDOW_SILL, WINDOW_X + WINDOW_W / 2, WINDOW_SILL / 2, ROOM_D, Math.PI);
+// Arriba ventana
+const windowTop = WINDOW_SILL + WINDOW_H;
+addDurlockPanel(WINDOW_W, ROOM_H - windowTop, WINDOW_X + WINDOW_W / 2, windowTop + (ROOM_H - windowTop) / 2, ROOM_D, Math.PI);
+// Entre ventana y puerta 2 (x=1.87 a 2.52)
+const midStart = WINDOW_X + WINDOW_W;
+addDurlockPanel(DOOR2_X - midStart, ROOM_H, midStart + (DOOR2_X - midStart) / 2, ROOM_H / 2, ROOM_D, Math.PI);
+// Dintel arriba puerta 2
+addDurlockPanel(DOOR2_W, ROOM_H - 2.05, DOOR2_X + DOOR2_W / 2, 2.05 + (ROOM_H - 2.05) / 2, ROOM_D, Math.PI);
+// Después de puerta 2 (x=3.29 a 4.05)
+const seg2End = DOOR2_X + DOOR2_W;
+addDurlockPanel(ROOM_W - seg2End, ROOM_H, seg2End + (ROOM_W - seg2End) / 2, ROOM_H / 2, ROOM_D, Math.PI);
+
+// Hoja de puerta 2 (pared larga inferior, z=ROOM_D, mirando hacia -z)
+const door2 = makePaneledDoor(DOOR2_W - 0.02, 2.05);
+door2.position.set(DOOR2_X + DOOR2_W / 2, 1.025, ROOM_D - 0.02);
+door2.rotation.y = Math.PI;
+scene.add(door2);
+
+// === Revestimiento WPC NEGRO sobre la cara EXTERIOR de la pared inferior ===
+// Sale ~6 cm afuera del durlock interior (rastrel + listón)
+const WPC_OFFSET = 0.06;
+const wpcZ = ROOM_D + WPC_OFFSET;
+
+function setWpcRepeat(mat, w, h) {
+  const m = mat.clone();
+  m.map = mat.map.clone();
+  m.map.wrapS = THREE.RepeatWrapping;
+  m.map.wrapT = THREE.RepeatWrapping;
+  // Listones de 3 cm + surcos de 1 cm = 4 cm por unidad
+  // Canvas tiene 8 listones × 32 px = 256 px = 32 cm real
+  // Vertical: canvas 1024 px = 2.5 m real (sin tiling vertical en una pared de 2.20 m)
+  m.map.repeat.set(w / 0.32, h / 2.5);
+  m.map.colorSpace = THREE.SRGBColorSpace;
+  m.map.needsUpdate = true;
+  m.needsUpdate = true;
+  return m;
+}
+
+function addWpcPanel(w, h, x, y) {
+  if (w <= 0 || h <= 0) return;
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), setWpcRepeat(wpcMat, w, h));
+  m.position.set(x, y, wpcZ);
+  // Mira hacia +z (afuera)
+  m.receiveShadow = true;
+  scene.add(m);
+}
+
+// Mismos splits que la pared interior, pero del lado exterior con WPC negro
+addWpcPanel(WINDOW_X, ROOM_H, WINDOW_X / 2, ROOM_H / 2);                                              // antes de ventana
+addWpcPanel(WINDOW_W, WINDOW_SILL, WINDOW_X + WINDOW_W / 2, WINDOW_SILL / 2);                          // abajo ventana
+addWpcPanel(WINDOW_W, ROOM_H - (WINDOW_SILL + WINDOW_H), WINDOW_X + WINDOW_W / 2, (WINDOW_SILL + WINDOW_H) + (ROOM_H - (WINDOW_SILL + WINDOW_H)) / 2); // arriba ventana
+addWpcPanel(DOOR2_X - (WINDOW_X + WINDOW_W), ROOM_H, (WINDOW_X + WINDOW_W) + (DOOR2_X - (WINDOW_X + WINDOW_W)) / 2, ROOM_H / 2); // entre ventana y puerta
+addWpcPanel(DOOR2_W, ROOM_H - 2.05, DOOR2_X + DOOR2_W / 2, 2.05 + (ROOM_H - 2.05) / 2);                // dintel puerta 2
+addWpcPanel(ROOM_W - (DOOR2_X + DOOR2_W), ROOM_H, (DOOR2_X + DOOR2_W) + (ROOM_W - (DOOR2_X + DOOR2_W)) / 2, ROOM_H / 2); // después de puerta 2
+
+// Marco aluminio en U alrededor de las aberturas (terminación del WPC)
+const wpcFrameMat = new THREE.MeshStandardMaterial({ color: 0x222226, roughness: 0.45, metalness: 0.6 });
+function addWpcFrame(w, h, cx, cy) {
+  const bar = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.025), wpcFrameMat);
+  bar.position.set(cx, cy, wpcZ + 0.013);
+  scene.add(bar);
+}
+// Marco ventana
+addWpcFrame(WINDOW_W + 0.02, 0.025, WINDOW_X + WINDOW_W / 2, WINDOW_SILL);                            // inferior
+addWpcFrame(WINDOW_W + 0.02, 0.025, WINDOW_X + WINDOW_W / 2, WINDOW_SILL + WINDOW_H);                 // superior
+addWpcFrame(0.025, WINDOW_H + 0.02, WINDOW_X, WINDOW_SILL + WINDOW_H / 2);                            // izquierda
+addWpcFrame(0.025, WINDOW_H + 0.02, WINDOW_X + WINDOW_W, WINDOW_SILL + WINDOW_H / 2);                 // derecha
+// Marco puerta 2 (3 lados, abajo no)
+addWpcFrame(DOOR2_W + 0.02, 0.025, DOOR2_X + DOOR2_W / 2, 2.05);                                      // dintel
+addWpcFrame(0.025, 2.05, DOOR2_X, 2.05 / 2);                                                          // izquierda
+addWpcFrame(0.025, 2.05, DOOR2_X + DOOR2_W, 2.05 / 2);                                                // derecha
+
+// Vidrio de ventana
+const winGlass = new THREE.Mesh(new THREE.PlaneGeometry(WINDOW_W - 0.04, WINDOW_H - 0.04), glassMat);
+winGlass.rotation.y = Math.PI;
+winGlass.position.set(WINDOW_X + WINDOW_W / 2, WINDOW_SILL + WINDOW_H / 2, ROOM_D - 0.01);
+scene.add(winGlass);
+// Marco ventana (4 barras)
+const winFrameMat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.5 });
+function addWinFrame(w, h, cx, cy) {
+  const bar = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.04), winFrameMat);
+  bar.position.set(cx, cy, ROOM_D - 0.02);
+  scene.add(bar);
+}
+addWinFrame(WINDOW_W, 0.04, WINDOW_X + WINDOW_W / 2, WINDOW_SILL);                           // inferior
+addWinFrame(WINDOW_W, 0.04, WINDOW_X + WINDOW_W / 2, WINDOW_SILL + WINDOW_H);                 // superior
+addWinFrame(0.04, WINDOW_H, WINDOW_X, WINDOW_SILL + WINDOW_H / 2);                            // izquierda
+addWinFrame(0.04, WINDOW_H, WINDOW_X + WINDOW_W, WINDOW_SILL + WINDOW_H / 2);                 // derecha
+addWinFrame(0.03, WINDOW_H, WINDOW_X + WINDOW_W / 2, WINDOW_SILL + WINDOW_H / 2);             // travesaño central
+
+// === Pared corta IZQUIERDA (x=0) — plana, opuesta a la pared húmeda ===
+const leftMat = setRepeat(durlockMat.clone(), 2, 2);
+const leftWall = new THREE.Mesh(new THREE.PlaneGeometry(ROOM_D, ROOM_H), leftMat);
+leftWall.rotation.y = Math.PI / 2;
+leftWall.position.set(0, ROOM_H / 2, ROOM_D / 2);
+leftWall.receiveShadow = true;
+scene.add(leftWall);
+
+// === Pared corta DERECHA (x=ROOM_W) = PARED HÚMEDA ===
+// Parte alta: azulejo subway 7,5×15 blanco (de y=0.90 a y=2.20, ancho = ROOM_D = 2.35)
+const tileH = ROOM_H - MESADA_H;
+const wetTop = new THREE.Mesh(new THREE.PlaneGeometry(ROOM_D, tileH), setRepeat(tileMat.clone(), ROOM_D / 0.60, tileH / 0.60));
+wetTop.rotation.y = -Math.PI / 2;
+wetTop.position.set(ROOM_W - 0.001, MESADA_H + tileH / 2, ROOM_D / 2);
+wetTop.receiveShadow = true;
+scene.add(wetTop);
+// Parte baja: durlock
+const wetBot = new THREE.Mesh(new THREE.PlaneGeometry(ROOM_D, MESADA_H), setRepeat(durlockMat.clone(), 2, 1));
+wetBot.rotation.y = -Math.PI / 2;
+wetBot.position.set(ROOM_W - 0.001, MESADA_H / 2, ROOM_D / 2);
+scene.add(wetBot);
+
+// Posiciones en z sobre la pared húmeda (x=ROOM_W)
+const LAV_Z = LAV_L / 2;                   // centro lavarropas
+const MESADA_Z = LAV_L + MESADA_L / 2;     // centro mesada (después del lavarropas)
+const BASE_H = 0.05;                        // altura base de cemento
+
+// === Base de cemento (5 cm) bajo mesada + lavarropas ===
+const baseDepth = MESADA_W;                 // 0.65 m (profundidad desde pared)
+const baseLength = LAV_L + MESADA_L;        // 0.60 + 1.64 = 2.24 m (largo)
+const cementBase = new THREE.Mesh(
+  new THREE.BoxGeometry(baseDepth, BASE_H, baseLength),
+  concreteMat
+);
+cementBase.position.set(ROOM_W - baseDepth / 2, BASE_H / 2, baseLength / 2);
+cementBase.castShadow = true;
+cementBase.receiveShadow = true;
+scene.add(cementBase);
+
+// === Mesada (madera) — partida en 4 piezas alrededor del traforo (45×70 cm) ===
+// Top a 90 cm del piso (ergonomía).
+// Traforo NO centrado: arrimado a la IZQUIERDA, pegado al lavarropas con 5 cm de lip.
+const TRAFORO_X = 0.45;
+const TRAFORO_Z = 0.70;
+const TRAFORO_LIP = 0.05; // lip de 5 cm entre lavarropas y bacha
+const marginX = (MESADA_W - TRAFORO_X) / 2;  // 0.10 (siempre centrado en x)
+
+// Traforo en coordenadas de mundo
+const TRAFORO_Z_START = LAV_L + TRAFORO_LIP;         // 0.65
+const TRAFORO_Z_END = TRAFORO_Z_START + TRAFORO_Z;   // 1.35
+const TRAFORO_CZ = (TRAFORO_Z_START + TRAFORO_Z_END) / 2;  // 1.00
+
+const mesadaY = MESADA_H - MESADA_TH / 2;
+const mesadaCX = ROOM_W - MESADA_W / 2;
+const mesadaCZ = MESADA_Z;
+
+// Mesada z va de LAV_L (0.60) a LAV_L + MESADA_L (2.24)
+const MESADA_Z_START = LAV_L;
+const MESADA_Z_END = LAV_L + MESADA_L;
+const marginZ_front = TRAFORO_Z_START - MESADA_Z_START;  // 0.05 — angosto, junto al lavarropas
+const marginZ_back = MESADA_Z_END - TRAFORO_Z_END;       // 0.89 — ancho, hacia el otro extremo
+
+// Piece 1: franja x-min (frente, hacia el cuarto) — cubre todo el largo
+const m1 = new THREE.Mesh(new THREE.BoxGeometry(marginX, MESADA_TH, MESADA_L), woodMat);
+m1.position.set(mesadaCX - MESADA_W / 2 + marginX / 2, mesadaY, mesadaCZ);
+m1.castShadow = true; m1.receiveShadow = true;
+scene.add(m1);
+
+// Piece 2: franja x-max (contra la pared) — cubre todo el largo
+const m2 = new THREE.Mesh(new THREE.BoxGeometry(marginX, MESADA_TH, MESADA_L), woodMat);
+m2.position.set(mesadaCX + MESADA_W / 2 - marginX / 2, mesadaY, mesadaCZ);
+m2.castShadow = true; m2.receiveShadow = true;
+scene.add(m2);
+
+// Piece 3: lip corto entre lavarropas y bacha (5 cm)
+const m3 = new THREE.Mesh(new THREE.BoxGeometry(TRAFORO_X, MESADA_TH, marginZ_front), woodMat);
+m3.position.set(mesadaCX, mesadaY, MESADA_Z_START + marginZ_front / 2);
+m3.castShadow = true; m3.receiveShadow = true;
+scene.add(m3);
+
+// Piece 4: franja larga después de la bacha (89 cm, hacia el hueco)
+const m4 = new THREE.Mesh(new THREE.BoxGeometry(TRAFORO_X, MESADA_TH, marginZ_back), woodMat);
+m4.position.set(mesadaCX, mesadaY, TRAFORO_Z_END + marginZ_back / 2);
+m4.castShadow = true; m4.receiveShadow = true;
+scene.add(m4);
+
+// Mueble bajo mesada (blanco laminado, desde base de cemento hasta mesada)
+const muebleMat = new THREE.MeshStandardMaterial({ color: 0xf4f4f5, roughness: 0.35, metalness: 0.05 });
+const muebleH = MESADA_H - MESADA_TH - BASE_H; // 0.90 - 0.04 - 0.05 = 0.81
+const mueble = new THREE.Mesh(
+  new THREE.BoxGeometry(MESADA_W - 0.03, muebleH, MESADA_L - 0.06),
+  muebleMat
+);
+mueble.position.set(ROOM_W - MESADA_W / 2, BASE_H + muebleH / 2, MESADA_Z);
+mueble.castShadow = true;
+mueble.receiveShadow = true;
+scene.add(mueble);
+
+// Manija
+const handleMat = new THREE.MeshStandardMaterial({ color: 0x888888, roughness: 0.3, metalness: 0.8 });
+const handle = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.02, 0.25), handleMat);
+handle.position.set(ROOM_W - MESADA_W - 0.02, 0.58, MESADA_Z);
+scene.add(handle);
+
+// === Bacha NEGRA (granito composite) — arrimada a la izquierda, junto al lavarropas ===
+// Rim flush con la mesada + bowl que baja 18 cm
+const BACHA_DEPTH = 0.18;
+const bachaBowl = new THREE.Mesh(
+  new THREE.BoxGeometry(TRAFORO_X, BACHA_DEPTH, TRAFORO_Z),
+  blackBachaMat
+);
+bachaBowl.position.set(mesadaCX, MESADA_H - BACHA_DEPTH / 2, TRAFORO_CZ);
+bachaBowl.castShadow = true;
+bachaBowl.receiveShadow = true;
+scene.add(bachaBowl);
+
+// Fondo del bowl
+const bachaFondo = new THREE.Mesh(
+  new THREE.BoxGeometry(TRAFORO_X - 0.04, 0.001, TRAFORO_Z - 0.04),
+  new THREE.MeshStandardMaterial({ color: 0x050505, roughness: 0.5, metalness: 0.1 })
+);
+bachaFondo.position.set(mesadaCX, MESADA_H - BACHA_DEPTH + 0.005, TRAFORO_CZ);
+scene.add(bachaFondo);
+
+// Canilla — centrada sobre la bacha (que ahora está a la izquierda, no en el medio de la mesada)
+const faucetBase = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.025, 0.22, 16), bachaMat);
+faucetBase.position.set(ROOM_W - 0.08, MESADA_H + 0.11, TRAFORO_CZ);
+scene.add(faucetBase);
+const faucetSpout = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.015, 0.18, 16), bachaMat);
+faucetSpout.rotation.z = Math.PI / 2;
+faucetSpout.position.set(ROOM_W - 0.17, MESADA_H + 0.21, TRAFORO_CZ);
+scene.add(faucetSpout);
+
+// === Lavarropas (apoyado en la base de cemento, +5 cm) ===
+const lavBody = new THREE.Mesh(new THREE.BoxGeometry(LAV_W, LAV_H, LAV_L), lavMat);
+lavBody.position.set(ROOM_W - LAV_W / 2, BASE_H + LAV_H / 2, LAV_Z);
+lavBody.castShadow = true;
+lavBody.receiveShadow = true;
+scene.add(lavBody);
+
+const lavPanel = new THREE.Mesh(new THREE.BoxGeometry(LAV_W - 0.04, 0.04, LAV_L - 0.04), lavPanelMat);
+lavPanel.position.set(ROOM_W - LAV_W / 2, BASE_H + LAV_H + 0.02, LAV_Z);
+scene.add(lavPanel);
+for (let i = 0; i < 3; i++) {
+  const knob = new THREE.Mesh(new THREE.CylinderGeometry(0.015, 0.015, 0.02, 16), darkPlasticMat);
+  knob.rotation.x = Math.PI / 2;
+  knob.position.set(ROOM_W - LAV_W + 0.05 + i * 0.08, BASE_H + LAV_H + 0.04, LAV_Z + 0.18);
+  scene.add(knob);
+}
+const doorOuter = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.03, 32), darkPlasticMat);
+doorOuter.rotation.z = Math.PI / 2;
+doorOuter.position.set(ROOM_W - LAV_W - 0.01, BASE_H + 0.45, LAV_Z);
+scene.add(doorOuter);
+const doorGlass = new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.17, 0.035, 32), glassMat);
+doorGlass.rotation.z = Math.PI / 2;
+doorGlass.position.set(ROOM_W - LAV_W - 0.02, BASE_H + 0.45, LAV_Z);
+scene.add(doorGlass);
+const logo = new THREE.Mesh(new THREE.CircleGeometry(0.03, 16), darkPlasticMat);
+logo.rotation.y = -Math.PI / 2;
+logo.position.set(ROOM_W - LAV_W - 0.005, BASE_H + 0.75, LAV_Z);
+scene.add(logo);
+
+// === Lámpara de techo ===
+const lampShade = new THREE.Mesh(
+  new THREE.CylinderGeometry(0.12, 0.18, 0.06, 16, 1, true),
+  new THREE.MeshStandardMaterial({ color: 0xeeeeee, roughness: 0.7, side: THREE.DoubleSide })
+);
+lampShade.position.set(ROOM_W / 2, ROOM_H - 0.08, ROOM_D / 2);
+scene.add(lampShade);
+
+// === Vistas predefinidas ===
+const views = {
+  iso: { pos: [ROOM_W + 2.5, 2.8, ROOM_D + 3.2], target: [ROOM_W / 2, ROOM_H / 2.4, ROOM_D / 2] },
+  front: { pos: [ROOM_W / 2, 1.3, ROOM_D + 4.5], target: [ROOM_W / 2, 1.3, ROOM_D / 2] },
+  wet: { pos: [ROOM_W - 3.5, 1.3, ROOM_D / 2], target: [ROOM_W, 1.1, ROOM_D / 2] },
+  top: { pos: [ROOM_W / 2, 8, ROOM_D / 2 + 0.01], target: [ROOM_W / 2, 0, ROOM_D / 2] },
+  fachada: { pos: [ROOM_W / 2, 1.4, ROOM_D + 5.2], target: [ROOM_W / 2, 1.1, ROOM_D + WPC_OFFSET] }
+};
+function setView(name) {
+  const v = views[name];
+  if (!v) return;
+  camera.position.set(...v.pos);
+  controls.target.set(...v.target);
+  controls.update();
+}
+setView('iso');
+document.querySelectorAll('#views button').forEach(btn => {
+  btn.addEventListener('click', () => setView(btn.dataset.view));
+});
+
+// === Resize ===
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// === Loop ===
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>

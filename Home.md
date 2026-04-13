@@ -73,6 +73,9 @@ Reformas en el hogar.
 - [[Hogar/Lavadero/Lavadero|Reforma Lavadero]]
 - [[Hogar/Lavadero/01-mesada-presupuestos|Mesada — Presupuestos]]
 - [[Hogar/Lavadero/02-bachas|Bachas — Opciones]]
+- [[Hogar/Lavadero/03-durlock-presupuesto|Durlock — Presupuesto revestimiento paredes]]
+- [[Hogar/Lavadero/04-azulejo-zona-humeda|Azulejo — Presupuesto zona húmeda]]
+- [[Hogar/Lavadero/05-revestimiento-wpc-exterior|WPC exterior — Revestimiento símil madera]]
 
 ### Oficina
 - [[Hogar/Oficina/Oficina|Reforma Oficina]]
@@ -150,6 +153,7 @@ Ver [[Skills/Skills|Skills]].
 - [[Skills/configurar-boveda/SKILL|Configurar Bóveda]] — Vincula proyectos con Obsidian
 - [[Skills/sincronizar-boveda/SKILL|Sincronizar Bóveda]] — Sincroniza docs del proyecto
 - [[Skills/tarea-boveda/SKILL|Tarea Bóveda]] — Crea notas de tareas (APP/API) en el proyecto
+- [[Skills/nota-reforma/SKILL|Nota Reforma]] — Crea notas livianas en proyectos no-software y actualiza índices
 - [[Skills/fullstack-docker-app/SKILL|Fullstack Docker App]] — Genera infra Docker completa
 - [[Skills/skill-creator/SKILL|Skill Creator]] — Crea nuevos skills
 - [[Skills/pdf/SKILL|PDF]] — Generación de PDFs

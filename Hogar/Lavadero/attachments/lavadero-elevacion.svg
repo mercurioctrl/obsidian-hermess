@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" font-family="system-ui, sans-serif" font-size="10">
+  <defs>
+    <!-- Gradientes para simular el bisel -->
+    <linearGradient id="tileBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcfcfe"/>
+      <stop offset="20%" stop-color="#f6f6f8"/>
+      <stop offset="60%" stop-color="#ededef"/>
+      <stop offset="100%" stop-color="#cbcbcf"/>
+    </linearGradient>
+    <!-- Subway 7,5 × 15 con junta blanca y running bond (canvas = 15 × 15) -->
+    <pattern id="subway" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+      <!-- Fondo junta blanca -->
+      <rect width="15" height="15" fill="#ffffff"/>
+      <!-- Fila superior: 1 tile entero (x 0-15 y 0-7.5) -->
+      <rect x="0.35" y="0.35" width="14.3" height="6.8" fill="url(#tileBevel)" stroke="#a8a8ac" stroke-width="0.08"/>
+      <!-- Fila inferior offset 50%: 2 medios tiles -->
+      <rect x="0.35" y="7.85" width="6.8" height="6.8" fill="url(#tileBevel)" stroke="#a8a8ac" stroke-width="0.08"/>
+      <rect x="7.85" y="7.85" width="6.8" height="6.8" fill="url(#tileBevel)" stroke="#a8a8ac" stroke-width="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="420" height="360" fill="#ffffff"/>
+
+  <text x="210" y="22" text-anchor="middle" font-size="15" font-weight="bold">Lavadero — Elevación pared húmeda</text>
+  <text x="210" y="36" text-anchor="middle" font-size="10" fill="#666">Pared corta (2,35 m × 2,20 m) · Azulejo subway blanco 7,5×15 · Medidas en cm</text>
+
+  <g transform="translate(85, 65)">
+    <!-- Pared 235 x 220 cm -->
+    <rect x="0" y="0" width="235" height="220" fill="#ffffff" stroke="#2a2a2a" stroke-width="2"/>
+
+    <!-- Zona azulejada blanca: de y=0 (techo) a y=130 (top mesada) -->
+    <rect x="0" y="0" width="235" height="130" fill="url(#subway)" stroke="#888" stroke-width="0.8"/>
+
+    <!-- Label zona azulejo -->
+    <g>
+      <rect x="60" y="40" width="115" height="50" rx="3" fill="#ffffff" stroke="#aaa" stroke-width="0.5" opacity="0.95"/>
+      <text x="117" y="57" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">AZULEJO BLANCO</text>
+      <text x="117" y="69" text-anchor="middle" font-size="8" fill="#333">Subway 7,5×15 brillante</text>
+      <text x="117" y="81" text-anchor="middle" font-size="9" fill="#c00" font-weight="bold">2,35 × 1,30 ≈ 3,05 m²</text>
+    </g>
+
+    <!-- Base de cemento 5 cm (eleva mesada + lavarropas) -->
+    <rect x="0" y="215" width="224" height="5" fill="#a8a8a8" stroke="#555" stroke-width="0.5"/>
+    <pattern id="concreteHatch" patternUnits="userSpaceOnUse" width="4" height="4">
+      <line x1="0" y1="4" x2="4" y2="0" stroke="#777" stroke-width="0.5"/>
+    </pattern>
+    <rect x="0" y="215" width="224" height="5" fill="url(#concreteHatch)"/>
+    <text x="-10" y="219" text-anchor="end" font-size="6" fill="#555">cemento 5 cm</text>
+
+    <!-- Lavarropas 60 x 85 cm NEGRO - arrimado al lado de la puerta sola, sobre base -->
+    <rect x="0" y="130" width="60" height="85" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+    <rect x="4" y="134" width="52" height="14" fill="#333" stroke="#000" stroke-width="0.5"/>
+    <circle cx="30" cy="175" r="18" fill="#0a0a0a" stroke="#555" stroke-width="1"/>
+    <circle cx="30" cy="175" r="13" fill="#1a1a1a" stroke="#444" stroke-width="0.6"/>
+    <circle cx="30" cy="175" r="2" fill="#888"/>
+    <text x="30" y="209" text-anchor="middle" font-size="6" fill="#ddd">Lavarropas 60</text>
+
+    <!-- Mesada 164 cm, top a 90 cm del piso, después del lavarropas (x=60 a 224) -->
+    <rect x="60" y="130" width="164" height="4" fill="#d4ad7a" stroke="#6b4220" stroke-width="0.8"/>
+    <text x="142" y="145" text-anchor="middle" font-size="8" fill="#6b4220">Mesada 164 cm</text>
+
+    <!-- Bacha NEGRA — arrimada al lavarropas con 5 cm de lip (mesada empieza en x=60, lip hasta x=65, bacha de 65 a 135) -->
+    <rect x="65" y="128" width="70" height="4" fill="#0a0a0a" stroke="#333" stroke-width="0.5"/>
+    <text x="100" y="125" text-anchor="middle" font-size="7" fill="#000">bacha negra</text>
+
+    <!-- Mueble bajo mesada BLANCO (visual, entre base y mesada) -->
+    <rect x="62" y="134" width="160" height="81" fill="#f4f4f5" stroke="#c0c0c5" stroke-width="0.6"/>
+    <!-- Línea de división de puertas del mueble -->
+    <line x1="142" y1="140" x2="142" y2="209" stroke="#ccc" stroke-width="0.4"/>
+    <!-- Manijas -->
+    <circle cx="135" cy="175" r="1.5" fill="#888" stroke="#555" stroke-width="0.2"/>
+    <circle cx="149" cy="175" r="1.5" fill="#888" stroke="#555" stroke-width="0.2"/>
+
+    <!-- Hueco 11 cm (espacio libre al fondo, lado ventana+puerta) -->
+    <rect x="224" y="140" width="11" height="80" fill="#fff8e8" stroke="#c9a832" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="229" y="182" text-anchor="middle" font-size="5" fill="#8b6a10" transform="rotate(-90 229 182)">11 cm</text>
+
+    <!-- Piso -->
+    <line x1="-10" y1="220" x2="245" y2="220" stroke="#2a2a2a" stroke-width="4"/>
+    <text x="117" y="235" text-anchor="middle" font-size="8" fill="#888">— piso —</text>
+
+    <!-- DIMENSIONES -->
+    <!-- Altura total 2,20 m -->
+    <g stroke="#2a2a2a" stroke-width="0.8" fill="none">
+      <line x1="-40" y1="0" x2="-40" y2="220"/>
+      <line x1="-45" y1="0" x2="-35" y2="0"/>
+      <line x1="-45" y1="220" x2="-35" y2="220"/>
+    </g>
+    <text x="-52" y="113" text-anchor="middle" font-size="11" font-weight="bold" transform="rotate(-90 -52 113)">2,20 m</text>
+
+    <!-- Altura zona azulejada 1,30 m -->
+    <g stroke="#c00" stroke-width="0.8" fill="none">
+      <line x1="245" y1="0" x2="245" y2="130"/>
+      <line x1="240" y1="0" x2="250" y2="0"/>
+      <line x1="240" y1="130" x2="250" y2="130"/>
+    </g>
+    <text x="253" y="68" font-size="10" fill="#c00" font-weight="bold">1,30 m</text>
+
+    <!-- Altura mesada 90 cm -->
+    <g stroke="#888" stroke-width="0.6" fill="none">
+      <line x1="-18" y1="130" x2="-18" y2="220"/>
+      <line x1="-22" y1="130" x2="-14" y2="130"/>
+      <line x1="-22" y1="220" x2="-14" y2="220"/>
+    </g>
+    <text x="-26" y="178" text-anchor="middle" font-size="8" fill="#666" transform="rotate(-90 -26 178)">90 cm</text>
+
+    <!-- Ancho pared 2,35 m -->
+    <g stroke="#2a2a2a" stroke-width="0.8" fill="none">
+      <line x1="0" y1="255" x2="235" y2="255"/>
+      <line x1="0" y1="250" x2="0" y2="260"/>
+      <line x1="235" y1="250" x2="235" y2="260"/>
+    </g>
+    <text x="117" y="272" text-anchor="middle" font-size="11" font-weight="bold">2,35 m</text>
+
+    <!-- Sub-división: 60 + 164 + 11 -->
+    <g stroke="#666" stroke-width="0.5" fill="none">
+      <line x1="0" y1="290" x2="60" y2="290"/>
+      <line x1="0" y1="286" x2="0" y2="294"/>
+      <line x1="60" y1="286" x2="60" y2="294"/>
+      <line x1="60" y1="290" x2="224" y2="290"/>
+      <line x1="224" y1="286" x2="224" y2="294"/>
+      <line x1="224" y1="290" x2="235" y2="290"/>
+      <line x1="235" y1="286" x2="235" y2="294"/>
+    </g>
+    <text x="30" y="304" text-anchor="middle" font-size="8" fill="#666">60 cm</text>
+    <text x="142" y="304" text-anchor="middle" font-size="8" fill="#666">164 cm</text>
+    <text x="229" y="304" text-anchor="middle" font-size="6" fill="#8b6a10">11</text>
+
+    <!-- Ancho azulejo = pared completa -->
+    <g stroke="#c00" stroke-width="0.8" fill="none">
+      <line x1="0" y1="-18" x2="235" y2="-18"/>
+      <line x1="0" y1="-22" x2="0" y2="-14"/>
+      <line x1="235" y1="-22" x2="235" y2="-14"/>
+    </g>
+    <text x="117" y="-25" text-anchor="middle" font-size="10" font-weight="bold" fill="#c00">2,35 m (pared completa azulejada)</text>
+  </g>
+
+  <!-- Leyenda -->
+  <g transform="translate(55, 330)" font-size="9">
+    <rect x="0" y="0" width="14" height="10" fill="url(#subway)" stroke="#000" stroke-width="0.5"/>
+    <text x="20" y="9">Azulejo subway 10×20 negro · 2,35 × 1,30 m ≈ 3,05 m²</text>
+  </g>
+</svg>
