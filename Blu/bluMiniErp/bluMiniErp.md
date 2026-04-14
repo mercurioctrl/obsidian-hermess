@@ -50,7 +50,8 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | Base de datos | MySQL 8 |
 | Cache | Redis 7 |
 | Auth | Laravel Sanctum (Bearer token) |
-| PDF | barryvdh/laravel-dompdf + TCPDF + FPDI |
+| PDF presupuestos | Spatie Browsershot + Chromium headless (desde Node 20 + Puppeteer) |
+| PDF activaciones | TCPDF + FPDI sobre membretada |
 | IA | DeepSeek API |
 | Mail | SMTP (box.lio.red, cuenta `payments@blustudioinc.com`) |
 | Proxy | Nginx |

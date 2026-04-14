@@ -112,3 +112,34 @@ Las URLs de imagen se generan con `Storage::url()` que usa `APP_URL` del `.env`
 del backend. Por default viene como `http://localhost` — hay que setear
 `http://localhost:8060` en dev o el dominio real en producción para que las
 imágenes se carguen desde el front.
+
+### Pipeline de normalización de imágenes
+
+Toda imagen que entra al catálogo (via [[base-de-conocimiento#Admin Panel cmsadmin|admin panel]]
+o via `catalog:import`) se pasa por `App\Src\BackOffice\Catalog\Image\NormalizeImage`
+(GD puro, sin dependencias composer extra). Objetivo: que todas las cards queden con
+el mismo marco visual aunque las fotos originales tengan fondos, sombras, transparencias
+o aspect ratios distintos.
+
+**Pasos del pipeline:**
+
+1. **Detectar tipo real por contenido** (`getimagesize`), no por extensión — clientes
+   suben PNGs con extensión `.jpg` (export Mac "Copia de X")
+2. **Flatten sobre canvas blanco** — maneja PNGs con transparencia
+3. **Whiten background** — todo pixel con RGB ≥ 230 se snapea a blanco puro, eliminando
+   sombras suaves y gradientes que bloqueaban el crop
+4. **imagecropauto** con `IMG_CROP_THRESHOLD=0.5` contra blanco — recorta márgenes
+5. **Canvas cuadrado** con 8% de padding (`contentSize = max(cw, ch); canvasSize = contentSize * 1.16`)
+6. **Save atómico** — escribe a `.tmp` y `rename()` sobre el original (si falla, queda intacto)
+
+Hay comando artisan `catalog:normalize-images [--sku=X | --product=ID]` idempotente
+para reprocesar lo existente (683 imágenes ~2 min en el container).
+
+**Estilos del front** para que el fondo blanco se perciba como "marco":
+`pages/catalogoMerch.vue` → cards, modal y thumbs usan `background: #fff` con
+`padding` en el `<img>` (12px card, 20px modal, 4px thumb).
+
+**Filtro adicional**: el `computed` del front oculta productos con `active=false`
+o sin imágenes, además del filtro del backend.
+
+Ver gotchas en [[changelog#2026-04-13 — Normalización de imágenes del catálogo|changelog]].

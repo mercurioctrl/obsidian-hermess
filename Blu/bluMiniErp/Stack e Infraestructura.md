@@ -10,7 +10,7 @@
 | [[Base de Datos]] | MySQL | 8 |
 | Cache / Queue | Redis | 7 |
 | Auth | Laravel Sanctum (Bearer token) | - |
-| PDF (presupuestos) | barryvdh/laravel-dompdf | - |
+| PDF (presupuestos) | Spatie Browsershot + Chromium headless (Node 20 + Puppeteer en el container) | Browsershot ^4.2 / Chromium 147 |
 | PDF (activaciones) | TCPDF + FPDI sobre membretada | - |
 | IA | DeepSeek API (deepseek-chat) | - |
 | Mail | SMTP (symfony/mailer via Laravel) | - |
@@ -111,6 +111,69 @@ MAIL_PAYMENTS_BCC=payments@blustudioinc.com
 
 La hoja membretada de Blu (`membretadaBlu.pdf`) se usa como fondo para los PDFs de activaciones. Se almacena en `backend/storage/app/templates/membretada.pdf`.
 
+## Browsershot - renderizado de PDFs de presupuesto
+
+Los PDFs de presupuesto se generan con **Spatie Browsershot + Chromium headless**, no con DomPDF. El motivo es que el botón "PDF" del frontend abre `/preview` como HTML (render del navegador) y se esperaba que el PDF adjuntado al email fuera idéntico. DomPDF no soporta flex, no tiene webfonts y caía a Times serif — el output divergía visiblemente del preview. La solución fue unificar ambos caminos bajo Chrome headless.
+
+### Entry point único
+
+`app/Services/PdfService.php` → `renderPresupuestoPdf(Presupuesto $p): string` devuelve los bytes del PDF. Lo usan:
+
+- `PresupuestoController::pdf()` → endpoint `GET /api/presupuestos/{id}/pdf` (download)
+- `PresupuestoInvoiceMail::attachments()` → adjunto del email
+
+Ambos renderizan el **mismo blade**: `resources/views/pdf/presupuesto-preview.blade.php` (el mismo que sirve `/preview` como HTML). No usar `pdf/presupuesto.blade.php` — quedó como legacy de la era DomPDF.
+
+### Configuración de Browsershot
+
+```php
+Browsershot::html($html)
+    ->setChromePath('/usr/bin/chromium')   // chromium del sistema (no el de puppeteer)
+    ->noSandbox()                          // obligatorio si el container corre como root
+    ->format('A4')
+    ->margins(0, 0, 0, 0)
+    ->showBackground()
+    ->waitUntilNetworkIdle()
+    ->pdf();
+```
+
+### Dependencias del container backend (Dockerfile)
+
+- **Chromium:** paquete `chromium` de Debian Trixie + libs compartidas: `libnss3 libatk-bridge2.0-0 libgtk-3-0 libasound2 libx11-xcb1 libxcomposite1 libxdamage1 libxrandr2 libpangocairo-1.0-0 libpango-1.0-0 libcairo2 libxshmfence1`
+- **Fuentes:** `fonts-liberation fonts-dejavu-core fonts-noto-color-emoji`
+- **Node 20:** instalado desde `deb.nodesource.com/setup_20.x`
+- **Puppeteer global:** `npm install -g puppeteer` con env vars para que NO baje su propio Chromium:
+  - `PUPPETEER_SKIP_DOWNLOAD=true`
+  - `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true`
+  - `PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium`
+
+Rebuild pesado: ~300MB extras en la imagen, varios minutos de build. Corre headless sin GUI en servers Linux sin modificaciones.
+
+### Advisories de Composer (Browsershot PKSA)
+
+`spatie/browsershot ^4.2` tiene 6 advisories activos (`PKSA-j9hz-k29x-6s58`, `PKSA-kq82-8x3t-s3fs`, `PKSA-8m7x-943y-brpz`, `PKSA-318x-z311-x7rh`, `PKSA-y3ty-b1bg-gxtm`, `PKSA-5jt2-w99c-cs4s`) que bloquean el install en Composer 2.8+. La mitigación es no exponer los métodos vulnerables a input de usuario (acá Browsershot solo recibe HTML generado server-side — no hay user input). Workaround en `composer.json`:
+
+```json
+"config": {
+    "audit": {
+        "abandoned": "ignore",
+        "ignore": ["PKSA-j9hz-k29x-6s58", "PKSA-kq82-8x3t-s3fs", "PKSA-8m7x-943y-brpz", "PKSA-318x-z311-x7rh", "PKSA-y3ty-b1bg-gxtm", "PKSA-5jt2-w99c-cs4s"]
+    }
+}
+```
+
+Y el Dockerfile corre `composer update --no-dev --optimize-autoloader --no-scripts --no-audit`. Ver [[Errores Comunes#Browsershot bloqueado por security advisories PKSA]].
+
+### Verificación en runtime
+
+```bash
+docker exec minisaas-backend chromium --version    # Chromium 147.x...
+docker exec minisaas-backend node --version        # v20.x
+docker exec minisaas-backend ls /usr/lib/node_modules/puppeteer  # existe
+```
+
+Si el PDF falla al generarse, chequear primero estos tres puntos.
+
 ## Mail SMTP
 
 El proyecto envía mails transaccionales vía SMTP de BluStudio. Por ahora solo invoices de presupuestos (`POST /api/presupuestos/{id}/enviar-invoice`), con BCC automático a `payments@blustudioinc.com`.
@@ -132,23 +195,23 @@ Laravel 11 en este repo **no trae** `config/mail.php` en el skeleton (solo `app`
 
 ### Patrón de Mailable con PDF adjunto
 
-`app/Mail/PresupuestoInvoiceMail.php` es la referencia canónica para cualquier futuro Mailable que adjunte PDFs generados con DomPDF:
+`app/Mail/PresupuestoInvoiceMail.php` es la referencia canónica: delega la generación del PDF al `PdfService` (Browsershot + Chromium) para no duplicar lógica.
 
 ```php
 public function attachments(): array
 {
-    $pdf = Pdf::loadView('pdf.presupuesto', [...])->setPaper('a4');
+    $pdf = app(PdfService::class)->renderPresupuestoPdf($this->presupuesto);
 
     return [
-        Attachment::fromData(fn () => $pdf->output(), "invoice-{$numero}.pdf")
+        Attachment::fromData(fn () => $pdf, "invoice-{$this->presupuesto->numero}.pdf")
             ->withMime('application/pdf'),
     ];
 }
 ```
 
-- **PDF in-memory:** `$pdf->output()` devuelve el binario como string, no toca filesystem ni volumen Docker
+- **PDF in-memory:** `renderPresupuestoPdf()` devuelve el binario como string, no toca filesystem ni volumen Docker
 - **BCC en el `Envelope()`:** Leído de `config('mail.payments_bcc')` con fallback a env. El controller no necesita conocer el BCC
-- **No reutilizar `PdfService`:** `PdfService->generarPresupuesto()` devuelve un `Response` (download), no un string, así que el Mailable duplica la carga de la view con `Pdf::loadView(...)`
+- **Un único entry point:** Tanto `GET /api/presupuestos/{id}/pdf` (download) como el adjunto del email pasan por `PdfService::renderPresupuestoPdf()`. Así el output es el mismo en los dos caminos. Ver [[#Browsershot - renderizado de PDFs de presupuesto]]
 
 ### Futuro: múltiples transportes
 

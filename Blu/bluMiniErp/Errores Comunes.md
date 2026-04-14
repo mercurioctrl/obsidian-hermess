@@ -194,6 +194,50 @@ Iterar gastos y convertir a la moneda del presupuesto usando `tasa_cambio`. Ver 
 
 ---
 
+## Log facade sin FQN completo falla en Laravel 11
+
+**Síntoma:** En un `catch` o cualquier otro lugar, llamar `\Log::error(...)` falla con `Class "Log" not found`. El error original que motivaba el catch queda enmascarado porque el propio catch tira una excepción distinta.
+
+**Causa:** Laravel 11 en este repo no tiene registrado el alias global `\Log` (el array `aliases` de `config/app.php` no se provisiona por default en Laravel 11). Con el slash inicial, PHP lo busca en el namespace raíz — y no existe.
+
+**Solución:** Usar siempre el FQN completo del facade: `\Illuminate\Support\Facades\Log::error(...)`. O mejor, agregar `use Illuminate\Support\Facades\Log;` al tope del archivo y llamar `Log::error(...)`.
+
+**Donde se descubrió:** `PresupuestoController::enviarInvoice` — el catch estaba intentando loguear un fallo de `Mail::to(...)` y crasheaba, devolviendo el mensaje `"Class Log not found"` al frontend en lugar del error real de SMTP.
+
+**Cómo detectarlo rápido:** Si una respuesta de error dice `Class "X" not found` donde `X` es un nombre de facade (`Log`, `DB`, `Cache`, `Mail`, etc.), faltan los `use` o hay que usar el FQN con namespace completo.
+
+---
+
+## Browsershot bloqueado por security advisories PKSA
+
+**Síntoma:** `composer update` falla con `Your requirements could not be resolved to an installable set of packages` al intentar instalar `spatie/browsershot ^4.x`. El mensaje lista 6 PKSA (`PKSA-j9hz-k29x-6s58`, etc.) y dice "these were not loaded, because they are affected by security advisories".
+
+**Causa:** Composer 2.8+ bloquea automáticamente la instalación de paquetes con advisories activos. Los advisories de Browsershot son todos de la clase "inyección si se pasa input de usuario directo" — en este repo no aplican porque Browsershot solo recibe HTML generado server-side desde blades internos (no hay user input).
+
+**Solución:** Ignorar los PKSA explícitamente en `composer.json`:
+
+```json
+"config": {
+    "audit": {
+        "abandoned": "ignore",
+        "ignore": [
+            "PKSA-j9hz-k29x-6s58",
+            "PKSA-kq82-8x3t-s3fs",
+            "PKSA-8m7x-943y-brpz",
+            "PKSA-318x-z311-x7rh",
+            "PKSA-y3ty-b1bg-gxtm",
+            "PKSA-5jt2-w99c-cs4s"
+        ]
+    }
+}
+```
+
+Y en el `composer update` agregar `--no-audit` (en el Dockerfile ya está).
+
+**Importante:** Si alguna vez se expone un endpoint que pasa input de usuario directamente a Browsershot (URLs arbitrarias, HTML desde el frontend, etc.), revisar cada advisory antes de mantenerlo ignorado. Ver [[Stack e Infraestructura#Advisories de Composer (Browsershot PKSA)]].
+
+---
+
 ## Ver tambien
 
 - [[Stack e Infraestructura]] - Errores de Docker y deploy

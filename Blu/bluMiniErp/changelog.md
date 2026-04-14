@@ -9,10 +9,22 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 - feat: **Envío de invoice por email** desde detalle de presupuesto. Nuevo botón "Enviar invoice" junto al de PDF, modal con email precargado desde `cliente.email` y vista previa del mensaje. Al enviar, el mail queda guardado en la ficha del cliente ("se acuerda el mail"). Ver [[Backend - API#Presupuestos]] y [[Stack e Infraestructura#Mail SMTP]]
 - infra: Configurado SMTP de `box.lio.red:465` (SSL) con remitente `payments@blustudioinc.com`. `MAIL_PASSWORD` queda vacía en el `.env` commiteado, cada entorno la setea. BCC automático a `payments@blustudioinc.com` (`MAIL_PAYMENTS_BCC`). Ver [[memoria#Mail SMTP y envío de invoices]]
 - infra: Creado `config/mail.php` a mano — Laravel 11 en este repo no lo trae en el skeleton por default (solo app, auth, cache, cors, database, sanctum, services, session). Sin ese archivo el Mail facade no funciona aunque estén las env vars. Ver [[Errores Comunes#Laravel 11 sin config mail php por default]]
-- feat: Mailable `PresupuestoInvoiceMail` con **PDF adjunto in-memory** (`Pdf::loadView(...)->output()`) — no toca filesystem. El Envelope setea el BCC, no el controller
+- feat: Mailable `PresupuestoInvoiceMail` con **PDF adjunto in-memory** — no toca filesystem. El Envelope setea el BCC, no el controller
 - feat: Vista `resources/views/emails/presupuesto-invoice.blade.php` con estilo consistente con el sistema de diseño (fondo `#F5F5F0`, cards blancos, texto `#1A1A1A`, totales formateados `es-AR`)
 
-Archivos: `app/Mail/PresupuestoInvoiceMail.php`, `app/Http/Controllers/PresupuestoController.php` (método `enviarInvoice`), `config/mail.php`, `resources/views/emails/presupuesto-invoice.blade.php`, `routes/api.php`, `frontend/pages/presupuestos/[id].vue`, `.env`, `CLAUDE.md`
+**Iteración (misma fecha) — migración de renderizado de PDF presupuestos:**
+
+- fix: `\Log::error(...)` sin FQN completo fallaba en el catch del envío de invoice (Class "Log" not found — Laravel 11 no registra el alias `\Log` global en este repo). Cambiado a `\Illuminate\Support\Facades\Log::error(...)` en `PresupuestoController::enviarInvoice`. Ver [[Errores Comunes#Log facade sin FQN completo falla en Laravel 11]]
+- refactor: **Migración DomPDF → Spatie Browsershot + Chromium headless** para PDFs de presupuesto. El botón "PDF" del frontend abre `/preview` como HTML (render Chrome real), mientras que el email adjuntaba un DomPDF con fuentes Times serif, sin flex y con logo caído al texto fallback — outputs muy distintos. Ahora ambos caminos (download y adjunto del email) pasan por `PdfService::renderPresupuestoPdf()` que renderiza `pdf.presupuesto-preview.blade.php` (el mismo blade que usa `/preview`) vía Chrome headless → outputs prácticamente idénticos. Ver [[PDFs y Renderizado#Presupuestos - Browsershot + Chromium headless]]
+- infra: Dockerfile del backend ahora instala `chromium` + libs X/audio/pango/cairo, fuentes (`fonts-liberation fonts-dejavu-core fonts-noto-color-emoji`), Node 20 (via `deb.nodesource.com`) y `puppeteer` global. Env vars `PUPPETEER_SKIP_DOWNLOAD`, `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`, `PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium` para usar el Chromium del sistema (no el que bajaría puppeteer). Rebuild pesado: ~300MB extras, varios minutos. Corre headless sin problema en servers Linux sin GUI.
+- composer: `spatie/browsershot ^4.2` tiene advisories PKSA-* activos que bloquean el install. Workaround: `config.audit.ignore` con los 6 PKSA + flag `--no-audit` en `composer update` del Dockerfile. Ver [[Errores Comunes#Browsershot bloqueado por security advisories PKSA]]
+- refactor: `PresupuestoInvoiceMail::attachments()` ahora delega en `app(PdfService::class)->renderPresupuestoPdf($presupuesto)` en vez de hacer `Pdf::loadView(...)` directo. Elimina duplicación — hay un único entry point para generar el PDF de un presupuesto
+- cleanup: `pdf.presupuesto.blade.php` quedó como legacy (no se usa en ningún path) — se puede eliminar en una próxima limpieza
+- config local: `MAIL_PASSWORD` seteada en `.env` local (no commiteada) para probar el envío end-to-end
+
+Archivos: `backend/Dockerfile`, `backend/composer.json`, `backend/app/Services/PdfService.php`, `backend/app/Mail/PresupuestoInvoiceMail.php`, `backend/app/Http/Controllers/PresupuestoController.php`, `backend/resources/views/pdf/presupuesto.blade.php` (legacy), `CLAUDE.md`
+
+Archivos del envío de invoice (bloque anterior): `app/Mail/PresupuestoInvoiceMail.php`, `app/Http/Controllers/PresupuestoController.php` (método `enviarInvoice`), `config/mail.php`, `resources/views/emails/presupuesto-invoice.blade.php`, `routes/api.php`, `frontend/pages/presupuestos/[id].vue`, `.env`
 
 ## 2026-04-08
 

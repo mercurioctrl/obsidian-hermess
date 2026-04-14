@@ -100,6 +100,20 @@ Reformas en el hogar.
 
 ---
 
+## NAEVO
+
+E-commerce de suplementos de bienestar. Nuxt 3 SSR + Laravel 11 + MySQL 8 + Redis + Nginx en Docker.
+
+- [[naevo/naevo|NAEVO]]
+- [[naevo/arquitectura|Arquitectura]]
+- [[naevo/stack|Stack]]
+- [[naevo/modulos|Módulos]]
+- [[naevo/changelog|Changelog]]
+- [[naevo/contexto|Contexto]]
+- [[naevo/memoria|Memoria]]
+
+---
+
 ## NB — New Bytes
 
 - [[NB/NB|NB]]

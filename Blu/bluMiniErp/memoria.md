@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-04-13
+Ultima sincronizacion: 2026-04-13 (iteración: migración PDF presupuestos a Browsershot)
 
 ---
 
@@ -88,7 +88,8 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 ### Activaciones
 - **Copiar:** Copiar activaciones entre proyectos del mismo cliente. Periodo opcional. Estructura copiada, datos de ejecucion vacios
 - **Eliminacion:** Requiere credenciales admin. Modal email+password. Backend valida rol ADMIN
-- **PDFs:** TCPDF+FPDI sobre membretada Blu (portrait A4). Presupuestos siguen con DomPDF. Plantilla en `storage/app/templates/membretada.pdf`
+- **PDFs activaciones:** TCPDF+FPDI sobre membretada Blu (portrait A4). Plantilla en `storage/app/templates/membretada.pdf`
+- **PDFs presupuestos (2026-04-13):** Migrados de DomPDF a **Spatie Browsershot + Chromium headless**. Entry point único `PdfService::renderPresupuestoPdf()` — lo usan tanto `/api/presupuestos/{id}/pdf` como `PresupuestoInvoiceMail`. Blade canónico: `pdf/presupuesto-preview.blade.php` (el mismo que renderiza `/preview` HTML). Dockerfile instala chromium + libs + Node 20 + puppeteer global. Ver [[Stack e Infraestructura#Browsershot - renderizado de PDFs de presupuesto]]
 - **DeepSeek IA:** Descripciones automaticas con DeepSeek API. Config en `services.php`. Campos `descripcion_ia` y `descripcion_ia_cant_hitos`. Frontend muestra "Desactualizada" si cambia la cantidad de hitos
 - **DeepSeek longitud escalada (2026-03-30):** Longitud variable segun cantidad de hitos — ≤5 hitos: 2-3 oraciones / `max_tokens: 300`; 6-15 hitos: 3-5 oraciones / `max_tokens: 500`; +15 hitos: 5-7 oraciones / `max_tokens: 700`. Prompt dice "cubriendo todas las actividades listadas" (NO "breve") para evitar omisiones del modelo
 
@@ -108,7 +109,9 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 
 **"Se acuerda el mail":** cuando el usuario envía un invoice con un email, el endpoint actualiza `cliente.email` si difiere. La próxima vez el modal viene precargado con ese valor. La persistencia vive en la ficha del cliente, no en una tabla aparte de historial.
 
-**Patrón canónico de Mailable con PDF:** Ver `app/Mail/PresupuestoInvoiceMail.php`. Adjunta el PDF **in-memory** con `Pdf::loadView(...)->output()` — no se toca filesystem. Reutilizar este patrón para cualquier Mailable futuro con adjunto.
+**Patrón canónico de Mailable con PDF:** Ver `app/Mail/PresupuestoInvoiceMail.php`. Delega la generación del PDF al servicio central (`app(PdfService::class)->renderPresupuestoPdf($presupuesto)`) y adjunta los bytes **in-memory** — no se toca filesystem. Desde el 2026-04-13 el PDF se renderiza con Browsershot/Chromium en lugar de DomPDF, pero la interfaz del Mailable no cambió. Reutilizar este patrón para cualquier Mailable futuro con adjunto (un servicio dedicado que devuelve bytes, el Mailable solo adjunta).
+
+**Fix del `\Log::error` (2026-04-13):** El catch del `enviarInvoice` usaba `\Log::error(...)` sin FQN, que en Laravel 11 no resuelve (no hay alias `\Log` global). Cuando `Mail::to(...)` lanzaba un error real, el propio catch crasheaba con "Class Log not found", enmascarando la causa. Siempre usar `\Illuminate\Support\Facades\Log::error(...)` o agregar `use Illuminate\Support\Facades\Log;` al tope. Ver [[Errores Comunes#Log facade sin FQN completo falla en Laravel 11]].
 
 ### Otros
 - **Busqueda global:** Buscador en topbar. GET `/api/busqueda?q=`. Busca en clientes, presupuestos, proyectos, gastos. Max 5 por tipo. Ver [[Frontend#Busqueda global]]
