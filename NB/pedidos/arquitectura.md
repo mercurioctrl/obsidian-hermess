@@ -21,7 +21,7 @@ pedidos/
 
 Controllers → Services → Repositories → Models (parcialmente implementado).
 
-En la práctica, la mayoría de la lógica está directamente en los **controllers** (138 controllers en 61 subdirectorios). Solo existen 4 Services y 3 Repositories formales — el patrón se aplicó para módulos específicos como MakeSale, RemoveSale, ClientProfile, MercadoLibre y TotalSales.
+En la práctica, la mayoría de la lógica está directamente en los **controllers** (144 controllers en 61+ subdirectorios). Solo existen Services y Repositories formales para módulos específicos como MakeSale, RemoveSale, ClientProfile, MercadoLibre, TotalSales y **Statistics/Lo**.
 
 ### Controllers principales
 
@@ -29,6 +29,7 @@ En la práctica, la mayoría de la lógica está directamente en los **controlle
 |--------|------------|-------------|
 | Order | 27 | CRUD de pedidos (OrderCreate, OrderList, OrderUpdate) |
 | Statistics | 10 | Dashboards y reportes estadísticos |
+| **Statistics/Lo** | **6** | **[[modulo-dashboard-lo|Dashboard Libre Opción]]** (summary, funnel, resellers, cube) |
 | SyncUp | 9 | Sincronización con sistemas externos |
 | DownloadDocument | 6 | Descarga de documentos (PDF, Excel) |
 | Addendum | 5 | Addendums de pedidos |
@@ -39,8 +40,8 @@ En la práctica, la mayoría de la lógica está directamente en los **controlle
 
 ### Capas de soporte
 
-- **Services/** — ShippingMethodService, ClientProfileService, ClientService, MercadoLibreService, TotalSalesService, MercadoLibreOrdersService
-- **Repositories/** — ShippingMethodRepository, ClientProfileRepository, MercadoLibreRepository, TotalSalesRepository
+- **Services/** — ShippingMethodService, ClientProfileService, ClientService, MercadoLibreService, TotalSalesService, MercadoLibreOrdersService, **LoStatisticsService**
+- **Repositories/** — ShippingMethodRepository, ClientProfileRepository, MercadoLibreRepository, TotalSalesRepository, **LoStatisticsRepository**
 - **Support/** — 6 clases utilitarias: Price, TemplateMail, TokenManager, UploadFile, emails
 - **Helper/** — Filter, Pagination
 - **ValueObjects/** — DateRangeFilter
@@ -58,7 +59,7 @@ En la práctica, la mayoría de la lógica está directamente en los **controlle
 
 ### Rutas
 
-~234 rutas en `routes/api.php`, todas bajo `/v1`. Las rutas `syncUp/*` están fuera del middleware de auth.
+~240 rutas en `routes/api.php`, todas bajo `/v1`. Las rutas `syncUp/*` están fuera del middleware de auth.
 
 ### Dato: ShippingMethods
 
@@ -66,19 +67,20 @@ El endpoint `/v1/shippingMethods` consulta `[LO].[dbo].[mediosEnvio]` y siempre 
 
 ## Frontend
 
-### Páginas (23)
+### Páginas (27)
 
 - **Root:** orders, clients, clientsRequest, products, vouchers, comissions, chatsLO, login
 - **Dashboard/** (7): ranking, heatMaps, limitesObjetivos, incentivoGigabyte, logisticPerformance
 - **Marketing/** (4): actions, brands, funds, movements
+- **libreOpcion/** (4): métricas, embudo, resellers, cubo OLAP — ver [[modulo-dashboard-lo]]
 
-### Componentes (101)
+### Componentes (110+)
 
-Organizados por feature: Orders (26), Filters (18), Mkt (9), Table (8), Client (7), Report (7), Modal (4), Products (3), Dashboard (2), + 17 root.
+Organizados por feature: Orders (26), Filters (19), Mkt (9), Table (9), Client (7), Report (7), Modal (4), Products (3), Dashboard (2), **LibreOpcion (2)**, + 17 root.
 
-### Vuex Store (12 módulos)
+### Vuex Store (13 módulos)
 
-orders, clients, clientsRequest, products, vouchers, comissions, dashboard, statistics, marketing, reports, chatsLO.
+orders, clients, clientsRequest, products, vouchers, comissions, dashboard, statistics, marketing, reports, chatsLO, **libreOpcion**.
 
 ### Plugins (10)
 
@@ -86,10 +88,12 @@ api.js (Axios wrapper), permissions.js (RBAC), firebase-messaging.js (push), api
 
 ## Base de datos
 
-SQL Server (SQLSRV via ODBC). Tres bases de datos:
+SQL Server (SQLSRV via ODBC). Cuatro bases de datos:
 - **NewBytes_DBF** — Datos transaccionales (pedidos, remitos, stock, clientes, agentes)
 - **NB_WEB** — Datos web (registro_stock, users) — conexión default en Laravel
-- **LO** — Datos de logística (mediosEnvio)
+- **LO** — Datos del marketplace Libre Opción (pedidosCabecera, vendedores, mediosEnvio, mediosPago, usuarios)
+- **NEW_BYTES** — Remitos y ventas (MS_REMITO_CABECERA, MS_VENTAS_REMITOS)
+- **CS** — Catálogo de productos (productos)
 
 Ver detalles de tablas y gotchas en [[contexto#Base de datos|Contexto]].
 
@@ -107,4 +111,5 @@ Ver [[stack]] para versiones completas.
 - [[contexto]] — Reglas de negocio y gotchas
 - [[modulo-makesale]] — Flujo MakeSale
 - [[modulo-removesale]] — Flujo RemoveSale
+- [[modulo-dashboard-lo]] — Dashboard Libre Opción
 - [[stack]] — Dependencias y versiones

@@ -126,7 +126,49 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: ✳ Calculate wall panel quantity needed for 3-meter wall"
+              "title": "Terminal: zsh"
+            }
+          },
+          {
+            "id": "8081d3d875fb64b7",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "terminal:terminal",
+              "state": {
+                "terminal:terminal": {
+                  "cwd": "/Users/hermess/www/obsidian-hermess/obsidian-hermess",
+                  "focus": false,
+                  "profile": {
+                    "args": [
+                      "--login"
+                    ],
+                    "executable": "/bin/zsh",
+                    "followTheme": true,
+                    "name": "",
+                    "platforms": {
+                      "darwin": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": false,
+                    "rightClickAction": "copyPaste",
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "serial": null
+                }
+              },
+              "pinned": true,
+              "icon": "terminal",
+              "title": "Terminal: ✳ Set up remote Obsidian vault on dedicated server"
             }
           },
           {
@@ -263,16 +305,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría.md",
+                "file": "NB/pedidos/pedidos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "API - Feat - Recategorizar productos sin categoría"
+              "title": "pedidos"
             }
           }
         ],
-        "currentTab": 13
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -446,8 +488,31 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "5859a2c5685f108b",
+  "active": "8081d3d875fb64b7",
   "lastOpenFiles": [
+    "NB/pedidos/pedidos.md",
+    "aplus-server/changelog.md",
+    "aplus-server/contexto.md",
+    "aplus-server/stack.md",
+    "aplus-server/arquitectura.md",
+    "aplus-server/aplus-server.md",
+    "aplus-server",
+    "NB/pedidos/arquitectura.md",
+    "NB/pedidos/memoria.md",
+    "NB/pedidos/modulo-dashboard-lo.md",
+    "Libre Opcion/tareas/API - Feat - CRUD de campañas.md",
+    "Libre Opcion/memoria.md",
+    "Libre Opcion/stack.md",
+    "Libre Opcion/arquitectura.md",
+    "Libre Opcion/Copia de Informe-Semanal-SEO-LibreOpcion-2026-04-15.pdf",
+    "Libre Opcion/tareas/APP - Feat - Gestión de campañas.md",
+    "Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría.md",
+    "Libre Opcion/changelog.md",
+    "Asus/saMiniSiteCodes/memoria.md",
+    "Asus/saMiniSiteCodes/contexto.md",
+    "Asus/saMiniSiteCodes/changelog.md",
+    "Asus/saMiniSiteCodes/stack.md",
+    "Asus/saMiniSiteCodes/arquitectura.md",
     "Asus/Asus.md",
     "Asus/saMiniSiteCodes/saMiniSiteCodes.md",
     "Asus/saMiniSiteCodes",
@@ -459,35 +524,12 @@
     "Libre Opcion/Informe-Semanal-SEO-LibreOpcion-2026-04-15.pdf",
     "Asus/Contrataciones/lu242au0i.tmp",
     "Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos.md",
-    "Recurso Humano/Recurso Humano.md",
-    "Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría.md",
-    "Recurso Humano/Paritaria Comercio CCT 130-75 Abril-Junio 2026.md",
-    "naevo/naevo.md",
-    "Blu/bluMiniErp/Modulo Mercury Invoicing.md",
-    "naevo/contexto.md",
-    "naevo/modulos.md",
-    "naevo/changelog.md",
-    "naevo/memoria.md",
-    "naevo/stack.md",
-    "naevo/arquitectura.md",
     "naevo",
-    "Hogar/Lavadero/02-bachas.md",
-    "Hogar/Oficina/Oficina.md",
-    "Hogar/CLAUDE.md",
     "Hogar/Lavadero/attachments/lavadero-planta.svg",
-    "Hogar/Lavadero/01-mesada-presupuestos.md",
     "Hogar/Lavadero/attachments/lavadero-elevacion.svg",
-    "Hogar/Lavadero/05-revestimiento-wpc-exterior.md",
-    "Hogar/Lavadero/03-durlock-presupuesto.md",
-    "Hogar/Lavadero/04-azulejo-zona-humeda.md",
     "Hogar/Lavadero/attachments/lavadero-3d.html",
     "Hogar/Lavadero/attachments",
-    "Skills/nota-reforma/SKILL.md",
     "Skills/nota-reforma",
-    "Hogar/Lavadero/Lavadero.md",
-    "Hogar/Oficina",
-    "Hogar/Lavadero",
-    "Libre Opcion/07-fix-cls-mobile-h1-sr-only-ronda-3.md",
     "Sin título 1.canvas",
     "NB/Sin título.canvas",
     "Sin título.canvas"

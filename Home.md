@@ -4,9 +4,30 @@
 
 ---
 
+## aplus-server
+
+Servidor Node+Fastify detrás de Caddy para hostear A+ content sindicado (iframes en Fravega, Mercado Libre, Compragamer). Firma HMAC de assets, watermark con trazabilidad por retailer.
+
+- [[aplus-server/aplus-server|aplus-server]]
+- [[aplus-server/arquitectura|Arquitectura]]
+- [[aplus-server/stack|Stack]]
+- [[aplus-server/contexto|Contexto]]
+- [[aplus-server/changelog|Changelog]]
+
+---
+
 ## Asus
 
 - [[Asus/Asus|Asus]]
+
+### saMiniSiteCodes
+Micrositio de canje de códigos ROG / Resident Evil. Promo finalizada 2026-04-15.
+- [[Asus/saMiniSiteCodes/saMiniSiteCodes|saMiniSiteCodes]]
+- [[Asus/saMiniSiteCodes/arquitectura|Arquitectura]]
+- [[Asus/saMiniSiteCodes/stack|Stack]]
+- [[Asus/saMiniSiteCodes/changelog|Changelog]]
+- [[Asus/saMiniSiteCodes/contexto|Contexto]]
+- [[Asus/saMiniSiteCodes/memoria|Memoria]]
 
 ### Contrataciones
 - [[Asus/Contrataciones/Contrataciones|Contrataciones]]
@@ -16,10 +37,6 @@
 - [[Asus/Contrataciones/Escenarios de Contratación|Escenarios de Contratación]]
 - [[Asus/Contrataciones/Fórmulas del Modelo|Fórmulas del Modelo]]
 - [[Asus/Contrataciones/Calculadora Excel - Instrucciones|Calculadora Excel - Instrucciones]]
-
-### saMiniSiteCodes
-Micrositios de canje de códigos de activación (ROG / Resident Evil).
-- [[Asus/saMiniSiteCodes/saMiniSiteCodes|saMiniSiteCodes]]
 
 ---
 
@@ -94,18 +111,31 @@ Reformas en el hogar.
 ## Libre Opcion
 
 - [[Libre Opcion/Libre Opcion|Libre Opción]]
+- [[Libre Opcion/arquitectura|Arquitectura]]
+- [[Libre Opcion/stack|Stack]]
+- [[Libre Opcion/changelog|Changelog]]
+- [[Libre Opcion/memoria|Memoria]]
+
+### SEO & Performance
 - [[Libre Opcion/00-resumen-diagnostico-seo-performance|Resumen Diagnóstico SEO/Performance]]
 - [[Libre Opcion/01-fix-cls-imagenes|Fix CLS Imágenes]]
 - [[Libre Opcion/02-fix-lcp-render-blocking|Fix LCP Render Blocking]]
 - [[Libre Opcion/03-fix-header-min-height|Fix Header Min Height]]
 - [[Libre Opcion/04-fix-fuentes-innecesarias|Fix Fuentes Innecesarias]]
 - [[Libre Opcion/05-fix-fouc-css-tardio|Fix FOUC CSS Tardío]]
+- [[Libre Opcion/06-fix-cls-tbt-ronda-2|Fix CLS/TBT Ronda 2]]
+- [[Libre Opcion/07-fix-cls-mobile-h1-sr-only-ronda-3|Fix CLS Mobile Ronda 3]]
+- [[Libre Opcion/08-fix-cls-listings-ronda-4|Fix CLS Listings Ronda 4]]
 
 ### Tareas
 - [[Libre Opcion/tareas/tareas|Tareas]]
-- [[Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto|APP - Feat - Gestión de imágenes del reseller]]
-- [[Libre Opcion/tareas/APP - Refactor - Migrar cotización de envíos de API legacy a v4|APP - Refactor - Migrar cotización de envíos]]
-- [[Libre Opcion/tareas/API - Feat - Imágenes personalizadas del reseller por producto|API - Feat - Imágenes personalizadas del reseller]]
+- [[Libre Opcion/tareas/APP - Refactor - Migrar cotización de envíos de API legacy a v4|Migrar cotización de envíos]]
+- [[Libre Opcion/tareas/API - Feat - Imágenes personalizadas del reseller por producto|Imágenes personalizadas reseller]]
+- [[Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto|Gestión imágenes reseller (frontend)]]
+- [[Libre Opcion/tareas/APP - Fix - Tooltip de codigo postal aparece al cargar el sitio|Fix tooltip código postal]]
+- [[Libre Opcion/tareas/API - Refactor - Migrar recurso de preguntas y respuestas a v4|Migrar preguntas a v4]]
+- [[Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos|Estadísticas categorización]]
+- [[Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría|Recategorizar productos]]
 
 ---
 
@@ -145,12 +175,14 @@ Sistema de gestión de compras a proveedores. Laravel 9 + Nuxt 2.
 - [[NB/expedicion/tareas/tareas|Tareas]]
 
 ### Pedidos
+Sistema de gestión de pedidos. Laravel 9 + Nuxt 2 + SQL Server.
 - [[NB/pedidos/pedidos|Pedidos]]
 - [[NB/pedidos/arquitectura|Arquitectura]]
 - [[NB/pedidos/stack|Stack]]
 - [[NB/pedidos/contexto|Contexto]]
 - [[NB/pedidos/modulo-makesale|Módulo MakeSale]]
 - [[NB/pedidos/modulo-removesale|Módulo RemoveSale]]
+- [[NB/pedidos/modulo-dashboard-lo|Dashboard Libre Opción]]
 - [[NB/pedidos/memoria|Memoria]]
 - [[NB/pedidos/changelog|Changelog]]
 

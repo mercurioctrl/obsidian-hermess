@@ -23,12 +23,13 @@ Sistema de expedición y despacho de mercadería.
 - [[NB/expedicion/tareas/tareas|Tareas]]
 
 ## Pedidos
-Sistema de gestión de pedidos.
+Sistema de gestión de pedidos. Laravel 9 + Nuxt 2 + SQL Server.
 - [[NB/pedidos/pedidos|Pedidos]]
 - [[NB/pedidos/arquitectura|Arquitectura]]
 - [[NB/pedidos/stack|Stack]]
 - [[NB/pedidos/contexto|Contexto]]
 - [[NB/pedidos/modulo-makesale|Módulo MakeSale]]
 - [[NB/pedidos/modulo-removesale|Módulo RemoveSale]]
+- [[NB/pedidos/modulo-dashboard-lo|Dashboard Libre Opción]]
 - [[NB/pedidos/memoria|Memoria]]
 - [[NB/pedidos/changelog|Changelog]]

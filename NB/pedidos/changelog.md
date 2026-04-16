@@ -2,6 +2,25 @@
 
 Registro de cambios del proyecto, agrupado por fecha.
 
+## 2026-04-16
+
+- feat: **[[modulo-dashboard-lo|Dashboard Libre Opción]]** — nueva sección completa de estadísticas exclusiva del marketplace LO
+  - 6 endpoints backend: summary, funnel, byPaymentMethod, byShippingMethod, resellers, cube OLAP
+  - 4 páginas frontend: métricas (KPIs + pies), embudo de conversión, ranking resellers, cubo multidimensional
+  - Embudo de 5 etapas: Carritos → Pedido generado → Activos → Facturados → Entregados
+  - Cubo OLAP con 7 dimensiones y 4 medidas
+  - Visible solo para Administrador, Gerente General, Product Manager
+- fix: **Entregados** usa `MS_VENTAS_REMITOS.ID_STATUS > 1` (no `pedclit.delivered`)
+- fix: **Carritos vs cancelaciones** — los sin pedclit son carritos abandonados, no cancelaciones
+- fix: **Total cancelados** = created - active (no suma de flags que se solapan)
+- fix: **Motivos de cancelación** — si hay `motivoCancelacion`, se agrupa por eso sin mostrar payment; payment solo para los sin motivo
+- feat: **Links clickeables** en motivos de cancelación navegan a `/orders` con filtros exactos
+- feat: **Filtros OrderList** — agregados `loOnly`, `loCancelled`, `motivoCancelacion`, `mpPaymentStatus`, `mpPaymentStatusDetail`, `sinMotivo` (sin afectar existente)
+
+Archivos backend: `Controllers/Statistics/Lo/` (6), `Services/Statistics/Lo/`, `Repositories/Statistics/Lo/`, `routes/api.php`, `OrderListRepository.php`, `OrderList.php`
+Archivos frontend: `pages/libreOpcion/` (4), `store/libreOpcion.js`, `components/LibreOpcion/`, `components/Table/TabMenuLO.vue`, `components/Filters/LibreOpcion.vue`, `layouts/basic.vue`
+Branch: `feature/dashboard-lo`
+
 ## 2026-04-06
 
 - fix: **Retiro siempre visible en shippingMethods** — eliminado early return que impedía agregar "Retiro" (id 3999) cuando la query por `companyCode` no devolvía resultados de la DB

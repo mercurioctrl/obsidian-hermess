@@ -19,6 +19,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[memoria|Memoria]] — Contexto acumulado de sesiones con Claude
 - [[modulo-makesale|MakeSale]] — Flujo de ejecución de pedidos (pedido → remito)
 - [[modulo-removesale|RemoveSale]] — Flujo de reversión de remitos
+- [[modulo-dashboard-lo|Dashboard Libre Opción]] — Estadísticas exclusivas del marketplace LO
 
 ## Repos
 
@@ -30,4 +31,4 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 El sistema soporta tres marcas: **NB**, **NBElectric** y **Libreopción**. Se filtran por `companyCode` en la mayoría de endpoints y tablas.
 
 ---
-*Última sincronización: 2026-04-06*
+*Última sincronización: 2026-04-16*

@@ -4,43 +4,40 @@ Contexto acumulado de sesiones de trabajo con Claude en este proyecto.
 
 ## Usuario
 
-Desarrollador/tech lead argentino. Maneja frontend (Nuxt/Vue) y backend (Laravel). Prefiere iteración rápida, soluciones directas, y que se verifique que las cosas funcionan antes de declarar listo.
+- Desarrollador fullstack senior argentino
+- Idioma: español rioplatense
+- Prefiere iterar rápido y soluciones simples
+- No agregar features no solicitadas
 
 ## Feedback
 
-### Siempre probar cambios
-Después de cada fix, verificar con requests reales (curl, npm run dev). No asumir que un cambio funciona sin probarlo.
-
-### SQL concatenado — cuidado con nulls
-Las queries en MakeSaleService y RemoveSaleService se construyen concatenando strings. Un campo null genera SQL inválido que rompe todo el batch. Siempre verificar propiedades interpoladas, especialmente las que vienen de LEFT JOINs. Ver [[contexto#Gotcha SQL concatenado en MakeSale/RemoveSale|detalle]].
+- Siempre verificar cambios con pruebas reales (curl, dev server) antes de reportar como terminado
+- MakeSale/RemoveSale usan SQL concatenado — verificar nulls con ISNULL antes de interpolar en queries
+- **Cancelaciones LO vs carritos abandonados:** pedidos sin pedclit no son cancelaciones sino carritos abandonados. `motivoCancelacion` tiene prioridad sobre `mp_payment_status`. Total cancelados = created - active (no sumar flags que se solapan)
 
 ## Proyecto
 
-### Node.js + OpenSSL
-Frontend necesita `NODE_OPTIONS=--openssl-legacy-provider` con Node v17+ (la máquina tiene Node v25.5.0).
+- Frontend necesita `NODE_OPTIONS=--openssl-legacy-provider` con Node v17+
+- Firebase no configurado en local, plugin usa stub vacío
+- Tablas clave: pedclit (pedidos), albclit/albclil (remitos), clientes, agentes, articulo
+- Gotcha: columnas duplicadas en SELECT por JOINs, case sensitivity en nombres de columna PHP
+- Backend usa varias DBs: NB_WEB (default), NewBytes_DBF, LO, NEW_BYTES, CS
+- Rutas syncUp usan TOKEN_SYNCUP del .env, no JWT
+- Branching: Development como base, hotfix/*, deploy frontend via gamma
+- **Dashboard LO** en branch `feature/dashboard-lo` — ver [[modulo-dashboard-lo]]
+  - Entregados = `MS_VENTAS_REMITOS.ID_STATUS > 1` (no `pedclit.delivered`)
+  - Carritos cuenta desde pedidosCabecera sin requerir pedclit
+  - navList[1] = Libre Opción, navList[2] = Pedidos (desplazado)
+  - opcache PHP: ejecutar `docker exec api-rest-pedidos-apirest-laravel php -r "opcache_reset();"` después de modificar PHP
+  - Filtros OrderList agregados: `loOnly`, `loCancelled`, `motivoCancelacion`, `mpPaymentStatus`, `mpPaymentStatusDetail`, `sinMotivo`
 
-### Firebase en local
-No configurado. Plugin usa stub vacío. Verificar guards antes de llamar a `getMessaging()`. Ver [[contexto#Firebase local|detalle]].
+## Referencias
 
-### Docker setup
-- Backend: container `api-rest-pedidos-apirest-laravel`, puerto 8093
-- Frontend: local, puerto 3002, proxy `/v1/` → localhost:8093
-- DB: SQL Server externo
+- Bugs trackeados en Jira (integrado via apiJira.client.js)
+- Docker container backend: `api-rest-pedidos-apirest-laravel` (puerto 8093)
 
-### SyncUp — autenticación por TOKEN_SYNCUP
-Las rutas `/v1/syncUp/*` (mercadolibreOrders, pricesPendingOrders, clientLtv, etc.) no usan JWT ni middleware de auth. Cada controller valida manualmente con `$request->input('token') != env('TOKEN_SYNCUP')`. Son endpoints para cron jobs y procesos internos.
+## Ver también
 
-### Múltiples bases de datos
-El backend consulta varias DBs SQL Server, no solo NB_WEB:
-- **[LO].[dbo]** — mediosEnvio (métodos de envío)
-- **NewBytes_DBF.dbo** — pedclit/pedclil (pedidos), stocks, albclit/albclil (remitos), agentes
-- **NB_WEB** — registro_stock, users (base default en config)
-
-### Branching
-- Rama base: `Development`
-- Hotfixes: `hotfix/{descripcion}` (ej: `hotfix/shipping-retiro-always`)
-- Features: `PED-{ticket}-{descripcion}`
-- Deploy frontend: PR a `gamma` → GitHub Actions
-
----
-*Sincronizado: 2026-04-06*
+- [[contexto]] — Reglas de negocio detalladas
+- [[arquitectura]] — Estructura del proyecto
+- [[modulo-dashboard-lo]] — Dashboard Libre Opción
