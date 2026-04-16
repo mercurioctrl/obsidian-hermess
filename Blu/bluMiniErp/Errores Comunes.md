@@ -238,6 +238,25 @@ Y en el `composer update` agregar `--no-audit` (en el Dockerfile ya está).
 
 ---
 
+## Mercury IP whitelist en API tokens
+
+**Síntoma:** Cualquier llamada a Mercury API devuelve HTTP 401 con `errorCode: ipNotWhitelisted` y mensaje "This API token can only be used from whitelisted IP addresses. Your current IP address (X.X.X.X) is not whitelisted." — incluso aunque el token sea correcto y la cuenta tenga el plan adecuado.
+
+**Causa:** Mercury permite restringir cada API token a una lista de IPs autorizadas (configurado en el dashboard al crear/editar el token). Cuando está activo, todas las IPs no listadas reciben 401, sin distinguir entre token inválido o token válido pero IP no permitida.
+
+**Solución:**
+1. Mercury dashboard → Settings → API Tokens → editar el token activo
+2. En "IP whitelist" agregar la IP egress del entorno (la que aparece en el mensaje de error)
+3. Guardar y reintentar
+
+**Cuidado en deploy:** la IP egress de **dev local** (Mac/Windows del developer) es distinta de la IP egress del **server de producción**. Hay que agregar las dos al whitelist (o usar tokens diferentes por entorno). Si el server cambia de proveedor o región, también cambia la IP.
+
+**Cómo detectarlo rápido:** El cuerpo del 401 trae el JSON de Mercury con `errorCode: ipNotWhitelisted` y la IP detectada — ese mensaje es el que hay que copiar al whitelist. Si en cambio el error dice "Invalid token", es otro problema.
+
+**Donde aplica:** Todas las llamadas de `MercuryController` y `MercuryInvoiceController`. Ver [[Medios de Pago#Mercury Invoicing API (desde 2026-04-14)]].
+
+---
+
 ## Ver tambien
 
 - [[Stack e Infraestructura]] - Errores de Docker y deploy

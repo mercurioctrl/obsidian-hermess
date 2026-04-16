@@ -36,7 +36,7 @@ stores/
 └── auth.js                  # Pinia: auth JWT, token localStorage, apiFetch()
 
 middleware/
-└── admin.js                 # Route guard: redirige a /cmsadmin/login si no auth
+└── admin.js                 # Route guard: redirige a /staffpanel/login si no auth
 
 layouts/
 ├── default.vue              # Público: Header + Footer + globalOverlay
@@ -55,7 +55,7 @@ public/img/clients/             # Logos SVG de clientes (blancos, monocromático
 ├── adata.svg
 └── xpg.svg
 
-pages/cmsadmin/
+pages/staffpanel/
 ├── login.vue                # Login standalone (layout: false)
 ├── index.vue                # Dashboard
 ├── contactos.vue            # Mensajes de contacto
@@ -64,9 +64,9 @@ pages/cmsadmin/
 └── usuarios.vue             # CRUD usuarios
 ```
 
-## Admin Panel (/cmsadmin)
+## Admin Panel (/staffpanel)
 
-> Detalle de rutas y auth en [[arquitectura#Panel admin cmsadmin|arquitectura → Panel admin]] y [[arquitectura#Auth admin|arquitectura → Auth]]
+> Detalle de rutas y auth en [[arquitectura#Panel admin staffpanel|arquitectura → Panel admin]] y [[arquitectura#Auth admin|arquitectura → Auth]]
 
 **Convenciones:**
 - Todas las páginas admin usan `definePageMeta({ layout: 'admin', middleware: 'admin' })`
@@ -76,10 +76,10 @@ pages/cmsadmin/
 - Estilos admin son scoped, dark mode (#0a0a0a fondo, #111 cards, #222 bordes)
 
 **Para agregar nueva sección admin:**
-1. Crear `pages/cmsadmin/nueva-seccion.vue`
+1. Crear `pages/staffpanel/nueva-seccion.vue`
 2. Agregar `definePageMeta({ layout: 'admin', middleware: 'admin' })`
 3. Agregar link en `layouts/admin.vue` nav
-4. Agregar `'cmsadmin/nueva-seccion': false` en `nuxt.config.ts > i18n.pages`
+4. Agregar `'staffpanel/nueva-seccion': false` en `nuxt.config.ts > i18n.pages`
 
 ## JobBoard (Búsquedas activas de Recruiting)
 
@@ -120,7 +120,7 @@ Agregar un objeto al array `jobs` en `JobBoard.vue`:
 ### Para migrar a API (futuro)
 - Reemplazar array `jobs` por `useFetch()` o `apiFetch()` al [[stack#Backend consumido|backend]]
 - Crear endpoints CRUD en el backend (dominio `JobListing`)
-- Agregar sección en [[#Admin Panel (/cmsadmin)|admin panel]] `/cmsadmin/busquedas`
+- Agregar sección en [[#Admin Panel (/staffpanel)|admin panel]] `/staffpanel/busquedas`
 - Los modales de postulación y solicitud también necesitarán endpoints (`POST /api/job-application`, `POST /api/job-request`)
 
 ### Patrones usados

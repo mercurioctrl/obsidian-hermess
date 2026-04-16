@@ -8,7 +8,7 @@
 blu/ (monorepo)
 ├── blu-web-v1/          ← ESTE PROYECTO (Nuxt 3, puerto 3000)
 │   ├── Sitio público: /, /nosotros, /hablemos, /servicios/*, /catalogo-merch
-│   ├── Admin panel: /cmsadmin/*
+│   ├── Admin panel: /staffpanel/*
 │   └── consume API de ↓
 ├── sitio-api-rest-v1-laravel/  (Laravel 10, puerto 8060)
 │   └── MySQL 8.0 + Redis
@@ -35,19 +35,19 @@ blu/ (monorepo)
 | `/catalogo-merch` | `catalogoMerch.vue` | Galería pública del [[#Catálogo de merch\|catálogo de merch]], filtros por categoría + búsqueda + lightbox |
 | `/[email]` | `[email].vue` | vCard dinámica |
 
-### Panel admin (`/cmsadmin`)
+### Panel admin (`/staffpanel`)
 
-> Convenciones y guía para agregar secciones en [[base-de-conocimiento#Admin Panel cmsadmin|base de conocimiento → Admin]]
+> Convenciones y guía para agregar secciones en [[base-de-conocimiento#Admin Panel staffpanel|base de conocimiento → Admin]]
 
 | Ruta | Descripción |
 |------|-------------|
-| `/cmsadmin/login` | Login standalone |
-| `/cmsadmin` | Dashboard |
-| `/cmsadmin/contactos` | Mensajes de contacto |
-| `/cmsadmin/citas` | Gestión de citas |
-| `/cmsadmin/timeslots` | Generación de horarios |
-| `/cmsadmin/catalogo` | CRUD del [[#Catálogo de merch\|catálogo de merch]] + upload de imágenes |
-| `/cmsadmin/usuarios` | CRUD usuarios |
+| `/staffpanel/login` | Login standalone |
+| `/staffpanel` | Dashboard |
+| `/staffpanel/contactos` | Mensajes de contacto |
+| `/staffpanel/citas` | Gestión de citas |
+| `/staffpanel/timeslots` | Generación de horarios |
+| `/staffpanel/catalogo` | CRUD del [[#Catálogo de merch\|catálogo de merch]] + upload de imágenes |
+| `/staffpanel/usuarios` | CRUD usuarios |
 
 ## Layouts
 - `default.vue` — Público: Header + Footer + globalOverlay → usa [[base-de-conocimiento#Fondos de Página|fondos animados]]
@@ -59,18 +59,37 @@ blu/ (monorepo)
 - Páginas admin excluidas de i18n (`false` en `nuxt.config.ts`)
 - Paquete: [[stack#Core|@nuxtjs/i18n 9.5]]
 
-## Auth (admin)
+## Auth y permisos (admin)
+
 - JWT via `stores/auth.js` ([[stack#Core|Pinia 3.0]])
 - Token en localStorage
 - `apiFetch()` agrega Bearer automáticamente → [[stack#Backend consumido|endpoints del backend]]
-- `middleware/admin.js` protege rutas `/cmsadmin/*`
+- `middleware/admin.js` protege rutas `/staffpanel/*` (auth + permisos por sección)
 - Credenciales dev: `sistemas@gmail.com` / `npm8956`
 
-## Catálogo de merch
+### Sistema de permisos por sección
 
-Feature agregada en [[changelog#2026-04-13 — Catálogo de merch|2026-04-13]]. Galería
-pública de productos de merchandising corporativo, sin precios (solo título + fotos
-por categoría).
+Cada usuario tiene `permissions` (JSON array) en la tabla `users` del backend.
+Admin role siempre tiene todos los permisos (bypass en el getter).
+
+| Componente | Archivo | Función |
+|-----------|---------|--------|
+| Getter | `stores/auth.js` → `hasPermission(section)` | Admin=true siempre, otros chequean array |
+| Middleware | `middleware/admin.js` → mapa `ROUTE_SECTION` | Redirige a dashboard si no tiene permiso |
+| Sidebar | `layouts/admin.vue` → `v-if` en cada nav item | Oculta secciones sin permiso |
+| Gestión | `pages/staffpanel/usuarios.vue` → array `SECTIONS` | Checkboxes para asignar permisos |
+| Backend | `UpdateUserRequest` + `CreateUserRequest` | Valida códigos con `in:` |
+
+**Códigos válidos:** `contactos`, `citas`, `timeslots`, `catalogo`, `reclutamiento`, `usuarios`
+
+Al agregar nueva sección: registrar el código en los 5 archivos listados arriba.
+Ver [[changelog#2026-04-15 — Sistema de permisos por sección  fixes admin panel|changelog]] y [[memoria#Sistema de permisos admin 2026-04-15|memoria]].
+
+### HTML nativo en admin (NO Nuxt UI)
+
+Los componentes Nuxt UI (`UInput`, `UButton`, `UFormField`) renderizan mal en el
+admin porque el sitio tiene dark mode global. Usar HTML nativo con estilos scoped.
+`<UIcon>` y `<UModal>` sí funcionan. Ver [[memoria#HTML nativo en admin|detalle]].
 
 ### Data flow
 
@@ -86,7 +105,7 @@ MySQL: products + product_images     +     storage/app/public/catalog/{sku}/*
 GET /api/catalog/products      ←    imágenes servidas por Apache en
        ↓                              http://localhost:8060/storage/...
 pages/catalogoMerch.vue (front)
-pages/cmsadmin/catalogo.vue (admin CRUD con auth)
+pages/staffpanel/catalogo.vue (admin CRUD con auth)
 ```
 
 ### Modelo de datos (backend)
@@ -115,7 +134,7 @@ imágenes se carguen desde el front.
 
 ### Pipeline de normalización de imágenes
 
-Toda imagen que entra al catálogo (via [[base-de-conocimiento#Admin Panel cmsadmin|admin panel]]
+Toda imagen que entra al catálogo (via [[base-de-conocimiento#Admin Panel staffpanel|admin panel]]
 o via `catalog:import`) se pasa por `App\Src\BackOffice\Catalog\Image\NormalizeImage`
 (GD puro, sin dependencias composer extra). Objetivo: que todas las cards queden con
 el mismo marco visual aunque las fotos originales tengan fondos, sombras, transparencias
@@ -143,3 +162,51 @@ para reprocesar lo existente (683 imágenes ~2 min en el container).
 o sin imágenes, además del filtro del backend.
 
 Ver gotchas en [[changelog#2026-04-13 — Normalización de imágenes del catálogo|changelog]].
+
+## SEO y archivos de descubrimiento
+
+El sitio vive en el **dominio canónico `blustudioinc.com`**. La razón social legal
+es "BLU STUDIO GROUP LLC" pero `blustudiogroup.com` **no** es el dominio — es una
+trampa recurrente que costó un commit de corrección (`5b87943` el 2026-04-15). Si
+aparece `blustudiogroup.com` en el código, es un bug. Ver [[memoria#Dominio canónico blustudioinccom|memoria → dominio canónico]].
+
+### Lugares donde el dominio vive hardcodeado
+
+| Archivo | Líneas |
+|---------|--------|
+| `nuxt.config.ts` | `site.url` (para `@nuxtjs/sitemap`) + `runtimeConfig.public.siteUrl` |
+| `public/robots.txt` | línea `Sitemap:` |
+| `public/llms.txt` | URLs de servicios + contacto + idiomas |
+| `public/.well-known/security.txt` | `Contact:` + `Canonical:` |
+
+### Archivos de descubrimiento
+
+Ubicación: `public/` → servidos como estáticos en la raíz del dominio.
+
+| Archivo | Propósito | Fuente |
+|---------|-----------|--------|
+| `/sitemap.xml` | Indexación de buscadores | **Generado automáticamente** por `@nuxtjs/sitemap` en build, incluye todas las rutas de Nuxt con variantes i18n. No se commitea. |
+| `/robots.txt` | Permisos de crawlers | Estático. Referencia el sitemap. Permite explícitamente GPTBot, ClaudeBot, Google-Extended, PerplexityBot, YouBot. |
+| `/llms.txt` | Descripción estructurada para LLMs | Estático. Formato [llms.txt](https://llmstxt.org/): servicios, contacto, idiomas. |
+| `/.well-known/security.txt` | Contacto de seguridad | Estático. Expira 2027-03-23, reemplazar antes. |
+| `/bimi/logo.svg` | Logo para BIMI (Brand Indicators for Message Identification) | Estático. Perfil **SVG Tiny 1.2 Portable/Secure** obligatorio. |
+
+### Checklist del perfil BIMI
+
+Todo SVG que vaya a `/bimi/logo.svg` debe cumplir:
+
+- `baseProfile="tiny-ps"` + `version="1.2"` en el root `<svg>`
+- Elemento `<title>` presente
+- `viewBox` cuadrado arrancando en `0 0` (ej. `0 0 500 500`)
+- **Sin** `x`/`y` en el root
+- **Sin** `<script>`, `<animate*>`, `<foreignObject>`, `<image>`, `<filter>`, `xlink:`, refs externas (`href=`)
+- Tamaño < 32 KB
+
+Se validan todos con un solo `grep -cE`:
+```bash
+grep -cE "<script|<animate|<foreignObject|<image |xlink:|<a |<use |href=|filter=|<filter" public/bimi/logo.svg
+# Debe devolver 0
+```
+
+Un SVG "normal" (Illustrator export, Figma export) **no cumple** estas restricciones
+— hay que ajustarlo a mano o rechazarlo.

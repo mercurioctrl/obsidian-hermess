@@ -6,6 +6,8 @@
 
 ## Asus
 
+- [[Asus/Asus|Asus]]
+
 ### Contrataciones
 - [[Asus/Contrataciones/Contrataciones|Contrataciones]]
 - [[Asus/Contrataciones/Contrataciones MOC|Contrataciones MOC]]
@@ -14,6 +16,10 @@
 - [[Asus/Contrataciones/Escenarios de Contratación|Escenarios de Contratación]]
 - [[Asus/Contrataciones/Fórmulas del Modelo|Fórmulas del Modelo]]
 - [[Asus/Contrataciones/Calculadora Excel - Instrucciones|Calculadora Excel - Instrucciones]]
+
+### saMiniSiteCodes
+Micrositios de canje de códigos de activación (ROG / Resident Evil).
+- [[Asus/saMiniSiteCodes/saMiniSiteCodes|saMiniSiteCodes]]
 
 ---
 
@@ -27,6 +33,7 @@
 - [[Blu/blu-web-v1/stack|Stack]]
 - [[Blu/blu-web-v1/base-de-conocimiento|Base de Conocimiento]]
 - [[Blu/blu-web-v1/changelog|Changelog]]
+- [[Blu/blu-web-v1/memoria|Memoria]]
 
 ### bluMiniErp
 - [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]]
@@ -42,6 +49,8 @@
 - [[Blu/bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
 - [[Blu/bluMiniErp/Reglas de Negocio|Reglas de Negocio]]
 - [[Blu/bluMiniErp/Medios de Pago|Medios de Pago]]
+- [[Blu/bluMiniErp/Modulo Mercury Invoicing|Módulo Mercury Invoicing]]
+- [[Blu/bluMiniErp/Modulo WhatsApp Inbox|Módulo WhatsApp Inbox]]
 - [[Blu/bluMiniErp/Modulo Permisos|Módulo Permisos]]
 - [[Blu/bluMiniErp/Modulo Personal|Módulo Personal]]
 - [[Blu/bluMiniErp/Errores Comunes|Errores Comunes]]
@@ -160,12 +169,22 @@ Planilla de opciones financieras con Apps Script + API Bully.
 
 ---
 
+## Recurso Humano
+
+Base de conocimiento de RRHH: paritarias, convenios colectivos, liquidación de haberes, marco legal laboral.
+
+- [[Recurso Humano/Recurso Humano|Recurso Humano]]
+- [[Recurso Humano/Paritaria Comercio CCT 130-75 Abril-Junio 2026|Paritaria Comercio CCT 130/75 — Abril/Junio 2026]]
+
+---
+
 ## Skills de Claude Code
 
 Ver [[Skills/Skills|Skills]].
 
 - [[Skills/configurar-boveda/SKILL|Configurar Bóveda]] — Vincula proyectos con Obsidian
 - [[Skills/sincronizar-boveda/SKILL|Sincronizar Bóveda]] — Sincroniza docs del proyecto
+- [[Skills/guardar-contexto/SKILL|Guardar Contexto]] — Persiste aprendizajes de la sesión en CLAUDE.md + memoria Claude
 - [[Skills/tarea-boveda/SKILL|Tarea Bóveda]] — Crea notas de tareas (APP/API) en el proyecto
 - [[Skills/nota-reforma/SKILL|Nota Reforma]] — Crea notas livianas en proyectos no-software y actualiza índices
 - [[Skills/fullstack-docker-app/SKILL|Fullstack Docker App]] — Genera infra Docker completa

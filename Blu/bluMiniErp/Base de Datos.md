@@ -1,6 +1,6 @@
 # Base de Datos
 
-MySQL 8. 47 migraciones. 22 tablas principales.
+MySQL 8. 57 migraciones. 23 tablas principales.
 
 ## Diagrama de relaciones
 
@@ -16,6 +16,7 @@ etiquetas
    +- presupuesto_etiqueta (etiqueta_id)
 
 clientes
+   +- cliente_telefonos (cliente_id, cascade) [desde 2026-04-15]
    +- presupuestos (cliente_id)
    |     +- items_presupuesto (presupuesto_id, cascade)
    |     +- movimientos_cuenta (presupuesto_id, nullable)
@@ -61,6 +62,7 @@ Ver detalles de cada modelo en [[Backend - Modelos]].
 | id | bigint PK | |
 | nombre | varchar(200) | |
 | email | varchar(150) | nullable |
+| mercury_customer_id | varchar(64) | nullable. UUID del customer en Mercury (find-or-create). Migracion 0049. Ver [[Medios de Pago#Mercury Invoicing API (desde 2026-04-14)]] |
 | telefono | varchar(50) | nullable |
 | empresa | varchar(200) | nullable |
 | cuit_dni | varchar(30) | nullable |
@@ -68,7 +70,25 @@ Ver detalles de cada modelo en [[Backend - Modelos]].
 | moneda_default | enum | ARS, USD |
 | notas | text | nullable |
 | activo | boolean | default true |
+| persona_contacto | varchar(150) | nullable |
 | created_at, updated_at | timestamps | |
+
+> Desde 2026-04-15 los clientes tienen además teléfonos múltiples en la tabla [[#cliente_telefonos]] con soporte de tipo (WHATSAPP default, LLAMADA, FIJO).
+
+### `cliente_telefonos`
+Teléfonos múltiples por cliente (migraciones 0053/0054). Ver [[Modulo WhatsApp Inbox]] y [[changelog#2026-04-15]].
+
+| Columna | Tipo | Notas |
+|---------|------|-------|
+| id | bigint PK | |
+| cliente_id | FK → clientes | cascade delete |
+| nombre | varchar(100) | nullable. Nombre del contacto (ej "Catriel", "Recepción") |
+| codigo_area | varchar(10) | ej "54", "5411" |
+| numero | varchar(30) | |
+| tipo | varchar(20) | `WHATSAPP` (default), `LLAMADA`, `FIJO` |
+| created_at, updated_at | timestamps | |
+
+Se usa principalmente para enviar adjuntos por WhatsApp (`proyecto_adjuntos` + [[Modulo WhatsApp Inbox]]). El modelo `ClienteTelefono` usa `$touches = ['cliente']` para mantener el `updated_at` del cliente fresco al modificar teléfonos.
 
 ### `presupuestos`
 | Columna | Tipo | Notas |
@@ -89,9 +109,16 @@ Ver detalles de cada modelo en [[Backend - Modelos]].
 | vigencia_dias | int | |
 | observaciones | text | nullable |
 | created_by | FK -> usuarios | nullable |
+| mercury_invoice_id | varchar(64) | nullable. UUID del invoice en Mercury. Migracion 0050 |
+| mercury_invoice_slug | varchar(64) | nullable. Slug para construir hostedUrl y payUrl |
+| mercury_invoice_status | varchar(32) | nullable. Paid / Unpaid / Overdue / Cancelled / Draft |
+| mercury_invoice_tasa_cambio | decimal(12,4) | nullable. Tasa ARS→USD usada al crear (auditoría) |
+| mercury_invoice_created_at | timestamp | nullable |
+| mercadopago_payment_url | text | nullable. `init_point` persistido al generar preferencia. Migracion 0051 |
+| stripe_payment_url | text | nullable. `url` del Checkout Session persistido al generar |
 | created_at, updated_at | timestamps | |
 
-Ver flujo de estados en [[Reglas de Negocio#Presupuestos - Flujo de estados]].
+Ver flujo de estados en [[Reglas de Negocio#Presupuestos - Flujo de estados]] y la integración Mercury Invoicing en [[Medios de Pago#Mercury Invoicing API (desde 2026-04-14)]].
 
 ### `items_presupuesto`
 | Columna | Tipo | Notas |
@@ -242,6 +269,7 @@ Sin timestamps. Ver [[Errores Comunes#withTimestamps en la relacion proyecto_emp
 | notas | text | nullable |
 | descripcion_ia | text | nullable. Ver [[Backend - API#Evidencias]] |
 | descripcion_ia_cant_hitos | unsigned int | nullable |
+| created_by | FK -> usuarios | nullable. Usuario que creó la activación (migración 0052, 2026-04-14). Ver [[Reglas de Negocio#Activaciones - tracking de creador]] |
 
 ### `hitos_ejecucion`
 | Columna | Tipo | Notas |
@@ -259,6 +287,7 @@ Sin timestamps. Ver [[Errores Comunes#withTimestamps en la relacion proyecto_emp
 | estado | varchar(50) | Ok / Pendiente Blu / Pendiente Cliente / En Progreso / Cancelado |
 | jira_issue_key | varchar(50) | nullable |
 | jira_issue_summary | varchar(500) | nullable |
+| created_by | FK -> usuarios | nullable. Usuario que creó el hito (migración 0052). En `update()` se preserva al reconciliar por id. Ver [[Backend - Modelos#PruebaEjecucion]] |
 
 ### `etiquetas`
 | Columna | Tipo | Notas |
@@ -270,13 +299,20 @@ Sin timestamps. Ver [[Errores Comunes#withTimestamps en la relacion proyecto_emp
 Ver [[Reglas de Negocio#Etiquetas de Presupuestos]].
 
 ### `configuracion`
-Tabla singleton. Contiene credenciales de [[Medios de Pago]] (MP, Stripe, Mercury) y Jira.
+Tabla singleton. Contiene credenciales de [[Medios de Pago]] (MP, Stripe, Mercury), Jira y WhatsApp Inbox.
+
+Columnas clave añadidas en 2026-04-15 (migración 0055):
+- `inbox_api_url` — varchar(500), nullable. URL del endpoint del [[Modulo WhatsApp Inbox]]
+- `inbox_api_token` — varchar(500), nullable. Nunca se devuelve al frontend (desarmado del JSON de `show`). Flag `inbox_tiene_token` lo reemplaza
 
 ### `mercadopago_movimientos`
 Persistencia local de movimientos de MercadoPago. Ver [[Medios de Pago#MercadoPago]].
 
 ### `proyecto_adjuntos`
 Enlaces y archivos adjuntos de un proyecto. Ver [[Backend - API#Proyectos]].
+
+Columna añadida en 2026-04-15 (migración 0056):
+- `public_token` — varchar(80), unique, nullable. Hex 64 chars generado on-demand por `ProyectoAdjunto::asegurarPublicToken()`. Permite acceso público sin auth via `GET /api/archivos/publico/{token}` para compartir adjuntos por WhatsApp. Ver [[Modulo WhatsApp Inbox#Public token para acceso sin auth]]
 
 ---
 

@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-04-13 (iteración: migración PDF presupuestos a Browsershot)
+Ultima sincronizacion: 2026-04-16 (iteración: WhatsApp links fix, OG preview, APP_URL fix, opcache gotcha)
 
 ---
 
@@ -13,6 +13,9 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 ### Docker
 - **Local vs servidor:** En local, docker corre desde `mini-saas/`. En servidor Ubuntu necesita `sudo`. `git pull` puede fallar por backups con permisos root
 - **Frontend rebuild:** Siempre usar `--no-cache` y reiniciar nginx despues para resolver nueva IP del container. Ver [[Stack e Infraestructura#Comandos de deploy]]
+- **APP_URL en docker-compose.yml (2026-04-16):** La variable `APP_URL` hardcodeada en `docker-compose.yml` overrideaba el `.env` de Laravel. Ahora usa `${APP_URL:-http://localhost:8823}` (configurable). PHP-FPM lee de `.env` de Laravel, no de env vars del container — ambos deben tener el puerto
+- **Nginx $http_host (2026-04-16):** La location `/api/` pasa `proxy_set_header Host $http_host` (con puerto) en vez de `$host`. Sin esto, `url()` de Laravel genera URLs sin el puerto 8823
+- **Deploy + opcache (2026-04-16):** `docker cp` + `optimize:clear` no limpia el opcache de PHP-FPM. Siempre `docker restart minisaas-backend` después de copiar archivos PHP
 
 ### PHP / Laravel
 - **env() vs config():** Nunca usar `env()` directo en controllers. PHP-FPM no hereda env vars del container. Registrar en `config/services.php` y leer con `config()`. Ver [[Errores Comunes#env no lee variables de entorno del container en PHP-FPM]]
@@ -25,6 +28,19 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **Modal:** Siempre usar `v-model`, nunca `v-if` + `@close`. Ver [[Frontend#Componentes UI]]
 - **useApi.delete con body:** Usar `{ data: {...} }`, no `{ body: {...} }`
 - **useApi errores:** Los catch reciben Error estandar. Usar `e.message`, no `e?.data?.message`
+
+### Action bar — jerarquía visual
+**Patrón canónico (2026-04-14, por feedback explícito del usuario):** En pantallas de detalle (presupuesto, proyecto, etc.), el action bar tiene como máximo `[Editar] [⋯ Más] | [CTA outline] [CTA primary]` — máximo 2 CTAs visibles + 1 dropdown único "Más" agrupado por sección con headers tipográficos. Ver [[Frontend#Action bar de pantallas de detalle]].
+
+**Reglas:**
+- **Defaultear** features nuevas al menú "Más", no a botones visibles. Solo ascender a CTA si es transición de estado del flujo principal.
+- **Máximo 2 CTAs primarios** simultáneos. Si hay 3 transiciones posibles, la menos común va al menú.
+- Usar headers de sección dentro del dropdown cuando hay 4+ items para dar jerarquía visual.
+- En mobile, ocultar labels de Editar/Más con `hidden sm:inline`.
+
+**Why del usuario:** Llegó a haber 9-10 botones visibles en el detalle de presupuesto y se volvió "difícil de usar, demasiado a la vista y confuso". La consolidación bajo un menú único con headers por sección hace las acciones secundarias descubribles sin abrumar la vista.
+
+**Anti-patrones:** spawn-ear botones nuevos por cada feature, múltiples dropdowns coexistiendo, esconder transiciones de estado en el menú, botones del mismo color/peso visual que los CTAs primarios para acciones secundarias.
 
 ### Convenciones de API
 
@@ -92,10 +108,12 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 - **PDFs presupuestos (2026-04-13):** Migrados de DomPDF a **Spatie Browsershot + Chromium headless**. Entry point único `PdfService::renderPresupuestoPdf()` — lo usan tanto `/api/presupuestos/{id}/pdf` como `PresupuestoInvoiceMail`. Blade canónico: `pdf/presupuesto-preview.blade.php` (el mismo que renderiza `/preview` HTML). Dockerfile instala chromium + libs + Node 20 + puppeteer global. Ver [[Stack e Infraestructura#Browsershot - renderizado de PDFs de presupuesto]]
 - **DeepSeek IA:** Descripciones automaticas con DeepSeek API. Config en `services.php`. Campos `descripcion_ia` y `descripcion_ia_cant_hitos`. Frontend muestra "Desactualizada" si cambia la cantidad de hitos
 - **DeepSeek longitud escalada (2026-03-30):** Longitud variable segun cantidad de hitos — ≤5 hitos: 2-3 oraciones / `max_tokens: 300`; 6-15 hitos: 3-5 oraciones / `max_tokens: 500`; +15 hitos: 5-7 oraciones / `max_tokens: 700`. Prompt dice "cubriendo todas las actividades listadas" (NO "breve") para evitar omisiones del modelo
+- **Tracking de creador (2026-04-14):** Nueva columna `created_by` (nullable) en `pruebas_ejecucion` y `hitos_ejecucion` (migración 0052). El detalle de activación muestra "Creada por X" + columna "Creado por" en la tabla de hitos. Los PDFs/preview no exponen el dato. `update()` reconcilia hitos por `id` en lugar de borrar+recrear, preservando el `created_by` original de los existentes. Los registros previos a la migración quedan en `NULL` (aparecen como "—") y pueden backfillearse con un `UPDATE` manual si hace falta. Ver [[changelog#2026-04-14]]
 
 ### Integraciones
-- **MercadoPago:** Access token + banco vinculado. Movimientos via `/v1/payments/search`. Sync saldo manual. Conversion USD->ARS. Limitaciones API (balance 403, movements requiere permisos especiales). Ver [[Medios de Pago#MercadoPago]]
-- **Stripe:** Secret key + banco vinculado. Montos en centavos. Checkout Sessions. Conversion moneda. Ver [[Medios de Pago#Stripe]]
+- **MercadoPago:** Access token + banco vinculado. Movimientos via `/v1/payments/search`. Sync saldo manual. Conversion USD->ARS. Limitaciones API (balance 403, movements requiere permisos especiales). **Desde 2026-04-14:** `init_point` se persiste en `presupuestos.mercadopago_payment_url`. Ver [[Medios de Pago#MercadoPago]]
+- **Stripe:** Secret key + banco vinculado. Montos en centavos. Checkout Sessions. Conversion moneda. **Desde 2026-04-14:** `url` del Checkout Session se persiste en `presupuestos.stripe_payment_url`. Ver [[Medios de Pago#Stripe]]
+- **Mercury Invoicing (2026-04-14):** API de Accounts Receivable de Mercury para facturar USD. Solo cuentas con plan que incluye Invoicing. Servicio único `MercuryInvoiceService`. 8 endpoints en `MercuryInvoiceController` (incluye `/link` para vincular invoices existentes y filtro `?status=` en `index`). Mercury solo opera en USD — para presupuestos ARS hay conversion ARS→USD con tasa BCRA persistida. **IP whitelist por token** (las IPs egress de dev y prod son distintas). PDF descargable via `/ar/invoices/{id}/pdf` (no documentado pero existe). URLs derivadas del slug: `/invoice/{slug}` (vista hosteada) y `/pay/{slug}` (landing de pago). El modal de envío permite **vincular invoices Mercury existentes** (picker filtrado por Unpaid con warning de cliente mismatch) y **adjuntar el PDF de Mercury** al email como segundo attachment (`PresupuestoInvoiceMail` recibe 3er arg `bool $attachMercuryPdf`, fallback con warning si la descarga falla). Ver [[Modulo Mercury Invoicing]] y [[Medios de Pago#Mercury Invoicing API (desde 2026-04-14)]]
 - **Conversion monedas:** Dolar oficial BCRA venta (dolarapi.com). USD->ARS multiplica, ARS->USD divide
 
 ### Mail SMTP y envío de invoices
@@ -111,7 +129,40 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 
 **Patrón canónico de Mailable con PDF:** Ver `app/Mail/PresupuestoInvoiceMail.php`. Delega la generación del PDF al servicio central (`app(PdfService::class)->renderPresupuestoPdf($presupuesto)`) y adjunta los bytes **in-memory** — no se toca filesystem. Desde el 2026-04-13 el PDF se renderiza con Browsershot/Chromium en lugar de DomPDF, pero la interfaz del Mailable no cambió. Reutilizar este patrón para cualquier Mailable futuro con adjunto (un servicio dedicado que devuelve bytes, el Mailable solo adjunta).
 
+**Payment links en el email (2026-04-14):** El `PresupuestoInvoiceMail` ahora recibe un segundo argumento `$paymentLinks` (array `mercury|stripe|mercadopago` → URL). Los URLs vienen del modal de envío (sección "Métodos de pago a incluir") y se renderizan como botones full-width en el body del email, cada uno con su color de marca. El controller (`enviarInvoice`) los recibe en el body del POST como flags opcionales (`mercury_pay_url`, `stripe_payment_url`, `mercadopago_payment_url`). Para que el modal del frontend pueda pre-marcar los checkboxes, los links se persisten en el presupuesto cuando se generan (no son ephemeral). Ver [[Modulo Mercury Invoicing]].
+
 **Fix del `\Log::error` (2026-04-13):** El catch del `enviarInvoice` usaba `\Log::error(...)` sin FQN, que en Laravel 11 no resuelve (no hay alias `\Log` global). Cuando `Mail::to(...)` lanzaba un error real, el propio catch crasheaba con "Class Log not found", enmascarando la causa. Siempre usar `\Illuminate\Support\Facades\Log::error(...)` o agregar `use Illuminate\Support\Facades\Log;` al tope. Ver [[Errores Comunes#Log facade sin FQN completo falla en Laravel 11]].
+
+### Clientes — Teléfonos múltiples (2026-04-15)
+Un cliente puede tener N teléfonos con `nombre` de contacto, `codigo_area`, `numero` y `tipo` (`WHATSAPP` default, `LLAMADA`, `FIJO`). Migraciones 0053/0054, modelo `ClienteTelefono` con `$touches = ['cliente']`. Ver [[Base de Datos#cliente_telefonos]] y [[Backend - Modelos#ClienteTelefono]].
+
+**Decisiones de diseño:**
+- **Endpoints dedicados, no sync desde update del cliente.** Hay un `POST /api/clientes/{id}/telefonos` y `DELETE /api/clientes/{id}/telefonos/{telefono}`, registrados ANTES del `apiResource('clientes', …)` para no colisionar con `{cliente}`. Descartamos la alternativa de aceptar el array en el body del update del cliente porque era más complejo (sync/reconcile por id), acoplaba cambios, y forzaba editar el cliente entero para agregar un teléfono.
+- **UI en el aside, no en el modal de edición.** Primera iteración puso el card dentro del bloque Información + un form en el modal de edición. Por feedback del usuario en la misma sesión (*"debería aparecer como un módulo más, similar al de adjuntos en proyectos"* y después *"ponelo en el aside, abajo del de estado"*) terminó replicando el patrón visual de "Enlaces y Archivos" de proyecto, viviendo en la columna derecha de `pages/clientes/[id].vue`.
+- **`nuevo.vue` NO lleva el form de teléfonos.** Se carga después desde el detalle. Mantener el form de creación simple.
+
+**Caso de uso principal:** enviar adjuntos de proyecto al cliente por WhatsApp. Ver sección siguiente.
+
+### WhatsApp Inbox API y compartir adjuntos (2026-04-15)
+Integración con un servicio externo tipo cola para enviar WhatsApp. Ver [[Modulo WhatsApp Inbox]] para la documentación completa.
+
+**Contexto:**
+- El usuario tiene su propia infraestructura — un servicio que corre detrás de ngrok, con un cliente de WhatsApp Web activo y una SQLite como cola. Se le postea `{ token, telefono, mensaje }`, se encola, y un worker lo envía cada 10s con reintentos hasta 5 veces. NO es la API oficial de WhatsApp Business.
+- La URL del ngrok **puede cambiar** — por eso `inbox_api_url` es configurable desde el UI (`configuracion.inbox_api_url`, migración 0055). El token también se edita desde el UI y nunca viaja al frontend en el GET.
+
+**Flow del caso de uso "compartir adjunto por WhatsApp":**
+1. En el card "Enlaces y Archivos" de un proyecto, cada adjunto muestra en hover un botón verde (`lucide:message-circle`) **solo si el cliente tiene algún teléfono con `tipo=WHATSAPP`**. El computed `whatsappContactos` filtra desde `proyecto.cliente.telefonos` — requiere que `ProyectoController::show` eager-loadee `presupuesto.cliente.telefonos` (está en el controller).
+2. Modal con checkboxes, todos pre-seleccionados.
+3. Backend genera `bin2hex(random_bytes(32))` (64 chars hex) si el adjunto no tiene `public_token`, lo persiste (migración 0056), y arma la URL `/api/archivos/publico/{token}`.
+4. Para cada teléfono, normaliza el número con `preg_replace('/\D+/', '', codigo_area.numero)` y postea al Inbox API con mensaje `"Hola {nombre}, te ha enviado el archivo {titulo} - {url}"`. Errores individuales se acumulan en `fallidos[]` — no rompen el loop.
+5. Toast con contadores.
+
+**La ruta pública `/api/archivos/publico/{token}` está fuera de `auth:sanctum`.** La seguridad se basa **únicamente** en la imposibilidad de adivinar el token. No hay expiración, no hay rate limiting, no hay firma. Para invalidar un link compartido, `UPDATE proyecto_adjuntos SET public_token = NULL WHERE id = X`. Si esto genera un problema de abuso, agregar throttling al middleware o agregar `public_token_expires_at`.
+
+**Gotchas / próximos pasos:**
+- El mensaje incluye el link en claro. Asumir que puede ser reenviado en WhatsApp — si el archivo es sensible, el usuario tiene que borrarlo del proyecto o invalidar el token.
+- El mismo patrón (config de URL/token + `Http::post` al Inbox API) se puede reutilizar para otros flows de envío (ej: invoices, presupuestos, activaciones). Cuando llegue, extraer la llamada HTTP a un servicio dedicado (`WhatsAppService::enviar($telefono, $mensaje)`) en vez de duplicar.
+- Si el token de Inbox API cambia, el `update` de `ConfiguracionController` unset-ea `inbox_api_token` cuando viene vacío — así se puede editar solo la URL sin reingresar el token. Mismo patrón que Mercury/MP/Stripe.
 
 ### Otros
 - **Busqueda global:** Buscador en topbar. GET `/api/busqueda?q=`. Busca en clientes, presupuestos, proyectos, gastos. Max 5 por tipo. Ver [[Frontend#Busqueda global]]

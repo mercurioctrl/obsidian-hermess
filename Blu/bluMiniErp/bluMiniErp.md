@@ -2,14 +2,14 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-04-13
+**Ultima sincronizacion:** 2026-04-16
 
 ## Arquitectura
 
 | Documento                   | Contenido                                                 |
 | --------------------------- | --------------------------------------------------------- |
 | [[Stack e Infraestructura]] | Docker, puertos, variables de entorno, comandos de deploy |
-| [[Base de Datos]]           | 22 tablas, columnas, relaciones y migraciones             |
+| [[Base de Datos]]           | 23 tablas, columnas, relaciones y migraciones             |
 | [[Backend - Modelos]]       | Modelos Eloquent: fillable, casts, relaciones, metodos    |
 | [[Backend - API]]           | Todas las rutas API y controllers                         |
 | [[Frontend]]                | Paginas, stores, composables, layout, convenciones        |
@@ -21,7 +21,9 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | [[Modulo Personal]] | Empleados, asignacion a proyectos, pagos |
 | [[Reglas de Negocio]] | Reglas de dominio criticas y comportamientos no obvios |
 | [[Modulo Permisos]] | Sistema de permisos granular por usuario |
-| [[Medios de Pago]] | MercadoPago, Stripe y Mercury |
+| [[Medios de Pago]] | MercadoPago, Stripe y Mercury (cuenta + invoicing) |
+| [[Modulo Mercury Invoicing]] | Facturación electrónica USD via Mercury AR API (2026-04-14) |
+| [[Modulo WhatsApp Inbox]] | Integración con Inbox API externa + compartir adjuntos por WhatsApp (2026-04-15). OG preview con logo Blu (2026-04-16) |
 | [[Errores Comunes]] | Bugs ya cometidos y como evitarlos |
 
 ## Sistema de Diseno
@@ -38,8 +40,8 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 
 | Documento | Contenido |
 |-----------|-----------|
-| [[changelog\|Changelog]] | Registro de commits y features por fecha |
-| [[memoria\|Memoria]] | Feedback, decisiones y contexto del proyecto |
+| [[changelog|Changelog]] | Registro de commits y features por fecha |
+| [[memoria|Memoria]] | Feedback, decisiones y contexto del proyecto |
 
 ## Stack
 

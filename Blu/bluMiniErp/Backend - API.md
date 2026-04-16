@@ -3,11 +3,14 @@
 ## Estructura de autenticacion
 
 ```
-POST /api/auth/login         <- publico
-GET  /api/presupuestos/*/pdf <- token via query string
+POST /api/auth/login                 <- publico
+GET  /api/presupuestos/*/pdf         <- token via query string
+GET  /api/archivos/publico/{token}   <- publico, 64 chars hex [desde 2026-04-15]
 Todo lo demas -> middleware auth:sanctum (Bearer token)
 Rutas de admin -> middleware adicional EnsureIsAdmin
 ```
+
+**`GET /api/archivos/publico/{token}`** — sirve archivos de `proyecto_adjuntos` por `public_token` sin requerir auth. Si `tipo=ENLACE` hace `redirect()->away()`, si `tipo=ARCHIVO` devuelve el file con `Content-Disposition: inline`. La seguridad se basa en la imposibilidad de adivinar el token (hex 64 chars). Ver [[Modulo WhatsApp Inbox#Public token para acceso sin auth]].
 
 ## Auth
 ```
@@ -27,15 +30,23 @@ Ver [[Frontend#Busqueda global]] para la UI.
 
 ## Clientes
 ```
-GET    /api/clientes                  -> index (filtros: search, activo)
+GET    /api/clientes                  -> index (filtros: search, activo) [eager telefonos]
 POST   /api/clientes                  -> store
-GET    /api/clientes/{id}             -> show [con wrapper data:]
+GET    /api/clientes/{id}             -> show [con wrapper data:, eager telefonos + presupuestos]
 PUT    /api/clientes/{id}             -> update [con wrapper data:]
 DELETE /api/clientes/{id}             -> destroy (soft: activo=false)
 GET    /api/clientes/{id}/cuenta      -> cuenta (movimientos)
 GET    /api/clientes/{id}/presupuestos
 GET    /api/clientes-export/csv
+
+# Teléfonos del cliente (desde 2026-04-15)
+POST   /api/clientes/{id}/telefonos            -> agregarTelefono
+       body: { nombre?, codigo_area, numero, tipo? }
+       tipo: WHATSAPP (default) | LLAMADA | FIJO
+DELETE /api/clientes/{id}/telefonos/{telefono} -> eliminarTelefono
 ```
+
+Las rutas de teléfonos se registran **antes** del `apiResource('clientes', …)` para no colisionar con `{cliente}`. Ver [[Errores Comunes#Rutas especificas despues de apiResource colisionan con id]]. `ClienteResource` siempre incluye el array `telefonos` (id, nombre, codigo_area, numero, tipo). Ver [[Modulo WhatsApp Inbox]] para el caso de uso principal.
 
 ## Presupuestos
 ```
@@ -77,6 +88,10 @@ GET    /api/proyectos/{id}/adjuntos
 POST   /api/proyectos/{id}/adjuntos/enlace
 POST   /api/proyectos/{id}/adjuntos/archivo  -> multipart, max 10MB
 DELETE /api/proyectos/{id}/adjuntos/{adj}
+POST   /api/proyectos/{id}/adjuntos/{adj}/enviar-whatsapp
+       body: { telefono_ids: number[] }
+       genera/reutiliza public_token y postea al Inbox API por cada contacto.
+       response: { url, enviados[], fallidos[] }
 POST   /api/proyectos/{id}/jira-boards       -> vincularJiraBoard
 DELETE /api/proyectos/{id}/jira-boards/{board}
 ```
@@ -168,6 +183,82 @@ GET    /api/evidencias/{evidencia}/pdf      -> PDF sobre membretada
 
 ## MercadoPago, Stripe, Mercury
 Ver [[Medios de Pago]] para documentacion completa de las tres integraciones.
+
+### Mercury Invoicing — endpoints (desde 2026-04-14)
+
+```
+GET    /api/mercury/invoices/cotizacion       -> BCRA oficial venta para conversión ARS→USD
+GET    /api/mercury/invoices                  -> listado cursor-based (limit, order, start_after, end_before)
+                                                  acepta ?status=Unpaid|Paid|Overdue|Cancelled (filtro PHP)
+                                                  resuelve customer name vía clientes.mercury_customer_id
+                                                  y presupuesto vinculado vía presupuestos.mercury_invoice_id
+POST   /api/mercury/invoices                  -> crear desde presupuesto
+                                                  body: presupuesto_id, due_date, send_email_option, tasa_cambio?
+GET    /api/mercury/invoices/{id}             -> detalle con lineItems
+GET    /api/mercury/invoices/{id}/pdf         -> proxy del PDF de Mercury (soporta ?token=)
+POST   /api/mercury/invoices/{id}/cancel      -> cancelar invoice y actualizar status local
+POST   /api/mercury/invoices/{id}/refresh     -> re-sync status desde Mercury
+POST   /api/mercury/invoices/{id}/link        -> vincular invoice existente a presupuesto
+                                                  body: presupuesto_id. Persiste id/slug/status.
+                                                  Falla con 422 si el presupuesto ya tiene invoice asociado.
+```
+
+> Las rutas de cotización y `/pdf` van fuera del middleware auth (la primera es pública, la segunda usa `?token=` query). El resto está dentro de `auth:sanctum`.
+
+> ⚠️ **Orden de las rutas:** `/mercury/invoices/cotizacion` se registra ANTES de `/mercury/invoices/{id}` para que no colisione con el route model binding. Ver [[Errores Comunes#Rutas especificas despues de apiResource colisionan con id]].
+
+## WhatsApp Inbox — envío de adjuntos
+
+Integración con servicio externo tipo cola. Ver [[Modulo WhatsApp Inbox]] para doc completa del flow, el endpoint del worker, y las consideraciones de seguridad.
+
+**Config** (singleton `configuracion`):
+```
+GET    /api/config                    -> show [hide inbox_api_token, expose inbox_tiene_token bool]
+PUT    /api/config (admin)            -> update (valida inbox_api_url como url)
+                                         inbox_api_token vacío → no se persiste (mantiene el anterior)
+```
+
+**Envío desde proyecto:**
+```
+POST   /api/proyectos/{proyecto}/adjuntos/{adjunto}/enviar-whatsapp
+       body: { telefono_ids: number[] }
+       1. Valida pertenencia del adjunto al proyecto y de los teléfonos al cliente del presupuesto
+       2. asegurarPublicToken() → bin2hex(random_bytes(32)) si no existe
+       3. Arma mensaje: "Hola {nombre}, te ha enviado el archivo {titulo} - {url}"
+       4. Normaliza número: preg_replace('/\D+/', '', codigo_area.numero)
+       5. Http::timeout(15)->asJson()->post(inbox_api_url, { token, telefono, mensaje }) por cada contacto
+       6. Errores individuales NO rompen el loop — se acumulan en fallidos[]
+       response: { url, enviados[], fallidos[] }
+```
+
+**Ruta pública** (fuera de `auth:sanctum`):
+```
+GET    /api/archivos/publico/{token}  -> ProyectoController::servirArchivoPublico
+       ENLACE   → redirect()->away($adjunto->url)
+       ARCHIVO  → response()->file() con Content-Disposition: inline
+       404 si el token no existe o el archivo fue borrado del filesystem
+```
+
+**Controller methods nuevos en `ProyectoController` (2026-04-15):**
+- `enviarAdjuntoWhatsApp(Request, Proyecto, ProyectoAdjunto)` — dentro de auth
+- `servirArchivoPublico(string $token)` — público, sin auth
+
+Imports agregados: `Illuminate\Support\Facades\Http`, `App\Models\ClienteTelefono`, `App\Models\Configuracion`.
+
+**Eager-load en `show`:** `presupuesto.cliente.telefonos` (ya estaba `presupuesto.cliente`, se profundiza para que el frontend tenga los contactos WhatsApp disponibles sin request extra).
+
+### Envío de invoice por email — payment links
+
+```
+POST   /api/presupuestos/{id}/enviar-invoice
+   body: email (required)
+         mercury_pay_url? (string url — botón "Depósito Bancario" en el email)
+         stripe_payment_url? (string url — botón "Pagar con Tarjeta")
+         mercadopago_payment_url? (string url — botón "Pagar con MercadoPago")
+         attach_mercury_pdf? (boolean — adjunta el PDF del invoice Mercury como 2do attachment)
+```
+
+Los 3 URLs opcionales se renderizan como botones en el body del email solo si están presentes en el body del POST. El controller los pasa al `PresupuestoInvoiceMail` como 2do argumento (`$paymentLinks` array) y `attach_mercury_pdf` como 3er argumento (`bool $attachMercuryPdf`). Si `attachMercuryPdf=true` y el presupuesto tiene `mercury_invoice_id`, el Mailable baja el PDF de Mercury vía `MercuryInvoiceService::getInvoicePdf()` y lo adjunta como segundo PDF (además del PDF Blu del presupuesto). Si la descarga falla, se loguea warning y se sigue sin él. Ver [[Modulo Mercury Invoicing#Sub-flow — adjuntar PDF de Mercury al email]].
 
 ## Etiquetas
 ```

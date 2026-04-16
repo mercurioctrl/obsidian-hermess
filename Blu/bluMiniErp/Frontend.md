@@ -178,7 +178,53 @@ Ver [[Medios de Pago#Stripe]] para detalle backend. Branding purpura `#635BFF`.
 
 ## Modulo Mercury
 
-Ver [[Medios de Pago#Mercury]] para detalle backend. Branding azul `#0A85E0`.
+`/mercury` con tabs **Cuenta** (balances + movimientos) e **Invoices** (listado cursor-based con acciones por fila: ver online, descargar PDF, cancelar). Ver [[Medios de Pago#Mercury]] y [[Modulo Mercury Invoicing]] para el flujo completo. Branding azul `#0A85E0`.
+
+---
+
+## Action bar de pantallas de detalle
+
+**Patrón canónico** aplicado en `pages/presupuestos/[id].vue` (2026-04-14, por feedback del usuario). Reemplaza el spawn-eo de botones que generaba 9-10 acciones visibles por una jerarquía clara con máximo 2 CTAs visibles.
+
+**Estructura:**
+
+```
+[Editar] [⋯ Más] | [CTA outline] [CTA primary]
+```
+
+donde `|` es un separador vertical (`<div class="w-px h-6 bg-[#E8E8E3] mx-1"></div>`).
+
+**Reglas:**
+
+1. **Editar** visible siempre que el estado del documento lo permita (oculto en `COBRADO`/`FACTURADO`). Outline secundario.
+2. **⋯ Más** dropdown único que agrupa TODAS las acciones secundarias bajo headers tipográficos por sección. Ejemplo de presupuesto:
+   - **Documento**: Descargar PDF · Enviar invoice por email
+   - **Mercury**: Crear / Ver invoice (con badge de status)
+   - **Generar link de cobro** (cuando aplica): MercadoPago · Stripe
+   - **Marcar como Facturado** (cuando aplica) — separador antes
+3. **Separador vertical** entre el menú y los CTAs primarios — solo cuando hay CTAs.
+4. **CTAs primarios por estado** (1-2 máximo, lado derecho) — son las transiciones de estado del flujo principal:
+   - `BORRADOR` → "Marcar Enviado" (azul)
+   - `ENVIADO` → "Rechazado" (outline rojo) + "Aprobar" (verde primary)
+   - `APROBADO` sin proyecto → "Crear Proyecto" + "Marcar Cobrado"
+   - `APROBADO`/`FACTURADO` con proyecto → "Ver Proyecto" + "Marcar Cobrado"
+   - `COBRADO`/`RECHAZADO`/`CANCELADO` → solo Editar+Más
+
+**Headers de sección** dentro del dropdown: `text-[10px] uppercase tracking-wider text-[#9B9B93] font-medium`. Separadores entre grupos: `<div class="border-t border-[#F0F0EB] my-1"></div>`.
+
+**Click-outside** del dropdown se maneja con un handler `closeMenus(e)` registrado en `onMounted`/`onBeforeUnmount`, usando un selector `data-acciones-menu` en el wrapper del botón. Ver `pages/presupuestos/[id].vue` para implementación de referencia.
+
+**Mobile:** ocultar las labels de Editar/Más con `hidden sm:inline` y dejar solo los íconos.
+
+**Anti-patrones a evitar:**
+- Spawn-ear botones nuevos por cada feature → satura visualmente y pierde jerarquía
+- Múltiples dropdowns coexistiendo en la misma barra → el usuario no sabe dónde está cada acción
+- Esconder transiciones de estado en el menú → mata el flujo principal del documento
+- Botones del mismo color/peso visual que los CTAs primarios para acciones secundarias → pierde la señal visual de qué es lo importante
+
+**Cuándo ascender una acción del menú a CTA visible:** solo si es transición de estado del flujo principal del documento. Cualquier otra cosa (PDF, enviar, generar link, ver detalles externos, etc.) va al menú "Más".
+
+Ver [[memoria#Action bar — jerarquía visual]] para el contexto del feedback del usuario.
 
 ---
 

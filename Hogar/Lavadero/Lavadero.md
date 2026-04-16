@@ -49,6 +49,10 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
   - **Llave en mano:** ~$528.000 – $840.000 (materiales + MO)
   - **Solo materiales (ML):** ~$395.600
   - Detalle completo en [[03-durlock-presupuesto]]
+- **Lista del durlockero (cielorraso + tabique reforzado) — abril 2026:**
+  - **Solo materiales (ML):** ~$576.300 (+$37.000 masilla si la compramos aparte = **~$613.300**)
+  - ⚠️ Confirmar con él: placas **verde RH**, si incluye masilla, y si esta lista reemplaza o complementa el revestimiento de paredes
+  - Desglose completo en [[03-durlock-presupuesto#📋 Lista del durlockero (abril 2026)]]
 - **Presupuesto azulejo (abril 2026) — pared húmeda 2,35 × 1,30 m = 3,05 m²:**
   - **Azulejo elegido:** Subway **blanco brillante biselado 7,5 × 15** (Incepa / Construnort / Cortines, 1ra calidad)
   - **Llave en mano:** ~$150.000 – $235.000 (promedio ~$191.500)

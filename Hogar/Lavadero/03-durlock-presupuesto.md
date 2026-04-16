@@ -213,6 +213,94 @@ Para comparar ofertas, pedir a cada durlockero cotización **desglosada** con:
 
 Pedir **2 o 3 presupuestos** a durlockeros del barrio con los puntos del checklist de arriba. Solo así se valida el rango. Los valores publicados online en Argentina quedan desactualizados en cuestión de semanas.
 
+## 📋 Lista del durlockero (abril 2026)
+
+El durlockero pasó la lista de materiales concreta para **cielorraso + tabique**. Es un alcance distinto al que yo había estimado arriba (revestimiento de las 4 paredes): ahora el foco es **hacer cielorraso nuevo + un tabique reforzado** más chico, no revestir toda la periferia. Precios promedio de MercadoLibre a abril 2026.
+
+> ⚠️ **Alerta a confirmar con el durlockero:** no aclara si las placas son **Verde RH (resistente a la humedad)** o blancas estándar. Para el lavadero —sobre todo el cielorraso, que es donde se acumula el vapor— **tienen que ser Verde RH obligatoriamente**. Preguntarle antes de comprar. Diferencia de precio entre blanca y verde: ~15 %.
+
+> ℹ️ **Calibre 0,70 mm** en los perfiles de tabique: es **chapa reforzada** (el estándar común es 0,52 mm). Buena señal de calidad estructural, pero encarece respecto al cálculo original. Los 5 montantes + 2 soleras sugieren que es para un tramo corto de tabique (≈1,80–2 m de largo), no un tabique largo.
+
+### Cielorraso
+
+| Ítem                                       | Cant. | $/u prom. | Subtotal     |
+| ------------------------------------------ | ----- | --------- | ------------ |
+| **Media omega 2,60 m** (cuelgue a losa)    | 35    | $3.000    | **$105.000** |
+| **Perfil cielorraso (solera de carga) 2,60 m** | 18 | $3.300    | **$59.400**  |
+| **Solera perimetral cielorraso 2,60 m**    | 7     | $2.700    | **$18.900**  |
+| **Placa Durlock 12,5 mm 1,20 × 2,40**      | 4     | $17.000   | **$68.000**  |
+| **Subtotal cielorraso**                    |       |           | **$251.300** |
+
+Enlaces MercadoLibre:
+- [Media omega Durlock](https://listado.mercadolibre.com.ar/media-omega-durlock)
+- [Perfil cielorraso / solera de carga](https://listado.mercadolibre.com.ar/perfil-cielorraso-durlock)
+- [Solera perimetral cielorraso](https://listado.mercadolibre.com.ar/solera-perimetral-cielorraso)
+- [Placa Durlock Verde RH 12,5](https://listado.mercadolibre.com.ar/placa-durlock-verde-rh-12.5) ⚠️ pedir verde, no blanca
+
+### Tabique reforzado (chapa 0,70 mm)
+
+| Ítem                                        | Cant. | $/u prom. | Subtotal     |
+| ------------------------------------------- | ----- | --------- | ------------ |
+| **Placa Durlock 12,5 mm 1,20 × 2,40**       | 10    | $17.000   | **$170.000** |
+| **Montante 0,70 mm × 2,60 m** (reforzado)   | 5     | $6.000    | **$30.000**  |
+| **Solera 0,70 mm × 2,60 m** (reforzada)     | 2     | $5.500    | **$11.000**  |
+| **Subtotal tabique**                        |       |           | **$211.000** |
+
+Enlaces MercadoLibre:
+- [Placa Durlock 12,5 tabique](https://listado.mercadolibre.com.ar/placa-durlock-12.5) ⚠️ verde RH si el tabique toca zona húmeda
+- [Montante 0,70 reforzado](https://listado.mercadolibre.com.ar/montante-durlock-0.70)
+- [Solera 0,70 reforzada](https://listado.mercadolibre.com.ar/solera-durlock-0.70)
+
+### Tornillería y fijación
+
+| Ítem                                                           | Cant.      | $/u prom.           | Subtotal     |
+| -------------------------------------------------------------- | ---------- | ------------------- | ------------ |
+| **Tornillo 8 + taco ladrillo hueco** (fijación a mampostería)  | 600 u      | $10.000 / 100 u     | **$60.000**  |
+| **Tornillos T3** (45–55 mm, doble placa o placa+aislación)     | 200 u      | $6.000 / 100 u      | **$12.000**  |
+| **Tornillos T2 punta aguja** (placa → perfil)                  | 1.000 u    | $22.000 / 1000 u    | **$22.000**  |
+| **Tornillos T1 punta mecha** (perfil → perfil)                 | 300 u      | $3.000 / 100 u      | **$9.000**   |
+| **Subtotal tornillería**                                       |            |                     | **$103.000** |
+
+Enlaces MercadoLibre:
+- [Tornillo 8 con taco para ladrillo hueco](https://listado.mercadolibre.com.ar/tornillo-con-taco-ladrillo-hueco)
+- [Tornillos T3 punta aguja Durlock](https://listado.mercadolibre.com.ar/tornillos-t3-durlock)
+- [Tornillos T2 punta aguja × 1000 u](https://listado.mercadolibre.com.ar/tornillos-t2-punta-aguja-durlock)
+- [Tornillos T1 punta mecha × 100 u](https://listado.mercadolibre.com.ar/tornillos-t1-punta-mecha-durlock)
+
+### Terminación y accesorios
+
+| Ítem                                         | Cant. | $/u prom. | Subtotal    |
+| -------------------------------------------- | ----- | --------- | ----------- |
+| **Guarda / guardacanto metálico 3 m**        | 2     | $3.000    | **$6.000**  |
+| **Cinta tramada (fibra de vidrio) 50 m**     | 1     | $5.000    | **$5.000**  |
+| **Subtotal terminación**                     |       |           | **$11.000** |
+
+Enlaces MercadoLibre:
+- [Guardacanto Durlock 3 m](https://listado.mercadolibre.com.ar/guardacanto-durlock)
+- [Cinta tramada fibra de vidrio Durlock](https://listado.mercadolibre.com.ar/cinta-tramada-durlock)
+
+> ⚠️ **Falta en la lista** (confirmar con el durlockero si la pone él o la tenemos que agregar): **masilla para tomar juntas**. Para ~45 m² de superficie emplacada (cielorraso + tabique doble cara) hacen falta **~1 balde de masilla lista para usar de 32 kg** (~$37.000). Sin masilla no se puede terminar.
+
+### Total lista durlockero
+
+| Rubro                       | Subtotal     |
+| --------------------------- | ------------ |
+| Cielorraso                  | $251.300     |
+| Tabique 0,70 mm             | $211.000     |
+| Tornillería + fijación      | $103.000     |
+| Terminación                 | $11.000      |
+| **TOTAL materiales pedidos** | **~$576.300** |
+| + Masilla 32 kg (faltante)  | +$37.000     |
+| **Total con masilla**       | **~$613.300** |
+
+### Qué confirmar con el durlockero antes de comprar
+
+1. **¿Placas Verde RH o blancas?** — para lavadero tiene que ser verde. Si está cotizando blanca, pedirle que cambie.
+2. **¿El tabique es divisorio nuevo o revestimiento de una pared existente?** — 5 montantes + 2 soleras da para ~1,80 m de tabique corto. Si era para revestir toda una pared, faltan perfiles.
+3. **¿La masilla la pone él o la compramos nosotros?** — no está en la lista.
+4. **¿Qué pasa con el revestimiento de las otras paredes?** — el presupuesto original contemplaba revestir ~24 m² de paredes (ver tabla arriba). Esta lista no cubre eso. Confirmar si quedaron fuera del alcance o si las vamos a azulejar/pintar directo sobre la mampostería existente.
+5. **¿Mano de obra aparte?** — esta lista es **solo materiales**. Pedir cotización de MO por separado.
+
 ## Fuentes consultadas
 
 ### Precios mayoristas / referencia

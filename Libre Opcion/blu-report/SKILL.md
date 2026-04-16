@@ -47,14 +47,19 @@ El template base está en `assets/blu_report_template.py`. Es un script ejecutab
 - Rojo `#fee2e2` / `#b91c1c` para deltas negativos / estados de error
 - Ámbar `#fef3c7` / `#a16207` para estados intermedios ("En proceso")
 
+**Logo oficial:** el template ya trae embebido el logo real de Blu (SVG) en base64 en la constante `BLU_LOGO_SVG_B64`, y se renderiza con `svglib` + `reportlab.graphics` a través del helper `draw_blu_logo(canv, x, y, height, color=None)`. **Nunca** dibujes texto "Blu." en Helvetica como fallback — siempre usá `draw_blu_logo()`. El SVG tiene aspect ratio ≈ 1.078 (casi cuadrado) y el bounding box ya está ajustado, así que no hace falta agregar padding. Si alguna vez hay que reemplazar el logo, el SVG está también en `assets/blu-logo.svg` y podés regenerar la constante con:
+```
+python3 -c "import base64; print(base64.b64encode(open('blu-logo.svg','rb').read()).decode())"
+```
+
 **Primera página:**
-- Logo "Blu." grande (Helvetica-Bold 36pt) arriba a la izquierda
+- Logo Blu grande arriba a la izquierda (alto 18mm, vía `draw_blu_logo`)
 - Arriba a la derecha: "DOCUMENTO" en gris 8pt + título del documento en 22pt bold + "N° X" debajo
 - Metadata block alineada a la derecha con labels en gris regular y valores en negro bold (Proyecto, Para, email del cliente, Período, Comparado con)
 - Línea separadora sutil antes del contenido
 
 **Páginas siguientes:**
-- Mini-logo "Blu." (16pt) arriba a la izquierda + título y N° pequeño arriba a la derecha
+- Mini-logo Blu (alto 7mm) arriba a la izquierda + título y N° pequeño arriba a la derecha
 - Línea separadora
 - Menos margen superior para aprovechar espacio
 
@@ -63,7 +68,7 @@ El template base está en `assets/blu_report_template.py`. Es un script ejecutab
 - "Reporte [tipo] del período indicado."
 - "Para consultas: info@blustudioinc.com"
 - "CUIT: 30-71909207-8"
-- Logo "Blu." grande en gris claro `#d4d4d4` abajo a la derecha
+- Logo Blu en gris claro `#d4d4d4` abajo a la derecha (alto 11mm, usando `draw_blu_logo(..., color=FOOTER_LOGO_GRAY)`)
 - "Página N" centrado abajo
 
 ## Estructura de contenido recomendada

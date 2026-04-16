@@ -35,7 +35,7 @@
 ## Backend consumido
 
 > Estructura del backend en [[arquitectura#Contexto en el monorepo|monorepo]]
-> Admin consume estos endpoints via `apiFetch()` → [[base-de-conocimiento#Admin Panel cmsadmin|panel admin]]
+> Admin consume estos endpoints via `apiFetch()` → [[base-de-conocimiento#Admin Panel staffpanel|panel admin]]
 
 - Laravel 10 en `localhost:8060` (container `blu-api-laravel`, branch `gamma`)
 - Auth: Sanctum (Bearer token)

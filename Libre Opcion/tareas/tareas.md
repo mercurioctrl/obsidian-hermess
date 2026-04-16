@@ -10,3 +10,5 @@ Tareas de desarrollo del proyecto [[Libre Opcion/Libre Opcion|Libre Opcion]].
 ## API
 
 - [[Libre Opcion/tareas/API - Feat - Imágenes personalizadas del reseller por producto|API - Feat - Imágenes personalizadas del reseller por producto]]
+- [[Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría|API - Feat - Recategorizar productos sin categoría]]
+- [[Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos|API - Feat - Estadísticas de categorización de productos]]

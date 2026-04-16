@@ -20,15 +20,20 @@ naevo/
       (root)                  # TheHeader, TheFooter, AnnouncementBar, CartDrawer, SearchModal
     layouts/                  # default, auth, admin
     stores/                   # auth.ts, cart.ts (Pinia)
-    composables/              # useApi.ts, useMercadoPago.ts, useGooglePlaces.ts, useToast.ts
+    composables/              # useApi.ts, useMercadoPago.ts, useGooglePlaces.ts, useToast.ts,
+                              # useSiteSettings.ts (settings globales editables desde admin)
+    public/
+      logo.svg                # Logo principal (SVG full-color, reemplaza logo.png)
+      images/                 # Assets estáticos (profesional-salud.jpg, etc.)
 
   backend/                    # Laravel 11
-    app/Http/Controllers/Api/        # 15 controllers públicos
+    app/Http/Controllers/Api/        # 17 controllers públicos
     app/Http/Controllers/Api/Admin/  # 18 controllers admin
     app/Models/                      # 39 modelos Eloquent
-    database/migrations/             # 45 migraciones
+    database/migrations/             # 46 migraciones
     database/seeders/                # 16 seeders
     routes/api.php                   # Todas las rutas API
+    storage/app/public/wellness-goals/  # Fotos lifestyle + frasco (editables via CMS)
 
   nginx/default.conf          # /api → backend:8000, / → frontend:3000
   docs/                       # architecture.md, schema.md, modules/
@@ -41,6 +46,7 @@ naevo/
 - **Guest session** — el header `X-Session-Id` se envía siempre (sin login) junto con `Bearer token` cuando hay auth. El backend resuelve user/session manualmente en rutas que no tienen `auth:sanctum`.
 - **Auth por cookie** — token Sanctum en cookie `auth_token` (no localStorage), compatible con SSR.
 - **Home 100% CMS-driven** — todo el contenido del home viene de `/api/cms/home`. Nada hardcodeado excepto estructura de componentes.
+- **Public settings whitelist** — `GET /api/public-settings` (en `PublicSettingController`) devuelve settings filtrados por un array `PUBLIC_KEYS` hardcoded. El frontend los lee con `useSiteSettings` composable. Patrón para exponer valores globales editables (hoy: alto del logo). Ver [[memoria#Project — Patterns]].
 
 ## Módulos backend (13)
 
@@ -69,6 +75,8 @@ Ver [[modulos|Mapa de módulos]] para detalle rápido.
 3. **Addresses referenciadas, no copiadas** — orders tienen FK con `nullOnDelete`.
 4. **Pagos via MercadoPago Brick** — `mercadopago_payment_id` y `mercadopago_preference_id` en orders.
 5. **Blog author es string libre** — no hay FK a users.
+6. **Home CMS-driven** — el contenido del home se edita desde `/admin/cms` (trust badges, banners, testimonials, ingredients, etc.), nada inline en Vue.
+7. **Logo SVG + alto editable** — `frontend/public/logo.svg` reemplaza al PNG (mejor escalado). El alto del logo en el header (mobile + desktop) se edita desde `/admin/configuracion` via `logo_height_mobile` / `logo_height_desktop`.
 
 ## Orden actual del home (abril 2026)
 
@@ -78,7 +86,7 @@ Tras la reestructuración de abril 2026:
 2. TheHeader (nav: Inicio, Productos, Ciencia, Blog, Profesionales)
 3. HeroSlider o HeroBanner (según `hero_display_mode`)
 4. **FeaturedProducts** (movido arriba)
-5. WellnessGoals (grid 6-col con hover crossfade lifestyle↔producto)
+5. WellnessGoals (grid 6-col sin card, estilo Horbäach con crossfade lifestyle↔frasco NAEVO transparente)
 6. QualityBadges (unificado con certifications)
 7. SubscriptionSection
 8. QuizSection
@@ -89,6 +97,16 @@ Tras la reestructuración de abril 2026:
 
 `ScienceIngredients` y `BlogPreview` ya no se renderizan en el home — Science vive en `/ciencia`, el blog preview se eliminó completamente.
 
+## Wellness Goals — editabilidad CMS
+
+La tabla `wellness_goals` tiene además de `name/slug/description/icon_url`:
+- `lifestyle_image_url` — foto circular default del hover (estado sin cursor)
+- `product_image_url` — frasco NAEVO transparente del hover
+
+Ambos editables desde `/admin/objetivos` via upload endpoint `POST /api/admin/wellness-goals/upload-image` (mismo patrón que los banners del CMS). Fotos guardadas en `storage/app/public/wellness-goals/`.
+
+El componente `WellnessGoals.vue` replica el hover effect de horbaach.com exacto: zoom de imagen `scale(1.01) → 1.07` con `transition 950ms cubic-bezier(.25,.46,.45,.94)`, título slide + color change, flecha `→` con fade+slide. Ver [[memoria#WellnessGoals]].
+
 ## Ver también
 
 - [[naevo|Índice]]
@@ -96,3 +114,4 @@ Tras la reestructuración de abril 2026:
 - [[modulos|Módulos]]
 - [[contexto|Reglas de negocio y TODOs]]
 - [[memoria|Memoria auto-guardada]]
+- [[changelog|Changelog]]

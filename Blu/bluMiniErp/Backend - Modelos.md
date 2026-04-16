@@ -31,14 +31,29 @@ Ver [[Modulo Permisos]] para el sistema completo de permisos.
 
 ### Cliente
 ```php
-fillable: nombre, email, telefono, empresa, cuit_dni, direccion, moneda_default, notas, activo
+fillable: nombre, email, telefono, empresa, cuit_dni, direccion, moneda_default,
+          notas, activo, persona_contacto, mercury_customer_id
 casts:    moneda_default -> Moneda, activo -> boolean
 relaciones:
   hasMany(Presupuesto)
   hasMany(MovimientoCuenta)
+  hasMany(ClienteTelefono) -> telefonos()  [desde 2026-04-15, orderBy id]
 atributos computados:
   saldo: array con claves ARS y USD
 ```
+
+Eager-load `telefonos` en `ClienteController::index` y `show`. `ClienteResource` siempre expone el array (id, nombre, codigo_area, numero, tipo).
+
+### ClienteTelefono
+```php
+table:    cliente_telefonos
+fillable: cliente_id, nombre, codigo_area, numero, tipo
+$touches = ['cliente']  // toca updated_at del cliente
+relaciones:
+  belongsTo(Cliente)
+```
+
+`tipo` es string plano (no enum), valores aceptados: `WHATSAPP` (default), `LLAMADA`, `FIJO`. Validación con `Rule::in([...])` en `ClienteController::agregarTelefono`. Ver [[Modulo WhatsApp Inbox]].
 
 ### Presupuesto
 ```php
@@ -112,13 +127,30 @@ Ver [[Reglas de Negocio#Bancos y Cajas - Saldo automatico]].
 ### Configuracion
 ```php
 table:    configuracion (singleton, siempre 1 fila)
-nota:     mp_access_token y stripe_secret_key NO se exponen en GET /config
+fillable: ..., mercury_api_key, mercury_account_id, mercury_banco_caja_id,
+          inbox_api_url, inbox_api_token
+nota:     mp_access_token, stripe_secret_key, mercury_api_key, inbox_api_token
+          NO se exponen en GET /config.
+          Flags booleanos: mp_tiene_token, stripe_tiene_token,
+          mercury_tiene_key, inbox_tiene_token
 ```
 
-Contiene credenciales de [[Medios de Pago]].
+Contiene credenciales de [[Medios de Pago]] y del [[Modulo WhatsApp Inbox]].
 
 ### Empleado
 Ver [[Modulo Personal]] para documentacion completa.
+
+### ProyectoAdjunto
+```php
+table:    proyecto_adjuntos
+fillable: proyecto_id, tipo, nombre, url, path, mime_type, size, public_token
+relaciones:
+  belongsTo(Proyecto)
+metodos:
+  asegurarPublicToken(): string
+```
+
+`asegurarPublicToken()` (desde 2026-04-15) genera `bin2hex(random_bytes(32))` (64 chars hex) y lo persiste si todavía no existe. Se usa para compartir el adjunto por WhatsApp via URL pública sin auth. Ver [[Modulo WhatsApp Inbox#Public token para acceso sin auth]].
 
 ### PruebaEjecucion (Activacion)
 ```php

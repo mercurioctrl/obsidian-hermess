@@ -5,12 +5,19 @@ Copiá este archivo al scratchpad de la sesión, editá las constantes del top y
 reescribí `build_story()` con el contenido del informe. No toques el resto:
 el header, footer y estilos ya están calibrados.
 
+El logo oficial viene embebido en base64 (constante BLU_LOGO_SVG_B64) y se
+renderiza con svglib + reportlab.graphics. No uses texto "Blu." en Helvetica:
+siempre invocá draw_blu_logo() para mantener el branding correcto.
+
 Uso:
     cp /sessions/<id>/mnt/.claude/skills/blu-report/assets/blu_report_template.py \
        /sessions/<id>/generate_report.py
     # editá generate_report.py
     python /sessions/<id>/generate_report.py
 """
+import base64
+import io
+
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
 from reportlab.lib import colors
@@ -20,6 +27,8 @@ from reportlab.platypus import (
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_CENTER, TA_JUSTIFY
+from reportlab.graphics import renderPDF
+from svglib.svglib import svg2rlg
 
 # ============================================================================
 # CONFIGURACIÓN DEL DOCUMENTO — editá solamente esto
@@ -31,11 +40,86 @@ PROJECT        = "Abr: Nombre del Proyecto"   # Proyecto
 CLIENT         = "Nombre del Cliente"         # Cliente
 CLIENT_EMAIL   = "<info@cliente.com>"         # Email del cliente (con <>)
 PERIOD         = "12/03/2026 — 08/04/2026"    # Período del informe
-COMPARE_PERIOD = "12/02/2026 — 11/03/2026"    # Período de comparación (opcional, dejar "" si no aplica)
+COMPARE_PERIOD = "12/02/2026 — 11/03/2026"    # Período de comparación (vacío si no aplica)
 FOOTER_TEXT    = "Reporte semanal de SEO y performance del período indicado."
 
 # ============================================================================
-# SISTEMA VISUAL — no modificar salvo para ajustes finos
+# LOGO OFICIAL BLU (SVG embebido en base64)
+# Bounding box ajustado al acrónimo "B." — aspect ratio ≈ 1.078 (casi cuadrado).
+# No modificar. Si hace falta cambiar el logo, regenerar la constante con:
+#     python3 -c "import base64; print(base64.b64encode(open('blu-logo.svg','rb').read()).decode())"
+# ============================================================================
+BLU_LOGO_SVG_B64 = (
+    "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0"
+    "cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NTQuMDAgNDIxLjA1Ij4K"
+    "ICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzMzLjAwLC0zMjYuODApIj4KICAgIDxwYXRo"
+    "IGQ9Ik0xMDcwLjEyLDU4NC4zOGMtMy43OC0xMS41MS04Ljk0LTIxLjY0LTE1LjQ5LTMwLjM4"
+    "LTYuNTUtOC43My0xNC4yLTE2LjA5LTIyLjk0LTIyLjA0LTguNzQtNS45Ni0xOC4wOC0xMC41"
+    "Mi0yOC0xMy43LDEyLjcxLTYuNzUsMjIuOTQtMTYuNTgsMzAuNjgtMjkuNDksNy43NS0xMi45"
+    "LDExLjYyLTI5LjQ5LDExLjYyLTQ5Ljc1LDAtMTYuMjgtMi41OS0zMS4wNy03Ljc1LTQ0LjM4"
+    "LTUuMTctMTMuMzEtMTIuNTEtMjQuOTItMjIuMDQtMzQuODYtOS41My05LjkyLTIxLjE1LTE3"
+    "LjU4LTM0Ljg1LTIyLjk0LTEzLjctNS4zNi0yOS4xLTguMDQtNDYuMTctOC4wNGgtMjAwLjE4"
+    "djM0OC41Mmg3NC40NXY2OC41M2gxNDIuNDFjMTkuMDYsMCwzNi4yNC0yLjk4LDUxLjUzLTgu"
+    "OTQsMTUuMjktNS45NiwyOC4zLTE0LjM5LDM5LjAyLTI1LjMyLDEwLjcyLTEwLjkyLDE4Ljk2"
+    "LTIzLjgzLDI0LjcyLTM4LjczLDUuNzYtMTQuOSw4LjY0LTMxLjI4LDguNjQtNDkuMTUsMC0x"
+    "NC42OS0xLjg5LTI3LjgtNS42Ni0zOS4zMlpNODA5LjQ2LDM5Ny4zMWgxMTYuMThjMTMuOSww"
+    "LDI1LjAyLDQuMTcsMzMuMzYsMTIuNTEsOC4zNCw4LjM0LDEyLjUxLDE5LjY2LDEyLjUxLDMz"
+    "Ljk2cy00LjE3LDI1LjAyLTEyLjUxLDMzLjM2Yy04LjM0LDguMzQtMTkuNDcsMTIuNTEtMzMu"
+    "MzYsMTIuNTFoLTExNi4xOHYtOTIuMzRaTTk4NS4yMiw2NjEuMjRjLTEwLjcyLDEwLjcyLTI1"
+    "LjAyLDE2LjA5LTQyLjksMTYuMDloLTEzMi44NnYtMTE5LjE1aDEzMi44NmMxNy44NywwLDMy"
+    "LjE3LDUuNDYsNDIuOSwxNi4zOCwxMC43MiwxMC45MywxNi4wOSwyNS41MiwxNi4wOSw0My43"
+    "OXMtNS4zNiwzMi4xNy0xNi4wOSw0Mi45WiIvPgogICAgPHJlY3QgeD0iMTExMy41MSIgeT0i"
+    "NjczLjQ1IiB3aWR0aD0iNzEuNDkiIGhlaWdodD0iNjguNTEiLz4KICA8L2c+Cjwvc3ZnPgo="
+)
+
+_LOGO_CACHE = {}
+
+def _load_logo():
+    if "rlg" not in _LOGO_CACHE:
+        svg_bytes = base64.b64decode(BLU_LOGO_SVG_B64)
+        _LOGO_CACHE["rlg"] = svg2rlg(io.BytesIO(svg_bytes))
+    return _LOGO_CACHE["rlg"]
+
+
+def draw_blu_logo(canv, x, y, height, color=None):
+    """
+    Dibuja el logo oficial Blu sobre el canvas.
+      x, y   — esquina inferior-izquierda del logo (en puntos).
+      height — alto deseado en puntos. El ancho se calcula manteniendo el
+               aspect ratio real del logo (≈1.078).
+      color  — opcional: si se pasa un reportlab.lib.colors.Color, el logo
+               se dibuja en ese color (útil para el logo gris del footer).
+               Default: negro tal como viene en el SVG.
+    """
+    logo = _load_logo()
+    scale = height / logo.height
+    canv.saveState()
+    canv.translate(x, y)
+    canv.scale(scale, scale)
+    if color is not None:
+        # Aplicar color a todos los shapes del Drawing
+        from reportlab.graphics.shapes import Path, Rect, Group
+        def tint(node):
+            if hasattr(node, "fillColor"):
+                node.fillColor = color
+            if hasattr(node, "strokeColor") and node.strokeColor is not None:
+                node.strokeColor = color
+            if hasattr(node, "contents"):
+                for child in node.contents:
+                    tint(child)
+        tint(logo)
+    renderPDF.draw(logo, canv, 0, 0)
+    canv.restoreState()
+
+
+def logo_width_for_height(height):
+    """Devuelve el ancho (en puntos) que tendrá el logo a la altura dada."""
+    logo = _load_logo()
+    return height * (logo.width / logo.height)
+
+
+# ============================================================================
+# SISTEMA VISUAL — no modificar salvo ajustes finos
 # ============================================================================
 BLACK          = colors.HexColor("#0a0a0a")
 TEXT           = colors.HexColor("#1a1a1a")
@@ -48,11 +132,12 @@ AMBER          = colors.HexColor("#fef3c7")
 AMBER_TEXT     = colors.HexColor("#a16207")
 RED_BG         = colors.HexColor("#fee2e2")
 RED_TEXT       = colors.HexColor("#b91c1c")
+FOOTER_LOGO_GRAY = colors.HexColor("#d4d4d4")
 
 PAGE_W, PAGE_H = A4
 MARGIN_L = 22 * mm
 MARGIN_R = 22 * mm
-MARGIN_T = 70 * mm    # Espacio para el header grande de la primera página
+MARGIN_T = 70 * mm
 MARGIN_B = 30 * mm
 CONTENT_W = PAGE_W - MARGIN_L - MARGIN_R
 
@@ -60,11 +145,11 @@ styles = getSampleStyleSheet()
 
 H1 = ParagraphStyle('H1', parent=styles['Normal'],
     fontName='Helvetica-Bold', fontSize=14, textColor=BLACK,
-    spaceBefore=18, spaceAfter=10, leading=18)
+    spaceBefore=14, spaceAfter=8, leading=18)
 
 H2 = ParagraphStyle('H2', parent=styles['Normal'],
     fontName='Helvetica-Bold', fontSize=10, textColor=MUTED,
-    spaceBefore=14, spaceAfter=6, leading=12)
+    spaceBefore=12, spaceAfter=6, leading=12)
 
 BODY = ParagraphStyle('BODY', parent=styles['Normal'],
     fontName='Helvetica', fontSize=9.5, textColor=TEXT,
@@ -74,9 +159,6 @@ BODY_LEFT = ParagraphStyle('BODY_LEFT', parent=BODY, alignment=TA_LEFT)
 
 SMALL = ParagraphStyle('SMALL', parent=styles['Normal'],
     fontName='Helvetica', fontSize=8, textColor=MUTED, leading=11)
-
-LABEL = ParagraphStyle('LABEL', parent=styles['Normal'],
-    fontName='Helvetica', fontSize=7.5, textColor=MUTED, leading=10)
 
 KPI_NUM = ParagraphStyle('KPI_NUM', parent=styles['Normal'],
     fontName='Helvetica-Bold', fontSize=15, textColor=BLACK, leading=18,
@@ -94,32 +176,31 @@ CELL_BOLD = ParagraphStyle('CELL_BOLD', parent=CELL,
 
 
 def P(text, style=CELL):
-    """Helper: envolvé texto de celda en Paragraph para que haga wrap."""
     return Paragraph(text, style)
 
 
 # ============================================================================
 # HEADER / FOOTER (canvas drawing)
 # ============================================================================
+HEADER_LOGO_H  = 18 * mm    # Alto del logo grande en la primera página
+MINI_LOGO_H    = 7 * mm     # Alto del logo chico en las páginas siguientes
+FOOTER_LOGO_H  = 11 * mm    # Alto del logo gris del footer
+
 def draw_first_page(canv, doc):
     canv.saveState()
 
-    # Logo "Blu." grande arriba a la izquierda
-    canv.setFillColor(BLACK)
-    canv.setFont("Helvetica-Bold", 36)
-    canv.drawString(MARGIN_L, PAGE_H - 32 * mm, "Blu.")
+    # Logo Blu grande arriba a la izquierda
+    draw_blu_logo(canv, MARGIN_L, PAGE_H - 14*mm - HEADER_LOGO_H, HEADER_LOGO_H)
 
-    # "DOCUMENTO" label gris arriba a la derecha
+    # "DOCUMENTO" label arriba a la derecha
     canv.setFont("Helvetica", 8)
     canv.setFillColor(MUTED)
     canv.drawRightString(PAGE_W - MARGIN_R, PAGE_H - 22 * mm, "DOCUMENTO")
 
-    # Título del documento (grande, bold)
     canv.setFont("Helvetica-Bold", 22)
     canv.setFillColor(BLACK)
     canv.drawRightString(PAGE_W - MARGIN_R, PAGE_H - 30 * mm, DOC_TITLE)
 
-    # N° documento
     canv.setFont("Helvetica", 8)
     canv.setFillColor(MUTED)
     canv.drawRightString(PAGE_W - MARGIN_R - 12, PAGE_H - 36 * mm, "N°  ")
@@ -127,7 +208,6 @@ def draw_first_page(canv, doc):
     canv.setFillColor(BLACK)
     canv.drawRightString(PAGE_W - MARGIN_R, PAGE_H - 36 * mm, DOC_NUMBER)
 
-    # Bloque de metadata alineado a la derecha
     meta_y = PAGE_H - 46 * mm
     line_h = 4.2 * mm
     metas = [
@@ -150,11 +230,10 @@ def draw_first_page(canv, doc):
         label_w = canv.stringWidth(label, "Helvetica", 8.5)
         canv.drawString(PAGE_W - MARGIN_R - bold_w - label_w, y, label)
 
-    # Línea separadora antes del contenido
     canv.setStrokeColor(LIGHT_LINE)
     canv.setLineWidth(0.5)
-    canv.line(MARGIN_L, PAGE_H - MARGIN_T + 4 * mm,
-              PAGE_W - MARGIN_R, PAGE_H - MARGIN_T + 4 * mm)
+    canv.line(MARGIN_L, PAGE_H - MARGIN_T + 4*mm,
+              PAGE_W - MARGIN_R, PAGE_H - MARGIN_T + 4*mm)
 
     draw_footer(canv)
     canv.restoreState()
@@ -162,10 +241,9 @@ def draw_first_page(canv, doc):
 
 def draw_later_page(canv, doc):
     canv.saveState()
+
     # Mini-logo arriba a la izquierda
-    canv.setFillColor(BLACK)
-    canv.setFont("Helvetica-Bold", 16)
-    canv.drawString(MARGIN_L, PAGE_H - 18 * mm, "Blu.")
+    draw_blu_logo(canv, MARGIN_L, PAGE_H - 14*mm - MINI_LOGO_H*0.2, MINI_LOGO_H)
 
     # Título corto arriba a la derecha
     canv.setFont("Helvetica", 8)
@@ -188,7 +266,6 @@ def draw_footer(canv):
     canv.setLineWidth(0.5)
     canv.line(MARGIN_L, fy + 4 * mm, PAGE_W - MARGIN_R, fy + 4 * mm)
 
-    # Footer text
     canv.setFillColor(MUTED)
     canv.setFont("Helvetica", 7.5)
     canv.drawString(MARGIN_L, fy, FOOTER_TEXT)
@@ -201,12 +278,17 @@ def draw_footer(canv):
     canv.setFillColor(MUTED)
     canv.drawString(MARGIN_L, fy - 6.4 * mm, "CUIT: 30-71909207-8")
 
-    # Logo grande gris abajo a la derecha
-    canv.setFillColor(colors.HexColor("#d4d4d4"))
-    canv.setFont("Helvetica-Bold", 24)
-    canv.drawRightString(PAGE_W - MARGIN_R, fy - 4 * mm, "Blu.")
+    # Logo gris abajo a la derecha.
+    # El borde superior del logo se alinea con la línea superior del texto
+    # del footer (la de "Reporte semanal..."): la B "comienza" donde arranca
+    # visualmente el texto de la izquierda.
+    logo_w = logo_width_for_height(FOOTER_LOGO_H)
+    draw_blu_logo(canv,
+                  PAGE_W - MARGIN_R - logo_w,
+                  fy - FOOTER_LOGO_H + 2 * mm,
+                  FOOTER_LOGO_H,
+                  color=FOOTER_LOGO_GRAY)
 
-    # Número de página
     canv.setFillColor(MUTED)
     canv.setFont("Helvetica", 7)
     canv.drawCentredString(PAGE_W / 2, 10 * mm, f"Página {canv.getPageNumber()}")
@@ -216,19 +298,12 @@ def draw_footer(canv):
 # COMPONENTES REUTILIZABLES
 # ============================================================================
 def section_header(text):
-    """Header de sección: uppercase gris chico (el estilo clave del look Blu)."""
     return Paragraph(text.upper(), H2)
 
 
 def kpi_cards(cards):
     """
-    Grid de 4 KPI cards. `cards` es una lista de tuplas:
-        (label, value, delta_text, delta_positive)
-    Ejemplo:
-        [("CONVERSIONES", "906", "+110,7 %", True),
-         ("INGRESOS", "$291,5 M", "+1.287 %", True),
-         ("TASA", "0,43 %", "+233 %", True),
-         ("ENGAGEMENT", "35 s", "+48 %", True)]
+    cards: lista de (label, value, delta_text, positive_bool)
     """
     labels, values, deltas = [], [], []
     for label, value, delta, positive in cards:
@@ -255,18 +330,8 @@ def kpi_cards(cards):
 
 
 def comparison_table(headers, rows, delta_col_index=-1, positive_rows=None):
-    """
-    Tabla de comparación antes / hoy / Δ.
-    `headers`: lista de strings (ej: ["MÉTRICA", "ANTES", "HOY", "Δ"])
-    `rows`: lista de listas con los datos
-    `delta_col_index`: índice de la columna Δ para colorear (default: última)
-    `positive_rows`: lista de índices de filas donde el delta es positivo (verde).
-                     Si es None, todas se pintan verde.
-                     Si es una lista, las que no están se pintan rojo.
-    """
     data = [headers] + rows
     col_count = len(headers)
-    # Repartir anchos: primera columna más ancha
     first_w = CONTENT_W * 0.42
     rest_w = (CONTENT_W - first_w) / (col_count - 1)
     col_widths = [first_w] + [rest_w] * (col_count - 1)
@@ -283,10 +348,8 @@ def comparison_table(headers, rows, delta_col_index=-1, positive_rows=None):
         ('LEFTPADDING', (0, 0), (-1, -1), 4),
         ('ALIGN', (1, 0), (-1, -1), 'RIGHT'),
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
-        # Delta column en bold
         ('FONT', (delta_col_index, 1), (delta_col_index, -1), 'Helvetica-Bold', 9),
     ]
-    # Colorear deltas
     for i, _ in enumerate(rows):
         row_idx = i + 1
         is_positive = positive_rows is None or i in positive_rows
@@ -299,17 +362,9 @@ def comparison_table(headers, rows, delta_col_index=-1, positive_rows=None):
     return t
 
 
-def status_table(headers, rows, status_col_index=-1):
-    """
-    Tabla con chips de estado en la última columna.
-    `rows`: cada fila tiene strings o Paragraphs. La última celda es el estado
-            ("Verificado", "Pendiente", "En proceso", etc.)
-    Pintar la columna de estado en verde.
-    """
+def status_table(headers, rows):
     data = [headers] + rows
     col_count = len(headers)
-
-    # Anchos balanceados con última columna fija
     status_w = 30 * mm
     index_w = 8 * mm if headers[0] in ("#", "Nº", "N°") else 0
     remaining = CONTENT_W - status_w - index_w
@@ -328,7 +383,7 @@ def status_table(headers, rows, status_col_index=-1):
         ('TEXTCOLOR', (0, 0), (-1, 0), MUTED),
         ('FONT', (0, 1), (-1, -1), 'Helvetica', 9),
         ('TEXTCOLOR', (0, 1), (-1, -1), TEXT),
-        ('TEXTCOLOR', (0, 1), (0, -1), MUTED),  # Columna de índice en gris
+        ('TEXTCOLOR', (0, 1), (0, -1), MUTED),
         ('LINEBELOW', (0, 0), (-1, 0), 0.6, BLACK),
         ('LINEBELOW', (0, 1), (-1, -2), 0.3, LIGHT_LINE),
         ('TOPPADDING', (0, 0), (-1, -1), 8),
@@ -337,11 +392,10 @@ def status_table(headers, rows, status_col_index=-1):
         ('RIGHTPADDING', (0, 0), (-1, -1), 5),
         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
         ('ALIGN', (0, 0), (0, -1), 'CENTER'),
-        ('ALIGN', (status_col_index, 0), (status_col_index, -1), 'CENTER'),
-        # Chip de estado
-        ('BACKGROUND', (status_col_index, 1), (status_col_index, -1), GREEN_OK),
-        ('TEXTCOLOR', (status_col_index, 1), (status_col_index, -1), GREEN_OK_TEXT),
-        ('FONT', (status_col_index, 1), (status_col_index, -1), 'Helvetica-Bold', 8),
+        ('ALIGN', (-1, 0), (-1, -1), 'CENTER'),
+        ('BACKGROUND', (-1, 1), (-1, -1), GREEN_OK),
+        ('TEXTCOLOR', (-1, 1), (-1, -1), GREEN_OK_TEXT),
+        ('FONT', (-1, 1), (-1, -1), 'Helvetica-Bold', 8),
     ]))
     return t
 
@@ -353,11 +407,10 @@ def build_story():
     story = []
     story.append(NextPageTemplate('later'))
 
-    # ---------- RESUMEN EJECUTIVO ----------
     story.append(Paragraph("Resumen ejecutivo", H1))
     story.append(Paragraph(
-        "Párrafo corto (2-4 líneas) con el mensaje principal del informe. "
-        "Resaltá con <b>bold</b> lo más importante.",
+        "Párrafo corto con el mensaje principal del informe. Resaltá con "
+        "<b>bold</b> lo más importante.",
         BODY))
 
     story.append(Spacer(1, 4))
@@ -368,12 +421,8 @@ def build_story():
         ("MÉTRICA 4", "35 s", "+48,8 %", True),
     ]))
 
-    # ---------- SECCIÓN DE DATOS ----------
-    story.append(section_header("Nombre de la sección"))
-    story.append(Paragraph(
-        "Párrafo de contexto que explica qué muestra la tabla siguiente.",
-        BODY))
-
+    story.append(section_header("Sección"))
+    story.append(Paragraph("Párrafo de contexto.", BODY))
     story.append(comparison_table(
         headers=["INDICADOR", "ANTES", "HOY", "VARIACIÓN"],
         rows=[
@@ -381,52 +430,17 @@ def build_story():
             ["Conversiones", "430", "906", "+110,70 %"],
             ["Ingresos", "$21,0 M", "$291,5 M", "+1.287,8 %"],
         ],
-        positive_rows=[1, 2],  # filas 1 y 2 son positivas; 0 es negativa
+        positive_rows=[1, 2],
     ))
 
-    # ---------- TABLA DE ESTADO (fixes / acciones) ----------
-    story.append(section_header("Acciones desplegadas"))
-    story.append(status_table(
-        headers=["#", "ACCIÓN", "DESCRIPCIÓN", "ESTADO"],
-        rows=[
-            ["1",
-             P("Título de la acción en bold", CELL_BOLD),
-             P("Descripción que puede ser larga y hacer wrap dentro de la celda.", CELL),
-             "Verificado"],
-            ["2",
-             P("Otra acción", CELL_BOLD),
-             P("Descripción.", CELL),
-             "Verificado"],
-        ],
-    ))
-
-    # ---------- OPORTUNIDADES ----------
-    story.append(section_header("Oportunidades para el próximo período"))
-    opps = [
-        ("1. Título de la oportunidad.",
-         "Explicación breve en 1-2 líneas de qué hacer y por qué."),
-        ("2. Otra oportunidad.",
-         "Otra explicación."),
-    ]
-    for title, desc in opps:
-        story.append(Paragraph(f"<b>{title}</b>", BODY))
-        story.append(Paragraph(desc, BODY))
-        story.append(Spacer(1, 4))
-
-    # ---------- CONCLUSIÓN (envuelta en KeepTogether para evitar viudas) ----------
     story.append(KeepTogether([
         section_header("Conclusión"),
-        Paragraph(
-            "Párrafo de cierre con el mensaje clave. Idealmente 3-5 líneas.",
-            BODY),
+        Paragraph("Párrafo de cierre.", BODY),
     ]))
 
     return story
 
 
-# ============================================================================
-# BUILD
-# ============================================================================
 def main():
     doc = BaseDocTemplate(
         OUTPUT,

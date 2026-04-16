@@ -4,95 +4,118 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-04-16
+
+- fix: **Envío WhatsApp — mensajes con links correctos.** Se intentó usar `mediaBase64` y `mediaUrl` para enviar archivos como adjuntos nativos de WhatsApp, pero el worker del bot no procesa media (solo texto). Se revirtió a mensajes de texto con links:
+  - **ARCHIVO:** `"Hola {nombre}, te envío {titulo}\n\n{publicUrl}"`
+  - **ENLACE:** `"Hola {nombre}, te comparto {titulo}\n\n{urlDirecta}"` (con `https://` asegurado). Antes usaba el redirect via public token; ahora manda la URL directa del enlace
+- fix: **APP_URL corregida a `http://localhost:8823`** — antes era `http://localhost` (sin puerto), generaba URLs rotas en los links compartidos por WhatsApp. El problema estaba en 3 capas: (1) `docker-compose.yml` hardcodeaba `APP_URL: http://localhost` overrideando el `.env` de Laravel; (2) PHP-FPM no hereda env vars del container igual que CLI; (3) Nginx pasaba `Host: $host` que no incluye el puerto
+- infra: `docker-compose.yml` ahora usa `APP_URL: ${APP_URL:-http://localhost:8823}` (configurable desde `.env` de compose con fallback correcto)
+- infra: `nginx/default.conf` cambiado `proxy_set_header Host $host` → `$http_host` en la location `/api/` para que Laravel vea el puerto en `url()`. Ver [[Stack e Infraestructura#Nginx - Ruteo]]
+- feat: **Open Graph preview con logo Blu en links compartidos por WhatsApp.** `servirArchivoPublico` ahora detecta crawlers por User-Agent (WhatsApp, Facebook, Telegram, Slack, LinkedIn) y devuelve HTML con `og:title`, `og:image` (logo Blu) y `og:description` en vez del archivo. Usuarios reales siguen recibiendo el archivo/redirect normal. Ver [[Modulo WhatsApp Inbox#Compartir adjuntos por WhatsApp]]
+- discovery: **Deploy backend con `docker cp` no basta si PHP-FPM tiene opcache activo.** `optimize:clear` limpia caches de Laravel pero no el opcache de PHP. Hay que reiniciar el container con `docker restart minisaas-backend`. Ver [[Errores Comunes]] y [[Stack e Infraestructura#Comandos de deploy]]
+- discovery: **El bot de WhatsApp (Inbox API) no soporta media** — acepta `mediaBase64`/`mediaUrl`/`mimetype`/`filename` en el request y responde `success:true`, pero el worker solo procesa el campo `mensaje`. Para enviar archivos como adjuntos nativos de WhatsApp, hace falta arreglar el worker del bot. Ver [[Modulo WhatsApp Inbox#Servicio externo (Inbox API) — referencia completa]]
+
+Archivos: `backend/app/Http/Controllers/ProyectoController.php` (enviarAdjuntoWhatsApp simplificado + servirArchivoPublico con OG tags + import Log), `docker-compose.yml` (APP_URL configurable), `nginx/default.conf` ($http_host)
+
+---
+
+## 2026-04-15
+
+- feat: **Teléfonos múltiples por cliente** — un cliente puede tener N teléfonos con código de área, nombre de contacto y tipo (`WHATSAPP` default, `LLAMADA`, `FIJO`). Card "Teléfonos" en el aside de `pages/clientes/[id].vue`, debajo del card Estado (no en el modal de edición). Ver [[Base de Datos#cliente_telefonos]] y [[Backend - API#Clientes]]
+- db: Migración 0053 — crea `cliente_telefonos` (`cliente_id`, `codigo_area`, `numero`, `etiqueta`)
+- db: Migración 0054 — rename `etiqueta` → `nombre` y agrega `tipo` (string, default `WHATSAPP`). La migración 0053 quedó con forma vieja porque se iteró en la misma sesión
+- feat: Endpoints dedicados **fuera** del `update` del cliente — `POST /api/clientes/{id}/telefonos` y `DELETE /api/clientes/{id}/telefonos/{telefono}`. Se deliberó la alternativa de sincronizar desde el body del update y se descartó: más simple, menos acoplamiento, y permite tocar teléfonos sin editar el cliente. Las rutas están registradas **antes** de `apiResource('clientes', …)` para no colisionar con `{cliente}`. Ver [[Errores Comunes#Rutas especificas despues de apiResource colisionan con id]]
+- feat: `ClienteTelefono` con `$touches = ['cliente']` para mantener el `updated_at` del cliente fresco al tocar teléfonos. `ClienteController::index/show` eager-loadea `telefonos`, `ClienteResource` siempre los expone
+- ux: Primera iteración puso el card dentro del bloque Información y también un form en el modal de edición. Se movió por feedback: **"debería aparecer como un módulo más, similar al de adjuntos en proyectos"** y después **"ponelo en el aside, abajo del de estado"**. Patrón final replica el de "Enlaces y Archivos" de proyecto — header + botón "+ Agregar" que toggleaea un mini-form, lista con ícono por tipo, X para borrar visible en hover
+
+**Integración WhatsApp Inbox API + compartir adjuntos de proyecto (misma fecha):**
+
+- feat: **Nueva integración WhatsApp via Inbox API externa** — un servicio tipo cola (worker + SQLite) al que se le postea `{ token, telefono, mensaje }` y un cliente de WhatsApp Web se encarga del envío cada 10s con reintentos. Ver [[Modulo WhatsApp Inbox]]
+- db: Migración 0055 — `configuracion.inbox_api_url` e `inbox_api_token`. Configurables desde el card "Integración WhatsApp (Inbox API)" en `pages/configuracion/index.vue`. Mismo patrón que Mercury/MP/Stripe: el token nunca se devuelve al frontend, solo flag `inbox_tiene_token`
+- feat: **Compartir adjuntos de proyecto por WhatsApp** — botón verde (`lucide:message-circle`) en hover junto a cada adjunto del card "Enlaces y Archivos" en `pages/proyectos/[id].vue`. Visible solo si el cliente tiene al menos un teléfono con `tipo=WHATSAPP`. Modal con checkboxes listando los contactos WhatsApp del cliente (todos pre-seleccionados)
+- db: Migración 0056 — `proyecto_adjuntos.public_token` (varchar(80), unique, nullable). Método `ProyectoAdjunto::asegurarPublicToken()` genera `bin2hex(random_bytes(32))` (64 chars hex) on-demand y lo persiste. La seguridad del link compartido se basa únicamente en la imposibilidad de adivinar el token
+- feat: **Ruta pública fuera de auth** — `GET /api/archivos/publico/{token}` → `ProyectoController::servirArchivoPublico`. Si `tipo=ENLACE` hace `redirect()->away()`, si `tipo=ARCHIVO` devuelve el file con `Content-Disposition: inline`. Sin expiración, sin rate limiting — si hay que invalidar un link compartido, `UPDATE proyecto_adjuntos SET public_token = NULL WHERE id = X`
+- feat: **Endpoint de envío** — `POST /api/proyectos/{proyecto}/adjuntos/{adjunto}/enviar-whatsapp` con body `{ telefono_ids[] }`. Valida pertenencia al cliente del proyecto, genera/reutiliza el `public_token`, arma el mensaje `"Hola {nombre}, te ha enviado el archivo {titulo} - {url}"`, normaliza el número con `preg_replace('/\D+/', '', codigo_area.numero)` y postea por cada contacto al `inbox_api_url` con `Http::timeout(15)`. Errores individuales no rompen el loop — se acumulan en `fallidos[]`. Response: `{ url, enviados[], fallidos[] }` — el frontend muestra toast con contadores
+- infra: `ProyectoController::show` ahora eager-loadea `presupuesto.cliente.telefonos` para que el frontend tenga los contactos WhatsApp disponibles sin request extra
+
+Archivos: migraciones 0053/0054/0055/0056, `app/Models/ClienteTelefono.php` (nuevo), `app/Models/Cliente.php` (relación), `app/Models/ProyectoAdjunto.php` (método `asegurarPublicToken`), `app/Models/Configuracion.php` (fillable), `app/Http/Controllers/ClienteController.php` (store/update/show eager-load + endpoints agregarTelefono/eliminarTelefono), `app/Http/Controllers/ProyectoController.php` (eager-load telefonos, endpoints `enviarAdjuntoWhatsApp` y `servirArchivoPublico`, imports de `Http`/`Configuracion`/`ClienteTelefono`), `app/Http/Controllers/ConfiguracionController.php` (hide + flag `inbox_tiene_token`, validación URL, guard contra token vacío), `app/Http/Resources/ClienteResource.php` (expone telefonos), `routes/api.php` (rutas `/clientes/{id}/telefonos`, `/proyectos/{id}/adjuntos/{adj}/enviar-whatsapp`, `/archivos/publico/{token}` **fuera de auth**), `frontend/pages/clientes/[id].vue` (card Teléfonos en aside + CRUD inline), `frontend/pages/clientes/nuevo.vue` (revertido — no lleva teléfonos en el form de creación), `frontend/pages/configuracion/index.vue` (card Integración WhatsApp), `frontend/pages/proyectos/[id].vue` (botón WhatsApp + modal contactos + computed `whatsappContactos`)
+
+---
+
+## 2026-04-14
+
+- feat: **Integración Mercury Invoicing API completa** — facturación electrónica USD desde el ERP usando la API de Accounts Receivable de Mercury. Cubre los 3 caminos: listado, creación desde presupuesto, y embebido del link de pago en el email. Ver [[Modulo Mercury Invoicing]] y [[Medios de Pago#Mercury Invoicing API (desde 2026-04-14)]]
+- db: Migración 0049 — `clientes.mercury_customer_id` (uuid del customer en Mercury, persistido tras find-or-create)
+- db: Migración 0050 — `presupuestos.mercury_invoice_id` / `mercury_invoice_slug` / `mercury_invoice_status` / `mercury_invoice_tasa_cambio` / `mercury_invoice_created_at` (referencia + auditoría del invoice creado)
+- db: Migración 0051 — `presupuestos.mercadopago_payment_url` y `presupuestos.stripe_payment_url` (antes los links se generaban on-the-fly y eran ephemeral; ahora se persisten para reusarlos en el modal de envío)
+- feat (Fase 1 — backend foundations): nuevo `app/Services/MercuryInvoiceService.php` envuelve toda la lógica HTTP. Nuevo `MercuryInvoiceController` con 7 endpoints. Ver [[Backend - API#Mercury Invoicing — endpoints (desde 2026-04-14)]]
+- feat (Fase 2 — listado): `/mercury` ahora tiene **tabs** "Cuenta" e "Invoices". Tab Invoices lazy-load, tabla cursor-based con status badges
+- feat (Fase 3 — crear desde presupuesto): botón "Crear invoice Mercury" en `/presupuestos/[id]` cuando `!mercury_invoice_id`. Modal con conversión ARS→USD
+- feat (Fase 4 — payment links en email): modal "Enviar invoice por email" con sección "Métodos de pago a incluir" (Mercury/Stripe/MP)
+- feat: **Vincular invoice Mercury existente** y **adjuntar PDF Mercury al email**
+- ux: **Reorganización del action bar de presupuestos** — máximo 2 CTAs + dropdown "Más"
+- feat: **Tracking de usuario creador en activaciones e hitos** — `created_by` nullable (migración 0052)
+
+---
+
 ## 2026-04-13
 
-- feat: **Envío de invoice por email** desde detalle de presupuesto. Nuevo botón "Enviar invoice" junto al de PDF, modal con email precargado desde `cliente.email` y vista previa del mensaje. Al enviar, el mail queda guardado en la ficha del cliente ("se acuerda el mail"). Ver [[Backend - API#Presupuestos]] y [[Stack e Infraestructura#Mail SMTP]]
-- infra: Configurado SMTP de `box.lio.red:465` (SSL) con remitente `payments@blustudioinc.com`. `MAIL_PASSWORD` queda vacía en el `.env` commiteado, cada entorno la setea. BCC automático a `payments@blustudioinc.com` (`MAIL_PAYMENTS_BCC`). Ver [[memoria#Mail SMTP y envío de invoices]]
-- infra: Creado `config/mail.php` a mano — Laravel 11 en este repo no lo trae en el skeleton por default (solo app, auth, cache, cors, database, sanctum, services, session). Sin ese archivo el Mail facade no funciona aunque estén las env vars. Ver [[Errores Comunes#Laravel 11 sin config mail php por default]]
-- feat: Mailable `PresupuestoInvoiceMail` con **PDF adjunto in-memory** — no toca filesystem. El Envelope setea el BCC, no el controller
-- feat: Vista `resources/views/emails/presupuesto-invoice.blade.php` con estilo consistente con el sistema de diseño (fondo `#F5F5F0`, cards blancos, texto `#1A1A1A`, totales formateados `es-AR`)
+- feat: **Envío de invoice por email** desde detalle de presupuesto
+- infra: Configurado SMTP `box.lio.red:465` SSL
+- refactor: **Migración DomPDF → Spatie Browsershot + Chromium headless** para PDFs de presupuesto
 
-**Iteración (misma fecha) — migración de renderizado de PDF presupuestos:**
-
-- fix: `\Log::error(...)` sin FQN completo fallaba en el catch del envío de invoice (Class "Log" not found — Laravel 11 no registra el alias `\Log` global en este repo). Cambiado a `\Illuminate\Support\Facades\Log::error(...)` en `PresupuestoController::enviarInvoice`. Ver [[Errores Comunes#Log facade sin FQN completo falla en Laravel 11]]
-- refactor: **Migración DomPDF → Spatie Browsershot + Chromium headless** para PDFs de presupuesto. El botón "PDF" del frontend abre `/preview` como HTML (render Chrome real), mientras que el email adjuntaba un DomPDF con fuentes Times serif, sin flex y con logo caído al texto fallback — outputs muy distintos. Ahora ambos caminos (download y adjunto del email) pasan por `PdfService::renderPresupuestoPdf()` que renderiza `pdf.presupuesto-preview.blade.php` (el mismo blade que usa `/preview`) vía Chrome headless → outputs prácticamente idénticos. Ver [[PDFs y Renderizado#Presupuestos - Browsershot + Chromium headless]]
-- infra: Dockerfile del backend ahora instala `chromium` + libs X/audio/pango/cairo, fuentes (`fonts-liberation fonts-dejavu-core fonts-noto-color-emoji`), Node 20 (via `deb.nodesource.com`) y `puppeteer` global. Env vars `PUPPETEER_SKIP_DOWNLOAD`, `PUPPETEER_SKIP_CHROMIUM_DOWNLOAD`, `PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium` para usar el Chromium del sistema (no el que bajaría puppeteer). Rebuild pesado: ~300MB extras, varios minutos. Corre headless sin problema en servers Linux sin GUI.
-- composer: `spatie/browsershot ^4.2` tiene advisories PKSA-* activos que bloquean el install. Workaround: `config.audit.ignore` con los 6 PKSA + flag `--no-audit` en `composer update` del Dockerfile. Ver [[Errores Comunes#Browsershot bloqueado por security advisories PKSA]]
-- refactor: `PresupuestoInvoiceMail::attachments()` ahora delega en `app(PdfService::class)->renderPresupuestoPdf($presupuesto)` en vez de hacer `Pdf::loadView(...)` directo. Elimina duplicación — hay un único entry point para generar el PDF de un presupuesto
-- cleanup: `pdf.presupuesto.blade.php` quedó como legacy (no se usa en ningún path) — se puede eliminar en una próxima limpieza
-- config local: `MAIL_PASSWORD` seteada en `.env` local (no commiteada) para probar el envío end-to-end
-
-Archivos: `backend/Dockerfile`, `backend/composer.json`, `backend/app/Services/PdfService.php`, `backend/app/Mail/PresupuestoInvoiceMail.php`, `backend/app/Http/Controllers/PresupuestoController.php`, `backend/resources/views/pdf/presupuesto.blade.php` (legacy), `CLAUDE.md`
-
-Archivos del envío de invoice (bloque anterior): `app/Mail/PresupuestoInvoiceMail.php`, `app/Http/Controllers/PresupuestoController.php` (método `enviarInvoice`), `config/mail.php`, `resources/views/emails/presupuesto-invoice.blade.php`, `routes/api.php`, `frontend/pages/presupuestos/[id].vue`, `.env`
+---
 
 ## 2026-04-08
 
-- feat: Filtros de mes, año y cliente en listados de presupuestos, proyectos y activaciones. Default al mes/año actual con opción "Todos" para deshabilitar cada filtro. Ver [[memoria#Listados - filtros de fecha y cliente]] y [[Backend - API#Presupuestos]]
-- refactor: Listado de proyectos migrado de filtrado client-side a fetch server-side con query params (consistente con presupuestos y activaciones)
-- convención: Param wire usa `anio` (ASCII) en lugar de `año` para evitar fragilidad de encoding URL/PHP. State frontend mantiene nombres en español. Ver [[memoria#Query params sin caracteres no-ASCII]]
+- feat: Filtros de mes, año y cliente en listados de presupuestos, proyectos y activaciones
 
-Campos de fecha por listado:
-- Presupuestos → `presupuestos.fecha`
-- Proyectos → `proyectos.fecha_inicio`
-- Activaciones → `pruebas_ejecucion.periodo_desde`
-
-Archivos: `PresupuestoController.php`, `ProyectoController.php`, `PruebaEjecucionController.php`, `presupuestos/index.vue`, `proyectos/index.vue`, `evidencias/index.vue`
+---
 
 ## 2026-03-30
 
-- feat: Descripcion IA de activaciones escalada segun cantidad de hitos. ≤5 hitos -> 2-3 oraciones (`max_tokens: 300`), 6-15 hitos -> 3-5 oraciones (`max_tokens: 500`), +15 hitos -> 5-7 oraciones (`max_tokens: 700`). Prompt dice "cubriendo todas las actividades listadas" (no "breve") para evitar omisiones del modelo. Ver [[Reglas de Negocio]] y [[Backend - API#DeepSeek]]
-- fix: Actualizar dominio `blu.inc` -> `blustudioinc.com` en invoice (PDF de presupuestos)
-- docs: Reglas de longitud escalada DeepSeek en CLAUDE.md
+- feat: Descripcion IA de activaciones escalada segun cantidad de hitos
+- fix: Actualizar dominio `blu.inc` -> `blustudioinc.com` en invoice
 
-Archivos: `PruebaEjecucionController.php`, `presupuesto-preview.blade.php`, `CLAUDE.md`
+---
 
 ## 2026-03-29
 
-- feat: Campo `realizado` en gastos para indicar si el pago al acreedor fue cancelado (migracion 0048). Toggle con PATCH, desmarcar requiere credenciales admin. Ver [[Reglas de Negocio#Gastos - Campo realizado]]
-- feat: Checkbox read-only de gastos realizados en listado de presupuestos. Eager-load `proyecto.gastos` en index
-- feat: Color diferente para estado COBRADO vs APROBADO en [[Frontend]] (StatusBadge)
-- fix: Dashboard — meses duplicados en grafico de ingresos/gastos
+- feat: Campo `realizado` en gastos para indicar si el pago al acreedor fue cancelado
+- feat: Checkbox read-only de gastos realizados en listado de presupuestos
 
-Archivos principales: `GastoController.php`, `GastoResource.php`, `Gasto.php`, `presupuestos/index.vue`, `StatusBadge.vue`, `DashboardService.php`
+---
 
 ## 2026-03-27
 
-- fix: PDF presupuesto — corregir scroll en html2canvas para exportacion completa
-- ui: Remover boton eliminar del listado de activaciones (solo desde detalle)
+- fix: PDF presupuesto — corregir scroll en html2canvas
+- ui: Remover boton eliminar del listado de activaciones
 
-Archivos: `presupuesto-preview.blade.php`, `evidencias/index.vue`
+---
 
 ## 2026-03-25
 
-- feat: Eliminar activaciones requiere credenciales admin (modal email+password). Ver [[Reglas de Negocio#Operaciones que requieren credenciales admin]]
+- feat: Eliminar activaciones requiere credenciales admin
 - feat: Mostrar estado del proyecto en listado de presupuestos
 
-Archivos: `PruebaEjecucionController.php`, `presupuestos/index.vue`, `evidencias/[id].vue`
+---
 
 ## 2026-03-22
 
-- feat: IVA en gastos (0 / 10.5 / 21 / 27%). Migracion 0047. Ver [[Reglas de Negocio#IVA en Gastos]]
-- feat: Etiquetas de colores visibles en listado de proyectos. Ver [[Reglas de Negocio#Etiquetas de Presupuestos]]
+- feat: IVA en gastos (0 / 10.5 / 21 / 27%)
+- feat: Etiquetas de colores visibles en listado de proyectos
 - feat: Orden de presupuestos y proyectos por `updated_at` DESC con touch automatico
 - feat: Dashboard mejorado con 6 KPIs, tooltips, filtro por periodo
-- feat: Edicion de gastos con restriccion por estado de presupuesto (COBRADO/FACTURADO bloquea)
+- feat: Edicion de gastos con restriccion por estado de presupuesto
 - feat: Modal de detalle de gasto en vista de proyecto
 - feat: Boton eliminar gastos desde listado y vista de proyecto
-- ui: Reducir tamano de texto en tabla gastos del proyecto, quitar columna categoria
-- docs: Documentar edicion de gastos, proteccion por estado y error de rutas apiResource
-- fix: `env()` -> `config()` en BackupController. Ver [[Errores Comunes#env no lee variables de entorno del container en PHP-FPM]]
-- fix: nowrap en columnas numericas de gastos
 
-Archivos principales: `GastoController.php`, `GastoResource.php`, `gastos/nuevo.vue`, `gastos/[id].vue`, `proyectos/[id].vue`, `presupuestos/index.vue`, `DashboardService.php`
+---
 
 ## 2026-03-21
 
-- feat: PDF de activaciones sobre hoja membretada Blu con TCPDF+FPDI (portrait A4). Ver [[Stack e Infraestructura#Plantilla PDF membretada]]
-- fix: Agregar tcpdf y fpdi al composer.json para produccion
-- fix: Asegurar dirs templates y temp en Dockerfile y entrypoint
-
-Archivos: `PruebaEjecucionController.php`, `Dockerfile`, `docker-entrypoint.sh`, `composer.json`
+- feat: PDF de activaciones sobre hoja membretada Blu con TCPDF+FPDI
 
 ---
 
