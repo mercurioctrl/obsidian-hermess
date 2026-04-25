@@ -32,6 +32,18 @@ Retailer iframe  →  Cloudflare (proxy + cache + DDoS)
 7. Rate-limit por IP (Fastify con `trustProxy: true` lee XFF → IP real detrás de Caddy/Cloudflare).
    - `RATE_LIMIT_HTML=30/min`, `RATE_LIMIT_ASSETS=300/min` por defecto.
 
+## Parámetros de URL soportados
+
+El handler `GET /:product/` acepta query params opcionales para modificar el HTML servido (sin tocar los `index.html` de cada slug):
+
+| Param | Valor | Efecto |
+|-------|-------|--------|
+| `resize` | `1` | Inyecta `<script src="https://cdn.jsdelivr.net/npm/@iframe-resizer/child"></script>` antes de `</body>`, para que el retailer pueda usar `iframe-resizer` en el parent y auto-ajustar el alto del iframe. |
+
+**Convención**: cualquier valor distinto a lo documentado → no-op (fail closed). Si se agregan más params, extender `server.js` y esta tabla.
+
+**Gotcha para cache**: si alguna vez se agrega cache del HTML, la cache key debe incluir el querystring porque `?resize=1` y sin él generan HTML distintos.
+
 ## Estructura de carpetas
 
 ```
@@ -82,6 +94,12 @@ Store en memoria funciona con **1 instancia de `app`**. Si se escala horizontal,
 
 ### Rewriter basado en regex
 El regex de `signHtml` solo reescribe URLs relativas que empiezan con `assets/` en atributos `src|href|poster|data-src|data-poster`. Para soportar `srcset`, `data-video`, etc., hay que extender el regex.
+
+### Auto-resize opt-in via query param
+El script de `iframe-resizer` **no** se injecta por default — solo si el retailer pasa `?resize=1`. Razones:
+- No todos los retailers usan el parent script de iframe-resizer; inyectar siempre sería dependencia innecesaria.
+- Mantiene los `index.html` de los slugs libres de deps externas.
+- El retailer decide per-integration.
 
 ## Ver también
 

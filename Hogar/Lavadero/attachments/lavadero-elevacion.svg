@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" font-family="system-ui, sans-serif" font-size="10">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 460" font-family="system-ui, sans-serif" font-size="10">
   <defs>
     <!-- Gradientes para simular el bisel -->
     <linearGradient id="tileBevel" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -9,26 +9,44 @@
     </linearGradient>
     <!-- Subway 7,5 × 15 con junta blanca y running bond (canvas = 15 × 15) -->
     <pattern id="subway" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-      <!-- Fondo junta blanca -->
       <rect width="15" height="15" fill="#ffffff"/>
-      <!-- Fila superior: 1 tile entero (x 0-15 y 0-7.5) -->
       <rect x="0.35" y="0.35" width="14.3" height="6.8" fill="url(#tileBevel)" stroke="#a8a8ac" stroke-width="0.08"/>
-      <!-- Fila inferior offset 50%: 2 medios tiles -->
       <rect x="0.35" y="7.85" width="6.8" height="6.8" fill="url(#tileBevel)" stroke="#a8a8ac" stroke-width="0.08"/>
       <rect x="7.85" y="7.85" width="6.8" height="6.8" fill="url(#tileBevel)" stroke="#a8a8ac" stroke-width="0.08"/>
     </pattern>
+    <!-- Látex impermeable (franja pintada arriba del azulejo, lado alto) -->
+    <pattern id="paintHatch" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#fafafd"/>
+      <line x1="0" y1="6" x2="6" y2="0" stroke="#e0e0ea" stroke-width="0.5"/>
+    </pattern>
   </defs>
 
-  <rect width="420" height="360" fill="#ffffff"/>
+  <rect width="500" height="460" fill="#ffffff"/>
 
-  <text x="210" y="22" text-anchor="middle" font-size="15" font-weight="bold">Lavadero — Elevación pared húmeda</text>
-  <text x="210" y="36" text-anchor="middle" font-size="10" fill="#666">Pared corta (2,35 m × 2,20 m) · Azulejo subway blanco 7,5×15 · Medidas en cm</text>
+  <text x="250" y="22" text-anchor="middle" font-size="15" font-weight="bold">Lavadero — Elevación pared húmeda</text>
+  <text x="250" y="36" text-anchor="middle" font-size="10" fill="#666">Pared corta 2,35 m · techo inclinado ~20° (220 cm lado ventana → 305 cm lado fondo) · Medidas en cm</text>
 
-  <g transform="translate(85, 65)">
-    <!-- Pared 235 x 220 cm -->
-    <rect x="0" y="0" width="235" height="220" fill="#ffffff" stroke="#2a2a2a" stroke-width="2"/>
+  <!-- Eje Y del grupo: y=0 corresponde a 2,20 m (techo lado ventana). y=-85 corresponde a 3,05 m (techo lado fondo). y=220 es el piso. -->
+  <g transform="translate(100, 175)">
 
-    <!-- Zona azulejada blanca: de y=0 (techo) a y=130 (top mesada) -->
+    <!-- Trapecio de la pared: bottom 0..235 a y=220, top-left (fondo alto) (0,-85), top-right (ventana baja) (235,0) -->
+    <polygon points="0,-85 235,0 235,220 0,220" fill="#ffffff" stroke="#2a2a2a" stroke-width="2"/>
+
+    <!-- Línea del techo inclinado (canto superior) en rojo suave para enfatizar -->
+    <line x1="0" y1="-85" x2="235" y2="0" stroke="#1a1a1a" stroke-width="2.5"/>
+    <text x="117" y="-55" text-anchor="middle" font-size="9" fill="#333" font-style="italic">techo ~20° (sube hacia el fondo →)</text>
+
+    <!-- Flecha que indica el sentido de la pendiente -->
+    <g stroke="#666" stroke-width="0.8" fill="none">
+      <path d="M 200 -10 L 165 -35" marker-end="url(#arrow)"/>
+    </g>
+
+    <!-- Franja pintada látex impermeable entre azulejo (y=0) y techo (línea inclinada) — triángulo del lado fondo -->
+    <polygon points="0,-85 235,0 0,0" fill="url(#paintHatch)" stroke="#bcbcc9" stroke-width="0.5"/>
+    <text x="55" y="-28" font-size="7" fill="#555">látex impermeable</text>
+    <text x="55" y="-18" font-size="6" fill="#888">(sobre durlock, NO azulejo)</text>
+
+    <!-- Zona azulejada blanca: de y=0 (220 cm) a y=130 (90 cm = top mesada). Rectangular uniforme en toda la pared. -->
     <rect x="0" y="0" width="235" height="130" fill="url(#subway)" stroke="#888" stroke-width="0.8"/>
 
     <!-- Label zona azulejo -->
@@ -47,7 +65,7 @@
     <rect x="0" y="215" width="224" height="5" fill="url(#concreteHatch)"/>
     <text x="-10" y="219" text-anchor="end" font-size="6" fill="#555">cemento 5 cm</text>
 
-    <!-- Lavarropas 60 x 85 cm NEGRO - arrimado al lado de la puerta sola, sobre base -->
+    <!-- Lavarropas 60 x 85 cm NEGRO — del lado FONDO (izquierda), donde el techo es más alto (mejor para abrir tapa / tendedero arriba) -->
     <rect x="0" y="130" width="60" height="85" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
     <rect x="4" y="134" width="52" height="14" fill="#333" stroke="#000" stroke-width="0.5"/>
     <circle cx="30" cy="175" r="18" fill="#0a0a0a" stroke="#555" stroke-width="1"/>
@@ -59,19 +77,17 @@
     <rect x="60" y="130" width="164" height="4" fill="#d4ad7a" stroke="#6b4220" stroke-width="0.8"/>
     <text x="142" y="145" text-anchor="middle" font-size="8" fill="#6b4220">Mesada 164 cm</text>
 
-    <!-- Bacha NEGRA — arrimada al lavarropas con 5 cm de lip (mesada empieza en x=60, lip hasta x=65, bacha de 65 a 135) -->
+    <!-- Bacha NEGRA — arrimada al lavarropas con 5 cm de lip -->
     <rect x="65" y="128" width="70" height="4" fill="#0a0a0a" stroke="#333" stroke-width="0.5"/>
     <text x="100" y="125" text-anchor="middle" font-size="7" fill="#000">bacha negra</text>
 
-    <!-- Mueble bajo mesada BLANCO (visual, entre base y mesada) -->
+    <!-- Mueble bajo mesada BLANCO -->
     <rect x="62" y="134" width="160" height="81" fill="#f4f4f5" stroke="#c0c0c5" stroke-width="0.6"/>
-    <!-- Línea de división de puertas del mueble -->
     <line x1="142" y1="140" x2="142" y2="209" stroke="#ccc" stroke-width="0.4"/>
-    <!-- Manijas -->
     <circle cx="135" cy="175" r="1.5" fill="#888" stroke="#555" stroke-width="0.2"/>
     <circle cx="149" cy="175" r="1.5" fill="#888" stroke="#555" stroke-width="0.2"/>
 
-    <!-- Hueco 11 cm (espacio libre al fondo, lado ventana+puerta) -->
+    <!-- Hueco 11 cm (espacio libre lado ventana) -->
     <rect x="224" y="140" width="11" height="80" fill="#fff8e8" stroke="#c9a832" stroke-width="0.5" stroke-dasharray="2,2"/>
     <text x="229" y="182" text-anchor="middle" font-size="5" fill="#8b6a10" transform="rotate(-90 229 182)">11 cm</text>
 
@@ -80,21 +96,29 @@
     <text x="117" y="235" text-anchor="middle" font-size="8" fill="#888">— piso —</text>
 
     <!-- DIMENSIONES -->
-    <!-- Altura total 2,20 m -->
+    <!-- Altura total lado FONDO (alto) = 3,05 m -->
     <g stroke="#2a2a2a" stroke-width="0.8" fill="none">
-      <line x1="-40" y1="0" x2="-40" y2="220"/>
-      <line x1="-45" y1="0" x2="-35" y2="0"/>
+      <line x1="-40" y1="-85" x2="-40" y2="220"/>
+      <line x1="-45" y1="-85" x2="-35" y2="-85"/>
       <line x1="-45" y1="220" x2="-35" y2="220"/>
     </g>
-    <text x="-52" y="113" text-anchor="middle" font-size="11" font-weight="bold" transform="rotate(-90 -52 113)">2,20 m</text>
+    <text x="-52" y="67" text-anchor="middle" font-size="11" font-weight="bold" transform="rotate(-90 -52 67)">3,05 m (fondo)</text>
+
+    <!-- Altura total lado VENTANA (bajo) = 2,20 m -->
+    <g stroke="#2a2a2a" stroke-width="0.8" fill="none">
+      <line x1="275" y1="0" x2="275" y2="220"/>
+      <line x1="270" y1="0" x2="280" y2="0"/>
+      <line x1="270" y1="220" x2="280" y2="220"/>
+    </g>
+    <text x="287" y="113" text-anchor="middle" font-size="11" font-weight="bold" transform="rotate(-90 287 113)">2,20 m (ventana)</text>
 
     <!-- Altura zona azulejada 1,30 m -->
     <g stroke="#c00" stroke-width="0.8" fill="none">
-      <line x1="245" y1="0" x2="245" y2="130"/>
-      <line x1="240" y1="0" x2="250" y2="0"/>
-      <line x1="240" y1="130" x2="250" y2="130"/>
+      <line x1="250" y1="0" x2="250" y2="130"/>
+      <line x1="245" y1="0" x2="255" y2="0"/>
+      <line x1="245" y1="130" x2="255" y2="130"/>
     </g>
-    <text x="253" y="68" font-size="10" fill="#c00" font-weight="bold">1,30 m</text>
+    <text x="258" y="68" font-size="10" fill="#c00" font-weight="bold">1,30 m</text>
 
     <!-- Altura mesada 90 cm -->
     <g stroke="#888" stroke-width="0.6" fill="none">
@@ -103,6 +127,14 @@
       <line x1="-22" y1="220" x2="-14" y2="220"/>
     </g>
     <text x="-26" y="178" text-anchor="middle" font-size="8" fill="#666" transform="rotate(-90 -26 178)">90 cm</text>
+
+    <!-- Diferencia vertical 85 cm (pendiente) -->
+    <g stroke="#2a7a2a" stroke-width="0.7" fill="none">
+      <line x1="-25" y1="-85" x2="-25" y2="0"/>
+      <line x1="-30" y1="-85" x2="-20" y2="-85"/>
+      <line x1="-30" y1="0" x2="-20" y2="0"/>
+    </g>
+    <text x="-33" y="-42" text-anchor="middle" font-size="8" fill="#2a7a2a" font-weight="bold" transform="rotate(-90 -33 -42)">+85 cm</text>
 
     <!-- Ancho pared 2,35 m -->
     <g stroke="#2a2a2a" stroke-width="0.8" fill="none">
@@ -114,30 +146,29 @@
 
     <!-- Sub-división: 60 + 164 + 11 -->
     <g stroke="#666" stroke-width="0.5" fill="none">
-      <line x1="0" y1="290" x2="60" y2="290"/>
-      <line x1="0" y1="286" x2="0" y2="294"/>
-      <line x1="60" y1="286" x2="60" y2="294"/>
-      <line x1="60" y1="290" x2="224" y2="290"/>
-      <line x1="224" y1="286" x2="224" y2="294"/>
-      <line x1="224" y1="290" x2="235" y2="290"/>
-      <line x1="235" y1="286" x2="235" y2="294"/>
+      <line x1="0" y1="243" x2="60" y2="243"/>
+      <line x1="0" y1="239" x2="0" y2="247"/>
+      <line x1="60" y1="239" x2="60" y2="247"/>
+      <line x1="60" y1="243" x2="224" y2="243"/>
+      <line x1="224" y1="239" x2="224" y2="247"/>
+      <line x1="224" y1="243" x2="235" y2="243"/>
+      <line x1="235" y1="239" x2="235" y2="247"/>
     </g>
-    <text x="30" y="304" text-anchor="middle" font-size="8" fill="#666">60 cm</text>
-    <text x="142" y="304" text-anchor="middle" font-size="8" fill="#666">164 cm</text>
-    <text x="229" y="304" text-anchor="middle" font-size="6" fill="#8b6a10">11</text>
+    <text x="30" y="240" text-anchor="middle" font-size="8" fill="#666">60</text>
+    <text x="142" y="240" text-anchor="middle" font-size="8" fill="#666">164</text>
+    <text x="229" y="240" text-anchor="middle" font-size="6" fill="#8b6a10">11</text>
 
-    <!-- Ancho azulejo = pared completa -->
-    <g stroke="#c00" stroke-width="0.8" fill="none">
-      <line x1="0" y1="-18" x2="235" y2="-18"/>
-      <line x1="0" y1="-22" x2="0" y2="-14"/>
-      <line x1="235" y1="-22" x2="235" y2="-14"/>
-    </g>
-    <text x="117" y="-25" text-anchor="middle" font-size="10" font-weight="bold" fill="#c00">2,35 m (pared completa azulejada)</text>
+    <!-- Etiquetas lado fondo / lado ventana -->
+    <text x="30" y="-95" text-anchor="middle" font-size="9" font-weight="bold" fill="#444">← fondo (alto)</text>
+    <text x="205" y="-10" text-anchor="middle" font-size="9" font-weight="bold" fill="#444">ventana (bajo) →</text>
   </g>
 
   <!-- Leyenda -->
-  <g transform="translate(55, 330)" font-size="9">
+  <g transform="translate(55, 430)" font-size="9">
     <rect x="0" y="0" width="14" height="10" fill="url(#subway)" stroke="#000" stroke-width="0.5"/>
-    <text x="20" y="9">Azulejo subway 10×20 negro · 2,35 × 1,30 m ≈ 3,05 m²</text>
+    <text x="20" y="9">Azulejo subway 7,5×15 blanco · 2,35 × 1,30 m ≈ 3,05 m²</text>
+
+    <rect x="260" y="0" width="14" height="10" fill="url(#paintHatch)" stroke="#bcbcc9" stroke-width="0.5"/>
+    <text x="280" y="9">Látex impermeable (franja arriba del azulejo, lado fondo)</text>
   </g>
 </svg>

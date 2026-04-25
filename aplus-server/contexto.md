@@ -67,3 +67,25 @@ cp .env.example .env               # opcional: start.sh lo hace solo
 
 - [[aplus-server/arquitectura|Arquitectura]]
 - [[aplus-server/stack|Stack]]
+## Replicación de microsites (A+ content)
+
+El flujo para agregar un producto nuevo al servidor **no es copiar el HTML del sitio oficial**. Se usa el skill [[Skills/replicar-microsite/SKILL|Replicar Microsite]] que genera un `index.html` semántico desde cero, optimizado para iframe.
+
+### Reglas aprendidas (2026-04-16, con TUF B550M-PLUS WIFI II)
+
+- **NO mantener la estructura original si usa `fullpage.js` / `owl-carousel` / `position:absolute` viewport-full**. En iframe rompe los anchors (fullpage los construye), no inicializa los carousels y pierde las galerías. **Rebuild completo desde cero con Swiper + HTML semántico.**
+- **Galerías anidadas** a más de 1 nivel de la nav principal son un anti-patrón. Siempre surfacearlas como anchor propio (ej: `#galeria`, `#armoury`).
+- **ASUS tiene 3 tipos de galería** que hay que saber reconocer:
+  - **Lightbox del producto** (`dlcdnwebimgs.asus.com/gain/<uuid>/`): la galería principal — 6-10 fotos 2400×2400. Usar main Swiper + thumbs Swiper acoplados + lightbox.
+  - **Armoury Crate** (filter chips verticales + slider por chip): mini-Swiper por chip con 1-3 slides.
+  - **Fan overlay** (base image + overlays cross-fade por chip): CSS puro, no necesita Swiper.
+- **CDNs de ASUS**: `www.asus.com/websites/global/products/<id>/img/...` es el fallback confiable. `dlcdnimgs.asus.com` tira **403 AccessDenied**. `dlcdnwebimgs.asus.com/gain/<uuid>/` es solo para la galería lightbox del producto. `media/global/gallery/<slug>...` **puede traer imágenes de accesorios/gabinetes en bundle, NO la mother** — confirmar abriendo una antes de usar.
+
+### Iframe-ready (obligatorio para este servidor)
+
+Todo `index.html` servido desde `content/<slug>/` debe:
+- Usar `container-type: inline-size` en `<body>` + `@container` queries (nunca viewport units `vw/vh`).
+- Enviar `postMessage({type:'microsite:height', height:N, slug:'<slug>'})` al padre via ResizeObserver + click + load/resize para auto-resize del iframe.
+- No tener `position: fixed`, `overflow:hidden` en html/body, ni scrolls internos.
+- Usar URLs **relativas** `assets/...` (para que el rewriter HMAC del server las firme).
+

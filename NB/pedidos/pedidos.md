@@ -20,6 +20,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[modulo-makesale|MakeSale]] — Flujo de ejecución de pedidos (pedido → remito)
 - [[modulo-removesale|RemoveSale]] — Flujo de reversión de remitos
 - [[modulo-dashboard-lo|Dashboard Libre Opción]] — Estadísticas exclusivas del marketplace LO
+- [[feature-asignacion-oc|Feature: Asignación OC ↔ Venta]] — Trazabilidad pedclil ↔ pedprol antes de serializar
 
 ## Repos
 
@@ -31,4 +32,4 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 El sistema soporta tres marcas: **NB**, **NBElectric** y **Libreopción**. Se filtran por `companyCode` en la mayoría de endpoints y tablas.
 
 ---
-*Última sincronización: 2026-04-16*
+*Última sincronización: 2026-04-24*

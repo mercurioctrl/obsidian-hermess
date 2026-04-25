@@ -2,7 +2,7 @@
   <rect width="540" height="360" fill="#ffffff"/>
 
   <text x="270" y="20" text-anchor="middle" font-size="15" font-weight="bold">Lavadero — Planta (vista cenital)</text>
-  <text x="270" y="34" text-anchor="middle" font-size="10" fill="#666">Escala ~1:10 · Medidas en cm · 4,05 × 2,35 m, alto 2,20 m</text>
+  <text x="270" y="34" text-anchor="middle" font-size="10" fill="#666">Escala ~1:10 · Medidas en cm · 4,05 × 2,35 m · techo inclinado ~20° (2,20 m ventana ↑ 3,05 m fondo)</text>
 
   <g transform="translate(60, 60)">
     <!-- Piso 405 x 235 cm (1 SVG unit ≈ 1 cm) -->
@@ -64,6 +64,78 @@
     <!-- Pileta del lavadero (dibujo interno marcado en el papel del usuario) -->
     <rect x="180" y="105" width="30" height="25" fill="#eaeaea" stroke="#888" stroke-width="1"/>
     <text x="195" y="121" text-anchor="middle" font-size="5" fill="#555">pileta?</text>
+
+    <!-- Dicros GU10 aplique sobreponer (6 unidades, grilla 3×2) — sobre el techo, proyectadas en planta -->
+    <g id="dicros">
+      <!-- Halo suave de luz proyectada (para mostrar cobertura aproximada) -->
+      <g opacity="0.18">
+        <circle cx="100" cy="59"  r="55" fill="#ffd670"/>
+        <circle cx="230" cy="59"  r="55" fill="#ffd670"/>
+        <circle cx="355" cy="59"  r="55" fill="#ffd670"/>
+        <circle cx="100" cy="176" r="55" fill="#ffd670"/>
+        <circle cx="230" cy="176" r="55" fill="#ffd670"/>
+        <circle cx="355" cy="176" r="55" fill="#ffd670"/>
+      </g>
+      <!-- Apliques (círculo blanco con borde) -->
+      <g stroke="#2a2a2a" stroke-width="0.8" fill="#ffffff">
+        <circle cx="100" cy="59"  r="4"/>
+        <circle cx="230" cy="59"  r="4"/>
+        <circle cx="355" cy="59"  r="4"/>
+        <circle cx="100" cy="176" r="4"/>
+        <circle cx="230" cy="176" r="4"/>
+        <circle cx="355" cy="176" r="4"/>
+      </g>
+      <!-- Punto GU10 interno (indicando el spot orientable) -->
+      <g fill="#e0a800">
+        <circle cx="100" cy="59"  r="1.6"/>
+        <circle cx="230" cy="59"  r="1.6"/>
+        <circle cx="355" cy="59"  r="1.6"/>
+        <circle cx="100" cy="176" r="1.6"/>
+        <circle cx="230" cy="176" r="1.6"/>
+        <circle cx="355" cy="176" r="1.6"/>
+      </g>
+      <!-- Numeración -->
+      <g font-size="5.5" fill="#2a2a2a" font-weight="bold">
+        <text x="110" y="56" >1</text>
+        <text x="240" y="56" >2</text>
+        <text x="365" y="56" >3</text>
+        <text x="110" y="174">4</text>
+        <text x="240" y="174">5</text>
+        <text x="365" y="174">6</text>
+      </g>
+    </g>
+
+    <!-- Sub-dimensiones de la grilla de dicros (izquierda: z=59 y z=176) -->
+    <g stroke="#bb9a10" stroke-width="0.4" fill="none" opacity="0.7">
+      <line x1="-14" y1="0" x2="-14" y2="59"/>
+      <line x1="-18" y1="0" x2="-10" y2="0"/>
+      <line x1="-18" y1="59" x2="-10" y2="59"/>
+      <line x1="-14" y1="59" x2="-14" y2="176"/>
+      <line x1="-18" y1="176" x2="-10" y2="176"/>
+      <line x1="-14" y1="176" x2="-14" y2="235"/>
+      <line x1="-18" y1="235" x2="-10" y2="235"/>
+    </g>
+    <text x="-24" y="30"  text-anchor="middle" font-size="5" fill="#8b6a10" transform="rotate(-90 -24 30)">59</text>
+    <text x="-24" y="117" text-anchor="middle" font-size="5" fill="#8b6a10" transform="rotate(-90 -24 117)">117</text>
+    <text x="-24" y="206" text-anchor="middle" font-size="5" fill="#8b6a10" transform="rotate(-90 -24 206)">59</text>
+
+    <!-- Indicador de pendiente del techo: sube hacia arriba del dibujo (pared de fondo) -->
+    <defs>
+      <marker id="slopeArrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+        <path d="M0,0 L8,4 L0,8 z" fill="#2a7a2a"/>
+      </marker>
+    </defs>
+    <g transform="translate(80, 20)">
+      <!-- Caja de fondo suave -->
+      <rect x="-4" y="-4" width="48" height="195" rx="4" fill="#f4faf4" stroke="#a7d3a7" stroke-width="0.6" opacity="0.85"/>
+      <!-- Flecha vertical: punta arriba (techo sube hacia el fondo) -->
+      <line x1="20" y1="180" x2="20" y2="12" stroke="#2a7a2a" stroke-width="2.2" marker-end="url(#slopeArrow)"/>
+      <!-- Etiqueta arriba (fondo, alto) -->
+      <text x="20" y="5" text-anchor="middle" font-size="8" font-weight="bold" fill="#2a7a2a">3,05 m</text>
+      <text x="20" y="193" text-anchor="middle" font-size="8" font-weight="bold" fill="#2a7a2a">2,20 m</text>
+      <!-- Etiqueta lateral -->
+      <text x="40" y="95" text-anchor="middle" font-size="7" fill="#2a5a2a" transform="rotate(90 40 95)">techo sube ↑ (~20°)</text>
+    </g>
 
     <!-- Dimensión 405 (arriba) -->
     <g stroke="#2a2a2a" stroke-width="0.8" fill="none">
@@ -132,5 +204,9 @@
 
     <line x1="300" y1="5" x2="318" y2="5" stroke="#c00" stroke-width="2" stroke-dasharray="4,2"/>
     <text x="324" y="9">Pared húmeda</text>
+
+    <circle cx="405" cy="5" r="4" fill="#ffffff" stroke="#2a2a2a" stroke-width="0.8"/>
+    <circle cx="405" cy="5" r="1.6" fill="#e0a800"/>
+    <text x="414" y="9">Dicro GU10 orientable (6 und · 3×2)</text>
   </g>
 </svg>

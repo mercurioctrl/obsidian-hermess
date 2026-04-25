@@ -6,12 +6,15 @@
 
 ## aplus-server
 
-Servidor Node+Fastify detrás de Caddy para hostear A+ content sindicado (iframes en Fravega, Mercado Libre, Compragamer). Firma HMAC de assets, watermark con trazabilidad por retailer.
+Servidor Node+Fastify detrás de Caddy para hostear A+ content sindicado (iframes en Fravega, Mercado Libre, Compragamer, Libre Opción). Firma HMAC de assets, watermark con trazabilidad por retailer.
 
 - [[aplus-server/aplus-server|aplus-server]]
 - [[aplus-server/arquitectura|Arquitectura]]
 - [[aplus-server/stack|Stack]]
+- [[aplus-server/integracion-retailers|Integración con retailers]]
+- [[aplus-server/migracion-libreopcion|Migración desde /micrositios-files/]]
 - [[aplus-server/contexto|Contexto]]
+- [[aplus-server/memoria|Memoria]]
 - [[aplus-server/changelog|Changelog]]
 
 ---
@@ -147,6 +150,7 @@ E-commerce de suplementos de bienestar. Nuxt 3 SSR + Laravel 11 + MySQL 8 + Redi
 - [[naevo/arquitectura|Arquitectura]]
 - [[naevo/stack|Stack]]
 - [[naevo/modulos|Módulos]]
+- [[naevo/templates-preview|Templates & Preview Switcher]]
 - [[naevo/changelog|Changelog]]
 - [[naevo/contexto|Contexto]]
 - [[naevo/memoria|Memoria]]
@@ -163,6 +167,14 @@ Sistema de gestión de compras a proveedores. Laravel 9 + Nuxt 2.
 - [[NB/Compras/arquitectura|Arquitectura]]
 - [[NB/Compras/stack|Stack]]
 - [[NB/Compras/changelog|Changelog]]
+
+### Comprobantes
+Sistema de comprobantes (facturas F/FUy, after-sale, cobros, remitos, certificados eléctricos). API PHP 8 / Slim 4 sobre SQL Server + web app Nuxt 2 que renderiza vouchers a HTML/PDF.
+- [[NB/Comprobantes/Comprobantes|Comprobantes]]
+- [[NB/Comprobantes/arquitectura|Arquitectura]]
+- [[NB/Comprobantes/stack|Stack]]
+- [[NB/Comprobantes/changelog|Changelog]]
+- [[NB/Comprobantes/contexto|Contexto]]
 
 ### Expedición
 - [[NB/expedicion/expedicion|Expedición]]
@@ -183,8 +195,20 @@ Sistema de gestión de pedidos. Laravel 9 + Nuxt 2 + SQL Server.
 - [[NB/pedidos/modulo-makesale|Módulo MakeSale]]
 - [[NB/pedidos/modulo-removesale|Módulo RemoveSale]]
 - [[NB/pedidos/modulo-dashboard-lo|Dashboard Libre Opción]]
+- [[NB/pedidos/feature-asignacion-oc|Feature: Asignación OC ↔ Venta]]
 - [[NB/pedidos/memoria|Memoria]]
 - [[NB/pedidos/changelog|Changelog]]
+
+### sincroAfip
+Sincronizador automático de comprobantes recibidos de AFIP (ARCA) → SQL Server. Python + Playwright + Docker.
+- [[NB/sincroAfip/sincroAfip|sincroAfip]]
+- [[NB/sincroAfip/arquitectura|Arquitectura]]
+- [[NB/sincroAfip/stack|Stack]]
+- [[NB/sincroAfip/despliegue|Despliegue]]
+- [[NB/sincroAfip/migracion|Migración]]
+- [[NB/sincroAfip/tabla-referencia|Tabla de referencia]]
+- [[NB/sincroAfip/contexto|Contexto]]
+- [[NB/sincroAfip/changelog|Changelog]]
 
 ---
 
@@ -220,9 +244,11 @@ Ver [[Skills/Skills|Skills]].
 - [[Skills/tarea-boveda/SKILL|Tarea Bóveda]] — Crea notas de tareas (APP/API) en el proyecto
 - [[Skills/nota-reforma/SKILL|Nota Reforma]] — Crea notas livianas en proyectos no-software y actualiza índices
 - [[Skills/fullstack-docker-app/SKILL|Fullstack Docker App]] — Genera infra Docker completa
+- [[Skills/replicar-microsite/SKILL|Replicar Microsite]] — Replica microsites de producto (ASUS, MSI, etc.) a HTML iframe-ready
 - [[Skills/skill-creator/SKILL|Skill Creator]] — Crea nuevos skills
 - [[Skills/pdf/SKILL|PDF]] — Generación de PDFs
 - [[Skills/docx/SKILL|DOCX]] — Generación de documentos Word
 - [[Skills/xlsx/SKILL|XLSX]] — Generación de hojas de cálculo
 - [[Skills/pptx/SKILL|PPTX]] — Generación de presentaciones
 - [[Skills/schedule/SKILL|Schedule]] — Agentes programados
+

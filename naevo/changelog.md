@@ -183,3 +183,60 @@ sudo apt update && sudo apt install -y docker-compose-plugin
 ```
 
 **Importante:** no usar `docker-compose` con guion (v1 standalone, deprecado). El script usa v2 y muchos comandos fallan si se fuerza v1.
+
+---
+
+## 2026-04-19
+
+Sesión enfocada en rama `feature/preview-switcher-tools` — sistema de galería comparativa de diseños para cliente.
+
+### Feat: 10 variantes de home por design system
+
+Bajo `/templates/<slug>`, una página standalone por DS con CSS scoped:
+
+- **blu-19 Mantra** (material3) · **blu-20 Ítaca** (apple-hig) · **blu-21 Ágora** (polaris) · **blu-22 Lúmina** (carbon) · **blu-23 Fluido** (fluent)
+- **blu-24 Cúspide** (antd) · **blu-25 Meridiano** (atlassian) · **blu-26 Cálamo** (chakra) · **blu-27 Raíz** (shadcn) · **blu-28 Orbe** (tailwind-ui)
+
+Todas consumen `/api/cms/home` via `composables/useTemplateData.ts` — cambios en el CMS se reflejan en las 10.
+
+### Feat: TemplateSwitcher FAB neutro
+
+`components/TemplateSwitcher.vue` — botón flotante bottom-right, siempre `#111`/blanco (no hereda accent del template). Se incluye al final de cada una de las 10 páginas.
+
+### Feat: Integración al switcher /preview/
+
+En `public/preview/index.html`, la función `load()` rutea según prefijo:
+- `tpl-*` → `/templates/<slug>` (Nuxt live)
+- resto → `/preview/<slug>/` (mirror estático)
+
+Permite agregar variantes Nuxt sin correr `add-variant.sh` ni hacer docker cp.
+
+### Chore: panel de Ajustes size-only
+
+Los 5 color pickers (accent, accent2, bg, surface, text) del `<details id="tools">` pasan a `hidden`. Quedan sólo tamaño de fuente + alto de logo. `applyToIframe` deja de inyectar CSS de color — cada variante muestra su paleta original. Commit `a4be121` tiene el diff si se revierte.
+
+### Chore: rename presentation-only a blu-NN Fantasía
+
+Las 28 opciones del dropdown se renombran para el cliente: `blu-01 Origen` → `blu-28 Orbe`. Values/slugs técnicos intactos (no romper rutas). Se actualizan también `useHead title`, footer copyrights y `TEMPLATES` del composable. Vendor `Blu Studio` en los 10.
+
+### Logo SVG con filtro mono según contraste
+
+Cada template reemplaza su "mark" inventado por `<img src="/logo.svg">` con filtro:
+- Full color: material3, polaris, fluent, antd, atlassian, chakra, tailwind-ui
+- Mono negro (`brightness(0)`): apple-hig, shadcn
+- Mono blanco (`brightness(0) invert(1)`): carbon, footer de shadcn
+
+### Gotcha: disk space durante rebuild
+
+El build falló con `no space left on device` — Docker tenía 62+ GB entre imágenes y build cache (23 GB solo de cache). Orden seguro de limpieza:
+1. `docker builder prune -af` (20+ GB recuperables)
+2. `docker image prune -f`
+3. `docker system prune -af` (NO `--volumes` — borra MySQL del proyecto)
+
+Archivos principales tocados esta sesión:
+- `frontend/pages/templates/*.vue` (10 nuevos)
+- `frontend/components/TemplateSwitcher.vue`
+- `frontend/composables/useTemplateData.ts`
+- `frontend/public/preview/index.html`
+
+Commits: `b805bab`, `a4be121`, `5e0736a`.

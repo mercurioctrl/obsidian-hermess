@@ -3,7 +3,7 @@
 E-commerce de suplementos de bienestar. Stack fullstack en Docker con backend headless y frontend SSR.
 
 - **Repo local:** `/Users/hermess/www/naevo-web/naevo/`
-- **Rama activa:** `feature/homepage-updates-abril-2026`
+- **Rama activa:** `feature/preview-switcher-tools`
 - **URL local:** `http://localhost:8088`
 - **Admin:** `admin@naevo.com`
 
@@ -18,6 +18,7 @@ Ver [[stack|Stack y dependencias]] para el detalle.
 - [[naevo/arquitectura|Arquitectura]] — estructura de carpetas, módulos, patrones de datos
 - [[naevo/stack|Stack]] — versiones, dependencias, servicios externos
 - [[naevo/modulos|Módulos]] — mapa de los 13 módulos del backend/frontend
+- [[naevo/templates-preview|Templates & Preview Switcher]] — galería de 28 variantes de home + switcher comparativo para cliente
 - [[naevo/changelog|Changelog]] — registro de cambios por fecha
 - [[naevo/contexto|Contexto]] — reglas de negocio, decisiones, TODOs pendientes
 - [[naevo/memoria|Memoria]] — memoria auto-guardada del proyecto (gotchas, patterns)
@@ -29,4 +30,4 @@ Ver [[stack|Stack y dependencias]] para el detalle.
 
 ---
 
-_Última sincronización: 2026-04-14_
+_Última sincronización: 2026-04-19_

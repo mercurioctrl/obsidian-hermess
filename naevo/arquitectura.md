@@ -107,6 +107,18 @@ Ambos editables desde `/admin/objetivos` via upload endpoint `POST /api/admin/we
 
 El componente `WellnessGoals.vue` replica el hover effect de horbaach.com exacto: zoom de imagen `scale(1.01) → 1.07` con `transition 950ms cubic-bezier(.25,.46,.45,.94)`, título slide + color change, flecha `→` con fade+slide. Ver [[memoria#WellnessGoals]].
 
+
+## Templates gallery & preview switcher (abril 2026)
+
+Desde la rama `feature/preview-switcher-tools`, el proyecto expone una galería comparativa de 28 variantes de home — 18 mirrors estáticos + 10 templates Nuxt live bajo `pages/templates/<slug>.vue`. Ver [[templates-preview|documentación completa]].
+
+Arquitectura clave:
+- `pages/templates/<slug>.vue` — una página standalone por DS (material3, apple-hig, polaris, carbon, fluent, antd, atlassian, chakra, shadcn, tailwind-ui). CSS scoped con prefijo único. Cada una usa `definePageMeta({ layout: false })` y consume `/api/cms/home` via `composables/useTemplateData.ts`.
+- `components/TemplateSwitcher.vue` — FAB flotante neutro para saltar entre templates dentro de la galería.
+- `frontend/public/preview/index.html` — switcher maestro; su función `load()` rutea `tpl-*` a páginas Nuxt live (`/templates/<slug>`) y el resto a mirrors estáticos (`/preview/<slug>/`).
+
+Naming al cliente: **blu-NN Fantasía** (blu-01 → blu-28). Los values y slugs técnicos nunca se renombran — sólo labels.
+
 ## Ver también
 
 - [[naevo|Índice]]

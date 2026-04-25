@@ -72,6 +72,16 @@ Reglas de trabajo aprendidas durante sesiones previas.
 - **backup.sh** — genera `backups/backup_YYYYMMDD_HHMMSS.tar.gz` con DB + uploads.
 - **sync-from-prod.sh** — script custom del usuario (no tracked en git) para pull desde prod.
 
+
+## Project — templates & preview switcher (abril 2026)
+
+- **10 templates Nuxt live** bajo `pages/templates/<slug>.vue` — una página por DS con CSS scoped, consumen CMS via `useTemplateData()`. Ver [[templates-preview]] y [[project_templates_gallery]].
+- **tpl-* live routing** — `load()` del switcher `/preview/` rutea `tpl-*` a `/templates/<slug>` y el resto a mirrors estáticos. Ver [[project_preview_tpl_routing]].
+- **Blu-NN naming** — variantes se presentan al cliente como `blu-NN Fantasía`, label-only, nunca tocar values/slugs. Próxima: blu-29. Ver [[feedback_blu_naming_convention]].
+- **Panel Ajustes size-only** — color pickers hidden (no borrados), `applyToIframe` sólo inyecta font/logo. Colores respetan original del template. Ver [[feedback_preview_size_only_tools]].
+- **Docker disk cleanup** — build fallaba con 'no space left on device'. Orden: `docker builder prune -af` → `image prune -f` → `system prune -af`. **NUNCA** `--volumes` (mata MySQL). Ver [[feedback_docker_disk_cleanup]].
+- **Logo con filtro mono** — templates con header/footer oscuros usan `filter: brightness(0) invert(1)` (carbon, shadcn footer), los de aesthetic minimal usan `brightness(0)` (apple-hig, shadcn header), el resto full-color.
+
 ## Ver también
 
 - [[naevo|Índice]]

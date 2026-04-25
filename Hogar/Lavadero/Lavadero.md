@@ -5,10 +5,10 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 ## Medidas reales (relevadas)
 
 - **Planta:** 4,05 × 2,35 m (aprox rectangular)
-- **Altura:** 2,20 m
-- **Pared larga superior (405 cm):** pared 145 + puerta 79 + pared 181
-- **Pared larga inferior (405 cm):** pared 67 + ventana 120 + pared 65 + puerta 77 + pared 76
-- **Paredes cortas (235 cm cada una):** sin puertas ni ventanas — **una de ellas es la pared húmeda**
+- **Altura:** **2,20 m en el lado bajo (pared con ventana)** y **~3,05 m en el lado alto (pared del fondo)** — **techo inclinado ~20°** en el sentido frente↔fondo (la profundidad de 2,35 m cubre la pendiente)
+- **Pared larga superior / fondo (405 cm, lado alto):** pared 145 + puerta 79 + pared 181
+- **Pared larga inferior / frente (405 cm, lado bajo, ventana):** pared 67 + ventana 120 + pared 65 + puerta 77 + pared 76
+- **Paredes cortas (235 cm cada una):** sin puertas ni ventanas — **una de ellas es la pared húmeda**. Su canto superior sigue la pendiente del techo (trapecio: 2,20 m del lado ventana, 3,05 m del lado fondo)
 - **2 puertas** (una en cada pared larga), **1 ventana** (en la pared larga inferior)
 - **Base de cemento 5 cm** sobre la pared húmeda que eleva el piso bajo la mesada + lavarropas (0,65 m profundidad × 2,24 m largo)
 - **Puertas tablero con vidrios repartidos en 4** (mitad inferior madera maciza, mitad superior 4 vidrios con cruz central de madera)
@@ -16,6 +16,8 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 - **Paredes:** terminación blanca
 
 > Los números de los segmentos no suman exactamente 405 (arriba da 413, abajo 406). Son mediciones manuales con tolerancia de ±1 cm por segmento — la aproximación es buena.
+
+> **Techo inclinado ~20°:** desde la pared de atrás (alta, 3,05 m sobre piso) baja hacia la pared con ventana (baja, 2,20 m). Diferencia vertical ≈ 85 cm sobre 2,35 m de profundidad. Afecta: cielorraso, altura de alacenas del lado ventana, y el remate superior del azulejo en la pared húmeda (que es un trapecio, no un rectángulo).
 
 ## Estado
 
@@ -44,7 +46,11 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
   - **Azulejo** en pared detrás de bacha y pared del lavarropas, hasta ~1,8 m (zona húmeda con salpicaduras directas)
   - **Durlock placa verde (RH)** con pintura impermeable (látex baños/cocinas) en el resto + cielorraso
   - *Razón:* el durlock verde resiste humedad ambiente pero no agua directa repetida; azulejar todo es caro y trabajoso
-- **Cielorraso de durlock:** es lo más prescindible si hay que recortar presupuesto. El azulejado en zona húmeda no.
+- **Cielorraso de durlock — nueva decisión por techo inclinado:**
+  - **Opción A (recomendada):** *seguir la pendiente del techo.* Conserva el volumen (altura del fondo llega a ~3,05 m, el ambiente se percibe más grande). Más m² de durlock (+~15% vs. horizontal) y más MO por los ángulos.
+  - **Opción B:** *horizontal a 2,20 m* (altura mínima). Más simple y prolijo, pero **pierde ~85 cm de altura útil en el fondo** — genera un entretecho inaccesible. Desaprovecha volumen sin ganar nada.
+  - **Opción C:** *horizontal a 2,40–2,60 m* con un remate o cornisa en la pared de atrás. Balance visual, más trabajo de carpintería/yesería.
+  - **Prescindibilidad:** sigue siendo lo más recortable del presupuesto si hace falta (el azulejado en zona húmeda no).
 - **Presupuesto durlock (abril 2026) — 24 m² de paredes útiles, altura 2,20 m:**
   - **Llave en mano:** ~$528.000 – $840.000 (materiales + MO)
   - **Solo materiales (ML):** ~$395.600
@@ -55,6 +61,7 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
   - Desglose completo en [[03-durlock-presupuesto#📋 Lista del durlockero (abril 2026)]]
 - **Presupuesto azulejo (abril 2026) — pared húmeda 2,35 × 1,30 m = 3,05 m²:**
   - **Azulejo elegido:** Subway **blanco brillante biselado 7,5 × 15** (Incepa / Construnort / Cortines, 1ra calidad)
+  - **Remate superior:** horizontal uniforme a 2,20 m (no sigue la pendiente del techo). Del lado del fondo queda una franja de ~85 cm de pared arriba del azulejo que se pinta con látex impermeable. *Razón:* corte parejo, listones del subway horizontales, remate prolijo con guardacanto. Seguir la pendiente implicaría cortes biselados en cada hilada superior — caro y propenso a desprolijidades.
   - **Llave en mano:** ~$150.000 – $235.000 (promedio ~$191.500)
   - **Solo materiales (ML):** ~$121.500 (4 cajas + Klaukol Impermeable + pastina blanca)
   - Detalle completo en [[04-azulejo-zona-humeda]]
@@ -62,6 +69,21 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 - **Fachada exterior** (lado terraza privada): revestimiento WPC símil madera **negro coextrusionado**, listones verticales, sobre la pared larga inferior (con ventana + 2da puerta) — ver [[05-revestimiento-wpc-exterior]]
 - **Mesada:** **Opción 1 — Quebracho Palermo, Paraíso macizo 40 mm ($560.000).** Ver [[01-mesada-presupuestos]] para el razonamiento técnico (traforo grande + paraíso más estable + 40 mm más rígido).
   - *Plan B si el presupuesto aprieta:* pedir a Marengon cotización en **eucalipto 40 mm** (no 30 mm) antes de decidir.
+- **Iluminación — 6 dicroicas GU10 aplique de sobreponer (orientables):**
+  - **Tipo:** plafón cilíndrico blanco de sobreponer (~8 cm Ø × 3 cm alto), portalámpara GU10 orientable/basculante. No empotrado → ideal para este techo inclinado (no requiere cámara de aire ni calar el durlock/cielorraso).
+  - **Lámparas GU10 LED:** 5–7 W · ~500 lm c/u · **3000 K (luz cálida)** para ambiente hogareño — o 4000 K (neutra) si se prioriza ver bien manchas en ropa. Ángulo de haz 36°–60° (más cerrado = más spot, más abierto = más pareja la pared).
+  - **Cantidad total:** **6 dicros** — ~3000 lm totales ≈ 315 lux promedio (adecuado; con picos sobre zonas de tarea gracias a que son orientables).
+  - **Disposición: grilla 3×2** con la columna sobre la mesada desplazada:
+
+    | | Col A (x=100 cm) | Col B (x=230 cm) | Col C (x=355 cm, sobre mesada) |
+    |---|---|---|---|
+    | **Fila fondo** (z=59 cm, lado alto) | general · ilumina zona de puerta trasera | luz central · pasillo | sobre **lavarropas** (apunta al tambor / tapa) |
+    | **Fila ventana** (z=176 cm, lado bajo) | general · zona libre opuesta a mesada | luz central · complementa luz de ventana | sobre **bacha y extremo mesada** (luz de tarea) |
+
+  - **Orientación:** aunque el techo va inclinado ~20°, cada spot es basculante → se corrige la dirección individualmente. *Default recomendado:* todos apuntando al piso (compensar pendiente), salvo los 2 de la columna C que se apuntan a la mesada/bacha.
+  - **Instalación:** cableado por arriba del cielorraso de durlock (si se hace Opción A — seguir la pendiente) o visto con cablecanal si no hay cielorraso. Cada spot necesita su caja rectangular de conexión.
+  - **Circuitos:** conviene cablear las 2 filas en 2 llaves separadas → se puede usar solo la fila de la mesada (luz de tarea) o las 2 juntas (ambiente general).
+  - Posiciones reflejadas en [[attachments/lavadero-planta.svg|planta]] y [[attachments/lavadero-3d.html|render 3D]].
 
 ### Aún sin recomendación
 
@@ -74,8 +96,11 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 ### Puntos a verificar (no bloqueantes)
 
 - **Ancho del lavarropas:** ahora la pared húmeda es de 235 cm, así que con mesada de 164 cm queda un hueco de **~71 cm** para el lavarropas + algo de espacio libre. Ya no es restrictivo como antes — cualquier lavarropas estándar de 60 cm entra cómodo con ~11 cm libres, que pueden servir para una canasta de ropa o un estante.
-- **Confirmar en qué pared corta va la mesada** — ambas paredes de 235 cm son lisas (sin puertas ni ventanas), hay que definir cuál.
-- **Altura de alacenas/estantes:** con techo a 220 cm, la zona azulejada va de 90 a 220 = 130 cm. Si querés alacenas arriba de la mesada, hay que restárselas al azulejo (típico: alacena empieza a 140–150 cm del piso).
+- **Confirmar en qué pared corta va la mesada** — ambas paredes de 235 cm son lisas (sin puertas ni ventanas), hay que definir cuál. **Con el techo inclinado**, esto deja de ser simétrico: sobre la pared húmeda el techo va subiendo desde la ventana hacia el fondo, entonces el *lavarropas conviene que quede del lado del fondo* (más altura libre para abrir la tapa, colgar un tendedero o sumar un estante alto) y la *bacha + mueble del lado de la ventana* (donde el techo baja a 2,20 m).
+- **Altura de alacenas/estantes (techo inclinado):**
+  - **Lado ventana (alto útil 2,20 m):** alacena estándar 70 cm entra justa: base a 140 → tope a 210 deja 10 cm al techo. Si preferís margen o plomero-friendly, arrancar base a 130 (tope a 200) o usar alacena de 60 cm de alto.
+  - **Lado fondo (alto útil 3,05 m):** espacio cómodo. Se puede poner una alacena alta (80–90 cm) o combinar alacena + repisa superior, sin comprometer el azulejo (que termina a 2,20 uniforme).
+  - **Zona azulejada:** 90 a 220 cm = **1,30 m de azulejo uniforme** en toda la pared húmeda. La franja 220–305 cm del lado del fondo queda pintada (látex impermeable), no azulejada.
 
 ## Gastos
 
@@ -100,7 +125,7 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 
 ### Render 3D interactivo
 
-Abrir [`attachments/lavadero-3d.html`](attachments/lavadero-3d.html) con doble click (se abre en el navegador). Incluye 4 vistas predefinidas (Iso / Frente / Pared húmeda / Planta) y navegación libre con mouse. **Requiere internet** la primera vez (descarga Three.js de CDN).
+Abrir [`attachments/lavadero-3d.html`](attachments/lavadero-3d.html) con doble click (se abre en el navegador). Incluye 5 vistas predefinidas (Iso / Frente / Pared húmeda / Planta / Fachada WPC) y navegación libre con mouse. Muestra el techo inclinado real (2,20 m ventana → 3,05 m fondo), las paredes cortas como trapecio, y la franja pintada arriba del azulejo del lado alto. **Requiere internet** la primera vez (descarga Three.js de CDN).
 
 ## Notas
 
