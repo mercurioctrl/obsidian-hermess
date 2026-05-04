@@ -2,6 +2,26 @@
 
 Registro de cambios del proyecto, agrupado por fecha.
 
+## 2026-04-25
+
+Continuación de iteraciones sobre [[feature-asignacion-oc|Asignación OC ↔ Venta]]:
+
+- feat: **modo solo lectura para pedidos remitidos** — el modal se puede abrir con `pedclit.cestado='S'` pero todo queda deshabilitado (inputs, checkboxes, botones de acción). Alerta info arriba, botón cambia de ✏️ a 👁️ en `Detail.vue`, footer solo "Cerrar". Acepta asignaciones en estado `'V'` o `'C'` (consumidas por el trigger). Genera filas huérfanas para OCs cuyo saldo ya se agotó y no vienen en `candidatasFifo`.
+- feat: **persistencia del checkbox "costo seleccionado" en DB** — nueva columna `pedclil_oc_asignacion.costo_seleccionado BIT NOT NULL DEFAULT 0`. Reemplaza localStorage (que era por-browser). Ahora portable entre máquinas. Camino: PUT items incluyen flag → `ReemplazarAsignacionRequest` valida → service propaga → `insertAsignacion` graba → `asignacionesDeLinea` devuelve → modal precarga.
+- feat: **extender duración de sesión JWT a 60 días** — `.env backend` `JWT_EXPIRATION_TIME="now + 60 days"`; `nuxt.config.js` `refreshToken.maxAge = 60 * 60 * 24 * 60`. Rationale: evitar relogins operativos frecuentes. Rotar `JWT_SIGNATURE_KEY` si hay filtración.
+- infra: scripts SQL nuevos `database/sql/2026_04_25_001_{add,drop}_costo_seleccionado.sql` — idempotentes, con `USE [NewBytes_DBF]; GO` y `sys.columns + sys.tables` en lugar de `INFORMATION_SCHEMA`.
+- gotcha: **SSMS pegar apply+drop en la misma ventana los ejecuta a ambos** → la columna apareció y desapareció, rompiendo `asignacionesDeLinea` con *"Invalid column name 'costo_seleccionado'"*. Fix: tratar cada script como archivo separado.
+- gotcha: `SET IMPLICIT_TRANSACTIONS ON` (default en algunas sesiones SSMS) produce warning cosmético "ROLLBACK TRANSACTION sin BEGIN TRANSACTION" en los DDL. Ignorar, o `SET IMPLICIT_TRANSACTIONS OFF;` arriba del script.
+
+Archivos:
+- Backend: `Asignacion/AsignacionRepository.php` (SELECT + INSERT con `costo_seleccionado`), `Asignacion/AsignacionService.php` (propagación), `Http/Requests/Asignacion/ReemplazarAsignacionRequest.php` (validación), `database/sql/2026_04_25_001_*.sql`, `.env` (JWT_EXPIRATION_TIME).
+- Frontend: `Modal/AsignarOCModal.vue` (prop `readOnly`, filas huérfanas, checkbox persistido, footer condicional), `Orders/Detail.vue` (ícono dinámico edit/eye, `:read-only="!isPending"`), `nuxt.config.js` (refreshToken maxAge).
+- Docs: `docs/asignacion-oc-pedclil.md`, `CLAUDE.md`.
+
+**Deploy**:
+- Frontend: commit de `nuxt.config.js` ya pusheado a `feature/asignacion-oc-pedclil` (4a36d6c). El resto de cambios aún sin committear.
+- Backend: editar `.env` en el servidor + `config:clear` + correr `2026_04_25_001_add_costo_seleccionado.sql` en SQL Server (solo el apply, no el drop).
+
 ## 2026-04-24
 
 Iteraciones sobre [[feature-asignacion-oc|Asignación OC ↔ Venta]] post primer merge a Development:
@@ -14,9 +34,35 @@ Iteraciones sobre [[feature-asignacion-oc|Asignación OC ↔ Venta]] post primer
 - fix: **modal no auto-sugiere FIFO si ya hay vigentes** al reabrir — antes proponía cantidades de FIFO para OCs sin vigente, lo que confundía al operador (parecía que el save no había funcionado). Ahora respeta lo guardado y deja el resto en 0; el botón "Aplicar FIFO" sigue disponible para redistribuir.
 - chore: rama frontend rebaseada sobre `Development` actual (incluye refactor `AsignarOcModalMejoras`: z-index modal, focus en input cantidad, estado P/S con label "Pendiente"/"Remitida"). Force-push con `--force-with-lease`.
 
-Archivos: 
-- Backend: `Asignacion/AsignacionRepository.php`, `Asignacion/AsignacionService.php`, `Asignacion/ReemplazarAsignacionRequest.php`
-- Frontend: `Modal/AsignarOCModal.vue`
+**Tercera tanda de iteraciones (misma fecha, flujo "Guardar con costo" + UX del dropdown):**
+
+- feat: **título dinámico del modal** — `{branch} - {order} - {id_articulo} - {nombre_producto} (Asignar línea de compra)`. Requiere `articulo.cDetalle` (LEFT JOIN en `pedclilInfo`).
+- feat: **checkbox por fila en columna Costo** — permite seleccionar qué OCs usar para el cálculo del costo promedio. Estado persiste en `localStorage['asignarOC.costoTildados.{pedclilId}']` entre aperturas del modal.
+- feat: **bloque "Costo promedio ponderado"** debajo de los alerts — fórmula `Σ(costo × cantidad) / Σ(cantidad)` sobre filas tildadas con cantidad > 0. Si hay una sola fila muestra "Costo seleccionado: X"; si son múltiples, "Costo promedio ponderado (N OCs · X u): Y".
+- feat: **botón "Guardar con costo"** en footer custom del modal — además de persistir la asignación OC, hace `PATCH /v1/orders/addItem` con `costForSale = promedio ponderado`. `Detail.vue::onAsignacionGuardada` escucha `saved: { conCosto }` y refresca el detalle si aplica.
+- feat: **tag "ASIGNADA"** (violeta) en el dropdown de Costo de `Detail.vue` — heurística: compara `Math.round(costForSale * 100) / 100 === store.getters['asignaciones/costoPonderadoPorLinea'](...)`. Requiere que `asignacionesDeLinea` traiga `costo` (JOIN a `pedprol.nPreDiv`).
+- fix: **redondeo consistente (bug 139,73 vs 139,72)** — `toLocaleString` y `toFixed` dan resultados distintos en bordes tipo `139.725`. Reemplazado por `Math.round((x + Number.EPSILON) * 100) / 100` en modal Y store, para que match exacto sea posible.
+- feat: **dropdown de Costo rediseñado** en `Detail.vue` — cada opción es `precio (monospace, verde) + meta (bandera + proveedor · depósito)` con tags semánticos (ACTUAL / PROMEDIO / ASIGNADA). `dropdown-match-select-width=false` + `minWidth: 320px` para que entre todo. Tabular-nums alinea los precios como columna.
+- feat: **endpoint `pedclilInfo` extendido** — ahora retorna `producto_nombre`, `id_almacen`, `lista_precio`, `npreunit` (para armar el PATCH de addItem) y se propagan en el payload de `sugerirFifo`.
+- infra: **`selectedPrice` del PATCH `/orders/addItem`** debe ser `pedclil.npreunit` (precio unitario real), NO `listaPrecio` (código de lista). El backend valida `> 0` — mandar 0 tira *"No se permite un precio menor o igual a 0"*.
+
+Archivos:
+- Backend: `Asignacion/AsignacionRepository.php` (+3 JOINs en `pedclilInfo`, +costo en `asignacionesDeLinea`), `Asignacion/AsignacionService.php` (propaga campos nuevos).
+- Frontend: `Modal/AsignarOCModal.vue`, `Orders/Detail.vue` (método `costoVieneDeAsignacion`, slot de costo rediseñado, handler `onAsignacionGuardada`), `store/asignaciones.js` (+getter `costoPonderadoPorLinea`).
+- Docs: `docs/asignacion-oc-pedclil.md`, `CLAUDE.md`.
+
+**Segunda tanda de iteraciones (misma fecha, nuevas features de contexto en el modal):**
+
+- feat: **columna Costo** en el modal — `pedprol.nPreDiv` joineado por `nNumPed + cRef` en `candidatasFifo`. Formato `es-AR` con 2 decimales. Width del modal pasó a 900px.
+- feat: **endpoint `/v1/asignaciones/stock-almacenes`** (GET) + método `AsignacionRepository::stockPorAlmacen` → stock físico del SKU por depósito (JOIN `stocks + FP_Almacen`, filtra `deleted_at IS NULL` y `nstock > 0 OR reservado > 0`).
+- feat: **endpoint `/v1/asignaciones/comprometido`** (GET) + métodos `pedidosPendientesPorArticulo` y `remitosSinFacturarPorArticulo` → devuelve `{pedidos, remitos}` del mismo SKU (pedidos = `pedclit.cestado='P'` misma company; remitos = `albclit.lfacturado=0`). Top 50 de cada uno.
+- feat: **bloques de contexto en el modal** — chips de stock por depósito debajo de la tabla + `a-collapse` con dos paneles (órdenes pendientes / remitos sin facturar) que el operador puede expandir para ver qué compromete el SKU. Contexto read-only **fuera** del `<a-table>` editable (patrón [[feedback_modal_contexto_vs_edicion|separar edición de contexto]] — ver memoria local).
+- docs: [[feature-asignacion-oc-cookbook|cookbook]] actualizado con receta nueva "Agregar bloque de contexto al modal", queries SQL de stock/compromisos, curls ejecutables. [[feature-asignacion-oc|feature note]] lista 7 endpoints (antes 5). Memoria local cross-sesión actualizada con schema de `stocks`/`FP_Almacen`/`albclit`/`clientes` (hay dos PKs: `ccodcli` vs `ID_CLIENTE` según tabla).
+
+Archivos (cambios working-tree, aún sin commit):
+- Backend: `Asignacion/AsignacionRepository.php`, `Asignacion/AsignacionService.php`, `Asignacion/AsignacionController.php`, `routes/api.php`
+- Frontend: `Modal/AsignarOCModal.vue`, `plugins/api.js`
+- Docs: `docs/asignacion-oc-pedclil.md`, `CLAUDE.md`
 
 Branch en ambos repos: `feature/asignacion-oc-pedclil` (lista para nuevo PR).
 

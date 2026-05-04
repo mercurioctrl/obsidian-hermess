@@ -61,12 +61,14 @@ Cero acoplamiento con [[modulo-makesale]] / [[modulo-removesale]].
 
 ## API HTTP
 
-5 endpoints bajo `/v1`, dentro de `middleware('permission')`:
+7 endpoints bajo `/v1`, dentro de `middleware('permission')`:
 
 | Método | Ruta | Acción |
 |---|---|---|
-| GET | `/asignaciones/sugerencia-fifo?pedclilId={id}` | Sugerencia FIFO calculada (no persiste). |
-| GET | `/asignaciones/candidatas?pedclilId={id}` | Lista raw de OCs candidatas. |
+| GET | `/asignaciones/sugerencia-fifo?pedclilId={id}` | Sugerencia FIFO calculada (no persiste). Items incluyen `costo` (pedprol.nPreDiv). |
+| GET | `/asignaciones/candidatas?pedclilId={id}` | Lista raw de OCs candidatas (incluye `proveedor_nombre`, `proforma`, `costo`). |
+| GET | `/asignaciones/stock-almacenes?pedclilId={id}` | Stock físico del SKU por depósito (read-only, contexto). |
+| GET | `/asignaciones/comprometido?pedclilId={id}` | Pedidos pendientes + remitos sin facturar del SKU. |
 | GET | `/orders/{branch}-{order}/asignaciones` | Estado por línea + asignaciones del pedido. |
 | PUT | `/asignaciones/lineas/{pedclilId}` | Reemplaza vigentes (transaccional, locks). |
 | DELETE | `/asignaciones/lineas/{pedclilId}` | Libera todas las vigentes. |
@@ -75,11 +77,11 @@ Cuando `feature_flag=false` o company no habilitada: respuesta `{enabled:false}`
 
 ## Frontend
 
-- **`store/asignaciones.js`** — Vuex module. Getter `estadoPorLinea` deriva 4 estados UI: `COMPLETA / PARCIAL / DISPONIBLE (hay candidatas pero no asignado) / SIN_ASIGNAR (no hay candidatas)`.
+- **`store/asignaciones.js`** — Vuex module. Getters: `estadoPorLinea` (4 estados UI: `COMPLETA / PARCIAL / DISPONIBLE / SIN_ASIGNAR`), `cantidadesPorLinea`, `asignacionesPorLinea`, **`costoPonderadoPorLinea`** (promedio de OCs vigentes con el mismo redondeo que el modal — base de la heurística "ASIGNADA").
 - **`components/Orders/AsignacionBadge.vue`** — tag verde/amarillo/naranja/rojo + tooltip con cantidades + OCs candidatas.
-- **`components/Modal/AsignarOCModal.vue`** — tabla editable con sugerencia FIFO precargada, validación en vivo, tooltips explicando FIFO al usuario final.
-- **`components/Orders/Detail.vue`** — columna "OC" en `allColumns` después de `cant`, gateada por `assignmentFeatureEnabled && companyHabilitada`. Botón ✏️ por línea cuando `isPending`.
-- **`plugins/api.js`** — namespace `asignacion` (5 wrappers).
+- **`components/Modal/AsignarOCModal.vue`** — título dinámico `branch - order - id - producto`. Soporta prop `readOnly` (usado cuando el pedido ya está remitido): deshabilita inputs, checkboxes, oculta "Aplicar FIFO"/"Limpiar", footer queda solo con "Cerrar". Acepta asignaciones en estado V o C en modo readOnly, con filas huérfanas sintéticas para OCs cuyo saldo ya se agotó. Tabla editable (OC/Fecha/Proveedor/Proforma/**Costo con checkbox**/Estado/Disp/Cant/Origen) con sugerencia FIFO precargada, validación en vivo. Bloque "Costo promedio ponderado" visible cuando hay checkboxes tildados. Debajo: chips con stock físico del SKU por depósito + collapse con pedidos pendientes y remitos sin facturar (contexto read-only). Footer custom con 3 botones: Cancelar / **Guardar con costo** (hace `PATCH /orders/addItem` antes de persistir la asignación) / Guardar. Checkboxes persisten en **DB** (`pedclil_oc_asignacion.costo_seleccionado`), portable entre máquinas.
+- **`components/Orders/Detail.vue`** — columna "OC" en `allColumns` después de `cant`, gateada por `assignmentFeatureEnabled && companyHabilitada`. Botón ✏️ cuando `isPending`, 👁️ cuando remitido (abre modal en modo readOnly). Dropdown de Costo rediseñado (tags ACTUAL/PROMEDIO/ASIGNADA, `tabular-nums`, `minWidth: 320px`). Método `costoVieneDeAsignacion(record)` compara con el getter del store para mostrar tag violeta. Handler `onAsignacionGuardada({ conCosto })` refresca el detalle tras "Guardar con costo".
+- **`plugins/api.js`** — namespace `asignacion` (7 wrappers: +`getStockAlmacenes`, +`getComprometido`).
 - **`nuxt.config.js`** — `publicRuntimeConfig.assignmentFeatureEnabled` y `assignmentCompanies`.
 
 **Cambios extra al backend para que el front funcione**:
@@ -172,6 +174,7 @@ La rama `feature/asignacion-oc-pedclil` ya había sido mergeada a Development va
 
 ## Ver también
 
+- [[feature-asignacion-oc-cookbook|Cookbook]] — Recetas de modificación, queries SQL de debug, curl ejecutables y mapa de archivos
 - [[arquitectura]] — Estructura general del proyecto
 - [[modulo-makesale]] — Flujo MakeSale (no se toca desde este feature)
 - [[modulo-removesale]] — Flujo RemoveSale (no se toca desde este feature)

@@ -18,12 +18,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Libre Opcion/hot sale.md",
+                    "file": "Laset/Miercoles.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "hot sale"
+                  "title": "Miercoles"
                 }
               }
             ]
@@ -135,8 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 405.5,
-    "collapsed": true
+    "width": 405.5
   },
   "right": {
     "id": "0e915724376836fd",
@@ -255,6 +254,13 @@
   },
   "active": "ae72af9a57024674",
   "lastOpenFiles": [
+    "Laset/Martes.md",
+    "Laset/Miercoles.md",
+    "NB/pedidos/arquitectura.md",
+    "Laset",
+    "Libre Opcion/memoria.md",
+    "NB/pedidos/feature-asignacion-oc-cookbook.md",
+    "Sin título.canvas",
     "Libre Opcion/hot sale.md",
     "Libre Opcion/Informe-SEO-Performance-LibreOpcion-N3-2026-04-24.pdf",
     "Blu/blu-web-v1/arquitectura.md",
@@ -282,21 +288,14 @@
     "Libre Opcion/Informe-SEO-Performance-LibreOpcion-N3-2026-04-21.pdf",
     "Libre Opcion/Informe-SEO-Performance-LibreOpcion-2026-04-21.pdf",
     "Hogar/Lavadero/attachments/lavadero-planta.svg",
-    "Hogar/Lavadero/02-bachas.md",
     "Hogar/Lavadero/attachments/lavadero-elevacion.svg",
-    "Hogar/Lavadero/04-azulejo-zona-humeda.md",
-    "Hogar/Oficina/Oficina.md",
-    "Libre Opcion/Libre Opcion.md",
-    "naevo/templates-preview.md",
     "Skills/replicar-microsite",
     "aplus-server",
     "Libre Opcion/Copia de Informe-Semanal-SEO-LibreOpcion-2026-04-15.pdf",
     "Asus/saMiniSiteCodes",
-    "Skills/blu-report.skill",
     "Skills/blu-report/assets/blu-logo.svg",
     "Libre Opcion/blu-report/assets/blu-logo.svg",
     "Sin título 1.canvas",
-    "NB/Sin título.canvas",
-    "Sin título.canvas"
+    "NB/Sin título.canvas"
   ]
 }

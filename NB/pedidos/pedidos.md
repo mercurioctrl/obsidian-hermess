@@ -21,6 +21,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[modulo-removesale|RemoveSale]] — Flujo de reversión de remitos
 - [[modulo-dashboard-lo|Dashboard Libre Opción]] — Estadísticas exclusivas del marketplace LO
 - [[feature-asignacion-oc|Feature: Asignación OC ↔ Venta]] — Trazabilidad pedclil ↔ pedprol antes de serializar
+- [[feature-asignacion-oc-cookbook|Cookbook Asignación OC]] — Recetas, SQL de debug, curl examples y mapa de archivos
 
 ## Repos
 
@@ -32,4 +33,4 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 El sistema soporta tres marcas: **NB**, **NBElectric** y **Libreopción**. Se filtran por `companyCode` en la mayoría de endpoints y tablas.
 
 ---
-*Última sincronización: 2026-04-24*
+*Última sincronización: 2026-04-25 (modo read-only del modal, persistencia en DB del costo seleccionado, JWT 60 días)*
