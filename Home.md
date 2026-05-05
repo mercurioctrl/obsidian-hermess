@@ -219,6 +219,10 @@ Planilla de opciones financieras con Apps Script + API Bully.
 - [[Planilla Acciones Bully/Planilla Acciones Bully|Planilla Acciones Bully]]
 - [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Documentacion Apps Script - Opciones API]]
 
+### bully — Fair Value Scraper
+Scraper Python que obtiene fair values desde investing.com Pro → SQL Server (NB_WEB). Corre via `fv_run.sh` con proxy Surfshark.
+- [[Planilla Acciones Bully/bully|bully]]
+
 ### Prompts
 - [[Planilla Acciones Bully/prompt-optimizar-api|Prompt - Optimizar API]]
 - [[Planilla Acciones Bully/prompt-agregar-stock-data-api|Prompt - Agregar stock data API]]
@@ -251,4 +255,3 @@ Ver [[Skills/Skills|Skills]].
 - [[Skills/xlsx/SKILL|XLSX]] — Generación de hojas de cálculo
 - [[Skills/pptx/SKILL|PPTX]] — Generación de presentaciones
 - [[Skills/schedule/SKILL|Schedule]] — Agentes programados
-
