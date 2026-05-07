@@ -17,12 +17,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Red/02-camaras.md",
+                    "file": "NB/inventario/inventario.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "02-camaras"
+                  "title": "inventario"
                 }
               }
             ]
@@ -250,8 +250,18 @@
   },
   "active": "debec2963849097d",
   "lastOpenFiles": [
-    "Red/01-cambios-2025-05.md",
+    "pega/pega.md",
+    "pega",
+    "NB/NB.md",
     "Red/02-camaras.md",
+    "NB/inventario/memoria.md",
+    "NB/inventario/contexto.md",
+    "NB/inventario/changelog.md",
+    "NB/inventario/stack.md",
+    "NB/inventario/arquitectura.md",
+    "NB/inventario/inventario.md",
+    "NB/inventario",
+    "Red/01-cambios-2025-05.md",
     "Red/Red.md",
     "Red",
     "Planilla Acciones Bully/arquitectura.md",
@@ -263,8 +273,6 @@
     "Hogar/Lavadero/04-azulejo-zona-humeda.md.tmp.505647.1777898104469",
     "Hogar/Lavadero/04-azulejo-zona-humeda.md.tmp.505647.1777898097903",
     "Hogar/Lavadero/04-azulejo-zona-humeda.md.tmp.505647.1777898056870",
-    "Hogar/Lavadero/04-azulejo-zona-humeda.md.tmp.505647.1777898047392",
-    "Hogar/Lavadero/04-azulejo-zona-humeda.md.tmp.505647.1777898036073",
     "Libre Opcion/hot sale.md",
     "Blu/blu-web-v1/arquitectura.md",
     "Blu/blu-web-v1/blu-web-v1.md",
@@ -278,14 +286,6 @@
     "NB/pedidos/modulo-removesale.md",
     "NB/pedidos/pedidos.md",
     "NB/sincroAfip/despliegue.md",
-    "NB/sincroAfip/arquitectura.md",
-    "NB/sincroAfip/stack.md",
-    "NB/Comprobantes/Comprobantes.md",
-    "NB/sincroAfip/sincroAfip.md",
-    "NB/Comprobantes/contexto.md",
-    "NB/Comprobantes/changelog.md",
-    "NB/Comprobantes/stack.md",
-    "NB/Comprobantes/arquitectura.md",
     "Hogar/Lavadero/attachments/lavadero-planta.svg",
     "Hogar/Lavadero/attachments/lavadero-elevacion.svg",
     "Skills/blu-report/assets/blu-logo.svg",

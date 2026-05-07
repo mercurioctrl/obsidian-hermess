@@ -30,6 +30,15 @@ Sistema de expedición y despacho de mercadería.
 - [[NB/expedicion/changelog|Changelog]]
 - [[NB/expedicion/tareas/tareas|Tareas]]
 
+## Inventario
+Sistema de inventario (gestión de productos, stock, kits, precios, scraping). FastAPI + Nuxt 2 + SQL Server.
+- [[NB/inventario/inventario|Inventario]]
+- [[NB/inventario/arquitectura|Arquitectura]]
+- [[NB/inventario/stack|Stack]]
+- [[NB/inventario/contexto|Contexto]]
+- [[NB/inventario/changelog|Changelog]]
+- [[NB/inventario/memoria|Memoria]]
+
 ## Pedidos
 Sistema de gestión de pedidos. Laravel 9 + Nuxt 2 + SQL Server.
 - [[NB/pedidos/pedidos|Pedidos]]
@@ -53,4 +62,3 @@ Sincronizador automático de comprobantes recibidos de AFIP (ARCA) → SQL Serve
 - [[NB/sincroAfip/tabla-referencia|Tabla de referencia]]
 - [[NB/sincroAfip/contexto|Contexto]]
 - [[NB/sincroAfip/changelog|Changelog]]
-
