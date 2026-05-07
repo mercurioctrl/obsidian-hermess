@@ -7,46 +7,39 @@
 
 ## Contexto
 
-Presupuesto para revestir la **zona húmeda** del lavadero con **azulejo subway 7,5 × 15 cm blanco brillante biselado**. La zona húmeda es la pared corta completa donde van la bacha (negra) + lavarropas (negro), donde hay contacto directo con agua y donde el durlock verde RH **no** es adecuado (ver [[03-durlock-presupuesto]] para el razonamiento de por qué se azuleja solo esta franja).
+Presupuesto para revestir la **zona húmeda** del lavadero con **azulejo subway 10 × 20 cm blanco brillante biselado**. La zona húmeda incluye la pared corta completa (bacha + mesada) y la franja sobre el lavarropas, donde hay contacto directo con agua y donde el durlock verde RH **no** es adecuado (ver [[03-durlock-presupuesto]] para el razonamiento de por qué se azuleja solo esta franja).
 
 **Contraste visual:** azulejo blanco brillante + lavarropas negro + bacha negra + mesada paraíso = esquema clásico "black & white" con madera cálida.
 
-**Zona a revestir:** **pared corta completa** (2,35 m de ancho), desde la mesada hasta el techo.
+**Zona a revestir:** pared corta completa desde la mesada hasta el techo + franja sobre el lavarropas (sin mesada, altura independiente).
 
-> **Geometría confirmada (relevamiento abril 2026):**
+> **Geometría actualizada (mayo 2026):**
 >
 > - El lavadero es **4,05 × 2,35 m, altura 2,20 m**. La pared húmeda es una de las dos paredes cortas (235 cm), ambas lisas sin puertas ni ventanas.
 > - Mesada **164 cm** + lavarropas **60 cm** + espacio libre **~11 cm** = 235 cm (llena la pared con margen).
-> - **Altura de azulejo:** desde la superficie de la mesada (a ~90 cm del piso) hasta el techo → **1,30 m de alto** (techo 220 − mesada 90).
-> - **Superficie:** 2,35 × 1,30 = **3,055 m²**.
-> - Con **10 % de merma** (cortes, biselados): **~3,36 m² → comprar 4 cajas (4 m²)**.
+> - **Rectángulo 1 — zona mesada:** 2,35 m ancho × 1,30 m alto (techo 220 − mesada 90) = **3,055 m²**
+> - **Rectángulo 2 — zona lavarropas (sin mesada):** 1,10 m ancho × 0,80 m alto = **0,88 m²**
+> - **Total real:** 3,055 + 0,88 = **3,935 m²**
+> - Con **10 % de merma** (cortes, biselados): **~4,33 m² → comprar 5 cajas (5 m²)**.
 >
 > **Ver [[Lavadero#Planos|planos en Lavadero.md]]** para la ubicación exacta.
 
 ## Producto elegido
 
-**Azulejo Subway 7,5 × 15 cm blanco brillante biselado (1ra calidad)**
-Link del usuario: [MercadoLibre — Cerámica subway biselada blanca brillante 7,5×15 1ra calidad](https://www.mercadolibre.com.ar/ceramica-subway-biseleda-blanca-brilante-75x15-1ra-cal/up/MLAU223005643)
+**Azulejo Subway 10 × 20 cm blanco brillante biselado — Green Deco**
+Link: [MercadoLibre — Azulejos Subway 10×20 Green Deco](https://articulo.mercadolibre.com.ar/MLA-805322127-azulejos-ceramicos-subway-blanco-biselado-10x20-bano-cocina-pared-_JM?searchVariation=46306129203)
 
-Marcas típicas para este formato: **Incepa**, **Construnort**, **Cortines**. Presentación estándar:
-
-- **~1,0 a 1,12 m² por caja** (~80-88 piezas)
-- Espesor ~7 mm, junta recomendada **2 mm**
+- **1 caja = 1 m²** (50 piezas)
 - Cerámica esmaltada brillante, biselada, **uso pared**
-- Piezas más chicas que el subway 10×20 tradicional — más juntas = más trabajo de colocación y más consumo de pastina
+- Formato estándar 10×20: menos juntas que el 7,5×15 → menos pastina y colocación más rápida
 
 ## Opciones / Detalle — precios en MercadoLibre (abril 2026)
 
-### Azulejo blanco 7,5 × 15
+### Azulejo subway blanco 10 × 20 — Green Deco
 
-Los listados de MercadoLibre muestran precios de 2020 ($999–$2.000) **desactualizados**. Los precios reales 2026 para subway blanco 7,5 × 15 brillante de primera calidad están típicamente entre **$18.000 y $28.000 por m²** (el blanco es más común y más barato que el negro). Marcas relevadas: Incepa, Construnort, Cortines.
-
-| Vendedor / marca       | Precio por m² (estim. 2026) | Observación                |
-| ---------------------- | --------------------------- | -------------------------- |
-| Construnort            | ~$18.000                    | Nacional, 1ra calidad      |
-| Cortines               | ~$22.000                    | Cerámica nacional          |
-| Incepa (importado)     | ~$26.000                    | Importado, brillante top    |
-| **Rango**              | **$18.000 – $28.000**       | **Promedio ~$22.000**      |
+| Vendedor / marca | Precio por caja (= 1 m²) | Observación       |
+| ---------------- | ------------------------ | ----------------- |
+| Green Deco (ML)  | **$21.994**              | Elegido, biselado |
 
 > **Confirmar precios actuales** llamando a corralones o revisando links del usuario — los listados web quedan muy desactualizados.
 
@@ -64,7 +57,7 @@ Los listados de MercadoLibre muestran precios de 2020 ($999–$2.000) **desactua
 
 ### Pastina
 
-**Klaukol Pastina 1 kg color blanco** (junta 2 mm, rinde ~4 m²/kg con piezas chicas)
+**Klaukol Pastina 1 kg color blanco** (junta 2 mm, rinde ~5–6 m²/kg con piezas 10×20)
 
 | Producto | Precio |
 | -------- | ------ |
@@ -72,7 +65,7 @@ Los listados de MercadoLibre muestran precios de 2020 ($999–$2.000) **desactua
 | Alta Performance 1 kg | hasta $16.500 |
 | **Elección recomendada** | **Común color blanco, ~$6.000/kg** |
 
-> Con piezas de 7,5 × 15 (más juntas que el 10 × 20), el rendimiento baja a ~4 m²/kg. Para 3,05 m² real + merma, con **1 kg alcanza justo**, mejor llevar **1,5 kg** (1 paquete de 1 kg + medio de reserva). Color **blanco** para que la junta sea discreta y el conjunto visualmente "limpio".
+> Con piezas de 10×20 el rendimiento es mejor que el 7,5×15 (~5–6 m²/kg). Para ~3,94 m² real, con **1 kg alcanza**, llevar **1,5 kg** de reserva. Color **blanco** para junta discreta.
 
 ### Varilla / perfil de terminación (opcional)
 
@@ -84,28 +77,23 @@ Los listados de MercadoLibre muestran precios de 2020 ($999–$2.000) **desactua
 
 ## Cálculo de materiales
 
-Para ~3,05 m² reales + 10 % merma = ~3,36 m² → comprar **4 cajas** (~4 m²).
+Zona mesada (2,35 × 1,30) + zona lavarropas (1,10 × 0,80) = **3,935 m²** reales + 10 % merma = **~4,33 m² → comprar 5 cajas** (1 caja = 1 m², Green Deco).
 
-| Ítem                               | Cantidad          | Subtotal (prom.) |
-| ---------------------------------- | ----------------- | ---------------- |
-| Azulejo subway blanco 7,5×15       | **4 cajas (~4 m²)** | $88.000        |
-| Klaukol Impermeable 30 kg          | **1 bolsa**       | $18.500          |
-| Pastina blanca 1,5 kg              | **~1,5 kg**       | $9.000           |
-| Varilla PVC terminación (opt.)     | 1 barra           | $6.000           |
-| **Total materiales (promedio)**    |                   | **~$121.500**    |
-
-**Rangos:**
-
-- **Low (marcas nacionales + ofertas):** ~$95.000
-- **High (Incepa importado + pastina premium):** ~$150.000
+| Ítem                               | Cantidad            | Subtotal (prom.) |
+| ---------------------------------- | ------------------- | ---------------- |
+| Azulejo subway blanco 10×20 Green Deco | **5 cajas (5 m²)** | $109.970         |
+| Klaukol Impermeable 30 kg          | **1 bolsa**         | $18.500          |
+| Pastina blanca 1,5 kg              | **~1,5 kg**         | $9.000           |
+| Varilla PVC terminación (opt.)     | 1 barra             | $6.000           |
+| **Total materiales**               |                     | **~$143.470**    |
 
 ## Mano de obra
 
-Colocación de subway 7,5×15 biselado requiere **más prolijidad que el 10×20** (más juntas, más cortes, piezas más chicas). Valores de mercado 2026:
+Colocación de subway 10×20 biselado. Valores de mercado 2026:
 
-- **$18.000 – $28.000/m²** de colocación (aumentado ~15 % vs 10×20 por las piezas más chicas)
-- Para ~3,05 m²: **$55.000 – $85.000**
-- **Promedio: ~$70.000**
+- **$15.000 – $25.000/m²** de colocación
+- Para ~3,94 m²: **$59.000 – $98.000**
+- **Promedio: ~$78.000**
 
 ## Total llave en mano (materiales + MO)
 
@@ -140,7 +128,7 @@ _(agregar foto del azulejo elegido + referencia del lavadero actual)_
 - **Klaukol Impermeable obligatorio** — en zona con agua directa, el pegamento blanco común pierde adherencia con el tiempo.
 - **Preparación del sustrato:** sobre revoque fino o sobre durlock verde RH, aplicar **imprimación o puente de adherencia** antes del pegamento si se coloca sobre durlock.
 - **Junta de 2 mm** con crucetas plásticas — las crucetas vienen aparte, ~$2.000 por bolsa de 500.
-- **Tomar las hiladas horizontales primero** — el subway se coloca con trama **running bond** (corrido al 50 %, como un muro de ladrillos) o **stack bond** (alineado). Definir antes.
+- **Tomar las hiladas horizontales primero** — el subway 10×20 se coloca con trama **running bond** (corrido al 50 %, como un muro de ladrillos) o **stack bond** (alineado). Definir antes.
 - Si se coloca sobre **placa verde RH**, sellar las juntas del durlock primero y verificar que la estructura esté rígida (el movimiento rompe la junta del azulejo).
 
 ## Ver también

@@ -27,6 +27,8 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 
 ### Pendiente
 - Revestimiento de paredes (paredes irregulares) — presupuesto relevado en [[03-durlock-presupuesto]], falta **decidir** durlock total vs combinado con azulejo
+- **Compra de pisos** (piso sintético tipo parquet laminado)
+- **Compra de revestimiento** (durlock, azulejo zona húmeda, WPC exterior)
 - Compra e instalación de mesada con bacha (164×65 cm, agujero bacha 70×45 cm)
 - Mueble bajo mesada
 - Cielorraso de durlock — *sujeto a presupuesto*
@@ -104,10 +106,12 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 
 ## Gastos
 
-| Fecha       | Concepto                                         | Monto      |
-| ----------- | ------------------------------------------------ | ---------- |
-| _en curso_  | Albañil (caños, desagote, nivelación de piso)    | $500.000   |
-| **Total pagado** |                                             | **$500.000** |
+| Fecha       | Concepto                                         | Monto        |
+| ----------- | ------------------------------------------------ | ------------ |
+| _en curso_  | Albañil (caños, desagote, nivelación de piso)    | $500.000     |
+| 2026-04-24  | Mario (contratista) — pago 1                     | $1.000.000   |
+| 2026-04-30  | Mario (contratista) — pago 2                     | $700.000     |
+| **Total pagado** |                                             | **$2.200.000** |
 
 ## Planos
 
