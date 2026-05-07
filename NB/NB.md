@@ -49,6 +49,7 @@ Sistema de gestión de pedidos. Laravel 9 + Nuxt 2 + SQL Server.
 - [[NB/pedidos/modulo-removesale|Módulo RemoveSale]]
 - [[NB/pedidos/modulo-dashboard-lo|Dashboard Libre Opción]]
 - [[NB/pedidos/feature-asignacion-oc|Feature: Asignación OC ↔ Venta]]
+- [[NB/pedidos/feature-asignacion-oc-cookbook|Cookbook Asignación OC]]
 - [[NB/pedidos/memoria|Memoria]]
 - [[NB/pedidos/changelog|Changelog]]
 
