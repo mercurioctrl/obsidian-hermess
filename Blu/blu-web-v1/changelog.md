@@ -300,3 +300,70 @@ Si aparecen imágenes nuevas "chicas" o con margen extra, reprocesar con
 Antes del primer run masivo se guardó snapshot del volumen en el container:
 `/tmp/catalog-backup.tgz` (`tar czf` sobre `catalog/`). Si se necesita revertir,
 extraer ese tarball sobre `storage/app/public/`.
+
+## 2026-05-06 — Propuestas comerciales detrás de token (`/propuestas/[slug]`)
+
+Nueva ruta dinámica para servir propuestas comerciales personalizadas a clientes,
+detrás de un token por URL, con el look del sitio (GlowBackground, Helvetica,
+paleta de servicios) e identidad de marca del cliente parametrizable.
+
+Commits: `30a41b5` (base), `37248e5` (identidad Gigabyte), `41bd510` (cleanup).
+
+### Página `pages/propuestas/[slug].vue`
+
+- `definePageMeta({ layout: false })` — sin Header/Footer del sitio.
+- `useHead`: `<meta robots="noindex, nofollow">`.
+- Catálogo `PROPOSALS` hardcoded (in-page) con slug → `{ token, client, brand,
+  services[9], dashboardItems, exclusions, monthlyFee, ... }`.
+- Gate: si `slug` no existe en `PROPOSALS` o `query.token` no matchea →
+  pantalla "Acceso restringido" con logo Blu, sin filtrar contenido.
+- Estructura mantiene la del HTML original (`assets/html/Gigabyte Propuesta.html`):
+  nav, hero "Marketing que se diseña / no se improvisa", marquee, sobre Blu,
+  para el cliente (con sub-marcas), 4 verticales, 9 servicios, dashboard 100%,
+  pricing card con fee animado, exclusiones, cierre, footer.
+- Animaciones: `IntersectionObserver` para reveals + counters (`100%` y fee USD).
+- Excluida de i18n (`'propuestas/[slug]': false` en `nuxt.config.ts`) y del
+  sitemap (`exclude: ['/propuestas/**', '/staffpanel/**']`).
+
+### Identidad de marca por cliente — patrón `--brand`
+
+Cada propuesta puede definir un `brand` con `{ logo, color, subBrands[] }`.
+La página expone `--brand` como CSS variable a nivel `.proposal` y la usa en:
+
+- Nav: logo del cliente al lado del logo Blu (con drop-shadow tinte brand).
+- Client-section: orb del fondo, accent de "idioma del canal", borders y badges.
+- Brand showcase: card con logo principal + grid de sub-marcas con tag.
+
+Esto permite replicar el patrón con futuros clientes sin tocar el código:
+basta con sumar entrada al `PROPOSALS` y depositar logos en
+`public/clients/<slug>/`.
+
+### Gigabyte — primera propuesta (token `gbt-mkt-2026`)
+
+- Logos copiados desde `assets/html/gigabyteBrand/` a `public/clients/gigabyte/`:
+  `gigabyte.png`, `aorus.png`, `aorus-silver.png`, `aero.png`.
+- Fuente corporativa **Aldrich** copiada a `public/fonts/aldrich/` y registrada
+  en `assets/css/fonts.css`. Aplicada en propuesta a labels técnicos
+  (section-labels, kickers, badges, mono-tags, meta de servicios, footer) —
+  el cuerpo y los titulares siguen en Helvetica para no perder identidad Blu.
+- Color de marca **`#FF6600`** (naranja Gigabyte) como acento secundario
+  exclusivo del client-section. Magenta y azul de Blu siguen siendo dominantes
+  en el resto.
+- Sub-marcas en showcase: AORUS (gaming), AERO (creator), AORUS Mark (lifestyle).
+
+### Cleanup confidencialidad (`41bd510`)
+
+Eliminado el strip fallback con ASUS/Acer/Brother/ADATA/XPG/Hikvision —
+una propuesta confidencial no debe mencionar competidores del cliente.
+Solo queda el showcase del cliente al que va dirigida la propuesta.
+
+### Cómo agregar un nuevo cliente
+
+1. Sumar entrada en `PROPOSALS` dentro de `pages/propuestas/[slug].vue`.
+2. `mkdir public/clients/<slug>/` y dejar logos PNG/SVG.
+3. Definir `brand: { logo, color, subBrands[] }` en la entrada.
+4. URL final: `https://blustudioinc.com/propuestas/<slug>?token=<token>`.
+
+### URL de la propuesta Gigabyte
+
+`https://blustudioinc.com/propuestas/gigabyte?token=gbt-mkt-2026`

@@ -48,6 +48,7 @@ Micrositio de canje de códigos ROG / Resident Evil. Promo finalizada 2026-04-15
 - [[Blu/Blu|Blu]]
 
 ### blu-web-v1
+Sitio web corporativo + admin + propuestas comerciales por token (`/propuestas/[slug]`).
 - [[Blu/blu-web-v1/blu-web-v1|blu-web-v1]]
 - [[Blu/blu-web-v1/arquitectura|Arquitectura]]
 - [[Blu/blu-web-v1/stack|Stack]]

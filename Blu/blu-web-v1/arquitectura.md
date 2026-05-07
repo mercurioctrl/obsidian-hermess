@@ -210,3 +210,57 @@ grep -cE "<script|<animate|<foreignObject|<image |xlink:|<a |<use |href=|filter=
 
 Un SVG "normal" (Illustrator export, Figma export) **no cumple** estas restricciones
 — hay que ajustarlo a mano o rechazarlo.
+
+## Propuestas comerciales detrás de token
+
+Ruta dinámica `pages/propuestas/[slug].vue` para servir propuestas a clientes
+específicos, fuera del sitio público pero dentro del mismo deploy. Excluida
+de i18n y del sitemap, con `<meta robots="noindex, nofollow">`.
+
+> Detalle de implementación, sub-marcas y cómo agregar un nuevo cliente en
+> [[changelog#2026-05-06 — Propuestas comerciales detrás de token propuestasslug|changelog 2026-05-06]].
+
+### Gate por token
+
+- URL: `/propuestas/<slug>?token=<token>` — `<slug>` matchea contra el catálogo
+  `PROPOSALS` definido en la página, `<token>` debe coincidir con el del slug.
+- Sin token o token incorrecto → componente `gate` con mensaje "Acceso restringido"
+  (logo Blu + texto), no se filtra contenido de la propuesta.
+- El catálogo está hardcoded en la página (no DB) — basta editar el archivo
+  para sumar/rotar tokens.
+
+### Patrón `--brand` para identidad por cliente
+
+Cada propuesta puede definir un objeto `brand`:
+
+```js
+brand: {
+  logo: '/clients/<slug>/<logo>.png',
+  color: '#HEX',  // se inyecta como CSS var --brand
+  subBrands: [{ name, logo, tag }, ...]
+}
+```
+
+`--brand` se usa puntualmente para:
+- Nav: drop-shadow tinte brand sobre el logo del cliente
+- Client-section: orb del fondo, accent de un span del H2, borders del showcase
+- Badges, sub-brand cards en hover
+
+El resto de la página mantiene el sistema visual de Blu (magenta `#FF00D0`,
+azul `#0474f4`, violeta `#9c44ff`). Esto evita que la propuesta se vea
+"genérica" pero también evita que Blu desaparezca.
+
+### Assets del cliente
+
+- Logos en `public/clients/<slug>/*.png|svg`
+- Fuentes corporativas opcionales en `public/fonts/<slug>/`, registradas en
+  `assets/css/fonts.css`. Para Gigabyte → **Aldrich-Regular.ttf**, aplicada
+  selectivamente a labels/kickers/badges (no titulares ni cuerpo).
+- Recursos en bruto del manual de marca quedan en `assets/html/<cliente>Brand/`
+  (no se commitean — son brand kits internos pesados con PDFs/AI/zips).
+
+### Propuestas activas
+
+| Slug | Cliente | Token | URL completa |
+|------|---------|-------|--------------|
+| `gigabyte` | Gigabyte | `gbt-mkt-2026` | `/propuestas/gigabyte?token=gbt-mkt-2026` |

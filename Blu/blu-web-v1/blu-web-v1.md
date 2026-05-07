@@ -5,7 +5,7 @@ Sitio web corporativo de Blu Inc Studio — Nuxt 3 + Vue 3 + SCSS
 ## Notas
 
 - [[base-de-conocimiento]] — Documentación completa del proyecto (componentes, patrones CSS, fondos, animaciones, JobBoard, catálogo de merch, admin panel)
-- [[arquitectura]] — Contexto en el monorepo, páginas, layouts, i18n, auth, permisos, [[arquitectura#Catálogo de merch|catálogo de merch]] con [[arquitectura#Pipeline de normalización de imágenes|pipeline de normalización]], [[arquitectura#SEO y archivos de descubrimiento|SEO y archivos de descubrimiento]]
+- [[arquitectura]] — Contexto en el monorepo, páginas, layouts, i18n, auth, permisos, [[arquitectura#Catálogo de merch|catálogo de merch]] con [[arquitectura#Pipeline de normalización de imágenes|pipeline de normalización]], [[arquitectura#SEO y archivos de descubrimiento|SEO y archivos de descubrimiento]], [[arquitectura#Propuestas comerciales detrás de token|propuestas comerciales]]
 - [[stack]] — Dependencias, colores de servicios, backend consumido
 - [[changelog]] — Registro de cambios de assets, decisiones y actualizaciones fuera del código
 - [[memoria]] — Facts, preferencias y gotchas cross-sesión
@@ -18,13 +18,15 @@ Sitio web corporativo de Blu Inc Studio — Nuxt 3 + Vue 3 + SCSS
 - [[base-de-conocimiento#Admin Panel staffpanel|Panel admin]] — contactos, citas, horarios, catálogo, reclutamiento, usuarios
 - [[arquitectura#Sistema de permisos por sección|Permisos por sección]] — cada usuario ve solo las secciones asignadas, admin siempre ve todo
 - [[arquitectura#SEO y archivos de descubrimiento|SEO y archivos de descubrimiento]] — sitemap auto-generado, robots, llms.txt, security.txt, BIMI logo en dominio canónico `blustudioinc.com`
+- [[arquitectura#Propuestas comerciales detrás de token|Propuestas comerciales]] en `/propuestas/[slug]?token=` — landings personalizadas por cliente con identidad de marca parametrizable (ver [[changelog#2026-05-06 — Propuestas comerciales detrás de token propuestasslug|changelog 2026-05-06]])
 
 ## Contexto no-obvio (leer antes de tocar)
 
 - **Dominio canónico:** `blustudioinc.com` — NO `blustudiogroup.com` (ver [[memoria#Dominio canónico trampa no-obvia|memoria]])
 - **HTML nativo en admin:** NO usar Nuxt UI en forms del admin panel — ver [[memoria#HTML nativo en admin|memoria]]
 - **Perfil BIMI obligatorio:** SVG Tiny 1.2 Portable/Secure — ver [[arquitectura#Checklist del perfil BIMI|checklist]]
+- **Propuestas confidenciales:** nunca mencionar competidores del cliente en `/propuestas/<slug>` — ver [[memoria#Propuestas comerciales 2026-05-06|memoria]]
 
 ## Última sincronización
 
-2026-04-15 — Sistema de permisos por sección del admin panel, migración a HTML nativo en forms, fix de cambio de contraseña. Ver [[changelog#2026-04-15 — Sistema de permisos por sección  fixes admin panel|changelog]].
+2026-05-07 — Propuestas comerciales detrás de token (`/propuestas/[slug]`), primera propuesta activa para Gigabyte con identidad de marca (logos, fuente Aldrich, naranja `#FF6600`). Ver [[changelog#2026-05-06 — Propuestas comerciales detrás de token propuestasslug|changelog]].

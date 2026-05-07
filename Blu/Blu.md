@@ -5,7 +5,7 @@ Base de conocimiento de la empresa. Dominio público: **blustudioinc.com** (NO b
 ## Proyectos
 
 ### blu-web-v1 — Sitio web corporativo
-Nuxt 3 + Vue 3 + SCSS. Frontend público + panel admin. Consume API Laravel (`sitio-api-rest-v1-laravel`).
+Nuxt 3 + Vue 3 + SCSS. Frontend público + panel admin + propuestas comerciales por token. Consume API Laravel (`sitio-api-rest-v1-laravel`).
 - [[blu-web-v1/blu-web-v1|blu-web-v1]] (índice)
 - [[blu-web-v1/arquitectura|Arquitectura]]
 - [[blu-web-v1/stack|Stack]]
@@ -21,6 +21,11 @@ Nuxt 3 + Laravel 11 + MySQL 8 + Redis + Nginx en Docker.
 - [[bluMiniErp/Backend - Modelos|Backend - Modelos]]
 - [[bluMiniErp/Backend - API|Backend - API]]
 - [[bluMiniErp/Frontend|Frontend]]
+- [[bluMiniErp/Componentes UI|Componentes UI]]
+- [[bluMiniErp/Design Tokens|Design Tokens]]
+- [[bluMiniErp/Layout System|Layout System]]
+- [[bluMiniErp/Page Templates|Page Templates]]
+- [[bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
 - [[bluMiniErp/Reglas de Negocio|Reglas de Negocio]]
 - [[bluMiniErp/Medios de Pago|Medios de Pago]]
 - [[bluMiniErp/Modulo Mercury Invoicing|Modulo Mercury Invoicing]]
@@ -30,3 +35,13 @@ Nuxt 3 + Laravel 11 + MySQL 8 + Redis + Nginx en Docker.
 - [[bluMiniErp/Errores Comunes|Errores Comunes]]
 - [[bluMiniErp/changelog|Changelog]]
 - [[bluMiniErp/memoria|Memoria]]
+
+## Propuestas comerciales activas
+
+Sirvas desde `blu-web-v1` en `/propuestas/<slug>?token=<token>`. Catálogo y tokens
+hardcoded en `pages/propuestas/[slug].vue`. Detalles en
+[[blu-web-v1/arquitectura#Propuestas comerciales detrás de token|arquitectura]].
+
+| Cliente | Slug | Notas |
+|---------|------|-------|
+| Gigabyte | `gigabyte` | Mayo 2026, foco Blu.Marketing, naranja `#FF6600`, fuente Aldrich |

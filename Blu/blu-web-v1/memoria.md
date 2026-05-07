@@ -58,10 +58,29 @@ Convención `app/Src/BackOffice/{Domain}/{Action}/` con Controller + Request + S
 
 Clientes actuales: **ASUS, Acer, Brother, ADATA, XPG**. Hikvision fue removido previamente (commit `082c81b`). SVGs en `public/img/clients/`.
 
+## Propuestas comerciales (2026-05-06)
+
+Ruta dinámica `/propuestas/[slug]?token=` para servir landings personalizadas a clientes,
+detrás de un token, con identidad visual del cliente parametrizable vía `--brand` CSS var.
+Excluida de i18n y del sitemap, con `noindex, nofollow`. El catálogo de propuestas y sus
+tokens viven hardcoded en `pages/propuestas/[slug].vue` (no DB).
+
+**Patrón importante:** assets del cliente en `public/clients/<slug>/`, fuentes corporativas
+opcionales en `public/fonts/<slug>/` registradas en `assets/css/fonts.css`. Brand kits
+internos pesados (PDFs/AI/zips) en `assets/html/<cliente>Brand/` **NO se commitean**.
+
+**Confidencialidad:** una propuesta nunca debe mencionar competidores del cliente
+(ej: en la propuesta de Gigabyte se quitó el strip con ASUS/Acer/Brother/ADATA/XPG/Hikvision).
+
+Primera propuesta activa: **Gigabyte** → `/propuestas/gigabyte?token=gbt-mkt-2026`,
+acento naranja `#FF6600`, fuente Aldrich, sub-marcas AORUS / AERO / AORUS Mark.
+Detalles completos en [[changelog#2026-05-06 — Propuestas comerciales detrás de token propuestasslug|changelog 2026-05-06]] y [[arquitectura#Propuestas comerciales detrás de token|arquitectura]].
+
 ## Commits importantes
 
 | Commit | Descripción |
 |--------|-------------|
+| `30a41b5` + `37248e5` + `41bd510` | Propuestas comerciales detrás de token, identidad Gigabyte (2026-05-06) |
 | `cbe1159` | docs: dominio canónico blustudioinc.com + archivos de descubrimiento SEO (2026-04-15) |
 | `5b87943` | fix: corregir dominio a blustudioinc.com en SEO y sitemap (2026-04-15) |
 | `2e4a750` | feat: agregar logo BIMI en /bimi/logo.svg (2026-04-15) |
