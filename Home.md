@@ -1,53 +1,45 @@
 # Home
 
-Índice general de la bóveda de conocimiento.
+Índice general de la bóveda de Obsidian.
 
 ---
 
-## aplus-server
+## Proyectos NB
 
-Servidor Node+Fastify detrás de Caddy para hostear A+ content sindicado (iframes en Fravega, Mercado Libre, Compragamer, Libre Opción). Firma HMAC de assets, watermark con trazabilidad por retailer.
+- [[NB/NB|NB]] — New Bytes, índice general
 
-- [[aplus-server/aplus-server|aplus-server]]
-- [[aplus-server/arquitectura|Arquitectura]]
-- [[aplus-server/stack|Stack]]
-- [[aplus-server/integracion-retailers|Integración con retailers]]
-- [[aplus-server/migracion-libreopcion|Migración desde /micrositios-files/]]
-- [[aplus-server/contexto|Contexto]]
-- [[aplus-server/memoria|Memoria]]
-- [[aplus-server/changelog|Changelog]]
+### Compras
+Sistema de gestión de compras a proveedores.
+- [[NB/Compras/Compras|Compras]] · [[NB/Compras/arquitectura|Arquitectura]] · [[NB/Compras/stack|Stack]] · [[NB/Compras/changelog|Changelog]]
 
----
+### Comprobantes
+Facturas, after-sale, cobros, remitos, certificados eléctricos.
+- [[NB/Comprobantes/Comprobantes|Comprobantes]] · [[NB/Comprobantes/arquitectura|Arquitectura]] · [[NB/Comprobantes/stack|Stack]] · [[NB/Comprobantes/contexto|Contexto]]
 
-## Asus
+### Expedición
+Sistema de despacho de mercadería.
+- [[NB/expedicion/expedicion|Expedición]] · [[NB/expedicion/arquitectura|Arquitectura]] · [[NB/expedicion/contexto|Contexto]] · [[NB/expedicion/memoria|Memoria]]
 
-- [[Asus/Asus|Asus]]
+### Inventario
+Sistema de inventario de productos, stock, kits, precios y scraping. FastAPI + Nuxt 2.
+- [[NB/inventario/inventario|Inventario]] · [[NB/inventario/arquitectura|Arquitectura]] · [[NB/inventario/stack|Stack]] · [[NB/inventario/contexto|Contexto]] · [[NB/inventario/changelog|Changelog]] · [[NB/inventario/memoria|Memoria]]
 
-### saMiniSiteCodes
-Micrositio de canje de códigos ROG / Resident Evil. Promo finalizada 2026-04-15.
-- [[Asus/saMiniSiteCodes/saMiniSiteCodes|saMiniSiteCodes]]
-- [[Asus/saMiniSiteCodes/arquitectura|Arquitectura]]
-- [[Asus/saMiniSiteCodes/stack|Stack]]
-- [[Asus/saMiniSiteCodes/changelog|Changelog]]
-- [[Asus/saMiniSiteCodes/contexto|Contexto]]
-- [[Asus/saMiniSiteCodes/memoria|Memoria]]
+### Pedidos
+Gestión de pedidos de venta.
+- [[NB/pedidos/pedidos|Pedidos]] · [[NB/pedidos/arquitectura|Arquitectura]] · [[NB/pedidos/contexto|Contexto]] · [[NB/pedidos/memoria|Memoria]] · [[NB/pedidos/changelog|Changelog]]
 
-### Contrataciones
-- [[Asus/Contrataciones/Contrataciones|Contrataciones]]
-- [[Asus/Contrataciones/Contrataciones MOC|Contrataciones MOC]]
-- [[Asus/Contrataciones/Modelo de Liquidación CCT 130-75|Modelo de Liquidación CCT 130-75]]
-- [[Asus/Contrataciones/Coeficientes de Facturación|Coeficientes de Facturación]]
-- [[Asus/Contrataciones/Escenarios de Contratación|Escenarios de Contratación]]
-- [[Asus/Contrataciones/Fórmulas del Modelo|Fórmulas del Modelo]]
-- [[Asus/Contrataciones/Calculadora Excel - Instrucciones|Calculadora Excel - Instrucciones]]
+### sincroAfip
+Sincronización automática de comprobantes AFIP → SQL Server.
+- [[NB/sincroAfip/sincroAfip|sincroAfip]] · [[NB/sincroAfip/arquitectura|Arquitectura]] · [[NB/sincroAfip/despliegue|Despliegue]] · [[NB/sincroAfip/changelog|Changelog]]
 
 ---
 
-## Blu
+## Proyectos Blu
 
-- [[Blu/Blu|Blu]]
+- [[Blu/Blu|Blu]] — Índice general Blu
 
 ### blu-web-v1
+<<<<<<< HEAD
 Sitio web corporativo + admin + propuestas comerciales por token (`/propuestas/[slug]`).
 - [[Blu/blu-web-v1/blu-web-v1|blu-web-v1]]
 - [[Blu/blu-web-v1/arquitectura|Arquitectura]]
@@ -55,43 +47,55 @@ Sitio web corporativo + admin + propuestas comerciales por token (`/propuestas/[
 - [[Blu/blu-web-v1/base-de-conocimiento|Base de Conocimiento]]
 - [[Blu/blu-web-v1/changelog|Changelog]]
 - [[Blu/blu-web-v1/memoria|Memoria]]
+=======
+- [[Blu/blu-web-v1/blu-web-v1|blu-web-v1]] · [[Blu/blu-web-v1/arquitectura|Arquitectura]] · [[Blu/blu-web-v1/stack|Stack]] · [[Blu/blu-web-v1/changelog|Changelog]] · [[Blu/blu-web-v1/memoria|Memoria]]
+>>>>>>> origin/main
 
 ### bluMiniErp
-- [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]]
-- [[Blu/bluMiniErp/Frontend|Frontend]]
-- [[Blu/bluMiniErp/Backend - API|Backend - API]]
-- [[Blu/bluMiniErp/Backend - Modelos|Backend - Modelos]]
-- [[Blu/bluMiniErp/Base de Datos|Base de Datos]]
-- [[Blu/bluMiniErp/Stack e Infraestructura|Stack e Infraestructura]]
-- [[Blu/bluMiniErp/Componentes UI|Componentes UI]]
-- [[Blu/bluMiniErp/Layout System|Layout System]]
-- [[Blu/bluMiniErp/Page Templates|Page Templates]]
-- [[Blu/bluMiniErp/Design Tokens|Design Tokens]]
-- [[Blu/bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
-- [[Blu/bluMiniErp/Reglas de Negocio|Reglas de Negocio]]
-- [[Blu/bluMiniErp/Medios de Pago|Medios de Pago]]
-- [[Blu/bluMiniErp/Modulo Mercury Invoicing|Módulo Mercury Invoicing]]
-- [[Blu/bluMiniErp/Modulo WhatsApp Inbox|Módulo WhatsApp Inbox]]
-- [[Blu/bluMiniErp/Modulo Permisos|Módulo Permisos]]
-- [[Blu/bluMiniErp/Modulo Personal|Módulo Personal]]
-- [[Blu/bluMiniErp/Errores Comunes|Errores Comunes]]
-- [[Blu/bluMiniErp/memoria|Memoria]]
-- [[Blu/bluMiniErp/changelog|Changelog]]
+- [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]] · [[Blu/bluMiniErp/changelog|Changelog]] · [[Blu/bluMiniErp/memoria|Memoria]]
+- [[Blu/bluMiniErp/Backend - API|Backend API]] · [[Blu/bluMiniErp/Base de Datos|Base de Datos]] · [[Blu/bluMiniErp/Componentes UI|Componentes UI]]
 
 ---
 
-## Catirel
+## Proyectos Asus
+
+- [[Asus/Asus|Asus]] — Índice general Asus
+
+### saMiniSiteCodes
+- [[Asus/saMiniSiteCodes/saMiniSiteCodes|saMiniSiteCodes]] · [[Asus/saMiniSiteCodes/arquitectura|Arquitectura]] · [[Asus/saMiniSiteCodes/stack|Stack]] · [[Asus/saMiniSiteCodes/changelog|Changelog]] · [[Asus/saMiniSiteCodes/memoria|Memoria]]
+
+### Contrataciones MOC
+- [[Asus/Contrataciones/Contrataciones|Contrataciones]] · [[Asus/Contrataciones/Calculadora Excel - Instrucciones|Calculadora Excel]] · [[Asus/Contrataciones/Escenarios de Contratación|Escenarios]]
+
+---
+
+## Proyectos Catirel
 
 - [[Catirel/Catirel|Catirel]]
 
-### Proyectos / It
+---
 
-#### Jira Chrome Extension
-Extensión Chrome MV3 para crear issues de Jira rápidamente desde la barra del navegador.
-- [[Catirel/Proyectos/It/Jira-Chrome-extension/Jira-Chrome-extension|Jira Chrome Extension]]
+## Otros proyectos
 
-### Recursos
-- [[Catirel/Modelos de archivo/Historia de usuario para Jira - Modelo|Historia de usuario para Jira - Modelo]]
+### pega
+Plataforma de comparación de precios de hardware gamer (Laravel + Nuxt 2 + FastAPI scraper).
+- [[pega/pega|pega]]
+
+### aplus-server
+- [[aplus-server/aplus-server|aplus-server]] · [[aplus-server/arquitectura|Arquitectura]] · [[aplus-server/stack|Stack]] · [[aplus-server/contexto|Contexto]] · [[aplus-server/changelog|Changelog]] · [[aplus-server/memoria|Memoria]]
+
+### naevo
+- [[naevo/naevo|naevo]] · [[naevo/arquitectura|Arquitectura]] · [[naevo/stack|Stack]] · [[naevo/contexto|Contexto]] · [[naevo/changelog|Changelog]] · [[naevo/memoria|Memoria]] · [[naevo/modulos|Módulos]]
+
+### Libre Opcion
+- [[Libre Opcion/Libre Opcion|Libre Opcion]] · [[Libre Opcion/arquitectura|Arquitectura]] · [[Libre Opcion/stack|Stack]] · [[Libre Opcion/changelog|Changelog]] · [[Libre Opcion/memoria|Memoria]]
+
+---
+
+## Red
+
+- [[Red/Red|Red]] — Infraestructura de red
+  - [[Red/01-cambios-2025-05|Cambios mayo 2025]] · [[Red/02-camaras|Cámaras]]
 
 ---
 
@@ -244,16 +248,6 @@ Base de conocimiento de RRHH: paritarias, convenios colectivos, liquidación de 
 
 Ver [[Skills/Skills|Skills]].
 
-- [[Skills/configurar-boveda/SKILL|Configurar Bóveda]] — Vincula proyectos con Obsidian
-- [[Skills/sincronizar-boveda/SKILL|Sincronizar Bóveda]] — Sincroniza docs del proyecto
-- [[Skills/guardar-contexto/SKILL|Guardar Contexto]] — Persiste aprendizajes de la sesión en CLAUDE.md + memoria Claude
-- [[Skills/tarea-boveda/SKILL|Tarea Bóveda]] — Crea notas de tareas (APP/API) en el proyecto
-- [[Skills/nota-reforma/SKILL|Nota Reforma]] — Crea notas livianas en proyectos no-software y actualiza índices
-- [[Skills/fullstack-docker-app/SKILL|Fullstack Docker App]] — Genera infra Docker completa
-- [[Skills/replicar-microsite/SKILL|Replicar Microsite]] — Replica microsites de producto (ASUS, MSI, etc.) a HTML iframe-ready
-- [[Skills/skill-creator/SKILL|Skill Creator]] — Crea nuevos skills
-- [[Skills/pdf/SKILL|PDF]] — Generación de PDFs
-- [[Skills/docx/SKILL|DOCX]] — Generación de documentos Word
-- [[Skills/xlsx/SKILL|XLSX]] — Generación de hojas de cálculo
-- [[Skills/pptx/SKILL|PPTX]] — Generación de presentaciones
-- [[Skills/schedule/SKILL|Schedule]] — Agentes programados
+- [[Skills/configurar-boveda/SKILL|configurar-boveda]] — Vincula proyectos con la bóveda de Obsidian
+- [[Skills/sincronizar-boveda/SKILL|sincronizar-boveda]] — Sincroniza el proyecto con Obsidian
+- [[Skills/blu-report/SKILL|blu-report]] — Reportes para Blu
