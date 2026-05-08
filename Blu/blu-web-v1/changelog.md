@@ -367,3 +367,148 @@ Solo queda el showcase del cliente al que va dirigida la propuesta.
 ### URL de la propuesta Gigabyte
 
 `https://blustudioinc.com/propuestas/gigabyte?token=gbt-mkt-2026`
+
+## 2026-05-07 — Polish visual de la propuesta Gigabyte
+
+Sesión de ajustes finos sobre `pages/propuestas/[slug].vue` (sin cambios estructurales,
+solo copy y estilos) para afinar la propuesta antes de presentarla.
+
+### Cambios
+
+- **Nav:** invertido el orden a "GIGABYTE × Blu" (cliente primero), `nav__client-logo`
+  pasa a `height: 41px` en desktop para que el logo Gigabyte tenga peso visual.
+- **Marca textual:** "Blu Studio | MKT · IT · BI · RECRUITING" reemplaza
+  "Blu.Inc // MKT · IT · BI · RECRUITING" en el side-note del hero.
+- **Hero copy:** nuevo lede "Integramos **marketing, comunicación y soporte** al canal
+  en una ejecución coordinada, medible y **orientada a performance** — para maximizar
+  el impacto de cada inversión." Más alineado al lenguaje del canal IT.
+- **Color de acento por sección:**
+  - "se diseña." (hero) y punto de "Activamos oportunidades." (sobre Blu) ahora en
+    azul Blu `#0474f4` (override inline sobre `.accent` y `.dot`).
+  - Punto de "idioma del canal." (cliente) en naranja Gigabyte `#FF6600`.
+  - Bullet de "X sub-marcas" en `.mono-tag--brand` ahora en `$accent` (rosa) en vez de `--brand`.
+- **Marquesina:** `scroll-x` acelerada de 38s → 14s (~2.7×) — la animación lenta
+  daba sensación de quietud en la página.
+- **Stats-row sobre Blu:** `padding: 28px 24px 16px 24px` simétrico en cada `.stat`
+  para que las labels (FRENTES DE SERVICIO, SOPORTE INTEGRAL, etc.) no queden pegadas
+  al borde divisor con el cell siguiente.
+
+### Gotcha de entorno (no del código)
+
+Cuando se levanta `npm run dev` en blu-web-v1, el puerto `3000` puede estar tomado
+por otro container Docker (en este caso `aplus-server-app-1`, que mappea
+`127.0.0.1:3000`). Síntoma: `localhost:3000` devuelve `{"message":"Route GET:/ not found",
+"statusCode":404}` con formato Nitro/Fastify, no Nuxt. La razón: Nuxt dev bindea a
+`[::1]:3000` (IPv6), Docker a `127.0.0.1:3000` (IPv4) — `localhost` resuelve primero
+a IPv4 y pega al container equivocado. Solución: `docker stop aplus-server-app-1`
+o entrar por `http://[::1]:3000`.
+
+## 2026-05-08 — Continuación polish Gigabyte (commits del día)
+
+Sesión larga de iteración sobre la propuesta Gigabyte: copy, color de acentos por
+sección, confetti en el CTA y arreglos mobile. Cuatro commits en `catri-fork-2026-temporada-2`
+(`d63de68`, `9395365`, `a03252d`, `3758db7`).
+
+### Estructura — Verticales
+
+Removido el grid de 9 tiles (Blu.IT, Blu.Marketing, Blu.Bi, Blu.Recruiting + cells soft +
+center "Servicios"). Se conserva el header "Cuatro verticales, una sola operación." +
+el párrafo descriptivo. Razón: el grid quedaba repetitivo y comía espacio sin aportar
+información — el resto de la página ya lo cubre.
+
+### Copy y servicios
+
+- **Servicio 07:** rebautizado "Soporte **360°** en IT" (antes "en marketing"). Nuevo
+  desc: "Nos aseguramos de que los recursos, sistemas y herramientas funcionen —
+  soporte continuo a equipos, partners y operaciones." Marca explícita el alcance IT
+  como vertical Blu transversal a la propuesta de marketing.
+- **Servicio 09:** cierre del desc cambia a "...próximos pasos y trazabilidad."
+  (antes terminaba "...próximos pasos — todo trazado.").
+- **Hero side-note:** "Blu Studio | MKT · IT · BI · RECRUITING" (separador `|`,
+  no `//`).
+- **Cierre:** "¿Querés transformar **tus objetivos** en realidad?" (antes "¿Listos
+  para transformar..."). Ambos signos de pregunta en blanco; "tus objetivos" en azul.
+
+### Identidad — sub-marcas Gigabyte
+
+- AERO usa el `Aero.png` cuadrado (más limpio que el wordmark). Para emparejar el
+  visual con AORUS y la 3ra card, se baja la altura solo de AERO con
+  `logoMaxHeight: 23.6` en la data del sub-brand y un binding inline `:style` sobre
+  el `.sub-brand__logo`.
+- 3ra card pasa de "AORUS Mark / aorus-silver.png" a usar `buchino.png` (el águila
+  AORUS — copiado a `public/clients/gigabyte/buchino.png`). El `name` del data sigue
+  siendo "AORUS Mark" para no tocar el dataset, solo cambia el logo visible.
+- Para que los tags ("GAMING · HIGH-END", "CREATOR · WORKSTATION", "LIFESTYLE · ESPORTS")
+  queden todos en la misma línea base sin importar el alto real de cada logo, se envuelve
+  el `<img>` en un `.sub-brand__logo-slot` de `height: 36px` con flex center. El logo
+  vive centrado dentro del slot fijo.
+
+### Color por sección — uso del nuevo dot
+
+El `<span class="dot">` heredaba siempre rosa (`$accent`). Se sobreescribe con
+`style="color: #..."` inline en los puntos finales para alinear cada sección a su
+identidad cromática:
+
+- **Azul Blu (`#0474f4`):** "se diseña.", "Activamos oportunidades.",
+  "Nueve servicios, una sola operación.", "visible en tiempo real.",
+  "inversión clara, mensual y abierta.", `%` del 100% (`-webkit-text-fill-color`
+  en `.big-counter .units`).
+- **Naranja Gigabyte (`#FF6600`):** "idioma del canal." (sección "Para el cliente").
+- **Rosa (`$accent`):** bullet de "X sub-marcas" (`.mono-tag--brand::before` ahora
+  fija a `$accent` en vez de `var(--brand)`).
+
+### CTA con confetti — `fireConfetti()`
+
+El botón "Avancemos con Gigabyte" del closer pasa de `<a href="mailto:...">` a
+`<button @click="fireConfetti">`. La función está en el `<script setup>` del slug y
+no depende de librerías:
+
+- Crea un `<div>` overlay `position:fixed;inset:0;pointer-events:none;z-index:9999`
+  appended a `body`.
+- Genera 180 partículas (mezcla de cuadrados ~6-14px y círculos), colores
+  `#FF00D0`, `#0474f4`, `#FF6600`, `#00D985`, `#9c44ff`, `#00CFCE`, `#fff`.
+- Origen: bounding rect del botón (`event.currentTarget.getBoundingClientRect()`,
+  centro). Velocidad inicial random con ángulo entre -30° y -150° desde la horizontal.
+- RAF tick: gravedad `vy += 0.35`, drag `vx *= 0.992`, fade en los últimos 40 frames.
+- `cancelAnimationFrame` + `layer.remove()` cuando todas mueren (~3-4s).
+
+`.cta` necesitó `border:none; cursor:pointer; font-family:inherit` para que el
+`<button>` se vea idéntico al `<a>` que reemplaza.
+
+### Fixes mobile (≤900px)
+
+- **Tachado de "No se improvisa.":** la pseudo-línea diagonal absoluta con
+  `transform: rotate(-3deg)` se rompía cuando el span wrappeaba a 2 líneas (una sola
+  raya inclinada cruzando ambas). En `@media (max-width: 900px)` se desactiva el
+  `::after` y se usa `text-decoration: line-through; text-decoration-color: $accent`,
+  que sigue cada línea de texto. Desktop conserva el tachado diagonal estilizado.
+- **Chip del nav "Propuesta · Mayo 2026":** se split en
+  `<span class="tag">Propuesta<span class="tag__date"> · Mayo 2026</span></span>`
+  con `.tag__date { display: none }` en mobile. El chip muestra solo "Propuesta" en
+  mobile y "Propuesta · Mayo 2026" en desktop sin duplicar markup.
+
+### Sobre Blu — stats-row
+
+Padding simétrico `28px 24px 16px 24px` en cada `.stat` (antes era `28px 20px 4px 0`,
+con left=0 los labels quedaban pegados al borde divisor con la celda anterior).
+Desktop fue lo único que se ajustó; mobile heredaba el problema y ahora también queda bien.
+
+### Marquesina
+
+`scroll-x` acelerada de **38s → 14s** (≈2.7×). La animación lenta daba sensación
+de quietud entre el hero y el bloque "Sobre Blu".
+
+### Nav — orden invertido
+
+Pasa de "Blu × {cliente}" a "{cliente} × Blu" — la propuesta está dirigida al cliente,
+así que su logo lleva la lectura. `nav__client-logo` sube a `height: 41px` desktop
+para que GIGABYTE tenga peso visual contra el `nav__logo` de Blu (22px).
+
+### Assets versionados (`a03252d`)
+
+Se sumaron al repo todos los archivos en `assets/html/gigabyteBrand/` (111 archivos,
++22994 líneas): logos PDF/PNG/AI (GBT, AORUS, AERO, mascotas), fuentes TTF/OTF (AORUS,
+Akzidenz, DINPro, Industry, Roboto, Teko, Aero Matics, Aldrich), Manual de Marca PDF
+(9.5MB) y los PNG ya copiados a `public/clients/gigabyte/`. Convención: el material
+fuente de marca se versiona como `assets/html/{cliente}Brand/`, los assets servidos
+en runtime van a `public/clients/{slug}/`.
