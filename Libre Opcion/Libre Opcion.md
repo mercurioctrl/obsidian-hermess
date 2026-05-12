@@ -1,7 +1,7 @@
 # Libre Opcion
 
 Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
-Última sincronización: 2026-05-11.
+Última sincronización: 2026-05-12.
 
 ---
 
@@ -19,12 +19,14 @@ Script Python para envío masivo de emails HTML. Integración con SQL Server par
 - [[enviosMailDrop/enviosMailDrop|enviosMailDrop]] — Índice
 - [[enviosMailDrop/arquitectura|Arquitectura]] · [[enviosMailDrop/stack|Stack]] · [[enviosMailDrop/contexto|Contexto]] · [[enviosMailDrop/changelog|Changelog]]
 
-## Wallet — API v4
+## Wallet & Categorización — API v4
 
 ### TareaWallet
-Análisis e implementación del módulo de billetera. Airdrop OpcionFest $15.000 ARS.
+Análisis e implementación del módulo de billetera y features relacionadas. Airdrop OpcionFest $15.000 ARS. Sistema de recategorización de productos.
 - [[TareaWallet/TareaWallet|TareaWallet]] — Índice
-- [[TareaWallet/contexto|Contexto]] — Flujo de ingreso, TR_CODIGO 476, queries y HMAC
+- [[TareaWallet/contexto|Contexto]] — Flujo de ingreso, TR_CODIGO 476, queries, HMAC, análisis recategorización
+- [[TareaWallet/arquitectura-recategorizacion|Arquitectura Recategorización]] — Job, CategoriaMatcher, tablas DB, algoritmo propuesto
+- [[TareaWallet/changelog|Changelog]] — Historial de cambios recientes (favoritos, cupones, estadísticas, imágenes)
 
 ## Landings y campañas MKT
 

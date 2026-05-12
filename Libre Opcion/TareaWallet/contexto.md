@@ -1,5 +1,30 @@
 # Contexto — TareaWallet
 
+## 2026-05-12
+
+### Análisis sistema de recategorización (LIO-630)
+
+Se revisó la feature de Franco en rama `LIO-630-api-review-recategorizar-productos-sin-categoria-concurrencia-del-job-y-filtro-solo-con-stock`.
+
+**Hallazgos clave:**
+
+- El `CategoriaMatcher` está **completamente hardcodeado** en PHP: keywords, exclusiones e IDs de categoría destino son reglas escritas a mano por Franco basadas en conocimiento del catálogo.
+- Las tablas `categoriasPrediccionMatchFree/Required/Exclude` existen en DB con 545/8/581 filas respectivamente pero **no están conectadas** al matcher. `precargarMapas()` está vacío.
+- El campo `via` puede ser `nombre`, `alias` o `switch`, pero el matcher actual **solo devuelve `switch`** — los otros dos nunca se incrementan.
+- El orden de las reglas en `resolverPorTitulo` es intencional: mousepad antes que mouse, discos antes que notebook, cable al final por ser genérico.
+
+**Control de concurrencia (último commit):**
+- Doble bloqueo: Service verifica corrida activa antes de crear el Job, y el Job hace UPDATE atómico para marcar `running`.
+- `solo_con_stock=true` es obligatorio — hardcodeado en el Service, retorna 422 si no se cumple.
+
+**Diseño propuesto para migrar a DB-driven:**
+- Parsear `%A%B%` → lista de tokens ordenados
+- Índice invertido: `primer_token → [(categoria, tokens[])]`
+- Aplicar Free → filtrar con Exclude → validar Required → resolver por especificidad (más tokens gana)
+- Ver [[arquitectura-recategorizacion]] para detalle completo
+
+---
+
 ## 2026-05-11
 
 ### Análisis del flujo de ingreso a la wallet
@@ -97,3 +122,4 @@ token = hmac.new(HMAC_KEY.encode(), payload.encode(), hashlib.sha256).hexdigest(
 ## Ver también
 
 - [[TareaWallet]]
+- [[arquitectura-recategorizacion]]
