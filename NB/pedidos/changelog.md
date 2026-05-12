@@ -170,3 +170,14 @@ Archivos: `AuthRepository.php`, filtros de Sellers/Shipping/Payment en frontend
 - feat: eliminar impuesto interno al agregar a la orden
 - fix: **moveItem con kits** — descomponer kits en componentes al mover, preservar precio del origen
 - fix: eliminación del origen para items normales en moveItem
+
+## 2026-05-12
+
+- fix: **arreglo join albclitshipping** — corregido JOIN en `OrderListRepository.php` relacionado a la tabla de shipping por albarán de cliente.
+- feat: **cupón Libre Opción** — lógica de aplicación de cupones en pedidos LO. Archivos: `OrderRepository.php`, `UnprocessedOrdersRepository.php`, `OrderService.php`.
+- fix: **`salespersonId` ahora actualiza también `ccodage`** — al hacer PATCH `/v1/clients/{id}/params`, además de guardar en `ID_VENDEDOR`, se actualiza `ccodage = RIGHT('00'+ISNULL(valor,''),2)`. Regla de negocio: `ccodage` debe mantenerse sincronizado con `ID_VENDEDOR` en `NewBytes_DBF.dbo.clientes`. Archivo: `Services/Client/ClientParametersService.php`.
+- fix: **removida restricción `ncosteprom > 0`** en `GetProducts` (`ProductRepository.php`) — artículos con costo promedio en 0 o NULL ahora aparecen en el listado. La restricción impedía buscar artículos recién cargados sin costo.
+
+Archivos: `Services/Client/ClientParametersService.php`, `Repositories/Product/ProductRepository.php`, `Repositories/Order/OrderList/OrderListRepository.php`, `Repositories/Order/OrderRepository.php`
+
+Rama: `hotfix-salesperson-and-ncostreprom-ccodage` (basada en `Development`, pusheada a origin)

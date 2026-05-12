@@ -33,4 +33,4 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 El sistema soporta tres marcas: **NB**, **NBElectric** y **Libreopción**. Se filtran por `companyCode` en la mayoría de endpoints y tablas.
 
 ---
-*Última sincronización: 2026-04-25 (modo read-only del modal, persistencia en DB del costo seleccionado, JWT 60 días)*
+*Última sincronización: 2026-05-12 (salespersonId → ccodage, removida restricción ncosteprom, cupón LO, arreglo join albclitshipping)*

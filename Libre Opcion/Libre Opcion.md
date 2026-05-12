@@ -1,7 +1,7 @@
 # Libre Opcion
 
-Diagnóstico y mejoras de SEO, performance y features para libreopcion.com.ar.
-Última sincronización: 2026-04-16.
+Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
+Última sincronización: 2026-05-11.
 
 ---
 
@@ -11,6 +11,37 @@ Diagnóstico y mejoras de SEO, performance y features para libreopcion.com.ar.
 - [[stack|Stack]] — Tecnologías, versiones, servicios externos
 - [[changelog|Changelog]] — Registro de trabajo por fecha
 - [[memoria|Memoria]] — Consolidación de feedback, reglas y contexto del proyecto
+
+## Herramientas internas
+
+### enviosMailDrop
+Script Python para envío masivo de emails HTML. Integración con SQL Server para control de campañas.
+- [[enviosMailDrop/enviosMailDrop|enviosMailDrop]] — Índice
+- [[enviosMailDrop/arquitectura|Arquitectura]] · [[enviosMailDrop/stack|Stack]] · [[enviosMailDrop/contexto|Contexto]] · [[enviosMailDrop/changelog|Changelog]]
+
+## Wallet — API v4
+
+### TareaWallet
+Análisis e implementación del módulo de billetera. Airdrop OpcionFest $15.000 ARS.
+- [[TareaWallet/TareaWallet|TareaWallet]] — Índice
+- [[TareaWallet/contexto|Contexto]] — Flujo de ingreso, TR_CODIGO 476, queries y HMAC
+
+## Landings y campañas MKT
+
+### OpcionFest (activa — rama feat/landing-opcionfest)
+Landing de evento e-commerce con hero video, grid de productos curados y precios flash.
+- Ruta: `/opcionfest`
+- Banner animado en home slider: `SliderHeroOpcionFest.vue`
+- Assets: `static/micrositios-files/opcionFest/mkt/sin_borde/`
+- CTA externo: https://bit.ly/Opcion_Fest_2026
+
+### ASUS ROG x Resident Evil Requiem
+- Ruta: `/asus/rog`
+- Rama: `feat/landing-asus-rog-requiem` (mergeada)
+
+### ASUS TUF RX 9070 XT Black Ops 7 Special Edition
+- Banner home: `SliderHeroLimitedEdition.vue` (activado con `HOME_HERO_BANNER=1`)
+- Rama: `LIO-618` (mergeada)
 
 ## SEO & Performance
 

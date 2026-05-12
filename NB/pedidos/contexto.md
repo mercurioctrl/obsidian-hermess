@@ -108,3 +108,18 @@ Con Node v17+ se requiere `NODE_OPTIONS=--openssl-legacy-provider` para levantar
 - [[modulo-removesale]] — Flujo de reversión
 - [[feature-asignacion-oc]] — Feature de asignación OC↔Venta
 - [[stack]] — Tecnologías y versiones
+
+## Parámetros del cliente — salespersonId y ccodage
+
+Al actualizar parámetros del cliente via `PATCH /v1/clients/{id}/params`, el campo `salespersonId` escribe **dos columnas** en `NewBytes_DBF.dbo.clientes`:
+
+- `ID_VENDEDOR = salespersonId`
+- `ccodage = RIGHT('00'+ISNULL(salespersonId,''),2)` — código del vendedor con padding de 2 dígitos
+
+Ambas deben mantenerse sincronizadas. El campo `ccodage` es el que usa el sistema legado para identificar al vendedor asignado.
+
+Archivo: `Services/Client/ClientParametersService.php` método `buildUpdateColumns`.
+
+## Artículos sin costo promedio (`ncosteprom`)
+
+La restricción `A.ncosteprom > 0` fue removida del endpoint `GET /v1/items`. Artículos recién cargados o con costo en 0 ahora son visibles en el buscador. Si en el futuro se necesita filtrar por costo, agregar el filtro como query param opcional, no hardcodeado.
