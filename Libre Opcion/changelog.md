@@ -89,6 +89,34 @@ Archivos clave: `pages/opcionfest.vue`, `components/Home/Banners/SliderHeroOpcio
 
 Assets: `static/micrositios-files/opcionFest/mkt/sin_borde/` (10 imágenes por producto, sin bordes ni logo)
 
+## 2026-05-12 / 2026-05-13
+
+### Rama: feat/landing-opcionfest — pulido mobile, timer visual, nuevos productos
+
+#### Hero mobile
+- **fix**: `height: 400px` eliminado del breakpoint ≤700px (con `overflow: hidden` cortaba contenido) — ahora `height: auto` desde el breakpoint 768px
+- **fix**: Beneficios (Envío gratis / 40% OFF / Garantía) alineados con `flex-direction: column; width: fit-content; margin: 0 auto` — antes cada ítem se centraba individualmente y los íconos quedaban en posiciones distintas
+- **fix**: `padding-top` del hero aumentado a 40px para separar el logo de la navbar
+- **fix**: Ancla `#productos` movida del countdown al grid de productos — antes el botón "Ver productos" scrolleaba al countdown
+- **fix**: Scroll suave implementado con JS (`scrollIntoView`) para evitar que el router de Nuxt interprete el hash como navegación a la home
+
+#### Timer de precio relámpago (solo landing)
+- **feat**: Nuevo diseño visual para el timer de precios flash en la landing — reemplaza el recuadro "Finaliza en HH:MM:SS" por una barra de progreso con labels de tiempo transcurrido/restante
+- Prop `timerBarMode` agregada a `ProgresoInstantFlash.vue` (no rompe otros contextos)
+- Barra naranja se llena a medida que pasa el tiempo; labels muestran "Xh YYm pasadas" / "Xh YYm restantes"
+- Margen lateral de 5px para que la barra no toque los bordes de la card
+
+#### Slider home
+- **fix**: Videos `SliderHeroOpcionFest` y `SliderHeroLimitedEdition` envueltos en `<div>` dentro del Carousel — Slick no contaba los componentes Vue como slides válidos y solo mostraba 2 bullets
+- **fix**: Fondo de imagen en cards flash cambiado de `#f8f8f8` a `#fff` (eliminaba borde gris visual)
+
+#### Nuevos productos en la landing
+- **feat**: 6 productos nuevos incorporados al inicio de la grilla: PS5 (P694634), Nintendo Switch 2 (P752793), TV 32" Samsung (P646228), TV 55" QLED Samsung (P757958), TV 50" Crystal 4K Samsung (P757957), Monitor LG 24" (P441756)
+- Imágenes MKT agregadas a `static/micrositios-files/opcionFest/mkt/sin_borde/`
+- Los nuevos productos aparecen primero en la grilla (`PRODUCT_SLUGS` reordenado)
+
+Archivos: `pages/opcionfest.vue`, `components/Productos/ProgresoInstantFlash.vue`, `components/Home/Banners/SliderPrincipal.vue`
+
 ## Ver también
 
 - [[arquitectura|Arquitectura]]
