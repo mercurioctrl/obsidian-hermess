@@ -4,6 +4,18 @@ Registro de cambios del proyecto, consolidado desde los repositorios de API y Fr
 
 ---
 
+## 2026-05-13
+
+### API
+- feat(payment): Agregado medio de pago "Línea de Crédito" (ID 21) al flujo que transiciona a pago pendiente al entregar
+- config: Nueva variable de entorno `CREDIT_LINE_PAYMENT` en `.env-example`
+- docs: Creado `CLAUDE.md` en la raíz del monorepo (guía para Claude Code)
+
+Archivos principales: `app/src/Service/Order/DispatchService.php`, `app/.env-example`
+Rama: `deve-fix-linea-creidto-laset`
+
+---
+
 ## 2026-04-05
 
 ### Setup local (sesión con Claude)

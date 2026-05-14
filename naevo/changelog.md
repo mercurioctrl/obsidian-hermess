@@ -240,3 +240,38 @@ Archivos principales tocados esta sesión:
 - `frontend/public/preview/index.html`
 
 Commits: `b805bab`, `a4be121`, `5e0736a`.
+
+## 2026-05-13
+
+### Editor visual de home (`/home/edit`)
+
+Nueva página WYSIWYG en `frontend/pages/home/edit.vue` (protegida con middleware `admin`). Renderiza la home real con overlays de edición por sección. Click en cualquier sección abre un panel lateral deslizante con los campos editables. Guarda via admin API y refresca el visual en tiempo real.
+
+Secciones editables desde el panel:
+- **Hero** — título, subtítulo, imagen, ambos CTAs (texto + URL)
+- **Anuncio** — texto, URL, colores, activar/desactivar
+- **Productos destacados** — título y subtítulo de sección (guardados en `settings`)
+- **Categorías** — título y subtítulo de sección + edición individual de cada WellnessGoal (nombre, imagen lifestyle, orden)
+- **Footer** — todos los enlaces por columna, agregar nuevos
+- Secciones sin CMS muestran badge gris indicando que se editan en `/admin/cms`
+
+### Textos de sección en tabla `settings`
+
+Para secciones con texto hardcodeado en componentes Vue, se creó el patrón de guardarlos en la tabla `settings` como pares clave-valor y leerlos via `PublicSettingController`. Nuevas claves añadidas al whitelist público: `home_products_title`, `home_products_subtitle`, `home_categories_title`, `home_categories_subtitle`.
+
+Componentes modificados para aceptar props opcionales: `FeaturedProducts.vue`, `ShopByCategory.vue`.
+
+### Badges de certificación en hero trust band
+
+Reemplazada la banda de texto (Formulación · Trazabilidad · etc.) por 5 iconos circulares SVG: GMP, ISO 9001, No GMO, Gluten Free, Vegano. Íconos inline en `HeroBanner.vue`, estilos con `border-radius: 50%` y borde semitransparente.
+
+### Ajustes visuales en ShopByCategory
+
+- `gap: 8px → 0` entre cards de categorías (tarjetas pegadas sin espacios)
+- Eliminado `border-top: 3px solid` de los 6 anillos de color (`.ed-cat-ring-1..6`)
+
+### Bug fix: Redis port en `.env` del backend
+
+`REDIS_PORT=6382` (puerto del host) causaba `Connection refused` en el backend durante login. Corregido a `REDIS_PORT=6379` (puerto interno de Docker). El error solo aparece en el log — desde `tinker` Redis siempre respondía porque usaba la conexión directa al container.
+
+Archivos principales: `frontend/pages/home/edit.vue` (nuevo), `frontend/components/home/HeroBanner.vue`, `frontend/components/home/FeaturedProducts.vue`, `frontend/components/home/ShopByCategory.vue`, `backend/app/Http/Controllers/Api/PublicSettingController.php`

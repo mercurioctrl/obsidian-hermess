@@ -4,6 +4,20 @@ Registro de decisiones, problemas y soluciones encontradas durante el trabajo en
 
 ---
 
+## 2026-05-13 — Línea de crédito en flujo de pago pendiente
+
+### Contexto
+Al entregar un retiro o envío con medio de pago **Pago Diferido**, el pedido pasa a "Pago Pendiente" en vez de "Entregado". Esto es intencional para esos medios. El usuario solicitó agregar el mismo comportamiento para "Línea de Crédito" (ID 21).
+
+### Solución
+- Agregar constante `CREDIT_LINE_PAYMENT` cargada desde `.env` (default 21)
+- Incluirla en el `switch` de `updateStateOrder()` junto a Moto, Van y Pago Diferido
+- Agregar `CREDIT_LINE_PAYMENT=` al `.env-example`
+
+**Archivo:** `app/src/Service/Order/DispatchService.php`
+
+---
+
 ## 2026-04-05 — Setup inicial en Apple Silicon
 
 ### Problema: Dockerfile no buildea (Ubuntu 18.04 EOL)
@@ -121,8 +135,8 @@ node scripts/update-build-version.js
 
 ## Ver también
 
-- [[NB/expedicion/arquitectura|Arquitectura]] — Decisiones de diseño actuales
-- [[NB/expedicion/stack|Stack]] — Versiones que explican estas decisiones
-- [[NB/expedicion/documentacion|Documentación]] — Setup con los workarounds aplicados
-- [[NB/expedicion/changelog|Changelog]] — Cuándo se hicieron estos cambios
-- [[NB/expedicion/contexto|Contexto]] — Estado general del proyecto
+- [[arquitectura]] — Decisiones de diseño actuales
+- [[stack]] — Versiones que explican estas decisiones
+- [[documentacion]] — Setup con los workarounds aplicados
+- [[changelog]] — Cuándo se hicieron estos cambios
+- [[contexto]] — Estado general del proyecto

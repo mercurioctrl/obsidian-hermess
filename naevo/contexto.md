@@ -14,20 +14,24 @@ Contexto de negocio, decisiones del usuario y TODOs pendientes. No incluye cosas
 - **Unificación Quality + Certifications** — eran dos secciones separadas con propósito redundante. Ahora una sola con las promesas de calidad como feature cards y las certificaciones como row de badges abajo.
 - **Blog preview fuera del home** — el cliente no quería que el blog compitiera con el catálogo en la página principal; el contenido editorial queda solo en `/blog`.
 - **Logo SVG + alto editable desde admin** — cliente quería que el logo escale limpio a cualquier tamaño (SVG) y poder ajustar su altura sin tocar código (admin settings). Se creó un patrón de "public settings whitelist" reutilizable.
+- **Editor visual `/home/edit`** — el cliente quiere editar textos e imágenes del home sin tocar el código. Se creó un editor WYSIWYG que renderiza la home real con overlays de edición. Reutiliza los componentes existentes + admin API. Los textos hardcodeados en componentes se migran a la tabla `settings`.
+- **Badges de certificación en hero** — reemplazada la banda de texto (Formulación/Trazabilidad/etc.) por 5 iconos circulares: GMP, ISO 9001, No GMO, Gluten Free, Vegano. El cliente prefiere el estilo visual con íconos.
+- **SubscriptionSection oculta** — el cliente pidió ocultar temporalmente la sección "Subscribe & save" de la home. Está comentada en `pages/index.vue` — se puede re-activar cuando el módulo esté listo para lanzar.
 
-## TODOs pendientes (abril 2026)
+## TODOs pendientes (mayo 2026)
 
 ### Pendientes en la rama `feature/homepage-updates-abril-2026`
 
 - **Endpoint backend para Profesionales** — el formulario de `pages/profesionales.vue` apunta a `/api/professionals` que no existe. Falta crear controller + migration + route + email de notificación al admin.
-- **Seeder de certifications badges** — verificar que `trust_badges.certifications` traiga todos los esperados (GMP, ISO 9001, No GMO, Gluten Free, Vegano). Si faltan, actualizar el seeder del CMS.
+- **Seeder de certifications badges** — verificar que `trust_badges.certifications` traiga todos los esperados (GMP, ISO 9001, No GMO, Gluten Free, Vegano). Si faltan, actualizar el seeder del CMS. (Los badges del hero son SVGs hardcodeados — son distintos a los del CMS).
 
 ### Mejoras futuras
 
 - **Normalizar slug `antiestres-sueño`** — hoy tiene ñ en la DB pero los filenames en storage usan ASCII. Si se normaliza a ASCII, renombrar los archivos también.
 - **Integraciones reales de shipping carriers** — OCA/Andreani/Entregar tienen costos simulados. Implementar APIs reales cuando corresponda.
 - **Doble opt-in en newsletter** — hoy es suscripción directa.
-- **Fotos lifestyle más alineadas a la marca** — hoy son de Unsplash stock (free license). Cuando haya fotos profesionales NAEVO, subir desde `/admin/objetivos` (flow ya funciona).
+- **Fotos lifestyle más alineadas a la marca** — hoy son de Unsplash stock (free license). Cuando haya fotos profesionales NAEVO, subir desde el editor visual `/home/edit` (ya funciona el upload).
+- **Expandir editor visual** — las secciones Calidad, Newsletter, Rewards y Estándares muestran badge "texto fijo". Se pueden migrar a `settings` siguiendo el mismo patrón de `home_products_title`.
 
 ## Reglas del usuario (preferencias personales)
 

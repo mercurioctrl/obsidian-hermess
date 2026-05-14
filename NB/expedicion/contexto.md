@@ -2,7 +2,7 @@
 
 ## Qué es
 
-Sistema de **expedición/logística de warehouse** para NB (distribuidor mayorista). Gestiona el flujo completo de mercadería: entrada de proveedores, almacenamiento, serialización, preparación de pedidos, env��os, retiros, devoluciones y comprobantes.
+Sistema de **expedición/logística de warehouse** para NB (distribuidor mayorista). Gestiona el flujo completo de mercadería: entrada de proveedores, almacenamiento, serialización, preparación de pedidos, envíos, retiros, devoluciones y comprobantes.
 
 ## Estructura del monorepo
 
@@ -65,8 +65,24 @@ expedicion/
 - **Gamma:** Deploy automático via GitHub Actions (SSH) al mergear PR a branch Gamma
 - **Producción:** `api.warehouse.lio.red`, `api2.warehouse.lio.red`
 
-## Estado actual (2026-04-05)
+## Regla de negocio: medios de pago y estado al entregar
 
+Al despachar un pedido (`DispatchService::dispatch()`), el estado intermedio depende del medio de pago:
+
+| Medio de pago | ID | Comportamiento al despachar | Estado al entregar |
+|---|---|---|---|
+| Moto | env `MOTORCYCLE_PAYMENT` (def. 2) | → status 3 (Despachado) | → status 14 (Pago Pendiente) |
+| Van | env `VAN_PAYMENT` (def. 4) | → status 3 (Despachado) | → status 14 (Pago Pendiente) |
+| Pago Diferido | env `DEFERRED_PAYMENT` (def. 16) | → status 3 (Despachado) | → status 14 (Pago Pendiente) |
+| Pago Diferido NBE | env `DEFERRED_NBE_PAYMENT` (def. 19) | → status 3 (Despachado) | → status 14 (Pago Pendiente) |
+| Línea de Crédito | env `CREDIT_LINE_PAYMENT` (def. 21) | → status 3 (Despachado) | → status 14 (Pago Pendiente) |
+| Resto | — | → status 4 (Finalizado) | → status 13 (Entregado) |
+
+Lógica en `app/src/Service/Order/DispatchService.php` — métodos `updateStateOrder()` y `updateStateOrderHand()`.
+
+## Estado actual (2026-05-13)
+
+- Agregado medio de pago "Línea de Crédito" (ID 21) al flujo de pago pendiente
 - App funcionando localmente (front + back conectados)
 - Docker actualizado a Ubuntu 22.04 / PHP 8.3 / ODBC 18 para compatibilidad con Apple Silicon (ARM64)
 - SQL Server remoto conectado (190.210.23.108:1433, base NB_WEB)
@@ -76,8 +92,8 @@ expedicion/
 
 ## Ver también
 
-- [[NB/expedicion/arquitectura|Arquitectura]] — Diagramas, capas, flujo de request
-- [[NB/expedicion/stack|Stack]] — Tecnologías y versiones
-- [[NB/expedicion/documentacion|Documentación]] — Setup, comandos, variables de entorno
-- [[NB/expedicion/changelog|Changelog]] — Historial de cambios
-- [[NB/expedicion/memoria|Memoria]] — Problemas resueltos y decisiones
+- [[arquitectura]] — Diagramas, capas, flujo de request
+- [[stack]] — Tecnologías y versiones
+- [[documentacion]] — Setup, comandos, variables de entorno
+- [[changelog]] — Historial de cambios
+- [[memoria]] — Problemas resueltos y decisiones

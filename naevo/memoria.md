@@ -1,6 +1,6 @@
 # Memoria
 
-Consolidación de la memoria auto-guardada del proyecto (`~/.claude/projects/-Users-hermess-www-naevo-web/memory/`). Son patterns, gotchas y decisiones que NO son obvias leyendo el código — cosas que aprendimos del camino.
+Consolidación de la memoria auto-guardada del proyecto (`~/.claude/projects/-var-www-naevo/memory/`). Son patterns, gotchas y decisiones que NO son obvias leyendo el código — cosas que aprendimos del camino.
 
 ## Feedback — workflow
 
@@ -11,7 +11,7 @@ Reglas de trabajo aprendidas durante sesiones previas.
 - **Backend también necesita rebuild** — tras cambios en Laravel, mismo patrón con `--no-cache backend`.
 - **Verificar API antes de crear componentes** — siempre hacer `curl` al endpoint antes de inventar campos en un componente Vue. Los field names deben coincidir con la serialización Eloquent exacta, no asumir.
 - **Laravel .env pisa docker-compose env** — `backend/.env` tiene precedencia sobre variables de `docker-compose.yml`. Si algo no funciona, revisar `backend/.env`.
-- **Redis port interno vs host** — dentro de containers usar `REDIS_PORT=6379` (interno). El host-mapping (`REDIS_PORT=6383`) es solo para conexiones desde la Mac, no entre containers.
+- **Redis port interno vs host** — dentro de containers usar `REDIS_PORT=6379` (interno). El host-mapping (`6382` o `6383`) es solo para conexiones desde el host Mac, no entre containers. El error se manifiesta como `Connection refused` en el log de Laravel durante login/session — pero desde `tinker` Redis responde OK porque usa la conexión directa.
 - **Curl API primero en bugs de display** — antes de investigar componentes, storage o nginx, hacer `curl` al endpoint y confirmar qué devuelve. 80% de los bugs de "no muestra" son field mismatches.
 - **Revisar auth middleware antes de asumir** — las rutas de carrito NO tienen `auth:sanctum`. Resuelven el user manualmente via `PersonalAccessToken`. No asumir que `$request->user()` funciona sin verificar la ruta.
 - **Match route params con controller signature** — el número y orden de `{params}` en la ruta debe coincidir con los argumentos del método del controller.
@@ -19,20 +19,32 @@ Reglas de trabajo aprendidas durante sesiones previas.
 - **Verificar Tailwind classes** — no usar clases no-standard como `w-4.5`. Antes de usar una clase, confirmar que existe.
 - **Si un componente no aparece, verificar resolución** — buscar `resolveComponent()` en el build para confirmar que Nuxt lo está resolviendo.
 - **Componentes de layout en raíz** — los componentes que se usan en layouts deben vivir en `components/` (raíz), no en subcarpetas. El auto-import por subcarpetas agrega prefijos que rompen los layouts.
-- **No hardcodear contenido del CMS** — si algo debería ser editable, actualizar DB + seeder, no inlineear en Vue.
+- **No hardcodear contenido del CMS** — si algo debería ser editable, actualizar DB + seeder, no inlineear en Vue. Para textos simples usar la tabla `settings` (patrón ya establecido).
 - **Primary action field va primero en forms** — el campo principal (search/autocomplete) arriba, los secundarios abajo. Mejora la UX del form.
 - **Pivot tables devuelven la join row, no el modelo real** — al iterar `related_products`, el modelo real está anidado (ej. `rp.related_product`). No acceder a campos del producto directamente en el pivot.
 - **CMS banner tiene dos campos de imagen** — `image_url` (modo text+image) vs `slider_image_url` (modo slider). Al debuggear, primero chequear qué modo está activo.
 
 ## Project — arquitectura y estructura
 
-- **Container names, ports, paths, nginx** — backend=8000, frontend=3000, nginx=80 (host `APP_PORT=8088`), db=3306 (host `DB_PORT=3309`), redis=6379 (host `REDIS_PORT=6383`).
+- **Container names, ports, paths, nginx** — backend=8000, frontend=3000, nginx=80 (host `APP_PORT=8088`), db=3306 (host `DB_PORT=3309`), redis=6379 (host `REDIS_PORT=6382`).
 - **Volúmenes nombrados, no bind mounts** — usar `docker compose cp` para copiar archivos. El storage del backend es un volumen persistente.
 - **Home usa `layout: false`** — maneja su propia estructura (AnnouncementBar + TheHeader + ... + TheFooter + CartDrawer). Otras páginas usan `default.vue` layout.
-- **Branding** — color primario `#0f2bde`, logo en `frontend/public/logo.png`.
+- **Branding** — NÆVO (con Æ), color primario `#0f2bde`, tipografía display Umbra (CDNFonts).
 - **Product images** — 45 PNGs con fondo blanco, en volumen Docker, las cards del frontend usan `bg-white` para matchear.
 - **Workflow de imágenes estáticas** — subir a `images/` en raíz del repo → copiar a `frontend/public/images/` → actualizar DB + seeder si van en CMS.
 - **Search system** — SearchModal con live suggestions desde el header + página `/buscar`. Endpoint `/api/products/search`.
+- **`/home/edit` visual editor** — página WYSIWYG para editar la home sin tocar código. Protegida con middleware `admin`. Reutiliza los mismos componentes Vue del home con overlays de edición superpuestos.
+
+## Project — patrón settings CMS-lite
+
+Para textos hardcodeados en componentes Vue que necesitan ser editables:
+1. Agregar la clave al array `PUBLIC_KEYS` en `PublicSettingController`
+2. Agregar prop opcional con default vacío al componente (`withDefaults(defineProps<{...}>(), {...})`)
+3. En el componente, usar `prop || 'texto default hardcodeado'`
+4. En `index.vue`, pasar `:section-title="settings.home_X_title"`
+5. En `/home/edit`, guardar via `PUT /admin/settings` con array de `{key, value}`
+
+Claves activas: `logo_height_mobile`, `logo_height_desktop`, `home_products_title`, `home_products_subtitle`, `home_categories_title`, `home_categories_subtitle`.
 
 ## Project — API y data
 
@@ -48,43 +60,16 @@ Reglas de trabajo aprendidas durante sesiones previas.
 - **Shipping carriers** — OCA, Andreani, Entregar. Logos en DB (`logo_url`), costos simulados (no API real).
 - **Google Places Autocomplete** — composable `useGooglePlaces.ts`, restringido a Argentina, requiere `GOOGLE_MAPS_API_KEY` env.
 
-## Project — customizations UI
+## Project — homepage (mayo 2026)
 
-- **Featured products slider** — slider horizontal, 8 productos (featured + random fill), sin librería de carousel.
-- **Product detail shipping & payments** — sección de shipping (API) + logos de medios de pago (SVGs inline) abajo de los badges.
-
-## Project — homepage (abril 2026)
-
-- **Nuevo orden del home** — ver [[arquitectura#orden-actual-del-home-abril-2026]].
+- **Orden del home**: AnnouncementBar → Header → Hero → FeaturedProducts → ShopByCategory → BestQuality → Newsletter → Rewards → OurStandards → Footer. SubscriptionSection comentada temporalmente.
 - **QualityBadges dos props** — `badges` + `certifications`, fusiona lo que antes eran dos componentes.
-- **WellnessGoals 6-col con hover crossfade** — ver [[project_wellness_goals_hover|memoria técnica]] y [[contexto|contexto de la decisión]].
-- **Nav 5 links** — Inicio, Productos, Ciencia, Blog, Profesionales. Hardcoded en `TheHeader.vue`, no viene del CMS. Al agregar un link nuevo, verificar que la página exista Y agregar el slug a `reservedSlugs` en `pages/[slug].vue`.
-- **Páginas `/ciencia` y `/profesionales`** — ambas usan layout default. `/profesionales` tiene form con TODO de endpoint inexistente.
-
-## Project — bug fixes históricos
-
-- **Quiz** — 6 bugs fixeados, expandido de 3→6 preguntas. Field name mismatches principalmente.
-- **Blog listing** — response double-wrapped, endpoint de categorías públicas faltante, field de imagen equivocado.
-
-## Reference — scripts y external
-
-- **restore.sh** — interactivo, pide número de backup + password del `.env` + "si". Ejecutar con prefijo `!` en Claude (no funciona con pipe/heredoc).
-- **backup.sh** — genera `backups/backup_YYYYMMDD_HHMMSS.tar.gz` con DB + uploads.
-- **sync-from-prod.sh** — script custom del usuario (no tracked en git) para pull desde prod.
-
-
-## Project — templates & preview switcher (abril 2026)
-
-- **10 templates Nuxt live** bajo `pages/templates/<slug>.vue` — una página por DS con CSS scoped, consumen CMS via `useTemplateData()`. Ver [[templates-preview]] y [[project_templates_gallery]].
-- **tpl-* live routing** — `load()` del switcher `/preview/` rutea `tpl-*` a `/templates/<slug>` y el resto a mirrors estáticos. Ver [[project_preview_tpl_routing]].
-- **Blu-NN naming** — variantes se presentan al cliente como `blu-NN Fantasía`, label-only, nunca tocar values/slugs. Próxima: blu-29. Ver [[feedback_blu_naming_convention]].
-- **Panel Ajustes size-only** — color pickers hidden (no borrados), `applyToIframe` sólo inyecta font/logo. Colores respetan original del template. Ver [[feedback_preview_size_only_tools]].
-- **Docker disk cleanup** — build fallaba con 'no space left on device'. Orden: `docker builder prune -af` → `image prune -f` → `system prune -af`. **NUNCA** `--volumes` (mata MySQL). Ver [[feedback_docker_disk_cleanup]].
-- **Logo con filtro mono** — templates con header/footer oscuros usan `filter: brightness(0) invert(1)` (carbon, shadcn footer), los de aesthetic minimal usan `brightness(0)` (apple-hig, shadcn header), el resto full-color.
+- **WellnessGoals 6-col sin gap** — `gap: 0`, sin `border-top` en los anillos de color. Hover crossfade lifestyle↔producto.
+- **Hero trust band** — 5 badges con íconos SVG circulares (GMP, ISO 9001, No GMO, Gluten Free, Vegano). Hardcodeados en `HeroBanner.vue` — no son los mismos que `cms_trust_badges`.
 
 ## Ver también
 
-- [[naevo|Índice]]
-- [[arquitectura|Arquitectura]]
-- [[contexto|Reglas de negocio y TODOs]]
+- [[naevo|Índice del proyecto]]
+- [[contexto|Contexto y decisiones]]
+- [[arquitectura|Arquitectura técnica]]
 - [[changelog|Changelog]]

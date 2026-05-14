@@ -1,3 +1,10 @@
+
+## 2026-05-13
+
+- feat: **nuevo medio de pago id=21 con comportamiento de pago diferido** — funciona igual que el id=16 (pago diferido): verifica crédito disponible del cliente antes de liquidar y autoriza directo a status 2 (autorizado pendiente de preparar).
+  - Archivos: `Services/Liquidate/LiquidateServices.php` (constante `DEFERRED_PAYMENT_21 = 21`, condición en `verifyPaymentDeferred`), `Services/Liquidate/CreateOrder.php` (mapa `payment()` y condición en `authorization()`)
+  - Rama: `deve-fix-linea-creidto-laset` (basada en `Development`, pusheada a origin)
+
 # Changelog
 
 Registro de cambios del proyecto, agrupado por fecha.

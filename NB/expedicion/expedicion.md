@@ -3,7 +3,7 @@
 Sistema de expedición y logística de warehouse para NB (distribuidor mayorista).
 Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 
-**Última sincronización:** 2026-04-05
+**Última sincronización:** 2026-05-13
 
 ---
 
@@ -11,12 +11,12 @@ Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 
 | Nota | Descripción |
 |------|-------------|
-| [[NB/expedicion/contexto|Contexto]] | Qué es, dominios de negocio, autenticación, entornos |
-| [[NB/expedicion/arquitectura|Arquitectura]] | Diagramas, capas backend, flujo frontend, Docker, CI/CD |
-| [[NB/expedicion/stack|Stack]] | Tecnologías, versiones, dependencias, servicios externos |
-| [[NB/expedicion/documentacion|Documentación]] | Setup local, variables de entorno, comandos, endpoints |
-| [[NB/expedicion/changelog|Changelog]] | Historial de cambios (API + Frontend) |
-| [[NB/expedicion/memoria|Memoria]] | Problemas resueltos, decisiones, gotchas |
+| [[contexto]] | Qué es, dominios de negocio, reglas de pago, autenticación, entornos |
+| [[arquitectura]] | Diagramas, capas backend, flujo frontend, Docker, CI/CD |
+| [[stack]] | Tecnologías, versiones, dependencias, servicios externos |
+| [[documentacion]] | Setup local, variables de entorno, comandos, endpoints |
+| [[changelog]] | Historial de cambios (API + Frontend) |
+| [[memoria]] | Problemas resueltos, decisiones, gotchas |
 
 ---
 

@@ -19,6 +19,15 @@ Sistema de comprobantes (facturas F/FUy, after-sale, cobros, remitos, certificad
 - [[NB/Comprobantes/changelog|Changelog]]
 - [[NB/Comprobantes/contexto|Contexto]]
 
+## Control de Precios
+Panel web interno para gestión de precios, utilidades y stock por artículo. PHP + jQuery + SQL Server + Docker.
+- [[NB/controldeprecios/controldeprecios|Control de Precios]]
+- [[NB/controldeprecios/arquitectura|Arquitectura]]
+- [[NB/controldeprecios/stack|Stack]]
+- [[NB/controldeprecios/contexto|Contexto]]
+- [[NB/controldeprecios/memoria|Memoria Claude]]
+- [[NB/controldeprecios/changelog|Changelog]]
+
 ## Expedición
 Sistema de expedición y despacho de mercadería.
 - [[NB/expedicion/expedicion|Expedición]]
