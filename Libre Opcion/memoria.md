@@ -1,7 +1,7 @@
 # Memoria del proyecto
 
 Consolidación de la memoria de Claude para Libre Opcion (sitio-web-app-v3).
-Última sincronización: 2026-05-14.
+Última sincronización: 2026-05-15.
 
 ---
 
@@ -23,9 +23,10 @@ Consolidación de la memoria de Claude para Libre Opcion (sitio-web-app-v3).
 - **Slick carousel + Vue**: Siempre envolver componentes Vue en `<div>` dentro del Carousel — Slick cuenta nodos DOM, no componentes Vue. Sin el wrapper los bullets no funcionan correctamente
 - **CLS skeletons**: Skeleton y card real deben tener la misma altura
 - **asyncData para SSR crítico únicamente**: Datos secundarios van en `mounted`
-- **iframeResizer**: Siempre llamar `disconnect()` en `beforeDestroy` para limpiar el registry global. Sin esto la navegación posterior se rompe (búsquedas dejan de funcionar)
+- **iframeResizer — cleanup completo**: Ver sección "Contenido A+" abajo. La solución correcta NO es solo `disconnect()`, requiere despachar `pageInfoStop`/`parentInfoStop` antes.
 - **Fetch async en watch handlers**: Siempre usar AbortController con timeout + guard `this._isDestroyed` antes de mutar estado reactivo
 - **CSP en localhost**: `aplus.libreopcion.com.ar` tiene `frame-ancestors` que no incluye localhost. El HEAD fetch sí funciona pero el iframe se bloquea. Fix: timeout 5s para ocultar si iframeResizer no recibe respuesta
+- **Debugging librerías de terceros — navegación rota**: Cuando la navegación asincrónica se rompe post-navigate, sospechar primero de ResizeObserver/MutationObserver globales no limpiados. Leer el source minificado del CDN para entender qué hace y qué NO hace `disconnect()`. El fix es triggerear el cleanup ANTES de borrar el registry, no después.
 
 ## Proyecto
 
@@ -42,6 +43,47 @@ Consolidación de la memoria de Claude para Libre Opcion (sitio-web-app-v3).
 - `banners[1]` = slides desktop, `banners[2]` = slides mobile (index.vue)
 - `rutas/rutaRetorno` en store: si está seteado, la home redirige. El Logo lo limpia antes de navegar
 
+## Contenido A+ (aplus.libreopcion.com.ar)
+
+Implementación en `pages/producto/_id.vue`. Librería: `@iframe-resizer/parent` v5.5.9 (CDN jsdelivr).
+
+### Flujo
+1. `watch.producto` → `checkAPlusContent()` — HEAD fetch con AbortController 3s
+2. Si 200 → `aPlusContentAvailable = true` → iframe renderiza
+3. `onAPlusIframeLoad(event)` → `await loadIframeResizerScript()` → `window.iframeResize({...}, iframe)`
+4. `_aPlusIframeEl = iframe` (referencia no reactiva para beforeDestroy)
+5. Timer 5s: si no hubo comunicación → `_disconnectAPlusResizer()` + ocultar iframe
+6. `beforeDestroy` → `_disconnectAPlusResizer()`
+
+### La solución correcta para cleanup (commit 5d922efb3, 2026-05-15)
+
+El bug era: `disconnect()` → `Le()` borra `ee[id]`, pero el `ResizeObserver` sobre `document.body` (creado por iframeResizer cuando el child envía `pageInfo`) sigue activo. Cuando Vue desmonta → observer dispara → `l()` crashea → `window.onerror` → navegación rota.
+
+**Fix definitivo en `_disconnectAPlusResizer()`:**
+```js
+// Despachar ANTES de disconnect() para triggerear l() con ee[id] vivo
+["pageInfoStop", "parentInfoStop"].forEach((type) => {
+  window.dispatchEvent(new MessageEvent("message", {
+    data: `[iFrameSizer]${iframe.id}:::${type}`,
+    origin: new URL(iframe.src).origin,
+  }));
+});
+iframe.iFrameResizer.disconnect();
+```
+
+### Código muerto eliminado
+`syndicationIframe` (desktop + mobile) — referenciaba `onSyndicationIframeLoad`, `limitedEditionSyndicatedContentSrc`, `syndicationIframeHeight` que no existían en el script. Eliminado en `5d922efb3`.
+
+### `_aPlusIframeEl` — por qué existe
+`$refs.aplusIframe` se vuelve `null` si el timer de 5s remueve el iframe del DOM antes de `beforeDestroy`. `_aPlusIframeEl` (prefijo `_` = no reactivo en Vue 2) guarda la referencia directa.
+
+## OpcionFest (rama feat/landing-opcionfest)
+
+- Landing `/opcionfest`: hero video bg, 15 productos curados, countdown, sección flash lazy
+- Imágenes MKT en `static/micrositios-files/opcionFest/mkt/sin_borde/`
+- Timer visual en cards flash: prop `timerBarMode` en `ProgresoInstantFlash.vue`
+- Banner en home slider: `SliderHeroOpcionFest.vue`
+
 ## Variables .env activas (local)
 
 ```
@@ -51,21 +93,6 @@ PRODUCT_IDS=757166,757188,757232,757254
 API_HOST4=http://localhost:8097/v4/
 NODE_PORT=3000
 ```
-
-## Contenido A+ (aplus.libreopcion.com.ar)
-
-- En `pages/producto/_id.vue`
-- HEAD fetch con AbortController 3s → si falla, `aPlusContentAvailable = false`
-- `ref="aplusIframe"` en el iframe para poder hacer `disconnect()` en beforeDestroy
-- Si iframeResizer no recibe respuesta en 5s → ocultar iframe (CSP block en localhost)
-- Guard `_isDestroyed` en todos los callbacks async
-
-## OpcionFest (rama feat/landing-opcionfest)
-
-- Landing `/opcionfest`: hero video bg, 15 productos curados, countdown, sección flash lazy
-- Imágenes MKT en `static/micrositios-files/opcionFest/mkt/sin_borde/`
-- Timer visual en cards flash: prop `timerBarMode` en `ProgresoInstantFlash.vue`
-- Banner en home slider: `SliderHeroOpcionFest.vue`
 
 ## Referencias
 

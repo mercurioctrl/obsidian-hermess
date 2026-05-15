@@ -1,13 +1,13 @@
 # Libre Opcion
 
 Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
-Última sincronización: 2026-05-14.
+Última sincronización: 2026-05-15.
 
 ---
 
 ## Proyecto
 
-- [[arquitectura|Arquitectura]] — Estructura de componentes, decisiones de diseño, patrones
+- [[arquitectura|Arquitectura]] — Estructura de componentes, decisiones de diseño, patrones, iframeResizer cleanup
 - [[stack|Stack]] — Tecnologías, versiones, servicios externos
 - [[changelog|Changelog]] — Registro de trabajo por fecha
 - [[memoria|Memoria]] — Consolidación de feedback, reglas y contexto del proyecto
@@ -42,15 +42,25 @@ Landing de evento e-commerce con hero video, grid de productos curados y precios
 - Rama: `feat/landing-asus-rog-requiem` (mergeada)
 
 ### ASUS TUF RX 9070 XT Black Ops 7 Special Edition
-- Banner home: `SliderHeroLimitedEdition.vue` — botón "Ver ASUS" → `/asus` (actualizado 2026-05-14)
+- Banner home: `SliderHeroLimitedEdition.vue` — botón "Ver ASUS" → `/asus`
 - Activado con `HOME_HERO_BANNER=1` en `.env`
 - Bullets estilo Apple activados con `HOME_BANNER_BULLETS_APPLE=1`
 - Rama: `LIO-618` (mergeada)
 
-## Fixes recientes (2026-05-14) — rama development
+## Fixes recientes
 
-- **iframeResizer** (`pages/producto/_id.vue`): disconnect en beforeDestroy, timeout 3s fetch, ocultar iframe si CSP lo bloquea. Ver [[memoria#Contenido A+ (aplus.libreopcion.com.ar)|Memoria > A+]]
-- **Slider home bullets**: SliderHeroLimitedEdition envuelto en `<div>` para que Slick lo cuente como slide. Ver [[memoria#Feedback (reglas de trabajo)|Memoria > Slick carousel]]
+### 2026-05-15 — iframeResizer root cause (commit `5d922efb3`)
+Bug crítico resuelto: visitar una ficha con contenido A+ rompía la navegación asincrónica posterior (búsquedas, links, todo dejaba de funcionar hasta F5).
+
+- **Causa raíz**: `disconnect()` borraba el registry `ee[id]` pero no desconectaba el `ResizeObserver` creado por iframeResizer. El observer crasheaba en el siguiente cambio de DOM, propagando un TypeError a `window.onerror` que corrompía el estado de la app.
+- **Fix**: despachar `pageInfoStop`/`parentInfoStop` como `MessageEvent` sintéticos antes de `disconnect()`, forzando que el cleanup corra mientras el registry existe.
+- Eliminado código muerto `syndicationIframe` (refs a métodos inexistentes).
+- Ver [[arquitectura#iframeResizer — Cleanup pattern|Arquitectura]] y [[memoria#Contenido A+ (aplus.libreopcion.com.ar)|Memoria]].
+
+### 2026-05-14 — Fixes UX y slider
+- iframeResizer: disconnect, AbortController 3s, timeout CSP, guard `_isDestroyed`
+- Bullets slider home: `SliderHeroLimitedEdition` envuelto en `<div>` para Slick
+- Banner ASUS: botón "Ver ASUS" + bullets Apple
 
 ## SEO & Performance
 

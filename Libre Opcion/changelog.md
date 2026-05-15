@@ -88,6 +88,24 @@ Archivos: `components/Home/Banners/SliderHeroLimitedEdition.vue`, `pages/busqued
 
 Archivos: `pages/producto/_id.vue`, `components/Home/Banners/SliderPrincipal.vue`, `components/Home/Banners/SliderHeroLimitedEdition.vue`
 
+---
+
+## 2026-05-15
+
+### Rama: development — Fix root cause iframeResizer (navegación rota)
+
+- **fix**: Causa raíz del bug "navegación asincrónica se rompe después de visitar ficha con A+" (`pages/producto/_id.vue`, commit `5d922efb3`)
+
+  **Mecanismo descubierto:** cuando el iframe A+ carga en producción, la librería child de iframeResizer v5.5.9 envía mensajes `pageInfo`/`parentInfo` que provocan que la función interna `w()` cree un `ResizeObserver` sobre `document.body` (subtree). Al navegar, `disconnect()` → `Le()` borra `ee[id]` del registry, pero el ResizeObserver sigue activo. En el siguiente cambio de DOM (Vue desmontando el componente), el observer dispara, detecta que `ee[id]` no existe, llama `l()` para limpiarse, y `l()` crashea en `ee[c].iframe` (TypeError). El error llega a `window.onerror` → `chunk-reload.client.js` → `originalOnError` → corrompía navegación.
+
+  **Fix:** despachar `pageInfoStop` y `parentInfoStop` como `MessageEvent` sintéticos ANTES de llamar `disconnect()`, para que `l()` corra mientras `ee[id]` existe y desconecte los ResizeObservers limpiamente.
+
+- **fix**: Eliminado código muerto `syndicationIframe` (desktop + mobile) que referenciaba métodos/variables inexistentes en el script (`onSyndicationIframeLoad`, `limitedEditionSyndicatedContentSrc`, `syndicationIframeHeight`)
+
+- **feat**: Almacenamiento de referencia directa al iframe en `_aPlusIframeEl` (no reactivo, prefijo `_`) para que `beforeDestroy` pueda acceder al elemento aunque `$refs.aplusIframe` ya sea null (pasa cuando el timer de 5s ejecuta antes de la destrucción)
+
+Ver [[arquitectura#iframeResizer — Cleanup pattern|Arquitectura]] y [[memoria#Contenido A+ (aplus.libreopcion.com.ar)|Memoria]].
+
 ## Ver también
 
 - [[arquitectura|Arquitectura]]

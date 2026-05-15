@@ -34,10 +34,10 @@ Proyectos para la marca Gigabyte (hardware IT).
 ## Libre Opcion
 E-commerce marketplace. Nuxt 2 SSR + API Laravel + PM2. Rama activa: `development`.
 - [[Libre Opcion/Libre Opcion|Libre Opcion]] — Índice completo
-  - [[Libre Opcion/arquitectura|Arquitectura]] — componentes, slider, aplus iframe, env vars
+  - [[Libre Opcion/arquitectura|Arquitectura]] — componentes, slider, iframeResizer cleanup pattern, env vars
   - [[Libre Opcion/stack|Stack]] — Nuxt 2, Vue 2, PM2, dependencias
-  - [[Libre Opcion/changelog|Changelog]] — Registro de trabajo por fecha (última entrada: 2026-05-14)
-  - [[Libre Opcion/memoria|Memoria]] — reglas de trabajo, gotchas, iframeResizer, env vars locales
+  - [[Libre Opcion/changelog|Changelog]] — Registro de trabajo por fecha (última entrada: 2026-05-15)
+  - [[Libre Opcion/memoria|Memoria]] — reglas de trabajo, gotchas, A+ iframe, env vars locales
 
 ## Recurso Humano
 - [[Recurso Humano/Recurso Humano|Recurso Humano]]
@@ -49,8 +49,19 @@ E-commerce marketplace. Nuxt 2 SSR + API Laravel + PM2. Rama activa: `developmen
 - [[Hogar/Hogar|Hogar]]
 
 ## Servidores y sistemas
+
+### hermess-pc
+Configuración de la PC personal: monitores, servicios, GNOME, scripts y optimizaciones.
+- [[hermess-pc/hermess-pc|hermess-pc]] — Índice
+  - [[hermess-pc/arquitectura|Arquitectura]] — servicios, stack, decisiones de config
+  - [[hermess-pc/earlyoom|earlyoom]] — Protección contra OOM (RAM llena → no congelamiento)
+  - [[hermess-pc/monitores|Monitores]] — 3 monitores, layout, fix ventanas en BenQ
+  - [[hermess-pc/sync-curls|sync-curls]] — Sincronización horaria de endpoints Laravel
+  - [[hermess-pc/changelog|Changelog]]
+  - [[hermess-pc/memoria|Memoria de Claude]]
+
+### Otros servidores
 - [[aplus-server/aplus-server|aplus-server]]
-- [[hermess-pc/hermess-pc|hermess-pc]]
 - [[pega/pega|pega]]
 - [[Planilla Acciones Bully/Planilla Acciones Bully|Planilla Acciones Bully]]
 
