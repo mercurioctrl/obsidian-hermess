@@ -135,3 +135,29 @@ Ver [[stack]] para versiones completas.
 - [[modulo-dashboard-lo]] — Dashboard Libre Opción
 - [[feature-asignacion-oc]] — Feature de Asignación OC ↔ Venta
 - [[stack]] — Dependencias y versiones
+
+## Modelo canónico ERP
+
+Mapeo conceptual de los nombres legacy en `NewBytes_DBF.dbo` para que nadie se pierda con la nomenclatura:
+
+| Concepto | Tablas | Detalle |
+|---|---|---|
+| **Compras** (OCs a proveedores) | `pedprot` + `pedprol` + `pedproi` | cabecera (proveedor, almacén, tracking, arrivalDate) + líneas (SKU, qty, FOB unit) + **cargos extra** (camion, percepciones) |
+| **Ventas** (a clientes) | `pedclit` + `pedclil` | cabecera (cliente, incoterm, forwarder, proforma) + líneas |
+| **Stock** | `stocks` | Por `cCodAlm`/`ID_ALMACEN` (NO tiene `companyCode`) — buckets: `nstock`, `nstock_ingresando`, `nstock_reserva_pedidos`, `nstock_postventa`, `nstock_virtual` |
+| **Linkeo compra↔venta** | `pedclil_oc_asignacion` | [[feature-asignacion-oc]] |
+| **CFE Uruguay** | `FP_FactWebCliEncabezado_Uy` + `FP_FactWebCliDetalle_Uy` + `FP_DocumentosUY` + `FP_ComprobantesUY` | tipoCfe 101=eTicket / 102=NC / 103=ND, IVA 22% |
+| **Forwarders** | `forwarders` | DHL, Peniel International (Miami)…, con `companyCode` |
+| **Empresas** | `FP_Empresas` | 11 activas — ver [[contexto#Empresas activas (FP_Empresas)]] |
+
+**Gotcha**: `pedproi` no es solo impuestos — guarda también cargos extra del pedido de compra (`cdescrip='camion'` $50/$200). Linkea a `pedprot.nNumPed`, NO a `pedclit`. Ver [[contexto#Gotcha: pedproi no es solo impuestos]].
+
+## Features documentados
+
+- [[feature-asignacion-oc|Asignación OC ↔ Venta (pedclil ↔ pedprol)]]
+- [[feature-asignacion-oc-cookbook|Cookbook Asignación OC]]
+- [[feature-laset-import|Laset Import Framework (companyCode=11)]] — staging para reconciliar planilla FOB con ERP
+
+## Multi-empresa
+
+El sistema soporta **11 empresas activas** filtrando por `companyCode` (`NewBytes_DBF.dbo.FP_Empresas`). NO solo NB/NBElectric/Libreopción — también OXXEN, NBGLOBAL, MUGELLO, **LASET** (CODEMP=11, importadora uruguaya), etc. Ver [[contexto#Empresas activas (FP_Empresas)]].

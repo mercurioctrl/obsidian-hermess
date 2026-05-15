@@ -90,3 +90,19 @@ Contexto acumulado de sesiones de trabajo con Claude en este proyecto.
 - [[feature-asignacion-oc]] — Feature actual
 - [[modulo-dashboard-lo]] — Feature reciente
 - [[modulo-makesale]] / [[modulo-removesale]]
+
+- **[[feature-laset-import|Laset Import Framework]]** en branch `lasetImportFramework` (ambos repos)
+  - CompanyCode=11. Importadora uruguaya — ver [[contexto#Empresas activas (FP_Empresas)]].
+  - **Regla cero**: nunca modificar tablas ERP existentes (`pedprot`/`pedprol`/`pedproi`/`pedclit`/`pedclil`/`stocks`/`FP_*`/`forwarders`/`rebates`). Solo lectura. Toda metadata de matching vive en `laset_import_staging.matched_*`. Ver [[contexto#Regla cero: tablas ERP son read-only]].
+  - **Modelo canónico ERP**: compras = `pedprot` + `pedprol` + `pedproi` (incluye cargos extra), ventas = `pedclit` + `pedclil`, stock = `stocks` (por almacén, sin `companyCode`). Ver [[contexto#Modelo canónico ERP (compras / ventas / stock)]].
+  - **Gotcha `pedproi`**: NO es solo impuestos — guarda cargos extra del pedido de compra (`cdescrip='camion'` $50/$200). Linkea a `pedprot.nNumPed`, NO a `pedclit`. 158 rows total para companyCode=11.
+  - **Gotcha `stocks`**: no tiene `companyCode`. Filtrar por almacenes Laset: DOM, BON, GRI, SAF, URU, ASI.
+  - **Gotcha `rebates` huérfana**: 12 rows, schema primitivo, sin `companyCode`, creada con `NewTable` vacía el 2025-11-01. Restos de intento abandonado. NO usar.
+  - **Schema staging creado 2026-05-14**: `laset_import_batches` (cabecera por carga) + `laset_import_staging` (67 cols crudas NVARCHAR lossless + 8 cols matching con CHECK enum). Scripts `database/sql/2026_05_14_001_{create,drop}_laset_import_staging.sql`. Aplicados.
+  - **Identidad contable**: `SUM(pedprol.nCanPed) − SUM(pedclil.ncanped) = stocks.nstock + nstock_ingresando` por SKU+almacén+companyCode. Sanity check para reconciliación.
+  - **CFE Uruguay ya implementado**: tablas `FP_FactWebCliEncabezado_Uy` (179 rows), `FP_FactWebCliDetalle_Uy` (1411), `FP_DocumentosUY` (6), `FP_ComprobantesUY` (9). IVA 22%, DOL, tipoCfe 101=eTicket/102=NC/103=ND. Adendas confirman beneficiario "Laset Sociedad Anonima". Es la mitad downstream del flujo de Laset ya migrada.
+  - **Forwarders Laset**: 84 rows con `companyCode=11` en tabla `forwarders` — DHL, Peniel International (Miami), etc.
+  - **Insight planilla**: cada fila es 1 venta ↔ 1 compra (Qty=CANTIDAD 100% del tiempo). 339 de 438 Vendor Invoices se repiten en >1 fila → split manual antes de cargar al Excel.
+  - **Sistema soporta 11 empresas activas**, no solo NB/NBElectric/LO como decía el CLAUDE.md histórico. Ver [[contexto#Empresas activas (FP_Empresas)]].
+  - Próximos pasos: cargador PHP que parsee `docs/laser.xlsx` → poblar staging → reconciliación heurística → migración del delta.
+  - Documentación canónica: `docs/laset-import-framework.md` (repo) y [[feature-laset-import]] (Obsidian).

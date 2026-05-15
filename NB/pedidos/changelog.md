@@ -188,3 +188,24 @@ Archivos: `AuthRepository.php`, filtros de Sellers/Shipping/Payment en frontend
 Archivos: `Services/Client/ClientParametersService.php`, `Repositories/Product/ProductRepository.php`, `Repositories/Order/OrderList/OrderListRepository.php`, `Repositories/Order/OrderRepository.php`
 
 Rama: `hotfix-salesperson-and-ncostreprom-ccodage` (basada en `Development`, pusheada a origin)
+
+## 2026-05-14
+
+Sesión de **descubrimiento + scaffolding del [[feature-laset-import|Laset Import Framework]]** (companyCode=11). Branch `lasetImportFramework` creada en ambos repos basada en `Development`/`development` recién sincronizadas.
+
+- discovery DB: identificadas las 11 empresas activas en `FP_Empresas` (no solo NB/NBElectric/LO como decía el `CLAUDE.md`). Laset = CODEMP 11, importadora uruguaya con `defaultIncoterms=14`.
+- discovery ERP: mapeo canónico **compras = `pedprot` + `pedprol` + `pedproi`**, **ventas = `pedclit` + `pedclil`**, **stock = `stocks`** (filtrado por almacén — no tiene `companyCode`). `pedclil_oc_asignacion` linkea ambos. Estado actual companyCode=11: 386 compras + 363 ventas + 179 CFE Uy + 84 forwarders + 158 cargos extra ya migrados.
+- gotcha confirmado: **`pedproi` no es solo impuestos** — guarda también cargos extra del pedido de compra (`cdescrip='camion'` $50/$200). Linkea a `pedprot.nNumPed`, NO a `pedclit`.
+- gotcha confirmado: tabla `rebates` (12 rows) + `NewTable` (0 rows) son **huérfanas** — restos de intento abandonado del 2025-11-01. Sin `companyCode`. NO usar.
+- discovery CFE Uruguay: las 4 tablas `FP_*_Uy` (Encabezado, Detalle, Documentos, Comprobantes) son **la mitad downstream de Laset ya implementada** — emiten CFE uruguayos con IVA 22% en DOL a clientes LATAM. 179 facturas + 1411 líneas con adendas que confirman beneficiario "Laset Sociedad Anonima".
+- creadas tablas staging: **`laset_import_batches`** (cabecera por carga, 9 cols) + **`laset_import_staging`** (1 fila por fila de Excel, 67 cols crudas en NVARCHAR lossless + 8 cols de matching con CHECK enum). En `NewBytes_DBF.dbo`. 5 índices: batch, sku, customer_invoice, vendor_invoice, status.
+- scripts DDL versionados: `2026_05_14_001_create_laset_import_staging.sql` + drop simétrico. Aplicados al SQL Server.
+- regla cero del feature: **NUNCA modificar tablas ERP existentes** (`pedprot`/`pedprol`/`pedproi`/`pedclit`/`pedclil`/`stocks`/`FP_*`/`forwarders`). Solo lectura via JOIN; toda metadata de matching vive en `laset_import_staging.matched_*`.
+- bug menor recuperado: `git branch -D development` en backend (case-insensitive macOS) borró también `Development`. Recuperado con `git reset --hard origin/Development`.
+- documentación: `docs/laset-import-framework.md` (nuevo, 250+ líneas), sección "Laset Import Framework" agregada al `CLAUDE.md` del repo.
+
+Archivos: `docs/laset-import-framework.md`, `api-rest-pedidos-laravel/app/database/sql/2026_05_14_001_{create,drop}_laset_import_staging.sql`, `api-rest-pedidos-laravel/app/database/sql/README.md` (entrada nueva), `CLAUDE.md`.
+
+Branch: `lasetImportFramework` (ambos repos, basada en development/Development sincronizadas).
+
+Próximo paso: cargador PHP que parsee `docs/laser.xlsx` y popule la staging, después reconciliación.
