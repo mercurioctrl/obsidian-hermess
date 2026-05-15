@@ -1,47 +1,22 @@
-# Blu Inc Studio
+# Blu — BLU Digital Agency
 
-Base de conocimiento de la empresa. Dominio público: **blustudioinc.com** (NO blustudiogroup.com — la razón social "BLU STUDIO GROUP LLC" confunde).
+Proyectos y áreas de BLU Digital Agency.
 
 ## Proyectos
 
-### blu-web-v1 — Sitio web corporativo
-Nuxt 3 + Vue 3 + SCSS. Frontend público + panel admin + propuestas comerciales por token. Consume API Laravel (`sitio-api-rest-v1-laravel`).
-- [[blu-web-v1/blu-web-v1|blu-web-v1]] (índice)
-- [[blu-web-v1/arquitectura|Arquitectura]]
-- [[blu-web-v1/stack|Stack]]
-- [[blu-web-v1/base-de-conocimiento|Base de Conocimiento]]
-- [[blu-web-v1/changelog|Changelog]]
-- [[blu-web-v1/memoria|Memoria]]
+### [[blu-web-v1/blu-web-v1|blu-web-v1]] — Sitio web + CMS
+- [[blu-web-v1/arquitectura|arquitectura]] · [[blu-web-v1/stack|stack]] · [[blu-web-v1/changelog|changelog]]
+- [[blu-web-v1/base-de-conocimiento|base de conocimiento]] · [[blu-web-v1/memoria|memoria]]
 
-### bluMiniErp — ERP interno
-Nuxt 3 + Laravel 11 + MySQL 8 + Redis + Nginx en Docker.
-- [[bluMiniErp/bluMiniErp|bluMiniErp]] (índice)
-- [[bluMiniErp/Stack e Infraestructura|Stack e Infraestructura]]
-- [[bluMiniErp/Base de Datos|Base de Datos]]
-- [[bluMiniErp/Backend - Modelos|Backend - Modelos]]
-- [[bluMiniErp/Backend - API|Backend - API]]
-- [[bluMiniErp/Frontend|Frontend]]
-- [[bluMiniErp/Componentes UI|Componentes UI]]
-- [[bluMiniErp/Design Tokens|Design Tokens]]
-- [[bluMiniErp/Layout System|Layout System]]
-- [[bluMiniErp/Page Templates|Page Templates]]
-- [[bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
-- [[bluMiniErp/Reglas de Negocio|Reglas de Negocio]]
-- [[bluMiniErp/Medios de Pago|Medios de Pago]]
-- [[bluMiniErp/Modulo Mercury Invoicing|Modulo Mercury Invoicing]]
-- [[bluMiniErp/Modulo WhatsApp Inbox|Modulo WhatsApp Inbox]]
-- [[bluMiniErp/Modulo Personal|Modulo Personal]]
-- [[bluMiniErp/Modulo Permisos|Modulo Permisos]]
-- [[bluMiniErp/Errores Comunes|Errores Comunes]]
-- [[bluMiniErp/changelog|Changelog]]
-- [[bluMiniErp/memoria|Memoria]]
+### [[bluMiniErp/bluMiniErp|bluMiniErp]] — Mini ERP interno
+- [[bluMiniErp/Backend - API|Backend API]] · [[bluMiniErp/Backend - Modelos|Modelos]] · [[bluMiniErp/Base de Datos|Base de Datos]]
+- [[bluMiniErp/Frontend|Frontend]] · [[bluMiniErp/Componentes UI|Componentes UI]] · [[bluMiniErp/Design Tokens|Design Tokens]]
+- [[bluMiniErp/Layout System|Layout System]] · [[bluMiniErp/Page Templates|Page Templates]]
+- [[bluMiniErp/Medios de Pago|Medios de Pago]] · [[bluMiniErp/Modulo Mercury Invoicing|Mercury Invoicing]]
+- [[bluMiniErp/Modulo Permisos|Permisos]] · [[bluMiniErp/Modulo Personal|Personal]] · [[bluMiniErp/Modulo WhatsApp Inbox|WhatsApp Inbox]]
+- [[bluMiniErp/Reglas de Negocio|Reglas de Negocio]] · [[bluMiniErp/Stack e Infraestructura|Stack e Infra]]
+- [[bluMiniErp/Errores Comunes|Errores Comunes]] · [[bluMiniErp/changelog|changelog]] · [[bluMiniErp/memoria|memoria]]
 
-## Propuestas comerciales activas
-
-Sirvas desde `blu-web-v1` en `/propuestas/<slug>?token=<token>`. Catálogo y tokens
-hardcoded en `pages/propuestas/[slug].vue`. Detalles en
-[[blu-web-v1/arquitectura#Propuestas comerciales detrás de token|arquitectura]].
-
-| Cliente | Slug | Notas |
-|---------|------|-------|
-| Gigabyte | `gigabyte` | Mayo 2026, foco Blu.Marketing, naranja `#FF6600`, fuente Aldrich |
+### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
+- [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]]
+- **Equipo:** [[rrhh/equipo/catriel-mercurio|Catriel]] · [[rrhh/equipo/alejandra-guidobono|Alejandra]] · [[rrhh/equipo/belu-ontivero|Belu]] · [[rrhh/equipo/barbara-carrillo|Bárbara]] · [[rrhh/equipo/ezequiel-manzano|Ezequiel]] · [[rrhh/equipo/guillermo-avila|Guillermo]] · [[rrhh/equipo/marbe-moreno|Marbe]] · [[rrhh/equipo/emanuel-ferreyra|Emanuel]] · [[rrhh/equipo/franco-callipo|Franco]] · [[rrhh/equipo/sebastian-fontan|Sebastián]]
