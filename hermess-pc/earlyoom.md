@@ -18,6 +18,7 @@ El kernel OOM killer actúa demasiado tarde — para cuando interviene, el siste
 
 ```bash
 EARLYOOM_ARGS="-m 5 -s 10 -r 60 \
+  -N /usr/local/bin/earlyoom-notify.sh \
   --prefer '(chrome|chromium|slack|thunderbird|java)' \
   --avoid '(gnome-shell|bash|zsh|fish|sshd|systemd|warp-terminal|mysqld|dockerd|qemu-system|containerd|libvirtd)'"
 ```
@@ -33,6 +34,32 @@ EARLYOOM_ARGS="-m 5 -s 10 -r 60 \
 
 - **Prefiere matar primero:** Chrome, Chromium, Slack, Thunderbird, Java
 - **Nunca mata:** GNOME Shell, bash/zsh/fish, sshd, systemd, Warp Terminal, MySQL, Docker, QEMU, containerd, libvirtd
+
+---
+
+## Notificaciones de escritorio
+
+**Script:** `/usr/local/bin/earlyoom-notify.sh`
+
+Envía una notificación de escritorio cada vez que earlyoom mata un proceso.
+
+- **SIGTERM** → urgency `normal`
+- **SIGKILL** → urgency `critical`
+
+### Detalle técnico
+
+earlyoom corre como servicio de sistema (root), por lo que no tiene acceso directo a la sesión D-Bus del usuario. La solución es usar `su -c` con el socket de sesión explícito:
+
+```bash
+su -c "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus \
+  notify-send --urgency='$URGENCY' --icon=dialog-warning \
+  'earlyoom: proceso eliminado' \
+  'Señal: $EARLYOOM_SIGNAL\nProceso: $EARLYOOM_NAME (PID $EARLYOOM_PID)'" \
+  hermess
+```
+
+> `sudo -u hermess notify-send` **no funciona** — intenta lanzar `dbus-launch` y falla.
+> `su -c` con el socket `/run/user/1000/bus` explícito sí funciona.
 
 ---
 
@@ -75,6 +102,10 @@ cat /proc/$(pgrep dockerd)/oom_score_adj
 
 # Reiniciar si se cambia config
 sudo systemctl restart earlyoom
+
+# Probar notificación manualmente
+sudo EARLYOOM_PID=99999 EARLYOOM_NAME="chrome" EARLYOOM_SIGNAL="SIGTERM" \
+  /usr/local/bin/earlyoom-notify.sh
 ```
 
 ---
