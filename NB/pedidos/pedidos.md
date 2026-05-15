@@ -1,6 +1,6 @@
 # Pedidos
 
-Sistema de gestión de pedidos de **NB** (New Bytes). Aplicación web interna para vendedores y administradores.
+Sistema de gestión de pedidos de **NB** (New Bytes). Aplicación web interna para vendedores y administradores. Multi-empresa: soporta las **11 empresas activas** del grupo (NB, NBElectric, Libreopción, **Laset**, Mugello, Oxxen, etc.) filtrando por `companyCode`.
 
 ## Stack
 
@@ -12,25 +12,30 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 
 ## Notas del proyecto
 
-- [[arquitectura|Arquitectura]] — Estructura, patrones, controllers, modelos y servicios
+- [[arquitectura|Arquitectura]] — Estructura, patrones, controllers, modelos, servicios, modelo canónico ERP
 - [[stack|Stack]] — Tecnologías, versiones y dependencias
 - [[changelog|Changelog]] — Registro de cambios por fecha
-- [[contexto|Contexto]] — Reglas de negocio, gotchas y decisiones
+- [[contexto|Contexto]] — Reglas de negocio, gotchas, empresas, regla cero ERP
 - [[memoria|Memoria]] — Contexto acumulado de sesiones con Claude
 - [[modulo-makesale|MakeSale]] — Flujo de ejecución de pedidos (pedido → remito)
 - [[modulo-removesale|RemoveSale]] — Flujo de reversión de remitos
 - [[modulo-dashboard-lo|Dashboard Libre Opción]] — Estadísticas exclusivas del marketplace LO
 - [[feature-asignacion-oc|Feature: Asignación OC ↔ Venta]] — Trazabilidad pedclil ↔ pedprol antes de serializar
 - [[feature-asignacion-oc-cookbook|Cookbook Asignación OC]] — Recetas, SQL de debug, curl examples y mapa de archivos
+- [[feature-laset-import|Feature: Laset Import Framework]] — Importación de operación FOB de Laset (CODEMP=11) desde planilla histórica al ERP existente
 
 ## Repos
 
 - Backend: `New-Bytes/api-rest-pedidos-laravel` (branch principal: `Development`)
-- Frontend: `New-Bytes/pedidos-web-app-v1` (branch principal: `Development`)
+- Frontend: `New-Bytes/pedidos-web-app-v1` (branch principal: `development`)
 
-## Multi-marca
+## Multi-empresa
 
-El sistema soporta tres marcas: **NB**, **NBElectric** y **Libreopción**. Se filtran por `companyCode` en la mayoría de endpoints y tablas.
+El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_Empresas`). Las históricamente más mencionadas son **NB**, **NBElectric** y **Libreopción**, pero también hay **OXXEN**, **NBGLOBAL**, **DIGITO BINARIO**, **CCRT**, **SUC 10**, **MUGELLO**, **PISOS Y REVESTIMIENTOS** y **LASET** (única importadora — ver [[feature-laset-import]]). Ver [[contexto#Empresas activas (FP_Empresas)]] para la tabla completa.
+
+## Regla cero — tablas ERP read-only
+
+Las tablas legacy del ERP (`pedprot`, `pedprol`, `pedproi`, `pedclit`, `pedclil`, `stocks`, `FP_*`, `forwarders`, `rebates`) **nunca se modifican** desde features nuevos. Se leen via `SELECT/JOIN`. Toda metadata de cualquier feature vive en tablas nuevas con prefijo del feature (`pedclil_oc_asignacion`, `laset_import_*`). Ver [[contexto#Regla cero: tablas ERP son read-only]].
 
 ---
-*Última sincronización: 2026-05-12 (salespersonId → ccodage, removida restricción ncosteprom, cupón LO, arreglo join albclitshipping)*
+*Última sincronización: 2026-05-14 (Laset Import Framework — discovery + staging + docs)*

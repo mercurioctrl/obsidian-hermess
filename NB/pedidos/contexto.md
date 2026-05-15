@@ -123,3 +123,67 @@ Archivo: `Services/Client/ClientParametersService.php` método `buildUpdateColum
 ## Artículos sin costo promedio (`ncosteprom`)
 
 La restricción `A.ncosteprom > 0` fue removida del endpoint `GET /v1/items`. Artículos recién cargados o con costo en 0 ahora son visibles en el buscador. Si en el futuro se necesita filtrar por costo, agregar el filtro como query param opcional, no hardcodeado.
+
+## Empresas activas (FP_Empresas)
+
+El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_Empresas`), no solo NB/NBElectric/Libreopción como sugiere el README histórico:
+
+| CODEMP | Nombre | Notas |
+|---:|---|---|
+| 02 | OXXEN SRL | factura PSO |
+| 03 | NBGLOBAL | DOL |
+| 04 | NB DISTRIBUIDORA MAYORISTA SRL | NB principal, agente_ret |
+| 05 | DIGITO BINARIO SRL | DB, agente_ret |
+| 06 | CCRT (Consorcio Red Tecnología) | |
+| 07 | SUC 10 | |
+| 08 | MUGELLO SRL | |
+| 09 | NBElectric | misma CNIF que NB(04), agente_ret |
+| 10 | PISOS Y REVESTIMIENTOS | |
+| **11** | **LASET** | CNIF 12-dígitos (Uruguay), DOL, `defaultIncoterms=14`, **única importadora** — ver [[feature-laset-import]] |
+| 12 | Libre Opción | |
+
+Modelo: `app/Models/Company.php` → `protected $table = 'NewBytes_DBF.dbo.FP_Empresas '`.
+
+## Regla cero: tablas ERP son read-only
+
+**NUNCA emitir** `UPDATE`, `DELETE`, `ALTER TABLE`, `DROP COLUMN`, `INSERT` (excepto en flujos explícitos como MakeSale/Migrate) sobre las tablas existentes del ERP: `pedprot`, `pedprol`, `pedproi`, `pedclit`, `pedclil`, `stocks`, `FP_Empresas`, `FP_FactWebCliEncabezado_Uy`, `FP_FactWebCliDetalle_Uy`, `FP_DocumentosUY`, `FP_ComprobantesUY`, `forwarders`, `rebates`, etc. Tampoco crear vistas/triggers que escriban sobre ellas.
+
+**Por qué:** el ERP legacy maneja datos críticos de producción cargados desde múltiples sistemas. Cambios pueden romper procesos externos (FacturaPlus, scripts de DBA, integraciones no visibles desde el monorepo).
+
+**Cómo aplicar:** features nuevos viven en tablas nuevas con prefijo del feature (`laset_import_*`, `pedclil_oc_asignacion`). El cruce con ERP es solo lectura via `SELECT/JOIN`. Resultados del cruce se persisten en la propia tabla nueva.
+
+## Modelo canónico ERP (compras / ventas / stock)
+
+| Concepto | Tablas | Detalle |
+|---|---|---|
+| **Compras** (OCs a proveedores) | `pedprot` + `pedprol` + `pedproi` | Cabecera + líneas + cargos extra (`cdescrip='camion'`) |
+| **Ventas** (a clientes) | `pedclit` + `pedclil` | Cabecera + líneas |
+| **Stock** | `stocks` | Por `cCodAlm`/`ID_ALMACEN` — NO tiene `companyCode` |
+| **Linkeo compra↔venta** | `pedclil_oc_asignacion` | [[feature-asignacion-oc]] |
+| **CFE Uruguay (output)** | `FP_FactWebCliEncabezado_Uy` + `FP_FactWebCliDetalle_Uy` + `FP_DocumentosUY` + `FP_ComprobantesUY` | tipoCfe 101=eTicket / 102=NC / 103=ND, IVA 22% |
+
+### Gotcha: `pedproi` no es solo impuestos
+
+Pese al nombre "proi" (parece "proveedor impuestos"), guarda **además de percepciones IIBB** los **cargos extra del pedido de compra**: `cdescrip='camion'` $50/$200, etc. Linkea a `pedprot.nNumPed` via `nnumped`, **NO a `pedclit`**. 158 rows totales.
+
+### Gotcha: `stocks` sin `companyCode`
+
+Filtrar solo por `cCodAlm`/`ID_ALMACEN`. Cada empresa tiene su set de almacenes. Para Laset: DOM, BON, GRI, SAF, URU, ASI.
+
+### Gotcha: `rebates` + `NewTable` huérfanas
+
+Creadas el 2025-11-01 con schema primitivo, sin `companyCode`. Restos de intento abandonado de modelar rebates. **NO usar**. Modelar nuevo si se necesita.
+
+### Identidad contable de chequeo
+
+`SUM(pedprol.nCanPed) − SUM(pedclil.ncanped) = stocks.nstock + nstock_ingresando` por SKU + almacén + `companyCode`. Si no cierra, hay bug previo.
+
+## macOS y branches case-insensitive
+
+El backend usa branch `Development` (mayúscula), el frontend `development` (minúscula). En macOS con HFS+/APFS default (case-insensitive), `git branch -D development` puede borrar también `Development`. El resultado: rama queda "sin commits", `origin/Development [gone]`, archivos todos como `A` en status — pero `origin/Development` sigue intacto.
+
+Recuperación:
+```
+git reset --hard origin/Development
+git branch --set-upstream-to=origin/Development Development
+```

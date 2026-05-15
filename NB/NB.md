@@ -49,7 +49,7 @@ Sistema de inventario (gestión de productos, stock, kits, precios, scraping). F
 - [[NB/inventario/memoria|Memoria]]
 
 ## Pedidos
-Sistema de gestión de pedidos. Laravel 9 + Nuxt 2 + SQL Server.
+Sistema de gestión de pedidos multi-empresa (NB / NBElectric / Libreopción / **Laset** / Mugello / Oxxen / etc.). Laravel 9 + Nuxt 2 + SQL Server.
 - [[NB/pedidos/pedidos|Pedidos]]
 - [[NB/pedidos/arquitectura|Arquitectura]]
 - [[NB/pedidos/stack|Stack]]
@@ -59,6 +59,7 @@ Sistema de gestión de pedidos. Laravel 9 + Nuxt 2 + SQL Server.
 - [[NB/pedidos/modulo-dashboard-lo|Dashboard Libre Opción]]
 - [[NB/pedidos/feature-asignacion-oc|Feature: Asignación OC ↔ Venta]]
 - [[NB/pedidos/feature-asignacion-oc-cookbook|Cookbook Asignación OC]]
+- [[NB/pedidos/feature-laset-import|Feature: Laset Import Framework]]
 - [[NB/pedidos/memoria|Memoria]]
 - [[NB/pedidos/changelog|Changelog]]
 
