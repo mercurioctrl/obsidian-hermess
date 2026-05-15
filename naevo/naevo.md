@@ -38,4 +38,4 @@ Ver [[stack|Stack y dependencias]] para el detalle.
 
 ---
 
-_Última sincronización: 2026-05-13_
+_Última sincronización: 2026-05-14_

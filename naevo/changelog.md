@@ -275,3 +275,36 @@ Reemplazada la banda de texto (Formulación · Trazabilidad · etc.) por 5 icono
 `REDIS_PORT=6382` (puerto del host) causaba `Connection refused` en el backend durante login. Corregido a `REDIS_PORT=6379` (puerto interno de Docker). El error solo aparece en el log — desde `tinker` Redis siempre respondía porque usaba la conexión directa al container.
 
 Archivos principales: `frontend/pages/home/edit.vue` (nuevo), `frontend/components/home/HeroBanner.vue`, `frontend/components/home/FeaturedProducts.vue`, `frontend/components/home/ShopByCategory.vue`, `backend/app/Http/Controllers/Api/PublicSettingController.php`
+
+## 2026-05-14
+
+### Editor visual — secciones completas + reordenamiento
+
+Completado el editor visual de la home iniciado el día anterior.
+
+**Secciones que se sumaron al editor:**
+- **Calidad** — título, subtítulo, pledge + edición individual de trust badges y certificaciones (via )
+- **Newsletter** — título, descripción, mensaje de éxito al suscribirse
+- **Rewards** — título, intro, CTA + 3 pasos (título y texto de cada uno)
+- **OurStandards** — comentada en `index.vue` y `edit.vue` (temporalmente oculta)
+
+**Reordenamiento de secciones:**
+- Cada sección reordenable (products, categories, quality, newsletter, rewards) tiene flechas ↑↓ siempre visibles en la esquina superior derecha
+- Al mover una sección: swap inmediato en el array `sectionOrder` + `PUT /admin/settings` con `home_section_order` (string CSV)
+- `index.vue` lee el orden en SSR y renderiza en ese orden via `<template v-for>`
+- Flechas con `@click.stop` para no abrir el panel de edición al reordenar
+
+**PublicSettingController expandido:**
+Todas las claves CMS del home agregadas al whitelist público:
+`home_quality_title/subtitle/pledge`, `home_newsletter_title/description/success`,
+`home_rewards_title/intro/cta`, `home_rewards_1/2/3_title/text`, `home_section_order`
+
+**Branding:**
+- Tipografía display Umbra via CDNFonts
+- Reemplazo sistemático de NAEVO → NÆVO (con Æ) en todas las páginas y componentes
+
+Archivos principales: `frontend/pages/home/edit.vue` (grande), `frontend/pages/index.vue`,
+`backend/app/Http/Controllers/Api/PublicSettingController.php`,
+`frontend/components/home/BestQuality.vue`, `NewsletterSection.vue`, `RewardsSection.vue`
+
+Commits: `e5b3894` (branding Umbra + NÆVO), `59acad5` (editor completo + reordenamiento)

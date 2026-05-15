@@ -31,7 +31,7 @@ Contexto de negocio, decisiones del usuario y TODOs pendientes. No incluye cosas
 - **Integraciones reales de shipping carriers** — OCA/Andreani/Entregar tienen costos simulados. Implementar APIs reales cuando corresponda.
 - **Doble opt-in en newsletter** — hoy es suscripción directa.
 - **Fotos lifestyle más alineadas a la marca** — hoy son de Unsplash stock (free license). Cuando haya fotos profesionales NAEVO, subir desde el editor visual `/home/edit` (ya funciona el upload).
-- **Expandir editor visual** — las secciones Calidad, Newsletter, Rewards y Estándares muestran badge "texto fijo". Se pueden migrar a `settings` siguiendo el mismo patrón de `home_products_title`.
+- ~~**Expandir editor visual**~~ ✅ Completado 2026-05-14 — Calidad, Newsletter y Rewards ahora editables. OurStandards comentada. Reordenamiento con flechas ↑↓ también implementado (`home_section_order` en settings).
 
 ## Reglas del usuario (preferencias personales)
 

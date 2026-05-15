@@ -1,7 +1,7 @@
 # Libre Opcion
 
 Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
-Última sincronización: 2026-05-12.
+Última sincronización: 2026-05-14.
 
 ---
 
@@ -42,8 +42,15 @@ Landing de evento e-commerce con hero video, grid de productos curados y precios
 - Rama: `feat/landing-asus-rog-requiem` (mergeada)
 
 ### ASUS TUF RX 9070 XT Black Ops 7 Special Edition
-- Banner home: `SliderHeroLimitedEdition.vue` (activado con `HOME_HERO_BANNER=1`)
+- Banner home: `SliderHeroLimitedEdition.vue` — botón "Ver ASUS" → `/asus` (actualizado 2026-05-14)
+- Activado con `HOME_HERO_BANNER=1` en `.env`
+- Bullets estilo Apple activados con `HOME_BANNER_BULLETS_APPLE=1`
 - Rama: `LIO-618` (mergeada)
+
+## Fixes recientes (2026-05-14) — rama development
+
+- **iframeResizer** (`pages/producto/_id.vue`): disconnect en beforeDestroy, timeout 3s fetch, ocultar iframe si CSP lo bloquea. Ver [[memoria#Contenido A+ (aplus.libreopcion.com.ar)|Memoria > A+]]
+- **Slider home bullets**: SliderHeroLimitedEdition envuelto en `<div>` para que Slick lo cuente como slide. Ver [[memoria#Feedback (reglas de trabajo)|Memoria > Slick carousel]]
 
 ## SEO & Performance
 
@@ -64,5 +71,3 @@ Landing de evento e-commerce con hero video, grid de productos curados y precios
 - [[Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto|Gestión de imágenes reseller (frontend)]]
 - [[Libre Opcion/tareas/APP - Fix - Tooltip de codigo postal aparece al cargar el sitio|Fix tooltip código postal]]
 - [[Libre Opcion/tareas/API - Refactor - Migrar recurso de preguntas y respuestas a v4|Migrar preguntas y respuestas a v4]]
-- [[Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos|Estadísticas categorización]]
-- [[Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría|Recategorizar productos]]

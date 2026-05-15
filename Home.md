@@ -1,4 +1,3 @@
-
 # Home
 
 Índice general de la bóveda de conocimiento.
@@ -33,7 +32,12 @@ Proyectos para la marca Gigabyte (hardware IT).
 - [[NB/NB|NB]]
 
 ## Libre Opcion
-- [[Libre Opcion/Libre Opcion|Libre Opcion]]
+E-commerce marketplace. Nuxt 2 SSR + API Laravel + PM2. Rama activa: `development`.
+- [[Libre Opcion/Libre Opcion|Libre Opcion]] — Índice completo
+  - [[Libre Opcion/arquitectura|Arquitectura]] — componentes, slider, aplus iframe, env vars
+  - [[Libre Opcion/stack|Stack]] — Nuxt 2, Vue 2, PM2, dependencias
+  - [[Libre Opcion/changelog|Changelog]] — Registro de trabajo por fecha (última entrada: 2026-05-14)
+  - [[Libre Opcion/memoria|Memoria]] — reglas de trabajo, gotchas, iframeResizer, env vars locales
 
 ## Recurso Humano
 - [[Recurso Humano/Recurso Humano|Recurso Humano]]
@@ -47,9 +51,18 @@ Proyectos para la marca Gigabyte (hardware IT).
 ## Servidores y sistemas
 - [[aplus-server/aplus-server|aplus-server]]
 - [[hermess-pc/hermess-pc|hermess-pc]]
-- [[naevo/naevo|naevo]]
 - [[pega/pega|pega]]
 - [[Planilla Acciones Bully/Planilla Acciones Bully|Planilla Acciones Bully]]
+
+## naevo
+E-commerce de suplementos NÆVO. Nuxt 3 SSR + Laravel 11 + Docker.
+- [[naevo/naevo|naevo]] — Índice del proyecto
+  - [[naevo/arquitectura|Arquitectura]]
+  - [[naevo/stack|Stack]]
+  - [[naevo/modulos|Módulos]]
+  - [[naevo/changelog|Changelog]]
+  - [[naevo/contexto|Contexto]]
+  - [[naevo/memoria|Memoria]]
 
 ---
 
