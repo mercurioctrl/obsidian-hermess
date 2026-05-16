@@ -106,3 +106,144 @@ Contexto acumulado de sesiones de trabajo con Claude en este proyecto.
   - **Sistema soporta 11 empresas activas**, no solo NB/NBElectric/LO como decía el CLAUDE.md histórico. Ver [[contexto#Empresas activas (FP_Empresas)]].
   - Próximos pasos: cargador PHP que parsee `docs/laser.xlsx` → poblar staging → reconciliación heurística → migración del delta.
   - Documentación canónica: `docs/laset-import-framework.md` (repo) y [[feature-laset-import]] (Obsidian).
+
+- **[[feature-laset-import|Laset Import]] post aggregate matching (2026-05-14 PM)**:
+  - **Decisión**: planilla = fuente de verdad para comp=11 (ERP comp=11 ex-carga-fallida). Ver [[contexto#Laset: planilla = fuente de verdad]].
+  - **Regla de aislamiento**: cualquier `DELETE`/`INSERT` sobre tablas ERP durante este feature debe llevar `WHERE companyCode = 11` SIEMPRE. Otras companies intocables. Ver [[contexto#Laset: regla de aislamiento companyCode != 11]].
+  - **Bridge SKU**: `articulo.ID_PRODUCTO` (varchar) = SKU fabricante, `articulo.ID_ARTICULO` (int) = PK interna que linkea pedprol/pedclil/stocks. Cobertura inicial 84% directa, +14 con normalizaciones automáticas, +5 servicios.
+  - **Tabla `laset_sku_alias`** (en `NewBytes_DBF.dbo`): persiste alias planilla↔ID_Articulo + services + ignored. Bridge view UNIONa articulo + alias. CHECK constraint en source (`auto:trim|auto:nospace|auto:nohyphen|auto:hyph2sp|auto:sp2hyph|auto:alnum|auto:split-slash|auto:last-word|manual|service|ignored`).
+  - **Aggregate matching aplicado**: 2461/3007 filas MATCHED (82% importable), 147 UNMATCHED por SKU huérfano, 399 IGNORED basura+services. Score 100=ERP-exact, 90=trust-planilla-discrepancia, 80=trust-planilla-delta-puro, 0=bloqueado/basura.
+  - **Plan migración 3 fases**: A) alta huérfanos en articulo por catálogo, B) DELETE ERP comp=11 sin contraparte, C) INSERT 2461 MATCHED → ERP + asignaciones.
+  - **CSV huérfanos** generado en `docs/laset_orphan_skus.csv` (+ `.md` legible) — 100 SKUs únicos para que catálogo dé de alta.
+  - **Gotchas dblib/SQL 2012** acumulados (ver `feedback_dblib_gotchas` en memoria local):
+    - PhpSpreadsheet inviable con xlsx grandes → preprocesar con Python+openpyxl en host (`scripts/laset_xlsx_to_json.py`).
+    - Segfault con UPDATE prepared en loop → tabla tmp + UPDATE FROM JOIN single-statement.
+    - dblib no auto-castea DECIMAL → INT en columnas tmp.
+    - `CREATE OR ALTER VIEW` y `DROP VIEW IF EXISTS` no soportados en 2012 → `IF OBJECT_ID(…,'V') IS NOT NULL DROP VIEW`.
+    - `pedprot.sitio=0` vs `pedprol.sitio=NULL` → joinear solo por `nNumPed`.
+  - **Scripts SQL versionados**: `database/sql/2026_05_14_00{1,2,3}_*.sql` (+ drops simétricos). Lista en `database/sql/README.md`.
+  - **Comando**: `php artisan laset:import-staging /tmp/laset.json --imported-by=hermess [--force] [--dry-run]`.
+  - **Estado vivo** del feature en archivo: `project_laset_import_framework` (memoria local) y `docs/laset-import-framework.md` (repo).
+
+- **[[feature-laset-import|Laset Import]] post Fase B + discovery Fase C (2026-05-14 PM)**:
+  - **Fase B ejecutada**: DELETE total ERP comp=11 — 7822 filas borradas (pedprot=386, pedprol=1349, pedproi=31, pedclit=363, pedclil=1847, albprot=526, albprol=1205, albclit=331, albclil=1746, pedclil_oc_asignacion=38). Backups in-DB en `NewBytes_DBF.dbo.laset_phase_b_backup_*` (10 tablas). Otras companies intactas (verificado pre/post snapshot). Script: `database/sql/2026_05_14_004_phase_b_delete_comp11.sql`.
+  - **Decisión Fase B**: DELETE total + re-INSERT en lugar de row-level matching, porque el matching staging↔ERP es agregado por SKU.
+  - **Bug crítico atrapado en revisión SQL**: `pedclit.cnumped` NO es único globalmente (5 colisiones comp=11↔comp=4: 10338002, 10338022, 10338027). PK efectiva `(cnumped, cnumsuc)` — uq_pedclit. Refactorizado a `DELETE x FROM x JOIN pedclit ON cnumped+cnumsuc WHERE companyCode=11`. Ver `feedback_pedclit_pk_compuesta` (memoria local).
+  - **Bug también atrapado**: conteo inicial `albprot=370` era falso (subselect cruzado nnumalb↔nNumPed). Real: 526 (todos comp=11, rango 2026-03-02→2026-05-12). 369 con pedprot padre + 157 huérfanos (compras directas sin OC).
+  - **Pre-check assertions** (pedido del usuario): batch separado con `DECLARE @bad / SELECT @bad / IF @bad > 0 THROW 50001` antes de cada DELETE. Loader PHP propaga excepción y aborta. Ver `feedback_pre_check_assertions_destructivos` (memoria local).
+  - **Discovery Fase C**: schema 6 tablas mapeado. 2461 MATCHED → 417 pedprot + 396 pedclit + ~1349 pedprol + ~1847 pedclil ≈ 4078 INSERTs. nNumPed manual desde MAX+1=13219, cnumped manual desde MAX+1=10459501.
+  - **Tabla maestra moderna `FP_Proveedores`** (no `proveedo` legacy que tiene `cnompro` vacío). 80 proveedores comp=11 ya existentes. Match staging.proveedor → FP_Proveedores `WHERE companyCode=11`: 25/28, 3 a auto-crear. Ver `project_erp_master_tables_fp` (memoria local).
+  - **Regla "nunca compartido entre companies"** (confirmada por usuario): proveedores y clientes pertenecen a EXACTAMENTE una company. CCODPRO único globalmente; ccodcli puede tener duplicados pero solo intra-company. Ex-carga-fallida pedprot/pedclit comp=11 referenciaba CCODPRO/ccodcli de NB (comp=4) — data sucia, ignorar al planear Fase C.
+  - **Match clientes** (`WHERE companyCode=11` estricto): 50/56 OK, 6 a auto-crear.
+  - **Match SKUs**: 806/820 OK vía `articulo.ID_PRODUCTO`, 14 bloqueados (Fase A pendiente).
+  - **Decisiones de implementación Fase C**: artisan command PHP con `--dry-run/--limit/--chunk`, auto-crear FP_Proveedores/clientes mínimos comp=11, idempotencia via `match_status=IMPORTED`. NO implementado todavía.
+
+### FP_* vs legacy
+
+El ERP tiene **dos generaciones** de tablas maestras:
+- **Legacy** (`proveedo`, `articulo`): char(N) con padding, `cnompro` vacío para Laset, deprecadas para flujos nuevos.
+- **Moderna** (`FP_Proveedores`, `FP_Marcas`): nvarchar, columnas modernas (NombreComercial, Direccion, Id_Pais, Fecha_Alta, etc), datos poblados.
+
+Para resolver un proveedor/cliente, **usar la tabla moderna** con `WHERE companyCode = N` estricto. NO usar legacy. El INSERT de nuevo proveedor/cliente debe ir a la moderna.
+
+### PK compuesta pedclit
+
+`pedclit.cnumped` NO es único globalmente (verificado: 5 colisiones reales entre comp=11 y comp=4). PK efectiva = `(cnumped, cnumsuc)` (`uq_pedclit` UNIQUE). Misma regla aplica a `albclit.cnumalb`. Cualquier `DELETE/UPDATE/JOIN` sobre pedclit/pedclil/albclit/albclil debe usar **JOIN compuesto**, NO `WHERE cnumped IN (SELECT cnumped FROM ...)`.
+
+`pedprot.nNumPed` y `albprot.nnumalb` SÍ son únicos globalmente — esos pueden usar subselect IN.
+
+Distribución cnumsuc en pedclit comp=11 (al pre-Fase B): `0002`=357, `0000`=5, `0010`=1.
+
+### Pre-check assertions destructivos
+
+Para DELETE/UPDATE destructivos en SQL Server, agregar pre-check en su propio batch antes:
+```sql
+DECLARE @bad INT = 0;
+SELECT @bad = COUNT(*) FROM <set a borrar> WHERE <criterio que detecte filas que NO cumplen aislamiento>;
+IF @bad > 0 THROW 50001, [ABORT <tabla>], 1;
+GO
+DELETE ... ;
+GO
+```
+THROW (severity 16) está disponible desde SQL 2012, aborta el batch. Loader PHP del README (`unprepared` en loop sin try/catch silencioso) propaga la excepción y aborta el script entero antes de tocar nada. Defense in depth.
+
+### Almacenes Laset reales
+
+Para `companyCode=11` (Laset), los almacenes válidos en `FP_Almacen` son **únicamente** DOM, BON, GRI, URU, ASI (más TES de test). **`SAF` NO es almacén de Laset** — pertenece a NB (comp=4) y nunca debería aparecer en pedprot/pedclit/pedclil/stocks comp=11.
+
+Mapping `staging.deposito` → almacén Laset (cCodAlm/warehousesId/ID_ALMACEN):
+- `DOMESTIC MIAMI` → DOM (9)
+- `BONDED PROVEEDOR`/`BONDED-FASTMARK`/`BONDED-SEASIDE` → BON (11) — todos los bonded consolidan a BON (BON tiene 3 IDs: 11, 13, 16)
+- `GRIS` → GRI (10)
+- `URUGUAY` → URU (14)
+- `ASIA` → ASI (15)
+
+Las 3 columnas (`cCodAlm`+`warehousesId` en pedprot, `ccodalm`+`ID_ALMACEN` en pedclit, `ID_ALMACEN` en pedclil) deben quedar **coordinadas**. Para descubrir almacenes de una company N: `SELECT CCODALM, ID_ALMACEN FROM FP_Almacen WHERE companyCode = N AND deleted_at IS NULL`.
+
+NO confiar en backups de carga fallida (ej. `laset_phase_b_backup_pedprot` listaba SAF, pero era data sucia que mezclaba data NB).
+
+### Doble filtro: company del item + del almacén
+
+Para `stocks` (y otras tablas compartidas sin `companyCode` propio), filtrar por **AMBOS criterios simultáneos** al hacer DELETE/UPDATE/SELECT por company:
+
+```sql
+WHERE s.cCodAlm IN (almacenes de la company)
+  AND s.ID_ARTICULO IN (SELECT ID_ARTICULO FROM articulo WHERE companyCode = N)
+```
+
+**Caso real** (Laset reset stocks 2026-05-14): 286 filas legítimamente comp=11 reseteadas; 302 filas con articulo NB (comp=4) en almacenes Laset preservadas (17 unidades, items compartidos físicamente entre NB y Laset). Si se hubiera filtrado solo por almacén, se habría tocado data NB.
+
+**Identidad contable post-reset**: saldo neto comp=11 = 0 ✓. SKU global 657/657 cuadran (100%). Por (SKU, almacén) 1059/1090 (97%); las 31 discrepancias son cross-warehouse internas del ERP (compra en X, venta desde Y, neto SKU=0) — no bug.
+
+### Resolución de maestros filtra companyCode
+
+Toda resolución de un identificador de negocio a su ID interno
+(SKU→`articulo.ID_ARTICULO`, razón social→`clientes.ccodcli`,
+proveedor→`FP_Proveedores.CCODPRO`) **debe filtrar siempre `companyCode=N`**.
+Un mismo `ID_PRODUCTO`/nombre existe en varias companies con ID distinto; sin
+el filtro se liga la línea a un artículo de OTRA company.
+
+**Caso real (Fase C, 2026-05-15)**: `resolveMasters` resolvía SKU sin
+`companyCode=11` → 56 `pedprol` + 56 `pedclil` de órdenes comp=11 apuntaron a
+44 artículos NB (comp=4). Lo detectó el pre-check de aislamiento de Fase D
+(THROW si el delta de stock toca un artículo no-comp-11), no un test. Fix:
+filtro en `resolveMasters` + SQL `2026_05_15_002` (remap de los 5 con gemelo
+comp=11). 39 SKUs sin gemelo → Fase A.
+
+**Cómo aplicar**: query de resolución con `->where('companyCode', N)`; si no
+hay match, BLOQUEAR la fila (no agarrar otra company). Antes de UPDATE sobre
+tabla compartida sin companyCode (`stocks`): JOIN a la maestra + `companyCode=N`
++ pre-check THROW. Relacionado con [[memoria#Doble filtro: company del item + del almacén]].
+
+### Snapshot / Restore Laset (reversibilidad)
+
+`laset:snapshot <tag>` copia la tajada comp=11 (14 tablas del registro
+`App\Support\LasetSnapshotRegistry`, incl. cross-DB `NB_WEB.registro_stock`
+por marcador `fichero LIKE 'Laset Fase D%'`) a `laset_snap_<tag>_*` +
+`laset_snapshot_manifest`. `laset:restore <tag>` borra la tajada actual y la
+repone desde el snapshot (IDENTITY_INSERT + columnas explícitas sin
+computadas; trigger `tg_pedclit_cestado_asignacion` off/on; pre-check vs
+manifiesto; todo en 1 transacción). **Correr snapshot ANTES de cada
+proceso/sesión.** Probado end-to-end 2026-05-15.
+
+Gotchas: `DISABLE/ENABLE TRIGGER` NO admite prefijo de DB → ejecutar con
+`EXEC NewBytes_DBF.sys.sp_executesql N'DISABLE TRIGGER [dbo].[..] ON [dbo].[..]'`.
+`IDENTITY_INSERT` exige lista de columnas y una tabla a la vez (1 unprepared
+batch). Tablas con identity: pedprot.id_pedprod, pedclit.id, pedclil.id,
+pedclil_oc_asignacion.id, pedproi.id, albclit.id, albclil.IdDetalleRemito,
+stocks.id_auto, FP_Proveedores.ID_PROVEEDOR, registro_stock.id.
+
+### Identidad contable Laset
+
+`Σ compras(pedprol) − Σ ventas(pedclil) − stocks.nstock = 0` por
+`(ID_Articulo, almacén)` comp=11. Fase D la cumple por construcción (resetea
+stock a 0 y escribe `nstock = compras − ventas`). Si no da 0 en algún grupo,
+o falta procesar ese trade (orden diferida) o hay bug — verificar contra
+órdenes diferidas antes de asumir error.
+
+### Stocks: tabla por (ID_ARTICULO, ID_ALMACEN), requiere UPSERT
+
+`stocks` es tabla real 21 cols (`id_auto` IDENTITY). Un artículo comp=11 NO
+tiene fila en `stocks` para cada almacén — hay que **INSERT fila mínima** si
+falta (no solo UPDATE), si no se pierde el movimiento. ccodalm/almacén
+válidos = `FP_Almacen WHERE companyCode=11` (NUNCA hardcodear IDs).

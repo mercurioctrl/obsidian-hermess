@@ -23,6 +23,8 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-asignacion-oc|Feature: Asignación OC ↔ Venta]] — Trazabilidad pedclil ↔ pedprol antes de serializar
 - [[feature-asignacion-oc-cookbook|Cookbook Asignación OC]] — Recetas, SQL de debug, curl examples y mapa de archivos
 - [[feature-laset-import|Feature: Laset Import Framework]] — Importación de operación FOB de Laset (CODEMP=11) desde planilla histórica al ERP existente
+- [[nota-catalogo-laset|Nota a Catálogo — alta 39 SKUs Laset]] — pedido de alta de artículos comp=11 que destraban Fase D (para enviar a catálogo)
+- [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11; correr antes de cada proceso/sesión
 
 ## Repos
 
@@ -38,4 +40,4 @@ El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_
 Las tablas legacy del ERP (`pedprot`, `pedprol`, `pedproi`, `pedclit`, `pedclil`, `stocks`, `FP_*`, `forwarders`, `rebates`) **nunca se modifican** desde features nuevos. Se leen via `SELECT/JOIN`. Toda metadata de cualquier feature vive en tablas nuevas con prefijo del feature (`pedclil_oc_asignacion`, `laset_import_*`). Ver [[contexto#Regla cero: tablas ERP son read-only]].
 
 ---
-*Última sincronización: 2026-05-14 (Laset Import Framework — discovery + staging + docs)*
+*Última sincronización: 2026-05-15 (Laset Fase D pasada 1 ejecutada y verificada en dev; snapshot/restore unificado probado end-to-end; pasada 2 espera Fase A catálogo — ver [[feature-laset-import#13. Fase D pasada 1 ejecutada + fixes + snapshot/restore (2026-05-15)]])*

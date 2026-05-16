@@ -187,3 +187,69 @@ Recuperación:
 git reset --hard origin/Development
 git branch --set-upstream-to=origin/Development Development
 ```
+
+## Laset: planilla = fuente de verdad
+
+Para el [[feature-laset-import|feature Laset Import Framework]] (`companyCode=11`), cuando los datos de la planilla `docs/laser.xlsx` y los datos del ERP difieren, **la planilla wins**. Razón: la data actual en `pedprot`/`pedprol`/`pedproi`/`pedclit`/`pedclil` para comp=11 es de una **carga fallida previa**: tiene duplicaciones de hasta 10× (ej. `Ajuste precio A520MAPRO` plC=280 / erpC=2260), faltantes, y cantidades incorrectas.
+
+## Laset: regla de aislamiento companyCode != 11
+
+Excepción acotada al [[contexto#Regla cero: tablas ERP son read-only|read-only ERP]]: durante las fases de migración del feature laset-import SÍ se hacen `DELETE`+`INSERT` sobre `pedprot`/`pedprol`/`pedproi`/`pedclit`/`pedclil`, **pero exclusivamente con `WHERE companyCode = 11`**. Toda otra empresa (NB=4, NBE=9, LO=12, OXXEN=2, MUGELLO=8, etc.) queda intocable — operan en producción desde otros sistemas.
+
+## Laset: plan de migración (3 fases)
+
+```
+Fase A — Alta huérfanos en articulo (equipo catálogo, externo)
+    100 SKUs únicos de docs/laset_orphan_skus.csv
+    INSERT INTO articulo (ID_PRODUCTO, …)
+    Después: la vista vw_laset_sku_bridge los toma automáticamente.
+
+Fase B — DELETE ERP comp=11 sin contraparte en planilla
+    DELETE FROM pedprot/pedprol/pedproi/pedclit/pedclil
+    WHERE companyCode = 11 AND NOT EXISTS (matching en planilla MATCHED)
+    Filtro estricto siempre. NUNCA tocar el resto.
+
+Fase C — INSERT planilla → ERP (2461 filas MATCHED)
+    INSERT a pedprot/pedprol/pedproi (compra)
+    INSERT a pedclit/pedclil (venta)
+    INSERT a pedclil_oc_asignacion (linkeo)
+    Update staging.matched_* + match_status='IMPORTED'
+```
+
+Stock queda correcto como consecuencia (no se INSERT manualmente).
+
+## Laset: Fase D y defecto de Fase C (2026-05-15)
+
+Fase C creó solo las **órdenes** comp=11 (pedprot/pedprol + pedclit/pedclil),
+sin remitos ni `pedproi` ni stock. **Fase D** (`laset:import-fase-d`) los
+genera sobre las órdenes existentes: `albprot`+`albprol` (compra),
+`albclit`+`albclil` (venta, `ccodalm` del pedclit — NO el `'SAF'` de MakeSale),
+`pedproi cdescrip='camion'`, y replica stock compra(+)/venta(−).
+
+**Por qué importa (gotcha)**: el pre-check de aislamiento de Fase D destapó
+que `LasetImportFaseCCommand::resolveMasters` resolvía SKU→`ID_ARTICULO` **sin
+filtrar `companyCode`**, ligando 56 pedprol + 56 pedclil comp=11 a 44
+artículos NB (comp=4). Regla derivada: **toda resolución de maestro
+(SKU/cliente/proveedor) lleva siempre `WHERE companyCode=N`**, y antes de
+cualquier UPDATE sobre tabla compartida sin companyCode (`stocks`) va un
+pre-check THROW que aborte si el set incluye otra company. Ver
+[[memoria#Resolución de maestros filtra companyCode]] y
+[[feature-laset-import#12. Sesión 2026-05-15 (cont.) — Fase D + fix defecto Fase C]].
+
+**Fechas de documento**: los remitos respetan la fecha del documento
+(`pedprot.dFecPed`/`pedclit.dfecped` cargadas de la planilla), nunca
+`GETDATE()`.
+
+**Estado**: Fase D **pasada 1 ejecutada en dev** (~870 órdenes limpias migradas).
+Pasada 2 (15+15 órdenes con los 39 SKUs de `docs/laset_fasec_skus_sin_comp11.csv`)
+espera Fase A catálogo + re-bind.
+
+## Reversibilidad: snapshot/restore (regla operativa)
+
+**Antes de CUALQUIER proceso o sesión que toque comp=11** (Fase C/D, fixes,
+y especialmente producción): `php artisan laset:snapshot <tag>`. Si algo sale
+mal: `php artisan laset:restore <tag> --force` deja la tajada comp=11 (14
+tablas, incl. `NB_WEB.registro_stock`) exactamente como estaba. Probado
+end-to-end. Es restauración a un PUNTO (no undo incremental). Detalle en
+[[feature-laset-snapshot-restore]]. Pedido explícito del usuario: "si pasa
+algo malo en producción, dejar todo como estaba antes".
