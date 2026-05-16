@@ -3,204 +3,391 @@
 > Importar la operación FOB de **LASET** (CODEMP=11, empresa importadora uruguaya del grupo) desde la planilla histórica `Raw ventas FOB` hacia las tablas existentes del ERP, **sin tocar el resto del ERP**. Solo aplica a `companyCode = 11`.
 
 Branch: `lasetImportFramework` (ambos repos).
-Estado al **2026-05-14**: discovery completa + staging creado y aplicado. Cargador, reconciliación e importación de delta pendientes.
+Estado al **2026-05-15**: Fase B + Fase C ejecutadas. **Fase D PASADA 1 ejecutada y verificada en dev** (493 albprot + 1454 albprol + 111 pedproi + 379 albclit + 2155 albclil + 2155 registro_stock; stock 672/672 = delta; identidad contable 684/721, residuo = órdenes diferidas). Defecto de Fase C corregido (SQL 002 aplicado, 8+8 remapeadas). **Pasada 2** (15+15 órdenes con 39 SKUs) espera Fase A catálogo. Snapshot/restore unificado disponible y probado (ver §13 y [[feature-laset-snapshot-restore]]).
 
 ---
 
-## 1. Contexto y descubrimiento
+## 1. Contexto
 
-### Quién es Laset
+LASET = Laset Sociedad Anónima (Uruguay, RUT 217502910019, dirección Pradines Clemente 1795), CODEMP=11 en [[contexto#Empresas activas (FP_Empresas)|FP_Empresas]]. Es importadora — triangula via **New Bytes Inc** (USA) hacia clientes LATAM (Chile 986, Paraguay 974, Colombia 240, Bolivia 197, Ecuador, Panamá, USA, Argentina). Única empresa con `defaultIncoterms=14`.
 
-Empresa **CODEMP=11** en `NewBytes_DBF.dbo.FP_Empresas`. Es **Laset Sociedad Anónima** (Uruguay), dirección `Pradines Clemente 1795`, RUT `217502910019` (12 dígitos, no-argentino). Factura en DOL, con `defaultIncoterms=14` (única empresa con incoterm default). Es importadora — triangula via **New Bytes Inc** (USA) hacia clientes LATAM (Chile 986, Paraguay 974, Colombia 240, Bolivia 197, Argentina 58, Ecuador, Panamá, USA).
+La planilla `docs/laser.xlsx` pestaña **`Raw ventas FOB`**: 3008 × 67. Cada fila es un trade completo (compra a vendor + venta a cliente final + costos + rebates + logística + re-facturación NB Inc).
 
-El sistema soporta **11 empresas activas**, no solo NB/NBElectric/LO como dice el CLAUDE.md histórico. Ver [[contexto#Empresas activas (FP_Empresas)]].
+## 2. Decisiones clave de negocio
 
-### La planilla
+### Planilla es la fuente de verdad
 
-`docs/laser.xlsx` (typo: el archivo se llama "laser" pero la empresa es "Laset"), pestaña **`Raw ventas FOB`**: 3008 filas × 67 columnas, años 2025-2026. **2614 filas válidas** (excluye fila 2 con SELECTORs, 367 con `Year=1900`, 22 vacías).
+La data actual ERP para `companyCode=11` (~386 pedprot + ~363 pedclit pre-Fase B) era de una **carga fallida previa**: tenía duplicaciones, faltantes, cantidades incorrectas + referencias a clientes/proveedores de NB (comp=4) por error.
 
-Cada fila es un **trade completo**: vendor (US/CH/PY) → NB Inc (US) → cliente final (LATAM), con su SKU, qty, FOB unit, costos, venta, logística, rebates, re-facturación NB Inc.
+**Regla**: cuando staging y ERP comp=11 difieren, **planilla wins**.
 
-**Insight clave**: la planilla ya viene pre-linkeada (Qty compra = CANTIDAD venta en 100% de filas válidas). Una compra mayorista se splittea manualmente en N filas (1 por cliente) antes de cargarse — 339 de 438 Vendor Invoices se repiten.
+### Regla de aislamiento
 
-### Por qué importar
+Todo lo que NO es `companyCode = 11` queda **intocable**: otras companies (NB=4, NBE=9, LO=12, OXXEN=2, MUGELLO=8, etc.) operan en producción y se cargan desde otros sistemas. Cualquier `DELETE`/`UPDATE` durante este feature debe llevar SIEMPRE `WHERE … companyCode = 11`. Verificado con snapshot pre/post en Fase B.
 
-La planilla cubre **todo** el flujo histórico. El ERP tiene migrado parcialmente:
+### Regla "nunca compartido entre companies"
 
-| Tabla ERP | Rows `companyCode=11` | Concepto |
-|---|---:|---|
-| `pedprot` | 386 | Compras (cabecera) |
-| `pedprol` | (líneas) | Compras (detalle) |
-| `pedproi` | 158 | Cargos extra de compra ("camion", percepciones) |
-| `pedclit` | 363 | Ventas (cabecera) |
-| `pedclil` | (líneas) | Ventas (detalle) |
-| `forwarders` | 84 | DHL, Peniel International (Miami)… |
-| `FP_FactWebCliEncabezado_Uy` | 179 | CFE Uruguay emitidos |
-| `FP_FactWebCliDetalle_Uy` | 1411 | Líneas de CFE Uy |
+**Proveedores y clientes pertenecen a EXACTAMENTE una company**. Confirmado por usuario:
+- `FP_Proveedores.CCODPRO` es único globalmente.
+- `clientes.ccodcli` puede tener duplicados pero solo intra-company (0 ccodcli compartido entre comp=11 y otras).
+- Si pedprot/pedclit comp=11 referencia un ccodpro/ccodcli de otra company, es **data sucia** (caso típico: ex-carga-fallida).
 
-La planilla tiene 2614 filas válidas → **delta grande a importar**, especialmente histórico pre-2026.
+Aplicación: para Fase C, todo match staging → maestros usa `WHERE companyCode = 11` estricto.
 
----
+### Manejo de SKUs huérfanos
 
-## 2. Decisión clave: NO crear modelo nuevo
+100 SKUs únicos en planilla no mapean a `articulo.ID_PRODUCTO`. **Deben darse de alta** en `articulo` por equipo de catálogo (Fase A). Listado: `docs/laset_orphan_skus.csv` y `.md`.
 
-El framework **ya existe** en el ERP, solo bajo otros nombres. Ver el [[arquitectura#Modelo canónico ERP|mapeo canónico de tablas]]:
+## 3. Modelo canónico ERP
 
-- **Compras** = `pedprot` + `pedprol` + `pedproi`
+El framework ya existe en el ERP, solo bajo otros nombres. Ver [[arquitectura#Modelo canónico ERP|mapeo canónico]]:
+
+- **Compras** = `pedprot` + `pedprol` + `pedproi` (incl. cargos extra)
 - **Ventas** = `pedclit` + `pedclil`
-- **Stock** = `stocks` (filtrado por almacén)
-- **Linkeo compra↔venta** = [[feature-asignacion-oc|`pedclil_oc_asignacion`]] (ya habilitado para Laset via `ASSIGNMENT_COMPANIES=4,11`)
-- **CFE final** = `FP_FactWebCliEncabezado_Uy` + `FP_FactWebCliDetalle_Uy`
+- **Stock** = `stocks` (filtrado por almacén — no tiene `companyCode`)
+- **Linkeo compra↔venta** = [[feature-asignacion-oc|`pedclil_oc_asignacion`]] (ya habilitado `ASSIGNMENT_COMPANIES=4,11`)
+- **CFE Uy** = `FP_FactWebCliEncabezado_Uy` + `FP_FactWebCliDetalle_Uy`
+- **Maestros**: `FP_Proveedores` (moderna, no `proveedo`), `clientes`, `articulo`. Ver [[memoria#FP_* vs legacy]].
 
-El trabajo del feature es **reconciliar la planilla con lo ya migrado** e importar el delta, **sin tocar las tablas ERP**.
+## 4. Bridge SKU planilla ↔ ERP
+
+`articulo.ID_PRODUCTO` (varchar(50)) = SKU del fabricante. `articulo.ID_ARTICULO` (int) = PK interna que linkea con `pedprol.ID_Articulo`, `pedclil.ID_Articulo`, `stocks.ID_ARTICULO`.
+
+Cobertura: 620/739 (84%) directo + 14 vía normalizaciones (alias `auto:trim`, `auto:nospace`, `auto:split-slash`, `auto:last-word`) + 5 services explícitos. Quedan 100 SKUs huérfanos pendientes de alta.
+
+Tabla **`laset_sku_alias`** persiste alias auto-detectados, services, y decisiones manuales/ignored.
+
+## 5. Arquitectura
+
+```
+Excel docs/laser.xlsx (Raw ventas FOB)
+    ↓ scripts/laset_xlsx_to_json.py (Python + openpyxl en host)
+JSON
+    ↓ php artisan laset:import-staging
+laset_import_batches + laset_import_staging   ← 3007 filas raw NVARCHAR
+    ↓ aggregate matching (script PHP, próximamente artisan)
+staging.match_status / match_score / match_notes poblados
+    ↓
+    ├─ MATCHED (2461) → Fase C: INSERT a ERP
+    ├─ UNMATCHED NO_BRIDGE (147) → bloqueado, Fase A: alta huérfanos
+    └─ IGNORED (399) → no migrar
+```
+
+## 6. Schema (en `NewBytes_DBF.dbo`)
+
+**Tablas nuevas (4):**
+
+- `laset_import_batches` — 9 cols. Cabecera por carga.
+- `laset_import_staging` — 79 cols (67 raw NVARCHAR + 4 sistema + 8 matching).
+- `laset_sku_alias` — alias SKU↔ID_Articulo + services + ignored.
+- `laset_match_decisions_tmp` — temporal, se dropea al final del aggregate match.
+
+**Backups Fase B (10):** `laset_phase_b_backup_pedprot/pedprol/pedproi/pedclit/pedclil/albprot/albprol/albclit/albclil/pedclil_oc_asignacion`. Mantener hasta validar Fase C.
+
+**Vistas (7):** `vw_laset_sku_bridge`, `vw_laset_planilla_compras`, `vw_laset_planilla_ventas`, `vw_laset_erp_compras`, `vw_laset_erp_ventas`, `vw_laset_erp_stock`, `vw_laset_reconciliation`.
+
+**Scripts SQL** en `database/sql/`:
+
+- `2026_05_14_001_create_laset_import_staging.sql` (+ drop)
+- `2026_05_14_002_create_laset_reconciliation_views.sql` (+ drop)
+- `2026_05_14_003_create_laset_sku_alias.sql` (+ drop, también refactorea bridge view)
+- `2026_05_14_004_phase_b_delete_comp11.sql` (+ esqueleto rollback) — **Fase B aplicada 2026-05-14 PM**.
+
+## 7. Distribución final del staging (post aggregate-match)
+
+| match_status | match_score | filas | Significado |
+|---|---:|---:|---|
+| MATCHED | 100 | 536 | planilla = ERP exacto |
+| MATCHED | 90 | 1860 | planilla wins (ERP discrepa) |
+| MATCHED | 80 | 65 | planilla wins (delta puro) |
+| UNMATCHED | 0 | 147 | NO_BRIDGE — bloqueado, requiere alta de 100 SKUs huérfanos |
+| IGNORED | 0 | 399 | basura + services |
+
+**Total importable a ERP: 2461 filas (82%)**.
+
+## 8. Plan de migración (3 fases)
+
+```
+Fase A — Alta de huérfanos en articulo (PENDIENTE — equipo catálogo, fuera de scope)
+    INSERT INTO articulo (ID_PRODUCTO, …) para los 100 SKUs
+    de docs/laset_orphan_skus.csv.
+    Después re-correr aggregate match — vw_laset_sku_bridge los toma vía
+    articulo automáticamente, baja UNMATCHED a 0.
+
+Fase B — Limpieza ERP comp=11 ✓ EJECUTADA 2026-05-14 PM
+    Decisión: DELETE total comp=11 (no row-level matching), porque el
+    matching staging↔ERP es agregado por SKU. "Planilla wins" — asumimos
+    que las 2461 filas MATCHED cubren toda la realidad y nukeamos comp=11.
+
+    7822 filas borradas (todas comp=11):
+      pedprot=386, pedprol=1349, pedproi=31
+      pedclit=363, pedclil=1847
+      albprot=526, albprol=1205, albclit=331, albclil=1746
+      pedclil_oc_asignacion=38
+
+    Backups in-DB: NewBytes_DBF.dbo.laset_phase_b_backup_* (10 tablas).
+    Otras companies intactas (snapshot pre/post por company verificado).
+    Script: database/sql/2026_05_14_004_phase_b_delete_comp11.sql.
+
+    Gotchas críticos atrapados en revisión SQL pre-ejecución:
+      - pedclit.cnumped NO único globalmente (5 colisiones comp=11↔comp=4).
+        PK efectiva (cnumped, cnumsuc) — uq_pedclit. Refactorizado a JOINs
+        compuestos. Habría borrado 5 ventas legítimas de NB sin esto.
+        Ver [[memoria#PK compuesta pedclit]].
+      - albprot.companyCode tiene 11875 filas NULL. Conteo inicial 370 era
+        falso (subselect cruzado). Conteo real: 526.
+      - Pre-check assertions con THROW antes de cada DELETE (pedido del
+        usuario). Loader PHP propaga excepción y aborta antes de tocar nada.
+        Ver [[memoria#Pre-check assertions destructivos]].
+
+Fase C — INSERT planilla → ERP (PENDIENTE — discovery completa)
+    Por cada laset_import_staging.match_status='MATCHED' (2461 filas):
+      INSERT a pedprot/pedprol/pedproi (compra)
+      INSERT a pedclit/pedclil (venta)
+      INSERT a pedclil_oc_asignacion (linkeo)
+    UPDATE staging.matched_* + match_status='IMPORTED'
+
+    Schema mapeado: pedprot 34 cols (id_pedprod IDENTITY, nNumPed manual desde
+    MAX+1=13219), pedclit 78 cols (id IDENTITY, cnumped manual desde
+    MAX+1=10459501, ccodcli NOT NULL), pedprol 25, pedclil 42, pedproi 16
+    (lcalcuauto NOT NULL sin default), pedclil_oc_asignacion 19.
+
+    Agrupación: 2461 líneas → 417 pedprot únicas (por proveedor+vendor_pi+
+    vendor_invoice) + 396 pedclit únicas (por razon_social+customer_pi+
+    customer_invoice) ≈ 4078 INSERTs.
+
+    Mapping a maestros (con WHERE companyCode=11 estricto):
+      proveedores via FP_Proveedores.cnompro:  25/28 OK,  3 a auto-crear
+      clientes via clientes.cnomcli:           50/56 OK,  6 a auto-crear
+      SKUs via articulo.ID_PRODUCTO:          806/820 OK, 14 bloqueados (Fase A)
+
+    Decisiones para implementación (con usuario):
+      - Forma: artisan command laset:import-fase-c con --dry-run/--limit/--chunk
+      - FKs faltantes: auto-crear FP_Proveedores/clientes mínimos comp=11
+      - Idempotencia: skip filas con match_status='IMPORTED'
+```
+
+Stock queda correcto como consecuencia de B+C (no se INSERT manualmente).
+
+## 9. Comandos
+
+### Carga planilla → staging
+
+```bash
+python3 api-rest-pedidos-laravel/app/scripts/laset_xlsx_to_json.py \
+    docs/laser.xlsx "Raw ventas FOB" /tmp/laset.json
+docker cp /tmp/laset.json api-rest-pedidos-apirest-laravel:/tmp/laset.json
+docker exec api-rest-pedidos-apirest-laravel \
+    php artisan laset:import-staging /tmp/laset.json --imported-by=hermess --force
+```
+
+### Aggregate matching (planilla wins)
+
+```bash
+docker exec api-rest-pedidos-apirest-laravel php artisan laset:aggregate-match --dry-run
+docker exec api-rest-pedidos-apirest-laravel php artisan laset:aggregate-match
+```
+
+Aplica regla planilla=verdad para comp=11. Decisiones SKU-level:
+- bridge OK + ERP=planilla → MATCHED 100
+- bridge OK + ERP discrepa → MATCHED 90 (planilla wins)
+- BRIDGE_SIN_ERP_DATA → MATCHED 80 (delta puro)
+- SERVICE/IGNORED alias → IGNORED
+- NO_BRIDGE → UNMATCHED (Fase A pendiente)
+- Basura (SELECTOR / year != 2025-2026 / sin SKU) → IGNORED
+
+### Fase C: INSERT staging → ERP
+
+```bash
+docker exec api-rest-pedidos-apirest-laravel php artisan laset:import-fase-c --dry-run
+docker exec api-rest-pedidos-apirest-laravel php artisan laset:import-fase-c --limit=10
+docker exec api-rest-pedidos-apirest-laravel php artisan laset:import-fase-c
+```
+
+Idempotente. Resuelve maestros con `WHERE companyCode=11` estricto. Auto-crea `FP_Proveedores` y `clientes` mínimos para los faltantes. Mapping deposito→almacén ya coordinado con FP_Almacen comp=11.
+
+### Reset stocks comp=11 (doble filtro)
+
+```bash
+docker exec api-rest-pedidos-apirest-laravel php /var/www/app/scripts/laset_reset_stocks.php --dry-run
+docker exec api-rest-pedidos-apirest-laravel php /var/www/app/scripts/laset_reset_stocks.php
+```
+
+Doble filtro: `articulo.companyCode=11 AND stocks.cCodAlm IN (almacenes Laset)`. Backup automático en `laset_phase_b_backup_stocks`. Items NB en almacén Laset PRESERVADOS.
+
+### Pre-flight / post-flight para producción
+
+```bash
+docker exec api-rest-pedidos-apirest-laravel php /var/www/app/scripts/laset_pre_flight_prod.php
+docker exec api-rest-pedidos-apirest-laravel php /var/www/app/scripts/laset_post_flight_validation.php
+```
+
+### Inspección manual
+
+```sql
+SELECT bridge_status, COUNT(*) FROM vw_laset_reconciliation GROUP BY bridge_status
+SELECT match_status, match_score, COUNT(*) FROM laset_import_staging GROUP BY match_status, match_score
+SELECT companyCode, COUNT(*) FROM pedclit GROUP BY companyCode
+```
+
+## 10. Gotchas
+
+### Negocio
+
+- **Planilla wins** sobre ERP comp=11 para todo PARTIAL.
+- **companyCode != 11** jamás se modifica.
+- **Proveedores/clientes nunca compartidos entre companies** — usar `WHERE companyCode=11` estricto.
+- **`pedproi` NO es solo impuestos**: guarda cargos extra del pedido de compra (`cdescrip='camion'`), linkea a `pedprot.nNumPed`, NO a `pedclit`.
+- **`rebates` + `NewTable`** son huérfanas (creadas 2025-11-01) — restos de intento abandonado. NO usar.
+- **CFE Uy ya implementado**: `FP_FactWebCliEncabezado_Uy` (179) + `FP_FactWebCliDetalle_Uy` (1411). NO recrearlo.
+- **`proveedo` legacy con `cnompro` vacío** — usar `FP_Proveedores` moderna. Ver [[memoria#FP_* vs legacy]].
+
+### Técnicos (ver [[memoria]] para detalle)
+
+- **PhpSpreadsheet inviable** con `docs/laser.xlsx` (>15 min) → preprocesar con Python + openpyxl en host.
+- **dblib segfault** con cientos de UPDATE prepared en loop → tabla tmp + UPDATE FROM JOIN single-statement.
+- **dblib no auto-castea DECIMAL** → usar INT en columnas tmp para scores/conteos.
+- **SQL Server 2012** — sin `CREATE OR ALTER VIEW`, sin `DROP VIEW IF EXISTS`. THROW soportado.
+- **`pedprot.sitio=0` vs `pedprol.sitio=NULL`** → JOINear solo por `nNumPed`.
+- **`pedclit.cnumped` NO único globalmente** — PK efectiva `(cnumped, cnumsuc)`. Usar JOIN compuesto en queries.
+- **`albprot.companyCode` tiene 11875 NULLs** — usar `WHERE companyCode=11` directo, NO subselects cruzados.
+- **macOS case-insensitive**: branch `Development` (mayúscula). `git branch -D development` puede romper `Development`. Recovery: `git reset --hard origin/Development`.
+
+## 11. Próximos pasos
+
+- [ ] Fase A: equipo catálogo da de alta los 100 SKUs huérfanos en `articulo`.
+- [x] ~~Portar el aggregate-match a artisan command~~ → **`laset:aggregate-match` listo (2026-05-15)**.
+- [x] ~~Diseñar y aplicar Fase B (DELETE ERP comp=11)~~ → **Aplicada en dev 2026-05-14, 7822 filas**.
+- [x] ~~Diseñar y aplicar Fase C (INSERT staging MATCHED → ERP)~~ → **Aplicada en dev 2026-05-14, 8224 INSERTs, identidad SKU global 100%**.
+- [x] ~~Reset stocks comp=11~~ → **`laset_reset_stocks.php` versionado y aplicado en dev**.
+- [x] ~~Runbook producción + pre/post flight scripts~~ → **`docs/laset-import-runbook-prod.md` + scripts auxiliares listos (2026-05-15)**.
+- [ ] **Replicar a producción**: coordinar ventana, ejecutar runbook. Ver [[changelog#2026-05-15]].
+- [ ] Decidir modelo de rebates (`Sell out rebate`, `Reportado AMD/NVIDIA`, `Qty a la que aplica`) — la tabla `rebates` existente está huérfana, hay que modelar nuevo.
 
 ---
 
-## 3. Mapeo planilla ↔ ERP
+## 12. Sesión 2026-05-15 (cont.) — Fase D + fix defecto Fase C
 
-### Compras
+### Qué se hizo
 
-| Planilla | ERP |
-|---|---|
-| `PROVEEDOR` | `pedprot.cCodPro` |
-| `PAIS PROVEEDOR` | `pedprot.countryId` |
-| `MARCA` | catálogo de productos |
-| `DEPOSITO` (DOM/BON/GRI/SAF/URU/ASI) | `pedprot.cCodAlm`, `warehousesId` |
-| `Vendor PI` | tentativo: `pedprot.cExped` |
-| `Vendor Invoice` | tentativo: `pedprot.dateVoucherNumber` |
-| `Qty`, `SKU`, `Description` | `pedprol.nCanPed`, `cRef`, `cDetalle` |
-| `FOB` (unit) | `pedprol.nPreDiv` |
-| `AMOUNT` (=FOB×Qty) | `pedprol.nPreDiv * nCanPed` |
-| `AWB` / `Tracking` | `pedprot.trackingNumber` |
-| `Fecha de arribo` | `pedprot.arrivalDate` |
-| `Costo extra (Camión, RMA, etc)` | `pedproi.cdescrip='camion'` + `nimporte` |
-| `STATUS` (compra) | `pedprot.cEstado` |
+Fase C resultó incompleta: creó solo las **órdenes** (`pedprot`/`pedprol` +
+`pedclit`/`pedclil` + `pedclil_oc_asignacion`), **sin remitos, sin `pedproi`,
+sin movimiento de stock**. Se implementó **Fase D** como paso standalone sobre
+las órdenes comp=11 ya existentes:
 
-### Ventas
+- Comando `laset:import-fase-d` (`app/Console/Commands/LasetImportFaseDCommand.php`),
+  `--dry-run/--limit/--chunk`, idempotente (saltea órdenes con remito).
+- Paso 0 obligatorio: SQL `2026_05_15_001_reset_stock_comp11.sql` — resetea
+  stock comp=11 en almacén Laset a 0 con **doble filtro**
+  (`articulo.companyCode=11 AND ID_ALMACEN in 9,10,11,17,18`); items NB en
+  almacén compartido **intactos**; backup `laset_phase_b_backup_stocks`.
+- Crea `albprot`+`albprol` (link `nnumped`=pedprot.nNumPed), `albclit`+`albclil`
+  (link `(cnumped,cnumsuc)`, `ccodalm` del pedclit — **NO** el `'SAF'`
+  hardcodeado de MakeSale), `pedproi cdescrip='camion'` (de staging.camion,
+  111 OCs), stock compra(+)/venta(−) vía tabla delta + un solo UPDATE FROM
+  JOIN (dblib-safe) + `registro_stock` en `NB_WEB.dbo`.
+- **Fechas de documento respetadas**: `dfecalb`/`dfecent` = `pedprot.dFecPed` /
+  `pedclit.dfecped` (que Fase C cargó de la planilla), nunca `GETDATE()`.
+- `albproi` NO existe como tabla → fuera de scope.
 
-| Planilla | ERP |
-|---|---|
-| `Pais` (destino) | `Client.idCountry` |
-| `RAZON SOCIAL` / `DESTINATARIO FISCAL` | `pedclit.ccodcli` |
-| `VENDEDOR` | `pedclit.ccodage` (='72' = Natalia Huang) |
-| `Invoice Date` / `Fecha de Factura` | `pedclit.dfecped` |
-| `Customer PI` | `pedclit.proformaInvoice` |
-| `Customer Invoice` | `pedclit.cnumped` + `FP_FactWebCliEncabezado_Uy.numeroCfe` |
-| `CANTIDAD`, `Modelo`, `PRECIO de venta`, `TOTAL` | `pedclil.ncanped`, `cref`, `npreunit`, `nimp` |
-| `REAL COST` / `Real Mkp` | `pedclil.costForSale`, `userUtility`, `acelerator` |
-| `Transporte` / Forwarder | `pedclit.forwarderId` → `forwarders` |
-| `Incoterm` | `pedclit.incotermId` |
-| `STATUS` (venta) | `pedclit.cestado` |
+Dry-run validado: albprot=506, albprol=2439, albclit=392, albclil=2439,
+pedproi=111, registro_stock=2439, stock neto=0 (entradas +686 = salidas −686,
+la identidad contable cierra).
 
-### Sin destino claro en ERP (lo único que falta)
+### El defecto de Fase C que destrabó el pre-check
 
-| Planilla | Comentario |
-|---|---|
-| `Sell out rebate`, `Reportado AMD/NVIDIA`, `Qty a la que aplica`, `Finalización REBATE` | Tabla `rebates` existe pero es **huérfana** (12 rows, sin `companyCode`, schema primitivo, creada junto a `NewTable` vacía el mismo día — restos de intento abandonado). Modelar nuevo cuando se llegue a esa etapa. |
-| `NB Inc > Cliente` (re-facturación NB Inc → cliente, %) | Mecanismo inter-company. Posible candidato: `addendum` de la CFE. |
-| `APA` / `Soporte extra` | Pueden mapear a `pedclil.ncostoextra_import` |
+El pre-check de aislamiento de Fase D (THROW si algún `ID_Articulo` del delta
+de stock no es `companyCode=11`) detectó que
+`LasetImportFaseCCommand::resolveMasters` resolvía SKU→`ID_ARTICULO` con
+`articulo.ID_PRODUCTO whereIn(...)` **sin filtrar companyCode**. Cuando un SKU
+existía como artículo NB (comp=4), Fase C ligó la línea comp=11 al
+`ID_ARTICULO` de NB → **56 `pedprol` + 56 `pedclil` apuntando a 44 artículos
+NB**. Sin el guard, Fase D habría tocado stock NB. Ver
+[[memoria#Resolución de maestros filtra companyCode]].
 
----
+### Fix aplicado (2026-05-15)
 
-## 4. Schema staging (creado 2026-05-14)
+1. `resolveMasters` ahora filtra `articulo.companyCode=11` (un SKU sin
+   artículo comp=11 queda bloqueado, nunca se liga a otra company).
+2. SQL `2026_05_15_002_fix_fasec_articulo_comp11.sql` **APLICADO**: remapeó
+   **8 `pedprol` + 8 `pedclil`** (los 5 SKUs con artículo gemelo comp=11:
+   122527→122264, 122528→122328, 122534→122262, 122580→122042,
+   122545→121897), solo orden padre comp=11, backups `laset_fasec_fix_backup_*`
+   (56+56), tabla `articulo` y otras companies intactas. Líneas contaminadas:
+   56→48 por tabla. Gotcha de aplicación: el loader `GO`+`unprepared` falla
+   en los UPDATE por "results pending" dblib tras los pre-check `SELECT @var`
+   → los 2 UPDATE se aplican en conexión fresca.
+3. Los **39 SKUs sin gemelo comp=11** → Fase A catálogo. Listados con impacto
+   en `docs/laset_fasec_skus_sin_comp11.csv` (el más urgente:
+   `100-100001973WOF`, 8 líneas). Nota lista para enviar a catálogo:
+   [[nota-catalogo-laset]].
 
-Dos tablas nuevas en `NewBytes_DBF.dbo` (cero modificación a tablas ERP):
+### Estado / próximo desbloqueo
 
-### `laset_import_batches` (9 cols)
-Cabecera por carga. Permite reimportar versiones sucesivas del Excel y hacer diff entre cargas.
+Fase D **no se aplica** hasta: (1) catálogo da de alta los 39 SKUs como
+`articulo` comp=11 (externo); (2) re-bind/re-correr Fase C para esas órdenes;
+(3) `2026_05_15_001` reset stock; (4) `laset:import-fase-d --dry-run` debe dar
+**0 artículos no-comp11** → recién ahí el run real.
 
-- `id` INT IDENTITY PK
-- `file_name`, `file_sha256`, `sheet_name`, `total_rows`, `valid_rows`
-- `imported_at` (default `SYSDATETIME()`), `imported_by`, `notes`
+## 13. Fase D pasada 1 ejecutada + fixes + snapshot/restore (2026-05-15)
 
-### `laset_import_staging` (79 cols)
-1 fila por fila del Excel. **67 cols crudas en NVARCHAR (lossless)** + 8 cols de matching + 4 cols sistema.
+### Pasada 1 ejecutada (dev) — modo `--skip-bloqueadas`
 
-Estructura:
-- `id` INT IDENTITY PK, `batch_id` FK, `source_row_number`, `created_at`
-- 67 cols crudas con nombres `snake_case` y comentarios `-- col NN` referenciando orden Excel original (ej. `vendor_invoice`, `qty`, `sku`, `customer_invoice`, `cantidad`, `precio_venta`, `awb`, `costo_extra_camion`…). Palabras reservadas escapadas: `[comment]`, `[status]`.
-- `match_status` NVARCHAR(20) con CHECK en `('UNMATCHED','MATCHED','PARTIAL','CONFLICT','IMPORTED','IGNORED')`, default `'UNMATCHED'`
-- `matched_pedprot_nnumped` INT, `matched_pedprol_nlinea` DECIMAL(10,2), `matched_pedclit_cnumped` VARCHAR(8), `matched_pedclil_id` INT
-- `match_score` DECIMAL(5,2), `match_notes`, `matched_at`
+`laset:import-fase-d --skip-bloqueadas` difiere las **15 pedprot + 15 pedclit**
+que tocan los 39 SKUs sin artículo comp=11 (decisión: 2 pasadas; solo 30 de
+~900 órdenes bloqueadas) y migra el resto. Resultado verificado independiente:
 
-Índices: `batch`, `sku`, `customer_invoice`, `vendor_invoice`, `status`.
+- 493 albprot + 1454 albprol + 111 pedproi(camion) + 379 albclit + 2155 albclil
+  + 2155 registro_stock (fecha de documento).
+- Stock: **672/672 grupos `(artículo, almacén)` con `nstock == delta` exacto**.
+- Idempotente (re-run = 0). NB / no-comp11 intacto.
 
-### Scripts SQL
+### Tres fixes que costó descubrir (limit=5 → run completo)
 
-- `api-rest-pedidos-laravel/app/database/sql/2026_05_14_001_create_laset_import_staging.sql`
-- `api-rest-pedidos-laravel/app/database/sql/2026_05_14_001_drop_laset_import_staging.sql` (rollback simétrico)
+1. **Consolidación de líneas de remito.** `albclil` PK = `(ID_Articulo,
+   ID_NROREMCLI_ENC)` → 1 línea por artículo por remito (norma del ERP:
+   `backup_albclil` 1746 filas, 0 dups; `backup_albprol` idem). `buildPlan`
+   ahora agrega por `ID_Articulo` dentro del remito (suma `ncanent`; precio y
+   almacén son idénticos dentro del grupo, verificado 0/143). Aplica a
+   albprol + albclil + registro_stock.
+2. **UPSERT de stock.** `stocks` es tabla por `(ID_ARTICULO, ID_ALMACEN)`;
+   ~64% de combos comp=11 no tenían fila → el `UPDATE`-only perdía el
+   movimiento. Ahora INSERT de fila mínima si falta (`id_auto` IDENTITY no se
+   inserta; NOT NULL en 0; `ccodalm`/almacén desde `FP_Almacen`).
+3. **Set de almacenes Laset.** El hardcode `(9,10,11,17,18)` era doblemente
+   erróneo: 17/18 no existen como Laset; URU/ASI reales = **14/15**. Fuente de
+   verdad única = **`FP_Almacen WHERE companyCode=11`**. Corregido en el reset
+   SQL `2026_05_15_001` y en el comando. Ver [[memoria#Almacenes Laset reales]].
 
-Aplicados al SQL Server siguiendo el patrón del `database/sql/README.md` (`docker exec ... php -r "..."` con `preg_split` por `GO`). Ver [[arquitectura#DDL legacy y migraciones]].
+Guards agregados que pagaron: **ASSERT** con rollback si queda grupo de stock
+sin aplicar, y **auto-auditoría** filas reales vs plan (rollback total si
+difiere) — atraparon el PK de albclil y el almacén angosto sin corromper data.
 
----
+### Identidad contable validada
 
-## 5. Estrategia de reconciliación
+`Σ compras − Σ ventas − stock = 0` por `(SKU, almacén)` comp=11. Fase D la
+cumple **por construcción** (parte de stock reseteado a 0 y escribe
+`nstock = compras − ventas`). Verificado: **684/721 grupos = 0**; los **37
+≠ 0 están 100% explicados** por las 30 órdenes diferidas (cierran en pasada
+2), **0 inexplicados**.
 
-**Identidad contable**: `SUM(compras) − SUM(ventas) = stocks.nstock + nstock_ingresando` por SKU+almacén+`companyCode=11`.
+### Snapshot / restore unificado (reversibilidad total)
 
-Tres niveles de cruce:
-
-1. **Sanity intra-ERP**: chequear que la identidad cierra hoy con los 386 OCs + 363 ventas ya migrados. Si no cierra, hay bug previo independiente de la planilla.
-2. **Sanity planilla**: en staging, `SUM(qty) − SUM(cantidad)` por SKU + `deposito` (afinando por `status` Vendidas/Retirado/Stock/Pendiente).
-3. **Delta planilla vs ERP**: diferencia entre (1) y (2). Es exactamente lo que falta migrar.
-
-### Heurística de matching staging → ERP (pendiente de implementar)
-
-1. Match exacto `customer_invoice` ↔ `pedclit.cnumped`. Score 100.
-2. Match `SKU + qty + cliente` en `pedclil` joineando `pedclit` (`companyCode=11`). Score 80.
-3. Match `vendor_invoice` ↔ `pedprot.dateVoucherNumber`. Score 70.
-4. Match `SKU + qty + proveedor` en `pedprol` joineando `pedprot`. Score 60.
-5. Sino → `match_status='UNMATCHED'`.
-
-Persistir resultado en `laset_import_staging.matched_*`.
-
----
-
-## 6. Almacenes de Laset
-
-`pedprot.cCodAlm` para `companyCode=11`:
-
-| ERP | warehousesId | Planilla `DEPOSITO` |
-|---|---:|---|
-| DOM | 9 | DOMESTIC MIAMI |
-| BON | 11, 13, 16 | BONDED PROVEEDOR |
-| GRI | 10 | GRIS |
-| SAF | 7, 9, 10, 14, 15 | (FASTMARK?) |
-| URU | 14 | URUGUAY |
-| ASI | 15 | ASIA |
-
----
-
-## 7. Gotchas
-
-- **Read-only ERP**: NUNCA `UPDATE`/`DELETE`/`ALTER` sobre tablas existentes. Toda metadata de matching vive en `laset_import_staging.matched_*`. INSERTs a ERP son fase explícita de migración. Ver [[contexto#Regla cero: tablas ERP son read-only]].
-- **`pedproi` no es solo impuestos**: además de "Percepción IIBB Caba", guarda **cargos extra** del pedido de compra con `cdescrip='camion'` y `nimporte`. Linkea a `pedprot.nNumPed`, NO a `pedclit`.
-- **`stocks` sin `companyCode`**: filtrar por `cCodAlm`/`ID_ALMACEN` contra los almacenes de Laset.
-- **`rebates` huérfana**: NO usar — schema primitivo, sin `companyCode`, restos de intento abandonado (creada con `NewTable` vacía el 2025-11-01).
-- **CFE Uy ya existe**: 179 cabeceras + 1411 líneas. Si staging matchea con un `numeroCfe`, marcar `MATCHED`.
-- **Branches case-insensitive macOS**: backend usa `Development` (mayúscula), frontend `development` (minúscula). Borrar la de minúscula puede romper la mayúscula. Recovery con `git reset --hard origin/<correcto>`.
-- **Quality issues planilla**: fila 2 con SELECTORs, `Year=1900` (367 rows basura), 22 vacías, cols 45/66/67 sin header, `Invoice Date` y `DEPOSITO` duplicadas. Por eso staging es todo NVARCHAR lossless.
-
----
-
-## 8. Próximos pasos
-
-- [ ] Cargador PHP (lee `docs/laser.xlsx` con `phpoffice/phpspreadsheet`, popula `laset_import_batches` + `laset_import_staging`)
-- [ ] Vistas de reconciliación read-only sobre staging + ERP
-- [ ] Query de la identidad contable por SKU+almacén
-- [ ] Heurística de matching → poblar `matched_*`
-- [ ] Decidir modelo de rebates (`Sell out rebate`, `Reportado AMD/NVIDIA`)
-- [ ] Migración del delta (UNMATCHED → INSERT a pedprot/pedprol/pedproi/pedclit/pedclil + pedclil_oc_asignacion)
-
----
+Todo el proceso es ahora reversible: `laset:snapshot <tag>` antes de cualquier
+proceso/sesión, `laset:restore <tag>` deja la tajada comp=11 exactamente como
+estaba. Probado end-to-end (daño simulado → restore → estado bit-idéntico).
+Doc completa en [[feature-laset-snapshot-restore]].
 
 ## Ver también
 
 - [[pedidos|Índice del proyecto]]
-- [[arquitectura|Arquitectura]] — modelo canónico ERP, capas, DDL legacy
-- [[contexto|Contexto]] — regla cero ERP, empresas activas, gotchas
-- [[memoria|Memoria]]
+- [[arquitectura|Arquitectura]] — modelo canónico ERP, tablas FP_* maestras
+- [[contexto|Contexto]] — regla cero ERP, empresas activas, regla planilla=verdad
+- [[memoria|Memoria]] — gotchas dblib, PK compuesta pedclit, FP_Proveedores moderna
+- [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
 - [[feature-asignacion-oc|Feature Asignación OC↔Venta]] — el linkeo que ya existe
-- [[changelog#2026-05-14]] — sesión de discovery + creación de staging
+- [[changelog#2026-05-14 (PM) — Laset Fase B ejecutada + discovery Fase C]] — sesión completa
 - Doc canónico en repo: `docs/laset-import-framework.md`
-- SQL DDL: `api-rest-pedidos-laravel/app/database/sql/2026_05_14_001_create_laset_import_staging.sql`
+- SQL DDL: `database/sql/2026_05_14_00{1,2,3,4}_*.sql`
+- CSV huérfanos: `docs/laset_orphan_skus.csv`
+

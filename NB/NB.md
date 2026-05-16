@@ -60,6 +60,7 @@ Sistema de gestión de pedidos multi-empresa (NB / NBElectric / Libreopción / *
 - [[NB/pedidos/feature-asignacion-oc|Feature: Asignación OC ↔ Venta]]
 - [[NB/pedidos/feature-asignacion-oc-cookbook|Cookbook Asignación OC]]
 - [[NB/pedidos/feature-laset-import|Feature: Laset Import Framework]]
+- [[NB/pedidos/feature-laset-snapshot-restore|Snapshot/Restore Laset]]
 - [[NB/pedidos/memoria|Memoria]]
 - [[NB/pedidos/changelog|Changelog]]
 
