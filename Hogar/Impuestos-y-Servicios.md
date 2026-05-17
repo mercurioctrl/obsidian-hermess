@@ -6,4 +6,4 @@ Sección para registrar y hacer seguimiento de los pagos periódicos asociados a
 - (Pendiente de completar)
 
 ## Servicios
-- (Pendiente de completar)
+- [[Hogar/Servicios/Metrogas|Metrogas]] — Gas domiciliario

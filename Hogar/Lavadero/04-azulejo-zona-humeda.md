@@ -144,3 +144,8 @@ _(agregar foto del azulejo elegido + referencia del lavadero actual)_
 - [Subway Negro — listado MercadoLibre](https://listado.mercadolibre.com.ar/azulejo-negro-subway-biselado)
 - [Klaukol Impermeable Potenciado 30 kg — MercadoLibre](https://listado.mercadolibre.com.ar/klaukol-impermeable-potenciado-x-30-kg)
 - [Pastina Klaukol 1 kg — MercadoLibre](https://listado.mercadolibre.com.ar/pastina-klaukol-1-kg)
+
+
+## Ver también
+
+- [[Lavadero]] — Índice reforma del lavadero

@@ -81,3 +81,7 @@ Bug crítico resuelto: visitar una ficha con contenido A+ rompía la navegación
 - [[Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto|Gestión de imágenes reseller (frontend)]]
 - [[Libre Opcion/tareas/APP - Fix - Tooltip de codigo postal aparece al cargar el sitio|Fix tooltip código postal]]
 - [[Libre Opcion/tareas/API - Refactor - Migrar recurso de preguntas y respuestas a v4|Migrar preguntas y respuestas a v4]]
+
+## Contexto comercial
+
+- [[hot sale]] — Preparación Hot Sale 2026

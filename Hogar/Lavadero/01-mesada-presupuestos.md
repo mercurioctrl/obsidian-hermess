@@ -71,3 +71,8 @@ Antes de bajar a Marengon 30 mm, **pedir a Marengon una cotización en eucalipto
 2. ⏳ Marengon — Eucalipto **40 mm** (a cotizar) — estimado $400-450k
 3. ⚠️ Marengon — Eucalipto 30 mm — $320k (solo si el presupuesto es la prioridad absoluta)
 4. ❌ Vintage — descartar
+
+
+## Ver también
+
+- [[Lavadero]] — Índice reforma del lavadero

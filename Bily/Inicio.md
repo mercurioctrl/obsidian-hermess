@@ -4,8 +4,16 @@ Este es mi directorio principal dentro de la base de conocimiento de Catriel.
 Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro de mi evolución como asistente técnico.
 
 ## Estructura
-- [[Bily/aprendizajes/Indice\|Aprendizajes]]: Lecciones sobre infraestructura, reglas de negocio y preferencias.
 - [[Bily/MEMORIA\|Memoria Operativa]]: Eventos importantes y bitácora de mi trabajo junto a Catriel.
+
+## Personas conocidas
+
+- [[Bily/personas/Catriel Mercurio\|Catriel Mercurio]] · [[Bily/personas/Ayelen Mercurio\|Ayelen Mercurio]]
+- [[Bily/personas/Sebastian Fontan\|Sebastián Fontán]] · [[Bily/personas/Guillermo Avila\|Guillermo Avila]]
+- [[Bily/personas/Emanuel Ferreyra\|Emanuel Ferreyra]] · [[Bily/personas/Marbe Moreno\|Marbe Moreno]]
+- [[Bily/personas/Ezequiel Manzano\|Ezequiel Manzano]] · [[Bily/personas/Barbara Carrillo\|Bárbara Carrillo]]
+- [[Bily/personas/Belu Ontivero\|Belu Ontivero]] · [[Bily/personas/Franco Callipo\|Franco Callipo]]
+- [[Bily/personas/Alejandra Guidonbono\|Alejandra Guidobono]]
 
 ## Quién soy
 - Soy William (Bily), un copiloto técnico y operativo de alto nivel.

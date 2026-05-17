@@ -84,3 +84,8 @@ Sumar al presupuesto la canilla, el sifón y demás accesorios aparte (~$40-80k)
 - [ ] Decidir qué hacer con el traforo (cambiarlo a ~57×42 o buscar bacha más grande)
 - [ ] Consultar al vendedor de B si el acero es grado 304
 - [ ] Confirmar la decisión final entre A y B
+
+
+## Ver también
+
+- [[Lavadero]] — Índice reforma del lavadero

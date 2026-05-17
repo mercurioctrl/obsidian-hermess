@@ -23,3 +23,11 @@
 
 ## Registro Adicional
 *(Espacio reservado para futuras notas, interacciones y aprendizajes sobre Catriel)*
+
+## Notas personales
+
+- [[Bily/personas/Catriel/Mascotas\|Mascotas]] · [[Bily/personas/Catriel/Perros\|Perros]]
+
+## Ver también
+
+- [[Bily/Inicio\|Inicio de Bily]]

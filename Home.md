@@ -39,8 +39,7 @@
 
 ## Hogar
 
-- `Hogar/`
-  - `Lavadero/` · `Oficina/`
+- [[Hogar/Lavadero/Lavadero|Lavadero]] · [[Hogar/Oficina/Oficina|Oficina]] · [[Hogar/Impuestos-y-Servicios|Impuestos y Servicios]] · [[Hogar/Servicios/Metrogas|Metrogas]]
 
 ## Laset
 
@@ -86,7 +85,7 @@ Ver [[Skills/Skills|Skills]].
 - [[aplus-server/aplus-server|aplus-server]]
   - [[aplus-server/arquitectura|arquitectura]] · [[aplus-server/stack|stack]] · [[aplus-server/changelog|changelog]] · [[aplus-server/memoria|memoria]] · [[aplus-server/contexto|contexto]] · [[aplus-server/integracion-retailers|retailers]] · [[aplus-server/migracion-libreopcion|migración]]
 - [[hermess-pc/hermess-pc|hermess-pc]]
-  - [[hermess-pc/arquitectura|arquitectura]] · [[hermess-pc/red|red UniFi]] · [[hermess-pc/changelog|changelog]] · [[hermess-pc/earlyoom|earlyoom]] · [[hermess-pc/memoria|memoria]] · [[hermess-pc/monitores|monitores]] · `musica/`
+  - [[hermess-pc/arquitectura|arquitectura]] · [[hermess-pc/red|red UniFi]] · [[hermess-pc/changelog|changelog]] · [[hermess-pc/earlyoom|earlyoom]] · [[hermess-pc/memoria|memoria]] · [[hermess-pc/monitores|monitores]] · [[hermess-pc/musica/musica|musica]]
 
 ## Otros proyectos
 

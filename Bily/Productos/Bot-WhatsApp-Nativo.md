@@ -36,3 +36,7 @@ Un bot conversacional diseñado para operar de manera nativa y directa desde Wha
 2. **Capa de Orquestación (Core Inteligente).**
 3. **Capa de Tools & Ingesta (APIs Locales).**
 4. **Capa de Memoria (Bases de Datos).**
+
+## Ver también
+
+- [[Bily/Inicio\|Inicio de Bily]]

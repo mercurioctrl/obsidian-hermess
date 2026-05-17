@@ -20,3 +20,7 @@
 - Cuotas pendientes de plan de pago: $ 75.951,70
 
 _Nota: estos importes de deuda los informa la factura al 13/05/2026 y pueden variar con nuevos movimientos._
+
+## Ver también
+
+- [[Impuestos-y-Servicios]] — Pagos periódicos del hogar

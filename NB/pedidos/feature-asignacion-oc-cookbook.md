@@ -404,7 +404,7 @@ ORDER BY t.dFecPed DESC;
 
 ## Workflow de branch
 
-> Ver [[feedback_rebase_development_modal|memoria]] para el detalle.
+> Ver [[memoria]] para el detalle.
 
 La rama `feature/asignacion-oc-pedclil` ya recibió 3 merges parciales a Development (PRs #1193, #1196, #1197). Cualquier cambio sobre `AsignarOCModal.vue` u otros archivos compartidos requiere bajar Development primero:
 
