@@ -109,9 +109,12 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 | Fecha       | Concepto                                         | Monto        |
 | ----------- | ------------------------------------------------ | ------------ |
 | _en curso_  | Albañil (caños, desagote, nivelación de piso)    | $500.000     |
-| 2026-04-24  | Mario (contratista) — pago 1                     | $1.000.000   |
-| 2026-04-30  | Mario (contratista) — pago 2                     | $700.000     |
-| **Total pagado** |                                             | **$2.200.000** |
+| 2026-04-17  | Mario (contratista) — pago 1                     | $500.000     |
+| 2026-04-24  | Mario (contratista) — pago 2                     | $1.000.000   |
+| 2026-04-30  | Mario (contratista) — pago 4                     | $700.000     |
+| 2026-05-01  | Mario (contratista) — pago 5                     | $700.000     |
+| 2026-05-15  | Mario (contratista) — pago 6                     | $1.000.000   |
+| **Total pagado** |                                             | **$5.400.000** |
 
 ## Planos
 
