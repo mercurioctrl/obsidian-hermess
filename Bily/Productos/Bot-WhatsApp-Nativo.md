@@ -7,9 +7,11 @@ Idea registrada a partir de notas de voz y mensajes de Catriel el 17 de Mayo de 
 Un bot conversacional diseñado para operar de manera nativa y directa desde WhatsApp, funcionando como un **orquestador multi-agente** con memoria persistente y capacidad de comunicación autónoma con terceros. El sistema está pensado como una plataforma multi-instancia (cada agente con su propio número).
 
 ## Filosofía de Producto y Experiencia de Usuario (UX)
-- **Onboarding ("Minteo" del Bot):** Un proceso de configuración inicial interactivo, empático (sin ser empalagoso) y extremadamente pulido. El usuario "crea" o "mintea" su propio bot conversando con él: respondiendo preguntas simples para definir su personalidad (el "alma" o prompt base) y el tipo de tareas principales que le va a delegar.
-- **Simplicidad Nivel Apple:** Fricción cero. Filosofía de diseño directa donde "las cosas son lo que son" y no hay jerga técnica ni nombres rebuscados. El bot y sus interacciones deben ser tan intuitivos que cualquier persona (incluso perfiles totalmente alejados de la tecnología) pueda utilizarlo y entenderlo de forma natural y sin curva de aprendizaje.
-- **Formateo Nativo (MD a WhatsApp):** Dado que la interfaz principal es WhatsApp, el bot incorpora un adaptador de formato que traduce documentos estructurados (Markdown) al formato nativo de WhatsApp (asteriscos para negritas, sin encabezados '#' pesados, listas limpias) garantizando una lectura siempre estética y agradable en dispositivos móviles.
+- **Onboarding ("Minteo" del Bot):** Un proceso de configuración inicial interactivo, empático (sin ser empalagoso) y extremadamente pulido. El usuario "crea" o "mintea" su propio bot conversando con él para definir su personalidad y el tipo de tareas principales que le va a delegar.
+- **Perfiles de Asistencia (Arquetipos):** El sistema ofrece perfiles o roles predefinidos (ej: Emprendedor, CEO, Creativo, Operativo). Dependiendo del perfil elegido durante el minteo, el bot adopta una postura proactiva específica. Por ejemplo, un perfil "Emprendedor" o "CEO" le preguntará activamente al usuario por sus objetivos de negocio, KPIs y hará un seguimiento de metas a corto y largo plazo.
+- **Gestor de Objetivos y To-Do Empresarial:** En perfiles orientados a negocio, el bot actúa como asistente de gestión: ayuda a descomponer problemas grandes en partes manejables, genera y mantiene una lista de tareas (to-do list) y la organiza siguiendo principios clásicos de administración de empresas (priorización, dependencias, plazos, responsables, etc.).
+- **Simplicidad Nivel Apple:** Fricción cero. Filosofía de diseño directa donde "las cosas son lo que son" y no hay jerga técnica ni nombres rebuscados. El bot y sus interacciones deben ser tan intuitivos que cualquier persona pueda utilizarlo de forma natural y sin curva de aprendizaje.
+- **Formateo Nativo (MD a WhatsApp):** Dado que la interfaz principal es WhatsApp, el bot incorpora un adaptador de formato que traduce documentos estructurados (Markdown) al formato nativo de WhatsApp (asteriscos para negritas, listas limpias) garantizando una lectura siempre estética.
 
 ## Características Clave (Requerimientos)
 1. **Cerebro / Base de Conocimiento Permanente:** Sistema de memoria a largo plazo absoluto (no olvida nada).
@@ -19,9 +21,9 @@ Un bot conversacional diseñado para operar de manera nativa y directa desde Wha
 3. **Comunicación Autónoma con Terceros (Killer Feature):** Capacidad de iniciar y mantener conversaciones con otras personas o negocios por WhatsApp. (Ej: Pedir cotizaciones a proveedores).
 4. **Lectura de Contexto Completo:** Acceso, lectura y análisis de todo el historial de los chats.
 5. **Procesamiento de Multimedia Nativo (Zero-Token Cost):** Audios e imágenes se procesan estrictamente mediante APIs locales para evitar costos.
-6. **Tareas Programadas (Cronjobs):** Soporte para procesos en background, seguimientos y automatizaciones diferidas.
+6. **Tareas Programadas (Cronjobs) y Proactividad:** Soporte para procesos en background, seguimientos y automatizaciones diferidas. Ideal para hacer seguimiento autónomo de los objetivos planteados en los perfiles.
 7. **Multi-Instancia:** Escalabilidad horizontal. Múltiples agentes fácilmente desplegables, cada uno con su número.
-8. **Traductor de Formato a WhatsApp:** Pipeline de conversión de texto (MD -> WA Format) para mostrar respuestas largas, documentos o resúmenes de memoria de forma óptima en la app.
+8. **Traductor de Formato a WhatsApp:** Pipeline de conversión de texto (MD -> WA Format) para lectura óptima.
 
 ## Stack Tecnológico y Arquitectura Propuesta
 - **Cliente de WhatsApp:** `whatsapp-web.js` con `puppeteer`. Se descarta la API oficial de Meta para evitar bloqueos y plantillas.
