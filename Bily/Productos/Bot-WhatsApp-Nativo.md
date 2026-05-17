@@ -8,32 +8,31 @@ Un bot conversacional diseñado para operar de manera nativa y directa desde Wha
 
 ## Filosofía de Producto y Experiencia de Usuario (UX)
 - **Onboarding ("Minteo" del Bot):** Un proceso de configuración inicial interactivo, empático (sin ser empalagoso) y extremadamente pulido. El usuario "crea" o "mintea" su propio bot conversando con él para definir su personalidad y el tipo de tareas principales que le va a delegar.
-- **Perfiles de Asistencia (Arquetipos):** El sistema ofrece perfiles o roles predefinidos (ej: Emprendedor, CEO, Creativo, Operativo). Dependiendo del perfil elegido durante el minteo, el bot adopta una postura proactiva específica. Por ejemplo, un perfil "Emprendedor" o "CEO" le preguntará activamente al usuario por sus objetivos de negocio, KPIs y hará un seguimiento de metas a corto y largo plazo.
-- **Gestor de Objetivos y To-Do Empresarial:** En perfiles orientados a negocio, el bot actúa como asistente de gestión: ayuda a descomponer problemas grandes en partes manejables, genera y mantiene una lista de tareas (to-do list) y la organiza siguiendo principios clásicos de administración de empresas (priorización, dependencias, plazos, responsables, etc.).
-- **Simplicidad Nivel Apple:** Fricción cero. Filosofía de diseño directa donde "las cosas son lo que son" y no hay jerga técnica ni nombres rebuscados. El bot y sus interacciones deben ser tan intuitivos que cualquier persona pueda utilizarlo de forma natural y sin curva de aprendizaje.
-- **Formateo Nativo (MD a WhatsApp):** Dado que la interfaz principal es WhatsApp, el bot incorpora un adaptador de formato que traduce documentos estructurados (Markdown) al formato nativo de WhatsApp (asteriscos para negritas, listas limpias) garantizando una lectura siempre estética.
+- **Perfiles de Asistencia (Arquetipos):** El sistema ofrece perfiles o roles predefinidos (ej: Emprendedor, CEO, Creativo, Operativo). Dependiendo del perfil elegido durante el minteo, el bot adopta una postura proactiva específica. Por ejemplo, un perfil "Emprendedor" o "CEO" le preguntará activamente al usuario por sus objetivos de negocio, KPIs y hará un seguimiento de metas.
+- **Gestor de Objetivos y To-Do Empresarial:** En perfiles orientados a negocio, el bot ayuda a descomponer problemas grandes en partes manejables, genera y mantiene una lista de tareas y la organiza siguiendo principios clásicos de administración.
+- **Interés Genuino como Feature de Marketing:** El bot está diseñado para mostrar curiosidad sana por la persona (preguntar por su entorno, relaciones, intereses y objetivos) de forma natural y no invasiva. Esta proactividad y sensación de “atención personalizada” funciona como gancho psicológico para aumentar la retención y el engagement en los primeros días de uso.
+- **Simplicidad Nivel Apple:** Fricción cero. Diseño directo donde "las cosas son lo que son" y no hay jerga técnica.
+- **Formateo Nativo (MD a WhatsApp):** Adaptador de formato que traduce Markdown a estilo WhatsApp para una lectura agradable en móvil.
 
 ## Características Clave (Requerimientos)
 1. **Cerebro / Base de Conocimiento Permanente:** Sistema de memoria a largo plazo absoluto (no olvida nada).
 2. **Arquitectura Multi-Agente (Enrutamiento Inteligente):** 
-   - *Agente Orquestador (High-IQ):* Utiliza un modelo pago de alta capacidad para manejar el hilo general y derivar tareas.
-   - *Sub-agentes y Tools locales:* Las tareas pesadas, repetitivas o de volumen se delegan a modelos locales.
-3. **Comunicación Autónoma con Terceros (Killer Feature):** Capacidad de iniciar y mantener conversaciones con otras personas o negocios por WhatsApp. (Ej: Pedir cotizaciones a proveedores).
-4. **Lectura de Contexto Completo:** Acceso, lectura y análisis de todo el historial de los chats.
-5. **Procesamiento de Multimedia Nativo (Zero-Token Cost):** Audios e imágenes se procesan estrictamente mediante APIs locales para evitar costos.
-6. **Tareas Programadas (Cronjobs) y Proactividad:** Soporte para procesos en background, seguimientos y automatizaciones diferidas. Ideal para hacer seguimiento autónomo de los objetivos planteados en los perfiles.
-7. **Multi-Instancia:** Escalabilidad horizontal. Múltiples agentes fácilmente desplegables, cada uno con su número.
-8. **Traductor de Formato a WhatsApp:** Pipeline de conversión de texto (MD -> WA Format) para lectura óptima.
+   - *Agente Orquestador (High-IQ):* Modelo pago de alta capacidad.
+   - *Sub-agentes y Tools locales:* Tareas pesadas delegadas a modelos locales.
+3. **Comunicación Autónoma con Terceros (Killer Feature):** Conversar con personas/negocios por WhatsApp.
+4. **Lectura de Contexto Completo:** Acceso y análisis del historial completo.
+5. **Procesamiento de Multimedia Nativo (Zero-Token Cost):** Audios e imágenes via APIs locales.
+6. **Tareas Programadas (Cronjobs) y Proactividad:** Seguimientos y automatizaciones.
+7. **Multi-Instancia:** Escalabilidad horizontal por número.
+8. **Traductor de Formato a WhatsApp:** MD -> formato WhatsApp.
 
 ## Stack Tecnológico y Arquitectura Propuesta
-- **Cliente de WhatsApp:** `whatsapp-web.js` con `puppeteer`. Se descarta la API oficial de Meta para evitar bloqueos y plantillas.
-- **Procesamiento AI Híbrido (Tiered LLM Architecture):**
-  - *Decisiones / Orquestación:* Modelo pago con alta capacidad de razonamiento.
-  - *Procesamiento Pesado / Multimedia:* Microservicios locales (`whisper.cpp`, Ollama con LLaVA/Moondream).
-- **Contenerización (Docker):** Arquitectura fuertemente desacoplada.
+- **Cliente de WhatsApp:** `whatsapp-web.js` con `puppeteer`.
+- **Procesamiento AI Híbrido (Tiered LLM Architecture):** Modelo pago para orquestación + microservicios locales para multimedia y tareas pesadas.
+- **Contenerización (Docker):** Arquitectura desacoplada.
 
 ### Esquema de Arquitectura Base
-1. **Capa de Comunicación (Workers de WhatsApp):** Múltiples contenedores independientes corriendo `whatsapp-web.js`.
-2. **Capa de Orquestación (Core Inteligente):** Motor LLM pago que toma decisiones, enruta y usa herramientas.
-3. **Capa de Tools & Ingesta (APIs Locales):** Microservicios de inferencia local para audios/imágenes.
-4. **Capa de Memoria (Bases de Datos):** Base Vectorial (RAG) y Base Relacional (estados y cronjobs).
+1. **Capa de Comunicación (Workers de WhatsApp).**
+2. **Capa de Orquestación (Core Inteligente).**
+3. **Capa de Tools & Ingesta (APIs Locales).**
+4. **Capa de Memoria (Bases de Datos).**
