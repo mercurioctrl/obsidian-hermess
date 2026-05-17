@@ -12,6 +12,7 @@ Skills reutilizables para Claude Code, almacenados en la bóveda para compartir 
 - [[Skills/sincronizar-boveda/SKILL|sincronizarBoveda]] — Sincroniza documentación, arquitectura y changelog del proyecto con Obsidian
 - [[Skills/tarea-boveda/SKILL|tareaBoveda]] — Crea notas de tareas (APP/API + Feat/Refactor/Fix) en la subcarpeta `tareas/` del proyecto
 - [[Skills/nota-reforma/SKILL|notaReforma]] — Crea una nota liviana (estado/decisión/gastos/fotos) en proyectos no-software del vault y actualiza índices padres recursivamente
+- [[Skills/reconstruir-indices/SKILL|reconstruirIndices]] — Recorre toda la bóveda recursivamente y reconstruye wikilinks en todos los índices; actualiza Home.md con resumen de cada carpeta
 
 ## Cómo usar
 

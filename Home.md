@@ -79,6 +79,7 @@ Ver [[Skills/Skills|Skills]].
 - `blu-report/` · `configurar-boveda/` · `docx/` · `fullstack-docker-app/`
 - `nota-reforma/` · `pdf/` · `pptx/` · `replicar-microsite/`
 - `schedule/` · `sincronizar-boveda/` · `skill-creator/` · `tarea-boveda/` · `xlsx/`
+- [[Skills/reconstruir-indices/SKILL|reconstruirIndices]] — reconstruye wikilinks en todos los índices de la bóveda
 
 ## Servidores / Infra
 
