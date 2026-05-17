@@ -11,6 +11,21 @@ Visión general de los componentes, servicios y decisiones de configuración del
 | RAM | 32 GB |
 | Monitores | 3 (ver [[hermess-pc/monitores]]) |
 | GPU | Conectores DP-0, DP-3, HDMI-0 |
+| Router | UniFi USG-3P (ver [[hermess-pc/red]]) |
+
+---
+
+## Red
+
+Ver [[hermess-pc/red]] para detalle completo.
+
+| ISP | Puerto USG | Modo |
+|-----|-----------|------|
+| Telecom | Port 1 (eth0) | Primary |
+| Telecentro | Port 3 (eth2) | Failover Only |
+
+- Controller UniFi en Docker (`/var/www/hermess/unifi/`)
+- Failover automático si Telecom cae
 
 ---
 
@@ -80,11 +95,14 @@ Ver [[hermess-pc/sync-curls]] para detalle completo.
 | OOMScoreAdjust=-1000 en docker/containerd/libvirtd | VMs y contenedores nunca son sacrificados |
 | TilingShell autotiling=false | Causaba redimensionado que rompía posición de ventanas |
 | sync-curls como servicio de usuario | No requiere root, se integra con `journalctl --user` |
+| Telecentro como Failover Only | ISP secundario más lento, solo para emergencias |
+| config.gateway.json mínimo | Evita conflictos con reglas NAT del controller |
 
 ---
 
 ## Ver también
 
+- [[hermess-pc/red]]
 - [[hermess-pc/earlyoom]]
 - [[hermess-pc/monitores]]
 - [[hermess-pc/sync-curls]]

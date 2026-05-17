@@ -39,3 +39,22 @@ Archivos modificados:
 - `/etc/systemd/system/docker.service.d/oom.conf`
 - `/etc/systemd/system/containerd.service.d/oom.conf`
 - `/etc/systemd/system/libvirtd.service.d/oom.conf`
+---
+
+## 2026-05-16
+
+### Dual WAN failover — Telecentro como WAN2 ✓
+
+- Configurado eth2 (Port 3) del USG-3P como WAN secundaria con Telecentro
+- Modem Telecentro en modo router (DHCP activo, da IP 10.131.202.19/24 al USG)
+- Load Balancing: Failover Only (Telecentro solo activa si Telecom cae)
+- Ambas WANs en estado **Active** confirmado desde el controller
+
+**Problemas resueltos:**
+- eth2 tenía `disable` en config.boot → removido por SSH con sed
+- Reglas NAT 6004-6006 stale (network-group) bloqueaban el provision → eliminadas
+- USG-3P no soporta `load-balancing wan-load-balance` → removido de config.gateway.json
+
+Archivos modificados:
+- `/var/www/hermess/unifi/config/data/sites/default/config.gateway.json` (solo eth2)
+- `/config/config.boot` en USG (eth2 habilitado con DHCP, NAT rules limpiadas)
