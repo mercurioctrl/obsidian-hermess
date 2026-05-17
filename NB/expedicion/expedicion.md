@@ -19,6 +19,7 @@ Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 | [[memoria]] | Problemas resueltos, decisiones, gotchas |
 
 ---
+- [[NB/expedicion/tareas/tareas|tareas]] — Tareas de desarrollo del proyecto [[NB/expedicion/expedicion|Expedición]].
 
 ## Tareas
 

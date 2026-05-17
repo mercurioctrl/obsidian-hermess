@@ -10,3 +10,11 @@ Tareas de desarrollo del proyecto [[NB/expedicion/expedicion|Expedición]].
 ## APP
 
 - [[NB/expedicion/tareas/APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas|APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas]]
+
+## Ver también
+
+- [[NB/expedicion/tareas/API - Feat - Confirmar ingreso manualmente y notificar por email]]
+- [[NB/expedicion/tareas/API - Feat - Confirmar ingreso manualmente y notificar por email]]
+- [[NB/expedicion/tareas/API - Feat - Incluir permisos de bypass en objeto user]]
+- [[NB/expedicion/tareas/API - Feat - Permisos por agente para saltear validaciones de serials]]
+- [[NB/expedicion/tareas/APP - Refactor - Separar campos obligatorios y opcionales en modal de medidas]]

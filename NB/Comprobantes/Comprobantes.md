@@ -40,3 +40,7 @@ La app Nuxt es el **cliente** de la API PHP. Cada ruta de voucher en Nuxt tiene 
 ---
 
 _Última sincronización: 2026-04-22_
+- [[NB/Comprobantes/arquitectura|Arquitectura]]
+- [[NB/Comprobantes/changelog|Changelog]]
+- [[NB/Comprobantes/contexto|Contexto]]
+- [[NB/Comprobantes/stack|Stack]]

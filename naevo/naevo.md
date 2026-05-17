@@ -39,3 +39,9 @@ Ver [[stack|Stack y dependencias]] para el detalle.
 ---
 
 _Última sincronización: 2026-05-14_
+- [[naevo/arquitectura|Arquitectura]]
+- [[naevo/changelog|Changelog]]
+- [[naevo/contexto|Contexto]]
+- [[naevo/memoria|Memoria]]
+- [[naevo/modulos|Módulos]]
+- [[naevo/templates-preview|Templates & Preview Switcher]]

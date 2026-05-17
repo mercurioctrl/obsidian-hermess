@@ -14,3 +14,17 @@ Tareas de desarrollo del proyecto [[Libre Opcion/Libre Opcion|Libre Opcion]].
 - [[Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría|API - Feat - Recategorizar productos sin categoría]]
 - [[Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos|API - Feat - Estadísticas de categorización de productos]]
 - [[Libre Opcion/tareas/API - Feat - CRUD de campañas|API - Feat - CRUD de campañas]]
+
+## Ver también
+
+- [[Libre Opcion/tareas/API - Refactor - Migrar recurso de preguntas y respuestas a v4]]
+- [[Libre Opcion/tareas/APP - Fix - Tooltip de codigo postal aparece al cargar el sitio|APP - Fix - Tooltip de código postal aparece al cargar el sitio]]
+- [[Libre Opcion/tareas/API - Feat - CRUD de campañas]]
+- [[Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos|API - Feat - Estadísticas de categorización de productos (v4)]]
+- [[Libre Opcion/tareas/API - Feat - Imágenes personalizadas del reseller por producto]]
+- [[Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría|API - Feat - Recategorizar productos sin categoría (v4, background job)]]
+- [[Libre Opcion/tareas/API - Refactor - Migrar recurso de preguntas y respuestas a v4]]
+- [[Libre Opcion/tareas/APP - Feat - Gestión de campañas]]
+- [[Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto]]
+- [[Libre Opcion/tareas/APP - Fix - Tooltip de codigo postal aparece al cargar el sitio|APP - Fix - Tooltip de código postal aparece al cargar el sitio]]
+- [[Libre Opcion/tareas/APP - Refactor - Migrar cotización de envíos de API legacy a v4]]

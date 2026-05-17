@@ -13,6 +13,13 @@ Cada producto es una carpeta `content/<slug>/` con su `index.html` + `assets/` (
 - [[aplus-server/contexto|Contexto]] — modelo de amenazas, gotchas, reglas operativas, patrones de replicación de microsites
 - [[aplus-server/memoria|Memoria]] — memoria persistente de Claude (estrategia, estado, referencias, feedback)
 - [[aplus-server/changelog|Changelog]] — registro de cambios
+- [[aplus-server/arquitectura|Arquitectura]]
+- [[aplus-server/changelog|Changelog]]
+- [[aplus-server/contexto|Contexto]]
+- [[aplus-server/integracion-retailers|Integración con retailers]]
+- [[aplus-server/memoria|Memoria]]
+- [[aplus-server/migracion-libreopcion|Migración desde `/micrositios-files/` de Libre Opción]]
+- [[aplus-server/stack|Stack]]
 
 ## Stack resumido
 

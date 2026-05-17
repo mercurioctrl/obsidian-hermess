@@ -34,3 +34,12 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 - [[hermess-pc/arquitectura]]
 - [[hermess-pc/red]]
 - [[hermess-pc/changelog]]
+- [[hermess-pc/musica/musica|musica]] — Descargador de playlists de YouTube a MP3. Organiza los archivos en carpetas ...
+- [[hermess-pc/musica/musica|musica]] — Descargador de playlists de YouTube a MP3. Organiza los archivos en carpetas ...
+- [[hermess-pc/arquitectura|Arquitectura del sistema]]
+- [[hermess-pc/changelog|Changelog]]
+- [[hermess-pc/earlyoom|earlyoom — Protección contra OOM]]
+- [[hermess-pc/memoria|Memoria de Claude — hermess-pc]]
+- [[hermess-pc/monitores|Configuración de monitores]]
+- [[hermess-pc/red|Red — UniFi dual WAN failover]]
+- [[hermess-pc/sync-curls|Servicio sync-curls]]

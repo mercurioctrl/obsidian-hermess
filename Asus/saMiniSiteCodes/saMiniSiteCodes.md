@@ -22,3 +22,8 @@ Formulario público para solicitar código, panel de admin para gestionar claims
 ---
 
 *Última sincronización: 2026-04-16*
+- [[Asus/saMiniSiteCodes/arquitectura|Arquitectura]]
+- [[Asus/saMiniSiteCodes/changelog|Changelog]]
+- [[Asus/saMiniSiteCodes/contexto|Contexto]]
+- [[Asus/saMiniSiteCodes/memoria|Memoria]]
+- [[Asus/saMiniSiteCodes/stack|Stack]]

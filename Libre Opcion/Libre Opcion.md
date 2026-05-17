@@ -85,3 +85,8 @@ Bug crítico resuelto: visitar una ficha con contenido A+ rompía la navegación
 ## Contexto comercial
 
 - [[hot sale]] — Preparación Hot Sale 2026
+
+## Ver también
+
+- [[Libre Opcion/tareas/tareas|tareas]] — Tareas de desarrollo del proyecto [[Libre Opcion/Libre Opcion|Libre Opcion]].
+- [[Libre Opcion/sync-curls|Sync Curls — Proceso de sincronización periódica]]

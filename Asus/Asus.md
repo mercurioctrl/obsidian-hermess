@@ -22,3 +22,8 @@ Modelo de liquidación, coeficientes y escenarios de contratación CCT 130/75.
 - [[Asus/Contrataciones/Escenarios de Contratación|Escenarios de Contratación]]
 - [[Asus/Contrataciones/Fórmulas del Modelo|Fórmulas del Modelo]]
 - [[Asus/Contrataciones/Calculadora Excel - Instrucciones|Calculadora Excel - Instrucciones]]
+
+## Ver también
+
+- [[Asus/Contrataciones/Contrataciones|Contrataciones]] — Modelo de contratación de personal tercerizado bajo CCT 130/75 (Empleados de ...
+- [[Asus/saMiniSiteCodes/saMiniSiteCodes|saMiniSiteCodes]] — Micrositio de canje de códigos de activación para productos ASUS / ROG (Resid...

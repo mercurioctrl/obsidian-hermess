@@ -35,3 +35,11 @@ Versiones del script `Code.gs` en la carpeta `codigo/`:
 
 - API: `https://api.bully.lio.red/options`
 - Apps Script editor: `https://script.google.com/u/0/home/projects/1GQ32BC3XcLudtVARbvMyT1lgJ0WOpCynYUlff8zd2KXhZaB3K7ygRlVO/edit`
+
+## Ver también
+
+- [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Planilla Acciones Bully - Apps Script]]
+- [[Planilla Acciones Bully/arquitectura|Arquitectura — bully]]
+- [[Planilla Acciones Bully/bully|bully — API + Fair Value Scraper]]
+- [[Planilla Acciones Bully/prompt-agregar-stock-data-api|Prompt para Claude Code - Agregar datos de stock a la API]]
+- [[Planilla Acciones Bully/prompt-optimizar-api|Prompt para Claude Code - Optimizar API Bully]]
