@@ -2,7 +2,7 @@
 
 Base de conocimiento de la PC personal de hermess: configuración del sistema, red, monitores, extensiones GNOME, servicios, scripts y optimizaciones.
 
-Última sincronización: 2026-05-16
+Última sincronización: 2026-05-18
 
 ---
 
@@ -23,7 +23,7 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 - **OS:** Ubuntu (GNOME)
 - **RAM:** 32 GB
 - **Monitores:** 3 (Gigabyte 1440p centro, BenQ portrait izq, LG portrait der)
-- **Red:** USG-3P con dual WAN — Telecom (primary) + Telecentro (failover)
+- **Red:** USG-3P dual WAN — Telecom (primary) + Telecentro (failover)
 - **Servicios activos:** earlyoom, sync-curls, Docker, libvirt/QEMU, MySQL, Apache2
 - **Entorno de trabajo:** VMs (libvirt/QEMU), contenedores Docker, apps Electron (Slack, Warp)
 
@@ -34,12 +34,3 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 - [[hermess-pc/arquitectura]]
 - [[hermess-pc/red]]
 - [[hermess-pc/changelog]]
-- [[hermess-pc/musica/musica|musica]] — Descargador de playlists de YouTube a MP3. Organiza los archivos en carpetas ...
-- [[hermess-pc/musica/musica|musica]] — Descargador de playlists de YouTube a MP3. Organiza los archivos en carpetas ...
-- [[hermess-pc/arquitectura|Arquitectura del sistema]]
-- [[hermess-pc/changelog|Changelog]]
-- [[hermess-pc/earlyoom|earlyoom — Protección contra OOM]]
-- [[hermess-pc/memoria|Memoria de Claude — hermess-pc]]
-- [[hermess-pc/monitores|Configuración de monitores]]
-- [[hermess-pc/red|Red — UniFi dual WAN failover]]
-- [[hermess-pc/sync-curls|Servicio sync-curls]]

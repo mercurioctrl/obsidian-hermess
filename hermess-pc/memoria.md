@@ -1,6 +1,6 @@
 # Memoria de Claude — hermess-pc
 
-Contexto y preferencias guardadas por Claude para este proyecto. Sincronizado: 2026-05-15.
+Contexto y preferencias guardadas por Claude para este proyecto. Sincronizado: 2026-05-18.
 
 ---
 
@@ -14,6 +14,13 @@ Contexto y preferencias guardadas por Claude para este proyecto. Sincronizado: 2
 ---
 
 ## Configuraciones del sistema
+
+### Red
+Ver [[hermess-pc/red]] para detalle completo.
+- USG-3P con dual WAN: Telecom (primary, Port 1) + Telecentro (failover, Port 3)
+- Controller UniFi en Docker, config override en `config.gateway.json`
+- Telecentro modem en modo router (DHCP activo, da 10.131.202.19/24)
+- Ambas WANs Active, modo Failover Only
 
 ### Monitores
 Ver [[hermess-pc/monitores]] para detalle completo.
@@ -45,5 +52,6 @@ Ver [[hermess-pc/sync-curls]] para detalle completo.
 ## Ver también
 
 - [[hermess-pc/arquitectura]]
+- [[hermess-pc/red]]
 - [[hermess-pc/changelog]]
 - [[hermess-pc/hermess-pc|Índice]]
