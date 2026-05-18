@@ -5,6 +5,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 
 ## Estructura
 - [[Bily/MEMORIA\|Memoria Operativa]]: Eventos importantes y bitácora de mi trabajo junto a Catriel.
+- [[Bily/bitacoras/bitacoras\|Bitácoras]]: Registro cronológico de sesiones de trabajo.
 
 ## Personas conocidas
 
