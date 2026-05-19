@@ -10,12 +10,12 @@
 - Arreglar a Sebastián el módulo de "préstamos de capital".
 
 ## Bloqueos / Esperando OK
-- Dar OK a Ema para crear manualmente las líneas de caja/banco (caso cobro 3 métodos).
 - Seguimiento Ezequiel (Postventa): Ver si pudo replicar con el cliente dónde falla el flujo.
 
 ## En curso
 
 ## Listo
+- Dar OK a Ema para crear manualmente las líneas de caja/banco (caso cobro 3 métodos).
 - Pagarle la tarjeta a mi papá.
 - Responder preguntas a Marbe sobre PED-1360.
 - Reiniciar el servidor de Gamma (Marbe).
