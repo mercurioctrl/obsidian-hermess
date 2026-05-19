@@ -6,7 +6,7 @@ Sistema de gestión de pedidos de **NB** (New Bytes). Aplicación web interna pa
 
 - **Frontend:** Nuxt.js 2.15 (Vue 2) + Ant Design Vue 1.7
 - **Backend:** Laravel 9 (PHP 8.1) + SQL Server
-- **Deploy:** Docker (backend) + PM2 (frontend)
+- **Deploy:** Docker (backend, puerto 8093) + PM2 (frontend, puerto 3702)
 
 Ver detalles completos en [[stack|Stack e infraestructura]].
 
@@ -40,4 +40,4 @@ El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_
 Las tablas legacy del ERP (`pedprot`, `pedprol`, `pedproi`, `pedclit`, `pedclil`, `stocks`, `FP_*`, `forwarders`, `rebates`) **nunca se modifican** desde features nuevos. Se leen via `SELECT/JOIN`. Toda metadata de cualquier feature vive en tablas nuevas con prefijo del feature (`pedclil_oc_asignacion`, `laset_import_*`). Ver [[contexto#Regla cero: tablas ERP son read-only]].
 
 ---
-*Última sincronización: 2026-05-15 (Laset Fase D pasada 1 ejecutada y verificada en dev; snapshot/restore unificado probado end-to-end; pasada 2 espera Fase A catálogo — ver [[feature-laset-import#13. Fase D pasada 1 ejecutada + fixes + snapshot/restore (2026-05-15)]])*
+*Última sincronización: 2026-05-19 — pull frontend: PED-1358/1359/1361/1363 mergeados a `development`; backend en rama `deve-fix-linea-creidto-laset` con medio de pago 21 diferido. Laset Fase D pasada 2 pendiente (espera Fase A catálogo). Ver [[changelog]] para detalle.*
