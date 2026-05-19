@@ -1,9 +1,9 @@
 
-Categorias con problemas:
+Referidos al recurso de categorias
+https://omega-api4.libreopcion.com.ar/v4/cabecera-categorias
 
-Aca en Alarmas, se ve un sensor https://gamma.libreopcion.com/productos?o=rel&categorias=alarmas
+Necesitamos en principio 
 
-Cables, ambiguedad Existen 2 categorias -> Cables y Cables y Adaptadores
-En cables, muy pocos son cables de hecho https://gamma.libreopcion.com/productos?o=rel&categorias=cables
+No solo tener la división Padres -> Hijos
 
-https://gamma.libreopcion.com/productos?o=rel&categorias=cables_y_adaptadores
+Sino ademas 
