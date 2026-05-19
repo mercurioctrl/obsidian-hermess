@@ -6,4 +6,10 @@ Necesitamos en principio
 
 No solo tener la división Padres -> Hijos
 
-Sino ademas 
+Sino ademas que deben estar Agrupados
+
+Osea puede haber varios grupos de padres, que a su vez tienen sus hijos
+
+De esta forma podemos lograr un esquema tipo
+
+Grupo -> Padres -> Hijo
