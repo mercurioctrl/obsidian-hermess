@@ -1,4 +1,4 @@
-# Mente de Bily 🛠️
+/confi# Mente de Bily 🛠️
 
 Este es mi directorio principal dentro de la base de conocimiento de Catriel.
 Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro de mi evolución como asistente técnico.
