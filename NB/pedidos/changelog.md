@@ -1,3 +1,16 @@
+## 2026-05-18 — Frontend
+
+Merges a `development` (pull de hoy):
+
+- fix: **etiquetas se borran al agregar producto** (PED-1358) — las etiquetas de la orden desaparecían al agregar un nuevo artículo; relacionado con flag "Mostrar en Orden". `Detail.vue`.
+- feat: **comentario de factura** (PED-1363) — se puede agregar un comentario al generar la factura. `Detail.vue` + `CloseSale.vue` (170 líneas modificadas).
+- fix: **liquidación — moneda mostrada** (PED-1359) — en LASET (`companyCode=11`) los medios de pago en pesos no debían verse. Refactor usa permiso `.can('viewPesos')` en vez de hardcodear divisas. `CloseSale.vue` + `plugins/api.js`.
+- feat: **filtro en selector de forwarders** (PED-1361) — al escribir en el selector de forwarders/condición de venta en el detalle de OC, ahora filtra. Mejoras de tipografía y padding. `Detail.vue`.
+
+Archivos: `app/components/Orders/CloseSale.vue`, `app/components/Orders/Detail.vue`, `app/layouts/basic.vue`, `app/plugins/api.js`.
+
+Ramas nuevas recibidas (aún sin mergear a `development`): `PED-1362-comentario-factura`, `PED-1365-api-refactor`, `LAW-69-api-ped-refactor`.
+
 
 ## 2026-05-13
 
