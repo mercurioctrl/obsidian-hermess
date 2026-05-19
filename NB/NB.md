@@ -32,3 +32,7 @@ Microservicio REST de cotización, creación y tracking de envíos (OCA, Andrean
 ## [[sincroAfip/sincroAfip|sincroAfip]]
 - [[sincroAfip/arquitectura|arquitectura]] · [[sincroAfip/stack|stack]] · [[sincroAfip/contexto|contexto]] · [[sincroAfip/changelog|changelog]]
 - [[sincroAfip/despliegue|despliegue]] · [[sincroAfip/migracion|migracion]] · [[sincroAfip/tabla-referencia|tabla-referencia]]
+
+## [[cobros/cobros|cobros]]
+Sistema de gestión financiera: cobros, pagos, cajas, cuentas corrientes, préstamos de capital.
+- [[cobros/arquitectura|arquitectura]] · [[cobros/stack|stack]] · [[cobros/contexto|contexto]] · [[cobros/changelog|changelog]]
