@@ -3,6 +3,7 @@
 ## Por hacer
 - Probar la carga de ítems de NB en el módulo de compras.
 - Confirmar call de arquitectura sobre módulo Crypto.
+- Hacer el banner del Pacman para Libre Opción.
 
 ## Bloqueos / Esperando OK
 - Dar OK a Ema para crear manualmente las líneas de caja/banco (caso cobro 3 métodos).
