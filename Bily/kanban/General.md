@@ -8,6 +8,7 @@
 - Daily: Preguntarle a Ezequiel si arregló la meet con Postventa.
 - Linkear el chat en la app.
 - Daily: Hablar de SLI con Ezequiel y Marbe.
+- Comprar la mesada (Lavadero).
 
 ## Bloqueos / Esperando OK
 
