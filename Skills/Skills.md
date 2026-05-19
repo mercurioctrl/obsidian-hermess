@@ -7,6 +7,9 @@ Skills reutilizables para Claude Code, almacenados en la bóveda para compartir 
 ### Generación de proyectos
 - [[SKILL|fullstack-docker-app]] — Genera infraestructura Docker completa (Nuxt 3 + Laravel 11 + MySQL + Redis + Nginx)
 
+### Bily
+- [[Skills/bily/bitacoras/SKILL|procesarBitacorasBily]] — Indexa las bitácoras nuevas de Bily en `bitacoras.md` y agrega back-links
+
 ### Integración con Obsidian
 - [[Skills/configurar-boveda/SKILL|configurarBoveda]] — Vincula un proyecto con una carpeta en la bóveda
 - [[Skills/sincronizar-boveda/SKILL|sincronizarBoveda]] — Sincroniza documentación, arquitectura y changelog del proyecto con Obsidian
