@@ -10,7 +10,7 @@
 │   │   ├── Controller/   # Slim controllers (extienden Base)
 │   │   ├── Service/      # Lógica de negocio
 │   │   ├── Repository/   # SQL Server queries (sin ORM)
-│   │   ├── Middleware/   # PermissionMiddleware, PermissionAdminMiddleware
+│   │   ├── Middleware/   # PermissionMiddleware, PermissionAdminMiddleware, etc.
 │   │   ├── Domain/       # Patrón vertical slice (features nuevas)
 │   │   └── Helper/       # Pagination, Filter, ExportExcel
 │   └── docker/           # Dockerfile + apache config
@@ -46,8 +46,9 @@ Route → Middleware (JWT + permisos) → Controller.__invoke() → Service → 
 ### Autenticación
 - JWT emitido por el backend, enviado en header `Authorization: Bearer`
 - `PermissionMiddleware` valida token y flag `cobro`
-- `PermissionAdminMiddleware` valida flag `cobro_admin`
-- Token expuesto en el frontend vía `@nuxtjs/auth-next`
+- `PermissionAdminMiddleware` valida flag `cobro_admin` (o `cobro`)
+- Cada permiso nuevo tiene su propio middleware en `src/Middleware/`
+- Token expuesto en el frontend vía `this.$auth.user.{permiso}`
 
 ## Base de datos
 
@@ -64,27 +65,38 @@ Route → Middleware (JWT + permisos) → Controller.__invoke() → Service → 
 | `MC_LOG_OPERACIONES` | NEW_BYTES | Log de operaciones por caja |
 | `MC_SALDOS_CAJA` | NEW_BYTES | Saldo por caja y forma de pago |
 | `MC_FORMAS_PAGO` | NEW_BYTES | Formas de pago y cotización |
+| `permisos_agente` | NB_WEB | Permisos granulares por usuario/agente |
 
 ## Módulo de Préstamos de Capital
 
-### Flujo Prestar Capital
-1. `POST /lendCapital` → `LendCapitalService`
-2. INSERT en `MC_CCORRIENTES_MOVIMIENTOS` (TR_CODIGO=30, positivo)
-3. INSERT en `MC_LOG_OPERACIONES`
-4. UPDATE `MC_SALDOS_CAJA` (reduce saldo de caja)
-5. INSERT en `MC_PRESTAMOS_CAPITAL` (TIPO=P)
+### Flujo Prestar Capital (`POST /lendCapital`)
+1. Middleware: `PermissionLendCapitalMiddleware` (requiere `prestar_capital=1`)
+2. `LendCapitalService` → `LendCapitalRepository`
+3. INSERT en `MC_CCORRIENTES_MOVIMIENTOS` (TR_CODIGO=30, CC_IMPORTEUSD positivo)
+4. ~~INSERT en `MC_LOG_OPERACIONES`~~ — **eliminado**: la caja no se impacta al prestar
+5. INSERT en `MC_PRESTAMOS_CAPITAL` (TIPO='P')
+- **Nota**: el dinero físico sale por "Pagar al cliente", no por esta operación
 
-### Flujo Cobrar Deuda
-1. `POST /payCapitalDebt` → `PayCapitalDebtService`
-2. INSERT en `MC_CCORRIENTES_MOVIMIENTOS` (TR_CODIGO=42, negativo)
-3. INSERT en `MC_LOG_OPERACIONES`
-4. UPDATE `MC_SALDOS_CAJA` (aumenta saldo de caja)
-5. INSERT en `MC_PRESTAMOS_CAPITAL` (TIPO=C)
+### Flujo Cobrar Deuda (`POST /payCapitalDebt`)
+1. Middleware: `PermissionPayCapitalMiddleware` (requiere `cobrar_capital=1`)
+2. `PayCapitalDebtService` → `PayCapitalDebtRepository`
+3. INSERT en `MC_CCORRIENTES_MOVIMIENTOS` (TR_CODIGO=42, CC_IMPORTEUSD negativo)
+4. INSERT en `MC_LOG_OPERACIONES` (aparece en vista Caja)
+5. UPDATE `MC_SALDOS_CAJA` (suma al saldo de caja)
+6. INSERT en `MC_PRESTAMOS_CAPITAL` (TIPO='C')
 
 ### Convención de signos en MC_PRESTAMOS_CAPITAL
 - `TIPO=P` (Préstamo): monto positivo — cliente debe dinero
 - `TIPO=C` (Cobro): monto positivo — se cobra ese monto de la deuda
-- Saldo = SUM(P) - SUM(C)
+- Saldo = SUM(MONTO donde TIPO=P) - SUM(MONTO donde TIPO=C)
+- Los pagos son libres (parciales, no atados a préstamo específico)
+
+### Permisos del módulo
+| Permiso DB | Permiso JWT | Middleware | Protege |
+|---|---|---|---|
+| `prestar_capital` | `prestarCapital` | `PermissionLendCapitalMiddleware` | `POST /lendCapital` |
+| `cobrar_capital` | `cobrarCapital` | `PermissionPayCapitalMiddleware` | `POST /payCapitalDebt` |
+| `ver_capital` | `verCapital` | (frontend only) | Ojito en modal CapitalDebt |
 
 ## Docker (dev)
 - Container: `cobros-api-rest`, puerto `8083:80`

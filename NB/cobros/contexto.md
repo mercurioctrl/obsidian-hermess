@@ -24,6 +24,13 @@
 - El saldo = SUM(P.MONTO_TOTAL_USD) - SUM(C.MONTO_TOTAL_USD)
 - Los pagos son parciales y libres — no están atados a un préstamo específico
 - Se puede prestar N veces y cobrar en cuotas distintas al total de cada préstamo
+- **Al prestar**: NO se impacta la caja. El dinero físico sale por "Pagar al cliente"
+- **Al cobrar**: SÍ se impacta la caja (suma saldo + log de operaciones)
+
+### Visibilidad de montos en el modal de capital
+- Por defecto los montos aparecen ocultos (••••) — privacidad ante terceros
+- El ícono de ojo en el footer alterna la visibilidad
+- Si el usuario no tiene `ver_capital=1`, el ojito muestra error y no revela
 
 ## Decisiones tomadas durante el desarrollo
 
@@ -38,17 +45,23 @@
 
 ### Columnas de permisos en dev vs prod
 - En dev: `cobro`, `cobro_admin`, `edit_credit`, `cobro_adjust_to` están en `permisos_agente`
-- En prod: están en `usuarios_nb`
+- En prod: pueden estar en `usuarios_nb`
 - `AuthRepository` usa `ISNULL(permisos_agente.X, 0)` para compatibilidad
 
+### Permisos del módulo de capital — patrón
+- Cada permiso nuevo tiene su propio Middleware en `src/Middleware/`
+- El permiso se agrega al JWT en ambas queries de `AuthRepository` (login y getById)
+- Permisos solo de frontend (como `ver_capital`) no tienen middleware, se chequean en el componente
+
 ## Bugs conocidos (preexistentes, no del feature)
-1. **Búsqueda por CUIT**: `C.ccodcli = {stringFilter}` sin comillas → falla si el input tiene `-` (llega como `%`)
+1. **Búsqueda por CUIT**: `C.ccodcli = {stringFilter}` sin comillas → falla si el input tiene `-`
 2. **companyCode = "null"**: el frontend envía el string literal `"null"` cuando no hay companyCode
 
 ## TODOs / próximos pasos
+- Ejecutar los ALTER en prod para los permisos: `prestar_capital`, `cobrar_capital`, `ver_capital`
+- Merge de `feature/prestamos-capital` a main en ambos repos
 - Fix bug CUIT search en `Client.php:441`
 - Fix bug companyCode null en `Client.php:331`
-- Deploy del feature `prestamos-capital` en producción (pendiente compilar front)
 
 ## Ver también
 - [[arquitectura]] · [[stack]] · [[changelog]]

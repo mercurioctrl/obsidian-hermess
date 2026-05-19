@@ -56,7 +56,7 @@
 
 - [[NB/NB|NB]] — Proyectos y microservicios del ecosistema New Bytes
   - [[NB/Compras/Compras|Compras]] · [[NB/Comprobantes/Comprobantes|Comprobantes]] · [[NB/controldeprecios/controldeprecios|controldeprecios]] · [[NB/expedicion/expedicion|expedicion]]
-  - [[NB/inventario/inventario|inventario]] · [[NB/microservicio-envios/microservicio-envios|microservicio-envios]] · [[NB/pedidos/pedidos|pedidos]] · [[NB/sincroAfip/sincroAfip|sincroAfip]]
+  - [[NB/inventario/inventario|inventario]] · [[NB/microservicio-envios/microservicio-envios|microservicio-envios]] · [[NB/pedidos/pedidos|pedidos]] · [[NB/sincroAfip/sincroAfip|sincroAfip]] · [[NB/cobros/cobros|cobros]]
 
 ## Bily
 

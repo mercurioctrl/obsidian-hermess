@@ -1,26 +1,18 @@
-# CashBox — Cobros
+# CashBox Cobros
 
-Sistema de gestión financiera para New Bytes: cobros, pagos, cajas, cuentas corrientes y préstamos de capital.
+Sistema financiero para gestión de cobros, pagos, cheques, cajas y cuentas corrientes.
 
-**Repos:**
-- `New-Bytes/api-rest-cobros` — backend PHP 8.2 + Slim 4
-- `New-Bytes/cobros-web-app-v1` — frontend Nuxt 2 + Ant Design Vue
+**Stack:** PHP 8.2 + Slim 4 (API) · Nuxt 2 + Ant Design Vue (Frontend) · SQL Server
+**Repos:** `api-rest-cobros` · `cobros-web-app-v1`
+**Entorno dev:** Docker (puerto 8083 API, 3002 Frontend)
 
-**Producción:**
-- Frontend: `https://caja.saftel.com`
-- API: `https://api.cashbox.lio.red/v1`
-
-**Rama activa:** `feature/prestamos-capital`
+Última sincronización: 2026-05-19
 
 ---
 
 ## Notas
 
-- [[arquitectura]] — estructura, patrones, módulo de préstamos de capital
-- [[stack]] — tecnologías, versiones, infraestructura
-- [[contexto]] — reglas de negocio, decisiones, bugs conocidos
-- [[changelog]] — historial de cambios
-
----
-
-*Última sincronización: 2026-05-19*
+- [[arquitectura]] — estructura, patrones, tablas clave, flujos del módulo de capital
+- [[stack]] — tecnologías, versiones, dependencias
+- [[changelog]] — historial de cambios por fecha
+- [[contexto]] — reglas de negocio, decisiones, bugs conocidos, TODOs

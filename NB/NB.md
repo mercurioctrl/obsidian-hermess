@@ -36,3 +36,7 @@ Microservicio REST de cotización, creación y tracking de envíos (OCA, Andrean
 ## [[cobros/cobros|cobros]]
 Sistema de gestión financiera: cobros, pagos, cajas, cuentas corrientes, préstamos de capital.
 - [[cobros/arquitectura|arquitectura]] · [[cobros/stack|stack]] · [[cobros/contexto|contexto]] · [[cobros/changelog|changelog]]
+
+## [[compras/reglas-compras|compras]]
+Reglas y documentación del proceso de compras.
+- [[compras/reglas-compras|reglas-compras]]
