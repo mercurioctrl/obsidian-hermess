@@ -12,6 +12,9 @@ memoria operativa de Bily.
 - `/procesarBitacorasBily` — Indexa las bitácoras nuevas de Bily en `Bily/bitacoras/bitacoras.md` y agrega back-links en las bitácoras que no los tengan.
   - Skill: `~/.claude/skills/procesar-bitacoras-bily/SKILL.md`
 
+- `/sincronizarMenteBily` — Recorre `Bily/` recursivamente y asegura que cada carpeta tenga un `Inicio.md` que liste su contenido. Crea los que falten. Nunca borra.
+  - Skill: `~/.claude/skills/sincronizar-mente-bily/SKILL.md`
+
 ## Convenciones de la bóveda
 
 - **Índice por carpeta:** cada carpeta tiene un `{NombreCarpeta}.md` que enlaza a sus notas hijas.

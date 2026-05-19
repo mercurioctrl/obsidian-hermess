@@ -6,6 +6,13 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 ## Estructura
 - [[Bily/MEMORIA\|Memoria Operativa]]: Eventos importantes y bitácora de mi trabajo junto a Catriel.
 - [[Bily/bitacoras/bitacoras\|Bitácoras]]: Registro cronológico de sesiones de trabajo.
+- [[Bily/personas/Inicio\|Personas]] — perfiles del equipo y contactos
+- [[Bily/Productos/Inicio\|Productos]] — ideas y productos en desarrollo
+- [[Bily/kanban/Inicio\|Kanban]] — tableros de proyectos en curso
+- [[Bily/tareas/Inicio\|Tareas]] — lista de tareas pendientes
+- [[Bily/dreams/Inicio\|Sueños]] — registro onírico
+- [[Bily/todos/Inicio\|Todos]] — to-dos personales por persona
+- [[Bily/proyectos/Inicio\|Proyectos]] — proyectos planificados
 
 ## Personas conocidas
 

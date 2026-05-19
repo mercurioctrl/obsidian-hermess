@@ -9,6 +9,7 @@ Skills reutilizables para Claude Code, almacenados en la bóveda para compartir 
 
 ### Bily
 - [[Skills/bily/bitacoras/SKILL|procesarBitacorasBily]] — Indexa las bitácoras nuevas de Bily en `bitacoras.md` y agrega back-links
+- [[Skills/bily/SKILL|sincronizarMenteBily]] — Recorre `Bily/` recursivamente y asegura que cada carpeta tenga su `Inicio.md`
 
 ### Integración con Obsidian
 - [[Skills/configurar-boveda/SKILL|configurarBoveda]] — Vincula un proyecto con una carpeta en la bóveda
