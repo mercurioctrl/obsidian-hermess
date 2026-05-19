@@ -1,13 +1,12 @@
 # Kanban
 
-Tableros kanban de proyectos, desarrollo y reformas en curso.
+Tableros kanban de proyectos y operacionales.
 
 ## Contenido
 
-- [[Bily/kanban/Blu|Kanban – Blu (Desarrollo y Ops)]]
+- [[Bily/kanban/General|Kanban – General (Trabajo y Personal)]]
 - [[Bily/kanban/LASET|Kanban – LASET]]
 - [[Bily/kanban/Lavadero|Kanban – Lavadero]]
-- [[Bily/kanban/Personal|Kanban – Personal]]
 
 ## Ver también
 
