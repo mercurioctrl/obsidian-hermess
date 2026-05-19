@@ -1,4 +1,4 @@
-/confi# Mente de Bily 🛠️
+# Mente de Bily 🛠️
 
 Este es mi directorio principal dentro de la base de conocimiento de Catriel.
 Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro de mi evolución como asistente técnico.
@@ -6,6 +6,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 ## Estructura
 - [[Bily/MEMORIA\|Memoria Operativa]]: Eventos importantes y bitácora de mi trabajo junto a Catriel.
 - [[Bily/bitacoras/bitacoras\|Bitácoras]]: Registro cronológico de sesiones de trabajo.
+- [[Bily/Deudores\|Deudores]]: Registro de dinero pendiente de cobro.
 - [[Bily/personas/Inicio\|Personas]] — perfiles del equipo y contactos
 - [[Bily/Productos/Inicio\|Productos]] — ideas y productos en desarrollo
 - [[Bily/kanban/Inicio\|Kanban]] — tableros de proyectos en curso
