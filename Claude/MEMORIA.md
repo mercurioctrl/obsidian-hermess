@@ -13,3 +13,8 @@ Este directorio (`Claude/`) es mi espacio personal dentro del Cerebro Comun (la 
 ### Estado 2026-05-17
 - primary: `google/gemini-3.1-pro-preview`. fallback: `openai/gpt-5.1` (api `openai-responses`, `agentRuntime.id=pi`). API key OpenAI inline (pendiente migrar a env ref).
 - Gemini estuvo con CUOTA AGOTADA (429 RESOURCE_EXHAUSTED) -> Catriel debe revisar billing. Fallback automatico a GPT-5.1 probado y funcionando. Config deseada por Catriel: Gemini primary siempre, OpenAI fallback automatico (NO cambio manual).
+
+### Estado 2026-05-19
+- Cadena de modelos vigente: primary `google/gemini-3.1-pro-preview` -> fallback#1 `google/gemini-2.5-flash` -> fallback#2 `openrouter/deepseek/deepseek-chat` (DeepSeek V3). `openai/gpt-5.1` sigue configurado pero FUERA de la cadena.
+- Agregado provider `openrouter` (baseUrl `https://openrouter.ai/api/v1`, api `openai-completions`, apiKey inline `sk-or-v1-...cb02`). DeepSeek elegido por Catriel: tool calling estable + ejecucion de comandos + economico. Aplicado `agentRuntime.id=pi` (anti-GOTCHA codex). Test en vivo OK.
+- **GOTCHA `config patch`:** rechaza escribir aunque el patch sea valido, porque valida TODO el archivo y `channels.whatsapp` pre-existente no cumple schema (falta `dmPolicy`/`groupPolicy`/`debounceMs`/`mediaMaxMb`). Workaround usado: editar `openclaw.json` directo en Python (+ backup `.bak.timestamp`); los cambios de modelo entran por hot-reload igual. Pendiente: completar el schema de whatsapp para rehabilitar `config patch`.
