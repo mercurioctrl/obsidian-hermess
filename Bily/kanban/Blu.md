@@ -9,9 +9,9 @@
 - Seguimiento Ezequiel (Postventa): Ver si pudo replicar con el cliente dónde falla el flujo.
 
 ## En curso
-- Responder preguntas a Marbe sobre PED-1360.
 
 ## Listo
+- Responder preguntas a Marbe sobre PED-1360.
 - Reiniciar el servidor de Gamma (Marbe).
 - Bug FACTURU multi-producto resuelto (Ezequiel).
 
