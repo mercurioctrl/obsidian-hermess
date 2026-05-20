@@ -71,3 +71,46 @@ ALTER TABLE NB_WEB.dbo.permisos_agente ADD ver_capital     BIT NOT NULL DEFAULT 
 
 ## Ver también
 - [[arquitectura]] · [[contexto]] · [[stack]]
+
+---
+
+## 2026-05-20 — Refinamientos y nuevas funcionalidades del módulo de capital
+
+### fix: payCapitalDebt no toca la CC del cliente
+
+- Se intentó primero un doble impacto (TR=30 + TR=42) para neto 0 en CC, pero el resultado era restar dos veces
+- Decisión final: el cobro de capital **no toca MC_CCORRIENTES_MOVIMIENTOS para nada**
+- Solo impacta: MC_LOG_OPERACIONES (caja) + MC_SALDOS_CAJA + MC_PRESTAMOS_CAPITAL TIPO='C'
+- Archivos: `PayCapitalDebtRepository.php`, `PayCapitalDebtService.php`
+
+### fix: verCapital no llegaba al frontend tras login
+
+- `AuthService::user()` construye el array de usuario manualmente y no incluía los 3 permisos nuevos
+- Fix: agregar `prestarCapital`, `cobrarCapital`, `verCapital` al array de `user()`
+- Archivo: `AuthService.php`
+
+### feat: fila de totales al pie de la tabla de movimientos de capital
+
+- Muestra saldo total en u$d y en $ debajo de la tabla de movimientos
+- El total en $ es la suma fila a fila de (amountUsd × quote de cada fila), no totalUsd × cotización actual
+- Respeta el toggle de visibilidad (••••)
+- Archivo: `CapitalDebt.vue`
+
+### feat: sección "Deudas de capital" en el menú Clientes
+
+**Backend (`GET /capitalDebtClients`):**
+- Nuevo `CapitalDebtClientsRepository` que consulta `MC_PRESTAMOS_CAPITAL` agrupado por cliente
+- Devuelve solo clientes con saldo ≠ 0
+- Columnas: `clientId`, `clientName`, `totalLentUsd`, `totalPaidUsd`, `balanceUsd`, `totalLentLocal`, `totalPaidLocal`, `balanceLocal`
+- Fix post-deploy: nombre de columna `cnomcli` (no `capeage/cnbrape/cnombre`)
+- Archivos: `CapitalDebtClientsRepository.php`, `CapitalDebtClients.php` (controller)
+
+**Frontend:**
+- Nueva página `capitalDebtClients.vue` + store `capitalDebtClients.js`
+- Tabla con montos prestados, cobrados y saldo en u$d y $
+- Click en fila abre el mismo modal `CtaCteCliente` de siempre
+- Nuevo ítem "Deudas de capital" en el submenú Clientes del `TabMenu.vue`
+- El título del submenú cambia dinámicamente según la sección activa
+
+## Ver también
+- [[arquitectura]] · [[contexto]] · [[stack]]
