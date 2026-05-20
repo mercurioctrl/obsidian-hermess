@@ -9,6 +9,7 @@
 - Resolver SLI.
 - Comprar la mesada (Lavadero).
 - Hacer lo de LASET del ECCN.
+- Decirle a Marbe que en la barra superior se tienen que poder usar emojis.
 
 ## Bloqueos / Esperando OK
 
