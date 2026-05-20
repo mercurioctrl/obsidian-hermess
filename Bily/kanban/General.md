@@ -8,6 +8,7 @@
 - Linkear el chat en la app.
 - Resolver SLI.
 - Comprar la mesada (Lavadero).
+- Hacer lo de LASET del ECCN.
 
 ## Bloqueos / Esperando OK
 
