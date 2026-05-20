@@ -18,5 +18,6 @@ Proyectos y áreas de BLU Digital Agency.
 - [[bluMiniErp/Errores Comunes|Errores Comunes]] · [[bluMiniErp/changelog|changelog]] · [[bluMiniErp/memoria|memoria]]
 
 ### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
+- [[rrhh/alertas-gestion|alertas de gestión]] · [[rrhh/cumpleanos|cumpleaños]] · [[rrhh/changelog|changelog]]
 - [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]]
 - **Equipo:** [[rrhh/equipo/catriel-mercurio|Catriel]] · [[rrhh/equipo/alejandra-guidobono|Alejandra]] · [[rrhh/equipo/belu-ontivero|Belu]] · [[rrhh/equipo/barbara-carrillo|Bárbara]] · [[rrhh/equipo/ezequiel-manzano|Ezequiel]] · [[rrhh/equipo/guillermo-avila|Guillermo]] · [[rrhh/equipo/marbe-moreno|Marbe]] · [[rrhh/equipo/emanuel-ferreyra|Emanuel]] · [[rrhh/equipo/franco-callipo|Franco]] · [[rrhh/equipo/sebastian-fontan|Sebastián]]
