@@ -2,7 +2,7 @@
 
 Base de conocimiento de la PC personal de hermess: configuración del sistema, red, monitores, extensiones GNOME, servicios, scripts y optimizaciones.
 
-Última sincronización: 2026-05-18
+Última sincronización: 2026-05-20
 
 ---
 
@@ -15,6 +15,18 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 - [[hermess-pc/sync-curls|Servicio sync-curls]]
 - [[hermess-pc/changelog|Changelog]]
 - [[hermess-pc/memoria|Memoria de Claude]]
+
+---
+
+## Proyectos
+
+### musica
+Descargador de playlists de YouTube a MP3 organizado en `Artista/Álbum/`.
+- [[hermess-pc/musica/musica|musica]] — Índice del proyecto
+- [[hermess-pc/musica/arquitectura|Arquitectura]] — Flujo del script
+- [[hermess-pc/musica/stack|Stack]] — yt-dlp, ffmpeg, Python 3
+- [[hermess-pc/musica/changelog|Changelog]] — Historial de cambios
+- [[hermess-pc/musica/contexto|Contexto]] — Biblioteca descargada y entorno
 
 ---
 
