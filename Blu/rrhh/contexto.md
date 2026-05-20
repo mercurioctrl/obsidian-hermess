@@ -2,9 +2,9 @@
 
 ## Situación actual
 
-Los CEOs de BLU Digital Agency llevan personalmente toda la gestión de personas:
+Los CEOs de BLU Digital Agency llevaban personalmente toda la gestión de personas:
 vacaciones, licencias, ausencias, feriados, cumpleaños, conflictos y seguimiento del equipo.
-Esto genera carga operativa que distrae de las decisiones estratégicas.
+Esto generaba carga operativa que distraía de las decisiones estratégicas.
 
 ## Objetivo
 
@@ -14,7 +14,7 @@ Incorporar una consultora de RRHH externa para:
 - Diagnosticar el clima y la cultura actual
 - Implementar procesos y políticas formales de RRHH
 
-## Scope inicial de la consultora
+## Scope de la consultora
 
 ### Autonomía total (decide sola)
 - Aprobación de vacaciones y ausencias
@@ -54,7 +54,19 @@ Incorporar una consultora de RRHH externa para:
 Los empleados contactan directamente a la consultora, no a los CEOs.
 Se define un canal único (ej. Slack) para esa comunicación.
 
+## Infraestructura RRHH armada (al 2026-05-16)
+
+| Herramienta | Descripción |
+|---|---|
+| `equipo/` | 10 perfiles individuales con datos personales y perfil RRHH |
+| [[alertas-gestion]] | Panel de señales de gestión por persona (callouts Obsidian) |
+| [[cumpleanos]] | Calendario de cumpleaños con próximos 12 meses |
+| `recordatorio-cumpleanos.sh` | Script cron — avisa 7 días antes de cada cumpleaños |
+| Crontab sistema | `7 9 * * *` — corre diario, log en `recordatorios.log` |
+
 ## Ver también
 
 - [[agenda-primera-reunion]]
 - [[actividades-rrhh-it]]
+- [[alertas-gestion]]
+- [[cumpleanos]]
