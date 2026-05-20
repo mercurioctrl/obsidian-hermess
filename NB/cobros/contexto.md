@@ -58,7 +58,8 @@
 2. **companyCode = "null"**: el frontend envía el string literal `"null"` cuando no hay companyCode
 
 ## TODOs / próximos pasos
-- Ejecutar los ALTER en prod para los permisos: `prestar_capital`, `cobrar_capital`, `ver_capital`
+- ✅ ALTERs ejecutados en prod: `prestar_capital`, `cobrar_capital`, `ver_capital` agregados a `permisos_agente`
+- ✅ Permisos asignados: agentes 27 y 66 → `cobrar_capital=1`; agente 12 → los 3 permisos
 - Merge de `feature/prestamos-capital` a main en ambos repos
 - Fix bug CUIT search en `Client.php:441`
 - Fix bug companyCode null en `Client.php:331`
