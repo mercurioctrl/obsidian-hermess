@@ -2,14 +2,14 @@
 
 ## Datos
 
-| Campo                   | Valor                                   |
-| ----------------------- | --------------------------------------- |
-| **Rol**                 | Analista QA / Desarrollador de Software |
-| **Email**               | gavila@nb.com.ar                        |
-| **WhatsApp**            | 4426022591                              |
-| **Fecha de nacimiento** | 23/05/1994 (31 años)                    |
+| Campo                   | Valor                                                          |
+| ----------------------- | -------------------------------------------------------------- |
+| **Rol**                 | Analista QA / Desarrollador de Software                        |
+| **Email**               | gavila@nb.com.ar                                               |
+| **WhatsApp**            | 4426022591                                                     |
+| **Fecha de nacimiento** | 23/05/1994 (31 años)                                           |
 | **Localidad**           | Irapuato, Guanajuato (Serravalle #315, Residencial San Marino) |
-| **CP**                  | 36625                                   |
+| **CP**                  | 36625                                                          |
 
 ## Perfil personal
 
