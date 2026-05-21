@@ -1,3 +1,21 @@
+## 2026-05-21 — Feature integrarECCN (paso 1)
+
+Arranque del feature **[[feature-integrar-eccn|integrarECCN]]** — clasificación ECCN (Export Control Classification Number) de la operación de exportación de Laset (`companyCode=11`). El ECCN depende de **dos ejes**: el tipo de producto (familia) y el proveedor.
+
+- **Rama `integrarECCN`** creada en ambos repos desde `lasetImportFramework`.
+- **Tabla nueva `ecc_familia_proveedor`** (`NewBytes_DBF.dbo`) — matriz de doble entrada familia × proveedor → `eccn` + `codigo_arancelario`. FK lógicas (no enforced) a `familias`/`FP_Proveedores`. Columna `origen` `C`=CSV / `M`=manual. SQL `database/sql/2026_05_21_001_create_ecc_familia_proveedor.sql` (+ drop). **Aplicado en dev**.
+- **Comando `ecc:import-categorias`** (`EccImportCategoriasCommand`) — lee `database/data/eccCategorias.csv`, resuelve proveedor/familia por `companyCode` con match exacto normalizado (mayúsculas, sin puntos/comas), descarta filas sin match en ambos ejes. Idempotente: borra+reinserta `origen='C'`, respeta `origen='M'`.
+- **CSV fuente** `eccCategorias.csv` versionado en `database/data/`.
+- **Ejecutado en dev**: **94 vínculos** cargados comp=11, idempotencia verificada. Sin match: 2 proveedores (`NEW BYTES INC`=comp 4, `PNY TECHNOLOGIES INC` inexistente comp=11) y 18 categorías del CSV sin familia comp=11.
+- **Decisión** (usuario): solo matches exactos, NO fuzzy. `CABLES`↔`CABLE`, `ODD`↔`OPTICAL DRIVE`, `FAN`↔`AIR COOLING` quedan afuera a propósito.
+- **Gotcha workflow**: queries ad-hoc a SQL Server vía el container — usar archivo PHP + `php artisan tinker archivo.php`, no `--execute` (el escaping shell→tinker rompe con `T_NS_SEPARATOR`). El repo `app/` está montado en `/var/www/app/` del container → los archivos del repo se ven adentro sin `docker cp`.
+
+Archivos: `api-rest-pedidos-laravel/app/database/sql/2026_05_21_001_{create,drop}_ecc_familia_proveedor.sql`, `database/data/eccCategorias.csv`, `app/Console/Commands/EccImportCategoriasCommand.php`, `database/sql/README.md`, `CLAUDE.md`.
+
+Branch: `integrarECCN` (ambos repos, basada en `lasetImportFramework`).
+
+---
+
 ## 2026-05-20 (cont.) — Botón "Importar seleccionadas" + auto-create de artículos + cadena de fixes
 
 Sesión larga sobre el viewer Sync Laset. Se agregó el flujo de importación al ERP desde la UI y se corrigieron varios bugs descubiertos al probarlo end-to-end.

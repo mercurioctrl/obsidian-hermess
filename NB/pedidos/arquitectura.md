@@ -157,6 +157,8 @@ Mapeo conceptual de los nombres legacy en `NewBytes_DBF.dbo` para que nadie se p
 - [[feature-asignacion-oc|Asignación OC ↔ Venta (pedclil ↔ pedprol)]]
 - [[feature-asignacion-oc-cookbook|Cookbook Asignación OC]]
 - [[feature-laset-import|Laset Import Framework (companyCode=11)]] — staging para reconciliar planilla FOB con ERP
+- [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
+- [[feature-integrar-eccn|integrarECCN]] — clasificación ECCN (control de exportación) por familia × proveedor para comp=11
 
 ## Multi-empresa
 

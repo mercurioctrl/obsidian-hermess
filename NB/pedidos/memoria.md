@@ -16,6 +16,7 @@ Contexto acumulado de sesiones de trabajo con Claude en este proyecto.
 - **Cancelaciones LO vs carritos abandonados:** pedidos sin pedclit no son cancelaciones sino carritos abandonados. `motivoCancelacion` tiene prioridad sobre `mp_payment_status`. Total cancelados = created - active (no sumar flags que se solapan)
 - **No tocar MakeSale/RemoveSale** desde features nuevos — usar triggers SQL o capa nueva. Decisión explícita en [[feature-asignacion-oc|asignación OC]].
 - **Antes de tirar SQL contra dev compartida**, mostrar al usuario host/db/user para que confirme.
+- **Queries ad-hoc a SQL Server** (container `api-rest-pedidos-apirest-laravel`): usar archivo PHP + `php artisan tinker archivo.php`, NO `--execute` con `\$`/`::`/comillas anidadas (el escaping shell→tinker rompe con `T_NS_SEPARATOR`). El repo back `app/` está montado en `/var/www/app/` → los archivos del repo se ven adentro sin `docker cp`.
 
 ## Proyecto
 
@@ -137,6 +138,14 @@ Contexto acumulado de sesiones de trabajo con Claude en este proyecto.
   - **Match clientes** (`WHERE companyCode=11` estricto): 50/56 OK, 6 a auto-crear.
   - **Match SKUs**: 806/820 OK vía `articulo.ID_PRODUCTO`, 14 bloqueados (Fase A pendiente).
   - **Decisiones de implementación Fase C**: artisan command PHP con `--dry-run/--limit/--chunk`, auto-crear FP_Proveedores/clientes mínimos comp=11, idempotencia via `match_status=IMPORTED`. NO implementado todavía.
+
+- **[[feature-integrar-eccn|integrarECCN]]** en branch `integrarECCN` (ambos repos, desde `lasetImportFramework`)
+  - **ECCN** = Export Control Classification Number — string de normativa de exportación EE.UU. (`EAR99`/`5A992`/`4A994`/`4A001`/`5A992C`). Depende de **dos ejes**: familia del producto + proveedor.
+  - **Tabla `ecc_familia_proveedor`** (`NewBytes_DBF.dbo`) — matriz familia × proveedor → `eccn` + `codigo_arancelario`. FK lógicas (no enforced) a `familias`/`FP_Proveedores`. `origen` `C`=CSV / `M`=manual. SQL `database/sql/2026_05_21_001_create_ecc_familia_proveedor.sql`.
+  - **Comando `ecc:import-categorias`** — lee `database/data/eccCategorias.csv`, resuelve proveedor/familia por `companyCode` con match exacto normalizado, descarta filas sin match en ambos ejes. Idempotente (borra+reinserta `origen='C'`, respeta `origen='M'`).
+  - **Decisión usuario**: solo match exacto, NO fuzzy.
+  - **Estado paso 1 (2026-05-21)**: 94 vínculos comp=11 cargados en dev. Sin match: 2 proveedores (`NEW BYTES INC`=comp 4, `PNY TECHNOLOGIES INC` inexistente comp=11) + 18 categorías del CSV sin familia comp=11.
+  - `familias` (modelo `App\Models\Category`, PK `ID_FAMILIA`) tiene `companyCode` y `defaultTariffPosition` (HS por familia); linkea a artículos por `articulo.ID_FAMILIA`.
 
 ### FP_* vs legacy
 
