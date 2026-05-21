@@ -8,8 +8,8 @@
 | **Email**               | gavila@nb.com.ar                        |
 | **WhatsApp**            | 4426022591                              |
 | **Fecha de nacimiento** | 23/05/1994 (31 años)                    |
-| **Localidad**           | Irapuato, México (Cupatitzio 781)       |
-| **CP**                  | 36631                                   |
+| **Localidad**           | Irapuato, Guanajuato (Serravalle #315, Residencial San Marino) |
+| **CP**                  | 36625                                   |
 
 ## Perfil personal
 
