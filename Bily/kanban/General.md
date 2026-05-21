@@ -7,7 +7,6 @@
 - Linkear el chat en la app.
 - Resolver SLI.
 - Comprar la mesada (Lavadero).
-- Hacer lo de LASET del ECCN.
 - Decirle a Marbe que en la barra superior se tienen que poder usar emojis.
 
 ## Bloqueos / Esperando OK
@@ -16,6 +15,7 @@
 - Arreglar a Sebastián el módulo de "préstamos de capital".
 
 ## Listo
+- Hacer lo de LASET del ECCN.
 - Hacer el banner del Pacman para Libre Opción.
 - Daily: Hablar de SLI con Ezequiel y Marbe.
 - Daily: Preguntarle a Ezequiel si arregló la meet con Postventa.
