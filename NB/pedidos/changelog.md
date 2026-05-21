@@ -1,3 +1,45 @@
+## 2026-05-20 — Reimport de planilla Laset via UI (botón Examinar)
+
+Feature nuevo: el usuario puede subir una `.xlsx` desde la UI de Sync Laset y el sistema agrega solo las filas nuevas, sin tocar las históricas.
+
+**Backend** ([[feature-laset-import#14. Reimport de planilla via UI (2026-05-20)]]):
+
+- SQL `2026_05_20_001_add_laset_reimport_support.sql` (+ drop simétrico). Aplicado contra `NewBytes_DBF` con éxito. Agrega:
+  - `laset_import_batches.headers NVARCHAR(MAX)` — JSON con los 67 nombres canónicos de columna.
+  - `laset_import_staging.row_hash CHAR(64)` — SHA256 normalizado de las 67 cols crudas.
+  - Recreate `CK_laset_staging_match_status` para aceptar `'NEW'`.
+  - Index `ix_laset_staging_row_hash`.
+- `app/Support/LasetRowHasher.php` — hash determinístico: trim por celda, separador `\x01`, sha256 hex. Mismo algoritmo en backfill y reimport para asegurar dedup.
+- `app/Console/Commands/LasetBackfillRowHashCommand.php` (`laset:backfill-row-hash [--xlsx=…]`). Recalcula `row_hash` con UPDATE FROM JOIN single-statement (dblib-safe). Si se pasa `--xlsx`, además guarda headers canónicos en el primer batch que los tenga NULL. **Ejecutado en dev**: 3007 filas hasheadas.
+- `app/Http/Controllers/Laset/ReimportLaset.php` — `POST /v1/laset/reimport` (multipart `file`). Validación: max 50 MB, mime `xlsx`. Flujo:
+  1. Mueve el upload a tmp + corre `scripts/laset_xlsx_to_json.py` (sigue siendo el único parser viable — PhpSpreadsheet inviable, ver [[memoria]]).
+  2. Compara headers entrantes vs canónicos guardados en `laset_import_batches.headers` (primer batch con headers NOT NULL). Si **no hay canónicos aún**, este upload los **establece**; si hay y difieren → `422` con diff `[{index, expected, got}, …]`.
+  3. Carga set en memoria de todos los `row_hash` existentes (~3k entries). Para cada fila calcula hash y la clasifica `existing` / `dup_in_file` / `new`.
+  4. Crea nuevo batch + INSERT chunked de las nuevas con `match_status='NEW'`. Devuelve `{batch_id, total_in_file, new_rows, existing_rows, dup_in_file, header_check.mode}`.
+- `scripts/laset_xlsx_to_json.py` ahora emite también `headers: [...]` (fila 1 cruda).
+- `routes/api.php` agrega `POST /v1/laset/reimport`.
+
+**Frontend** (`pedidos-web-app-v1/app`):
+
+- `pages/syncLaset.vue`: botón **"Reimportar planilla"** (tipo `primary`, icon `upload`) al lado de los counters, con loading state. Usa `<a-upload :before-upload>` para interceptar el archivo y disparar `store.reimport`. Si el backend responde 422 con `differences`, muestra `notification.error` con las 8 primeras diffs ("col 12: esperado «Qty», llegó «Cant.»"). Si OK, `notification.success` con resumen. Color `purple` para tags `NEW` en counters y filas.
+- `plugins/api.js`: `laset.reimport(file)` — POST multipart.
+- `store/syncLaset.js`: action `reimport` que despacha al endpoint, setea el nuevo `batchId` y refresca summary + staging.
+
+**Infraestructura Docker** (permanente, comiteable):
+
+- `docker/php/apache-uploads.ini` (nuevo) + montaje en `docker-compose.yml` → `/etc/php/8.1/apache2/conf.d/99-laset-uploads.ini:ro`. Sube `upload_max_filesize=100M`, `post_max_size=110M`, `memory_limit=512M`. Antes Apache mod_php usaba el default Ubuntu (`2M/8M`) y rechazaba el xlsx histórico. **Probado**: container recreado lee los valores del archivo del repo.
+- `docker/Dockerfile` agrega `python3 python3-pip` al apt-get + `pip3 install openpyxl==3.1.2`. El parser Python era inejecutable runtime sin esto.
+
+**Comportamiento esperado**:
+
+- Misma planilla histórica → `new_rows=0`, `existing_rows=3007`.
+- Planilla con filas extra → solo entran las nuevas, con `match_status='NEW'`, sin matching ERP (deliberado — quedan visibles en el viewer para auditoría manual).
+- Cambio de columna (renombre/reorden) → `422`, no se crea batch.
+
+**Pendiente operativo**: copiar `docs/laser.xlsx` a `app/docs/` (o pasarlo manualmente al comando) para que `laset:backfill-row-hash --xlsx=…` registre los headers canónicos desde la planilla histórica. Mientras tanto, el primer reimport via UI los establece automáticamente.
+
+---
+
 ## 2026-05-18 — Frontend
 
 Merges a `development` (pull de hoy):

@@ -378,6 +378,93 @@ proceso/sesión, `laset:restore <tag>` deja la tajada comp=11 exactamente como
 estaba. Probado end-to-end (daño simulado → restore → estado bit-idéntico).
 Doc completa en [[feature-laset-snapshot-restore]].
 
+## 14. Reimport de planilla via UI (2026-05-20)
+
+Hasta esta sesión, cargar una versión nueva de la planilla requería: (a) preprocesar el `.xlsx` con `scripts/laset_xlsx_to_json.py` en el host, (b) `php artisan laset:import-staging path/al.json` dentro del container, (c) re-correr `laset:aggregate-match`. Engorroso y atado a tener un operador con acceso al server.
+
+Ahora hay un botón **"Reimportar planilla"** en la página Sync Laset que permite que cualquier usuario con permiso `lasetView` suba la planilla actualizada desde el navegador. El sistema agrega **solo las filas nuevas** (detectadas por contenido), sin tocar las históricas ni el matching ya hecho.
+
+### 14.1 Decisiones clave
+
+- **"Fila nueva" = hash diferente.** Cada fila se hashea con SHA256 sobre los 67 valores crudos normalizados (trim por celda, separador `\x01`, nulls → ""). El hash es la identidad. Pros: tolerante a SKUs vacíos / clientes sin nombre fiscal; cualquier cambio en una celda existente cuenta como "fila nueva" (puede generar duplicación temporal, asumible). Decisión del usuario sobre alternativas (clave natural compuesta / híbrido).
+- **Validación de columnas: estricta.** Nombres + orden exactos vs los headers canónicos almacenados en `laset_import_batches.headers` del primer batch que los tenga. Si difiere → `422` con diff `[{index, expected, got}, …]`. Si **no hay canónicos** (BD recién migrada) → el primer upload **establece** los headers de referencia. Decisión del usuario sobre tolerancia "solo nombres / orden libre".
+- **Filas nuevas no se matchean.** Entran con `match_status='NEW'` y `matched_pedprot_nnumped/matched_pedclit_cnumped=NULL`. Se muestran en el viewer con color `purple` y el operador decide si re-corre `laset:aggregate-match` (que ya las clasificaría). El reimport no asume que la planilla nueva quiera tocar el ERP existente.
+
+### 14.2 Cambios en DB
+
+SQL `database/sql/2026_05_20_001_add_laset_reimport_support.sql` (+ drop simétrico), aplicado vía Laravel `DB::unprepared` con split por `GO` (no había sqlcmd en el container):
+
+| Cambio | Tabla | Detalle |
+|---|---|---|
+| `+` col | `laset_import_batches` | `headers NVARCHAR(MAX) NULL` — JSON `["País","Razón social", …]` (67) |
+| `+` col | `laset_import_staging` | `row_hash CHAR(64) NULL` — SHA256 hex |
+| Recreate | `CK_laset_staging_match_status` | acepta `'NEW'` además de los 6 estados previos |
+| `+` index | `ix_laset_staging_row_hash` | dedup O(log n) |
+
+Backfill ejecutado en dev: **3007 filas con `row_hash` calculado** (mismo algoritmo que el reimport).
+
+### 14.3 Backend nuevo
+
+```
+app/Support/LasetRowHasher.php              # hash(array $67values): string
+app/Console/Commands/LasetBackfillRowHashCommand.php  # laset:backfill-row-hash [--xlsx=…]
+app/Http/Controllers/Laset/ReimportLaset.php          # POST /v1/laset/reimport
+```
+
+Flujo del controller:
+
+1. `request->validate(['file' => 'required|file|mimes:xlsx|max:51200'])`.
+2. Mueve el `UploadedFile` a `tmp/laset_up_*.xlsx`.
+3. `exec("python3 scripts/laset_xlsx_to_json.py … 2>&1")` → JSON con `{file_sha256, headers[67], rows[…]}`.
+4. Compara `headers` entrantes vs canónicos (`SELECT TOP 1 headers FROM laset_import_batches WHERE headers IS NOT NULL ORDER BY id ASC`). Si difiere → `422`.
+5. Carga set en memoria: `SELECT row_hash FROM laset_import_staging WHERE row_hash IS NOT NULL` (~3k entries = 192 KB).
+6. Para cada fila: `LasetRowHasher::hash(values)` → `existing` / `dup_in_file` / `new`.
+7. Crea batch (con `headers` JSON guardado) + INSERT chunked (150 rows) de las nuevas con `match_status='NEW'`.
+8. Devuelve `{batch_id, total_in_file, new_rows, existing_rows, dup_in_file, header_check.mode}`.
+
+El backfill command usa **UPDATE FROM JOIN single-statement** vía tabla temporal (`#laset_hash_*` con id+hash), para evitar el segfault clásico de dblib con UPDATEs prepared en loop (ver [[memoria#feedback_dblib_gotchas]]).
+
+### 14.4 Frontend
+
+- `pages/syncLaset.vue`: botón `<a-upload :before-upload>` al lado de los counters. Color `purple` para tag `NEW`.
+- `store/syncLaset.js`: action `reimport(file)` que postea, setea `batchId`, refresca summary + staging.
+- `plugins/api.js`: `laset.reimport(file)` — multipart con `Content-Type: multipart/form-data`.
+- Manejo de errores: si la respuesta es `422` con `differences`, `notification.error` muestra las 8 primeras diferencias en formato "col N: esperado «X», llegó «Y»" + "…y K más".
+
+### 14.5 Infra Docker — uploads grandes + parser Python
+
+Dos cambios persistentes en `api-rest-pedidos-laravel/`:
+
+- **`docker/php/apache-uploads.ini`** (nuevo) montado en `docker-compose.yml` → `/etc/php/8.1/apache2/conf.d/99-laset-uploads.ini:ro`. Setea `upload_max_filesize=100M`, `post_max_size=110M`, `memory_limit=512M`, `max_execution_time=300`. **Gotcha**: el repo ya montaba `docker/php/local.ini` a `/usr/local/etc/php/conf.d/local.ini` pero esa ruta corresponde a la imagen oficial `php` de Docker Hub, NO a este container Ubuntu+Apache. El mod_php real lee `/etc/php/8.1/apache2/conf.d/`. Antes el container quedaba con el default `upload_max_filesize=2M` y el reimport tiraba "El campo file no se pudo subir".
+- **`docker/Dockerfile`**: agrega `python3 python3-pip` al `apt-get install` + un `RUN pip3 install --no-cache-dir openpyxl==3.1.2`. Sin esto, el container no tenía cómo correr `scripts/laset_xlsx_to_json.py`.
+
+Validado: container recreado con `docker-compose up -d --force-recreate` lee los valores nuevos desde el repo.
+
+### 14.6 Operación
+
+```
+# 1) Aplicar la migración (una sola vez)
+php /var/www/app/database/sql/2026_05_20_001_add_laset_reimport_support.sql
+# (o vía DB::unprepared split por GO)
+
+# 2) Backfillar hashes de las filas ya cargadas
+php artisan laset:backfill-row-hash
+
+# 3) (Opcional) Backfillar headers canónicos desde el xlsx histórico
+php artisan laset:backfill-row-hash --xlsx=docs/laser.xlsx
+
+# 4) Usar el botón desde la UI en /syncLaset
+```
+
+Si el paso 3 se omite, el **primer reimport via UI** establece los headers canónicos automáticamente (modo `establish`). Subsecuentes uploads se validan estricto contra esos.
+
+### 14.7 Lo que NO hace este feature (por diseño)
+
+- No re-matchea ni re-clasifica filas existentes — solo agrega lo nuevo.
+- No re-corre `laset:aggregate-match` automáticamente; las filas `NEW` quedan pendientes.
+- No toca tablas ERP (`pedprot/pedprol/pedclit/pedclil/stocks/FP_*`). Cumple [[memoria#feedback_erp_tables_read_only]].
+- No detecta "filas modificadas" como un estado aparte; ediciones a una fila existente entran como `NEW` con hash distinto (queda la versión vieja también, con su match histórico intacto). Aceptado.
+
 ## Ver también
 
 - [[pedidos|Índice del proyecto]]
@@ -386,8 +473,9 @@ Doc completa en [[feature-laset-snapshot-restore]].
 - [[memoria|Memoria]] — gotchas dblib, PK compuesta pedclit, FP_Proveedores moderna
 - [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
 - [[feature-asignacion-oc|Feature Asignación OC↔Venta]] — el linkeo que ya existe
+- [[changelog#2026-05-20 — Reimport de planilla Laset via UI (botón Examinar)]] — sesión que introdujo el feature
 - [[changelog#2026-05-14 (PM) — Laset Fase B ejecutada + discovery Fase C]] — sesión completa
 - Doc canónico en repo: `docs/laset-import-framework.md`
-- SQL DDL: `database/sql/2026_05_14_00{1,2,3,4}_*.sql`
+- SQL DDL: `database/sql/2026_05_14_00{1,2,3,4}_*.sql`, `database/sql/2026_05_20_001_*.sql`
 - CSV huérfanos: `docs/laset_orphan_skus.csv`
 
