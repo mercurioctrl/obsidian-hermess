@@ -1,3 +1,19 @@
+## 2026-05-21 (cont.) — integrarECCN: permiso, detalle de orden y carga manual
+
+Continuación del feature **[[feature-integrar-eccn|integrarECCN]]** — ahora el ECCN se ve y se carga desde el detalle de la orden. Commiteado y pusheado a la rama `integrarECCN` (back `2c87867e`, front `d0083b6`).
+
+- **Permiso RBAC `eccView`** — columna `NB_WEB.dbo.permisos_agente.eccView` (SQL `2026_05_21_002_add_ecc_view_permission.sql`, `DEFAULT 0`). Agregado a las dos queries de `AuthRepository` (`login()` + `getByToken()`) y a `UserDto` → viaja en el JWT y en el objeto `user`. Front: `$can('eccView')` en `plugins/permissions.js`. Activado en dev a 5 usuarios (agente 12 Catriel + 4 de Laset comp=11). **Gotcha**: tokens previos al deploy no lo traen → re-login necesario (igual que `lasetView`).
+- **ECCN por ítem en el detalle de orden** (`GET /v1/orders/{branch}-{order}`) — cada ítem trae `ecc: {value, editable}` **solo si el usuario tiene el permiso**. El JOIN se concatena condicionalmente a la query de `OrderRepository::getOrderDetail` (`$eccSelect`/`$eccApply`): sin permiso la query queda idéntica a la original (cero penalización de performance). `value` = ECCN resuelto por (familia, proveedor de la OC asignada, vía `OUTER APPLY TOP 1` sin fan-out); `editable` = la clave es resoluble. Gating del JSON: `OrderItemDto::$ecc` es propiedad tipada sin default + `property_exists` → `json_encode` la omite sin permiso.
+- **Carga manual del ECCN** — `POST /v1/ecc` (`Http/Controllers/Ecc/EccStore.php`, invokable): body `{pedclilId, eccn}`, resuelve `(company_code, id_familia, ccodpro)` desde la línea y hace upsert en `ecc_familia_proveedor` con `origen='M'` (protege la edición de un futuro `ecc:import-categorias`). Gateado por `eccView` (403), 422 si la línea no tiene familia/OC.
+- **Frontend** (`Detail.vue`) — columna **ECCN** en la tabla de ítems (`visible: $can('eccView')`). Si hay valor lo muestra; si está vacío y es editable, un **lápiz** abre un popover inline (input + Guardar) → `POST /v1/ecc` → `refreshModalOrder` re-trae el detalle (así toda línea con la misma clave deja de verse en null). `$api.ecc.save()` en `plugins/api.js`.
+
+Archivos back: `Dto/Auth/UserDto.php`, `Dto/Order/OrderItemDto.php`, `Repositories/Auth/AuthRepository.php`, `Repositories/Order/OrderRepository.php`, `Http/Controllers/Ecc/EccStore.php`, `routes/api.php`, `database/sql/2026_05_21_002_{add,drop}_ecc_view_permission.sql`.
+Archivos front: `components/Orders/Detail.vue`, `plugins/permissions.js`, `plugins/api.js`.
+
+**Pendiente prod**: los 3 SQL (`2026_05_21_00{1,2}`) están aplicados solo en dev.
+
+---
+
 ## 2026-05-21 — Feature integrarECCN (paso 1)
 
 Arranque del feature **[[feature-integrar-eccn|integrarECCN]]** — clasificación ECCN (Export Control Classification Number) de la operación de exportación de Laset (`companyCode=11`). El ECCN depende de **dos ejes**: el tipo de producto (familia) y el proveedor.

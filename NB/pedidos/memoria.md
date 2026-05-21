@@ -144,7 +144,10 @@ Contexto acumulado de sesiones de trabajo con Claude en este proyecto.
   - **Tabla `ecc_familia_proveedor`** (`NewBytes_DBF.dbo`) — matriz familia × proveedor → `eccn` + `codigo_arancelario`. FK lógicas (no enforced) a `familias`/`FP_Proveedores`. `origen` `C`=CSV / `M`=manual. SQL `database/sql/2026_05_21_001_create_ecc_familia_proveedor.sql`.
   - **Comando `ecc:import-categorias`** — lee `database/data/eccCategorias.csv`, resuelve proveedor/familia por `companyCode` con match exacto normalizado, descarta filas sin match en ambos ejes. Idempotente (borra+reinserta `origen='C'`, respeta `origen='M'`).
   - **Decisión usuario**: solo match exacto, NO fuzzy.
-  - **Estado paso 1 (2026-05-21)**: 94 vínculos comp=11 cargados en dev. Sin match: 2 proveedores (`NEW BYTES INC`=comp 4, `PNY TECHNOLOGIES INC` inexistente comp=11) + 18 categorías del CSV sin familia comp=11.
+  - **Permiso `eccView`** (columna `permisos_agente.eccView`): viaja en el JWT vía la query `login()` → gotcha: tokens viejos no lo traen, hay que re-loguearse. Activado a 5 usuarios (agente 12 Catriel + 4 de Laset comp=11).
+  - **Detalle de orden**: el `ecc` por ítem (`{value, editable}`) se agrega a la query **solo si hay permiso** (JOIN concatenado condicionalmente → cero costo para quien no lo tiene). Proveedor desde la OC asignada (`pedclil_oc_asignacion`, `OUTER APPLY TOP 1`). Gating del campo en JSON: propiedad tipada sin default + `property_exists` → `json_encode` la omite sin permiso.
+  - **Carga manual** `POST /v1/ecc`: upsert con `origen='M'` (protege la edición de un futuro `ecc:import-categorias`, que reemplaza solo `origen='C'`). Front: lápiz + popover inline en la columna ECCN de `Detail.vue`.
+  - **Estado 2026-05-21**: tabla + 94 vínculos del CSV + permiso + columna ECCN con carga manual, todo en **dev**. Commiteado y pusheado (back `2c87867e`, front `d0083b6`). SQL `2026_05_21_00{1,2}` pendientes en prod. **Doc vivo y completo en `CLAUDE.md` → sección `### Feature integrarECCN`.**
   - `familias` (modelo `App\Models\Category`, PK `ID_FAMILIA`) tiene `companyCode` y `defaultTariffPosition` (HS por familia); linkea a artículos por `articulo.ID_FAMILIA`.
 
 ### FP_* vs legacy
