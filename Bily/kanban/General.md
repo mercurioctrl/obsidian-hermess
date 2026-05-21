@@ -2,7 +2,6 @@
 
 ## Por hacer
 - Probar la carga de ítems de NB en el módulo de compras.
-- Hacer el banner del Pacman para Libre Opción.
 - Gestionar nuevo documento (DNI) - Perdido en el viaje a Chile.
 - Pagar deuda AFIP (VEP de autónomos / multa que mandó Cristina). Vencimiento: 03/06/2026.
 - Linkear el chat en la app.
@@ -17,6 +16,7 @@
 - Arreglar a Sebastián el módulo de "préstamos de capital".
 
 ## Listo
+- Hacer el banner del Pacman para Libre Opción.
 - Daily: Hablar de SLI con Ezequiel y Marbe.
 - Daily: Preguntarle a Ezequiel si arregló la meet con Postventa.
 - Seguimiento Ezequiel (Postventa): Ver si pudo replicar con el cliente dónde falla el flujo.
