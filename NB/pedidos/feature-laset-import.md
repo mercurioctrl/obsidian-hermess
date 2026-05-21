@@ -465,6 +465,45 @@ Si el paso 3 se omite, el **primer reimport via UI** establece los headers canó
 - No toca tablas ERP (`pedprot/pedprol/pedclit/pedclil/stocks/FP_*`). Cumple [[memoria#feedback_erp_tables_read_only]].
 - No detecta "filas modificadas" como un estado aparte; ediciones a una fila existente entran como `NEW` con hash distinto (queda la versión vieja también, con su match histórico intacto). Aceptado.
 
+## 15. Botón "Importar seleccionadas" + auto-create de artículos (2026-05-20 cont.)
+
+El viewer Sync Laset pasó de ser solo lectura a poder **disparar la importación al ERP**. El usuario tilda filas y un job async corre todo el pipeline.
+
+### 15.1 Job de importación
+
+- Tabla `laset_import_jobs` (SQL `2026_05_20_002`) — persiste status/phase/progress/result/reconciliation/error de cada corrida.
+- `laset:run-import-job {jobId}` — orquestador async (disparado con `nohup php artisan … &` desde el controller; `QUEUE_CONNECTION=sync`, no hay worker). Corre: aggregate-match (si hay UNMATCHED/NEW) → Fase C `--staging-ids=` → Fase D `--skip-bloqueadas` → reconciliación.
+- Endpoints: `POST /v1/laset/import-jobs` (crea + dispara), `GET /v1/laset/import-jobs/{id}` (polling), `POST /v1/laset/import-jobs/preview` (closure + detalle sin crear job).
+
+### 15.2 Cierre transitivo de selección (`LasetSelectionClosure`)
+
+Tildar 1 fila no alcanza: si pertenece a una OC con 5 SKUs, importar solo esa fila deja la OC incompleta en el ERP. El closure expande vía BFS sobre el grafo bipartito `fila ↔ OC(proveedor,vendor_pi,vendor_invoice) ↔ venta(razon_social,customer_pi,customer_invoice)` hasta cerrar el subgrafo conexo. Limitado al `batch_id` de las filas seed, excluye `IGNORED`. **En Laset el grafo es muy denso**: 2 filas seed → 1755 expandidas.
+
+### 15.3 Auto-create de artículos y marcas
+
+`LasetImportFaseCCommand::resolveMasters` → `planArticulosAutoCreate`:
+- SKU sin `articulo` comp=11 → busca gemelo en otra company. Si existe: **clona** (descripción/marca/familia/IVA del original). Si no: **crea desde planilla** (description + marca + defaults).
+- Marcas faltantes se crean en `FP_Marcas` (tabla **global**, sin companyCode; PK lógica `ID_Marca` se reserva con MAX+1, `ID` es IDENTITY).
+- `articulo` no tiene IDENTITY → `codigo`/`ID_ARTICULO` se reservan con MAX+1 (mismo patrón que pedprot).
+- Gotchas del INSERT a `articulo`: `[national]` es palabra reservada (brackets en todas las cols); `ivaCompra`/`ivaVenta` son **columnas calculadas** (derivadas de `ctipoiva`/`ctipoivac`) — fuera del INSERT.
+
+`aggregate-match`: `NO_BRIDGE` → `MATCHED score=70` (auto-creable). Heurística service-like (`Flete`, `NC %`, `Ajuste%`, `Correcc%`, `Protecc%`, `Nuevo precio%`, `Gastos%`, SKU con `$` o `LEN > 40`) → `IGNORED` — filtra ajustes/notas de crédito que la planilla pone en la columna SKU.
+
+### 15.4 Reconciliación
+
+`compras_feature − ventas_feature − stock = 0` por SKU+almacén, con `compras`/`ventas` restringidas a pedprot/pedclit del feature (`EXISTS staging.matched_*`) para no contaminar con data productiva ajena (ej. las pedprot SAF cargadas a mano).
+
+### 15.5 Fixes de datos en esta sesión
+
+- **URU/ASI**: `DEPOSITO_TO_CCODALM` de Fase C tenía 17/18; los reales en `FP_Almacen` comp=11 son **14/15**. Corregido (las pedprot existentes ya estaban bien — solo era prevención).
+- **`aggregate-match` no procesaba `NEW`** → fix `IN ('UNMATCHED','NEW')`.
+- **Asignaciones `V` sobre ventas `S`**: el trigger `tg_pedclit_cestado_asignacion` (ON UPDATE) no se dispara porque Fase C inserta `pedclit` directo en `'S'`. 2644 asignaciones comp=11 quedaron en `'V'`. Fix: UPDATE bulk → `'C'` + Fase C ahora inserta el estado derivado del `cestado` del pedclit. Ver [[feature-asignacion-oc#Gotchas técnicos]].
+- **Stock huérfano**: 50 grupos SKU+almacén comp=11 con identidad rota por residuos pre-feature → reset global (−1601 netas), aislado a comp=11.
+
+### 15.6 Frontend
+
+`syncLaset.vue`: checkboxes (`row-selection`), botón "Importar seleccionadas (N)", 3 modales — preview (collapses de Compras/Ventas/Stock/SKUs a auto-crear), progreso (polling 2s), resultado (tabla de deltas de reconciliación).
+
 ## Ver también
 
 - [[pedidos|Índice del proyecto]]
@@ -472,10 +511,10 @@ Si el paso 3 se omite, el **primer reimport via UI** establece los headers canó
 - [[contexto|Contexto]] — regla cero ERP, empresas activas, regla planilla=verdad
 - [[memoria|Memoria]] — gotchas dblib, PK compuesta pedclit, FP_Proveedores moderna
 - [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
-- [[feature-asignacion-oc|Feature Asignación OC↔Venta]] — el linkeo que ya existe
-- [[changelog#2026-05-20 — Reimport de planilla Laset via UI (botón Examinar)]] — sesión que introdujo el feature
+- [[feature-asignacion-oc|Feature Asignación OC↔Venta]] — el linkeo OC↔venta; ver gotcha del trigger
+- [[changelog#2026-05-20 (cont.) — Botón "Importar seleccionadas" + auto-create de artículos + cadena de fixes]] — sesión completa
 - [[changelog#2026-05-14 (PM) — Laset Fase B ejecutada + discovery Fase C]] — sesión completa
 - Doc canónico en repo: `docs/laset-import-framework.md`
-- SQL DDL: `database/sql/2026_05_14_00{1,2,3,4}_*.sql`, `database/sql/2026_05_20_001_*.sql`
+- SQL DDL: `database/sql/2026_05_14_00{1,2,3,4}_*.sql`, `database/sql/2026_05_20_00{1,2,3}_*.sql`
 - CSV huérfanos: `docs/laset_orphan_skus.csv`
 

@@ -1,3 +1,48 @@
+## 2026-05-20 (cont.) — Botón "Importar seleccionadas" + auto-create de artículos + cadena de fixes
+
+Sesión larga sobre el viewer Sync Laset. Se agregó el flujo de importación al ERP desde la UI y se corrigieron varios bugs descubiertos al probarlo end-to-end.
+
+### Importar al ERP desde la UI
+
+- **Tabla `laset_import_jobs`** (SQL `2026_05_20_002`, aplicado) — estado de cada job: status, phase, progress, result JSON, reconciliation JSON, error.
+- **`laset:run-import-job {jobId}`** — orquestador async: corre aggregate-match (si hay UNMATCHED/NEW) → Fase C → Fase D → reconciliación, escribiendo progreso a la tabla.
+- **Controllers** `LasetImportJobCreate` (POST, dispara `nohup php artisan` en background), `LasetImportJobStatus` (GET polling), `LasetImportJobPreview` (POST, calcula closure sin crear job).
+- **`LasetSelectionClosure`** — cierre transitivo: tildar 1 fila arrastra todas las de su OC y su venta, recursivamente (BFS sobre grafo bipartito fila↔OC↔venta). Necesario para fidelidad: importar el subgrafo conexo completo. En Laset el grafo es denso (2 filas → 1755 expandidas).
+- **Frontend** `syncLaset.vue`: checkboxes de selección, botón "Importar seleccionadas (N)", 3 modales (preview con compras/ventas/stock/SKUs a auto-crear, progreso con polling 2s, resultado con tabla de deltas de reconciliación).
+
+### Auto-create de artículos y marcas (Fase C)
+
+- Antes los SKUs sin alta en `articulo` comp=11 bloqueaban la fila. Ahora Fase C los **auto-crea**: clona del gemelo de otra company si existe, o crea desde la planilla (description + marca). Marcas faltantes se crean en `FP_Marcas` (tabla global, sin companyCode).
+- `aggregate-match`: `NO_BRIDGE` ahora → `MATCHED score=70` ("auto-creable"), ya no `UNMATCHED`. Heurística service-like (`Flete`, `NC %`, `Ajuste%`, `Nuevo precio %`, `Gastos%`, SKU con `$` o > 40 chars) → `IGNORED`.
+- `--staging-ids=` agregado a `laset:import-fase-c` para filtrar al subset del job.
+
+### Cadena de bugs corregidos (descubiertos probando)
+
+- **`[national]`** es palabra reservada SQL Server → brackets en todas las columnas del INSERT de `articulo`.
+- **`ivaCompra`/`ivaVenta`** son columnas calculadas → fuera del INSERT.
+- **URU/ASI** estaban hardcodeados como 17/18 en `DEPOSITO_TO_CCODALM` de Fase C; los reales en `FP_Almacen` comp=11 son **14/15**. Corregido.
+- **`aggregate-match` no procesaba `NEW`** (solo `UNMATCHED`) → las filas del reimport via UI quedaban sin clasificar. Fix: `WHERE match_status IN ('UNMATCHED','NEW')`.
+- **Gotcha trigger `tg_pedclit_cestado_asignacion`**: promueve asignación V→C en ON UPDATE de `pedclit.cestado`. Fase C inserta `pedclit` directo en `'S'` → el trigger nunca corre → 2644 asignaciones comp=11 quedaron en `'V'` sobre ventas ya servidas. Fix: UPDATE bulk 2644 → `'C'` + Fase C ahora inserta el estado derivado del `cestado`.
+- **Stock huérfano**: 50 grupos (SKU+almacén) comp=11 con `compras − ventas − stock ≠ 0` por residuos pre-feature. Reset global aplicado (−1601 unidades netas), 100% aislado a comp=11. Snapshot `pre_reset_huerfanos_20260520_2200`.
+- **`vw_pedclil_estado_asignacion`** solo incluía `cestado='P'` → los pedidos Laset (servidos) no aparecían en el listado ni en el modal AsignarOC. SQL `2026_05_20_003`: la vista ahora incluye `cestado='S'` **solo para companyCode=11** (NB/NBE/LO intactas), join cuenta `estado IN ('V','C')`, nueva columna `pedido_estado`. `lineasSinAsignacion` (FIFO) filtra `pedido_estado='P'`.
+- **`AsignacionRepository::asignacionesDeLinea`**: (1) no traía nombre de proveedor → agregado JOIN `FP_Proveedores` (`proveedor_nombre` + `proforma`); (2) el JOIN a `pedprol` por `cRef` duplicaba filas en OCs multi-línea del mismo SKU → corregido a JOIN por `nLinea`.
+
+### Infra Docker
+
+- `docker/php/apache-uploads.ini` montado en `docker-compose.yml` → `upload_max_filesize=100M`.
+- `python3 + openpyxl` agregados al `Dockerfile`.
+
+### Snapshots de seguridad creados
+
+`pre-fix-job-cleanup-20260520-2005`, `pre_fase_c_fix_national_2150`, `pre_reset_huerfanos_20260520_2200`.
+
+### Pendiente / no resuelto por diseño
+
+- 4 `pedprot` + 5 `pedclit` con `cCodAlm='SAF'` comp=11 — data productiva cargada a mano por un operador (almacén equivocado, SAF es de NB). No son del feature; se dejaron como están. Sus 8 `pedclil` figuran como `SIN_ASIGNAR` (legítimo).
+- El `registro_stock` del reset de huérfanos no se insertó (bug `||` vs `+` en el script one-shot); el UPDATE de `stocks` sí quedó aplicado.
+
+---
+
 ## 2026-05-20 — Reimport de planilla Laset via UI (botón Examinar)
 
 Feature nuevo: el usuario puede subir una `.xlsx` desde la UI de Sync Laset y el sistema agrega solo las filas nuevas, sin tocar las históricas.
