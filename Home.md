@@ -35,7 +35,7 @@
 ## Gigabyte
 
 - [[Gigabyte/Gigabyte|Gigabyte]]
-  - [[Gigabyte/gigaErp/gigaErp|gigaErp]]
+  - [[Gigabyte/gigaErp/gigaErp|gigaErp]] — ERP Gigabyte: distribuidores, catálogo 247 productos (INVID+NB), existencias cruzadas, marketing
 
 ## Hogar
 

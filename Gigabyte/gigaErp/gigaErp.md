@@ -1,3 +1,5 @@
+
+# gigaErp.md
 # gigaErp
 
 Sistema interno de gestión para la marca **Gigabyte** (distribuidores IT en Argentina/Uruguay).
@@ -7,7 +9,7 @@ Sistema interno de gestión para la marca **Gigabyte** (distribuidores IT en Arg
 - **Credenciales seed:** `admin@gigabyte.com` / `admin123`
 - **Operativos demo:** `maria.gomez@gigabyte.com` / `lucas.herrera@gigabyte.com` (pass: `demo1234`)
 - **Repositorio:** `git@github.com:BluIncStudio/gigaErp.git` — rama `main`
-- **Última sincronización:** 2026-05-14
+- **Última sincronización:** 2026-05-20
 
 ## Stack
 
@@ -21,24 +23,30 @@ Sistema interno de gestión para la marca **Gigabyte** (distribuidores IT en Arg
 
 ## Módulos implementados
 
-- **Dashboard** — 6 KPIs (clientes, ingresos, gastos, resultado, cobrado, deuda) + pixel bar chart 12 meses + resultado del período + ventas por estado
-- **Clientes** — CRUD + fondo de marketing por año + detalle
-- **Proveedores** — CRUD completo (5 proveedores en demo)
-- **Tareas** — Kanban 4 columnas con **drag & drop** + modal detalle estilo Jira
+- **Dashboard** — 6 KPIs + pixel bar chart 12 meses + resultado del período + ventas por estado
+- **Distribuidores** — CRUD + fondo de marketing por año + detalle (ex-Clientes)
+- **Proveedores** — CRUD completo
+- **Tareas** — Kanban 4 columnas con drag & drop + modal detalle estilo Jira
 - **Marketing** — Acciones + Campañas + adjuntos
 - **Mercadería** — Ventas + Stock por depósito + Depósitos
+- **Productos** — Catálogo con grid/lista, filtros distribuidor/stock, SKU, código dist., foto, precios
+- **Existencias** — Tabla cruzada SKU × distribuidor (quién tiene qué y cuánto)
 - **Calendario** — Eventos y fechas comerciales
 - **Configuración** — Etiquetas, tipos, estados (solo admin)
+
+## Catálogo cargado (2026-05-20)
+
+| Distribuidor | Productos | SKU real |
+|-------------|-----------|---------|
+| INVID | 41 | ✅ buscados en gigabyte.com |
+| New Bytes | 206 | ✅ igual al código |
+| Elit | — | pendiente |
+| Air | — | pendiente |
 
 ## Branding
 
 - Logo sidebar: `aorus_logo_black.svg` (h-8 / 2rem)
 - Topbar: "Brand ERP"
-
-## Datos de demo
-
-DemoSeeder cargado (2026-05-14) — 3 meses de operación simulados:
-12 productos · 13 ventas · 22 tareas · 15 acciones de marketing · 4 campañas · 12 eventos
 
 ## Puertos de la máquina
 
@@ -51,8 +59,8 @@ DemoSeeder cargado (2026-05-14) — 3 meses de operación simulados:
 
 ## Notas del proyecto
 
-- [[arquitectura]] — Decisiones de diseño, patterns backend/frontend, bug apiResource pluralización, pixel bar chart SVG
+- [[arquitectura]] — Decisiones de diseño, patterns backend/frontend, endpoints Productos y Existencias
 - [[stack]] — Tecnologías, versiones, comandos de deploy
 - [[changelog]] — Historial de construcción sesión a sesión
-- [[contexto]] — Reglas de negocio, branding, datos demo, TODOs
-- [[memoria]] — Convenciones críticas, endpoints, troubleshooting, debugging checklist
+- [[contexto]] — Reglas de negocio, distribuidores, catálogo, TODOs
+- [[memoria]] — Convenciones críticas, troubleshooting, debugging checklist

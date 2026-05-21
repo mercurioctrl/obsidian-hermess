@@ -198,4 +198,62 @@ Después de hacer `optimize:clear` manual, el sistema caía a SQLite.
 **Fix**: `docker exec gigaerp-backend php artisan config:cache`
 
 Archivos modificados: `backend/app/Http/Controllers/DashboardController.php`, `frontend/pages/index.vue`, `frontend/layouts/default.vue`
+## 2026-05-20 — Módulo Productos + Existencias + datos reales INVID/New Bytes
+
+### Módulo Productos (`/productos`)
+
+Nueva sección de catálogo de productos con:
+- **Vista lista** (default) y **grid** con toggle
+- Filtros: distribuidor, estado de stock (con stock / sin stock), búsqueda por nombre/SKU/código
+- Cards con foto, nombre, código distribuidor, SKU, precio, oferta, IVA, precio final
+- Columnas en lista: producto, cód. dist., SKU, precio, precio final, IVA, stock, último ingreso
+- Badge de stock: verde "Con stock" (con cantidad) · rojo "Sin stock"
+- Modal detalle con todos los campos + precios
+- Stock aleatorio generado en seeder: 5% en cero, resto 1–150 unidades
+- `ultimo_ingreso` fecha aleatoria en los últimos 365 días
+
+**Migraciones agregadas:**
+- `0020` — campos proveedor/precio/foto/IVA a productos (supersedido por 0021)
+- `0021` — agrega `tipo` a clientes + `distribuidor_id` (FK→clientes) a productos
+- `0022` — agrega `stock` (unsigned int) y `ultimo_ingreso` (date) a productos
+- `0023` — renombra `sku` → `codigo_distribuidor` (el código interno del distribuidor, no el SKU real)
+- `0024` — agrega columna `sku` (SKU real del fabricante, unique, nullable)
+
+**Concepto clave — dos códigos en productos:**
+- `codigo_distribuidor`: código interno del distribuidor (ej. `0416990` en INVID)
+- `sku`: modelo oficial del fabricante (ej. `GP-P550SS` en Gigabyte) — puede estar vacío
+
+### Módulo Existencias (`/existencias`)
+
+Nueva sección de consulta cruzada de inventario:
+- Tabla con filas = SKU único, columnas = un distribuidor por columna
+- Cada celda muestra: `✓ N` (verde, con cantidad) · `✗ Sin stock` (rojo) · `—` (no vende ese producto)
+- Columna "Total" = suma de stock en todos los distribuidores
+- Todos los distribuidores aparecen como columnas aunque no tengan ningún producto (para ver quién NO tiene el item)
+- Filtros: distribuidor, stock (alguno / todos en cero), búsqueda por SKU/nombre/marca
+- Endpoint `GET /api/existencias` devuelve `{ distribuidores: [], items: [{ sku, nombre, marca, stock: {dist_id: cantidad|null}, stock_total }] }`
+
+### Datos cargados: INVID y New Bytes como distribuidores
+
+**INVID** (41 productos Gigabyte):
+- Creado como Cliente con `tipo=distribuidor`
+- SKUs reales buscados en gigabyte.com (GP-P550SS, GV-N1030D4-2GL, B760M D3HP DDR4, etc.)
+- Precio, IVA 21% (fuentes) / 10.5% (mothers/VGA), foto_principal desde invidcomputers.com
+
+**New Bytes** (206 productos Gigabyte):
+- Creado como Cliente con `tipo=distribuidor`
+- `sku = codigo_distribuidor` (NB ya usa los SKUs reales como código)
+- Precio, IVA, foto_principal desde static.nb.com.ar
+
+**Productos con SKU coincidente en ambos distribuidores** (se ven en la misma fila en Existencias):
+`GV-R76GAMING OC-8GD`, `GV-N5050GAMING OC-8GD`, `GV-N5070GAMING OC-12GD`, `GV-N506TEAGLE OC-8GD`, `GV-R9070GAMING OC-16GD`, `Z890 UD`, `Z890 UD WIFI6E`
+
+### Seeders — fresh install listo
+
+- `ProductoInvidSeeder` y `ProductoNewBytesSeeder` registrados en `DatabaseSeeder`
+- Ambos seeders incluyen `stock` y `ultimo_ingreso` aleatorios por producto
+- La migración 0022 ya no popula datos (los productos no existen cuando corre en fresh install)
+- Fresh install completo: `php artisan migrate --seed`
+
+Archivos: `backend/app/Http/Controllers/{Producto,Existencia}Controller.php`, `backend/database/migrations/0020-0024`, `backend/database/seeders/{ProductoInvid,ProductoNewBytes,Database}Seeder.php`, `frontend/pages/productos/index.vue`, `frontend/pages/existencias/index.vue`, `frontend/layouts/default.vue`
 

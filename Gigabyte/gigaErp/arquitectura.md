@@ -1,3 +1,4 @@
+
 # Arquitectura — gigaErp
 
 ## Estructura de directorios
@@ -7,13 +8,13 @@ gigaErp/
 ├── backend/          ← Laravel 11 (PHP 8.4)
 │   ├── app/
 │   │   ├── Enums/            ← RolUsuario, EstadoTarea, PrioridadTarea, EstadoVenta
-│   │   ├── Http/Controllers/ ← 18 resource controllers
+│   │   ├── Http/Controllers/ ← 20 resource controllers
 │   │   ├── Http/Resources/   ← 8 API resources
 │   │   ├── Models/           ← 18 Eloquent models
 │   │   └── Services/
 │   ├── database/
-│   │   ├── migrations/       ← 0001–0019
-│   │   └── seeders/          ← DatabaseSeeder + DemoSeeder (demo 3 meses)
+│   │   ├── migrations/       ← 0001–0024
+│   │   └── seeders/          ← DatabaseSeeder + DemoSeeder + ProductoInvidSeeder + ProductoNewBytesSeeder
 │   └── routes/api.php        ← todo dentro de auth:sanctum
 ├── frontend/         ← Nuxt 3 SPA (ssr: false)
 │   ├── components/ui/        ← Modal, FormField, DataTable, StatsCard, StatusBadge, Toast
@@ -21,6 +22,8 @@ gigaErp/
 │   ├── layouts/              ← default (sidebar+topbar), auth
 │   ├── middleware/           ← auth.global.ts (global, no usar definePageMeta)
 │   ├── pages/                ← routing por archivos
+│   │   ├── productos/index.vue   ← catálogo con grid/lista/filtros/stock
+│   │   └── existencias/index.vue ← tabla cruzada SKU × distribuidor
 │   ├── public/logos/         ← aorus_logo_black.svg, gigabyte_logo_clean.svg
 │   └── stores/               ← auth.ts (Pinia)
 ├── nginx/default.conf        ← /api/* y /storage/* → backend:9000, /* → frontend:3000
@@ -35,122 +38,136 @@ gigaErp/
 - Colecciones sin paginar (`get()`): `{ data: [] }` sin `meta`
 - Rutas estáticas **siempre antes** del `apiResource`
 
+## Módulo Productos — `GET /api/productos`
+
+```
+Filtros: ?search=X &distribuidor_id=N &stock=con_stock|sin_stock &activo=1
+Pagina: 50 por página
+Eager loads: distribuidor
+```
+
+Campos por producto: `id, nombre, codigo_distribuidor, sku, marca, precio, precio_oferta, iva, precio_final, foto_principal, distribuidor_id, distribuidor{id,nombre}, activo, stock, ultimo_ingreso`
+
+### Dos códigos en Producto
+
+| Campo | Descripción | Lookup key en seeder |
+|-------|-------------|---------------------|
+| `codigo_distribuidor` | Código interno del distribuidor | ✅ (updateOrCreate) |
+| `sku` | SKU real del fabricante (Gigabyte) | solo almacenado, no es PK |
+
+## Módulo Existencias — `GET /api/existencias`
+
+Endpoint no-resource (solo `index`). Agrupa todos los productos con SKU no-null por SKU.
+
+```json
+{
+  "distribuidores": [{ "id": N, "nombre": "..." }],
+  "items": [{
+    "sku": "GV-N1030D4-2GL",
+    "nombre": "...",
+    "marca": "Gigabyte",
+    "foto_principal": "...",
+    "precio": 111.38,
+    "precio_final": 123.07,
+    "stock": { "1": 45, "2": null },
+    "stock_total": 45
+  }]
+}
+```
+
+- `stock[dist_id] = N` → tiene el producto, N unidades
+- `stock[dist_id] = 0` → tiene el producto, sin unidades
+- `stock[dist_id] = null` → no vende ese producto
+- **Todos** los distribuidores (tipo=distribuidor) aparecen como columnas, aunque no tengan productos
+
 ## Paginación vs colección por módulo
 
 | Módulo | Backend | Frontend — leer con |
 |--------|---------|---------------------|
-| Clientes, Ventas, Acciones, Productos | `paginate(20)` | `res.data` + `res.meta` |
+| Clientes, Ventas, Acciones, Productos | `paginate(20/50)` | `res.data` + `res.meta` |
 | Tareas, Etiquetas, Tipos, Estados | `get()` | `res.data ?? res` |
+| Existencias | `get()` agrupado | `res.distribuidores` + `res.items` (sin wrapper data) |
 
 ## API Resources — relaciones cargadas
 
+### ProductoResource
+| Endpoint | Relaciones cargadas |
+|----------|-------------------|
+| `index()` | `distribuidor` |
+| `show()` | `stocks.deposito` |
+
 ### AccionMarketingResource
-| Endpoint | Relaciones cargadas | Campos retornados |
-|----------|--------------------|--------------------|
-| `index()` | `cliente`, `tipo`, `estado`, `campana`, `creadoPor` | id, titulo, monto_usd, fecha_inicio/fin, cliente, tipo, estado, campana, created_at |
-| `show()` | todo lo anterior + `adjuntos`, `tareas` | todo lo anterior + adjuntos[], tareas[] |
+| Endpoint | Relaciones cargadas |
+|----------|-------------------|
+| `index()` | `cliente`, `tipo`, `estado`, `campana`, `creadoPor` |
+| `show()` | todo lo anterior + `adjuntos`, `tareas` |
 
 ### TareaResource
 | Endpoint | Relaciones |
 |----------|-----------|
-| `index()` | `cliente`, `proveedor`, `asignadoUsuario`, `etiquetas` — sin `creadoPor` |
+| `index()` | `cliente`, `proveedor`, `asignadoUsuario`, `etiquetas` |
 | `show()` | todo lo anterior + `asignadoProveedor`, `accion`, `creadoPor` |
-
-> `creado_por` solo disponible al abrir el modal de detalle, no en el Kanban.
 
 ## apiResource — pluralización española (BUG CONOCIDO)
 
-Laravel singulariza en inglés. Con nombres en español puede generar parámetros incorrectos:
+| apiResource | Parámetro generado | Fix aplicado |
+|------------|-------------------|-------------|
+| `acciones` | `{accione}` ❌ | `.parameters(['acciones' => 'accion'])` |
+| `proveedores` | `{proveedore}` ❌ | `.parameters(['proveedores' => 'proveedor'])` |
+| `productos` | `{producto}` ✅ | OK sin fix |
 
-| apiResource | Parámetro generado | Parámetro correcto | Estado |
-|------------|-------------------|-------------------|--------|
-| `acciones` | `{accione}` ❌ | `{accion}` | ✅ Corregido con `.parameters()` |
-| `proveedores` | `{proveedore}` ❌ | `{proveedor}` | ✅ Corregido con `.parameters()` |
-| `tipos-accion` | `{tipos_accion}` → camelCase `$tiposAccion` | ✓ coincide | OK |
-| `estados-accion` | `{estados_accion}` → camelCase `$estadosAccion` | ✓ coincide | OK |
-
-**Síntoma**: Resource devuelve todos los campos en `null` (no hay 404 ni 500).
-**Diagnóstico**: `php artisan route:list --path=api/X` + curl autenticado al endpoint.
-**Fix**: `Route::apiResource('X', XController::class)->parameters(['X' => 'param']);`
-**Regla**: al crear cualquier `apiResource` en español, verificar inmediatamente el parámetro con `route:list`.
+**Síntoma**: Resource devuelve campos en `null` sin 404 ni 500.
+**Diagnóstico**: `php artisan route:list --path=api/X`.
 
 ## Enum en colecciones — bug keyBy
 
-Cuando un modelo tiene `$casts = ['estado' => MiEnum::class]` y se hace `->get()->keyBy('estado')`, Laravel castea el campo a enum y el keyBy falla con *"could not be converted to string"*.
-
-**Fix**: `->keyBy(fn($v) => $v->estado->value)`
+`->get()->keyBy('estado')` falla con enum cast. **Fix**: `->keyBy(fn($v) => $v->estado->value)`
 
 ## Dashboard — estructura GET /api/dashboard
 
 ```json
 {
-  "kpis": {
-    "clientes_activos", "clientes_nuevos_mes",
-    "ingresos_mes", "ingresos_anio",
-    "cobrado_mes", "pendiente_cobro",
-    "gastos_mes", "gastos_anio",
-    "resultado_mes", "resultado_anio",
-    "margen_pct", "ticket_promedio",
-    "acciones_activas", "tareas_pendientes", "tareas_en_curso"
-  },
-  "ventas_por_estado": {
-    "PAGADA":    { "cantidad": N, "total": N },
-    "PENDIENTE": { "cantidad": N, "total": N },
-    "CANCELADA": { "cantidad": N, "total": N },
-    "total": N
-  },
+  "kpis": { "clientes_activos", "ingresos_mes", "gastos_mes", "resultado_mes", "cobrado_mes", "pendiente_cobro" ... },
+  "ventas_por_estado": { "PAGADA": { "cantidad": N, "total": N }, ... },
   "top_clientes": [{ "id", "nombre", "total_ventas" }],
   "ultimos_12_meses": [{ "label": "MAY", "mes": 5, "anio": 2026, "ingresos": N, "gastos": N }]
 }
 ```
 
-- `ingresos` = ventas con `estado = PAGADA`
-- `gastos` = `AccionMarketing.monto_usd`
-- `top_clientes` filtra solo ventas PAGADAS del año
-
-## Pixel Bar Chart SVG — implementación (pages/index.vue)
+## Pixel Bar Chart SVG (pages/index.vue)
 
 ```ts
-const PX_SIZE = 5   // CRÍTICO: barW debe igualar PX_SIZE para cuadrados (no rectángulos)
+const PX_SIZE = 5   // barW = PX_SIZE para cuadrados perfectos
 const PX_GAP  = 2
-const PX_STEP = 7
 const CHART_H = 140
-const MAX_PX  = 20  // filas de cuadraditos
+const MAX_PX  = 20  // filas de cuadraditos por barra
 ```
-
-Colores: ingresos `#1A1A1A` / `#EBEBEB` vacío · gastos `#C0392B` / `#F5E8E8` vacío.
-SVG font-size: `6` unidades SVG (escala con viewBox — a pantallas más anchas, se ve más grande).
-Layout: viewBox `0 0 770 {CHART_H+26}`, slot 60px/mes, bar1 at `i*60+23`, bar2 at `i*60+31`.
 
 ## Decisiones de diseño
 
 ### `config:cache` obligatorio (PHP-FPM)
-`env()` devuelve null en PHP-FPM sin cache. El `docker-entrypoint.sh` corre `config:cache` al arrancar.
-Si el cache se pierde (por `optimize:clear` manual): `docker exec gigaerp-backend php artisan config:cache`.
+`env()` devuelve null en PHP-FPM. Fix: `docker exec gigaerp-backend php artisan config:cache`
 
-### `$table` explícito en modelos españoles
-`Proveedor` → `protected $table = 'proveedores'`
-`Configuracion` → `protected $table = 'configuraciones'`
+### Distribuidores = Clientes con `tipo='distribuidor'`
+No hay tabla separada para distribuidores. Campo `tipo` en `clientes`.
+Productos se vinculan con `distribuidor_id` (FK → `clientes.id`).
 
-### PHP 8.4 en runtime
-`composer:2` usa PHP 8.4 al resolver dependencias. Runtime: `php:8.4-cli`.
+### stock en tabla productos (no en stock_deposito)
+El módulo Productos usa campo `stock` directo. El módulo Mercadería legacy usa `stock_deposito`.
+Ambos coexisten — el campo `stock` en Producto es independiente del stock por depósito.
 
-### Kanban — drag & drop + modal Jira
-- HTML5 DnD nativo sin dependencias
-- Click → `GET /tareas/{id}` → modal `2xl`
-- Anti-conflicto: `draggingId` con `setTimeout 50ms` en `onDragEnd`
-
-### Branding
-- Sidebar logo: `frontend/public/logos/aorus_logo_black.svg` → `class="h-8 w-auto"` (2rem)
-- Topbar: `<span class="text-sm text-[#9B9B93]">Brand ERP</span>`
+### Migración de datos en seeders, no en migraciones
+La migración 0022 solo agrega la columna `stock`. El llenado inicial va en los seeders
+(los productos no existen cuando corre la migración en fresh install).
 
 ## Modelos y relaciones principales
 
 ```
 Usuario ─────── tareas (asignado_usuario_id / creado_por_id)
 Cliente ─┬────── tareas · acciones_marketing · campanas
-         ├────── asignaciones_fondo · eventos_calendario
-         └────── ventas
+(=Dist.) ├────── asignaciones_fondo · eventos_calendario
+         ├────── ventas
+         └────── productos (via distribuidor_id)
 Proveedor ────── tareas (proveedor_id / asignado_proveedor_id)
 AccionMarketing ─┬─── tareas · accion_adjuntos
 Campana ──────── acciones_marketing
