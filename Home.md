@@ -100,3 +100,5 @@ Ver [[Skills/Skills|Skills]].
 - [[naevo/naevo|naevo]]
   - [[naevo/arquitectura|arquitectura]] · [[naevo/stack|stack]] · [[naevo/changelog|changelog]] · [[naevo/contexto|contexto]] · [[naevo/memoria|memoria]] · [[naevo/modulos|módulos]] · [[naevo/templates-preview|templates]]
 - [[pega/pega|pega]]
+- [[pacman/pacman|pacman]] — Banner jugable de Pac-Man Day (juego de Pac-Man en JavaScript vanilla, HTML5 Canvas)
+  - [[pacman/arquitectura|arquitectura]] · [[pacman/stack|stack]] · [[pacman/changelog|changelog]] · [[pacman/contexto|contexto]]

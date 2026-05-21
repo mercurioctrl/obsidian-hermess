@@ -160,6 +160,9 @@ La rama `feature/asignacion-oc-pedclil` ya había sido mergeada a Development va
 - **`pedprol` no tiene IDENTITY** ni PK formal — la identificación es la tupla `(nNumPed, nLinea, cRef)`, snapshoteada en cada insert.
 - **Saldo y disponible son siempre dinámicos** (`vw_saldo_oc`) — no hay tabla de "disponibles" que mantener sincronizada.
 - **Asignación es informativa hasta MakeSale** — el saldo verdadero post-consumo lo gestiona el legacy. Por ahora no descontamos el consumo histórico (Opción C de modelado).
+- **Trigger `tg_pedclit_cestado_asignacion` es ON UPDATE** — promueve la asignación `V→C` cuando `pedclit.cestado` cambia `P→S`. Si un proceso inserta `pedclit` **directo en `'S'`** (como hace `LasetImportFaseCCommand`), el trigger nunca corre y la asignación queda en `'V'` sobre una venta ya servida. Quien inserte pedclit servidos debe setear la asignación en `'C'` explícitamente. (Bug detectado 2026-05-20: 2644 asignaciones Laset comp=11 quedaron mal; fix bulk + Fase C ahora deriva el estado del `cestado`.)
+- **`vw_pedclil_estado_asignacion` incluye `cestado='S'` solo para `companyCode=11`** (desde SQL `2026_05_20_003`). El resto de companies sigue viendo solo pedidos `'P'`. La vista expone `pedido_estado`; `lineasSinAsignacion` (FIFO) filtra `pedido_estado='P'` para no tocar servidos.
+- **`asignacionesDeLinea` joinea `pedprol` por `nLinea`, NO por `cRef`** — una OC puede tener varias líneas del mismo SKU (típico en imports Laset); el join por `cRef` multiplica filas. La asignación guarda `n_linea_oc` justamente para esto.
 
 ## Lookup rápido
 
