@@ -25,6 +25,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-laset-import|Feature: Laset Import Framework]] — Importación de operación FOB de Laset (CODEMP=11) desde planilla histórica al ERP existente
 - [[nota-catalogo-laset|Nota a Catálogo — alta 39 SKUs Laset]] — pedido de alta de artículos comp=11 que destraban Fase D (para enviar a catálogo)
 - [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11; correr antes de cada proceso/sesión
+- [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN (control de exportación) por familia × proveedor para comp=11
 
 ## Repos
 
@@ -40,4 +41,4 @@ El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_
 Las tablas legacy del ERP (`pedprot`, `pedprol`, `pedproi`, `pedclit`, `pedclil`, `stocks`, `FP_*`, `forwarders`, `rebates`) **nunca se modifican** desde features nuevos. Se leen via `SELECT/JOIN`. Toda metadata de cualquier feature vive en tablas nuevas con prefijo del feature (`pedclil_oc_asignacion`, `laset_import_*`). Ver [[contexto#Regla cero: tablas ERP son read-only]].
 
 ---
-*Última sincronización: 2026-05-20 (cont.) — Sync Laset pasó de viewer a **importador**: botón "Importar seleccionadas" que dispara un job async (aggregate-match → Fase C → Fase D → reconciliación) sobre el cierre transitivo OC↔venta de las filas tildadas. Fase C ahora **auto-crea artículos y marcas** faltantes con `companyCode=11`. Cadena de fixes: `aggregate-match` procesa `NEW`, gotcha del trigger de asignaciones (2644 corregidas V→C), reset global de stock huérfano comp=11 (−1601), `vw_pedclil_estado_asignacion` extendida a pedidos servidos comp=11, `asignacionesDeLinea` con nombre de proveedor. SQL `2026_05_20_002` y `003` aplicados. Ver [[feature-laset-import#15. Botón "Importar seleccionadas" + auto-create de artículos (2026-05-20 cont.)]] y [[changelog]].*
+*Última sincronización: 2026-05-21 (cont.) — Feature **[[feature-integrar-eccn|integrarECCN]]** avanzado y pusheado (rama `integrarECCN`, back `2c87867e` / front `d0083b6`). Además de la tabla `ecc_familia_proveedor` + import: permiso RBAC `eccView`, ECCN por ítem en el detalle de orden (JOIN condicional según permiso, cero costo para quien no lo tiene), y carga manual con lápiz + popover (`POST /v1/ecc`, upsert `origen='M'`). SQL `2026_05_21_00{1,2}` aplicados solo en dev. Ver [[feature-integrar-eccn]] y [[changelog#2026-05-21 (cont.) — integrarECCN: permiso, detalle de orden y carga manual]].*

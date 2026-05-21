@@ -71,6 +71,14 @@ El driver `dblib` (alternativo al `sqlsrv`, configurado vía `SqlServerDblibServ
 
 `pedprol` (líneas de OC) no tiene `id` IDENTITY ni PK formal. La identificación de una línea de OC requiere la tupla `(nNumPed, nLinea, cRef)`. El [[feature-asignacion-oc|feature de asignación]] snapshotea las 3 columnas en cada insert.
 
+### Gotcha: queries ad-hoc a SQL Server vía el container
+
+Para explorar/consultar la DB desde una sesión de dev se usa el container `api-rest-pedidos-apirest-laravel` (app en `/var/www/app`).
+
+- **No usar `php artisan tinker --execute="..."`** para queries con código no trivial: el doble escaping shell→tinker rompe con `\$`, `::` de namespaces y comillas anidadas (`PHP Parse error: unexpected T_NS_SEPARATOR`). En su lugar, escribir un `.php` y correr `php artisan tinker /ruta/script.php` (tinker ejecuta el archivo, con Laravel ya booteado).
+- **El repo back está montado en el container**: el host `api-rest-pedidos-laravel/app/` es volume-mount de `/var/www/app/`. Los archivos del repo (comandos, SQL, `database/data/`) se ven adentro **sin `docker cp`**. Solo hace falta `docker cp` para archivos temporales fuera del repo.
+- Aplicar un `.sql` con `GO`: patrón del README de `database/sql/` (`php -r` que splitea por `GO` y hace `unprepared`).
+
 ## Stock por tipo de pedido
 
 - **Pedido normal:** descuenta de `nstock`

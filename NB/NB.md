@@ -10,7 +10,7 @@ Microservicio REST de cotización, creación y tracking de envíos (OCA, Andrean
 
 ## [[pedidos/pedidos|pedidos]]
 - [[pedidos/arquitectura|arquitectura]] · [[pedidos/stack|stack]] · [[pedidos/contexto|contexto]] · [[pedidos/memoria|memoria]] · [[pedidos/changelog|changelog]]
-- [[pedidos/feature-asignacion-oc|feature-asignacion-oc]] · [[pedidos/feature-asignacion-oc-cookbook|cookbook]] · [[pedidos/feature-laset-import|feature-laset-import]] · [[pedidos/feature-laset-snapshot-restore|feature-laset-snapshot-restore]]
+- [[pedidos/feature-asignacion-oc|feature-asignacion-oc]] · [[pedidos/feature-asignacion-oc-cookbook|cookbook]] · [[pedidos/feature-laset-import|feature-laset-import]] · [[pedidos/feature-laset-snapshot-restore|feature-laset-snapshot-restore]] · [[pedidos/feature-integrar-eccn|feature-integrar-eccn]]
 - [[pedidos/modulo-dashboard-lo|modulo-dashboard-lo]] · [[pedidos/modulo-makesale|modulo-makesale]] · [[pedidos/modulo-removesale|modulo-removesale]] · [[pedidos/nota-catalogo-laset|nota-catalogo-laset]]
 
 ## [[expedicion/expedicion|expedicion]]
