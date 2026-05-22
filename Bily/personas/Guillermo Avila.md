@@ -1,6 +1,7 @@
 # Perfil: Guillermo Avila
 
 ## Información Básica
+- **Cumpleaños:** 23 de mayo
 - **Rol:** Analista QA / Developer
 - **Empresa:** [[Blu]]
 - **Dirección Actual:** SERRAVALLE #315, RESIDENCIAL SAN MARINO, IRAPUATO, GUANAJUATO. Código Postal: 36625
