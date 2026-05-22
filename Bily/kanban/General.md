@@ -1,6 +1,8 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- Arreglar el tema de Bulli (pedido por Seba).
+- Mandarle mensaje o mail a Seba por el tema de Bulli.
 - Aplicar cambios en el módulo de préstamos de capital según la captura enviada: ![[prestamos_captura.jpg]]
 - Configurar premios y mail del Pac-Man (Libre Opción): 1er puesto Kit Thermal Take, y email automático al completar form con cupón "PacmanDay2026" (10% off, tope $10.000).
 - Probar la carga de ítems de NB en el módulo de compras.
