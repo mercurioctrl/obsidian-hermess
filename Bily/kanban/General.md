@@ -1,6 +1,7 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- Configurar premios y mail del Pac-Man (Libre Opción): 1er puesto Kit Thermal Take, y email automático al completar form con cupón "PacmanDay2026" (10% off, tope $10.000).
 - Probar la carga de ítems de NB en el módulo de compras.
 - Gestionar nuevo documento (DNI) - Perdido en el viaje a Chile.
 - Pagar deuda AFIP (VEP de autónomos / multa que mandó Cristina). Vencimiento: 03/06/2026.
