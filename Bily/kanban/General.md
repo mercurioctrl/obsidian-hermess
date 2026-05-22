@@ -1,6 +1,10 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- Revisar errores de carga FC Solytec 49503 (Carla Carpinteri - NB): ![[captura_nb_1.jpg]] ![[captura_nb_2.jpg]] [[factura_solytec_nb.pdf]]
+  - No trae percepciones (AFIP no las levanta, exige PDF físico).
+  - IVA precargado en 10% en lugar de 10,5%.
+  - Falla al aplicar descuento del 5% (da error por total distinto). Nota: Si se cambia manual el IVA a 10,5% el IVA da bien, pero sigue sin aplicar el descuento (quizás ya está precalculado).
 - Arreglar el tema de Bulli (pedido por Seba).
 - Mandarle mensaje o mail a Seba por el tema de Bulli.
 - Aplicar cambios en el módulo de préstamos de capital según la captura enviada: ![[prestamos_captura.jpg]]
