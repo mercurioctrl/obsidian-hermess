@@ -7,3 +7,4 @@ Sección para registrar y hacer seguimiento de los pagos periódicos asociados a
 
 ## Servicios
 - [[Hogar/Servicios/Metrogas|Metrogas]] — Gas domiciliario
+- [[Hogar/Servicios/Edesur|Edesur]] — Electricidad
