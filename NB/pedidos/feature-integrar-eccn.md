@@ -124,6 +124,18 @@ Todo aplicado y probado **solo en dev**; **commiteado y pusheado** a la rama
 - Columna ECCN en el detalle de orden con carga manual.
 - **Pendiente prod**: los 3 SQL (`2026_05_21_00{1,2}`) están aplicados solo en dev.
 
+## Deploy a producción
+
+En orden:
+
+1. **DDL** — correr cada script por separado en SSMS/sqlcmd (respetan `GO`, idempotentes):
+   - `2026_05_21_001_create_ecc_familia_proveedor.sql` → crea la tabla en `NewBytes_DBF`.
+   - `2026_05_21_002_add_ecc_view_permission.sql` → agrega la columna `eccView` en `NB_WEB`.
+   - No pegar el `create`/`add` junto con su `drop_*` en la misma ventana (SSMS ejecuta todo y deshace lo creado).
+2. **Poblar la tabla** — `php artisan ecc:import-categorias` (requiere `database/data/eccCategorias.csv` en el server). Carga los ~94 vínculos.
+3. **Activar el permiso** — `UPDATE NB_WEB.dbo.permisos_agente SET eccView=1 WHERE id_usuario_web = <UserId>` para cada usuario que deba verlo (resolver el `UserId` por `usuarios_nb.UserName`, ya que los IDs pueden diferir entre dev y prod).
+4. **Re-login** — los usuarios deben volver a loguearse: el permiso viaja en el JWT y los tokens viejos no lo traen.
+
 ---
 
 ## Ver también
