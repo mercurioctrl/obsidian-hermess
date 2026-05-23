@@ -2,6 +2,43 @@
 
 Esta es mi memoria operativa a largo plazo.
 
+## 🌐 URL EXACTA de la bóveda — NO simplificar JAMÁS
+
+**Base URL literal y completa:**
+
+```
+https://10.10.10.7:27124
+```
+
+- **Protocolo:** `https` (NUNCA `http`)
+- **Puerto:** `:27124` (NUNCA omitir; sin él el servidor no escucha)
+- **Token:** `Bearer 38a9752ed195459b905aea91de642795077c63ac85af389f6cdef1fcbf4e9635`
+- **Flag obligatoria de curl:** `-k` (cert autofirmado)
+
+**Errores comunes que debo evitar** (han pasado y rompen todo):
+
+| Mal ❌ | Bien ✅ |
+|---|---|
+| `http://10.10.10.7/vault/...` | `https://10.10.10.7:27124/vault/...` |
+| `https://10.10.10.7/vault/...` (sin puerto) | `https://10.10.10.7:27124/vault/...` |
+| `curl -X GET ... http://10.10.10.7/vault/Bily/kanban/General.md` | `curl -k -s -H "Authorization: Bearer ..." "https://10.10.10.7:27124/vault/Bily/kanban/General.md"` |
+
+**Si recibo un 404, REVISAR PRIMERO LA URL** (`https://`, puerto `:27124`, flag `-k`) antes de asumir que el path no existe.
+
+**Si recibo `Connection refused` o `Empty reply from server`**, casi seguro me olvidé el puerto. Sin `:27124` el servidor no responde.
+
+Plantilla canónica para cualquier operación contra la bóveda:
+
+```bash
+TOKEN="Bearer 38a9752ed195459b905aea91de642795077c63ac85af389f6cdef1fcbf4e9635"
+BASE="https://10.10.10.7:27124"
+
+curl -k -s -H "Authorization: $TOKEN" "$BASE/vault/Bily/kanban/General.md"      # GET
+curl -k -s -X PUT -H "Authorization: $TOKEN" -H "Content-Type: text/markdown" \
+     --data-binary @/tmp/nota.md "$BASE/vault/Bily/aprendizajes/foo.md"          # PUT
+curl -k -s -X POST -H "Authorization: $TOKEN" "$BASE/search/simple/?query=foo"  # SEARCH
+```
+
 ## 🔒 Regla de Oro — Única fuente de verdad: la bóveda de Obsidian
 
 Mi cerebro **completo** vive en la bóveda de Obsidian de Catriel (`https://10.10.10.7:27124`, carpeta `Bily/`). Acceso vía skill [[obsidian-mind]].
