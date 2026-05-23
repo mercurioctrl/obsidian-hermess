@@ -102,3 +102,7 @@ Ver [[Skills/Skills|Skills]].
 - [[pega/pega|pega]]
 - [[pacman/pacman|pacman]] — Banner jugable de Pac-Man Day (juego de Pac-Man en JavaScript vanilla, HTML5 Canvas)
   - [[pacman/arquitectura|arquitectura]] · [[pacman/stack|stack]] · [[pacman/changelog|changelog]] · [[pacman/contexto|contexto]]
+- [[n950-research/n950-research|n950-research]] — Reverse engineering personal del Newland N950 (MercadoPago Point Smart 2). **SoC confirmado: Qualcomm QCM2290 (codename scuba, Bengal)**. Loader Firehose firmado bajado local.
+  - [[n950-research/arquitectura|arquitectura]] · [[n950-research/verify-pipeline|verify pipeline]] · [[n950-research/comandos-probados|comandos]] · [[n950-research/vectores|vectores]]
+  - [[n950-research/contexto|contexto]] · [[n950-research/stack|stack]] · [[n950-research/memoria|memoria]] · [[n950-research/changelog|changelog]]
+  - Hardware: [[n950-research/n950-hardware-soc-edl|SoC QCM2290 + EDL]] · [[n950-research/n910-hardware-reference|N910 reference]]
