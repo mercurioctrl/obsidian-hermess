@@ -8,4 +8,5 @@ fi
 
 git add -A
 git commit -m "vault backup: $(date '+%Y-%m-%d %H:%M:%S')"
+git pull --rebase -X ours origin main >> /tmp/obsidian-sync.log 2>&1
 git push origin main >> /tmp/obsidian-sync.log 2>&1
