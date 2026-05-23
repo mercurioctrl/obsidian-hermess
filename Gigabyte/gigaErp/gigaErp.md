@@ -2,12 +2,12 @@
 
 Sistema interno de gestión para la marca **Gigabyte** (distribuidores IT en Argentina/Uruguay).
 
-- **Directorio:** \`/var/www/gigabyte/gigaErp/\`
-- **URL local:** \`http://10.10.10.7:8824\`
-- **Credenciales seed:** \`admin@gigabyte.com\` / \`admin123\`
-- **Operativos demo:** \`maria.gomez@gigabyte.com\` / \`lucas.herrera@gigabyte.com\` (pass: \`demo1234\`)
-- **Repositorio:** \`git@github.com:BluIncStudio/gigaErp.git\` — rama \`main\`
-- **Última sincronización:** 2026-05-21
+- **Directorio:** `/var/www/gigabyte/gigaErp/`
+- **URL local:** `http://10.10.10.7:8824`
+- **Credenciales seed:** `admin@gigabyte.com` / `admin123`
+- **Operativos demo:** `maria.gomez@gigabyte.com` / `lucas.herrera@gigabyte.com` (pass: `demo1234`)
+- **Repositorio:** `git@github.com:BluIncStudio/gigaErp.git` — rama `main`
+- **Última sincronización:** 2026-05-23
 
 ## Stack
 
@@ -28,38 +28,17 @@ Sistema interno de gestión para la marca **Gigabyte** (distribuidores IT en Arg
 - **Marketing** — Acciones + Campañas + adjuntos
 - **Mercadería** — Ventas + Stock dinámico por depósito + Depósitos
 - **Productos** — Catálogo con grid/lista, filtros distribuidor/stock, SKU, código dist., foto, precios
-- **Existencias** — Tabla cruzada SKU × distribuidor (quién tiene qué y cuánto)
-- **Órdenes de Venta** — Listado, nueva orden con líneas dinámicas, detalle/edición
-- **Calendario** — Eventos y fechas comerciales
-- **Configuración** — Etiquetas, tipos, estados (solo admin)
-
-## Catálogo cargado
-
-| Distribuidor | Productos | SKU real |
-|-------------|-----------|---------|
-| INVID | 41 | ✅ buscados en gigabyte.com |
-| New Bytes | 206 | ✅ igual al código |
-| Elit | — | pendiente |
-| Air | — | pendiente |
-
-## Branding
-
-- Logo sidebar: \`aorus_logo_black.svg\` (h-8 / 2rem)
-- Topbar: "Brand ERP"
-
-## Puertos de la máquina
-
-| Proyecto | Puerto |
-|---------|--------|
-| gigaErp | **8824** |
-| minisaas | 8823 |
-| bluMiniErp | 8088 |
-| DB gigaErp | 3310 |
+- **Existencias** — Tabla cruzada SKU × distribuidor con stock por fuente
+- **Órdenes de Venta** — Listado + Crear/Editar con picker de productos por depósito + Generar Invoice PDF
 
 ## Notas del proyecto
 
-- [[arquitectura]] — Decisiones de diseño, patterns backend/frontend, endpoints
-- [[stack]] — Tecnologías, versiones, comandos de deploy
-- [[changelog]] — Historial de construcción sesión a sesión
-- [[contexto]] — Reglas de negocio, distribuidores, catálogo, TODOs
-- [[memoria]] — Convenciones críticas, troubleshooting, debugging checklist
+- [[arquitectura]] — Decisiones de diseño, endpoints, relaciones, patrones backend/frontend
+- [[stack]] — Tecnologías, dependencias, versiones
+- [[changelog]] — Historial de cambios por fecha
+- [[contexto]] — Reglas de negocio, decisiones de sesión, TODOs
+- [[memoria]] — Memoria consolidada de Claude para este proyecto
+
+## Ver también
+
+[[Gigabyte/Gigabyte|Gigabyte]]
