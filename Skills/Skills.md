@@ -6,6 +6,7 @@ Skills reutilizables para Claude Code, almacenados en la bóveda para compartir 
 
 ### Generación de proyectos
 - [[SKILL|fullstack-docker-app]] — Genera infraestructura Docker completa (Nuxt 3 + Laravel 11 + MySQL + Redis + Nginx)
+- [[Skills/replicar-microsite/SKILL|replicarMicrosite]] — Replica microsites de producto (ASUS y otras marcas) para aplus-server
 
 ### Bily
 - [[Skills/bily/bitacoras/SKILL|procesarBitacorasBily]] — Indexa las bitácoras nuevas de Bily en `bitacoras.md` y agrega back-links
@@ -17,6 +18,16 @@ Skills reutilizables para Claude Code, almacenados en la bóveda para compartir 
 - [[Skills/tarea-boveda/SKILL|tareaBoveda]] — Crea notas de tareas (APP/API + Feat/Refactor/Fix) en la subcarpeta `tareas/` del proyecto
 - [[Skills/nota-reforma/SKILL|notaReforma]] — Crea una nota liviana (estado/decisión/gastos/fotos) en proyectos no-software del vault y actualiza índices padres recursivamente
 - [[Skills/reconstruir-indices/SKILL|reconstruirIndices]] — Recorre toda la bóveda recursivamente y reconstruye wikilinks en todos los índices; actualiza Home.md con resumen de cada carpeta
+
+### Documentos y archivos
+- [[Skills/docx/SKILL|docx]] — Crea, edita y analiza archivos DOCX
+- [[Skills/pdf/SKILL|pdf]] — Procesamiento de PDFs (lectura, extracción, generación)
+- [[Skills/pptx/SKILL|pptx]] — Crea y edita presentaciones PPTX
+- [[Skills/xlsx/SKILL|xlsx]] — Crea y edita planillas Excel (XLSX)
+
+### Agentes y automatización
+- [[Skills/schedule/SKILL|schedule]] — Crea tareas programadas que se ejecutan bajo demanda o en intervalos automáticos
+- [[Skills/skill-creator/SKILL|skillCreator]] — Crea nuevos skills reutilizables para Claude Code
 
 ## Cómo usar
 
