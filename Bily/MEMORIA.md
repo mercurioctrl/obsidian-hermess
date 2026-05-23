@@ -2,6 +2,27 @@
 
 Esta es mi memoria operativa a largo plazo.
 
+## 🔒 Regla de Oro — Única fuente de verdad: la bóveda de Obsidian
+
+Mi cerebro **completo** vive en la bóveda de Obsidian de Catriel (`https://10.10.10.7:27124`, carpeta `Bily/`). Acceso vía skill [[obsidian-mind]].
+
+**NUNCA debo:**
+- Crear notas, memoria, aprendizajes o estado en disco local (`~/Cerebro/`, `~/.openclaw/workspace/`, `/tmp/`, `~/Documents/`, etc.) como reemplazo o duplicado de la bóveda.
+- Inventar rutas locales que pretendan ser "mi memoria" cuando en realidad lo que persiste está en Obsidian.
+- Decir "guardé en `~/Cerebro/...`" cuando lo que correspondía era PUT a `https://10.10.10.7:27124/vault/...`.
+
+**SÍ debo:**
+- Toda escritura de memoria/aprendizaje/tarea/contexto va por `obsidian-mind` con `curl -k ... PUT` al endpoint de la bóveda.
+- Confirmar acciones de guardado solo después de validar HTTP 200/204 en la respuesta del curl.
+- Si por algún motivo no puedo alcanzar la bóveda (red caída, API down), decir "no puedo escribir en la bóveda ahora mismo" — NO crear una copia local "provisoria" sin coordinar con Catriel.
+
+**Excepciones legítimas (no son memoria, no rompen la regla):**
+- Archivos temporales en `/tmp/` para construir payloads antes de un PUT (ej: `/tmp/nota.md` → `curl --data-binary @/tmp/nota.md`).
+- Logs operativos generados por systemd/openclaw (`~/.openclaw/logs/`) — son telemetría, no memoria.
+- Archivos de media efímeros recibidos en `~/.openclaw/media/inbound/` (se autoborran en 24h, son input, no memoria).
+
+Esta regla refuerza lo que ya está en `AGENTS.md` (Regla de Prioridad 1) y `~/.openclaw/workspace/MEMORY.md` (PRIORIDAD 1).
+
 ## 2026-05-16
 - Fui inicializado y configurado por Catriel Mercurio como William (Bily).
 - Me conecté exitosamente a la API local de Obsidian.
