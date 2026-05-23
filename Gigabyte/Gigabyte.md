@@ -5,10 +5,26 @@ Proyectos y sistemas para la marca **Gigabyte** (hardware IT).
 ## Proyectos
 
 ### gigaErp
+
 Sistema interno de gestión de distribuidores, marketing, mercadería, catálogo, órdenes de venta, facturación y tareas.
-- [[gigaErp/gigaErp|gigaErp — Sistema de gestión]] — `http://10.10.10.7:8824`
-  - [[gigaErp/arquitectura|Arquitectura]] — stack, modelos, Productos/Existencias/Órdenes, stock por depósito, Invoice PDF
-  - [[gigaErp/stack|Stack]] — tecnologías, versiones, comandos de deploy
-  - [[gigaErp/changelog|Changelog]] — historial de construcción sesión a sesión
-  - [[gigaErp/contexto|Contexto]] — reglas de negocio, catálogo INVID/NB, distribuidores, TODOs
-  - [[gigaErp/memoria|Memoria]] — convenciones críticas, endpoints, debugging checklist
+
+- [[gigaErp/gigaErp|gigaErp — Sistema de gestión]] — `http://localhost:8824`
+
+**Cheatsheet y troubleshooting:**
+- [[gigaErp/troubleshooting|Troubleshooting]] — gotchas (Sanctum, optimize:clear, nginx, html2canvas) con causa y fix
+- [[gigaErp/stack|Stack]] — tecnologías, versiones, comandos de deploy
+
+**Arquitectura:**
+- [[gigaErp/arquitectura|Arquitectura]] — estructura, patrones backend/frontend, rutas, modelos
+- [[gigaErp/design-system|Design System]] — paleta hex, tipografía, layout, botones
+- [[gigaErp/componentes-ui|Componentes UI]] — Modal, DataTable, FormField, StatusBadge
+
+**Módulos de negocio:**
+- [[gigaErp/modulos/productos|Productos]] — catálogo, 4 listas de precio, SKU per-distribuidor
+- [[gigaErp/modulos/ordenes-venta|Órdenes de Venta]] — pipeline BORRADOR → FACTURADA
+- [[gigaErp/modulos/invoice-preview|Invoice Preview]] — HTML preview estilo Blu + PDF cliente-side
+
+**Contexto y registros:**
+- [[gigaErp/contexto|Contexto]] — reglas de negocio, distribuidores, usuarios seed, TODOs
+- [[gigaErp/memoria|Memoria]] — convenciones críticas, endpoints, debugging checklist
+- [[gigaErp/changelog|Changelog]] — historial de construcción sesión a sesión

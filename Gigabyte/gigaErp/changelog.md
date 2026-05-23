@@ -102,3 +102,57 @@ Endpoint `GET /api/ventas/{id}/pdf` que genera PDF descargable via dompdf (ya in
 **Frontend**: botón "Descargar PDF" en banner verde de invoice generada (en `/ordenes-venta/[id]`). Usa `fetch()` nativo con token Bearer, descarga como blob y dispara `<a download>`.
 
 Archivos: `backend/app/Http/Controllers/{ProductoController,VentaController,OrdenVentaController}.php`, `backend/app/Http/Resources/OrdenVentaResource.php`, `backend/app/Models/{ItemOrdenVenta,Venta}.php`, `backend/database/migrations/0028-0029`, `backend/resources/views/ventas/invoice.blade.php`, `backend/routes/api.php`, `frontend/components/OrdenItems.vue`, `frontend/pages/ordenes-venta/[id].vue`, `frontend/pages/ordenes-venta/nueva.vue`
+
+
+---
+
+## 2026-05-23
+
+### Reorganización de docs · CLAUDE.md ≤200 líneas
+
+Por regla del proyecto, el `CLAUDE.md` no puede pasar de 200 líneas. Se redujo
+de 486 a 127 líneas, dejando solo cheatsheet (stack, comandos, reglas críticas)
+y un índice de pointers a las notas de la bóveda. El detalle de arquitectura,
+módulos, design system y troubleshooting **vive ahora acá en Obsidian**.
+
+Notas nuevas creadas:
+- [[troubleshooting]] — catálogo de gotchas con causa y fix
+- [[modulos/ordenes-venta]] — pipeline completo Orden → Invoice
+- [[modulos/invoice-preview]] — preview Blu-style + html2pdf cliente-side
+- [[modulos/productos]] — 4 listas de precio + SKU per-distribuidor
+- [[design-system]] — paleta, tipografía, layout, botones, cards
+- [[componentes-ui]] — Modal, DataTable, FormField, StatusBadge, etc.
+
+Memoria de Claude actualizada en `~/.claude/projects/-Users-hermess-www-gigaErp/memory/`
+con 8 archivos (perfil de usuario, workflow git, deploy dance, gotchas Sanctum y
+html2canvas, credenciales dev, referencia Blu ERP, regla del 200-lineas-CLAUDE).
+
+### Invoice del listado abre en nueva tab (commit `02e5b12`)
+
+En el listado de Órdenes de Venta, la columna Invoice muestra el `VTA-XXXX` como
+link verde con ícono `external-link`. Click → abre la preview en `_blank` sin
+disparar el row-click. `@click.stop` para evitar bubbling.
+
+Archivo: `frontend/pages/ordenes-venta/index.vue`.
+
+### Invoice preview estilo Blu (commit `001f8c8`)
+
+Reemplaza el invoice PDF server-side de DomPDF por una **preview HTML cliente-side**
+con descarga PDF vía html2pdf.js. Replica el patrón visual del presupuesto de
+`erp.blustudioinc.com` que el usuario usó como referencia.
+
+Detalles en [[modulos/invoice-preview]]. Gotchas en [[troubleshooting]].
+
+Cambios:
+- Nuevo blade `backend/resources/views/ventas/invoice-preview.blade.php`
+- `VentaController@preview` acepta token Bearer o `?token=` para shareable URL
+- Ruta pública `GET /api/ventas/{venta}/preview` (auth la hace el controller)
+- Botón "Ver invoice" en `pages/ordenes-venta/[id].vue` junto al "Descargar PDF" viejo
+- Logo AORUS embebido como PNG data URI (workaround html2canvas + SVG viewBox)
+- `backend/Dockerfile`: agregado `COPY resources/` y `COPY public/logos/` (faltaban — los blades antes solo vivían en runtime vía `docker cp`)
+
+Archivos: `backend/resources/views/ventas/invoice-preview.blade.php` (nuevo),
+`backend/app/Http/Controllers/VentaController.php`, `backend/routes/api.php`,
+`backend/Dockerfile`, `backend/public/logos/aorus_logo_black.png` (nuevo),
+`frontend/public/logos/aorus_logo_black.png` (nuevo),
+`frontend/pages/ordenes-venta/[id].vue`.
