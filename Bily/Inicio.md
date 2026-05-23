@@ -14,6 +14,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/dreams/Inicio\|Sueños]] — registro onírico
 - [[Bily/todos/Inicio\|Todos]] — to-dos personales por persona
 - [[Bily/proyectos/Inicio\|Proyectos]] — proyectos planificados
+- [[Bily/pagos/Inicio\|Pagos]] — registro de pagos y compromisos económicos
 
 ## Personas conocidas
 
