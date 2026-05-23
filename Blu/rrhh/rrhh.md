@@ -11,6 +11,7 @@ Consultora RRHH externa incorporada para diagnóstico organizacional y gestión 
 
 | Nombre | Rol | Email |
 |---|---|---|
+| [[equipo/ayelen-mercurio\|Ayelen Mercurio]] | Head de RRHH | — |
 | [[equipo/catriel-mercurio\|Catriel Mercurio]] | Director de Tecnología | cmercurio@blu.inc |
 | [[equipo/alejandra-guidobono\|Alejandra Guidobono]] | Directora de Marketing | aguidobono@blu.inc |
 | [[equipo/belu-ontivero\|Belu Ontivero]] | Graphic Designer Senior | bontivero@blu.inc |
