@@ -17,6 +17,9 @@ Proyectos y áreas de BLU Digital Agency.
 - [[bluMiniErp/Reglas de Negocio|Reglas de Negocio]] · [[bluMiniErp/Stack e Infraestructura|Stack e Infra]]
 - [[bluMiniErp/Errores Comunes|Errores Comunes]] · [[bluMiniErp/changelog|changelog]] · [[bluMiniErp/memoria|memoria]]
 
+### Dirección
+- [[Blu/direccion/reunion-directorio-pendiente|Reunión de Directorio Blu – Pendiente]]
+
 ### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
 - [[rrhh/alertas-gestion|alertas de gestión]] · [[rrhh/cumpleanos|cumpleaños]] · [[rrhh/changelog|changelog]]
 - [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]]

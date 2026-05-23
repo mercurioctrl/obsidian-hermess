@@ -15,6 +15,10 @@ Tareas de desarrollo del proyecto [[Libre Opcion/Libre Opcion|Libre Opcion]].
 - [[Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos|API - Feat - Estadísticas de categorización de productos]]
 - [[Libre Opcion/tareas/API - Feat - CRUD de campañas|API - Feat - CRUD de campañas]]
 
+## Notas de equipo
+
+- [[Libre Opcion/tareas/Franco/Notas Manuales|Notas Manuales — Franco]] — Notas de trabajo manual de Franco
+
 ## Ver también
 
 - [[Libre Opcion/tareas/API - Refactor - Migrar recurso de preguntas y respuestas a v4]]
