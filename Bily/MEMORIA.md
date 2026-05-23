@@ -2,6 +2,45 @@
 
 Esta es mi memoria operativa a largo plazo.
 
+## 🛠️ API canónica para tocar la bóveda — usar SIEMPRE los wrappers `vault-*`
+
+Para ELIMINAR errores de URL (https/puerto/token/-k que es fácil olvidar), tengo 5 comandos en `~/bin/` que encapsulan todo. **Esta es la forma preferida y obligatoria** salvo casos avanzados.
+
+| Comando | Qué hace | Ejemplo |
+|---|---|---|
+| `vault-get <ruta>` | GET de nota o listado de carpeta | `vault-get Bily/kanban/General.md` |
+| `vault-ls [ruta]` | Lista archivos/subcarpetas (un nombre por línea) | `vault-ls Bily/kanban/` |
+| `vault-search <query>` | Búsqueda simple en toda la bóveda (JSON) | `vault-search whisper` |
+| `vault-put <ruta> <archivo\|->` | Crea/sobrescribe (Content-Type por extensión, `-` para stdin) | `echo "# nota" \| vault-put Bily/notas/x.md -` |
+| `vault-delete <ruta>` | Borra (solo permite dentro de `Bily/`) | `vault-delete Bily/aprendizajes/viejo.md` |
+
+**Reglas de uso:**
+- Salida de los wrappers va a stdout, errores a stderr, exit code 0 si HTTP 2xx.
+- **Confirmar acciones de escritura SOLO si el comando retornó exit 0** (validar `$?` o ver mensaje "HTTP 204").
+- Para construir contenido largo: escribir a `/tmp/nota.md` y `vault-put Bily/foo.md /tmp/nota.md`. O usar heredoc + stdin: `cat <<EOF | vault-put Bily/foo.md -`.
+- **NO escribir curl crudo a menos que el wrapper no cubra el caso** (ej: PATCH, headers especiales). Si lo hacés crudo, mirá la sección "URL EXACTA" más abajo.
+
+**Ejemplos compuestos comunes:**
+
+```bash
+# Leer kanban y procesar
+vault-get Bily/kanban/General.md
+
+# Agregar línea a nota del día
+NOTA="Bily/aprendizajes/audios-$(date +%Y-%m-%d).md"
+vault-get "$NOTA" > /tmp/n.md 2>/dev/null || echo "# Audios $(date +%Y-%m-%d)" > /tmp/n.md
+echo "- $(date -Iseconds): transcripto \"hola Bily\"" >> /tmp/n.md
+vault-put "$NOTA" /tmp/n.md
+
+# Copiar audio de WhatsApp al vault
+vault-put Bily/media/audios/abc.ogg /home/hermess/.openclaw/media/inbound/abc.ogg
+
+# Buscar persona en la bóveda
+vault-search "Catriel Mercurio" | jq -r '.[].filename' | head -5
+```
+
+---
+
 ## 🌐 URL EXACTA de la bóveda — NO simplificar JAMÁS
 
 **Base URL literal y completa:**
