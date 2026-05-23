@@ -16,185 +16,89 @@ Se construyó el proyecto desde cero en una sesión de trabajo.
 **Backend Laravel 11:**
 - 4 Enums: `RolUsuario`, `EstadoTarea`, `PrioridadTarea`, `EstadoVenta`
 - 19 migraciones numeradas (0001–0019)
-- 18 Models Eloquent (con \$table explícito en \`Proveedor\` y \`Configuracion\`)
+- 18 Models Eloquent
 - 18 Controllers resource
 - 8 API Resources
-- Middleware \`EnsureIsAdmin\`
-- Seeders: admin@gigabyte.com, clientes (Elit/New Bytes/Invid/Air), proveedor Blu Studio, configuraciones
 
 **Frontend Nuxt 3 SPA:**
-- Composables: \`useApi\`, \`useNotification\`
-- Store: \`auth.ts\` (Pinia) con \`isAdmin\`, \`verMontos\`, \`tienePermiso()\`
-- Layout sidebar: Dashboard, Clientes, Proveedores, Tareas, Marketing, Mercadería, Calendario, Configuración
-- Componentes UI: \`Modal\`, \`FormField\`, \`DataTable\`, \`StatsCard\`, \`StatusBadge\`, \`Toast\`, \`NavItem\`
+- Composables: `useApi`, `useNotification`
+- Store: `auth.ts` (Pinia)
 - 14 páginas implementadas
-
-**Páginas implementadas:**
-- \`/login\` — auth con Sanctum Bearer
-- \`/\` — Dashboard con 6 KPIs + top clientes
-- \`/clientes\` — CRUD + search + paginación
-- \`/clientes/[id]\` — detalle + fondo de marketing con año selector
-- \`/tareas\` — Kanban 4 columnas click-to-move
-- \`/proveedores\` — CRUD completo
-- \`/marketing\` — Acciones con filtros cliente/estado
-- \`/marketing/[id]\` — detalle + adjuntos + tareas relacionadas
-- \`/marketing/campanas\` — CRUD campañas
-- \`/mercaderia\` — Listado de ventas
-- \`/mercaderia/stock\` — Productos + ajuste de stock por depósito
-- \`/mercaderia/depositos\` — Vista card de depósitos
-- \`/calendario\` — Eventos + panel "este mes"
-- \`/configuracion\` — CRUD etiquetas/tipos/estados (solo admin)
-
-### Troubleshooting resuelto en deploy
-
-- **Puerto 3308/3309 ocupados**: cambiado a 3310
-- **PHP 8.3 vs 8.4**: \`composer:2\` requiere PHP 8.4, cambiado runtime a \`php:8.4-cli\`
-- **SQLite en HTTP**: \`.env\` de \`create-project\` pisaba las env vars Docker; solución: \`rm -f .env + config:cache\` en entrypoint
-- **\`personal_access_tokens\` faltante**: Sanctum no publicó migrations con \`--no-scripts\`; agregado \`vendor:publish\` al entrypoint
-- **\`proveedors\` table not found**: pluralizador inglés incorrecto; agregado \`\$table\` a \`Proveedor\` y \`Configuracion\`
-- **\`localhost\` en frontend**: URL de API hardcodeada en build; cambiado \`API_BASE_URL=/api\` para funcionar desde cualquier IP de red
 
 ## 2026-05-14 — Demo data + Kanban mejorado
 
-### DemoSeeder — datos ficticios para muestra al cliente
+- DemoSeeder con 3 meses de datos ficticios
+- Kanban drag & drop HTML5 nativo
+- Modal detalle de tarea estilo Jira
+- Fix SQLite/config:cache
+- Fix TypeError filter en tareas
 
-Se creó \`database/seeders/DemoSeeder.php\` simulando 3 meses de operación (Feb–May 2026):
+## 2026-05-14 — Debugging acciones + Dashboard + branding
 
-- **Usuarios**: 2 operativos nuevos (María Gómez, Lucas Herrera) + admin existente
-- **Clientes**: datos completos para los 4 distribuidores (CUIT, contacto, ciudad, \`fondo_marketing_usd\`)
-- **Proveedores**: 4 nuevos (Imprenta Gráfica Sur, Logística Rápida SA, Tech Events SRL, Media Digital Pro)
-- **Productos**: 12 (Notebooks, Monitores, Componentes, Periféricos, Almacenamiento) con stock en 2 depósitos
-- **Asignaciones de fondo**: \$50k/\$40k/\$35k/\$30k por distribuidor en 2026
-- **Campañas**: 1 por cliente con fechas Feb–May 2026
-- **Acciones de marketing**: 15 en estados mixtos (7 Finalizadas, 4 En curso, 1 Planificada, 1 Pausada, 1 Cancelada)
-- **Tareas**: 22 distribuidas en las 4 columnas Kanban (11 LISTO, 5 EN_CURSO, 2 READY_FOR_QA, 4 POR_HACER)
-- **Ventas**: 13 (8 PAGADA, 4 PENDIENTE, 1 CANCELADA), todos los distribuidores con al menos 2 operaciones
-- **Eventos de calendario**: 12 eventos y fechas comerciales clave
-- **Etiquetas**: 8 (Urgente, Bloqueada, Follow-up, Diseño, Revisión, Q2-2026, Gaming, Workstation)
+- Fix apiResource pluralización española (.parameters())
+- Fix Resource wrapper en frontend
+- Dashboard: 6 KPIs + pixel bar chart SVG 12 meses
+- Logo AORUS sidebar, "Brand ERP" topbar
 
-Archivos: \`backend/database/seeders/DemoSeeder.php\`
+## 2026-05-20 — Módulo Productos + Existencias + datos reales
 
-### Kanban — drag & drop nativo
-
-Reemplazado el sistema click-to-move por drag & drop HTML5 nativo (sin dependencias externas):
-- Cursor \`grab\` en cards, \`grabbing\` al arrastrar
-- Columna destino se resalta al hover
-- Card arrastrando se pone semitransparente
-- Al soltar llama a \`PATCH /tareas/{id}/estado\` y actualiza el estado localmente
-
-### Kanban — modal detalle estilo Jira
-
-Al hacer clic en una card (sin arrastrar) se abre modal \`2xl\` con layout 2 columnas:
-- **Izquierda**: ID de tarea, título editable inline, descripción textarea, etiquetas con colores
-- **Derecha (sidebar)**: Estado, Prioridad, Asignado a, Creado por (read-only), Cliente, Proveedor, Deadline, Fecha de carga, botón Eliminar
-- Carga datos frescos del endpoint \`GET /tareas/{id}\`
-- \`TareaResource\` actualizado para incluir campo \`creado_por\`
-
-Archivos: \`frontend/pages/tareas/index.vue\`, \`backend/app/Http/Resources/TareaResource.php\`, \`backend/app/Http/Controllers/TareaController.php\`
-
-### Fix: SQLite en producción (config:cache)
-
-**Síntoma**: \`SQLSTATE[HY000]: General error: 1 no such table: usuarios (Connection: sqlite)\`
-
-**Causa**: PHP-FPM no puede leer variables de entorno del container. \`env('DB_CONNECTION')\` devolvía null → fallback a \`sqlite\`.
-
-**Solución**: \`docker exec gigaerp-backend php artisan config:cache\` — cachea la config usando las env vars (accesibles desde artisan CLI), y PHP-FPM lee el cache estático.
-
-**Nota**: el entrypoint ya corre \`config:cache\` al arrancar, pero si el container se reinicia sin reconstruir puede perder el cache. Solución permanente: agregar \`config:cache\` al entrypoint.
-
-### Fix: TypeError filter is not a function (tareas)
-
-**Causa**: \`/tareas\` devuelve \`{ data: [], meta: {} }\` pero el código asignaba el objeto completo a \`tareas.value\`.
-
-**Fix**: \`tareas.value = t.data ?? t\`
-
-## 2026-05-14 — Actualización de memoria y documentación
-
-Se reescribieron los archivos de memoria de Claude y se sincronizó Obsidian para trabajo más preciso y rápido en futuras sesiones.
-
-Sin cambios en código. Solo documentación.
-
-## 2026-05-14 — Debugging acciones de marketing + fixes apiResource
-
-### Bugs encontrados y corregidos
-
-**1. config:cache perdido → Connection: sqlite**
-
-**2. apiResource pluralización española — model binding roto**
-- \`Route::apiResource("acciones", ...)\` generaba parámetro \`{accione}\`
-- Fix: \`.parameters(["acciones" => "accion"])\` y \`.parameters(["proveedores" => "proveedor"])\`
-
-**3. Frontend no desenvolvía el wrapper Resource**
-- Fix: \`accion.value = a?.data ?? a\`
-
-**4. AccionMarketingResource no retornaba tareas**
-- Fix: agregado \`"tareas"\` al \`toArray()\`
-
-## 2026-05-14 — Dashboard rediseño + branding + pixel bar chart
-
-- Logo sidebar: \`aorus_logo_black.svg\`, topbar: "Brand ERP"
-- Dashboard: 6 KPIs + pixel bar chart SVG 12 meses + resultado del período + ventas por estado
-- \`DashboardController\` renovado: \`kpis\`, \`ventas_por_estado\`, \`ultimos_12_meses\`
-- Bug corregido: \`->keyBy('estado')\` con enum cast → fix \`->keyBy(fn(\$v) => \$v->estado->value)\`
-
-Archivos: \`backend/app/Http/Controllers/DashboardController.php\`, \`frontend/pages/index.vue\`, \`frontend/layouts/default.vue\`
-
-## 2026-05-20 — Módulo Productos + Existencias + datos reales INVID/New Bytes
-
-### Módulo Productos (\`/productos\`)
-
-Nueva sección de catálogo con vista lista/grid, filtros distribuidor/stock, SKU, foto, precios, badge de stock.
-
-**Concepto clave — dos códigos en productos:**
-- \`codigo_distribuidor\`: código interno del distribuidor (ej. \`0416990\` en INVID)
-- \`sku\`: modelo oficial del fabricante (ej. \`GP-P550SS\`) — puede estar vacío
-
-**Migraciones agregadas:** 0020–0024 (campos precio/foto/IVA, tipo en clientes, stock/ultimo_ingreso, renombrar sku→codigo_distribuidor, agregar sku real)
-
-### Módulo Existencias (\`/existencias\`)
-
-Tabla cruzada SKU × distribuidor. Todos los distribuidores aparecen como columnas aunque no tengan productos.
-
-### Datos cargados
-
-- **INVID**: 41 productos Gigabyte con SKUs buscados en gigabyte.com
-- **New Bytes**: 206 productos Gigabyte (SKU = código distribuidor)
-
-Archivos: \`backend/app/Http/Controllers/{Producto,Existencia}Controller.php\`, \`backend/database/migrations/0020-0024\`, \`backend/database/seeders/{ProductoInvid,ProductoNewBytes,Database}Seeder.php\`, \`frontend/pages/{productos,existencias}/index.vue\`
+- Módulo Productos (/productos): catálogo con grid/lista/filtros/stock
+- Módulo Existencias (/existencias): tabla cruzada SKU × distribuidor
+- Datos INVID (41 productos) y New Bytes (206 productos) cargados
+- Migraciones 0020–0024: precio/foto/IVA, tipo en clientes, stock, sku
 
 ## 2026-05-21 — Módulo Órdenes de Venta + Stock dinámico por depósito
 
-### Módulo Órdenes de Venta (\`/ordenes-venta\`)
+- Módulo OrdenVenta (cabecera + líneas): index, nueva, detalle/edición
+- Enum EstadoOrdenVenta, OrdenVentaResource con items embebidos
+- Migraciones 0025 (SKU único por distribuidor), 0026 (listas de precio 1–4), 0027 (tablas orden)
+- Vista /mercaderia/stock: columnas dinámicas por depósito activo
+- ProductoResource: campos stocks_deposito y stock_total via whenLoaded
 
-Nuevo módulo integrado desde \`main\` (commit b1209de):
+Archivos: `backend/app/Enums/EstadoOrdenVenta.php`, `backend/app/Http/Controllers/OrdenVentaController.php`, `backend/app/Http/Resources/OrdenVentaResource.php`, `backend/app/Models/{OrdenVenta,ItemOrdenVenta}.php`, `frontend/pages/ordenes-venta/`, `frontend/components/OrdenItems.vue`, `frontend/pages/mercaderia/stock/index.vue`
 
-- **Enum**: \`EstadoOrdenVenta\`
-- **Modelos**: \`OrdenVenta\` (cabecera) + \`ItemOrdenVenta\` (líneas, 1:N)
-- **Controller**: \`OrdenVentaController\` — index, store, show, update, destroy
-- **Resource**: \`OrdenVentaResource\` con items embebidos
-- **Migraciones**: \`0027_create_ordenes_venta_tables\`
-- **Frontend**: listado (\`/ordenes-venta\`), nueva orden (\`/ordenes-venta/nueva\`), detalle (\`/ordenes-venta/[id]\`)
-- **Componente**: \`OrdenItems.vue\` para gestión de líneas dinámicas
-- **StatusBadge**: nuevos estados de orden agregados
+## 2026-05-23 — Filtros de stock + depósito por ítem + Commercial Invoice PDF
 
-### Migraciones de soporte para Productos
+### Filtros complementarios en picker de Órdenes de Venta
 
-- \`0025\` — SKU único por distribuidor (constraint \`unique(sku, distribuidor_id)\`)
-- \`0026\` — Listas de precio 1–4 (\`precio_lista_1\` … \`precio_lista_4\`) a la tabla productos
+El selector de productos en órdenes de venta tenía los filtros de depósito y stock como dos `.filter()` independientes que no se coordinaban. Rediseñados como un único filtro combinado:
 
-### Stock — columnas dinámicas por depósito (\`/mercaderia/stock\`)
+- Depósito seleccionado → el filtro de stock aplica sobre ESE depósito específico
+- Sin depósito → el filtro de stock aplica sobre el stock total del producto
+- `Number(filtroDeposito.value)` para evitar coerción de tipo en claves del objeto `stocks_deposito`
+- `seleccionables()` endpoint ahora incluye `stocks_deposito: {deposito_id: cantidad}` y `stock` (eager load relación `stocks`)
 
-Antes: columna estática "Stock total". Ahora: una columna por depósito activo.
+### Selección de depósito por ítem de orden
 
-- \`ProductoController::index\` eager-load \`stocks.deposito\`
-- \`ProductoResource\` nuevo campo \`stocks_deposito: { deposito_id: cantidad }\` (via \`whenLoaded\`)
-- \`ProductoResource\` nuevo campo \`stock_total\` como suma de la relación
-- Frontend: \`columnas\` pasa a \`computed()\` con \`depositos.value.map(...)\` intercalado
-- Celdas: verde con cantidad · rojo con 0 · \`—\` si no hay entrada para ese depósito
+Cada línea de orden ahora guarda de qué depósito se toma el stock:
 
-### Deploy de sesión
+- **Migración 0028**: columna `deposito_id` nullable en `items_orden_venta` (FK → depositos, nullOnDelete)
+- `ItemOrdenVenta::$fillable` actualizado + relación `deposito()`
+- `OrdenVentaController`: acepta `deposito_id` en validación, lo persiste en `sincronizarItems()`; eager load `items.deposito` en todos los endpoints
+- `OrdenVentaResource`: expone `deposito_id` y `deposito_nombre` en cada ítem
+- **Frontend picker**: pills de depósito por producto con stock en paréntesis, auto-selecciona el primer depósito con stock o el filtro activo; `depositosPicker` reactive map
+- Columna "Depósito" agregada a la tabla de ítems de la orden
 
-- \`optimize:clear\` sin \`config:cache\` posterior → caída a SQLite (patrón recurrente)
-- Siempre: \`optimize:clear\` + \`config:cache\` en mismo comando
+### PDF Commercial Invoice
 
-Archivos: \`backend/app/Enums/EstadoOrdenVenta.php\`, \`backend/app/Http/Controllers/OrdenVentaController.php\`, \`backend/app/Http/Resources/OrdenVentaResource.php\`, \`backend/app/Models/{OrdenVenta,ItemOrdenVenta}.php\`, \`backend/database/migrations/0025–0027\`, \`backend/app/Http/Controllers/ProductoController.php\`, \`backend/app/Http/Resources/ProductoResource.php\`, \`frontend/pages/ordenes-venta/\`, \`frontend/components/OrdenItems.vue\`, \`frontend/pages/mercaderia/stock/index.vue\`
+Endpoint `GET /api/ventas/{id}/pdf` que genera PDF descargable via dompdf (ya instalado en el container).
+
+**Blade template** (`resources/views/ventas/invoice.blade.php`):
+- Logo Gigabyte SVG embebido como base64 (sin dependencias de filesystem externo)
+- Número de invoice formateado `INV-{AÑO}-{XXXX}` desde `venta.numero`
+- Bloque Seller: datos de empresa desde tabla `configuraciones` (`empresa_nombre`, `empresa_direccion`, etc.)
+- Bloque Buyer: nombre, email, teléfono, dirección del cliente
+- Barra de términos: Payment Terms, Incoterm, Currency, cantidad de ítems
+- Tabla de ítems con header negro: SKU · Description · Qty · Unit Price · Total
+- Totales: Subtotal / Shipping / Total USD
+- Bank Details: Banco, ABA/Routing, SWIFT, Account #, Dirección del banco
+- Authorized Signature: línea + nombre + título
+- `page-break-inside: avoid` en todos los bloques principales (terms bar, tabla, totals, banco, firma)
+
+**Migración 0029**:
+- Campo `shipping_usd` (decimal, default 0) en tabla `ventas`
+- Config keys sembradas: `empresa_direccion`, `empresa_ciudad_pais`, `empresa_telefono`, `empresa_email`, `empresa_web`, `invoice_payment_terms`, `invoice_incoterm`, `invoice_banco_*`, `invoice_firma_*`
+
+**Frontend**: botón "Descargar PDF" en banner verde de invoice generada (en `/ordenes-venta/[id]`). Usa `fetch()` nativo con token Bearer, descarga como blob y dispara `<a download>`.
+
+Archivos: `backend/app/Http/Controllers/{ProductoController,VentaController,OrdenVentaController}.php`, `backend/app/Http/Resources/OrdenVentaResource.php`, `backend/app/Models/{ItemOrdenVenta,Venta}.php`, `backend/database/migrations/0028-0029`, `backend/resources/views/ventas/invoice.blade.php`, `backend/routes/api.php`, `frontend/components/OrdenItems.vue`, `frontend/pages/ordenes-venta/[id].vue`, `frontend/pages/ordenes-venta/nueva.vue`
