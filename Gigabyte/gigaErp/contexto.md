@@ -10,21 +10,20 @@ Moneda: USD exclusivamente.
 
 | Email | Pass | Rol | Permisos extra |
 |-------|------|-----|----------------|
-| \`admin@gigabyte.com\` | \`admin123\` | ADMIN | todos |
-| \`maria.gomez@gigabyte.com\` | \`demo1234\` | OPERATIVO | VER_MONTOS |
-| \`lucas.herrera@gigabyte.com\` | \`demo1234\` | OPERATIVO | — |
+| `admin@gigabyte.com` | `admin123` | ADMIN | todos |
+| `maria.gomez@gigabyte.com` | `demo1234` | OPERATIVO | VER_MONTOS |
+| `lucas.herrera@gigabyte.com` | `demo1234` | OPERATIVO | — |
 
 ## Distribuidores (Clientes con tipo='distribuidor')
 
 | Nombre | Ciudad | Fondo 2026 | Productos cargados |
 |--------|--------|------------|-------------------|
-| Elit | Buenos Aires | \$50,000 | — |
-| New Bytes | Córdoba | \$40,000 | 206 productos |
-| INVID | Mendoza | \$35,000 | 41 productos |
-| Air | Rosario | \$30,000 | — |
+| Elit | Buenos Aires | $50,000 | — |
+| New Bytes | Córdoba | $40,000 | 206 productos |
+| INVID | Mendoza | $35,000 | 41 productos |
+| Air | Rosario | $30,000 | — |
 
-> Los distribuidores son **Clientes** con \`tipo='distribuidor'\`. No son una entidad separada.
-> Elit y Air son clientes de marketing sin catálogo de productos cargado aún.
+> Los distribuidores son **Clientes** con `tipo='distribuidor'`. No son una entidad separada.
 
 ## Proveedores
 
@@ -38,58 +37,53 @@ Moneda: USD exclusivamente.
 
 ## Catálogo de productos — dos códigos
 
-Cada producto tiene dos códigos separados:
-
 | Campo | Descripción | Ejemplo INVID | Ejemplo NB |
 |-------|-------------|---------------|------------|
-| \`codigo_distribuidor\` | Código interno del distribuidor | \`0416990\` | \`GP-P550SS\` |
-| \`sku\` | Modelo oficial del fabricante (Gigabyte) | \`GP-P550SS\` | \`GP-P550SS\` |
+| `codigo_distribuidor` | Código interno del distribuidor | `0416990` | `GP-P550SS` |
+| `sku` | Modelo oficial del fabricante (Gigabyte) | `GP-P550SS` | `GP-P550SS` |
 
-- **INVID**: códigos numéricos propios → SKU buscado en gigabyte.com manualmente
-- **New Bytes**: ya usa el SKU real como código → \`sku = codigo_distribuidor\`
-- Cuando coincide el SKU entre distribuidores, aparecen en la **misma fila** en Existencias
 - SKU es único **por distribuidor** (constraint 0025), no globalmente
 
 ## Branding / UI
 
-- **Logo sidebar**: \`aorus_logo_black.svg\` → \`class="h-8 w-auto"\` en \`layouts/default.vue\`
-- **Topbar**: texto "Brand ERP" (\`text-sm text-[#9B9B93]\`)
-- Logos en \`frontend/public/logos/\`: \`aorus_logo_black.svg\`, \`gigabyte_logo_clean.svg\`
+- **Logo sidebar**: `aorus_logo_black.svg` en `layouts/default.vue`
+- **Topbar**: texto "Brand ERP"
+- Logos en `frontend/public/logos/`: `aorus_logo_black.svg`, `gigabyte_logo_clean.svg`
+- `gigabyte_logo_clean.svg` embebido como base64 en el PDF de invoice
 
 ## Reglas de negocio
 
 ### Fondo de marketing
-- Cada distribuidor tiene fondo asignado por año (puede haber múltiples aportes)
-- Acciones de marketing consumen el fondo (\`monto_usd\`)
-- Disponible = asignado − consumido (puede ser negativo)
+- Cada distribuidor tiene fondo asignado por año
+- Acciones de marketing consumen el fondo (`monto_usd`)
 
 ### Tareas / Kanban
 - 4 columnas: POR_HACER → EN_CURSO → READY_FOR_QA → LISTO
-- Drag & drop HTML5 nativo
-- Click en card → modal detalle estilo Jira
+- Drag & drop HTML5 nativo, click → modal detalle estilo Jira
 
 ### Stock de productos
-- Campo \`stock\` directo en tabla \`productos\` — usado por el módulo Productos/Existencias
-- Tabla \`stock_deposito\` (modelo \`StockDeposito\`) — usada por \`/mercaderia/stock\`
-- Vista \`/mercaderia/stock\` ahora muestra una columna por depósito activo (dinámico)
-
-### Existencias (vista cruzada)
-- Agrupa productos por SKU real
-- Un producto sin SKU **no aparece** en Existencias
-- Todos los distribuidores aparecen como columnas aunque no tengan productos
-- \`null\` en una celda = ese distribuidor no vende ese producto
-- \`0\` = lo vende pero está sin stock
+- Campo `stock` directo en `productos` — usado por Productos/Existencias
+- Tabla `stock_deposito` (modelo `StockDeposito`) — usado por `/mercaderia/stock`
 
 ### Órdenes de Venta
-- Entidad nueva: \`OrdenVenta\` (cabecera) + \`ItemOrdenVenta\` (líneas)
-- Estados: \`EstadoOrdenVenta\` enum
-- Endpoint \`GET /api/ordenes-venta\` paginado
-- Listas de precio 1–4 disponibles en productos para uso en órdenes
+- `OrdenVenta` (cabecera) + `ItemOrdenVenta` (líneas)
+- Cada ítem tiene `deposito_id` nullable: de qué depósito se toma el stock
+- Picker de productos en la orden filtra por depósito + stock (filtros combinados)
+- Al agregar un producto: pills de depósito con stock disponible, auto-selecciona primer depósito con stock
+- Listas de precio 1–4 disponibles en productos
+
+### Invoice (PDF)
+- Se genera desde `/ordenes-venta/[id]` al "Generar invoice" → crea registro `Venta`
+- El PDF se descarga con el botón "Descargar PDF" en el banner verde de la orden
+- Endpoint: `GET /api/ventas/{id}/pdf` (autenticado con Bearer)
+- Formato: Commercial Invoice con logo, seller, buyer, payment terms, incoterm, bank details, firma
+- Datos de empresa en tabla `configuraciones` (claves `empresa_*` e `invoice_*`)
+- `shipping_usd` en la tabla ventas (default 0)
 
 ### Dashboard
-- Ingresos = ventas con estado PAGADA
-- Gastos = AccionMarketing.monto_usd (gasto de marketing)
-- No hay conversión ARS/USD — el sistema opera solo en USD
+- Ingresos = ventas PAGADA
+- Gastos = AccionMarketing.monto_usd
+- Solo USD
 
 ## Datos demo cargados
 
@@ -102,45 +96,55 @@ Cada producto tiene dos códigos separados:
 | ProductoInvidSeeder | Productos Gigabyte INVID | 41 |
 | ProductoNewBytesSeeder | Productos Gigabyte New Bytes | 206 |
 
-## Decisiones tomadas
+## Configuraciones en DB (tabla configuraciones)
 
-- Distribuidores y clientes son la misma entidad (tabla \`clientes\`, campo \`tipo\`)
-- Drag & drop HTML5 nativo en Kanban — sin dependencias externas
-- Modal Jira para detalle de tarea — evita página separada
-- Export Excel/PDF como stubs 501 — libs ya instaladas para después
-- Sistema opera solo en USD — no hay conversión ni cotización
-- \`codigo_distribuidor\` separado de \`sku\` para poder manejar distribuidores con codificación propia
-- SKUs reales de INVID fueron buscados en gigabyte.com en sesión 2026-05-20
-- SKU único por distribuidor (no global) — un mismo SKU puede tenerlo INVID y NB
+| Clave | Valor default |
+|-------|---------------|
+| `empresa_nombre` | Gigabyte |
+| `empresa_direccion` | 123 Main St, Miami, FL 33101 |
+| `empresa_ciudad_pais` | Miami, FL — USA |
+| `empresa_telefono` | +1 (305) 000-0000 |
+| `empresa_email` | sales@company.com |
+| `empresa_web` | www.company.com |
+| `invoice_payment_terms` | Net 30 |
+| `invoice_incoterm` | FCA Miami |
+| `invoice_banco_nombre` | Bank of America |
+| `invoice_banco_cuenta` | 000-000000-00 |
+| `invoice_banco_aba` | 026009593 |
+| `invoice_banco_swift` | BOFAUS3N |
+| `invoice_banco_direccion` | 100 N Tryon St, Charlotte, NC 28255 |
+| `invoice_firma_nombre` | Authorized Representative |
+| `invoice_firma_titulo` | Sales Manager |
+
+> Todos estos valores se leen en tiempo real al generar el PDF. Editar en la sección Configuración.
 
 ## TODOs pendientes
 
-- [ ] Agregar SKUs reales a productos de Elit y Air cuando se cargue su catálogo
-- [ ] Agregar precio/stock a productos de Elit y Air
-- [ ] Export Excel (\`maatwebsite/excel\` instalado, stubs 501)
-- [ ] Export PDF ventas (\`barryvdh/laravel-dompdf\` instalado, stubs 501)
+- [ ] Agregar SKUs reales a productos de Elit y Air
+- [ ] Export Excel (`maatwebsite/excel` instalado, stubs 501)
 - [ ] Asignación de fondo desde panel cliente (hoy solo lectura)
 - [ ] Permisos granulares en sidebar (hoy todos ven todo)
+- [ ] Vista/edición de Ventas directa (hoy solo se accede via orden)
+- [ ] Campo `shipping_usd` editable en alguna UI (hoy default 0)
 - [x] Módulo Productos con filtros, stock, último ingreso
 - [x] Módulo Existencias (tabla cruzada SKU × distribuidor)
-- [x] Seeders completos registrados para fresh install
 - [x] Módulo Órdenes de Venta (cabecera + líneas + estados)
-- [x] Stock con columnas dinámicas por depósito en \`/mercaderia/stock\`
+- [x] Stock con columnas dinámicas por depósito en `/mercaderia/stock`
+- [x] Selección de depósito por ítem en órdenes de venta
+- [x] Filtros complementarios depósito + stock en picker de orden
+- [x] PDF Commercial Invoice con dompdf (barryvdh/laravel-dompdf)
 
 ## Bugs corregidos (historial)
 
-- \`config:cache\` ya estaba en entrypoint — el síntoma SQLite reaparece si se corre \`optimize:clear\` manual (patrón recurrente: siempre correr \`config:cache\` después)
-- \`apiResource('acciones')\` → \`{accione}\` → fix \`.parameters()\`
-- \`apiResource('proveedores')\` → \`{proveedore}\` → fix \`.parameters()\`
-- \`pages/marketing/[id].vue\` asignaba \`accion.value = a\` sin desenvolver \`{ data: {} }\`
-- \`AccionMarketingResource\` no retornaba \`tareas\` en \`toArray\`
-- \`->keyBy('estado')\` falla con enum cast → fix: \`->keyBy(fn(\$v) => \$v->estado->value)\`
-- Migración 0022 intentaba popular stock antes de que existieran los productos → movido a seeders
+- `config:cache` debe correr SIEMPRE después de `optimize:clear` (PHP-FPM no lee env vars)
+- `apiResource('acciones')` → `{accione}` → fix `.parameters()`
+- `apiResource('proveedores')` → `{proveedore}` → fix `.parameters()`
+- `->keyBy('estado')` falla con enum cast → fix: `->keyBy(fn($v) => $v->estado->value)`
+- Filtros de depósito y stock en picker de órdenes no se coordinaban → unificados en un solo `.filter()`
 
 ## Puerto confirmado
 
-- **gigaErp: 8824** (no 8823 — ese lo usa minisaas-nginx)
-- minisaas: 8823 | gigaErp: 8824 | DB: 3310
+- **gigaErp: 8824** | minisaas: 8823 | DB: 3310
 
 ## Ver también
 
