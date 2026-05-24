@@ -1,70 +1,84 @@
-# Bot-WhatsApp-MVP — Carpeta del producto
+# Bily — Carpeta del producto (Blu Studio Inc)
 
-**Status:** spec cerrada (v1.0), briefs listos, pendiente arrancar arquitectura.
+**Status:** spec cerrada (v1.0+), briefs FINALIZADOS para handoff a equipos, ADR en draft.
 **Última actualización:** 2026-05-24
 
 ---
 
 ## Documentos en esta carpeta
 
-| Doc | Status | Audiencia |
-|---|---|---|
-| [[Bot-WhatsApp-MVP/Spec\|Spec MVP v1.0]] | ✅ Cerrada | Todo el equipo, fuente de verdad |
-| [[Bot-WhatsApp-MVP/Brief-Diseno\|Brief Diseño]] | ✅ Listo | Equipo de diseño — pueden arrancar |
-| [[Bot-WhatsApp-MVP/Brief-Marketing\|Brief Marketing]] | ✅ Listo | Equipo de marketing — pueden arrancar |
-| [[Bot-WhatsApp-MVP/ADR\|Architecture Decision Record]] | ⏳ Pendiente | Equipo técnico — bloqueado hasta que se escriba |
-| [[Bot-WhatsApp-MVP/Brief-Devs\|Brief técnico para devs]] | ⏳ Pendiente | Equipo técnico — depende del ADR |
+| Doc | Status | Audiencia | Acción |
+|---|---|---|---|
+| [[Bot-WhatsApp-MVP/Spec\|Spec MVP v1.0+]] | ✅ Cerrada | Todo el equipo | Lectura referencial |
+| [[Bot-WhatsApp-MVP/Brief-Diseno\|Brief Diseño]] | ✅ FINAL | Equipo de diseño | **Compartir hoy, pueden arrancar** |
+| [[Bot-WhatsApp-MVP/Brief-Marketing\|Brief Marketing]] | ✅ FINAL | Equipo de marketing | **Compartir hoy, pueden arrancar** |
+| [[Bot-WhatsApp-MVP/ADR\|Architecture Decision Record]] | 🟡 v0.1 draft | Tech lead + Sr devs | **Cerrar 4 decisiones abiertas → v1.0** |
+| [[Bot-WhatsApp-MVP/Brief-Devs\|Brief técnico para devs]] | ⏳ Pendiente | Equipo técnico | Después del ADR final |
 
 ---
 
-## Resumen ejecutivo del producto
+## Resumen ejecutivo
 
-**One-liner:** Asistente IA premium con nombre, cara y memoria propia que vive en su propio WhatsApp y aprende tu vida.
+**Producto:** Bily (grafía oficial, 1 L) — asistente IA con identidad propia (nombre random B-* + avatar único + personalidad propia), vive en su propio número de WhatsApp, cerebro markdown persistente.
 
-**Pricing:** $59 USD/mes (~66k ARS), single tier, trial 14 días sin tarjeta.
+**Empresa:** Blu Studio Inc.
+
+**Dominio:** `billy.blustudioinc.com` (excepción de grafía con el producto Bily).
+
+**Pricing:** $59 USD/mes single tier · trial 14 días sin tarjeta.
 
 **Target:** profesionales individuales + dueños PyME en Argentina (LATAM en fase 2).
 
-**Costo operativo equipo:** $18,000/mes fijo.
+**Costos operativos mensuales:**
+- Equipo + infra base: $18,000
+- Marketing agresivo: $8,000-15,000 (promedio $11,500)
+- **Total: ~$29,500/mes**
 
-**Break-even:** ~440 paying users (estimado mes 6-7 post-launch).
+**Break-even:** ~720 paying users (estimado mes 10-11 post-launch).
 
-**Runway necesario:** $40-50k USD para cubrir gap mes 0-7.
+**Runway necesario:** $100-130k USD para cubrir gap mes 0-10.
 
-**Cronograma:** 8-10 semanas a beta cobrable + 1-2 meses de bugs/iteración = launch público mes 3-4 post-arranque dev.
-
-**Equipo:** 3 srs dev + 1 jr + 1 QA + diseño + marketing + Catriel como PM (50-100% tiempo).
+**Cronograma:** 8-10 semanas dev MVP + 1-2 meses iteración + launch público mes 3-4.
 
 ---
 
 ## Decisiones clave ya tomadas
 
-1. **Stack técnico:** custom thin orchestrator (NO OpenClaw/Hermes), TypeScript/Node, markdown REST API propio (NO Obsidian)
-2. **WhatsApp:** phone farm con Androids viejos + whatsapp-web.js
-3. **Browser tool:** puppeteer compartido con WA Web
-4. **LLM:** router multi-provider con fallback (Claude/Gemini/OpenAI + Ollama local)
-5. **Cerebro:** markdown files + REST API custom + wikilink-weaver + person-profiler
-6. **Identidad agente:** nombre random B-* inmutable + avatar único (API ya existente)
-7. **Geo MVP:** Argentina + español rioplatense
-8. **Diferenciador:** "no es ChatGPT, es un asistente con identidad propia y memoria irreemplazable"
+| Categoría | Decisión |
+|---|---|
+| Stack agente | Custom thin orchestrator (NO OpenClaw/Hermes/Letta) |
+| Lenguaje | TypeScript/Node (propuesto, confirmar) |
+| Cerebro | Markdown REST API propio + SQLite FTS5 (NO Obsidian app) |
+| WhatsApp | Phone farm Androids + whatsapp-web.js + puppeteer compartido con browse tool |
+| LLM | Vercel AI SDK + router custom con fallback Ollama |
+| Brain access | Wrappers `brain_*` como tools (LLM nunca escribe URLs) |
+| Per-tenant | 1 systemd process por agente (K8s scale-to-zero post-MVP) |
+| Whisper | Reuso del stack ya construido (whisper.cpp + sidecar) |
+| Geo | Argentina + español rioplatense (LATAM fase 2) |
+| Identidad agente | Nombre random B-* INMUTABLE + avatar único minteado |
+| MercadoPago | Cuenta operativa con recurrentes habilitados |
+| Abogado | Estudio de confianza disponible |
+| PM | Catriel (50-100% del tiempo) |
 
 ---
 
 ## Próximos pasos inmediatos
 
-| Paso | Owner | ETA |
+| Paso | Owner | Status |
 |---|---|---|
-| Briefs a diseño y marketing → ellos arrancan | Catriel | Hoy |
-| Catriel resuelve preguntas pendientes de briefs | Catriel | Esta semana |
-| Escribir ADR (arquitectura) | Catriel + Sr1 (tech lead) + Claude | Próxima semana |
-| Brief técnico para devs + sprint plan | Sr1 (tech lead) | Después del ADR |
-| Kickoff con equipo completo | Catriel | Semana 0 del dev |
+| Compartir Brief-Diseno con equipo diseño | Catriel | **Hoy** |
+| Compartir Brief-Marketing con equipo marketing | Catriel | **Hoy** |
+| Pasar a diseño: logo Blu + paleta colores + 5-10 avatars de ejemplo | Catriel | Esta semana |
+| Cerrar 4 ADRs abiertas en el ADR v0.1 | Catriel + Claude | Próxima sesión |
+| Brief técnico para devs (sprint plan stage 1) | Tech lead + Claude | Después del ADR final |
+| Conseguir runway $100-130k USD | Catriel | Pre-launch |
+| Kickoff técnico con equipo completo | Catriel | Semana 0 dev |
 
 ---
 
-## Relacionado (otros productos / docs)
+## Relacionado
 
-- [[Bily/Productos/Billy-Bot|Arquitectura Billy Bot original (referencia)]]
+- [[Bily/Productos/Billy-Bot|Arquitectura Billy Bot (referencia inicial)]]
 - [[Bily/Productos/Bot-WhatsApp-Nativo|Idea original del producto]]
-- [[Claude/Whisper|Stack whisper local (componente reusable)]]
-- [[Claude/Vault-Wrappers|Patrón vault-wrappers (lección aprendida)]]
+- [[Claude/Whisper|Stack whisper local reusable]]
+- [[Claude/Vault-Wrappers|Patrón vault-wrappers]]
