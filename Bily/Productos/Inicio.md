@@ -9,6 +9,10 @@ Ideas y productos en desarrollo impulsados por Bily y Catriel.
 - [[Bily/Productos/Bot-WhatsApp-Elevator-Pitch|Elevator Pitch – Bot / Asistente Nativo para WhatsApp]]
 - [[Bily/Productos/Bot-WhatsApp-Minteeo-y-Suenio|Minteo del Alma, Personalidad y Ciclo de Sueño]]
 
+### Subcarpetas
+
+- [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bot WhatsApp MVP]] — documentación de planificación del producto
+
 ## Ver también
 
 - [[Bily/Inicio|Inicio de Bily]]
