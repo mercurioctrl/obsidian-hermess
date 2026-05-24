@@ -1,25 +1,29 @@
 # Brief Marketing — Bily (producto de Blu Studio Inc)
 
-> **Decisiones fundacionales** (cerradas con Catriel el 2026-05-24):
-> - **Producto:** Bily (la marca paraguas / empresa es Blu Studio Inc)
-> - **Dominio:** `billy.blustudioinc.com` (⚠️ verificar grafía oficial: "grafía oficial **Bily** (1 L))
+**Para:** Equipo de Marketing · **De:** Catriel + Claude · **Fecha:** 2026-05-24 (v2)
+**Doc relacionado:** [[Bily/Productos/Bot-WhatsApp-MVP/Spec|Spec MVP v2.0]] (leer para contexto completo)
+
+> **Decisiones fundacionales** (cerradas en v2.0):
+> - **Producto:** Bily (grafía oficial, 1 L) — empresa **Blu Studio Inc**
+> - **Dominio:** `billy.blustudioinc.com`
+> - **Pricing:** **$249 USD/mes** (~275k ARS) single tier premium · trial 14 días self-service sin tarjeta
+> - **Strategy:** **Apple-style** (premium + sin friction + sin demos + sin descuentos)
+> - **Geo:** Argentina-only MVP, LATAM fase 2
 > - **Redes sociales:** Crear cuentas separadas para Bily (Blu Studio empresa tiene las suyas)
 > - **Branding base:** Logo y colores básicos existen, diseño los formaliza
-
-**Para:** Equipo de Marketing · **De:** Catriel + Claude · **Fecha:** 2026-05-24
-**Doc relacionado:** [[Bily/Productos/Bot-WhatsApp-MVP/Spec|Spec MVP v1.0]] (leer para contexto completo)
+> - **Presupuesto autorizado:** $8,000-15,000 USD/mes (cashflow real)
 
 ---
 
 ## 1. Contexto en 1 minuto
 
-Producto: **asistente IA personal premium con identidad propia, que vive en WhatsApp con su propio número, y aprende la vida del usuario en un cerebro markdown que crece con el uso**.
+**Bily** es un asistente IA premium con identidad propia, su propio número de WhatsApp, y un cerebro markdown que crece con el usuario. Target: **dueños de PyME + profesionales independientes de alto leverage** en Argentina.
 
-Modelo: **suscripción $59 USD/mes** (~66k ARS) con 14 días de trial gratis.
+**Pricing:** $249/mes (~275k ARS) — comparable a 30% de lo que cuesta un becario en Arg, sin gestión humana.
 
-Target inicial: **profesionales individuales + dueños de PyME en Argentina**.
+**Strategy:** **Apple-style.** Premium pricing fijo, sin descuentos, sin demos, sin SDRs, sin ads gritones. El producto + experiencia + brand venden solos. Marketing minimalista pero obsesivo en quality.
 
-Diferenciador clave: **NO es ChatGPT en WhatsApp**. Es un agente con identidad propia (nombre random + avatar único + personalidad propia) que se vuelve **emocionalmente irreemplazable** con el tiempo porque acumula la historia personal del usuario en un cerebro que es del usuario.
+**Diferenciador:** "Bily no es un chatbot. Es un asistente con nombre, cara y memoria propia, que aprende tu vida y se vuelve irreemplazable porque acumula tu historia en un cerebro que es tuyo."
 
 ---
 
@@ -27,244 +31,295 @@ Diferenciador clave: **NO es ChatGPT en WhatsApp**. Es un agente con identidad p
 
 ### 2.1. Frase canónica (NO modificar)
 
-> **"No es un bot. Es un asistente con nombre, cara y memoria propia, que aprende tu vida y se vuelve irreemplazable porque acumula tu historia personal en un cerebro que es tuyo."**
+> **"No es un chatbot. Es un asistente con nombre, cara y memoria propia, que aprende tu vida y se vuelve irreemplazable porque acumula tu historia personal en un cerebro que es tuyo."**
 
-### 2.2. Variantes por contexto
+### 2.2. Variantes Apple-style por contexto
 
 | Contexto | Frase |
 |---|---|
 | **Headline landing** | "Tu asistente IA con nombre propio que te conoce de verdad" |
-| **Subheadline landing** | "Aprende tu vida. Ordena tu caos. Vive en WhatsApp." |
-| **Ads (Meta/Google)** | "Conocé a tu Bily — Brisa, Billy, Bruno... ¿quién será el tuyo?" |
-| **Mensaje pricing** | "El único asistente que se vuelve irreemplazable porque guarda tu historia." |
-| **One-liner para network/PR** | "Bily es como un asistente humano que nunca olvida nada y trabaja 24/7 en WhatsApp." |
+| **Subheadline** | "Aprende tu vida. Ordena tu caos. Vive en WhatsApp." |
+| **Para PyME** | "Tu empleado digital 24/7. Sin sueldo, sin vacaciones, sin olvidos." |
+| **Para profesionales** | "Como tener un becario brillante que nunca olvida nada y trabaja 24/7." |
+| **Comparación racional** | "Lo que paga un becario una semana, Bily lo hace todo el mes — sin descanso." |
+| **Network / PR** | "El iPhone de los asistentes IA: premium, único, y se enamoran de él." |
+| **Para inversores / partners** | "El primer asistente que se vuelve emocionalmente irreemplazable. Lock-in temporal por cerebro acumulado." |
 
-### 2.3. Pillars de mensajería (los 4 wow moments traducidos a beneficios)
+### 2.3. Pillars de mensajería (los 4 wow moments)
 
 | Pillar | Beneficio comunicado |
 |---|---|
 | 🎂 **Identidad propia** | "Tu asistente nace con un nombre único, un avatar único, una personalidad única. No es el mismo robot que el de tu vecino." |
 | 🧠 **Memoria infalible** | "Lo que le contás se queda. Después de 1 mes te recuerda cumpleaños, contratos, deudas, problemas recurrentes." |
-| 🎯 **Acción real** | "No solo responde: busca info, agenda, manda mensajes, te ordena tareas. Como un becario que nunca duerme." |
-| 🇦🇷 **Privado y argentino** | "Tus datos viven en servidores nuestros, no van a Google ni OpenAI. Habla rioplatense, entiende tu contexto." |
+| 🎯 **Acción real** | "No solo responde: busca info, agenda, manda mensajes, te ordena tareas. Como un becario brillante que nunca duerme." |
+| 🇦🇷 **Privado y premium** | "Tus datos viven en servidores nuestros, no van a Google ni OpenAI. Habla rioplatense. Experiencia premium en cada detalle." |
 
 ---
 
-## 3. Entregables esperados
+## 3. Lo que NO hacemos (Apple-style discipline)
+
+🚫 **Ads gritones en redes** (estilo "AYÚDATE CON IA!!!!!")
+🚫 **Descuentos / promos / black friday / cyber monday**
+🚫 **Anual gratis / lifetime deals** (devalúan brand)
+🚫 **Affiliate masivo / paid posts genéricos**
+🚫 **Demos personalizadas con SDR/AE** (NO B2B enterprise classic)
+🚫 **Trial extendido / gracia para no pagar** (sí pagás o no, sin negociación)
+🚫 **Tiers / opciones múltiples** (UN producto, UN precio)
+🚫 **Copywriting agresivo de "DOLOR DOLOR DOLOR"** estilo gurus
+🚫 **Long-form sales pages con 50 testimonials forzados**
+
+---
+
+## 4. Entregables esperados
 
 ### 🔴 Prioridad 1 — bloquean launch (semanas 1-4)
 
-#### 3.1. Landing page (copy + estructura)
-Estructura propuesta — pulir copy:
-1. **Hero:** headline + subheadline + CTA "Crear mi asistente gratis 14 días" + visual del avatar
-2. **Social proof bar:** "Usado por X profesionales en Argentina" (cuando haya)
-3. **Cómo funciona** (4 pasos visualizados): 1) Escribís → 2) Nace tu agente → 3) Se va conociendo → 4) Te ayuda 24/7
-4. **Qué hace tu agente** (6-8 features con iconos): recordar personas, agendar, buscar web, transcribir audios, organizar tareas, integrarse con tu trabajo
-5. **Diferencia vs ChatGPT en WhatsApp** (tabla comparativa)
-6. **Testimoniales** (vacío inicial, llenar con beta)
-7. **Pricing:** card único con $59/mes + lo que incluye + "14 días free, sin tarjeta"
-8. **FAQ** (10-15 preguntas curated)
+#### 4.1. Landing page (copy + estructura)
+**Tone Apple-style:** minimalista, visual, confiado, sin hard-sell.
+
+Estructura propuesta:
+1. **Hero:** headline + subheadline + CTA "Crear mi Bily" + visual del avatar (animado idealmente)
+2. **Video corto** (5-15 seg) del minteo en acción — el "wow" en formato consumible
+3. **Cómo funciona** (3 pasos máximo): 1) Escribís → 2) Nace tu Bily → 3) Te conoce
+4. **Lo que hace** (6 features con iconos minimalistas)
+5. **Diferencia vs ChatGPT en WhatsApp** (tabla minimalista, NO comparativa larga)
+6. **Pricing:** card único con $249/mes destacado · "14 días free, sin tarjeta" · checklist features
+7. **Una historia de cliente** (con su Bily) — NO 50 testimonials, UN caso bien contado
+8. **FAQ** (8-10 preguntas máximo, las críticas)
 9. **Footer:** legal, contacto, redes
 
-**Tone of voice de la landing:** cálido + directo + 0% bullshit corporativo. Tutear/vosear (rioplatense). Frases cortas. Ejemplos concretos.
+**NO hagas:**
+- Long-form sales page con 5000 palabras
+- Múltiples CTAs (un solo CTA principal)
+- Comparativas larguísimas con competidores
+- Testimonials forzados o pagos
 
-#### 3.2. Mensajería del minteo (texto que recibe el usuario)
-Coordinar con producto + diseño los **5-10 textos iniciales** que envía el agente cuando nace:
-- Texto del bot público al recibir primer msg
-- Texto del agente al "nacer"
-- Texto de las primeras 5 preguntas de onboarding (¿a qué te dedicás? ¿tu familia? ¿tu rutina? etc.)
-- Texto de cierre del onboarding ("listo, ya tengo lo básico, ahora podés mandarme cualquier cosa")
+#### 4.2. Mensajería del minteo
+**Apple-style:** cada texto del minteo está pulido al milímetro. 0% texto throwaway.
 
-**Tone:** depende del agente (cada uno tiene personalidad), pero hay **frases base** que son siempre las mismas (legal, instrucciones). Esas las escribís vos.
+5-10 textos críticos a redactar con producto + diseño:
+- Texto del bot público al recibir primer msg ("¡Hola! Estás a 60 segundos de conocer a tu Bily...")
+- Texto del bot público pidiendo el nombre del usuario
+- Texto de "tu agente está naciendo..." (durante 30 seg de bootstrap)
+- Texto de presentación del avatar minteado
+- Texto del agente al "nacer" (primer mensaje desde su número nuevo)
+- Texto de las 4-5 preguntas de onboarding inicial
+- Texto de cierre del onboarding inicial
 
-#### 3.3. Email sequences para trial
-4-6 emails durante los 14 días del trial:
-- **Día 0:** "Bienvenido, conocé tu agente" (link a WhatsApp para empezar)
-- **Día 1:** "Cómo aprovechar tu primer día con [nombre del agente]"
-- **Día 4:** "Casos de uso que te pueden servir"
-- **Día 7:** "Ya pasó la mitad — ¿qué te está costando?"
-- **Día 12:** "Tu trial termina en 2 días — decidí si seguís"
-- **Día 14:** "Hoy termina el trial — última oportunidad de continuar"
+Cada texto: **memorable, cálido, distinto del bot promedio**. Sin emoji spam pero con uso estratégico (1-2 max).
 
-**Cada uno con CTA claro y posibilidad de respuesta directa al equipo.**
+#### 4.3. Email sequences para trial
+5 emails durante los 14 días del trial:
+- **Día 0:** "Tu Bily ya nació — empezá la conversación" (link directo a WA, con avatar del agente)
+- **Día 2:** "3 formas inteligentes de aprovechar tu primera semana" (3 use cases concretos cortos)
+- **Día 7:** "Mid-trial check: tu Bily ya sabe X sobre vos" (datos del cerebro)
+- **Día 12:** "Tu trial termina en 2 días — seguís?"
+- **Día 14:** "Última oportunidad — Bily se va a dormir mañana"
 
-#### 3.4. FAQ + handling de objeciones
-~20 preguntas/objeciones típicas con respuestas pre-escritas, usables en:
-- FAQ de landing
-- Respuestas de marketing en redes
-- Capacitación de soporte/sales
+**Style emails:** premium, minimalist, breve. NO marketing-y. Tipo emails de Apple post-compra.
 
-Ejemplos a cubrir:
+#### 4.4. FAQ + handling de objeciones
+~12-15 preguntas/objeciones premium-friendly:
+
+- "¿$249 al mes no es caro?"
 - "¿Es seguro? ¿Mis datos están protegidos?"
 - "¿Qué pasa si dejo de pagar?"
 - "¿Lo puedo agregar a grupos de WA?"
 - "¿Cómo se diferencia de ChatGPT?"
-- "¿$59 no es caro?"
 - "¿Funciona en español argentino?"
 - "¿Qué hace si le pido algo que no sabe?"
 - "¿Puedo elegir el nombre y avatar?"
 - "¿Tengo que instalar algo?"
-- "¿Funciona offline?"
+- "¿Y si me arrepiento?"
+- "¿Es para mi empresa o para mí personal?"
+- "¿Quién entrena/mejora a mi Bily con el tiempo?"
 
-#### 3.5. Materiales legal (a coordinar con abogado)
-- Términos y condiciones
-- Política de privacidad (Ley 25.326 Argentina + GDPR-aware)
+#### 4.5. Materiales legal (coordinar con abogado)
+- TOS específico
+- Política de privacidad (Ley 25.326 + GDPR-aware para LATAM futuro)
 - Política de uso aceptable
-- Aviso de privacidad para grupos de WhatsApp (cuando agente es agregado)
+- Privacy notice para grupos de WhatsApp (cuando Bily es agregado)
 
-### 🟡 Prioridad 2 — para crecimiento post-launch (semanas 4-8)
+### 🟡 Prioridad 2 — para crecimiento sostenido (semanas 4-12)
 
-#### 3.6. Content calendar — primeros 3 meses
-Contenido educativo + casos de uso + testimoniales. Cadencia sugerida:
-- **2 posts/semana en IG/TikTok** (visuales, casos de uso)
-- **1 post/semana en LinkedIn** (más profesional, target PyME)
-- **1 thread/semana en X** (insights, behind the scenes)
-- **1 blog post / 2 semanas** (long-form SEO)
+#### 4.6. Content premium — storytelling Apple-style
 
-#### 3.7. Influencer outreach plan
-- **Lista target:** 10-20 influencers tech/productividad/emprendedurismo argentinos con 10k-100k followers (sweet spot engagement vs reach)
-- **Pitch deck:** 1-pager para mandarles con beneficios de early access
-- **Ofertas tier:** acceso gratis perpetuo + comisión por referidos vs solo acceso vs paid post
+**NO marketing-blog típico SaaS.** En su lugar:
 
-#### 3.8. Ads creatives (cuando haya social proof)
-- 5-10 creatives para Meta (Reels + carousels + image ads)
-- 3-5 search ads para Google
-- Lead magnets para captar emails de los que no convierten directo
+- **2 videos cortos/mes** (60-90 seg): historias de clientes (cuando haya beta) o "behind the scenes" del producto
+- **1 long-read/mes** en Medium/Substack: piezas pensadas (no SEO-stuffed) sobre el futuro de asistentes IA, casos de uso premium, filosofía del producto
+- **Cuenta de IG/X visual:** producto + behind-the-scenes + minimalist aesthetic. Posts diarios pero CURADOS.
+- **Founder-led storytelling:** Catriel cuenta el camino en su X/LinkedIn personal. Su historia + producto + aprendizajes.
 
-#### 3.9. Referral program
-Diseñar mecanismo: "Regalá un mes a un amigo, ganás un mes". Diseño con producto/dev sobre cómo se trackea (cupón? link único?).
+#### 4.7. Influencer outreach selectivo
 
-### 🟢 Prioridad 3 — operacional ongoing (semanas 8+)
+**NO mass-outreach. Curated relationships.**
 
-- Social media management
-- Soporte 1ra línea
-- Customer success outreach a Pro
-- Análisis de churn + feedback de cancelaciones
-- Newsletter mensual a paying users
+- **Lista target:** 3-5 influencers premium por trimestre
+- **Profile target:** tech/business/productividad/emprendedurismo con 30k-200k followers, alta confianza con su audience, NO mass-affiliate types
+- **Approach:** acceso gratuito early + invitación a conversación honesta + posibilidad de partnership real
+- **NO ofrecemos:** dinero por post, comisión por venta, lifetime deals
+- **SÍ ofrecemos:** acceso anticipado, custom features para su use case, presencia en nuestra story de evolución
+
+Candidatos primer round (research necesario):
+- 1-2 tech influencers (Solomonoff, Mati Lanusse o similares en Arg)
+- 1-2 founders/productividad (los del estilo de María Migueliz, Demián Sterman)
+- 1 contador/abogado tipo que serve PyMEs
+
+#### 4.8. Press selectivo
+
+**Target:** 3-5 coberturas curadas por año, NO releases masivos.
+
+- TechCrunch en Español
+- Infobae Tech
+- LaNación Tecnología
+- iProUP
+- Forbes Argentina
+
+**Angle:** "El primer asistente IA argentino con identidad propia. Cómo construimos algo emocionalmente irreemplazable."
+
+#### 4.9. Referral program VIP
+
+Diseño con producto/dev:
+- "Regalá un mes de Bily a alguien" — usuario actual obtiene 2 meses bonus
+- NO mass referral con comisiones — selectivo, premium feel
+- Tracking via cupón único por user
+
+### 🟢 Prioridad 3 — operacional ongoing
+
+- Soporte 1ra línea (reactivo, premium quality response)
+- Customer success outreach SOLO a Pro/power users que parecen frustrados
+- Análisis de churn (cada cancelación es una entrevista — feedback gold)
+- Newsletter mensual a paying users (curado, no marketing)
 
 ---
 
-## 4. Cronograma sugerido (alineado a stage gates del producto)
+## 5. Cronograma sugerido (alineado a stage gates del producto)
 
 | Semana | Estado producto | Foco marketing | Outputs |
 |---|---|---|---|
-| 1-2 | Stage 1 dev: single-tenant pulido | Landing page copy + estructura + FAQ | Doc final con copy aprobado |
-| 3-4 | Stage 2 dev: multi-tenant | Trial email sequences + mensajería minteo + legal docs | Emails listos, copy minteo aprobado, legal en review |
-| 5-6 | Stage 3 dev: intelligence | Content seed (10 posts iniciales) + influencer outreach | Calendar 1er mes listo, 3-5 influencers contactados |
-| 7-8 | Stage 4 dev: ops + beta | Beta privado (30-50 users), recopilación testimoniales | Primeros casos documentados, ajustes a copy basado en feedback |
-| 9-10 | Launch público | Push social orgánico + primeros ads | Campañas activas, métricas tracking |
-| 11-12 | Tracción | Análisis qué funciona + escalar | Optimizaciones + segunda ola creativos |
+| 1-2 | Stage 1: single-tenant pulido | Landing copy + FAQ + emails trial | Doc final con copy aprobado |
+| 3-4 | Stage 2: multi-tenant | Brand identity con diseño + mensajería minteo + legal docs | Brand book, copy minteo, legal en review |
+| 5-6 | Stage 3: intelligence | Content seed (3 long-reads + 6 videos cortos) + influencer outreach round 1 | Content listo, 5 influencers contactados |
+| 7-8 | Stage 4: ops + beta | **Closed alpha invitado** (Catriel hace founder-led sales con 20-30 personas de su red) | Primeros casos documentados, ajustes basados en feedback |
+| 9-10 | **Launch público soft** | Activar landing pública + IG/X + press releases + activación influencers | Tracción inicial, primeros sign-ups orgánicos |
+| 11-12 | Crecimiento | Análisis qué funciona + escalar lo que sí | Optimización + content adicional + segundo round influencers |
 
 ---
 
-## 5. Stage gates de adquisición (de la spec, sección 10.bis)
+## 6. Stage gates de adquisición (Apple-style, NO ads agresivos)
 
-| Etapa | Usuarios | Canal primario | Inversión |
+| Etapa | Usuarios | Canal primario | Inversión mensual |
 |---|---|---|---|
-| 0-50 (beta cerrado) | red personal + equipo | Invitación 1-a-1 | $500-1,000 (perks beta) |
-| 50-200 (beta abierto) | influencers de nicho + contenido | **5-7 influencers early access** + producción contenido | **$3,000-5,000/mes** |
-| 200-500 | mix orgánico + ads chicos | Ads testing + lista de espera FOMO | **$5,000-8,000/mes** |
-| 500-1,500 | Meta + Google ads full + referrals | Ads escalado con creatives basados en testimoniales | **$8,000-12,000/mes** |
-| 1,500+ | mix + partnerships | Partners: MercadoPago, contadores, consultores | **$10,000-15,000/mes** |
-
-**Total presupuesto marketing autorizado:** $8,000-15,000 USD/mes con escalado conforme funnel se valide.
+| 0-30 (closed alpha) | Tu red + early believers, **founder-led** | Invitación 1-a-1 personal de Catriel | $500-1k perks beta |
+| 30-100 | Boca-en-boca curated + 3-5 micro-influencers premium | Contenido propio (videos + long-reads) + colabs orgánicas | $2,000-4,000 |
+| 100-300 | Content marketing premium + selectos partnerships | Articles + videos + 1-2 events curados (Premium Tech Buenos Aires?) | $5,000-8,000 |
+| 300+ | Mix + word-of-mouth motorizado + referral VIP | Programa de referidos VIP + ads selectos solo para warm audiences (no cold) | $8,000-15,000 |
 
 **KPI clave a vigilar:**
-- CAC por canal (target <$60 para que LTV:CAC > 3:1 asumiendo retention 6 meses)
-- Conversión trial → paid (target >12%)
-- Tiempo de payback (target <4 meses)
+- CAC por canal (target <$300 — alto vs SaaS típico pero ok con LTV $5k+)
+- Conversión trial → paid (target >25% — Apple-style attracts pre-qualified)
+- Tiempo de payback (target <3 meses con $249/mes)
+- NPS Promoter score (target >50 — boca-en-boca es nuestro motor)
 
 ---
 
-## 6. Personas detalladas (validar/refinar)
+## 7. Personas refinadas (post-v2)
 
-### 6.1. Persona "Profesional Independiente" (target principal Personal)
-- **Nombre:** Sebastián, 38 años, Buenos Aires
-- **Trabajo:** Consultor independiente / freelancer / profesional de servicios
-- **Dolor:** "No tengo tiempo de organizar mi caos. Tengo todo en la cabeza, WhatsApp, y un Notion que nunca actualizo."
+### 7.1. Persona principal: "Carolina, dueña PyME"
+- **Nombre:** Carolina, 45 años, dueña de un comercio mediano en CABA
+- **Negocio:** Maneja 8 empleados + 200 clientes recurrentes + proveedores + facturación
+- **Dolor:** "Vivo en WhatsApp pero todo lo importante se pierde. Ayer un proveedor me reclamó algo que pagué hace 2 meses, no me acordaba"
+- **Trigger compra:** Confusión con proveedor le costó $$$
+- **Objeción típica:** "$249 al mes, ¿en serio? Solo uso WhatsApp"
+- **Respuesta:** "Exactamente por eso. Lo que ya hacés en WhatsApp, ahora con memoria. Te recuerda contextos, deudas, fechas — lo que un asistente humano hace pero 24/7 y mucho más barato."
+
+### 7.2. Persona secundaria: "Sebastián, consultor"
+- **Nombre:** Sebastián, 38 años, consultor independiente
+- **Trabajo:** 15-25 clientes activos en paralelo
+- **Dolor:** "No tengo tiempo de organizar mi caos. Tengo todo en la cabeza, en WhatsApp, y un Notion que nunca actualizo"
 - **Trigger:** Cliente importante le pidió algo y no se acordaba del contexto previo
-- **Objeción típica:** "$59 al mes, ¿en serio? ChatGPT cuesta $20"
-- **Respuesta:** "ChatGPT no tiene memoria de vos. Esto sí. La diferencia se nota al mes 2."
+- **Objeción típica:** "ChatGPT cuesta $20, esto $249"
+- **Respuesta:** "ChatGPT no tiene memoria de vos. Bily sí. A los 2 meses la diferencia es brutal: te recuerda quién es cada cliente, qué proyectos tenés activos, qué prometiste hacer."
 
-### 6.2. Persona "Dueño PyME" (target principal upsell + retention)
-- **Nombre:** Carolina, 45 años, dueña de un comercio de barrio
-- **Trabajo:** Maneja el negocio + ventas + proveedores + empleados + facturación
-- **Dolor:** "Tengo proveedores que me reclaman pagos que ya pagué, clientes que dicen que les debo, todo en WhatsApp."
-- **Trigger:** Confusión con un proveedor le costó $$$
-- **Objeción típica:** "No soy tecnológica, esto seguro no es para mí"
-- **Respuesta:** "Es WhatsApp, vos ya lo usás. El agente hace todo el trabajo, vos solo le hablás."
-
-### 6.3. Persona "Influencer / Creator" (lever para crecimiento)
+### 7.3. Persona terciaria (para crecimiento): "Mati, creator/influencer tech"
 - **Nombre:** Mati, 32, creador de contenido tech
-- **Trabajo:** Crea contenido en redes, vive de productos digitales
-- **Por qué le interesa:** novedad genuina + producto cool para mostrar + posible alianza
-- **Approach:** acceso gratis + features early + creditos visuales en redes
+- **Por qué interesa:** Novedad genuina + producto cool para mostrar + posible alianza
+- **Approach:** acceso gratuito perpetuo + invitación a conversación de feedback + posibilidad de partnership como early evangelist
+- **NO ofrecemos:** comisión por sales, dinero por post (devalúa)
 
 ---
 
-## 7. Guidelines y decisiones ya tomadas (no negociables)
+## 8. Guidelines y decisiones ya tomadas (no negociables)
 
-- **Pricing:** $59 USD/mes (~66k ARS), tier único, trial 14 días sin tarjeta
-- **Target:** Argentina primero, profesionales + PyME
-- **Idioma:** español rioplatense (vos, che, dale, etc.) — NO neutro
-- **Tone:** cálido + directo, anti-corporate, anti-bullshit
-- **Nombre del producto:** TBD (¿"Blu Bots"? ¿"Blu Agent"? ¿"Bily"?) — definir con Catriel
-- **Diferenciador central:** "no es ChatGPT", es identidad + memoria propia
-- **NO prometer cosas que no hace:** generación de imágenes, agentes en grupos hablando con otros agentes, etc. son post-MVP
-
----
-
-## 8. Recursos disponibles
-
-- **Spec del producto:** [[Bily/Productos/Bot-WhatsApp-MVP/Spec]]
-- **Diferenciador canónico:** sección 4 de la spec
-- **Análisis financiero:** sección 5.3 (para entender la unidad económica)
-- **Brief de diseño:** [[Bily/Productos/Bot-WhatsApp-MVP/Brief-Diseno]]
+- **Pricing:** $249 USD/mes (~275k ARS), tier único, trial 14 días sin tarjeta
+- **Target:** Argentina primero (LATAM fase 2), dueños PyME + profesionales premium
+- **Idioma:** español rioplatense (vos, dale, che) — NO neutro
+- **Tone:** premium + cálido + directo. Apple-style minimalismo. Anti-bullshit total.
+- **Nombre del producto:** **Bily** (1 L)
+- **Empresa:** **Blu Studio Inc**
+- **Diferenciador:** "no es ChatGPT — identidad + memoria + lock-in emocional ético"
+- **Estrategia:** **Apple-style** (premium + sin friction + sin demos + sin descuentos)
+- **NO prometer:** features post-MVP (vision, multi-agente, ERP, generación de imágenes)
 
 ---
 
-## 9. Preguntas / decisiones pendientes (coordinar con Catriel)
+## 9. Recursos disponibles
+
+- **Spec del producto v2.0:** [[Bily/Productos/Bot-WhatsApp-MVP/Spec]]
+- **Análisis financiero:** sección 5 de la spec (entender unit economics)
+- **Brief de diseño v2:** [[Bily/Productos/Bot-WhatsApp-MVP/Brief-Diseno]]
+- **MercadoPago:** cuenta empresarial operativa con recurrentes habilitados (Catriel pasa credenciales)
+- **Abogado:** estudio de confianza para producto digital (coordinar revisión)
+
+---
+
+## 10. Preguntas / decisiones pendientes (coordinar con Catriel)
 
 **Cerradas:**
-- [x] Nombre del producto → **Bily** (empresa = Blu Studio Inc)
-- [x] Dominio → **billy.blustudioinc.com**
-- [x] Redes sociales → crear nuevas para Bily
-
-**Cerradas (ronda final):**
-- [x] Grafía → **Bily** (1 L)
-- [x] Presupuesto marketing → **$8,000-15,000 USD/mes** (agresivo desde semana 1)
-- [x] MercadoPago → cuenta empresarial operativa con recurrentes habilitados (pedir credenciales API)
-- [x] Abogado → estudio de confianza disponible para producto digital (coordinar revisión legal)
+- [x] Producto: Bily · Empresa: Blu Studio Inc · Dominio: billy.blustudioinc.com
+- [x] Pricing: $249 USD/mes single tier premium
+- [x] Strategy: Apple-style
+- [x] Trial: 14 días self-service
+- [x] Sales: founder-led primeros 30, después self-service
+- [x] Customer success: reactivo
+- [x] Presupuesto: $8-15k USD/mes
+- [x] MercadoPago: operativo
+- [x] Abogado: disponible
 
 **Aún por coordinar con Catriel:**
-- [ ] Influencers concretos en mente o investigación desde cero
-- [ ] Partnerships estratégicos (MercadoPago, contadores, consultoras PyME)
+- [ ] Influencers concretos en mente o investigación desde cero (round 1: 3-5)
+- [ ] Partnerships estratégicos (MercadoPago como partner?, contadores, consultoras PyME)
 - [ ] Cuentas Blu Studio para warm-up (mientras armamos las de Bily)
+- [ ] Disponibilidad para founder-led sales calls primeros 30 clientes
+- [ ] Compromiso con strategy "no descuentos" cuando alguien negocie
 
 ---
 
-## 10. Criterios de éxito del trabajo de marketing
+## 11. Criterios de éxito del trabajo de marketing
 
-- Landing convierte >5% de visitas a "iniciar trial" (industry good para SaaS)
-- Conversión trial → paid >12% (target de la spec)
-- CAC promedio <$60 (LTV:CAC >3:1 asumiendo 6+ meses retention)
-- 30+ menciones en redes orgánicas en primer trimestre
-- 3+ influencers de nicho posteando sobre el producto
-- Brand consistency: todas las pieces de marketing usando el diferenciador canónico
+- Landing convierte >5% de visitas a "iniciar trial"
+- Conversión trial → paid >25% (Apple-style pre-qualified leads)
+- CAC promedio <$300 (LTV:CAC >3:1 asumiendo 18+ meses retention premium)
+- 100 paying users mes 12, 200 mes 24 (alineado con cronograma realista)
+- NPS Promoter score >50 (boca-en-boca como motor)
+- 3+ historias de clientes documentadas y públicas en primer año
+- Brand consistency: 100% de pieces usan el diferenciador canónico
 
 ---
 
-## 11. Coordinación
+## 12. Coordinación
 
 - **Standup semanal con Catriel:** lunes 30 min para alinear prioridades + revisar métricas
-- **Sync con diseño:** cada cosa que necesite visuales se pide a diseño con anticipación (no last-minute)
-- **Sync con dev:** features que se prometen en marketing tienen que estar implementadas (no over-promise)
+- **Founder-led sales calls** (primeros 30 clientes): Catriel reserva 2-3 hrs/semana en calendar
+- **Sync con diseño:** assets visuales se piden con anticipación (no last-minute)
+- **Sync con dev:** features prometidas tienen que estar implementadas (no over-promise)
 - **Async:** todo en doc compartido + canal de trabajo
 
 ---
 
 ## Relacionado
 
-- [[Bily/Productos/Bot-WhatsApp-MVP/Spec|Spec MVP completa]]
-- [[Bily/Productos/Bot-WhatsApp-MVP/Brief-Diseno|Brief Diseño]]
-- [[Bily/Productos/Bot-WhatsApp-MVP/ADR|Architecture Decision Record]] (próximamente)
+- [[Bily/Productos/Bot-WhatsApp-MVP/Spec|Spec MVP v2.0]]
+- [[Bily/Productos/Bot-WhatsApp-MVP/Brief-Diseno|Brief Diseño v2]]
+- [[Bily/Productos/Bot-WhatsApp-MVP/ADR|Architecture Decision Record]]
