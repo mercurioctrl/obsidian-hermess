@@ -1,8 +1,10 @@
 # Spec MVP — Agente WhatsApp con cerebro propio (Producto Blu)
 
-**Status:** v1.0 — spec cerrada con Catriel · Claude (Opus 4.7).
+**Status:** v1.0 FINAL — spec cerrada con Catriel · Claude (Opus 4.7).
 **Última actualización:** 2026-05-24
 **Próximo paso:** generar Architecture Decision Record + brief de diseño y marketing.
+
+**Cambio importante respecto a versiones anteriores:** se descartó el modelo de tiers ($19/$69 híbrido) en favor de un **single tier premium ($59 USD/mes)**. Esto simplifica todo (vender, comunicar, soportar) y mejora el perfil financiero. Implica un reposicionamiento hacia "asistente profesional / empleado virtual" en lugar de mass-market.
 
 > Documento vivo. Las secciones marcadas con **🔴 [PENDIENTE]** son decisiones aún no tomadas. **🟡 [PROPUESTA]** = mi sugerencia esperando confirmación. **🟢** = decidido.
 
@@ -82,22 +84,29 @@ Variantes cortas:
 
 🟢 **Brain ownership cuando dejan de pagar:** Freezing 90 días → eliminación. Notificaciones en día 60 y 80 con opción de export.
 
-### 5.1. Estructura de tiers (v1.0 — pricing híbrido decidido)
+### 5.1. Estructura de pricing (v1.0 — single tier premium)
 
-| Tier | Precio USD/mes | Equiv ARS aprox | Quién | Qué incluye | Costo marginal | Margen |
-|---|---|---|---|---|---|---|
-| **Trial** | $0 (14 días) | — | Cualquier signup nuevo | Full features con cap reducido (50 msgs/día) | $3-5 | -$3 (CAC) |
-| **Personal** | $19 | ~21k ARS | Freelancers, profesionales | 1 agente, modelos balanceados (Haiku/Flash primary, Sonnet ocasional, Ollama fallback agresivo), tools básicos (brain, web, audio), 500 msgs/día cap | ~$7 | ~$12 |
-| **Pro** | **$69** | ~76k ARS | Dueños PyME, high-leverage | 1 agente, modelos top-tier (Sonnet/Gemini Pro), todos los tools, integraciones avanzadas (post-MVP: mail/cal/ERP), sin caps | ~$25 | **~$44** |
-| **(Post-MVP) Business** | $149-199 | TBD | PyME con equipo | 3 agentes, shared brain opcional, billing centralizado | TBD | TBD |
+| Tier | Precio USD/mes | Equiv ARS aprox | Qué incluye | Costo marginal | Margen |
+|---|---|---|---|---|---|
+| **Trial** | $0 (14 días) | — | Full features con cap reducido (50 msgs/día) | $3-5 | -$3 (CAC) |
+| **Tier único** | **$59** | **~66k ARS** | 1 agente, modelos top-tier (Sonnet/Gemini Pro primary, Haiku/Flash para tasks background, Ollama fallback), todos los tools (brain, web, audio, group chats), cap 500 msgs/día, integraciones avanzadas en fase 2 | ~$18 | **~$41** |
+| **(Post-MVP) Business** | $149-199 | TBD | 3 agentes, shared brain opcional, billing centralizado | TBD | TBD |
 
-🟢 **Estrategia comercial híbrida — push fuerte vender Pro:**
+🟢 **Estrategia comercial — single tier premium:**
 
-El modelo depende de que el mix Pro ≥ 30%. Implicancias:
-- **Marketing segmenta mensajería:** Personal posiciona como "asistente personal", Pro como "empleado virtual / asistente de negocio"
-- **Onboarding sugiere upgrade** cuando detecta uso PyME (mención de empleados, facturación, gestión de clientes)
-- **Sales team** o **success manager** para acompañar trials Pro (mayor ticket merece touch)
-- **Tools premium en Pro** (mail, calendar, ERP en fase 2) son ganchos de upsell desde Personal
+- **Posicionamiento:** "asistente profesional / empleado virtual digital" — no es para todos, es para profesionales y PyME owners que valoran tiempo y necesitan delegación inteligente
+- **Mensajería principal:** "Por menos del costo de un becario, tenés un asistente 24/7 con memoria infalible"
+- **Comparación que justifica precio:** café diario ($90/mes en arg) + Netflix + Spotify = ~$30 USD. Tu Brisa es comparable a "comprar tiempo".
+- **Sin upsell path** = menos complejidad en pricing/comercial, pero requiere comunicar valor desde día 1
+- **Cap 500 msgs/día** evita explosión de costo por power users. Si crece la base de users, agregar tier Power a $99-149 post-MVP
+
+### 5.1.bis. Por qué single tier premium (rationale para el equipo)
+
+- **Simpleza:** un solo precio para vender, soportar, billing. Reduce 50% de la carga cognitiva en marketing y CS
+- **Selección de clientes:** $59 filtra "curiosos casuales" — quienes pagan están comprometidos con el producto, menor churn
+- **Margen por user alto** = menor volumen necesario = menos presión sobre marketing en MVP
+- **Menos servers/chips necesarios** para llegar a break-even (440 vs 1500 users) = ops más simples al principio
+- **No diluye la marca** "Bily/Brisa premium" con tier barato que compita con ChatGPT genérico
 
 ### 5.2. Análisis de viabilidad económica (calibrado con targets conservadores)
 
@@ -115,37 +124,35 @@ El modelo depende de que el mix Pro ≥ 30%. Implicancias:
 | 18 | 1,800-2,500 | Crecimiento sostenido |
 | 24 | 3,500-5,000 | LATAM expansion |
 
-### 5.3. Viabilidad económica con pricing híbrido $19/$69
+### 5.3. Viabilidad económica con single tier $59
 
-**Cálculo a 1,000 users (mes 12) según mix Pro:**
+**Break-even:** $18,000 / $41 margen = **440 paying users**.
 
-| Mix Personal/Pro | Margen mes 12 | Estado |
-|---|---|---|
-| 80/20 (Pro bajo) | 800×$12 + 200×$44 = **$18,400** | ✅ Cubre apenas |
-| **70/30 (target)** | 700×$12 + 300×$44 = **$21,600** | ✅ Sobra $3,600/mes |
-| 60/40 (Pro alto) | 600×$12 + 400×$44 = **$24,800** | ✅ Sobra $6,800/mes |
-| 50/50 (Pro = Personal) | 500×$12 + 500×$44 = **$28,000** | ✅ Sobra $10,000/mes |
+**Cronograma proyectado:**
 
-**Cronograma de break-even revisado:**
-
-| Mes post-launch | Users target | Margen estimado (mix 70/30) | Status |
+| Mes post-launch | Users target | Margen estimado | Status |
 |---|---|---|---|
-| 3 | 100-200 | $2,160-4,320 | -$13k a -$16k (runway) |
-| 6 | 200-300 | $4,320-6,480 | -$11k a -$14k (runway) |
-| 9 | 500-700 | $10,800-15,120 | -$3k a -$7k (acercándose) |
-| 12 | **1,000** | **$21,600** | ✅ **Break-even superado** |
-| 18 | 1,800-2,500 | $38,880-54,000 | 2-3× costo (profit + reinversión) |
-| 24 | 3,500-5,000 | $75,600-108,000 | 4-6× costo (escala) |
+| 3 | 100-200 | $4,100-8,200 | -$10k a -$14k (runway) |
+| **6** | **200-300** | **$8,200-12,300** | -$6k a -$10k (cerca) |
+| **7** | **~440** | **~$18,040** | ✅ **Break-even** |
+| 9 | 500-700 | $20,500-28,700 | $3k-11k sobra (profit inicial) |
+| 12 | **1,000** | **$41,000** | ✅ **2.3× costo** (sobra $23k/mes para reinversión) |
+| 18 | 1,800-2,500 | $73,800-102,500 | 4-6× costo |
+| 24 | 3,500-5,000 | $143,500-205,000 | 8-11× costo (escala seria) |
 
-**Runway necesario:** ~$50-70k USD para cubrir gap mes 0-12 (~$5-7k promedio/mes). Después self-sustaining.
+**Runway necesario:** ~$40-50k USD para cubrir gap mes 0-7 (después self-sustaining). Menos exigente que el modelo híbrido.
 
-🟢 **Riesgos críticos de este pricing model:**
-- **Mix Pro < 25%** → no cubre $18k, vuelve a faltar runway → KPI a vigilar SEMANAL
-- **Conversión trial→paid <10%** → el modelo no escala
-- **Churn mensual >10%** → ataca antes de escalar marketing
-- **Costo marginal real explota** (si users power consumen más LLM que estimado) → caps duros + downgrade auto
+🟢 **Riesgos críticos:**
+- **Conversión trial→paid <10%** → el modelo no escala, repensar producto o posicionamiento
+- **Churn mensual >10%** → leak en valor percibido, atacar antes de escalar marketing
+- **Costo marginal real explota** (si users power consumen >2× LLM estimado) → caps duros + Ollama fallback más agresivo
 
-🟢 **KPI más crítico del MVP: % de Pro en el mix.** Sin Pro alto, los $19 de Personal no alcanzan. Marketing y sales tienen que estar OBSESIONADOS con conversión a Pro.
+🟢 **KPIs más críticos del MVP** (a vigilar semanal post-launch):
+1. **Conversión trial → paid** (target >12%)
+2. **Churn mensual** (target <7%)
+3. **Costo unitario real por usuario** (target ≤$20/mes en LLM+infra)
+4. **NPS** (target >40)
+5. **Mensajes por usuario activo por día** (target >10 — señal de adopción)
 
 ### 5.3. Métricas financieras tracked desde día 1
 
@@ -465,9 +472,9 @@ Lista de pendientes que tenemos que resolver en próximas iteraciones:
 - [x] Edge cases → comportamiento propuesto para 8 casos críticos
 
 **Cerrados en v1.0:**
-- [x] Pricing definitivo → **Híbrido $19 Personal / $69 Pro** con push comercial a Pro (sección 5.1)
-- [x] KPI crítico identificado → % Pro en mix (vigilar semanal post-launch)
-- [x] Runway necesario calculado → ~$50-70k USD para cubrir mes 0-12
+- [x] Pricing definitivo → **Single tier $59 USD/mes** (decisión revisada — se descartó modelo híbrido)
+- [x] KPIs críticos identificados → conversión trial→paid, churn, costo unitario, NPS, mensajes/user/día
+- [x] Runway necesario calculado → ~$40-50k USD para cubrir mes 0-7
 
 **Validaciones colaterales (no bloquean v1.0, hacer en paralelo durante stage 0):**
 - [ ] Diseño + marketing aprueban lista de 45 nombres B (filtrar lo que no encaje)
