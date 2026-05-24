@@ -1,4 +1,10 @@
-# Brief Diseño — Producto Blu (Bot WhatsApp con cerebro propio)
+# Brief Diseño — Bily (producto de Blu Studio Inc)
+
+> **Decisiones fundacionales** (cerradas con Catriel el 2026-05-24):
+> - **Producto:** Bily (la marca paraguas / empresa es Blu Studio Inc)
+> - **Dominio:** `billy.blustudioinc.com` (⚠️ verificar grafía oficial: "Bily" vs "Billy")
+> - **Brand identity:** Logo y colores básicos existen, no hay brand book formal → diseño los recibe y formaliza
+> - **Redes sociales:** Crear cuentas separadas para Bily (Blu Studio empresa tiene las suyas)
 
 **Para:** Equipo de Diseño · **De:** Catriel + Claude · **Fecha:** 2026-05-24
 **Doc relacionado:** [[Bily/Productos/Bot-WhatsApp-MVP/Spec|Spec MVP v1.0]] (leer para contexto completo, NO obligatorio para arrancar)
@@ -132,13 +138,17 @@ Necesitamos un panel interno simple para:
 
 ## 6. Preguntas / decisiones pendientes (a coordinar con Catriel)
 
-- [ ] ¿Hay logo Blu actual o lo creamos de cero?
-- [ ] ¿Brand book pre-existente de Blu que tengamos que respetar?
-- [ ] ¿Naming de la app/producto? El producto se llama ¿"Blu"? ¿"Blu Bots"? ¿"Bily" (genérico)? ¿"Tu Bily"?
-- [ ] ¿Mockup del avatar actual de la API para revisar? Pasame 5-10 ejemplos generados.
-- [ ] ¿Color principal Blu? (es azul, asumo, pero hay 1000 azules)
-- [ ] ¿La landing va en blu.com.ar, otro dominio o subdominio?
-- [ ] ¿Tenemos cuenta de Figma compartida o uso una propia para entregar?
+**Cerradas:**
+- [x] Nombre del producto → **Bily** (empresa = Blu Studio Inc)
+- [x] Dominio → **billy.blustudioinc.com**
+- [x] Logo y brand existente → básico, sin brand book formal
+- [x] Redes sociales → crear nuevas para Bily
+
+**Aún por coordinar con Catriel:**
+- [ ] Verificar grafía oficial: "Bily" o "Billy" (el dominio usa "billy" con doble L pero el nombre se dijo "bily" con una)
+- [ ] Catriel pasa logo actual + paleta de colores actual de Blu Studio (PNG/SVG/Figma)
+- [ ] Catriel comparte 5-10 ejemplos del avatar generado por la API actual
+- [ ] Cuenta Figma compartida (¿la creamos? ¿usás la del equipo?)
 
 ---
 

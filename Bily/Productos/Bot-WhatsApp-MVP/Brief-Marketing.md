@@ -1,4 +1,10 @@
-# Brief Marketing — Producto Blu (Bot WhatsApp con cerebro propio)
+# Brief Marketing — Bily (producto de Blu Studio Inc)
+
+> **Decisiones fundacionales** (cerradas con Catriel el 2026-05-24):
+> - **Producto:** Bily (la marca paraguas / empresa es Blu Studio Inc)
+> - **Dominio:** `billy.blustudioinc.com` (⚠️ verificar grafía oficial: "Bily" vs "Billy")
+> - **Redes sociales:** Crear cuentas separadas para Bily (Blu Studio empresa tiene las suyas)
+> - **Branding base:** Logo y colores básicos existen, diseño los formaliza
 
 **Para:** Equipo de Marketing · **De:** Catriel + Claude · **Fecha:** 2026-05-24
 **Doc relacionado:** [[Bily/Productos/Bot-WhatsApp-MVP/Spec|Spec MVP v1.0]] (leer para contexto completo)
@@ -29,9 +35,9 @@ Diferenciador clave: **NO es ChatGPT en WhatsApp**. Es un agente con identidad p
 |---|---|
 | **Headline landing** | "Tu asistente IA con nombre propio que te conoce de verdad" |
 | **Subheadline landing** | "Aprende tu vida. Ordena tu caos. Vive en WhatsApp." |
-| **Ads (Meta/Google)** | "Conocé a tu copiloto IA personal — Brisa, Billy, Bruno... ¿quién será el tuyo?" |
-| **Mensaje pricing/Pro** | "El único asistente que se vuelve irreemplazable porque guarda tu historia." |
-| **One-liner para network/PR** | "Es como un asistente humano que nunca olvida nada y trabaja 24/7 en WhatsApp." |
+| **Ads (Meta/Google)** | "Conocé a tu Bily — Brisa, Billy, Bruno... ¿quién será el tuyo?" |
+| **Mensaje pricing** | "El único asistente que se vuelve irreemplazable porque guarda tu historia." |
+| **One-liner para network/PR** | "Bily es como un asistente humano que nunca olvida nada y trabaja 24/7 en WhatsApp." |
 
 ### 2.3. Pillars de mensajería (los 4 wow moments traducidos a beneficios)
 
@@ -217,14 +223,19 @@ Diseñar mecanismo: "Regalá un mes a un amigo, ganás un mes". Diseño con prod
 
 ## 9. Preguntas / decisiones pendientes (coordinar con Catriel)
 
-- [ ] ¿Nombre del producto? (afecta TODO el marketing)
-- [ ] ¿Dominio para landing? blu.com.ar / o.blu / otro
-- [ ] ¿Tenemos cuentas oficiales de Blu en IG/TikTok/X/LinkedIn? ¿Usamos esas o creamos nuevas?
-- [ ] Presupuesto disponible mensual para marketing (define escala de ads, # de influencers, etc.)
-- [ ] Cuenta de MercadoPago para cobrar suscripciones (necesario para integrar billing antes de launch)
-- [ ] ¿Abogado para revisar legal? Buscar / contratar.
-- [ ] ¿Influencers concretos en mente o investigamos desde cero?
-- [ ] ¿Estrategia de partnership con MercadoPago / otros? (puede ser canal grande)
+**Cerradas:**
+- [x] Nombre del producto → **Bily** (empresa = Blu Studio Inc)
+- [x] Dominio → **billy.blustudioinc.com**
+- [x] Redes sociales → crear nuevas para Bily
+
+**Aún por coordinar con Catriel:**
+- [ ] Verificar grafía oficial: "Bily" o "Billy"
+- [ ] **Presupuesto mensual disponible para marketing** (define escala de ads, # de influencers)
+- [ ] **Estado MercadoPago Empresarial** (necesario para billing antes de launch)
+- [ ] **Abogado disponible** o necesidad de contratar para legal
+- [ ] **Influencers concretos en mente** o investigación desde cero
+- [ ] **Partnerships estratégicos** (MercadoPago, contadores, consultoras PyME)
+- [ ] **Cuentas Blu Studio para usar como warm-up** (mientras armamos las de Bily)
 
 ---
 
