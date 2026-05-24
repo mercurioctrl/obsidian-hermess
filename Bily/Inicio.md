@@ -15,6 +15,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/todos/Inicio\|Todos]] — to-dos personales por persona
 - [[Bily/proyectos/Inicio\|Proyectos]] — proyectos planificados
 - [[Bily/pagos/Inicio\|Pagos]] — registro de pagos y compromisos económicos
+- [[Bily/aprendizajes/Inicio\|Aprendizajes]] — notas operativas capturadas durante el trabajo con Catriel
 
 ## Personas conocidas
 

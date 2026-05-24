@@ -16,6 +16,7 @@ Microservicio REST de cotización, creación y tracking de envíos (OCA, Andrean
 ## [[expedicion/expedicion|expedicion]]
 - [[expedicion/arquitectura|arquitectura]] · [[expedicion/stack|stack]] · [[expedicion/contexto|contexto]] · [[expedicion/memoria|memoria]] · [[expedicion/changelog|changelog]]
 - [[expedicion/documentacion|documentacion]]
+- [[NB/expedicion/tareas/tareas|tareas de expedición]]
 
 ## [[inventario/inventario|inventario]]
 - [[inventario/arquitectura|arquitectura]] · [[inventario/stack|stack]] · [[inventario/contexto|contexto]] · [[inventario/memoria|memoria]] · [[inventario/changelog|changelog]]

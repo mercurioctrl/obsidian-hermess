@@ -5,7 +5,8 @@ Skills reutilizables para Claude Code, almacenados en la bóveda para compartir 
 ## Skills disponibles
 
 ### Generación de proyectos
-- [[SKILL|fullstack-docker-app]] — Genera infraestructura Docker completa (Nuxt 3 + Laravel 11 + MySQL + Redis + Nginx)
+- [[Skills/fullstack-docker-app/SKILL|fullstack-docker-app]] — Genera infraestructura Docker completa (Nuxt 3 + Laravel 11 + MySQL + Redis + Nginx)
+- [[Skills/blu-report/SKILL|blu-report]] — Genera informes de seguimiento SEO para Libre Opción
 - [[Skills/replicar-microsite/SKILL|replicarMicrosite]] — Replica microsites de producto (ASUS y otras marcas) para aplus-server
 
 ### Bily
