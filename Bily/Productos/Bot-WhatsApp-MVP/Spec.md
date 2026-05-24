@@ -1,507 +1,529 @@
-# Spec MVP — Agente WhatsApp con cerebro propio (Producto Blu)
+# Spec MVP — Bily (producto de Blu Studio Inc)
 
-**Status:** v1.0 FINAL — spec cerrada con Catriel · Claude (Opus 4.7).
+**Status:** v2.0 — reset estratégico Apple-style premium · Claude (Opus 4.7) con Catriel.
 **Última actualización:** 2026-05-24
-**Próximo paso:** generar Architecture Decision Record + brief de diseño y marketing.
-
-**Cambio importante respecto a versiones anteriores:** se descartó el modelo de tiers ($19/$69 híbrido) en favor de un **single tier premium ($59 USD/mes)**. Esto simplifica todo (vender, comunicar, soportar) y mejora el perfil financiero. Implica un reposicionamiento hacia "asistente profesional / empleado virtual" en lugar de mass-market.
-
-> Documento vivo. Las secciones marcadas con **🔴 [PENDIENTE]** son decisiones aún no tomadas. **🟡 [PROPUESTA]** = mi sugerencia esperando confirmación. **🟢** = decidido.
+**Cambio mayor vs v1.0:** Pivot de pricing $59 self-service a **$249 premium con experiencia Apple-style** (alta calidad, sin friction, sin demos), tras reality check sobre velocidad real de adquisición en Argentina (10 nuevos/mes max).
 
 ---
 
-## 1. Vision / Elevator pitch
+## 1. Vision / elevator pitch
 
-🟢 **Una sola frase:** Un asistente IA personal con identidad propia que nace de tu primer mensaje, vive en su propio número de WhatsApp, y va construyendo un cerebro de markdown que crece con vos hasta volverse irreemplazable.
+🟢 **Una sola frase:** "El asistente IA premium con identidad propia, que vive en su propio WhatsApp, y se vuelve irreemplazable porque acumula tu historia personal en un cerebro que es tuyo. Como el iPhone de los asistentes inteligentes."
 
-🟢 **Lo que NO es:** un chatbot de WhatsApp con LLM. La diferencia es la *acumulación de memoria personal a lo largo del tiempo* + la *identidad emocional única* — eso es el moat.
+🟢 **Lo que NO es:** un chatbot de WhatsApp con LLM más. La diferencia es la *acumulación de memoria personal* + la *identidad emocional única* + la *experiencia premium de uso* — eso es el moat.
+
+🟢 **Vibe:** Apple. Premium pero accesible (sin friction). Producto excelente que se vende solo. Diseño obsesivo. Nada de "tier free", nada de "demos personalizadas", nada de "ads gritones".
 
 ---
 
 ## 2. Cliente objetivo
 
-🟢 **Quién:** Profesionales individuales (freelancers, consultores, independientes) **y** dueños de PyME (negocios chicos: comercios, servicios, emprendedores).
+🟢 **Quién (foco principal):** Dueños de PyME (10-100 empleados típicamente) que buscan delegación operativa inteligente. Profesionales independientes de alto leverage (consultores, abogados, doctores con consultorio, ejecutivos freelance) como mercado secundario.
 
-🟡 **Perfil arquetípico (a validar):**
-- 30-55 años
-- Multitasking entre trabajo y vida personal
-- Ya usa WhatsApp como canal principal de comunicación (familia + clientes + proveedores)
-- Tiene "fricción cognitiva" de tener que recordar tareas, personas, contextos
-- Comodidad media-alta con tech (no necesita ser power user, pero no se asusta con tools)
-
-🟢 **Geografía MVP:** Argentina-only · español rioplatense. LATAM en fase 2.
-🟢 **Pago:** ARS vía MercadoPago (gateway de cobro recurrente). Precio ancla en USD en landing para comunicar valor relativo.
+🟢 **Perfil arquetípico:**
+- 35-60 años
+- Multitasking constante: equipo + clientes + proveedores + vida personal
+- Ya usa WhatsApp como canal central de su negocio y vida
+- Frustrado con perder contexto, olvidarse cosas, dispersión de tareas en 5 lugares
+- Comodidad tech: media (no técnico, pero no se asusta)
+- Disposición a pagar por tools que le ahorran horas/semana
 
 🟢 **Pain points que resolvemos:**
-- "Tengo que escribirme a mí mismo notas que después no encuentro"
-- "Me olvidé el contexto de la última conversación con X persona"
-- "Mis tareas están en 5 lados (papel, notas, calendar, mente, WA)"
-- "Quiero un asistente que actualmente me CONOZCA, no que arranque de cero cada vez"
+- "Tengo que recordar 100 cosas y termina cayéndose alguna"
+- "Mis empleados/proveedores/clientes me piden cosas que ya hicimos, no me acuerdo cuando ni qué"
+- "Vivo en WhatsApp pero todo lo importante se pierde en el scroll"
+- "Quiero un asistente que me CONOZCA, no que arranque de cero cada vez"
+- "Un becario me costaría $XXX por mes y no trabaja 24/7"
+
+🟢 **Geografía MVP:** Argentina-only · español rioplatense. LATAM en fase 2.
+
+🟢 **Pago:** ARS vía MercadoPago (cuenta empresarial operativa con recurrentes habilitados). Precio ancla en USD en landing para comunicar valor.
 
 ---
 
-## 3. Promesa de valor (qué les damos)
+## 3. Promesa de valor
 
 🟢 **El paquete:**
-1. **Agente propio con identidad única** — nombre B-random (Billy, Barbi, Bruno, Brisa, ...) + avatar único minteado al instante (estilo space-invader).
-2. **Su propio número de WhatsApp dedicado** — pueden agregarlo a grupos, contactos lo guardan como persona, no como bot.
-3. **Cerebro persistente** — todo lo que charlan se va guardando + organizando en un markdown vault que el usuario puede consultar (UI propia o cliente Obsidian conectado).
-4. **Memoria activa** — recuerda personas, proyectos, problemas recurrentes, patrones del usuario. No arranca de cero.
-5. **Acción en el mundo** — toolkits para navegar internet, leer mail, gestionar tareas, scrappear, conectar a APIs (incluido tu propio ERP de Blu).
-6. **Proactividad** — recordatorios, follow-ups, briefings periódicos (cron natural).
-7. **Backup garantizado** — su cerebro nunca se pierde; pueden exportarlo en cualquier momento.
+1. **Agente con identidad única** — nombre B-random inmutable (Billy, Brisa, Bruno, Barbi, ...) + avatar único minteado al instante
+2. **Su propio número de WhatsApp dedicado** — pueden agregarlo a grupos, contactos lo guardan como persona
+3. **Cerebro markdown persistente** — todo lo que charlan se va guardando + organizando
+4. **Memoria activa** — recuerda personas, proyectos, problemas recurrentes, patrones
+5. **Acción en el mundo** — toolkits para navegar internet, organizar tareas, transcribir audios
+6. **Proactividad sutil** — recordatorios contextuales, briefings periódicos, follow-ups
+7. **Backup garantizado** — cerebro nunca se pierde; exportable en cualquier momento (zip)
+8. **Experiencia premium** — minteo cinematográfico, respuestas pulidas, diseño impecable
 
 ---
 
 ## 4. Diferenciación
 
-🟡 **Vs alternativas existentes:**
+### 4.1. Posicionamiento "Apple of AI assistants"
 
-| Alternativa | Por qué pierde frente a nosotros |
+🟢 **Frase canónica:** "Bily no es un chatbot. Es un asistente con nombre, cara y memoria propia, que aprende tu vida y se vuelve irreemplazable porque acumula tu historia en un cerebro que es tuyo."
+
+🟢 **Vibe Apple:**
+- **Premium pricing sin negociación** ($249 fijo, sin descuentos, sin anual gratis, sin promos)
+- **Producto + experiencia sells itself** (no demos, no SDRs, no high-touch sales)
+- **Diseño obsesivo en el onboarding** (minteo cinematográfico, avatar único, primeros 5 minutos memorables)
+- **Marketing minimalista pero impactante** (storytelling, no ads gritones)
+- **Brand premium visual** (paleta limitada, tipografía cuidada, no clipart corporativo)
+- **Status symbol implícito** ("tener tu Bily es ser de los pioneros que entendieron")
+
+### 4.2. Vs alternativas existentes
+
+| Alternativa | Por qué pierde |
 |---|---|
 | ChatGPT app | Sin WhatsApp nativo, sin identidad, sin proactividad, memoria limitada |
-| Bots WA con GPT (tipo Poe en WA) | Sin identidad propia, sin cerebro acumulativo, sin tools profundos |
+| Bots WA con GPT (tipo Poe en WA) | Sin identidad propia, sin cerebro acumulativo, sin tools profundos, UX de bot |
 | Claude / Gemini personal | Sin canal WhatsApp, friction de cambio de app |
-| Asistente humano (VA virtual) | Más caro, no 24/7, no instantáneo, no tiene memoria infalible |
-| Sistemas CRM/PIM tradicionales | Requieren input estructurado, no conversacional, no proactivos |
+| Asistente humano (VA virtual) | Más caro ($800-2000/mes), no 24/7, no instantáneo, memoria limitada |
+| Asistente personal full-time | $1500-3000/mes minimum, requiere management, vacaciones, errores humanos |
 
-🟢 **El moat real es la acumulación temporal**: después de 6 meses de uso, el cerebro del usuario contiene tanta historia personal que migrar a competidor = perder 6 meses de vida. **Lock-in emocional ético** (porque pueden exportar todo).
+🟢 **El moat real:** la acumulación temporal del cerebro. Después de 6+ meses de uso, migrar a competidor = perder meses de historia personal. **Lock-in emocional ético** (porque pueden exportar todo en cualquier momento).
 
-🟢 **Frase diferenciadora canónica** (para landing/pitch/marketing):
+### 4.3. Variantes de mensajería por contexto
 
-> **"No es un bot que te contesta. Es un asistente con nombre, cara y memoria propia, que aprende tu vida y se vuelve irreemplazable porque acumula tu historia personal en un cerebro que es tuyo."**
-
-Variantes cortas:
-- "Tu asistente IA con nombre propio que te conoce de verdad." (corta para ads)
-- "Aprende tu vida. Ordena tu caos. Vive en WhatsApp." (slogan)
-- "El único asistente que se vuelve irremplazable porque guarda tu historia." (para vender Pro)
+| Contexto | Frase |
+|---|---|
+| **Headline landing** | "Tu asistente IA con nombre propio que te conoce de verdad" |
+| **Subheadline** | "Aprende tu vida. Ordena tu caos. Vive en WhatsApp." |
+| **Para PyME owners** | "Tu empleado digital 24/7. Sin sueldo, sin vacaciones, sin olvidos." |
+| **Comparación racional** | "Lo que paga un becario una semana, Bily lo hace todo el mes — sin descanso ni rotación." |
+| **Para network/PR** | "El iPhone de los asistentes IA: premium, único, y se enamoran de él." |
 
 ---
 
 ## 5. Modelo de negocio
 
-🟢 **Modelo:** Suscripción mensual fija.
+🟢 **Pricing:** **$249 USD/mes** (~275,000 ARS) · single tier · sin descuentos, sin promos, sin anual.
 
-🟢 **Brain ownership cuando dejan de pagar:** Freezing 90 días → eliminación. Notificaciones en día 60 y 80 con opción de export.
+🟢 **Trial:** 14 días self-service, sin tarjeta, sin demo required. Activación instantánea via WhatsApp.
 
-### 5.1. Estructura de pricing (v1.0 — single tier premium)
+🟢 **Brain ownership al dejar de pagar:** Freezing 90 días (read-only via export) → eliminación. Notificaciones día 60 y 80.
 
-| Tier | Precio USD/mes | Equiv ARS aprox | Qué incluye | Costo marginal | Margen |
-|---|---|---|---|---|---|
-| **Trial** | $0 (14 días) | — | Full features con cap reducido (50 msgs/día) | $3-5 | -$3 (CAC) |
-| **Tier único** | **$59** | **~66k ARS** | 1 agente, modelos top-tier (Sonnet/Gemini Pro primary, Haiku/Flash para tasks background, Ollama fallback), todos los tools (brain, web, audio, group chats), cap 500 msgs/día, integraciones avanzadas en fase 2 | ~$18 | **~$41** |
-| **(Post-MVP) Business** | $149-199 | TBD | 3 agentes, shared brain opcional, billing centralizado | TBD | TBD |
+### 5.1. Estructura de pricing v2.0
 
-🟢 **Estrategia comercial — single tier premium:**
+| Item | Valor |
+|---|---|
+| **Tier único** | $249 USD/mes (~275k ARS) |
+| **Trial** | 14 días, sin tarjeta, full features con cap reducido (200 msgs/día) |
+| **Cap msgs/día (post-trial)** | 1000 (más que generoso, evita abuso power user) |
+| **Cap audios/día** | 50 audios procesados con whisper |
+| **Métodos de pago** | MercadoPago (ARS recurrente) — Stripe/Lemon Squeezy para internacionales en fase 2 |
+| **Cancelación** | Self-service, cualquier momento. Sin cargos por baja. |
+| **Refunds** | 30 días money-back si no quedó conforme (filtra mal client pero genera confianza) |
 
-- **Posicionamiento:** "asistente profesional / empleado virtual digital" — no es para todos, es para profesionales y PyME owners que valoran tiempo y necesitan delegación inteligente
-- **Mensajería principal:** "Por menos del costo de un becario, tenés un asistente 24/7 con memoria infalible"
-- **Comparación que justifica precio:** café diario ($90/mes en arg) + Netflix + Spotify = ~$30 USD. Tu Brisa es comparable a "comprar tiempo".
-- **Sin upsell path** = menos complejidad en pricing/comercial, pero requiere comunicar valor desde día 1
-- **Cap 500 msgs/día** evita explosión de costo por power users. Si crece la base de users, agregar tier Power a $99-149 post-MVP
+### 5.2. Por qué $249 single tier premium (rationale)
 
-### 5.1.bis. Por qué single tier premium (rationale para el equipo)
+- **Apple thinking:** un solo precio, claro. No "Personal/Pro/Business" — eso es decisión cognitive cost. UN producto, UN precio.
+- **Justificación por valor:** un becario o asistente part-time cuesta $800+ USD/mes en Argentina. Bily a $249 es ~30% de eso, sin gestión humana.
+- **Filtra el target correcto:** PyME owner serio + profesional alto leverage. NO toleramos "tire-kickers" curiosos casuales (drenan soporte sin pagar margen).
+- **Margen por user alto** = menos volumen necesario = menos presión sobre marketing.
+- **Premium positioning** alinea con todo el resto del producto (identidad, calidad, diseño).
 
-- **Simpleza:** un solo precio para vender, soportar, billing. Reduce 50% de la carga cognitiva en marketing y CS
-- **Selección de clientes:** $59 filtra "curiosos casuales" — quienes pagan están comprometidos con el producto, menor churn
-- **Margen por user alto** = menor volumen necesario = menos presión sobre marketing en MVP
-- **Menos servers/chips necesarios** para llegar a break-even (440 vs 1500 users) = ops más simples al principio
-- **No diluye la marca** "Bily/Brisa premium" con tier barato que compita con ChatGPT genérico
+### 5.3. Análisis de viabilidad económica (realista para Argentina)
 
-### 5.2. Análisis de viabilidad económica (calibrado con targets conservadores)
+**Constraint validado:** velocidad realista de adquisición = **~10 nuevos paying users/mes** en Argentina (con marketing efectivo Apple-style).
 
-**Costo operativo fijo:** $18,000 USD/mes (salarios equipo + infra base).
+**Costo operativo total mensual:**
+- Equipo dev + infra base: **$18,000** (subsidiado por Blu Studio Inc — contable pero NO cashflow puro)
+- Marketing (presupuesto autorizado): **$8,000-15,000** (cashflow real)
+- **Total contable: ~$29,500/mes** · **Cashflow real necesario: ~$11,500/mes** (solo marketing + variables)
 
-**Targets de tracción definidos por Catriel (conservadores):**
+**Costo marginal por user (PyME owner uso típico):** ~$30/mes (LLM + chip + infra puppeteer)
+**Margen por user:** $249 - $30 = **$219/user/mes**
 
-| Mes | Users target | Status |
-|---|---|---|
-| 0 | 30-50 | Beta cerrado |
-| 1 | 50-100 | Beta abierto cupos limitados |
-| 3 | 100-200 | Launch público marketing soft |
-| 6 | **200-300** | Construcción de PMF |
-| 12 | **1,000** | Tracción inicial |
-| 18 | 1,800-2,500 | Crecimiento sostenido |
-| 24 | 3,500-5,000 | LATAM expansion |
+**Break-even matemático:**
+- vs costos totales ($30k): **~140 paying users**
+- vs cashflow real ($11.5k marketing): **~55 paying users** ← este es el número clave
 
-### 5.3. Viabilidad económica con single tier $59 + marketing agresivo
+**Cronograma realista con 10 nuevos/mes + churn 5-8%:**
 
-⚠️ **Actualización 2026-05-24:** Catriel autorizó presupuesto marketing AGRESIVO ($8-15k/mes), lo cual cambia el costo operativo total.
-
-**Costo operativo total revisado:**
-- Equipo + infra base: $18,000/mes
-- Marketing (promedio): $11,500/mes ($8-15k según etapa)
-- **Total mensual: ~$29,500/mes**
-
-**Break-even revisado:** $29,500 / $41 margen = **~720 paying users**.
-
-**Cronograma proyectado revisado:**
-
-| Mes post-launch | Users target | Margen estimado | Total costos | Status |
+| Mes | Users acumulados | Margen mensual | Vs $30k contable | Vs $11.5k cashflow |
 |---|---|---|---|---|
-| 3 | 100-200 | $4,100-8,200 | $26,000 | -$18k a -$22k (runway) |
-| 6 | 200-300 | $8,200-12,300 | $28,000 | -$16k a -$20k (runway) |
-| 9 | 500-700 | $20,500-28,700 | $30,000 | -$2k a -$10k (cerca) |
-| **10-11** | **~720** | **~$29,500** | $29,500 | ✅ **Break-even** |
-| 12 | 1,000 | $41,000 | $30,000 | ✅ $11k margen para reinversión |
-| 18 | 1,800-2,500 | $73,800-102,500 | $33,000 | $40-69k profit/mes |
-| 24 | 3,500-5,000 | $143,500-205,000 | $35,000 | $108-170k profit/mes |
+| 3 | ~28 | $6,132 | -$23,868 | -$5,368 |
+| **5** | **~45** | **$9,855** | -$20,145 | **-$1,645 ← cerca cashflow BE** |
+| **6** | **~55** | **$12,045** | -$17,955 | **+$545 ← cashflow positivo** |
+| 9 | ~80 | $17,520 | -$12,480 | +$6,020 |
+| 12 | ~110 | $24,090 | -$5,910 | +$12,590 |
+| **16** | **~138** | **$30,222** | **~contable BE** | +$18,722 |
+| 18 | ~145 | $31,755 | +$1,755 | +$20,255 |
+| 24 | ~175 | $38,325 | +$8,325 | +$26,825 |
+| 36 | ~200 (plateau) | $43,800 | +$13,800 | +$32,300 |
 
-**Runway necesario revisado:** **~$100-130k USD** para cubrir gap mes 0-10 (vs $40-50k del cálculo previo sin marketing agresivo).
+**Doble cálculo importante:**
+1. **Cashflow break-even (solo marketing): mes 6** — a partir de ahí Bily se paga su propio marketing
+2. **Contable break-even total: mes 16** — cuando Bily devuelve lo que Blu Studio invierte (equipo)
 
-🟡 **El upside del marketing agresivo:** acelera la tracción. Si funciona, los targets conservadores se superan y break-even se mueve a mes 8-9 en lugar de 10-11. Si NO funciona, hay que recalibrar (bajar marketing o subir pricing).
+### 5.4. Implicancias estratégicas
 
-🟢 **Trade-off de la decisión:** invertir más en marketing acelera el momento de PMF y la curva de aprendizaje, a cambio de mayor runway necesario. Vale la pena SI el equipo de marketing puede ejecutar (necesita budget Y talent).
+🟢 **El equipo dev está pagado por Blu Studio Inc.** Bily como "spin-off" interno NO consume cashflow puro por salarios — solo costos marginales (LLM, chips, marketing). Esto cambia drásticamente la viabilidad.
 
-🟢 **Riesgos críticos:**
-- **Conversión trial→paid <10%** → el modelo no escala, repensar producto o posicionamiento
-- **Churn mensual >10%** → leak en valor percibido, atacar antes de escalar marketing
-- **Costo marginal real explota** (si users power consumen >2× LLM estimado) → caps duros + Ollama fallback más agresivo
+🟢 **Runway cashflow real necesario:** **~$50-80k USD** (no $100-130k de v1.0) — para cubrir gap mes 0-6 de marketing + variables. Después self-sustaining.
 
-🟢 **KPIs más críticos del MVP** (a vigilar semanal post-launch):
-1. **Conversión trial → paid** (target >12%)
-2. **Churn mensual** (target <7%)
-3. **Costo unitario real por usuario** (target ≤$20/mes en LLM+infra)
-4. **NPS** (target >40)
-5. **Mensajes por usuario activo por día** (target >10 — señal de adopción)
+🟢 **Profitabilidad contable (a Blu Studio):** mes 16 break-even, plateau ~$13.8k/mes profit en estado estable (mes 36). Lifetime value de un cliente: ~$5,000 USD asumiendo 24 meses promedio.
 
-### 5.3. Métricas financieras tracked desde día 1
-
-- MRR por tier · CAC por canal · LTV por tier · LTV:CAC (target >3:1) · cost-to-serve real · margen por tier · churn mensual por tier
+🟢 **Si Apple-style funciona y traemos 15/mes en lugar de 10** (viral + status + boca-en-boca):
+- Cashflow break-even: mes 4
+- Contable break-even: mes 11
+- Plateau ~300 users → $65k/mes margen ($35k profit)
 
 ---
 
 ## 6. User journey
 
-### 6.1. Minteo (el ritual fundacional — máxima atención de UX)
+### 6.1. Minteo (el ritual fundacional — máxima inversión de UX)
 
-**Trigger:** Usuario llega al landing → escribe a un número público de "comenzar" (ej: +549 11 BLU-START).
+**Apple-style:** lo más importante son los primeros 5 minutos. Es el "unboxing" del producto. Cada detalle visual + texto + timing está pulido al milímetro.
+
+**Trigger:** Usuario llega al landing → escanea QR o tap link → abre WhatsApp con número público de minteo ya cargado.
 
 ```
-[Bot público - 1ra interacción]
-> "¡Hola! Vas a crear tu propio asistente IA. Antes de empezar, ¿cómo te llamás?"
+[Bot público de minteo - 1ra interacción]
+> "👋 ¡Hola! Estás a 60 segundos de conocer a tu Bily.
+> Primero, ¿cómo te decís?"
 
 [Usuario]
 > "Catriel"
 
-[Bot público]
-> "Listo Catriel. Voy a crear tu asistente, dame 30 segundos.
-> Tu asistente se va a llamar BRISA. 🎲
-> Este es su avatar: [imagen minteada]
-> En unos segundos te va a escribir desde su propio número.
-> Contestale para arrancar su entrenamiento."
+[Bot público] (con typing indicator visible)
+> "Bárbaro Catriel.
+> Ahora voy a crear tu asistente único.
+> Te aviso cuando esté listo (~30 seg)..."
 
-[30 segundos después, desde nuevo número +549 11 YYYYY]
-[avatar = el minteado]
-> "Hola Catriel, soy Brisa! Recién nací 👶
-> Voy a ser tu copiloto: te ayudo con tareas, recuerdo cosas, busco info, te ordeno el caos.
-> Todo lo que charlemos lo voy guardando en mi cabeza, así te conozco cada día más.
-> Para arrancar contame algo de vos: ¿a qué te dedicás?"
+[Sistema: backend mintea avatar + asigna nombre + provisiona chip + spawn agent]
+
+[Bot público - card visual con avatar minteado]
+> "🎉 Listo!
+> Conocé a tu BRISA.
+> [Imagen del avatar - 512×512 - alta calidad]
+> En unos segundos te escribe desde su propio número."
+
+[~10 segundos después, desde número nuevo +549 11 YYYYY]
+[Photo profile = avatar minteado]
+[Status: "Naciendo... 👶"]
+
+[BRISA - desde su número]
+> "Catriel 🎀
+> Soy Brisa. Recién nací — sos la primera persona que conozco.
+>
+> Voy a ser tu copiloto: te ayudo con tareas, recuerdo contexto, busco información, te ordeno el caos del día a día.
+>
+> Todo lo que charlemos lo voy guardando en mi cabeza — así te conozco cada día más.
+>
+> Para arrancar bien, contame algo de vos: a qué te dedicás?"
+
+[Estado del agente cambia a "Online · Aprendiendo de Catriel"]
 ```
 
 **Backend del minteo (atómico, rollback si algo falla):**
 1. Recibir primer msg en bot público
-2. Pedir nombre del usuario
-3. Generar nombre random B-* desde lista curada
+2. Pedir nombre del usuario (1 sola pregunta — no formulario)
+3. Generar nombre random B-* de lista curada
 4. Llamar API de mint para avatar
-5. Allocate chip libre del pool
-6. Spawn agent runtime (systemd unit / container)
-7. Esperar WhatsApp Web auth (puede requerir QR scan offline, ver 🔴 abajo)
-8. Bot público hace handoff: avisa al usuario que su agente le va a escribir
-9. Agente envía primer mensaje desde su nuevo número
-10. Persistir agente en DB con (userId, agentName, phoneE164, avatar, vaultPath, ...)
+5. Allocate chip libre del pool (pre-warm: phone con WA Web ya pareado esperando)
+6. Spawn agent runtime
+7. Bot público hace handoff con card visual del avatar
+8. Agente envía primer mensaje desde su nuevo número con personalidad ya inyectada
 
-🟢 **Infraestructura WA:** Phone farm con Androids viejos. Cada agente = 1 Android dedicado con SIM + WA app + WA Web pareado vía QR al server central.
+🟢 **Phone farm con pool pre-warm:** al menos 5 phones siempre "warmed" (pareados con WA Web esperando). Cuando minteamos, agarramos uno del pool y el cron rellena el slot.
 
-**Implicancias operacionales del phone farm:**
-- Stock inicial: ~50 Androids usados (~$50 c/u = ~$2,500 capex) en estantes con power + USB + WiFi
-- Para escalar: 50 phones por estante, cuando se llena se compra otro
-- Provisioning de nuevo agente: chip nuevo en phone libre + pairing QR (manual al inicio, automatizable con scrcpy/ADB)
-- Health monitoring: battery, online, WA conectado por agente. Alertas si phone se cuelga >15 min
-- Minteo "30 segundos" requiere pool de phones ya pareados pre-warm. Si pool vacío, fallback UX: "tu agente nace en X min, te avisamos"
+### 6.2. Onboarding inicial (primeras 5-10 vueltas)
 
-### 6.2. Uso diario
+Bily hace 4-5 preguntas iniciales suaves para sembrar el cerebro:
+- ¿A qué te dedicás?
+- ¿Tu familia más cercana?
+- ¿Las 3 personas más importantes en tu trabajo?
+- ¿Cómo es tu rutina típica?
+
+**Cada respuesta crea entries en el cerebro:** `Bily/personas/Catriel.md`, `Bily/personas/[nombres]/...`, `Bily/proyectos/...`, `Bily/Inicio.md`.
+
+Al cerrar onboarding inicial:
+> "Listo Catriel, ya tengo lo básico para arrancar. Cualquier cosa que quieras que recuerde, contame.
+> Tip: mandame audios cuando estés manejando o caminando — los transcribo y los proceso igual.
+> Bienvenido a tu Bily 🤍"
+
+### 6.3. Uso diario
 
 - Usuario manda mensaje (texto/audio/imagen) por WA → Agente procesa → Responde por WA
-- Audio: transcrito local con whisper, NUNCA gasta tokens multimodal
-- Imágenes: analizadas con LLM vision (cuando aplica)
-- Agente puede usar tools detrás de escena (buscar en internet, leer mail, mandar mensaje a alguien) y reportar resultado
+- Audio: transcrito local con whisper (sin tokens multimodal)
+- Tools en background (busca info, agenda, manda mensaje, lee mail futuro)
 - Cada noche: dream-cron consolida memoria del día
-- Cada semana: pattern-detector reporta insights ("notamos que los lunes a la mañana siempre te toca cobrar a X cliente")
+- Cada semana: pattern-detector reporta insights al usuario
 
-### 6.3. Casos borde
+### 6.4. Group chats
 
-**Comportamiento en grupos de WhatsApp:**
+🟢 **Comportamiento decidido:** Bily escucha y absorbe todo el contenido del grupo en su cerebro (aprende contexto, personas, patrones), pero **solo responde cuando el owner lo menciona** con `@` o le contesta directamente.
 
-🟢 **Decisión:** El agente **escucha y absorbe todo el contenido del grupo en su cerebro** (aprende contexto, personas, patrones), pero **solo responde cuando el owner lo menciona** con `@` o le contesta directamente.
+🟡 **Privacy notice obligatorio:** cuando Bily es agregado a un grupo, automáticamente manda:
+> "Hola, soy Brisa, asistente de Catriel. Sus mensajes en este grupo pueden ser procesados por IA para ayudarlo a recordar contexto. Si no querés que te incluya, escribime '/opt-out' y te omito."
 
-🟡 **Implicancias críticas a manejar:**
-- **Privacidad de otros participantes:** los otros del grupo NO consintieron a que sus mensajes vayan al cerebro privado del owner. Riesgo legal/ético.
-  - **Mitigación obligatoria:** mensaje automático cuando el agente es agregado a un grupo, tipo: *"Hola, soy Brisa, asistente de Catriel. Sus mensajes en este grupo pueden ser procesados por IA para ayudarlo a recordar contexto. Si no querés que te incluya, decímelo y te omito."*
-  - Implementar lista de "opted-out" por número en cada grupo
-- **WhatsApp TOS:** procesamiento de msgs de terceros puede violar TOS de Meta. Riesgo de ban del número.
-  - **Mitigación:** consultar con abogado, modelar como "el owner es responsable de la legalidad en su grupo" (igual que un humano que toma notas)
-- **Modo configurable:** owner puede setear por grupo: "absorbe + responde si mencionado" (default) | "solo absorbe (silent)" | "ignora completamente este grupo"
+Implementar lista de "opted-out" por número en cada grupo.
 
-🟡 **Edge cases — comportamiento propuesto (validar antes de cerrar v1.0):**
+### 6.5. Casos borde
 
-| Caso | Comportamiento propuesto |
+| Caso | Comportamiento |
 |---|---|
-| Usuario cambia su número personal de WA | Re-verificación obligatoria: agente le manda código de 6 dígitos al nuevo número, lo confirma al viejo, migra ownership |
-| Pierde el celular del agente / quema chip | Portabilidad: nuevo chip + Android, cerebro se asocia al chip nuevo. Owner re-verifica identidad. Brain intacto |
-| Pide acción dañina (borrar archivos, mandar msg ofensivo) | Guardrails LLM + confirmación explícita del owner antes de actuar. Acciones irreversibles requieren "sí, hacelo" textual |
-| 2 usuarios con agentes en el mismo grupo | NO cross-pollination en MVP. Cada agente solo escribe en cerebro de su owner. Fase 2 podría tener shared brain opcional |
-| Mensaje sospechoso de phishing/scam al owner | Agente lo nota y avisa al owner ("ojo, este mensaje parece sospechoso porque..."), no bloquea automáticamente |
-| Owner agrega agente a grupo >100 personas | Agente manda privacy notice + se queda silent por default (no absorbe a menos que owner pida explícito) |
-| Usuario manda contenido sexual / NSFW | Agente responde con tono respetuoso pero no procesa/genera contenido NSFW. Puede recibirlo, no produce |
-| Usuario menor de edad (detectado por contexto) | Agente avisa al equipo + funcionalidad limitada hasta verificación de edad |
+| Usuario cambia su número personal | Re-verificación obligatoria con código al nuevo + viejo, migra ownership |
+| Pierde el celular del agente / queman chip | Portabilidad: nuevo chip + Android, cerebro intacto, re-verificación owner |
+| Pide acción dañina | Guardrails LLM + confirmación explícita textual antes de ejecutar |
+| 2 usuarios con agentes en mismo grupo | NO cross-pollination. Cada cerebro isolated. Shared brain opcional fase 2. |
+| Msg sospechoso de phishing al owner | Agente avisa ("ojo, esto parece sospechoso porque..."), no bloquea |
+| Owner agrega Bily a grupo >100 personas | Privacy notice + silent por default + responde solo si pide explícito |
+| Contenido NSFW | Recibe sin bloquear, NO genera/procesa contenido sexual |
+| Menor de edad detectado por contexto | Alerta interna al equipo, funcionalidad limitada hasta verificación |
 
 ---
 
 ## 7. Alcance MVP — qué está IN y qué está OUT
 
-🟡 **[PROPUESTA] IN para MVP cobrable:**
+🟢 **IN para MVP cobrable:**
 
 | Feature | Por qué |
 |---|---|
 | 1 agente por usuario | Multi-agent es complejidad innecesaria en v1 |
-| WhatsApp como único canal | Validamos hipótesis principal antes de Telegram/Discord/etc. |
-| Minteo público + bot fundacional | Es el "wow" del producto |
+| WhatsApp como único canal | Foco hipótesis principal |
+| Minteo público + bot fundacional cinematográfico | Es el "wow" del producto Apple-style |
 | Cerebro markdown REST + acceso vía agente | Core del moat |
-| Transcripción local de audios (whisper) | Ya está hecho, costo cero |
+| Transcripción local de audios (whisper) | Ya hecho |
 | Tool: navegación web (puppeteer compartido) | Tool más demandado |
-| Tool: buscar en su propio cerebro | Hace utilidad de la memoria |
+| Tool: buscar/escribir en su propio cerebro | Hace utilidad de la memoria |
 | Tool: agregar/leer tareas en kanban | Hace utilidad de la organización |
 | Wikilink-weaver + person-profiler (cron) | La "magia" que diferencia |
-| Group chat support (absorbe + responde si mencionado) | Validado en ronda 3 — sumamos privacy notice obligatorio |
 | LLM router multi-tier con Ollama fallback | Resilencia + cost control |
-| Backup automático diario a cloud storage | Existential (sin esto no hay producto) |
-| Export del brain (zip de markdown) | Compromiso ético + lock-in justo |
-| Admin panel mínimo (vos como operador) | Necesario para dar soporte |
-| Billing con cobro mensual recurrente | Necesario para cobrar |
+| Backup automático horario a cloud storage | Existential |
+| Export del brain (zip de markdown cifrado) | Compromiso ético + lock-in justo |
+| Admin panel para Catriel + soporte | Necesario operativo |
+| Billing mensual MercadoPago | Para cobrar |
+| Group chat support (absorbe + responde si mencionado) | Validado en v1 |
+| Privacy notice automático en grupos | Legal/ético |
+| Dream cron (consolidación nocturna de memoria) | Reusable del Bily original |
 
-🟡 **[PROPUESTA] OUT (post-MVP):**
+🟢 **OUT (post-MVP):**
 
 | Feature | Por qué afuera |
 |---|---|
 | Telegram / Discord / Signal / Email channels | Foco WA primero |
-| Múltiples agentes por usuario | Complejidad, validamos demanda primero |
-| Acceso a ERP de Blu | Específico, va en fase 2 con clientes Blu |
-| ~~Group chats~~ | **MOVIDO A IN para MVP** — escucha todo, responde solo si mencionado, con privacy notice automático |
+| Múltiples agentes por usuario | Validamos demanda primero |
+| Acceso a ERP de Blu Studio | Específico, fase 2 |
 | Vision (analizar imágenes) | Cuando hay demanda |
 | Generación de imágenes | Lujo |
-| Voice notes salientes (agente manda audio) | UX adicional, no critical |
+| Voice notes salientes (agente manda audio) | UX adicional no crítica |
 | Marketplace de tools de terceros | Plataforma, no producto |
-| Integraciones nativas (calendar, mail, banks) | Post primera tracción |
+| Integraciones nativas (Gmail/Calendar/banks/ERP) | Post primera tracción |
 | Multi-language (inglés, portugués) | Argentina + LATAM en español primero |
-| Mobile app propia | WA es la app, no necesitamos otra |
-| Cross-agent collaboration (mi Bily habla con tu Bily) | Idea cool pero compleja |
+| Mobile app propia | WA es la app |
+| Cross-agent collaboration | Idea cool, post-MVP |
+| Tier Family (varios agentes shared brain) | Post-MVP |
 
 ---
 
 ## 8. Personalidad y branding
 
-🟢 **Naming convention:** Todos los nombres empiezan con B (alineado al brand Blu). Lista curada con vibe argentino + cálido. **Inmutable una vez asignado** — el usuario NO puede elegir ni hacer reroll (es parte del ritual de imprinting: aceptás a tu agente como es).
+🟢 **Naming convention:** Todos los nombres empiezan con B. Lista curada de ~45 con vibe argentino + cálido. **Inmutable una vez asignado** (parte del ritual Apple-style).
 
-🟡 **Lista inicial propuesta (~45 nombres, mix de géneros y estilos):**
+🟡 **Lista propuesta (~45 nombres):**
 
-**Femeninos (15):**
-Brisa · Barbi · Bea · Belu · Bruna · Bianca · Bambi · Briana · Berta · Bea · Bibi · Belén · Bella · Bonnie · Beba
+**Femeninos (15):** Brisa · Barbi · Bea · Belu · Bruna · Bianca · Bambi · Briana · Berta · Bibi · Belén · Bella · Bonnie · Beba
 
-**Masculinos (15):**
-Billy · Bruno · Beto · Bilo · Bro · Beni · Borja · Baltasar · Bauti · Benja · Bautista · Bilbo · Buby · Bobby · Bukowski
+**Masculinos (15):** Billy · Bruno · Beto · Bilo · Bro · Beni · Borja · Baltasar · Bauti · Benja · Bautista · Bilbo · Buby · Bobby · Bukowski
 
-**Neutros / gender-fluid (15):**
-Benji · Bambi · Brett · Bowie · Bay · Bali · Boba · Bichi · Buki · Bremen · Berry · Boto · Bao · Buho · Brio
+**Neutros (15):** Benji · Bambi · Brett · Bowie · Bay · Bali · Boba · Bichi · Buki · Bremen · Berry · Boto · Bao · Buho · Brio
 
-🟡 **Para validar con diseño y marketing:** ¿algún nombre suena ofensivo en algún regionalismo, choca con marca registrada, o no encaja con la personalidad de Blu? Filtrar antes de v1.0.
+🟢 **Avatar:** generado vía API existente (estilo space-invader, pixel art geométrico). Único por agente, inmutable.
 
-🟢 **Avatar:** generado vía tu API existente (estilo space-invader). Único por agente, inmutable.
+🟢 **Persona base + ejes randomizados:**
 
-🟡 **[PROPUESTA] Persona base + ejes randomizados:**
-
-**Base (todos los agentes):**
+**Base (todos):**
 - Voz cálida, no servil
 - Usa "vos" (argentino)
 - Curiosidad genuina por el usuario
-- Honesto sobre sus límites
+- Honesto sobre límites
 - NUNCA inventa información — si no sabe, lo dice y propone buscar
 
-**Ejes randomizados al minteo (para que no sean clones):**
-- Tono: más formal ↔ más relajado (3 niveles)
-- Proactividad: más reservado ↔ más sugerente (3 niveles)
+**Ejes randomizados al minteo (3⁴ = 81 combinaciones):**
+- Tono: formal ↔ relajado (3 niveles)
+- Proactividad: reservado ↔ sugerente (3 niveles)
 - Humor: serio ↔ chistoso (3 niveles)
 - Estilo: técnico ↔ coloquial (3 niveles)
 
-3⁴ = 81 combinaciones de personalidad base. Distintivas pero coherentes con la marca.
+### 8.1. "Wow moments" Apple-style (los 4 pilares)
 
-### 8.1. "Wow moments" — los 4 pilares (decisión: invertir en todos)
+| # | Wow moment | Cuándo | Cómo se logra |
+|---|---|---|---|
+| 1 | **Unboxing del minteo** | Primeros 5 min | Animación visual, avatar único impactante, primer mensaje memorable, NO formularios |
+| 2 | **Personalidad propia palpable** | Días 1-3 | Ejes randomizados sienten distintos, NO reads like ChatGPT |
+| 3 | **Acción real impecable** | Semana 1 | Primer tool call que funciona da "ohh, esto SI hace cosas" |
+| 4 | **Memoria demostrada** | Semana 2-3 | "Ayer dijiste X, ya creé una tarea para vos" - lock-in emocional |
 
-El producto necesita 4 momentos diferenciados a lo largo del funnel para enganchar emocionalmente. NO elegimos uno, los priorizamos secuencialmente:
-
-| # | Wow moment | Cuándo dispara | Cómo se logra | Stage |
-|---|---|---|---|---|
-| 1 | **El minteo en sí** | Primeros 5 min | Nombre + avatar únicos, "nacimiento" animado, primer msg con voz cálida diferenciada | Stage 1 (semana 1-2) |
-| 2 | **Personalidad propia** | Días 1-3 | Ejes randomizados de tono/proactividad/humor/estilo. Cada agente "se siente único" | Stage 1 (sale del seed system) |
-| 3 | **Acción real** | Semana 1 | Tools funcionan en el primer uso: busca info, agenda, navega, manda mensajes | Stage 2 (toolkit robusto) |
-| 4 | **Memoria demostrada** | Semana 2-3 | "Ayer dijiste X, ya creé una tarea". "Veo que Cata es esposa de Catriel". Wikilink-weaver + person-profiler funcionando | Stage 3 (intelligence) |
-
-**Implicancia para roadmap:** los 4 entran en MVP. Wow 1+2 en stage 1, Wow 3 en stage 2, Wow 4 en stage 3. Antes de cobrar, los 4 funcionan.
+Antes de salir a cobrar, los 4 funcionan. Inversión obsesiva en pulido visual + textos + timing.
 
 ---
 
 ## 9. Requerimientos no funcionales
 
 🟢 **Privacidad:**
-- Datos del usuario viven en infra propia (no se mandan a terceros más que para inferencia LLM)
-- Inferencia LLM puede usar providers cloud (Anthropic, Google, OpenAI) pero con disclaimer
-- Modo "privacy-first": forzar Ollama local, sin cloud
-- Compliance: privacy policy + TOS conformes a Ley 25.326 (Argentina) — 🔴 [PENDIENTE] revisar con abogado
+- Datos del usuario en infra propia (server on-prem Catriel)
+- Inferencia LLM puede usar cloud providers (Anthropic/Google/OpenAI) con disclaimer
+- Modo "privacy-first" opcional: forzar Ollama local
+- Compliance Ley 25.326 + privacy policy + TOS revisados por abogado
 
 🟢 **Backup:**
-- Snapshot del brain del usuario cada hora a object storage (S3/B2/R2)
-- Retención: 30 snapshots diarios + 12 mensuales + 5 anuales
-- Restore self-service vía admin panel
-- Export bajo demanda como zip cifrado
+- Snapshot horario del brain de cada agente → object storage (B2/R2) con encryption at-rest
+- Retención: 30 daily + 12 monthly + 5 yearly
+- Test restore semanal automático sobre 1 agente al azar
+- Export self-service vía admin: zip cifrado del brain completo
 
 🟢 **Disponibilidad:**
-- Target: 99% mensual (≈7h downtime/mes tolerados)
-- Agentes con auto-restart en crash
+- Target: 99% mensual (~7h downtime/mes tolerables)
+- Auto-restart en crash
 - Health checks cada 5 min
-- Alertas a operador si un agente queda "muerto" >15 min
+- Alertas a operador si un agente queda muerto >15 min
 
-🟢 **Performance (SLA target):**
-- **Texto:** mediana <5s, p95 <10s. Si supera, el agente puede mandar "typing..." indicator + "estoy pensándolo" después de 5s
-- **Audio:** mediana <30s (incluyendo whisper transcripción), p95 <60s. UX: enviar "🎤 escuchando..." al recibir
-- **Tool calls** (web, brain, calendar): el tiempo del tool se suma, no hay SLA estricto pero el agente debe avisar si supera 30s
-- **Concurrencia:** target 30-50 agentes simultáneos por server (i7/Xeon + 32 GB RAM + SSD). Escalado horizontal cuando se llena
+🟢 **Performance SLA:**
+- **Texto:** mediana <5s, p95 <10s
+- **Audio:** mediana <30s (incluye whisper), p95 <60s
+- **Tool calls:** sin SLA estricto, agente avisa si >30s
+- **Concurrencia:** 30-50 agentes simultáneos por server
 
 🟢 **Escalabilidad:**
 - Arquitectura per-agent (1 process group por agente)
-- Permite escalar horizontalmente: más users = más servers
-- Stage 2 (post-MVP): scale-to-zero con activación on-message
+- Stage 2 (post-MVP): scale-to-zero con activación on-message si crece
 
 ---
 
 ## 10. Métricas de éxito del MVP
 
-🟡 **[PROPUESTA] Si se cumplen estas, el MVP fue exitoso:**
+🟢 **KPIs Apple-style (calidad sobre cantidad):**
 
-| Métrica | Target |
-|---|---|
-| Usuarios que completan el minteo (de los que lo arrancan) | >70% |
-| Retention W1 (siguen activos 7 días post-minteo) | >50% |
-| Retention M1 (activos 30 días) | >30% |
-| Mensajes por usuario por día (uso real) | >5 |
-| Conversión trial→paid | >15% |
-| Churn mensual post-trial | <10% |
-| NPS de beta users | >40 |
-| Costo unitario por usuario (LLM + infra) | <$3/mes |
-| Latencia mediana de respuesta | <3s |
-| % de respuestas que requieren tool call | >20% (señal de uso profundo) |
+| Métrica | Target | Por qué importa |
+|---|---|---|
+| Completion rate del minteo | >85% | Si no completan, perdemos la mejor chance |
+| Retention W1 | >70% | Si vuelven semana 1, hubo conexión |
+| Retention M1 | >50% | Si llegan a mes 1, probable que paguen |
+| Conversión trial→paid | >25% | Apple-style: pocos pero comprometidos |
+| Churn mensual post-trial | <5% | Premium = retention alta |
+| Mensajes/user activo/día | >15 | Uso profundo, no curiosidad casual |
+| NPS de paying users | >50 | Excelente para B2B premium |
+| Costo unitario por user (LLM+infra) | <$35/mes | Margen sostenible |
+| Latencia mediana texto | <5s | UX premium |
+| % respuestas con tool call | >30% | Uso real, no solo chitchat |
+| **MRR mes 6** | **$13,000+** | Cashflow break-even |
+| **Paying users mes 12** | **100+** | Tracción real |
+| **NPS Promoter score** | **30+** | Boca-en-boca como motor |
 
 ---
 
-## 10.bis. Estrategia de marketing — adquisición de los primeros 100 users
-
-🟢 **Modelo: stage gates con escalado de canales conforme va habiendo social proof.**
-
-| Etapa | Usuarios | Canal primario | Inversión | Objetivo principal |
-|---|---|---|---|---|
-| **0-50 (beta cerrado)** | tu red personal + equipo + sus círculos | Invitación 1-a-1, mensaje privado | $0 (tiempo) | Feedback profundo, primeros testimonios honestos, validar UX del minteo |
-| **50-200 (beta abierto)** | influencers de nicho (tech / productividad / emprendedurismo arg) | 2-3 influencers con early access, gratis a cambio de contenido honesto | $500-2,000 en perks/exclusividad | Generar buzz orgánico, casos de uso reales para social proof |
-| **200-500** | repost de los influencers + contenido propio | Blog/video del equipo, casos de uso destacados, lista de espera con FOMO | $1,000-3,000 en producción de contenido | Construir confianza, optimizar mensajería |
-| **500-1,500** | Meta + Google ads + referrals (incentivado: "regalá un mes free") | Ads pagados con creatives basados en testimonios | $3,000-10,000/mes en ads | CAC medible, escalar lo que funciona |
-| **1,500+** | Mix de todo lo anterior + partnerships (con software/empresas para PyME) | Ampliar ad spend, partnerships con MercadoPago / contadores / consultores | $10,000+/mes | Tracción real, profitabilidad |
-
-🟡 **Métricas por etapa:**
-- 0-50: NPS, qualitative feedback, churn por causa documentada
-- 50-200: conversiones desde influencer, viralidad orgánica (referencias menc.)
-- 200+: CAC, conversión funnel, ROI por canal
-
-## 11. Roadmap post-MVP (orientación, no compromiso)
+## 11. Roadmap post-MVP
 
 **Fase 2 (mes 4-6 post-launch):**
 - Telegram channel
-- Multi-agent por usuario (uno personal + uno de trabajo)
+- Multi-agent por usuario (personal + negocio)
 - Tool: mail (Gmail / IMAP)
 - Tool: calendar
-- Acceso a ERP Blu (para clientes Blu)
-- LATAM expansion (México, Colombia, Uruguay, Chile)
+- LATAM expansion (México, Chile, Uruguay, Colombia)
 
 **Fase 3 (mes 6-12):**
 - Vision en WA (analiza fotos, recetas, documentos)
-- Voice notes salientes
-- Marketplace de tools de terceros (developer ecosystem)
-- Cross-agent collaboration
-- Tier "Family" (varios agentes compartiendo cerebro familiar)
+- Voice notes salientes (Bily responde con audio)
+- ERP integrations (Blu Studio products, contabilidad, facturación)
+- Marketplace de tools de terceros
 
 **Fase 4 (año 2+):**
-- App mobile propia (alternativa a WA para users que la quieran)
-- Hardware: pin físico (à la Humane) que conecta directo al agente
-- Modelo propio fine-tuned con datos agregados (consensual)
+- App mobile propia (alternativa a WA)
+- Hardware: pin físico (à la Humane)
+- Tier Family (cerebro familiar compartido)
+- Modelo propio fine-tuned
 
 ---
 
-## 12. Riesgos y mitigación
+## 12. Estrategia de marketing Apple-style
+
+🟢 **Foco:** brand + experiencia + storytelling > ads agresivos.
+
+🟢 **Presupuesto autorizado:** $8,000-15,000 USD/mes (escalado por etapa).
+
+### 12.1. Stage gates de adquisición
+
+| Etapa | Users | Canal primario | Inversión |
+|---|---|---|---|
+| 0-30 (closed alpha) | Tu red + early believers | Invitación 1-a-1, gratis | $500-1k perks |
+| 30-100 | Boca-en-boca curated + 3-5 micro-influencers premium | Contenido propio + colabs orgánicas | $2-4k/mes |
+| 100-300 | Content marketing + selectos partnerships | Articles + videos + 1-2 events curados | $5-8k/mes |
+| 300+ | Mix + word-of-mouth motorizado | Programa de referidos VIP + ads selectos para warm audiences | $8-15k/mes |
+
+### 12.2. Tactics Apple-style
+
+- **Landing minimalista visual** (NO long-form copywriting agresivo)
+- **Video corto del minteo** (5-15 seg) que muestre el "wow"
+- **Story-driven content** (un cliente, una historia, no listas de features)
+- **Brand bagaje** (paleta limitada, tipografía cuidada, fotografía/render premium)
+- **Press selectivo** (TechCrunch, eldiario.es tech, Infobae tech — busqueda de coverage de calidad)
+- **Founder-led storytelling** (Catriel en redes contando el camino) — NO ads gritones
+- **Influencers de nicho premium** (no mass-market — solo gente que sus audiences confían)
+- **Referral program VIP** (regalá un mes a un par, recibís 2 meses)
+
+### 12.3. Lo que NO hacemos
+
+- Ads gritones en redes (estilo "AYÚDATE CON IA!!!!")
+- Descuentos / promos / black fridays
+- Anual gratis / lifetime deals (devalúan brand)
+- Affiliate masivo / paid posts genéricos
+- Demos personalizadas con SDR (NO B2B enterprise classic)
+- Trial extendido / gracia para no pagar
+
+---
+
+## 13. Riesgos y mitigación
 
 | Riesgo | Probabilidad | Impacto | Mitigación |
 |---|---|---|---|
-| Meta banea números WA usados de forma "no consumidor" | Alta | Crítico | Usar chips reales de personas, evitar patrones automáticos obvios, plan B con Cloud API |
-| Costo de LLM tokens explota con users power | Media | Alto | Tiered pricing + caps + downgrade auto a Flash/Haiku/Ollama |
-| Cerebro de un usuario se corrompe o se pierde | Baja | Crítico | Backups múltiples + tests de restore automatizados |
-| Competidor copia el modelo rápidamente | Alta (a largo) | Medio | Moat es la acumulación temporal de cerebros, difícil de copiar tarde |
-| Privacidad: leak de un cerebro a otro usuario | Baja | Crítico | Isolation per-agent estricta, tests de seguridad, encriptación at-rest |
-| Usuarios usan el agente para spam / scam | Media | Alto | TOS claros, rate limits, detección de patrones, ban policy |
-| Modelos LLM cambian de pricing o se discontinúan | Alta | Medio | Router multi-provider + Ollama como salvavidas |
-| Fricción del minteo (QR scan WA Web) espanta usuarios | Media | Alto | Hacerlo invisible: chip + WA Web ya pairadeado antes del minteo |
+| Meta banea números WA por automation pattern | Alta | Crítico | Chips reales + comportamiento humano-like (random delays, no spam) + plan B Cloud API |
+| Adquisición real <10/mes | Media | Alto | Founder-led sales primeros 30 + revisar messaging |
+| Conversión trial→paid <15% | Media | Alto | Iterar onboarding + early CX outreach a trials en día 7 |
+| Cerebro corrompido / perdido | Baja | Crítico | Backups multi-tier + tests restore + isolation per-agent |
+| Privacy leak entre usuarios | Baja | Crítico | Isolation estricta + tests seguridad + encryption at-rest + auditoría |
+| Costo LLM explota | Media | Medio | Caps duros + downgrade Ollama auto + monitoring per-user |
+| Competidor con más capital copia | Alta (largo) | Medio | Moat = acumulación temporal de cerebros, difícil de copiar tarde |
+| Modelos LLM cambian precios | Alta | Medio | Router multi-provider + Ollama fallback |
+| Phone farm physical issues (power/internet/AC) | Media | Alto | UPS + 4G backup + monitoreo physical |
+| Apple-style no convierte como esperamos | Media | Alto | Mes 3 review: si <20% conversión, replantear strategy |
+| Equipo de Blu Studio se desbalanza | Baja | Medio | Vigilar carga, no over-allocate a Bily de equipos productivos |
 
 ---
 
-## 13. Decisiones abiertas — necesitamos definir antes de cerrar la spec
+## 14. Decisiones cerradas en v2.0
 
-Lista de pendientes que tenemos que resolver en próximas iteraciones:
+- [x] **Pricing:** $249 USD/mes single tier premium
+- [x] **Trial:** 14 días self-service sin tarjeta
+- [x] **Strategy:** Apple-style (premium + sin friction + sin demos)
+- [x] **Sales motion:** founder-led primeros 30 clientes, después self-service total
+- [x] **Customer success:** reactivo (responde si escriben), NO outbound
+- [x] **Marketing:** brand + storytelling + boca-en-boca + influencers selectos. NO ads gritones.
+- [x] **Costos:** equipo $18k subsidiado por Blu Studio Inc. Cashflow real = solo marketing ($8-15k/mes)
+- [x] **Runway cashflow:** $50-80k USD para cubrir mes 0-6
+- [x] **Break-even cashflow:** mes 6
+- [x] **Break-even contable:** mes 16
+- [x] **Geo:** Argentina-only MVP, LATAM fase 2
+- [x] **Pago:** MercadoPago (cuenta empresarial operativa)
+- [x] **Producto:** Bily (1 L), empresa Blu Studio Inc
+- [x] **Dominio:** billy.blustudioinc.com
 
-**Cerrados en v0.2:**
-- [x] Pricing exacto → Personal $19 / Pro $49 USD, a validar con beta
-- [x] Geo/idioma → Argentina + español rioplatense, LATAM en fase 2
-- [x] Infraestructura WA → phone farm Androids viejos
-- [x] Wow moment → los 4 priorizados secuencialmente (sección 8.1)
+**Validaciones colaterales (no bloquean, hacer en paralelo):**
+- [ ] Diseño + marketing aprueban lista de 45 nombres B
+- [ ] Abogado revisa privacy notice grupos + TOS + Ley 25.326
+- [ ] Beta cerrado de 30-50 valida edge cases y messaging
+- [ ] Confirmar phone farm hardware ready (50 Androids + power + Wi-Fi)
 
-**Cerrados en v0.3:**
-- [x] Cost basis → $18k = solo equipo+infra base
-- [x] Behavior en grupos → escucha + responde si mencionado + privacy notice
-- [x] Marketing → stage gates
-- [x] PM role → Catriel (50-100%)
+---
 
-**Cerrados en v0.4:**
-- [x] Naming choice → siempre random, inmutable (parte del ritual)
-- [x] Latencia → texto <5s mediana, audio <30s mediana
-- [x] Diferenciador canónico → "No es un bot. Es asistente con nombre, cara y memoria propia..."
-- [x] User targets → conservadores (200-300 mes 6, 1000 mes 12) confirmados por Catriel
-- [x] Lista inicial de nombres B → 45 propuestos (a filtrar con diseño/marketing)
-- [x] Edge cases → comportamiento propuesto para 8 casos críticos
+## 15. Próximos artefactos (relacionados)
 
-**Cerrados en v1.0:**
-- [x] Pricing definitivo → **Single tier $59 USD/mes** (decisión revisada — se descartó modelo híbrido)
-- [x] KPIs críticos identificados → conversión trial→paid, churn, costo unitario, NPS, mensajes/user/día
-- [x] Runway necesario calculado → ~$40-50k USD para cubrir mes 0-7
-
-**Validaciones colaterales (no bloquean v1.0, hacer en paralelo durante stage 0):**
-- [ ] Diseño + marketing aprueban lista de 45 nombres B (filtrar lo que no encaje)
-- [ ] Abogado revisa privacy notice obligatorio en grupos + TOS general + Ley 25.326
-- [ ] Validar con beta cerrado los edge cases propuestos y refinar comportamiento
-- [ ] Confirmar runway disponible ($50-70k) o decidir si arrancar con equipo más chico
-
-## 14. v1.0 lista — próximos artefactos a producir
-
-Con esta spec cerrada, los siguientes documentos en orden:
-
-1. **Architecture Decision Record (ADR)** — los 6 componentes principales, contratos entre ellos, stack tecnológico final, decisiones técnicas + rationale. ~1-2 días.
-2. **Brief para diseño** — qué visuales necesita el equipo, mockups del minteo, branding guidelines, variantes de avatares. ~1 día.
-3. **Brief para marketing** — qué assets producir, mensajería por tier (Personal vs Pro), copy de landing, calendario de stage gates. ~1 día.
-4. **Brief técnico para devs** — onboarding al stack, división de responsabilidades, sprint plan stage 1. ~1 día.
-5. **Kickoff con todo el equipo** — recorrer spec + roles + cronograma + Q&A.
+1. **ADR (Architecture Decision Record)** — sin cambios significativos vs v1 (arquitectura misma)
+2. **Brief Diseño** — actualizado v2 (Apple-style, paleta limitada, premium minimal)
+3. **Brief Marketing** — actualizado v2 (storytelling premium, no ads gritones, founder-led)
+4. **Brief Devs** — sin cambios significativos vs v1 (stack mismo, sprint plan mismo)
+5. **Kickoff con equipo completo**
 
 ---
 
@@ -513,3 +535,7 @@ Con esta spec cerrada, los siguientes documentos en orden:
 - [[Bily/Productos/Bot-WhatsApp-Elevator-Pitch|Elevator Pitch]]
 - [[Claude/Whisper|Stack de transcripción local]] (componente reusable)
 - [[Claude/Vault-Wrappers|API canónica para tocar la bóveda]] (patrón aprendido)
+- [[Bot-WhatsApp-MVP/ADR|Architecture Decision Record]]
+- [[Bot-WhatsApp-MVP/Brief-Diseno|Brief Diseño]]
+- [[Bot-WhatsApp-MVP/Brief-Marketing|Brief Marketing]]
+- [[Bot-WhatsApp-MVP/Brief-Devs|Brief Devs]]
