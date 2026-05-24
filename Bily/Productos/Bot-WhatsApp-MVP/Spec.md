@@ -1,6 +1,6 @@
 # Spec MVP — Agente WhatsApp con cerebro propio (Producto Blu)
 
-**Status:** v0.1 — draft inicial, iterando con Catriel · Claude (Opus 4.7).
+**Status:** v0.2 — iterando con Catriel · Claude (Opus 4.7).
 **Última actualización:** 2026-05-24
 
 > Documento vivo. Las secciones marcadas con **🔴 [PENDIENTE]** son decisiones aún no tomadas. **🟡 [PROPUESTA]** = mi sugerencia esperando confirmación. **🟢** = decidido.
@@ -25,7 +25,9 @@
 - Ya usa WhatsApp como canal principal de comunicación (familia + clientes + proveedores)
 - Tiene "fricción cognitiva" de tener que recordar tareas, personas, contextos
 - Comodidad media-alta con tech (no necesita ser power user, pero no se asusta con tools)
-- 🔴 [PENDIENTE] Geografía: ¿Argentina-only en MVP, o LATAM desde el día 1?
+
+🟢 **Geografía MVP:** Argentina-only · español rioplatense. LATAM en fase 2.
+🟢 **Pago:** ARS vía MercadoPago (gateway de cobro recurrente). Precio ancla en USD en landing para comunicar valor relativo.
 
 🟢 **Pain points que resolvemos:**
 - "Tengo que escribirme a mí mismo notas que después no encuentro"
@@ -68,15 +70,48 @@
 
 🟢 **Modelo:** Suscripción mensual fija.
 
-🔴 **[PENDIENTE] Pricing exacto** — necesito tu input. Opciones a discutir en próxima ronda de preguntas.
+🟢 **Brain ownership cuando dejan de pagar:** Freezing 90 días → eliminación. Notificaciones en día 60 y 80 con opción de export.
 
-🟢 **Brain ownership cuando dejan de pagar:** Freezing 90 días → eliminación. Notificaciones al usuario en día 60 y 80 con opción de export.
+### 5.1. Estructura de tiers (v0.2 — a validar precios con beta)
 
-🟡 **[PROPUESTA] Estructura de tiers:**
-- **Trial:** 14 días free, full features
-- **Personal:** $X/mes — 1 agente, modelos top-tier con cap diario, todos los tools básicos
-- **Pro:** $Y/mes — modelos top-tier sin cap, tools avanzados (ERP/integraciones), prioridad de procesamiento
-- **(Post-MVP) Business:** 1 cuenta + múltiples agentes (vos + el de tu negocio), shared brain opcional
+| Tier | Precio USD/mes | Equiv ARS aprox | Quién | Qué incluye | Costo marginal | Margen |
+|---|---|---|---|---|---|---|
+| **Trial** | $0 (14 días) | — | Cualquier signup nuevo | Full features con cap reducido (50 msgs/día) | $3-5 | -$3 (CAC) |
+| **Personal** | $19 | ~21k ARS | Freelancers, profesionales | 1 agente, modelos balanceados (Haiku/Flash primary, Sonnet ocasional, Ollama fallback agresivo), tools básicos (brain, web, audio), 500 msgs/día cap | ~$7 | ~$12 |
+| **Pro** | $49 | ~55k ARS | Dueños PyME, high-leverage | 1 agente, modelos top-tier (Sonnet/Gemini Pro), todos los tools, integraciones avanzadas (post-MVP: mail/cal/ERP), sin caps | ~$25 | ~$24 |
+| **(Post-MVP) Business** | $99-149 | TBD | PyME con equipo | 3 agentes, shared brain opcional, billing centralizado | TBD | TBD |
+
+### 5.2. Análisis de viabilidad económica
+
+**Costo operativo fijo:** $18,000 USD/mes (salarios equipo + infra base).
+
+**Targets de paying users para sostener costos:**
+
+| Cobertura | Mix mínimo (ejemplos) |
+|---|---|
+| **Break-even** ($18k margen) | 1,500 Personal · 750 Pro · mix 750/375 |
+| **2× costo** ($36k margen, escala sana) | 3,000 Personal · 1,500 Pro · mix 1,500/750 |
+| **3× costo** ($54k margen, profit + reinversión) | 4,500 Personal · 2,250 Pro · mix 2,250/1,125 |
+
+**Cronograma realista de tracción:**
+
+| Mes post-launch | Users target | Status |
+|---|---|---|
+| 0 | 30-50 | Beta cerrado (invitados, gratis) |
+| 1 | 100-200 | Beta abierto con cupos limitados |
+| 3 | 300-700 | Launch público con marketing soft |
+| 6 | 800-1,500 | **Break-even si conversión trial→paid >15%** |
+| 12 | 2,000-3,500 | Profitabilidad (1.5-2× costo) |
+| 18 | 4,000-6,000 | LATAM expansion (cuando PMF validado en AR) |
+
+**Sensibilidades:**
+- Conversión trial→paid <10% → modelo no escala, repensar tiers
+- Mix Pro/Personal <30/70 → demasiada dependencia de volumen
+- Churn mensual >10% → leak en valor percibido
+
+### 5.3. Métricas financieras tracked desde día 1
+
+- MRR por tier · CAC por canal · LTV por tier · LTV:CAC (target >3:1) · cost-to-serve real · margen por tier · churn mensual por tier
 
 ---
 
@@ -120,7 +155,14 @@
 9. Agente envía primer mensaje desde su nuevo número
 10. Persistir agente en DB con (userId, agentName, phoneE164, avatar, vaultPath, ...)
 
-🔴 **[PENDIENTE]** Cómo se pairea WhatsApp Web con el chip si el chip está en una phone farm vs GSM gateway. Esto es operacional, no UX, pero define el tiempo del minteo (30s o 5 min?).
+🟢 **Infraestructura WA:** Phone farm con Androids viejos. Cada agente = 1 Android dedicado con SIM + WA app + WA Web pareado vía QR al server central.
+
+**Implicancias operacionales del phone farm:**
+- Stock inicial: ~50 Androids usados (~$50 c/u = ~$2,500 capex) en estantes con power + USB + WiFi
+- Para escalar: 50 phones por estante, cuando se llena se compra otro
+- Provisioning de nuevo agente: chip nuevo en phone libre + pairing QR (manual al inicio, automatizable con scrcpy/ADB)
+- Health monitoring: battery, online, WA conectado por agente. Alertas si phone se cuelga >15 min
+- Minteo "30 segundos" requiere pool de phones ya pareados pre-warm. Si pool vacío, fallback UX: "tu agente nace en X min, te avisamos"
 
 ### 6.2. Uso diario
 
@@ -209,6 +251,19 @@
 - Estilo: técnico ↔ coloquial (3 niveles)
 
 3⁴ = 81 combinaciones de personalidad base. Distintivas pero coherentes con la marca.
+
+### 8.1. "Wow moments" — los 4 pilares (decisión: invertir en todos)
+
+El producto necesita 4 momentos diferenciados a lo largo del funnel para enganchar emocionalmente. NO elegimos uno, los priorizamos secuencialmente:
+
+| # | Wow moment | Cuándo dispara | Cómo se logra | Stage |
+|---|---|---|---|---|
+| 1 | **El minteo en sí** | Primeros 5 min | Nombre + avatar únicos, "nacimiento" animado, primer msg con voz cálida diferenciada | Stage 1 (semana 1-2) |
+| 2 | **Personalidad propia** | Días 1-3 | Ejes randomizados de tono/proactividad/humor/estilo. Cada agente "se siente único" | Stage 1 (sale del seed system) |
+| 3 | **Acción real** | Semana 1 | Tools funcionan en el primer uso: busca info, agenda, navega, manda mensajes | Stage 2 (toolkit robusto) |
+| 4 | **Memoria demostrada** | Semana 2-3 | "Ayer dijiste X, ya creé una tarea". "Veo que Cata es esposa de Catriel". Wikilink-weaver + person-profiler funcionando | Stage 3 (intelligence) |
+
+**Implicancia para roadmap:** los 4 entran en MVP. Wow 1+2 en stage 1, Wow 3 en stage 2, Wow 4 en stage 3. Antes de cobrar, los 4 funcionan.
 
 ---
 
@@ -306,17 +361,22 @@
 
 Lista de pendientes que tenemos que resolver en próximas iteraciones:
 
-- [ ] **Pricing exacto** ($/mes por tier)
-- [ ] **Geo/idioma** (Argentina-only vs LATAM, español-only vs multi)
-- [ ] **Infraestructura WA**: phone farm vs GSM gateway (define el OPS de chips)
-- [ ] **Lista final de nombres B**
+**Cerrados en v0.2:**
+- [x] ~~Pricing exacto~~ → Personal $19 / Pro $49 USD, a validar con beta
+- [x] ~~Geo/idioma~~ → Argentina + español rioplatense, LATAM en fase 2
+- [x] ~~Infraestructura WA~~ → phone farm Androids viejos
+- [x] ~~Wow moment~~ → los 4 priorizados secuencialmente (sección 8.1)
+
+**Confirmar/validar lo siguiente para llegar a v0.3:**
+- [ ] **¿Los $18k incluyen costos variables por usuario (chips, infra puppeteer) o solo fijos del equipo?** (define cuánto de los $18k es realmente "umbral fijo")
+- [ ] **Cantidad de users target a 6 / 12 / 18 meses** (¿estamos alineados con los números de 5.2 o tenés otro plan?)
+- [ ] **Lista final de nombres B** (propuesta inicial en 8)
 - [ ] **Latencia objetivo** y SLA
 - [ ] **Behavior en grupos** (responde solo si mencionado vs siempre escucha vs configurable)
 - [ ] **Edge cases** (cambio de número del user, pérdida de chip, etc.)
-- [ ] **Marketing channel** primario para los primeros 100 users (ads vs influencers vs orgánico vs referral)
+- [ ] **Marketing channel** primario para los primeros 100 users
 - [ ] **Diferenciación específica** vs ChatGPT en WhatsApp (Poe, etc.)
-- [ ] **Cuál es el "wow moment"** que convierte trial→paid (cosa concreta que demostremos)
-- [ ] **Si el usuario quiere un nombre específico (Billy 2.0?)** — ¿se respeta o sigue siendo random?
+- [ ] **¿Usuario puede pedir un nombre específico?** o ¿siempre random?
 - [ ] **Equipo & responsabilidades**: quién es el PM/product owner (vos? alguien del equipo?)
 
 ---
