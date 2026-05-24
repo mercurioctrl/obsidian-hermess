@@ -124,23 +124,34 @@ Variantes cortas:
 | 18 | 1,800-2,500 | Crecimiento sostenido |
 | 24 | 3,500-5,000 | LATAM expansion |
 
-### 5.3. Viabilidad económica con single tier $59
+### 5.3. Viabilidad económica con single tier $59 + marketing agresivo
 
-**Break-even:** $18,000 / $41 margen = **440 paying users**.
+⚠️ **Actualización 2026-05-24:** Catriel autorizó presupuesto marketing AGRESIVO ($8-15k/mes), lo cual cambia el costo operativo total.
 
-**Cronograma proyectado:**
+**Costo operativo total revisado:**
+- Equipo + infra base: $18,000/mes
+- Marketing (promedio): $11,500/mes ($8-15k según etapa)
+- **Total mensual: ~$29,500/mes**
 
-| Mes post-launch | Users target | Margen estimado | Status |
-|---|---|---|---|
-| 3 | 100-200 | $4,100-8,200 | -$10k a -$14k (runway) |
-| **6** | **200-300** | **$8,200-12,300** | -$6k a -$10k (cerca) |
-| **7** | **~440** | **~$18,040** | ✅ **Break-even** |
-| 9 | 500-700 | $20,500-28,700 | $3k-11k sobra (profit inicial) |
-| 12 | **1,000** | **$41,000** | ✅ **2.3× costo** (sobra $23k/mes para reinversión) |
-| 18 | 1,800-2,500 | $73,800-102,500 | 4-6× costo |
-| 24 | 3,500-5,000 | $143,500-205,000 | 8-11× costo (escala seria) |
+**Break-even revisado:** $29,500 / $41 margen = **~720 paying users**.
 
-**Runway necesario:** ~$40-50k USD para cubrir gap mes 0-7 (después self-sustaining). Menos exigente que el modelo híbrido.
+**Cronograma proyectado revisado:**
+
+| Mes post-launch | Users target | Margen estimado | Total costos | Status |
+|---|---|---|---|---|
+| 3 | 100-200 | $4,100-8,200 | $26,000 | -$18k a -$22k (runway) |
+| 6 | 200-300 | $8,200-12,300 | $28,000 | -$16k a -$20k (runway) |
+| 9 | 500-700 | $20,500-28,700 | $30,000 | -$2k a -$10k (cerca) |
+| **10-11** | **~720** | **~$29,500** | $29,500 | ✅ **Break-even** |
+| 12 | 1,000 | $41,000 | $30,000 | ✅ $11k margen para reinversión |
+| 18 | 1,800-2,500 | $73,800-102,500 | $33,000 | $40-69k profit/mes |
+| 24 | 3,500-5,000 | $143,500-205,000 | $35,000 | $108-170k profit/mes |
+
+**Runway necesario revisado:** **~$100-130k USD** para cubrir gap mes 0-10 (vs $40-50k del cálculo previo sin marketing agresivo).
+
+🟡 **El upside del marketing agresivo:** acelera la tracción. Si funciona, los targets conservadores se superan y break-even se mueve a mes 8-9 en lugar de 10-11. Si NO funciona, hay que recalibrar (bajar marketing o subir pricing).
+
+🟢 **Trade-off de la decisión:** invertir más en marketing acelera el momento de PMF y la curva de aprendizaje, a cambio de mayor runway necesario. Vale la pena SI el equipo de marketing puede ejecutar (necesita budget Y talent).
 
 🟢 **Riesgos críticos:**
 - **Conversión trial→paid <10%** → el modelo no escala, repensar producto o posicionamiento

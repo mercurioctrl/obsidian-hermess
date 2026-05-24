@@ -2,7 +2,7 @@
 
 > **Decisiones fundacionales** (cerradas con Catriel el 2026-05-24):
 > - **Producto:** Bily (la marca paraguas / empresa es Blu Studio Inc)
-> - **Dominio:** `billy.blustudioinc.com` (⚠️ verificar grafía oficial: "Bily" vs "Billy")
+> - **Dominio:** `billy.blustudioinc.com` (⚠️ verificar grafía oficial: "grafía oficial **Bily** (1 L))
 > - **Redes sociales:** Crear cuentas separadas para Bily (Blu Studio empresa tiene las suyas)
 > - **Branding base:** Logo y colores básicos existen, diseño los formaliza
 
@@ -161,11 +161,13 @@ Diseñar mecanismo: "Regalá un mes a un amigo, ganás un mes". Diseño con prod
 
 | Etapa | Usuarios | Canal primario | Inversión |
 |---|---|---|---|
-| 0-50 (beta cerrado) | red personal + equipo | Invitación 1-a-1 | $0 (tiempo) |
-| 50-200 (beta abierto) | influencers de nicho | 2-3 influencers early access | $500-2,000 perks |
-| 200-500 | repost + contenido propio | Blog/video + lista de espera FOMO | $1,000-3,000 producción |
-| 500-1,500 | Meta + Google ads + referrals | Ads con testimoniales como creatives | $3,000-10,000/mes ads |
-| 1,500+ | mix + partnerships | Partners: MercadoPago, contadores, consultores | $10,000+/mes |
+| 0-50 (beta cerrado) | red personal + equipo | Invitación 1-a-1 | $500-1,000 (perks beta) |
+| 50-200 (beta abierto) | influencers de nicho + contenido | **5-7 influencers early access** + producción contenido | **$3,000-5,000/mes** |
+| 200-500 | mix orgánico + ads chicos | Ads testing + lista de espera FOMO | **$5,000-8,000/mes** |
+| 500-1,500 | Meta + Google ads full + referrals | Ads escalado con creatives basados en testimoniales | **$8,000-12,000/mes** |
+| 1,500+ | mix + partnerships | Partners: MercadoPago, contadores, consultores | **$10,000-15,000/mes** |
+
+**Total presupuesto marketing autorizado:** $8,000-15,000 USD/mes con escalado conforme funnel se valide.
 
 **KPI clave a vigilar:**
 - CAC por canal (target <$60 para que LTV:CAC > 3:1 asumiendo retention 6 meses)
@@ -228,14 +230,16 @@ Diseñar mecanismo: "Regalá un mes a un amigo, ganás un mes". Diseño con prod
 - [x] Dominio → **billy.blustudioinc.com**
 - [x] Redes sociales → crear nuevas para Bily
 
+**Cerradas (ronda final):**
+- [x] Grafía → **Bily** (1 L)
+- [x] Presupuesto marketing → **$8,000-15,000 USD/mes** (agresivo desde semana 1)
+- [x] MercadoPago → cuenta empresarial operativa con recurrentes habilitados (pedir credenciales API)
+- [x] Abogado → estudio de confianza disponible para producto digital (coordinar revisión legal)
+
 **Aún por coordinar con Catriel:**
-- [ ] Verificar grafía oficial: "Bily" o "Billy"
-- [ ] **Presupuesto mensual disponible para marketing** (define escala de ads, # de influencers)
-- [ ] **Estado MercadoPago Empresarial** (necesario para billing antes de launch)
-- [ ] **Abogado disponible** o necesidad de contratar para legal
-- [ ] **Influencers concretos en mente** o investigación desde cero
-- [ ] **Partnerships estratégicos** (MercadoPago, contadores, consultoras PyME)
-- [ ] **Cuentas Blu Studio para usar como warm-up** (mientras armamos las de Bily)
+- [ ] Influencers concretos en mente o investigación desde cero
+- [ ] Partnerships estratégicos (MercadoPago, contadores, consultoras PyME)
+- [ ] Cuentas Blu Studio para warm-up (mientras armamos las de Bily)
 
 ---
 
