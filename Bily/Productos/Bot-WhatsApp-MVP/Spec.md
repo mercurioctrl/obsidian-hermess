@@ -1,7 +1,8 @@
 # Spec MVP — Agente WhatsApp con cerebro propio (Producto Blu)
 
-**Status:** v0.3 — iterando con Catriel · Claude (Opus 4.7).
+**Status:** v1.0 — spec cerrada con Catriel · Claude (Opus 4.7).
 **Última actualización:** 2026-05-24
+**Próximo paso:** generar Architecture Decision Record + brief de diseño y marketing.
 
 > Documento vivo. Las secciones marcadas con **🔴 [PENDIENTE]** son decisiones aún no tomadas. **🟡 [PROPUESTA]** = mi sugerencia esperando confirmación. **🟢** = decidido.
 
@@ -64,6 +65,15 @@
 
 🟢 **El moat real es la acumulación temporal**: después de 6 meses de uso, el cerebro del usuario contiene tanta historia personal que migrar a competidor = perder 6 meses de vida. **Lock-in emocional ético** (porque pueden exportar todo).
 
+🟢 **Frase diferenciadora canónica** (para landing/pitch/marketing):
+
+> **"No es un bot que te contesta. Es un asistente con nombre, cara y memoria propia, que aprende tu vida y se vuelve irreemplazable porque acumula tu historia personal en un cerebro que es tuyo."**
+
+Variantes cortas:
+- "Tu asistente IA con nombre propio que te conoce de verdad." (corta para ads)
+- "Aprende tu vida. Ordena tu caos. Vive en WhatsApp." (slogan)
+- "El único asistente que se vuelve irremplazable porque guarda tu historia." (para vender Pro)
+
 ---
 
 ## 5. Modelo de negocio
@@ -72,42 +82,70 @@
 
 🟢 **Brain ownership cuando dejan de pagar:** Freezing 90 días → eliminación. Notificaciones en día 60 y 80 con opción de export.
 
-### 5.1. Estructura de tiers (v0.2 — a validar precios con beta)
+### 5.1. Estructura de tiers (v1.0 — pricing híbrido decidido)
 
 | Tier | Precio USD/mes | Equiv ARS aprox | Quién | Qué incluye | Costo marginal | Margen |
 |---|---|---|---|---|---|---|
 | **Trial** | $0 (14 días) | — | Cualquier signup nuevo | Full features con cap reducido (50 msgs/día) | $3-5 | -$3 (CAC) |
 | **Personal** | $19 | ~21k ARS | Freelancers, profesionales | 1 agente, modelos balanceados (Haiku/Flash primary, Sonnet ocasional, Ollama fallback agresivo), tools básicos (brain, web, audio), 500 msgs/día cap | ~$7 | ~$12 |
-| **Pro** | $49 | ~55k ARS | Dueños PyME, high-leverage | 1 agente, modelos top-tier (Sonnet/Gemini Pro), todos los tools, integraciones avanzadas (post-MVP: mail/cal/ERP), sin caps | ~$25 | ~$24 |
-| **(Post-MVP) Business** | $99-149 | TBD | PyME con equipo | 3 agentes, shared brain opcional, billing centralizado | TBD | TBD |
+| **Pro** | **$69** | ~76k ARS | Dueños PyME, high-leverage | 1 agente, modelos top-tier (Sonnet/Gemini Pro), todos los tools, integraciones avanzadas (post-MVP: mail/cal/ERP), sin caps | ~$25 | **~$44** |
+| **(Post-MVP) Business** | $149-199 | TBD | PyME con equipo | 3 agentes, shared brain opcional, billing centralizado | TBD | TBD |
 
-### 5.2. Análisis de viabilidad económica
+🟢 **Estrategia comercial híbrida — push fuerte vender Pro:**
+
+El modelo depende de que el mix Pro ≥ 30%. Implicancias:
+- **Marketing segmenta mensajería:** Personal posiciona como "asistente personal", Pro como "empleado virtual / asistente de negocio"
+- **Onboarding sugiere upgrade** cuando detecta uso PyME (mención de empleados, facturación, gestión de clientes)
+- **Sales team** o **success manager** para acompañar trials Pro (mayor ticket merece touch)
+- **Tools premium en Pro** (mail, calendar, ERP en fase 2) son ganchos de upsell desde Personal
+
+### 5.2. Análisis de viabilidad económica (calibrado con targets conservadores)
 
 **Costo operativo fijo:** $18,000 USD/mes (salarios equipo + infra base).
 
-**Targets de paying users para sostener costos:**
+**Targets de tracción definidos por Catriel (conservadores):**
 
-| Cobertura | Mix mínimo (ejemplos) |
-|---|---|
-| **Break-even** ($18k margen) | 1,500 Personal · 750 Pro · mix 750/375 |
-| **2× costo** ($36k margen, escala sana) | 3,000 Personal · 1,500 Pro · mix 1,500/750 |
-| **3× costo** ($54k margen, profit + reinversión) | 4,500 Personal · 2,250 Pro · mix 2,250/1,125 |
-
-**Cronograma realista de tracción:**
-
-| Mes post-launch | Users target | Status |
+| Mes | Users target | Status |
 |---|---|---|
-| 0 | 30-50 | Beta cerrado (invitados, gratis) |
-| 1 | 100-200 | Beta abierto con cupos limitados |
-| 3 | 300-700 | Launch público con marketing soft |
-| 6 | 800-1,500 | **Break-even si conversión trial→paid >15%** |
-| 12 | 2,000-3,500 | Profitabilidad (1.5-2× costo) |
-| 18 | 4,000-6,000 | LATAM expansion (cuando PMF validado en AR) |
+| 0 | 30-50 | Beta cerrado |
+| 1 | 50-100 | Beta abierto cupos limitados |
+| 3 | 100-200 | Launch público marketing soft |
+| 6 | **200-300** | Construcción de PMF |
+| 12 | **1,000** | Tracción inicial |
+| 18 | 1,800-2,500 | Crecimiento sostenido |
+| 24 | 3,500-5,000 | LATAM expansion |
 
-**Sensibilidades:**
-- Conversión trial→paid <10% → modelo no escala, repensar tiers
-- Mix Pro/Personal <30/70 → demasiada dependencia de volumen
-- Churn mensual >10% → leak en valor percibido
+### 5.3. Viabilidad económica con pricing híbrido $19/$69
+
+**Cálculo a 1,000 users (mes 12) según mix Pro:**
+
+| Mix Personal/Pro | Margen mes 12 | Estado |
+|---|---|---|
+| 80/20 (Pro bajo) | 800×$12 + 200×$44 = **$18,400** | ✅ Cubre apenas |
+| **70/30 (target)** | 700×$12 + 300×$44 = **$21,600** | ✅ Sobra $3,600/mes |
+| 60/40 (Pro alto) | 600×$12 + 400×$44 = **$24,800** | ✅ Sobra $6,800/mes |
+| 50/50 (Pro = Personal) | 500×$12 + 500×$44 = **$28,000** | ✅ Sobra $10,000/mes |
+
+**Cronograma de break-even revisado:**
+
+| Mes post-launch | Users target | Margen estimado (mix 70/30) | Status |
+|---|---|---|---|
+| 3 | 100-200 | $2,160-4,320 | -$13k a -$16k (runway) |
+| 6 | 200-300 | $4,320-6,480 | -$11k a -$14k (runway) |
+| 9 | 500-700 | $10,800-15,120 | -$3k a -$7k (acercándose) |
+| 12 | **1,000** | **$21,600** | ✅ **Break-even superado** |
+| 18 | 1,800-2,500 | $38,880-54,000 | 2-3× costo (profit + reinversión) |
+| 24 | 3,500-5,000 | $75,600-108,000 | 4-6× costo (escala) |
+
+**Runway necesario:** ~$50-70k USD para cubrir gap mes 0-12 (~$5-7k promedio/mes). Después self-sustaining.
+
+🟢 **Riesgos críticos de este pricing model:**
+- **Mix Pro < 25%** → no cubre $18k, vuelve a faltar runway → KPI a vigilar SEMANAL
+- **Conversión trial→paid <10%** → el modelo no escala
+- **Churn mensual >10%** → ataca antes de escalar marketing
+- **Costo marginal real explota** (si users power consumen más LLM que estimado) → caps duros + downgrade auto
+
+🟢 **KPI más crítico del MVP: % de Pro en el mix.** Sin Pro alto, los $19 de Personal no alcanzan. Marketing y sales tienen que estar OBSESIONADOS con conversión a Pro.
 
 ### 5.3. Métricas financieras tracked desde día 1
 
@@ -187,13 +225,18 @@
   - **Mitigación:** consultar con abogado, modelar como "el owner es responsable de la legalidad en su grupo" (igual que un humano que toma notas)
 - **Modo configurable:** owner puede setear por grupo: "absorbe + responde si mencionado" (default) | "solo absorbe (silent)" | "ignora completamente este grupo"
 
-🔴 **[PENDIENTE] Otros edge cases:**
-- Usuario cambia su número de WhatsApp personal → ¿el agente se entera? ¿hay que re-verificar identidad?
-- Usuario pierde el celular del agente / queman el chip → portabilidad del cerebro a chip nuevo
-- Usuario pide acción dañina (eliminar archivos, mandar mail X a persona Y) → guardrails
-- Dos usuarios con agentes en el mismo grupo → ¿cross-pollination de cerebros? (NO en MVP, cada cerebro isolated)
-- Agente recibe mensaje que parece phishing/scam dirigido al owner → ¿avisa? ¿bloquea?
-- Owner agrega agente a grupo de >100 personas → ¿se mete o se queda silent?
+🟡 **Edge cases — comportamiento propuesto (validar antes de cerrar v1.0):**
+
+| Caso | Comportamiento propuesto |
+|---|---|
+| Usuario cambia su número personal de WA | Re-verificación obligatoria: agente le manda código de 6 dígitos al nuevo número, lo confirma al viejo, migra ownership |
+| Pierde el celular del agente / quema chip | Portabilidad: nuevo chip + Android, cerebro se asocia al chip nuevo. Owner re-verifica identidad. Brain intacto |
+| Pide acción dañina (borrar archivos, mandar msg ofensivo) | Guardrails LLM + confirmación explícita del owner antes de actuar. Acciones irreversibles requieren "sí, hacelo" textual |
+| 2 usuarios con agentes en el mismo grupo | NO cross-pollination en MVP. Cada agente solo escribe en cerebro de su owner. Fase 2 podría tener shared brain opcional |
+| Mensaje sospechoso de phishing/scam al owner | Agente lo nota y avisa al owner ("ojo, este mensaje parece sospechoso porque..."), no bloquea automáticamente |
+| Owner agrega agente a grupo >100 personas | Agente manda privacy notice + se queda silent por default (no absorbe a menos que owner pida explícito) |
+| Usuario manda contenido sexual / NSFW | Agente responde con tono respetuoso pero no procesa/genera contenido NSFW. Puede recibirlo, no produce |
+| Usuario menor de edad (detectado por contexto) | Agente avisa al equipo + funcionalidad limitada hasta verificación de edad |
 
 ---
 
@@ -240,12 +283,20 @@
 
 ## 8. Personalidad y branding
 
-🟢 **Naming convention:** Todos los nombres empiezan con B (alineado al brand Blu). Lista curada de ~50-100 nombres con vibe argentino + cálido. Inmutable una vez asignado.
+🟢 **Naming convention:** Todos los nombres empiezan con B (alineado al brand Blu). Lista curada con vibe argentino + cálido. **Inmutable una vez asignado** — el usuario NO puede elegir ni hacer reroll (es parte del ritual de imprinting: aceptás a tu agente como es).
 
-🔴 **[PENDIENTE]** Lista exacta de nombres — propuesta inicial:
-- Femeninos: Brisa, Barbi, Bea, Belu, Bruna, Bianca, Bauti, Benji, Bambi, Briana...
-- Masculinos: Billy, Bruno, Beto, Bauti, Benji, Bilo, Bro, Beni, Borja, Baltasar...
-- Neutros / gender-fluid: Bauti, Benji, Bilo, Beni, Bambi, Brett...
+🟡 **Lista inicial propuesta (~45 nombres, mix de géneros y estilos):**
+
+**Femeninos (15):**
+Brisa · Barbi · Bea · Belu · Bruna · Bianca · Bambi · Briana · Berta · Bea · Bibi · Belén · Bella · Bonnie · Beba
+
+**Masculinos (15):**
+Billy · Bruno · Beto · Bilo · Bro · Beni · Borja · Baltasar · Bauti · Benja · Bautista · Bilbo · Buby · Bobby · Bukowski
+
+**Neutros / gender-fluid (15):**
+Benji · Bambi · Brett · Bowie · Bay · Bali · Boba · Bichi · Buki · Bremen · Berry · Boto · Bao · Buho · Brio
+
+🟡 **Para validar con diseño y marketing:** ¿algún nombre suena ofensivo en algún regionalismo, choca con marca registrada, o no encaja con la personalidad de Blu? Filtrar antes de v1.0.
 
 🟢 **Avatar:** generado vía tu API existente (estilo space-invader). Único por agente, inmutable.
 
@@ -301,10 +352,11 @@ El producto necesita 4 momentos diferenciados a lo largo del funnel para enganch
 - Health checks cada 5 min
 - Alertas a operador si un agente queda "muerto" >15 min
 
-🔴 **[PENDIENTE] Performance:**
-- Latencia objetivo de respuesta: ¿2s? ¿5s? ¿"cuando esté listo"?
-- Transcripción de audio: ya medido ~5-10s para audio típico
-- Concurrencia: ¿cuántos agentes simultáneos por server?
+🟢 **Performance (SLA target):**
+- **Texto:** mediana <5s, p95 <10s. Si supera, el agente puede mandar "typing..." indicator + "estoy pensándolo" después de 5s
+- **Audio:** mediana <30s (incluyendo whisper transcripción), p95 <60s. UX: enviar "🎤 escuchando..." al recibir
+- **Tool calls** (web, brain, calendar): el tiempo del tool se suma, no hay SLA estricto pero el agente debe avisar si supera 30s
+- **Concurrencia:** target 30-50 agentes simultáneos por server (i7/Xeon + 32 GB RAM + SSD). Escalado horizontal cuando se llena
 
 🟢 **Escalabilidad:**
 - Arquitectura per-agent (1 process group por agente)
@@ -399,18 +451,39 @@ Lista de pendientes que tenemos que resolver en próximas iteraciones:
 - [x] Wow moment → los 4 priorizados secuencialmente (sección 8.1)
 
 **Cerrados en v0.3:**
-- [x] Cost basis confirmado → $18k = solo equipo+infra base, los variables marginales por user son EXTRA (margenes de la spec son correctos)
-- [x] Behavior en grupos → escucha todo + responde si mencionado + privacy notice obligatorio + configurable por grupo
-- [x] Marketing → stage gates: red personal (0-50) → influencers nicho (50-200) → contenido (200-500) → ads (500-1500) → mix (1500+)
-- [x] PM role → Catriel (50-100% tiempo) — single point of decision, cuello de botella a vigilar
+- [x] Cost basis → $18k = solo equipo+infra base
+- [x] Behavior en grupos → escucha + responde si mencionado + privacy notice
+- [x] Marketing → stage gates
+- [x] PM role → Catriel (50-100%)
 
-**Por cerrar para llegar a v1.0:**
-- [ ] **Lista final de nombres B** (propuesta inicial en 8 — ¿la apruebas / agregás / sacás?)
-- [ ] **Latencia objetivo** y SLA
-- [ ] **Otros edge cases** (cambio número user, pérdida chip, acciones dañinas, etc. listados en 6.3)
-- [ ] **Diferenciación específica** vs ChatGPT en WhatsApp (Poe, etc.) — necesita 1 sentence killer
-- [ ] **¿Usuario puede pedir nombre específico?** o ¿siempre random?
-- [ ] **Cantidad de users target a 6/12/18 meses** confirmar contra mi proyección (sección 5.2)
+**Cerrados en v0.4:**
+- [x] Naming choice → siempre random, inmutable (parte del ritual)
+- [x] Latencia → texto <5s mediana, audio <30s mediana
+- [x] Diferenciador canónico → "No es un bot. Es asistente con nombre, cara y memoria propia..."
+- [x] User targets → conservadores (200-300 mes 6, 1000 mes 12) confirmados por Catriel
+- [x] Lista inicial de nombres B → 45 propuestos (a filtrar con diseño/marketing)
+- [x] Edge cases → comportamiento propuesto para 8 casos críticos
+
+**Cerrados en v1.0:**
+- [x] Pricing definitivo → **Híbrido $19 Personal / $69 Pro** con push comercial a Pro (sección 5.1)
+- [x] KPI crítico identificado → % Pro en mix (vigilar semanal post-launch)
+- [x] Runway necesario calculado → ~$50-70k USD para cubrir mes 0-12
+
+**Validaciones colaterales (no bloquean v1.0, hacer en paralelo durante stage 0):**
+- [ ] Diseño + marketing aprueban lista de 45 nombres B (filtrar lo que no encaje)
+- [ ] Abogado revisa privacy notice obligatorio en grupos + TOS general + Ley 25.326
+- [ ] Validar con beta cerrado los edge cases propuestos y refinar comportamiento
+- [ ] Confirmar runway disponible ($50-70k) o decidir si arrancar con equipo más chico
+
+## 14. v1.0 lista — próximos artefactos a producir
+
+Con esta spec cerrada, los siguientes documentos en orden:
+
+1. **Architecture Decision Record (ADR)** — los 6 componentes principales, contratos entre ellos, stack tecnológico final, decisiones técnicas + rationale. ~1-2 días.
+2. **Brief para diseño** — qué visuales necesita el equipo, mockups del minteo, branding guidelines, variantes de avatares. ~1 día.
+3. **Brief para marketing** — qué assets producir, mensajería por tier (Personal vs Pro), copy de landing, calendario de stage gates. ~1 día.
+4. **Brief técnico para devs** — onboarding al stack, división de responsabilidades, sprint plan stage 1. ~1 día.
+5. **Kickoff con todo el equipo** — recorrer spec + roles + cronograma + Q&A.
 
 ---
 
