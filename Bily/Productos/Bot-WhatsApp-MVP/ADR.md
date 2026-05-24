@@ -1,6 +1,6 @@
 # Architecture Decision Record (ADR) — Bily
 
-**Status:** v0.1 — draft inicial, iterando con Catriel · Claude (Opus 4.7).
+**Status:** v1.0 — 4 decisiones críticas cerradas con Catriel · Claude (Opus 4.7).
 **Última actualización:** 2026-05-24
 **Doc relacionado:** [[Bily/Productos/Bot-WhatsApp-MVP/Spec|Spec MVP v1.0]]
 
@@ -107,21 +107,50 @@ Cronograma: 8-10 semanas a MVP cobrable + 1-2 meses iteración → launch públi
 
 ### 4.1. Lenguajes y runtimes
 
-🟡 **Propuesta: TypeScript / Node 22 LTS** para todo el agent-core y servicios HTTP.
+🟢 **DECISIÓN: Híbrido TypeScript + Python** según fortalezas de cada lenguaje y del equipo.
 
-**Rationale:**
-- Tu proyecto existente de WhatsApp ya está en Node (`whatsapp-web.js` + puppeteer)
-- Vercel AI SDK (TypeScript) es el mejor del mercado para LLM routing
-- Async/event-loop excelente para multi-agente
-- Tipado strict da seguridad para team de 4 devs
-- Ecosistema npm rico
+**Rationale:** El equipo es más fuerte en Python, pero hay piezas donde Node/TS son la elección natural por ecosystem (WA, puppeteer, Vercel AI SDK). En vez de forzar todo a un lado, dividimos por afinidad.
 
-🔴 **[DECISIÓN ABIERTA-001] Lenguaje principal:**
-- A) TypeScript/Node (propuesta) — reuso máximo de tu código, ecosistema fuerte
-- B) Python — si tu equipo es más fuerte ahí; LiteLLM es alternativa decente a Vercel AI SDK
-- C) Híbrido — TS para agent runtime + channels, Python para data/analytics (más complejo de mantener)
+### 4.1.1. Split TS / Python
 
-**Exception scripts:** Python para data ops one-shot (ETL, análisis) y para el whisper sidecar (ya existe).
+**TypeScript / Node 22 LTS** — donde es obligatorio o claramente mejor:
+
+| Componente | Por qué TS |
+|---|---|
+| **Agent runtime** (per-agent process) | Maneja puppeteer + WA channel directamente |
+| **WA channel** (whatsapp-web.js) | Único lugar donde WA Web funciona bien |
+| **Puppeteer pool + browse toolkit** | Mejor soporte y maturity en Node |
+| **LLM Router** (Vercel AI SDK) | El SDK es TS-native; LiteLLM en Python es decente pero no superior |
+| **Admin Panel** (Next.js) | React ecosystem |
+| **Mint bot público** | Mismo runtime que agentes |
+
+**Python 3.12** — donde el equipo brilla y es naturalmente mejor:
+
+| Componente | Por qué Python |
+|---|---|
+| **Brain REST API** | FastAPI + SQLite es excelente; equipo es fuerte acá |
+| **Intelligence plugins** (wikilink-weaver, person-profiler, pattern-detector) | NLP/text analysis es zona fuerte de Python; pandas/scipy disponibles |
+| **Whisper sidecar** (ya existe) | Re-uso 100% |
+| **Cost tracker + analytics** | Pandas + SQL para crunchear datos |
+| **Cron jobs / batch jobs** | Equipo lo va a hacer mejor en Python |
+| **ETL / data ops** | Natural |
+
+### 4.1.2. Comunicación entre TS y Python
+
+- **HTTP REST** (principal): Agent TS → Brain Python via HTTP. Wrappers tipo `brain_*` lo encapsulan.
+- **Message queue** (cuando aplique): Redis Pub/Sub o BullMQ para trigger de cron jobs desde el agente.
+- **Shared types**: definir schemas con JSON Schema o Protobuf, generar TS types y Pydantic models desde la misma fuente.
+
+### 4.1.3. Consecuencias del híbrido
+
+- **(+)** El equipo trabaja en lo que sabe → menos errores, más velocidad
+- **(+)** Componente correcto a cada lenguaje (no force-fits)
+- **(+)** Reuso del whisper sidecar (Python) y proyectos existentes WA (Node)
+- **(−)** 2 stacks para mantener → 2 setups de dev, 2 lints, 2 CI pipelines
+- **(−)** Refactoring cross-stack es más laburo (cambio de schema afecta TS + Python)
+- **(−)** Onboarding más caro (devs necesitan poder leer ambos)
+
+**Mitigación:** turbo monorepo soporta workspaces multi-language. CI puede correr ambos en paralelo. Shared types generados desde una source of truth.
 
 ### 4.2. Frameworks y librerías clave
 
@@ -141,34 +170,37 @@ Cronograma: 8-10 semanas a MVP cobrable + 1-2 meses iteración → launch públi
 | Frontend admin | **Next.js 15** + Tailwind + shadcn/ui | Productivo, server components, ecosistema |
 | Cron | **node-cron** o **bullmq** (Redis-backed) | Para wikilink-weaver, person-profiler, backup |
 
-### 4.3. 🔴 [DECISIÓN ABIERTA-002] DB para metadata
+### 4.3. DB para metadata
 
-Necesitamos guardar: agentes (id, name, phoneE164, ownerId, vaultPath, status, createdAt, ...), users, billing, sessions, cron jobs, etc.
+🟢 **DECISIÓN: SQLite-per-agente + PostgreSQL central**
 
-Opciones:
+- **SQLite por agente** (`~/agents/<agentId>/data.sqlite`): brain index FTS5, conversation history, agent-local state, cron job state local. Cada agente totalmente self-contained.
+- **Postgres central** (managed o on-prem): users, billing, agent registry (qué agentes existen, status), chip pool, marketing funnel data, audit logs.
 
-| Opción | Pros | Contras |
-|---|---|---|
-| **A. PostgreSQL global** (1 DB para todo) | Fácil queries cross-agente (admin, billing, analytics). Backups centralizados. Tooling rico (Prisma, Drizzle) | SPOF — si la DB cae, todos los agentes caen. Más complejo backup-per-tenant |
-| **B. SQLite per-agente** + Postgres global solo para users/billing | Isolation perfecta (cada agente es self-contained). Backups simples (es 1 archivo). Failure isolation | Queries cross-agente más complejas (need aggregation). Menos tooling |
-| **C. Postgres + tenant_id en todas las tablas** | Lo mejor de A pero con row-level security | Más cuidado en queries (always filter by tenant). Performance OK hasta ~1000 agents |
+**Stack:**
+- **TS:** Drizzle ORM para Postgres (typed, lightweight)
+- **Python:** SQLAlchemy 2.0 async para Postgres + better-sqlite3 bindings (o `sqlite3` stdlib)
+- Migrations: Drizzle migrations + Alembic (Python) — coordinadas
 
-🟡 **Recomendación: B (SQLite-per-agente + Postgres central)** para MVP. Razones:
-- Isolation se alinea con el resto de la arquitectura (1 process por agente)
-- Backup del cerebro es 1 archivo `.sqlite` por agente, simple
-- Postgres solo para users + billing + cross-agent aggregates
-- Si crece, migrar a Postgres puro es factible
+**Backup:**
+- SQLite-per-agente: snapshot file completo a object storage cada hora
+- Postgres: pg_dump diario + WAL archiving
 
-### 4.4. 🔴 [DECISIÓN ABIERTA-003] Auth para users
+### 4.4. Auth para users
 
-| Opción | Pros | Contras |
-|---|---|---|
-| **A. Custom JWT** | Total control, sin dependencia externa, mínimo costo | Hay que hacer todo: signup, password reset, sessions, 2FA, etc. |
-| **B. Clerk** | Drop-in, UI ready, 2FA, social login. Free hasta 10k users | $25/mes después de 10k. Dependencia externa |
-| **C. Auth0** | Madurísimo, enterprise-ready | Caro, más complejo de configurar |
-| **D. Supabase Auth** | Free generoso, viene con DB Postgres si la usás | Acopla auth con DB; menos control |
+🟢 **DECISIÓN: Custom JWT** (con buenas prácticas).
 
-🟡 **Recomendación: A (Custom JWT)** para MVP por simpleza + control + cero costo. Migrar a Clerk si el setup de auth se vuelve cuello de botella. Considerar B si el Jr no tiene experiencia haciendo auth seguro (es fácil cometer errores).
+**Stack:**
+- bcrypt para password hashing (cost factor 12+)
+- JWT con HS256 o RS256, expiración 15 min + refresh tokens 30 días
+- Refresh tokens en DB para revocar
+- Rate limiting en endpoints de auth
+- 2FA opcional vía TOTP (post-MVP)
+- Password reset via email con token de un solo uso
+
+**Quién lo codea:** Sr 1 lidera, Jr ayuda. **NO** dejar al Jr solo en auth (zonas de seguridad sensibles).
+
+**Migration path:** si vemos que el setup nos cuesta más de 2 semanas o aparecen issues de seguridad, migrar a Clerk (es drop-in).
 
 ---
 
@@ -442,20 +474,33 @@ bily/
 
 ## 8. Deploy y operations
 
-### 8.1. 🔴 [DECISIÓN ABIERTA-004] Dónde corren los servers
+### 8.1. Dónde corren los servers
 
-| Opción | Pros | Contras | Costo ~50 agentes |
-|---|---|---|---|
-| **A. Hetzner dedicated servers** (Alemania) | Mejor $/RAM del mundo. Servers físicos potentes ($50-150/mes) | Latencia 200-300ms desde Arg (impacta LLM round trips). EU jurisdiction |
-| **B. AWS/DigitalOcean EE.UU.** | Cloud estándar, multi-AZ, ecosistema | Más caro. Latencia ~80-150ms desde Arg |
-| **C. On-prem en tu oficina/casa** | Control total, latencia mínima, sin renta mensual | Power/Internet UPS-dependent. Phone farm necesita lugar físico igual |
-| **D. Hybrid: phone farm + brain on-prem, agent-runtimes en cloud** | Lo mejor de ambos | Más complejo de mantener |
+🟢 **DECISIÓN: On-prem en el lugar de Catriel** (MVP).
 
-🟡 **Recomendación:** **C (on-prem)** para MVP por **2 razones específicas a tu setup:**
-1. La phone farm necesita lugar físico de todos modos
-2. Vos ya tenés un servidor donde corre OpenClaw + Bily — ese es el embrión de la infra
+**Rationale:**
+- La phone farm necesita lugar físico de todos modos
+- El servidor actual de Catriel (donde corre Bily/OpenClaw) es el embrión de la infra prod
+- Cero renta mensual de cloud durante el período de runway crítico
+- Latencia mínima entre agentes y phone farm (mismo LAN)
 
-Post-MVP cuando llegue el costo de uptime físico (UPS, internet redundante, AC), migrar lo que no es phone farm a cloud.
+**Hardware mínimo recomendado:**
+- Server principal: 32 GB RAM, Xeon o i7/Ryzen 7+, SSD NVMe ≥1 TB, Ubuntu 24.04 LTS
+- Estante phone farm: 50 Androids + power + USB hub + WiFi dedicado
+- UPS para server (mínimo 30 min aguante)
+- Internet redundante (fibra + 4G backup)
+
+**Servicios externos (cloud, no on-prem):**
+- Object storage para backups (Backblaze B2 o Cloudflare R2 — más baratos que S3)
+- LLM providers (Anthropic, Google, OpenAI APIs)
+- DNS y CDN para landing (Cloudflare free)
+- MercadoPago para billing (API)
+- Email transaccional (Postmark / Resend)
+
+**Post-MVP migration plan (mes 6+):**
+- Si el costo de uptime físico (UPS, internet, AC) supera $500/mes, migrar agent-runtimes a Hetzner dedicated (mejor $/RAM del mundo)
+- Phone farm SIEMPRE on-prem (no se puede mover)
+- Brain REST API podría migrar a cloud cerca de los agentes
 
 ### 8.2. CI/CD
 
@@ -476,16 +521,19 @@ Post-MVP cuando llegue el costo de uptime físico (UPS, internet redundante, AC)
 
 ---
 
-## 9. Decisiones abiertas — necesitan input antes de cerrar v1.0
+## 9. Estado de decisiones
 
-- 🔴 **ADR-001:** Lenguaje (TS propuesto)
-- 🔴 **ADR-002:** DB metadata (SQLite-per-agent + Postgres central propuesto)
-- 🔴 **ADR-003:** Auth (Custom JWT propuesto)
-- 🔴 **ADR-004:** Deploy infra (on-prem propuesto)
-- ⚪ **ADR-005:** ¿Ollama dónde corre? mismo server o dedicado? Define hardware necesario
-- ⚪ **ADR-006:** ¿Cron jobs con node-cron simple o bullmq+Redis? (más robusto pero +1 dep)
-- ⚪ **ADR-007:** ¿Monitoring stack: Prometheus+Grafana auto-managed o servicio (Datadog/New Relic)?
-- ⚪ **ADR-008:** ¿Object storage para backups: S3/B2/R2/Hetzner Storage?
+**Cerradas en v1.0:**
+- [x] **ADR-001:** Lenguaje → **Híbrido TypeScript + Python** (ver 4.1)
+- [x] **ADR-002:** DB → **SQLite-per-agente + Postgres central**
+- [x] **ADR-003:** Auth → **Custom JWT** (Sr1 lidera, Jr asiste)
+- [x] **ADR-004:** Deploy → **On-prem** en lugar de Catriel (MVP) + object storage cloud para backups
+
+**Decisiones secundarias (se pueden cerrar con tech lead, no bloquean dev):**
+- [ ] **ADR-005:** Ollama dónde corre — mismo server o GPU dedicada. **Propuesta:** mismo server con modelo small (llama3.2:3b ~2GB) en MVP. GPU dedicada post-MVP cuando crezca uso de fallback.
+- [ ] **ADR-006:** Cron jobs — **Propuesta:** `node-cron` para TS, `APScheduler` para Python. BullMQ+Redis solo cuando haga falta queue distribuida (post-MVP).
+- [ ] **ADR-007:** Monitoring — **Propuesta:** Prometheus + Grafana self-hosted en el mismo server. Grafana Cloud free tier si necesitamos accesos externos.
+- [ ] **ADR-008:** Object storage para backups — **Propuesta:** Backblaze B2 (cheaper que S3) o Cloudflare R2 (zero egress fees). B2 si simpleza, R2 si vamos a leer mucho desde el agente.
 
 ---
 
