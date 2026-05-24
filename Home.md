@@ -90,6 +90,11 @@ Ver [[Skills/Skills|Skills]].
 - `schedule/` · `sincronizar-boveda/` · `skill-creator/` · `tarea-boveda/` · `xlsx/`
 - [[Skills/reconstruir-indices/SKILL|reconstruirIndices]] — reconstruye wikilinks en todos los índices de la bóveda
 
+## Claude — Espacio de Claude en la bóveda
+
+- [[Claude/MEMORIA|Memoria de Claude]] — aprendizajes, tareas delegadas y memoria a largo plazo
+  - [[Claude/Whisper|Whisper local]] · [[Claude/Vault-Wrappers|Vault Wrappers]]
+
 ## Servidores / Infra
 
 - [[aplus-server/aplus-server|aplus-server]]
