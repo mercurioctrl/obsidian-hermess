@@ -1,6 +1,6 @@
 # Spec MVP — Agente WhatsApp con cerebro propio (Producto Blu)
 
-**Status:** v0.2 — iterando con Catriel · Claude (Opus 4.7).
+**Status:** v0.3 — iterando con Catriel · Claude (Opus 4.7).
 **Última actualización:** 2026-05-24
 
 > Documento vivo. Las secciones marcadas con **🔴 [PENDIENTE]** son decisiones aún no tomadas. **🟡 [PROPUESTA]** = mi sugerencia esperando confirmación. **🟢** = decidido.
@@ -175,12 +175,25 @@
 
 ### 6.3. Casos borde
 
-🔴 **[PENDIENTE]** Definir comportamiento para:
-- Usuario cambia su número de WhatsApp personal → ¿el agente se entera? ¿hay que re-verificar?
-- Usuario pierde el celular del agente / queman el chip → portabilidad del cerebro a nuevo chip
-- Agente agregado a grupo → ¿responde solo si lo mencionan? ¿escucha todo siempre?
-- Usuario pide acción dañina (eliminar archivos, mandar mail a X persona X cosa) → guardrails
-- Dos personas hablando del mismo proyecto, ambas tienen agente → ¿cross-pollination? (probablemente NO en MVP)
+**Comportamiento en grupos de WhatsApp:**
+
+🟢 **Decisión:** El agente **escucha y absorbe todo el contenido del grupo en su cerebro** (aprende contexto, personas, patrones), pero **solo responde cuando el owner lo menciona** con `@` o le contesta directamente.
+
+🟡 **Implicancias críticas a manejar:**
+- **Privacidad de otros participantes:** los otros del grupo NO consintieron a que sus mensajes vayan al cerebro privado del owner. Riesgo legal/ético.
+  - **Mitigación obligatoria:** mensaje automático cuando el agente es agregado a un grupo, tipo: *"Hola, soy Brisa, asistente de Catriel. Sus mensajes en este grupo pueden ser procesados por IA para ayudarlo a recordar contexto. Si no querés que te incluya, decímelo y te omito."*
+  - Implementar lista de "opted-out" por número en cada grupo
+- **WhatsApp TOS:** procesamiento de msgs de terceros puede violar TOS de Meta. Riesgo de ban del número.
+  - **Mitigación:** consultar con abogado, modelar como "el owner es responsable de la legalidad en su grupo" (igual que un humano que toma notas)
+- **Modo configurable:** owner puede setear por grupo: "absorbe + responde si mencionado" (default) | "solo absorbe (silent)" | "ignora completamente este grupo"
+
+🔴 **[PENDIENTE] Otros edge cases:**
+- Usuario cambia su número de WhatsApp personal → ¿el agente se entera? ¿hay que re-verificar identidad?
+- Usuario pierde el celular del agente / queman el chip → portabilidad del cerebro a chip nuevo
+- Usuario pide acción dañina (eliminar archivos, mandar mail X a persona Y) → guardrails
+- Dos usuarios con agentes en el mismo grupo → ¿cross-pollination de cerebros? (NO en MVP, cada cerebro isolated)
+- Agente recibe mensaje que parece phishing/scam dirigido al owner → ¿avisa? ¿bloquea?
+- Owner agrega agente a grupo de >100 personas → ¿se mete o se queda silent?
 
 ---
 
@@ -199,6 +212,7 @@
 | Tool: buscar en su propio cerebro | Hace utilidad de la memoria |
 | Tool: agregar/leer tareas en kanban | Hace utilidad de la organización |
 | Wikilink-weaver + person-profiler (cron) | La "magia" que diferencia |
+| Group chat support (absorbe + responde si mencionado) | Validado en ronda 3 — sumamos privacy notice obligatorio |
 | LLM router multi-tier con Ollama fallback | Resilencia + cost control |
 | Backup automático diario a cloud storage | Existential (sin esto no hay producto) |
 | Export del brain (zip de markdown) | Compromiso ético + lock-in justo |
@@ -212,7 +226,7 @@
 | Telegram / Discord / Signal / Email channels | Foco WA primero |
 | Múltiples agentes por usuario | Complejidad, validamos demanda primero |
 | Acceso a ERP de Blu | Específico, va en fase 2 con clientes Blu |
-| Group chats (escuchar/responder en grupos) | Comportamiento sutil + privacy → fase 2 |
+| ~~Group chats~~ | **MOVIDO A IN para MVP** — escucha todo, responde solo si mencionado, con privacy notice automático |
 | Vision (analizar imágenes) | Cuando hay demanda |
 | Generación de imágenes | Lujo |
 | Voice notes salientes (agente manda audio) | UX adicional, no critical |
@@ -318,15 +332,32 @@ El producto necesita 4 momentos diferenciados a lo largo del funnel para enganch
 
 ---
 
+## 10.bis. Estrategia de marketing — adquisición de los primeros 100 users
+
+🟢 **Modelo: stage gates con escalado de canales conforme va habiendo social proof.**
+
+| Etapa | Usuarios | Canal primario | Inversión | Objetivo principal |
+|---|---|---|---|---|
+| **0-50 (beta cerrado)** | tu red personal + equipo + sus círculos | Invitación 1-a-1, mensaje privado | $0 (tiempo) | Feedback profundo, primeros testimonios honestos, validar UX del minteo |
+| **50-200 (beta abierto)** | influencers de nicho (tech / productividad / emprendedurismo arg) | 2-3 influencers con early access, gratis a cambio de contenido honesto | $500-2,000 en perks/exclusividad | Generar buzz orgánico, casos de uso reales para social proof |
+| **200-500** | repost de los influencers + contenido propio | Blog/video del equipo, casos de uso destacados, lista de espera con FOMO | $1,000-3,000 en producción de contenido | Construir confianza, optimizar mensajería |
+| **500-1,500** | Meta + Google ads + referrals (incentivado: "regalá un mes free") | Ads pagados con creatives basados en testimonios | $3,000-10,000/mes en ads | CAC medible, escalar lo que funciona |
+| **1,500+** | Mix de todo lo anterior + partnerships (con software/empresas para PyME) | Ampliar ad spend, partnerships con MercadoPago / contadores / consultores | $10,000+/mes | Tracción real, profitabilidad |
+
+🟡 **Métricas por etapa:**
+- 0-50: NPS, qualitative feedback, churn por causa documentada
+- 50-200: conversiones desde influencer, viralidad orgánica (referencias menc.)
+- 200+: CAC, conversión funnel, ROI por canal
+
 ## 11. Roadmap post-MVP (orientación, no compromiso)
 
 **Fase 2 (mes 4-6 post-launch):**
 - Telegram channel
 - Multi-agent por usuario (uno personal + uno de trabajo)
-- Group chat support en WA
 - Tool: mail (Gmail / IMAP)
 - Tool: calendar
 - Acceso a ERP Blu (para clientes Blu)
+- LATAM expansion (México, Colombia, Uruguay, Chile)
 
 **Fase 3 (mes 6-12):**
 - Vision en WA (analiza fotos, recetas, documentos)
@@ -362,22 +393,24 @@ El producto necesita 4 momentos diferenciados a lo largo del funnel para enganch
 Lista de pendientes que tenemos que resolver en próximas iteraciones:
 
 **Cerrados en v0.2:**
-- [x] ~~Pricing exacto~~ → Personal $19 / Pro $49 USD, a validar con beta
-- [x] ~~Geo/idioma~~ → Argentina + español rioplatense, LATAM en fase 2
-- [x] ~~Infraestructura WA~~ → phone farm Androids viejos
-- [x] ~~Wow moment~~ → los 4 priorizados secuencialmente (sección 8.1)
+- [x] Pricing exacto → Personal $19 / Pro $49 USD, a validar con beta
+- [x] Geo/idioma → Argentina + español rioplatense, LATAM en fase 2
+- [x] Infraestructura WA → phone farm Androids viejos
+- [x] Wow moment → los 4 priorizados secuencialmente (sección 8.1)
 
-**Confirmar/validar lo siguiente para llegar a v0.3:**
-- [ ] **¿Los $18k incluyen costos variables por usuario (chips, infra puppeteer) o solo fijos del equipo?** (define cuánto de los $18k es realmente "umbral fijo")
-- [ ] **Cantidad de users target a 6 / 12 / 18 meses** (¿estamos alineados con los números de 5.2 o tenés otro plan?)
-- [ ] **Lista final de nombres B** (propuesta inicial en 8)
+**Cerrados en v0.3:**
+- [x] Cost basis confirmado → $18k = solo equipo+infra base, los variables marginales por user son EXTRA (margenes de la spec son correctos)
+- [x] Behavior en grupos → escucha todo + responde si mencionado + privacy notice obligatorio + configurable por grupo
+- [x] Marketing → stage gates: red personal (0-50) → influencers nicho (50-200) → contenido (200-500) → ads (500-1500) → mix (1500+)
+- [x] PM role → Catriel (50-100% tiempo) — single point of decision, cuello de botella a vigilar
+
+**Por cerrar para llegar a v1.0:**
+- [ ] **Lista final de nombres B** (propuesta inicial en 8 — ¿la apruebas / agregás / sacás?)
 - [ ] **Latencia objetivo** y SLA
-- [ ] **Behavior en grupos** (responde solo si mencionado vs siempre escucha vs configurable)
-- [ ] **Edge cases** (cambio de número del user, pérdida de chip, etc.)
-- [ ] **Marketing channel** primario para los primeros 100 users
-- [ ] **Diferenciación específica** vs ChatGPT en WhatsApp (Poe, etc.)
-- [ ] **¿Usuario puede pedir un nombre específico?** o ¿siempre random?
-- [ ] **Equipo & responsabilidades**: quién es el PM/product owner (vos? alguien del equipo?)
+- [ ] **Otros edge cases** (cambio número user, pérdida chip, acciones dañinas, etc. listados en 6.3)
+- [ ] **Diferenciación específica** vs ChatGPT en WhatsApp (Poe, etc.) — necesita 1 sentence killer
+- [ ] **¿Usuario puede pedir nombre específico?** o ¿siempre random?
+- [ ] **Cantidad de users target a 6/12/18 meses** confirmar contra mi proyección (sección 5.2)
 
 ---
 
