@@ -9,7 +9,6 @@
 - Probar la carga de ítems de NB en el módulo de compras.
 - Pagar deuda AFIP (VEP de autónomos / multa que mandó Cristina). Vencimiento: 03/06/2026.
 - Linkear el chat en la app.
-- Resolver SLI.
 - Comprar la mesada (Lavadero).
 - Decirle a Marbe que en la barra superior se tienen que poder usar emojis.
 
@@ -18,6 +17,7 @@
 ## En curso
 
 ## Listo
+- Resolver SLI.
 - Mandarle mensaje o mail a Seba por el tema de Bulli.
 - Arreglar el tema de Bulli (pedido por Seba).
 - Aplicar cambios en el módulo de préstamos de capital según la captura enviada: ![[prestamos_captura.jpg]]
