@@ -134,4 +134,5 @@
 - [[Bily/Productos/Bot-WhatsApp-Nativo|Idea original del producto]]
 - [[Bily/MEMORIA|MEMORIA de Bily — reglas operativas]]
 - [[Claude/Whisper|Stack whisper local reusable]]
+- [[Claude/Image-OCR|Image OCR preflight (tesseract) — reusable para screenshots]]
 - [[Claude/Vault-Wrappers|Patrón vault-wrappers]]
