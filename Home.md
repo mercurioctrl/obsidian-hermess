@@ -65,7 +65,7 @@
 - [[Bily/Inicio|Inicio de Bily]] — Asistente técnico/operativo de Catriel (William/Bily)
   - [[Bily/MEMORIA|Memoria operativa]] · [[Bily/bitacoras/bitacoras|bitácoras]] · [[Bily/kanban/LASET|kanban LASET]]
   - Personas: [[Bily/personas/Catriel Mercurio|Catriel]] · [[Bily/personas/Ayelen Mercurio|Ayelen]] · [[Bily/personas/Sebastian Fontan|Sebastián]] · [[Bily/personas/Guillermo Avila|Guillermo]] · [[Bily/personas/Emanuel Ferreyra|Emanuel]] · [[Bily/personas/Marbe Moreno|Marbe]] · [[Bily/personas/Ezequiel Manzano|Ezequiel]] · [[Bily/personas/Barbara Carrillo|Bárbara]] · [[Bily/personas/Belu Ontivero|Belu]] · [[Bily/personas/Franco Callipo|Franco]] · [[Bily/personas/Alejandra Guidonbono|Alejandra]]
-  - Productos: [[Bily/Productos/Inicio|Índice de Productos]] · [[Bily/Productos/Bot-WhatsApp-Nativo|Bot WhatsApp Nativo]] · [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bot WhatsApp MVP]]
+  - Productos: [[Bily/Productos/Inicio|Índice de Productos]] · [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bot WhatsApp MVP]] · [[Bily/Productos/Bot-WhatsApp-Nativo|Bot WhatsApp Nativo]] · [[Bily/Productos/Bot-WhatsApp-Elevator-Pitch|Elevator Pitch]] · [[Bily/Productos/Bot-WhatsApp-Minteeo-y-Suenio|Minteo y Sueño]] · [[Bily/Productos/Billy-Bot|Billy-Bot]]
 
 ## Planilla Acciones Bully
 
