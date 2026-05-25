@@ -7,7 +7,6 @@
   - Falla al aplicar descuento del 5% (da error por total distinto). Nota: Si se cambia manual el IVA a 10,5% el IVA da bien, pero sigue sin aplicar el descuento (quizás ya está precalculado).
 - Configurar premios y mail del Pac-Man (Libre Opción): 1er puesto Kit Thermal Take, y email automático al completar form con cupón "PacmanDay2026" (10% off, tope $10.000).
 - Probar la carga de ítems de NB en el módulo de compras.
-- Gestionar nuevo documento (DNI) - Perdido en el viaje a Chile. (Turno sacado: 17/06 12:15hs en Parque Avellaneda)
 - Pagar deuda AFIP (VEP de autónomos / multa que mandó Cristina). Vencimiento: 03/06/2026.
 - Linkear el chat en la app.
 - Resolver SLI.
