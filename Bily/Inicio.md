@@ -8,7 +8,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/bitacoras/bitacoras\|Bitácoras]]: Registro cronológico de sesiones de trabajo.
 - [[Bily/Deudores\|Deudores]]: Registro de dinero pendiente de cobro.
 - [[Bily/personas/Inicio\|Personas]] — perfiles del equipo y contactos
-- [[Bily/Productos/Inicio\|Productos]] — ideas y productos en desarrollo
+- [[Bily/Productos/Productos\|Productos]] — ideas y productos en desarrollo
 - [[Bily/kanban/Inicio\|Kanban]] — tableros de proyectos en curso
 - [[Bily/tareas/Inicio\|Tareas]] — lista de tareas pendientes
 - [[Bily/dreams/Inicio\|Sueños]] — registro onírico

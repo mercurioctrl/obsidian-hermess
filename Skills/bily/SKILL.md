@@ -121,7 +121,7 @@ Formato de cada entrada:
 ```markdown
 - [[Bily/personas/Inicio|Personas]] — equipo y contactos
 - [[Bily/bitacoras/bitacoras|Bitácoras]] — registro de sesiones
-- [[Bily/Productos/Inicio|Productos]] — ideas y productos en desarrollo
+- [[Bily/Productos/Productos|Productos]] — ideas y productos en desarrollo
 ```
 
 ### 4. Reportar
