@@ -15,6 +15,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-05-21|2026-05-21]] — Perfiles de equipo, tablero Kanban, sueños de Bily
 - [[Bily/bitacoras/2026-05-22|2026-05-22]] — Pagos del hogar, kanban semanal, errores en facturación, directivas personas
 - [[Bily/bitacoras/2026-05-23|2026-05-23]] — Políticas WhatsApp (grupos/privados), configuración fallback Gemini, pendientes embeddings y Whisper
+- [[Bily/bitacoras/2026-05-24|2026-05-24]] — Día sin actividad, estado de reposo
 
 ## Ver también
 
