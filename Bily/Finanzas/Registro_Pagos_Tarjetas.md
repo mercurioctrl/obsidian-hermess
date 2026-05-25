@@ -10,11 +10,21 @@ El objetivo es mantener el control sobre los montos que se abonan, la deuda pend
 
 ## Resumen Actual
 
-- **Total Pagado (Mes actual):** $0
-- **Total Adeudado:** $0
+- **Total Pagado (Mes actual):** $5.000.000,00 ARS | u$s 2.633,00
+- **Total Adeudado:** $3.355.846,06 ARS | u$s 0,00
 - **Intereses/Extras:** $0
 
 ## Historial de Transacciones
+
+### Mayo 2026
+
+**VISA Santander (XXXX-3890)**
+- **Resumen Original:** $8.357.056,06 ARS | u$s 2.632,12
+- **Pagos Realizados:** $5.000.000,00 ARS | u$s 2.633,00
+- **Saldo Pendiente:** $3.355.846,06 ARS
+- **Vencimiento:** 08/05/2026
+- **Detalle adicional:** El pago total está adherido al débito automático.
+
 *(Los movimientos reportados en el grupo PAGOS se irán listando aquí).*
 
 ---
