@@ -93,7 +93,7 @@ Ver [[Skills/Skills|Skills]].
 ## Claude — Espacio de Claude en la bóveda
 
 - [[Claude/MEMORIA|Memoria de Claude]] — aprendizajes, tareas delegadas y memoria a largo plazo
-  - [[Claude/Whisper|Whisper local]] · [[Claude/Vault-Wrappers|Vault Wrappers]]
+  - [[Claude/Whisper|Whisper local]] · [[Claude/Image-OCR|Image OCR preflight]] · [[Claude/Vault-Wrappers|Vault Wrappers]]
 
 ## Servidores / Infra
 
