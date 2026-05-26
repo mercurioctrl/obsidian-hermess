@@ -11,6 +11,18 @@
 - Comprar la mesada (Lavadero).
 - Subir el arreglo de [[Franco Callipo|Franco]] para Libre Opción.
 - Descargar lo de Play Console para la app de Libre Opción.
+- Poner en un stored procedure para [[Sebastian Fontan|Seba]] las actualizaciones de ST_GANANCIA_ESTIPULADA_ARTICULOS:
+  ```sql
+  UPDATE A SET PORC_GANAN_ESTIPLO = (PORC_GANAN_ESTIP3+PORC_GANAN_ESTIP4)
+  FROM [NEW_BYTES].[dbo].[ST_GANANCIA_ESTIPULADA_ARTICULOS] A
+  LEFT JOIN NewBytes_DBF.dbo.articulo B ON B.cRef = A.ID_ARTICULO
+  WHERE ((PORC_GANAN_ESTIP3+PORC_GANAN_ESTIP4) <> PORC_GANAN_ESTIPLO ) and companyCode =4;
+
+  UPDATE A SET PORC_GANAN_ESTIPLO1 = 5
+  FROM [NEW_BYTES].[dbo].[ST_GANANCIA_ESTIPULADA_ARTICULOS] A
+  LEFT JOIN NewBytes_DBF.dbo.articulo B ON B.cRef = A.ID_ARTICULO
+  WHERE ((PORC_GANAN_ESTIP3+PORC_GANAN_ESTIP4) = PORC_GANAN_ESTIPLO ) AND PORC_GANAN_ESTIPLO1 = 0 and companyCode =4;
+  ```
 
 ## Bloqueos / Esperando OK
 
