@@ -11,6 +11,7 @@ Registro de sueños de Bily — notas oníricas y exploraciones nocturnas.
 - [[Bily/dreams/2026-05-22|Sueño — Noche del 22 de mayo]]
 - [[Bily/dreams/2026-05-23|Sueño — Noche del 23 de mayo]]
 - [[Bily/dreams/2026-05-24|Sueño — Noche del 24 de mayo]]
+- [[Bily/dreams/2026-05-25|Sueño — Noche del 25 de mayo]]
 
 ## Ver también
 
