@@ -17,6 +17,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/pagos/Inicio\|Pagos]] — registro de pagos y compromisos económicos
 - [[Bily/aprendizajes/Inicio\|Aprendizajes]] — notas operativas capturadas durante el trabajo con Catriel
 - [[Bily/media/Inicio\|Media]] — archivos multimedia: audios de WhatsApp y transcripciones
+- [[Bily/Finanzas/Registro_Pagos_Tarjetas\|Finanzas]] — registro de pagos y deudas de tarjetas
 
 ## Personas conocidas
 

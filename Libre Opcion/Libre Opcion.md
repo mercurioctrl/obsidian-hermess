@@ -81,6 +81,10 @@ Bug crítico resuelto: visitar una ficha con contenido A+ rompía la navegación
 - [[Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto|Gestión de imágenes reseller (frontend)]]
 - [[Libre Opcion/tareas/APP - Fix - Tooltip de codigo postal aparece al cargar el sitio|Fix tooltip código postal]]
 - [[Libre Opcion/tareas/API - Refactor - Migrar recurso de preguntas y respuestas a v4|Migrar preguntas y respuestas a v4]]
+- [[Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría|Recategorizar productos sin categoría]]
+- [[Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos|Estadísticas de categorización de productos]]
+- [[Libre Opcion/tareas/API - Feat - CRUD de campañas|CRUD de campañas]]
+- [[Libre Opcion/tareas/APP - Feat - Gestión de campañas|Gestión de campañas (frontend)]]
 
 ## Contexto comercial
 
