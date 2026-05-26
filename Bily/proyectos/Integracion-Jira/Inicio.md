@@ -1,0 +1,259 @@
+---
+tags: [proyecto, integracion, jira, bily]
+estado: diseno
+creado: 2026-05-26
+owner: Catriel
+---
+
+# Integración Jira para Bily (y agentes futuros)
+
+> Diseño técnico completo. Objetivo: que **Bily responda sobre tickets/sprints por WhatsApp** y que la capa quede **portable** para reutilizarla desde Claude Code u otros agentes (no acoplada a OpenClaw).
+
+## 1. Objetivos
+
+1. **Bily lee Jira** — Catriel pregunta por WhatsApp ("¿qué tengo hoy?", "estado de EXP-553") y Bily responde con datos vivos.
+2. **Bily escribe en Jira** — dictado por WhatsApp: crear ticket, transicionar, comentar, asignar.
+3. **Bily avisa proactivamente** — webhooks de Jira → mensaje WhatsApp ("te asignaron COM-300", "se cerró el sprint EXP-S42").
+4. **Portable** — la capa de acceso a Jira es invocable desde Claude Code, otros agentes, scripts cron — sin requerir OpenClaw.
+
+## 2. Workspace objetivo
+
+- **URL:** `https://bluinc.atlassian.net`
+- **Proyectos activos detectados** (de la bóveda): EXP (Expedición), COM, ASUS, y otros.
+- **Auth:** API Token de Atlassian (email + token Basic Auth). Generar en `id.atlassian.com/manage-profile/security/api-tokens`.
+
+## 3. Arquitectura (4 capas + 1 transversal)
+
+```
+                           ┌──────────────────────────────┐
+   L3 ─ Consumidores       │ OpenClaw   Claude Code  cron │
+                           │ plugin     skill        jobs │
+                           └────┬─────────────┬────────┬──┘
+                                ↓             ↓        ↓
+   L2 ─ CLI wrappers       ┌─────────────────────────────┐
+        (~/bin/jira-*)     │ jira-issue  jira-search ... │
+                           └────────────┬────────────────┘
+                                        ↓
+   L1 ─ Sidecar local      ┌─────────────────────────────┐
+        :9002 (opcional)   │ cache · rate-limit · vault  │
+                           │ sync · token mgmt           │
+                           └────────────┬────────────────┘
+                                        ↓
+   L0 ─ Cliente Jira       ┌─────────────────────────────┐
+        (jiralib)          │ auth · paginación · JQL     │
+                           └────────────┬────────────────┘
+                                        ↓
+                              Jira Cloud REST v3
+                                        │
+                                        │  (webhooks salientes)
+                                        ↓
+   T  ─ Webhook receiver   ┌─────────────────────────────┐
+        :9003              │ HMAC · debouncing · ruteo   │
+                           └────────────┬────────────────┘
+                                        ↓
+                              OpenClaw API → WhatsApp
+```
+
+**Decisión clave:** los wrappers L2 hablan **preferentemente** con el sidecar L1, pero si `JIRA_SIDECAR_URL` no está seteada caen directo a L0 → Jira REST. Esto hace al skill portable a máquinas sin sidecar (solo necesita el wrapper + creds).
+
+## 4. Componentes en detalle
+
+### L0 · `jiralib` (cliente Python, portable)
+
+- **Ubicación propuesta:** `~/lib/jiralib/` (módulo Python instalable con `pip install -e`).
+- **Responsabilidad:** auth, paginación, helpers JQL, retry/backoff sobre 429.
+- **Dependencias:** solo `httpx` (sin SDK de Atlassian — son pesados y obsoletos).
+- **API mínima:**
+  ```python
+  from jiralib import Jira
+  j = Jira()  # lee env JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN
+  j.issue("EXP-553")
+  j.search("assignee = currentUser() AND statusCategory != Done")
+  j.create(project="COM", summary="...", description="...", issuetype="Task")
+  j.transition("EXP-553", to="Done")
+  j.comment("EXP-553", "Listo")
+  j.sprints(board_id=42, state="active")
+  ```
+- **Por qué Python y no Node:** ya hay precedente con whisper (`~/whisper/sidecar.py`), Catriel cómodo, mejor para scripting cron. Plugin OpenClaw queda en Node igual (habla con sidecar por HTTP).
+
+### L1 · `jira-sidecar` :9002 (servicio local, opcional)
+
+- **Ubicación:** `~/jira/sidecar.py` + systemd `--user` unit (espejo de whisper).
+- **Por qué existe:**
+  - **Cache** por TTL (default 60s para issues, 300s para searches) — Bily pregunta lo mismo 3 veces seguidas y no quemamos rate limit.
+  - **Rate limit interno** — Jira Cloud: 10 req/s por usuario. Sidecar limita a 8/s con burst 20.
+  - **Token mgmt** — un solo lugar lee creds del disco, los wrappers no las ven.
+  - **Vault sync** — cada issue consultado se persiste como `Bily/jira/<KEY>.md` (configurable). Habilita lectura offline desde cualquier agente que tenga acceso a la bóveda.
+- **Endpoints:**
+  ```
+  GET  /issue/<key>                 → issue completo (cacheado)
+  GET  /search?jql=<jql>&fields=... → array de issues
+  POST /issue                       → crea (body JSON)
+  POST /transition/<key>            → transiciona ({to: "Done"})
+  POST /comment/<key>               → comenta ({body: "..."})
+  GET  /my?status=open              → mis tickets
+  GET  /sprint/active?board=<id>    → sprint activo
+  GET  /health
+  ```
+- **Bind:** `127.0.0.1:9002` (no expuesto a LAN — espejo de la decisión de whisper).
+
+### L2 · Wrappers `jira-*` en `~/bin/` (espejo de `vault-*`)
+
+- **Por qué existen:** mismo motivo que `vault-*` — Bily cuando cae a deepseek alucina URLs/headers. Los wrappers eliminan el vector. Ver [[vault-wrappers]] y [[whisper-local]] punto 7.
+- **Comandos:**
+  | Cmd | Qué hace |
+  |---|---|
+  | `jira-issue <KEY>` | JSON del ticket (campos clave por defecto, `--full` para todo) |
+  | `jira-search "<JQL>"` | Array JSON de issues |
+  | `jira-my [--status open\|all]` | Mis tickets activos |
+  | `jira-sprint [--board <id>]` | Sprint activo + issues |
+  | `jira-create <PROJ> "<summary>" [--desc ...] [--type Task]` | Crea ticket, devuelve KEY |
+  | `jira-transition <KEY> "<estado>"` | Mueve ticket (resuelve `transitionId` automágicamente) |
+  | `jira-comment <KEY> "<texto>"` | Agrega comentario |
+  | `jira-assign <KEY> <email\|me>` | Reasigna |
+- **Comportamiento:** stdout = JSON o texto plano según flag; stderr = errores; exit 0 si OK.
+- **Detección de sidecar:** si `JIRA_SIDECAR_URL` está seteada → HTTP al sidecar. Else → Python script directo usando `jiralib`. **Esto es lo que hace al skill portable.**
+
+### L3a · Plugin OpenClaw `jira-context-preflight`
+
+- **Patrón:** copia exacta del `whisper-audio-preflight` + `image-ocr-preflight`. Ver [[image-ocr-preflight]] y [[openclaw-plugin-build]].
+- **Hook `message_received`:**
+  1. Parsear mensaje WhatsApp con regex:
+     - Ticket keys: `\b([A-Z]{2,10})-(\d+)\b` → fetch issues.
+     - Triggers JQL: "qué tengo hoy", "mis tickets", "mi sprint", "qué hay nuevo en <proj>" → fetch search apropiada.
+  2. Fire-and-forget `fetch('http://127.0.0.1:9002/...')`, cachear promise por `sessionKey` (TTL 5min, igual que whisper).
+- **Hook `before_prompt_build`:**
+  1. Await las promises pendientes.
+  2. `prependContext` con bloque enriquecido:
+     ```
+     [Contexto Jira inyectado preflight]
+     EXP-553 "Validar carga masiva" · status=In Review · assignee=Guille · sprint=EXP-S42
+     Última actividad: hace 2h — Guille comentó "Esperando QA"
+     URL: https://bluinc.atlassian.net/browse/EXP-553
+     [fin contexto Jira]
+     ```
+  3. El LLM responde con datos frescos sin gastar tool calls.
+- **Por qué hook y no skill/tool:** mismo motivo que OCR — Bily (con fallback a deepseek) **no elige** llamar herramientas confiables. El hook elimina la decisión del modelo. Ver [[image-ocr-preflight]] "Why hook y no skill".
+- **Writes (crear/transicionar/comentar):** **NO** se ejecutan automáticamente desde el hook. El hook solo enriquece contexto. Para writes, el LLM emite una llamada al wrapper `jira-create` etc. via Bash tool — y un hook `before_tool_use` puede pedir confirmación a Catriel por WhatsApp ("¿Confirmás crear COM-301 'X' asignado a vos? sí/no").
+
+### L3b · Skill de Claude Code (portable)
+
+- **Ubicación:** `~/.claude/skills/jira/` con `SKILL.md` describiendo triggers ("/jira", "estado de", "ticket X").
+- **Implementación:** invoca los wrappers `jira-*`. Si la máquina no tiene wrappers instalados, el skill incluye un script `setup-jira.sh` que:
+  1. Pide email + token interactivo.
+  2. Los guarda en `~/.config/jira/credentials` (chmod 600).
+  3. Instala `jiralib` (`pip install`) y los wrappers (`cp ~/bin/jira-* ...`).
+- **Esto cumple el requisito de portabilidad** que pediste: el skill se mueve entre máquinas y se autoconfigura.
+
+### L3c · MCP de Atlassian (futuro / opcional)
+
+- Atlassian publica un MCP oficial (ya cargado en mi entorno como `mcp__claude_ai_Atlassian__*`).
+- **Cuándo usarlo:** queries ad-hoc complejas desde Claude Code donde no querés mantener un wrapper.
+- **Cuándo NO:** flujo de WhatsApp/Bily (latencia + costo de tool call por consulta es prohibitivo a escala).
+
+### T · Webhook receiver `:9003` (notificaciones proactivas)
+
+- **Servicio:** micro-server Python (FastAPI) en `~/jira/webhook.py`, systemd `--user`.
+- **Endpoint:** `POST /jira/event/<secret>` (el `<secret>` actúa como shared key — Jira Cloud no firma HMAC por defecto).
+- **Eventos suscriptos** (configurados en Jira Settings → System → Webhooks):
+  - `jira:issue_updated` (filtrado a status changes y assignee changes)
+  - `jira:issue_created` (filtrado a assignee=Catriel o mention=Catriel)
+  - `comment_created` (filtrado a mentions o issues donde Catriel es assignee/reporter)
+  - `sprint_started` / `sprint_closed`
+- **Debouncing:** ventana de 30s — si el mismo issue cambia 5 veces seguidas, una sola notificación.
+- **Ruteo:** POST a OpenClaw API → mensaje WhatsApp a Catriel con resumen + URL.
+- **Exposición externa:** depende del setup (ver decisiones abiertas).
+
+## 5. Modelo de datos en la bóveda
+
+Cada ticket consultado se persiste como `Bily/jira/<KEY>.md`:
+
+```markdown
+---
+jira_key: EXP-553
+status: In Review
+assignee: Guille
+sprint: EXP-S42
+updated: 2026-05-26T14:22:00Z
+project: EXP
+url: https://bluinc.atlassian.net/browse/EXP-553
+tags: [jira, EXP, in-review]
+---
+
+# EXP-553 · Validar carga masiva
+
+**Descripción:** ...
+
+## Comentarios
+- @Guille (2h): Esperando QA
+- @Catriel (1d): Probado, ok
+
+## Sincronizado
+- Última sync: 2026-05-26 14:22 ART
+- TTL cache sidecar: 60s
+```
+
+**Beneficios:**
+- Otros agentes (incluido Claude Code en cualquier proyecto) leen Jira **sin tener acceso al token**.
+- Búsqueda full-text vía `vault-search "EXP-553"`.
+- Linkable con `[[EXP-553]]` desde cualquier nota.
+
+**Costo:** suma notas al grafo Obsidian. Mitigación: carpeta `Bily/jira/` excluida del graph view por default.
+
+## 6. Seguridad
+
+| Tema | Decisión |
+|---|---|
+| API token | `~/.config/jira/credentials` chmod 600. **Nunca** en repo ni en CLAUDE.md. |
+| Bind sidecar | `127.0.0.1` only, no LAN. |
+| Webhook auth | Shared secret en path + IP allowlist (rango Atlassian Cloud). |
+| Writes destructivos | Hook `before_tool_use` pide confirmación WhatsApp antes de transitions/deletes. |
+| Audit log | Sidecar loguea toda operación con timestamp + user-agent del wrapper invocador en `~/jira/logs/audit.log`. |
+| Rotación token | Recordatorio cron cada 6 meses (Atlassian no fuerza, pero buena práctica). |
+
+## 7. Roadmap (fases entregables)
+
+| F | Entregable | Tiempo estimado | Valor |
+|---|---|---|---|
+| **F1** | `jiralib` + sidecar mínimo + wrappers read-only (`jira-issue`, `jira-search`, `jira-my`). | ~4-6h | Probar desde terminal, validar creds y JQL. |
+| **F2** | Plugin OpenClaw `jira-context-preflight` con detección de ticket keys + queries comunes. | ~3h | **Bily ya contesta sobre tickets por WhatsApp.** |
+| **F3** | Wrappers write (`jira-create`, `jira-transition`, `jira-comment`, `jira-assign`) + hook de confirmación. | ~4h | Catriel dicta acciones por WhatsApp. |
+| **F4** | Vault sync (sidecar persiste cada issue tocado como nota Markdown). Skill Claude Code. | ~3h | Portabilidad real, otros agentes consumen. |
+| **F5** | Webhook receiver + notificaciones proactivas filtradas. | ~6h | Bily avisa sin que Catriel pregunte. |
+| **F6** | Polish: cache invalidation inteligente, dashboards de uso, MCP fallback. | open-ended | Mantenimiento a largo plazo. |
+
+**Total camino crítico (F1-F3):** ~13h de implementación. F1 sola ya rompe el cuello de botella actual.
+
+## 8. Decisiones abiertas (necesito input de Catriel)
+
+1. **¿Lenguaje del sidecar?** → Recomiendo Python (precedente whisper, ergonomía scripting). Alternativa: Node (consistencia con plugins OpenClaw).
+2. **¿Cachear issues como notas Markdown en la bóveda?** → Recomiendo sí, en `Bily/jira/`, con tag exclusión del graph. Habilita el caso "skill portable". Alternativa: SQLite local en `~/.cache/jira/`.
+3. **¿Webhook receiver expuesto cómo?** Opciones:
+   - **a)** Cloudflared tunnel (si ya tenés uno) — Bily/Blu tiene Cloudflare?
+   - **b)** Tailscale Funnel.
+   - **c)** Atlassian Forge app (más profesional pero más overhead).
+   - **d)** Posponer F5 hasta resolver esto.
+4. **¿Granularidad notificaciones proactivas?** → Recomiendo: solo si `assignee == Catriel` OR `mention == Catriel` OR `sprint_changed AND board ∈ {boards de Catriel}`. Sin esto, firehose.
+5. **¿Auto-confirmar writes o pedir confirmación siempre?** → Recomiendo confirmar SOLO para: transitions, deletes, assignment changes. Comentarios y creación pueden ir auto (son reversibles).
+6. **¿Convención de KEY parsing?** En WhatsApp Catriel suele tipear `exp 553` o `EXP553` además de `EXP-553`. ¿Normalizamos? → Recomiendo sí, regex tolerante.
+
+## 9. Riesgos
+
+- **Rate limit Jira (10 req/s)** — mitigado por cache sidecar. Pero si Bily entra en bucle de búsquedas, puede tocar el techo. Sidecar tiene rate limit interno.
+- **Token leak** — único punto sensible. Está en `~/.config/jira/credentials` chmod 600, fuera de CLAUDE.md y de cualquier repo.
+- **OpenClaw bloquea fetch a localhost?** → Probar early. El plugin whisper usa `fetch('http://127.0.0.1:9001/...')` y funciona desde abril 2026, así que estamos OK.
+- **Webhook spam** — mitigado por debouncing 30s + filtros pre-receiver.
+- **Sincronización stale** — si Catriel edita en Jira UI, el cache de 60s puede mostrar versión vieja. Aceptable. Si molesta, baja TTL a 15s o agregar invalidación por webhook.
+
+## 10. Referencias internas
+
+- Patrón sidecar + plugin OpenClaw: [[whisper-local]]
+- Plugin preflight (hook que injecta contexto): [[image-ocr-preflight]]
+- Wrappers `~/bin/`: [[vault-wrappers]]
+- Build de plugins OpenClaw: [[openclaw-plugin-build]]
+- Sesiones de OpenClaw (para entender flujo de mensajes WhatsApp): [[openclaw-sessions]]
+- Workspace Blu: `Blu/bluMiniErp/Base de Datos.md` (tabla `proyecto_jira_boards`)
+
+---
+
+**Próximo paso sugerido:** responder las 6 decisiones abiertas y arrancar F1 (4-6h, valor inmediato comprobable desde terminal).
