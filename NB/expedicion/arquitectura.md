@@ -1,4 +1,4 @@
-# Arquitectura — Expedición
+	# Arquitectura — Expedición
 
 ## Diagrama general
 
