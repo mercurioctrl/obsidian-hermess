@@ -9,7 +9,6 @@
 - Pagar deuda AFIP (VEP de autónomos / multa que mandó Cristina). Vencimiento: 03/06/2026.
 - Linkear el chat en la app.
 - Comprar la mesada (Lavadero).
-- Decirle a Marbe que en la barra superior se tienen que poder usar emojis.
 
 ## Bloqueos / Esperando OK
 
