@@ -9,6 +9,8 @@
 - Pagar deuda AFIP (VEP de autónomos / multa que mandó Cristina). Vencimiento: 03/06/2026.
 - Linkear el chat en la app.
 - Comprar la mesada (Lavadero).
+- Subir el arreglo de [[Franco Callipo|Franco]] para Libre Opción.
+- Descargar lo de Play Console para la app de Libre Opción.
 
 ## Bloqueos / Esperando OK
 
