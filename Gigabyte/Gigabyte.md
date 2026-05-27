@@ -6,16 +6,16 @@ Proyectos y sistemas para la marca **Gigabyte** (hardware IT).
 
 ### gigaErp
 
-Sistema interno de gestión de distribuidores, marketing, mercadería, catálogo, órdenes de venta, facturación y tareas.
+Sistema interno de gestión de distribuidores, marketing, mercadería, catálogo, órdenes de venta, facturación, cuenta corriente y tareas.
 
 - [[gigaErp/gigaErp|gigaErp — Sistema de gestión]] — `http://localhost:8824`
 
 **Cheatsheet y troubleshooting:**
-- [[gigaErp/troubleshooting|Troubleshooting]] — gotchas (Sanctum, optimize:clear, nginx, html2canvas) con causa y fix
+- [[gigaErp/troubleshooting|Troubleshooting]] — gotchas (Sanctum, optimize:clear, nginx, Nuxt routing) con causa y fix
 - [[gigaErp/stack|Stack]] — tecnologías, versiones, comandos de deploy
 
 **Arquitectura:**
-- [[gigaErp/arquitectura|Arquitectura]] — estructura, patrones backend/frontend, rutas, modelos
+- [[gigaErp/arquitectura|Arquitectura]] — estructura, patrones backend/frontend, rutas, módulos, convenciones
 - [[gigaErp/design-system|Design System]] — paleta hex, tipografía, layout, botones
 - [[gigaErp/componentes-ui|Componentes UI]] — Modal, DataTable, FormField, StatusBadge
 
@@ -25,6 +25,6 @@ Sistema interno de gestión de distribuidores, marketing, mercadería, catálogo
 - [[gigaErp/modulos/invoice-preview|Invoice Preview]] — HTML preview estilo Blu + PDF cliente-side
 
 **Contexto y registros:**
-- [[gigaErp/contexto|Contexto]] — reglas de negocio, distribuidores, usuarios seed, TODOs
+- [[gigaErp/contexto|Contexto]] — reglas de negocio, distribuidores, saldos cc, nomenclatura UI, TODOs
 - [[gigaErp/memoria|Memoria]] — convenciones críticas, endpoints, debugging checklist
 - [[gigaErp/changelog|Changelog]] — historial de construcción sesión a sesión
