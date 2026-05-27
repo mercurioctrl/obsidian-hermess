@@ -1,3 +1,39 @@
+
+## 2026-05-27 — Dashboard expandido: tareas, calendario, OV, productos por distri, cuentas corrientes
+
+### Nuevos widgets en `frontend/pages/index.vue`
+
+Se agregaron 5 secciones al dashboard principal, manteniendo el estilo de la UI existente:
+
+- **Tareas — estado actual**: 4 contadores por estado (Por hacer / En curso / Ready for QA / Listo) con barra proporcional + alerta roja si hay tareas vencidas (deadline < hoy, estado ≠ LISTO)
+- **Próximos 14 días** (calendario): lista de eventos ordenados por fecha con línea de color lateral, tipo (EVENTO / FECHA_COMERCIAL) y badge «Hoy / Mañana / en Xd»
+- **Últimas órdenes de venta**: tabla compacta de las últimas 8 OV con número, cliente, fecha, badge de estado y total USD
+- **Cuentas corrientes / Deudores**: 2 cards resumen (deuda total + clientes con deuda) + top 5 deudores por monto pendiente
+- **Productos por distribuidor**: barra proporcional con cantidad de SKUs por cada distribuidor (top 6)
+
+### Backend — `DashboardController` (`/api/dashboard`)
+
+Nuevos campos en la respuesta:
+
+```json
+proximos_eventos: [{ id, titulo, tipo, fecha_inicio, color, todo_dia }]  // EventoCalendario, 14 días
+tareas_stats: { POR_HACER, EN_CURSO, READY_FOR_QA, LISTO, vencidas }
+ultimas_ordenes: [{ id, numero, cliente, fecha, estado, total_usd }]     // last 8
+productos_por_distri: [{ nombre, cantidad }]                              // top 6 por SKU count
+cuentas_corrientes: { total_deuda, clientes_con_deuda, top_deudores }
+```
+
+### Fix: enum keyBy en colecciones Eloquent
+
+`->get()->keyBy('estado')` falla cuando el campo tiene cast a enum (PHP trata el enum como objeto, no string).
+Fix: `->keyBy(fn($v) => $v->estado->value)`
+
+Este patrón quedó documentado en [[arquitectura]] y [[memoria]].
+
+**Commit:** `db6bf60`
+Archivos: `backend/app/Http/Controllers/DashboardController.php`, `frontend/pages/index.vue`
+
+---
 ## 2026-05-27 — Línea de crédito + Notas de crédito + fixes UI
 
 ### Línea de crédito por distribuidor
