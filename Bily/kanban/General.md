@@ -1,6 +1,7 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- Daily: Preguntarle a [[Ezequiel Manzano|Ezequiel]] "cómo descargo las facturas de facturu".
 - Revisar errores de carga FC Solytec 49503 (Carla Carpinteri - NB): ![[captura_nb_1.jpg]] ![[captura_nb_2.jpg]] [[factura_solytec_nb.pdf]]
   - No trae percepciones (AFIP no las levanta, exige PDF físico).
   - IVA precargado en 10% en lugar de 10,5%.
