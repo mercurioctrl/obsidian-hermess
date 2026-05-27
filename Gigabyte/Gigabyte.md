@@ -15,13 +15,13 @@ Sistema interno de gestión de distribuidores, marketing, mercadería, catálogo
 - [[gigaErp/stack|Stack]] — tecnologías, versiones, comandos de deploy
 
 **Arquitectura:**
-- [[gigaErp/arquitectura|Arquitectura]] — estructura, patrones backend/frontend, rutas, módulos, convenciones
+- [[gigaErp/arquitectura|Arquitectura]] — estructura, patrones backend/frontend, rutas, módulos, convenciones, importaciones XLSX
 - [[gigaErp/design-system|Design System]] — paleta hex, tipografía, layout, botones
 - [[gigaErp/componentes-ui|Componentes UI]] — Modal, DataTable, FormField, StatusBadge
 
 **Módulos de negocio:**
-- [[gigaErp/modulos/productos|Productos]] — catálogo, 4 listas de precio, SKU per-distribuidor
-- [[gigaErp/modulos/ordenes-venta|Órdenes de Venta]] — pipeline BORRADOR → FACTURADA
+- [[gigaErp/modulos/productos|Productos]] — catálogo, 4 listas de precio, SKU per-distribuidor, importaciones XLSX
+- [[gigaErp/modulos/ordenes-venta|Órdenes de Venta]] — pipeline BORRADOR → FACTURADA, validación stock en depósito
 - [[gigaErp/modulos/invoice-preview|Invoice Preview]] — HTML preview estilo Blu + PDF cliente-side
 
 **Contexto y registros:**

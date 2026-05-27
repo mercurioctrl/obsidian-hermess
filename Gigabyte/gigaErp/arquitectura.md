@@ -203,3 +203,29 @@ No hay tabla separada para distribuidores. Campo `tipo` en `clientes`.
 
 - [[gigaErp]] · [[stack]] · [[changelog]] · [[contexto]] · [[memoria]]
 - [[modulos/productos]] · [[modulos/ordenes-venta]] · [[modulos/invoice-preview]]
+
+## Módulo Importaciones de Stock (XLSX)
+
+Flujo de 3 pasos para ingresar stock al depósito desde un archivo Excel.
+
+### Endpoints
+
+- `POST /api/mercaderia/importaciones/parsear` — Recibe archivo xlsx/xls/csv, lo guarda en storage con UUID, devuelve headers de la primera fila + muestra de filas para mapeo
+- `POST /api/mercaderia/importaciones/procesar` — Recibe `staged_id`, `deposito_id` y mapeo (`col_codigo`, `col_cantidad`), ejecuta upsert en `stock_deposito`
+
+### Modelos
+
+- `ImportacionMercaderia` — Registro de cada carga (fecha, depósito, archivo)
+- `ItemImportacionMercaderia` — Líneas de trazabilidad por producto
+
+### Frontend (`frontend/pages/mercaderia/importaciones/`)
+
+- `index.vue` — listado de importaciones con tab "Subir Masivo"
+- `nueva.vue` — paso 1: upload archivo → paso 2: mapeo de columnas → paso 3: confirmar
+- `[id].vue` — detalle de una importación
+
+**Dependencia backend:** `phpoffice/phpspreadsheet` (ya instalado en el container)
+
+## Ver también
+
+- [[contexto]] · [[modulos/productos]] · [[stack]]

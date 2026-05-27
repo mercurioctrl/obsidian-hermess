@@ -35,8 +35,8 @@
 ## Gigabyte
 
 - [[Gigabyte/Gigabyte|Gigabyte]]
-  - [[Gigabyte/gigaErp/gigaErp|gigaErp]] — ERP Gigabyte: distribuidores, catálogo, órdenes de venta, invoice preview
-    - [[Gigabyte/gigaErp/troubleshooting|troubleshooting]] · [[Gigabyte/gigaErp/arquitectura|arquitectura]] · [[Gigabyte/gigaErp/design-system|design system]] · [[Gigabyte/gigaErp/componentes-ui|componentes UI]]
+  - [[Gigabyte/gigaErp/gigaErp|gigaErp]] — ERP Gigabyte: distribuidores, stock, importaciones XLSX, cuenta corriente, órdenes de venta + validación stock, invoice
+    - [[Gigabyte/gigaErp/troubleshooting|troubleshooting]] · [[Gigabyte/gigaErp/arquitectura|arquitectura]] · [[Gigabyte/gigaErp/contexto|contexto]] · [[Gigabyte/gigaErp/memoria|memoria]]
     - Módulos: [[Gigabyte/gigaErp/modulos/productos|productos]] · [[Gigabyte/gigaErp/modulos/ordenes-venta|órdenes de venta]] · [[Gigabyte/gigaErp/modulos/invoice-preview|invoice preview]]
 
 ## Hogar
