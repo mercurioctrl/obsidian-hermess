@@ -156,3 +156,70 @@ Archivos: `backend/resources/views/ventas/invoice-preview.blade.php` (nuevo),
 `backend/Dockerfile`, `backend/public/logos/aorus_logo_black.png` (nuevo),
 `frontend/public/logos/aorus_logo_black.png` (nuevo),
 `frontend/pages/ordenes-venta/[id].vue`.
+
+## 2026-05-26 — Cuenta corriente de distribuidores + reorganización de navegación
+
+### Módulo Cuenta Corriente (`movimientos_cuenta`)
+
+Nuevo módulo completo de estado de cuenta por distribuidor.
+
+**Backend:**
+- Migración `0030_create_movimientos_cuenta_table`: tabla `movimientos_cuenta` con `cliente_id`, `tipo` (enum), `referencia`, `concepto`, `fecha`, `debe_usd`, `haber_usd`, `venta_id` nullable
+- Enum `TipoMovimiento`: `FACTURA`, `PAGO`, `NOTA_CREDITO`, `AJUSTE`
+- Modelo `MovimientoCuenta` con relaciones a `Cliente` y `Venta`
+- Controller `CuentaCorrienteController@index`: devuelve movimientos con saldo acumulado corriente + resumen (debe_usd, haber_usd, saldo_usd)
+- Ruta `GET /clientes/{cliente}/cuenta-corriente`
+- `ClienteController@index`: usa `withSum` para calcular saldo de cada distribuidor en una sola query
+- `ClienteResource`: nuevo campo `saldo_usd` = `debe_total_usd - haber_total_usd`
+- `CuentaCorrienteSeeder`: datos de fantasía para los 4 distribuidores (Elit, New Bytes, Invid, Air) con historial desde 2025-Q3; facturas, pagos, notas de crédito y ajustes
+
+**Saldos sembrados:**
+
+| Distribuidor | Facturado | Pagado/NC | Saldo |
+|---|---|---|---|
+| Elit | $104,660 | $96,350 | $8,310 |
+| New Bytes | $50,705 | $43,525 | $7,180 |
+| Invid | $76,670 | $70,910 | $5,760 |
+| Air | $32,695 | $28,250 | $4,445 |
+
+**Frontend:**
+- `clientes/index.vue`: columna "Saldo" con color ámbar (a cobrar) / verde (a favor), botones de acción separados (fondo marketing, cuenta corriente, editar, eliminar)
+- Ruta Nuxt reorganizada: `[id].vue` → `[id]/index.vue` para habilitar ruta hija sin conflicto de layout
+- `clientes/[id]/index.vue`: botón "Cuenta corriente" en header
+- `clientes/[id]/cuenta-corriente.vue` (nueva página): 3 cards resumen + tabla con Fecha · Tipo · Referencia · Concepto · Debe · Haber · Saldo corriente acumulado
+
+**Fix importante:** La API devuelve `{ data: {...} }` para recursos individuales. Todos los `api.get()` de detail pages deben usar `c?.data ?? c` para desempaquetar.
+
+Archivos: `backend/database/migrations/0030_*`, `backend/app/Enums/TipoMovimiento.php`, `backend/app/Models/MovimientoCuenta.php`, `backend/app/Http/Controllers/CuentaCorrienteController.php`, `backend/database/seeders/CuentaCorrienteSeeder.php`, `frontend/pages/clientes/[id]/cuenta-corriente.vue`
+
+### Reorganización de sidebar y secciones
+
+**Renombres:**
+- "Mercadería" → **"Stock Bodega"** (enlaza a `/mercaderia/stock` directamente)
+- "Existencias" → **"Stock Distri"**
+- "Productos" → **"APIs Distri"**
+- "Marketing" (sección sidebar) → **"Fondo"** (ítem de menú)
+- "Importaciones" → **"Subir Masivo"**
+- Subtítulo distribuidores: "Agencias, estudios y distribuidores" → **"Mayoristas"**
+
+**Estructura sidebar nueva:**
+```
+Principal:    Dashboard · Distribuidores · Proveedores
+Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Órdenes de Venta
+Marketing:    Fondo · Calendario · Tareas
+Admin:        Configuración (solo admin)
+```
+
+**Stock Bodega — navegación por tabs:**
+- `mercaderia/index.vue` redirige automáticamente a `/mercaderia/stock`
+- Las 3 subpáginas (stock, depósitos, importaciones) tienen tabs consistentes: **Stock | Depósitos | Subir Masivo**
+- Tab activo: fondo blanco con sombra sobre pill gris
+- Se quitó la tabla de ventas que antes aparecía en `/mercaderia`
+
+**Stock Bodega — buscador y filtros:**
+- Buscador full-text (nombre, SKU, código distribuidor) con debounce 300ms
+- Filtro **Todos / Con stock / Sin stock** (parámetros `stock=con_stock|sin_stock`)
+
+Archivos: `frontend/layouts/default.vue`, `frontend/pages/mercaderia/index.vue`, `frontend/pages/mercaderia/stock/index.vue`, `frontend/pages/mercaderia/depositos/index.vue`, `frontend/pages/mercaderia/importaciones/index.vue`
+
+---

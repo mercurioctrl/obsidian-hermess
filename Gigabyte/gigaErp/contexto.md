@@ -16,12 +16,12 @@ Moneda: USD exclusivamente.
 
 ## Distribuidores (Clientes con tipo='distribuidor')
 
-| Nombre | Ciudad | Fondo 2026 | Productos cargados |
-|--------|--------|------------|-------------------|
-| Elit | Buenos Aires | $50,000 | — |
-| New Bytes | Córdoba | $40,000 | 206 productos |
-| INVID | Mendoza | $35,000 | 41 productos |
-| Air | Rosario | $30,000 | — |
+| Nombre | Ciudad | Fondo 2026 | Saldo cc |
+|--------|--------|------------|----------|
+| Elit | Buenos Aires | $50,000 | $8,310 a cobrar |
+| New Bytes | Córdoba | $40,000 | $7,180 a cobrar |
+| INVID | Mendoza | $35,000 | $5,760 a cobrar |
+| Air | Rosario | $30,000 | $4,445 a cobrar |
 
 > Los distribuidores son **Clientes** con `tipo='distribuidor'`. No son una entidad separada.
 
@@ -35,12 +35,27 @@ Moneda: USD exclusivamente.
 | Tech Events SRL | Organización de Eventos |
 | Media Digital Pro | Agencia Digital |
 
+## Nomenclatura de secciones (nombres en la UI)
+
+| URL | Nombre en sidebar | Sección |
+|-----|------------------|---------|
+| `/clientes` | Distribuidores | Principal |
+| `/mercaderia/stock` | Stock Bodega | Operaciones |
+| `/existencias` | Stock Distri | Operaciones |
+| `/productos` | APIs Distri | Operaciones |
+| `/ordenes-venta` | Órdenes de Venta | Operaciones |
+| `/marketing` | Fondo | Marketing |
+| `/calendario` | Calendario | Marketing |
+| `/tareas` | Tareas | Marketing |
+
+> La subsección "Importaciones" dentro de Stock Bodega se llama **"Subir Masivo"** en tabs y botón.
+
 ## Catálogo de productos — dos códigos
 
-| Campo | Descripción | Ejemplo INVID | Ejemplo NB |
-|-------|-------------|---------------|------------|
-| `codigo_distribuidor` | Código interno del distribuidor | `0416990` | `GP-P550SS` |
-| `sku` | Modelo oficial del fabricante (Gigabyte) | `GP-P550SS` | `GP-P550SS` |
+| Campo | Descripción | Ejemplo INVID |
+|-------|-------------|---------------|
+| `codigo_distribuidor` | Código interno del distribuidor | `0416990` |
+| `sku` | Modelo oficial del fabricante (Gigabyte) | `GP-P550SS` |
 
 - SKU es único **por distribuidor** (constraint 0025), no globalmente
 
@@ -48,10 +63,15 @@ Moneda: USD exclusivamente.
 
 - **Logo sidebar**: `aorus_logo_black.svg` en `layouts/default.vue`
 - **Topbar**: texto "Brand ERP"
-- Logos en `frontend/public/logos/`: `aorus_logo_black.svg`, `gigabyte_logo_clean.svg`
-- `gigabyte_logo_clean.svg` embebido como base64 en el PDF de invoice
+- Subtítulo distribuidores: "Mayoristas"
 
 ## Reglas de negocio
+
+### Cuenta corriente de distribuidores
+- Tabla `movimientos_cuenta`: `tipo` (FACTURA, PAGO, NOTA_CREDITO, AJUSTE), `debe_usd`, `haber_usd`
+- Saldo = suma(debe) - suma(haber). Positivo = cliente debe. Negativo = cliente tiene crédito.
+- El listado de distribuidores muestra el saldo de cada uno (calculado con `withSum` en el index)
+- Página dedicada `/clientes/{id}/cuenta-corriente` con saldo acumulado corriente por fila
 
 ### Fondo de marketing
 - Cada distribuidor tiene fondo asignado por año
@@ -62,61 +82,20 @@ Moneda: USD exclusivamente.
 - Drag & drop HTML5 nativo, click → modal detalle estilo Jira
 
 ### Stock de productos
-- Campo `stock` directo en `productos` — usado por Productos/Existencias
-- Tabla `stock_deposito` (modelo `StockDeposito`) — usado por `/mercaderia/stock`
+- Campo `stock` directo en `productos` — usado por APIs Distri / Stock Distri
+- Tabla `stock_deposito` (modelo `StockDeposito`) — usado por Stock Bodega (`/mercaderia/stock`)
+- Son independientes — no se sincronizan automáticamente
 
 ### Órdenes de Venta
 - `OrdenVenta` (cabecera) + `ItemOrdenVenta` (líneas)
 - Cada ítem tiene `deposito_id` nullable: de qué depósito se toma el stock
-- Picker de productos en la orden filtra por depósito + stock (filtros combinados)
-- Al agregar un producto: pills de depósito con stock disponible, auto-selecciona primer depósito con stock
 - Listas de precio 1–4 disponibles en productos
 
 ### Invoice (PDF)
 - Se genera desde `/ordenes-venta/[id]` al "Generar invoice" → crea registro `Venta`
-- El PDF se descarga con el botón "Descargar PDF" en el banner verde de la orden
 - Endpoint: `GET /api/ventas/{id}/pdf` (autenticado con Bearer)
-- Formato: Commercial Invoice con logo, seller, buyer, payment terms, incoterm, bank details, firma
+- Preview pública: `GET /api/ventas/{venta}/preview?token=...`
 - Datos de empresa en tabla `configuraciones` (claves `empresa_*` e `invoice_*`)
-- `shipping_usd` en la tabla ventas (default 0)
-
-### Dashboard
-- Ingresos = ventas PAGADA
-- Gastos = AccionMarketing.monto_usd
-- Solo USD
-
-## Datos demo cargados
-
-| Seeder | Entidad | Cantidad |
-|--------|---------|----------|
-| DemoSeeder | Productos legacy (stock por depósito) | 12 |
-| DemoSeeder | Ventas | 13 (8 PAGADA · 4 PENDIENTE · 1 CANCELADA) |
-| DemoSeeder | Tareas | 22 |
-| DemoSeeder | Acciones de marketing | 15 |
-| ProductoInvidSeeder | Productos Gigabyte INVID | 41 |
-| ProductoNewBytesSeeder | Productos Gigabyte New Bytes | 206 |
-
-## Configuraciones en DB (tabla configuraciones)
-
-| Clave | Valor default |
-|-------|---------------|
-| `empresa_nombre` | Gigabyte |
-| `empresa_direccion` | 123 Main St, Miami, FL 33101 |
-| `empresa_ciudad_pais` | Miami, FL — USA |
-| `empresa_telefono` | +1 (305) 000-0000 |
-| `empresa_email` | sales@company.com |
-| `empresa_web` | www.company.com |
-| `invoice_payment_terms` | Net 30 |
-| `invoice_incoterm` | FCA Miami |
-| `invoice_banco_nombre` | Bank of America |
-| `invoice_banco_cuenta` | 000-000000-00 |
-| `invoice_banco_aba` | 026009593 |
-| `invoice_banco_swift` | BOFAUS3N |
-| `invoice_banco_direccion` | 100 N Tryon St, Charlotte, NC 28255 |
-| `invoice_firma_nombre` | Authorized Representative |
-| `invoice_firma_titulo` | Sales Manager |
-
-> Todos estos valores se leen en tiempo real al generar el PDF. Editar en la sección Configuración.
 
 ## TODOs pendientes
 
@@ -126,13 +105,14 @@ Moneda: USD exclusivamente.
 - [ ] Permisos granulares en sidebar (hoy todos ven todo)
 - [ ] Vista/edición de Ventas directa (hoy solo se accede via orden)
 - [ ] Campo `shipping_usd` editable en alguna UI (hoy default 0)
+- [ ] Ingresar movimientos de cuenta corriente desde la UI (hoy solo lectura del seeder)
+- [x] Módulo Cuenta Corriente por distribuidor (movimientos_cuenta, saldo en listado)
+- [x] Reorganización sidebar (Operaciones + Marketing subsecciones)
+- [x] Stock Bodega con tabs + buscador + filtro con/sin stock
 - [x] Módulo Productos con filtros, stock, último ingreso
 - [x] Módulo Existencias (tabla cruzada SKU × distribuidor)
 - [x] Módulo Órdenes de Venta (cabecera + líneas + estados)
-- [x] Stock con columnas dinámicas por depósito en `/mercaderia/stock`
-- [x] Selección de depósito por ítem en órdenes de venta
-- [x] Filtros complementarios depósito + stock en picker de orden
-- [x] PDF Commercial Invoice con dompdf (barryvdh/laravel-dompdf)
+- [x] PDF Commercial Invoice
 
 ## Bugs corregidos (historial)
 
@@ -141,6 +121,8 @@ Moneda: USD exclusivamente.
 - `apiResource('proveedores')` → `{proveedore}` → fix `.parameters()`
 - `->keyBy('estado')` falla con enum cast → fix: `->keyBy(fn($v) => $v->estado->value)`
 - Filtros de depósito y stock en picker de órdenes no se coordinaban → unificados en un solo `.filter()`
+- Nuxt: `[id].vue` coexistiendo con `[id]/` carpeta → el `.vue` actúa como layout padre. Fix: mover a `[id]/index.vue`
+- API devuelve `{ data: {} }` para recursos individuales → siempre usar `c?.data ?? c` en detail pages
 
 ## Puerto confirmado
 
