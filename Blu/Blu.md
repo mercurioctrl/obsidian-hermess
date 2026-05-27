@@ -11,7 +11,7 @@ Proyectos y áreas de BLU Digital Agency.
 ### [[bluMiniErp/bluMiniErp|bluMiniErp]] — Mini ERP interno
 - [[bluMiniErp/Backend - API|Backend API]] · [[bluMiniErp/Backend - Modelos|Modelos]] · [[bluMiniErp/Base de Datos|Base de Datos]]
 - [[bluMiniErp/Frontend|Frontend]] · [[bluMiniErp/Componentes UI|Componentes UI]] · [[bluMiniErp/Design Tokens|Design Tokens]]
-- [[bluMiniErp/Layout System|Layout System]] · [[bluMiniErp/Page Templates|Page Templates]]
+- [[bluMiniErp/Layout System|Layout System]] · [[bluMiniErp/Page Templates|Page Templates]] · [[bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
 - [[bluMiniErp/Medios de Pago|Medios de Pago]] · [[bluMiniErp/Modulo Mercury Invoicing|Mercury Invoicing]]
 - [[bluMiniErp/Modulo Permisos|Permisos]] · [[bluMiniErp/Modulo Personal|Personal]] · [[bluMiniErp/Modulo WhatsApp Inbox|WhatsApp Inbox]]
 - [[bluMiniErp/Reglas de Negocio|Reglas de Negocio]] · [[bluMiniErp/Stack e Infraestructura|Stack e Infra]]

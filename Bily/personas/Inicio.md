@@ -17,6 +17,8 @@ Perfiles de las personas que Bily conoce: equipo de Blu, familia y colaboradores
 - [[Bily/personas/Alejandra Guidonbono|Perfil: Alejandra Guidonbono]]
 - [[Bily/personas/Alejandra-Guidobono|Alejandra Guidobono – Ficha personal]]
 - [[Bily/personas/Carla Carpinteri|Perfil: Carla Carpinteri]]
+- [[Bily/personas/Ciro|Perfil: Ciro]]
+- [[Bily/personas/Joshua|Perfil: Joshua]]
 
 ### Subcarpetas
 

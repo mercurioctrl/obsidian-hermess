@@ -13,7 +13,7 @@
 
 ### bluMiniErp — Mini ERP interno
 - [[Blu/bluMiniErp/bluMiniErp|índice]] · [[Blu/bluMiniErp/Backend - API|Backend API]] · [[Blu/bluMiniErp/Backend - Modelos|Modelos]] · [[Blu/bluMiniErp/Base de Datos|Base de Datos]]
-- [[Blu/bluMiniErp/Frontend|Frontend]] · [[Blu/bluMiniErp/Componentes UI|UI]] · [[Blu/bluMiniErp/Design Tokens|Tokens]] · [[Blu/bluMiniErp/Layout System|Layout]] · [[Blu/bluMiniErp/Page Templates|Templates]]
+- [[Blu/bluMiniErp/Frontend|Frontend]] · [[Blu/bluMiniErp/Componentes UI|UI]] · [[Blu/bluMiniErp/Design Tokens|Tokens]] · [[Blu/bluMiniErp/Layout System|Layout]] · [[Blu/bluMiniErp/Page Templates|Templates]] · [[Blu/bluMiniErp/Dashboard UI Skill|Dashboard UI Skill]]
 - [[Blu/bluMiniErp/Medios de Pago|Pagos]] · [[Blu/bluMiniErp/Modulo Mercury Invoicing|Facturación]] · [[Blu/bluMiniErp/Modulo Permisos|Permisos]] · [[Blu/bluMiniErp/Modulo Personal|Personal]] · [[Blu/bluMiniErp/Modulo WhatsApp Inbox|WhatsApp Inbox]]
 - [[Blu/bluMiniErp/Reglas de Negocio|Reglas de Negocio]] · [[Blu/bluMiniErp/Stack e Infraestructura|Infra]] · [[Blu/bluMiniErp/Errores Comunes|Errores]] · [[Blu/bluMiniErp/changelog|changelog]] · [[Blu/bluMiniErp/memoria|memoria]]
 
@@ -66,6 +66,7 @@
   - [[Bily/MEMORIA|Memoria operativa]] · [[Bily/bitacoras/bitacoras|bitácoras]] · [[Bily/kanban/LASET|kanban LASET]]
   - Personas: [[Bily/personas/Catriel Mercurio|Catriel]] · [[Bily/personas/Ayelen Mercurio|Ayelen]] · [[Bily/personas/Sebastian Fontan|Sebastián]] · [[Bily/personas/Guillermo Avila|Guillermo]] · [[Bily/personas/Emanuel Ferreyra|Emanuel]] · [[Bily/personas/Marbe Moreno|Marbe]] · [[Bily/personas/Ezequiel Manzano|Ezequiel]] · [[Bily/personas/Barbara Carrillo|Bárbara]] · [[Bily/personas/Belu Ontivero|Belu]] · [[Bily/personas/Franco Callipo|Franco]] · [[Bily/personas/Alejandra Guidonbono|Alejandra]]
   - Productos: [[Bily/Productos/Productos|Índice de Productos]] · [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bot WhatsApp MVP]] · [[Bily/Productos/Bot-WhatsApp-Nativo|Bot WhatsApp Nativo]] · [[Bily/Productos/Bot-WhatsApp-Elevator-Pitch|Elevator Pitch]] · [[Bily/Productos/Bot-WhatsApp-Minteeo-y-Suenio|Minteo y Sueño]] · [[Bily/Productos/Billy-Bot|Billy-Bot]]
+  - [[Bily/Deudores|Deudores]] · [[Bily/aprendizajes/Inicio|Aprendizajes]] · [[Bily/dreams/Inicio|Sueños]] · [[Bily/Finanzas/Inicio|Finanzas]] · [[Bily/pagos/Inicio|Pagos]] · [[Bily/tareas/Inicio|Tareas]] · [[Bily/todos/Inicio|Todos]] · [[Bily/proyectos/Inicio|Proyectos]] · [[Bily/media/Inicio|Media]]
 
 ## Planilla Acciones Bully
 
@@ -85,10 +86,11 @@
 ## Skills de Claude Code
 
 Ver [[Skills/Skills|Skills]].
-- `blu-report/` · `configurar-boveda/` · `docx/` · `fullstack-docker-app/`
+- `bily/` · `blu-report/` · `configurar-boveda/` · `docx/` · `fullstack-docker-app/`
 - `nota-reforma/` · `pdf/` · `pptx/` · `replicar-microsite/`
 - `schedule/` · `sincronizar-boveda/` · `skill-creator/` · `tarea-boveda/` · `xlsx/`
 - [[Skills/reconstruir-indices/SKILL|reconstruirIndices]] — reconstruye wikilinks en todos los índices de la bóveda
+- [[Skills/bily/SKILL|sincronizarMenteBily]] · [[Skills/bily/bitacoras/SKILL|procesarBitacorasBily]]
 
 ## Claude — Espacio de Claude en la bóveda
 
@@ -100,7 +102,7 @@ Ver [[Skills/Skills|Skills]].
 - [[aplus-server/aplus-server|aplus-server]]
   - [[aplus-server/arquitectura|arquitectura]] · [[aplus-server/stack|stack]] · [[aplus-server/changelog|changelog]] · [[aplus-server/memoria|memoria]] · [[aplus-server/contexto|contexto]] · [[aplus-server/integracion-retailers|retailers]] · [[aplus-server/migracion-libreopcion|migración]]
 - [[hermess-pc/hermess-pc|hermess-pc]]
-  - [[hermess-pc/arquitectura|arquitectura]] · [[hermess-pc/red|red UniFi]] · [[hermess-pc/changelog|changelog]] · [[hermess-pc/earlyoom|earlyoom]] · [[hermess-pc/memoria|memoria]] · [[hermess-pc/monitores|monitores]] · [[hermess-pc/musica/musica|musica]]
+  - [[hermess-pc/arquitectura|arquitectura]] · [[hermess-pc/red|red UniFi]] · [[hermess-pc/changelog|changelog]] · [[hermess-pc/earlyoom|earlyoom]] · [[hermess-pc/memoria|memoria]] · [[hermess-pc/monitores|monitores]] · [[hermess-pc/sync-curls|sync-curls]] · [[hermess-pc/musica/musica|musica]]
 
 ## Otros proyectos
 

@@ -14,6 +14,10 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 - [[stack|Stack tecnológico]] — Frameworks, dependencias, servicios externos
 - [[changelog|Changelog]] — Historial de cambios
 
+## Ver también
+
+- [[NB/compras/reglas-compras|Reglas de negocio — Compras]] — reglas del proceso de compras
+
 ## Repositorios
 
 - `api-rest-compras-laravel/` — API REST (repo Git independiente)
