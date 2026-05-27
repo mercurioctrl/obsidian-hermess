@@ -35,7 +35,7 @@
 ## Gigabyte
 
 - [[Gigabyte/Gigabyte|Gigabyte]]
-  - [[Gigabyte/gigaErp/gigaErp|gigaErp]] — ERP Gigabyte: distribuidores, stock, importaciones XLSX, cuenta corriente, órdenes de venta + validación stock, invoice
+  - [[Gigabyte/gigaErp/gigaErp|gigaErp]] — ERP Gigabyte: distribuidores, cuenta corriente, línea de crédito, notas de crédito, órdenes de venta + APROBADA, invoice, stock bodega
     - [[Gigabyte/gigaErp/troubleshooting|troubleshooting]] · [[Gigabyte/gigaErp/arquitectura|arquitectura]] · [[Gigabyte/gigaErp/contexto|contexto]] · [[Gigabyte/gigaErp/memoria|memoria]]
     - Módulos: [[Gigabyte/gigaErp/modulos/productos|productos]] · [[Gigabyte/gigaErp/modulos/ordenes-venta|órdenes de venta]] · [[Gigabyte/gigaErp/modulos/invoice-preview|invoice preview]]
 
