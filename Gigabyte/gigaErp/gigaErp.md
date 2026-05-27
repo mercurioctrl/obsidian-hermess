@@ -3,7 +3,7 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `4fb850e` · **Última sincronización:** 2026-05-27
+**Último commit:** `dd811dd` · **Última sincronización:** 2026-05-27
 
 ---
 
@@ -26,7 +26,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 ---
 
-## Estado actual (2026-05-27) — commit `4fb850e`
+## Estado actual (2026-05-27) — commit `dd811dd`
 
 ### Módulos implementados
 
@@ -38,11 +38,12 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 | Órdenes de Venta | ✅ | BORRADOR → APROBADA → FACTURADA, permisos granulares |
 | Invoice (PDF + preview) | ✅ | html2pdf.js, preview pública por token |
 | Stock Bodega | ✅ | Depósitos, importaciones XLSX, columnas por depósito (fix object cast) |
-| Stock Distri / APIs Distri | ✅ | Catálogo por distribuidor, 4 listas de precio |
+| Stock Distri / APIs Distri | ✅ | Catálogo + botón Sincronizar APIs (simulación por distribuidor) |
 | Fondos de Marketing | ✅ | Asignación por distribuidor y año |
 | Tareas (Kanban) | ✅ | 4 columnas, drag & drop, modal detalle |
 | Calendario | ✅ | Eventos y fechas comerciales |
 | Configuración | ✅ | Datos empresa + CRUD usuarios con permisos |
+| Buscador global | ✅ | Topbar ⌘K — busca clientes, productos, OV, proveedores, tareas |
 
 ### Dashboard — widgets actuales
 
@@ -55,12 +56,12 @@ Row 6:   Resultado período  |  Ventas por estado + Top clientes
 Row 7:   Productos por distribuidor (full width)
 ```
 
-### Endpoint `/api/dashboard` — campos
+### Buscador global — `GET /api/search?q=`
 
-```json
-{ kpis, ventas_por_estado, top_clientes, ultimos_12_meses,
-  proximos_eventos, tareas_stats, ultimas_ordenes,
-  productos_por_distri, cuentas_corrientes }
+```
+Secciones: Clientes · Productos (nombre/SKU) · Órdenes de Venta · Proveedores · Tareas
+Shortcut: ⌘K / Ctrl+K · Mínimo 2 chars · Máx 4 por sección · Debounce 280ms
+Navegación: directo al ítem (clientes/OV) o sección con ?search= pre-relleno
 ```
 
 ### Volumen en DB
@@ -84,18 +85,18 @@ Row 7:   Productos por distribuidor (full width)
 
 ### Distribuidores
 
-| Nombre | Ciudad | SKUs | Saldo cc | Línea de crédito |
-|--------|--------|------|----------|-----------------|
-| New Bytes | Córdoba | 206 | a cobrar | $20,000 |
-| Invid | Mendoza | 41 | a cobrar | $40,000 |
-| Elit | Buenos Aires | — | a cobrar | $30,000 |
-| Air | Rosario | — | a cobrar | $12,000 |
+| Nombre | Ciudad | SKUs | Línea de crédito |
+|--------|--------|------|-----------------|
+| New Bytes | Córdoba | 206 | $20,000 |
+| Invid | Mendoza | 41 | $40,000 |
+| Elit | Buenos Aires | — | $30,000 |
+| Air | Rosario | — | $12,000 |
 
 ---
 
 ## Ver también
 
-- [[changelog]] — últimos cambios: fix stocks_deposito (4fb850e) + dashboard expandido (db6bf60)
-- [[arquitectura]] — estructura completa del código
-- [[memoria]] — gotchas incluyendo (object) cast en Resources con claves numéricas
+- [[changelog]] — últimos: Sincronizar APIs (dd811dd) · buscador global (88d87bd) · fix stocks (4fb850e)
+- [[arquitectura]] — estructura completa incluyendo SearchController y GlobalSearch
+- [[memoria]] — gotchas: arrow functions PHP, (object) cast, enum keyBy
 - [[contexto]] — reglas de negocio y TODOs pendientes

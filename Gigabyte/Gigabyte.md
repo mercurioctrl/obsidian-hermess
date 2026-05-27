@@ -7,7 +7,9 @@ Proyectos relacionados con la marca Gigabyte (hardware IT).
 ## Proyectos
 
 ### gigaErp
-ERP interno para gestión de distribuidores, stock, órdenes de venta y cuenta corriente.
+ERP interno para gestión de distribuidores, stock, órdenes de venta, cuenta corriente y buscador global.
+Commit actual: `dd811dd` — Sincronizar APIs + buscador global ⌘K
+
 - [[gigaErp/gigaErp|gigaErp — índice]]
   - [[gigaErp/arquitectura|Arquitectura]]
   - [[gigaErp/changelog|Changelog]]
