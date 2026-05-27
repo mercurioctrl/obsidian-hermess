@@ -1,3 +1,26 @@
+## 2026-05-27 — Fix: stocks_deposito por ID de depósito en Stock Bodega
+
+### Bug encontrado
+
+En la vista Stock Bodega, el Monitor Gigabyte G27Q mostraba 25 unidades en la columna "Depósito Argentina" pero el total era 105 — valores inconsistentes.
+
+### Causa raíz
+
+Laravel Resource's `removeMissingValues()` llama `array_values()` cuando **todas las claves del array son numéricas** (ej: `[1 => 80, 2 => 25]`). Esto re-indexa el array desde 0 (`[80, 25]`), perdiendo los IDs de depósito como claves. El frontend leía `stocks_deposito[deposito_id]` pero recibía un array posicional, no un objeto keyed por ID.
+
+### Fix
+
+Cast `(object)` en ambos lugares donde se construye `stocks_deposito`:
+
+- `ProductoResource::toArray()` → `whenLoaded('stocks', fn() => (object) mapWithKeys(...))`
+- `ProductoController::seleccionables()` → `'stocks_deposito' => (object) mapWithKeys(...)`
+
+El cast fuerza serialización JSON como `{"1":80,"2":25}` (objeto) en lugar de `[80,25]` (array). El frontend ya usaba `stocks_deposito[d.id]` correctamente — solo faltaba que llegara con las claves.
+
+**Commit:** `4fb850e` (pusheado)
+Archivos: `backend/app/Http/Resources/ProductoResource.php`, `backend/app/Http/Controllers/ProductoController.php`
+
+---
 
 ## 2026-05-27 — Dashboard expandido: tareas, calendario, OV, productos por distri, cuentas corrientes
 

@@ -3,7 +3,7 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `db6bf60` · **Última sincronización:** 2026-05-27
+**Último commit:** `4fb850e` · **Última sincronización:** 2026-05-27
 
 ---
 
@@ -26,7 +26,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 ---
 
-## Estado actual (2026-05-27) — commit `db6bf60`
+## Estado actual (2026-05-27) — commit `4fb850e`
 
 ### Módulos implementados
 
@@ -37,7 +37,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 | Notas de crédito | ✅ | Desde CC (libre) y desde orden FACTURADA (parciales/totales) |
 | Órdenes de Venta | ✅ | BORRADOR → APROBADA → FACTURADA, permisos granulares |
 | Invoice (PDF + preview) | ✅ | html2pdf.js, preview pública por token |
-| Stock Bodega | ✅ | Depósitos, importaciones XLSX, filtros en card |
+| Stock Bodega | ✅ | Depósitos, importaciones XLSX, columnas por depósito (fix object cast) |
 | Stock Distri / APIs Distri | ✅ | Catálogo por distribuidor, 4 listas de precio |
 | Fondos de Marketing | ✅ | Asignación por distribuidor y año |
 | Tareas (Kanban) | ✅ | 4 columnas, drag & drop, modal detalle |
@@ -95,6 +95,7 @@ Row 7:   Productos por distribuidor (full width)
 
 ## Ver también
 
-- [[changelog]] — último cambio: dashboard expandido (db6bf60)
+- [[changelog]] — últimos cambios: fix stocks_deposito (4fb850e) + dashboard expandido (db6bf60)
 - [[arquitectura]] — estructura completa del código
+- [[memoria]] — gotchas incluyendo (object) cast en Resources con claves numéricas
 - [[contexto]] — reglas de negocio y TODOs pendientes
