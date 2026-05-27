@@ -17,6 +17,8 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-05-23|2026-05-23]] — Políticas WhatsApp (grupos/privados), configuración fallback Gemini, pendientes embeddings y Whisper
 - [[Bily/bitacoras/2026-05-24|2026-05-24]] — Día sin actividad, estado de reposo
 - [[Bily/bitacoras/2026-05-25|2026-05-25]] — Día feriado (25 de Mayo), organización de pendientes nocturnos
+- [[Bily/bitacoras/2026-05-26|2026-05-26]] — Depuración tablero Kanban general, registro de tareas de desarrollo/operativas
+- [[Bily/bitacoras/2026-05-27|2026-05-27]] — Consulta facturu en daily, kanban general
 
 ## Ver también
 
