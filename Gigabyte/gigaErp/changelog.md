@@ -256,4 +256,52 @@ Antes era posible agregar a una orden un producto con stock 0 en el depósito se
 La validación respeta el depósito activo: si el usuario filtra por un depósito o selecciona uno en las pills, la validación se hace contra ese depósito específico.
 
 Archivos: `frontend/components/OrdenItems.vue`
+## 2026-05-26 — Estado APROBADA + Sistema de permisos + Gestión de usuarios
+
+### Estado APROBADA en Órdenes de Venta
+
+Flujo extendido: **BORRADOR → APROBADA → FACTURADA** (o cualquiera → ANULADA).
+
+**Backend:**
+- `EstadoOrdenVenta`: nuevo case `APROBADA`
+- `OrdenVentaController::aprobar()`: valida permiso `aprobaciones` (→ 403), verifica estado BORRADOR (→ 422), transiciona
+- `generarInvoice()`: ahora requiere estado APROBADA (antes BORRADOR)
+- Nueva ruta `PATCH /api/ordenes-venta/{id}/aprobar` (antes del `apiResource`)
+
+**Frontend (`ordenes-venta/[id].vue`):**
+- `authStore` inicializado a nivel de `<script setup>` (antes estaba dentro de funciones)
+- `aprobable`: BORRADOR + `tienePermiso('aprobaciones')` → muestra botón ámbar "Aprobar"
+- `facturable`: APROBADA → muestra botón verde "Generar invoice"
+- Subtítulo dinámico: "Aprobada — lista para facturar"
+- Badge `APROBADA` (ámbar) agregado a `StatusBadge.vue`
+
+### Sistema de permisos — gestionable desde Configuración
+
+**Permisos actuales:**
+- `aprobaciones` — aprobar órdenes de venta
+- `VER_MONTOS` — ver montos en el sistema
+
+**Configuración → Usuarios:** CRUD completo con modal que incluye checkboxes de permisos.
+- `nuevoUsuario()`, `editarUsuario()`, `guardarUsuario()`, `eliminarUsuario()`
+- `PERMISOS_DISPONIBLES` array en el componente — agregar acá para extender
+- Fix: `usuarios.value = res?.data ?? res` (UsuarioResource::collection envuelve en `{ data: [] }`)
+
+**Usuarios creados (pass: demo1234):**
+- `carolina.lagos@gigabyte.com` — OPERATIVO, permisos: aprobaciones + VER_MONTOS
+- `martin.fierro@gigabyte.com` — OPERATIVO, permisos: VER_MONTOS
+- `julia.mendez@gigabyte.com` — OPERATIVO, sin permisos
+
+Archivos: `backend/app/Enums/EstadoOrdenVenta.php`, `backend/app/Http/Controllers/OrdenVentaController.php`, `backend/routes/api.php`, `backend/database/seeders/UsuarioSeeder.php`, `frontend/components/ui/StatusBadge.vue`, `frontend/pages/ordenes-venta/[id].vue`, `frontend/pages/configuracion/index.vue`
+
+### Fix: UsuarioResource::collection wrapper
+
+`api.get('/usuarios')` devuelve `{ data: [...] }` no el array directo.
+En los 3 lugares de `configuracion/index.vue` donde se asignaba `usuarios.value`:
+```js
+// Antes (mostraba solo el primer usuario):
+usuarios.value = u
+
+// Ahora:
+usuarios.value = u?.data ?? u
+```
 

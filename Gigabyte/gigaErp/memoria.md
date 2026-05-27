@@ -10,11 +10,12 @@ Vive en `~/.claude/projects/-var-www-gigabyte-gigaErp/memory/` — esta nota es 
 
 **gigaErp** — sistema interno Gigabyte (hardware IT) en `http://localhost:8824`.
 
-| Email | Pass | Rol |
-|-------|------|-----|
-| `admin@gigabyte.com` | `admin123` | ADMIN |
-| `maria.gomez@gigabyte.com` | `demo1234` | OPERATIVO |
-| `lucas.herrera@gigabyte.com` | `demo1234` | OPERATIVO |
+| Email | Pass | Rol | Permisos |
+|-------|------|-----|----------|
+| `admin@gigabyte.com` | `admin123` | ADMIN | todos |
+| `carolina.lagos@gigabyte.com` | `demo1234` | OPERATIVO | aprobaciones + VER_MONTOS |
+| `martin.fierro@gigabyte.com` | `demo1234` | OPERATIVO | VER_MONTOS |
+| `julia.mendez@gigabyte.com` | `demo1234` | OPERATIVO | ninguno |
 
 **Distribuidores**: Elit (GBA $50k, saldo $8,310), New Bytes (Córdoba $40k, saldo $7,180), Invid (Mendoza $35k, saldo $5,760), Air (Rosario $30k, saldo $4,445)
 
@@ -24,16 +25,11 @@ Vive en `~/.claude/projects/-var-www-gigabyte-gigaErp/memory/` — esta nota es 
 
 ### Perfil de Catriel
 
-Catriel Mercurio (`hermess`), trabaja para Blu Studio Inc. Es el dueño/desarrollador
-principal de `gigaErp`. Trabaja en español argentino — responder en español, con
-tildes correctas. Prefiere mensajes concisos, directos, sin relleno.
+Catriel Mercurio (`hermess`), trabaja para Blu Studio Inc. Dueño/desarrollador principal de `gigaErp`. Trabaja en español argentino. Prefiere mensajes concisos, directos, sin relleno.
 
-Tiene varios proyectos ERP en paralelo (este `gigaErp` para Gigabyte; otro
-`erp.blustudioinc.com` para Blu — referencia visual para presupuestos/invoices).
+Tiene varios proyectos ERP en paralelo (este `gigaErp` para Gigabyte; `erp.blustudioinc.com` para Blu — referencia visual para invoices).
 
-Hace `git pull` manualmente entre sesiones — a veces hay commits propios entre
-medio que no escribí yo. Siempre chequear `git log --oneline -5` antes de
-asumir el estado del repo.
+Hace `git pull` manualmente entre sesiones. Siempre chequear `git log --oneline -5` antes de asumir el estado del repo.
 
 ---
 
@@ -41,162 +37,124 @@ asumir el estado del repo.
 
 ### Workflow git
 
-En este proyecto el usuario trabaja **directo sobre `main`** — no usa feature branches.
+Trabaja **directo sobre `main`** — no usa feature branches. NO agregar `Co-Authored-By: Claude...`. `git commit` y `git push` solo cuando lo pide explícitamente.
 
-- NO crear branch antes de commitear.
-- NO agregar `Co-Authored-By: Claude...` en los mensajes.
-- `git commit` solo cuando el usuario lo pide explícitamente.
-- `git push` igual — solo cuando dice "push" o "subilo".
-- Mensajes de commit en español, con scope `feat(modulo): ...` o `fix: ...`.
-
-**Why:** proyecto chico de un solo desarrollador, sin code review, sin CI gates.
-
-### Deploy dance del backend (sin rebuild)
-
-Secuencia obligatoria al cambiar código backend en runtime:
+### Deploy dance backend (sin rebuild)
 
 ```bash
-# 1. copiar
 docker cp backend/app/... gigaerp-backend:/var/www/html/app/...
-
-# 2. migrar (borrar dup Sanctum antes)
-docker exec gigaerp-backend sh -c 'rm -f database/migrations/*_create_personal_access_tokens_table.php'
-docker exec gigaerp-backend php artisan migrate --force
-
-# 3. re-cachear config — sin esto cae a sqlite y todo es 500
-docker exec gigaerp-backend php artisan config:cache
-
-# 4. si tocaste routes/blade
-docker exec gigaerp-backend php artisan route:clear
-docker exec gigaerp-backend php artisan view:clear
+docker exec gigaerp-backend php artisan route:clear   # si cambiaron rutas
+docker exec gigaerp-backend php artisan config:cache  # SIEMPRE
 ```
 
-**Después de cualquier rebuild de container app:** `docker restart gigaerp-nginx` o
-nginx queda con IP cacheada → 502.
-
-**Frontend:** siempre rebuild `--no-cache`. Nitro tiene manifest de assets en build
-time; `docker cp` a `.output/public/` no funciona.
+**Frontend:** siempre rebuild `--no-cache`. Después: `docker restart gigaerp-nginx`.
 
 ### CLAUDE.md ≤200 líneas (regla dura)
 
-El `CLAUDE.md` del proyecto NO puede pasar de 200 líneas. Toda la información importante
-vive en esta bóveda, no en el CLAUDE.md.
+El `CLAUDE.md` NO puede pasar de 200 líneas. Toda la info importante vive en esta bóveda.
 
 ---
 
-## Memoria — Proyecto (gotchas)
+## Memoria — Gotchas críticos
 
-### Nuxt 3 — conflicto `[id].vue` + `[id]/` directorio
+### API Resource wrapper — `res?.data ?? res`
 
-Si coexisten `pages/foo/[id].vue` y el directorio `pages/foo/[id]/`, Nuxt trata
-el `.vue` como **layout padre** de todas las rutas hijas. El contenido hijo no reemplaza al padre.
+**SIEMPRE** desempaquetar la respuesta:
+```js
+// colección (index)
+const res = await api.get('/usuarios')
+usuarios.value = res?.data ?? res   // ✓ — UsuarioResource::collection devuelve { data: [] }
 
-**Solución:** Mover `[id].vue` → `[id]/index.vue`. Así las rutas son hermanas independientes.
-
+// recurso individual (show)
+const res = await api.get('/ordenes-venta/1')
+orden.value = res?.data ?? res      // ✓
 ```
-pages/clientes/
-  [id]/
-    index.vue              → /clientes/:id
-    cuenta-corriente.vue   → /clientes/:id/cuenta-corriente  ✓
-```
 
-**Detectado en:** migración de `/clientes/[id].vue` al agregar la sub-ruta `/cuenta-corriente`.
+**Síntoma del bug:** solo se ve el primer elemento del listado, o la UI queda vacía.
 
-### API Resource wrapper — `c?.data ?? c`
-
-La API devuelve `{ data: {} }` para recursos individuales (Laravel Resource).
-En todos los `api.get()` de páginas de detalle usar:
+### Permiso en frontend — inicializar authStore en `<script setup>`
 
 ```js
-const data = await api.get('/clientes/1')
-cliente.value = data?.data ?? data   // ✓
-// cliente.value = data              // ✗ → .nombre === undefined
+// ✓ Correcto — disponible en template
+const authStore = useAuthStore()
+const puedeAprobar = computed(() => authStore.tienePermiso('aprobaciones'))
+
+// ✗ Incorrecto — solo disponible dentro de esa función
+function aprobar() {
+  const authStore = useAuthStore()  // no disponible en template
+}
 ```
 
-### `withSum` para saldo en listado
+### Flujo de estados — Órdenes de Venta
 
-Para mostrar el saldo de cuenta corriente en el listado de distribuidores sin N+1:
-
-```php
-// ClienteController@index
-Cliente::withSum('movimientosCuenta as debe_total_usd', 'debe_usd')
-       ->withSum('movimientosCuenta as haber_total_usd', 'haber_usd')
-       ->paginate(20);
-
-// ClienteResource
-'saldo_usd' => round((float)($this->debe_total_usd ?? 0) - (float)($this->haber_total_usd ?? 0), 2),
+```
+BORRADOR → APROBADA → FACTURADA
+    ↓           ↓
+  ANULADA    ANULADA
 ```
 
-### Sanctum republica su migración en cada boot
+- Solo usuarios con permiso `aprobaciones` pueden ir a APROBADA
+- Solo desde APROBADA se puede generar invoice (FACTURADA)
 
-El `docker-entrypoint.sh` del backend corre `php artisan vendor:publish` para Sanctum
-en cada arranque, generando un archivo nuevo con timestamp. Como la tabla
-`personal_access_tokens` ya existe, `migrate` revienta.
+### Dos tablas de stock (no sincronizan)
 
-**Workaround:** `rm -f database/migrations/*_create_personal_access_tokens_table.php` antes de migrar.
+- `productos.stock` — Stock Distri / APIs Distri
+- `stock_deposito` — Stock Bodega / Órdenes de Venta
+- Importaciones XLSX actualizan solo `stock_deposito`
 
-### html2canvas rompe SVG con viewBox offset
+### Import XLSX — lookup doble
 
-`aorus_logo_black.svg` tiene `viewBox="519 657 1819 455"` (no empieza en 0,0). html2canvas
-ignora el offset y recorta el logo en el PDF.
+Busca primero por `sku`, luego por `codigo_distribuidor`. Los Excel de proveedores suelen usar `codigo_distribuidor`.
 
-**Solución:** PNG embebido como data URI base64 en el blade (`aorus_logo_black.png`).
+### Nuxt `[id].vue` + carpeta `[id]/` — conflicto
 
-### Filtros de stock en backend — parámetros exactos
+Mover el `.vue` a `[id]/index.vue` para que conviva con rutas hijas.
 
-- `?stock=con_stock` → productos con stock > 0
-- `?stock=sin_stock` → productos con stock = 0
-- Sin parámetro → todos
+### `no such table: X (Connection: sqlite)`
 
-**No usar** `?stock=con` o `?stock=sin` — el backend no los reconoce.
+```bash
+docker exec gigaerp-backend php artisan config:cache
+```
 
-### Credenciales y endpoints dev
+Causa: config cache perdido — `env()` no funciona en PHP-FPM.
 
-- **Login:** `admin@gigabyte.com` / `admin123` (modelo `Usuario` → tabla `usuarios`)
-- **URL:** `http://localhost:8824`
-- **DB:** `gigaerp/changeme` host port `3310`
-- **Token compartible:** `?token=${encodeURIComponent(token)}` en URL, backend valida con `PersonalAccessToken::findToken()`
+### Nginx 502 después de rebuild
+
+```bash
+docker restart gigaerp-nginx
+```
 
 ---
 
-## Memoria — Módulo Cuenta Corriente
+## Memoria — Sistema de permisos
 
-### Estructura
+```js
+// Frontend
+authStore.isAdmin                        // true si ADMIN
+authStore.tienePermiso('aprobaciones')   // true si ADMIN o tiene el permiso
 
-```
-Tabla: movimientos_cuenta
-Enum TipoMovimiento: FACTURA, PAGO, NOTA_CREDITO, AJUSTE
-Saldo = sum(debe_usd) - sum(haber_usd). Positivo = cliente debe. Negativo = cliente tiene crédito.
-```
-
-### Endpoint
-
-```
-GET /api/clientes/{cliente}/cuenta-corriente
-Respuesta: { movimientos: [...con saldo_acumulado por fila...], resumen: { debe_usd, haber_usd, saldo_usd } }
+// Backend
+$request->user()->tienePermiso('aprobaciones')  // → 403 Response si falla
 ```
 
-### Ruta Nuxt
-
-`/clientes/[id]/cuenta-corriente.vue` — hermana de `[id]/index.vue`.
+**Para agregar un permiso nuevo:**
+1. Definir la clave string
+2. Agregar a `PERMISOS_DISPONIBLES` en `configuracion/index.vue`
+3. Usar en backend con `tienePermiso()`
+4. Usar en frontend con `authStore.tienePermiso()`
 
 ---
 
 ## Memoria — Referencias externas
 
-### Blu ERP — referencia visual
-
-`https://erp.blustudioinc.com` — referencia visual cuando pide reproducir features.
-
-Patrón ya replicado (commit `001f8c8`):
-- Preview HTML en blade con html2pdf.js cliente-side (no DomPDF)
-- Helvetica Neue, max-width 780px, márgenes minimalistas
+- **Blu ERP:** `https://erp.blustudioinc.com` — referencia visual para invoices (html2pdf.js, Helvetica Neue, max-width 780px)
+- **Bóveda Obsidian:** `https://localhost:27124/` · Token en memoria del usuario
 
 ---
 
 ## Ver también
 
 - [[gigaErp]] — índice del proyecto
-- [[troubleshooting]] — versión expandida de los gotchas
-- [[contexto]] — reglas de negocio y datos seed
 - [[arquitectura]] — patrones frontend/backend completos
+- [[contexto]] — reglas de negocio y datos seed
+- [[troubleshooting]] — versión expandida de los gotchas

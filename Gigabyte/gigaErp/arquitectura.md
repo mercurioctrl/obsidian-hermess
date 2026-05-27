@@ -229,3 +229,45 @@ Flujo de 3 pasos para ingresar stock al depósito desde un archivo Excel.
 ## Ver también
 
 - [[contexto]] · [[modulos/productos]] · [[stack]]
+
+## Sistema de permisos — `permisos` JSON en `usuarios`
+
+```php
+// Modelo Usuario
+public function tienePermiso(string $permiso): bool
+{
+    if ($this->esAdmin()) return true;
+    return in_array($permiso, $this->permisos ?? []);
+}
+```
+
+**Permisos actuales:**
+| Clave | Descripción | Dónde se verifica |
+|-------|-------------|------------------|
+| `aprobaciones` | Aprobar órdenes de venta (BORRADOR → APROBADA) | `OrdenVentaController::aprobar()` |
+| `VER_MONTOS` | Ver montos en el sistema | `authStore.verMontos` |
+
+**Agregar permiso nuevo:** string en `PERMISOS_DISPONIBLES` (configuracion/index.vue) + verificar en backend con `tienePermiso()`.
+
+## Flujo de estados — Órdenes de Venta
+
+```
+BORRADOR ──(aprobaciones)──► APROBADA ──(cualquiera)──► FACTURADA
+   │                              │
+   └──────────────────────────────┴──────────────────► ANULADA
+```
+
+**Endpoints de transición (antes del apiResource en routes/api.php):**
+```php
+Route::post(/ordenes-venta/{orden_venta}/invoice, ...)   // APROBADA → FACTURADA
+Route::patch(/ordenes-venta/{orden_venta}/aprobar, ...)  // BORRADOR → APROBADA (requiere permiso)
+Route::patch(/ordenes-venta/{orden_venta}/anular, ...)   // → ANULADA
+Route::apiResource(ordenes-venta, ...)
+```
+
+## Gestión de usuarios desde UI
+
+`Configuración → Usuarios` — tab completo con:
+- Listado: nombre, email, rol, activo, badges de permisos
+- Modal crear/editar: nombre, email, password, rol, activo, checkboxes de permisos
+- Solo visible para ADMIN (`if (!authStore.isAdmin) navigateTo("/")`)

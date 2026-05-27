@@ -12,18 +12,18 @@ Distribuye productos a mayoristas (Elit, New Bytes, INVID, Air) en Argentina.
 
 ## Notas de este proyecto
 
-- [[arquitectura]] — estructura de directorios, sidebar, módulos, patrones Laravel/Nuxt
+- [[arquitectura]] — estructura, patrones, permisos, flujo de estados de órdenes
 - [[stack]] — tecnologías, dependencias, servicios
 - [[design-system]] — paleta, tipografía, layout, botones, cards
 - [[componentes-ui]] — Modal, DataTable, FormField, StatusBadge, StatsCard
-- [[contexto]] — reglas de negocio, distribuidores, nomenclatura, TODOs
+- [[contexto]] — reglas de negocio, distribuidores, usuarios, TODOs
 - [[troubleshooting]] — gotchas recurrentes (sanctum, nginx, optimize:clear, html2canvas)
 - [[changelog]] — historial de trabajo por fecha
-- [[memoria]] — memoria consolidada de Claude para este proyecto
+- [[memoria]] — patrones, gotchas, workflow — leer antes de cada sesión
 
 ## Módulos
 
-- [[modulos/ordenes-venta]] — pipeline Orden → Invoice, estados, ítems, depósito por ítem, validación stock
+- [[modulos/ordenes-venta]] — pipeline BORRADOR → APROBADA → FACTURADA, permisos, ítems, depósito
 - [[modulos/invoice-preview]] — preview HTML estilo Blu + html2pdf.js + shareable token
 - [[modulos/productos]] — 4 listas de precio, SKU per-distribuidor, importaciones XLSX
 
@@ -37,6 +37,7 @@ Distribuye productos a mayoristas (Elit, New Bytes, INVID, Air) en Argentina.
 | Stock Bodega | ✅ tabs + buscador + filtro + importaciones XLSX |
 | Stock Distri | ✅ tabla cruzada SKU × distribuidor |
 | APIs Distri | ✅ catálogo con filtros y stock |
-| Órdenes de Venta | ✅ cabecera + líneas + validación stock + invoice PDF |
+| Órdenes de Venta | ✅ BORRADOR → APROBADA → FACTURADA + validación stock |
+| Gestión usuarios | ✅ CRUD + permisos configurables desde UI |
 | Fondo Marketing | ✅ lectura (ingreso pendiente desde UI) |
 | Tareas / Kanban | ✅ drag & drop + modal detalle |
