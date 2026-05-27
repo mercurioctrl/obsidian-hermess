@@ -54,3 +54,27 @@ Archivo: `frontend/pages/clientes/index.vue`
 - **Sidebar**: "Fondo" → "Fondos" (`frontend/layouts/default.vue`)
 - **Stock Bodega**: barra de filtros ahora usa card `bg-white rounded-xl border border-[#E8E8E3] p-4` consistente con el resto de páginas (`frontend/pages/mercaderia/stock/index.vue`)
 - **Importaciones XLSX**: fallback a `codigo_distribuidor` si no hay match por `sku` (`ImportacionMercaderiaController`)
+
+## 2026-05-27 — Datos demo: órdenes de venta para todos los distribuidores
+
+Se crearon 20 órdenes de venta FACTURADAS (5 por distribuidor) via tinker, con sus ventas, ítems y movimientos de cuenta corriente correspondientes.
+
+**Volumen creado:**
+
+| Distribuidor | Órdenes | Facturado |
+|---|---|---|
+| Elit | 5 | USD 54,540 |
+| New Bytes | 5 | USD 40,240 |
+| Invid | 5 | USD 52,345 |
+| Air | 5 | USD 28,790 |
+
+**Criterio de productos por distribuidor:**
+- Elit (BA): high-end — AERO 16, M27U, RTX 4070, SSD, Cooler AIO
+- New Bytes (Córdoba): gaming — G5 KF, G27Q, RX 7600, K85, M4000, H500
+- Invid (Mendoza): workstation + componentes — AERO 16, M27U, fuentes, coolers, SSD
+- Air (Rosario): periféricos litoral — K85, M4000, H500, G27Q, fuentes, SSD
+
+Cada orden: estado FACTURADA, venta asociada (VTA-0015 a VTA-0034), movimiento DEBE en cuenta corriente.
+Las órdenes originales del DemoSeeder (OV-0001, OV-0002) se conservan. Total OV: 22, total ventas: 34.
+
+**Commit:** `8162e3c` — incluye todo el módulo de notas de crédito + línea de crédito + este seeding.

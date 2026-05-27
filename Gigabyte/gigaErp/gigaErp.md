@@ -3,7 +3,7 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Última sincronización:** 2026-05-27
+**Último commit:** `8162e3c` · **Última sincronización:** 2026-05-27
 
 ---
 
@@ -26,25 +26,31 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 ---
 
-## Estado actual (2026-05-27)
+## Estado actual (2026-05-27) — commit `8162e3c`
 
 ### Módulos implementados
 
 | Módulo | Estado | Notas |
 |--------|--------|-------|
 | Distribuidores / Cuenta corriente | ✅ | Movimientos, saldo, línea de crédito con historial |
-| Notas de crédito | ✅ | Desde CC (texto libre) y desde orden FACTURADA (parciales) |
-| Órdenes de Venta | ✅ | BORRADOR → APROBADA → FACTURADA, permisos |
+| Notas de crédito | ✅ | Desde CC (libre) y desde orden FACTURADA (parciales/totales) |
+| Órdenes de Venta | ✅ | BORRADOR → APROBADA → FACTURADA, permisos granulares |
 | Invoice (PDF + preview) | ✅ | html2pdf.js, preview pública por token |
-| Stock Bodega | ✅ | Depósitos, importaciones XLSX, filtros |
-| Stock Distri / APIs Distri | ✅ | Catálogo por distribuidor |
+| Stock Bodega | ✅ | Depósitos, importaciones XLSX, filtros en card |
+| Stock Distri / APIs Distri | ✅ | Catálogo por distribuidor, 4 listas de precio |
 | Fondos de Marketing | ✅ | Asignación por distribuidor y año |
 | Tareas (Kanban) | ✅ | 4 columnas, drag & drop, modal detalle |
 | Configuración | ✅ | Datos empresa + CRUD usuarios con permisos |
 
-### Migraciones
+### Volumen en DB
 
-`0001–0033` — la última agrega `notas_credito` + `notas_credito_items` + FK `nota_credito_id` en `movimientos_cuenta`.
+| Entidad | Cantidad |
+|---------|---------|
+| Órdenes de venta | 22 (OV-0001 a OV-0022) |
+| Ventas / Invoices | 34 (VTA-0001 a VTA-0034) |
+| Movimientos cc | ~62 |
+| Productos | 259 |
+| Migraciones | 0001–0033 |
 
 ### Usuarios demo
 
@@ -54,3 +60,12 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 | `carolina.lagos@gigabyte.com` / `demo1234` | OPERATIVO | aprobaciones + VER_MONTOS |
 | `martin.fierro@gigabyte.com` / `demo1234` | OPERATIVO | VER_MONTOS |
 | `julia.mendez@gigabyte.com` / `demo1234` | OPERATIVO | — |
+
+### Distribuidores con línea de crédito
+
+| Nombre | Saldo cc | Línea de crédito |
+|--------|----------|-----------------|
+| Elit | a cobrar | $30,000 |
+| New Bytes | a cobrar | $20,000 |
+| Invid | a cobrar | $40,000 |
+| Air | a cobrar | $12,000 |
