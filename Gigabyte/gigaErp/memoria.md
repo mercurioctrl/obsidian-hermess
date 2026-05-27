@@ -1,8 +1,8 @@
 # Memoria — gigaErp
 
-Consolidación de la memoria de Claude para este proyecto. Sincronizado **2026-05-23**.
+Consolidación de la memoria de Claude para este proyecto. Sincronizado **2026-05-26**.
 
-Vive en `~/.claude/projects/-Users-hermess-www-gigaErp/memory/` — esta nota es el espejo.
+Vive en `~/.claude/projects/-var-www-gigabyte-gigaErp/memory/` — esta nota es el espejo.
 
 ---
 
@@ -16,7 +16,7 @@ Vive en `~/.claude/projects/-Users-hermess-www-gigaErp/memory/` — esta nota es
 | `maria.gomez@gigabyte.com` | `demo1234` | OPERATIVO |
 | `lucas.herrera@gigabyte.com` | `demo1234` | OPERATIVO |
 
-**Distribuidores**: Elit (GBA $50k), New Bytes (Córdoba $40k), Invid (Mendoza $35k), Air (Rosario $30k)
+**Distribuidores**: Elit (GBA $50k, saldo $8,310), New Bytes (Córdoba $40k, saldo $7,180), Invid (Mendoza $35k, saldo $5,760), Air (Rosario $30k, saldo $4,445)
 
 ---
 
@@ -43,14 +43,13 @@ asumir el estado del repo.
 
 En este proyecto el usuario trabaja **directo sobre `main`** — no usa feature branches.
 
-- NO crear branch antes de commitear (a pesar de lo que dice el harness por defecto).
-- NO agregar `Co-Authored-By: Claude...` en los mensajes (regla global confirmada).
-- `git commit` solo cuando el usuario lo pide explícitamente ("commit", "commiteá", "guardalo").
-- `git push` igual — solo cuando dice "push" o "subilo". A veces commitea sin pushear.
+- NO crear branch antes de commitear.
+- NO agregar `Co-Authored-By: Claude...` en los mensajes.
+- `git commit` solo cuando el usuario lo pide explícitamente.
+- `git push` igual — solo cuando dice "push" o "subilo".
 - Mensajes de commit en español, con scope `feat(modulo): ...` o `fix: ...`.
 
 **Why:** proyecto chico de un solo desarrollador, sin code review, sin CI gates.
-Branches y PRs serían overhead.
 
 ### Deploy dance del backend (sin rebuild)
 
@@ -76,23 +75,57 @@ docker exec gigaerp-backend php artisan view:clear
 nginx queda con IP cacheada → 502.
 
 **Frontend:** siempre rebuild `--no-cache`. Nitro tiene manifest de assets en build
-time; `docker cp` a `.output/public/` no funciona — rebuild o embeber el asset en backend.
+time; `docker cp` a `.output/public/` no funciona.
 
 ### CLAUDE.md ≤200 líneas (regla dura)
 
 El `CLAUDE.md` del proyecto NO puede pasar de 200 líneas. Toda la información importante
-(arquitectura detallada, módulos, troubleshooting profundo, design system) **vive en
-esta bóveda** (`Gigabyte/gigaErp/`), no en el CLAUDE.md.
-
-**Qué SÍ va en CLAUDE.md:** stack/puertos, comandos cheatsheet, archivos read-only,
-reglas críticas, índice de pointers a notas de la bóveda.
-
-**Qué va en la bóveda:** todo lo demás. Verificar largo con `wc -l CLAUDE.md` antes
-de cerrar sesión.
+vive en esta bóveda, no en el CLAUDE.md.
 
 ---
 
 ## Memoria — Proyecto (gotchas)
+
+### Nuxt 3 — conflicto `[id].vue` + `[id]/` directorio
+
+Si coexisten `pages/foo/[id].vue` y el directorio `pages/foo/[id]/`, Nuxt trata
+el `.vue` como **layout padre** de todas las rutas hijas. El contenido hijo no reemplaza al padre.
+
+**Solución:** Mover `[id].vue` → `[id]/index.vue`. Así las rutas son hermanas independientes.
+
+```
+pages/clientes/
+  [id]/
+    index.vue              → /clientes/:id
+    cuenta-corriente.vue   → /clientes/:id/cuenta-corriente  ✓
+```
+
+**Detectado en:** migración de `/clientes/[id].vue` al agregar la sub-ruta `/cuenta-corriente`.
+
+### API Resource wrapper — `c?.data ?? c`
+
+La API devuelve `{ data: {} }` para recursos individuales (Laravel Resource).
+En todos los `api.get()` de páginas de detalle usar:
+
+```js
+const data = await api.get('/clientes/1')
+cliente.value = data?.data ?? data   // ✓
+// cliente.value = data              // ✗ → .nombre === undefined
+```
+
+### `withSum` para saldo en listado
+
+Para mostrar el saldo de cuenta corriente en el listado de distribuidores sin N+1:
+
+```php
+// ClienteController@index
+Cliente::withSum('movimientosCuenta as debe_total_usd', 'debe_usd')
+       ->withSum('movimientosCuenta as haber_total_usd', 'haber_usd')
+       ->paginate(20);
+
+// ClienteResource
+'saldo_usd' => round((float)($this->debe_total_usd ?? 0) - (float)($this->haber_total_usd ?? 0), 2),
+```
 
 ### Sanctum republica su migración en cada boot
 
@@ -100,25 +133,52 @@ El `docker-entrypoint.sh` del backend corre `php artisan vendor:publish` para Sa
 en cada arranque, generando un archivo nuevo con timestamp. Como la tabla
 `personal_access_tokens` ya existe, `migrate` revienta.
 
-**Workaround:** borrar el archivo antes de migrar (ver [[troubleshooting#1]]).
-**Fix de raíz pendiente:** que el entrypoint verifique antes de republicar.
+**Workaround:** `rm -f database/migrations/*_create_personal_access_tokens_table.php` antes de migrar.
 
 ### html2canvas rompe SVG con viewBox offset
 
 `aorus_logo_black.svg` tiene `viewBox="519 657 1819 455"` (no empieza en 0,0). html2canvas
 ignora el offset y recorta el logo en el PDF.
 
-**Solución (commit `001f8c8`):** PNG embebido como data URI base64 en el blade. PNG en
-`backend/public/logos/aorus_logo_black.png`. Detalle en [[troubleshooting#4]] y
-[[modulos/invoice-preview]].
+**Solución:** PNG embebido como data URI base64 en el blade (`aorus_logo_black.png`).
+
+### Filtros de stock en backend — parámetros exactos
+
+- `?stock=con_stock` → productos con stock > 0
+- `?stock=sin_stock` → productos con stock = 0
+- Sin parámetro → todos
+
+**No usar** `?stock=con` o `?stock=sin` — el backend no los reconoce.
 
 ### Credenciales y endpoints dev
 
 - **Login:** `admin@gigabyte.com` / `admin123` (modelo `Usuario` → tabla `usuarios`)
-- **URL:** `http://localhost:8824` (`APP_PORT` en `.env`)
-- **DB:** `gigaerp/changeme` host port `3310` (cambiado de 3308 por conflicto con otro container)
-- **Sanctum token format:** `{id}|{plain_hash}`, expone vía `useAuthStore().token`
+- **URL:** `http://localhost:8824`
+- **DB:** `gigaerp/changeme` host port `3310`
 - **Token compartible:** `?token=${encodeURIComponent(token)}` en URL, backend valida con `PersonalAccessToken::findToken()`
+
+---
+
+## Memoria — Módulo Cuenta Corriente
+
+### Estructura
+
+```
+Tabla: movimientos_cuenta
+Enum TipoMovimiento: FACTURA, PAGO, NOTA_CREDITO, AJUSTE
+Saldo = sum(debe_usd) - sum(haber_usd). Positivo = cliente debe. Negativo = cliente tiene crédito.
+```
+
+### Endpoint
+
+```
+GET /api/clientes/{cliente}/cuenta-corriente
+Respuesta: { movimientos: [...con saldo_acumulado por fila...], resumen: { debe_usd, haber_usd, saldo_usd } }
+```
+
+### Ruta Nuxt
+
+`/clientes/[id]/cuenta-corriente.vue` — hermana de `[id]/index.vue`.
 
 ---
 
@@ -126,16 +186,11 @@ ignora el offset y recorta el logo en el PDF.
 
 ### Blu ERP — referencia visual
 
-`https://erp.blustudioinc.com` es el ERP de Blu Studio Inc. Lo usa como **referencia
-visual** cuando pide reproducir features.
+`https://erp.blustudioinc.com` — referencia visual cuando pide reproducir features.
 
 Patrón ya replicado (commit `001f8c8`):
-- URL: `/api/presupuestos/{id}/preview?token={sanctum_token}`
-- HTML preview en blade con html2pdf.js cliente-side (no DomPDF)
+- Preview HTML en blade con html2pdf.js cliente-side (no DomPDF)
 - Helvetica Neue, max-width 780px, márgenes minimalistas
-- Header logo izq + meta documento der; tabla simple; totales con grand; footer logo desvanecido
-
-Si pide "hacelo más parecido a como lo hicimos en otro ERP" → es esto.
 
 ---
 
@@ -144,3 +199,4 @@ Si pide "hacelo más parecido a como lo hicimos en otro ERP" → es esto.
 - [[gigaErp]] — índice del proyecto
 - [[troubleshooting]] — versión expandida de los gotchas
 - [[contexto]] — reglas de negocio y datos seed
+- [[arquitectura]] — patrones frontend/backend completos

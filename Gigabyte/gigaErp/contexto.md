@@ -81,15 +81,23 @@ Moneda: USD exclusivamente.
 - 4 columnas: POR_HACER → EN_CURSO → READY_FOR_QA → LISTO
 - Drag & drop HTML5 nativo, click → modal detalle estilo Jira
 
-### Stock de productos
+### Stock de productos — dos sistemas independientes
 - Campo `stock` directo en `productos` — usado por APIs Distri / Stock Distri
 - Tabla `stock_deposito` (modelo `StockDeposito`) — usado por Stock Bodega (`/mercaderia/stock`)
 - Son independientes — no se sincronizan automáticamente
+- Las importaciones XLSX actualizan `stock_deposito` (no el campo `stock`)
+
+### Importaciones de stock (XLSX)
+- Flujo 3 pasos: subir archivo → mapear columnas → confirmar
+- `POST /api/mercaderia/importaciones/parsear` — guarda en storage, devuelve headers
+- `POST /api/mercaderia/importaciones/procesar` — upsert `stock_deposito` por producto+depósito
+- Trazabilidad: tabla `importaciones_mercaderia` + `items_importacion_mercaderia`
 
 ### Órdenes de Venta
 - `OrdenVenta` (cabecera) + `ItemOrdenVenta` (líneas)
 - Cada ítem tiene `deposito_id` nullable: de qué depósito se toma el stock
 - Listas de precio 1–4 disponibles en productos
+- **Validación de stock**: no se puede agregar un producto sin stock en el depósito seleccionado (bloqueo en UI + guard en `agregar()`)
 
 ### Invoice (PDF)
 - Se genera desde `/ordenes-venta/[id]` al "Generar invoice" → crea registro `Venta`
@@ -106,6 +114,8 @@ Moneda: USD exclusivamente.
 - [ ] Vista/edición de Ventas directa (hoy solo se accede via orden)
 - [ ] Campo `shipping_usd` editable en alguna UI (hoy default 0)
 - [ ] Ingresar movimientos de cuenta corriente desde la UI (hoy solo lectura del seeder)
+- [x] Validación stock en picker de órdenes (no se puede agregar producto sin stock en depósito)
+- [x] Importaciones masivas de stock desde XLSX con mapeo de columnas
 - [x] Módulo Cuenta Corriente por distribuidor (movimientos_cuenta, saldo en listado)
 - [x] Reorganización sidebar (Operaciones + Marketing subsecciones)
 - [x] Stock Bodega con tabs + buscador + filtro con/sin stock

@@ -223,3 +223,37 @@ Admin:        Configuración (solo admin)
 Archivos: `frontend/layouts/default.vue`, `frontend/pages/mercaderia/index.vue`, `frontend/pages/mercaderia/stock/index.vue`, `frontend/pages/mercaderia/depositos/index.vue`, `frontend/pages/mercaderia/importaciones/index.vue`
 
 ---
+## 2026-05-26 — Importaciones de stock desde XLSX + Validación de stock en órdenes
+
+### Importaciones masivas desde archivo XLSX (`feat(mercaderia): importaciones de stock desde xlsx`)
+
+Flujo completo de ingreso de stock al depósito via archivo Excel:
+
+**Backend:**
+- `ImportacionMercaderiaController`: dos endpoints:
+  - `POST /api/mercaderia/importaciones/parsear` — recibe archivo xlsx/xls/csv, lo guarda en storage temporal con UUID, devuelve headers de la primera fila + muestra de filas para que el frontend construya el mapeo de columnas
+  - `POST /api/mercaderia/importaciones/procesar` — recibe `staged_id`, `deposito_id` y mapeo de columnas (`col_codigo`, `col_cantidad`), procesa cada fila, actualiza `stock_deposito` (upsert por producto+depósito), crea registro `ImportacionMercaderia` + `ItemImportacionMercaderia` para trazabilidad
+- Dependencia: `phpoffice/phpspreadsheet` (ya instalada en el container)
+- Modelos: `ImportacionMercaderia`, `ItemImportacionMercaderia`
+
+**Frontend — flujo de 3 pasos:**
+- Paso 1: Subir archivo → preview de headers y primera fila
+- Paso 2: Mapear columnas (código, cantidad) con selects dinámicos + depósito destino
+- Paso 3: Confirmar → muestra resumen (filas procesadas, productos actualizados, errores)
+
+Archivos: `backend/app/Http/Controllers/ImportacionMercaderiaController.php`, `backend/app/Models/{ImportacionMercaderia,ItemImportacionMercaderia}.php`, `backend/database/migrations/0030_create_importaciones_mercaderia_tables.php`, `frontend/pages/mercaderia/importaciones/{index,nueva,[id]}.vue`
+
+### Validación de stock en picker de Órdenes de Venta
+
+Antes era posible agregar a una orden un producto con stock 0 en el depósito seleccionado.
+
+**Fix en `OrdenItems.vue`:**
+- Nueva función `tieneStock(p)`: retorna `true` si `stockEnDeposito(p, depositoEfectivo(p)) > 0`
+- Guard en `agregar()`: retorna inmediatamente si `!tieneStock(p)`
+- Botones "Lista 1–4" con `:disabled="!tieneStock(p)"` + `opacity-40 cursor-not-allowed`
+- Badge rojo "Sin stock" junto al nombre del producto cuando el stock es 0 en el depósito efectivo
+
+La validación respeta el depósito activo: si el usuario filtra por un depósito o selecciona uno en las pills, la validación se hace contra ese depósito específico.
+
+Archivos: `frontend/components/OrdenItems.vue`
+
