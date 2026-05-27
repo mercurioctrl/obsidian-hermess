@@ -13,7 +13,7 @@ las invoices son **Ventas** (reusamos la tabla `ventas` que ya existía).
 | `numero` | string unique | formato `OV-0001` |
 | `cliente_id` | FK → `clientes` | cascadeOnDelete |
 | `usuario_id` | FK → `usuarios` nullable | quien la creó |
-| `venta_id` | FK → `ventas` nullable | invoice generada (null si BORRADOR) |
+| `venta_id` | FK → `ventas` nullable | invoice generada (null si BORRADOR/APROBADA) |
 | `estado` | string | enum `EstadoOrdenVenta` |
 | `fecha` | date | |
 | `total_usd` | decimal(12,2) | recalculado al sincronizar items |
@@ -37,12 +37,17 @@ las invoices son **Ventas** (reusamos la tabla `ventas` que ya existía).
 ## Estados (`EstadoOrdenVenta` enum)
 
 ```
-BORRADOR  → FACTURADA   (al generar invoice; crea Venta)
-BORRADOR  → ANULADA     (manualmente)
-BORRADOR  → eliminada   (DELETE; solo si BORRADOR)
+BORRADOR → APROBADA → FACTURADA
+    ↓           ↓
+  ANULADA    ANULADA
 ```
 
-Una vez `FACTURADA` o `ANULADA`, no se puede editar ni eliminar.
+| Estado | Editable | Quién puede avanzar |
+|--------|----------|---------------------|
+| BORRADOR | ✅ | Cualquier usuario logueado |
+| APROBADA | ❌ | Solo usuario con permiso `aprobaciones` |
+| FACTURADA | ❌ | Solo desde estado APROBADA |
+| ANULADA | ❌ | Desde BORRADOR o APROBADA |
 
 ## Endpoints
 
@@ -51,24 +56,52 @@ GET    /api/ordenes-venta                    listado paginado (filtros: cliente_
 POST   /api/ordenes-venta                    crear (estado BORRADOR)
 GET    /api/ordenes-venta/{id}               show con items + venta
 PUT    /api/ordenes-venta/{id}               editar (422 si no es BORRADOR)
-DELETE /api/ordenes-venta/{id}               eliminar (422 si FACTURADA)
+DELETE /api/ordenes-venta/{id}               eliminar (422 si no es BORRADOR)
+PATCH  /api/ordenes-venta/{id}/aprobar       BORRADOR → APROBADA (403 sin permiso `aprobaciones`)
 PATCH  /api/ordenes-venta/{id}/anular        → ANULADA (422 si FACTURADA)
-POST   /api/ordenes-venta/{id}/invoice       genera Venta, marca FACTURADA (201)
+POST   /api/ordenes-venta/{id}/invoice       genera Venta, marca FACTURADA (422 si no es APROBADA)
 ```
 
-Las rutas estáticas (`/invoice`, `/anular`) van **antes** del `apiResource` con
+Las rutas estáticas (`/aprobar`, `/anular`, `/invoice`) van **antes** del `apiResource` con
 `->parameters(['ordenes-venta' => 'orden_venta'])` para que el route model binding funcione.
 
 ## Generación de la invoice
 
 `OrdenVentaController@generarInvoice` (dentro de transacción):
 
-1. Valida que la orden esté en `BORRADOR` y tenga ítems.
+1. Valida que la orden esté en `APROBADA` y tenga ítems.
 2. Crea una `Venta` nueva (`VTA-XXXX`) con `cliente_id`, `total_usd`, `notas` referenciando la orden.
 3. Por cada `items_orden_venta` crea un `items_venta` con `producto_id`, `cantidad`, `precio_usd`, `subtotal_usd`.
 4. Actualiza la orden: `estado = FACTURADA`, `venta_id = venta.id`.
 
 La invoice generada se ve como **HTML preview Blu-style** — ver [[invoice-preview]].
+
+## Nota de crédito desde orden FACTURADA
+
+Una vez que la orden está `FACTURADA`, aparece el botón **"Nota de crédito"** (lila/indigo)
+en el banner de la invoice en `pages/ordenes-venta/[id].vue`.
+
+### Flujo
+
+1. Click → modal pre-llenado con los ítems de la orden:
+   - `descripcion`: `nombre del producto (SKU)` — texto libre, editable
+   - `cantidad`: cantidad del ítem — editable (reducir para NC parcial)
+   - `precio_usd`: precio snapshotado — editable (reducir para NC parcial)
+2. El usuario puede editar cualquier campo para hacer la NC **total o parcial**.
+3. Al confirmar: `POST /clientes/{cliente_id}/notas-credito` con los ítems editados.
+4. Se abre automáticamente la preview en nueva tab.
+
+El endpoint es el mismo que el de cuenta corriente — ambos orígenes usan
+`/clientes/{id}/notas-credito`. La pre-llenación es solo frontend.
+
+### Nota de crédito vs Ajuste manual (desde cuenta corriente)
+
+| Origen | Descripción | Ítems |
+|--------|-------------|-------|
+| Orden FACTURADA | Pre-llena con items de la orden, editable | Texto + qty + precio (parcial posible) |
+| Cuenta corriente | Libre, desde cero | Texto + qty + precio |
+
+Ambos crean: `NotaCredito` + `NotaCreditoItem[]` + `MovimientoCuenta` NOTA_CREDITO (haber).
 
 ## Validación
 
@@ -77,7 +110,7 @@ La invoice generada se ve como **HTML preview Blu-style** — ver [[invoice-prev
 'fecha'                => 'required|date',
 'notas'                => 'nullable|string',
 'items'                => 'required|array|min:1',
-'items.*.producto_id'  => 'required|distinct|exists:productos,id',  // distinct = no repetir SKU
+'items.*.producto_id'  => 'required|distinct|exists:productos,id',
 'items.*.deposito_id'  => 'nullable|exists:depositos,id',
 'items.*.lista_precio' => 'required|integer|min:1|max:4',
 'items.*.cantidad'     => 'required|integer|min:1',
@@ -91,7 +124,7 @@ El precio NO viene del frontend — el backend lo lee de `producto.precio_lista_
 
 - `pages/ordenes-venta/index.vue` — listado con DataTable, columna **Invoice** con link clickable que abre la preview en nueva tab
 - `pages/ordenes-venta/nueva.vue` — wizard de creación (cabecera + builder de ítems)
-- `pages/ordenes-venta/[id].vue` — detalle/edición + acciones: Guardar, Generar invoice, Anular, Eliminar
+- `pages/ordenes-venta/[id].vue` — detalle/edición + acciones: Guardar, Aprobar, Generar invoice, Anular, Eliminar, **Nota de crédito** (solo FACTURADA)
 
 ### Componente clave: `components/OrdenItems.vue`
 
@@ -112,3 +145,4 @@ Picker de producto: modal con buscador, cada producto muestra **4 botones (Lista
 - [[productos]] — las 4 listas de precio que se eligen acá
 - [[invoice-preview]] — qué se ve al "Ver invoice"
 - [[arquitectura]] — patrón general de controllers/resources
+- [[contexto]] — reglas de negocio, permisos `aprobaciones`
