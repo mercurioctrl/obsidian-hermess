@@ -1,3 +1,38 @@
+## 2026-05-27 — Buscador global + Sincronizar APIs
+
+### Buscador global en topbar (`frontend/components/GlobalSearch.vue`)
+
+Nuevo componente de búsqueda universal disponible en el topbar de todas las páginas.
+
+- **Shortcut ⌘K / Ctrl+K** para enfocar desde cualquier pantalla
+- Busca en paralelo: Clientes, Productos, Órdenes de Venta, Proveedores, Tareas
+- Dropdown animado con resultados agrupados por sección, ícono y subtítulo
+- Navegación directa: Distribuidor → `/clientes/{id}/cuenta-corriente`, OV → `/ordenes-venta/{id}`
+- Productos y Proveedores → sección con `?search=` pre-relleno
+- ESC cierra, click fuera cierra, sin resultados muestra mensaje
+- Mínimo 2 caracteres, máximo 4 resultados por sección, debounce 280ms
+
+**Backend:** `SearchController` (`GET /api/search?q=`). Fix notable: arrow functions PHP capturan por valor — se reescribió con `foreach` en lugar de `->each(fn() =>)`.
+
+**Commits:** `88d87bd`
+**Archivos:** `backend/app/Http/Controllers/SearchController.php`, `backend/routes/api.php`, `frontend/components/GlobalSearch.vue`, `frontend/layouts/default.vue`, `frontend/pages/productos/index.vue`
+
+---
+
+### Botón Sincronizar APIs en sección Productos (`frontend/pages/productos/index.vue`)
+
+Botón en el header de APIs Distri que simula la sincronización de catálogos con cada distribuidor.
+
+- Modal con lista de distribuidores, cada uno con barra de progreso individual
+- Estados: Pendiente → Conectando con API → Descargando catálogo → Procesando productos → ✓ Listo
+- Tiempo total ≤ 10 segundos distribuido entre todos los distribuidores
+- Botón "Listo" bloqueado hasta que todos terminan
+- Cantidad de productos sincronizados aleatoria por distribuidor (simulada)
+
+**Commit:** `dd811dd`
+**Archivos:** `frontend/pages/productos/index.vue`
+
+---
 ## 2026-05-27 — Fix: stocks_deposito por ID de depósito en Stock Bodega
 
 ### Bug encontrado
