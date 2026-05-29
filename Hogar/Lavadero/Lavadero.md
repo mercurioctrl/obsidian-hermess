@@ -141,3 +141,4 @@ Abrir [`attachments/lavadero-3d.html`](attachments/lavadero-3d.html) con doble c
 - [[03-durlock-presupuesto|Durlock — Presupuesto revestimiento paredes]]
 - [[04-azulejo-zona-humeda|Azulejo — Presupuesto zona húmeda]]
 - [[05-revestimiento-wpc-exterior|WPC exterior — Revestimiento símil madera pared con ventana]]
+- [[06-plano-traforo-mesada|Plano — Traforo de la mesada (especificación para carpintería)]]
