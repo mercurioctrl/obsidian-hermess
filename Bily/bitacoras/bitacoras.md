@@ -20,6 +20,8 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-05-26|2026-05-26]] — Depuración tablero Kanban general, registro de tareas de desarrollo/operativas
 - [[Bily/bitacoras/2026-05-27|2026-05-27]] — Consulta facturu en daily, kanban general
 
+- [[Bily/bitacoras/2026-05-28|2026-05-28]] — Limpieza de Kanban y revisión de turnos (DNI, AFIP)
+
 ## Ver también
 
 - [[Bily/Inicio|Inicio de Bily]]
