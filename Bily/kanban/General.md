@@ -8,6 +8,7 @@
 - Comprar seguidores NBE.
 - Que [[Ezequiel Manzano|Eze]] pruebe las estadísticas de NB mensuales de los vendedores.
 - Reunión con [[Juan]] por drop shipping.
+- Resolver la otra multa de tránsito.
 
 ## Bloqueos / Esperando OK
 
