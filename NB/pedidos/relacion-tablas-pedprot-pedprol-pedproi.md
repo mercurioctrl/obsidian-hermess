@@ -56,3 +56,10 @@ Cuando la OC se recibe, se generan albprot (encabezado del remito de compra) y a
 ## Base de datos
 
 Todas en [NewBytes_DBF].[dbo]
+
+## Ver también
+- [[relacion-tablas-ped-alb|Tablas de ventas (pedclit/pedclil/albclit/albclil)]]
+- [[relacion-tablas-albprot-albprol|Remitos de compra (albprot/albprol)]]
+- [[relacion-tablas-articulo-stocks|Artículo y stocks]]
+- [[relacion-tablas-stocks-almacen|Stocks y depósitos]]
+- [[relacion-companycode|companyCode por tabla]]

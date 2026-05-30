@@ -96,3 +96,9 @@ Esto ocurrió en el proyecto Laset (2026-05-15) cuando una carga fallida dejó p
 
 - articulo y stocks: [NewBytes_DBF].[dbo]
 - stocks también se cruza con [NewBytes_DBF].[dbo].[FP_Almacen] por ID_ALMACEN para obtener nombre y código del almacén.
+
+## Ver también
+- [[relacion-tablas-ped-alb|Tablas de ventas (pedclit/pedclil/albclit/albclil)]]
+- [[relacion-tablas-pedprot-pedprol-pedproi|Tablas de compras (pedprot/pedprol/pedproi)]]
+- [[relacion-tablas-stocks-almacen|Stocks y depósitos]]
+- [[relacion-companycode|companyCode por tabla]]

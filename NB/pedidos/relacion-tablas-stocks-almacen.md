@@ -110,3 +110,10 @@ nstock = nstock + cantidad
 ## Base de datos
 
 Todas en [NewBytes_DBF].[dbo]
+
+## Ver también
+- [[relacion-tablas-articulo-stocks|Artículo y stocks]]
+- [[relacion-tablas-ped-alb|Tablas de ventas (pedclit/pedclil/albclit/albclil)]]
+- [[relacion-tablas-pedprot-pedprol-pedproi|Tablas de compras (pedprot/pedprol/pedproi)]]
+- [[relacion-companycode|companyCode por tabla]]
+- [[modulo-makesale|MakeSale — flujo de liquidación]]

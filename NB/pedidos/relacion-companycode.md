@@ -31,3 +31,11 @@ Un pedido de companyCode=X solo puede referenciar artículos con companyCode=X. 
 ## albclit — historial del campo
 
 La columna companyCode fue agregada el 2026-05-30. Los registros históricos sin pedclit padre (remitos legacy del ERP, 2010-2025) fueron asignados a companyCode=4 (NB) ya que todos los registros legacy pertenecían a NB.
+
+## Ver también
+- [[relacion-tablas-ped-alb|Tablas de ventas (pedclit/pedclil/albclit/albclil)]]
+- [[relacion-tablas-pedprot-pedprol-pedproi|Tablas de compras (pedprot/pedprol/pedproi)]]
+- [[relacion-tablas-albprot-albprol|Remitos de compra (albprot/albprol)]]
+- [[relacion-tablas-articulo-stocks|Artículo y stocks]]
+- [[relacion-tablas-stocks-almacen|Stocks y depósitos]]
+- [[contexto|Contexto — regla cero ERP]]

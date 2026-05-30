@@ -80,3 +80,9 @@ WHERE t.companyCode = ?
 ## Base de datos
 
 Todas en [NewBytes_DBF].[dbo]
+
+## Ver también
+- [[relacion-tablas-pedprot-pedprol-pedproi|OC (pedprot/pedprol/pedproi)]]
+- [[relacion-tablas-ped-alb|Tablas de ventas (pedclit/pedclil/albclit/albclil)]]
+- [[relacion-tablas-stocks-almacen|Stocks y depósitos]]
+- [[relacion-companycode|companyCode por tabla]]

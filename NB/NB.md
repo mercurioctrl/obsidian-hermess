@@ -1,43 +1,56 @@
 # NB — New Bytes
 
-Proyectos y microservicios del ecosistema New Bytes.
+Proyectos del sistema NB (New Bytes). Aplicaciones internas de gestión para el grupo empresarial.
 
 ---
 
-## [[microservicio-envios/microservicio-envios|microservicio-envios]]
-Microservicio REST de cotización, creación y tracking de envíos (OCA, Andreani, Entregar, Urbano, Moto, NbE).
-- [[microservicio-envios/arquitectura|arquitectura]] · [[microservicio-envios/stack|stack]] · [[microservicio-envios/contexto|contexto]] · [[microservicio-envios/changelog|changelog]]
+## [[pedidos/pedidos|Pedidos]]
+Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.js 2. Docker (puerto 8093) + PM2 (puerto 3702).
+- [[pedidos/arquitectura|Arquitectura]] — patrones, controllers, servicios, modelo ERP
+- [[pedidos/stack|Stack]] — tecnologías y dependencias
+- [[pedidos/changelog|Changelog]] — historial de cambios
+- [[pedidos/contexto|Contexto]] — reglas de negocio, gotchas, empresas
+- [[pedidos/modulo-makesale|MakeSale]] · [[pedidos/modulo-removesale|RemoveSale]] · [[pedidos/modulo-dashboard-lo|Dashboard LO]]
+- [[pedidos/feature-laset-import|Laset Import]] · [[pedidos/feature-asignacion-oc|Asignación OC]] · [[pedidos/feature-integrar-eccn|ECCN]]
+- **Esquema ERP:** [[pedidos/relacion-tablas-ped-alb|ventas]] · [[pedidos/relacion-tablas-pedprot-pedprol-pedproi|compras]] · [[pedidos/relacion-tablas-albprot-albprol|remitos compra]] · [[pedidos/relacion-tablas-articulo-stocks|artículo/stocks]] · [[pedidos/relacion-tablas-stocks-almacen|depósitos]] · [[pedidos/relacion-companycode|companyCode]]
 
-## [[pedidos/pedidos|pedidos]]
-- [[pedidos/arquitectura|arquitectura]] · [[pedidos/stack|stack]] · [[pedidos/contexto|contexto]] · [[pedidos/memoria|memoria]] · [[pedidos/changelog|changelog]]
-- [[pedidos/feature-asignacion-oc|feature-asignacion-oc]] · [[pedidos/feature-asignacion-oc-cookbook|cookbook]] · [[pedidos/feature-laset-import|feature-laset-import]] · [[pedidos/feature-laset-snapshot-restore|feature-laset-snapshot-restore]] · [[pedidos/feature-laset-fix-pedprot-stockonly|fix-bugs-fase-c]] · [[pedidos/feature-integrar-eccn|feature-integrar-eccn]]
-- [[pedidos/modulo-dashboard-lo|modulo-dashboard-lo]] · [[pedidos/modulo-makesale|modulo-makesale]] · [[pedidos/modulo-removesale|modulo-removesale]] · [[pedidos/nota-catalogo-laset|nota-catalogo-laset]]
+---
 
-## [[expedicion/expedicion|expedicion]]
-- [[expedicion/arquitectura|arquitectura]] · [[expedicion/stack|stack]] · [[expedicion/contexto|contexto]] · [[expedicion/memoria|memoria]] · [[expedicion/changelog|changelog]]
-- [[expedicion/documentacion|documentacion]]
-- [[NB/expedicion/tareas/tareas|tareas de expedición]]
+## [[expedicion/expedicion|Expedición]]
+- [[expedicion/arquitectura|Arquitectura]] · [[expedicion/stack|Stack]] · [[expedicion/changelog|Changelog]]
 
-## [[inventario/inventario|inventario]]
-- [[inventario/arquitectura|arquitectura]] · [[inventario/stack|stack]] · [[inventario/contexto|contexto]] · [[inventario/memoria|memoria]] · [[inventario/changelog|changelog]]
+---
 
-## [[controldeprecios/controldeprecios|controldeprecios]]
-- [[controldeprecios/arquitectura|arquitectura]] · [[controldeprecios/stack|stack]] · [[controldeprecios/contexto|contexto]] · [[controldeprecios/memoria|memoria]] · [[controldeprecios/changelog|changelog]]
+## [[controldeprecios/controldeprecios|Control de Precios]]
+- [[controldeprecios/arquitectura|Arquitectura]] · [[controldeprecios/changelog|Changelog]]
 
-## [[Compras/Compras|Compras]]
-- [[Compras/arquitectura|arquitectura]] · [[Compras/stack|stack]] · [[Compras/changelog|changelog]]
+---
+
+## [[inventario/inventario|Inventario]]
+- [[inventario/arquitectura|Arquitectura]] · [[inventario/changelog|Changelog]]
+
+---
+
+## [[cobros/cobros|Cobros]]
+- [[cobros/cobros|Índice]] · [[cobros/changelog|Changelog]]
+
+---
 
 ## [[Comprobantes/Comprobantes|Comprobantes]]
-- [[Comprobantes/arquitectura|arquitectura]] · [[Comprobantes/stack|stack]] · [[Comprobantes/contexto|contexto]] · [[Comprobantes/changelog|changelog]]
+- [[Comprobantes/Comprobantes|Índice]]
 
-## [[sincroAfip/sincroAfip|sincroAfip]]
-- [[sincroAfip/arquitectura|arquitectura]] · [[sincroAfip/stack|stack]] · [[sincroAfip/contexto|contexto]] · [[sincroAfip/changelog|changelog]]
-- [[sincroAfip/despliegue|despliegue]] · [[sincroAfip/migracion|migracion]] · [[sincroAfip/tabla-referencia|tabla-referencia]]
+---
 
-## [[cobros/cobros|cobros]]
-Sistema de gestión financiera: cobros, pagos, cajas, cuentas corrientes, préstamos de capital.
-- [[cobros/arquitectura|arquitectura]] · [[cobros/stack|stack]] · [[cobros/contexto|contexto]] · [[cobros/changelog|changelog]]
+## [[microservicio-envios/microservicio-envios|Microservicio Envíos]]
+- [[microservicio-envios/microservicio-envios|Índice]]
 
-## [[compras/reglas-compras|compras]]
-Reglas y documentación del proceso de compras.
-- [[compras/reglas-compras|reglas-compras]]
+---
+
+## [[sincroAfip/sincroAfip|SincroAFIP]]
+- [[sincroAfip/sincroAfip|Índice]]
+
+---
+
+## [[Compras/Compras|Compras]]
+- [[Compras/Compras|Índice]]
+

@@ -61,3 +61,11 @@ JOIN albclil  AL ON AL.ID_NROREMCLI_ENC = A.ID_NROREMCLI_ENC
 
 ## Base de datos
 Todas estas tablas están en [NewBytes_DBF].[dbo]
+
+## Ver también
+- [[relacion-tablas-pedprot-pedprol-pedproi|Tablas de compras (pedprot/pedprol/pedproi)]]
+- [[relacion-tablas-albprot-albprol|Remitos de compra (albprot/albprol)]]
+- [[relacion-tablas-articulo-stocks|Artículo y stocks]]
+- [[relacion-tablas-stocks-almacen|Stocks y depósitos]]
+- [[relacion-companycode|companyCode por tabla]]
+- [[modulo-makesale|MakeSale — flujo de liquidación]]
