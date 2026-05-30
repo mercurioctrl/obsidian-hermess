@@ -680,3 +680,34 @@ Las dos filas IGNORED no son basura — son **snapshots del stock disponible** a
 - Idempotente, dblib-safe, transacción global con rollback en error.
 
 Commit + push. Doc en [[feature-laset-fix-pedprot-stockonly]].
+
+## 2026-05-30 — Análisis de esquema ERP y companyCode en albclit
+
+### Análisis de relaciones entre tablas ERP
+
+Sesión de documentación y análisis del esquema ERP. Se relevaron y documentaron las relaciones entre todas las tablas de pedidos, remitos, artículos, stock y depósitos.
+
+Notas creadas en la bóveda:
+- [[relacion-tablas-ped-alb]] — pedclit/pedclil/albclit/albclil (ventas)
+- [[relacion-tablas-pedprot-pedprol-pedproi]] — pedprot/pedprol/pedproi (compras)
+- [[relacion-tablas-albprot-albprol]] — albprot/albprol y su relación con pedprot
+- [[relacion-tablas-articulo-stocks]] — articulo y stocks con todas las tablas de líneas
+- [[relacion-companycode]] — mapa completo de qué tablas tienen companyCode propio
+- [[relacion-tablas-stocks-almacen]] — FP_Almacen, stocks, columnas de depósito en líneas
+
+Hallazgos clave:
+- Solo las cabeceras (pedprot, pedclit, albprot, albclit) y articulo tienen companyCode propio. Las líneas lo heredan del padre.
+- La columna de depósito en líneas de ventas se llama `ID_ALMACEN`; en líneas de compras se llama `stockWarehouseId`. Ambas son FK a `FP_Almacen.ID_ALMACEN`.
+- **NBE** es un depósito compartido entre cc=4 (NB) y cc=9 — no es error que líneas de pedidos cc=4 apunten a NBE.
+
+### Fix: companyCode en albclit
+
+`albclit` no tenía columna `companyCode`, lo que obligaba a hacer JOIN con `pedclit` para filtrar por empresa.
+
+**Cambios aplicados:**
+1. `ALTER TABLE [NewBytes_DBF].[dbo].[albclit] ADD companyCode INT NULL` — columna nueva
+2. `UPDATE` masivo: 231,454 registros poblados desde `pedclit` vía `(cnumped, cnumsuc)`
+3. 164,506 registros históricos (legacy ERP sin pedclit padre, 2010–2025) asignados a `companyCode=4` (NB) — todos los registros legacy pertenecían a NB
+4. `MakeSaleRepository::createHeader()` modificado para escribir `companyCode` en cada nuevo remito, heredándolo del `$order` (que viene de `pedclit`)
+
+Archivos modificados: `api-rest-pedidos-laravel/app/app/Repositories/MakeSale/MakeSaleRepository.php`
