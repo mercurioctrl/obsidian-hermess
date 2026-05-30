@@ -86,11 +86,13 @@ Al recibir una OC (Fase D Laset), el sistema suma al stock:
 - nstock_virtual: stock virtual calculado
 - ID_ALMACEN: almacén al que pertenece la fila de stock
 
-## Gotcha: articulo.companyCode vs pedprot/pedclit.companyCode
+## Regla: articulo.companyCode debe coincidir con el companyCode del pedido
 
-El artículo puede tener companyCode=4 (NB) aunque las OC/ventas sean companyCode=11 (Laset). El maestro de artículos es compartido. Solo las tablas de pedidos/remitos filtran estrictamente por companyCode para separar las empresas.
+Cada empresa tiene sus propios artículos en la tabla articulo, separados por companyCode. Un pedido (pedclit, pedprot) con companyCode=11 debe referenciar solo artículos con companyCode=11. Si una línea de pedido apunta a un artículo de otro companyCode, es un error de datos.
+
+Esto ocurrió en el proyecto Laset (2026-05-15) cuando una carga fallida dejó pedprol/pedclil cc=11 apuntando a artículos cc=4 (NB). El fix fue LasetFixCrossCompanyCommand: clonó los artículos cc=4 como cc=11 y remapeó los ID_Articulo en pedprol y pedclil.
 
 ## Base de datos
 
 - articulo y stocks: [NewBytes_DBF].[dbo]
-- stocks también existe a nivel de consulta en relación con [NewBytes_DBF].[dbo].[FP_Almacen] por ID_ALMACEN para obtener nombre y código del almacén.
+- stocks también se cruza con [NewBytes_DBF].[dbo].[FP_Almacen] por ID_ALMACEN para obtener nombre y código del almacén.
