@@ -3,11 +3,7 @@
 ## Por hacer
 - Probar la carga de ítems de NB en el módulo de compras.
 - Linkear el chat en la app.
-- Comprar la mesada (Lavadero).
-- Descargar lo de Play Console para la app de Libre Opción.
-- Comprar seguidores NBE.
 - Que [[Ezequiel Manzano|Eze]] pruebe las estadísticas de NB mensuales de los vendedores.
-- Reunión con [[Juan]] por drop shipping.
 - Resolver la otra multa de tránsito.
 
 ## Bloqueos / Esperando OK
@@ -15,6 +11,10 @@
 ## En curso
 
 ## Listo
+- Comprar la mesada (Lavadero).
+- Descargar lo de Play Console para la app de Libre Opción.
+- Comprar seguidores NBE.
+- Reunión con [[Juan]] por drop shipping.
 - Responderle a [[Ana]] (Anabel) el formulario sobre su música: https://forms.gle/kfmR3MhrWDV3mgED9
 - Daily: Preguntarle a [[Ezequiel Manzano|Ezequiel]] "cómo descargo las facturas de facturu".
 - Revisar errores de carga FC Solytec 49503 (Carla Carpinteri - NB): ![[captura_nb_1.jpg]] ![[captura_nb_2.jpg]] [[factura_solytec_nb.pdf]]
