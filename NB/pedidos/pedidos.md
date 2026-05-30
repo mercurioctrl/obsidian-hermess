@@ -28,6 +28,15 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-laset-fix-pedprot-stockonly|Fix bugs históricos Fase C Laset]] — pedprot/pedprol duplicados (2026-05-29) + stock-only descartado (2026-05-30): 369 OCs consolidadas, 33k unidades restauradas al pedprol
 - [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN (control de exportación) por familia × proveedor para comp=11
 
+## Esquema ERP — Tablas y relaciones
+
+- [[relacion-tablas-ped-alb|Relación pedclit / pedclil / albclit / albclil]] — ventas: pedido → remito, encabezado → líneas
+- [[relacion-tablas-pedprot-pedprol-pedproi|Relación pedprot / pedprol / pedproi]] — compras: OC encabezado, líneas y cargos extra
+- [[relacion-tablas-albprot-albprol|Relación albprot / albprol]] — remito de compra y su vínculo con pedprot
+- [[relacion-tablas-articulo-stocks|Relación articulo / stocks]] — maestro de productos y stock por almacén
+- [[relacion-tablas-stocks-almacen|Stocks y depósitos (FP_Almacen)]] — estructura de stocks, columnas de depósito en líneas, flujo de movimientos
+- [[relacion-companycode|companyCode — mapa por tabla]] — qué tablas tienen companyCode propio y cuáles lo heredan
+
 ## Repos
 
 - Backend: `New-Bytes/api-rest-pedidos-laravel` (branch principal: `Development`)
@@ -42,4 +51,4 @@ El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_
 Las tablas legacy del ERP (`pedprot`, `pedprol`, `pedproi`, `pedclit`, `pedclil`, `stocks`, `FP_*`, `forwarders`, `rebates`) **nunca se modifican** desde features nuevos. Se leen via `SELECT/JOIN`. Toda metadata de cualquier feature vive en tablas nuevas con prefijo del feature (`pedclil_oc_asignacion`, `laset_import_*`). Ver [[contexto#Regla cero: tablas ERP son read-only]].
 
 ---
-*Última sincronización: 2026-05-30 — Sesión de fixes históricos en Fase C de Laset: 2 commits con patches preventivos + 2 comandos retroactivos (`laset:fix-pedprot-dup`, `laset:fix-stock-only-pedprol`). 369 pedprot consolidados (Bug A+B) + 33.058 unidades de stock-only rescatadas (Bug C). Nuevos status `STOCK_ONLY`/`STOCK_ONLY_SUPERSEDED` en `laset_import_staging.match_status` (DDL `2026_05_30_001`). Ver [[feature-laset-fix-pedprot-stockonly]] y [[changelog#2026-05-30 — Bug Fase C: stock-only descartado (fix-stock-only-pedprol)]].**[[feature-integrar-eccn|integrarECCN]]** completo y pusheado (rama `integrarECCN`, back `2c87867e` / front `d0083b6`): tabla `ecc_familia_proveedor` + import, permiso RBAC `eccView`, ECCN por ítem en el detalle de orden (JOIN condicional según permiso) y carga manual con lápiz + popover (`POST /v1/ecc`). Documentada la secuencia de **deploy a producción** (DDL → import → activar permiso → re-login) en [[feature-integrar-eccn#Deploy a producción]]. SQL `2026_05_21_00{1,2}` aún solo en dev. Ver [[feature-integrar-eccn]] y [[changelog#2026-05-21 (cont.) — integrarECCN: permiso, detalle de orden y carga manual]].*
+*Última sincronización: 2026-05-30 — Análisis completo del esquema ERP: relaciones entre tablas de pedidos/remitos/compras/ventas, mapa de companyCode, depósitos compartidos. Fix: columna companyCode agregada a albclit (ALTER + UPDATE 395k filas + fix en MakeSaleRepository). Ver [[changelog#2026-05-30 — Análisis de esquema ERP y companyCode en albclit]].*
