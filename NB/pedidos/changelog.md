@@ -603,3 +603,80 @@ en contexto NewBytes_DBF.
 **Workflow**: `laset:snapshot <tag>` ANTES de cada proceso/sesión →
 si algo sale mal `laset:restore <tag> --force`. Ver
 [[feature-laset-snapshot-restore]].
+
+---
+
+## 2026-05-29 — Bugs Fase C: pedprot/pedprol duplicados (fix-pedprot-dup)
+
+Sesión disparada por la usuaria al reportar que la "compra" 13669 + 13916 (mismo proveedor MSI, mismo PI 11179042, mismo invoice 22028796) deberían ser **una sola OC** + la 13669 tenía 2 líneas del mismo art 122169 (qty 50 + 10) que deberían consolidarse. Investigación reveló 2 bugs en `LasetImportFaseCCommand`:
+
+- **Bug A (intra-pedprot)**: cada staging row generaba 1 pedprol independiente; el espejo `buildPedclilGroups` existía para ventas pero faltaba `buildPedprolGroups` para compras. Resultado en dev: 456 casos de `(nNumPed, ID_Articulo)` con N>1 pedprol.
+- **Bug B (inter-pedprot, cross-batch)**: `$pedprotByKey` se armaba solo desde rows del run actual; nunca consultaba ERP. Resultado en dev: 234 grupos pedprot duplicados / 369 sobrantes (~44% del total de 847 pedprot comp=11).
+
+**Patches preventivos** (commit `e251a8bd`):
+- Nuevo `buildPedprolGroups()` en `LasetImportFaseCCommand` agrupa por `(pedprot_key, ID_Articulo)` con FOB ponderado.
+- Nuevo `mergeExistingPedprot()` pre-carga pedprot existentes en ERP comp=11 por `(cExped, CSUFAC_TEMP)` y reusa `nNumPed`; `executePlan` skipea pedprot reusados; pedprol insertadas/updateadas según si ya existía la línea.
+
+**Comando retroactivo `laset:fix-pedprot-dup`** (`LasetFixPedprotDupCommand.php`) en 2 fases + compactación:
+- Fase 1 (inter): tabla tmp única `#pedprol_inter_map` con `ROW_NUMBER` para asignar nLinea contiguo por ganador. **UPDATE pedprol en 2 pasos** con `nLinea = -(new+1_000_000)` como buffer negativo — evita colisión transitoria de PK cuando winner y loser comparten nLineas. Re-apunta `pedclil_oc_asignacion.(n_num_ped_oc, n_linea_oc)`, `pedproi.nnumped`, `albprot.nnumped` (filtro `companyCode=11 OR NULL`), `laset_import_staging.(matched_pedprot_nnumped, matched_pedprol_nlinea)`.
+- Fase 2 (intra): consolida `(nNumPed, ID_Articulo)` con qty sumada + nPreDiv ponderado. DELETE losers.
+- Compactación: re-numera nLinea contiguo 1..N por pedprot tras gaps de DELETE.
+- Verify: doble invariante `total_qty` + `hash(SUM(art*qty))` debe preservarse → THROW + rollback si difiere. Atrapa bugs sutiles donde una qty se compensa con otra (caso real: primer intento del comando perdió 48.427 unidades por colisión de nLinea — restore inmediato del snapshot).
+
+**Resultados dev** (snapshot pre `pedprot_dedup_20260529`):
+- pedprot 847 → 478 (-369 losers consolidados).
+- pedprol 3166 → 1366 (-1800 consolidaciones de líneas dup).
+- `total_qty=139240` preservada exacta.
+- Caso reportado 13669/art 122169: 1 sola pedprot 13669 lin=1 qty=260 fob=70. ✓
+
+Snapshot, dry-run, real, idempotencia (re-run = 0 cambios). Commit + push. Doc en [[feature-laset-fix-pedprot-stockonly]].
+
+---
+
+## 2026-05-30 — Bug Fase C: stock-only descartado (fix-stock-only-pedprol)
+
+Continuación del análisis del 13669 — la usuaria notó que la compra real debía ser **300 unidades** (no 260) porque había 40 unid de stock no vendido. Investigación en staging:
+
+```
+vendor_pi=11179042 + vendor_invoice=22028796 + sku=PROB760PD4:
+- id=2258  batch=1 IMPORTED qty=50  customer_invoice=A-3656
+- id=2913  batch=1 IMPORTED qty=10  customer_invoice=A-3732
+- id=2914  batch=1 IGNORED  qty=240 customer_invoice=∅ (year=1900)
+- id=3702  batch=6 IMPORTED qty=200 customer_invoice=A-3767
+- id=3703  batch=6 IGNORED  qty=40  customer_invoice=∅ (year=1900)
+```
+
+Las dos filas IGNORED no son basura — son **snapshots del stock disponible** al final de cada batch. La fila del batch más alto (id=3703 qty=40) es el stock real al cierre del período. La 2914 (qty=240) es un snapshot anterior (después de vender 60 de las 300, quedaban 240).
+
+**Alcance del bug** en dev:
+- 491 filas IGNORED candidatas / 361 grupos únicos (vpi, vinv, sku).
+- Categorías post-categorización:
+  - F (pedprol existe, le falta qty): 198 grupos / 13.698 unid.
+  - B (pedprot existe pero no pedprol del art): 107 grupos / 10.797 unid.
+  - D (pedprot no existe — compra 100% stock): 49 grupos / 9.919 unid.
+  - C (sin SKU/proveedor en comp=11): 7 grupos.
+  - A (redundante) y E (qty=0): **0** ← regla robusta.
+- **Total: 34.414 unidades perdidas** (33.058 procesables, 1.356 cat C bloqueadas por Fase A catálogo).
+
+**Patches preventivos**:
+- `LasetAggregateMatchCommand` paso `4a-pre` (commit `1fb94e42`) reclasifica como nuevo status `STOCK_ONLY` filas con `year != 2025/2026 + vpi/vinv/sku no vacíos + qty>0 + customer_invoice vacío + (no SELECTOR, no service-like)`.
+- DDL `2026_05_30_001_add_stock_only_match_status.sql`: amplía `match_status` `NVARCHAR(20) → NVARCHAR(30)` (`STOCK_ONLY_SUPERSEDED` tiene 21 chars y no entraba — caso real, primer intento falló por truncate post-CHECK) + extiende `CK_laset_staging_match_status`.
+- `LasetImportFaseCCommand::handle` (commit `422a3c86`) delega tras MATCHED: `Artisan::call('laset:fix-stock-only-pedprol', [], $this->getOutput())` si hay STOCK_ONLY pendientes. Futuros imports manejan stock-only automáticamente en una sola corrida.
+
+**Comando retroactivo `laset:fix-stock-only-pedprol`** (`LasetFixStockOnlyPedprolCommand.php`):
+- Step 0: reclasifica IGNORED legacy → STOCK_ONLY con el mismo predicado del patch (paridad dev↔prod).
+- Step 1: por `(vpi, vinv, sku)`, fila del **batch más alto** gana; las anteriores → `STOCK_ONLY_SUPERSEDED`.
+- Step 2: aplica por categoría F/B/D + skip C.
+- Step 3: suma stock a `stocks` con tabla tmp `laset_stockonly_delta` + doble filtro (`articulo.companyCode=11 + FP_Almacen.companyCode=11`), excluye `INTERNAL_NO_STOCK_ARTICULOS` (FLETE 121944).
+- Step 4: marca staging ganadoras → IMPORTED con `matched_pedprot_nnumped + matched_pedprol_nlinea`.
+- Verify: STOCK_ONLY pendientes == cat C skipped + 0 huérfanas.
+
+**Resultados dev** (snapshot pre `stockonly_20260530`):
+- 490 IGNORED reclasificadas → STOCK_ONLY (360 ganadoras + 130 SUPERSEDED).
+- F=198 (+13.698 unid), B=113 (+12.127 unid), D=42 (+7.233 unid), C=7 skip.
+- pedprol comp=11 total_qty: 139.240 → **172.298** (+33.058).
+- arts distintos: 731 → 764 (+33 SKUs nuevos visibles en stock).
+- Caso reportado 13669/art 122169: qty 260 → **300** ✓.
+- Idempotente, dblib-safe, transacción global con rollback en error.
+
+Commit + push. Doc en [[feature-laset-fix-pedprot-stockonly]].

@@ -510,6 +510,7 @@ Tildar 1 fila no alcanza: si pertenece a una OC con 5 SKUs, importar solo esa fi
 - [[arquitectura|Arquitectura]] — modelo canónico ERP, tablas FP_* maestras
 - [[contexto|Contexto]] — regla cero ERP, empresas activas, regla planilla=verdad
 - [[memoria|Memoria]] — gotchas dblib, PK compuesta pedclit, FP_Proveedores moderna
+- [[feature-laset-fix-pedprot-stockonly|Fix bugs históricos Fase C]] — pedprot/pedprol dup (Bug A+B, 2026-05-29) + stock-only descartado (Bug C, 2026-05-30); patches + comandos retroactivos
 - [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
 - [[feature-asignacion-oc|Feature Asignación OC↔Venta]] — el linkeo OC↔venta; ver gotcha del trigger
 - [[changelog#2026-05-20 (cont.) — Botón "Importar seleccionadas" + auto-create de artículos + cadena de fixes]] — sesión completa

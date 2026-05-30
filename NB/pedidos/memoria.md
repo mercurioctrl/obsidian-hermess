@@ -259,3 +259,66 @@ o falta procesar ese trade (orden diferida) o hay bug — verificar contra
 tiene fila en `stocks` para cada almacén — hay que **INSERT fila mínima** si
 falta (no solo UPDATE), si no se pierde el movimiento. ccodalm/almacén
 válidos = `FP_Almacen WHERE companyCode=11` (NUNCA hardcodear IDs).
+
+---
+
+## 2026-05-29/30 — Bugs históricos en Fase C resueltos
+
+Tres bugs en `LasetImportFaseCCommand` resueltos con patches + comandos retroactivos. Doc completa en [[feature-laset-fix-pedprot-stockonly]].
+
+### Bug A — pedprol no consolidaba por (pedprot, ID_Articulo)
+
+Cada staging row generaba 1 pedprol independiente. N filas del mismo SKU dentro de la misma OC = N líneas (prohibido). Fix: nuevo `buildPedprolGroups()`, espejo del `buildPedclilGroups`. Backfill: `laset:fix-pedprot-dup` fase intra.
+
+### Bug B — pedprot no se reusaba cross-batch
+
+`$pedprotByKey` se armaba solo desde rows del run actual. Cuando llegaba la misma `(prov, vpi, vinv)` en un batch posterior, creaba pedprot duplicada en vez de agregar línea al existente. Fix: nuevo `mergeExistingPedprot()` consulta ERP. Backfill: `laset:fix-pedprot-dup` fase inter.
+
+### Bug C — stock-only descartado como basura
+
+Filas `year=1900 + customer_invoice vacío + vpi/vinv/sku/qty>0` son **stock disponible** (compra al proveedor sin venta aún), no basura. Aggregate-match paso 4a las marcaba IGNORED → pedprol quedaba corta. Fix: nuevo paso `4a-pre` en aggregate-match reclasifica como `STOCK_ONLY`. Fase C delega a `laset:fix-stock-only-pedprol` via `Artisan::call`. Backfill: el mismo comando aplica retroactivo.
+
+Detalles en [[feature-laset-fix-pedprot-stockonly#Bug A]], [[#Bug B]], [[#Bug C]].
+
+## Re-numerar PK/UNIQUE con buffer negativo
+
+Cuando hay que re-numerar `nLinea` (o cualquier columna que forma parte de un UNIQUE compuesto) y los valores nuevos pueden chocar transitoriamente con los viejos, hacer el UPDATE en **2 pasos** con un valor "imposible" intermedio:
+
+```sql
+-- Paso 1: mover al buffer negativo
+UPDATE pl SET pl.nLinea = -(m.new_nLinea + 1000000)
+FROM pedprol pl JOIN #map m ON ...;
+
+-- Paso 2: aplicar el valor final desde el buffer
+UPDATE pl SET pl.nNumPed = m.winner, pl.nLinea = m.new_nLinea
+FROM pedprol pl JOIN #map m ON pl.nLinea = -(m.new_nLinea + 1000000) ...;
+```
+
+Caso real: `LasetFixPedprotDupCommand::applyInter` fallaba con violación de PK al mover pedprol entre OCs sin buffer. Patrón aplicable a cualquier renumeración por ROW_NUMBER sobre tablas con UNIQUE compuesto.
+
+## Invariante con hash para fixes destructivos
+
+En comandos que mutan data en lote, capturar **dos** invariantes pre/post:
+1. `SUM(qty)` total.
+2. `SUM(qty * ID_Articulo)` como hash.
+
+Un solo conteo puede coincidir por casualidad si dos errores se compensan. Agregar el hash que mezcla dos columnas atrapa bugs donde la qty se preserva pero terminó en el ID_Articulo equivocado.
+
+Caso real: primer intento de `LasetFixPedprotDupCommand` perdió 48.427 unidades por colisión de nLinea. `total_qty` pasó de 139.240 a 90.813. Restore inmediato del snapshot + bug fix (introducir buffer negativo). Sin la doble invariante, el daño habría pasado por verify simple ("0 grupos dup restantes" era cierto).
+
+## NVARCHAR length cap en columnas enum/status
+
+Antes de agregar nuevos valores al CHECK constraint de una columna string, verificar largo declarado con INFORMATION_SCHEMA. SQL Server tira `String or binary data would be truncated` sin decir qué columna ni qué valor — fácil de pasar por alto cuando el ALTER del CHECK funcionó OK pero el primer UPDATE de aplicación falla y rompe la transacción global.
+
+Caso real: `laset_import_staging.match_status` era `NVARCHAR(20)`. Agregué `STOCK_ONLY_SUPERSEDED` (21 chars) al CHECK; `markSuperseded` falló por truncate y abortó toda la consolidación (rollback OK gracias a transacción). Fix: `ALTER COLUMN match_status NVARCHAR(30)` antes del CHECK.
+
+**Recomendación**: declarar columnas enum/status como `NVARCHAR(30)` por defecto en tablas nuevas. Costo de storage despreciable.
+
+## Reglas operativas Laset (afianzadas)
+
+1. **Snapshot SIEMPRE antes** de cualquier fix con `laset:snapshot <tag>`. Si algo sale mal: `laset:restore <tag> --force`.
+2. **Dry-run primero**, real después. Cada comando de fix tiene `--dry-run`.
+3. **Pre-check THROW** en cada comando: aislamiento comp=11, no cross-company.
+4. **Verify integrado con invariantes**: si el delta no es exactamente lo esperado, THROW + rollback.
+5. **Idempotencia obligatoria**: re-correr sobre data limpia = 0 cambios.
+6. **dblib-safe**: tabla tmp + UPDATE FROM JOIN single-statement. NUNCA loops de UPDATE individuales (segfault).
