@@ -23,18 +23,18 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-asignacion-oc|Feature: Asignación OC ↔ Venta]] — Trazabilidad pedclil ↔ pedprol antes de serializar
 - [[feature-asignacion-oc-cookbook|Cookbook Asignación OC]] — Recetas, SQL de debug, curl examples y mapa de archivos
 - [[feature-laset-import|Feature: Laset Import Framework]] — Importación de operación FOB de Laset (CODEMP=11) desde planilla histórica al ERP existente
-- [[nota-catalogo-laset|Nota a Catálogo — alta 39 SKUs Laset]] — pedido de alta de artículos comp=11 que destraban Fase D (para enviar a catálogo)
-- [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11; correr antes de cada proceso/sesión
-- [[feature-laset-fix-pedprot-stockonly|Fix bugs históricos Fase C Laset]] — pedprot/pedprol duplicados (2026-05-29) + stock-only descartado (2026-05-30): 369 OCs consolidadas, 33k unidades restauradas al pedprol
-- [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN (control de exportación) por familia × proveedor para comp=11
+- [[nota-catalogo-laset|Nota a Catálogo — alta 39 SKUs Laset]] — pedido de alta de artículos comp=11 que destraban Fase D
+- [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
+- [[feature-laset-fix-pedprot-stockonly|Fix bugs históricos Fase C Laset]] — pedprot/pedprol duplicados + stock-only descartado
+- [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN por familia × proveedor para comp=11
 
 ## Esquema ERP — Tablas y relaciones
 
-- [[relacion-tablas-ped-alb|Relación pedclit / pedclil / albclit / albclil]] — ventas: pedido → remito, encabezado → líneas
-- [[relacion-tablas-pedprot-pedprol-pedproi|Relación pedprot / pedprol / pedproi]] — compras: OC encabezado, líneas y cargos extra
-- [[relacion-tablas-albprot-albprol|Relación albprot / albprol]] — remito de compra y su vínculo con pedprot
-- [[relacion-tablas-articulo-stocks|Relación articulo / stocks]] — maestro de productos y stock por almacén
-- [[relacion-tablas-stocks-almacen|Stocks y depósitos (FP_Almacen)]] — estructura de stocks, columnas de depósito en líneas, flujo de movimientos
+- [[relacion-tablas-ped-alb|Ventas: pedclit / pedclil / albclit / albclil]] — pedido → remito, encabezado → líneas
+- [[relacion-tablas-pedprot-pedprol-pedproi|Compras: pedprot / pedprol / pedproi]] — OC encabezado, líneas y cargos extra
+- [[relacion-tablas-albprot-albprol|Remitos de compra: albprot / albprol]] — vínculo con pedprot
+- [[relacion-tablas-articulo-stocks|Artículo y stocks]] — maestro de productos, balance por almacén, reglas de FK
+- [[relacion-tablas-stocks-almacen|Stocks y depósitos (FP_Almacen)]] — columnas de depósito por tabla, depósitos compartidos
 - [[relacion-companycode|companyCode — mapa por tabla]] — qué tablas tienen companyCode propio y cuáles lo heredan
 
 ## Repos
@@ -44,11 +44,11 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 
 ## Multi-empresa
 
-El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_Empresas`). Las históricamente más mencionadas son **NB**, **NBElectric** y **Libreopción**, pero también hay **OXXEN**, **NBGLOBAL**, **DIGITO BINARIO**, **CCRT**, **SUC 10**, **MUGELLO**, **PISOS Y REVESTIMIENTOS** y **LASET** (única importadora — ver [[feature-laset-import]]). Ver [[contexto#Empresas activas (FP_Empresas)]] para la tabla completa.
+El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_Empresas`). Ver [[contexto#Empresas activas (FP_Empresas)]] para la tabla completa.
 
 ## Regla cero — tablas ERP read-only
 
-Las tablas legacy del ERP (`pedprot`, `pedprol`, `pedproi`, `pedclit`, `pedclil`, `stocks`, `FP_*`, `forwarders`, `rebates`) **nunca se modifican** desde features nuevos. Se leen via `SELECT/JOIN`. Toda metadata de cualquier feature vive en tablas nuevas con prefijo del feature (`pedclil_oc_asignacion`, `laset_import_*`). Ver [[contexto#Regla cero: tablas ERP son read-only]].
+Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadata vive en tablas nuevas con prefijo del feature. Ver [[contexto#Regla cero: tablas ERP son read-only]].
 
 ---
-*Última sincronización: 2026-05-30 — Análisis completo del esquema ERP: relaciones entre tablas de pedidos/remitos/compras/ventas, mapa de companyCode, depósitos compartidos. Fix: columna companyCode agregada a albclit (ALTER + UPDATE 395k filas + fix en MakeSaleRepository). Ver [[changelog#2026-05-30 — Análisis de esquema ERP y companyCode en albclit]].*
+*Última sincronización: 2026-05-30 — Mapa completo del esquema ERP: relaciones, companyCode, artículo/stocks/depósitos. Fix: companyCode agregado a albclit. Correcciones: SAF/NBE únicos depósitos compartidos, ID_Articulo como FK canónica, pedprol legacy sin almacén es esperado. Ver [[changelog#2026-05-30]].*
