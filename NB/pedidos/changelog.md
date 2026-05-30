@@ -711,3 +711,20 @@ Hallazgos clave:
 4. `MakeSaleRepository::createHeader()` modificado para escribir `companyCode` en cada nuevo remito, heredándolo del `$order` (que viene de `pedclit`)
 
 Archivos modificados: `api-rest-pedidos-laravel/app/app/Repositories/MakeSale/MakeSaleRepository.php`
+
+## 2026-05-30 (cont.) — Análisis profundo articulo/stocks/depósitos y correcciones de documentación
+
+### Correcciones a la documentación
+
+- **SAF y NBE** son los únicos depósitos compartidos — exclusivamente entre NB (cc=4) y NBElectric (cc=9). Cualquier otro cruce de companyCode en almacén es error de datos.
+- **`ID_Articulo` y `cref`** son ambos obligatorios y únicos en las tablas de líneas. `ID_Articulo` es la FK canónica. La discrepancia de 13.462 filas en pedclil es un caso puntual de Laset (cref conserva el código NB cc=4, ID_Articulo apunta al clon cc=11).
+- **`pedprol.stockWarehouseId` NULL en 99.5%** es esperado: son OCs legacy de NB que en la práctica pertenecen todas a SAF (ID_ALMACEN=2). No es error, es dato histórico.
+- **Regla de integridad stocks**: no deben existir filas en stocks donde el companyCode del artículo difiera del companyCode del almacén, salvo SAF/NBE.
+
+### Errores de datos documentados (no corregidos)
+
+- 10 pedidos DIGITO BINARIO (cc=5) con líneas en SAF (cc=4) — 2025
+- 1 pedido cc=1 con líneas en SAF — 2026-05-26
+- 6 pedprot NB (cc=4) con líneas en almacenes Laset (DOM/GRI/ASI) — mayo 2026, residuo migración
+
+Notas actualizadas: [[relacion-tablas-articulo-stocks]], [[relacion-tablas-stocks-almacen]]
