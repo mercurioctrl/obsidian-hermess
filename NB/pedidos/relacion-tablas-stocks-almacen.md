@@ -15,12 +15,12 @@ Columnas clave:
 - Id_Pais, ID_CIUDAD, ID_Provincia — ubicación geográfica
 
 ### stocks — stock por artículo y depósito
-Una fila por combinación (ID_ARTICULO, ID_ALMACEN). No tiene companyCode propio — se determina subiendo a articulo o a FP_Almacen.
+Una fila por combinación (ID_ARTICULO, ID_ALMACEN). No tiene companyCode propio.
 
 Columnas clave:
 - ID_ARTICULO (FK → articulo.ID_ARTICULO)
 - ID_ALMACEN (FK → FP_Almacen.ID_ALMACEN)
-- cref (varchar, copia del cRef del artículo)
+- cref — copia del cRef del artículo
 - nstock — stock disponible principal (NB)
 - nstock_lo — stock Libre Opción
 - nstock_reserva_pedidos — reservado por pedidos pendientes (se recalcula)
@@ -31,12 +31,11 @@ Columnas clave:
 - nstock_virtual — calculado
 - nstock_d1 — stock día 1
 - nstock_seguridad — stock de seguridad mínimo
-- guardarEnStock — flag
 - id_auto (PK IDENTITY interna)
 
 ## Columna de depósito en las tablas de líneas
 
-Todas las tablas de líneas tienen su propio campo de depósito a nivel de ítem (un pedido puede tener ítems de distintos depósitos):
+Todas las tablas de líneas tienen su propio campo de depósito a nivel de ítem. Un pedido puede tener ítems de distintos depósitos.
 
 | Tabla | Columna | FK a |
 |---|---|---|
@@ -45,7 +44,7 @@ Todas las tablas de líneas tienen su propio campo de depósito a nivel de ítem
 | pedprol | stockWarehouseId | FP_Almacen.ID_ALMACEN |
 | albprol | stockWarehouseId | FP_Almacen.ID_ALMACEN |
 
-El nombre cambia entre el mundo ventas (ID_ALMACEN) y compras (stockWarehouseId), pero apuntan a la misma tabla.
+El nombre cambia entre ventas (ID_ALMACEN) y compras (stockWarehouseId), pero apuntan a la misma tabla.
 
 ## Relaciones
 
@@ -66,28 +65,28 @@ pedclil LEFT JOIN stocks ON stocks.ID_ARTICULO = pedclil.ID_Articulo
 ```
 
 ### FP_Almacen → cabeceras
-pedprot usa CCODALM (código) y warehousesId (= ID_ALMACEN).
-pedclit usa ccodalm (código) y ID_ALMACEN.
-
 ```sql
 FP_Almacen ON FP_Almacen.ID_ALMACEN = pedprot.warehousesId
 FP_Almacen ON FP_Almacen.ID_ALMACEN = pedclit.ID_ALMACEN
 ```
 
-## companyCode y depósitos
+## Regla: companyCode y depósitos
 
-### Regla general
-Un pedido o remito (sea de venta o compra) no puede tener un ítem en un almacén de otro companyCode. El almacén de cada línea debe pertenecer al mismo companyCode que la cabecera.
+Un pedido o remito no puede tener un ítem en un almacén de otro companyCode, salvo depósitos explícitamente compartidos.
 
-### Excepción conocida: depósitos compartidos
-Algunos depósitos son compartidos entre empresas. El companyCode en FP_Almacen indica el "dueño" del depósito pero no impide que otras empresas lo usen.
+### Depósitos compartidos confirmados
 
-Depósitos compartidos confirmados (2026-05-30):
-- **NBE** — compartido entre cc=4 (NB) y cc=9. Los 754 pedclil cc=4 con almacén NBE (cc=9) NO son errores.
+| Depósito | CCODALM | companyCode dueño | Compartido con |
+|---|---|---|---|
+| NB SAF | SAF | 4 (NB) | 9 (NBElectric) |
+| NBElectric | NBE | 9 (NBElectric) | 4 (NB) |
 
-Depósitos pendientes de confirmar si son compartidos o errores:
-- SAF (cc=4): usado desde cc=5 (50 casos en pedclil) y cc=1 (2 casos)
-- DOM, GRI, ASI (cc=11 Laset): cruzados desde cc=4 en pedprol (residuo migración Laset, probablemente errores)
+SAF y NBE son los únicos depósitos compartidos. Cualquier otro cruce de companyCode entre línea y almacén es un error de datos.
+
+### Errores de datos conocidos (no corregidos, solo documentados)
+- 10 pedidos de DIGITO BINARIO (cc=5) con líneas en SAF (cc=4) — 2025, mayoría servidos
+- 1 pedido cc=1 con líneas en SAF — 2026-05-26, pendiente
+- 6 pedprot NB (cc=4) con líneas en almacenes Laset (DOM/GRI/ASI cc=11) — mayo 2026, residuo de migración Laset Fase C/D
 
 ## Qué pasa con el stock al operar
 
@@ -96,9 +95,9 @@ Se incrementa nstock_reserva_pedidos para los artículos del pedido.
 
 ### Al liquidar (crear albclit/albclil — MakeSale)
 ```
-nstock     = nstock - cantidad      (stock NB)
-nstock_lo  = nstock_lo - cantidad   (stock LO, si aplica)
-nstock_postventa = nstock_postventa - cantidad (si es post-venta)
+nstock     = nstock - cantidad
+nstock_lo  = nstock_lo - cantidad   (si aplica)
+nstock_postventa = nstock_postventa - cantidad (si aplica)
 nstock_reserva_pedidos se recalcula sobre pedclil pendientes
 ```
 
@@ -106,10 +105,6 @@ nstock_reserva_pedidos se recalcula sobre pedclil pendientes
 ```
 nstock = nstock + cantidad
 ```
-
-## Base de datos
-
-Todas en [NewBytes_DBF].[dbo]
 
 ## Ver también
 - [[relacion-tablas-articulo-stocks|Artículo y stocks]]

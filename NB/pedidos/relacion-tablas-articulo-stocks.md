@@ -1,104 +1,94 @@
 # Relación entre articulo / stocks y las tablas de líneas
 
-## Las dos tablas maestras
+## articulo — maestro de productos
 
-- articulo: maestro de productos. Contiene descripción, precio, marca, familia, cRef (código legible), ID_ARTICULO (PK numérica interna), companyCode.
-- stocks: stock por artículo y almacén. Una fila por (ID_ARTICULO, ID_ALMACEN). Contiene nstock, nstock_lo, nstock_reserva_pedidos, etc.
+Columnas clave para las relaciones:
+- ID_ARTICULO (int, PK) — identificador numérico interno, FK en todas las tablas de líneas
+- cRef (varchar) — código legible heredado del ERP legacy. Puede coincidir con ID_ARTICULO (cuando se migró) o ser distinto
+- companyCode — empresa dueña del artículo
+- ID_PRODUCTO (varchar) — SKU del fabricante (ej: '100-100001488BOX'), usado por Laset para el bridge planilla↔ERP
+- ncosteprom / ncosto — costo promedio y costo unitario
+- npvp1..6 / npremayor1..5 — listas de precios de venta y mayorista
+- Id_Marca, ID_FAMILIA, ccodfam — clasificación
+- kit (tinyint) — si es un kit (bundle de componentes)
+- companyCode — empresa dueña. Un pedido cc=X solo puede referenciar artículos cc=X
 
-## Cómo se relacionan con las tablas de líneas
+## stocks — balance actual por artículo y almacén
 
-Todas las tablas de líneas (pedclil, albclil, pedprol, albprol) referencian al artículo de dos maneras:
+Una fila por (ID_ARTICULO, ID_ALMACEN). Representa el saldo actual, no el historial de movimientos.
 
-- Por ID_Articulo (int): join directo con articulo.ID_ARTICULO. Es la FK limpia.
-- Por cRef (varchar): join alternativo con articulo.cRef. Se usa en algunos contextos por compatibilidad con el ERP legacy.
+La relación con las tablas de líneas es **indirecta**: stocks no tiene FK a pedclil ni albclil. El balance se actualiza con UPDATEs al liquidar (MakeSale) o recibir una OC (Fase D). Las líneas son el historial; stocks es la consecuencia acumulada.
 
-La regla general es: ID_Articulo es la FK preferida. cRef se usa cuando el sistema legacy no tenía ID numérico o cuando hay búsquedas textuales.
+## Cómo se referencia el artículo en cada tabla de líneas
 
-## Joins articulo con cada tabla de líneas
+| Tabla | Columna ID | Columna código | Columna almacén |
+|---|---|---|---|
+| pedclil | ID_Articulo (int) | cref (varchar) | ID_ALMACEN (int) |
+| albclil | ID_Articulo (int) | cref (varchar) | ID_ALMACEN (int) |
+| pedprol | ID_Articulo (int) | cRef (varchar) | stockWarehouseId (int, casi siempre NULL) |
+| albprol | ID_Articulo (int) | cref (varchar) | stockWarehouseId (int) |
 
-### pedclil → articulo
+## Regla crítica: ID_Articulo es la fuente de verdad, no cref
+
+En pedclil y albclil existen 13.462 filas donde `ID_Articulo` y `cref` apuntan a artículos distintos. Esto ocurre en líneas de Laset (cc=11): el `cref` conserva el código del artículo original cc=4 (NB) y el `ID_Articulo` apunta al clon cc=11 creado por `LasetFixCrossCompanyCommand`.
+
+**Siempre joinear por ID_Articulo. Nunca asumir que cref y ID_Articulo son consistentes.**
+
 ```sql
-pedclil
+-- Correcto
 JOIN articulo ON articulo.ID_ARTICULO = pedclil.ID_Articulo
--- alternativo por cRef:
+
+-- Incorrecto para Laset (puede traer artículo de otra empresa)
 JOIN articulo ON articulo.cRef = pedclil.cref
 ```
 
-### albclil → articulo
+## stockWarehouseId en pedprol es casi siempre NULL
+
+- pedprol: 69.393 de 69.764 filas tienen stockWarehouseId NULL (99.5%)
+- albprol: 666 de 75.986 filas tienen stockWarehouseId NULL (< 1%)
+
+El campo `stockWarehouseId` en pedprol fue agregado tarde (feature Laset). Las OCs históricas no lo tienen. Para consultas que necesiten el almacén de una OC, usar `pedprot.warehousesId` (almacén de la cabecera) como fallback.
+
+## Joins
+
+### articulo con líneas de venta
 ```sql
-albclil
-JOIN articulo ON articulo.ID_Articulo = albclil.ID_Articulo
--- alternativo por cRef:
-JOIN articulo ON articulo.cRef = albclil.cref
+-- por ID (correcto siempre)
+pedclil JOIN articulo ON articulo.ID_ARTICULO = pedclil.ID_Articulo
+albclil JOIN articulo ON articulo.ID_ARTICULO = albclil.ID_Articulo
 ```
 
-### pedprol → articulo
+### articulo con líneas de compra
 ```sql
-pedprol
-JOIN articulo ON articulo.ID_ARTICULO = pedprol.ID_Articulo
+pedprol JOIN articulo ON articulo.ID_ARTICULO = pedprol.ID_Articulo
+albprol JOIN articulo ON articulo.ID_ARTICULO = albprol.ID_Articulo
 ```
 
-### albprol → articulo
+### stocks con líneas de venta (incluye almacén)
 ```sql
-albprol
-JOIN articulo ON articulo.ID_ARTICULO = albprol.ID_Articulo
+pedclil LEFT JOIN stocks ON stocks.ID_ARTICULO = pedclil.ID_Articulo
+                         AND stocks.ID_ALMACEN  = pedclil.ID_ALMACEN
 ```
 
-## Cómo se relaciona stocks con las tablas de líneas
-
-stocks no tiene FK directa con las tablas de líneas. El join siempre pasa por el artículo Y el almacén:
-
+### stocks con líneas de compra
 ```sql
-stocks ON stocks.ID_ARTICULO = pedclil.ID_Articulo
-        AND stocks.ID_ALMACEN = pedclil.ID_ALMACEN
+-- albprol tiene stockWarehouseId casi siempre poblado
+albprol LEFT JOIN stocks ON stocks.ID_ARTICULO = albprol.ID_Articulo
+                         AND stocks.ID_ALMACEN  = albprol.stockWarehouseId
+
+-- pedprol: usar cabecera como fallback para el almacén
+pedprol LEFT JOIN pedprot pt ON pt.nNumPed = pedprol.nNumPed
+        LEFT JOIN stocks ON stocks.ID_ARTICULO = pedprol.ID_Articulo
+                         AND stocks.ID_ALMACEN  = COALESCE(pedprol.stockWarehouseId, pt.warehousesId)
 ```
 
-La PK efectiva de stocks es (ID_ARTICULO, ID_ALMACEN): un artículo puede tener filas de stock en múltiples almacenes.
+## Distribución de stocks por almacén
 
-### Consulta típica: líneas de pedido con stock disponible
-```sql
-FROM pedclil PL
-LEFT JOIN stocks S ON S.ID_ARTICULO = PL.ID_Articulo
-                   AND S.ID_ALMACEN = PL.ID_ALMACEN
-```
-
-## Qué hace el sistema con stocks al liquidar un pedido
-
-Al crear un remito (MakeSale), el sistema:
-1. Lee pedclil JOIN stocks para ver disponibilidad antes de liquidar.
-2. Al confirmar, descuenta del stock:
-   - nstock = nstock - cantidad (stock NB)
-   - nstock_lo = nstock_lo - cantidad (stock LO)
-   - nstock_postventa = nstock_postventa - cantidad (si corresponde)
-3. Recalcula nstock_reserva_pedidos sobre pedclil pendientes.
-
-Al recibir una OC (Fase D Laset), el sistema suma al stock:
-- nstock = nstock + cantidad (recepción)
-
-## Campos de stock más usados en las queries
-
-- nstock: stock disponible principal (NB)
-- nstock_lo: stock Libre Opción
-- nstock_reserva_pedidos: cantidad reservada por pedidos pendientes (se recalcula)
-- nstock_postventa: stock reservado para post-venta
-- nstock_en_cola: en cola de ingreso
-- nstock_ingresando: en tránsito/ingresando
-- nstock_virtual: stock virtual calculado
-- ID_ALMACEN: almacén al que pertenece la fila de stock
-
-## Regla: articulo.companyCode debe coincidir con el companyCode del pedido
-
-Cada empresa tiene sus propios artículos en la tabla articulo, separados por companyCode. Un pedido (pedclit, pedprot) con companyCode=11 debe referenciar solo artículos con companyCode=11. Si una línea de pedido apunta a un artículo de otro companyCode, es un error de datos.
-
-Esto ocurrió en el proyecto Laset (2026-05-15) cuando una carga fallida dejó pedprol/pedclil cc=11 apuntando a artículos cc=4 (NB). El fix fue LasetFixCrossCompanyCommand: clonó los artículos cc=4 como cc=11 y remapeó los ID_Articulo en pedprol y pedclil.
-
-## Base de datos
-
-- articulo y stocks: [NewBytes_DBF].[dbo]
-- stocks también se cruza con [NewBytes_DBF].[dbo].[FP_Almacen] por ID_ALMACEN para obtener nombre y código del almacén.
+Un artículo puede tener stock en múltiples almacenes (promedio 1, máximo 16 filas en stocks para un mismo artículo). Por eso el join a stocks siempre debe incluir ID_ALMACEN — sin ese filtro se obtienen múltiples filas y los totales se duplican.
 
 ## Ver también
 - [[relacion-tablas-ped-alb|Tablas de ventas (pedclit/pedclil/albclit/albclil)]]
 - [[relacion-tablas-pedprot-pedprol-pedproi|Tablas de compras (pedprot/pedprol/pedproi)]]
-- [[relacion-tablas-stocks-almacen|Stocks y depósitos]]
+- [[relacion-tablas-stocks-almacen|Stocks y depósitos (FP_Almacen)]]
 - [[relacion-companycode|companyCode por tabla]]
+- [[modulo-makesale|MakeSale — flujo de liquidación]]
