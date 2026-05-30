@@ -34,6 +34,19 @@ Columnas clave:
 - guardarEnStock — flag
 - id_auto (PK IDENTITY interna)
 
+## Columna de depósito en las tablas de líneas
+
+Todas las tablas de líneas tienen su propio campo de depósito a nivel de ítem (un pedido puede tener ítems de distintos depósitos):
+
+| Tabla | Columna | FK a |
+|---|---|---|
+| pedclil | ID_ALMACEN | FP_Almacen.ID_ALMACEN |
+| albclil | ID_ALMACEN | FP_Almacen.ID_ALMACEN |
+| pedprol | stockWarehouseId | FP_Almacen.ID_ALMACEN |
+| albprol | stockWarehouseId | FP_Almacen.ID_ALMACEN |
+
+El nombre cambia entre el mundo ventas (ID_ALMACEN) y compras (stockWarehouseId), pero apuntan a la misma tabla.
+
 ## Relaciones
 
 ### stocks → articulo
@@ -52,7 +65,7 @@ pedclil LEFT JOIN stocks ON stocks.ID_ARTICULO = pedclil.ID_Articulo
                          AND stocks.ID_ALMACEN  = pedclil.ID_ALMACEN
 ```
 
-### FP_Almacen → pedprot / pedclit (depósito del pedido)
+### FP_Almacen → cabeceras
 pedprot usa CCODALM (código) y warehousesId (= ID_ALMACEN).
 pedclit usa ccodalm (código) y ID_ALMACEN.
 
@@ -61,23 +74,20 @@ FP_Almacen ON FP_Almacen.ID_ALMACEN = pedprot.warehousesId
 FP_Almacen ON FP_Almacen.ID_ALMACEN = pedclit.ID_ALMACEN
 ```
 
-## companyCode en depósitos y stock
+## companyCode y depósitos
 
-FP_Almacen tiene companyCode propio — cada empresa tiene sus propios depósitos.
-stocks no tiene companyCode — se determina por el artículo o por el depósito.
+### Regla general
+Un pedido o remito (sea de venta o compra) no puede tener un ítem en un almacén de otro companyCode. El almacén de cada línea debe pertenecer al mismo companyCode que la cabecera.
 
-Para filtrar stock de una empresa:
-```sql
--- vía artículo
-stocks JOIN articulo ON articulo.ID_ARTICULO = stocks.ID_ARTICULO
-WHERE articulo.companyCode = 4
+### Excepción conocida: depósitos compartidos
+Algunos depósitos son compartidos entre empresas. El companyCode en FP_Almacen indica el "dueño" del depósito pero no impide que otras empresas lo usen.
 
--- vía depósito
-stocks JOIN FP_Almacen ON FP_Almacen.ID_ALMACEN = stocks.ID_ALMACEN
-WHERE FP_Almacen.companyCode = 4
-```
+Depósitos compartidos confirmados (2026-05-30):
+- **NBE** — compartido entre cc=4 (NB) y cc=9. Los 754 pedclil cc=4 con almacén NBE (cc=9) NO son errores.
 
-Ambos deberían dar el mismo resultado si los datos son consistentes.
+Depósitos pendientes de confirmar si son compartidos o errores:
+- SAF (cc=4): usado desde cc=5 (50 casos en pedclil) y cc=1 (2 casos)
+- DOM, GRI, ASI (cc=11 Laset): cruzados desde cc=4 en pedprol (residuo migración Laset, probablemente errores)
 
 ## Qué pasa con el stock al operar
 
