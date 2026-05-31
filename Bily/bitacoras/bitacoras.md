@@ -22,6 +22,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 
 - [[Bily/bitacoras/2026-05-28|2026-05-28]] — Limpieza de Kanban y revisión de turnos (DNI, AFIP)
 - [[Bily/bitacoras/2026-05-29|2026-05-29]] — Actualización Kanban, nueva persona Juan (drop shipping), multa AFIP resuelta, alerta multa tránsito
+- [[Bily/bitacoras/2026-05-30|2026-05-30]] — Actualización de tareas completadas en Kanban General y Lavadero
 
 ## Ver también
 

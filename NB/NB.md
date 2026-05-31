@@ -58,4 +58,5 @@ Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.
 
 ## [[Compras/Compras|Compras]]
 - [[Compras/Compras|Índice]] · [[Compras/arquitectura|Arquitectura]] · [[Compras/stack|Stack]] · [[Compras/changelog|Changelog]]
+- [[NB/compras/reglas-compras|Reglas de negocio — Compras]]
 
