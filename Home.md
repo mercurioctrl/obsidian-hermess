@@ -58,7 +58,13 @@
 
 - [[NB/NB|NB]] — Proyectos y microservicios del ecosistema New Bytes
   - [[NB/Compras/Compras|Compras]] · [[NB/Comprobantes/Comprobantes|Comprobantes]] · [[NB/controldeprecios/controldeprecios|controldeprecios]] · [[NB/expedicion/expedicion|expedicion]]
-  - [[NB/inventario/inventario|inventario]] · [[NB/microservicio-envios/microservicio-envios|microservicio-envios]] · [[NB/pedidos/pedidos|pedidos]] · [[NB/sincroAfip/sincroAfip|sincroAfip]] · [[NB/cobros/cobros|cobros]]
+  - [[NB/inventario/inventario|inventario]] · [[NB/microservicio-envios/microservicio-envios|microservicio-envios]] · [[NB/sincroAfip/sincroAfip|sincroAfip]] · [[NB/cobros/cobros|cobros]]
+
+### pedidos — Gestión de pedidos multi-empresa
+- [[NB/pedidos/pedidos|índice]] · [[NB/pedidos/arquitectura|arquitectura]] · [[NB/pedidos/stack|stack]] · [[NB/pedidos/changelog|changelog]] · [[NB/pedidos/contexto|contexto]]
+- [[NB/pedidos/modulo-makesale|MakeSale]] · [[NB/pedidos/modulo-removesale|RemoveSale]] · [[NB/pedidos/modulo-dashboard-lo|Dashboard LO]]
+- [[NB/pedidos/feature-laset-import|Laset Import]] · [[NB/pedidos/feature-asignacion-oc|Asignación OC]] · [[NB/pedidos/feature-integrar-eccn|ECCN]]
+- **Esquema ERP:** [[NB/pedidos/relacion-tablas-ped-alb|ventas]] · [[NB/pedidos/relacion-tablas-pedprot-pedprol-pedproi|compras]] · [[NB/pedidos/relacion-tablas-albprot-albprol|remitos compra]] · [[NB/pedidos/relacion-tablas-articulo-stocks|artículo/stocks]] · [[NB/pedidos/relacion-tablas-stocks-almacen|depósitos]] · [[NB/pedidos/relacion-companycode|companyCode]]
 
 ## Bily
 
