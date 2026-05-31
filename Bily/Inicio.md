@@ -27,6 +27,8 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/personas/Ezequiel Manzano\|Ezequiel Manzano]] · [[Bily/personas/Barbara Carrillo\|Bárbara Carrillo]]
 - [[Bily/personas/Belu Ontivero\|Belu Ontivero]] · [[Bily/personas/Franco Callipo\|Franco Callipo]]
 - [[Bily/personas/Alejandra Guidonbono\|Alejandra Guidobono]]
+- [[Bily/personas/Carla Carpinteri\|Carla Carpinteri]] · [[Bily/personas/Ciro\|Ciro]] · [[Bily/personas/Joshua\|Joshua]] · [[Bily/personas/Juan\|Juan]]
+- [[Bily/personas/Catriel/Inicio\|Catriel — notas personales]]
 
 ## Reglas Operativas
 - **Registro de Personas:** Si Catriel menciona a alguien desconocido, DEBO preguntarle quién es para verificar si está en la bóveda o, en su defecto, crear/completar su ficha en `Bily/personas/`.

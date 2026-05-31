@@ -18,7 +18,7 @@
 - [[Blu/bluMiniErp/Reglas de Negocio|Reglas de Negocio]] · [[Blu/bluMiniErp/Stack e Infraestructura|Infra]] · [[Blu/bluMiniErp/Errores Comunes|Errores]] · [[Blu/bluMiniErp/changelog|changelog]] · [[Blu/bluMiniErp/memoria|memoria]]
 
 ### rrhh — Recursos Humanos
-- [[Blu/rrhh/rrhh|índice]] · [[Blu/rrhh/contexto|contexto]] · [[Blu/rrhh/alertas-gestion|alertas de gestión]] · [[Blu/rrhh/cumpleanos|cumpleaños]] · [[Blu/rrhh/actividades-rrhh-it|actividades RRHH IT]]
+- [[Blu/rrhh/rrhh|índice]] · [[Blu/rrhh/contexto|contexto]] · [[Blu/rrhh/alertas-gestion|alertas de gestión]] · [[Blu/rrhh/cumpleanos|cumpleaños]] · [[Blu/rrhh/actividades-rrhh-it|actividades RRHH IT]] · [[Blu/rrhh/agenda-primera-reunion|agenda primera reunión]] · [[Blu/rrhh/changelog|changelog]]
 
 ---
 
@@ -36,7 +36,8 @@
 
 - [[Gigabyte/Gigabyte|Gigabyte]]
   - [[Gigabyte/gigaErp/gigaErp|gigaErp]] — ERP Gigabyte: distribuidores, cuenta corriente, línea de crédito, notas de crédito, órdenes de venta + APROBADA, invoice, stock bodega
-    - [[Gigabyte/gigaErp/troubleshooting|troubleshooting]] · [[Gigabyte/gigaErp/arquitectura|arquitectura]] · [[Gigabyte/gigaErp/contexto|contexto]] · [[Gigabyte/gigaErp/memoria|memoria]]
+    - [[Gigabyte/gigaErp/troubleshooting|troubleshooting]] · [[Gigabyte/gigaErp/arquitectura|arquitectura]] · [[Gigabyte/gigaErp/contexto|contexto]] · [[Gigabyte/gigaErp/memoria|memoria]] · [[Gigabyte/gigaErp/stack|stack]] · [[Gigabyte/gigaErp/changelog|changelog]]
+    - [[Gigabyte/gigaErp/design-system|design system]] · [[Gigabyte/gigaErp/componentes-ui|componentes UI]]
     - Módulos: [[Gigabyte/gigaErp/modulos/productos|productos]] · [[Gigabyte/gigaErp/modulos/ordenes-venta|órdenes de venta]] · [[Gigabyte/gigaErp/modulos/invoice-preview|invoice preview]]
 
 ## Hogar
@@ -53,6 +54,7 @@
   - [[Libre Opcion/arquitectura|arquitectura]] · [[Libre Opcion/stack|stack]] · [[Libre Opcion/changelog|changelog]] · [[Libre Opcion/memoria|memoria]]
   - [[Libre Opcion/00-resumen-diagnostico-seo-performance|resumen SEO]] · fixes: [[Libre Opcion/01-fix-cls-imagenes|01]] · [[Libre Opcion/02-fix-lcp-render-blocking|02]] · [[Libre Opcion/03-fix-header-min-height|03]] · [[Libre Opcion/04-fix-fuentes-innecesarias|04]] · [[Libre Opcion/05-fix-fouc-css-tardio|05]] · [[Libre Opcion/06-fix-cls-tbt-ronda-2|06]] · [[Libre Opcion/07-fix-cls-mobile-h1-sr-only-ronda-3|07]] · [[Libre Opcion/08-fix-cls-listings-ronda-4|08]]
   - [[Libre Opcion/TareaWallet/TareaWallet|TareaWallet]] · [[Libre Opcion/enviosMailDrop/enviosMailDrop|enviosMailDrop]] · [[Libre Opcion/tareas/tareas|tareas]]
+  - [[Libre Opcion/hot sale|Hot Sale 2026]] · [[Libre Opcion/sync-curls|sync-curls]]
 
 ## NB
 
@@ -61,16 +63,17 @@
   - [[NB/inventario/inventario|inventario]] · [[NB/microservicio-envios/microservicio-envios|microservicio-envios]] · [[NB/sincroAfip/sincroAfip|sincroAfip]] · [[NB/cobros/cobros|cobros]]
 
 ### pedidos — Gestión de pedidos multi-empresa
-- [[NB/pedidos/pedidos|índice]] · [[NB/pedidos/arquitectura|arquitectura]] · [[NB/pedidos/stack|stack]] · [[NB/pedidos/changelog|changelog]] · [[NB/pedidos/contexto|contexto]]
+- [[NB/pedidos/pedidos|índice]] · [[NB/pedidos/arquitectura|arquitectura]] · [[NB/pedidos/stack|stack]] · [[NB/pedidos/changelog|changelog]] · [[NB/pedidos/contexto|contexto]] · [[NB/pedidos/memoria|memoria]]
 - [[NB/pedidos/modulo-makesale|MakeSale]] · [[NB/pedidos/modulo-removesale|RemoveSale]] · [[NB/pedidos/modulo-dashboard-lo|Dashboard LO]]
-- [[NB/pedidos/feature-laset-import|Laset Import]] · [[NB/pedidos/feature-asignacion-oc|Asignación OC]] · [[NB/pedidos/feature-integrar-eccn|ECCN]]
+- [[NB/pedidos/feature-laset-import|Laset Import]] · [[NB/pedidos/feature-asignacion-oc|Asignación OC]] · [[NB/pedidos/feature-asignacion-oc-cookbook|Cookbook OC]] · [[NB/pedidos/feature-integrar-eccn|ECCN]]
+- [[NB/pedidos/feature-laset-snapshot-restore|Snapshot/Restore Laset]] · [[NB/pedidos/feature-laset-fix-pedprot-stockonly|Fix bugs Fase C Laset]] · [[NB/pedidos/nota-catalogo-laset|Nota Catálogo Laset]]
 - **Esquema ERP:** [[NB/pedidos/relacion-tablas-ped-alb|ventas]] · [[NB/pedidos/relacion-tablas-pedprot-pedprol-pedproi|compras]] · [[NB/pedidos/relacion-tablas-albprot-albprol|remitos compra]] · [[NB/pedidos/relacion-tablas-articulo-stocks|artículo/stocks]] · [[NB/pedidos/relacion-tablas-stocks-almacen|depósitos]] · [[NB/pedidos/relacion-companycode|companyCode]]
 
 ## Bily
 
 - [[Bily/Inicio|Inicio de Bily]] — Asistente técnico/operativo de Catriel (William/Bily)
   - [[Bily/MEMORIA|Memoria operativa]] · [[Bily/bitacoras/bitacoras|bitácoras]] · [[Bily/kanban/LASET|kanban LASET]]
-  - Personas: [[Bily/personas/Catriel Mercurio|Catriel]] · [[Bily/personas/Ayelen Mercurio|Ayelen]] · [[Bily/personas/Sebastian Fontan|Sebastián]] · [[Bily/personas/Guillermo Avila|Guillermo]] · [[Bily/personas/Emanuel Ferreyra|Emanuel]] · [[Bily/personas/Marbe Moreno|Marbe]] · [[Bily/personas/Ezequiel Manzano|Ezequiel]] · [[Bily/personas/Barbara Carrillo|Bárbara]] · [[Bily/personas/Belu Ontivero|Belu]] · [[Bily/personas/Franco Callipo|Franco]] · [[Bily/personas/Alejandra Guidonbono|Alejandra]]
+  - Personas: [[Bily/personas/Catriel Mercurio|Catriel]] · [[Bily/personas/Ayelen Mercurio|Ayelen]] · [[Bily/personas/Sebastian Fontan|Sebastián]] · [[Bily/personas/Guillermo Avila|Guillermo]] · [[Bily/personas/Emanuel Ferreyra|Emanuel]] · [[Bily/personas/Marbe Moreno|Marbe]] · [[Bily/personas/Ezequiel Manzano|Ezequiel]] · [[Bily/personas/Barbara Carrillo|Bárbara]] · [[Bily/personas/Belu Ontivero|Belu]] · [[Bily/personas/Franco Callipo|Franco]] · [[Bily/personas/Alejandra Guidonbono|Alejandra]] · [[Bily/personas/Carla Carpinteri|Carla]] · [[Bily/personas/Ciro|Ciro]] · [[Bily/personas/Joshua|Joshua]] · [[Bily/personas/Juan|Juan]]
   - Productos: [[Bily/Productos/Productos|Índice de Productos]] · [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bot WhatsApp MVP]] · [[Bily/Productos/Bot-WhatsApp-Nativo|Bot WhatsApp Nativo]] · [[Bily/Productos/Bot-WhatsApp-Elevator-Pitch|Elevator Pitch]] · [[Bily/Productos/Bot-WhatsApp-Minteeo-y-Suenio|Minteo y Sueño]] · [[Bily/Productos/Billy-Bot|Billy-Bot]]
   - [[Bily/Deudores|Deudores]] · [[Bily/aprendizajes/Inicio|Aprendizajes]] · [[Bily/dreams/Inicio|Sueños]] · [[Bily/Finanzas/Inicio|Finanzas]] · [[Bily/pagos/Inicio|Pagos]] · [[Bily/tareas/Inicio|Tareas]] · [[Bily/todos/Inicio|Todos]] · [[Bily/proyectos/Inicio|Proyectos]] · [[Bily/media/Inicio|Media]]
 
@@ -78,6 +81,7 @@
 
 - [[Planilla Acciones Bully/Planilla Acciones Bully|Planilla Acciones Bully]] — Herramienta Google Sheets para seguimiento de acciones en bolsa
   - [[Planilla Acciones Bully/arquitectura|arquitectura]] · [[Planilla Acciones Bully/bully|bully]] · [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Docs API]]
+  - [[Planilla Acciones Bully/prompt-optimizar-api|Prompt optimizar API]] · [[Planilla Acciones Bully/prompt-agregar-stock-data-api|Prompt agregar stock data]]
 
 ## Recurso Humano
 
