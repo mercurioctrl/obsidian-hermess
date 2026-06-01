@@ -1,6 +1,13 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- [ ] Para [[Diego Bordon]]: Agregar para que puedan contar de manera más lineal (solo aquellos que realmente no tienen algún dato y hay que contabilizar).
+- [ ] Requerimiento Postventa (Gestión de Armados):
+  - Cuando entra un armado, se debe poder seleccionar del pedido los ítems involucrados.
+  - En base a ellos, generar un nuevo serial que los contiene (se imprime en soporte técnico y se pega en la PC).
+  - Al ingresar la PC a postventa, se ingresa con el serial del armado (también se permite ingresar partes por separado).
+  - Si es un armado, en postventa se debe ver todo lo ingresado: marcar qué falló y el resto como "no falló".
+  - Si la PC vuelve a ingresar por segunda vez, se deben ver ambos seriales: el del ítem original que falló y el nuevo serial del componente de cambio.
 - [ ] Crear a [[Ezequiel Manzano|Ezequiel]] las historias de envío de correos.
 - [ ] Verificar con [[Emanuel Ferreyra|Ema]] lo del chat de [[Libre Opción]].
 - [ ] Pasar la factura de [[Adata]] a [[Fabio]] (con copia a [[Catriel Mercurio]]).
