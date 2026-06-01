@@ -1,6 +1,11 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- [ ] Pasar la factura de [[Adata]] a [[Fabio]] (con copia a [[Catriel Mercurio]]).
+- [ ] Ver lo de [[Ayelen Mercurio|Aye]].
+- [ ] Ver [[Doña Ramona]].
+- [ ] Reunión de [[Gigabyte]] el Viernes a las 14:00 HS.
+- [ ] Reunión con [[Sebastian Fontan|Sebas]] antes de que se vaya al mundial.
 - Probar la carga de ítems de NB en el módulo de compras.
 - Linkear el chat en la app.
 - Que [[Ezequiel Manzano|Eze]] pruebe las estadísticas de NB mensuales de los vendedores.
