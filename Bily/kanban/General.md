@@ -1,6 +1,7 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- [ ] Crear a [[Ezequiel Manzano|Ezequiel]] las historias de envío de correos.
 - [ ] Verificar con [[Emanuel Ferreyra|Ema]] lo del chat de [[Libre Opción]].
 - [ ] Pasar la factura de [[Adata]] a [[Fabio]] (con copia a [[Catriel Mercurio]]).
 - [ ] Ver lo de [[Ayelen Mercurio|Aye]].
