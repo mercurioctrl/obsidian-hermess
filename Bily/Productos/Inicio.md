@@ -10,6 +10,7 @@ Ideas y productos en desarrollo impulsados por Bily y Catriel.
 - [[Bily/Productos/Bot-WhatsApp-Minteeo-y-Suenio|Minteo del Alma, Personalidad y Ciclo de Sueño]]
 - [[Bily/Productos/Bot-WhatsApp-Nativo|Producto: Bot Copiloto Nativo para WhatsApp]]
 - [[Bily/Productos/changelog|Changelog — Bily/Productos]]
+- [[Bily/Productos/Ideas LibreOpcion.com|Ideas para LibreOpcion.com]]
 
 ### Subcarpetas
 
