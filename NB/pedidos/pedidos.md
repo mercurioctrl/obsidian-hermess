@@ -26,6 +26,9 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[nota-catalogo-laset|Nota a Catálogo — alta 39 SKUs Laset]] — pedido de alta de artículos comp=11 que destraban Fase D
 - [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
 - [[feature-laset-fix-pedprot-stockonly|Fix bugs históricos Fase C Laset]] — pedprot/pedprol duplicados + stock-only descartado
+- [[feature-laset-fix-marcas-comp11|Fix marcas comp=11]] — refactor Fase C marcas + backfill articulo.Id_Marca + cleanup FP_Marcas dups
+- [[feature-laset-wipe-reimport|Borrar todo comp=11 + reimport limpio]] — wipe transaccional con barrido de huérfanos + validación de stocks; flujo Borrar todo → Importar todo
+- [[feature-sync-laset-botones|Patrón Sync Laset — botones de mantenimiento]] — service+command+controller+UI para fixes Laset
 - [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN por familia × proveedor para comp=11
 
 ## Esquema ERP — Tablas y relaciones
@@ -51,4 +54,4 @@ El sistema soporta **11 empresas activas** (`LACTIVA=1` en `NewBytes_DBF.dbo.FP_
 Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadata vive en tablas nuevas con prefijo del feature. Ver [[contexto#Regla cero: tablas ERP son read-only]].
 
 ---
-*Última sincronización: 2026-05-30 — Mapa completo del esquema ERP: relaciones, companyCode, artículo/stocks/depósitos. Fix: companyCode agregado a albclit. Correcciones: SAF/NBE únicos depósitos compartidos, ID_Articulo como FK canónica, pedprol legacy sin almacén es esperado. Ver [[changelog#2026-05-30]].*
+*Última sincronización: 2026-06-02 — Depuración del import Laset (rama `lasetImportFramework`): stock-only doble conteo, dedup multi-renglón, factura tardía que partía OCs, y decisión de modelo "la planilla más reciente es la verdad" → **Reimportar planilla reemplaza el staging completo**, stock vía Fase D (`--skip-stock`), ganador stock-only por (vpi,sku,depósito). Ver [[changelog#2026-06-02 — Import Laset: reconciliación, dedup multi-renglón y modelo "snapshot completo"]] y el modelo final en [[feature-laset-import#Modelo de import — actualizado 2026-06-02]].*

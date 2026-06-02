@@ -322,3 +322,98 @@ Caso real: `laset_import_staging.match_status` era `NVARCHAR(20)`. Agregué `STO
 4. **Verify integrado con invariantes**: si el delta no es exactamente lo esperado, THROW + rollback.
 5. **Idempotencia obligatoria**: re-correr sobre data limpia = 0 cambios.
 6. **dblib-safe**: tabla tmp + UPDATE FROM JOIN single-statement. NUNCA loops de UPDATE individuales (segfault).
+
+
+## articulo.Id_Marca → NB_WEB.dbo.marcas (NO FP_Marcas)
+
+La FK lógica de `articulo.Id_Marca` apunta a **`NB_WEB.dbo.marcas.id`**, no a `NewBytes_DBF.dbo.FP_Marcas`. Toda la app joinea por `articulo.ID_MARCA = marcas.id`: Brand model, TotalSales, Statistics, Marketing, Product, ChangeClientOrder, Downloader, Report, etc.
+
+`NB_WEB.dbo.marcas` tiene `companyCode` — **scope por empresa**, una "ASUS" para comp=4 (id=65) NO es la misma que "ASUS" para comp=11 (id=1290). El importer Laset estaba creando marcas en `FP_Marcas` (tabla legacy sin PK ni companyCode) y rompió `articulo.Id_Marca` para 151 artículos comp=11.
+
+Regla: al crear/auto-crear artículos, SIEMPRE resolver/crear marca en `NB_WEB.dbo.marcas` con `companyCode=N` (la empresa del articulo). Lookup case-insensitive scopeado: `WHERE UPPER(LTRIM(RTRIM(referencia))) = ? AND companyCode = N`. Aislamiento estricto: una marca de comp=4 NO sirve para comp=11; si "ASUS" existe en comp=4 pero no en comp=11, hay que **crear otra entrada** comp=11.
+
+## IDENTITY + dblib
+
+Para tablas SQL Server con `id INT IDENTITY` accedidas vía driver `dblib`, NO usar:
+- INSERT con id explícito (`Cannot insert explicit value for identity column when IDENTITY_INSERT is set to OFF`).
+- `SET IDENTITY_INSERT ON/OFF` dentro de `DB::unprepared` (dblib pierde estado entre statements).
+- `MAX(id) + 1` para pre-reservar (rompe contrato IDENTITY, colisiona bajo concurrencia).
+
+Patrón correcto: omitir `id` del INSERT y capturar inmediato con `SELECT CAST(SCOPE_IDENTITY() AS INT) AS id`:
+
+```php
+foreach ($items as $name) {
+    DB::connection('sqlsrv')->insert(
+        "INSERT INTO NB_WEB.dbo.marcas (referencia, oculto, siteShow, companyCode, ocultarNbeB) VALUES (?, 0, 0, ?, 0)",
+        [$name, 11]
+    );
+    $r = DB::connection('sqlsrv')->selectOne("SELECT CAST(SCOPE_IDENTITY() AS INT) AS id");
+    $newId = (int)$r->id;
+    // usar $newId para FKs en INSERTs siguientes
+}
+```
+
+Para detectar si una columna es IDENTITY: `SELECT COLUMNPROPERTY(OBJECT_ID('schema.tabla'), 'col', 'IsIdentity')`.
+
+Si el código se refactorea de "pre-reservar ids" a IDENTITY: revisar TODOS los lugares donde se usaba el id pre-reservado y atrasarlos al post-INSERT (en `LasetImportFaseC` movimos la resolución de `articulosAutoCreate[].marca_id` de la fase de planificación a `executePlan` post-INSERT de marcas).
+
+## dblib + batches multi-statement (results pending)
+
+`DB::unprepared` con SQL que contiene `DECLARE` / `IF` / `PRINT` / `CURSOR` / `SELECT INTO` produce `Attempt to initiate a new Adaptive Server operation with results pending`. dblib no consume el rowset implícito y rompe el batch siguiente.
+
+Patrón: orquestar desde PHP — un statement por llamada (`DB::statement`/`DB::insert`/`DB::update`/`DB::select`), branching y verifies en PHP. Los archivos `.sql` quedan como referencia histórica; el ejecutor real es el service.
+
+Ver también [[memoria#Reglas operativas Laset (afianzadas)]].
+
+## Status terminal nuevo en staging — tocar 4 capas
+
+Cuando agregás un nuevo `match_status` terminal (no requiere acción del usuario, como `IGNORED`, `STOCK_ONLY_SUPERSEDED`) a `laset_import_staging`, hay que actualizar **4 capas** o queda inconsistente:
+
+1. **`SyncLasetList.php`** (`view=pending`): agregar el nuevo status al `NOT IN (...)` del WHERE.
+2. **`SyncLasetSummary.php`** (contador `pending`): excluir el status del incremento.
+3. **`syncLaset.vue`** (checkbox + `selectableIds`): no permitir tildar filas terminales.
+4. **`syncLaset.vue`** (map de colores `counters`/`statusColor`): agregar entry o el tag sale sin color.
+
+Caso: 2 filas de batch 6 quedaron eternamente en "Falta sincronizar" porque eran `STOCK_ONLY_SUPERSEDED` y el filtro no las reconocía. Si solo arreglás el filtro y dejás los counters, el badge sigue contando mal.
+
+Status mapping para staging:
+- **synced**: solo `IMPORTED`.
+- **terminal-not-synced**: `IGNORED`, `STOCK_ONLY_SUPERSEDED`.
+- **pending**: `MATCHED`, `UNMATCHED`, `PARTIAL`, `CONFLICT`, `NEW`, `STOCK_ONLY` (espera fix-stock-only).
+
+## Patrón service-first para botones de Sync Laset
+
+Cada feature de mantenimiento Laset que se quiere disparar desde la UI sigue el patrón:
+
+1. **Service** (`app/Services/Laset/*.php`) — preview/execute, lógica completa, idempotente.
+2. **Command CLI** (`Laset*Command.php`) — wrapper delgado del service.
+3. **Controller invokable** (`Laset*Run.php`) — body `{dry_run}`, delega al service.
+4. **Ruta** (`POST /v1/laset/<accion>`).
+5. **api.js wrapper** (`plugins/api.js` namespace `laset`).
+6. **UI** (botón + modal preview→confirmar en `syncLaset.vue`).
+
+Implementaciones actuales: `RelinkFacturasService` y `FixMarcasComp11Service`. Ver [[feature-sync-laset-botones]].
+
+## Wipe comp=11 — borrar hijos→padres + barrer huérfanos (2026-05-31)
+
+Al borrar tajadas jerárquicas comp=11 cuyos scopes hacen JOIN al padre, **borrar SIEMPRE hijos→padres**. Borrar el padre primero deja al hijo huérfano (el JOIN del scope no matchea) y el verify post (mismo scope) lo cuenta 0 → **pasa ciego**. Bug en `WipeTransactionalService` (iteraba padre→hijo) que acumulaba ~42k huérfanos en cada wipe+reimport → Fase D no descontaba stock de ventas. Fix: `array_reverse(DELETE_KEYS)` + barrido de huérfanos.
+
+- **Una herramienta basada en scope con JOIN al padre nunca ve/limpia huérfanos.** Agregar barrido separado: LÍNEAS por `articulo.companyCode=11`+sin padre; CABECERAS de remito por MAESTRO comp=11 (`clientes.CODEMP=11` vía ccodcli / `FP_Proveedores.companyCode=11` vía ccodpro), NO por sus líneas (respeta orden FK). Pre-filtro `(companyCode=11 OR NULL)` evita escanear 404k filas y el timeout dblib. Guard de aislamiento: baseline de cabeceras por empresa antes/después, THROW+rollback si cambia.
+- **albprot/albclit con companyCode NULL masivo** (~11.875 albprot): scopear remitos comp=11 por JOIN al padre (`albprot.nnumped`→`pedprot.nNumPed`, único global; NO `nnumalb`) o al maestro, nunca por su companyCode propio.
+
+## Frontend — selección "todo" no debe recortarse a la página visible (2026-05-31)
+
+En `syncLaset.vue` el computed `selectableIds` intersectaba `selectedRowKeys` contra `this.rows` (las 50 filas visibles del `a-table`) → "Importar todo" previsualizaba/importaba solo ~50 (síntoma "se van a importar 2098"). La selección cross-página vive en `selectedRowKeys`, no en `this.rows`. Fix: confiar en `selectedRowKeys` (ya restringido a no-terminales por checkboxes + backend), descartar solo terminales visibles. "Importar todo" fuerza `batchId='all'` para no importar 1 batch y dejar el resto (→ duplicación si después se corre Fase C manual). Preview y create deben usar el mismo set completo.
+
+
+## Import Laset — modelo final y bugs de reconciliación (2026-06-02)
+
+Sesión depurando casos reales del import comp=11. Modelo final en [[feature-laset-import#Modelo de import — actualizado 2026-06-02]]. Principio del usuario: **"siempre lo que importa es la planilla más reciente"**.
+
+- **Reimportar planilla REEMPLAZA el staging completo** (borra batches/filas previos, inserta el snapshot nuevo). Se quitó el dedup por `row_hash` que colapsaba renglones idénticos legítimos (un SKU listado 2 veces con misma cantidad → perdía unidades). Cada batch = snapshot completo.
+- **Dedup cross-batch en Fase C = "batch más completo gana"** por (pedclit, sku, OC), conservando todas las filas del grupo. `source_row_number` NO es estable entre batches (no sirve de clave).
+- **Stock: única fuente de verdad = Fase D.** `fix-stock-only` con `--skip-stock` (sólo suma a pedprol). Sin esto: doble conteo (fix-stock-only escribía stock + Fase D lo re-derivaba). Ganador stock-only por (vpi, sku, depósito), no por factura.
+- **Canonicalización de factura (Fase C)**: si un (prov, vendor_pi) tiene 1 sola factura no vacía, las vacías la adoptan → no parte la compra en 2 OCs cuando la factura llega en un batch posterior.
+- **CSUPROF_TEMP = vendor_pi completo** (cExped varchar(20) trunca). Fecha de compras stock-only = invoice_date.
+- **Flujo operativo:** Reimportar planilla → Borrar todo → Importar todo. Nunca incremental sin Borrar todo.
+- **Gotcha verificación:** el guard de auto-mode bloquea correr Fase C/D desde sesión de investigación → verificar con simulaciones read-only en tinker.

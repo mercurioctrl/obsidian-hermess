@@ -1,3 +1,31 @@
+## 2026-06-02 — Import Laset: reconciliación, dedup multi-renglón y modelo "snapshot completo"
+
+Sesión larga depurando casos reales del import comp=11 (rama `lasetImportFramework`). Varios bugs sistémicos que sólo aparecían al correr el pipeline real. Commits back `7e92c5ee` → `32f49b81`. Modelo final consolidado en [[feature-laset-import]].
+
+### Bugs encontrados y arreglados
+
+- **Stock-only atascado en IGNORED** (44.5k u perdidas): el paso 4a "basura" de `aggregate-match` re-pisaba a IGNORED las filas `year=1900` que el 4a-pre acababa de marcar STOCK_ONLY. Fix: excluir STOCK_ONLY/STOCK_ONLY_SUPERSEDED del `NOT IN`. Además Fase C ahora corre `fix-stock-only` SIEMPRE (rompe el chicken-egg: con todo en IGNORED nunca se llamaba).
+- **Doble conteo de stock** (reconciliación −33k): `fix-stock-only` escribía la qty stock-only en `pedprol` Y en `stocks`, y Fase D la re-derivaba de `pedprol−pedclil` → 2×. Fix: `--skip-stock` (Fase C lo pasa) → **Fase D es la única fuente de verdad del stock**.
+- **Stock-only acumulado entre corridas** (reconciliación +6861): importar incremental aplicaba snapshots viejos de stock-only encima de los nuevos. Fix: ganador stock-only por `(vendor_pi, sku, depósito)` (no por factura) + modelo snapshot-completo (abajo).
+- **Compra partida en 2 OCs + venta duplicada** (caso 14178/14190): la factura del proveedor llega en un batch posterior a la proforma; filas con factura vacía generaban un pedprot extra. Fix: canonicalización de factura en Fase C (si un `(prov, vendor_pi)` tiene 1 sola factura no vacía, las vacías la adoptan).
+- **Dedup que comía renglones** (caso 9800X3D, venta A-3765): un SKU listado 2 veces con misma cantidad en la misma factura perdía unidades. Causa: el dedup por `row_hash` de `ReimportLaset` descartaba renglones idénticos legítimos. Fix doble: (1) Fase C dedup cross-batch = "batch más completo gana" conservando todas las filas del grupo; (2) `ReimportLaset` ya no deduplica por hash.
+- **Fecha inválida en compras stock-only** (14204): cat D tomaba `dFecPed` de `fecha_arribo` (vacío). Fix: usa `invoice_date`.
+- **CSUPROF_TEMP vacío**: `cExped` es varchar(20) y trunca el vendor_pi; `CSUPROF_TEMP` (nvarchar 50) guarda el PI completo. Fase C/stock-only lo setean + backfill `laset:fix-csuprof-temp` (+ botón en /syncLaset).
+
+### Decisión de modelo (usuario): "la planilla más reciente es la verdad"
+
+- **Reimportar planilla = REEMPLAZA el staging completo** (borra batches/filas previos, inserta el snapshot nuevo como único batch). Antes acumulaba versiones viejas → staging inflado (>5000 ids → error) y datos obsoletos (ej. venta A-3748 ya no presente) en la reconciliación.
+- Límite `staging_ids` subido 5000 → 100000 en import-jobs.
+- Resultado: con un solo batch (la planilla vigente) Fase C deduplica limpio y no hay interferencia de datos viejos.
+
+### Gotcha de verificación
+
+El guard de auto-mode bloquea correr Fase C/D (modifican ERP compartido) desde la sesión → se verificó con simulaciones read-only en tinker; el usuario corre wipe+reimport por la UI.
+
+Archivos: `Console/Commands/LasetAggregateMatchCommand.php`, `LasetImportFaseCCommand.php`, `LasetFixStockOnlyPedprolCommand.php`, `LasetFixCsuprofTempCommand.php`, `Services/Laset/{WipeTransactionalService,FixCsuprofTempComp11Service}.php`, `Http/Controllers/Laset/{ReimportLaset,LasetFixCsuprofTempRun,LasetImportJobCreate,LasetImportJobPreview}.php`. Front: `pages/syncLaset.vue`, `plugins/api.js`.
+
+---
+
 ## 2026-05-21 (cont.) — integrarECCN: permiso, detalle de orden y carga manual
 
 Continuación del feature **[[feature-integrar-eccn|integrarECCN]]** — ahora el ECCN se ve y se carga desde el detalle de la orden. Commiteado y pusheado a la rama `integrarECCN` (back `2c87867e`, front `d0083b6`).
@@ -728,3 +756,65 @@ Archivos modificados: `api-rest-pedidos-laravel/app/app/Repositories/MakeSale/Ma
 - 6 pedprot NB (cc=4) con líneas en almacenes Laset (DOM/GRI/ASI) — mayo 2026, residuo migración
 
 Notas actualizadas: [[relacion-tablas-articulo-stocks]], [[relacion-tablas-stocks-almacen]]
+
+
+## 2026-05-30 — Fix retroactivo articulo.Id_Marca comp=11 + refactor Fase C marcas
+
+Bug histórico descubierto: `LasetImportFaseC` escribía marcas en `NewBytes_DBF.dbo.FP_Marcas` (legacy, sin PK ni companyCode) en vez de `NB_WEB.dbo.marcas` (que es la FK efectiva de `articulo.Id_Marca` en todo el codebase). Resultado: 151 artículos Laset con `Id_Marca` apuntando a marcas equivocadas (e.g. ASUS aparecía como ROCCAT comp=4 en TotalSales, Statistics, Marketing, Product, etc.) y 204 filas basura en FP_Marcas (199 en ID=80 + 5 en ID=81).
+
+**Refactor Fase C**:
+- Cambia INSERT/lookup de marcas a `NB_WEB.dbo.marcas` filtrado por `companyCode=11`.
+- `marcas.id` es IDENTITY → INSERT row-by-row + `SELECT CAST(SCOPE_IDENTITY() AS INT)` para capturar id real.
+- `articulosAutoCreate[].marca_id` se resuelve post-INSERT de marcas (no se pre-reserva). Pre-reservar IDs sobre IDENTITY falla con `Cannot insert explicit value for identity column when IDENTITY_INSERT is set to OFF`.
+- Aislamiento estricto: una marca de comp=4 no sirve para comp=11; si "ASUS" existe en comp=4 pero no en comp=11, crea otra entrada con `companyCode=11`.
+
+**Backfill ejecutado en dev (idempotente vía service)**:
+- 151 articulos comp=11 remapeados a su `Id_Marca` correcto en NB_WEB.marcas.
+- 5 marcas creadas en NB_WEB.marcas comp=11: ACER (1320), HP (1321), LENOVO (1322), MICROVIP (1323), WD (1324).
+- 204 filas basura eliminadas de FP_Marcas (ID_Marca IN 80, 81).
+- Backups: `NewBytes_DBF.dbo.laset_fix_marcas_backup_articulo` + `laset_fix_marcas_backup_fp` (mantener hasta validar prod).
+
+**Botón en UI**: "Fix marcas comp=11" en `/syncLaset` (junto a "Re-vincular facturas") con modal preview→confirmar. Dispara `POST /v1/laset/fix-marcas-comp11`. Mismo flujo desde CLI: `php artisan laset:fix-marcas-comp11 [--dry-run]`.
+
+**Archivos**: `app/Services/Laset/FixMarcasComp11Service.php`, `app/Console/Commands/LasetFixMarcasComp11Command.php`, `app/Http/Controllers/Laset/LasetFixMarcasComp11Run.php`, `app/Console/Commands/LasetImportFaseCCommand.php` (refactor), `routes/api.php`, `database/sql/2026_05_30_002_fix_articulo_id_marca_comp11.sql` (+ drop), frontend `pages/syncLaset.vue` + `plugins/api.js`.
+
+Doc: [[feature-laset-fix-marcas-comp11]], [[feature-sync-laset-botones]].
+
+## 2026-05-31 — Portado relink-facturas a botón UI + STOCK_ONLY_SUPERSEDED como status terminal
+
+**Re-vincular facturas — patrón service**: el comando CLI `laset:relink-facturas` ya existía; lo extraje a `app/Services/Laset/RelinkFacturasService.php` (preview/execute), agregué controller invokable `LasetRelinkFacturasRun.php` y ruta `POST /v1/laset/relink-facturas`. Botón "Re-vincular facturas" en `/syncLaset` con modal preview→confirmar. Stats: facturas a re-vincular / multi-pedido / sin match. El command CLI ahora es wrapper delgado del service.
+
+**Status terminal `STOCK_ONLY_SUPERSEDED` (fix)**: el usuario reportó 2 filas del batch 6 que aparecían eternamente en "Falta sincronizar". Eran `STOCK_ONLY_SUPERSEDED` (perdedoras del grupo stock-only — la ganadora ya está `IMPORTED`). El status es terminal pero NO synced (como `IGNORED`), pero el filtro `view=pending` solo conocía `IMPORTED` e `IGNORED`. Fix en **4 capas**:
+- `SyncLasetList.php`: `match_status NOT IN ('IMPORTED','IGNORED','STOCK_ONLY_SUPERSEDED')`.
+- `SyncLasetSummary.php`: `!in_array($status, ['IGNORED','STOCK_ONLY_SUPERSEDED'])` para incrementar `pending`.
+- `syncLaset.vue`: `TERMINAL = ['IMPORTED','IGNORED','STOCK_ONLY_SUPERSEDED']` en `getCheckboxProps.disabled` y `selectableIds`.
+- `syncLaset.vue` (map de colores): `STOCK_ONLY` cyan, `STOCK_ONLY_SUPERSEDED` default.
+
+Verificado vía curl batch 6: `view=pending` ahora 0 filas (antes 2). Summary pending=0, synced=380, total=400 (380 IMPORTED + 18 IGNORED + 2 STOCK_ONLY_SUPERSEDED).
+
+**Lección**: al introducir un status terminal nuevo al staging, tocar siempre las 4 capas (list filter + summary counter + frontend checkbox + color map). Grep `IMPORTED.*IGNORED` para encontrar los puntos exactos.
+
+Doc: [[feature-sync-laset-botones]], [[memoria#NVARCHAR length cap en columnas enum/status]].
+
+## 2026-05-31 (cont.) — Borrado transaccional comp=11 + barrido de huérfanos + reimport limpio
+
+Feature nuevo [[feature-laset-wipe-reimport|Borrar todo comp=11 + reimport limpio]] y resolución de un bug de fondo que corrompía cada ciclo de reimport. Commits: back `434beff8`, front `15ae1f4` (rama `lasetImportFramework`).
+
+- **Botón "Borrar todo comp=11"** (`WipeTransactionalService` + `laset:wipe-transactional` + `POST /v1/laset/wipe-transactional`) — borra toda la tajada transaccional comp=11 con snapshot `pre_wipe_*` previo, reset de stocks/staging y desvinculación de facturas. Flujo Borrar todo → Importar todo.
+- **Botón "Validar stocks"** (`CheckStocksOrphansService` + `GET /check-stocks-orphans`) — casos A/B de inconsistencia de stock, con drill-down de compras/ventas (`ArticleUsageService`, `GET /article-usage`) y limpieza de fantasmas (`CleanGhostStocksService` + `POST /clean-stocks-ghosts`).
+- **Seleccionar/Importar todo cross-página** (`SyncLasetSelectableIds` + `GET /selectable-ids?batchId=all`, opción "Todos los batches").
+- **Bug CRÍTICO — wipe borraba padres antes que hijos**: los scopes de los hijos hacen JOIN al padre; borrar el padre primero dejaba al hijo **huérfano** y el verify (mismo scope) pasaba ciego. Acumulaba duplicados en cada wipe+reimport (~42k huérfanos) → Fase D no descontaba stock de ventas → reconciliación con miles de deltas. Fix: `array_reverse(DELETE_KEYS)` (hijos→padres, FK-safe) + **barrido de huérfanos** con guard de aislamiento de otras empresas.
+- **Bug `albprot`/`albprol` scope por companyCode**: ~11.875 albprot con `companyCode=NULL` quedaban afuera del scope `WHERE companyCode=11`. Fix en `LasetSnapshotRegistry`: scope por `JOIN pedprot` (nnumped).
+- **Bug frontend `selectableIds`**: el computed recortaba la selección a la página visible (`this.rows`) → "Importar todo" previsualizaba/importaba solo ~50 (síntoma "se van a importar 2098"). Fix: confiar en `selectedRowKeys`, descartar solo terminales visibles; "Importar todo" fuerza `batchId='all'`.
+- **Bug `nnumalb`/`cnumalb` Fase D**: reservar desde MAX de cabecera Y línea (no solo cabecera) para no colisionar con orphans.
+- **Recuperación dev**: ciclo limpio Borrar todo → Importar todo → 3161 IMPORTED, **reconciliación 0 grupos con delta** (compras − ventas − stock = 0).
+
+Archivos: `app/Services/Laset/{WipeTransactional,CheckStocksOrphans,CleanGhostStocks,ArticleUsage}Service.php`, `app/Support/LasetSnapshotRegistry.php`, `app/Http/Controllers/Laset/{LasetWipeTransactionalRun,LasetCheckStocksOrphans,LasetCleanGhostStocksRun,LasetArticleUsage,SyncLasetSelectableIds}.php`, `pages/syncLaset.vue`, `plugins/api.js`.
+
+## 2026-05-31 (cont. 2) — Tipo de pedido Laset = INTERNO (orderTypeId=2)
+
+Las órdenes Laset comp=11 quedaban con `pedclit.orderTypeId=NULL` y `cobserv=''` (Fase C no seteaba esas columnas) → no aparecían en el filtro por tipo de `/orders` ni en `listOrderTypes`, y `OrderDto` casteaba `(int)NULL=0`. `orderTypeId` es el código del tipo y `cobserv` su etiqueta (van juntos). Catálogo: 1=DESCARGADO, 2=INTERNO, 3=PEDIDO APP ANDROID, 4=PEDIDO DE INTERNET, 5=PEDIDO LIBRE OPCION, 6=PRESUPUESTO, 7=POSTVENTA.
+
+- **Decisión usuario**: Laset = **INTERNO (orderTypeId=2)**.
+- **Importador**: `LasetImportFaseCCommand` ahora setea `cobserv='INTERNO'`+`orderTypeId=2` en el INSERT del pedclit (commit back `f31fceb2`). Vale para todo re-import tras "Borrar todo".
+- **Backfill**: `UPDATE pedclit SET orderTypeId=2, cobserv='INTERNO' WHERE companyCode=11` → 423 órdenes actualizadas en dev (sin tocar `cestado`, no dispara el trigger de asignación).

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LibreOpción · Radar de Tendencias</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121b2e; --panel2:#16223a; --line:#243450;
+    --txt:#e8eefb; --mut:#9fb0d0; --accent:#2f6df6; --green:#27c08a; --amber:#f5b13d; --purple:#7a3ff2;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
+  .wrap{max-width:1100px;margin:0 auto;padding:26px 18px 60px}
+  header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:6px}
+  .logo{font-size:22px;font-weight:800;letter-spacing:-.5px}
+  .logo span{color:var(--green)}
+  .sub{color:var(--mut);font-size:13px;margin:2px 0 18px}
+  .how{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:20px}
+  .how h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--mut)}
+  .how ol{margin:0;padding-left:18px;color:#cdd9f0;font-size:13.5px}
+  .how li{margin:4px 0}
+  .controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .controls input{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:11px 13px;font-size:14px}
+  .controls input::placeholder{color:#6f81a6}
+  .chips{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+  .chip{background:var(--panel);border:1px solid var(--line);color:var(--mut);border-radius:30px;padding:7px 13px;font-size:12.5px;cursor:pointer;user-select:none;transition:.15s}
+  .chip:hover{border-color:var(--accent);color:var(--txt)}
+  .chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+  .cat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 16px 18px;margin-bottom:16px}
+  .cat h2{margin:0 0 3px;font-size:17px;display:flex;align-items:center;gap:9px}
+  .cat .emoji{font-size:20px}
+  .cat .desc{color:var(--mut);font-size:12.5px;margin:0 0 13px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px}
+  a.src{display:flex;flex-direction:column;gap:3px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-decoration:none;color:var(--txt);transition:.15s}
+  a.src:hover{border-color:var(--accent);transform:translateY(-1px)}
+  a.src .nm{font-size:13px;font-weight:600}
+  a.src .tg{font-size:10.5px;color:var(--mut)}
+  .badge{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;margin-left:6px;vertical-align:middle}
+  .b-demand{background:rgba(39,192,138,.16);color:var(--green)}
+  .b-disc{background:rgba(47,109,246,.18);color:#7da7ff}
+  .b-comm{background:rgba(122,63,242,.18);color:#b89bff}
+  .foot{color:#6f81a6;font-size:11.5px;text-align:center;margin-top:30px;line-height:1.7}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--mut);margin-bottom:18px}
+  .legend span{display:flex;align-items:center;gap:5px}
+  .dot{width:9px;height:9px;border-radius:50%}
+  .empty{color:var(--mut);text-align:center;padding:30px;display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Libre<span>Opción</span> · Radar de Tendencias</div>
+    <div style="color:var(--mut);font-size:12px">v1.0 · enfocado Argentina</div>
+  </header>
+  <div class="sub">Tablero de descubrimiento para decidir qué importar. Cada botón abre la fuente <b>en vivo</b>, ya filtrada. Mirá, detectá, y lo prometedor pasalo a la planilla evaluadora.</div>
+
+  <div class="how">
+    <h3>Cómo usarlo (3 pasos)</h3>
+    <ol>
+      <li><b>Descubrí:</b> mirá los best-sellers de afuera (Amazon, AliExpress) y qué se busca en Google Trends Argentina.</li>
+      <li><b>Validá demanda local:</b> ¿hay gente buscándolo en Argentina pero poca oferta o precios inflados? Esa es la ventana.</li>
+      <li><b>Evaluá:</b> lo que parece prometedor, cargalo en la planilla evaluadora y cruzá demanda vs. margen/riesgo antes de importar.</li>
+    </ol>
+  </div>
+
+  <div class="legend">
+    <span><span class="dot" style="background:var(--green)"></span> Demanda / validación</span>
+    <span><span class="dot" style="background:#7da7ff"></span> Descubrimiento (qué se vende afuera)</span>
+    <span><span class="dot" style="background:#b89bff"></span> Comunidad / señal temprana</span>
+  </div>
+
+  <div class="controls">
+    <input id="q" type="text" placeholder="🔎 Escribí un producto y buscalo en todas las fuentes a la vez (ej: 'mini proyector', 'robot aspirador')…">
+  </div>
+
+  <div class="chips" id="chips"></div>
+  <div id="cats"></div>
+  <div class="empty" id="empty">No hay categorías con ese filtro.</div>
+
+  <div class="foot">
+    Regla de oro: cruzá siempre <b>"¿hay demanda?"</b> con <b>"¿me da número traerlo?"</b> (flete + impuestos + riesgo cambiario).<br>
+    Este panel abre fuentes públicas en vivo; no almacena datos. Para datos automatizados haría falta conectar APIs (Helium 10, Jungle Scout, SimilarWeb) más adelante.
+  </div>
+</div>
+
+<script>
+// Fuentes genéricas que reciben una query
+function genericSources(q){
+  const e=encodeURIComponent(q);
+  return [
+    {nm:"Google Trends AR",tg:"Interés de búsqueda en Argentina",type:"demand",url:`https://trends.google.com/trends/explore?geo=AR&q=${e}`},
+    {nm:"Google Trends comparado",tg:"AR vs. mundo",type:"demand",url:`https://trends.google.com/trends/explore?q=${e}`},
+    {nm:"MercadoLibre AR",tg:"Oferta y precios locales",type:"demand",url:`https://listado.mercadolibre.com.ar/${e}`},
+    {nm:"Amazon US",tg:"Qué se vende afuera",type:"disc",url:`https://www.amazon.com/s?k=${e}`},
+    {nm:"Amazon España",tg:"Mercado comparable",type:"disc",url:`https://www.amazon.es/s?k=${e}`},
+    {nm:"AliExpress",tg:"Tendencia y proveedores",type:"disc",url:`https://www.aliexpress.com/wholesale?SearchText=${e}`},
+    {nm:"YouTube reviews",tg:"Señal de comunidad",type:"comm",url:`https://www.youtube.com/results?search_query=${e}+review`},
+    {nm:"Reddit",tg:"Qué se habla",type:"comm",url:`https://www.reddit.com/search/?q=${e}`},
+  ];
+}
+
+// Categorías con accesos directos ya cargados
+const CATS=[
+  {id:"gaming",emoji:"🎮",name:"Gaming & Hardware",desc:"Periféricos, componentes, consolas, sillas. El nicho con más comunidad.",
+   links:[
+    {nm:"Amazon · PC Gaming best-sellers",type:"disc",url:"https://www.amazon.com/Best-Sellers-Video-Games-PC-Gaming-Accessories/zgbs/videogames/14225011"},
+    {nm:"Amazon · Computer components",type:"disc",url:"https://www.amazon.com/Best-Sellers-Computers-Accessories-Computer-Components/zgbs/pc/193870011"},
+    {nm:"Google Trends · gaming AR",type:"demand",url:"https://trends.google.com/trends/explore?geo=AR&cat=41&date=today%2012-m"},
+    {nm:"MercadoLibre · gaming",type:"demand",url:"https://listado.mercadolibre.com.ar/gaming"},
+    {nm:"AliExpress · gaming gear",type:"disc",url:"https://www.aliexpress.com/wholesale?SearchText=gaming+gear"},
+    {nm:"r/buildapc",type:"comm",url:"https://www.reddit.com/r/buildapc/"},
+   ]},
+  {id:"smart",emoji:"🏠",name:"Smart Home & Domótica",desc:"Foco estratégico (Hunnox). Sensores, cámaras, iluminación, enchufes, Matter.",
+   links:[
+    {nm:"Amazon · Smart Home best-sellers",type:"disc",url:"https://www.amazon.com/Best-Sellers-Smart-Home/zgbs/smart-home"},
+    {nm:"Google Trends · smart home AR",type:"demand",url:"https://trends.google.com/trends/explore?geo=AR&q=domotica,smart%20home,alexa,matter"},
+    {nm:"MercadoLibre · domótica",type:"demand",url:"https://listado.mercadolibre.com.ar/domotica"},
+    {nm:"AliExpress · smart home",type:"disc",url:"https://www.aliexpress.com/wholesale?SearchText=smart+home+matter"},
+    {nm:"r/smarthome",type:"comm",url:"https://www.reddit.com/r/smarthome/"},
+    {nm:"r/homeautomation",type:"comm",url:"https://www.reddit.com/r/homeautomation/"},
+   ]},
+  {id:"audio",emoji:"🎧",name:"Audio",desc:"Auriculares, parlantes, micrófonos, audio para streaming.",
+   links:[
+    {nm:"Amazon · Headphones best-sellers",type:"disc",url:"https://www.amazon.com/Best-Sellers-Electronics-Headphones/zgbs/electronics/172541"},
+    {nm:"Google Trends · audio AR",type:"demand",url:"https://trends.google.com/trends/explore?geo=AR&q=auriculares,parlante,microfono"},
+    {nm:"MercadoLibre · audio",type:"demand",url:"https://listado.mercadolibre.com.ar/auriculares"},
+    {nm:"AliExpress · earbuds",type:"disc",url:"https://www.aliexpress.com/wholesale?SearchText=wireless+earbuds"},
+    {nm:"r/headphones",type:"comm",url:"https://www.reddit.com/r/headphones/"},
+   ]},
+  {id:"tools",emoji:"🔧",name:"Herramientas eléctricas",desc:"Taladros, atornilladores, herramienta a batería, medición.",
+   links:[
+    {nm:"Amazon · Power & Hand Tools",type:"disc",url:"https://www.amazon.com/Best-Sellers-Tools-Home-Improvement-Power-Hand-Tools/zgbs/hi/552878"},
+    {nm:"Google Trends · herramientas AR",type:"demand",url:"https://trends.google.com/trends/explore?geo=AR&q=taladro,atornillador,herramientas%20electricas"},
+    {nm:"MercadoLibre · herramientas",type:"demand",url:"https://listado.mercadolibre.com.ar/herramientas-electricas"},
+    {nm:"AliExpress · power tools",type:"disc",url:"https://www.aliexpress.com/wholesale?SearchText=power+tools"},
+   ]},
+  {id:"home",emoji:"🍳",name:"Electrodomésticos",desc:"Pequeño electro, cocina, robots de cocina, aspiradoras.",
+   links:[
+    {nm:"Amazon · Home & Kitchen",type:"disc",url:"https://www.amazon.com/Best-Sellers-Home-Kitchen/zgbs/home-garden"},
+    {nm:"Google Trends · electro AR",type:"demand",url:"https://trends.google.com/trends/explore?geo=AR&q=robot%20aspirador,freidora%20de%20aire,cafetera"},
+    {nm:"MercadoLibre · electro",type:"demand",url:"https://listado.mercadolibre.com.ar/electrodomesticos"},
+    {nm:"AliExpress · home appliances",type:"disc",url:"https://www.aliexpress.com/wholesale?SearchText=home+appliances"},
+   ]},
+  {id:"gadgets",emoji:"📱",name:"Gadgets & Wearables",desc:"Smartwatches, proyectores, drones, accesorios novedosos.",
+   links:[
+    {nm:"Amazon · Electronics best-sellers",type:"disc",url:"https://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics"},
+    {nm:"Amazon · Wearable tech",type:"disc",url:"https://www.amazon.com/Best-Sellers-Electronics-Wearable-Technology/zgbs/electronics/10048700011"},
+    {nm:"Google Trends · gadgets AR",type:"demand",url:"https://trends.google.com/trends/explore?geo=AR&q=smartwatch,proyector,drone"},
+    {nm:"MercadoLibre · smartwatch",type:"demand",url:"https://listado.mercadolibre.com.ar/smartwatch"},
+    {nm:"AliExpress · hot gadgets",type:"disc",url:"https://www.aliexpress.com/wholesale?SearchText=trending+gadgets"},
+    {nm:"r/gadgets",type:"comm",url:"https://www.reddit.com/r/gadgets/"},
+   ]},
+  {id:"global",emoji:"🌎",name:"Termómetros globales",desc:"Para escanear qué se mueve en general antes de elegir categoría.",
+   links:[
+    {nm:"Amazon · Movers & Shakers",type:"disc",url:"https://www.amazon.com/gp/movers-and-shakers/electronics"},
+    {nm:"Amazon · New Releases electrónica",type:"disc",url:"https://www.amazon.com/gp/new-releases/electronics"},
+    {nm:"AliExpress · Trending",type:"disc",url:"https://www.aliexpress.com/gcp/300000512/aedaily"},
+    {nm:"Google Trends · AR (home)",type:"demand",url:"https://trends.google.com/trends/trendingsearches/daily?geo=AR"},
+    {nm:"Trendhunter · tech",type:"comm",url:"https://www.trendhunter.com/trends/technology"},
+   ]},
+];
+
+const badge=t=> t==="demand"?'<span class="badge b-demand">demanda</span>':t==="disc"?'<span class="badge b-disc">descubrir</span>':'<span class="badge b-comm">comunidad</span>';
+
+function render(filter){
+  const cont=document.getElementById('cats');
+  cont.innerHTML='';
+  let shown=0;
+  CATS.forEach(c=>{
+    if(filter && filter!=='all' && c.id!==filter) return;
+    shown++;
+    const links=c.links.map(l=>`<a class="src" href="${l.url}" target="_blank" rel="noopener"><span class="nm">${l.nm}</span><span class="tg">${badge(l.type)}</span></a>`).join('');
+    cont.insertAdjacentHTML('beforeend',
+      `<div class="cat"><h2><span class="emoji">${c.emoji}</span>${c.name}</h2><p class="desc">${c.desc}</p><div class="grid">${links}</div></div>`);
+  });
+  document.getElementById('empty').style.display = shown? 'none':'block';
+}
+
+// chips
+const chipsEl=document.getElementById('chips');
+[{id:'all',name:'Todas'}].concat(CATS.map(c=>({id:c.id,name:c.emoji+' '+c.name}))).forEach((c,i)=>{
+  const el=document.createElement('div');
+  el.className='chip'+(i===0?' active':'');
+  el.textContent=c.name; el.dataset.id=c.id;
+  el.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));el.classList.add('active');render(c.id);};
+  chipsEl.appendChild(el);
+});
+
+// search across all sources
+const q=document.getElementById('q');
+q.addEventListener('keydown',e=>{
+  if(e.key==='Enter' && q.value.trim()){
+    const cont=document.getElementById('cats');
+    document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+    const links=genericSources(q.value.trim()).map(l=>`<a class="src" href="${l.url}" target="_blank" rel="noopener"><span class="nm">${l.nm}</span><span class="tg">${l.tg} ${badge(l.type)}</span></a>`).join('');
+    cont.innerHTML=`<div class="cat"><h2><span class="emoji">🔎</span>Resultados para "${q.value.trim()}"</h2><p class="desc">Abrí cada fuente para ver el producto en vivo. Empezá por Google Trends AR y MercadoLibre para validar demanda local.</p><div class="grid">${links}</div></div>`;
+    document.getElementById('empty').style.display='none';
+  }
+});
+
+render('all');
+</script>
+</body>
+</html>

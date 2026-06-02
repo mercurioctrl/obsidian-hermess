@@ -66,7 +66,7 @@
 - [[NB/pedidos/pedidos|índice]] · [[NB/pedidos/arquitectura|arquitectura]] · [[NB/pedidos/stack|stack]] · [[NB/pedidos/changelog|changelog]] · [[NB/pedidos/contexto|contexto]] · [[NB/pedidos/memoria|memoria]]
 - [[NB/pedidos/modulo-makesale|MakeSale]] · [[NB/pedidos/modulo-removesale|RemoveSale]] · [[NB/pedidos/modulo-dashboard-lo|Dashboard LO]]
 - [[NB/pedidos/feature-laset-import|Laset Import]] · [[NB/pedidos/feature-asignacion-oc|Asignación OC]] · [[NB/pedidos/feature-asignacion-oc-cookbook|Cookbook OC]] · [[NB/pedidos/feature-integrar-eccn|ECCN]]
-- [[NB/pedidos/feature-laset-snapshot-restore|Snapshot/Restore Laset]] · [[NB/pedidos/feature-laset-fix-pedprot-stockonly|Fix bugs Fase C Laset]] · [[NB/pedidos/nota-catalogo-laset|Nota Catálogo Laset]]
+- [[NB/pedidos/feature-laset-snapshot-restore|Snapshot/Restore Laset]] · [[NB/pedidos/feature-laset-fix-pedprot-stockonly|Fix bugs Fase C Laset]] · [[NB/pedidos/feature-laset-fix-marcas-comp11|Fix marcas comp=11]] · [[NB/pedidos/feature-laset-wipe-reimport|Borrar todo + reimport limpio]] · [[NB/pedidos/feature-sync-laset-botones|Patrón botones Sync Laset]] · [[NB/pedidos/nota-catalogo-laset|Nota Catálogo Laset]]
 - **Esquema ERP:** [[NB/pedidos/relacion-tablas-ped-alb|ventas]] · [[NB/pedidos/relacion-tablas-pedprot-pedprol-pedproi|compras]] · [[NB/pedidos/relacion-tablas-albprot-albprol|remitos compra]] · [[NB/pedidos/relacion-tablas-articulo-stocks|artículo/stocks]] · [[NB/pedidos/relacion-tablas-stocks-almacen|depósitos]] · [[NB/pedidos/relacion-companycode|companyCode]]
 
 ## Bily

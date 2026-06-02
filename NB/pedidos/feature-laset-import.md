@@ -519,3 +519,25 @@ Tildar 1 fila no alcanza: si pertenece a una OC con 5 SKUs, importar solo esa fi
 - SQL DDL: `database/sql/2026_05_14_00{1,2,3,4}_*.sql`, `database/sql/2026_05_20_00{1,2,3}_*.sql`
 - CSV huérfanos: `docs/laset_orphan_skus.csv`
 
+
+
+---
+
+## Modelo de import — actualizado 2026-06-02
+
+Tras una sesión depurando casos reales (ver [[changelog#2026-06-02]]), el pipeline quedó así. **Principio rector (usuario): "siempre lo que importa es la planilla más reciente".**
+
+- **Reimportar planilla (`ReimportLaset`) REEMPLAZA el staging completo** — cada upload borra batches/filas previos e inserta el snapshot nuevo como único batch (transaccional). Se quitó el dedup por `row_hash` (colapsaba renglones legítimos idénticos → perdía unidades). No acumula versiones viejas.
+- **Dedup cross-batch en Fase C = "batch más completo gana"** por `(pedclit_key, sku, pedprot_key)`; a empate, batch más reciente; conserva TODAS las filas de ese batch (preserva multi-renglón legítimo, ej. mismo SKU en 2 líneas de una factura). NO usa `source_row_number` (no es estable entre batches).
+- **Canonicalización de factura (Fase C)** — si un `(proveedor, vendor_pi)` tiene 1 sola factura no vacía, las filas con factura vacía la adoptan → no parte la compra en dos OCs cuando la factura del proveedor llega en un batch posterior a la proforma.
+- **Stock: única fuente de verdad = Fase D.** `fix-stock-only` corre con `--skip-stock` desde Fase C (sólo suma al `pedprol`; Fase D deriva stock de `pedprol−pedclil`). Sin esto había doble conteo. Standalone sí escribe stock.
+- **Ganador stock-only por `(vendor_pi, sku, depósito)`** (no `vendor_invoice`): es "lo que queda del producto en esa OC+depósito" = último snapshot.
+- **`fix-stock-only` se corre SIEMPRE** al final de Fase C (no condicionado a STOCK_ONLY>0): su step 0 rescata IGNORED `year=1900` → STOCK_ONLY (chicken-egg).
+- **Wipe** ([[feature-laset-wipe-reimport]]) manda IMPORTED con nota `stock-only%` → STOCK_ONLY (no MATCHED); el resto IMPORTED → MATCHED. Preview cuenta sólo lo que realmente tocaría.
+- **`CSUPROF_TEMP` = vendor_pi completo** (proforma, columna J) — `cExped` es varchar(20) y trunca; `CSUPROF_TEMP` nvarchar(50) guarda el PI completo. Fase C y stock-only cat D lo setean; backfill retroactivo `laset:fix-csuprof-temp` + botón en /syncLaset.
+- **Fecha de compras stock-only** (cat D) = `invoice_date` (antes `fecha_arribo`, casi siempre vacío → fecha inválida).
+- **Límite `staging_ids`** en import-jobs subido 5000 → 100000 (snapshots completos generan miles de ids).
+
+**Flujo operativo correcto:** Reimportar planilla (reemplaza staging) → **Borrar todo** → **Importar todo**. Nunca importar incremental sin Borrar todo en el medio.
+
+**Gotcha verificación:** el guard de auto-mode bloquea correr Fase C/D desde sesión de investigación (modifican ERP compartido) → verificar con simulaciones read-only en tinker; el usuario corre el ciclo por la UI.
