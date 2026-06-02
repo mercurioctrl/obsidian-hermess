@@ -3,6 +3,7 @@
 ## Por hacer
 - [ ] Enviar a [[Alejandra Guidonbono|Ale]] el mensaje de acceso para el [[Adata]] Rewards (Recordatorio automático configurado cada 2hs para el 2026-06-03 en horario laboral).
 - [ ] Enviar el newsletter de [[Adata]] Rewards (Recordatorio configurado para las 9:20 AM).
+- [ ] Alistar la PC de [[Asus]] de marketing (pedido por [[Alejandra Guidonbono|Ale]]).
 - [ ] Para [[Diego Bordon]]: Agregar para que puedan contar de manera más lineal (solo aquellos que realmente no tienen algún dato y hay que contabilizar).
 - [ ] Requerimiento Postventa (Gestión de Armados):
   - Cuando entra un armado, se debe poder seleccionar del pedido los ítems involucrados.
