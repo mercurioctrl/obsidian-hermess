@@ -25,6 +25,10 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-05-30|2026-05-30]] — Actualización de tareas completadas en Kanban General y Lavadero
 - [[Bily/bitacoras/2026-05-31|2026-05-31]] — Día sin interacciones
 
+### Junio
+
+- [[Bily/bitacoras/2026-06-01|2026-06-01]] — Gestión de tareas y kanban, nuevo documento Ideas LibreOpcion.com, requerimientos al equipo, reunión Gigabyte
+
 ## Ver también
 
 - [[Bily/Inicio|Inicio de Bily]]
