@@ -11,10 +11,8 @@
   - Al ingresar la PC a postventa, se ingresa con el serial del armado (también se permite ingresar partes por separado).
   - Si es un armado, en postventa se debe ver todo lo ingresado: marcar qué falló y el resto como "no falló".
   - Si la PC vuelve a ingresar por segunda vez, se deben ver ambos seriales: el del ítem original que falló y el nuevo serial del componente de cambio.
-- [ ] Crear a [[Ezequiel Manzano|Ezequiel]] las historias de envío de correos.
 - [ ] Verificar con [[Emanuel Ferreyra|Ema]] lo del chat de [[Libre Opción]].
 - [ ] Pasar la factura de [[Adata]] a [[Fabio]] (con copia a [[Catriel Mercurio]]).
-- [ ] Ver lo de [[Ayelen Mercurio|Aye]].
 - [ ] Ver [[Doña Ramona]].
 - [ ] Reunión de [[Gigabyte]] el Viernes a las 14:00 HS.
 - [ ] Reunión con [[Sebastian Fontan|Sebas]] antes de que se vaya al mundial.
@@ -28,6 +26,8 @@
 ## En curso
 
 ## Listo
+- Ver lo de [[Ayelen Mercurio|Aye]].
+- Crear a [[Ezequiel Manzano|Ezequiel]] las historias de envío de correos.
 - Comprar la mesada (Lavadero).
 - Descargar lo de Play Console para la app de Libre Opción.
 - Comprar seguidores NBE.
