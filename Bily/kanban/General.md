@@ -1,6 +1,8 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- [ ] Enviar a [[Alejandra Guidonbono|Ale]] el mensaje de acceso para el [[Adata]] Rewards (Recordatorio automático configurado cada 2hs para el 2026-06-03 en horario laboral).
+- [ ] Enviar el newsletter de [[Adata]] Rewards (Recordatorio configurado para las 9:20 AM).
 - [ ] Para [[Diego Bordon]]: Agregar para que puedan contar de manera más lineal (solo aquellos que realmente no tienen algún dato y hay que contabilizar).
 - [ ] Requerimiento Postventa (Gestión de Armados):
   - Cuando entra un armado, se debe poder seleccionar del pedido los ítems involucrados.
@@ -39,15 +41,15 @@
 - Subir el arreglo de [[Franco Callipo|Franco]] para Libre Opción.
 - Poner en un stored procedure para [[Sebastian Fontan|Seba]] las actualizaciones de ST_GANANCIA_ESTIPULADA_ARTICULOS:
   ```sql
-  UPDATE A SET PORC_GANAN_ESTIPLO = (PORC_GANAN_ESTIP3+PORC_GANAN_ESTIP4)
+  UPDATE A SET PORC_GANAN_ESTIPLO = (PORC_GANAN_ESTIPLO3+PORC_GANAN_ESTIPLO4)
   FROM [NEW_BYTES].[dbo].[ST_GANANCIA_ESTIPULADA_ARTICULOS] A
   LEFT JOIN NewBytes_DBF.dbo.articulo B ON B.cRef = A.ID_ARTICULO
-  WHERE ((PORC_GANAN_ESTIP3+PORC_GANAN_ESTIP4) <> PORC_GANAN_ESTIPLO ) and companyCode =4;
+  WHERE ((PORC_GANAN_ESTIPLO3+PORC_GANAN_ESTIPLO4) <> PORC_GANAN_ESTIPLO ) and companyCode =4;
 
   UPDATE A SET PORC_GANAN_ESTIPLO1 = 5
   FROM [NEW_BYTES].[dbo].[ST_GANANCIA_ESTIPULADA_ARTICULOS] A
   LEFT JOIN NewBytes_DBF.dbo.articulo B ON B.cRef = A.ID_ARTICULO
-  WHERE ((PORC_GANAN_ESTIP3+PORC_GANAN_ESTIP4) = PORC_GANAN_ESTIPLO ) AND PORC_GANAN_ESTIPLO1 = 0 and companyCode =4;
+  WHERE ((PORC_GANAN_ESTIPLO3+PORC_GANAN_ESTIPLO4) = PORC_GANAN_ESTIPLO ) AND PORC_GANAN_ESTIPLO1 = 0 and companyCode =4;
   ```
 - Resolver SLI.
 - Mandarle mensaje o mail a Seba por el tema de Bulli.
