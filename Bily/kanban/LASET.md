@@ -2,12 +2,12 @@
 
 ## Por hacer
 - Terminar importación de LASET.
-- Comprar seguidores LASET.
-- Subir sitio LASET.
 
 ## En curso
 
 ## Listo
+- Comprar seguidores LASET.
+- Subir sitio LASET.
 
 ## Ver también
 
