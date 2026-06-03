@@ -28,6 +28,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 ### Junio
 
 - [[Bily/bitacoras/2026-06-01|2026-06-01]] — Gestión de tareas y kanban, nuevo documento Ideas LibreOpcion.com, requerimientos al equipo, reunión Gigabyte
+- [[Bily/bitacoras/2026-06-02|2026-06-02]] — Limpieza y actualización Kanbans (General/Lavadero/LASET), diagnóstico y corrección de cron de recordatorios
 
 ## Ver también
 

@@ -86,6 +86,16 @@ Bug crítico resuelto: visitar una ficha con contenido A+ rompía la navegación
 - [[Libre Opcion/tareas/API - Feat - CRUD de campañas|CRUD de campañas]]
 - [[Libre Opcion/tareas/APP - Feat - Gestión de campañas|Gestión de campañas (frontend)]]
 
+## Gestión Estratégica — Gestión X
+
+Documentación estratégica de libreopcion.com.ar: diagnóstico, hoja de ruta, posicionamiento, catálogo y operaciones.
+- [[Libre Opcion/Gestion X/00 - Índice Gestión X|Índice Gestión X]] — índice de los 19 documentos estratégicos
+- [[Libre Opcion/Gestion X/01 - Estudio de Mercado - Referentes|Estudio de Mercado — Referentes]]
+- [[Libre Opcion/Gestion X/02 - Hoja de Ruta - Fase 1 Diferenciación y Confianza|Hoja de Ruta Fase 1]]
+- [[Libre Opcion/Gestion X/15 - Plan de Accion - Proximos 6 Meses|Plan de Acción — Próximos 6 Meses]]
+- [[Libre Opcion/Gestion X/18 - Analisis Performance Ventas 12 Meses (FODA)|Análisis Performance Ventas 12 Meses (FODA)]]
+- [[Libre Opcion/Gestion X/Informe Diagnostico Conversion - Mayo 2026|Informe Diagnóstico Conversión — Mayo 2026]]
+
 ## Contexto comercial
 
 - [[hot sale]] — Preparación Hot Sale 2026
