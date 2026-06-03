@@ -1,7 +1,7 @@
 # Libre Opcion
 
 Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
-Última sincronización: 2026-05-15.
+Última sincronización: 2026-06-03.
 
 ---
 
@@ -89,6 +89,16 @@ Bug crítico resuelto: visitar una ficha con contenido A+ rompía la navegación
 ## Contexto comercial
 
 - [[hot sale]] — Preparación Hot Sale 2026
+
+## Gestión y Estrategia
+
+### Gestión X — Estrategia de negocio (MOC)
+Investigación de mercado, reposicionamiento (de precio a confianza), modelo operativo, cuotas, exclusivas, FODA con datos reales de 12 meses y plan de acción 2026. Incluye deliverables web (3 versiones del plan) y un cubo de datos interactivo.
+- [[Gestion X/00 - Índice Gestión X|Índice Gestión X (MOC)]] — hub de toda la estrategia
+- Decisiones: [[Gestion X/10 - Reposicionamiento - De Precio a Confianza|10 · Reposicionamiento]] · [[Gestion X/11 - Estrategia de Cuotas y Precio|11 · Cuotas]] · [[Gestion X/12 - Modelo Operativo - Importador-Mayorista con Red de Vendedores|12 · Modelo]] · [[Gestion X/13 - El Verdadero Cuello de Botella es la Demanda|13 · Demanda]]
+- [[Gestion X/14 - Liquidacion de Aging como Motor de Demanda|14 · Aging]] · [[Gestion X/17 - Exclusivas - Marcas Conocidas que Nadie Trae|17 · Exclusivas]] · [[Gestion X/19 - Politica de Envios|19 · Envíos]]
+- Datos: [[Gestion X/18 - Analisis Performance Ventas 12 Meses (FODA)|18 · FODA con datos]] · [[Gestion X/Informe Diagnostico Conversion - Mayo 2026|Diagnóstico de conversión]]
+- Entregables: [[Gestion X/15 - Plan de Accion - Proximos 6 Meses|Plan de acción 6 meses]] · `Plan-Estrategico-LibreOpcion-Marca.html` (sitio para socios) · `Cubo-Datos-LibreOpcion.html` (cubo OLAP 12 meses)
 
 ## Ver también
 

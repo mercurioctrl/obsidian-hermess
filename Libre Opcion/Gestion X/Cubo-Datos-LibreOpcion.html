@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LibreOpción · Cubo de Datos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="cube-data.js"></script>
+<style>
+  :root{--azul:#0044a4;--azul2:#0059d6;--rojo:#f90000;--verde:#22ac4b;--amarillo:#fccc00;--naranja:#ff5a36;
+    --ink:#1b1b1f;--gris:#7e7e83;--borde:#e9e9ea;--bg:#fff;--bg2:#f5f7f8;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg2);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;font-size:14px}
+  h1,h2,h3,.cond{font-family:'Roboto Condensed','Inter',sans-serif}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+  header.bar{background:#111;position:sticky;top:0;z-index:30}
+  header.bar .wrap{display:flex;align-items:center;gap:16px;height:60px}
+  header.bar img{height:28px;width:auto}
+  header.bar .sep{width:1px;height:22px;background:rgba(255,255,255,.22)}
+  header.bar .htag{color:#b9b9bd;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  header.bar a.back{margin-left:auto;color:#c9c9cf;font-size:13px;text-decoration:none;padding:7px 12px;border-radius:7px}
+  header.bar a.back:hover{background:rgba(255,255,255,.14);color:#fff}
+  .intro{padding:28px 0 6px}
+  .intro h1{font-size:30px}.intro p{color:var(--gris);max-width:780px;margin-top:6px}
+  /* panel */
+  .panel{background:#fff;border:1px solid var(--borde);border-radius:14px;padding:18px 20px;margin:18px 0;box-shadow:0 1px 3px rgba(16,40,80,.05)}
+  .seg{display:inline-flex;background:var(--bg2);border:1px solid var(--borde);border-radius:9px;padding:3px;gap:2px}
+  .seg button{border:none;background:none;font-family:'Inter';font-size:13px;font-weight:600;color:var(--gris);padding:7px 16px;border-radius:7px;cursor:pointer}
+  .seg button.on{background:#111;color:#fff}
+  .seg.brand button.on{background:var(--azul)}
+  .ctrls{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;margin-top:16px}
+  .fld{display:flex;flex-direction:column;gap:5px}
+  .fld label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris)}
+  select,input.search{font-family:'Inter';font-size:13.5px;color:var(--ink);background:#fff;border:1px solid var(--borde);border-radius:8px;padding:8px 10px;min-width:140px;cursor:pointer}
+  select:focus,input.search:focus{outline:none;border-color:var(--azul)}
+  input.search{cursor:text;min-width:180px}
+  .filtros{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;padding-top:16px;border-top:1px solid var(--borde)}
+  .filtros .fld label{color:var(--azul)}
+  /* kpis */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
+  .kpi{background:#fff;border:1px solid var(--borde);border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(16,40,80,.04)}
+  .kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--gris);font-weight:600}
+  .kpi .v{font-family:'Roboto Condensed';font-size:28px;font-weight:700;margin-top:4px}
+  .kpi .v.pos{color:var(--verde)}.kpi .v.neg{color:var(--rojo)}.kpi .v.az{color:var(--azul)}
+  /* chart */
+  .cbox{background:#fff;border:1px solid var(--borde);border-radius:14px;padding:20px;margin:18px 0;box-shadow:0 1px 3px rgba(16,40,80,.04)}
+  .cbox h3{font-size:16px;margin-bottom:14px}
+  .chart{position:relative;height:300px}
+  .evogrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
+  .evogrid h4{font-family:'Roboto Condensed';font-size:15px;margin-bottom:6px;color:var(--ink)}
+  @media(max-width:780px){.evogrid{grid-template-columns:1fr}}
+  /* table */
+  .tbox{background:#fff;border:1px solid var(--borde);border-radius:14px;margin:18px 0 60px;box-shadow:0 1px 3px rgba(16,40,80,.04);overflow:hidden}
+  .tbar{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--borde);flex-wrap:wrap;gap:10px}
+  .tbar h3{font-size:16px}.tbar .meta{font-size:12px;color:var(--gris)}
+  .tscroll{overflow-x:auto;max-height:620px;overflow-y:auto}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{padding:9px 12px;border-bottom:1px solid #f0f0eb;white-space:nowrap}
+  thead th{position:sticky;top:0;background:#fafaf8;font-family:'Roboto Condensed';font-weight:700;font-size:12px;letter-spacing:.03em;text-align:right;color:var(--gris);cursor:pointer;z-index:2}
+  thead th.lbl{text-align:left}
+  thead th:hover{color:var(--azul)}
+  td.lbl{text-align:left;font-weight:500;max-width:340px;overflow:hidden;text-overflow:ellipsis}
+  td{text-align:right;font-variant-numeric:tabular-nums;color:#2a2a2e}
+  tbody tr:hover{background:#f7faff}
+  tr.tot{font-weight:700;background:#fbfbf9;position:sticky;bottom:0}
+  tr.tot td{border-top:2px solid var(--borde);border-bottom:none}
+  .pos{color:var(--verde)}.neg{color:var(--rojo)}
+  .barcell{position:relative}
+  .barcell .bg{position:absolute;left:0;top:3px;bottom:3px;background:rgba(0,68,164,.08);border-radius:3px;z-index:0}
+  .barcell span{position:relative;z-index:1}
+  @media(max-width:640px){.intro h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <img src="assets/logo-libreopcion.png" alt="LibreOpción">
+  <span class="sep"></span><span class="htag">Cubo de Datos</span>
+  <a class="back" href="Plan-Estrategico-LibreOpcion-Marca.html">← Volver al plan</a>
+</div></header>
+
+<div class="wrap">
+  <div class="intro">
+    <h1>Cubo de datos · 12 meses</h1>
+    <p>Recorré los datos en todas sus dimensiones. <b>Productos</b> (Mes · Categoría · Marca · SKU) sale de item-group; <b>Operaciones</b> (Mes · Pago · Envío · Vendedor) sale de las grillas de venta. Elegí filas, columnas, medida y filtros.</p>
+  </div>
+
+  <div class="cbox">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <h3>Evolución mensual · 12 meses</h3>
+      <div class="seg" id="evoMetric"><button data-m="n" class="on">Órdenes</button><button data-m="v">Venta u$s</button><button data-m="share">% participación</button></div>
+    </div>
+    <div class="evogrid">
+      <div><h4>💳 Medios de pago</h4><div class="chart" style="height:300px"><canvas id="chPago"></canvas></div></div>
+      <div><h4>🚚 Medios de envío</h4><div class="chart" style="height:300px"><canvas id="chEnvio"></canvas></div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <h3 style="font-family:'Roboto Condensed';font-size:18px">🔎 Explorador de evolución — cualquier dimensión, mes a mes</h3>
+      <div class="seg brand" id="evoDs"><button data-ds="productos" class="on">📦 Productos</button><button data-ds="operaciones">🧾 Operaciones</button></div>
+    </div>
+    <div class="ctrls">
+      <div class="fld"><label>Dimensión (líneas)</label><select id="evoDim"></select></div>
+      <div class="fld"><label>Medida</label><select id="evoMeas"></select></div>
+      <div class="fld"><label>Top líneas</label><select id="evoTop"><option>5</option><option selected>8</option><option>12</option><option>20</option></select></div>
+      <div class="fld"><label>Buscar línea</label><input class="search" id="evoSearch" placeholder="ej. RYZEN, ASUS…"></div>
+    </div>
+    <div class="chart" style="height:430px;margin-top:18px"><canvas id="chEvo"></canvas></div>
+  </div>
+
+  <div class="panel">
+    <div class="seg brand" id="ds">
+      <button data-ds="productos" class="on">📦 Productos</button>
+      <button data-ds="operaciones">🧾 Operaciones</button>
+    </div>
+    <div class="ctrls">
+      <div class="fld"><label>Filas</label><select id="rowDim"></select></div>
+      <div class="fld"><label>Columnas</label><select id="colDim"></select></div>
+      <div class="fld"><label>Medida</label><select id="measure"></select></div>
+      <div class="fld"><label>Rentabilidad</label>
+        <div class="seg" id="prof"><button data-p="all" class="on">Todos</button><button data-p="pos">Rentables</button><button data-p="neg">Pérdida</button></div>
+      </div>
+      <div class="fld"><label>Buscar fila</label><input class="search" id="search" placeholder="texto…"></div>
+    </div>
+    <div class="filtros" id="filtros"></div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+  <div class="cbox"><h3 id="chTitle">Top por medida</h3><div class="chart"><canvas id="ch"></canvas></div></div>
+  <div class="tbox">
+    <div class="tbar"><h3 id="tTitle">Tabla dinámica</h3><span class="meta" id="tMeta"></span></div>
+    <div class="tscroll"><table id="tbl"></table></div>
+  </div>
+</div>
+
+<script>
+const F={
+ int:v=>Math.round(v).toLocaleString('es-AR'),
+ usd:v=>'u$s '+Math.round(v).toLocaleString('es-AR'),
+ pct:v=>(v>=0?'':'')+v.toFixed(1).replace('.',',')+'%'
+};
+const DS={
+ productos:{label:'Productos',facts:FACTS,
+  dims:{m:{label:'Mes',get:f=>f[0]},cat:{label:'Categoría',get:f=>SKUS[f[1]][1]},marca:{label:'Marca',get:f=>SKUS[f[1]][2]},sku:{label:'SKU',get:f=>SKUS[f[1]][0]}},
+  base:f=>({v:f[3],c:f[4],r:f[5],q:f[2],n:1}), rval:f=>f[5],
+  measures:{v:{label:'Venta u$s',fmt:F.usd},r:{label:'Renta u$s',fmt:F.usd,signed:1},mg:{label:'Margen %',fmt:F.pct,signed:1},q:{label:'Cantidad',fmt:F.int},c:{label:'Costo u$s',fmt:F.usd},n:{label:'Líneas',fmt:F.int}},
+  cntLabel:'Líneas'},
+ operaciones:{label:'Operaciones',facts:OPS,
+  dims:{m:{label:'Mes',get:o=>o[0]},pago:{label:'Medio de pago',get:o=>o[1]},envio:{label:'Medio de envío',get:o=>o[2]},vend:{label:'Vendedor',get:o=>o[3]}},
+  base:o=>({v:o[5],c:o[5]-o[6],r:o[6],q:0,n:o[4]}), rval:o=>o[6],
+  measures:{v:{label:'Venta u$s',fmt:F.usd},r:{label:'Renta u$s',fmt:F.usd,signed:1},mg:{label:'Margen %',fmt:F.pct,signed:1},n:{label:'Órdenes',fmt:F.int},tk:{label:'Ticket prom u$s',fmt:F.usd}},
+  cntLabel:'Órdenes'}
+};
+const COLORS=['#0044a4','#22ac4b','#ff5a36','#fccc00','#f90000','#0059d6','#8f00ff','#00a3a3','#ff8000','#34aaff','#b78a00','#e03d1a'];
+let state={ds:'productos',row:'cat',col:'m',measure:'v',prof:'all',search:'',filters:{}};
+let chart=null;
+
+function blank(){return{v:0,c:0,r:0,q:0,n:0}}
+function add(a,b){a.v+=b.v;a.c+=b.c;a.r+=b.r;a.q+=b.q;a.n+=b.n}
+function mval(a,m){switch(m){case'v':return a.v;case'c':return a.c;case'r':return a.r;case'q':return a.q;case'n':return a.n;case'mg':return a.v?a.r/a.v*100:0;case'tk':return a.n?a.v/a.n:0}}
+function sortVals(dim,vals){ if(dim==='m')return vals.sort(); return vals; }
+
+function rebuild(){ // repuebla selects al cambiar dataset
+  const ds=DS[state.ds], dimKeys=Object.keys(ds.dims);
+  const rs=document.getElementById('rowDim'), cs=document.getElementById('colDim'), ms=document.getElementById('measure');
+  rs.innerHTML=dimKeys.map(k=>`<option value="${k}">${ds.dims[k].label}</option>`).join('');
+  cs.innerHTML=`<option value="">(ninguna)</option>`+dimKeys.map(k=>`<option value="${k}">${ds.dims[k].label}</option>`).join('');
+  ms.innerHTML=Object.keys(ds.measures).map(k=>`<option value="${k}">${ds.measures[k].label}</option>`).join('');
+  // defaults validos
+  if(!dimKeys.includes(state.row)) state.row=dimKeys[1];
+  if(state.col&&!dimKeys.includes(state.col)) state.col='m';
+  if(!ds.measures[state.measure]) state.measure='v';
+  rs.value=state.row; cs.value=state.col; ms.value=state.measure;
+  // filtros por dimension
+  state.filters={};
+  const fc=document.getElementById('filtros'); fc.innerHTML='';
+  dimKeys.forEach(k=>{
+    const vals=[...new Set(ds.facts.map(ds.dims[k].get))]; sortVals(k,vals);
+    state.filters[k]='__all';
+    const f=document.createElement('div'); f.className='fld';
+    f.innerHTML=`<label>${ds.dims[k].label}</label><select data-f="${k}"><option value="__all">Todos (${vals.length})</option>${vals.map(v=>`<option value="${(''+v).replace(/"/g,'&quot;')}">${v}</option>`).join('')}</select>`;
+    f.querySelector('select').onchange=e=>{state.filters[k]=e.target.value;render()};
+    fc.appendChild(f);
+  });
+}
+
+function render(){
+  const ds=DS[state.ds];
+  const rowD=ds.dims[state.row], colD=state.col?ds.dims[state.col]:null, meas=state.measure;
+  // filtrar
+  let facts=ds.facts.filter(f=>{
+    for(const k in state.filters){ if(state.filters[k]!=='__all' && (''+ds.dims[k].get(f))!==state.filters[k]) return false; }
+    if(state.prof==='pos'&&ds.rval(f)<=0) return false;
+    if(state.prof==='neg'&&ds.rval(f)>=0) return false;
+    return true;
+  });
+  // agrupar
+  const rowMap={}, colSet={}, total=blank();
+  for(const f of facts){
+    const rv=''+rowD.get(f), b=ds.base(f);
+    if(!rowMap[rv]) rowMap[rv]={t:blank(),c:{}};
+    add(rowMap[rv].t,b); add(total,b);
+    if(colD){ const cv=''+colD.get(f); colSet[cv]=1; if(!rowMap[rv].c[cv])rowMap[rv].c[cv]=blank(); add(rowMap[rv].c[cv],b); }
+  }
+  // KPIs
+  const mg=total.v?total.r/total.v*100:0;
+  document.getElementById('kpis').innerHTML=`
+    <div class="kpi"><div class="l">Venta</div><div class="v az">${F.usd(total.v)}</div></div>
+    <div class="kpi"><div class="l">Renta</div><div class="v ${total.r>=0?'pos':'neg'}">${F.usd(total.r)}</div></div>
+    <div class="kpi"><div class="l">Margen</div><div class="v ${mg>=0?'pos':'neg'}">${F.pct(mg)}</div></div>
+    <div class="kpi"><div class="l">${ds.cntLabel}</div><div class="v">${F.int(total.n)}</div></div>
+    <div class="kpi"><div class="l">Grupos (${rowD.label})</div><div class="v">${F.int(Object.keys(rowMap).length)}</div></div>`;
+  // filas ordenadas por medida
+  let rows=Object.keys(rowMap).map(k=>({k,t:rowMap[k].t,c:rowMap[k].c,val:mval(rowMap[k].t,meas)}));
+  if(state.search){ const s=state.search.toLowerCase(); rows=rows.filter(r=>r.k.toLowerCase().includes(s)); }
+  rows.sort((a,b)=>Math.abs(b.val)-Math.abs(a.val));
+  const totalShown=rows.length, rowsTop=rows.slice(0,80);
+  // chart top 12
+  const top=rows.slice(0,12);
+  drawChart(top.map(r=>r.k), top.map(r=>mval(r.t,meas)), ds.measures[meas]);
+  document.getElementById('chTitle').textContent=`Top ${top.length} ${rowD.label} por ${ds.measures[meas].label}`;
+  // tabla
+  const cols=colD?sortVals(state.col,Object.keys(colSet)):null;
+  let colTotals=null;
+  if(colD){ colTotals={}; for(const k in rowMap){ const cm=rowMap[k].c; for(const cv in cm){ if(!colTotals[cv])colTotals[cv]=blank(); add(colTotals[cv],cm[cv]); } } }
+  buildTable(ds,rowD,colD,cols,rowsTop,total,meas,totalShown,colTotals);
+  document.getElementById('tTitle').textContent=colD?`${rowD.label} × ${colD.label} — ${ds.measures[meas].label}`:`Detalle por ${rowD.label}`;
+  document.getElementById('tMeta').textContent=`${totalShown} grupos${totalShown>80?' · mostrando top 80':''}`;
+}
+
+function cell(val,mObj){ const cls=mObj.signed?(val>0?'pos':val<0?'neg':''):''; return `<td class="${cls}">${mObj.fmt(val)}</td>`; }
+
+function buildTable(ds,rowD,colD,cols,rows,total,meas,totalShown,colTotals){
+  const mObj=ds.measures[meas]; let h='';
+  if(colD){
+    h+=`<thead><tr><th class="lbl">${rowD.label}</th>${cols.map(c=>`<th>${c}</th>`).join('')}<th>Total</th></tr></thead><tbody>`;
+    for(const r of rows){
+      h+=`<tr><td class="lbl" title="${r.k}">${r.k}</td>`;
+      h+=cols.map(c=>cell(r.c[c]?mval(r.c[c],meas):0,mObj)).join('');
+      h+=cell(mval(r.t,meas),mObj)+`</tr>`;
+    }
+    h+=`<tr class="tot"><td class="lbl">TOTAL</td>${cols.map(c=>cell(colTotals&&colTotals[c]?mval(colTotals[c],meas):0,mObj)).join('')}${cell(mval(total,meas),mObj)}</tr></tbody>`;
+  } else {
+    const maxv=Math.max(...rows.map(r=>Math.abs(mval(r.t,meas))),1);
+    h+=`<thead><tr><th class="lbl">${rowD.label}</th><th>Venta u$s</th><th>Renta u$s</th><th>Margen %</th><th>${ds.cntLabel}</th><th>% del total</th></tr></thead><tbody>`;
+    for(const r of rows){
+      const t=r.t, m=t.v?t.r/t.v*100:0, share=total.v?t.v/total.v*100:0, bw=Math.abs(mval(t,meas))/maxv*100;
+      h+=`<tr>
+        <td class="lbl barcell" title="${r.k}"><div class="bg" style="width:${bw}%"></div><span>${r.k}</span></td>
+        <td>${F.usd(t.v)}</td>
+        <td class="${t.r>=0?'pos':'neg'}">${F.usd(t.r)}</td>
+        <td class="${m>=0?'pos':'neg'}">${F.pct(m)}</td>
+        <td>${F.int(meas==='tk'||state.ds==='operaciones'?t.n:t.q)}</td>
+        <td>${share.toFixed(1).replace('.',',')}%</td></tr>`;
+    }
+    const tm=total.v?total.r/total.v*100:0;
+    h+=`<tr class="tot"><td class="lbl">TOTAL</td><td>${F.usd(total.v)}</td><td class="${total.r>=0?'pos':'neg'}">${F.usd(total.r)}</td><td>${F.pct(tm)}</td><td>${F.int(total.n)}</td><td>100%</td></tr></tbody>`;
+  }
+  document.getElementById('tbl').innerHTML=h;
+}
+
+function drawChart(labels,data,mObj){
+  const ctx=document.getElementById('ch');
+  if(chart)chart.destroy();
+  chart=new Chart(ctx,{type:'bar',data:{labels,datasets:[{data,backgroundColor:data.map((v,i)=>v<0?'#f90000':COLORS[i%COLORS.length]),borderRadius:5}]},
+   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>mObj.fmt(c.raw)}}},
+   scales:{x:{ticks:{maxRotation:55,minRotation:0,font:{size:10},callback:function(v){const l=this.getLabelForValue(v);return l.length>16?l.slice(0,16)+'…':l}},grid:{display:false}},
+    y:{grid:{color:'rgba(0,0,0,.06)'},ticks:{callback:v=>mObj.fmt(v).replace('u$s ','')}}}}});
+}
+
+// wiring
+document.querySelectorAll('#ds button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#ds button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  state.ds=b.dataset.ds; rebuild(); render();
+});
+document.querySelectorAll('#prof button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#prof button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  state.prof=b.dataset.p; render();
+});
+document.getElementById('rowDim').onchange=e=>{state.row=e.target.value;render()};
+document.getElementById('colDim').onchange=e=>{state.col=e.target.value;render()};
+document.getElementById('measure').onchange=e=>{state.measure=e.target.value;render()};
+document.getElementById('search').oninput=e=>{state.search=e.target.value;render()};
+
+// ===== Evolución mensual (medios de pago / envío) =====
+const MN=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+function monthLabel(m){const p=m.split('-');return MN[+p[1]-1]+' '+p[0].slice(2);}
+function monthlySeries(dimIdx,metric){
+  const useV=metric==='v', cats={}, monthTot={};
+  for(const o of OPS){
+    const mo=o[0], c=o[dimIdx], val=useV?o[5]:o[4];
+    (cats[c]=cats[c]||{})[mo]=(cats[c][mo]||0)+val;
+    monthTot[mo]=(monthTot[mo]||0)+val;
+  }
+  let list=Object.keys(cats).map(c=>({name:c,byM:cats[c],total:Object.values(cats[c]).reduce((a,b)=>a+b,0)}));
+  list.sort((a,b)=>b.total-a.total);
+  const grand=list.reduce((a,x)=>a+x.total,0)||1;
+  const keep=list.filter(x=>x.total/grand>=0.02), small=list.filter(x=>x.total/grand<0.02);
+  if(small.length){const o={name:'Otros',byM:{}};small.forEach(s=>{for(const m in s.byM)o.byM[m]=(o.byM[m]||0)+s.byM[m];});keep.push(o);}
+  return keep.map(x=>({name:x.name,data:MONTHS.map(m=>{const v=x.byM[m]||0;return metric==='share'?(monthTot[m]?v/monthTot[m]*100:0):v;})}));
+}
+let chPago=null,chEnvio=null,evoMetric='n';
+function drawLine(id,prev,dimIdx,metric){
+  if(prev)prev.destroy();
+  const series=monthlySeries(dimIdx,metric);
+  const fmt=metric==='v'?(v=>'u$s '+Math.round(v).toLocaleString('es-AR')):metric==='share'?(v=>v.toFixed(1).replace('.',',')+'%'):(v=>Math.round(v).toLocaleString('es-AR'));
+  return new Chart(document.getElementById(id),{type:'line',
+    data:{labels:MONTHS.map(monthLabel),datasets:series.map((s,i)=>({label:s.name,data:s.data,borderColor:COLORS[i%COLORS.length],backgroundColor:COLORS[i%COLORS.length],tension:.3,borderWidth:2.5,pointRadius:2,pointHoverRadius:4,fill:false}))},
+    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+     plugins:{legend:{position:'bottom',labels:{boxWidth:10,padding:10,font:{size:11},usePointStyle:true}},
+      tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmt(c.raw)}}},
+     scales:{y:{beginAtZero:true,max:metric==='share'?100:undefined,grid:{color:'rgba(0,0,0,.06)'},
+       ticks:{callback:v=>metric==='v'?(v/1000)+'k':metric==='share'?v+'%':v}},x:{grid:{display:false}}}}});
+}
+function drawEvo(){ chPago=drawLine('chPago',chPago,1,evoMetric); chEnvio=drawLine('chEnvio',chEnvio,2,evoMetric); }
+document.querySelectorAll('#evoMetric button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#evoMetric button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+  evoMetric=b.dataset.m; drawEvo();
+});
+
+// ===== Explorador de evolución (todas las dimensiones) =====
+const EVO={
+ productos:{facts:FACTS,base:f=>({v:f[3],r:f[5],q:f[2],n:1}),
+   dims:{cat:{label:'Categoría',get:f=>SKUS[f[1]][1]},marca:{label:'Marca',get:f=>SKUS[f[1]][2]},sku:{label:'SKU',get:f=>SKUS[f[1]][0]}},
+   measures:{v:'Venta u$s',r:'Renta u$s',mg:'Margen %',q:'Cantidad',sharev:'% de la venta'}},
+ operaciones:{facts:OPS,base:o=>({v:o[5],r:o[6],q:0,n:o[4]}),
+   dims:{pago:{label:'Medio de pago',get:o=>o[1]},envio:{label:'Medio de envío',get:o=>o[2]},vend:{label:'Vendedor',get:o=>o[3]}},
+   measures:{v:'Venta u$s',r:'Renta u$s',n:'Órdenes',sharen:'% de las órdenes'}}
+};
+let evoX={ds:'productos',dim:'cat',meas:'v',top:8,search:''}, chEvo=null;
+function evoSeries(){
+  const cfg=EVO[evoX.ds],get=cfg.dims[evoX.dim].get,base=cfg.base,meas=evoX.meas;
+  const cats={},mV={},mN={};
+  for(const f of cfg.facts){const c=''+get(f),b=base(f),mo=f[0];const a=(cats[c]=cats[c]||{});const am=(a[mo]=a[mo]||{v:0,r:0,q:0,n:0});am.v+=b.v;am.r+=b.r;am.q+=b.q;am.n+=b.n;mV[mo]=(mV[mo]||0)+b.v;mN[mo]=(mN[mo]||0)+b.n;}
+  let list=Object.keys(cats).map(c=>({name:c,byM:cats[c],tot:Object.values(cats[c]).reduce((s,x)=>s+x.v,0)}));
+  if(evoX.search){const s=evoX.search.toLowerCase();list=list.filter(x=>x.name.toLowerCase().includes(s));}
+  list.sort((a,b)=>b.tot-a.tot);
+  const keep=list.slice(0,evoX.top),rest=list.slice(evoX.top);
+  if(rest.length&&!evoX.search){const o={name:'Otros',byM:{}};rest.forEach(x=>{for(const m in x.byM){const t=(o.byM[m]=o.byM[m]||{v:0,r:0,q:0,n:0}),s=x.byM[m];t.v+=s.v;t.r+=s.r;t.q+=s.q;t.n+=s.n;}});keep.push(o);}
+  const val=(am,mo)=>{if(!am)return 0;switch(meas){case'v':return am.v;case'r':return am.r;case'q':return am.q;case'n':return am.n;case'mg':return am.v?am.r/am.v*100:0;case'sharev':return mV[mo]?am.v/mV[mo]*100:0;case'sharen':return mN[mo]?am.n/mN[mo]*100:0;}};
+  return keep.map(x=>({name:x.name,data:MONTHS.map(m=>val(x.byM[m],m))}));
+}
+function measFmt(m){if(m==='v'||m==='r')return v=>'u$s '+Math.round(v).toLocaleString('es-AR');if(m==='mg'||m==='sharev'||m==='sharen')return v=>v.toFixed(1).replace('.',',')+'%';return v=>Math.round(v).toLocaleString('es-AR');}
+function drawExplorer(){
+  if(chEvo)chEvo.destroy();
+  const series=evoSeries(),fmt=measFmt(evoX.meas),pct=(evoX.meas==='sharev'||evoX.meas==='sharen'),neg=(evoX.meas==='r'||evoX.meas==='mg');
+  chEvo=new Chart(document.getElementById('chEvo'),{type:'line',
+   data:{labels:MONTHS.map(monthLabel),datasets:series.map((s,i)=>({label:s.name.length>24?s.name.slice(0,24)+'…':s.name,data:s.data,borderColor:COLORS[i%COLORS.length],backgroundColor:COLORS[i%COLORS.length],tension:.3,borderWidth:2.5,pointRadius:2,pointHoverRadius:4,fill:false}))},
+   options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+    plugins:{legend:{position:'bottom',labels:{boxWidth:10,padding:9,font:{size:11},usePointStyle:true}},
+     tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmt(c.raw)}}},
+    scales:{y:{beginAtZero:!neg,max:pct?100:undefined,grid:{color:'rgba(0,0,0,.06)'},
+      ticks:{callback:v=>(evoX.meas==='v'||evoX.meas==='r')?(v/1000)+'k':(pct||evoX.meas==='mg')?v+'%':v}},x:{grid:{display:false}}}}});
+}
+function rebuildEvo(){
+  const cfg=EVO[evoX.ds],dimSel=document.getElementById('evoDim'),mSel=document.getElementById('evoMeas');
+  dimSel.innerHTML=Object.keys(cfg.dims).map(k=>`<option value="${k}">${cfg.dims[k].label}</option>`).join('');
+  mSel.innerHTML=Object.keys(cfg.measures).map(k=>`<option value="${k}">${cfg.measures[k]}</option>`).join('');
+  if(!cfg.dims[evoX.dim])evoX.dim=Object.keys(cfg.dims)[0];
+  if(!cfg.measures[evoX.meas])evoX.meas='v';
+  dimSel.value=evoX.dim; mSel.value=evoX.meas;
+}
+document.querySelectorAll('#evoDs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#evoDs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');evoX.ds=b.dataset.ds;rebuildEvo();drawExplorer();});
+document.getElementById('evoDim').onchange=e=>{evoX.dim=e.target.value;drawExplorer();};
+document.getElementById('evoMeas').onchange=e=>{evoX.meas=e.target.value;drawExplorer();};
+document.getElementById('evoTop').onchange=e=>{evoX.top=+e.target.value;drawExplorer();};
+document.getElementById('evoSearch').oninput=e=>{evoX.search=e.target.value;drawExplorer();};
+
+rebuild(); render(); drawEvo(); rebuildEvo(); drawExplorer();
+</script>
+</body>
+</html>

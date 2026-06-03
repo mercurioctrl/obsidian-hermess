@@ -55,7 +55,9 @@ Mapa de contenido de toda la investigación y estrategia de negocio de **LibreOp
 
 ## 🖥️ Entregable para socios
 
-- [[Plan-Estrategico-LibreOpcion-SaaS.html|🌐 Plan Estratégico — Versión mini-saas-ui (HTML)]] — estilo dashboard claro (Inter + mono, pixel-charts). Recomendada.
+- [[Plan-Estrategico-LibreOpcion-Marca.html|🌐 Plan Estratégico — Versión MARCA LibreOpción (HTML)]] — estética del sitio real: azul #0044a4, Roboto Condensed, logo y 4 colores de marca. ⭐ Recomendada para socios.
+- [[Cubo-Datos-LibreOpcion.html|🧊 Cubo de Datos — App interactiva (HTML)]] — pivot OLAP de 12 meses: mes · categoría · marca · SKU · pago · envío · rentabilidad + evolución mensual. (necesita `cube-data.js` y `assets/`)
+- [[Plan-Estrategico-LibreOpcion-SaaS.html|🌐 Plan Estratégico — Versión mini-saas-ui (HTML)]] — estilo dashboard claro (Inter + mono, pixel-charts).
 - [[Plan-Estrategico-LibreOpcion.html|🌐 Plan Estratégico — Versión deck oscuro (HTML)]] — misma data, estética oscura con Chart.js.
 
 ## 🧭 Síntesis estratégica en una línea
@@ -64,3 +66,4 @@ Mapa de contenido de toda la investigación y estrategia de negocio de **LibreOp
 
 ---
 _Generado el 2026-06-02 a partir de la sesión de investigación de mercado._
+_Actualizado 2026-06-03: notas 10–19 (estrategia + FODA con datos reales de 12 meses), 3 versiones del sitio para socios, y cubo de datos interactivo._
