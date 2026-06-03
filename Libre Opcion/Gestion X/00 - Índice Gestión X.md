@@ -27,6 +27,20 @@ Mapa de contenido de toda la investigación y estrategia de negocio de **LibreOp
 - [[07 - Idea Hunnox - Marca propia Smart Home]]
 - [[08 - Detección de Tendencias - Método y Herramientas]]
 - [[09 - Estudio de Catálogo - Compra Gamer]]
+- [[10 - Reposicionamiento - De Precio a Confianza]] — 🆕 decisión: de precio a confianza
+- [[11 - Estrategia de Cuotas y Precio]] — 🆕 cómo financiar el sin interés sin fundirse
+- [[12 - Modelo Operativo - Importador-Mayorista con Red de Vendedores]] — 🆕 qué somos en realidad
+- [[13 - El Verdadero Cuello de Botella es la Demanda]] — 🆕 ⭐ el insight que reordena todo
+- [[14 - Liquidacion de Aging como Motor de Demanda]] — 🆕 convertir el 50% de stock viejo en ventas
+- [[15 - Plan de Accion - Proximos 6 Meses]] — 🆕 ⭐ **el entregable**: qué hacer, en qué orden
+- [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]] — 🆕 el motor que converge media estrategia
+- [[17 - Exclusivas - Marcas Conocidas que Nadie Trae]] — 🆕 el foso durable: 2-3 marcas con demanda probada
+
+## 📊 Diagnóstico con datos reales
+
+- [[Informe Diagnostico Conversion - Mayo 2026]] — embudo, calidad de tráfico y demanda insatisfecha (GA4)
+- [[18 - Analisis Performance Ventas 12 Meses (FODA)]] — 🆕 ⭐ FODA con datos reales: turnaround, márgenes y mix
+- [[19 - Politica de Envios]] — 🆕 umbral de envío gratis: cortar la sangría sin perder la bandera
 
 ## 📎 Adjuntos (PDF / Excel / HTML)
 
@@ -38,6 +52,11 @@ Mapa de contenido de toda la investigación y estrategia de negocio de **LibreOp
 - [[adjuntos/LibreOpcion-Evaluador-de-Productos.xlsx|📊 Evaluador de Productos (Excel)]]
 - [[adjuntos/LibreOpcion-Estudio-Catalogo-CompraGamer.pdf|📄 Estudio Catálogo Compra Gamer (PDF)]]
 - [[adjuntos/LibreOpcion-Estudio-Catalogo-CompraGamer.xlsx|📊 Catálogo Compra Gamer 1.265 productos (Excel)]]
+
+## 🖥️ Entregable para socios
+
+- [[Plan-Estrategico-LibreOpcion-SaaS.html|🌐 Plan Estratégico — Versión mini-saas-ui (HTML)]] — estilo dashboard claro (Inter + mono, pixel-charts). Recomendada.
+- [[Plan-Estrategico-LibreOpcion.html|🌐 Plan Estratégico — Versión deck oscuro (HTML)]] — misma data, estética oscura con Chart.js.
 
 ## 🧭 Síntesis estratégica en una línea
 

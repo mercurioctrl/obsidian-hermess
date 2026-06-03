@@ -4,6 +4,7 @@
 - **Roles:** CTO, ingeniero de software, arquitecto de sistemas y operador de negocio.
 - **Empresa:** Blu
 - **Relaciones Clave:** Alejandra Guidonbono (esposa y socia), Sebastian Fontan (socio).
+- **ID WhatsApp:** +5491130510267
 
 ## Áreas de Especialidad
 - Backend y sistemas distribuidos.

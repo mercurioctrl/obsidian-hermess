@@ -11,6 +11,9 @@ tags:
 
 # 06 · Ventajas Competitivas y Posicionamiento
 
+> [!success] Revisado (2026-06-02)
+> El titular y el eje de esta nota fueron **actualizados**: el posicionamiento pasó de "el más barato" a **confianza/seguridad (garantía oficial + doble garantía)**. Ver decisión completa en [[10 - Reposicionamiento - De Precio a Confianza]]. El contenido de abajo se conserva como contexto del razonamiento original.
+
 ## Ventajas reales (ordenadas por peso)
 
 1. **Importación directa** — buen precio salteando intermediarios. *Es el verdadero foso.*

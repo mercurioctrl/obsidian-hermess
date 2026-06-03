@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LibreOpción · Plan Estratégico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F5F0; --sidebar:#F7F7F2; --card:#FFFFFF; --border:#E8E8E3; --border-light:#F0F0EB;
+    --t1:#1A1A1A; --t2:#6B6B63; --t3:#9B9B93; --label:#8B8B83;
+    --pos:#2D8C5A; --neg:#C0392B; --empty:#EBEBEB; --blue:#2563EB; --blue-bg:#EFF6FF;
+    --pos-bg:#ECF6F0; --neg-bg:#FBECEA; --amber:#B7791F; --amber-bg:#FBF3E6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--t1);font-family:'Inter','SF Pro Display',-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .mono{font-family:'JetBrains Mono','SF Mono',monospace}
+  h1,h2,h3{line-height:1.18;font-weight:600;letter-spacing:-.02em}
+  /* layout */
+  .app{display:flex}
+  aside{position:fixed;top:0;left:0;width:280px;height:100vh;background:var(--sidebar);border-right:1px solid var(--border);padding:28px 22px;display:flex;flex-direction:column;z-index:40}
+  aside .brand{font-weight:700;font-size:16px;letter-spacing:-.02em}
+  aside .brand b{color:var(--pos)}
+  aside .brand .mono{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--label);font-weight:500;margin-top:4px}
+  aside nav{margin-top:34px;display:flex;flex-direction:column;gap:2px}
+  aside nav a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:var(--t2);font-size:14px;font-weight:500;text-decoration:none;transition:.15s}
+  aside nav a .n{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t3);width:20px}
+  aside nav a:hover{background:var(--card);color:var(--t1)}
+  aside nav a.active{background:var(--card);color:var(--t1);box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  aside nav a.active .n{color:var(--pos)}
+  aside .foot{margin-top:auto;font-size:11px;color:var(--t3);line-height:1.5}
+  main{margin-left:280px;flex:1;min-width:0}
+  .pane{max-width:980px;margin:0 auto;padding:0 40px}
+  /* header */
+  .top{padding:80px 0 56px;border-bottom:1px solid var(--border)}
+  .kick{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--label);margin-bottom:20px}
+  .top h1{font-size:clamp(30px,4.5vw,50px);font-weight:700}
+  .top .lead{font-size:18px;color:var(--t2);max-width:680px;margin-top:20px}
+  .thesis{margin-top:30px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;max-width:720px;font-size:16px}
+  .thesis b{color:var(--t1)} .em{color:var(--pos);font-weight:600}
+  /* sections */
+  section{padding:56px 0;border-bottom:1px solid var(--border)}
+  .shead{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .shead .badge{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;color:var(--bg);background:var(--t1);width:32px;height:32px;border-radius:8px;display:grid;place-items:center}
+  .shead .kk{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--label)}
+  section h2{font-size:clamp(24px,3.4vw,34px);font-weight:700;margin-bottom:12px}
+  section .sub{color:var(--t2);font-size:16px;max-width:720px;margin-bottom:30px}
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:24px 0}
+  .scard{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;flex-direction:column}
+  .scard .lab{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--label)}
+  .scard .val{font-size:30px;font-weight:600;letter-spacing:-.02em;margin-top:12px;font-variant-numeric:tabular-nums}
+  .scard .val.pos{color:var(--pos)} .scard .val.neg{color:var(--neg)}
+  .scard .sub2{font-size:12px;color:var(--t3);margin-top:10px;padding-top:10px;border-top:1px solid var(--border-light)}
+  /* cards */
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px}
+  .card .ico{font-size:22px;margin-bottom:10px}
+  .card h3{font-size:17px;font-weight:600;margin-bottom:6px}
+  .card p{color:var(--t2);font-size:14px}
+  .card p b{color:var(--t1)}
+  /* chart box */
+  .cbox{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin:20px 0}
+  .cbox .ch{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:6px;flex-wrap:wrap}
+  .cbox h3{font-size:16px;font-weight:600}
+  .cbox .cap{color:var(--t3);font-size:13px;margin-bottom:22px;max-width:560px}
+  .legend{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .legend .li{display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--t2)}
+  .legend .sw{width:10px;height:10px;border-radius:2px}
+  .note{font-size:13px;color:var(--t2);margin-top:18px;padding-top:16px;border-top:1px solid var(--border-light)}
+  .note b{color:var(--t1)}
+  /* pixel chart */
+  .pchart{display:flex;gap:14px}
+  .pyax{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;flex-shrink:0;width:44px}
+  .pyax span{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t3);line-height:1}
+  .pcols{flex:1;display:flex;align-items:flex-end;gap:6px;min-width:0}
+  .pcol{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;cursor:default;min-width:0}
+  .psq{display:flex;flex-direction:column;gap:2px}
+  .psq i{border-radius:1px;display:block}
+  .pcol .xl{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t3);margin-top:8px;white-space:nowrap;text-align:center}
+  .ptip{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:6px;background:var(--card);border:1px solid var(--border);border-radius:9px;box-shadow:0 4px 14px rgba(0,0,0,.08);padding:9px 12px;white-space:nowrap;opacity:0;pointer-events:none;transition:.12s;z-index:10}
+  .pcol:hover .ptip{opacity:1}
+  .ptip .t{font-size:11px;font-weight:600;margin-bottom:4px}
+  .ptip .r{font-size:11px;color:var(--t2)} .ptip .r b{color:var(--t1)}
+  /* horizontal share bars */
+  .hbars{display:flex;flex-direction:column;gap:11px}
+  .hbar{display:grid;grid-template-columns:96px 1fr 52px;align-items:center;gap:12px}
+  .hbar .hl{font-size:13px;color:var(--t2)}
+  .hbar .track{height:22px;background:var(--bg);border-radius:5px;overflow:hidden}
+  .hbar .fill{height:100%;border-radius:5px}
+  .hbar .hv{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--t1);text-align:right;font-variant-numeric:tabular-nums}
+  /* callouts */
+  .callout{border-radius:12px;padding:18px 22px;margin:20px 0;border:1px solid var(--border);background:var(--card);font-size:15px;color:var(--t2)}
+  .callout.l-green{border-left:3px solid var(--pos)} .callout.l-red{border-left:3px solid var(--neg)}
+  .callout.l-blue{border-left:3px solid var(--blue)} .callout.l-amber{border-left:3px solid var(--amber)}
+  .callout b{color:var(--t1)}
+  /* split bar */
+  .split{display:flex;height:30px;border-radius:7px;overflow:hidden;border:1px solid var(--border)}
+  .split div{display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:#fff}
+  /* econ breakdown */
+  .econ{display:flex;flex-direction:column;gap:2px}
+  .erow{display:grid;grid-template-columns:1fr auto;gap:12px;padding:13px 14px;background:var(--bg);border-radius:8px;align-items:center}
+  .erow .en{font-size:14px} .erow .ev{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+  .erow.tot{background:#1A1A1A;color:#fff} .erow.tot .ev{color:#fff}
+  .erow .ev.pos{color:var(--pos)} .erow .ev.neg{color:var(--neg)}
+  /* foda */
+  .foda{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .foda .card h4{font-size:14px;font-weight:600;margin-bottom:10px}
+  .foda ul{list-style:none;font-size:13.5px;color:var(--t2)}
+  .foda li{padding:4px 0 4px 16px;position:relative}
+  .foda li:before{content:"–";position:absolute;left:0;color:var(--t3)}
+  /* tiers */
+  .tier{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:14px}
+  .tier .th{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+  .tier .tg{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;padding:5px 11px;border-radius:7px;letter-spacing:.04em}
+  .tg.a{background:var(--pos-bg);color:var(--pos)} .tg.b{background:var(--amber-bg);color:var(--amber)} .tg.c{background:var(--blue-bg);color:var(--blue)}
+  .tier h3{font-size:16px;font-weight:600}
+  .act{display:flex;gap:11px;padding:11px 0;border-top:1px solid var(--border-light);font-size:14px}
+  .act:first-of-type{border-top:none}
+  .act .ck{color:var(--pos);flex-shrink:0;font-weight:700}
+  .act small{color:var(--t3);display:block;font-size:12.5px;margin-top:1px}
+  /* table */
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:12px 8px;border-bottom:1px solid var(--border-light)}
+  th{font-family:'JetBrains Mono',monospace;color:var(--label);font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+  td.r,th.r{text-align:right;font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+  .up{color:var(--pos);font-weight:600}
+  .foot-cta{padding:64px 0 90px}
+  .foot-cta .big{font-size:clamp(22px,3vw,30px);font-weight:700;max-width:680px;letter-spacing:-.02em}
+  .foot-cta p{color:var(--t2);margin-top:16px;max-width:640px}
+  .foot-cta .meta{margin-top:30px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--t3);letter-spacing:.04em}
+  @media(max-width:860px){
+    aside{position:static;width:100%;height:auto;flex-direction:row;align-items:center;padding:14px 20px;border-right:none;border-bottom:1px solid var(--border)}
+    aside nav{display:none} aside .foot{display:none} main{margin-left:0}
+    .pane{padding:0 22px}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+<aside>
+  <div class="brand">Libre<b>Opción</b><span class="mono">Plan Estratégico · 2026</span></div>
+  <nav id="nav">
+    <a href="#s1" class="active"><span class="n">01</span> Dónde estamos</a>
+    <a href="#s2"><span class="n">02</span> Diagnóstico</a>
+    <a href="#s3"><span class="n">03</span> El insight</a>
+    <a href="#s4"><span class="n">04</span> La estrategia</a>
+    <a href="#s5"><span class="n">05</span> Datos · FODA</a>
+    <a href="#s6"><span class="n">06</span> Plan de acción</a>
+  </nav>
+  <div class="foot">Documento interno para socios.<br>Datos reales jun 2025 – may 2026.</div>
+</aside>
+
+<main>
+<div class="pane">
+
+  <header class="top">
+    <div class="kick">Documento interno · Para socios · Junio 2026</div>
+    <h1>De vender más barato<br>a vender mejor.</h1>
+    <p class="lead">Un recorrido por los datos reales del negocio y el plan para los próximos 6 meses. Todo sale de la performance de ventas de los últimos 12 meses y del analytics del sitio.</p>
+    <div class="thesis"><b>La tesis en una línea:</b> tenemos capital, mercadería y 446.000 visitas por mes. No nos falta plata ni stock — <span class="em">nos falta convertir</span>. El plan entero apunta a una sola meta: <span class="em">vender más de lo que ya podemos surtir</span>.</div>
+  </header>
+
+  <!-- 01 -->
+  <section id="s1">
+    <div class="shead"><span class="badge">01</span><span class="kk">Dónde estamos</span></div>
+    <h2>La foto real de hoy</h2>
+    <p class="sub">LibreOpción ya hizo un giro silencioso pero enorme: pasó de comprar mercado a pérdida a ser un negocio rentable. Pero a la mitad del volumen.</p>
+    <div class="stats">
+      <div class="scard"><span class="lab">Visitas / mes</span><span class="val">446k</span><span class="sub2">Tráfico real (GA4)</span></div>
+      <div class="scard"><span class="lab">Ventas / mes</span><span class="val">831</span><span class="sub2">Mayo 2026</span></div>
+      <div class="scard"><span class="lab">Conversión</span><span class="val neg">0,19%</span><span class="sub2">Sobre visitas</span></div>
+      <div class="scard"><span class="lab">Margen producto</span><span class="val pos">17,3%</span><span class="sub2">Último trimestre</span></div>
+      <div class="scard"><span class="lab">Ticket prom.</span><span class="val">$275k</span><span class="sub2">ARS</span></div>
+    </div>
+    <div class="cbox">
+      <div class="ch"><div><h3>El turnaround financiero</h3></div>
+        <div class="legend"><div class="li"><span class="sw" style="background:#2D8C5A"></span>Mes rentable</div><div class="li"><span class="sw" style="background:#C0392B"></span>Mes a pérdida</div></div>
+      </div>
+      <div class="cap">Facturación mensual (alto de la columna, u$s) · color según margen. El quiebre de diciembre 2025 es el corazón de la historia.</div>
+      <div id="pTurn"></div>
+      <div class="note">A mediados de 2025 vendíamos <b>el doble</b> (~u$s 327k/mes) pero <b>a pérdida</b>: comprábamos market share regalando margen. Desde diciembre cortamos eso y saltamos a <b>+12 a +16%</b> de margen, resignando la mitad del volumen. <b>El saneamiento ya pasó y funcionó.</b></div>
+    </div>
+    <div class="callout l-green"><b>Conclusión:</b> no estamos apagando un incendio — estamos optimizando un negocio que ya funciona. El desafío dejó de ser "sobrevivir" y pasó a ser <span class="em">recuperar volumen sin volver a perder plata</span>.</div>
+  </section>
+
+  <!-- 02 -->
+  <section id="s2">
+    <div class="shead"><span class="badge">02</span><span class="kk">Diagnóstico</span></div>
+    <h2>¿Por qué no vendemos más?</h2>
+    <p class="sub">Con 446k visitas, el problema no es el tráfico: es que se nos cae en el camino. Dos fugas concretas, medidas con datos reales.</p>
+    <div class="cbox">
+      <div class="ch"><h3>El embudo pierde donde más duele</h3></div>
+      <div class="cap">Usuarios en cada paso (mayo 2026). De cada 100 que ven un producto, solo ~6 compran.</div>
+      <div id="pFunnel"></div>
+      <div class="note">La mayor caída es <b>producto → carrito (−70%)</b>: ~10.200 personas que miran y se van. Causa principal: <b>cuotas con interés</b> (la competencia ofrece 24 sin interés) y un <b>envío gratis que no se ve</b> en la ficha.</div>
+    </div>
+    <div class="cbox">
+      <div class="ch"><h3>El tráfico pago quema plata</h3></div>
+      <div class="cap">Conversión por canal (% sobre sesiones). El pago es el 74% del volumen y el que peor convierte.</div>
+      <div id="pChannel"></div>
+      <div class="note"><b>Instagram Ads: 12.495 visitas → 0 ventas. Facebook Ads: 11.121 → 5 ventas.</b> Orgánico, directo y referidos convierten 2 a 4 veces mejor. Apagar el paid social es ahorro inmediato.</div>
+    </div>
+    <div class="grid g3">
+      <div class="card"><div class="ico">💳</div><h3>Cuotas con interés</h3><p>Máximo 6 cuotas con recargo (hasta +24%), mientras la competencia ofrece 24 sin interés. La herida #1 de conversión.</p></div>
+      <div class="card"><div class="ico">🚚</div><h3>Envío gratis invisible</h3><p>Ya pagamos el envío, pero el cliente ve "cotización en proceso". Pagamos el beneficio sin cobrar la conversión.</p></div>
+      <div class="card"><div class="ico">🔥</div><h3>Paid social</h3><p>Miles de visitas de Instagram/Facebook que no compran y ensucian todas las métricas.</p></div>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section id="s3">
+    <div class="shead"><span class="badge">03</span><span class="kk">El insight que reordena todo</span></div>
+    <h2>El cuello de botella es la demanda</h2>
+    <p class="sub">El plan original se preocupaba por capital, moats y exit. Pero con crédito de proveedor y espalda del grupo, el capital no es el problema. El problema es vender.</p>
+    <div class="grid g2">
+      <div class="callout l-blue" style="margin:0"><b>Lo que NO nos frena</b><br>Capital (crédito de proveedor + grupo), stock (podemos surtir mucho más) y rotación: el 59% de lo que se vende es stock fresco.</div>
+      <div class="callout l-green" style="margin:0"><b>Lo que SÍ nos frena</b><br>La demanda. Tenemos capacidad ociosa de surtir. Cada punto de conversión que ganamos es venta pura, sin gastar un peso más.</div>
+    </div>
+    <div class="cbox">
+      <div class="ch"><h3>La mina de oro: convertir el tráfico que ya tenemos</h3></div>
+      <div class="cap">Ventas mensuales proyectadas según la conversión, con el mismo tráfico de hoy (446k visitas).</div>
+      <div id="pConv"></div>
+      <div class="note">Pasar de <b>0,19% a 0,5%</b> = <b>~2,6× ventas</b> con el mismo tráfico, <b>sin capital nuevo</b> y <b>sin gastar más en marketing</b>. Y como el stock no es freno, esas ventas extra <b>se pueden surtir</b>. El movimiento de mayor retorno del plan.</div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section id="s4">
+    <div class="shead"><span class="badge">04</span><span class="kk">La estrategia</span></div>
+    <h2>Cómo ganamos</h2>
+    <p class="sub">Seis piezas que encajan entre sí. Todas apuntan a lo mismo: dar una razón para elegirnos y convertir más, sin pelear donde no se puede ganar.</p>
+    <div class="grid g2">
+      <div class="card"><div class="ico">🛡️</div><h3>De precio a confianza</h3><p>Dejamos "el más barato" (carrera al fondo contra MercadoLibre) y pasamos a <b>"la forma más segura de comprar tecnología cara"</b>: garantía oficial + doble garantía propia. Diferenciador disponible <b>hoy</b>.</p></div>
+      <div class="card"><div class="ico">🤝</div><h3>Importador con red de creadores</h3><p>No somos un marketplace abierto: somos un <b>importador-mayorista</b> con vendedores curados que revenden nuestro stock (+1-3%). Los <b>creadores</b> son el canal natural — y resuelven nuestro hueco en redes.</p></div>
+      <div class="card"><div class="ico">💳</div><h3>Cuotas sin fundirnos</h3><p>Sin interés por tres vías: <b>meter el costo en el precio</b> (ya somos ~14% más baratos), <b>que paguen las marcas</b> (promos MP) y bancos. Comérnoslas del margen es imposible; estas tres no.</p></div>
+      <div class="card"><div class="ico">🏆</div><h3>Exclusivas que nadie trae</h3><p>2-3 marcas <b>conocidas pero sin importador en Argentina</b> (Noctua, Seasonic, Aqara…). Demanda probada + cero competencia + control de precio. El único foso que dura.</p></div>
+      <div class="card"><div class="ico">🧩</div><h3>Armador + combos dinámicos</h3><p>Combos de actualización que se arman solos desde el stock y builds de la comunidad comprables. Mata la parálisis, sube el ticket y <b>liquida aging</b>.</p></div>
+      <div class="card"><div class="ico">🏷️</div><h3>Hunnox (marca propia)</h3><p>Hoy 0,1% de la venta pero <b>42% de margen</b>. La exclusividad estructural definitiva. Diferida a propósito hasta tener la máquina de conversión andando.</p></div>
+    </div>
+    <div class="callout l-blue"><b>El hilo conductor:</b> la confianza sube la conversión; los creadores traen alcance y contenido; las exclusivas rompen la comparación de precio (y financian las cuotas); los combos suben el ticket y mueven aging. <span class="em">No son seis ideas sueltas: es un solo sistema.</span></div>
+  </section>
+
+  <!-- 05 -->
+  <section id="s5">
+    <div class="shead"><span class="badge">05</span><span class="kk">Los datos que lo respaldan</span></div>
+    <h2>El FODA, con números reales</h2>
+    <p class="sub">Análisis de 5.056 líneas de venta de 12 meses, anclado en el último trimestre (en Argentina el contexto cambia rápido).</p>
+    <div class="cbox">
+      <div class="ch"><h3>Margen por categoría</h3></div>
+      <div class="cap">Último trimestre. El margen vive en las categorías chicas, no en el core (CPU/GPU).</div>
+      <div id="pCatM"></div>
+      <div class="note"><b>El insight de oro:</b> las categorías de alto margen (RAM 43%, gabinetes 20%, monitores 19%, PSU/cooling 18%) son <b>exactamente</b> donde apuntan las exclusivas (Noctua, Seasonic) y Hunnox. La estrategia de margen y la de exclusivas son la misma.</div>
+    </div>
+    <div class="grid g2">
+      <div class="cbox" style="margin:0">
+        <div class="ch"><h3>Facturación por categoría</h3></div>
+        <div class="cap">GPU + CPU son casi la mitad de la venta… pero los de margen más fino.</div>
+        <div class="hbars" id="hRev"></div>
+      </div>
+      <div class="cbox" style="margin:0">
+        <div class="ch"><h3>De dónde sale el margen</h3></div>
+        <div class="cap">Descomposición sobre la venta (último trimestre).</div>
+        <div class="econ">
+          <div class="erow"><span class="en">Margen de producto</span><span class="ev pos">+17,3%</span></div>
+          <div class="erow"><span class="en">Costo del envío gratis</span><span class="ev neg">−5,6%</span></div>
+          <div class="erow"><span class="en">Ingreso financiero (cuotas)</span><span class="ev pos">+1,6%</span></div>
+          <div class="erow tot"><span class="en">Margen neto</span><span class="ev">12,7%</span></div>
+        </div>
+        <div class="note">El envío gratis se come <b>un tercio</b> del margen → umbral. La financiación aporta poco (10%) → bajar el interés es manejable.</div>
+      </div>
+    </div>
+    <div class="cbox">
+      <div class="ch"><h3>Concentración de proveedor</h3></div>
+      <div class="cap">Un solo proveedor (LASET, intra-grupo) es el 90% del supply — la dependencia estructural a vigilar.</div>
+      <div class="split"><div style="width:90.5%;background:#1A1A1A">LASET · 90,5%</div><div style="width:9.5%;background:#C9C9C2;color:#6B6B63">Otros 34</div></div>
+    </div>
+    <h3 style="margin:36px 0 16px;font-size:20px;font-weight:600">FODA</h3>
+    <div class="foda">
+      <div class="card"><h4 style="color:var(--pos)">✅ Fortalezas</h4><ul><li>Turnaround impecable y estable (+12,7%)</li><li>Márgenes sanos y diversificados</li><li>GPU recuperó margen (8% → 18%)</li><li>Monitores estrella · Hunnox 42%</li></ul></div>
+      <div class="card"><h4 style="color:var(--neg)">🔻 Debilidades</h4><ul><li>CPU: 22% de venta, 10% de margen</li><li>Volumen a la mitad vs. 2025</li><li>Marca propia embrionaria</li></ul></div>
+      <div class="card"><h4 style="color:var(--blue)">🚀 Oportunidades</h4><ul><li>Recuperar volumen vía conversión</li><li>Escalar alto margen (exclusivas + Hunnox)</li><li>Combos para subir el margen del ticket</li></ul></div>
+      <div class="card"><h4 style="color:var(--neg)">🔴 Problemas</h4><ul><li>Envío gratis = 33% del margen</li><li>Concentración de proveedor (90%)</li></ul></div>
+      <div class="card"><h4 style="color:var(--amber)">🕳️ Carencias</h4><ul><li>Hunnox sin desarrollar</li><li>Sin política de envío ni diversificación</li><li>Tracking incompleto</li></ul></div>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section id="s6">
+    <div class="shead"><span class="badge">06</span><span class="kk">El plan de acción</span></div>
+    <h2>Qué hacemos, en qué orden</h2>
+    <p class="sub">Priorizado por retorno y costo. Casi todo el Tier 0 es gratis o es dejar de gastar — y es lo de mayor impacto.</p>
+    <div class="tier">
+      <div class="th"><span class="tg a">TIER 0 · ESTA SEMANA · GRATIS</span><h3>Quick wins de máximo retorno</h3></div>
+      <div class="act"><span class="ck">✓</span><div>Envío gratis <b>con umbral, visible</b> (desde ~u$s 50; retiro en local siempre gratis)<small>Corta la sangría del 33% del margen sin perder la bandera, y empuja el ticket</small></div></div>
+      <div class="act"><span class="ck">✓</span><div>Apagar el <b>paid social</b><small>Dejar de quemar plata en avisos que convierten cero</small></div></div>
+      <div class="act"><span class="ck">✓</span><div>Gritar la <b>garantía oficial + doble garantía</b><small>Nuestro diferenciador real, hoy escondido</small></div></div>
+      <div class="act"><span class="ck">✓</span><div>Arreglar el <b>tracking</b><small>No se puede gestionar lo que no se mide</small></div></div>
+      <div class="act"><span class="ck">✓</span><div>Activar <b>cuotas sin interés</b>, financiadas subiendo el precio ~11%<small>Usar el "aire" de precio que hoy regalamos</small></div></div>
+    </div>
+    <div class="tier">
+      <div class="th"><span class="tg b">TIER 1 · 1–3 MESES</span><h3>Embudo, aging y combos</h3></div>
+      <div class="act"><span class="ck">→</span><div>Arreglar el <b>embudo</b> (producto→carrito y checkout)</div></div>
+      <div class="act"><span class="ck">→</span><div>Lanzar <b>liquidación de aging</b> con escalera automática de descuento</div></div>
+      <div class="act"><span class="ck">→</span><div><b>Combos de actualización dinámicos</b> (rescatan productos sin venta + mueven aging)</div></div>
+      <div class="act"><span class="ck">→</span><div>Sello <b>"Vendido por LibreOpción"</b> + reescribir el titular de marca</div></div>
+    </div>
+    <div class="tier">
+      <div class="th"><span class="tg c">TIER 2 · 3–6 MESES</span><h3>Alcance, foso y disciplina</h3></div>
+      <div class="act"><span class="ck">→</span><div>Abrir la <b>red de vendedores/creadores</b> curada</div></div>
+      <div class="act"><span class="ck">→</span><div>Desarrollar <b>2-3 marcas exclusivas</b> (conocidas que nadie trae)</div></div>
+      <div class="act"><span class="ck">→</span><div><b>Armador completo + builds de la comunidad</b> comprables</div></div>
+      <div class="act"><span class="ck">→</span><div>Negociar cuotas con marcas · evaluador como filtro de compra</div></div>
+    </div>
+    <h3 style="margin:34px 0 8px;font-size:20px;font-weight:600">KPIs — a dónde vamos</h3>
+    <table>
+      <thead><tr><th>Métrica</th><th class="r">Hoy</th><th class="r">Meta 6 meses</th></tr></thead>
+      <tbody>
+        <tr><td>Conversión (por sesión)</td><td class="r">0,73%</td><td class="r up">1,5%+</td></tr>
+        <tr><td>Ventas / mes</td><td class="r">831</td><td class="r up">2× – 2,6×</td></tr>
+        <tr><td>% ventas en cuotas sin interés</td><td class="r">~0</td><td class="r up">Mayoría</td></tr>
+        <tr><td>Tráfico orgánico + referidos</td><td class="r">~96k</td><td class="r up">Creciente</td></tr>
+        <tr><td>Rotación de inventario</td><td class="r">~50% parado</td><td class="r up">Bajando</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="foot-cta">
+    <p class="big">Tenemos capital, mercadería y 446.000 visitas. El juego es convertir.</p>
+    <p>El plan no es crecer a cualquier costo — es <span class="em">optimizar un negocio que ya funciona</span> y darle, por fin, una razón clara para que la gente nos elija.</p>
+    <p class="meta">LibreOpción · Plan Estratégico · Junio 2026 · Documento interno para socios</p>
+  </div>
+
+</div>
+</main>
+</div>
+
+<script>
+// ---- Pixel bar chart ----
+function fmtCompact(v){ if(v>=1000) return (v/1000).toFixed(v>=10000?0:1).replace('.0','')+'k'; return (''+v).replace('.',','); }
+function pixel(elId, opts){
+  const el=document.getElementById(elId);
+  const items=opts.items, rows=opts.rows||13, sq=opts.sq||12;
+  const max=opts.max || Math.max(...items.map(i=>i.value));
+  const bodyH=rows*(sq+2);
+  // y axis
+  const steps=4; let yax='';
+  for(let i=0;i<=steps;i++){ const val=max*(steps-i)/steps; yax+=`<span>${opts.fmt?opts.fmt(val):fmtCompact(val)}</span>`; }
+  let cols='';
+  for(const it of items){
+    const filled=it.value<=0?0:Math.max(1,Math.round(it.value/max*rows));
+    let sqs='';
+    for(let r=rows;r>=1;r--){
+      const on = r<=filled;
+      const col = on ? (it.color||'#1A1A1A') : '#EBEBEB';
+      sqs+=`<i style="width:${sq}px;height:${sq}px;background:${col}"></i>`;
+    }
+    const tipv = opts.tip ? opts.tip(it) : (opts.fmt?opts.fmt(it.value):it.value);
+    cols+=`<div class="pcol">
+      <div class="ptip"><div class="t">${it.label}</div><div class="r">${tipv}</div></div>
+      <div class="psq">${sqs}</div>
+      <span class="xl">${it.x||it.label}</span></div>`;
+  }
+  el.innerHTML=`<div class="pchart"><div class="pyax" style="height:${bodyH}px;padding-bottom:26px">${yax}</div><div class="pcols">${cols}</div></div>`;
+}
+
+const GREEN='#2D8C5A',RED='#C0392B',INK='#1A1A1A',BLUE='#2563EB',AMBER='#B7791F',GREY='#C9C9C2';
+
+// 01 Turnaround — height=revenue, color=margin sign
+pixel('pTurn',{rows:13,sq:13,items:[
+ {label:'Jun 25',x:'Jun',value:326839,m:5.6,color:GREEN},{label:'Jul 25',x:'Jul',value:327305,m:2.6,color:GREEN},
+ {label:'Ago 25',x:'Ago',value:321597,m:-1.8,color:RED},{label:'Sep 25',x:'Sep',value:258110,m:-3.3,color:RED},
+ {label:'Oct 25',x:'Oct',value:171618,m:-2.7,color:RED},{label:'Nov 25',x:'Nov',value:197434,m:-3.6,color:RED},
+ {label:'Dic 25',x:'Dic',value:207502,m:7.3,color:GREEN},{label:'Ene 26',x:'Ene',value:132431,m:12.2,color:GREEN},
+ {label:'Feb 26',x:'Feb',value:128856,m:16.3,color:GREEN},{label:'Mar 26',x:'Mar',value:168880,m:13.1,color:GREEN},
+ {label:'Abr 26',x:'Abr',value:160217,m:13.1,color:GREEN},{label:'May 26',x:'May',value:161640,m:12.0,color:GREEN}],
+ fmt:v=>'u$s '+fmtCompact(Math.round(v)), tip:it=>`u$s ${Math.round(it.value).toLocaleString('es-AR')} · margen ${it.m>0?'+':''}${it.m}%`});
+
+// 02 Funnel
+pixel('pFunnel',{rows:13,sq:16,items:[
+ {label:'Vio producto',x:'Vio prod.',value:14604,color:INK},
+ {label:'Agregó al carrito',x:'Carrito',value:4405,color:'#3a3a3a'},
+ {label:'Inició checkout',x:'Checkout',value:3284,color:'#3a3a3a'},
+ {label:'Compró',x:'Compró',value:820,color:GREEN}],
+ fmt:v=>fmtCompact(Math.round(v)), tip:it=>`${it.value.toLocaleString('es-AR')} usuarios`});
+
+// 02 Channel
+pixel('pChannel',{rows:13,sq:14,max:2.5,items:[
+ {label:'Pago (74% tráfico)',x:'Pago',value:0.62,color:RED},
+ {label:'Email',x:'Email',value:0.63,color:AMBER},
+ {label:'Social',x:'Social',value:0.16,color:RED},
+ {label:'Orgánico',x:'Orgánico',value:1.41,color:GREEN},
+ {label:'Directo',x:'Directo',value:1.45,color:GREEN},
+ {label:'Referidos',x:'Referidos',value:2.50,color:GREEN}],
+ fmt:v=>v.toFixed(1).replace('.',',')+'%', tip:it=>`${(''+it.value).replace('.',',')}% conversión`});
+
+// 03 Conversion projection
+pixel('pConv',{rows:13,sq:18,items:[
+ {label:'Hoy (0,19%)',x:'Hoy · 0,19%',value:831,color:'#3a3a3a'},
+ {label:'Meta (0,5%)',x:'Meta · 0,5%',value:2230,color:GREEN},
+ {label:'Potencial (1%)',x:'Potencial · 1%',value:4460,color:BLUE}],
+ fmt:v=>fmtCompact(Math.round(v)), tip:it=>`${it.value.toLocaleString('es-AR')} ventas/mes`});
+
+// 05 Category margin
+pixel('pCatM',{rows:13,sq:13,max:44,items:[
+ {label:'RAM',value:43.3,color:GREEN},{label:'Storage',value:27.6,color:GREEN},{label:'Gabinete',value:20.5,color:GREEN},
+ {label:'UPS',value:20.4,color:GREEN},{label:'Monitor',value:19.4,color:GREEN},{label:'PSU',value:18.4,color:GREEN},
+ {label:'GPU',value:18.1,color:GREEN},{label:'Cooling',value:16.9,color:GREEN},{label:'Perif.',value:12.9,color:AMBER},
+ {label:'Mother',value:12.3,color:AMBER},{label:'CPU',value:9.7,color:RED}],
+ fmt:v=>Math.round(v)+'%', tip:it=>`${(''+it.value).replace('.',',')}% de margen`});
+
+// 05 Revenue share (horizontal bars)
+(function(){
+ const data=[['CPU',22.4,'#C0392B'],['GPU',19.2,AMBER],['Mother',12.6,INK],['Monitor',8.5,GREEN],['Storage',7.8,GREEN],['RAM',7.2,GREEN],['Perif.',5.8,'#6B6B63'],['PSU',4.9,GREEN],['Otros',4.4,GREY],['Gabinete',3.7,GREEN]];
+ const max=Math.max(...data.map(d=>d[1]));
+ document.getElementById('hRev').innerHTML=data.map(([l,v,c])=>
+  `<div class="hbar"><span class="hl">${l}</span><div class="track"><div class="fill" style="width:${v/max*100}%;background:${c}"></div></div><span class="hv">${(''+v).replace('.',',')}%</span></div>`).join('');
+})();
+
+// ---- scroll spy ----
+const links=[...document.querySelectorAll('#nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const i=secs.indexOf(e.target);links.forEach(l=>l.classList.remove('active'));if(links[i])links[i].classList.add('active');}})},{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(s=>s&&io.observe(s));
+</script>
+</body>
+</html>

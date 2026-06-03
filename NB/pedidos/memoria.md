@@ -322,6 +322,7 @@ Caso real: `laset_import_staging.match_status` era `NVARCHAR(20)`. Agregué `STO
 4. **Verify integrado con invariantes**: si el delta no es exactamente lo esperado, THROW + rollback.
 5. **Idempotencia obligatoria**: re-correr sobre data limpia = 0 cambios.
 6. **dblib-safe**: tabla tmp + UPDATE FROM JOIN single-statement. NUNCA loops de UPDATE individuales (segfault).
+<<<<<<< HEAD
 
 
 ## articulo.Id_Marca → NB_WEB.dbo.marcas (NO FP_Marcas)
@@ -417,3 +418,39 @@ Sesión depurando casos reales del import comp=11. Modelo final en [[feature-las
 - **CSUPROF_TEMP = vendor_pi completo** (cExped varchar(20) trunca). Fecha de compras stock-only = invoice_date.
 - **Flujo operativo:** Reimportar planilla → Borrar todo → Importar todo. Nunca incremental sin Borrar todo.
 - **Gotcha verificación:** el guard de auto-mode bloquea correr Fase C/D desde sesión de investigación → verificar con simulaciones read-only en tinker.
+=======
+## 2026-05-30 — albclit recibe columna companyCode
+
+`albclit` no tenía `companyCode`. Fix ejecutado:
+1. `ALTER TABLE NewBytes_DBF.dbo.albclit ADD companyCode INT NULL`
+2. `UPDATE albclit SET companyCode = pedclit.companyCode FROM albclit JOIN pedclit ON ...` (solo los que tienen pedclit padre)
+3. 164.506 registros legacy sin pedclit → asignados cc=4 (NB legacy, 2010-2025)
+4. `MakeSaleRepository::createHeader()` escribe `companyCode` en cada nuevo remito
+
+**A partir de esta sesión**, `albclit.companyCode` es confiable como filtro de company. Para registros muy legacy, validar también via JOIN con `pedclit`.
+
+---
+
+## Esquema ERP — mapa de relaciones (2026-05-30)
+
+Documentación completa de relaciones entre tablas, PKs, FKs y reglas de integridad en la bóveda:
+
+- [[relacion-tablas-ped-alb]] — ventas: pedclit/pedclil ↔ albclit/albclil, PK compuesta `(cnumped, cnumsuc)`, join por `ID_NROREMCLI_ENC`
+- [[relacion-tablas-pedprot-pedprol-pedproi]] — compras OC: pedprot/pedprol/pedproi, PK global `nNumPed`
+- [[relacion-tablas-albprot-albprol]] — remitos de compra: albprot/albprol, join por `nnumalb`
+- [[relacion-tablas-articulo-stocks]] — artículos y stocks: `ID_Articulo` canónico (sobre `cref`), `(ID_ARTICULO, ID_ALMACEN)` como PK lógica de stocks
+- [[relacion-tablas-stocks-almacen]] — depósitos: FP_Almacen, depósitos compartidos SAF/NBE solo entre NB (cc=4) y NBElectric (cc=9)
+- [[relacion-companycode]] — mapa completo de `companyCode` por tabla, regla SAF/NBE, integridad de stocks
+
+### Reglas clave del esquema
+
+- **PK ventas:** `(cnumped, cnumsuc)` — nunca usar solo `cnumped`
+- **PK compras:** `nNumPed` — único global
+- **Join albclit↔albclil:** por `ID_NROREMCLI_ENC`, NO por `CNUMALB`
+- **Join artículo:** siempre por `ID_Articulo`, no por `cref`
+- **Depósito compartido:** SAF y NBE son de NB (cc=4) + NBElectric (cc=9) ÚNICAMENTE
+- **pedprol.stockWarehouseId NULL:** 99.5% de OC legacy no tienen este campo → fallback SAF (ID_ALMACEN=2)
+- **13.462 pedclil con ID_Articulo ≠ cref:** son líneas Laset donde `cref` apunta al gemelo cc=4 y `ID_Articulo` al cc=11. Siempre usar `ID_Articulo`.
+
+---
+>>>>>>> origin/main

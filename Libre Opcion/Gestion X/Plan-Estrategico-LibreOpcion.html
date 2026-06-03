@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LibreOpción · Plan Estratégico 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#0a0e1a; --bg2:#0f1524; --card:#151d30; --card2:#1b2436;
+    --line:#243049; --accent:#4f8cff; --accent2:#00d4a0;
+    --text:#e8edf7; --muted:#8d98b0;
+    --green:#22c55e; --amber:#f5a623; --red:#ef4444; --violet:#a78bfa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.02em}
+  a{color:var(--accent);text-decoration:none}
+  /* progress */
+  #bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;z-index:100}
+  /* nav */
+  nav{position:sticky;top:0;background:rgba(10,14,26,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:50}
+  nav .wrap{display:flex;align-items:center;gap:6px;height:58px;overflow-x:auto;white-space:nowrap}
+  nav .brand{font-weight:800;margin-right:auto;font-size:15px}
+  nav .brand b{color:var(--accent)}
+  nav a{color:var(--muted);font-size:13px;padding:7px 11px;border-radius:8px;font-weight:600}
+  nav a:hover{color:var(--text);background:var(--card)}
+  /* hero */
+  .hero{padding:92px 0 64px;text-align:center;background:radial-gradient(120% 80% at 50% -10%,#16213d 0%,var(--bg) 60%)}
+  .hero .tag{display:inline-block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin-bottom:26px}
+  .hero h1{font-size:clamp(34px,6vw,62px);background:linear-gradient(180deg,#fff,#9fb4dd);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{font-size:clamp(17px,2.4vw,22px);color:var(--muted);max-width:760px;margin:24px auto 0}
+  .hero .thesis{margin:38px auto 0;max-width:740px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:14px;padding:22px 26px;text-align:left;font-size:17px}
+  .scrolldown{margin-top:46px;color:var(--muted);font-size:13px;letter-spacing:.1em}
+  /* sections */
+  section{padding:72px 0;border-top:1px solid var(--line)}
+  .step{display:inline-flex;align-items:center;gap:12px;margin-bottom:14px}
+  .step .num{font-size:13px;font-weight:800;color:var(--bg);background:linear-gradient(135deg,var(--accent),var(--accent2));width:34px;height:34px;border-radius:9px;display:grid;place-items:center}
+  .step .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:700}
+  section h2{font-size:clamp(26px,4vw,40px);margin-bottom:14px}
+  section .sub{color:var(--muted);font-size:18px;max-width:780px;margin-bottom:36px}
+  /* stat grid */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:30px 0}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .stat .v{font-size:32px;font-weight:800;letter-spacing:-.02em}
+  .stat .l{color:var(--muted);font-size:13px;margin-top:4px}
+  .stat.good .v{color:var(--green)} .stat.bad .v{color:var(--red)} .stat.warn .v{color:var(--amber)} .stat.acc .v{color:var(--accent)}
+  /* cards */
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+  .card h3{font-size:19px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15px}
+  .card .ico{font-size:24px;margin-bottom:10px}
+  .chartbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 12px;margin:22px 0}
+  .chartbox h3{font-size:17px;margin-bottom:4px}
+  .chartbox .cap{color:var(--muted);font-size:13px;margin-bottom:16px}
+  .chart{position:relative;height:340px}
+  .chart.tall{height:420px}
+  .note{font-size:13px;color:var(--muted);margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+  /* callout */
+  .callout{border-radius:14px;padding:20px 24px;margin:24px 0;border:1px solid var(--line);background:var(--card)}
+  .callout.acc{border-left:4px solid var(--accent)} .callout.green{border-left:4px solid var(--green)}
+  .callout.amber{border-left:4px solid var(--amber)} .callout.red{border-left:4px solid var(--red)} .callout.viol{border-left:4px solid var(--violet)}
+  .callout b{color:var(--text)}
+  .pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;margin:2px 4px 2px 0}
+  .pill.green{background:rgba(34,197,94,.14);color:#5fe39b} .pill.red{background:rgba(239,68,68,.14);color:#ff8585}
+  .pill.amber{background:rgba(245,166,35,.14);color:#fbc164}
+  .pill.acc{background:rgba(79,140,255,.14);color:#8fb6ff}
+  /* foda */
+  .foda{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .foda .card{padding:20px}
+  .foda h4{font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .foda ul{list-style:none;font-size:14px;color:var(--muted)}
+  .foda li{padding:5px 0 5px 18px;position:relative}
+  .foda li:before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  /* timeline / tiers */
+  .tier{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:18px}
+  .tier .th{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .tier .badge{font-size:12px;font-weight:800;padding:5px 12px;border-radius:8px}
+  .t0 .badge{background:rgba(34,197,94,.16);color:#5fe39b} .t1 .badge{background:rgba(245,166,35,.16);color:#fbc164} .t2 .badge{background:rgba(167,139,250,.16);color:#c4b4fb}
+  .tier h3{font-size:18px}
+  .action{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:15px}
+  .action:first-of-type{border-top:none}
+  .action .ck{color:var(--accent2);flex-shrink:0;font-weight:800}
+  .action small{color:var(--muted);display:block;font-size:13px}
+  /* kpi table */
+  table{width:100%;border-collapse:collapse;font-size:15px;margin-top:8px}
+  th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+  td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+  .up{color:var(--green);font-weight:700} .down{color:var(--red);font-weight:700}
+  footer{padding:64px 0 80px;text-align:center;border-top:1px solid var(--line);color:var(--muted)}
+  footer .big{font-size:clamp(22px,3.4vw,32px);color:var(--text);font-weight:800;max-width:760px;margin:0 auto 18px;letter-spacing:-.02em}
+  .em{color:var(--text);font-weight:700}
+  @media(max-width:640px){ .hero{padding:64px 0 48px} section{padding:54px 0} .stat .v{font-size:26px} }
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><div class="wrap">
+  <span class="brand">Libre<b>Opción</b> · Plan Estratégico</span>
+  <a href="#s1">Hoy</a><a href="#s2">Diagnóstico</a><a href="#s3">Insight</a><a href="#s4">Estrategia</a><a href="#s5">Datos</a><a href="#s6">Plan</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">Documento interno · Para socios · Junio 2026</span>
+  <h1>De vender más barato<br>a vender mejor.</h1>
+  <p class="lead">Un recorrido por los datos reales del negocio y el plan para los próximos 6 meses. Sin humo: todo lo de acá sale de la performance de ventas de los últimos 12 meses y del analytics del sitio.</p>
+  <div class="thesis">
+    <b>La tesis en una línea:</b> tenemos capital, mercadería y 446.000 visitas por mes. No nos falta plata ni stock — <span class="em">nos falta convertir</span>. El plan entero se subordina a una sola meta: <span class="em">vender más de lo que ya podemos surtir</span>.
+  </div>
+  <div class="scrolldown">↓ Deslizá para recorrer el plan</div>
+</div></header>
+
+<!-- ============ 1 ============ -->
+<section id="s1"><div class="wrap">
+  <div class="step"><span class="num">01</span><span class="kicker">Dónde estamos</span></div>
+  <h2>La foto real de hoy</h2>
+  <p class="sub">LibreOpción ya hizo un giro silencioso pero enorme: pasó de comprar mercado a pérdida, a ser un negocio rentable. Pero a la mitad del volumen.</p>
+
+  <div class="stats">
+    <div class="stat acc"><div class="v">446k</div><div class="l">Visitas / mes</div></div>
+    <div class="stat"><div class="v">831</div><div class="l">Ventas / mes</div></div>
+    <div class="stat bad"><div class="v">0,19%</div><div class="l">Conversión (s/visitas)</div></div>
+    <div class="stat good"><div class="v">+17,3%</div><div class="l">Margen de producto (hoy)</div></div>
+    <div class="stat"><div class="v">~$275k</div><div class="l">Ticket promedio (ARS)</div></div>
+  </div>
+
+  <div class="chartbox">
+    <h3>El turnaround financiero (12 meses)</h3>
+    <div class="cap">Facturación mensual (barras, u$s) vs. margen (línea, %). El quiebre de diciembre 2025 es el corazón de la historia.</div>
+    <div class="chart tall"><canvas id="cTurn"></canvas></div>
+    <div class="note">A mediados de 2025 vendíamos <b>el doble</b> (~u$s 327k/mes) pero <b>a pérdida</b> (−2 a −4%): comprábamos market share regalando margen. Desde diciembre cortamos eso y saltamos a <b>+12 a +16%</b>, resignando la mitad del volumen. <b>El saneamiento ya pasó y funcionó.</b></div>
+  </div>
+
+  <div class="callout green"><b>Conclusión del paso 1:</b> no estamos apagando un incendio — estamos optimizando un negocio que ya funciona. El desafío dejó de ser "sobrevivir" y pasó a ser "<span class="em">recuperar volumen sin volver a perder plata</span>".</div>
+</div></section>
+
+<!-- ============ 2 ============ -->
+<section id="s2" style="background:var(--bg2)"><div class="wrap">
+  <div class="step"><span class="num">02</span><span class="kicker">Diagnóstico</span></div>
+  <h2>¿Por qué no vendemos más?</h2>
+  <p class="sub">Con 446k visitas, el problema no es el tráfico: es que se nos cae en el camino. Dos fugas concretas, medidas con datos reales del sitio.</p>
+
+  <div class="chartbox">
+    <h3>El embudo pierde donde más duele</h3>
+    <div class="cap">Usuarios en cada paso (mayo 2026). De cada 100 que ven un producto, solo ~6 compran.</div>
+    <div class="chart"><canvas id="cFunnel"></canvas></div>
+    <div class="note">La mayor caída es <b>producto → carrito (−70%)</b>: ~10.200 personas que miran y se van. La causa principal son <b>las cuotas con interés</b> (la competencia ofrece 24 sin interés) y un <b>envío gratis que no se ve</b> en la ficha.</div>
+  </div>
+
+  <div class="chartbox">
+    <h3>El tráfico pago quema plata</h3>
+    <div class="cap">Conversión por canal (% sobre sesiones). El tráfico pago es el 74% del volumen y el que peor convierte.</div>
+    <div class="chart"><canvas id="cChannel"></canvas></div>
+    <div class="note"><b>Instagram Ads: 12.495 visitas → 0 ventas. Facebook Ads: 11.121 → 5 ventas.</b> El tráfico orgánico, directo y de referidos convierte 2 a 4 veces mejor. Apagar el paid social es ahorro inmediato.</div>
+  </div>
+
+  <div class="grid g3">
+    <div class="card"><div class="ico">💳</div><h3>Cuotas con interés</h3><p>Máximo 6 cuotas y con recargo (hasta +24%), mientras la competencia ofrece 24 sin interés. Es la herida #1 de conversión.</p></div>
+    <div class="card"><div class="ico">🚚</div><h3>Envío gratis invisible</h3><p>Ya pagamos el envío, pero el cliente ve "cotización en proceso" en vez de "ENVÍO GRATIS". Pagamos el beneficio sin cobrar la conversión.</p></div>
+    <div class="card"><div class="ico">🔥</div><h3>Paid social</h3><p>Miles de visitas de Instagram/Facebook Ads que no compran y ensucian todas las métricas.</p></div>
+  </div>
+</div></section>
+
+<!-- ============ 3 ============ -->
+<section id="s3"><div class="wrap">
+  <div class="step"><span class="num">03</span><span class="kicker">El insight que reordena todo</span></div>
+  <h2>El cuello de botella es la demanda</h2>
+  <p class="sub">El plan original se preocupaba por capital, moats y exit. Pero con crédito de proveedor y espalda del grupo, el capital no es el problema. El problema es vender.</p>
+
+  <div class="grid g2" style="margin-bottom:8px">
+    <div class="callout acc" style="margin:0"><b>Lo que NO nos frena</b><br><span style="color:var(--muted)">Capital (crédito de proveedor + grupo), stock (podemos surtir mucho más), e incluso la mercadería rota bien: el 59% de lo que se vende es stock fresco.</span></div>
+    <div class="callout green" style="margin:0"><b>Lo que SÍ nos frena</b><br><span style="color:var(--muted)">La demanda. Tenemos capacidad ociosa de surtir. Cada punto de conversión que ganamos es venta pura, sin gastar un peso más.</span></div>
+  </div>
+
+  <div class="chartbox">
+    <h3>La mina de oro: convertir el tráfico que ya tenemos</h3>
+    <div class="cap">Ventas mensuales proyectadas según la tasa de conversión, con el mismo tráfico de hoy (446k visitas).</div>
+    <div class="chart"><canvas id="cConv"></canvas></div>
+    <div class="note">Pasar de <b>0,19% a 0,5%</b> de conversión = <b>~2,6× ventas</b> con el mismo tráfico, <b>sin capital nuevo</b> y <b>sin gastar más en marketing</b>. Y como el stock no es freno, esas ventas extra <b>se pueden surtir</b>. Es el movimiento de mayor retorno de todo el plan.</div>
+  </div>
+</div></section>
+
+<!-- ============ 4 ============ -->
+<section id="s4" style="background:var(--bg2)"><div class="wrap">
+  <div class="step"><span class="num">04</span><span class="kicker">La estrategia</span></div>
+  <h2>Cómo ganamos</h2>
+  <p class="sub">Seis piezas que encajan entre sí. Todas apuntan a lo mismo: dar una razón para elegirnos y convertir más, sin pelear donde no se puede ganar.</p>
+
+  <div class="grid g2">
+    <div class="card"><div class="ico">🛡️</div><h3>De precio a confianza</h3><p>Dejamos de competir por "el más barato" (carrera al fondo contra MercadoLibre) y pasamos a <b>"la forma más segura de comprar tecnología cara"</b>: garantía oficial + doble garantía propia. Es nuestro diferenciador disponible <b>hoy</b>.</p></div>
+    <div class="card"><div class="ico">🤝</div><h3>Importador con red de creadores</h3><p>No somos un marketplace abierto: somos un <b>importador-mayorista</b> con vendedores curados que revenden nuestro stock (+1-3%). Los <b>creadores de contenido</b> son el canal natural — y resuelven nuestro hueco en redes.</p></div>
+    <div class="card"><div class="ico">💳</div><h3>Cuotas sin fundirnos</h3><p>Sin interés financiado por tres vías: <b>meter el costo en el precio</b> (ya somos ~14% más baratos), <b>que paguen las marcas</b> (promos MP) y negociar con bancos. Comérnoslas del margen es imposible; estas tres no.</p></div>
+    <div class="card"><div class="ico">🏆</div><h3>Exclusivas que nadie trae</h3><p>2-3 marcas <b>conocidas pero sin importador en Argentina</b> (Noctua, Seasonic, Aqara…). Demanda ya probada + cero competencia + control de precio. El único foso que dura.</p></div>
+    <div class="card"><div class="ico">🧩</div><h3>Armador + combos dinámicos</h3><p>Combos de actualización que se arman solos desde el stock, builds de la comunidad comprables. Mata la parálisis de decisión, sube el ticket y <b>liquida aging</b> metiendo stock viejo en los combos.</p></div>
+    <div class="card"><div class="ico">🏷️</div><h3>Hunnox (marca propia)</h3><p>Hoy 0,1% de la venta pero <b>42% de margen</b>. La exclusividad estructural definitiva. Diferida a propósito hasta tener la máquina de conversión andando, pero es la palanca de margen del futuro.</p></div>
+  </div>
+
+  <div class="callout viol"><b>El hilo conductor:</b> fijate que todo se conecta. La confianza sube la conversión. Los creadores traen alcance y contenido. Las exclusivas rompen la comparación de precio (y financian las cuotas). Los combos suben el ticket y mueven aging. <span class="em">No son seis ideas sueltas: es un solo sistema.</span></div>
+</div></section>
+
+<!-- ============ 5 ============ -->
+<section id="s5"><div class="wrap">
+  <div class="step"><span class="num">05</span><span class="kicker">Los datos que lo respaldan</span></div>
+  <h2>El FODA, con números reales</h2>
+  <p class="sub">Análisis de 5.056 líneas de venta de los últimos 12 meses (anclado en el último trimestre, porque en Argentina el contexto cambia rápido).</p>
+
+  <div class="grid g2">
+    <div class="chartbox" style="margin:0">
+      <h3>Margen por categoría</h3>
+      <div class="cap">Último trimestre. El margen vive en las categorías chicas, no en el core.</div>
+      <div class="chart tall"><canvas id="cCatMargin"></canvas></div>
+    </div>
+    <div class="chartbox" style="margin:0">
+      <h3>Facturación por categoría</h3>
+      <div class="cap">GPU + CPU son casi la mitad de la venta… pero los de margen más fino.</div>
+      <div class="chart tall"><canvas id="cCatRev"></canvas></div>
+    </div>
+  </div>
+
+  <div class="callout amber" style="margin-top:22px"><b>El insight de oro:</b> nuestras categorías de <b>alto margen</b> (RAM 43%, Storage 28%, gabinetes 20%, monitores 19%, PSU/cooling 18%) son <span class="em">exactamente</span> donde apuntan las marcas exclusivas (Noctua, Seasonic) y Hunnox. <b>La estrategia de margen y la de exclusivas son la misma</b> — y los datos lo confirman.</div>
+
+  <div class="grid g2" style="margin-top:22px">
+    <div class="chartbox" style="margin:0">
+      <h3>De dónde sale el margen</h3>
+      <div class="cap">Descomposición del margen (último trimestre). El envío gratis se come 1/3.</div>
+      <div class="chart"><canvas id="cEcon"></canvas></div>
+      <div class="note">Producto sano (17,3%), pero el <b>envío gratis cuesta el 33% del margen</b> y la financiación aporta un 10%. Por eso: umbral de envío + reconstruir el interés en el precio antes de tocar las cuotas.</div>
+    </div>
+    <div class="chartbox" style="margin:0">
+      <h3>Concentración de proveedor</h3>
+      <div class="cap">Un solo proveedor (LASET, intra-grupo) es el 90% del supply.</div>
+      <div class="chart"><canvas id="cProv"></canvas></div>
+      <div class="note">Es la dependencia estructural a vigilar: si LASET para, el negocio para. Diversificar es tarea de mediano plazo.</div>
+    </div>
+  </div>
+
+  <h3 style="margin:40px 0 18px;font-size:22px">FODA</h3>
+  <div class="foda">
+    <div class="card"><h4>✅ Fortalezas</h4><ul>
+      <li>Turnaround impecable y estable (+12,7% neto)</li>
+      <li>Márgenes sanos y diversificados</li>
+      <li>GPU recuperó margen (8% → 18%)</li>
+      <li>Monitores estrella · Hunnox prueba 42%</li>
+    </ul></div>
+    <div class="card"><h4>🔻 Debilidades</h4><ul>
+      <li>CPU: 22% de la venta a solo 10% de margen</li>
+      <li>Volumen a la mitad vs. 2025</li>
+      <li>Marca propia embrionaria</li>
+    </ul></div>
+    <div class="card"><h4>🚀 Oportunidades</h4><ul>
+      <li>Recuperar volumen vía conversión</li>
+      <li>Escalar alto margen (exclusivas + Hunnox)</li>
+      <li>Combos para subir el margen del ticket</li>
+    </ul></div>
+    <div class="card"><h4>🔴 Problemas</h4><ul>
+      <li>Envío gratis = 33% del margen</li>
+      <li>Concentración de proveedor (90%)</li>
+    </ul></div>
+    <div class="card"><h4>🕳️ Carencias</h4><ul>
+      <li>Hunnox sin desarrollar</li>
+      <li>Sin política de envío ni diversificación</li>
+      <li>Medición / tracking incompleto</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<!-- ============ 6 ============ -->
+<section id="s6" style="background:var(--bg2)"><div class="wrap">
+  <div class="step"><span class="num">06</span><span class="kicker">El plan de acción</span></div>
+  <h2>Qué hacemos, en qué orden</h2>
+  <p class="sub">Priorizado por retorno y costo. Casi todo el Tier 0 es gratis o es dejar de gastar — y es lo de mayor impacto.</p>
+
+  <div class="tier t0">
+    <div class="th"><span class="badge">TIER 0 · ESTA SEMANA · GRATIS</span><h3>Quick wins de máximo retorno</h3></div>
+    <div class="action"><span class="ck">✓</span><div>Envío gratis <b>con umbral, visible</b> (desde ~u$s 50; retiro en local siempre gratis)<small>Corta la sangría del 33% del margen sin perder la bandera, y empuja el ticket</small></div></div>
+    <div class="action"><span class="ck">✓</span><div>Apagar el <b>paid social</b><small>Dejar de quemar plata en avisos que convierten cero</small></div></div>
+    <div class="action"><span class="ck">✓</span><div>Gritar la <b>garantía oficial + doble garantía</b> en la ficha<small>Nuestro diferenciador real, hoy escondido</small></div></div>
+    <div class="action"><span class="ck">✓</span><div>Arreglar el <b>tracking</b> (buscador interno, eventos)<small>No se puede gestionar lo que no se mide</small></div></div>
+    <div class="action"><span class="ck">✓</span><div>Activar <b>cuotas sin interés</b>, financiadas subiendo el precio ~11%<small>Usar el "aire" de precio que hoy regalamos por ser los más baratos</small></div></div>
+  </div>
+
+  <div class="tier t1">
+    <div class="th"><span class="badge">TIER 1 · 1–3 MESES</span><h3>Embudo, aging y combos</h3></div>
+    <div class="action"><span class="ck">→</span><div>Arreglar el <b>embudo</b> (producto→carrito y checkout)</div></div>
+    <div class="action"><span class="ck">→</span><div>Lanzar <b>liquidación de aging</b> con escalera automática de descuento</div></div>
+    <div class="action"><span class="ck">→</span><div><b>Combos de actualización dinámicos</b> (rescatan productos sin venta + mueven aging)</div></div>
+    <div class="action"><span class="ck">→</span><div>Sello <b>"Vendido por LibreOpción"</b> + reescribir el titular de marca</div></div>
+  </div>
+
+  <div class="tier t2">
+    <div class="th"><span class="badge">TIER 2 · 3–6 MESES</span><h3>Alcance, foso y disciplina</h3></div>
+    <div class="action"><span class="ck">→</span><div>Abrir la <b>red de vendedores/creadores</b> curada</div></div>
+    <div class="action"><span class="ck">→</span><div>Desarrollar <b>2-3 marcas exclusivas</b> (conocidas que nadie trae)</div></div>
+    <div class="action"><span class="ck">→</span><div><b>Armador completo + builds de la comunidad</b> comprables</div></div>
+    <div class="action"><span class="ck">→</span><div>Negociar cuotas con marcas · evaluador como filtro de compra</div></div>
+  </div>
+
+  <h3 style="margin:38px 0 6px;font-size:22px">KPIs — a dónde vamos</h3>
+  <table>
+    <thead><tr><th>Métrica</th><th class="r">Hoy</th><th class="r">Meta 6 meses</th></tr></thead>
+    <tbody>
+      <tr><td>Conversión (por sesión)</td><td class="r">0,73%</td><td class="r up">1,5%+</td></tr>
+      <tr><td>Ventas / mes</td><td class="r">831</td><td class="r up">2× – 2,6×</td></tr>
+      <tr><td>% ventas en cuotas sin interés</td><td class="r">~0</td><td class="r up">Mayoría</td></tr>
+      <tr><td>Tráfico orgánico + referidos</td><td class="r">~96k</td><td class="r up">Creciente</td></tr>
+      <tr><td>Rotación de inventario (aging)</td><td class="r">~50% parado</td><td class="r up">Bajando</td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="big">Tenemos capital, mercadería y 446.000 visitas. El juego es convertir.</p>
+  <p>El plan no es crecer a cualquier costo — es <span class="em">optimizar un negocio que ya funciona</span> y darle, por fin, una razón clara para que la gente nos elija.</p>
+  <p style="margin-top:28px;font-size:13px;opacity:.7">LibreOpción · Plan Estratégico · Junio 2026 · Documento interno para socios<br>Basado en datos reales de ventas (jun 2025 – may 2026) y analytics del sitio.</p>
+</div></footer>
+
+<script>
+// progress bar
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{const h=document.documentElement;const p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;bar.style.width=p+'%';});
+
+// chart defaults
+Chart.defaults.color='#8d98b0';
+Chart.defaults.font.family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif";
+Chart.defaults.font.size=12;
+const GRID='rgba(36,48,73,.6)';
+const ACC='#4f8cff',ACC2='#00d4a0',GREEN='#22c55e',AMBER='#f5a623',RED='#ef4444',VIO='#a78bfa';
+const money=v=>'u$s '+v.toLocaleString('es-AR');
+
+// 1. Turnaround (combo)
+new Chart(cTurn,{data:{labels:['Jun','Jul','Ago','Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May'],
+ datasets:[
+ {type:'bar',label:'Facturación (u$s)',data:[326839,327305,321597,258110,171618,197434,207502,132431,128856,168880,160217,161640],backgroundColor:'rgba(79,140,255,.35)',borderRadius:5,yAxisID:'y'},
+ {type:'line',label:'Margen (%)',data:[5.6,2.6,-1.8,-3.3,-2.7,-3.6,7.3,12.2,16.3,13.1,13.1,12.0],borderColor:ACC2,backgroundColor:ACC2,borderWidth:3,tension:.3,pointRadius:3,yAxisID:'y1'}
+ ]},
+ options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+ plugins:{legend:{labels:{usePointStyle:true,boxWidth:8}}},
+ scales:{y:{grid:{color:GRID},ticks:{callback:v=>(v/1000)+'k'}},
+  y1:{position:'right',grid:{drawOnChartArea:false},ticks:{callback:v=>v+'%'},
+   suggestedMin:-6,suggestedMax:20},x:{grid:{display:false}}}}});
+
+// 2. Funnel
+new Chart(cFunnel,{type:'bar',data:{labels:['Vio producto','Agregó al carrito','Inició checkout','Compró'],
+ datasets:[{data:[14604,4405,3284,820],backgroundColor:[ACC,'#3d6fd1','#2f5aad',ACC2],borderRadius:6}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+ tooltip:{callbacks:{label:c=>c.raw.toLocaleString('es-AR')+' usuarios'}}},
+ scales:{x:{grid:{color:GRID}},y:{grid:{display:false}}}}});
+
+// 3. Channel conversion
+new Chart(cChannel,{type:'bar',data:{labels:['Pago (74% tráfico)','Email','Social','Orgánico','Directo','Referidos'],
+ datasets:[{label:'Conversión %',data:[0.62,0.63,0.16,1.41,1.45,2.50],
+ backgroundColor:[RED,AMBER,RED,GREEN,GREEN,ACC2],borderRadius:6}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+ tooltip:{callbacks:{label:c=>c.raw+'% conversión'}}},
+ scales:{y:{grid:{color:GRID},ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}}}});
+
+// 4. Conversion projection
+new Chart(cConv,{type:'bar',data:{labels:['Hoy (0,19%)','Meta (0,5%)','Potencial (1%)'],
+ datasets:[{label:'Ventas / mes (mismo tráfico)',data:[831,2230,4460],
+ backgroundColor:[ '#3d6fd1',ACC2,GREEN],borderRadius:8}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+ tooltip:{callbacks:{label:c=>c.raw.toLocaleString('es-AR')+' ventas/mes'}}},
+ scales:{y:{grid:{color:GRID}},x:{grid:{display:false}}}}});
+
+// 5. Category margin
+new Chart(cCatMargin,{type:'bar',data:{labels:['RAM','Storage','Gabinete','UPS','Monitor','PSU','GPU','Cooling','Periféricos','Mother','CPU'],
+ datasets:[{label:'Margen %',data:[43.3,27.6,20.5,20.4,19.4,18.4,18.1,16.9,12.9,12.3,9.7],
+ backgroundColor:[GREEN,GREEN,GREEN,GREEN,GREEN,GREEN,GREEN,AMBER,AMBER,AMBER,'#e07a5f'],borderRadius:5}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+ tooltip:{callbacks:{label:c=>c.raw+'% margen'}}},
+ scales:{x:{grid:{color:GRID},ticks:{callback:v=>v+'%'}},y:{grid:{display:false}}}}});
+
+// 6. Category revenue (doughnut)
+new Chart(cCatRev,{type:'doughnut',data:{labels:['CPU','GPU','Mother','Monitor','Storage','RAM','Periféricos','PSU','Otros','Gabinete','Cooling+UPS'],
+ datasets:[{data:[22.4,19.2,12.6,8.5,7.8,7.2,5.8,4.9,4.4,3.7,2.8],
+ backgroundColor:['#e07a5f',AMBER,'#3d6fd1',ACC2,GREEN,'#5fe39b',VIO,'#8fb6ff','#647089','#c4b4fb','#4f8cff'],borderColor:'#151d30',borderWidth:2}]},
+ options:{responsive:true,maintainAspectRatio:false,cutout:'58%',
+ plugins:{legend:{position:'right',labels:{boxWidth:10,padding:8,font:{size:11}}},
+ tooltip:{callbacks:{label:c=>c.label+': '+c.raw+'% de la venta'}}}}});
+
+// 7. Economics (decomposition)
+new Chart(cEcon,{type:'bar',data:{labels:['Margen\nproducto','Envío\ngratis','Ingreso\nfinanciero','Margen\nneto'],
+ datasets:[{data:[17.3,-5.6,1.6,12.7],
+ backgroundColor:[GREEN,RED,ACC2,ACC],borderRadius:6}]},
+ options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},
+ tooltip:{callbacks:{label:c=>c.raw+'% del margen sobre venta'}}},
+ scales:{y:{grid:{color:GRID},ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}}}});
+
+// 8. Supplier concentration
+new Chart(cProv,{type:'doughnut',data:{labels:['LASET S.A. (intra-grupo)','Otros 34 proveedores'],
+ datasets:[{data:[90.5,9.5],backgroundColor:[ACC,'#2f3a52'],borderColor:'#151d30',borderWidth:2}]},
+ options:{responsive:true,maintainAspectRatio:false,cutout:'62%',
+ plugins:{legend:{position:'bottom',labels:{boxWidth:10,padding:10}},
+ tooltip:{callbacks:{label:c=>c.label+': '+c.raw+'%'}}}}});
+</script>
+</body>
+</html>

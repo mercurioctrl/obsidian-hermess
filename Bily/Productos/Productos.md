@@ -16,6 +16,7 @@ Producto Bily ($249/mes USD, posicionamiento Apple-style premium). Subcarpeta co
 - [[Bily/Productos/Bot-WhatsApp-MVP/Brief-Marketing|Brief para marketing]] — founder-led sales, sin ads gritones
 
 ## Notas conceptuales / exploración previa
+- [[Bily/Productos/Ideas LibreOpcion.com|Ideas LibreOpcion.com]] — Central de ideas y mejoras para Libre Opción
 
 - [[Bily/Productos/Billy-Bot|Billy Bot]] — arquitectura inicial de microservicios
 - [[Bily/Productos/Bot-WhatsApp-Nativo|Bot Copiloto Nativo para WhatsApp]] — concepto producto
