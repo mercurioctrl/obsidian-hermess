@@ -21,8 +21,10 @@
                     (brand oracle + category inference)
                              │
                              ▼
-                      invid.db (SQLite)
+                      invid.db (SQLite, WAL)
                    /var/www/blupartpicker/
+                          ▲
+         dolarapi.com ──→ sync_exchange_rates.py (cada 30 min)
                              │
                          api.py (FastAPI)
                       uvicorn puerto 4444
@@ -32,6 +34,8 @@
 ```
 
 ## Base de datos — `invid.db`
+
+SQLite en WAL mode (`PRAGMA journal_mode=WAL` persistido en el archivo).
 
 ### Tabla `itemsRepository`
 
@@ -44,7 +48,7 @@ Catálogo unificado. UNIQUE constraint en `(source, codigo)`.
 | producto       | TEXT | ✓ | ✓ | ✓ | ✓ | |
 | fabricante     | TEXT | ✓ | ✓ | ✓ | ✓ | PG: API + oráculo (87.9%) |
 | nro_parte      | TEXT | ✓ | ✓ | ✓ | NULL | = codigo en Stylus |
-| moneda         | TEXT | USD | USD | USD | ARS | |
+| moneda         | TEXT | USD | USD | USD | ARS | Siempre "USD" o "ARS", nunca "US$" |
 | precio_sin_iva | REAL | ✓ | ✓ | ✓ | NULL | |
 | pct_iva        | REAL | ✓ | NULL | ✓ | NULL | Porcentaje (ej: 21) |
 | imp_interno    | REAL | ✓ | NULL | ✓ | NULL | Impuesto interno |
@@ -77,70 +81,83 @@ id, source, codigo, precio, stock, isinstock, recorded_at
 id, source, started_at, finished_at, status, items_total, items_new, items_updated, message
 ```
 
-## API REST — `api.py`
+### Tabla `exchange_rates`
+
+Tipos de cambio USD/ARS. Actualizada cada 30 min desde `dolarapi.com/v1/dolares`.
+
+```sql
+id, casa TEXT UNIQUE, nombre TEXT, compra REAL, venta REAL, source_updated_at TEXT, fetched_at TEXT
+```
+
+| `casa` | Descripción |
+|--------|-------------|
+| `oficial` | Dólar oficial bancario |
+| `mayorista` | Dólar mayorista — usado por importadores. **Default de la API** para conversión USD→ARS. |
+| `blue` | Dólar informal |
+| `bolsa` | Dólar bolsa (MEP) |
+| `contadoconliqui` | CCL |
+| `cripto` | Dólar cripto |
+| `tarjeta` | Dólar tarjeta |
+
+### Índices
+
+```sql
+idx_items_distribuidor      ON itemsRepository(distribuidor)
+idx_items_source            ON itemsRepository(source)
+idx_items_isinstock         ON itemsRepository(isinstock)
+idx_items_categoria_lower   ON itemsRepository(LOWER(categoria))
+idx_items_fabricante_lower  ON itemsRepository(LOWER(fabricante))
+idx_items_dist_cat          ON itemsRepository(distribuidor, LOWER(categoria))  ← más usado
+idx_items_dist_fab          ON itemsRepository(distribuidor, LOWER(fabricante))
+idx_items_orden             ON itemsRepository(fabricante, producto)
+
+idx_psh_source_codigo       ON price_stock_history(source, codigo)
+idx_psh_recorded_at         ON price_stock_history(recorded_at)
+```
+
+## API REST — `api.py` (v2.1.0)
 
 **Puerto:** 4444 · **Docs:** http://10.10.10.7:4444/docs · **Framework:** FastAPI + uvicorn
 
 | Endpoint | Descripción |
 |----------|-------------|
 | `GET /sources` | Estadísticas por fuente |
-| `GET /items` | Listado paginado con filtros |
+| `GET /items` | Listado paginado con filtros y conversión de moneda |
 | `GET /items/{source}/{codigo}` | Ficha completa |
 | `GET /items/{source}/{codigo}/historia` | Historial precio/stock |
 | `GET /fabricantes` | Marcas con conteo — acepta `source`, `categoria`, `distribuidor` |
 | `GET /categorias` | Categorías con conteo — acepta `source`, `fabricante`, `distribuidor` |
+| `GET /exchange-rates` | Tipos de cambio USD/ARS actuales (7 casas) |
 | `GET /sync/log` | Últimas ejecuciones de sync |
 
 ### Filtros de `/items`
 
-| Parámetro | Descripción |
-|-----------|-------------|
-| `source` | Fuente exacta (`invid`, `ceven`, `stylus`, `preciosgamer_1091`, ...) |
-| `fabricante` | Exacto, case-insensitive |
-| `categoria` | Exacto, case-insensitive |
-| `distribuidor` | `1` = mayorista · `0` = reseller |
-| `isinstock` | `1` / `0` |
-| `q` | LIKE en `producto` y `nro_parte` |
-| `limit` / `offset` | Paginación (max 500) |
+| Parámetro | Default | Descripción |
+|-----------|---------|-------------|
+| `source`, `fabricante`, `categoria`, `distribuidor`, `isinstock`, `q` | — | Filtros estándar |
+| `moneda_out` | — | `ARS` o `USD` — agrega `precio_convertido` en la moneda elegida |
+| `tc` | `mayorista` | Casa de cambio: `mayorista` \| `blue` \| `oficial` \| `bolsa` \| `cripto` \| `tarjeta` |
+| `precio_min` / `precio_max` | — | Rango sobre `precio_convertido` (requiere `moneda_out`) |
+| `sort_by` | — | `precio` \| `fabricante` \| `producto` \| `updated_at` |
+| `sort_dir` | `asc` | `asc` \| `desc` |
+| `limit` / `offset` | 50 / 0 | Paginación (max 500) |
+
+**Conversión inline SQL:**
+```sql
+CASE WHEN moneda = 'USD' THEN precio_final * {tc_venta} ELSE precio_final END  -- moneda_out=ARS
+CASE WHEN moneda = 'USD' THEN precio_final ELSE precio_final / {tc_venta} END  -- moneda_out=USD
+```
+
+**Caché en memoria (por worker uvicorn):**
+- `/categorias`, `/fabricantes`: TTL 5 min
+- Tipo de cambio activo: TTL 5 min
+- Se invalida sola al expirar; sin lógica de invalidación explícita
 
 ## Sync PreciosGamer — particularidades
 
-**Fuente:** `https://api.preciosgamer.com/v1/sync/items-export/123`  
-**Paginación:** `offset` + `limit=5000` hasta agotar resultados  
-**Since:** `GET /sync/log` del último sync exitoso de cualquier `preciosgamer_*`; primer run usa `2000-01-01`
+**Inferencia de categoría** (`extract_categoria()`): primera palabra → categoría, con skip de marcas y abreviaciones. **92.8% cobertura.**
 
-**Inferencia de categoría** (`extract_categoria()`):
-1. Primera palabra del `producto` → categoría
-2. Si la primera palabra es marca conocida (`KNOWN_BRANDS`) → usar la segunda
-3. Si la primera palabra es `ACCESORIOS`/`ACCESORIO` → usar la tercera
-4. Normalización de variantes: `AURICULARES→AURICULAR`, `MOTHERBOARD→MOTHER`, etc.
-5. Abreviaciones: `PC`, `NB→NOTEBOOK`, `MB→MOTHER`, `SSD/HDD→DISCO`
-6. Cobertura: **92.8%** de los 145k items
-
-**Oráculo de marcas** (`build_brand_oracle()` + `find_brand_in_text()`):
-1. Indexa las 711 marcas del repositorio con qty ≥ 2
-2. Para items sin `brandDescription`, escanea palabras del producto desde la segunda
-3. Saltea descriptores comunes (`GAMER`, `WIRELESS`, `RGB`, `USB`, ...)
-4. Soporta marcas multipalabra (`Trust gaming`, `TP-Link`, `Cooler master`)
-5. Cobertura: **87.9%** de los 145k items (69% API directa + 19% inferida)
-
-## Systemd service
-
-```
-/etc/systemd/system/blupartpicker-api.service
-User: <usuario actual>
-WorkingDirectory: <path del clone>
-Restart: always, RestartSec: 5s
-Logs: <path del clone>/api.log
-```
-
-## Portabilidad de paths
-
-`DB_PATH` y logs se derivan de la ubicación del archivo:
-```python
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(BASE_DIR, "invid.db")
-```
+**Oráculo de marcas** (`build_brand_oracle()` + `find_brand_in_text()`): indexa 711 marcas del repo (qty≥2), busca en texto de descripción, soporta marcas multipalabra. **87.9% cobertura total.**
 
 ## Crons
 
@@ -150,6 +167,7 @@ DB_PATH = os.path.join(BASE_DIR, "invid.db")
 | `sync_ceven.py` | `0 1,5,9,13,17,21 * * *` | ~15-20 min |
 | `sync_stylus.py` | `0 2,6,10,14,18,22 * * *` | ~5 min |
 | `sync_preciosgamer.py` | `0 3,7,11,15,19,23 * * *` | ~10 min (1er sync) |
+| `sync_exchange_rates.py` | `*/30 * * * *` | <5 seg |
 
 ## Volumen actual (jun 2026)
 
@@ -160,3 +178,12 @@ DB_PATH = os.path.join(BASE_DIR, "invid.db")
 | stylus | 906 | 863 (95%) | 811 | 653 (72%) | 906 | Mayorista |
 | preciosgamer_* (37) | 145.108 | 141.413 (97%) | 16.300 (11%) | 134.641 (93%) | 127.535 (88%) | Resellers |
 | **Total** | **147.673** | **142.756** | **18.748** | **136.603** | **130.100** | |
+
+---
+
+## Ver también
+
+- [[BluPartPicker]] — índice del proyecto
+- [[resellers]] — auth, formatos y gotchas por fuente
+- [[contexto]] — decisiones de diseño y casos de uso
+- [[changelog]] — historial de cambios
