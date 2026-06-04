@@ -67,3 +67,7 @@ Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.
 
 ---
 *Última actualización: 2026-05-31 — pedidos: nuevos features `feature-laset-fix-marcas-comp11` y `feature-sync-laset-botones`.*
+
+## Ver también
+
+- [[NB/compras/reglas-compras|Reglas de negocio — NB / Compras]]
