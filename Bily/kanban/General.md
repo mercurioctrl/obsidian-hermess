@@ -1,6 +1,7 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- [ ] Subir los aceleradores de [[Adata]] (Recordatorio programado para el 8 de junio a las 15hs).
 - [ ] Alistar la PC de [[Asus]] de marketing (pedido por [[Alejandra Guidonbono|Ale]]).
 - [ ] Para [[Diego Bordon]]: Agregar para que puedan contar de manera más lineal (solo aquellos que realmente no tienen algún dato y hay que contabilizar).
 - [ ] Requerimiento Postventa (Gestión de Armados):
