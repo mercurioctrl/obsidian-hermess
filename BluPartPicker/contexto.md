@@ -30,3 +30,12 @@ Proyecto propio para consolidar catálogos de distribuidores mayoristas de tecno
 - 3 distribuidores activos · ~2.565 productos · ~2.448 en stock
 - API pública en red local 10.10.10.7:4444
 - Syncs automáticos cada 4h, desfasados entre sí para no sobrecargar
+
+---
+
+## Ver también
+
+- [[BluPartPicker]] — índice del proyecto
+- [[arquitectura]] — decisiones técnicas detalladas
+- [[changelog]] — historial de lo implementado
+- [[memoria]] — próximos pasos posibles

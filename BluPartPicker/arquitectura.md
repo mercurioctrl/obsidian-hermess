@@ -60,3 +60,12 @@ Restart=always · Logs: /var/www/blupartpicker/api.log
 | sync_invid.py | `0 */4 * * *` (00,04,08,12,16,20) |
 | sync_ceven.py | `0 1,5,9,13,17,21 * * *` |
 | sync_stylus.py | `0 2,6,10,14,18,22 * * *` |
+
+---
+
+## Ver también
+
+- [[BluPartPicker]] — índice del proyecto
+- [[resellers]] — detalles de autenticación y formatos por distribuidor
+- [[stack]] — dependencias y estructura de archivos
+- [[memoria]] — gotchas y convenciones de código

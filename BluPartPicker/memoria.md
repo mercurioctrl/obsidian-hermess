@@ -55,3 +55,12 @@ Decisiones y contexto no obvio para retomar trabajo futuro rápido.
 - Frontend para comparar precios entre fuentes
 - Alertas cuando un precio cae X%
 - Cross-match por nro_parte entre distribuidores para ver el mismo producto en varios
+
+---
+
+## Ver también
+
+- [[BluPartPicker]] — índice del proyecto
+- [[resellers]] — casos puntuales detallados por distribuidor
+- [[arquitectura]] — schema y convenciones de la DB
+- [[changelog]] — historial de cambios

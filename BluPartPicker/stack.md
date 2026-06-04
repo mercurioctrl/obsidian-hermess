@@ -39,3 +39,11 @@
 - **DB:** SQLite (sin servidor, archivo único)
 - **Crons:** en crontab de hermess
 - **Logs:** `*.log` en `/var/www/blupartpicker/`
+
+---
+
+## Ver también
+
+- [[BluPartPicker]] — índice del proyecto
+- [[arquitectura]] — cómo se conectan los componentes
+- [[resellers]] — qué usa cada distribuidor

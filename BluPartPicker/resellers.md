@@ -24,3 +24,11 @@
 - **Stock:** `"Si"→1`, `"No"/"Call"→0` desde TSV. Stock numérico del catálogo (scraping web)
 - **Imágenes/URLs:** Scraping catálogo paginado `?TipoListado=Imagen&SortBy=4&pag=N` · ~103 páginas · tarjeta `.product-info-wrapper` · código en `.producto-codigo` como `#XXXX`
 - **Gotcha:** El filtro `?Codigo=XXX` en la URL NO funciona (devuelve catálogo completo). ~253 productos del TSV no aparecen en el catálogo → imagen/url quedan NULL
+
+---
+
+## Ver también
+
+- [[BluPartPicker]] — índice del proyecto
+- [[arquitectura]] — schema DB, endpoints, crons
+- [[memoria]] — credenciales, gotchas críticos y convenciones

@@ -1,5 +1,18 @@
 # Changelog — BluPartPicker
 
+## 2026-06-03 (continuación)
+
+### Repositorio Git
+- Subido a `git@github.com:BluIncStudio/bluPartPicker.git` (privado), rama `main`
+- `.gitignore`: excluye `invid.db`, `*.log`, `__pycache__`, `settings.local.json`
+
+### Bóveda Obsidian configurada
+- Carpeta `BluPartPicker/` en la bóveda con 7 notas: índice, arquitectura, resellers, stack, contexto, changelog, memoria
+- `CLAUDE.md` del proyecto en `.claude/CLAUDE.md` con sección Obsidian
+- `Home.md` actualizado con la nueva sección
+
+---
+
 ## 2026-06-03
 
 ### Nuevo distribuidor: Stylus
@@ -47,3 +60,11 @@
 - `itemsRepository`: catálogo unificado con UNIQUE(source, codigo)
 - `price_stock_history`: historial de precios/stock
 - `sync_log`: log de ejecuciones
+
+---
+
+## Ver también
+
+- [[BluPartPicker]] — índice del proyecto
+- [[arquitectura]] — estado actual del sistema
+- [[contexto]] — motivación y decisiones de diseño
