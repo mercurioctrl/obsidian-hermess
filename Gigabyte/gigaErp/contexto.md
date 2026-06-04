@@ -139,12 +139,16 @@ BORRADOR → APROBADA → FACTURADA
 
 ## TODOs pendientes
 
-- [ ] Agregar SKUs reales a productos de Elit y Air
+- [ ] Agregar SKUs reales a productos de Elit y Air (Ceven/Stylus ya los tienen via vincular-skus)
+- [ ] Resellers: comparativa de precios entre tiendas para el mismo SKU
 - [ ] Export Excel (`maatwebsite/excel` instalado, stubs 501)
 - [ ] Permisos granulares en sidebar (hoy todos ven todo)
 - [ ] Vista/edición de Ventas directa (hoy solo se accede via orden)
 - [ ] Campo `shipping_usd` editable en alguna UI (hoy default 0)
 - [ ] Anular nota de crédito (endpoint de estado ANULADA)
+- [x] Integración real partpicker: sync Air/Ceven/Invid/Stylus con vincular-skus
+- [x] Módulo Resellers live (sin DB) con filtros
+- [x] Filtro de marca default GIGABYTE en APIs Distri, Stock Distri y Resellers
 - [x] Nota de crédito desde cuenta corriente (texto libre)
 - [x] Nota de crédito desde orden facturada (pre-llenada, editable para parciales)
 - [x] Línea de crédito por distribuidor con historial de cambios
@@ -175,3 +179,4 @@ BORRADOR → APROBADA → FACTURADA
 ## Ver también
 
 [[gigaErp]] · [[arquitectura]] · [[changelog]] · [[memoria]]
+

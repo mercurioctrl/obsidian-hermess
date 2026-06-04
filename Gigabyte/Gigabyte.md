@@ -1,32 +1,17 @@
 # Gigabyte
 
-Proyectos relacionados con la marca Gigabyte (hardware IT).
+Proyectos relacionados con la marca **Gigabyte** (hardware IT Argentina).
 
 ---
 
 ## Proyectos
 
 ### gigaErp
-ERP interno para gestión de distribuidores, stock, órdenes de venta, cuenta corriente y buscador global.
-Commit actual: `dd811dd` — Sincronizar APIs + buscador global ⌘K
-
+ERP interno — distribuidores, stock, órdenes de venta, facturación, marketing.
 - [[gigaErp/gigaErp|gigaErp — índice]]
-  - [[gigaErp/arquitectura|Arquitectura]]
-  - [[gigaErp/changelog|Changelog]]
-  - [[gigaErp/contexto|Contexto de negocio]]
-  - [[gigaErp/memoria|Memoria y gotchas]]
-  - [[gigaErp/stack|Stack técnico]]
-  - [[gigaErp/design-system|Design system]]
-  - [[gigaErp/componentes-ui|Componentes UI]]
-  - [[gigaErp/troubleshooting|Troubleshooting]]
-
-#### Módulos
-  - [[gigaErp/modulos/ordenes-venta|Órdenes de Venta]]
-  - [[gigaErp/modulos/invoice-preview|Invoice Preview]]
-  - [[gigaErp/modulos/productos|Productos / APIs Distri]]
-
----
-
-## Ver también
-
-- [[Home]] — índice general de la bóveda
+- [[gigaErp/arquitectura|Arquitectura]]
+- [[gigaErp/changelog|Changelog]]
+- [[gigaErp/contexto|Contexto y TODOs]]
+- [[gigaErp/modulos/productos|Módulo APIs Distri (partpicker)]]
+- [[gigaErp/modulos/resellers|Módulo Resellers]]
+- [[gigaErp/modulos/ordenes-venta|Módulo Órdenes de Venta]]

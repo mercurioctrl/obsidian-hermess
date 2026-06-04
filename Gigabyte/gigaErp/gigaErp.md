@@ -3,7 +3,7 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `dd811dd` · **Última sincronización:** 2026-05-27
+**Último commit:** `b7c7377` · **Última sincronización:** 2026-06-04
 
 ---
 
@@ -22,11 +22,12 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 - [[modulos/ordenes-venta]] — pipeline Orden → Aprobación → Invoice → Nota de crédito
 - [[modulos/invoice-preview]] — preview Blu-style + html2pdf client-side
-- [[modulos/productos]] — 4 listas de precio + SKU per-distribuidor
+- [[modulos/productos]] — sync desde partpicker, 4 listas de precio, vincular-skus
+- [[modulos/resellers]] — resellers live desde partpicker, sin importar a DB
 
 ---
 
-## Estado actual (2026-05-27) — commit `dd811dd`
+## Estado actual (2026-06-04) — commit `b7c7377`
 
 ### Módulos implementados
 
@@ -37,41 +38,44 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 | Notas de crédito | ✅ | Desde CC (libre) y desde orden FACTURADA (parciales/totales) |
 | Órdenes de Venta | ✅ | BORRADOR → APROBADA → FACTURADA, permisos granulares |
 | Invoice (PDF + preview) | ✅ | html2pdf.js, preview pública por token |
-| Stock Bodega | ✅ | Depósitos, importaciones XLSX, columnas por depósito (fix object cast) |
-| Stock Distri / APIs Distri | ✅ | Catálogo + botón Sincronizar APIs (simulación por distribuidor) |
+| Stock Bodega | ✅ | Depósitos, importaciones XLSX, columnas por depósito |
+| Stock Distri | ✅ | Tabla cruzada SKU × distribuidor, filtro marca default GIGABYTE |
+| APIs Distri | ✅ | Sync real desde partpicker (Air/Ceven/Invid/Stylus), vincular-skus, filtro GIGABYTE |
+| Resellers | ✅ | Live desde partpicker, 37 tiendas PreciosGamer, filtro GIGABYTE |
 | Fondos de Marketing | ✅ | Asignación por distribuidor y año |
 | Tareas (Kanban) | ✅ | 4 columnas, drag & drop, modal detalle |
 | Calendario | ✅ | Eventos y fechas comerciales |
 | Configuración | ✅ | Datos empresa + CRUD usuarios con permisos |
 | Buscador global | ✅ | Topbar ⌘K — busca clientes, productos, OV, proveedores, tareas |
 
-### Dashboard — widgets actuales
+### Sidebar
 
 ```
-Row 1-2: 6 KPI cards (Distribuidores, Ingresos, Gastos, Resultado, Cobrado, Deuda)
-Row 3:   Pixel bar chart 12 meses (Ingresos vs Gastos)
-Row 4:   Tareas por estado  |  Próximos 14 días (calendario)
-Row 5:   Últimas 8 OV       |  Cuentas corrientes / top deudores
-Row 6:   Resultado período  |  Ventas por estado + Top clientes
-Row 7:   Productos por distribuidor (full width)
+Principal:    Dashboard · Distribuidores · Proveedores
+Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Resellers · Órdenes de Venta
+Marketing:    Fondos · Calendario · Tareas
+Admin:        Configuración (solo admin)
 ```
 
-### Buscador global — `GET /api/search?q=`
+### Distribuidores en DB
 
-```
-Secciones: Clientes · Productos (nombre/SKU) · Órdenes de Venta · Proveedores · Tareas
-Shortcut: ⌘K / Ctrl+K · Mínimo 2 chars · Máx 4 por sección · Debounce 280ms
-Navegación: directo al ítem (clientes/OV) o sección con ?search= pre-relleno
-```
+| id | Nombre | Origen |
+|----|--------|--------|
+| 1 | Elit | seeder demo |
+| 2 | New Bytes | seeder demo + sync partpicker |
+| 3 | Invid | seeder demo + sync partpicker |
+| 4 | Air | seeder demo + sync partpicker |
+| 5 | Ceven | creado al primer sync |
+| 6 | Stylus | creado al primer sync |
 
-### Volumen en DB
+### Volumen en DB (post-sync partpicker)
 
 | Entidad | Cantidad |
 |---------|---------|
-| Órdenes de venta | 22 (OV-0001 a OV-0022) |
-| Ventas / Invoices | 34 (VTA-0001 a VTA-0034) |
-| Movimientos cc | ~62 |
-| Productos | 259 (12 demo + 41 Invid + 206 New Bytes) |
+| Órdenes de venta | 22 |
+| Ventas / Invoices | 34 |
+| Productos (demo+seeders) | ~259 base |
+| Productos (post-sync) | +miles (Air ~8k, Invid ~1.2k, Ceven ~466, Stylus ~908) |
 | Migraciones | 0001–0033 |
 
 ### Usuarios demo
@@ -83,20 +87,10 @@ Navegación: directo al ítem (clientes/OV) o sección con ?search= pre-relleno
 | `martin.fierro@gigabyte.com` / `demo1234` | OPERATIVO | VER_MONTOS |
 | `julia.mendez@gigabyte.com` / `demo1234` | OPERATIVO | — |
 
-### Distribuidores
-
-| Nombre | Ciudad | SKUs | Línea de crédito |
-|--------|--------|------|-----------------|
-| New Bytes | Córdoba | 206 | $20,000 |
-| Invid | Mendoza | 41 | $40,000 |
-| Elit | Buenos Aires | — | $30,000 |
-| Air | Rosario | — | $12,000 |
-
 ---
 
 ## Ver también
 
-- [[changelog]] — últimos: Sincronizar APIs (dd811dd) · buscador global (88d87bd) · fix stocks (4fb850e)
-- [[arquitectura]] — estructura completa incluyendo SearchController y GlobalSearch
-- [[memoria]] — gotchas: arrow functions PHP, (object) cast, enum keyBy
+- [[changelog]] — últimos: partpicker real + resellers (b7c7377) · buscador (88d87bd) · fix stocks (4fb850e)
+- [[arquitectura]] — SincronizarApiController, ResellersController, patrón proxy API externa
 - [[contexto]] — reglas de negocio y TODOs pendientes
