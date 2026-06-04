@@ -78,3 +78,36 @@
 - [[BluPartPicker]] — índice del proyecto
 - [[arquitectura]] — estado actual del sistema
 - [[contexto]] — motivación y decisiones de diseño
+---
+
+## 2026-06-04 — Sesión 3: Exchange rates + conversión de precios + optimización DB
+
+### Tabla `exchange_rates` + sync automático
+- Nueva tabla en SQLite: `casa`, `nombre`, `compra`, `venta`, `source_updated_at`, `fetched_at`
+- 7 tipos de cambio: `oficial`, `mayorista`, `blue`, `bolsa`, `contadoconliqui`, `cripto`, `tarjeta`
+- `sync_exchange_rates.py`: fetch desde `dolarapi.com/v1/dolares` (sin auth), upsert por `casa`
+- Cron: `*/30 * * * *` (cada 30 min, sin log en sync_log por ser operación trivial)
+- Endpoint: `GET /exchange-rates` — devuelve las 7 casas ordenadas por relevancia
+
+### API v2.1.0 — conversión de precios y filtros nuevos en `/items`
+- `moneda_out=ARS|USD`: convierte `precio_final` al vuelo usando el TC activo → agrega campo `precio_convertido`
+- `tc=mayorista|blue|oficial|...`: elige la casa de cambio (default: `mayorista`)
+- `precio_min` / `precio_max`: filtra por precio convertido (requiere `moneda_out`)
+- `sort_by=precio|fabricante|producto|updated_at` + `sort_dir=asc|desc`
+- La conversión es inline SQL: `CASE WHEN moneda='USD' THEN precio_final * {tc} ELSE precio_final END`
+- Mayoristas devuelven ARS reales; resellers (PreciosGamer, ARS) se mantienen o convierten a USD
+
+### Optimización SQLite para 147k items
+- WAL mode activado (`PRAGMA journal_mode=WAL`) — permite reads concurrentes durante writes de sync
+- Pragmas por conexión en `get_db()`: `cache_size=-51200` (50MB), `temp_store=MEMORY`, `mmap_size=134217728` (128MB)
+- 8 índices: `distribuidor`, `source`, `isinstock`, `LOWER(categoria)`, `LOWER(fabricante)`, `(distribuidor, LOWER(categoria))`, `(distribuidor, LOWER(fabricante))`, `(fabricante, producto)`
+- Caché en memoria por worker (dict con TTL 5 min): `/categorias`, `/fabricantes` y tipos de cambio
+
+### Fix crítico: Invid moneda `US$` → `USD`
+- El Excel de Invid entrega `moneda="US$"`, no `"USD"`
+- La expresión SQL `CASE WHEN moneda='USD'` no matcheaba → 1.195 items sin conversión
+- Fix: normalización en `parse_excel()` al momento del parseo
+- Backfill manual: `UPDATE itemsRepository SET moneda='USD' WHERE moneda='US$' AND source='invid'` (1.195 filas)
+
+Archivos modificados: `api.py`, `sync_invid.py`, `sync_exchange_rates.py` (nuevo), `docs/architecture.md`, `README.md`
+
