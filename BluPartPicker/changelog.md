@@ -1,5 +1,21 @@
 # Changelog — BluPartPicker
 
+## 2026-06-04
+
+### Refactor portabilidad (commit `42a0eb7` — Claude Opus 4.8 desde host Ubuntu/AWS)
+- `api.py` + `sync_*.py`: `DB_PATH` y logs ya no hardcodean `/var/www/blupartpicker` — usan `BASE_DIR = os.path.dirname(os.path.abspath(__file__))`, el repo funciona desde cualquier clone/host/usuario
+- `start.sh`: `WORKDIR` desde la ubicación del script, `User=$(id -un)` en el unit de systemd, bootstrap de pip si no está instalado, fallback de Playwright para OS nuevos (`PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-x64` + libs `t64`)
+- `sync_invid.py`: fix bug — columna `categoria` faltaba en el `CREATE TABLE` (el INSERT ya la usaba, el primer sync en un host limpio fallaba con "no column named categoria")
+- `README.md` + `docs/architecture.md`: documentada la portabilidad y el setup en Ubuntu 26.04 / Python 3.14
+
+### `start.sh` probado y validado en este host
+- Exit code 0, todos los pasos OK
+- Deps instaladas, browser Playwright cacheado, systemd regenerado, crons actualizados
+- Invid ✓ · Stylus ✓ · Ceven ✓ (25 entradas nuevas en historial)
+- API verificada: 2.565 productos, 3 fuentes respondiendo
+
+---
+
 ## 2026-06-03 (continuación)
 
 ### Repositorio Git

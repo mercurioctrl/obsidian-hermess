@@ -49,4 +49,4 @@ tail -f /var/www/blupartpicker/api.log
 
 **Repo:** `git@github.com:BluIncStudio/bluPartPicker.git` (privado · rama `main`)
 
-*Última sincronización: 2026-06-03*
+*Última sincronización: 2026-06-04*

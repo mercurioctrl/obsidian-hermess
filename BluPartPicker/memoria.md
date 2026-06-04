@@ -35,6 +35,15 @@ Decisiones y contexto no obvio para retomar trabajo futuro rápido.
 - `stock` puede ser NULL (Invid no tiene stock numérico)
 - `precio_final` siempre con IVA incluido
 
+## Portabilidad — cómo correr en un host nuevo
+
+`bash start.sh` es suficiente desde cualquier clone. Maneja solo:
+- **pip no instalado** (Ubuntu nuevo) → lo bootstrappea vía apt / ensurepip
+- **Playwright sin build oficial** (Ubuntu 26.04+) → usa `PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-x64` (la arch en el string es obligatoria) + instala libs `t64` vía apt
+- **systemd unit** → se genera con `User=$(id -un)` y el path real del clone, no hay nada hardcodeado
+
+**Bug conocido resuelto:** `sync_invid.py` en versiones anteriores al commit `42a0eb7` no tenía `categoria` en el `CREATE TABLE`. Si la DB fue creada con esa versión vieja, hacer `ALTER TABLE itemsRepository ADD COLUMN categoria TEXT` manualmente.
+
 ## Agregar un nuevo distribuidor
 
 1. Crear `sync_NOMBRE.py` siguiendo patrón de `sync_stylus.py`
