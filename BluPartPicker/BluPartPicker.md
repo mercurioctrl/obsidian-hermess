@@ -1,52 +1,38 @@
 # BluPartPicker
 
-Catálogo unificado de distribuidores mayoristas de tecnología argentina. Consolida productos, precios, stock e imágenes de múltiples distribuidores en una sola API REST con historial de cambios.
+Catálogo unificado de tecnología argentina. API REST que consolida mayoristas y resellers en una sola DB SQLite con historial de precios.
 
-**Ruta:** `/var/www/blupartpicker`  
-**API:** `http://10.10.10.7:4444`  
-**Docs:** `http://10.10.10.7:4444/docs`  
-**DB:** `/var/www/blupartpicker/invid.db` (SQLite)
+**Última sync:** 2026-06-04
 
----
+## Stack
+
+- Python 3 · SQLite · FastAPI · uvicorn · systemd · cron
+- Playwright (solo Ceven, por Akamai)
+
+## Fuentes
+
+| Source | Tipo | Productos | Moneda |
+|--------|------|-----------|--------|
+| `invid` | Mayorista | ~1.195 | USD |
+| `ceven` | Mayorista | ~464 | USD |
+| `stylus` | Mayorista | ~906 | USD |
+| `preciosgamer_*` (37) | Resellers | ~145.108 | ARS |
+
+## API — http://10.10.10.7:4444
+
+```bash
+GET /items?categoria=MOUSE&fabricante=Logitech&distribuidor=0
+GET /categorias?distribuidor=0
+GET /fabricantes?categoria=MOUSE&distribuidor=1
+GET /items/{source}/{codigo}/historia
+GET /sources  |  GET /sync/log
+```
 
 ## Notas
 
-- [[BluPartPicker/arquitectura|Arquitectura]]
-- [[BluPartPicker/resellers|Resellers — casos puntuales]]
-- [[BluPartPicker/contexto|Contexto y motivación]]
-- [[BluPartPicker/stack|Stack e infraestructura]]
-- [[BluPartPicker/changelog|Changelog]]
-- [[BluPartPicker/memoria|Memoria Claude]]
-
----
-
-## Distribuidores activos
-
-| Source    | Productos | Con imagen | En stock | Cron           |
-|-----------|-----------|------------|----------|----------------|
-| `invid`   | ~1.195    | ~3%        | ~1.195   | cada 4h (00hs) |
-| `ceven`   | ~464      | ~96%       | ~442     | cada 4h (01hs) |
-| `stylus`  | ~906      | ~95%       | ~811     | cada 4h (02hs) |
-| **Total** | **~2.565**|            |**~2.448**|                |
-
----
-
-## Quick commands
-
-```bash
-# Estado de la API
-curl http://10.10.10.7:4444/sources
-
-# Sync manual
-python3 /var/www/blupartpicker/sync_invid.py
-python3 /var/www/blupartpicker/sync_ceven.py
-python3 /var/www/blupartpicker/sync_stylus.py
-
-# Servicio
-sudo systemctl restart blupartpicker-api
-tail -f /var/www/blupartpicker/api.log
-```
-
-**Repo:** `git@github.com:BluIncStudio/bluPartPicker.git` (privado · rama `main`)
-
-*Última sincronización: 2026-06-04*
+- [[arquitectura]] — schema DB, endpoints, inferencia de categoría/marca
+- [[resellers]] — auth, formatos y gotchas por fuente
+- [[stack]] — dependencias y versiones
+- [[contexto]] — decisiones de diseño y casos de uso
+- [[changelog]] — historial de lo implementado
+- [[memoria]] — próximos pasos y gotchas de sesión

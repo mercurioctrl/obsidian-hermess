@@ -1,49 +1,51 @@
-# Stack e Infraestructura — BluPartPicker
+# Stack — BluPartPicker
 
-## Python / Dependencias
+## Runtime
 
-| Paquete | Versión | Uso |
-|---|---|---|
-| fastapi | 0.133.1 | API REST |
-| uvicorn | 0.27.1 | ASGI server |
-| requests | 2.31.0 | HTTP (Invid, Stylus) |
-| openpyxl | 3.1.5 | Excel Invid |
-| playwright | 1.58.0 | Browser headless Ceven |
-| beautifulsoup4 | 4.14.3 | Scraping Invid, Stylus |
-| xlrd | 2.0.2 | (instalado, no se usa activamente) |
+- **Python 3** (probado en 3.12 y 3.14)
+- **SQLite** — `invid.db`, ~147k rows, sin servidor
+- **FastAPI** — API REST, puerto 4444, CORS abierto GET
+- **uvicorn** — ASGI server
+- **systemd** — service `blupartpicker-api`
+- **cron** — 4 jobs (invid, ceven, stylus, preciosgamer), desfasados por hora
 
-**Python:** 3.12.3  
-**Instalar todo:** `pip install fastapi uvicorn requests openpyxl beautifulsoup4 xlrd playwright --break-system-packages && python3 -m playwright install chromium`
-
-## Archivos del proyecto
+## Dependencias Python
 
 ```
-/var/www/blupartpicker/
-├── api.py              FastAPI app
-├── sync_invid.py       Sync Invid Computers
-├── sync_ceven.py       Sync Ceven (Playwright)
-├── sync_stylus.py      Sync Stylus S.A.
-├── invid.db            SQLite — toda la data
-├── start.sh            Setup desde cero
-├── README.md           Documentación de uso
-└── docs/
-    ├── architecture.md
-    └── resellers.md
+fastapi          # API REST
+uvicorn          # ASGI server
+requests         # HTTP para Invid, Stylus, PreciosGamer
+openpyxl         # Excel de Invid
+playwright       # Browser para Ceven (Akamai bypass)
+beautifulsoup4   # Scraping catálogo Invid y Stylus
 ```
 
-## Infraestructura
+## Syncs
 
-- **OS:** Linux Ubuntu, Python 3.12
-- **Servicio:** `blupartpicker-api.service` (systemd, user hermess)
-- **Puerto:** 4444
-- **DB:** SQLite (sin servidor, archivo único)
-- **Crons:** en crontab de hermess
-- **Logs:** `*.log` en `/var/www/blupartpicker/`
+| Script | Fuente | Técnica | Duración |
+|--------|--------|---------|----------|
+| `sync_invid.py` | Invid | Excel + scraping | ~5 min |
+| `sync_ceven.py` | Ceven | Playwright + NetSuite API | ~15-20 min |
+| `sync_stylus.py` | Stylus | TSV latin-1 + scraping | ~5 min |
+| `sync_preciosgamer.py` | PreciosGamer | API REST paginada | ~10 min (1er sync) |
+
+## APIs externas
+
+| API | Auth | Notas |
+|-----|------|-------|
+| PreciosGamer | Ninguna | `https://api.preciosgamer.com/v1/sync/items-export/123` |
+| Invid | Session cookie | Login por form |
+| Stylus | Session cookie | Login por form |
+| Ceven | Playwright session | Akamai bloquea requests directos |
+
+## Hosts probados
+
+- Ubuntu 22.04 LTS
+- Ubuntu 26.04 "resolute" (Python 3.14, libs Chromium `t64`, Playwright override `ubuntu24.04-x64`)
 
 ---
 
 ## Ver también
 
-- [[BluPartPicker]] — índice del proyecto
+- [[BluPartPicker]] — índice
 - [[arquitectura]] — cómo se conectan los componentes
-- [[resellers]] — qué usa cada distribuidor
