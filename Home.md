@@ -24,11 +24,11 @@
 
 ## BluPartPicker
 
-- [[BluPartPicker/BluPartPicker|BluPartPicker]] — Catálogo unificado de tecnología argentina · API REST puerto 4444 · ~147k productos · v2.1.0
+- [[BluPartPicker/BluPartPicker|BluPartPicker]] — Catálogo unificado de tecnología argentina · API REST puerto 4444 · v2.1.0 · commit `7e34d62`
   - [[BluPartPicker/arquitectura|arquitectura]] · [[BluPartPicker/resellers|resellers]] · [[BluPartPicker/stack|stack]] · [[BluPartPicker/contexto|contexto]] · [[BluPartPicker/changelog|changelog]] · [[BluPartPicker/memoria|memoria]]
   - Mayoristas (`distribuidor=1`): **Invid** · **Ceven** · **Stylus** — precios USD
-  - Resellers (`distribuidor=0`): **37 tiendas vía PreciosGamer** — precios ARS
-  - Exchange rates USD/ARS actualizados cada 30 min (dolarapi.com · 7 casas)
+  - Resellers (`distribuidor=0`): **37 tiendas vía PreciosGamer** — source por nombre (, etc.) — últimas 48h
+  - Exchange rates USD/ARS cada 30 min (dolarapi.com · 7 casas)
   - `http://10.10.10.7:4444` · `GET /items?moneda_out=ARS&tc=mayorista&sort_by=precio`
 
 ---

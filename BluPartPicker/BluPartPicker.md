@@ -2,7 +2,7 @@
 
 Catálogo unificado de tecnología argentina. API REST que consolida mayoristas y resellers en una sola DB SQLite con historial de precios y conversión de moneda en tiempo real.
 
-**Última sync:** 2026-06-04
+**Última sync:** 2026-06-04 · **Commit:** `7e34d62`
 
 ## Stack
 
@@ -12,29 +12,22 @@ Catálogo unificado de tecnología argentina. API REST que consolida mayoristas 
 
 ## Fuentes
 
-| Source | Tipo | Productos | Moneda |
-|--------|------|-----------|--------|
-| `invid` | Mayorista | ~1.195 | USD |
-| `ceven` | Mayorista | ~464 | USD |
+| Source | Tipo | Items activos | Moneda |
+|--------|------|---------------|--------|
+| `invid` | Mayorista | ~1.197 | USD |
+| `ceven` | Mayorista | ~466 | USD |
 | `stylus` | Mayorista | ~906 | USD |
-| `preciosgamer_*` (37) | Resellers | ~145.108 | ARS |
+| `preciosgamer_{slug}` (37) | Resellers | ~8-10k (últimas 48h) | ARS |
 
 ## API — http://10.10.10.7:4444
 
 ```bash
-# Filtros principales
 GET /items?categoria=MOUSE&fabricante=Logitech&distribuidor=0
 GET /items?distribuidor=1&moneda_out=ARS&tc=mayorista&sort_by=precio
-
-# Conversión de precios
-GET /items?moneda_out=ARS&tc=blue&precio_min=50000&precio_max=200000
+GET /items?moneda_out=USD&tc=blue&precio_min=100&precio_max=500
 GET /exchange-rates
-
-# Navegación
 GET /categorias?distribuidor=0
 GET /fabricantes?categoria=MOUSE&distribuidor=1
-
-# Detalle e historial
 GET /items/{source}/{codigo}
 GET /items/{source}/{codigo}/historia
 GET /sources  |  GET /sync/log
