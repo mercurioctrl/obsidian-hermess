@@ -60,4 +60,10 @@ Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.
 - [[Compras/Compras|Índice]] · [[Compras/arquitectura|Arquitectura]] · [[Compras/stack|Stack]] · [[Compras/changelog|Changelog]]
 
 ---
+
+## Borradores
+
+- [[NB/Borradores/[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]|[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]]]
+
+---
 *Última actualización: 2026-05-31 — pedidos: nuevos features `feature-laset-fix-marcas-comp11` y `feature-sync-laset-botones`.*

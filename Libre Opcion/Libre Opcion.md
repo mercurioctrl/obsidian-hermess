@@ -92,8 +92,23 @@ Documentación estratégica de libreopcion.com.ar: diagnóstico, hoja de ruta, p
 - [[Libre Opcion/Gestion X/00 - Índice Gestión X|Índice Gestión X]] — índice de los 19 documentos estratégicos
 - [[Libre Opcion/Gestion X/01 - Estudio de Mercado - Referentes|Estudio de Mercado — Referentes]]
 - [[Libre Opcion/Gestion X/02 - Hoja de Ruta - Fase 1 Diferenciación y Confianza|Hoja de Ruta Fase 1]]
+- [[Libre Opcion/Gestion X/03 - Hoja de Ruta - Fase 2 Rentabilización y Profundidad|Hoja de Ruta Fase 2 — Rentabilización y Profundidad]]
+- [[Libre Opcion/Gestion X/04 - Hoja de Ruta - Fase 3 Escala y Plataforma|Hoja de Ruta Fase 3 — Escala y Plataforma]]
+- [[Libre Opcion/Gestion X/05 - Roles por Fase|Roles por Fase]]
+- [[Libre Opcion/Gestion X/06 - Ventajas Competitivas y Posicionamiento|Ventajas Competitivas y Posicionamiento]]
+- [[Libre Opcion/Gestion X/07 - Idea Hunnox - Marca propia Smart Home|Idea Hunnox — Marca propia Smart Home]]
+- [[Libre Opcion/Gestion X/08 - Detección de Tendencias - Método y Herramientas|Detección de Tendencias — Método y Herramientas]]
+- [[Libre Opcion/Gestion X/09 - Estudio de Catálogo - Compra Gamer|Estudio de Catálogo — Compra Gamer]]
+- [[Libre Opcion/Gestion X/10 - Reposicionamiento - De Precio a Confianza|Reposicionamiento — De Precio a Confianza]]
+- [[Libre Opcion/Gestion X/11 - Estrategia de Cuotas y Precio|Estrategia de Cuotas y Precio]]
+- [[Libre Opcion/Gestion X/12 - Modelo Operativo - Importador-Mayorista con Red de Vendedores|Modelo Operativo — Importador-Mayorista con Red de Vendedores]]
+- [[Libre Opcion/Gestion X/13 - El Verdadero Cuello de Botella es la Demanda|El Verdadero Cuello de Botella es la Demanda]]
+- [[Libre Opcion/Gestion X/14 - Liquidacion de Aging como Motor de Demanda|Liquidación de Aging como Motor de Demanda]]
 - [[Libre Opcion/Gestion X/15 - Plan de Accion - Proximos 6 Meses|Plan de Acción — Próximos 6 Meses]]
+- [[Libre Opcion/Gestion X/16 - Armador, Combos Dinamicos y Builds de la Comunidad|Armador, Combos Dinámicos y Builds de la Comunidad]]
+- [[Libre Opcion/Gestion X/17 - Exclusivas - Marcas Conocidas que Nadie Trae|Exclusivas — Marcas Conocidas que Nadie Trae]]
 - [[Libre Opcion/Gestion X/18 - Analisis Performance Ventas 12 Meses (FODA)|Análisis Performance Ventas 12 Meses (FODA)]]
+- [[Libre Opcion/Gestion X/19 - Politica de Envios|Política de Envíos]]
 - [[Libre Opcion/Gestion X/Informe Diagnostico Conversion - Mayo 2026|Informe Diagnóstico Conversión — Mayo 2026]]
 
 ## Contexto comercial
