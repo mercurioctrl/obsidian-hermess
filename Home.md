@@ -22,6 +22,15 @@
 
 ---
 
+## BluPartPicker
+
+- [[BluPartPicker/BluPartPicker|BluPartPicker]] — Catálogo unificado de distribuidores mayoristas de tecnología argentina · API REST puerto 4444
+  - [[BluPartPicker/arquitectura|arquitectura]] · [[BluPartPicker/resellers|resellers]] · [[BluPartPicker/stack|stack]] · [[BluPartPicker/contexto|contexto]] · [[BluPartPicker/changelog|changelog]] · [[BluPartPicker/memoria|memoria]]
+  - Distribuidores: **Invid** (Excel + scraping) · **Ceven** (Playwright + NetSuite API) · **Stylus** (TSV por marca + scraping)
+  - `http://10.10.10.7:4444` · ~2.565 productos · ~2.448 en stock
+
+---
+
 ## Asus
 
 - [[Asus/Asus|Asus]] — Empresa de tecnología / hardware
