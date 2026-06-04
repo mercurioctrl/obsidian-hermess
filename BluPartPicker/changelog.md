@@ -110,4 +110,35 @@
 - Backfill manual: `UPDATE itemsRepository SET moneda='USD' WHERE moneda='US$' AND source='invid'` (1.195 filas)
 
 Archivos modificados: `api.py`, `sync_invid.py`, `sync_exchange_rates.py` (nuevo), `docs/architecture.md`, `README.md`
+---
+
+## 2026-06-04 — Sesión 4: PreciosGamer — source por nombre, modelo 48h, fixes
+
+### Source por nombre de reseller
+- El source se generaba como `preciosgamer_{resellerId}` (ej: `preciosgamer_1061`)
+- Cambiado a slug del nombre real: `preciosgamer_venex`, `preciosgamer_libre-opcion`, etc.
+- `_source_slug(name)`: lowercase + guiones, sin caracteres especiales
+- Migración de DB: 145.108 rows en `itemsRepository`, `price_stock_history` y `sync_log`
+
+### Modelo de sync: DELETE + INSERT, ventana 48h
+- Antes: upsert acumulativo — los items viejos se quedaban indefinidamente
+- Ahora: `DELETE FROM itemsRepository WHERE source LIKE 'preciosgamer_%'` antes de cada insert
+- `since` fijo = ahora - 48h (antes dependía del sync_log)
+- Así la tabla siempre muestra solo los items actualizados en las últimas 48h
+- `price_stock_history` no se toca (mantiene historial completo)
+
+### sku → nro_parte
+- PreciosGamer agregó campo `sku` a su API (puede ser NULL)
+- Mapeado a `nro_parte` en `normalize()` y en el UPDATE de `upsert_products()`
+- Ejemplos: `AC-HUEHU-B1`, `25246`, NULL
+
+### start.sh corregido
+- Faltaban crons de `sync_preciosgamer.py` y `sync_exchange_rates.py`
+- Faltaba el primer sync de ambos scripts en el setup inicial
+- Sin esto, `exchange_rates` nunca se creaba y la conversión de precios no funcionaba en server nuevo
+
+### Operacional
+- Ceven tuvo timeouts de login en 3 ejecuciones de cron consecutivas (08:00, 12:00, 04:00) — transitorio
+- Manual run funcionó OK: 466 items, 462 procesados
+- Commit `7e34d62` pusheado a main
 

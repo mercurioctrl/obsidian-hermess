@@ -3,26 +3,26 @@
 ## Estado actual (2026-06-04)
 
 - **4 fuentes:** invid, ceven, stylus, preciosgamer_* (37 resellers)
-- **147.673 productos** en total — 2.565 mayoristas + 145.108 resellers
+- **~10k productos activos de PreciosGamer** (últimas 48h) + 2.565 mayoristas
 - **API v2.1.0** — conversión de precios en tiempo real con tipos de cambio
-- Todos los syncs con cron cada 4h, desfasados hora por hora (0, 1, 2, 3)
-- Exchange rates: cada 30 min desde dolarapi.com
+- Todos los syncs con cron: invid cada 4h, ceven/stylus/preciosgamer cada 4h desfasados, exchange rates cada 30 min
 
 ## Gotchas activos
 
 - La DB se llama `invid.db` — herencia del primer distribuidor, no renombrar (rompe paths)
-- PreciosGamer: `source = preciosgamer_{resellerId}`, no por nombre de tienda
+- **PreciosGamer source:** formato `preciosgamer_{slug}` — ej: `preciosgamer_venex`, `preciosgamer_libre-opcion`. NO es el resellerId numérico (ya migrado).
+- **PreciosGamer modelo:** DELETE + INSERT en cada sync. No hay "actualizados", siempre son "nuevos". La tabla muestra solo los items actualizados en las últimas 48h.
 - El oráculo de marcas usa qty≥2 — marcas con 1 sola ocurrencia se ignoran como ruido
-- Playwright solo para Ceven; nunca intentar mover las llamadas a requests
-- **Invid moneda:** el Excel devuelve `"US$"`, no `"USD"` — siempre normalizar en `parse_excel()`. El CASE en la API usa `moneda = 'USD'` exacto; si llega `"US$"` la conversión falla silenciosamente.
-- Los precios en la API están en moneda original (`moneda` field). Para comparar USD vs ARS necesitar pasar `moneda_out`; sin eso `precio_final` es el valor crudo de cada fuente.
+- Playwright solo para Ceven; Akamai bloquea cualquier intento con requests/curl
+- **Invid moneda:** el Excel devuelve `"US$"`, no `"USD"` — siempre normalizar en `parse_excel()`. La expresión SQL usa `moneda = 'USD'` exacto.
+- Los precios en la API están en moneda original. Para comparar USD vs ARS usar `moneda_out`; sin eso `precio_final` es el valor crudo de cada fuente.
+- Ceven puede tener timeouts de login transitorios — si falla en cron, correr manual primero para confirmar que el sitio esté operativo.
 
 ## Próximos pasos posibles
 
 - Alertas de precio: webhook/email cuando `precio_final` baja N% en `price_stock_history`
 - Endpoint `/items/comparar?codigo=X` — mismo producto en múltiples fuentes
 - Frontend mínimo de comparación de precios
-- Scrapear categorías de PreciosGamer si la API las expone en otro endpoint
 
 ## Credenciales y accesos
 
@@ -39,3 +39,4 @@
 - [[BluPartPicker]] — índice del proyecto
 - [[arquitectura]] — detalles técnicos
 - [[changelog]] — historial completo
+- [[resellers]] — auth, formatos y gotchas por fuente
