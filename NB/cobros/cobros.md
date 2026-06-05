@@ -17,3 +17,7 @@ Sistema financiero para gestión de cobros, pagos, cheques, cajas y cuentas corr
 - [[stack]] — tecnologías, versiones, dependencias
 - [[changelog]] — historial de cambios por fecha
 - [[contexto]] — reglas de negocio, decisiones, bugs conocidos, TODOs
+
+## Ver también
+
+- [[NB/NB|NB]] — sistema padre

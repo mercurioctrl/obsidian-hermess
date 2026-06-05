@@ -53,7 +53,7 @@
 
 ## Hogar
 
-- [[Hogar/Lavadero/Lavadero|Lavadero]] · [[Hogar/Oficina/Oficina|Oficina]] · [[Hogar/Impuestos-y-Servicios|Impuestos y Servicios]] · [[Hogar/Servicios/Metrogas|Metrogas]] · [[Hogar/Servicios/Edesur|Edesur]]
+- [[Hogar/Lavadero/Lavadero|Lavadero]] · [[Hogar/Oficina/Oficina|Oficina]] · [[Hogar/Impuestos-y-Servicios|Impuestos y Servicios]] · [[Hogar/Servicios/Metrogas|Metrogas]] · [[Hogar/Servicios/Edesur|Edesur]] · [[Hogar/Presupuesto_Mario_2026|Presupuesto Mario 2026]]
 
 ## Laset
 
@@ -84,7 +84,7 @@
 ## Bily
 
 - [[Bily/Inicio|Inicio de Bily]] — Asistente técnico/operativo de Catriel (William/Bily)
-  - [[Bily/MEMORIA|Memoria operativa]] · [[Bily/bitacoras/bitacoras|bitácoras]] · [[Bily/kanban/LASET|kanban LASET]]
+  - [[Bily/MEMORIA|Memoria operativa]] · [[Bily/bitacoras/bitacoras|bitácoras]] · [[Bily/kanban/Inicio|Kanban]] · [[Bily/kanban/LASET|kanban LASET]]
   - Personas: [[Bily/personas/Catriel Mercurio|Catriel]] · [[Bily/personas/Ayelen Mercurio|Ayelen]] · [[Bily/personas/Sebastian Fontan|Sebastián]] · [[Bily/personas/Guillermo Avila|Guillermo]] · [[Bily/personas/Emanuel Ferreyra|Emanuel]] · [[Bily/personas/Marbe Moreno|Marbe]] · [[Bily/personas/Ezequiel Manzano|Ezequiel]] · [[Bily/personas/Barbara Carrillo|Bárbara]] · [[Bily/personas/Belu Ontivero|Belu]] · [[Bily/personas/Franco Callipo|Franco]] · [[Bily/personas/Alejandra Guidonbono|Alejandra]] · [[Bily/personas/Carla Carpinteri|Carla]] · [[Bily/personas/Ciro|Ciro]] · [[Bily/personas/Joshua|Joshua]] · [[Bily/personas/Juan|Juan]]
   - Productos: [[Bily/Productos/Productos|Índice de Productos]] · [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bot WhatsApp MVP]] · [[Bily/Productos/Bot-WhatsApp-Nativo|Bot WhatsApp Nativo]] · [[Bily/Productos/Bot-WhatsApp-Elevator-Pitch|Elevator Pitch]] · [[Bily/Productos/Bot-WhatsApp-Minteeo-y-Suenio|Minteo y Sueño]] · [[Bily/Productos/Billy-Bot|Billy-Bot]]
   - [[Bily/Deudores|Deudores]] · [[Bily/aprendizajes/Inicio|Aprendizajes]] · [[Bily/dreams/Inicio|Sueños]] · [[Bily/Finanzas/Inicio|Finanzas]] · [[Bily/pagos/Inicio|Pagos]] · [[Bily/tareas/Inicio|Tareas]] · [[Bily/todos/Inicio|Todos]] · [[Bily/proyectos/Inicio|Proyectos]] · [[Bily/media/Inicio|Media]]

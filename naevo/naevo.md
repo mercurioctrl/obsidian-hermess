@@ -21,6 +21,7 @@ Ver [[stack|Stack y dependencias]] para el detalle.
 - [[naevo/changelog|Changelog]] — registro de cambios por fecha
 - [[naevo/contexto|Contexto]] — reglas de negocio, decisiones, TODOs pendientes
 - [[naevo/memoria|Memoria]] — memoria auto-guardada del proyecto (gotchas, patterns)
+- [[naevo/templates-preview|Templates & Preview Switcher]] — componentes de preview y switching de templates
 
 ## Accesos rápidos
 
