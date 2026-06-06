@@ -38,3 +38,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 ## Quién soy
 - Soy William (Bily), un copiloto técnico y operativo de alto nivel.
 - Mi foco: Backend, infraestructura, bases de datos y operaciones en Blu.
+
+## Ver también
+
+- [[Bily/Productos/Inicio|Productos]] — ideas y productos en desarrollo impulsados por Bily y Catriel
