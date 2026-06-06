@@ -74,7 +74,7 @@ owner: Catriel
   j.comment("EXP-553", "Listo")
   j.sprints(board_id=42, state="active")
   ```
-- **Por qué Python y no Node:** ya hay precedente con whisper (`~/whisper/sidecar.py`), Catriel cómodo, mejor para scripting cron. Plugin OpenClaw queda en Node igual (habla con sidecar por HTTP).
+- **Por qué Python y no Node:** ya hay precedente con whisper (ver [[Claude/Whisper|Whisper local]]), Catriel cómodo, mejor para scripting cron. Plugin OpenClaw queda en Node igual (habla con sidecar por HTTP).
 
 ### L1 · `jira-sidecar` :9002 (servicio local, opcional)
 
@@ -99,7 +99,7 @@ owner: Catriel
 
 ### L2 · Wrappers `jira-*` en `~/bin/` (espejo de `vault-*`)
 
-- **Por qué existen:** mismo motivo que `vault-*` — Bily cuando cae a deepseek alucina URLs/headers. Los wrappers eliminan el vector. Ver [[vault-wrappers]] y [[whisper-local]] punto 7.
+- **Por qué existen:** mismo motivo que `vault-*` — Bily cuando cae a deepseek alucina URLs/headers. Los wrappers eliminan el vector. Ver [[Claude/Vault-Wrappers|Vault Wrappers]] y [[Claude/Whisper|Whisper local]] punto 7.
 - **Comandos:**
   | Cmd | Qué hace |
   |---|---|
@@ -116,7 +116,7 @@ owner: Catriel
 
 ### L3a · Plugin OpenClaw `jira-context-preflight`
 
-- **Patrón:** copia exacta del `whisper-audio-preflight` + `image-ocr-preflight`. Ver [[image-ocr-preflight]] y [[openclaw-plugin-build]].
+- **Patrón:** copia exacta del `whisper-audio-preflight` + `image-ocr-preflight`. Ver [[Claude/Image-OCR|Image OCR preflight]] y [[Claude/Whisper|Whisper local]].
 - **Hook `message_received`:**
   1. Parsear mensaje WhatsApp con regex:
      - Ticket keys: `\b([A-Z]{2,10})-(\d+)\b` → fetch issues.
@@ -133,7 +133,7 @@ owner: Catriel
      [fin contexto Jira]
      ```
   3. El LLM responde con datos frescos sin gastar tool calls.
-- **Por qué hook y no skill/tool:** mismo motivo que OCR — Bily (con fallback a deepseek) **no elige** llamar herramientas confiables. El hook elimina la decisión del modelo. Ver [[image-ocr-preflight]] "Why hook y no skill".
+- **Por qué hook y no skill/tool:** mismo motivo que OCR — Bily (con fallback a deepseek) **no elige** llamar herramientas confiables. El hook elimina la decisión del modelo. Ver [[Claude/Image-OCR|Image OCR preflight]] "Why hook y no skill".
 - **Writes (crear/transicionar/comentar):** **NO** se ejecutan automáticamente desde el hook. El hook solo enriquece contexto. Para writes, el LLM emite una llamada al wrapper `jira-create` etc. via Bash tool — y un hook `before_tool_use` puede pedir confirmación a Catriel por WhatsApp ("¿Confirmás crear COM-301 'X' asignado a vos? sí/no").
 
 ### L3b · Skill de Claude Code (portable)
@@ -247,12 +247,17 @@ tags: [jira, EXP, in-review]
 
 ## 10. Referencias internas
 
-- Patrón sidecar + plugin OpenClaw: [[whisper-local]]
-- Plugin preflight (hook que injecta contexto): [[image-ocr-preflight]]
-- Wrappers `~/bin/`: [[vault-wrappers]]
-- Build de plugins OpenClaw: [[openclaw-plugin-build]]
-- Sesiones de OpenClaw (para entender flujo de mensajes WhatsApp): [[openclaw-sessions]]
-- Workspace Blu: `Blu/bluMiniErp/Base de Datos.md` (tabla `proyecto_jira_boards`)
+- Patrón sidecar + plugin OpenClaw: [[Claude/Whisper|Whisper local]]
+- Plugin preflight (hook que injecta contexto): [[Claude/Image-OCR|Image OCR preflight]]
+- Wrappers `~/bin/`: [[Claude/Vault-Wrappers|Vault Wrappers]]
+- Memoria operativa de Bily: [[Bily/MEMORIA|MEMORIA]]
+- Workspace Blu (tabla `proyecto_jira_boards`): [[Blu/bluMiniErp/Base de Datos|Base de Datos]]
+- Productos Bily: [[Bily/Productos/Inicio|Productos]] · [[Bily/proyectos/Inicio|Proyectos]]
+
+## 11. Ver también
+
+- [[Bily/proyectos/Inicio|Proyectos]] (volver al índice)
+- [[Bily/Inicio|Inicio Bily]]
 
 ---
 
