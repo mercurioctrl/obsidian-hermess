@@ -37,4 +37,4 @@ El flujo de negocio es igual al anterior. Si falla el registro, el proceso de cr
 **Permite que, ante un reclamo ("el envío se creó pero no tiene tracking válido"), se pueda revisar el log del día y ver qué respondió la API de Entregar en ese momento.**
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:23:43 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:27:33 UTC._

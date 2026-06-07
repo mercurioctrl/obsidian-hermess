@@ -28,4 +28,4 @@ Para probar desde pedidos:
 /orders?between=06-01-2026_06-05-2026&companyCode=11&currentPage=1&search=10459755
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:44 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:29:14 UTC._

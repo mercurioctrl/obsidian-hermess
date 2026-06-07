@@ -37,4 +37,4 @@ Todas las semanas se actualiza la tabla de posiciones y los 10 mejores resellers
 MOCKUP ORIENTATIVO
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:37 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:27:35 UTC._

@@ -22,4 +22,4 @@ tags: [jira, LOMKT, activaciones-ok]
 10 posteos  con sus nombresy fechas respectivas
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:47 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:28:47 UTC._

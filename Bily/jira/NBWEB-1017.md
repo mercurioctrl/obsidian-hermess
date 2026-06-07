@@ -47,4 +47,4 @@ Idea inspirada en el ejemplo del sitio de **Nao**.
 Comunicación rápida visible (top banner).
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:51 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:27:36 UTC._

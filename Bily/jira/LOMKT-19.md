@@ -18,4 +18,4 @@ tags: [jira, LOMKT, tareas-por-hacer]
 [LOMKT-19 en Jira](https://bluinc.atlassian.net/browse/LOMKT-19)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:56 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:29:12 UTC._

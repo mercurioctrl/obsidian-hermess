@@ -29,4 +29,4 @@ Los colores son mas del manual de marca de new bytes que de libe opción
 De ser asi cual sería?
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:49 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:29:10 UTC._

@@ -18,4 +18,4 @@ tags: [jira, NBWEB, tareas-por-hacer]
 [NBWEB-1026 en Jira](https://bluinc.atlassian.net/browse/NBWEB-1026)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:37 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:27:34 UTC._

@@ -90,4 +90,4 @@ De esa tarea 24-mensionada
 **Respuesta de laset**: Automatico por default: por ejemplo si tenemos 3 items de 3 proveedores diferentes tendriamos 3 SLI pero que nos dé la opcion de cambiarlo manualmente.
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:45 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:29:15 UTC._

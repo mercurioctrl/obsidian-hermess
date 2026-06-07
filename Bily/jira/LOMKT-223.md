@@ -122,4 +122,4 @@ B) PC escritorio
 ---
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:00 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:28:50 UTC._

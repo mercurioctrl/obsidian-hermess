@@ -25,4 +25,4 @@ tags: [jira, LOMKT, activaciones-ok]
 **25-05** Día del Orgullo Geek
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:23:58 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:28:46 UTC._

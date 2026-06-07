@@ -18,4 +18,4 @@ tags: [jira, LOMKT, activaciones-ok]
 [LOMKT-237 en Jira](https://bluinc.atlassian.net/browse/LOMKT-237)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:23:59 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:28:46 UTC._

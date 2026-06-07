@@ -26,4 +26,4 @@ tags: [jira, LOMKT, activaciones-ok]
 - CAMBIAR FONDOS A LOS SUBBANNERS
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:23:59 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:28:48 UTC._

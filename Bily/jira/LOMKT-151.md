@@ -33,4 +33,4 @@ se puede ver en [gamma](https://gamma.libreopcion.com/)
 Está OK! @@Marbe Moreno
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:32 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:29:10 UTC._

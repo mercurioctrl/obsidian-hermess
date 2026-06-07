@@ -59,4 +59,4 @@ Y POR ULTIMO - ¿YA TE CONECTASTE A LA API DE NB?
 - NOS INTEGRAMOS A TODOS LOS SISTEMAS.
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:57 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:26:54 UTC._

@@ -35,4 +35,4 @@ y en la segunda solapa esta la base de datos que usamos appra completar esos dat
 MVPLaset
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:52 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:29:16 UTC._

@@ -18,4 +18,4 @@ tags: [jira, LOMKT, en-curso]
 [LOMKT-156 en Jira](https://bluinc.atlassian.net/browse/LOMKT-156)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:30 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:29:09 UTC._
