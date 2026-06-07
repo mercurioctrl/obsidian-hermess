@@ -4,6 +4,39 @@ Registro de trabajo en el proyecto Libre Opción.
 
 ---
 
+## 2026-06-07
+
+### Checkout — GetNet integrado (formulario embebido en el sitio)
+
+Se reemplazó la integración de Web Checkout de GetNet (redirección a plataforma externa) por un formulario embebido similar al de MercadoPago.
+
+**Backend (`sitio-api-rest-v4-laravel`):**
+- **feat**: `TokenizeGetNet.php` — Controller que tokeniza la tarjeta vía GetNet API (`POST /v1/tokens/card`). Valida JWT del usuario, valida campos de tarjeta, obtiene access token OAuth2 y retorna `number_token`
+- **feat**: Ruta `POST payment/getnet/tokenize` con middleware `token.auth` agregada en `routes/api.php`
+- **feat**: Variables de entorno GetNet sandbox configuradas en backend `.env`:
+  - `GETNET_URL_API=https://api.pre.globalgetnet.com`
+  - `GETNET_CLIENT_ID=cid_0ce168a0-...`, `GETNET_SECRET_ID`, `GETNET_SELLER_ID=23000018929`
+- `GetNetPayment.php` ya estaba implementado — procesa pago vía `POST /v1/payments` usando `number_token`
+- `PaymentProcessorFactory` ya registrado con `'getnet' => GetNetPayment::class`
+
+Archivos: `app/Http/Controllers/Payment/GetNet/TokenizeGetNet.php`, `routes/api.php`, `app/.env`
+
+**Frontend (`sitio-web-app-v3`):**
+- **feat**: `FormPagoGetNet.vue` — Reescrito como formulario completo con inputs nativos: número de tarjeta (detección automática de marca Visa/Mastercard/Amex/Cabal), selects de vencimiento MM/AA, CVV, cuotas (1/3/6/12 — Ahora 12), titular, tipo y número de documento. `createCardToken()` llama al backend, obtiene `number_token` y navega a confirmar
+- **feat**: `store/checkout.js` — Acción `actualizarpedidoConCardTokenGetNet` (guarda `number_token` + datos de tarjeta en el pedido vía API v3, idéntica a la de MP)
+- **feat**: `checkout-pago.vue` — Ref `componenteGetNet`, flag `isFieldsCompleteGetNet`, rama GetNet en `actualizarPedido()`. También agregados Payway (`componentePayway`) y MODO
+- **feat**: `confirmar.vue` — `processPaymentGetnet()` ahora llama `processPayment('getnet', {id})` igual que MP, en vez de redirigir a URL externa. También agregados `processPaymentPayway()` y `processPaymentModo()` (MODO usa SDK propio con QR/deeplink)
+- **feat**: `api4.js` — Métodos `tokenizeGetnet(data)`, `tokenizePayway(data)`, `createModoIntention(data)`
+- `mediosPago` id `5077` = GetNet, `5078` = Payway, `5079` = MODO — inyectados en `mediosPagoFiltrados` si no vienen de la API v3
+
+**Diagnóstico GetNet sandbox:**
+- La autenticación OAuth2 (`/authentication/oauth2/access_token`) funciona correctamente
+- Los endpoints `/v1/tokens/card` y `/v1/payments` devuelven 403 Access Denied (Akamai)
+- **Causa:** GetNet sandbox tiene whitelist de IPs. La IP del servidor es `190.189.93.116`
+- **Acción requerida:** Contactar a Santander/GetNet para habilitar la IP en el sandbox
+
+---
+
 ## 2026-04-16
 
 ### Rama: LIO-618 (hero limited edition BO7 + tienda oficial ASUS)
@@ -77,16 +110,10 @@ Archivos: `components/Home/Banners/SliderHeroLimitedEdition.vue`, `pages/busqued
 
 ### Rama: development — Fixes de producción y UX
 
-- **fix**: [[changelog#iframeResizer cleanup|iframeResizer]] en ficha de producto (`pages/producto/_id.vue`):
-  - `disconnect()` en `beforeDestroy` para limpiar registry global — sin esto al navegar quedaban referencias colgantes que rompían búsquedas y navegación asincrónica
-  - AbortController con timeout 3s en `checkAPlusContent` — evita que fetch colgado bloquee todo el watch handler
-  - Timeout 5s para ocultar iframe si CSP `frame-ancestors` lo bloquea (caso localhost)
-  - Guard `_isDestroyed` en todos los seteos de estado reactivo asincrónico
-- **fix**: Bullets slider home — `SliderHeroLimitedEdition` envuelto en `<div>` dentro de Carousel para que Slick lo cuente como slide. Antes solo aparecían 2 bullets
-- **feat**: Banner animado ASUS — botón "Tienda Oficial" → "Ver ASUS" con link a `/asus`
-- **feat**: `HOME_BANNER_BULLETS_APPLE=1` agregado al `.env` — activa bullets estilo Apple (círculos blancos a la derecha en desktop)
-
-Archivos: `pages/producto/_id.vue`, `components/Home/Banners/SliderPrincipal.vue`, `components/Home/Banners/SliderHeroLimitedEdition.vue`
+- **fix**: [[changelog#iframeResizer cleanup|iframeResizer]] en ficha de producto (`pages/producto/_id.vue`)
+- **fix**: Bullets slider home — `SliderHeroLimitedEdition` envuelto en `<div>` dentro de Carousel
+- **feat**: Banner animado ASUS — botón "Ver ASUS" con link a `/asus`
+- **feat**: `HOME_BANNER_BULLETS_APPLE=1` agregado al `.env`
 
 ---
 
@@ -95,14 +122,8 @@ Archivos: `pages/producto/_id.vue`, `components/Home/Banners/SliderPrincipal.vue
 ### Rama: development — Fix root cause iframeResizer (navegación rota)
 
 - **fix**: Causa raíz del bug "navegación asincrónica se rompe después de visitar ficha con A+" (`pages/producto/_id.vue`, commit `5d922efb3`)
-
-  **Mecanismo descubierto:** cuando el iframe A+ carga en producción, la librería child de iframeResizer v5.5.9 envía mensajes `pageInfo`/`parentInfo` que provocan que la función interna `w()` cree un `ResizeObserver` sobre `document.body` (subtree). Al navegar, `disconnect()` → `Le()` borra `ee[id]` del registry, pero el ResizeObserver sigue activo. En el siguiente cambio de DOM (Vue desmontando el componente), el observer dispara, detecta que `ee[id]` no existe, llama `l()` para limpiarse, y `l()` crashea en `ee[c].iframe` (TypeError). El error llega a `window.onerror` → `chunk-reload.client.js` → `originalOnError` → corrompía navegación.
-
-  **Fix:** despachar `pageInfoStop` y `parentInfoStop` como `MessageEvent` sintéticos ANTES de llamar `disconnect()`, para que `l()` corra mientras `ee[id]` existe y desconecte los ResizeObservers limpiamente.
-
-- **fix**: Eliminado código muerto `syndicationIframe` (desktop + mobile) que referenciaba métodos/variables inexistentes en el script (`onSyndicationIframeLoad`, `limitedEditionSyndicatedContentSrc`, `syndicationIframeHeight`)
-
-- **feat**: Almacenamiento de referencia directa al iframe en `_aPlusIframeEl` (no reactivo, prefijo `_`) para que `beforeDestroy` pueda acceder al elemento aunque `$refs.aplusIframe` ya sea null (pasa cuando el timer de 5s ejecuta antes de la destrucción)
+- **fix**: Eliminado código muerto `syndicationIframe`
+- **feat**: Referencia `_aPlusIframeEl` (no reactiva) para acceso en `beforeDestroy`
 
 Ver [[arquitectura#iframeResizer — Cleanup pattern|Arquitectura]] y [[memoria#Contenido A+ (aplus.libreopcion.com.ar)|Memoria]].
 
