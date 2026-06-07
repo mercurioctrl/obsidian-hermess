@@ -27,6 +27,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 
 ### Junio
 - [[Bily/bitacoras/2026-06-05|2026-06-05]] — Registro de historia para Franco en Kanban, resumen de estado
+- [[Bily/bitacoras/2026-06-06|2026-06-06]] — Limpieza del Kanban general, mantenimiento proactivo de pendientes
 
 - [[Bily/bitacoras/2026-06-01|2026-06-01]] — Gestión de tareas y kanban, nuevo documento Ideas LibreOpcion.com, requerimientos al equipo, reunión Gigabyte
 - [[Bily/bitacoras/2026-06-02|2026-06-02]] — Limpieza y actualización Kanbans (General/Lavadero/LASET), diagnóstico y corrección de cron de recordatorios
