@@ -139,3 +139,7 @@ Ver [[Skills/Skills|Skills]].
   - [[n950-research/arquitectura|arquitectura]] · [[n950-research/verify-pipeline|verify pipeline]] · [[n950-research/comandos-probados|comandos]] · [[n950-research/vectores|vectores]]
   - [[n950-research/contexto|contexto]] · [[n950-research/stack|stack]] · [[n950-research/memoria|memoria]] · [[n950-research/changelog|changelog]]
   - Hardware: [[n950-research/n950-hardware-soc-edl|SoC QCM2290 + EDL]] · [[n950-research/n910-hardware-reference|N910 reference]]
+
+## Ver también
+
+- [[agenda-primera-reunion|agenda-primera-reunion]]
