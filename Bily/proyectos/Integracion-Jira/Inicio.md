@@ -8,7 +8,7 @@ owner: Catriel
 como
 # Integración Jira para Bily (y agentes futuros)
 
-> **Estado:** F1+F2+F3+F4 **DEPLOYED** 2026-06-07. F5 (webhooks) pospuesto. Ver [[estado|estado vivo]] para componentes corriendo y [[changelog|changelog]] para cronología.
+> **Estado:** F1–F6 **DEPLOYED** 2026-06-07. Bily consume Jira por **MCP nativo** (preflight regex retirado, intent-over-regex). F5 (webhooks) pospuesto. Ver [[estado|estado vivo]] para componentes corriendo y [[changelog|changelog]] para cronología.
 
 > Diseño técnico completo. Objetivo: que **Bily responda sobre tickets/sprints por WhatsApp** y que la capa quede **portable** para reutilizarla desde Claude Code u otros agentes (no acoplada a OpenClaw).
 
@@ -219,11 +219,13 @@ tags: [jira, EXP, in-review]
 | F | Entregable | Estado |
 |---|---|---|
 | **F1** | `jiralib` + sidecar + wrappers read-only (`jira-issue`, `jira-search`, `jira-my`). | ✅ **DONE 2026-06-07 21:21** |
-| **F2** | Plugin OpenClaw `jira-context-preflight` (regex tolerante + triggers). | ✅ **DONE 2026-06-07 21:25** (+ bug fix provenance 21:34) |
+| **F2** | Plugin OpenClaw `jira-context-preflight` (regex tolerante + triggers). | ✅ DONE 2026-06-07 21:25 → ⚠️ **OBSOLETO: retirado en F6** |
+| **F2.5** | Tools de alto nivel (`jira-by-user`, `jira-activity`) + MCP server + preflight slim. | ✅ **DONE 2026-06-07 22:40** |
 | **F3** | Wrappers write + dry-run con `--yes` en destructivos. | ✅ **DONE 2026-06-07 21:47**, smoke-tested live por Catriel |
 | **F4** | Vault sync de tickets como notas Markdown + skill portable. | ✅ **DONE 2026-06-07 22:03** |
 | **F5** | Webhook receiver + notificaciones proactivas WhatsApp. | ⏸️ Pospuesto (necesita Cloudflared/Tailscale) |
-| **F6** | Polish: cache invalidation inteligente, dashboards de uso. | open-ended |
+| **F6** | **MCP nativo en OpenClaw** (`openclaw mcp set jira`) → Bily usa tools siempre presentes. Preflight regex **RETIRADO**. Intent-over-regex verificado en vivo. + `sync_all.py` (708 tickets a la bóveda). | ✅ **DONE 2026-06-07 (noche)** |
+| **F7** | Polish open-ended: índice + cron del bulk sync, cache invalidation inteligente, dashboards de uso. | open-ended |
 
 Ver [[changelog|changelog]] para cronología detallada y [[estado|estado vivo]] para qué corre ahora.
 
@@ -258,7 +260,7 @@ Ver [[changelog|changelog]] para cronología detallada y [[estado|estado vivo]] 
 
 ## 11. Ver también
 
-- [[changelog|Changelog]] — cronología detallada de las 4 fases deployadas hoy.
+- [[changelog|Changelog]] — cronología detallada de las fases F1–F6.
 - [[estado|Estado vivo]] — componentes corriendo, paths, endpoints, performance medida.
 - [[Bily/jira/Inicio|Bily/jira/]] — notas de tickets autopobladas por el vault sync.
 - [[Bily/proyectos/Inicio|Proyectos]] (volver al índice)
@@ -266,4 +268,4 @@ Ver [[changelog|changelog]] para cronología detallada y [[estado|estado vivo]] 
 
 ---
 
-**Próximo paso sugerido:** responder las 6 decisiones abiertas y arrancar F1 (4-6h, valor inmediato comprobable desde terminal).
+**Próximo paso sugerido (opcional):** F7 polish — generar índice `Bily/jira/Inicio.md` para los 708 tickets del bulk sync y agendar `sync_all.py` en cron para mantenerlos frescos. Catriel no lo pidió aún.
