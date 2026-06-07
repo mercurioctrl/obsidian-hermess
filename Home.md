@@ -27,7 +27,7 @@
 - [[BluPartPicker/BluPartPicker|BluPartPicker]] — Catálogo unificado de tecnología argentina · API REST puerto 4444 · v2.1.0 · commit `7e34d62`
   - [[BluPartPicker/arquitectura|arquitectura]] · [[BluPartPicker/resellers|resellers]] · [[BluPartPicker/stack|stack]] · [[BluPartPicker/contexto|contexto]] · [[BluPartPicker/changelog|changelog]] · [[BluPartPicker/memoria|memoria]]
   - Mayoristas (`distribuidor=1`): **Invid** · **Ceven** · **Stylus** — precios USD
-  - Resellers (`distribuidor=0`): **37 tiendas vía PreciosGamer** — source por nombre (, etc.) — últimas 48h
+  - Resellers (`distribuidor=0`): **37 tiendas vía PreciosGamer** — source por nombre — últimas 48h
   - Exchange rates USD/ARS cada 30 min (dolarapi.com · 7 casas)
   - `http://10.10.10.7:4444` · `GET /items?moneda_out=ARS&tc=mayorista&sort_by=precio`
 
@@ -61,8 +61,9 @@
 
 ## Libre Opción
 
-- [[Libre Opcion/Libre Opcion|Libre Opción]]
+- [[Libre Opcion/Libre Opcion|Libre Opción]] — E-commerce marketplace · Última sync: 2026-06-07
   - [[Libre Opcion/arquitectura|arquitectura]] · [[Libre Opcion/stack|stack]] · [[Libre Opcion/changelog|changelog]] · [[Libre Opcion/memoria|memoria]]
+  - **Pasarelas de pago (checkout integrado):** MP ✅ · GetNet ⚠️ (IP whitelist pendiente) · Payway 🔧 · MODO 🔧
   - [[Libre Opcion/00-resumen-diagnostico-seo-performance|resumen SEO]] · fixes: [[Libre Opcion/01-fix-cls-imagenes|01]] · [[Libre Opcion/02-fix-lcp-render-blocking|02]] · [[Libre Opcion/03-fix-header-min-height|03]] · [[Libre Opcion/04-fix-fuentes-innecesarias|04]] · [[Libre Opcion/05-fix-fouc-css-tardio|05]] · [[Libre Opcion/06-fix-cls-tbt-ronda-2|06]] · [[Libre Opcion/07-fix-cls-mobile-h1-sr-only-ronda-3|07]] · [[Libre Opcion/08-fix-cls-listings-ronda-4|08]]
   - [[Libre Opcion/TareaWallet/TareaWallet|TareaWallet]] · [[Libre Opcion/enviosMailDrop/enviosMailDrop|enviosMailDrop]] · [[Libre Opcion/tareas/tareas|tareas]]
   - [[Libre Opcion/hot sale|Hot Sale 2026]] · [[Libre Opcion/sync-curls|sync-curls]]
@@ -132,9 +133,9 @@ Ver [[Skills/Skills|Skills]].
 - [[naevo/naevo|naevo]]
   - [[naevo/arquitectura|arquitectura]] · [[naevo/stack|stack]] · [[naevo/changelog|changelog]] · [[naevo/contexto|contexto]] · [[naevo/memoria|memoria]] · [[naevo/modulos|módulos]] · [[naevo/templates-preview|templates]]
 - [[pega/pega|pega]]
-- [[pacman/pacman|pacman]] — Banner jugable de Pac-Man Day (juego de Pac-Man en JavaScript vanilla, HTML5 Canvas)
+- [[pacman/pacman|pacman]] — Banner jugable de Pac-Man Day
   - [[pacman/arquitectura|arquitectura]] · [[pacman/stack|stack]] · [[pacman/changelog|changelog]] · [[pacman/contexto|contexto]]
-- [[n950-research/n950-research|n950-research]] — Reverse engineering personal del Newland N950 (MercadoPago Point Smart 2). **SoC confirmado: Qualcomm QCM2290 (codename scuba, Bengal)**. Loader Firehose firmado bajado local.
+- [[n950-research/n950-research|n950-research]] — Reverse engineering personal del Newland N950 (MercadoPago Point Smart 2). **SoC confirmado: Qualcomm QCM2290**
   - [[n950-research/arquitectura|arquitectura]] · [[n950-research/verify-pipeline|verify pipeline]] · [[n950-research/comandos-probados|comandos]] · [[n950-research/vectores|vectores]]
   - [[n950-research/contexto|contexto]] · [[n950-research/stack|stack]] · [[n950-research/memoria|memoria]] · [[n950-research/changelog|changelog]]
   - Hardware: [[n950-research/n950-hardware-soc-edl|SoC QCM2290 + EDL]] · [[n950-research/n910-hardware-reference|N910 reference]]
