@@ -133,7 +133,7 @@ Meter el costo en el precio = **abandonar la bandera de "el más barato"**. Eso 
 ## Pendientes
 
 - [ ] Segmentar el catálogo: productos donde hay "aire" (exclusivas/importadas) vs. productos mainstream donde no lo hay — estrategia diferente para cada segmento.
-- [ ] En mainstream (AMD, etc.): investigar cómo acceder a promos bancarias (Supervielle, Comafi, ICBC vía MODO) igual que CompraGamer.
+- [ ] ⭐ **PRIORITARIO — Activar MODO en LibreOpción:** las promos bancarias (Supervielle, Comafi, ICBC, etc.) se activan automáticamente una vez adherido — no hay que negociar banco por banco. Consultar a Payway si MODO ya está habilitado en la cuenta (probablemente es un trámite menor). Requisitos: CUIT + cuenta bancaria. Sin costo de adhesión. Comisión: 0%–1,8%. Esto iguala la ventaja clave de CompraGamer en mainstream (6 cuotas a $53.044 vs. los $62.936 actuales).
 - [ ] Activar cuotas sin interés en MP (definir hasta cuántas) y medir impacto en conversión.
 - [ ] Mapear qué marcas mainstream del catálogo tienen promo MP subsidiada disponible.
 - [ ] Iniciar conversaciones con Getnet (adquirente concreto, más barato que MP en 1 pago).
