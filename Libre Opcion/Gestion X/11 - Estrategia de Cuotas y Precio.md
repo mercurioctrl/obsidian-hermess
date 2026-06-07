@@ -88,13 +88,35 @@ A ~USD 161k de GMV/mes no hay volumen para que un banco arme una promo a medida.
 | **Cuota Simple** (programa nacional) | 5,41% (3) · 10,31% (6) | ⚠️ Casi seguro **no calificás**: exige producción nacional y vos importás. |
 | **Bancos / adquirentes** | Variable | 🟡 Relación a futuro. Getnet es el primer paso concreto. |
 
-## 🎁 El "aire" de precio que hoy se regala
+## 🎁 El "aire" de precio — análisis actualizado (2026-06-06)
 
-Dato real: auricular Genius LibreOpción **$22.257** vs. competencia **~$26.000** → **~14% más barato**. Bancar 6 sin interés cuesta ~11–13%.
+### Caso 1: Auricular Genius (dato original)
+LibreOpción **$22.257** vs. competencia **~$26.000** → **~14% más barato**. En este caso sí existe "aire" para meter el costo.
 
-> [!tip] La jugada
-> Subí el precio ~11% y financiá con eso las cuotas sin interés. Quedás **casi al mismo precio que la competencia PERO con sin interés**. Pasás del peor de los mundos (barato + cuotas malas) al mejor (precio competitivo + buena cuota). **No requiere capital: el margen de precio ya existe, hoy se usa mal.**
-> ⚠️ Validar que ese ~11–14% de aire existe en el resto del catálogo (es un solo dato por ahora).
+### Caso 2: AMD Ryzen 7 5700G — el aire NO existe ⚠️
+
+Relevamiento real contra CompraGamer:
+
+| | CompraGamer | LibreOpción |
+|---|---|---|
+| Precio contado estimado | ~$270.000–$290.000 | **$304.531** |
+| 6 cuotas (Modo + Supervielle/Comafi/ICBC) | **$318.264** (6×$53.044) | — |
+| 6 cuotas (resto de bancos) | $350.724 (6×$58.454) | — |
+| 6 cuotas actuales | — | **$377.616** (6×$62.936) |
+| 12 cuotas | $390.036 (12×$32.503) | — |
+
+LibreOpción es **más cara en precio base** Y tiene **peores cuotas** — el peor escenario posible.
+
+Si LibreOpción aplica "meter el costo en el precio" para ofrecer 6 cuotas sin interés:
+- Precio ajustado: $304.531 × 1,1624 = **~$353.900**
+- Cuota resultante: **~$58.983/mes**
+- Resultado: similar a CompraGamer con banco común, pero **todavía 11% más caro** que su mejor opción ($53.044).
+
+> [!danger] Revisión de la hipótesis original
+> El "aire de precio" **no es universal**. Existe en algunas líneas (Genius) pero no en mainstream (AMD). En productos competidos el problema no es la estrategia de precio sino el acceso a **promos bancarias subsidiadas** que CompraGamer ya tiene (Supervielle, Comafi, ICBC vía MODO).
+
+> [!tip] La palanca real en mainstream
+> No subir el precio — **sumarse a las promos bancarias** que ya existen (banco paga el sin interés, costo 0 para el comercio). Esto es lo mismo que las promos MP subsidiadas por marca, pero del lado del banco.
 
 ## Decisión (2026-06-02): tres palancas combinadas
 
@@ -110,7 +132,8 @@ Meter el costo en el precio = **abandonar la bandera de "el más barato"**. Eso 
 
 ## Pendientes
 
-- [ ] Confirmar con Cowork el % de "aire" de precio promedio del catálogo vs. competencia.
+- [ ] Segmentar el catálogo: productos donde hay "aire" (exclusivas/importadas) vs. productos mainstream donde no lo hay — estrategia diferente para cada segmento.
+- [ ] En mainstream (AMD, etc.): investigar cómo acceder a promos bancarias (Supervielle, Comafi, ICBC vía MODO) igual que CompraGamer.
 - [ ] Activar cuotas sin interés en MP (definir hasta cuántas) y medir impacto en conversión.
 - [ ] Mapear qué marcas mainstream del catálogo tienen promo MP subsidiada disponible.
 - [ ] Iniciar conversaciones con Getnet (adquirente concreto, más barato que MP en 1 pago).
