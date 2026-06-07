@@ -144,3 +144,4 @@ Ver [[Skills/Skills|Skills]].
 ## Ver también
 
 - [[agenda-primera-reunion|agenda-primera-reunion]]
+- [[2026-06-07|2026-06-07]]
