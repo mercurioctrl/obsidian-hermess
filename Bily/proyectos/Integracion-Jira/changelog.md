@@ -51,6 +51,69 @@ Cronología de implementación. Ver [[Inicio|diseño]] para arquitectura y [[est
   - `files/` contiene copias de `jira.py` + los 7 wrappers ejecutables.
   - Skill detectada en hot por Claude Code (sin reinicio).
 
+## 2026-06-07 (segunda parte) — F2.5 deployed
+
+### 22:40 · Re-diseño preflight + tools de alto nivel + MCP
+
+**Motivación:** Catriel señaló que mi propuesta original de extender el preflight con regex para "qué hizo Marbe esta semana" estaba en la capa equivocada. El LLM ya hace intent recognition — la respuesta correcta es exponerle APIs/tools bien shaped, no hardcodear interpretación con string matching. Lección guardada como principio operativo (ver memoria operativa interna de Claude: `feedback-intent-over-regex`).
+
+### Parte A — Tools de alto nivel (intent-friendly)
+
+Agregado a `Jira` class:
+- `resolve_user(query)` — name/email/'me'/accountId → `{accountId, displayName, email}`. Maneja ambigüedad (multi-match en "catriel" preferentemente al currentUser).
+- `_parse_since(natural)` — "esta semana", "ayer", "hoy", "este mes", "ultimos 15 dias", "7d", "2w" → días enteros.
+- `by_user(name, since, project, include_reported)` — tickets de un usuario en ventana.
+- `activity(since, project, user)` — cualquier ticket tocado en ventana, filtrable.
+
+Endpoints sidecar nuevos: `GET /resolve-user`, `GET /by-user`, `GET /activity`.
+
+Wrappers `~/bin/` nuevos:
+- `jira-by-user <name|me> [--since "<rango>"] [--project <PROJ>] [--reported]`
+- `jira-activity [--since "<rango>"] [--project <PROJ>] [--user <name>]`
+
+**Tests validados:**
+- `jira-by-user marbe --since "esta semana"` → 35 tickets reales (NBWEB, LIO, MKT, ADATA).
+- `jira-by-user catriel` → 5 matches resueltos preferentemente al currentUser.
+- `jira-by-user guille --since "ultimos 3 dias"` → JQL `updated >= -3d` correctamente generada.
+- `jira-activity --project SNB --since ayer` → 1 ticket.
+
+### Parte B — MCP server
+
+`~/jira/mcp_server.py` (~250 líneas Python stdlib, JSON-RPC 2.0 sobre stdin/stdout). Habla al sidecar HTTP. 10 tools registradas con JSON Schema completo:
+
+| Tool | Descripción para LLM |
+|---|---|
+| `jira_issue` | Obtiene un ticket por KEY |
+| `jira_search` | JQL crudo |
+| `jira_my` | Tickets del currentUser |
+| `jira_by_user` | "¿qué hizo X esta semana?", "¿en qué anda Y?" |
+| `jira_activity` | "¿qué hay nuevo en proyecto X?", "¿qué se movió hoy?" |
+| `jira_transitions` | Lista transiciones disponibles de un ticket |
+| `jira_create` | Crear ticket (reversible) |
+| `jira_comment` | Comentar (bajo riesgo) |
+| `jira_assign` | Reasignar (reversible) |
+| `jira_transition` | DESTRUCTIVO: cambiar estado (siempre confirmar antes) |
+
+**Smoke test:** initialize + tools/list (10) + tools/call jira_by_user marbe → 35 tickets devueltos con JQL exacta.
+
+**Registrado en Claude Code:** `claude mcp add jira python3 -- /home/hermess/jira/mcp_server.py` (corrido por Catriel manualmente — auto-mode classifier correctamente bloquea self-modification del config de Claude Code).
+
+### Parte C — Preflight slim
+
+Cambio en el plugin OpenClaw `jira-context-preflight`:
+- Eliminado el regex genérico `\bjira\b` (era demasiado amplio).
+- Mantenidos solo 2 shortcuts alta frecuencia: `qué tengo hoy/pendiente/ahora/hacer` y `mis tickets/tareas/issues`.
+- Header del bloque inyectado completamente reescrito. Ahora declara explícitamente "este bloque solo cubre menciones de keys + 'qué tengo hoy'; para TODO lo demás usá los wrappers/MCP", y enumera TODAS las tools (read + writes + las nuevas de alto nivel) con ejemplos de intent → tool.
+
+Resultado: cuando Catriel manda "qué hizo marbe esta semana" por WhatsApp, el regex NO matchea (correcto), pero el header inyectado ya está en el contexto del agente — Bily ve "tenés `jira-by-user` disponible" y lo ejecuta vía Bash con args correctos. **El LLM hace el routing semántico, no el regex.**
+
+### Archivos propagados al skill portable
+
+`~/.claude/skills/jira/files/`:
+- `jira.py` (actualizado con resolve_user, by_user, activity, _parse_since)
+- `mcp_server.py` (nuevo)
+- `bin/jira-by-user`, `bin/jira-activity` (nuevos)
+
 ## Pendiente
 
 - **F5** (pospuesto por decisión 2026-06-07): webhook receiver `:9003` + notificaciones proactivas WhatsApp. Requiere resolver exposición externa (Cloudflared / Tailscale Funnel). Decisión: hacer cuando esté esa pieza.
