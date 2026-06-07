@@ -114,8 +114,10 @@ Meter el costo en el precio = **abandonar la bandera de "el más barato"**. Eso 
 - [ ] Activar cuotas sin interés en MP (definir hasta cuántas) y medir impacto en conversión.
 - [ ] Mapear qué marcas mainstream del catálogo tienen promo MP subsidiada disponible.
 - [ ] Iniciar conversaciones con Getnet (adquirente concreto, más barato que MP en 1 pago).
-- [ ] Verificar si LibreOpción califica para Plan Cuotas MiPyME de Getnet (rubro tech/importación).
 - [ ] Evaluar usar Getnet para 1 pago/débito + MP solo para promos de marca.
+- [ ] **Tramitar Certificado MiPyME** en AFIP (24hs, renovación automática). Vale por sí solo: IVA a 90 días, compensación impuesto al cheque, contribuciones patronales diferenciales.
+- [ ] Una vez obtenido el certificado: verificar si el rubro (importador/revendedor tech) está habilitado para Plan Cuotas MiPyME en Payway y Getnet.
+- [ ] Si califica MiPyME: activar en Payway (desde Mi Payway) — tasas 6,91% (3c) y 13,52% (6c), con opción de pasarle el costo al cliente via coeficiente.
 
 ## Enlaces
 
