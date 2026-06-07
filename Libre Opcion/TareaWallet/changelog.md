@@ -1,5 +1,22 @@
 # Changelog — TareaWallet
 
+## 2026-06-07
+
+### Integración MODO (billetera digital) — Checkout
+
+- **feat:** Controller `CreateModoIntention.php` — crea payment request en MODO SDK v2 (`/v2/payment-requests/`), retorna `{ qr, id, deeplink }`
+- **feat:** Autenticación MODO SDK v2 via `POST /v2/stores/companies/token` (reemplaza SDK v1)
+- **feat:** `TokenizeGetNet.php` y `TokenizePayway.php` — tokenización de tarjetas para GetNet y Payway
+- **feat:** Formularios de pago en frontend: `FormPagoGetNet.vue`, `FormPagoModo.vue`, `FormPagoPayway.vue`
+- **feat:** `checkout-pago.vue` — inyección de MODO (id 5079) en lista de medios de pago si no viene de la API
+- **fix (crítico):** `checkout.js` — `obtenerPedido` en asyncData de `confirmar.vue` hacía `ACTUALIZAR_PEDIDO` que sobreescribía `medioPagoId` a 0 (API v3 no conoce MODO). Fix: guardar `medioPagoIdPrevio` antes del commit y restaurar via `ACTUALIZAR_PAQUETES` si la API devolvió 0
+- **fix (crítico):** PHP-FPM tenía OPcache activo con rutas viejas en memoria — las nuevas rutas (`payment/modo/create-intention`, `payment/getnet/tokenize`, `payment/payway/tokenize`) retornaban 404 hasta reiniciar el contenedor
+- **fix:** `confirmar.vue` — `processPaymentModo()` carga MODO SDK (`ecommerce-modal.preprod.modo.com.ar/bundle.js`) y llama `window.ModoSDK.modoInitPayment({ version: '2', qrString, checkoutId, deeplink })`
+- Archivos API: `routes/api.php`, `CreateModoIntention.php`, `TokenizeGetNet.php`, `TokenizePayway.php`, `PaymentProcessorFactory.php`
+- Archivos Frontend: `checkout.js`, `confirmar.vue`, `checkout-pago.vue`, `api4.js`, `FormPagoModo.vue`
+
+---
+
 ## 2026-05-12
 
 ### Rama: LIO-630 — Recategorización (review/mejoras de Franco)
@@ -41,3 +58,4 @@
 
 - [[TareaWallet]]
 - [[arquitectura-recategorizacion]]
+- [[contexto]]
