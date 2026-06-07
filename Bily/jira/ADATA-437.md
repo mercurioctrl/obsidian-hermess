@@ -55,4 +55,4 @@ Feature: Correos de ranking por puntos.
 ###
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:24 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:27 UTC._

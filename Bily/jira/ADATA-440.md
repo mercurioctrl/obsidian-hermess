@@ -22,4 +22,4 @@ tags: [jira, ADATA, revisión]
 Premium Partner Award - EC N°1 Argentina - Compragamer
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:13 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:26 UTC._

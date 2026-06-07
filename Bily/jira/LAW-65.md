@@ -18,4 +18,4 @@ tags: [jira, LAW, por-hacer]
 [LAW-65 en Jira](https://bluinc.atlassian.net/browse/LAW-65)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:21 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:06 UTC._

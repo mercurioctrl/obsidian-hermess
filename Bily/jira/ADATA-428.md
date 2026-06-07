@@ -38,4 +38,4 @@ Banner 1
 En ambos en letra chica poner Promoción válida hasta el 30-06
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:39 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:33 UTC._

@@ -26,4 +26,4 @@ Story Lo de la figurita lo haria como story tipo el juego de lo fest
 mas alla de los post
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:23:46 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:12 UTC._

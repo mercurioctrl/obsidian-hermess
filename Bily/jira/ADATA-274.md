@@ -18,4 +18,4 @@ tags: [jira, ADATA, activaciones-ok]
 [ADATA-274 en Jira](https://bluinc.atlassian.net/browse/ADATA-274)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:20 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:32:16 UTC._

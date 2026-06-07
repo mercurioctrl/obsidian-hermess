@@ -24,4 +24,4 @@ tags: [jira, ADATA, activaciones-ok]
 @@Alejandra Guidobono @@barbara Realicé en total 54 banners entre desktop y mobile
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:31 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:41 UTC._

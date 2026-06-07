@@ -24,4 +24,4 @@ tags: [jira, ADATA, activaciones-ok]
 Kickoff EquipoAir Padel + ViajeHeberCargar Banners de PSU en distribuidores y Resellers\Captura del Adata Rewards de la pantalla de ingreso donde se ven los pintosInstructivo de clientes para el adata RewardsADATA REWARDSAgregar Reel del Adata Rewards y el post de linkedin
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:13 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:42 UTC._

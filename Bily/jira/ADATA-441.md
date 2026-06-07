@@ -38,4 +38,4 @@ Eventos como COMPUTEX nos permiten fortalecer alianzas, descubrir nuevas oportun
 @@Alejandra Guidobono  me cree esta tarea para el copy despues podemos cargar acá las imagenes que vayamos a poner el linkedin para que luego lo carguemos en el erp y no se los olvide nada
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:23:55 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:25 UTC._

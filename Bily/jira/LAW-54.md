@@ -22,4 +22,4 @@ tags: [jira, LAW, revisión]
 Los endpoints no parecen retornar resultados `paymentMethods` y `tradableDispatchMethod`
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:50 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:07 UTC._

@@ -35,4 +35,4 @@ tags: [jira, FB, pendiente-de-comunicar]
 2. Cambiaria la imagen que se ve de fondo o la de la pileta o la del complejo Adjunto la presentación donde esta la imagen que menciono del complejo
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:32 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:30 UTC._

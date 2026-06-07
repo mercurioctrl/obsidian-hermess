@@ -18,4 +18,4 @@ tags: [jira, ADATA, en-curso]
 [ADATA-352 en Jira](https://bluinc.atlassian.net/browse/ADATA-352)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:06 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:52 UTC._

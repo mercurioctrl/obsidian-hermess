@@ -59,4 +59,4 @@ sprint: Tablero Sprint 2
 Por ahi podes usae un qwerty para el dia del gamer sigue sin cerrarme y el del dia de la amistad tampoco
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:36 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:17 UTC._

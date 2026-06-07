@@ -22,4 +22,4 @@ tags: [jira, ADATA, activaciones-ok]
 TRADUCIR HACER PORTADA Y POST PARA LINKEDIN
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:41 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:32:18 UTC._

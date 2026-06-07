@@ -99,4 +99,4 @@ En **Blu.Recruiting**, ayudamos a conectar empresas con profesionales que están
 #BluRecruiting #Talento #Recruiting #Hiring #RRHH #HumanResources #Trabajo #OportunidadesLaborales #TalentManagement #PeopleAndCulture #EquipoGanador #Growth #BusinessSuccess 🚀✨
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:23:44 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:10 UTC._

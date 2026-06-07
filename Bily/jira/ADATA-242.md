@@ -71,4 +71,4 @@ https://docs.google.com/presentation/d/1kQu6Tb9euWyRoTcrueegIvQfot8McQoLI9-MpA9v
 Subir  los valores
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:29 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:32:21 UTC._

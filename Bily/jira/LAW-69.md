@@ -44,4 +44,4 @@ Se refactorizó el endpoint GET /banks para alinear  con el comportamiento ya ex
 - includeNull=false → WHERE companyCode = X
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:52 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:04 UTC._

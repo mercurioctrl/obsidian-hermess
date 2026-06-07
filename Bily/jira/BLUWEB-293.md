@@ -27,4 +27,4 @@ sprint: Tablero Sprint 2
 - HR
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:27 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:11 UTC._

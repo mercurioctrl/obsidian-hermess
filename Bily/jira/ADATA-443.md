@@ -24,4 +24,4 @@ tags: [jira, ADATA, revisión]
 _(sin texto)_
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:23:56 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:24 UTC._

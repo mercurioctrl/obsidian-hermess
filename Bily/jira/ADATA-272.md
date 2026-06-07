@@ -22,4 +22,4 @@ tags: [jira, ADATA, activaciones-ok]
 Hola Chicas, No habia ningun video en gear Pero hice algunos podemos de ver si usarlos
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:41 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:32:17 UTC._

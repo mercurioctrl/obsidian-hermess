@@ -49,4 +49,4 @@ sprint: Tablero Sprint 2
 we mate tiene mal escrito noviembre , el de christmas podriamos meter un grinch y el de la diversidad no me convence
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:37 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:16 UTC._

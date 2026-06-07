@@ -18,4 +18,4 @@ tags: [jira, ADATA, activaciones-ok]
 [ADATA-425 en Jira](https://bluinc.atlassian.net/browse/ADATA-425)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:12 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:34 UTC._

@@ -62,4 +62,4 @@ _(sin texto)_
 _(sin texto)_
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:25 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:26 UTC._

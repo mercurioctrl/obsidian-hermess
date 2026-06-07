@@ -30,4 +30,4 @@ Quieren avanzar con la propuesta 2, pero prefieren otro tipo de gradiente, aca d
 - O algun gradiente con los colores del logo, pero no lo haria rigido sino más bien una imagen fresca, innovadora y tecnológica
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:03 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:11 UTC._

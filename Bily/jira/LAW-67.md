@@ -33,4 +33,4 @@ sprint: Etapa 1
 https://docs.google.com/presentation/d/1K6WX1zQR2G5UPK9oNaLt_JEM2UkOpZMshm8yJ3Q3UlM/edit?usp=sharing
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:03 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:05 UTC._

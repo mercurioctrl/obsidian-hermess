@@ -19,4 +19,4 @@ sprint: Etapa 1
 [LAW-24 en Jira](https://bluinc.atlassian.net/browse/LAW-24)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:04 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:10 UTC._

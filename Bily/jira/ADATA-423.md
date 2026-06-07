@@ -24,4 +24,4 @@ tags: [jira, ADATA, activaciones-ok]
 @@Alejandra Guidobono @@barbara Les dejo esto para que puedan tener cuantificado los diseños, ya lo envié por el grupo de wsp de XPG para  ver si lo aprueba fabio
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:40 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:35 UTC._

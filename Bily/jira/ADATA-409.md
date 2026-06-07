@@ -46,4 +46,4 @@ El del sitio le pondriaEscaneá para accede r
 ¿Tenés dudas? Escaneá el QR
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:14 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:41 UTC._

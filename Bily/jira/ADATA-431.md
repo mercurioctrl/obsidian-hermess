@@ -27,4 +27,4 @@ tags: [jira, ADATA, activaciones-ok]
 24 vento
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:38 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:32 UTC._

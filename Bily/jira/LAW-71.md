@@ -22,4 +22,4 @@ tags: [jira, LAW, revisión]
 Al momento de filtrar por `companyCode` e `includeNull` de manera individual funcionan correctamente, sin embargo, al combinarlos no se obtiene la respuesta esperada.
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:53 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:03 UTC._

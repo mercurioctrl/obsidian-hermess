@@ -29,4 +29,4 @@ agregar `includeNull`
 LASET, Laset, laset
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:59 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:04 UTC._

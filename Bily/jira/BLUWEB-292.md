@@ -19,4 +19,4 @@ sprint: Tablero Sprint 2
 [BLUWEB-292 en Jira](https://bluinc.atlassian.net/browse/BLUWEB-292)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:38 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:11 UTC._

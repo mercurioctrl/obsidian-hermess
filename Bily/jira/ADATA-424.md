@@ -28,4 +28,4 @@ tags: [jira, ADATA, activaciones-ok]
 [https://docs.google.com/presentation/d/1X-sXFTbqgAwCwjgaiuAmJLfSOroSO7yduA1D5xdapK4/edit?slide=id.g3e2f5d2e746_0_2#slide=id.g3e2f5d2e746_0_2](https://docs.google.com/presentation/d/1X-sXFTbqgAwCwjgaiuAmJLfSOroSO7yduA1D5xdapK4/edit?slide=id.g3e2f5d2e746_0_2#slide=id.g3e2f5d2e746_0_2)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:40 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:35 UTC._

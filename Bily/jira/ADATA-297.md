@@ -18,4 +18,4 @@ tags: [jira, ADATA, por-hacer]
 [ADATA-297 en Jira](https://bluinc.atlassian.net/browse/ADATA-297)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:46 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:32:10 UTC._

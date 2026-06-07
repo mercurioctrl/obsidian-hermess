@@ -29,4 +29,4 @@ sprint: Etapa 1
 Pradines Clemente 1795, MoteVideo, 11500, Uruguay
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:13 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:02 UTC._

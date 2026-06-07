@@ -26,4 +26,4 @@ https://drive.google.com/drive/folders/1ml-qXM4pVpSInFdFxw7OI3Q-JOxVY_75
 Reemplazar si en algun lado dice blu.inc  ya que es el site anterior
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:28 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:38 UTC._

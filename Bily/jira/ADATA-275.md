@@ -22,4 +22,4 @@ tags: [jira, ADATA, activaciones-ok]
 PROGRAME PARA QUE SE ENVIARAN EN  LA FECHA DEL 27
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:26 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:32:15 UTC._

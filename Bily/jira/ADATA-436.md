@@ -18,4 +18,4 @@ tags: [jira, ADATA, por-hacer]
 [ADATA-436 en Jira](https://bluinc.atlassian.net/browse/ADATA-436)
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:24:27 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:27 UTC._

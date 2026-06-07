@@ -24,4 +24,4 @@ tags: [jira, FB, pendiente-de-comunicar]
 @@Alejandra Guidobono  Listo, está cargado la nueva versión en alta!
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:31 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:30:30 UTC._

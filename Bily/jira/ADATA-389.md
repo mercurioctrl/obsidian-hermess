@@ -26,4 +26,4 @@ Horario 20 hs
 Direciión Correo Central, Av. Leandro N. Alem 351, C1041 Cdad. Autónoma de Buenos Aires
 
 ---
-_Sincronizado por jira-sidecar el 2026-06-07 22:25:15 UTC._
+_Sincronizado por jira-sidecar el 2026-06-07 22:31:43 UTC._
