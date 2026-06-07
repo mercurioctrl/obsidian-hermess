@@ -114,8 +114,36 @@ Resultado: cuando Catriel manda "qué hizo marbe esta semana" por WhatsApp, el r
 - `mcp_server.py` (nuevo)
 - `bin/jira-by-user`, `bin/jira-activity` (nuevos)
 
+## 2026-06-07 (noche) — F6: MCP nativo en OpenClaw + preflight RETIRADO
+
+**Problema:** Catriel pedía cosas de Jira con fraseos siempre distintos ("decime qué tiene pendiente marbe", "pasame los pendientes de marbe moreno") y Bily no entendía. Causa: el único camino de Bily a las capabilities era el plugin preflight (Parte C de F2.5), que sólo inyectaba el header de tools con 2 triggers narrow o una key tipo `EXP-553`. Cualquier otro fraseo → no inyectaba → Bily no sabía que la tool existía → alucinaba. Capa equivocada (regex). El preflight slim de F2.5 fue una mejora pero **no resolvió el fondo**: seguía dependiendo de que el header ya estuviera en contexto.
+
+**Hallazgo clave:** OpenClaw soporta MCP nativo (`openclaw mcp set/list/show/unset`).
+
+**Fix aplicado (aprobado por Catriel):**
+1. **MCP registrado en OpenClaw** — el mismo `~/jira/mcp_server.py` que ya estaba en Claude Code:
+   ```bash
+   openclaw mcp set jira '{"command":"python3","args":["/home/hermess/jira/mcp_server.py"]}'
+   ```
+   Las 10 tools quedan **siempre presentes** en el runtime de Bily (relayan al sidecar :9002). Ya no hay descubrimiento condicional.
+2. **Plugin preflight RETIRADO del todo** — `openclaw plugins uninstall jira-context-preflight --force` (borra config entry + install record + dir en `~/.openclaw/extensions/`). **Fuente preservada** en `~/openclaw-plugins/jira-context-preflight/` (reinstalable). Se pierde el pre-fetch de latencia — aceptado.
+3. `openclaw gateway restart`.
+
+**Verificado en vivo:** `openclaw agent --agent main --message "decime qué tiene pendiente marbe moreno"` → Bily llamó `jira_by_user` solo y devolvió 28 tickets de Marbe agrupados por estado. **Fraseo que antes no matcheaba ningún trigger.** Intent recognition puro, cero regex. Aplicación directa de [[Claude/MEMORIA#intent-over-regex|intent-over-regex]].
+
+**Lección:** con LLM + tool-use, el descubrimiento de capabilities va por **tools siempre presentes** (MCP), no por inyección condicional por regex. El regex preflight servía sólo como optimización de latencia, nunca como mecanismo de comprensión.
+
+**Gotchas:** OpenClaw conecta los MCP **lazy** (primer turno de sesión, no al boot — no aparece en logs del restart). `openclaw plugins uninstall` exige TTY o `--force`.
+
+## 2026-06-07 — sync_all.py (bulk sync a la bóveda)
+
+`~/jira/sync_all.py "<JQL>" [--limit N]` — fuerza sync masivo a `Bily/jira/`. Pagina con `nextPageToken`, hace `issue_full` + `render_issue_note` + vault PUT secuencial, throttle 8 req/s, progreso cada 25 a `~/jira/logs/sync_all.log`.
+
+**Corrida real:** JQL `statusCategory != Done AND updated >= -365d` → **708 tickets, 0 fallos, 5.9 min** (~2 issues/s). `Bily/jira/` tiene 708 notas individuales. Propagado al skill portable (`files/sync_all.py` + paso "3b" en `setup-jira.sh`). **Pendiente opcional:** índice `Inicio.md` para las 708 notas + cron de refresh (no pedido aún).
+
 ## Pendiente
 
+- **Índice + cron del bulk sync** (opcional): generar `Bily/jira/Inicio.md` navegable para los 708 tickets y agendar `sync_all.py` en cron del sistema para mantenerlos frescos. Catriel no lo pidió todavía.
 - **F5** (pospuesto por decisión 2026-06-07): webhook receiver `:9003` + notificaciones proactivas WhatsApp. Requiere resolver exposición externa (Cloudflared / Tailscale Funnel). Decisión: hacer cuando esté esa pieza.
 
 ## Ver también

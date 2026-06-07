@@ -6,19 +6,22 @@ deploy_date: 2026-06-07
 
 # Estado vivo de la integración Jira
 
-Snapshot del 2026-06-07 22:03 — qué está corriendo en el server `hermess-server`. Ver [[changelog|changelog]] para historial de fases y [[Inicio|Inicio]] para diseño completo.
+Snapshot del 2026-06-07 (noche, post-F6) — qué está corriendo en el server `hermess-server`. Ver [[changelog|changelog]] para historial de fases y [[Inicio|Inicio]] para diseño completo.
 
 ## Resumen ejecutivo
 
 | Capa | Componente | Estado |
 |---|---|---|
-| Client | `~/jira/jira.py` (~32 KB, Python stdlib only) | active |
-| Sidecar | `jira-sidecar.service` :9002 | active, 10 MB RAM |
-| CLI | 7 wrappers `~/bin/jira-*` | ejecutables |
-| OpenClaw | Plugin `jira-context-preflight` (11 plugins en gateway) | registrado |
-| Vault | Notas Markdown en `[[Bily/jira/Inicio|Bily/jira/]]` | sync activo |
+| Client | `~/jira/jira.py` (Python stdlib only) | active |
+| Sidecar | `jira-sidecar.service` :9002 | active, ~10 MB RAM |
+| CLI | 9 wrappers `~/bin/jira-*` (+`jira-by-user`, `jira-activity`) | ejecutables |
+| MCP | `~/jira/mcp_server.py` (10 tools) | registrado en **OpenClaw** Y **Claude Code** |
+| OpenClaw | ~~Plugin `jira-context-preflight`~~ **RETIRADO (F6)** — Bily usa el MCP | desinstalado |
+| Vault | Notas Markdown en `[[Bily/jira/Inicio|Bily/jira/]]` (**708 tickets** vía `sync_all.py`) | sync activo |
 | Skill | `~/.claude/skills/jira/` con installer portable | registrada |
 | Creds | `~/.config/jira/credentials` chmod 600 | configurado |
+
+> **F6 (2026-06-07):** Bily ya NO depende del plugin preflight. Consume Jira por **MCP nativo** (`openclaw mcp set jira`), con las 10 tools siempre presentes → entiende cualquier fraseo por intent recognition, sin regex. El plugin fue desinstalado (fuente preservada en `~/openclaw-plugins/`).
 
 ## Paths en disco
 
@@ -26,23 +29,26 @@ Snapshot del 2026-06-07 22:03 — qué está corriendo en el server `hermess-ser
 ~/.config/jira/credentials           # chmod 600 — JIRA_BASE_URL + JIRA_EMAIL + JIRA_TOKEN
 ~/jira/
   jira.py                            # cliente + sidecar + CLI en un archivo
+  mcp_server.py                      # MCP stdio (10 tools) — consumido por OpenClaw y Claude Code
+  sync_all.py                        # bulk sync masivo a la bóveda (ver changelog)
   logs/
     sidecar.log                      # stdout
     sidecar.err                      # stderr
+    sync_all.log                     # progreso del bulk sync
 ~/bin/
   jira-issue                         # GET /issue/<KEY> (read)
   jira-search                        # POST /search/jql (read)
   jira-my                            # GET /my?status=open|all (read)
+  jira-by-user                       # GET /by-user (read, resolución de nombre + ventana natural)
+  jira-activity                      # GET /activity (read, actividad genérica)
   jira-create                        # POST /issue/create (write seguro)
   jira-comment                       # POST /comment/<KEY> (write seguro)
   jira-assign                        # POST /assign/<KEY> (write seguro)
   jira-transition                    # POST /transition/<KEY> (DESTRUCTIVO --yes)
 ~/.config/systemd/user/
   jira-sidecar.service               # systemd --user, auto-start
-~/.openclaw/extensions/
-  jira-context-preflight/            # plugin instalado
 ~/openclaw-plugins/
-  jira-context-preflight/            # source del plugin
+  jira-context-preflight/            # source del plugin (DESINSTALADO en F6, conservado por si se reinstala)
 ~/.claude/skills/
   jira/
     SKILL.md                         # triggers para Claude Code
@@ -69,6 +75,17 @@ Snapshot del 2026-06-07 22:03 — qué está corriendo en el server `hermess-ser
 
 Cada write invalida `ISSUE_CACHE[key]` + limpia `SEARCH_CACHE`, y enqueuea vault sync.
 
+## MCP — cómo lo consume Bily (F6)
+
+OpenClaw conecta el server MCP `jira` (lazy, al primer turno de cada sesión, no al boot del gateway). Las 10 tools quedan presentes en el runtime de Bily con descripciones optimizadas para que el LLM elija sola: `jira_issue`, `jira_search`, `jira_my`, `jira_by_user`, `jira_activity`, `jira_transitions`, `jira_create`, `jira_comment`, `jira_assign`, `jira_transition`. El binario relaya al sidecar :9002.
+
+```bash
+openclaw mcp list                    # → jira
+openclaw mcp show jira               # config efectiva
+# registrar (ya hecho):
+openclaw mcp set jira '{"command":"python3","args":["/home/hermess/jira/mcp_server.py"]}'
+```
+
 ## Cómo verificar que todo anda
 
 ```bash
@@ -87,8 +104,12 @@ curl -s http://127.0.0.1:9002/myself | python3 -m json.tool | head -10
 # Smoke test wrapper
 jira-my | python3 -c "import sys,json; d=json.load(sys.stdin); print('total tickets:', d['total'])"
 
-# Plugin cargado
-journalctl --user -u openclaw-gateway --since "5 minutes ago" | grep jira-context-preflight | tail
+# MCP registrado en OpenClaw
+openclaw mcp list   # → jira
+
+# Test en vivo de intent recognition (fraseo libre → tool correcta)
+openclaw agent --agent main --message "decime qué tiene pendiente marbe moreno"
+# → Bily llama jira_by_user y responde los tickets agrupados
 ```
 
 ## Workspace
@@ -123,13 +144,18 @@ journalctl --user -u openclaw-gateway --since "5 minutes ago" | grep jira-contex
 # Restart sidecar (después de tocar jira.py)
 systemctl --user restart jira-sidecar
 
-# Restart gateway (después de tocar el plugin)
-openclaw plugins install ~/openclaw-plugins/jira-context-preflight --force
-systemctl --user restart openclaw-gateway
+# Restart gateway (después de tocar config de OpenClaw / MCP)
+openclaw gateway restart
+
+# Re-registrar el MCP si hiciera falta
+openclaw mcp set jira '{"command":"python3","args":["/home/hermess/jira/mcp_server.py"]}'
+
+# Reinstalar el preflight (sólo si se quiere volver atrás de F6)
+# openclaw plugins install ~/openclaw-plugins/jira-context-preflight --force
 
 # Logs en vivo
 journalctl --user -u jira-sidecar -f
-journalctl --user -u openclaw-gateway -f | grep jira-context-preflight
+journalctl --user -u openclaw-gateway -f
 
 # Forzar resync de un ticket
 curl -s http://127.0.0.1:9002/issue/<KEY> >/dev/null && sleep 3 && vault-get Bily/jira/<KEY>.md
