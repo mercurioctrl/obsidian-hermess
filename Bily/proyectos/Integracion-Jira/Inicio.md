@@ -224,18 +224,17 @@ tags: [jira, EXP, in-review]
 
 **Total camino crítico (F1-F3):** ~13h de implementación. F1 sola ya rompe el cuello de botella actual.
 
-## 8. Decisiones abiertas (necesito input de Catriel)
+## 8. Decisiones (cerradas 2026-06-07)
 
-1. **¿Lenguaje del sidecar?** → Recomiendo Python (precedente whisper, ergonomía scripting). Alternativa: Node (consistencia con plugins OpenClaw).
-2. **¿Cachear issues como notas Markdown en la bóveda?** → Recomiendo sí, en `Bily/jira/`, con tag exclusión del graph. Habilita el caso "skill portable". Alternativa: SQLite local en `~/.cache/jira/`.
-3. **¿Webhook receiver expuesto cómo?** Opciones:
-   - **a)** Cloudflared tunnel (si ya tenés uno) — Bily/Blu tiene Cloudflare?
-   - **b)** Tailscale Funnel.
-   - **c)** Atlassian Forge app (más profesional pero más overhead).
-   - **d)** Posponer F5 hasta resolver esto.
-4. **¿Granularidad notificaciones proactivas?** → Recomiendo: solo si `assignee == Catriel` OR `mention == Catriel` OR `sprint_changed AND board ∈ {boards de Catriel}`. Sin esto, firehose.
-5. **¿Auto-confirmar writes o pedir confirmación siempre?** → Recomiendo confirmar SOLO para: transitions, deletes, assignment changes. Comentarios y creación pueden ir auto (son reversibles).
-6. **¿Convención de KEY parsing?** En WhatsApp Catriel suele tipear `exp 553` o `EXP553` además de `EXP-553`. ¿Normalizamos? → Recomiendo sí, regex tolerante.
+| # | Pregunta | Decisión | Razón |
+|---|---|---|---|
+| 1 | Lenguaje sidecar + jiralib | **Python** | Precedente whisper, ergonomía cron, httpx+FastAPI maduros. |
+| 2 | Caché de issues | **Notas Markdown en `Bily/jira/`** (con exclusión del graph) | Habilita lectura desde otros agentes sin compartir token. Linkeable `[[EXP-553]]`. |
+| 3 | Webhook receiver (F5) | **Posponer** hasta validar F1-F4 | Reduce scope inicial, decidimos exposición con más info real. |
+| 4 | Confirmación en writes | **Solo destructivos: deletes + transitions** | Creates/comments/assigns van auto. Confirma lo difícil de revertir. |
+| 5 | Workspace + email | `bluinc.atlassian.net` / `team@libreopcion.com` | Cuenta de Blu de Catriel. |
+| 6 | Token storage | `~/.config/jira/credentials` chmod 600 | Nunca en repo ni CLAUDE.md. Sidecar es el único lector. |
+| 7 | KEY parsing tolerante | **Sí**, regex acepta `EXP-553`, `EXP553`, `exp 553` | Catriel tipea por WhatsApp con typos. |
 
 ## 9. Riesgos
 
