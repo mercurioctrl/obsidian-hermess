@@ -1,11 +1,14 @@
 ---
 tags: [proyecto, integracion, jira, bily]
-estado: diseno
+estado: deployed
 creado: 2026-05-26
+deployed: 2026-06-07
 owner: Catriel
 ---
-
+como
 # Integración Jira para Bily (y agentes futuros)
+
+> **Estado:** F1+F2+F3+F4 **DEPLOYED** 2026-06-07. F5 (webhooks) pospuesto. Ver [[estado|estado vivo]] para componentes corriendo y [[changelog|changelog]] para cronología.
 
 > Diseño técnico completo. Objetivo: que **Bily responda sobre tickets/sprints por WhatsApp** y que la capa quede **portable** para reutilizarla desde Claude Code u otros agentes (no acoplada a OpenClaw).
 
@@ -213,16 +216,16 @@ tags: [jira, EXP, in-review]
 
 ## 7. Roadmap (fases entregables)
 
-| F | Entregable | Tiempo estimado | Valor |
-|---|---|---|---|
-| **F1** | `jiralib` + sidecar mínimo + wrappers read-only (`jira-issue`, `jira-search`, `jira-my`). | ~4-6h | Probar desde terminal, validar creds y JQL. |
-| **F2** | Plugin OpenClaw `jira-context-preflight` con detección de ticket keys + queries comunes. | ~3h | **Bily ya contesta sobre tickets por WhatsApp.** |
-| **F3** | Wrappers write (`jira-create`, `jira-transition`, `jira-comment`, `jira-assign`) + hook de confirmación. | ~4h | Catriel dicta acciones por WhatsApp. |
-| **F4** | Vault sync (sidecar persiste cada issue tocado como nota Markdown). Skill Claude Code. | ~3h | Portabilidad real, otros agentes consumen. |
-| **F5** | Webhook receiver + notificaciones proactivas filtradas. | ~6h | Bily avisa sin que Catriel pregunte. |
-| **F6** | Polish: cache invalidation inteligente, dashboards de uso, MCP fallback. | open-ended | Mantenimiento a largo plazo. |
+| F | Entregable | Estado |
+|---|---|---|
+| **F1** | `jiralib` + sidecar + wrappers read-only (`jira-issue`, `jira-search`, `jira-my`). | ✅ **DONE 2026-06-07 21:21** |
+| **F2** | Plugin OpenClaw `jira-context-preflight` (regex tolerante + triggers). | ✅ **DONE 2026-06-07 21:25** (+ bug fix provenance 21:34) |
+| **F3** | Wrappers write + dry-run con `--yes` en destructivos. | ✅ **DONE 2026-06-07 21:47**, smoke-tested live por Catriel |
+| **F4** | Vault sync de tickets como notas Markdown + skill portable. | ✅ **DONE 2026-06-07 22:03** |
+| **F5** | Webhook receiver + notificaciones proactivas WhatsApp. | ⏸️ Pospuesto (necesita Cloudflared/Tailscale) |
+| **F6** | Polish: cache invalidation inteligente, dashboards de uso. | open-ended |
 
-**Total camino crítico (F1-F3):** ~13h de implementación. F1 sola ya rompe el cuello de botella actual.
+Ver [[changelog|changelog]] para cronología detallada y [[estado|estado vivo]] para qué corre ahora.
 
 ## 8. Decisiones (cerradas 2026-06-07)
 
@@ -255,6 +258,9 @@ tags: [jira, EXP, in-review]
 
 ## 11. Ver también
 
+- [[changelog|Changelog]] — cronología detallada de las 4 fases deployadas hoy.
+- [[estado|Estado vivo]] — componentes corriendo, paths, endpoints, performance medida.
+- [[Bily/jira/Inicio|Bily/jira/]] — notas de tickets autopobladas por el vault sync.
 - [[Bily/proyectos/Inicio|Proyectos]] (volver al índice)
 - [[Bily/Inicio|Inicio Bily]]
 
