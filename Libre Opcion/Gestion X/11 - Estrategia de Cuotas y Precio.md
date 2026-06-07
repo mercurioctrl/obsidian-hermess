@@ -26,6 +26,55 @@ tags:
 > [!danger] La matemática que prohíbe comerse las cuotas
 > Con **17% de margen**, bancar **6 cuotas sin interés** de tu bolsillo (~11–13%) te deja 4–6% bruto — y de ahí todavía sale el **envío gratis** y la operación. **Te deja en pérdida.** Comerse el sin interés en todo el catálogo es matemáticamente imposible a 17%.
 
+## Getnet como adquirente alternativo
+
+Investigado el 2026-06-06. Tarifas oficiales: [getnet.com.ar/aranceles](https://www.getnet.com.ar/aranceles)
+
+### Aranceles base Getnet
+
+| Medio | Acreditación estándar |
+|---|---|
+| QR (dinero en cuenta) | 0,80% + IVA |
+| Débito | Hasta 1% + IVA (1 día hábil) |
+| Crédito 1 pago | **Hasta 2% + IVA** (8 días hábiles) |
+| Crédito cuotas | **Hasta 2% + IVA** (2 días hábiles) |
+
+> El arancel base de crédito 1 pago es **significativamente más barato que MP** (~3-4%).
+
+### Plan Cuotas Getnet — diferencia estructural clave
+
+**El interés lo paga el cliente, no el comercio.** La TNA se suma al precio de cada cuota.
+
+| Cuotas | TNA |
+|---|---|
+| 2 | 8,60% |
+| 3 | 11,36% |
+| 4 | 14,01% |
+| 6 | 18,99% |
+| 9 | 27,04% |
+| 12 | 33,23% |
+| 18 | 43,53% |
+| 24 | 51,65% |
+
+### Plan Cuotas MiPyME (Getnet)
+
+Solo 3 y 6 cuotas, para rubros habilitados. Tasas: **7,36% (3c) · 13,82% (6c)**. Verificar si el rubro tech/importación califica.
+
+### Getnet vs Mercado Pago — comparativa
+
+| | Getnet | Mercado Pago |
+|---|---|---|
+| **Quién paga el interés en cuotas** | El **cliente** | El **comercio** |
+| **6 cuotas** | 18,99% TNA → el comprador paga más | ~11-13% → vos lo absorbés |
+| **12 cuotas** | 33,23% TNA → el comprador paga más | ~20%+ → vos lo absorbés |
+| **Sin interés** | No existe en plan estándar | Sí, pero sale de tu margen |
+| **Arancel crédito 1 pago** | ~2% | ~3-4% |
+
+> [!tip] Combinación óptima tentativa
+> - **Getnet** para 1 pago y débito (arancel más bajo).
+> - **MP** para promos subsidiadas por marca (sin interés que paga AMD/ASUS/etc.) — el "oro" sigue siendo MP en ese caso.
+> - En líneas propias/importadas donde fijás precio: Getnet en cuotas (el costo va al cliente) o meter el interés en el precio.
+
 ## Por qué "acordar con bancos a lo bestia" no alcanza (todavía)
 
 A ~USD 161k de GMV/mes no hay volumen para que un banco arme una promo a medida. Las vías reales, por poder:
@@ -34,8 +83,10 @@ A ~USD 161k de GMV/mes no hay volumen para que un banco arme una promo a medida.
 |---|---|---|
 | **Promos MP subsidiadas por marca** ("24 sin interés", +300 marcas) | **~0%** (paga la marca/MP) | ✅ El oro. Aplica a **mainstream** (AMD, ASUS, Samsung). |
 | **Meter el costo en el precio** | Sale del margen ampliado | ✅ Base, sobre todo en **líneas exclusivas/importadas** (vos fijás el precio). |
+| **Getnet Plan Cuotas** | El cliente paga el interés (TNA 8,60%–51,65%) | ✅ Sin costo para el comercio. Útil en exclusivas. |
+| **Getnet MiPyME** | 7,36% (3c) · 13,82% (6c) | ⚠️ Verificar si el rubro califica. |
 | **Cuota Simple** (programa nacional) | 5,41% (3) · 10,31% (6) | ⚠️ Casi seguro **no calificás**: exige producción nacional y vos importás. |
-| **Bancos / adquirentes** | Variable | 🟡 Relación a futuro, vía adquirentes. Poco poder hoy. |
+| **Bancos / adquirentes** | Variable | 🟡 Relación a futuro. Getnet es el primer paso concreto. |
 
 ## 🎁 El "aire" de precio que hoy se regala
 
@@ -62,7 +113,9 @@ Meter el costo en el precio = **abandonar la bandera de "el más barato"**. Eso 
 - [ ] Confirmar con Cowork el % de "aire" de precio promedio del catálogo vs. competencia.
 - [ ] Activar cuotas sin interés en MP (definir hasta cuántas) y medir impacto en conversión.
 - [ ] Mapear qué marcas mainstream del catálogo tienen promo MP subsidiada disponible.
-- [ ] Iniciar conversaciones con adquirentes/bancos (proceso largo).
+- [ ] Iniciar conversaciones con Getnet (adquirente concreto, más barato que MP en 1 pago).
+- [ ] Verificar si LibreOpción califica para Plan Cuotas MiPyME de Getnet (rubro tech/importación).
+- [ ] Evaluar usar Getnet para 1 pago/débito + MP solo para promos de marca.
 
 ## Enlaces
 
