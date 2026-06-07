@@ -1,3 +1,8 @@
+---
+jira_account_id: 6070ddbe4703e40067cbeff8
+jira_display_name: Catriel Mercurio
+jira_email: "team@libreopcion.com"
+---
 # Perfil: Catriel Mercurio
 
 ## Información Básica
@@ -32,3 +37,9 @@
 ## Ver también
 
 - [[Bily/Inicio\|Inicio de Bily]]
+
+## Jira
+
+- **Cuenta Jira:** `Catriel Mercurio` (`accountId: 6070ddbe4703e40067cbeff8`) · email `team@libreopcion.com`
+- **Tareas (en vivo):** preguntale a Bily *"¿qué tiene pendiente Catriel Mercurio?"* — usa la tool `jira_by_user`. No se guardan acá: siempre frescas desde Jira.
+- **Tickets vinculados:** mirá el panel **Backlinks** de esta nota — cada ticket donde Catriel Mercurio es asignado/reporta enlaza acá automáticamente vía el sync de `Bily/jira/`.
