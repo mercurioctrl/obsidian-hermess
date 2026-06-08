@@ -40,3 +40,29 @@ Análisis e implementación del módulo de billetera y features relacionadas. In
 - [[TareaWallet/contexto|Contexto]] — MODO QR fix, OPcache gotcha, flujo wallet, TR_CODIGO 476, queries, HMAC
 - [[TareaWallet/changelog|Changelog]] — Historial por fecha
 - [[TareaWallet/arquitectura-recategorizacion|Arquitectura recategorización]]
+
+## SEO y Performance
+
+Diagnóstico y fixes de Core Web Vitals para libreopcion.com.ar.
+- [[Libre Opcion/00-resumen-diagnostico-seo-performance|Diagnóstico SEO y Performance]] — resumen ejecutivo
+- [[Libre Opcion/01-fix-cls-imagenes|01 — Fix CLS imágenes]]
+- [[Libre Opcion/02-fix-lcp-render-blocking|02 — Fix LCP render blocking]]
+- [[Libre Opcion/03-fix-header-min-height|03 — Fix header min-height]]
+- [[Libre Opcion/04-fix-fuentes-innecesarias|04 — Fix fuentes innecesarias]]
+- [[Libre Opcion/05-fix-fouc-css-tardio|05 — Fix FOUC CSS tardío]]
+- [[Libre Opcion/06-fix-cls-tbt-ronda-2|06 — Fix CLS/TBT ronda 2]]
+- [[Libre Opcion/07-fix-cls-mobile-h1-sr-only-ronda-3|07 — Fix CLS mobile H1 sr-only ronda 3]]
+- [[Libre Opcion/08-fix-cls-listings-ronda-4|08 — Fix CLS listings ronda 4]]
+
+## Tareas de desarrollo
+
+- [[Libre Opcion/tareas/tareas|Tareas]] — backlog de desarrollo del proyecto
+
+## Estrategia comercial
+
+- [[Libre Opcion/Gestion X/00 - Índice Gestión X|Gestión X]] — documentación estratégica (diagnóstico, hoja de ruta, posicionamiento, 19 docs)
+
+## Otras notas
+
+- [[Libre Opcion/hot sale|Hot Sale 2026]] — ideas de landing pages
+- [[Libre Opcion/sync-curls|Sync Curls]] — proceso de sincronización periódica
