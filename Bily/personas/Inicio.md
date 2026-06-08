@@ -21,6 +21,14 @@ Perfiles de las personas que Bily conoce: equipo de Blu, familia y colaboradores
 - [[Bily/personas/Joshua|Perfil: Joshua]]
 - [[Bily/personas/Juan|Perfil: Juan]]
 - [[Bily/personas/Mario Contratista|Perfil: Mario Contratista]]
+- [[Bily/personas/Marcela Nuble|Perfil: Marcela Nuble]]
+- [[Bily/personas/Blubot|Perfil: Blubot]]
+- [[Bily/personas/Automation for Jira|Perfil: Automation for Jira]]
+- [[Bily/personas/Pedidos Jira|Perfil: Pedidos Jira]]
+- [[Bily/personas/niczerus|Perfil: niczerus]]
+- [[Bily/personas/Sofía Melograna|Perfil: Sofía Melograna]]
+- [[Bily/personas/Eloy Passarella|Perfil: Eloy Passarella]]
+- [[Bily/personas/logistica@nb.com.ar|Perfil: logistica@nb.com.ar]]
 
 ### Subcarpetas
 

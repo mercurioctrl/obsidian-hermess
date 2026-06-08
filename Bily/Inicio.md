@@ -18,6 +18,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/aprendizajes/Inicio\|Aprendizajes]] — notas operativas capturadas durante el trabajo con Catriel
 - [[Bily/media/Inicio\|Media]] — archivos multimedia: audios de WhatsApp y transcripciones
 - [[Bily/Finanzas/Inicio\|Finanzas]] — registro de pagos y deudas de tarjetas
+- [[Bily/jira/Inicio\|Jira]] — 709 tickets sincronizados de 24 proyectos
 
 ## Personas conocidas
 
