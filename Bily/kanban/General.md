@@ -2,7 +2,6 @@
 
 ## Por hacer
 - [ ] Asignarle a [[Franco Callipo|Franco]] una historia de cómo hacer que los vendedores puedan reclamar ellos mismos por las calificaciones: https://bluinc.atlassian.net/jira/servicedesk/projects/SNB/queues/custom/63/SNB-3963
-- [ ] Subir los aceleradores de [[Adata]] (Recordatorio programado para el 8 de junio a las 15hs).
 - [ ] Para [[Diego Bordon]]: Agregar para que puedan contar de manera más lineal (solo aquellos que realmente no tienen algún dato y hay que contabilizar).
 - [ ] Requerimiento Postventa (Gestión de Armados):
   - Cuando entra un armado, se debe poder seleccionar del pedido los ítems involucrados.
@@ -24,6 +23,7 @@
 ## En curso
 
 ## Listo
+- [x] Subir los aceleradores de [[Adata]] (Recordatorio programado para el 8 de junio a las 15hs).
 - Enviar a [[Alejandra Guidonbono|Ale]] el mensaje de acceso para el [[Adata]] Rewards.
 - Enviar el newsletter de [[Adata]] Rewards.
 - Ver lo de [[Ayelen Mercurio|Aye]].
