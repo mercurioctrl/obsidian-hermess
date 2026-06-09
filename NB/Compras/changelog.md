@@ -2,6 +2,12 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-06-04
+
+- feat(competencia): nueva sección **Competencia** en el frontend para navegar el catálogo de competidores vía la BluPartPicker API. Dividida en dos subsecciones: **Distribuidores** (`distribuidor=1`) y **Resellers** (`distribuidor=0`). Filtros server-side (búsqueda, origen, marca, categoría, stock, moneda/TC + rango de precio, orden por columnas) + drawer de ficha e historial. (Frontend, rama `competencia`, commit `0e048bc`)
+
+Archivos: `store/competitors.js`, `plugins/api.js`, `components/Competitors/` (Catalog, SourceCards, Stats, Detail), `pages/distributors.vue`, `pages/resellers.vue`, `layouts/basic.vue`. Ver [[competencia|nota de Competencia]].
+
 ## 2026-03-11
 
 - feat: Despachos temporales y serialización de datos (API)
@@ -54,4 +60,4 @@ Historial de cambios del proyecto Compras, basado en los commits de ambos reposi
 
 ---
 
-Ver también: [[arquitectura|Arquitectura]] · [[stack|Stack]]
+Ver también: [[arquitectura|Arquitectura]] · [[stack|Stack]] · [[competencia|Competencia]]

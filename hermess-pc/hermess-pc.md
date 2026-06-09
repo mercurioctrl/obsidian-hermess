@@ -18,6 +18,12 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 
 ---
 
+## Skills locales
+
+- [[hermess-pc/skills/skills|Skills de Claude Code]] — skills instalados en `~/.claude/skills/` en este equipo
+
+---
+
 ## Proyectos
 
 ### musica

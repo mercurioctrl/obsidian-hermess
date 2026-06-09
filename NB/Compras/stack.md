@@ -16,6 +16,7 @@
 ### Infraestructura API
 
 - **Docker:** Ubuntu 22.04 + Apache + PHP 8.1 (mod_php)
+- **Contenedor:** `api-rest-compras-apirest-laravel`
 - **Puerto:** 8096 → 80
 - **Crontab:** Configurado en el contenedor (`docker/crontab`)
 
@@ -35,6 +36,8 @@
 | ESLint + Prettier + Stylelint | — | Linting |
 | PM2 | — | Process manager en producción |
 
+> **Puerto dev:** lo define `NODE_PORT` en `.env`. El `.env` real usa **3867** (el 3002 lo ocupa el proyecto `pedidos`). Ver [[memoria]].
+
 ### Variables de entorno clave
 
 **API** (`.env`):
@@ -46,8 +49,9 @@
 - `STATIC_URL` — URL de imágenes estáticas
 
 **Frontend** (`.env`):
-- `API_HOST` — URL de la API
-- `NODE_PORT` — Puerto del dev server (default 3002)
+- `API_HOST` — URL de la API de compras
+- `COMPETITORS_API_HOST` — URL de la BluPartPicker API (catálogo de competidores, ver [[competencia]]). Default `http://10.10.10.7:4444`
+- `NODE_PORT` — Puerto del dev server (real: 3867)
 - `COMPROBANTES` — URL del servicio de comprobantes
 - `SUPPORT` — URL del servicio de soporte
 - `JWT_SUPPORT_JIRA` — Token para integración Jira
@@ -57,6 +61,7 @@
 - **MS Comprobantes** (`API_VOUCHER_URL`) — Generación de comprobantes fiscales
 - **MS Envíos** (`API_MSENVIO_URL`) — Gestión de envíos
 - **API Posiciones Arancelarias** — Búsqueda externa de posiciones (endpoint `tariffPositionExternal`)
+- **BluPartPicker API** (`COMPETITORS_API_HOST`) — Catálogo de competidores (FastAPI). Consumida desde el browser (CORS abierto) por la sección [[competencia|Competencia]]. Docs en `/redoc`, spec en `/openapi.json`
 - **Jira** — Integración de soporte desde el frontend (`plugins/apiJira.client.js`)
 - **Imágenes estáticas** (`STATIC_URL`) — CDN de imágenes de productos
 
@@ -64,3 +69,4 @@
 
 - [[arquitectura|Arquitectura]]
 - [[changelog|Changelog]]
+- [[competencia|Competencia]]

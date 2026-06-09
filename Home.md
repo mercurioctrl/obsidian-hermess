@@ -55,13 +55,21 @@
   - [[Libre Opcion/00-resumen-diagnostico-seo-performance|resumen SEO]] · fixes: [[Libre Opcion/01-fix-cls-imagenes|01]] · [[Libre Opcion/02-fix-lcp-render-blocking|02]] · [[Libre Opcion/03-fix-header-min-height|03]] · [[Libre Opcion/04-fix-fuentes-innecesarias|04]] · [[Libre Opcion/05-fix-fouc-css-tardio|05]] · [[Libre Opcion/06-fix-cls-tbt-ronda-2|06]] · [[Libre Opcion/07-fix-cls-mobile-h1-sr-only-ronda-3|07]] · [[Libre Opcion/08-fix-cls-listings-ronda-4|08]]
   - [[Libre Opcion/TareaWallet/TareaWallet|TareaWallet]] · [[Libre Opcion/enviosMailDrop/enviosMailDrop|enviosMailDrop]] · [[Libre Opcion/tareas/tareas|tareas]]
   - [[Libre Opcion/hot sale|Hot Sale 2026]] · [[Libre Opcion/sync-curls|sync-curls]]
+<<<<<<< HEAD
   - **Gestión X (estrategia 2026):** [[Libre Opcion/Gestion X/00 - Índice Gestión X|MOC]] · [[Libre Opcion/Gestion X/13 - El Verdadero Cuello de Botella es la Demanda|insight demanda]] · [[Libre Opcion/Gestion X/18 - Analisis Performance Ventas 12 Meses (FODA)|FODA datos]] · [[Libre Opcion/Gestion X/15 - Plan de Accion - Proximos 6 Meses|plan 6 meses]] · cubo de datos + sitio para socios (HTML)
+=======
+  - [[Libre Opcion/Gestion X/00 - Índice Gestión X|Gestión X]] — documentación estratégica (19 docs: diagnóstico, hoja de ruta, posicionamiento)
+>>>>>>> origin/main
 
 ## NB
 
 - [[NB/NB|NB]] — Proyectos y microservicios del ecosistema New Bytes
   - [[NB/Compras/Compras|Compras]] · [[NB/Comprobantes/Comprobantes|Comprobantes]] · [[NB/controldeprecios/controldeprecios|controldeprecios]] · [[NB/expedicion/expedicion|expedicion]]
   - [[NB/inventario/inventario|inventario]] · [[NB/microservicio-envios/microservicio-envios|microservicio-envios]] · [[NB/sincroAfip/sincroAfip|sincroAfip]] · [[NB/cobros/cobros|cobros]]
+
+### Compras — Compras a proveedores + competencia
+- [[NB/Compras/Compras|índice]] · [[NB/Compras/arquitectura|arquitectura]] · [[NB/Compras/stack|stack]] · [[NB/Compras/changelog|changelog]] · [[NB/Compras/memoria|memoria]]
+- [[NB/Compras/competencia|Competencia]] (catálogo de competidores, BluPartPicker API) · [[NB/Compras/reglas-compras|reglas de compras]]
 
 ### pedidos — Gestión de pedidos multi-empresa
 - [[NB/pedidos/pedidos|índice]] · [[NB/pedidos/arquitectura|arquitectura]] · [[NB/pedidos/stack|stack]] · [[NB/pedidos/changelog|changelog]] · [[NB/pedidos/contexto|contexto]] · [[NB/pedidos/memoria|memoria]]
@@ -113,7 +121,7 @@ Ver [[Skills/Skills|Skills]].
 - [[aplus-server/aplus-server|aplus-server]]
   - [[aplus-server/arquitectura|arquitectura]] · [[aplus-server/stack|stack]] · [[aplus-server/changelog|changelog]] · [[aplus-server/memoria|memoria]] · [[aplus-server/contexto|contexto]] · [[aplus-server/integracion-retailers|retailers]] · [[aplus-server/migracion-libreopcion|migración]]
 - [[hermess-pc/hermess-pc|hermess-pc]]
-  - [[hermess-pc/arquitectura|arquitectura]] · [[hermess-pc/red|red UniFi]] · [[hermess-pc/changelog|changelog]] · [[hermess-pc/earlyoom|earlyoom]] · [[hermess-pc/memoria|memoria]] · [[hermess-pc/monitores|monitores]] · [[hermess-pc/sync-curls|sync-curls]] · [[hermess-pc/musica/musica|musica]]
+  - [[hermess-pc/arquitectura|arquitectura]] · [[hermess-pc/red|red UniFi]] · [[hermess-pc/changelog|changelog]] · [[hermess-pc/earlyoom|earlyoom]] · [[hermess-pc/memoria|memoria]] · [[hermess-pc/monitores|monitores]] · [[hermess-pc/sync-curls|sync-curls]] · [[hermess-pc/musica/musica|musica]] · [[hermess-pc/skills/skills|skills locales]]
 
 ## Otros proyectos
 

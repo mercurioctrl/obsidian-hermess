@@ -62,6 +62,7 @@ Cada página corresponde a un módulo de negocio con su propio store Vuex:
 | `categories.vue` | `categories.js` | Categorías |
 | `tariffPosition.vue` | `tariffPosition.js` | Posiciones arancelarias |
 | `tariffTax.vue` | `tariffTax.js` | Impuestos arancelarios |
+| `distributors.vue` / `resellers.vue` | `competitors.js` | Catálogo de competidores — ver [[competencia]] |
 | `dashboard.vue` | — | Dashboard principal |
 
 ### Sistema de modales
@@ -74,7 +75,7 @@ El store raíz (`store/index.js`) gestiona un sistema de modales dinámicos con 
 
 ### Plugins clave
 
-- `plugins/api.js` — Wrapper `$api` con métodos tipados por dominio (orders, providerOrderInbound, tariffPosition, company)
+- `plugins/api.js` — Wrapper `$api` con métodos tipados por dominio (orders, providerOrderInbound, tariffPosition, company, **competitors**)
 - `plugins/formats.js` — Formateo de números/fechas
 - `plugins/vue-mixin-common-methods.js` — Métodos compartidos entre componentes
 - `plugins/vee-validate.js` — Validación de formularios
@@ -85,7 +86,17 @@ El store raíz (`store/index.js`) gestiona un sistema de modales dinámicos con 
 - `Filters/` — Un componente de filtro por cada página/dominio
 - `Table/` — Celdas editables inline (`EditableCell.vue`), menú contextual (`ClickRightCell.vue`)
 - `Orders/` — Detalle de orden, agregar items, agregar posición arancelaria
+- `Competitors/` — Catálogo de competidores: `Catalog.vue` (grilla reutilizable por `distribuidor`), `SourceCards.vue`, `Stats.vue`, `Detail.vue`
 - `Report/` — Sistema de tickets/chat de soporte
+
+### Sección Competencia (catálogo de competidores)
+
+Feature que consume la **BluPartPicker API** (externa, ver [[stack#Servicios externos]] y [[competencia]]). Difiere del resto del front porque:
+
+- Usa una **instancia axios dedicada** (`$api.competitors`) apuntando a `COMPETITORS_API_HOST`, distinta del `API_HOST` de compras (CORS abierto, host distinto).
+- Todo **server-side** (catálogo de ~147k items): paginación, filtros, orden y conversión de moneda los resuelve la API.
+- Una sola grilla (`Catalog.vue`) parametrizada por `distribuidor` (1=Distribuidores, 0=Resellers) reutilizada por dos páginas.
+- Vive en la rama `competencia`.
 
 ## Base de datos
 
@@ -95,3 +106,4 @@ SQL Server externo. No hay migraciones Laravel — el schema es gestionado fuera
 
 - [[stack|Stack tecnológico]]
 - [[changelog|Changelog]]
+- [[competencia|Competencia]]
