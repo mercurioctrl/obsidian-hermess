@@ -6,17 +6,17 @@
 
 ## 🔵 Blu
 
-- [[Blu]] — Índice general
-  - [[blu-web-v1]] — Sitio web v1
-  - [[bluFixture]] — Prode Copa Mundial 2026 ← nuevo
-  - [[bluMiniErp]] — Mini ERP interno
-  - [[rrhh]] — Recursos Humanos
+- [[Blu/Blu|Blu]] — Índice general
+  - [[Blu/blu-web-v1/blu-web-v1|blu-web-v1]] — Sitio web v1
+  - [[Blu/bluFixture/bluFixture|bluFixture]] — Prode Copa Mundial 2026
+  - [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]] — Mini ERP interno
+  - [[Blu/rrhh/rrhh|rrhh]] — Recursos Humanos
   - `direccion/` — Dirección
 
 ## 🏢 Clientes & Proyectos
 
 - [[BluPartPicker]] — Comparador de precios hardware
-- [[Gigabyte]] → [[gigaErp]] — ERP Gigabyte
+- [[Gigabyte]] → gigaErp — ERP Gigabyte
 - [[Catirel]] — Proyectos Catirel
 - [[Asus]] — Contrataciones y mini sitio
 - [[naevo]] — Proyecto Naevo
@@ -60,7 +60,7 @@
 
 - [[Planilla Acciones Bully]] — Acciones y bots
 - `Claude/` — Notas sobre Claude
-- `Skills/` — [[Skills]] personales
+- [[Skills/Skills|Skills]] — Skills de Claude Code
 
 ---
 

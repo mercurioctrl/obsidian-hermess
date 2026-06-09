@@ -8,6 +8,10 @@ Proyectos y áreas de BLU Digital Agency.
 - [[blu-web-v1/arquitectura|arquitectura]] · [[blu-web-v1/stack|stack]] · [[blu-web-v1/changelog|changelog]]
 - [[blu-web-v1/base-de-conocimiento|base de conocimiento]] · [[blu-web-v1/memoria|memoria]]
 
+### [[bluFixture/bluFixture|bluFixture]] — Prode multiempresa Copa Mundial 2026
+- [[bluFixture/arquitectura|arquitectura]] · [[bluFixture/stack|stack]] · [[bluFixture/api|api]]
+- [[bluFixture/contexto|contexto]] · [[bluFixture/changelog|changelog]]
+
 ### [[bluMiniErp/bluMiniErp|bluMiniErp]] — Mini ERP interno
 - [[bluMiniErp/Backend - API|Backend API]] · [[bluMiniErp/Backend - Modelos|Modelos]] · [[bluMiniErp/Base de Datos|Base de Datos]]
 - [[bluMiniErp/Frontend|Frontend]] · [[bluMiniErp/Componentes UI|Componentes UI]] · [[bluMiniErp/Design Tokens|Design Tokens]]
@@ -18,10 +22,7 @@ Proyectos y áreas de BLU Digital Agency.
 - [[bluMiniErp/Errores Comunes|Errores Comunes]] · [[bluMiniErp/changelog|changelog]] · [[bluMiniErp/memoria|memoria]]
 
 ### Dirección
-- [[Blu/direccion/reunion-directorio-pendiente|Reunión de Directorio Blu – Pendiente]]
-
-### [[Blu/bluFixture/bluFixture|bluFixture]] — Prode multiempresa Copa Mundial 2026
-- [[Blu/bluFixture/arquitectura|arquitectura]] · [[Blu/bluFixture/changelog|changelog]]
+- [[direccion/reunion-directorio-pendiente|Reunión de Directorio Blu – Pendiente]]
 
 ### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
 - [[rrhh/alertas-gestion|alertas de gestión]] · [[rrhh/cumpleanos|cumpleaños]] · [[rrhh/changelog|changelog]]

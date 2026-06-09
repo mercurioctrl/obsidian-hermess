@@ -1,21 +1,40 @@
 # bluFixture
 
-Base de conocimiento del proyecto bluFixture — Prode multiempresa Copa Mundial 2026.
+Plataforma multiempresa de pronósticos para el **Mundial FIFA 2026**.
 
-## Descripción
+> **URL:** http://localhost:8830 · **Login:** admin@blufixture.com / admin1234
 
-Sistema de pronósticos (prode) para el Mundial 2026, multi-empresa. Cada empresa puede tener su propio portal de acceso con identidad visual propia.
+---
 
-## Stack
+## Notas del proyecto
+
+- [[arquitectura]] — Estructura, modelos, decisiones técnicas
+- [[stack]] — Tecnologías, dependencias, Docker
+- [[api]] — Referencia completa de endpoints
+- [[contexto]] — Reglas de negocio, patrones, gotchas
+- [[changelog]] — Historial de cambios por sesión
+
+---
+
+## Stack rápido
 
 | Capa | Tecnología |
 |------|-----------|
 | Frontend | Nuxt 3 + Vue 3 + Tailwind + Pinia |
 | Backend | Laravel 11 + PHP 8.3 + Sanctum |
-| DB | MySQL 8 |
-| Puerto público | 8830 |
+| DB | MySQL 8 (puerto 3308) |
+| Cache | Redis 7 |
+| Proxy | Nginx (puerto 8830) |
+| Deploy | Docker Compose |
 
-## Carpetas
+## Roles
 
-- [[arquitectura]] — Decisiones técnicas y estructura
-- [[changelog]] — Historial de cambios
+| Rol | Panel | Descripción |
+|-----|-------|-------------|
+| `super_admin` | `/admin` | Acceso total |
+| `empresa_admin` | `/empresa` | Gestiona su empresa |
+| `participante` | `/portal` | Portal de pronósticos |
+
+---
+
+*Última sincronización: 2026-06-08*
