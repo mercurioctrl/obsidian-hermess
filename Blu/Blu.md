@@ -20,6 +20,9 @@ Proyectos y áreas de BLU Digital Agency.
 ### Dirección
 - [[Blu/direccion/reunion-directorio-pendiente|Reunión de Directorio Blu – Pendiente]]
 
+### [[Blu/bluFixture/bluFixture|bluFixture]] — Prode multiempresa Copa Mundial 2026
+- [[Blu/bluFixture/arquitectura|arquitectura]] · [[Blu/bluFixture/changelog|changelog]]
+
 ### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
 - [[rrhh/alertas-gestion|alertas de gestión]] · [[rrhh/cumpleanos|cumpleaños]] · [[rrhh/changelog|changelog]]
 - [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]]

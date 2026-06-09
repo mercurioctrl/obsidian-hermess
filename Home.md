@@ -32,7 +32,8 @@
 
 ## 🟡 Libre Opción
 
-- `Libre Opcion/` — SEO & Performance fixes
+- [[Libre Opcion/Libre Opcion|Libre Opción]] — SEO & Performance fixes
+  - [[Libre Opcion/enviosMailDrop/enviosMailDrop|enviosMailDrop]] · [[Libre Opcion/tareas/tareas|tareas]] · [[Libre Opcion/TareaWallet/TareaWallet|TareaWallet]]
 
 ## 🔴 Bily
 
@@ -41,8 +42,9 @@
 
 ## 🏠 Hogar
 
-- `Hogar/` — Reformas
-  - `Lavadero/`, `Oficina/`, `Servicios/`
+- Reformas del hogar
+  - [[Hogar/Lavadero/Lavadero|Lavadero]] — reforma del lavadero
+  - [[Hogar/Oficina/Oficina|Oficina]] — reforma de la oficina
 
 ## 🌐 Red & Infra
 
