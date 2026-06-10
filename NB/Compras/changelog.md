@@ -2,6 +2,16 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-06-10
+
+> Cambios en working tree (aún sin commitear/mergear al cierre de la sesión).
+
+- fix: `tariffTax?companyCode=X` no devolvía los impuestos **globales** (IVA, Ganancias, Retenciones, etc., cargados con `companyCode NULL`). El filtro `companyCode = :cc` descarta los NULL en SQL Server. Cambiado a `(companyCode = :companyCode OR companyCode IS NULL)` para incluirlos (API — `TariffTaxPrefixRepository`). Ver [[contexto#Impuestos globales (NULL = todas las empresas)|regla de impuestos globales]].
+- perf/feat: Búsqueda unificada de items (`/v1/items?search=`). Ahora un solo término encuentra por SKU (`ID_PRODUCTO`), título (`CDETALLE`), `id_articulo`, marca y familia. Query **parametrizada** (named binds) → reutiliza el plan de ejecución de SQL Server y elimina la inyección SQL que había por interpolación de strings (API — `ItemRepository`).
+- feat: En el detalle de orden, la **cotización** queda no editable cuando el proveedor opera en pesos (`currencyId = 'PSO'`); solo la *cotización fiscal* es editable. En otra moneda (USD) la cotización sigue editable. Nuevo computed `isProviderInPesos` (Frontend — `Orders/Detail.vue`).
+
+Archivos: `app/Repositories/TariffPosition/TaxesName/TariffTaxPrefixRepository.php`, `app/Repositories/Items/ItemRepository.php`, `components/Orders/Detail.vue`
+
 ## 2026-03-11
 
 - feat: Despachos temporales y serialización de datos (API)
@@ -54,4 +64,4 @@ Historial de cambios del proyecto Compras, basado en los commits de ambos reposi
 
 ---
 
-Ver también: [[arquitectura|Arquitectura]] · [[stack|Stack]]
+Ver también: [[arquitectura|Arquitectura]] · [[stack|Stack]] · [[contexto|Contexto y reglas]]

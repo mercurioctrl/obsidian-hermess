@@ -13,6 +13,8 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 - [[arquitectura|Arquitectura]] — Estructura, patrones, módulos
 - [[stack|Stack tecnológico]] — Frameworks, dependencias, servicios externos
 - [[changelog|Changelog]] — Historial de cambios
+- [[contexto|Contexto y reglas]] — Reglas de negocio, decisiones y deuda técnica
+- [[memoria|Memoria del proyecto]] — Consolidado de la memoria persistente de Claude
 
 ## Ver también
 
@@ -28,4 +30,4 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 Las tareas se trackean con prefijo `COM-` en Jira.
 
 ---
-*Última sincronización: 2026-04-06*
+*Última sincronización: 2026-06-10*

@@ -1,6 +1,7 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- [ ] APP - Feat - Agregar hoja membretada de presupuesto (Pendiente de asignar a equipo dev)
 - [ ] Asignarle a [[Franco Callipo|Franco]] una historia de cómo hacer que los vendedores puedan reclamar ellos mismos por las calificaciones: https://bluinc.atlassian.net/jira/servicedesk/projects/SNB/queues/custom/63/SNB-3963
 - [ ] Para [[Diego Bordon]]: Agregar para que puedan contar de manera más lineal (solo aquellos que realmente no tienen algún dato y hay que contabilizar).
 - [ ] Requerimiento Postventa (Gestión de Armados):
