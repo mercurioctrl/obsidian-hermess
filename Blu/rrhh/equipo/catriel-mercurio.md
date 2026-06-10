@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Director de Tecnología |
-| **Email** | cmercurio@blu.inc |
+| **Email** | cmercurio@blustudioinc.com |
 | **WhatsApp** | +5491130510267 |
 | **Fecha de nacimiento** | 4/12/1987 (38 años) |
 | **Localidad** | Capital Federal (Medina 351) |

@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Desarrollador |
-| **Email** | emanzano@libreopcion.com |
+| **Email** | emanzano@blustudioinc.com |
 | **WhatsApp** | 1164331855 |
 | **Fecha de nacimiento** | 13/03/1996 (30 años) |
 | **Localidad** | Villa Lugano (Lisandro de la Torre 4761) |

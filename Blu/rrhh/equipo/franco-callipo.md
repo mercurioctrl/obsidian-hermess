@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Development |
-| **Email** | fcallipo |
+| **Email** | fcallipo@blustudioinc.com |
 | **WhatsApp** | 1155933390 |
 | **Fecha de nacimiento** | 8/10/2002 (23 años) |
 | **Localidad** | CABA (Zado 3639) |

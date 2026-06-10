@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Analista de Marketing |
-| **Email** | bcarrillo@blu.inc |
+| **Email** | bcarrillo@blustudioinc.com |
 | **WhatsApp** | 1157813857 |
 | **Fecha de nacimiento** | 29/08/2005 (20 años) |
 | **Localidad** | Recoleta (Laprida 2165) |

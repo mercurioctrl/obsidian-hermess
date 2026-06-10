@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Socio Fundador |
-| **Email** | sfontan@nb.com.ar |
+| **Email** | sfontan@blustudioinc.com |
 | **WhatsApp** | 1162388141 |
 | **Fecha de nacimiento** | 15/10/1977 (48 años) |
 | **Localidad** | CABA (Av. Jujuy 1039) |

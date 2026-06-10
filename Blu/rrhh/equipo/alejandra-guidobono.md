@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Directora de Marketing |
-| **Email** | aguidobono@blu.inc |
+| **Email** | aguidobono@blustudioinc.com |
 | **WhatsApp** | +5491163746563 |
 | **Fecha de nacimiento** | 30/04/1983 (43 años) |
 | **Localidad** | Villa Luro (Medina 351) |

@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Graphic Designer Senior |
-| **Email** | bontivero@blu.inc |
+| **Email** | bontivero@blustudioinc.com |
 | **WhatsApp** | +54 9 11 3392 1850 |
 | **Fecha de nacimiento** | 2/12/1994 (31 años) |
 | **Localidad** | San Isidro (Garibaldi 585, Piso 2B) |

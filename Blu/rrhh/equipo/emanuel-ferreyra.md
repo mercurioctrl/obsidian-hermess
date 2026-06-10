@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Software Development |
-| **Email** | eferreyra@nb.com |
+| **Email** | eferreyra@blustudioinc.com |
 | **WhatsApp** | 2235181923 |
 | **Fecha de nacimiento** | 30/12/1994 (31 años) |
 | **Localidad** | Mar del Plata (Chile 2292) |

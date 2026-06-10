@@ -2,6 +2,7 @@
 
 **Rol:** Head de RRHH
 **Departamento:** RRHH
+**Email:** amercurio@blustudioinc.com
 
 ## Notas
 - Hermana de Catriel Mercurio.

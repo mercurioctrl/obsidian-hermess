@@ -5,7 +5,7 @@
 | Campo | Valor |
 |---|---|
 | **Rol** | Frontend Developer |
-| **Email** | mmoreno@nb.com.ar |
+| **Email** | mmoreno@blustudioinc.com |
 | **WhatsApp** | 1122533038 |
 | **Fecha de nacimiento** | 20/11/1995 (30 años) |
 | **Localidad** | CABA (Morelos 63, 7B) |
