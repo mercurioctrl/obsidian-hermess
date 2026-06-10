@@ -1,27 +1,42 @@
 # Memoria del proyecto
 
-Hechos y gotchas cross-sesión (sincronizados desde la memoria de Claude del proyecto).
+Consolidado de la memoria persistente de Claude Code para este proyecto
+(`~/.claude/projects/-var-www-nb-compras/memory/`). Sincronizado el 2026-06-10.
 
-## Proyecto / setup
+## Estructura
 
-### Cómo correr front y back en local
-- **Backend (Laravel):** Docker, contenedor `api-rest-compras-apirest-laravel` en **http://localhost:8096** (API base `/v1`). Suele estar levantado.
-- **Frontend (Nuxt 2):** `cd compras-web-app-v1-/app && npm run dev` → **http://localhost:3867** (`NODE_PORT=3867` en `.env`).
-- El front **no** usa 3002 (el `.env-example` dice 3002, pero el `.env` real es 3867). El **3002 lo ocupa el proyecto `pedidos`**.
-- Puede faltar `node_modules`: correr `npm ci` (Node 16, compat. Nuxt 2).
-- El front responde **302** sin login (middleware `auth` global) — normal.
-- El log de `npm run dev` se **infla muchísimo** porque `axios.debug` está on en dev y loguea cada respuesta completa (`/fabricantes` ≈ 2648 filas). Para depurar conviene reiniciar con log limpio o apagar `axios.debug`.
+- `api-rest-compras-laravel/` — API Laravel 9 (PHP 8.1), repo Git propio. Código en `app/`.
+- `compras-web-app-v1-/` — Frontend Nuxt 2, repo Git propio. Código en `app/`.
 
-### Sección Competencia
-Ver [[competencia|nota dedicada]]. Resumen: feature en rama `competencia`, grilla de competidores server-side (Distribuidores / Resellers), consume BluPartPicker API.
+## Backend — Docker
 
-## Referencia
+- Contenedor: `api-rest-compras-apirest-laravel`, puerto **8096** → `http://localhost:8096`, base path **`/v1`**.
+- Setup: `cp docker-compose.example.yml docker-compose.yml` → `DOCKER_BUILDKIT=0 docker-compose up -d --build` → `composer install --no-security-blocking`.
+- Problemas resueltos al buildear:
+  - PPA ondrej/php vacío en Ubuntu 20.04 → base image `ubuntu:22.04` (PHP 8.1 en repos oficiales).
+  - MS ODBC Driver incompatible con OpenSSL 3.0 → usar **FreeTDS + pdo_dblib** (Laravel auto-detecta `pdo_dblib` si no está `pdo_sqlsrv`). Config: `/etc/freetds/freetds.conf` → `tds version = 7.4`.
+  - Permisos storage: `mkdir -p storage/framework/{cache,views,sessions}`.
+- Composer requiere `--no-security-blocking` por advisories en firebase/php-jwt y laravel v9.
 
-### BluPartPicker API (catálogo de competidores)
-- Host: `COMPETITORS_API_HOST=http://10.10.10.7:4444` (red interna). Docs `/redoc`, spec `/openapi.json`.
-- ~147k items; `distribuidor=1` mayoristas (≈2.565), `distribuidor=0` revendedores (≈145k). Siempre paginar server-side.
-- Gotchas: `categoria` filtra solo desde v2.1; `/sources` no marca `distribuidor` (detectar mayoristas muestreando `/items?distribuidor=1` → invid/ceven/stylus); `/fabricantes` ya no trae `source` por fila.
+## Backend — Arquitectura (cómo navegar rápido)
+
+Patrón por feature: **Controller invokable (`__invoke`) → Service → Repository (SQL crudo, `DB::select`) → DTO**. Rutas en `routes/api.php`. Auth JWT via `App\Support\TokenManager` (+ `PermissionMiddleware`, requiere `compras > 0`).
+
+Tabla clave `articulo` (alias `A`): `ID_ARTICULO`=id interno (entero, sargable), `ID_PRODUCTO`=SKU, `CDETALLE`=título, `companyCode`, flags `EXCLUIR<>1` y `ocultarDeNb<>1` (siempre en el WHERE).
+
+## Frontend — Arranque y convenciones
+
+- Dev: `cd compras-web-app-v1-/app && npm run dev` → **http://localhost:3867/** (puerto = `NODE_PORT`). Usa `NODE_OPTIONS=--openssl-legacy-provider` (webpack 4 + Node nuevo). Prod: pm2.
+- `.env` front: `API_HOST=http://localhost:8096/v1`, `NODE_PORT=3867`.
+- Moneda: `currencyId` con `'PSO'` (pesos) / `'DOL'` (dólar). `companyCode == 11` = LASET (oculta varias columnas, ver `plugins/permissions.js`).
+
+## Base de datos
+
+- Driver `DB_CONNECTION=sqlsrv` → en runtime usa `pdo_dblib` (FreeTDS).
+- Server canónico: `190.210.23.97:4444`, DB `NB_WEB`, user `web`. Detalle y gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
 
 ## Ver también
 
-- [[competencia|Competencia]] · [[arquitectura|Arquitectura]] · [[stack|Stack]]
+- [[arquitectura|Arquitectura]]
+- [[stack|Stack]]
+- [[contexto|Contexto y reglas]]

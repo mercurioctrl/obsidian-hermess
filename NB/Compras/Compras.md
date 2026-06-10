@@ -1,6 +1,6 @@
 # Compras
 
-Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear órdenes de compra, gestionar proveedores, ingresos parciales/totales, comprobantes, posiciones arancelarias y depósitos. Incluye además una sección de inteligencia de **competencia** (catálogo de competidores).
+Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear órdenes de compra, gestionar proveedores, ingresos parciales/totales, comprobantes, posiciones arancelarias y depósitos.
 
 ## Stack
 
@@ -12,10 +12,13 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 
 - [[arquitectura|Arquitectura]] — Estructura, patrones, módulos
 - [[stack|Stack tecnológico]] — Frameworks, dependencias, servicios externos
-- [[competencia|Competencia]] — Catálogo de competidores (BluPartPicker API), rama `competencia`
 - [[changelog|Changelog]] — Historial de cambios
-- [[memoria|Memoria]] — Hechos y gotchas cross-sesión (setup, puertos, API)
-- [[reglas-compras|Reglas de negocio — Compras]] — reglas del proceso de compras
+- [[contexto|Contexto y reglas]] — Reglas de negocio, decisiones y deuda técnica
+- [[memoria|Memoria del proyecto]] — Consolidado de la memoria persistente de Claude
+
+## Ver también
+
+- [[NB/compras/reglas-compras|Reglas de negocio — Compras]] — reglas del proceso de compras
 
 ## Repositorios
 
@@ -27,4 +30,4 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 Las tareas se trackean con prefijo `COM-` en Jira.
 
 ---
-*Última sincronización: 2026-06-04*
+*Última sincronización: 2026-06-10*

@@ -41,3 +41,7 @@ GET /sources  |  GET /sync/log
 - [[contexto]] — decisiones de diseño y casos de uso
 - [[changelog]] — historial de lo implementado sesión a sesión
 - [[memoria]] — gotchas activos, próximos pasos, credenciales
+
+## Crawlers
+
+- [[BluPartPicker/crawlers/fullh4rd|Scraper — Full H4rd]] — scraper de Full H4rd
