@@ -26,6 +26,55 @@ tags:
 > [!danger] La matemática que prohíbe comerse las cuotas
 > Con **17% de margen**, bancar **6 cuotas sin interés** de tu bolsillo (~11–13%) te deja 4–6% bruto — y de ahí todavía sale el **envío gratis** y la operación. **Te deja en pérdida.** Comerse el sin interés en todo el catálogo es matemáticamente imposible a 17%.
 
+## Getnet como adquirente alternativo
+
+Investigado el 2026-06-06. Tarifas oficiales: [getnet.com.ar/aranceles](https://www.getnet.com.ar/aranceles)
+
+### Aranceles base Getnet
+
+| Medio | Acreditación estándar |
+|---|---|
+| QR (dinero en cuenta) | 0,80% + IVA |
+| Débito | Hasta 1% + IVA (1 día hábil) |
+| Crédito 1 pago | **Hasta 2% + IVA** (8 días hábiles) |
+| Crédito cuotas | **Hasta 2% + IVA** (2 días hábiles) |
+
+> El arancel base de crédito 1 pago es **significativamente más barato que MP** (~3-4%).
+
+### Plan Cuotas Getnet — diferencia estructural clave
+
+**El interés lo paga el cliente, no el comercio.** La TNA se suma al precio de cada cuota.
+
+| Cuotas | TNA |
+|---|---|
+| 2 | 8,60% |
+| 3 | 11,36% |
+| 4 | 14,01% |
+| 6 | 18,99% |
+| 9 | 27,04% |
+| 12 | 33,23% |
+| 18 | 43,53% |
+| 24 | 51,65% |
+
+### Plan Cuotas MiPyME (Getnet)
+
+Solo 3 y 6 cuotas, para rubros habilitados. Tasas: **7,36% (3c) · 13,82% (6c)**. Verificar si el rubro tech/importación califica.
+
+### Getnet vs Mercado Pago — comparativa
+
+| | Getnet | Mercado Pago |
+|---|---|---|
+| **Quién paga el interés en cuotas** | El **cliente** | El **comercio** |
+| **6 cuotas** | 18,99% TNA → el comprador paga más | ~11-13% → vos lo absorbés |
+| **12 cuotas** | 33,23% TNA → el comprador paga más | ~20%+ → vos lo absorbés |
+| **Sin interés** | No existe en plan estándar | Sí, pero sale de tu margen |
+| **Arancel crédito 1 pago** | ~2% | ~3-4% |
+
+> [!tip] Combinación óptima tentativa
+> - **Getnet** para 1 pago y débito (arancel más bajo).
+> - **MP** para promos subsidiadas por marca (sin interés que paga AMD/ASUS/etc.) — el "oro" sigue siendo MP en ese caso.
+> - En líneas propias/importadas donde fijás precio: Getnet en cuotas (el costo va al cliente) o meter el interés en el precio.
+
 ## Por qué "acordar con bancos a lo bestia" no alcanza (todavía)
 
 A ~USD 161k de GMV/mes no hay volumen para que un banco arme una promo a medida. Las vías reales, por poder:
@@ -34,16 +83,40 @@ A ~USD 161k de GMV/mes no hay volumen para que un banco arme una promo a medida.
 |---|---|---|
 | **Promos MP subsidiadas por marca** ("24 sin interés", +300 marcas) | **~0%** (paga la marca/MP) | ✅ El oro. Aplica a **mainstream** (AMD, ASUS, Samsung). |
 | **Meter el costo en el precio** | Sale del margen ampliado | ✅ Base, sobre todo en **líneas exclusivas/importadas** (vos fijás el precio). |
+| **Getnet Plan Cuotas** | El cliente paga el interés (TNA 8,60%–51,65%) | ✅ Sin costo para el comercio. Útil en exclusivas. |
+| **Getnet MiPyME** | 7,36% (3c) · 13,82% (6c) | ⚠️ Verificar si el rubro califica. |
 | **Cuota Simple** (programa nacional) | 5,41% (3) · 10,31% (6) | ⚠️ Casi seguro **no calificás**: exige producción nacional y vos importás. |
-| **Bancos / adquirentes** | Variable | 🟡 Relación a futuro, vía adquirentes. Poco poder hoy. |
+| **Bancos / adquirentes** | Variable | 🟡 Relación a futuro. Getnet es el primer paso concreto. |
 
-## 🎁 El "aire" de precio que hoy se regala
+## 🎁 El "aire" de precio — análisis actualizado (2026-06-06)
 
-Dato real: auricular Genius LibreOpción **$22.257** vs. competencia **~$26.000** → **~14% más barato**. Bancar 6 sin interés cuesta ~11–13%.
+### Caso 1: Auricular Genius (dato original)
+LibreOpción **$22.257** vs. competencia **~$26.000** → **~14% más barato**. En este caso sí existe "aire" para meter el costo.
 
-> [!tip] La jugada
-> Subí el precio ~11% y financiá con eso las cuotas sin interés. Quedás **casi al mismo precio que la competencia PERO con sin interés**. Pasás del peor de los mundos (barato + cuotas malas) al mejor (precio competitivo + buena cuota). **No requiere capital: el margen de precio ya existe, hoy se usa mal.**
-> ⚠️ Validar que ese ~11–14% de aire existe en el resto del catálogo (es un solo dato por ahora).
+### Caso 2: AMD Ryzen 7 5700G — el aire NO existe ⚠️
+
+Relevamiento real contra CompraGamer:
+
+| | CompraGamer | LibreOpción |
+|---|---|---|
+| Precio contado estimado | ~$270.000–$290.000 | **$304.531** |
+| 6 cuotas (Modo + Supervielle/Comafi/ICBC) | **$318.264** (6×$53.044) | — |
+| 6 cuotas (resto de bancos) | $350.724 (6×$58.454) | — |
+| 6 cuotas actuales | — | **$377.616** (6×$62.936) |
+| 12 cuotas | $390.036 (12×$32.503) | — |
+
+LibreOpción es **más cara en precio base** Y tiene **peores cuotas** — el peor escenario posible.
+
+Si LibreOpción aplica "meter el costo en el precio" para ofrecer 6 cuotas sin interés:
+- Precio ajustado: $304.531 × 1,1624 = **~$353.900**
+- Cuota resultante: **~$58.983/mes**
+- Resultado: similar a CompraGamer con banco común, pero **todavía 11% más caro** que su mejor opción ($53.044).
+
+> [!danger] Revisión de la hipótesis original
+> El "aire de precio" **no es universal**. Existe en algunas líneas (Genius) pero no en mainstream (AMD). En productos competidos el problema no es la estrategia de precio sino el acceso a **promos bancarias subsidiadas** que CompraGamer ya tiene (Supervielle, Comafi, ICBC vía MODO).
+
+> [!tip] La palanca real en mainstream
+> No subir el precio — **sumarse a las promos bancarias** que ya existen (banco paga el sin interés, costo 0 para el comercio). Esto es lo mismo que las promos MP subsidiadas por marca, pero del lado del banco.
 
 ## Decisión (2026-06-02): tres palancas combinadas
 
@@ -59,10 +132,15 @@ Meter el costo en el precio = **abandonar la bandera de "el más barato"**. Eso 
 
 ## Pendientes
 
-- [ ] Confirmar con Cowork el % de "aire" de precio promedio del catálogo vs. competencia.
+- [ ] Segmentar el catálogo: productos donde hay "aire" (exclusivas/importadas) vs. productos mainstream donde no lo hay — estrategia diferente para cada segmento.
+- [ ] ⭐ **PRIORITARIO — Activar MODO en LibreOpción:** las promos bancarias (Supervielle, Comafi, ICBC, etc.) se activan automáticamente una vez adherido — no hay que negociar banco por banco. Consultar a Payway si MODO ya está habilitado en la cuenta (probablemente es un trámite menor). Requisitos: CUIT + cuenta bancaria. Sin costo de adhesión. Comisión: 0%–1,8%. Esto iguala la ventaja clave de CompraGamer en mainstream (6 cuotas a $53.044 vs. los $62.936 actuales).
 - [ ] Activar cuotas sin interés en MP (definir hasta cuántas) y medir impacto en conversión.
 - [ ] Mapear qué marcas mainstream del catálogo tienen promo MP subsidiada disponible.
-- [ ] Iniciar conversaciones con adquirentes/bancos (proceso largo).
+- [ ] Iniciar conversaciones con Getnet (adquirente concreto, más barato que MP en 1 pago).
+- [ ] Evaluar usar Getnet para 1 pago/débito + MP solo para promos de marca.
+- [ ] **Tramitar Certificado MiPyME** en AFIP (24hs, renovación automática). Vale por sí solo: IVA a 90 días, compensación impuesto al cheque, contribuciones patronales diferenciales.
+- [ ] Una vez obtenido el certificado: verificar si el rubro (importador/revendedor tech) está habilitado para Plan Cuotas MiPyME en Payway y Getnet.
+- [ ] Si califica MiPyME: activar en Payway (desde Mi Payway) — tasas 6,91% (3c) y 13,52% (6c), con opción de pasarle el costo al cliente via coeficiente.
 
 ## Enlaces
 

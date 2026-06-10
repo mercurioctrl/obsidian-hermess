@@ -57,9 +57,17 @@ Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.
 ---
 
 ## [[Compras/Compras|Compras]]
-Gestión de compras a proveedores (órdenes, ingresos, comprobantes, posiciones arancelarias) + inteligencia de competencia.
 - [[Compras/Compras|Índice]] · [[Compras/arquitectura|Arquitectura]] · [[Compras/stack|Stack]] · [[Compras/changelog|Changelog]]
-- [[Compras/competencia|Competencia]] · [[Compras/memoria|Memoria]] · [[Compras/reglas-compras|Reglas de compras]]
 
 ---
-*Última actualización: 2026-06-04 — compras: nueva sección Competencia (catálogo de competidores, rama `competencia`).*
+
+## Borradores
+
+- [[NB/Borradores/[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]|[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]]]
+
+---
+*Última actualización: 2026-05-31 — pedidos: nuevos features `feature-laset-fix-marcas-comp11` y `feature-sync-laset-botones`.*
+
+## Ver también
+
+- [[NB/compras/reglas-compras|Reglas de negocio — NB / Compras]]

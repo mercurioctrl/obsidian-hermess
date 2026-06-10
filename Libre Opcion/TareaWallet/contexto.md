@@ -1,5 +1,50 @@
 # Contexto — TareaWallet
 
+## 2026-06-07
+
+### Integración de pasarelas de pago — MODO, GetNet, Payway
+
+**Objetivo:** Integrar MODO (billetera digital QR), GetNet y Payway como medios de pago en el checkout.
+
+**Problema principal resuelto — MODO QR no aparecía:**
+
+El flujo de `confirmar.vue` llama en `asyncData` a `store.dispatch("checkout/obtenerPedido", { query, step: 3 })`.
+Ese action hace fetch a la API v3, que devuelve `medioPagoId = 0` (no conoce MODO, cuyo id es 5079 y es frontend-only).
+Luego llama `commit("ACTUALIZAR_PEDIDO", response)` que reemplaza todo `state.pedido` via `Vue.set`, borrando el `medioPagoId` seleccionado.
+
+**Fix en `checkout.js`:**
+```js
+const medioPagoIdPrevio = state.pedido?.paquetes?.[0]?.pago?.medioPagoId ?? 0;
+commit("ACTUALIZAR_PEDIDO", response);
+if (medioPagoIdPrevio !== 0 && state.pedido.paquetes[0]?.pago?.medioPagoId === 0) {
+  const paquetesRestaurados = state.pedido.paquetes.map((p, i) =>
+    i === 0 ? { ...p, pago: { ...p.pago, medioPagoId: medioPagoIdPrevio } } : p
+  );
+  commit("ACTUALIZAR_PAQUETES", paquetesRestaurados);
+}
+```
+
+**Problema secundario resuelto — 404 en rutas nuevas de pago:**
+
+Las rutas `payment/modo/create-intention`, `payment/getnet/tokenize` y `payment/payway/tokenize` fueron añadidas al `routes/api.php` pero PHP-FPM tenía OPcache activo con una versión vieja del archivo en memoria. Retornaban 404 a pesar de que via tinker el router sí las encontraba. Fix: reiniciar el contenedor (`docker restart sitio-api-rest-4.1-laravel`).
+
+> ⚠️ Después de añadir rutas nuevas al API, siempre reiniciar el contenedor para limpiar OPcache de PHP-FPM.
+
+**Arquitectura MODO SDK v2:**
+- Auth: `POST {MODO_URL_API}/v2/stores/companies/token` con `username/password`
+- Payment: `POST {MODO_URL_API}/v2/payment-requests/` con Bearer token
+- Frontend SDK: `https://ecommerce-modal.preprod.modo.com.ar/bundle.js`
+- Init: `window.ModoSDK.modoInitPayment({ version: '2', qrString, checkoutId, deeplink, ... })`
+- Env preprod: `MODO_URL_API=https://merchants.preprod.playdigital.com.ar`
+
+**ID de medio de pago MODO:** 5079 (frontend-only, no existe en la API v3 ni en la DB de medios de pago)
+
+**Medios de pago pendientes de test en navegador:**
+- Payway — backend confirmado OK, frontend listo
+- GetNet — servidor `190.189.93.116` necesita ser whitelisteado en Santander sandbox
+
+---
+
 ## 2026-05-12
 
 ### Análisis sistema de recategorización (LIO-630)
@@ -123,3 +168,4 @@ token = hmac.new(HMAC_KEY.encode(), payload.encode(), hashlib.sha256).hexdigest(
 
 - [[TareaWallet]]
 - [[arquitectura-recategorizacion]]
+- [[changelog]]

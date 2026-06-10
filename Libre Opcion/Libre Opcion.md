@@ -1,16 +1,29 @@
 # Libre Opcion
 
 Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
-Última sincronización: 2026-06-03.
+Última sincronización: 2026-06-07.
 
 ---
 
 ## Proyecto
 
-- [[arquitectura|Arquitectura]] — Estructura de componentes, decisiones de diseño, patrones, iframeResizer cleanup
+- [[arquitectura|Arquitectura]] — Checkout integrado (MP/GetNet/Payway/MODO), iframeResizer, banners
 - [[stack|Stack]] — Tecnologías, versiones, servicios externos
 - [[changelog|Changelog]] — Registro de trabajo por fecha
 - [[memoria|Memoria]] — Consolidación de feedback, reglas y contexto del proyecto
+
+## Pasarelas de pago (en desarrollo)
+
+Checkout con formulario embebido para múltiples proveedores. Ver [[arquitectura#Pasarelas de pago — Checkout integrado|Arquitectura § Pasarelas]].
+
+| ID | Proveedor | Estado |
+|---|---|---|
+| 5076 | MercadoPago | ✅ Producción |
+| 5077 | GetNet by Santander | ⚠️ Bloqueado (IP whitelist pendiente Santander) |
+| 5078 | Payway | 🔧 Implementado, pendiente test navegador |
+| 5079 | MODO | ✅ QR operativo en sandbox (2026-06-07) |
+
+**Pendiente:** Contactar Santander para habilitar IP `190.189.93.116` en sandbox GetNet.
 
 ## Herramientas internas
 
@@ -22,95 +35,34 @@ Script Python para envío masivo de emails HTML. Integración con SQL Server par
 ## Wallet & Categorización — API v4
 
 ### TareaWallet
-Análisis e implementación del módulo de billetera y features relacionadas. Airdrop OpcionFest $15.000 ARS. Sistema de recategorización de productos.
+Análisis e implementación del módulo de billetera y features relacionadas. Integración pasarelas de pago checkout. Airdrop OpcionFest $15.000 ARS. Sistema de recategorización de productos.
 - [[TareaWallet/TareaWallet|TareaWallet]] — Índice
-- [[TareaWallet/contexto|Contexto]] — Flujo de ingreso, TR_CODIGO 476, queries, HMAC, análisis recategorización
-- [[TareaWallet/arquitectura-recategorizacion|Arquitectura Recategorización]] — Job, CategoriaMatcher, tablas DB, algoritmo propuesto
-- [[TareaWallet/changelog|Changelog]] — Historial de cambios recientes (favoritos, cupones, estadísticas, imágenes)
+- [[TareaWallet/contexto|Contexto]] — MODO QR fix, OPcache gotcha, flujo wallet, TR_CODIGO 476, queries, HMAC
+- [[TareaWallet/changelog|Changelog]] — Historial por fecha
+- [[TareaWallet/arquitectura-recategorizacion|Arquitectura recategorización]]
 
-## Landings y campañas MKT
+## SEO y Performance
 
-### OpcionFest (activa — rama feat/landing-opcionfest)
-Landing de evento e-commerce con hero video, grid de productos curados y precios flash.
-- Ruta: `/opcionfest`
-- Banner animado en home slider: `SliderHeroOpcionFest.vue`
-- Assets: `static/micrositios-files/opcionFest/mkt/sin_borde/`
-- CTA externo: https://bit.ly/Opcion_Fest_2026
+Diagnóstico y fixes de Core Web Vitals para libreopcion.com.ar.
+- [[Libre Opcion/00-resumen-diagnostico-seo-performance|Diagnóstico SEO y Performance]] — resumen ejecutivo
+- [[Libre Opcion/01-fix-cls-imagenes|01 — Fix CLS imágenes]]
+- [[Libre Opcion/02-fix-lcp-render-blocking|02 — Fix LCP render blocking]]
+- [[Libre Opcion/03-fix-header-min-height|03 — Fix header min-height]]
+- [[Libre Opcion/04-fix-fuentes-innecesarias|04 — Fix fuentes innecesarias]]
+- [[Libre Opcion/05-fix-fouc-css-tardio|05 — Fix FOUC CSS tardío]]
+- [[Libre Opcion/06-fix-cls-tbt-ronda-2|06 — Fix CLS/TBT ronda 2]]
+- [[Libre Opcion/07-fix-cls-mobile-h1-sr-only-ronda-3|07 — Fix CLS mobile H1 sr-only ronda 3]]
+- [[Libre Opcion/08-fix-cls-listings-ronda-4|08 — Fix CLS listings ronda 4]]
 
-### ASUS ROG x Resident Evil Requiem
-- Ruta: `/asus/rog`
-- Rama: `feat/landing-asus-rog-requiem` (mergeada)
+## Tareas de desarrollo
 
-### ASUS TUF RX 9070 XT Black Ops 7 Special Edition
-- Banner home: `SliderHeroLimitedEdition.vue` — botón "Ver ASUS" → `/asus`
-- Activado con `HOME_HERO_BANNER=1` en `.env`
-- Bullets estilo Apple activados con `HOME_BANNER_BULLETS_APPLE=1`
-- Rama: `LIO-618` (mergeada)
+- [[Libre Opcion/tareas/tareas|Tareas]] — backlog de desarrollo del proyecto
 
-## Fixes recientes
+## Estrategia comercial
 
-### 2026-05-15 — iframeResizer root cause (commit `5d922efb3`)
-Bug crítico resuelto: visitar una ficha con contenido A+ rompía la navegación asincrónica posterior (búsquedas, links, todo dejaba de funcionar hasta F5).
+- [[Libre Opcion/Gestion X/00 - Índice Gestión X|Gestión X]] — documentación estratégica (diagnóstico, hoja de ruta, posicionamiento, 19 docs)
 
-- **Causa raíz**: `disconnect()` borraba el registry `ee[id]` pero no desconectaba el `ResizeObserver` creado por iframeResizer. El observer crasheaba en el siguiente cambio de DOM, propagando un TypeError a `window.onerror` que corrompía el estado de la app.
-- **Fix**: despachar `pageInfoStop`/`parentInfoStop` como `MessageEvent` sintéticos antes de `disconnect()`, forzando que el cleanup corra mientras el registry existe.
-- Eliminado código muerto `syndicationIframe` (refs a métodos inexistentes).
-- Ver [[arquitectura#iframeResizer — Cleanup pattern|Arquitectura]] y [[memoria#Contenido A+ (aplus.libreopcion.com.ar)|Memoria]].
+## Otras notas
 
-### 2026-05-14 — Fixes UX y slider
-- iframeResizer: disconnect, AbortController 3s, timeout CSP, guard `_isDestroyed`
-- Bullets slider home: `SliderHeroLimitedEdition` envuelto en `<div>` para Slick
-- Banner ASUS: botón "Ver ASUS" + bullets Apple
-
-## SEO & Performance
-
-- [[00-resumen-diagnostico-seo-performance|Resumen del diagnóstico]] — Hallazgos principales y plan de acción
-- [[01-fix-cls-imagenes]] — Fix CLS de imágenes sin dimensiones
-- [[02-fix-lcp-render-blocking]] — Fix LCP render-blocking
-- [[03-fix-header-min-height]] — Fix header sin min-height
-- [[04-fix-fuentes-innecesarias]] — Fix fuentes web innecesarias
-- [[05-fix-fouc-css-tardio]] — Fix FOUC (flash sin estilos)
-- [[06-fix-cls-tbt-ronda-2]] — Ronda 2: CLS + TBT + animaciones no compuestas
-- [[07-fix-cls-mobile-h1-sr-only-ronda-3]] — Ronda 3: CLS mobile h1 sr-only
-- [[08-fix-cls-listings-ronda-4]] — Ronda 4: CLS listings + Inter font preload
-
-## Tareas
-
-- [[Libre Opcion/tareas/APP - Refactor - Migrar cotización de envíos de API legacy a v4|Migrar cotización de envíos]]
-- [[Libre Opcion/tareas/API - Feat - Imágenes personalizadas del reseller por producto|Imágenes personalizadas reseller]]
-- [[Libre Opcion/tareas/APP - Feat - Gestión de imágenes del reseller en ficha de producto|Gestión de imágenes reseller (frontend)]]
-- [[Libre Opcion/tareas/APP - Fix - Tooltip de codigo postal aparece al cargar el sitio|Fix tooltip código postal]]
-- [[Libre Opcion/tareas/API - Refactor - Migrar recurso de preguntas y respuestas a v4|Migrar preguntas y respuestas a v4]]
-- [[Libre Opcion/tareas/API - Feat - Recategorizar productos sin categoría|Recategorizar productos sin categoría]]
-- [[Libre Opcion/tareas/API - Feat - Estadísticas de categorización de productos|Estadísticas de categorización de productos]]
-- [[Libre Opcion/tareas/API - Feat - CRUD de campañas|CRUD de campañas]]
-- [[Libre Opcion/tareas/APP - Feat - Gestión de campañas|Gestión de campañas (frontend)]]
-
-## Gestión Estratégica — Gestión X
-
-Documentación estratégica de libreopcion.com.ar: diagnóstico, hoja de ruta, posicionamiento, catálogo y operaciones.
-- [[Libre Opcion/Gestion X/00 - Índice Gestión X|Índice Gestión X]] — índice de los 19 documentos estratégicos
-- [[Libre Opcion/Gestion X/01 - Estudio de Mercado - Referentes|Estudio de Mercado — Referentes]]
-- [[Libre Opcion/Gestion X/02 - Hoja de Ruta - Fase 1 Diferenciación y Confianza|Hoja de Ruta Fase 1]]
-- [[Libre Opcion/Gestion X/15 - Plan de Accion - Proximos 6 Meses|Plan de Acción — Próximos 6 Meses]]
-- [[Libre Opcion/Gestion X/18 - Analisis Performance Ventas 12 Meses (FODA)|Análisis Performance Ventas 12 Meses (FODA)]]
-- [[Libre Opcion/Gestion X/Informe Diagnostico Conversion - Mayo 2026|Informe Diagnóstico Conversión — Mayo 2026]]
-
-## Contexto comercial
-
-- [[hot sale]] — Preparación Hot Sale 2026
-
-## Gestión y Estrategia
-
-### Gestión X — Estrategia de negocio (MOC)
-Investigación de mercado, reposicionamiento (de precio a confianza), modelo operativo, cuotas, exclusivas, FODA con datos reales de 12 meses y plan de acción 2026. Incluye deliverables web (3 versiones del plan) y un cubo de datos interactivo.
-- [[Gestion X/00 - Índice Gestión X|Índice Gestión X (MOC)]] — hub de toda la estrategia
-- Decisiones: [[Gestion X/10 - Reposicionamiento - De Precio a Confianza|10 · Reposicionamiento]] · [[Gestion X/11 - Estrategia de Cuotas y Precio|11 · Cuotas]] · [[Gestion X/12 - Modelo Operativo - Importador-Mayorista con Red de Vendedores|12 · Modelo]] · [[Gestion X/13 - El Verdadero Cuello de Botella es la Demanda|13 · Demanda]]
-- [[Gestion X/14 - Liquidacion de Aging como Motor de Demanda|14 · Aging]] · [[Gestion X/17 - Exclusivas - Marcas Conocidas que Nadie Trae|17 · Exclusivas]] · [[Gestion X/19 - Politica de Envios|19 · Envíos]]
-- Datos: [[Gestion X/18 - Analisis Performance Ventas 12 Meses (FODA)|18 · FODA con datos]] · [[Gestion X/Informe Diagnostico Conversion - Mayo 2026|Diagnóstico de conversión]]
-- Entregables: [[Gestion X/15 - Plan de Accion - Proximos 6 Meses|Plan de acción 6 meses]] · `Plan-Estrategico-LibreOpcion-Marca.html` (sitio para socios) · `Cubo-Datos-LibreOpcion.html` (cubo OLAP 12 meses)
-
-## Ver también
-
-- [[Libre Opcion/tareas/tareas|tareas]] — Tareas de desarrollo del proyecto [[Libre Opcion/Libre Opcion|Libre Opcion]].
-- [[Libre Opcion/sync-curls|Sync Curls — Proceso de sincronización periódica]]
+- [[Libre Opcion/hot sale|Hot Sale 2026]] — ideas de landing pages
+- [[Libre Opcion/sync-curls|Sync Curls]] — proceso de sincronización periódica

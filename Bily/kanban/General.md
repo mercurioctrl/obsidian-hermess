@@ -1,7 +1,8 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
-- [ ] Alistar la PC de [[Asus]] de marketing (pedido por [[Alejandra Guidonbono|Ale]]).
+- [ ] Reportar a [[Ezequiel Manzano|Eze]] problema de login: un usuario sin mail verificado intenta iniciar sesión, se le pide que revise la bandeja, pero no le llega el correo de validación (tampoco en SPAM).
+- [ ] Asignarle a [[Franco Callipo|Franco]] una historia de cómo hacer que los vendedores puedan reclamar ellos mismos por las calificaciones: https://bluinc.atlassian.net/jira/servicedesk/projects/SNB/queues/custom/63/SNB-3963
 - [ ] Para [[Diego Bordon]]: Agregar para que puedan contar de manera más lineal (solo aquellos que realmente no tienen algún dato y hay que contabilizar).
 - [ ] Requerimiento Postventa (Gestión de Armados):
   - Cuando entra un armado, se debe poder seleccionar del pedido los ítems involucrados.
@@ -12,7 +13,6 @@
 - [ ] Verificar con [[Emanuel Ferreyra|Ema]] lo del chat de [[Libre Opción]].
 - [ ] Pasar la factura de [[Adata]] a [[Fabio]] (con copia a [[Catriel Mercurio]]).
 - [ ] Ver [[Doña Ramona]].
-- [ ] Reunión de [[Gigabyte]] el Viernes a las 14:00 HS.
 - [ ] Reunión con [[Sebastian Fontan|Sebas]] antes de que se vaya al mundial.
 - Probar la carga de ítems de NB en el módulo de compras.
 - Linkear el chat en la app.
@@ -24,6 +24,7 @@
 ## En curso
 
 ## Listo
+- [x] Subir los aceleradores de [[Adata]] (Recordatorio programado para el 8 de junio a las 15hs).
 - Enviar a [[Alejandra Guidonbono|Ale]] el mensaje de acceso para el [[Adata]] Rewards.
 - Enviar el newsletter de [[Adata]] Rewards.
 - Ver lo de [[Ayelen Mercurio|Aye]].

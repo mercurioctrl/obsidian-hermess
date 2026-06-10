@@ -26,9 +26,15 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-05-31|2026-05-31]] — Día sin interacciones
 
 ### Junio
+- [[Bily/bitacoras/2026-06-05|2026-06-05]] — Registro de historia para Franco en Kanban, resumen de estado
+- [[Bily/bitacoras/2026-06-06|2026-06-06]] — Limpieza del Kanban general, mantenimiento proactivo de pendientes
+- [[Bily/bitacoras/2026-06-07|2026-06-07]] — Configuración de notificaciones de Bily y pruebas de integración con Jira
+- [[Bily/bitacoras/2026-06-08|2026-06-08]] — Tareas Franco LIO-663, historias Ezequiel/Marbe, Kanban y recordatorios
 
 - [[Bily/bitacoras/2026-06-01|2026-06-01]] — Gestión de tareas y kanban, nuevo documento Ideas LibreOpcion.com, requerimientos al equipo, reunión Gigabyte
 - [[Bily/bitacoras/2026-06-02|2026-06-02]] — Limpieza y actualización Kanbans (General/Lavadero/LASET), diagnóstico y corrección de cron de recordatorios
+- [[Bily/bitacoras/2026-06-03|2026-06-03]] — Revisión operativa de Kanban General, recordatorios de pendientes, confirmación de turno DNI
+- [[Bily/bitacoras/2026-06-04|2026-06-04]] — Actualización de finanzas personales, gestión de la obra del lavadero y registro de ideas de producto
 
 ## Ver también
 

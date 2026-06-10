@@ -22,11 +22,14 @@ Skills disponibles en el entorno de Claude Code (`~/.claude/skills/`).
 - [[reconstruir-indices]] — Reconstruye wikilinks en todos los índices de la bóveda
 - [[configurar-boveda]] — Conecta un proyecto con su carpeta en Obsidian
 - [[sincronizar-mente-bily]] — Asegura Inicio.md en cada carpeta de Bily/
+- [[procesar-bitacoras-bily]] — Indexa bitácoras nuevas de Bily y agrega back-links
+- [[sonar-bily]] — Genera el sueño de Bily para una noche determinada
 
 ## Configuración
 
 - [[update-config]] — Configura settings.json de Claude Code (hooks, automatizaciones)
 - [[keybindings-help]] — Personaliza keybindings de Claude Code
+- [[simplify]] — Revisa código cambiado para calidad, reutilización y eficiencia
 
 ## Otros
 

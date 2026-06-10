@@ -40,6 +40,10 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[relacion-tablas-stocks-almacen|Stocks y depósitos (FP_Almacen)]] — columnas de depósito por tabla, depósitos compartidos
 - [[relacion-companycode|companyCode — mapa por tabla]] — qué tablas tienen companyCode propio y cuáles lo heredan
 
+## Runbooks y referencias
+
+- [[runbook-alta-usuario-interno|Runbook — Alta de usuario interno]] — pasos para dar de alta un agente interno en el sistema
+
 ## Repos
 
 - Backend: `New-Bytes/api-rest-pedidos-laravel` (branch principal: `Development`)

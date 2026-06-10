@@ -54,7 +54,7 @@ gigaErp/
 
 ```
 Principal:    Dashboard · Distribuidores · Proveedores
-Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Órdenes de Venta
+Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Resellers · Órdenes de Venta
 Marketing:    Fondos · Calendario · Tareas
 Admin:        Configuración (solo admin)
 ```
@@ -219,3 +219,32 @@ docker restart gigaerp-nginx   # SIEMPRE después de rebuild
 - [[memoria]] — gotchas y patrones recurrentes
 - [[troubleshooting]] — errores conocidos y fixes
 - [[modulos/ordenes-venta]] — pipeline Orden → Aprobación → Invoice → Nota de Crédito
+## Integración API externa — patrón proxy backend
+
+Para APIs externas públicas (ej. partpicker), el backend actúa como proxy:
+- Nunca llamar desde frontend directo (CORS, lógica expuesta)
+- `Http::timeout(N)->get(URL, $params)` en el controller
+- Timeouts: 15s metadata, 30-60s listados grandes
+- Filtrar/validar antes de devolver al frontend
+
+### 
+
+- `GET /api/sincronizar/fuentes` — mayoristas de partpicker (sin `preciosgamer_`)
+- `POST /api/sincronizar/vincular-skus` — asigna `sku = strtoupper(nro_parte)` en chunk de 500
+- `POST /api/sincronizar/{source}` — upsert masivo paginando 500 items; crea `Cliente` si no existe
+
+**⚠️ Orden de rutas:** `vincular-skus` debe declararse ANTES del wildcard `{source}`.
+
+### 
+
+- `GET /api/resellers/fuentes` — resellers con prefijo `preciosgamer_`
+- `GET /api/resellers/items` — proxy con max 200 items, filtros: source, fabricante, isinstock, q
+
+### Gotchas partpicker
+
+- `stock` puede ser negativo (Air): `max(0, (int)$item["stock"])`
+- `precio_sin_iva`, `precio_final`, `pct_iva` pueden ser null → defaults 0, 0, 21
+- Resellers: precio real en `precio_convertido`, no en `precio_ars` (siempre null)
+- `fabricante` = exact match case-insensitive; para LIKE usar `q`
+
+
