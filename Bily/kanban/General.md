@@ -1,6 +1,8 @@
 # Kanban – Catriel (General)
 
 ## Por hacer
+- [ ] Filtro para que se vean también las fechas de ingreso.
+- [ ] Agregar checkbox para hacer acciones masivas sobre el control de precio y stock.
 - [ ] Agregar botón para seleccionar todas las cantidades máximas al generar un ingreso.
 - [ ] Asignar a [[Marbe Moreno|Marbe]]: APP - Feat - Agregar hoja membretada de presupuesto
 - [ ] Asignarle a [[Franco Callipo|Franco]] una historia de cómo hacer que los vendedores puedan reclamar ellos mismos por las calificaciones: https://bluinc.atlassian.net/jira/servicedesk/projects/SNB/queues/custom/63/SNB-3963
