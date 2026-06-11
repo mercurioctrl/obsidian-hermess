@@ -15,6 +15,7 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 - [[changelog|Changelog]] — Historial de cambios
 - [[contexto|Contexto y reglas]] — Reglas de negocio, decisiones y deuda técnica
 - [[memoria|Memoria del proyecto]] — Consolidado de la memoria persistente de Claude
+- [[competencia|Competencia]] — Catálogo de competidores (mayoristas y revendedores)
 
 ## Ver también
 
