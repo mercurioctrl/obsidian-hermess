@@ -31,6 +31,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-06-07|2026-06-07]] — Configuración de notificaciones de Bily y pruebas de integración con Jira
 - [[Bily/bitacoras/2026-06-08|2026-06-08]] — Tareas Franco LIO-663, historias Ezequiel/Marbe, Kanban y recordatorios
 - [[Bily/bitacoras/2026-06-09|2026-06-09]] — Organización de tareas, repaso Kanban/Jira, turno DNI, bug de login (mail sin verificar) para Eze
+- [[Bily/bitacoras/2026-06-10|2026-06-10]] — Regla de tareas API/APP para devs, limpieza Kanban/recordatorios, historia hoja membretada para Marbe
 
 - [[Bily/bitacoras/2026-06-01|2026-06-01]] — Gestión de tareas y kanban, nuevo documento Ideas LibreOpcion.com, requerimientos al equipo, reunión Gigabyte
 - [[Bily/bitacoras/2026-06-02|2026-06-02]] — Limpieza y actualización Kanbans (General/Lavadero/LASET), diagnóstico y corrección de cron de recordatorios
