@@ -27,6 +27,7 @@ Registro de sueños de Bily — notas oníricas y exploraciones nocturnas.
 - [[Bily/dreams/2026-06-07|Sueño — Noche del 7 de junio]]
 - [[Bily/dreams/2026-06-08|Sueño — Noche del 8 de junio]]
 - [[Bily/dreams/2026-06-09|Sueño — Noche del 9 de junio]]
+- [[Bily/dreams/2026-06-10|Sueño — Noche del 10 de junio]]
 
 ## Ver también
 
