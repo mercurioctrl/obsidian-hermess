@@ -70,9 +70,26 @@ El store raíz (`store/index.js`) gestiona un sistema de modales dinámicos con 
 - Múltiples modales simultáneos con z-index gestionado
 - Minimizar/maximizar
 - Arrastre (drag) via `components/Modal/Draggable.vue`
-- Modales tipados: Provider, Warehouse, TariffPosition, Order
+- Modales tipados: Provider, Warehouse, TariffPosition, Order, ProviderOrderInboundDetail
 
 El detalle de orden (`Orders/Detail.vue`) recibe props `orderDetail` (respuesta del endpoint de detalle) y `order` (el registro del listado, que trae `currencyId`). Regla de cotización por moneda: ver [[contexto#Cotización según moneda del proveedor|contexto]].
+
+⚠️ **z-index:** los modales draggables arrancan en 999 e **incrementan** al enfocar. Un `a-modal` de Ant anidado dentro de un Detail (ej. modal de seriales) necesita `:z-index` alto (se usa `10000`) o queda detrás del modal contenedor.
+
+### Detalle de Órdenes vs Ingresos (no confundir)
+
+Hay **dos componentes Detail casi idénticos**:
+
+- `components/Orders/Detail.vue` → vista **Órdenes** (modal type `OrderDetail`). Tiene filas resumen **Cotización** (`type:'resumen'`) **y Cotización fiscal** (`type:'resumenfiscal'`); columnas Subtotal/Subtotal Final en u\$d **y** \$. Reglas de display de cotización en pesos: ver [[contexto#Cotización en pesos (currencyQuote === 1) — display|contexto]].
+- `components/ProviderOrderInbound/Detail.vue` → vista **Ingresos** (modal type `ProviderOrderInboundDetail`; son órdenes ya remitidas). Solo fila **Cotización**. ⚠️ Su `name:` interno también es `'OrderDetail'` (colisión confusa, no es el de Órdenes).
+
+`orderDetail.numPed` = `PedProT.nNumPed` (id de orden). `record.id` del ítem = `ID_ARTICULO`.
+
+### Seriales de ingreso
+
+En el detalle de Ingreso, los productos serializados (`record.serializedAmount > 0`) muestran un menú contextual (clic derecho) "Ver seriales" que abre un `a-modal` con los números de serie.
+
+Flujo: `$api.providerOrderInbound.getSerials(numPed, ID_ARTICULO)` → `GET /v1/providerOrderInbound/{orderId}/serials/{itemId}` → `ProviderOrderInboundSerials` (controller) → `ProviderOrderInboundDetailService::getSerials` → `ProviderOrderInboundRepository::getSerials` → lee `NEW_BYTES.dbo.ST_DETALLE_STOCK` (col `SERIAL`) join `articulo` por `cRef`, filtrando `ID_COMPRA = nNumPed` + `ID_ARTICULO`.
 
 ### Plugins clave
 
@@ -86,16 +103,21 @@ El detalle de orden (`Orders/Detail.vue`) recibe props `orderDetail` (respuesta 
 ### Componentes reutilizables
 
 - `Filters/` — Un componente de filtro por cada página/dominio
-- `Table/` — Celdas editables inline (`EditableCell.vue`), menú contextual (`ClickRightCell.vue`)
+- `Table/` — Celdas editables inline (`EditableCell.vue`, `EditableCell2.vue` con prop `currency`), menú contextual (`ClickRightCell.vue`)
 - `Orders/` — Detalle de orden, agregar items, agregar posición arancelaria
+- `ProviderOrderInbound/` — Detalle de ingreso (ver arriba)
 - `Report/` — Sistema de tickets/chat de soporte
 
 ## Reglas de datos transversales
 
 Convenciones que atraviesan varias queries y conviene tener presentes (detalle y motivos en [[contexto|Contexto y reglas]]):
 
-- **Multi-base:** las queries joinean entre 4 bases del mismo SQL Server — `NewBytes_DBF` (maestro: `articulo`, `familias`, `stocks`, `FP_IMPUESTOS`, `FP_Empresas`…), `NB_WEB` (capa web: `usuarios_nb`, `WebArtComplement`, `marcas`, `fotos_productos`), `NEW_BYTES` (`PGM_USUARIOS`) y `PRODUCTOS` (`fotos`). Se referencian con nombre completo `[NewBytes_DBF].[dbo].[tabla]`.
-- **Impuestos globales:** en `FP_IMPUESTOS`, `companyCode = NULL` = impuesto global (aplica a todas las empresas). Filtrar por empresa con `(companyCode = :cc OR companyCode IS NULL)`, nunca solo `= :cc`.
+- **Multi-base:** las queries joinean entre varias bases del mismo SQL Server — `NewBytes_DBF` (maestro/ERP: `PedProT`/`PedProL` compras, `albprot`/`albprol` ingresos-remitos, `articulo`, `FP_Almacen`, `FP_PROVEEDORES`, `FP_IMPUESTOS`, `FP_Empresas`…), `NB_WEB` (capa web), `NEW_BYTES` (`ST_DETALLE_STOCK` seriales, `ST_*_DESPACHOS_*`) y `PRODUCTOS`. Se referencian con nombre completo `[Base].[dbo].[tabla]`.
+- **Compras vs ingresos:** orden = `PedProT.nNumPed` (líneas en `PedProL`). Ingreso/remito = `albprot.nnumalb` (líneas en `albprol`), vinculado por `albprot.nNumPed = PedProT.nNumPed`.
+- **`articulo` tiene dos ids:** `ID_ARTICULO` (numérico, el `item.id` del front) y `cRef` (string, el `cref` que usan PedProL/albprol/`ST_DETALLE_STOCK`). No son lo mismo.
+- **Seriales:** `NEW_BYTES.dbo.ST_DETALLE_STOCK`, col `SERIAL`, key `ID_COMPRA = PedProT.nNumPed` + `cref = articulo.cRef`. `serializedAmount` = COUNT de esas filas. `serialized` (1/0) por línea está en `PedProL`.
+- **Depósito:** `FP_Almacen` mapea `ID_ALMACEN` (num) ↔ `CCODALM` (char3) ↔ `cnombre`. `PedProT` guarda `warehousesId`+`cCodAlm`; `albprot` solo `ccodalm`. SAFcom = id 2 / 'SAF' (ver [[contexto#companyCode 4 (NB) y depósito SAFcom|contexto]]).
+- **Impuestos globales:** en `FP_IMPUESTOS`, `companyCode = NULL` = impuesto global (aplica a todas las empresas). Filtrar con `(companyCode = :cc OR companyCode IS NULL)`, nunca solo `= :cc`.
 - **Búsqueda de items (`ItemRepository`):** un único `search` cubre SKU (`A.ID_PRODUCTO`), título (`A.CDETALLE`), `A.ID_ARTICULO` (exacto, sargable), marca y familia, todo **parametrizado** (reutiliza plan de SQL Server, sin inyección).
 
 ## Base de datos

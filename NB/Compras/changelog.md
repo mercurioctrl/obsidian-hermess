@@ -12,6 +12,16 @@ Historial de cambios del proyecto Compras, basado en los commits de ambos reposi
 
 Archivos: `app/Repositories/TariffPosition/TaxesName/TariffTaxPrefixRepository.php`, `app/Repositories/Items/ItemRepository.php`, `components/Orders/Detail.vue`
 
+### Ingresos: ver seriales + ajustes de cotización en pesos (working tree)
+
+- feat: **Ver seriales en Ingresos** — clic derecho sobre un producto serializado en el detalle de un Ingreso → "Ver seriales (N)" → modal con los números de serie. Back: nuevo endpoint `GET /v1/providerOrderInbound/{nNumPed}/serials/{ID_ARTICULO}` (controller `ProviderOrderInboundSerials` → service → repo que lee `NEW_BYTES.dbo.ST_DETALLE_STOCK` por `ID_COMPRA` + `cref`). Se agregó `serializedAmount` por ítem al detalle del ingreso. Front: `$api.providerOrderInbound.getSerials`, menú contextual (`a-dropdown` trigger contextmenu) + `a-modal` en `ProviderOrderInbound/Detail.vue`. Ver [[arquitectura#Detalle de Órdenes vs Ingresos (no confundir)|arquitectura]].
+- fix: En el detalle de **Ingreso**, la fila resumen "Cotización" no mostraba **Subtotal Final** (la `percepcion` venía `undefined` → `subtotalFinal + undefined = NaN`, y `NaN >= 0` es false). Guard con `Number(orderDetail.percepcion) || 0` (`ProviderOrderInbound/Detail.vue`).
+- feat: Detalle en **pesos** (`currencyQuote === 1`): el **Costo** muestra `$` en vez de `u$d` (prop `currency` en `Table/EditableCell2.vue`, antes hardcodeado), se corrigieron las clases de color `.dolar`/`.peso` que estaban invertidas, y la fila **Cotización fiscal** ya no multiplica subtotales por la cotización fiscal — solo muestra el valor. Además se muestra la cotización / cotización fiscal en la columna "Cant." cuando la orden no es editable (remitida) (`Orders/Detail.vue`). Ver [[contexto#Cotización en pesos (currencyQuote === 1) — display|regla de display]].
+- ui: Columna **Fecha** del listado de Órdenes en una sola línea (`white-space: nowrap` + fuente 12px) para que la hora no caiga abajo (`pages/orders.vue`).
+- data: Limpieza en SQL Server (prod): `companyCode IS NULL` → **4 (NB)** en `PedProT` (78) y `albprot` (11.914); depósito **SAFcom** (`warehousesId=2` / `ccodalm='SAF'`) donde faltaba para `companyCode=4` (PedProT 10.319, albprot 3), **sin pisar** 7 filas con depósito distinto a propósito (DE1, Miami, DOM, 006). Ver [[contexto#companyCode 4 (NB) y depósito SAFcom|contexto]].
+
+Archivos (esta sesión): `app/Http/Controllers/Provider/ProviderOrderInboundSerials.php`, `app/Repositories/Provider/OrderInbound/ProviderOrderInboundRepository.php`, `app/Services/Provider/OrderInbound/ProviderOrderInboundDetailService.php`, `app/routes/api.php`, `components/ProviderOrderInbound/Detail.vue`, `components/Orders/Detail.vue`, `components/Table/EditableCell2.vue`, `pages/orders.vue`, `plugins/api.js`
+
 ## 2026-03-11
 
 - feat: Despachos temporales y serialización de datos (API)
