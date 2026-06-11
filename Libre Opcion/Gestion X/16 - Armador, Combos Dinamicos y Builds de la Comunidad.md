@@ -43,6 +43,17 @@ tags:
 | **Contenido / SEO** (cubre el hueco de redes) | Los builds UGC son **contenido buscable** generado por la comunidad, no por LibreOpción. |
 | **Confianza** | "Comprá el build que armó X" = elección guiada y segura. → [[10 - Reposicionamiento - De Precio a Confianza]] |
 
+## 💰 Revisión (2026-06-11): el "para qué" de fondo — mercado de upgrade + co-funding de marcas
+
+> [!important] Lo que casi se nos pasa
+> El armador/combos no es solo una palanca de conversión: **ataca el mercado real argentino y destraba fondos de las marcas.** Esto lo eleva de feature a columna vertebral.
+
+**1 · El mercado argentino es de upgrade, no de PC nueva.** Con el poder adquisitivo golpeado, lo normal es **actualizar** la PC que ya se tiene, no comprar una nueva. El catálogo de Compra Gamer lo confirma ([[09 - Estudio de Catálogo - Compra Gamer]]): **~46% son componentes sueltos** (el mercado de upgrade) vs. solo **7,4% equipos/PCs completas**, y **"Kits de actualización" es su 2ª subcategoría** (125 productos, casi empatada con Mothers AMD). El combo de actualización es el producto que ataca esa cancha.
+
+**2 · El combo destraba fondos de las marcas (palanca de margen).** Al empaquetar CPU + mother + RAM, **cada marca del combo tiene incentivo para co-fundear esa venta**: se apilan bonificaciones de varias marcas sobre un mismo carrito y se concentra volumen en SKUs puntuales → habilita **rebates y fondos de marketing (MDF)** que comprando suelto no aparecen. Es la misma lógica de "que paguen las marcas" de las cuotas ([[11 - Estrategia de Cuotas y Precio]]), pero del lado del producto: **plata fresca que afloja la restricción del 17% de margen**. Esto, no solo el ticket, es la razón estratégica de fondo para priorizar combos.
+
+**3 · App de vendedores (clonado de builds).** El armador alimenta una **aplicación para vendedores/creadores** donde **clonan builds y combos con un toque** y los ofrecen a su audiencia con su margen (+1–3%). Nosotros ponemos stock, precio, garantía, cuotas y logística; el vendedor no opera nada. Convierte el armador en un **canal de ventas distribuido** — cada creador es una tienda más. Se conecta con [[12 - Modelo Operativo - Importador-Mayorista con Red de Vendedores]].
+
 ## Dónde se ofrece
 
 - **Sección propia** ("Armá tu upgrade / tu PC").
