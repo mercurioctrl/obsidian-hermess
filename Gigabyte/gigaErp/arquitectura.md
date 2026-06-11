@@ -7,12 +7,12 @@ gigaErp/
 ├── backend/          ← Laravel 11 (PHP 8.4)
 │   ├── app/
 │   │   ├── Enums/            ← RolUsuario, EstadoTarea, EstadoVenta, EstadoOrdenVenta, TipoMovimiento
-│   │   ├── Http/Controllers/ ← ~24 controllers
+│   │   ├── Http/Controllers/ ← ~25 controllers (incl. ImportacionCatalogoController)
 │   │   ├── Http/Resources/   ← 9 API resources
 │   │   ├── Models/           ← ~24 Eloquent models
 │   │   └── (no Services aún)
 │   ├── database/
-│   │   ├── migrations/       ← 0001–0033 (numeradas)
+│   │   ├── migrations/       ← 0001–0040 (numeradas)
 │   │   └── seeders/          ← DatabaseSeeder, DemoSeeder, ProductoInvidSeeder,
 │   │                            ProductoNewBytesSeeder, CuentaCorrienteSeeder, UsuarioSeeder
 │   ├── resources/views/
@@ -35,10 +35,13 @@ gigaErp/
 │   │   ├── mercaderia/
 │   │   │   ├── index.vue               ← redirect a /mercaderia/stock
 │   │   │   ├── stock/index.vue         ← tabs + filtros en card blanca
+│   │   │   ├── catalogo/index.vue      ← tab Catálogo: editar/crear parámetros de producto
 │   │   │   ├── depositos/index.vue     ← tabs
 │   │   │   └── importaciones/
 │   │   │       ├── index.vue, nueva.vue, [id].vue
-│   │   ├── productos/index.vue         ← APIs Distri
+│   │   ├── productos/
+│   │   │   ├── index.vue               ← APIs Distri (+ toggle stock, botón Cargar catálogo)
+│   │   │   └── importar.vue            ← wizard carga masiva de catálogo
 │   │   ├── existencias/index.vue       ← Stock Distri
 │   │   ├── ordenes-venta/
 │   │   │   ├── index.vue               ← listado
@@ -58,6 +61,8 @@ Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Resellers · Órden
 Marketing:    Fondos · Calendario · Tareas
 Admin:        Configuración (solo admin)
 ```
+
+> Inventario (Stock Bodega) = 4 tabs: **Stock · Catálogo · Depósitos · Subir Masivo** (barra duplicada en cada página).
 
 ## Modelos principales y relaciones
 
@@ -94,7 +99,8 @@ Venta
 
 Producto
   ├── hasMany StockDeposito
-  └── (precio_lista_1..4, codigo_distribuidor, sku)
+  ├── (precio_lista_1..4, codigo_distribuidor, sku)
+  └── (catálogo GIGABYTE: item_no, bu_code, chipset, global_part, link, ean, carton_*)
 ```
 
 ## Enums
@@ -127,10 +133,14 @@ PATCH /api/ordenes-venta/{id}/aprobar
 PATCH /api/ordenes-venta/{id}/anular
 POST  /api/ordenes-venta/{id}/invoice
 
-# Importaciones
+# Importaciones de stock (mercadería)
 POST /api/importaciones-mercaderia/parsear          multipart: file
 POST /api/importaciones-mercaderia/chequear-skus
 POST /api/importaciones-mercaderia                  body: staged_id, deposito_id, mapeo
+
+# Carga masiva de catálogo (productos, no stock)
+POST /api/importaciones-catalogo/parsear            multipart: archivo
+POST /api/importaciones-catalogo                    body: staged_id, mapping{item_no...}, marca, categoria
 ```
 
 ## Módulo Nota de Crédito — flujo
@@ -155,6 +165,17 @@ POST /api/importaciones-mercaderia                  body: staged_id, deposito_id
 4. Backend: actualiza clientes.linea_credito_usd + crea historial_linea_credito
 5. Frontend: actualiza cliente, refresca historial
 6. Barra de utilización: saldo_usd / linea_credito_usd (roja >90%)
+```
+
+## Módulo Carga de Catálogo — flujo
+
+```
+1. /productos/importar o pestaña Catálogo → subir xlsx/csv
+2. POST /api/importaciones-catalogo/parsear → guarda staged + devuelve headers/rows/campos
+3. Frontend auto-mapea columnas por regex (item_no, bu_code, ean, carton_*...)
+4. POST /api/importaciones-catalogo → upsert Producto por item_no
+   - sku = codigo_distribuidor = item_no · nombre/modelo = global_part · marca=GIGABYTE
+5. Devuelve { creados, actualizados, omitidos, errores }
 ```
 
 ## Patrones Frontend
@@ -187,6 +208,15 @@ window.open(`/api/ventas/${id}/preview?token=${encodeURIComponent(authStore.toke
 window.open(`/api/notas-credito/${id}/preview?token=${encodeURIComponent(authStore.token)}`, "_blank")
 ```
 
+### Subir archivo (FormData con token) — patrón importadores
+
+```js
+const fd = new FormData(); fd.append("archivo", file)
+await $fetch(`${config.public.apiBase}/importaciones-catalogo/parsear`, {
+  method: "POST", body: fd, headers: { Authorization: `Bearer ${authStore.token}` },
+})
+```
+
 ### Patrón de filtros — todas las páginas usan card
 
 ```html
@@ -211,6 +241,8 @@ docker compose build --no-cache frontend && docker compose up -d frontend
 docker restart gigaerp-nginx   # SIEMPRE después de rebuild
 ```
 
+> ⚠️ El `docker cp` NO instala dependencias. Si el código usa una lib nueva (ej. PhpSpreadsheet vía `maatwebsite/excel`), hay que `docker compose build backend`. Ver [[troubleshooting#8. PhpSpreadsheet no instalado en el container|troubleshooting #8]].
+
 ## Ver también
 
 - [[gigaErp]] — índice del proyecto
@@ -218,7 +250,9 @@ docker restart gigaerp-nginx   # SIEMPRE después de rebuild
 - [[changelog]] — historial de cambios
 - [[memoria]] — gotchas y patrones recurrentes
 - [[troubleshooting]] — errores conocidos y fixes
+- [[modulos/productos]] — sync partpicker + carga de catálogo GIGABYTE
 - [[modulos/ordenes-venta]] — pipeline Orden → Aprobación → Invoice → Nota de Crédito
+
 ## Integración API externa — patrón proxy backend
 
 Para APIs externas públicas (ej. partpicker), el backend actúa como proxy:
@@ -227,7 +261,7 @@ Para APIs externas públicas (ej. partpicker), el backend actúa como proxy:
 - Timeouts: 15s metadata, 30-60s listados grandes
 - Filtrar/validar antes de devolver al frontend
 
-### 
+### Sincronización mayoristas
 
 - `GET /api/sincronizar/fuentes` — mayoristas de partpicker (sin `preciosgamer_`)
 - `POST /api/sincronizar/vincular-skus` — asigna `sku = strtoupper(nro_parte)` en chunk de 500
@@ -235,7 +269,7 @@ Para APIs externas públicas (ej. partpicker), el backend actúa como proxy:
 
 **⚠️ Orden de rutas:** `vincular-skus` debe declararse ANTES del wildcard `{source}`.
 
-### 
+### Resellers
 
 - `GET /api/resellers/fuentes` — resellers con prefijo `preciosgamer_`
 - `GET /api/resellers/items` — proxy con max 200 items, filtros: source, fabricante, isinstock, q
@@ -246,5 +280,3 @@ Para APIs externas públicas (ej. partpicker), el backend actúa como proxy:
 - `precio_sin_iva`, `precio_final`, `pct_iva` pueden ser null → defaults 0, 0, 21
 - Resellers: precio real en `precio_convertido`, no en `precio_ars` (siempre null)
 - `fabricante` = exact match case-insensitive; para LIKE usar `q`
-
-

@@ -90,8 +90,39 @@ Bind for 0.0.0.0:3308 failed: port is already allocated
 
 **Workaround:** la UX no se rompe porque el frontend lee `e.message` (que sí está). Si querés arreglar de raíz, mirar el handler en `bootstrap/app.php`.
 
+## 8. PhpSpreadsheet no instalado en el container
+
+**Síntoma:** subir un `.xlsx` a cualquier importador (mercadería o catálogo) tira:
+```
+Class "PhpOffice\PhpSpreadsheet\IOFactory" not found
+```
+
+**Causa:** la imagen del backend es vieja. `maatwebsite/excel` (que trae PhpSpreadsheet) está en `composer.json` del host pero **nunca corrió `composer install`** en el container → `vendor/phpoffice` y `vendor/maatwebsite` no existen. Además no hay binario `composer` dentro del container.
+
+**Fix de raíz:** reconstruir la imagen del backend (instala las deps del composer.json):
+```bash
+docker compose build backend && docker compose up -d backend
+docker restart gigaerp-nginx
+```
+
+**Workaround vigente:** el importador de catálogo (`ImportacionCatalogoController`) parsea **CSV de forma nativa** (`fgetcsv`) y solo usa PhpSpreadsheet para xlsx → con CSV anda sin rebuild. El importador de mercadería (`ImportacionMercaderiaController`) sí depende de PhpSpreadsheet siempre.
+
+## 9. `$request->validate()` descarta claves de un array anidado
+
+**Síntoma:** se mapean varias columnas (`mapping.bu_code`, `mapping.ean`, ...) pero al backend solo llega la única que tiene regla explícita (`mapping.item_no`); el resto queda null.
+
+**Causa:** `$request->validate(['mapping' => 'array', 'mapping.item_no' => 'required|integer'])` devuelve **solo las claves anidadas que tienen regla**. Las demás se descartan del set validado.
+
+**Fix:** agregar un comodín que valide (y por ende devuelva) todas las claves:
+```php
+'mapping'         => 'required|array',
+'mapping.item_no' => 'required|integer|min:0',
+'mapping.*'       => 'nullable|integer|min:0',
+```
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources
 - [[modulos/invoice-preview]] — donde aparece la trampa html2canvas/SVG
+- [[modulos/productos]] — importador de catálogo (gotchas 8 y 9)
 - [[changelog]] — cuando se identificó cada uno

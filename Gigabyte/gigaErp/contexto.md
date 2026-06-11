@@ -49,16 +49,29 @@ Moneda: USD exclusivamente.
 | `/calendario` | Calendario | Marketing |
 | `/tareas` | Tareas | Marketing |
 
-> La subsección "Importaciones" dentro de Stock Bodega se llama **"Subir Masivo"** en tabs y botón.
+> Stock Bodega tiene 4 tabs: **Stock · Catálogo · Depósitos · Subir Masivo**.
+> "Subir Masivo" = importaciones de stock (XLSX). "Catálogo" (`/mercaderia/catalogo`) = editar parámetros de producto.
 
-## Catálogo de productos — dos códigos
+## Catálogo de productos — códigos
 
-| Campo | Descripción | Ejemplo INVID |
-|-------|-------------|---------------|
-| `codigo_distribuidor` | Código interno del distribuidor | `0416990` |
+| Campo | Descripción | Ejemplo |
+|-------|-------------|---------|
+| `codigo_distribuidor` | Código interno del distribuidor | `0416990` (INVID) |
 | `sku` | Modelo oficial del fabricante (Gigabyte) | `GP-P550SS` |
+| `item_no` | Código por ítem del catálogo GIGABYTE | `28E00-10365-1CARR` |
+| `global_part` | Global Part No (modelo) | `GB-C103GP65G5 GAR1` |
 
-- SKU es único **por distribuidor** (constraint 0025), no globalmente
+- SKU es único **por distribuidor** (constraint 0025), no globalmente.
+
+### Catálogo GIGABYTE (carga masiva)
+
+Productos cargados desde el archivo del contacto de GIGABYTE (sin distribuidor):
+- `marca=GIGABYTE`, `distribuidor_id=null`
+- **`sku` = `codigo_distribuidor` = `item_no`** → permite cruzar el stock con el importador de mercadería (que matchea por sku/codigo_distribuidor)
+- `nombre` = `modelo` = Global Part
+- Campos propios (mig `0040`): `bu_code`, `chipset`, `item_no`, `global_part`, `link`, `ean`, `carton_box_qty`, `carton_peso_kg`, `carton_largo_mm`, `carton_ancho_mm`, `carton_alto_mm`
+- **UPC NO se usa.**
+- Carga: wizard `/productos/importar` o pestaña Catálogo. Detalle en [[modulos/productos#Carga masiva de catálogo GIGABYTE]].
 
 ## Branding / UI
 
@@ -113,10 +126,17 @@ Moneda: USD exclusivamente.
 ### Importaciones de stock (XLSX)
 
 - Flujo 3 pasos: subir archivo → mapear columnas → confirmar
-- `POST /api/mercaderia/importaciones/parsear` — guarda en storage, devuelve headers
-- `POST /api/mercaderia/importaciones/procesar` — upsert `stock_deposito` por producto+depósito
+- `POST /api/importaciones-mercaderia/parsear` — guarda en storage, devuelve headers
+- `POST /api/importaciones-mercaderia` — upsert `stock_deposito` por producto+depósito
 - Trazabilidad: tabla `importaciones_mercaderia` + `items_importacion_mercaderia`
 - **Lookup doble**: primero por `sku`, luego por `codigo_distribuidor` (los Excel suelen usar el segundo)
+- Para el catálogo GIGABYTE el cruce funciona porque `sku`/`codigo_distribuidor` = `item_no`.
+
+### Carga masiva del catálogo (productos, no stock)
+
+- `POST /api/importaciones-catalogo/parsear` + `POST /api/importaciones-catalogo`
+- **Upsert de productos por `item_no`** (crea/actualiza, no duplica). No toca stock.
+- Parsea CSV nativo; xlsx necesita PhpSpreadsheet (ver [[troubleshooting#8. PhpSpreadsheet no instalado en el container|troubleshooting #8]]).
 
 ### Órdenes de Venta — flujo de estados
 
@@ -139,13 +159,16 @@ BORRADOR → APROBADA → FACTURADA
 
 ## TODOs pendientes
 
+- [ ] Reconstruir imagen del backend para habilitar import xlsx (PhpSpreadsheet) — hoy solo CSV
+- [ ] Cargar precios/listas al catálogo GIGABYTE (la carga masiva trae productos sin precio)
 - [ ] Agregar SKUs reales a productos de Elit y Air (Ceven/Stylus ya los tienen via vincular-skus)
 - [ ] Resellers: comparativa de precios entre tiendas para el mismo SKU
-- [ ] Export Excel (`maatwebsite/excel` instalado, stubs 501)
+- [ ] Export Excel (`maatwebsite/excel` en composer.json, falta instalar en container)
 - [ ] Permisos granulares en sidebar (hoy todos ven todo)
 - [ ] Vista/edición de Ventas directa (hoy solo se accede via orden)
 - [ ] Campo `shipping_usd` editable en alguna UI (hoy default 0)
 - [ ] Anular nota de crédito (endpoint de estado ANULADA)
+- [x] Carga masiva del catálogo GIGABYTE (campos del mail) + pestaña Catálogo editable
 - [x] Integración real partpicker: sync Air/Ceven/Invid/Stylus con vincular-skus
 - [x] Módulo Resellers live (sin DB) con filtros
 - [x] Filtro de marca default GIGABYTE en APIs Distri, Stock Distri y Resellers
@@ -161,6 +184,8 @@ BORRADOR → APROBADA → FACTURADA
 
 ## Bugs corregidos (historial)
 
+- `mapping.*` necesario en `validate()`: con solo `mapping.item_no` se descartan las demás claves del array
+- `productos.codigo_distribuidor` NOT NULL sin default → setear = item_no al crear desde catálogo
 - `config:cache` debe correr SIEMPRE después de `optimize:clear` (PHP-FPM no lee env vars)
 - `apiResource` pluralización española → fix `.parameters()`
 - `->keyBy('estado')` falla con enum cast → fix: `->keyBy(fn($v) => $v->estado->value)`
@@ -178,5 +203,4 @@ BORRADOR → APROBADA → FACTURADA
 
 ## Ver también
 
-[[gigaErp]] · [[arquitectura]] · [[changelog]] · [[memoria]]
-
+[[gigaErp]] · [[arquitectura]] · [[changelog]] · [[memoria]] · [[modulos/productos]]

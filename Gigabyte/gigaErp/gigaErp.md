@@ -3,7 +3,7 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `b7c7377` · **Última sincronización:** 2026-06-04
+**Último commit:** `d08b3a4` · **Última sincronización:** 2026-06-11
 
 ---
 
@@ -22,12 +22,12 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 - [[modulos/ordenes-venta]] — pipeline Orden → Aprobación → Invoice → Nota de crédito
 - [[modulos/invoice-preview]] — preview Blu-style + html2pdf client-side
-- [[modulos/productos]] — sync desde partpicker, 4 listas de precio, vincular-skus
+- [[modulos/productos]] — sync partpicker + carga masiva de catálogo GIGABYTE, 4 listas de precio
 - [[modulos/resellers]] — resellers live desde partpicker, sin importar a DB
 
 ---
 
-## Estado actual (2026-06-04) — commit `b7c7377`
+## Estado actual (2026-06-11) — commit `d08b3a4`
 
 ### Módulos implementados
 
@@ -39,6 +39,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 | Órdenes de Venta | ✅ | BORRADOR → APROBADA → FACTURADA, permisos granulares |
 | Invoice (PDF + preview) | ✅ | html2pdf.js, preview pública por token |
 | Stock Bodega | ✅ | Depósitos, importaciones XLSX, columnas por depósito |
+| Catálogo (carga masiva) | ✅ | Carga base GIGABYTE (item_no, bu_code, chipset, carton...), upsert por item_no, pestaña editar |
 | Stock Distri | ✅ | Tabla cruzada SKU × distribuidor, filtro marca default GIGABYTE |
 | APIs Distri | ✅ | Sync real desde partpicker (Air/Ceven/Invid/Stylus), vincular-skus, filtro GIGABYTE |
 | Resellers | ✅ | Live desde partpicker, 37 tiendas PreciosGamer, filtro GIGABYTE |
@@ -57,6 +58,8 @@ Marketing:    Fondos · Calendario · Tareas
 Admin:        Configuración (solo admin)
 ```
 
+> Inventario (Stock Bodega) tiene 4 pestañas: **Stock · Catálogo · Depósitos · Subir Masivo**.
+
 ### Distribuidores en DB
 
 | id | Nombre | Origen |
@@ -68,6 +71,8 @@ Admin:        Configuración (solo admin)
 | 5 | Ceven | creado al primer sync |
 | 6 | Stylus | creado al primer sync |
 
+> El catálogo GIGABYTE se carga **sin distribuidor** (`distribuidor_id=null`, `marca=GIGABYTE`).
+
 ### Volumen en DB (post-sync partpicker)
 
 | Entidad | Cantidad |
@@ -76,7 +81,7 @@ Admin:        Configuración (solo admin)
 | Ventas / Invoices | 34 |
 | Productos (demo+seeders) | ~259 base |
 | Productos (post-sync) | +miles (Air ~8k, Invid ~1.2k, Ceven ~466, Stylus ~908) |
-| Migraciones | 0001–0033 |
+| Migraciones | 0001–0040 |
 
 ### Usuarios demo
 
@@ -91,6 +96,6 @@ Admin:        Configuración (solo admin)
 
 ## Ver también
 
-- [[changelog]] — últimos: partpicker real + resellers (b7c7377) · buscador (88d87bd) · fix stocks (4fb850e)
-- [[arquitectura]] — SincronizarApiController, ResellersController, patrón proxy API externa
+- [[changelog]] — últimos: carga masiva catálogo GIGABYTE (d08b3a4) · partpicker real + resellers (b7c7377)
+- [[arquitectura]] — SincronizarApiController, ResellersController, ImportacionCatalogoController
 - [[contexto]] — reglas de negocio y TODOs pendientes

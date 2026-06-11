@@ -1,3 +1,37 @@
+## 2026-06-11 — Carga masiva y edición de catálogo GIGABYTE
+
+Pedido del contacto de GIGABYTE (mail): poder cargar la base de productos con campos propios del catálogo (sin stock) y cruzar el stock después.
+
+### Campos de catálogo en `productos` (migración `0040`)
+
+Nuevas columnas: `bu_code`, `chipset`, `item_no`, `global_part`, `link`, `ean`, `carton_box_qty`, `carton_peso_kg`, `carton_largo_mm`, `carton_ancho_mm`, `carton_alto_mm`. **UPC NO se usa** (explícito en el mail).
+
+**Convención clave:** en el catálogo GIGABYTE `sku` = `codigo_distribuidor` = **ITEM NO**, `nombre`/`modelo` = Global Part, `marca`=GIGABYTE, `distribuidor_id`=null. Así el importador de stock de mercadería existente (matchea por sku/codigo_distribuidor) cruza el stock por ese código sin cambios.
+
+### Importador masivo de catálogo (`ImportacionCatalogoController`)
+
+- `POST /api/importaciones-catalogo/parsear` — sube xlsx/csv, devuelve headers + filas + campos mapeables
+- `POST /api/importaciones-catalogo` — **upsert** de productos por `item_no` (crea/actualiza, no duplica); devuelve `{creados, actualizados, omitidos, errores}`
+- Parseo **CSV nativo** (`fgetcsv`, detecta delimitador `, ; \t`) + xlsx vía PhpSpreadsheet si está disponible
+
+### Frontend
+
+- `/productos/importar` — wizard subir → mapear (auto-detecta las columnas del mail) → resultado. Botón "Cargar catálogo" en `/productos`.
+- Toggle **"Mostrar stock"** en la lista de productos (oculta columna + badge en grid/lista).
+- Bloque "Datos de catálogo" en el modal de detalle del producto.
+- **Pestaña Catálogo** en Inventario (`/mercaderia/catalogo`), junto a Stock · Depósitos · Subir Masivo — listar / editar / crear productos con todos los parámetros del catálogo. ITEM NO se mantiene sincronizado con SKU al guardar.
+
+### Gotchas resueltos
+
+- `$request->validate()` con reglas anidadas (solo `mapping.item_no`) devuelve **únicamente las claves validadas** del array → se perdían los demás mapeos. Fix: `'mapping.*' => 'nullable|integer|min:0'`.
+- `productos.codigo_distribuidor` es NOT NULL sin default → al crear, setear = item_no.
+- **PhpSpreadsheet no está instalado en el container** (imagen vieja; `maatwebsite/excel` figura en composer.json pero nunca corrió `composer install`) → rompe el parseo xlsx en AMBOS importadores (catálogo y mercadería). CSV anda; para habilitar xlsx falta `docker compose build backend`. Ver [[troubleshooting#8. PhpSpreadsheet no instalado en el container|troubleshooting]].
+
+**Commit:** `d08b3a4`
+**Archivos:** `backend/app/Http/Controllers/ImportacionCatalogoController.php` (nuevo), `Producto.php`, `ProductoController.php`, `ProductoResource.php`, `database/migrations/0040_add_catalogo_campos_to_productos_table.php`, `routes/api.php`, `frontend/pages/productos/importar.vue` (nuevo), `frontend/pages/mercaderia/catalogo/index.vue` (nuevo), `productos/index.vue`, tabs en `mercaderia/{stock,depositos,importaciones}`
+
+---
+
 ## 2026-06-04 — Integración partpicker + módulo Resellers
 
 ### Integración real con API partpicker (`SincronizarApiController`)
