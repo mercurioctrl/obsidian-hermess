@@ -9,11 +9,11 @@
 
 | Doc | Status | Audiencia | Acción |
 |---|---|---|---|
-| [[Bot-WhatsApp-MVP/Spec\|Spec MVP v2.0]] | ✅ FINAL | Todo el equipo | Lectura referencial |
-| [[Bot-WhatsApp-MVP/Brief-Diseno\|Brief Diseño v2]] | ✅ FINAL | Equipo diseño | **Compartir, pueden arrancar** |
-| [[Bot-WhatsApp-MVP/Brief-Marketing\|Brief Marketing v2]] | ✅ FINAL | Equipo marketing | **Compartir, pueden arrancar** |
-| [[Bot-WhatsApp-MVP/ADR\|Architecture Decision Record v1.0]] | ✅ FINAL | Tech lead + devs | Sin cambios (arquitectura misma) |
-| [[Bot-WhatsApp-MVP/Brief-Devs\|Brief Técnico Devs]] | ✅ FINAL | 4 devs + QA | Sin cambios significativos |
+| [[Bily/Productos/Bot-WhatsApp-MVP/Spec\|Spec MVP v2.0]] | ✅ FINAL | Todo el equipo | Lectura referencial |
+| [[Bily/Productos/Bot-WhatsApp-MVP/Brief-Diseno\|Brief Diseño v2]] | ✅ FINAL | Equipo diseño | **Compartir, pueden arrancar** |
+| [[Bily/Productos/Bot-WhatsApp-MVP/Brief-Marketing\|Brief Marketing v2]] | ✅ FINAL | Equipo marketing | **Compartir, pueden arrancar** |
+| [[Bily/Productos/Bot-WhatsApp-MVP/ADR\|Architecture Decision Record v1.0]] | ✅ FINAL | Tech lead + devs | Sin cambios (arquitectura misma) |
+| [[Bily/Productos/Bot-WhatsApp-MVP/Brief-Devs\|Brief Técnico Devs]] | ✅ FINAL | 4 devs + QA | Sin cambios significativos |
 
 ---
 

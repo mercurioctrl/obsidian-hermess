@@ -260,8 +260,8 @@ Ver [[changelog|changelog]] para cronología detallada y [[estado|estado vivo]] 
 
 ## 11. Ver también
 
-- [[changelog|Changelog]] — cronología detallada de las fases F1–F6.
-- [[estado|Estado vivo]] — componentes corriendo, paths, endpoints, performance medida.
+- [[Bily/proyectos/Integracion-Jira/changelog|Changelog]] — cronología detallada de las fases F1–F6.
+- [[Bily/proyectos/Integracion-Jira/estado|Estado vivo]] — componentes corriendo, paths, endpoints, performance medida.
 - [[Bily/jira/Inicio|Bily/jira/]] — notas de tickets autopobladas por el vault sync.
 - [[Bily/proyectos/Inicio|Proyectos]] (volver al índice)
 - [[Bily/Inicio|Inicio Bily]]
