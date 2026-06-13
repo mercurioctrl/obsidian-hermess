@@ -68,7 +68,7 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 - [[NB/Borradores/[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]|[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]]]
 
 ---
-*Última actualización: 2026-06-11 — Inventario: nueva sección Precios (edición bidireccional + competencia BluPartPicker), nota modulo-precios.*
+*Última actualización: 2026-06-12 — Inventario: señal de tendencia de precios en competencia, fix de cabecera sticky, notas de deploy a prod.*
 
 ## Ver también
 
