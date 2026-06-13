@@ -512,3 +512,69 @@ Akzidenz, DINPro, Industry, Roboto, Teko, Aero Matics, Aldrich), Manual de Marca
 (9.5MB) y los PNG ya copiados a `public/clients/gigabyte/`. Convención: el material
 fuente de marca se versiona como `assets/html/{cliente}Brand/`, los assets servidos
 en runtime van a `public/clients/{slug}/`.
+
+## 2026-06-12/13 — Landing del monitor Gigabyte MO27Q28G (estética del sitio oficial)
+
+Nueva propuesta `gigabyte-monitor` servida en `/propuestas/gigabyte-monitor?token=gbt-mo27-2026`:
+una landing one-page de **estrategia comercial integral** para posicionar el monitor
+Gigabyte MO27Q28G a través del reseller MEXX en Argentina. Componente nuevo
+`components/Propuestas/MonitorPresentation.vue`. Commits en `catri-fork-2026-temporada-2`:
+`b7fdc9d` (base), `58f87d8` + `1dcd5f8` + `106030c` (rondas de copy).
+
+### Mecanismo de dispatch por `kind`
+
+`pages/propuestas/[slug].vue` ahora puede **delegar el render a un componente** según el
+campo `kind` de la propuesta. El slug `gigabyte-monitor` define `kind: 'monitor'` y la
+página hace `<MonitorPresentation v-else-if="proposal.kind === 'monitor'">`. Las propuestas
+sin `kind` (ej. `gigabyte`) se siguen renderizando inline en la página. El gate por token
+es el mismo para ambos tipos.
+
+### Contenido hardcoded en arrays del `<script setup>`
+
+Todo el copy de la landing (heroStats, problems, marketRows, regionRows, mexxAudit, ejes,
+pitch, funnel, ads, adsKpis, roadmap, pillars) vive en arrays `const` dentro del
+`<script setup>` de `MonitorPresentation.vue`. **Para editar textos se tocan esos arrays,
+no el template.** Toda la sesión de ajustes de copy (poder adquisitivo, márgenes, garantía,
+Ahora 12/18, cifras de Ads $23.333/día, activaciones del roadmap, etc.) fue editar strings
+en esos arrays.
+
+### Identidad visual = AZUL Gigabyte, no naranja
+
+La landing imita la página oficial https://www.gigabyte.com/es/Monitor/MO27Q28G. Decisión
+cromática clave: **la línea Gigabyte Gaming usa azul, el naranja `#FF6600` es de AORUS**
+(sub-marca). La primera versión usó naranja por arrastre de la propuesta de marketing
+anterior; se corrigió a:
+
+- `$accent: #00A0E9` (cyan de botones/labels del sitio oficial)
+- `$blue-accent: #0446F2` (azul profundo de los headings Gigabyte)
+- Reemplazos de todos los `rgba(255,0,208,...)` (magenta) y `rgba(255,102,0,...)` (naranja)
+  por el azul correspondiente.
+
+### Otros detalles de la estética Gigabyte
+
+- **Tipografía:** `Aldrich` en MAYÚSCULAS en `.hero-title` y `.sec-head h2` (la fuente ya
+  estaba cargada en `assets/css/fonts.css`). Imita headlines tipo "PERFECT VIEWING ANGLE".
+- **Fondo negro plano:** se removió el `GlowBackground` (orbs) del componente; glows internos
+  del hero/closer bajados de opacidad.
+- **UI rectangular:** botones/badges/chips a `border-radius: 4px` (no píldoras), como el botón
+  "Buy Now" del sitio oficial.
+- **`.section-label`** (eyebrows): cyan con barra horizontal de 22px, estilo labels Gigabyte.
+- **`.textwall`:** muro de texto repetido en outline detrás del hero ("Perfect Black ·
+  Tandem OLED · 280Hz"), firma visual de la página oficial.
+- **Textos secundarios en blanco:** el token `$ink-mute` se subió de `rgba(255,255,255,0.45)`
+  a `#ffffff` puro por pedido (labels de stats, headers de tabla, nav, footer se veían apagados).
+
+### Gigabyte/AORUS bloquean bots — cómo se vio la página real
+
+WebFetch y `curl` reciben **403 Access Denied** (Akamai) en gigabyte.com y aorus.com. Se
+cargó la página real con **Playwright + el Chrome del sistema** (`chromium.launch({
+channel: 'chrome' })`), screenshots por scroll y extracción de colores con `getComputedStyle`.
+Mismo patrón sirvió para screenshotear la landing local en `:3008` y verificar el diseño.
+Existe un skill `/replicarMicrosite <url>` que automatiza esto. Ver
+[[memoria#Ver sitios que bloquean bots Gigabyte AORUS|memoria]].
+
+### Producto MO27Q28G
+
+27" QHD 2560×1440, 280Hz, 0.03ms, WOLED 4ta gen (Primary RGB Tandem OLED), DisplayHDR True
+Black 500, 99.5% DCI-P3. Estrategia: el producto es superior pero caro en USD vs Chile/Uruguay
+y nadie comunica su valor en Argentina → ganar en valor percibido, no en precio.

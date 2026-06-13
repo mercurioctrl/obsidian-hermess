@@ -6,15 +6,37 @@
 
 ```
 blu/ (monorepo)
-├── blu-web-v1/          ← ESTE PROYECTO (Nuxt 3, puerto 3000)
+├── blu-web-v1/          ← ESTE PROYECTO (Nuxt 3)
 │   ├── Sitio público: /, /nosotros, /hablemos, /servicios/*, /catalogo-merch
 │   ├── Admin panel: /staffpanel/*
+│   ├── Propuestas: /propuestas/[slug]?token=
 │   └── consume API de ↓
 ├── sitio-api-rest-v1-laravel/  (Laravel 10, puerto 8060)
 │   └── MySQL 8.0 + Redis
 ├── bluMiniErp/          (ERP interno, puerto 8823)
 └── adata/landing/       (HTML estático)
 ```
+
+> **Path del repo (Linux):** `/var/www/blu/blu-web-v1`. En sesiones viejas era Mac
+> (`/Users/hermess/www/blu`) — algunas referencias de memoria pueden tener el path viejo.
+
+## Build y deploy (importante)
+
+En la máquina de desarrollo el front **NO usa dev server**; corre el build de producción
+con PM2. **No hay HMR — todo cambio requiere rebuild + restart para verse.**
+
+```bash
+npm run build                  # genera .output/server/index.mjs
+pm2 restart BLUWeb             # app cluster, puerto 3008, usuario hermess
+# verificar: curl -s -o /dev/null -w "%{http_code}" http://localhost:3008/
+```
+
+- Config en `ecosystem.config.cjs` (app `BLUWeb`, cluster, **puerto 3008**).
+- El dev server (`npm run dev`, puerto 3000) puede chocar con un container Docker que
+  ocupa `127.0.0.1:3000` — ver [[changelog#2026-05-07 — Polish visual de la propuesta Gigabyte|gotcha IPv4/IPv6]].
+- Otros proyectos (gigaerp, blufixture, naevo, minisaas) corren en Docker con
+  `node .output/server/index.mjs` cwd=`/app` — no confundir con BLUWeb.
+- Ver detalle en [[memoria#Build y deploy PM2 en 3008|memoria → build y deploy]].
 
 ## Páginas principales
 
@@ -33,6 +55,7 @@ blu/ (monorepo)
 | `/servicios/bi` | `services/bi.vue` | [[base-de-conocimiento#3 Scroll Horizontal BI|Scroll horizontal]] |
 | `/servicios/recruiting` | `services/recruiting.vue` | [[base-de-conocimiento#4 Acordeón Expandible Recruiting|Acordeón]] + [[base-de-conocimiento#JobBoard Búsquedas activas de Recruiting|JobBoard]] |
 | `/catalogo-merch` | `catalogoMerch.vue` | Galería pública del [[#Catálogo de merch\|catálogo de merch]], filtros por categoría + búsqueda + lightbox |
+| `/propuestas/[slug]` | `propuestas/[slug].vue` | [[#Propuestas comerciales detrás de token\|Propuestas comerciales]] detrás de token |
 | `/[email]` | `[email].vue` | vCard dinámica |
 
 ### Panel admin (`/staffpanel`)
@@ -52,11 +75,12 @@ blu/ (monorepo)
 ## Layouts
 - `default.vue` — Público: Header + Footer + globalOverlay → usa [[base-de-conocimiento#Fondos de Página|fondos animados]]
 - `admin.vue` — Admin: sidebar con nav + logout (item "Catálogo" entre Horarios y Usuarios)
+- Las propuestas usan `layout: false` (sin Header/Footer del sitio).
 
 ## i18n
 - Español (default) e Inglés
 - Rutas localizadas: `/servicios/it` ↔ `/services/it`, `/nosotros` ↔ `/about-us`, `/catalogo-merch` ↔ `/merch-catalog`
-- Páginas admin excluidas de i18n (`false` en `nuxt.config.ts`)
+- Páginas admin y propuestas excluidas de i18n (`false` en `nuxt.config.ts`)
 - Paquete: [[stack#Core|@nuxtjs/i18n 9.5]]
 
 ## Auth y permisos (admin)
@@ -90,6 +114,8 @@ Ver [[changelog#2026-04-15 — Sistema de permisos por sección  fixes admin pan
 Los componentes Nuxt UI (`UInput`, `UButton`, `UFormField`) renderizan mal en el
 admin porque el sitio tiene dark mode global. Usar HTML nativo con estilos scoped.
 `<UIcon>` y `<UModal>` sí funcionan. Ver [[memoria#HTML nativo en admin|detalle]].
+
+## Catálogo de merch
 
 ### Data flow
 
@@ -217,8 +243,8 @@ Ruta dinámica `pages/propuestas/[slug].vue` para servir propuestas a clientes
 específicos, fuera del sitio público pero dentro del mismo deploy. Excluida
 de i18n y del sitemap, con `<meta robots="noindex, nofollow">`.
 
-> Detalle de implementación, sub-marcas y cómo agregar un nuevo cliente en
-> [[changelog#2026-05-06 — Propuestas comerciales detrás de token propuestasslug|changelog 2026-05-06]].
+> Detalle de la base y el patrón `--brand` en [[changelog#2026-05-06 — Propuestas comerciales detrás de token propuestasslug|changelog 2026-05-06]].
+> Detalle de la landing del monitor en [[changelog#2026-06-12/13 — Landing del monitor Gigabyte MO27Q28G estética del sitio oficial|changelog 2026-06-12/13]].
 
 ### Gate por token
 
@@ -229,7 +255,17 @@ de i18n y del sitemap, con `<meta robots="noindex, nofollow">`.
 - El catálogo está hardcoded en la página (no DB) — basta editar el archivo
   para sumar/rotar tokens.
 
-### Patrón `--brand` para identidad por cliente
+### Dos modos de render: inline vs componente (`kind`)
+
+Cada entrada de `PROPOSALS` puede renderizarse de dos formas:
+
+- **Inline** (default): el contenido se arma dentro de `[slug].vue` con el objeto
+  `brand`, `services`, etc. (ej. slug `gigabyte`).
+- **Delegado a componente:** si la entrada tiene `kind: '<tipo>'`, la página despacha
+  a un componente dedicado. Hoy `kind: 'monitor'` → `<MonitorPresentation>`
+  (`components/Propuestas/MonitorPresentation.vue`). El gate por token es idéntico.
+
+### Patrón `--brand` para identidad por cliente (modo inline)
 
 Cada propuesta puede definir un objeto `brand`:
 
@@ -241,26 +277,36 @@ brand: {
 }
 ```
 
-`--brand` se usa puntualmente para:
-- Nav: drop-shadow tinte brand sobre el logo del cliente
-- Client-section: orb del fondo, accent de un span del H2, borders del showcase
-- Badges, sub-brand cards en hover
+`--brand` se usa puntualmente para nav, client-section (orb del fondo, accent de un
+span del H2, borders del showcase), badges y sub-brand cards. El resto de la página
+mantiene el sistema visual de Blu.
 
-El resto de la página mantiene el sistema visual de Blu (magenta `#FF00D0`,
-azul `#0474f4`, violeta `#9c44ff`). Esto evita que la propuesta se vea
-"genérica" pero también evita que Blu desaparezca.
+### Landing del monitor (`MonitorPresentation.vue`)
+
+Componente dedicado para la propuesta `gigabyte-monitor`. Características:
+
+- **Todo el copy vive en arrays `const` del `<script setup>`** (heroStats, problems,
+  marketRows, regionRows, mexxAudit, ejes, pitch, funnel, ads, adsKpis, roadmap,
+  pillars). Para editar textos se tocan esos arrays, NO el template.
+- **Identidad visual = página oficial del MO27Q28G** (no el sistema Blu): azul Gigabyte
+  `#00A0E9` / `#0446F2` (NO naranja — el naranja `#FF6600` es de AORUS), tipografía
+  `Aldrich` en mayúsculas para títulos, fondo negro plano (sin GlowBackground),
+  UI rectangular `border-radius: 4px`, `.textwall` de texto en outline detrás del hero.
+- Ver detalle en [[memoria#Landing del monitor Gigabyte estética oficial|memoria]].
 
 ### Assets del cliente
 
 - Logos en `public/clients/<slug>/*.png|svg`
 - Fuentes corporativas opcionales en `public/fonts/<slug>/`, registradas en
-  `assets/css/fonts.css`. Para Gigabyte → **Aldrich-Regular.ttf**, aplicada
-  selectivamente a labels/kickers/badges (no titulares ni cuerpo).
+  `assets/css/fonts.css`. Para Gigabyte → **Aldrich-Regular.ttf**.
 - Recursos en bruto del manual de marca quedan en `assets/html/<cliente>Brand/`
   (no se commitean — son brand kits internos pesados con PDFs/AI/zips).
 
 ### Propuestas activas
 
-| Slug | Cliente | Token | URL completa |
-|------|---------|-------|--------------|
-| `gigabyte` | Gigabyte | `gbt-mkt-2026` | `/propuestas/gigabyte?token=gbt-mkt-2026` |
+| Slug | Cliente | Token | Render |
+|------|---------|-------|--------|
+| `gigabyte` | Gigabyte | `gbt-mkt-2026` | inline (propuesta marketing general) |
+| `gigabyte-monitor` | Gigabyte | `gbt-mo27-2026` | `kind: 'monitor'` → MonitorPresentation |
+
+URL: `/propuestas/<slug>?token=<token>` (dominio `blustudioinc.com` en prod, `localhost:3008` en dev).

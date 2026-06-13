@@ -64,4 +64,4 @@
 
 ---
 
-*Actualizado: 2026-06-10*
+*Actualizado: 2026-06-13*
