@@ -1,7 +1,7 @@
 # Memoria del proyecto
 
-Consolidación de la memoria de Claude para Libre Opcion (sitio-web-app-v3).
-Última sincronización: 2026-05-15.
+Consolidación de la memoria de Claude para Libre Opcion (sitio-web-app-v3 + API v4).
+Última sincronización: 2026-06-13.
 
 ---
 
@@ -12,6 +12,7 @@ Consolidación de la memoria de Claude para Libre Opcion (sitio-web-app-v3).
 ## Feedback (reglas de trabajo)
 
 - **No autoría**: Nunca agregar Co-Authored-By en commits
+- **No commitear sin autorización**: Los commits solo se hacen cuando el usuario lo pide expresamente
 - **Build local**: Secuencia OBLIGATORIA: `npm ci` → `npm run build` → `pm2 restart WebAppLO`. Sin `npm ci` el build falla o produce resultados incorrectos
 - **Rama activa**: `development` (el usuario trabaja aquí en local, `master` es producción)
 - **Sass mixed-decls**: Declaraciones planas SIEMPRE antes de bloques anidados
@@ -27,6 +28,35 @@ Consolidación de la memoria de Claude para Libre Opcion (sitio-web-app-v3).
 - **Fetch async en watch handlers**: Siempre usar AbortController con timeout + guard `this._isDestroyed` antes de mutar estado reactivo
 - **CSP en localhost**: `aplus.libreopcion.com.ar` tiene `frame-ancestors` que no incluye localhost. El HEAD fetch sí funciona pero el iframe se bloquea. Fix: timeout 5s para ocultar si iframeResizer no recibe respuesta
 - **Debugging librerías de terceros — navegación rota**: Cuando la navegación asincrónica se rompe post-navigate, sospechar primero de ResizeObserver/MutationObserver globales no limpiados. Leer el source minificado del CDN para entender qué hace y qué NO hace `disconnect()`. El fix es triggerear el cleanup ANTES de borrar el registry, no después.
+- **Backend — verificar siempre por HTTP, no por tinker**: Por OPcache (ver § Backend gotchas), tinker da falsos positivos. Tras editar PHP, recargar php-fpm y probar con `curl` al endpoint real.
+
+## Backend API v4 — Gotchas
+
+Backend `sitio-api-rest-v4-laravel` (PHP 8.3 + Laravel 10, Docker, SQL Server remoto). Patrón Controller → Service → Repository con SQL crudo (sin Eloquent).
+
+### OPcache `validate_timestamps=Off` — el código editado no se aplica a requests web
+
+El contenedor `sitio-api-rest-4.1-laravel` corre con `opcache.validate_timestamps=Off` (config de producción). php-fpm **cachea el bytecode y nunca relee los archivos** editados vía volume mount. `tinker`/CLI sí ve el código nuevo (`opcache.enable_cli=Off`), lo que produce una **falsa sensación de "fix verificado"**.
+
+> Regla: tras TODA edición PHP, recargar php-fpm en caliente y verificar con un `curl` al endpoint real (nunca solo tinker).
+
+```bash
+# El master php-fpm NO es PID 1 (PID 1 = apachectl); buscarlo con ps:
+docker exec sitio-api-rest-4.1-laravel sh -c \
+  'kill -USR2 $(ps aux | grep "php-fpm: master" | grep -v grep | awk "{print \$2}")'
+```
+
+`kill -USR2` recarga sin downtime y es preferible a reiniciar el container entero. Aplica a CUALQUIER edición PHP (controllers, services, repositories, rutas), no solo a rutas nuevas. Incidente 2026-06-12: un fix de SyncUp pasó en tinker pero PEGA siguió fallando 5 horas con el bytecode viejo.
+
+### SyncUp items — el sync falla sin dejar error en el log
+
+Los controllers SyncUp hacían `catch (\Exception $e) { return $this->error($e); }` y `Controller::error()` no loggea → los fallos eran 100% invisibles (en `laravel.log` la corrida quedaba incompleta sin ERROR). Resuelto 2026-06-12 agregando `Log::error` en los 9 controllers SyncUp.
+
+Modo de fallo conocido: el `USING` de los MERGE (`syncUpItemsInternal`, `syncupItemsUpdate`, `syncupItemsInternalUpdate`) agrupa por `id_interno, titulo, marca...`. Si dos publicaciones del mismo `id_interno` difieren en una columna del GROUP BY (típico: `id_marca` distinto entre vendedores), el origen genera 2 filas para la misma fila destino y SQL Server aborta todo el MERGE. Mitigado con dedupe `ROW_NUMBER() OVER (PARTITION BY <clave del ON>) WHERE rn = 1`. Detalle y SQL de detección en `sitio-api-rest-v4-laravel/docs/SYNCUP.md`. Ver [[changelog#2026-06-12|Changelog 2026-06-12]].
+
+### `config()` con string vacío no usa el default
+
+`config('app.key', 'default')` no aplica el default si la variable existe pero es `''`. Usar `config('app.key') ?: 'default'` para configs opcionales usadas en SQL.
 
 ## Proyecto
 
@@ -98,10 +128,12 @@ NODE_PORT=3000
 
 - Tareas SEO en Obsidian: carpeta `Libre Opcion/` con diagnóstico y fixes
 - CLAUDE.md del monorepo: `/var/www/lo/CLAUDE.md`
+- Memoria de Claude (backend): `~/.claude/projects/-var-www-lo/memory/` — `project_syncup_gotchas.md`, MEMORY.md
 
 ## Ver también
 
 - [[arquitectura|Arquitectura]]
 - [[changelog|Changelog]]
 - [[stack|Stack]]
+- [[TareaWallet/contexto|TareaWallet · Contexto]]
 - [[00-resumen-diagnostico-seo-performance|Diagnóstico SEO]]

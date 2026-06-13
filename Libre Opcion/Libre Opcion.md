@@ -1,7 +1,7 @@
 # Libre Opcion
 
 Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
-Última sincronización: 2026-06-07.
+Última sincronización: 2026-06-13.
 
 ---
 
@@ -10,7 +10,14 @@ Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.c
 - [[arquitectura|Arquitectura]] — Checkout integrado (MP/GetNet/Payway/MODO), iframeResizer, banners
 - [[stack|Stack]] — Tecnologías, versiones, servicios externos
 - [[changelog|Changelog]] — Registro de trabajo por fecha
-- [[memoria|Memoria]] — Consolidación de feedback, reglas y contexto del proyecto
+- [[memoria|Memoria]] — Consolidación de feedback, reglas y contexto del proyecto (frontend + backend gotchas)
+
+## Backend API v4 (sitio-api-rest-v4-laravel)
+
+PHP 8.3 + Laravel 10, Docker, SQL Server remoto. Patrón Controller → Service → Repository con SQL crudo.
+
+- **SyncUp items** (`POST`/`PATCH /v4/syncUp/items`) — sincroniza el catálogo al motor de búsqueda; lo llama PEGA cada hora. Fix 2026-06-12: dedupe en los MERGE + logging en controllers. Ver [[changelog#2026-06-12|Changelog 2026-06-12]] y [[memoria#Backend API v4 — Gotchas|Memoria § Backend gotchas]].
+- **Gotcha OPcache**: tras editar PHP hay que recargar php-fpm (`kill -USR2`) y verificar por HTTP, no por tinker. Detalle en [[memoria#OPcache validate_timestamps=Off — el código editado no se aplica a requests web|Memoria]] y [[TareaWallet/contexto#2026-06-07|TareaWallet/contexto]].
 
 ## Pasarelas de pago (en desarrollo)
 

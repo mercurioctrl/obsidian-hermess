@@ -4,6 +4,27 @@ Registro de trabajo en el proyecto Libre Opción.
 
 ---
 
+## 2026-06-12
+
+### API v4 — SyncUp items dejaba de sincronizar sin error visible
+
+**Síntoma:** PEGA llama `POST`/`PATCH /v4/syncUp/items` cada hora; desde las 08:24 el catálogo dejó de actualizarse y en `laravel.log` las corridas quedaban incompletas (aparecía `🔄 Iniciando` pero nunca `✅ completada`) **sin ningún ERROR**.
+
+**Causa raíz:** Dos publicaciones del mismo `id_interno` con `id_marca` distinto (vendedor 22: id_interno 120858 GENERICO vs HIKVISION, 121365 TRUST vs TP-LINK). El `USING` de los MERGE agrupa por `id_interno, titulo, marca, ...`, así que generaban más de una fila de origen para la misma fila destino y SQL Server abortaba: *"La instrucción MERGE intentó UPDATE o DELETE en la misma fila más de una vez"*. El error era invisible porque los controllers SyncUp hacían `catch (\Exception $e) { return $this->error($e); }` y `Controller::error()` no loggea.
+
+**Fix (backend `sitio-api-rest-v4-laravel`, rama `testing-pagos-multiples`):**
+- **fix**: Dedupe `ROW_NUMBER() OVER (PARTITION BY <clave del ON>) ... WHERE rn = 1` en el `USING` de los 3 MERGE de `SyncUpRepository`: `syncUpItemsInternal` (POST), `syncupItemsUpdate` y `syncupItemsInternalUpdate` (PATCH). Tolera el dato inconsistente eligiendo una fila arbitraria, el sync ya no aborta
+- **feat**: `Log::error` con clase y mensaje de la excepción en el `catch` de los 9 controllers SyncUp (antes el fallo era 100% silencioso)
+- **docs**: `docs/SYNCUP.md` (troubleshooting MERGE duplicado + OPcache), `docs/ARCHITECTURE.md` (gotchas de infra), `CHANGELOG.md`, `CLAUDE.md` (regla php-fpm)
+
+Archivos: `app/Repository/SyncUp/SyncUpRepository.php`, `app/Http/Controllers/SyncUp/*.php`
+
+**Gotcha clave — OPcache:** El fix pasó por `tinker` pero PEGA siguió fallando 5 horas con el bytecode viejo. El contenedor corre con `opcache.validate_timestamps=Off`: php-fpm cachea el bytecode y **no relee los archivos editados por el volume mount**; tinker/CLI sí ve el código nuevo (falsa sensación de fix verificado). Tras toda edición PHP hay que recargar php-fpm (`kill -USR2 <master>`, sin downtime) y verificar con `curl` al endpoint real. Refina la nota previa de [[TareaWallet/contexto#2026-06-07|TareaWallet/contexto]] (no hace falta reiniciar el container entero). Ver [[memoria#Backend API v4 — Gotchas|Memoria § Backend gotchas]].
+
+**Pendiente (a decisión del usuario):** unificar el `id_marca` de las publicaciones inconsistentes del vendedor 22; el dedupe tolera el dato pero la marca mostrada en el buscador puede ser la "equivocada".
+
+---
+
 ## 2026-06-07
 
 ### Checkout — GetNet integrado (formulario embebido en el sitio)
