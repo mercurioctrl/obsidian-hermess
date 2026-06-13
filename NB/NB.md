@@ -34,6 +34,7 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 - [[inventario/arquitectura|Arquitectura]] · [[inventario/changelog|Changelog]]
 - [[inventario/contexto|Contexto]] · [[inventario/memoria|Memoria]] · [[inventario/stack|Stack]]
 - [[inventario/modulo-precios|Módulo Precios]] — edición bidireccional precio⇄utilidad + competencia vía [[BluPartPicker]]
+- [[inventario/competencia-partpicker-cache|Cache de competencia]] — cache backend 30min SWR + cache local en la grilla de Precios
 
 ---
 
