@@ -8,4 +8,4 @@ Lista de tareas pendientes y en curso de Bily.
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

@@ -35,4 +35,4 @@ El objetivo es mantener el control sobre los montos que se abonan, la deuda pend
 *(Los movimientos reportados en el grupo PAGOS se irán listando aquí).*
 
 ---
-*Gestión automatizada por [[Bily/Inicio|Bily]]*
+*Gestión automatizada por [[Bily/Bily|Bily]]*

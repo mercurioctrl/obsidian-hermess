@@ -9,4 +9,4 @@ Documento dedicado a centralizar nuevas ideas, propuestas de mejora, features y 
 
 ## Relacionado
 - [[Bily/Productos/Productos|Índice de Productos]]
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

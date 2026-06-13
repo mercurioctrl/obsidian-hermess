@@ -17,7 +17,7 @@ Snapshot del 2026-06-07 (noche, post-F6) — qué está corriendo en el server `
 | CLI | 9 wrappers `~/bin/jira-*` (+`jira-by-user`, `jira-activity`) | ejecutables |
 | MCP | `~/jira/mcp_server.py` (10 tools) | registrado en **OpenClaw** Y **Claude Code** |
 | OpenClaw | ~~Plugin `jira-context-preflight`~~ **RETIRADO (F6)** — Bily usa el MCP | desinstalado |
-| Vault | Notas Markdown en `[[Bily/jira/Inicio|Bily/jira/]]` (**708 tickets** vía `sync_all.py`) | sync activo |
+| Vault | Notas Markdown en `[[Bily/jira/jira|Bily/jira/]]` (**708 tickets** vía `sync_all.py`) | sync activo |
 | Skill | `~/.claude/skills/jira/` con installer portable | registrada |
 | Creds | `~/.config/jira/credentials` chmod 600 | configurado |
 
@@ -165,6 +165,6 @@ curl -s http://127.0.0.1:9002/issue/<KEY> >/dev/null && sleep 3 && vault-get Bil
 
 - [[Inicio|Diseño técnico completo]]
 - [[changelog|Cronología de fases]]
-- [[Bily/jira/Inicio|Notas autopobladas]]
+- [[Bily/jira/jira|Notas autopobladas]]
 - [[Claude/Whisper|Whisper local]] (patrón sidecar análogo)
 - [[Claude/Vault-Wrappers|Vault Wrappers]] (mismo patrón anti-alucinación de URLs)

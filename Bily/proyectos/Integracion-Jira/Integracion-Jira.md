@@ -256,15 +256,15 @@ Ver [[changelog|changelog]] para cronología detallada y [[estado|estado vivo]] 
 - Wrappers `~/bin/`: [[Claude/Vault-Wrappers|Vault Wrappers]]
 - Memoria operativa de Bily: [[Bily/MEMORIA|MEMORIA]]
 - Workspace Blu (tabla `proyecto_jira_boards`): [[Blu/bluMiniErp/Base de Datos|Base de Datos]]
-- Productos Bily: [[Bily/Productos/Inicio|Productos]] · [[Bily/proyectos/Inicio|Proyectos]]
+- Productos Bily: [[Bily/Productos/Productos|Productos]] · [[Bily/proyectos/proyectos|Proyectos]]
 
 ## 11. Ver también
 
 - [[Bily/proyectos/Integracion-Jira/changelog|Changelog]] — cronología detallada de las fases F1–F6.
 - [[Bily/proyectos/Integracion-Jira/estado|Estado vivo]] — componentes corriendo, paths, endpoints, performance medida.
-- [[Bily/jira/Inicio|Bily/jira/]] — notas de tickets autopobladas por el vault sync.
-- [[Bily/proyectos/Inicio|Proyectos]] (volver al índice)
-- [[Bily/Inicio|Inicio Bily]]
+- [[Bily/jira/jira|Bily/jira/]] — notas de tickets autopobladas por el vault sync.
+- [[Bily/proyectos/proyectos|Proyectos]] (volver al índice)
+- [[Bily/Bily|Inicio Bily]]
 
 ---
 

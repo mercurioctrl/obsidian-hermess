@@ -8,4 +8,4 @@ Registro de pagos de tarjetas de crédito y compromisos financieros.
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

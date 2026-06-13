@@ -13,5 +13,5 @@ Registro creado a partir del comprobante de pago enviado por Catriel en WhatsApp
 
 ---
 **Enlaces relacionados:**
-- [[Bily/pagos/Inicio|Pagos]]
-- [[Bily/Inicio|Inicio Bily]]
+- [[Bily/pagos/pagos|Pagos]]
+- [[Bily/Bily|Inicio Bily]]

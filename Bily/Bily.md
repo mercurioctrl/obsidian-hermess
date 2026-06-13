@@ -7,18 +7,18 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/MEMORIA\|Memoria Operativa]]: Eventos importantes y bitácora de mi trabajo junto a Catriel.
 - [[Bily/bitacoras/bitacoras\|Bitácoras]]: Registro cronológico de sesiones de trabajo.
 - [[Bily/Deudores\|Deudores]]: Registro de dinero pendiente de cobro.
-- [[Bily/personas/Inicio\|Personas]] — perfiles del equipo y contactos
+- [[Bily/personas/personas\|Personas]] — perfiles del equipo y contactos
 - [[Bily/Productos/Productos\|Productos]] — ideas y productos en desarrollo
-- [[Bily/kanban/Inicio\|Kanban]] — tableros de proyectos en curso
-- [[Bily/tareas/Inicio\|Tareas]] — lista de tareas pendientes
-- [[Bily/dreams/Inicio\|Sueños]] — registro onírico
-- [[Bily/todos/Inicio\|Todos]] — to-dos personales por persona
-- [[Bily/proyectos/Inicio\|Proyectos]] — proyectos planificados
-- [[Bily/pagos/Inicio\|Pagos]] — registro de pagos y compromisos económicos
-- [[Bily/aprendizajes/Inicio\|Aprendizajes]] — notas operativas capturadas durante el trabajo con Catriel
-- [[Bily/media/Inicio\|Media]] — archivos multimedia: audios de WhatsApp y transcripciones
-- [[Bily/Finanzas/Inicio\|Finanzas]] — registro de pagos y deudas de tarjetas
-- [[Bily/jira/Inicio\|Jira]] — 709 tickets sincronizados de 24 proyectos
+- [[Bily/kanban/kanban\|Kanban]] — tableros de proyectos en curso
+- [[Bily/tareas/tareas\|Tareas]] — lista de tareas pendientes
+- [[Bily/dreams/dreams\|Sueños]] — registro onírico
+- [[Bily/todos/todos\|Todos]] — to-dos personales por persona
+- [[Bily/proyectos/proyectos\|Proyectos]] — proyectos planificados
+- [[Bily/pagos/pagos\|Pagos]] — registro de pagos y compromisos económicos
+- [[Bily/aprendizajes/aprendizajes\|Aprendizajes]] — notas operativas capturadas durante el trabajo con Catriel
+- [[Bily/media/media\|Media]] — archivos multimedia: audios de WhatsApp y transcripciones
+- [[Bily/Finanzas/Finanzas\|Finanzas]] — registro de pagos y deudas de tarjetas
+- [[Bily/jira/jira\|Jira]] — 709 tickets sincronizados de 24 proyectos
 
 ## Personas conocidas
 
@@ -29,7 +29,7 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/personas/Belu Ontivero\|Belu Ontivero]] · [[Bily/personas/Franco Callipo\|Franco Callipo]]
 - [[Bily/personas/Alejandra Guidonbono\|Alejandra Guidobono]]
 - [[Bily/personas/Carla Carpinteri\|Carla Carpinteri]] · [[Bily/personas/Ciro\|Ciro]] · [[Bily/personas/Joshua\|Joshua]] · [[Bily/personas/Juan\|Juan]]
-- [[Bily/personas/Catriel/Inicio\|Catriel — notas personales]]
+- [[Bily/personas/Catriel/Catriel\|Catriel — notas personales]]
 
 ## Reglas Operativas
 - **Registro de Personas:** Si Catriel menciona a alguien desconocido, DEBO preguntarle quién es para verificar si está en la bóveda o, en su defecto, crear/completar su ficha en `Bily/personas/`.
@@ -44,4 +44,4 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 
 ## Ver también
 
-- [[Bily/Productos/Inicio|Productos]] — ideas y productos en desarrollo impulsados por Bily y Catriel
+- [[Bily/Productos/Productos|Productos]] — ideas y productos en desarrollo impulsados por Bily y Catriel

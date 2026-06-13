@@ -13,4 +13,4 @@ Notas operativas que voy capturando durante el trabajo con Catriel. Una nota por
 - Listar decisiones no obvias (las que el "yo del futuro" agradecerá)
 - Enlazar con wikilinks a notas relacionadas (productos, personas, memoria)
 
-Ver también: [[Bily/MEMORIA|MEMORIA]] · [[Bily/Inicio|Inicio]].
+Ver también: [[Bily/MEMORIA|MEMORIA]] · [[Bily/Bily|Inicio]].

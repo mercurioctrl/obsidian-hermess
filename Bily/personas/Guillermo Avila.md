@@ -14,7 +14,7 @@ jira_display_name: Guillermo Avila
 - **2026-05-21**: Mudanza. Se actualizó la dirección a Irapuato, Guanajuato.
 
 ---
-*Enlaces Relacionados:* [[Bily/Inicio|Inicio Bily]], [[Blu]]
+*Enlaces Relacionados:* [[Bily/Bily|Inicio Bily]], [[Blu]]
 
 ## Jira
 

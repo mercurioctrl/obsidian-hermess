@@ -6,8 +6,8 @@ Archivos multimedia gestionados por Bily: audios, transcripciones y adjuntos.
 
 ### Subcarpetas
 
-- [[Bily/media/audios/Inicio|Audios]] — audios de WhatsApp procesados
+- [[Bily/media/audios/audios|Audios]] — audios de WhatsApp procesados
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

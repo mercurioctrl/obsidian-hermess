@@ -36,4 +36,4 @@ Toda la arquitectura, microservicios detallados (incluyendo visión y OCR) se de
 - **Contenerización (Docker):** Arquitectura desacoplada.
 
 ## Ver también
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

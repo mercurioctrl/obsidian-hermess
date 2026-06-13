@@ -10,4 +10,4 @@ Tableros kanban de proyectos y operacionales.
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

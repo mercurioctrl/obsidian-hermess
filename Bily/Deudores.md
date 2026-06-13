@@ -10,4 +10,4 @@ Registro de dinero pendiente de cobro (cuentas por cobrar).
 ## Saldados
 
 ## Ver también
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

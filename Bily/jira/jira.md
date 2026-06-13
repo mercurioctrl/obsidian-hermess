@@ -3,7 +3,7 @@
 Notas de tickets Jira autopobladas por el vault sync de la integración Bily↔Jira.
 709 tickets de 24 proyectos. Cada nota tiene frontmatter estructurado (`jira_key`, `status`, `assignee`, `sprint`).
 
-Ver arquitectura completa en [[Bily/proyectos/Integracion-Jira/Inicio|Integración Jira]].
+Ver arquitectura completa en [[Bily/proyectos/Integracion-Jira/Integracion-Jira|Integración Jira]].
 
 ## Proyectos
 
@@ -38,7 +38,7 @@ Ver arquitectura completa en [[Bily/proyectos/Integracion-Jira/Inicio|Integraci�
 
 - Linkear desde cualquier nota con `[[Bily/jira/KEY|KEY]]` (ej: `[[Bily/jira/EXP-553|EXP-553]]`)
 - Buscar con `vault-search "EXP-553"` o por campos frontmatter
-- Actualizar con `sync_all.py` (ver [[Bily/proyectos/Integracion-Jira/Inicio|Integración Jira F4/F6]])
+- Actualizar con `sync_all.py` (ver [[Bily/proyectos/Integracion-Jira/Integracion-Jira|Integración Jira F4/F6]])
 
 ## Contenido
 
@@ -825,6 +825,6 @@ Ver arquitectura completa en [[Bily/proyectos/Integracion-Jira/Inicio|Integraci�
 
 ## Ver también
 
-- [[Bily/proyectos/Integracion-Jira/Inicio|Integración Jira]] — arquitectura y roadmap
+- [[Bily/proyectos/Integracion-Jira/Integracion-Jira|Integración Jira]] — arquitectura y roadmap
 - [[Bily/proyectos/Integracion-Jira/estado|Estado vivo]] — componentes corriendo
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

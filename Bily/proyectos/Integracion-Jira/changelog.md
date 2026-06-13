@@ -150,4 +150,4 @@ Resultado: cuando Catriel manda "qué hizo marbe esta semana" por WhatsApp, el r
 
 - [[Inicio|Diseño completo]]
 - [[estado|Estado vivo (qué corre ahora)]]
-- [[Bily/jira/Inicio|Notas de tickets autopopuladas]]
+- [[Bily/jira/jira|Notas de tickets autopopuladas]]

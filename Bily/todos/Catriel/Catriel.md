@@ -8,5 +8,5 @@ Listas de tareas personales de Catriel.
 
 ## Ver también
 
-- [[Bily/todos/Inicio|Todos]]
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/todos/todos|Todos]]
+- [[Bily/Bily|Inicio de Bily]]

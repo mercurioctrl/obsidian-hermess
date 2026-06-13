@@ -7,7 +7,7 @@ Registro cronológico de cambios en la carpeta de productos.
 **Infra de visión para Bily (tarde):**
 - Bily falló dos veces ante imágenes de WhatsApp con texto (comprobantes bancarios) — patrón de auto-incapacidad post-fallo de herramienta externa, ignorando el bloque multimodal ya cargado.
 - Infra nueva reusable por el MVP: tesseract instalado en sistema + plugin OpenClaw `image-ocr-preflight` que pre-extrae texto antes del prompt (espejo del whisper preflight). End-to-end ~2.5s.
-- Documentado en [[Claude/Image-OCR]] y linkeado desde [[Bily/Productos/Bot-WhatsApp-MVP/Inicio]] como infra de stack reusable.
+- Documentado en [[Claude/Image-OCR]] y linkeado desde [[Bily/Productos/Bot-WhatsApp-MVP/Bot-WhatsApp-MVP]] como infra de stack reusable.
 - Sin cambios en specs/ADR/briefs — es infra del agente, no producto.
 
 **Migración de convención de índice (Inicio.md → Productos.md):**

@@ -42,6 +42,6 @@ Registro cronológico de sesiones de trabajo con Catriel.
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]
 - [[Bily/MEMORIA|Memoria operativa]]
-- [[Bily/bitacoras/dailys/Inicio|Dailys del equipo Blu]]
+- [[Bily/bitacoras/dailys/dailys|Dailys del equipo Blu]]

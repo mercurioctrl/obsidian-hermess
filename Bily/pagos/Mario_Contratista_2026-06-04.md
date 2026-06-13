@@ -12,5 +12,5 @@ Pago correspondiente a los avances de la [[Hogar/Lavadero/Lavadero|reforma del l
 
 ---
 **Enlaces relacionados:**
-- [[Bily/pagos/Inicio|Pagos]]
-- [[Bily/Inicio|Inicio Bily]]
+- [[Bily/pagos/pagos|Pagos]]
+- [[Bily/Bily|Inicio Bily]]

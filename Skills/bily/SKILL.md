@@ -96,7 +96,7 @@ Un item está presente si su path base (sin alias) aparece en algún `[[...]]` d
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]
 ```
 
 El título se forma capitalizando el nombre de la carpeta (ej: `personas` → `Personas`).
@@ -119,7 +119,7 @@ sección apropiada (o al final si no hay sección definida).
 
 Formato de cada entrada:
 ```markdown
-- [[Bily/personas/Inicio|Personas]] — equipo y contactos
+- [[Bily/personas/personas|Personas]] — equipo y contactos
 - [[Bily/bitacoras/bitacoras|Bitácoras]] — registro de sesiones
 - [[Bily/Productos/Productos|Productos]] — ideas y productos en desarrollo
 ```

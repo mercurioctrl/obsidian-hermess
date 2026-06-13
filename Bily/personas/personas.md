@@ -32,8 +32,8 @@ Perfiles de las personas que Bily conoce: equipo de Blu, familia y colaboradores
 
 ### Subcarpetas
 
-- [[Bily/personas/Catriel/Inicio|Catriel]] — notas personales de Catriel
+- [[Bily/personas/Catriel/Catriel|Catriel]] — notas personales de Catriel
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

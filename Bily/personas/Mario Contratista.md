@@ -11,4 +11,4 @@
 - **Detalle:** [[Hogar/Presupuesto_Mario_2026]]
 
 ## Ver también
-- [[Bily/Inicio|Inicio Bily]]
+- [[Bily/Bily|Inicio Bily]]

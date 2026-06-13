@@ -8,5 +8,5 @@ Archivos de audio recibidos por WhatsApp y procesados por Bily.
 
 ## Ver también
 
-- [[Bily/media/Inicio|Media]]
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/media/media|Media]]
+- [[Bily/Bily|Inicio de Bily]]

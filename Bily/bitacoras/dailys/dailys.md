@@ -9,4 +9,4 @@ Registros de dailys del equipo Blu archivados en la bóveda.
 ## Ver también
 
 - [[Bily/bitacoras/bitacoras|Bitácoras]]
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]

@@ -36,7 +36,7 @@ jira_email: "team@libreopcion.com"
 
 ## Ver también
 
-- [[Bily/Inicio\|Inicio de Bily]]
+- [[Bily/Bily\|Inicio de Bily]]
 
 ## Jira
 

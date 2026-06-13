@@ -1,12 +1,12 @@
 # Productos
 
-Ideas y productos en desarrollo impulsados por [[Bily/Inicio|Bily]] y [[Bily/personas/Catriel Mercurio|Catriel]].
+Ideas y productos en desarrollo impulsados por [[Bily/Bily|Bily]] y [[Bily/personas/Catriel Mercurio|Catriel]].
 
 **Última sincronización:** 2026-05-25
 
 ## Productos en planificación
 
-### [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bot WhatsApp MVP]]
+### [[Bily/Productos/Bot-WhatsApp-MVP/Bot-WhatsApp-MVP|Bot WhatsApp MVP]]
 Producto Bily ($249/mes USD, posicionamiento Apple-style premium). Subcarpeta con 6 documentos: spec funcional, briefs de diseño/marketing/devs, ADR técnico, hub de proyecto.
 
 - [[Bily/Productos/Bot-WhatsApp-MVP/Spec|Spec funcional v2.0]] — qué hace el producto, pricing, economics
@@ -29,7 +29,7 @@ Producto Bily ($249/mes USD, posicionamiento Apple-style premium). Subcarpeta co
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]
 - [[Bily/MEMORIA|Memoria operativa de Bily]]
 - [[Claude/MEMORIA|Memoria de Claude]] — para detalles técnicos del stack que soporta estos productos
-- [[Bily/Productos/Inicio|Inicio — índice alternativo de productos]]
+- [[Bily/Productos/Productos|Inicio — índice alternativo de productos]]

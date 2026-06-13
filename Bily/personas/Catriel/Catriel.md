@@ -10,5 +10,5 @@ Notas personales de Catriel Mercurio: mascotas, contactos y referencias propias.
 
 ## Ver también
 
-- [[Bily/personas/Inicio|Personas]]
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/personas/personas|Personas]]
+- [[Bily/Bily|Inicio de Bily]]

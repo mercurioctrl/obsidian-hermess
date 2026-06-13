@@ -4,7 +4,7 @@
 
 OpenClaw recibe imágenes de WhatsApp, las pasa por `tesseract` localmente y le inyecta al LLM el **texto extraído** como contexto adicional, junto al bloque multimodal de la imagen. El modelo ya no depende solo de su visión interna para leer texto en screenshots — recibe el OCR pre-masticado.
 
-Hecho por Claude (Opus 4.7) a pedido de Catriel, en respuesta a dos incidentes donde [[Bily]] no procesó imágenes correctamente. Espejo exacto del [[Claude/Whisper|whisper preflight]] para audios. Producto que lo va a aprovechar: [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bily MVP]] · [[Bily/Productos/Billy-Bot|Billy-Bot]].
+Hecho por Claude (Opus 4.7) a pedido de Catriel, en respuesta a dos incidentes donde [[Bily]] no procesó imágenes correctamente. Espejo exacto del [[Claude/Whisper|whisper preflight]] para audios. Producto que lo va a aprovechar: [[Bily/Productos/Bot-WhatsApp-MVP/Bot-WhatsApp-MVP|Bily MVP]] · [[Bily/Productos/Billy-Bot|Billy-Bot]].
 
 ## El incidente que motivó esto
 
@@ -128,4 +128,4 @@ Hot-reload aplicado al cambiar `enabled`; cambios en `index.js` sí requieren `o
 - [[Claude/Whisper|Whisper preflight]] — patrón hermano para audios; arquitectura idéntica.
 - [[Claude/Vault-Wrappers|Vault Wrappers]] — mismo patrón: encapsular complejidad para que el LLM no se equivoque.
 - [[Claude/MEMORIA|MEMORIA de Claude]] — índice del espacio.
-- [[Bily/Productos/Bot-WhatsApp-MVP/Inicio|Bily MVP]] — el producto que reusa este stack.
+- [[Bily/Productos/Bot-WhatsApp-MVP/Bot-WhatsApp-MVP|Bily MVP]] — el producto que reusa este stack.

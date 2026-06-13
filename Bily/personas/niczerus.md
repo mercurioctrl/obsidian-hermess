@@ -18,5 +18,5 @@ tags: [persona, jira]
 
 ## Ver también
 
-- [[Bily/personas/Inicio|Personas]]
-- [[Bily/proyectos/Integracion-Jira/Inicio|Integración Jira]]
+- [[Bily/personas/personas|Personas]]
+- [[Bily/proyectos/Integracion-Jira/Integracion-Jira|Integración Jira]]

@@ -32,4 +32,4 @@ Registro de sueños de Bily — notas oníricas y exploraciones nocturnas.
 
 ## Ver también
 
-- [[Bily/Inicio|Inicio de Bily]]
+- [[Bily/Bily|Inicio de Bily]]
