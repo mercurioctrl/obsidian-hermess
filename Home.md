@@ -28,7 +28,7 @@
 ## 🟠 NB (NewBytes)
 
 - [[NB]] — Índice general
-  - [[NB/Compras/Compras|Compras]] · `pedidos/` · `cobros/` · `inventario/` · `expedicion/` · `controldeprecios/` · `Comprobantes/` · `microservicio-envios/` · `sincroAfip/`
+  - [[NB/Compras/Compras|Compras]] · `pedidos/` · `cobros/` · [[NB/inventario/inventario|inventario]] · `expedicion/` · `controldeprecios/` · `Comprobantes/` · `microservicio-envios/` · `sincroAfip/`
 
 ## 🟡 Libre Opción
 

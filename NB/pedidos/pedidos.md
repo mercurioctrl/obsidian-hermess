@@ -63,6 +63,7 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Script de regularización stock doble-descuento|API - Fix - Script de regularización stock doble-descuento]]
 - [[API - Research - Causas del stockDelta distinto de cero|API - Research - Causas del stockDelta != 0 (auditoría global)]]
 - [[API - Research - Stock en estanteria no reflejado en el sistema|API - Research - Stock en estantería no reflejado en el sistema]]
+- [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
 *Última sincronización: 2026-06-02 — Depuración del import Laset (rama `lasetImportFramework`): stock-only doble conteo, dedup multi-renglón, factura tardía que partía OCs, y decisión de modelo "la planilla más reciente es la verdad" → **Reimportar planilla reemplaza el staging completo**, stock vía Fase D (`--skip-stock`), ganador stock-only por (vpi,sku,depósito). Ver [[changelog#2026-06-02 — Import Laset: reconciliación, dedup multi-renglón y modelo "snapshot completo"]] y el modelo final en [[feature-laset-import#Modelo de import — actualizado 2026-06-02]].*

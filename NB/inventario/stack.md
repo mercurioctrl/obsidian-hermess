@@ -19,10 +19,11 @@
 
 | Tecnología | Uso |
 |-----------|-----|
-| Python 3 | Lenguaje |
+| Python 3 | Lenguaje (venv local: `.venv`, Python 3.9) |
 | FastAPI | Framework web |
 | Pydantic | Validación y modelos |
 | pyodbc | Conexión a SQL Server |
+| requests | Cliente HTTP (API BluPartPicker en `competition/`) |
 | ODBC Driver 18 for SQL Server | Driver DB (solo v18 instalada) |
 | Scrapy | Web scraping |
 | BeautifulSoup4 + lxml | Parsing HTML |

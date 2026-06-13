@@ -1,5 +1,11 @@
 # API - Fix - Script de regularización stock doble-descuento
 
+> [!warning] CORREGIDO (2026-06-11)
+> El monto **NO es 683** sino **~380 u** (stock real recuperable por seriales). Las otras ~303 u
+> son **ventas cobradas con `albclil` faltante** (no son stock — restaurar la línea). El script
+> `regularizar_doble_descuento.py` ya fue reescrito a lógica **serial-based**.
+> Ver [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|Corrección caso DIAMOND]].
+
 **Proyecto:** [[pedidos|Pedidos]]
 **Estado:** Listo (dry-run validado — pendiente correr `--apply` con sign-off)
 **Fecha:** 2026-06-11

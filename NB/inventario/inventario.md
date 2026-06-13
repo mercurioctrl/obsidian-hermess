@@ -2,7 +2,7 @@
 
 Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
-**Última sincronización:** 2026-05-05
+**Última sincronización:** 2026-06-11
 
 ## Sub-proyectos
 
@@ -14,6 +14,7 @@ Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 ## Notas
 
 - [[arquitectura]] — Arquitectura del sistema y decisiones de diseño
+- [[modulo-precios]] — Sección Precios: edición bidireccional + competencia (BluPartPicker)
 - [[stack]] — Tecnologías, versiones y dependencias
 - [[changelog]] — Historial de cambios recientes
 - [[contexto]] — Entorno local, variables de entorno y gotchas
@@ -23,3 +24,4 @@ Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
 - [[NB]] — Proyecto padre en NB
 - [[Compras]] · [[pedidos]] · [[expedicion]] · [[sincroAfip]]
+- [[BluPartPicker]] — API de precios de competencia que consume la sección Precios

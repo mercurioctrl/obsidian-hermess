@@ -30,8 +30,10 @@ Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.
 ---
 
 ## [[inventario/inventario|Inventario]]
+Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Server.
 - [[inventario/arquitectura|Arquitectura]] · [[inventario/changelog|Changelog]]
 - [[inventario/contexto|Contexto]] · [[inventario/memoria|Memoria]] · [[inventario/stack|Stack]]
+- [[inventario/modulo-precios|Módulo Precios]] — edición bidireccional precio⇄utilidad + competencia vía [[BluPartPicker]]
 
 ---
 
@@ -66,7 +68,7 @@ Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.
 - [[NB/Borradores/[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]|[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]]]
 
 ---
-*Última actualización: 2026-06-10 — Compras: cotización en pesos no editable, búsqueda unificada de items y tariffTax con impuestos globales. Nuevas notas contexto/memoria.*
+*Última actualización: 2026-06-11 — Inventario: nueva sección Precios (edición bidireccional + competencia BluPartPicker), nota modulo-precios.*
 
 ## Ver también
 

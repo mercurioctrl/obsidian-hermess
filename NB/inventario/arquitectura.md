@@ -16,7 +16,7 @@ inventario/
 - **Routing**: File-based en `pages/` (Nuxt convention). Rutas extendidas en `nuxt.config.js` con `router.extendRoutes` para agregar variante `/:find` de búsqueda
 - **Auth**: `@nuxtjs/auth-next` con estrategia JWT local. Todas las rutas protegidas via middleware global en `nuxt.config.js`. Endpoints: `/auth/login`, `/auth/user`, `/auth/logout`
 - **API Layer**: Centralizado en `plugins/api.js`, inyectado como `this.$api`. Axios apunta a `API_HOST`
-- **Estado global**: Vuex en `store/` — principalmente paginación y definición de columnas de tablas. La carga de datos se hace en los componentes de página
+- **Estado global**: Vuex en `store/` — paginación, definición de columnas de tablas y módulos por sección (`itemsStock.js`, `itemsPrices.js`, `kits.js`...). La config de columnas de Precios vive en el store (con visibilidad persistida por usuario en localStorage)
 - **UI**: Ant Design Vue v1, Less para estilos (`assets/ant/main.less`, `assets/less/colors.less`)
 - **Filtros globales**: `formatNum` en `plugins/formats.js` — formato argentino (`.` miles, `,` decimales)
 
@@ -27,6 +27,7 @@ inventario/
 | `index.vue` | `/` | Home / Dashboard |
 | `products.vue` | `/products` | Listado y gestión de productos |
 | `itemsStock.vue` | `/itemsStock` | Gestión de stock |
+| `itemsPrices.vue` | `/itemsPrices` | Precios: utilidades, costos y competencia — ver [[modulo-precios]] |
 | `kits.vue` | `/kits` | Kits / bundles de productos |
 | `brands.vue` | `/brands` | Marcas |
 | `categories.vue` | `/categories` | Categorías |
@@ -50,7 +51,8 @@ inventario/
 | `products/` | CRUD de ítems, creación de stock, scraping de atributos |
 | `stocks/` | Gestión de stock, transferencias entre depósitos, seriales |
 | `brands/`, `categories/` | Datos maestros |
-| `prices/` | Precios y utilidades |
+| `prices/` | Precios y utilidades — `TYPE_CONFIG` mapea cada utilidad a su gain column y precio destino; incluye edición inversa precio→utilidad (`update_item_price_by_target`). Ver [[modulo-precios]] |
+| `competition/` | Precios de competencia vía BluPartPicker: cache 30 min SWR, matching SKU + `scrap_hg.search_keys` (palabra completa). Ver [[modulo-precios]] |
 | `selldiscount/` | Reglas de descuento en venta |
 | `kits/` | Kits/bundles (costo y utilidad incluidos) |
 | `certificates/` | Certificados eléctricos con generación de etiquetas ZPL |
@@ -61,6 +63,15 @@ inventario/
 | `warehouses/` | Depósitos |
 | `user/` | Usuarios |
 
+### Decisiones de diseño relevantes
+
+- **Precio = costo × (1 + Σ utilidades/100)** para todas las listas; el detalle de
+  pares de utilidades y la regla "ajustar siempre la primera" está en [[modulo-precios]].
+- **Competencia con cache en memoria** (no DB): los catálogos de partpicker (~75k
+  items) se indexan por MPN y por palabras de título; refresh en thread con
+  stale-while-revalidate para no bloquear requests.
+- **Anclaje de columnas por CSS sticky** (no `fixed` de antd) — ver gotchas en [[contexto]].
+
 ## Deployment
 
 - **Frontend**: PR a rama `gamma` → GitHub Actions → SSH → `deployInventory.sh` → pm2
@@ -68,4 +79,4 @@ inventario/
 
 ## Ver también
 
-- [[inventario]] · [[stack]] · [[changelog]] · [[contexto]]
+- [[inventario]] · [[stack]] · [[changelog]] · [[contexto]] · [[modulo-precios]]
