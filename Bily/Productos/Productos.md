@@ -32,4 +32,3 @@ Producto Bily ($249/mes USD, posicionamiento Apple-style premium). Subcarpeta co
 - [[Bily/Bily|Inicio de Bily]]
 - [[Bily/MEMORIA|Memoria operativa de Bily]]
 - [[Claude/MEMORIA|Memoria de Claude]] — para detalles técnicos del stack que soporta estos productos
-- [[Bily/Productos/Productos|Inicio — índice alternativo de productos]]

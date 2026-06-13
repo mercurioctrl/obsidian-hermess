@@ -37,7 +37,7 @@
 
 ## 🔴 Bily
 
-- [[Bily/Bily|Inicio]] — Índice Bily
+- [[Bily/Bily|Bily]] — Índice Bily
   - [[Bily/Finanzas/Finanzas|Finanzas]] · [[Bily/bitacoras/bitacoras|bitácoras]] · [[Bily/Productos/Productos|Productos]]
 
 ## 🏠 Hogar

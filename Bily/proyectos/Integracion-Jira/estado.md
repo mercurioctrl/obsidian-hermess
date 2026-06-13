@@ -6,7 +6,7 @@ deploy_date: 2026-06-07
 
 # Estado vivo de la integración Jira
 
-Snapshot del 2026-06-07 (noche, post-F6) — qué está corriendo en el server `hermess-server`. Ver [[changelog|changelog]] para historial de fases y [[Inicio|Inicio]] para diseño completo.
+Snapshot del 2026-06-07 (noche, post-F6) — qué está corriendo en el server `hermess-server`. Ver [[changelog|changelog]] para historial de fases y [[Bily/proyectos/Integracion-Jira/Integracion-Jira|Inicio]] para diseño completo.
 
 ## Resumen ejecutivo
 
@@ -163,7 +163,7 @@ curl -s http://127.0.0.1:9002/issue/<KEY> >/dev/null && sleep 3 && vault-get Bil
 
 ## Ver también
 
-- [[Inicio|Diseño técnico completo]]
+- [[Bily/proyectos/Integracion-Jira/Integracion-Jira|Diseño técnico completo]]
 - [[changelog|Cronología de fases]]
 - [[Bily/jira/jira|Notas autopobladas]]
 - [[Claude/Whisper|Whisper local]] (patrón sidecar análogo)

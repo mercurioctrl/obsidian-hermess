@@ -4,7 +4,7 @@ tags: [jira, integracion, changelog]
 
 # Changelog · Integración Jira
 
-Cronología de implementación. Ver [[Inicio|diseño]] para arquitectura y [[estado|estado vivo]] para componentes corriendo ahora.
+Cronología de implementación. Ver [[Bily/proyectos/Integracion-Jira/Integracion-Jira|diseño]] para arquitectura y [[estado|estado vivo]] para componentes corriendo ahora.
 
 ## 2026-06-07 — F1+F2+F3+F4 deployed (sesión completa)
 
@@ -148,6 +148,6 @@ Resultado: cuando Catriel manda "qué hizo marbe esta semana" por WhatsApp, el r
 
 ## Ver también
 
-- [[Inicio|Diseño completo]]
+- [[Bily/proyectos/Integracion-Jira/Integracion-Jira|Diseño completo]]
 - [[estado|Estado vivo (qué corre ahora)]]
 - [[Bily/jira/jira|Notas de tickets autopopuladas]]

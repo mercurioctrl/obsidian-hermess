@@ -12,8 +12,7 @@ memoria operativa de Bily.
 - `/procesarBitacorasBily` — Indexa las bitácoras nuevas de Bily en `Bily/bitacoras/bitacoras.md` y agrega back-links en las bitácoras que no los tengan.
   - Skill: `~/.claude/skills/procesar-bitacoras-bily/SKILL.md`
 
-- `/sincronizarMenteBily` — Recorre `Bily/` recursivamente y asegura que cada carpeta tenga un `Inicio.md` que liste su contenido. Crea los que falten. Nunca borra.
-  - Skill: `~/.claude/skills/sincronizar-mente-bily/SKILL.md`
+- ~~`/sincronizarMenteBily`~~ — **DEPRECADO** (2026-06-13). `Bily/` ya usa la convención estándar `{Carpeta}.md`, así que `/reconstruirIndices Bily` lo cubre. Ver el stub en `~/.claude/skills/sincronizar-mente-bily/SKILL.md`.
 
 - `/configurarBoveda` — Vincula un proyecto de código con una carpeta de la bóveda: escribe la sección `## Obsidian` en el `CLAUDE.md` del proyecto. Delega en `/reconstruirIndices` para reflejar la carpeta nueva en `Home.md`.
   - Skill: `~/.claude/skills/configurar-boveda/SKILL.md`
