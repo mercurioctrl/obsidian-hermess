@@ -1,5 +1,29 @@
 # Changelog — inventario
 
+## 2026-06-13
+
+Sesión de mejoras grandes a la grilla de **Precios** (`/itemsPrices`), rama `catri-fine-tuning`. Ver [[modulo-precios]].
+
+### Frontend (inventario-web-app)
+- **feat**: Columna **ID** propia anclada a la izquierda (antes el `#id` iba bajo el título; ahora el subtítulo muestra solo el SKU). Stickys: Sel · ID · SKU · Título con offsets calculados (`customCell` inline).
+- **feat**: Columna **Stock** (`stockTotal` = nstock+nstock_ctrl+nstock_d1+nstock_lo) + filtro **Con stock / Sin stock / Todos** (default Con stock).
+- **feat**: Columnas **Últ. ingreso / Últ. venta** (de `articulo.ULTIMO_INGRESO` / `ULTIMA_VENTA`).
+- **feat**: **Orden asc/desc en todas las columnas** (client-side, sobre la página cargada).
+- **feat**: **Recalcular masivo**: checkbox por fila + "todos" en cabecera; modal con un input por utilidad (PL1/PL2/MAY1/MAY2/LO1/LO2), 0=no toca, valor=suma esos puntos; aplica solo a seleccionados, secuencial con barra de progreso.
+- **feat**: Tamaño de página **"Todo"** (sentinel 1.000.000) + persistencia del tamaño en localStorage.
+- **feat**: **Exportar CSV** (es-AR, `;`, BOM) y **Excel .xlsx** (lib `xlsx`/SheetJS, import dinámico) de lo visible.
+- **feat**: **Cache local de competencia** en localStorage: hidrata la grilla al instante y no pega solo; botón **"Actualizar competencia"** refresca lo visible y reescribe el cache (con indicador "hace X"). El detalle sigue en vivo.
+- **feat**: Compactación de densidad (filas ~21px) y **altura dinámica** de la tabla midiendo `.ant-table-body` (sin franja vacía abajo).
+
+### Backend (ms-metadata)
+- **feat**: `get_items_prices` agrega `ULTIMO_INGRESO` y `ULTIMA_VENTA` (de `articulo`). OJO: `ULTIMA_COMPRA` NO existe en `articulo` (solo en `clientes`); el correcto es `ULTIMO_INGRESO`.
+- **feat**: filtro de stock en `get_items_stocks`/`get_items_stocks_count` con `(ISNULL(nstock)+ISNULL(nstock_ctrl)+ISNULL(nstock_d1)+ISNULL(nstock_lo))` + columna `stockTotal` en `ItemStock`.
+
+Archivos: `pages/itemsPrices.vue`, `store/itemsPrices.js`, `components/Filters/ItemsPrices.vue`, `plugins/api.js`, `core/controllers/stocks/stocks.py`, `core/models/models.py`, `package.json` (xlsx).
+
+### Ops
+- Se instaló `xlsx@0.18.5` en el frontend. **Tras `npm install` con el dev server corriendo hay que reiniciar `npm run dev`** (si no, webpack/HMR queda inconsistente → RuntimeError + loader infinito). Cambios sin commitear aún.
+
 ## 2026-06-12
 
 ### Frontend (inventario-web-app)

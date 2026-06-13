@@ -68,6 +68,34 @@ tooltip con el precio anterior) que viene de partpicker con `tendencia=1`.
   fijos con `scroll.y` + `scroll.x` numérico. Ver [[contexto#Gotchas conocidos]].
 - Fuentes de competencia siempre en MAYÚSCULAS.
 
+## Mejoras 2026-06-13 (rama catri-fine-tuning)
+
+- **Columnas fijas**: ahora son `Sel | ID | SKU | Título` con offsets izquierdos
+  calculados en el getter `columns` vía `customCell`/`customHeaderCell` (left
+  inline) — soporta cualquier offset y se reacomoda al ocultar columnas. El `#id`
+  pasó a columna **ID** propia; el subtítulo bajo el título muestra solo el SKU.
+- **Stock**: columna `stockTotal` (= nstock+nstock_ctrl+nstock_d1+nstock_lo) y
+  filtro **Con stock / Sin stock / Todos** (default Con stock). Backend filtra con
+  `(ISNULL(nstock)+...)>0`; el default lo inyecta `plugins/api.js`
+  (`stock` ausente→1, `"all"`→sin filtro).
+- **Fechas**: columnas Últ. ingreso / Últ. venta desde `articulo.ULTIMO_INGRESO`
+  y `ULTIMA_VENTA` (datetime) en `get_items_prices`. (`ULTIMA_COMPRA` no existe en
+  `articulo` — solo en `clientes`; usar `ULTIMO_INGRESO`.)
+- **Orden**: todas las columnas ordenables asc/desc (client-side, página cargada;
+  `COLUMN_SORTERS` en el store con accessors por tipo).
+- **Recalcular masivo**: checkbox por fila + "todos" en cabecera; modal con un input
+  por utilidad (PL1,PL2,MAY1,MAY2,LO1,LO2). 0=no toca esa columna, valor=suma esos
+  puntos a TODAS las filas seleccionadas; secuencial con barra de progreso (reusa
+  `PATCH /itemsPrice` por celda).
+- **Paginación "Todo"** (sentinel 1.000.000) y tamaño de página persistido en
+  `itemsPricesPageSize:<userId>` (pisa el `itemsPerPage` del link del tab).
+- **Export**: CSV (es-AR, separador `;`, BOM) y Excel `.xlsx` (lib `xlsx`/SheetJS,
+  import dinámico). Exporta columnas visibles + filas cargadas.
+- **Cache local de competencia**: ver [[competencia-partpicker-cache]] / [[contexto]].
+  Hidrata de `itemsPricesCompetition:<userId>`, refresca con botón.
+- **Densidad** ~21px/fila y **altura dinámica** (`updateTableBodyHeight` mide
+  `.ant-table-body`, no estima header).
+
 ## Ver también
 
 - [[arquitectura]] · [[contexto]] · [[changelog]] · [[inventario]]

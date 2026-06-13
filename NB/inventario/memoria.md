@@ -1,9 +1,24 @@
 # Memoria — inventario
 
-Memoria de Claude Code del proyecto (`~/.claude/projects/-Users-hermess-www-inventario/memory/`),
-consolidada por tipo. Última sincronización: 2026-06-11.
+Memoria de Claude Code del proyecto, consolidada por tipo.
+Última sincronización: 2026-06-13. (Memoria local también en
+`~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Grilla de Precios — mejoras 2026-06-13 (rama catri-fine-tuning)
+- Precios NO tiene endpoint propio: reusa `GET /itemsStocks?controlPrices=1`; precios en
+  `record.controlPrices`; edición por `PATCH /itemsPrice`. La query con `controlPrices`
+  es lenta (~4.4s) → el loader tarda, no es cuelgue.
+- Cols fijas: Sel·ID·SKU·Título (offsets inline). Stock (`stockTotal`) + filtro
+  Con/Sin/Todos. Fechas `ULTIMO_INGRESO`/`ULTIMA_VENTA` de `articulo` (no `ULTIMA_COMPRA`).
+- Orden en todas las columnas (client-side). Recalcular masivo por utilidad sobre
+  seleccionados (modal). Paginación "Todo". Export CSV + xlsx (SheetJS).
+- Persistencia localStorage por usuario: `itemsPricesColumnsVisibility`,
+  `itemsPricesPageSize`, `itemsPricesCompetition` (ver [[competencia-partpicker-cache]]).
+- Gotcha: `npm install` con `npm run dev` corriendo rompe HMR → reiniciar dev server.
+
+
 
 ### SQL Server legacy TLS
 El SQL Server `NB_WEB` (190.210.23.97,4444) solo soporta TLS 1.0. OpenSSL 3.x lo
@@ -49,4 +64,4 @@ Resellers (`distribuidor=0`): 37 tiendas `preciosgamer_*` (ARS, ~60k items).
 
 ## Ver también
 
-- [[inventario]] · [[contexto]] · [[modulo-precios]]
+- [[inventario]] · [[contexto]] · [[modulo-precios]] · [[competencia-partpicker-cache]]

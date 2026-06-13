@@ -12,6 +12,7 @@
 | @nuxtjs/auth-next | — | Autenticación JWT |
 | Axios | (via Nuxt) | HTTP client |
 | Less | — | Estilos (preprocesador CSS) |
+| xlsx (SheetJS) | ^0.18.5 | Export a Excel `.xlsx` en Precios (import dinámico) |
 
 **Entorno de ejecución:** Node.js + pm2 en producción
 

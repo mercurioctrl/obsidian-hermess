@@ -55,6 +55,9 @@ NODE_ENV=development
 
 | Problema | Causa | Solución |
 |----------|-------|---------|
+| **`npm install <pkg>` con el dev server corriendo → RuntimeError / loader infinito** (ej. al instalar `xlsx`) | Instalar deps mientras `npm run dev` corre deja webpack/HMR con estado inconsistente | **Reiniciar `npm run dev`** después de instalar; en el browser hard-reload |
+| **Grilla de Precios tarda en cargar (~4.4s)** con un loader largo | La query `?controlPrices=1` (`get_items_prices`) es pesada (IN clause grande + OUTER APPLYs) | No es cuelgue, es lentitud esperada; el loader espera a que resuelva |
+| **`ULTIMA_COMPRA` no existe** en `articulo` | Solo existe en `clientes`; para artículo la fecha de ingreso es `ULTIMO_INGRESO` | Usar `articulo.ULTIMO_INGRESO` (y `ULTIMA_VENTA`) |
 | **pyodbc 08001 "TCP Provider: 10054"** en todo endpoint con DB, aunque TCP y ping al server andan (parece firewall/VPN, NO lo es) | El SQL Server de prod solo habla **TLS 1.0** y OpenSSL 3.x lo rechaza por defecto (ambos drivers ODBC 17/18, con o sin `Encrypt`) | Levantar uvicorn con `OPENSSL_CONF=openssl_legacy.cnf` (commiteado en el repo: `MinProtocol=TLSv1`, `SECLEVEL=0`) |
 | **Filas desalineadas** con columna fija en tablas antd 1.x | `fixed:'left'` clona la tabla en un overlay y sincroniza alturas por JS — siempre se desfasa | CSS `position:sticky` + fondos opacos por estado (misma tabla ⇒ alineación perfecta). Ver `pages/itemsPrices.vue` |
 | **Cabeceras corridas** con header fijo (`scroll.y`) | Header y body son tablas separadas; con `scroll.x:'max-content'` cada una calcula anchos distintos | `scroll.x` numérico (suma de anchos visibles) + `table-layout:fixed; min-width:100%` en ambas |
