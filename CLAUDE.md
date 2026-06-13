@@ -15,6 +15,27 @@ memoria operativa de Bily.
 - `/sincronizarMenteBily` — Recorre `Bily/` recursivamente y asegura que cada carpeta tenga un `Inicio.md` que liste su contenido. Crea los que falten. Nunca borra.
   - Skill: `~/.claude/skills/sincronizar-mente-bily/SKILL.md`
 
+- `/configurarBoveda` — Vincula un proyecto de código con una carpeta de la bóveda: escribe la sección `## Obsidian` en el `CLAUDE.md` del proyecto. Delega en `/reconstruirIndices` para reflejar la carpeta nueva en `Home.md`.
+  - Skill: `~/.claude/skills/configurar-boveda/SKILL.md`
+
+- `/sincronizarBoveda` — Vuelca el estado del proyecto (git, arquitectura, changelog, memoria) a sus notas en la bóveda y reconstruye los wikilinks **entre notas del proyecto**. Delega en `/reconstruirIndices` para índices y `Home.md`.
+  - Skill: `~/.claude/skills/sincronizar-boveda/SKILL.md`
+
+## Lógica de un proyecto en la bóveda
+
+Tres skills con responsabilidades separadas. **La regla de oro: solo `/reconstruirIndices` toca índices (`{Carpeta}.md`) y `Home.md`** — siempre de forma aditiva, nunca regenera. Los demás skills, cuando necesitan actualizar un índice, **delegan en él**.
+
+| Capa | Skill responsable |
+|------|-------------------|
+| Vínculo proyecto ↔ carpeta + `## Obsidian` en su `CLAUDE.md` | `/configurarBoveda` (una vez por proyecto) |
+| Contenido de las notas (arquitectura, changelog, memoria…) + wikilinks **internos** del proyecto | `/sincronizarBoveda` (cada sesión de trabajo) |
+| Índices de carpeta (`{Carpeta}.md`) y `Home.md` (grafo de carpetas) | `/reconstruirIndices` (única fuente de verdad, aditivo) |
+
+**Flujo típico** (proyecto en `NB/expedicion/`):
+1. `/configurarBoveda` → crea/elige carpeta `NB/expedicion`, escribe su `CLAUDE.md`, corre `/reconstruirIndices`.
+2. Se trabaja y se hacen commits.
+3. `/sincronizarBoveda` → actualiza `changelog.md`, `arquitectura.md`, etc., linkea las notas entre sí, y corre `/reconstruirIndices NB` → actualiza `expedicion.md` → `NB.md` → `Home.md` sin pisar contenido.
+
 ## Convenciones de la bóveda
 
 - **Índice por carpeta:** cada carpeta tiene un `{NombreCarpeta}.md` que enlaza a sus notas hijas.

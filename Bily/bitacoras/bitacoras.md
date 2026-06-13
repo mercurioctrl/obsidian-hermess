@@ -38,6 +38,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-06-02|2026-06-02]] — Limpieza y actualización Kanbans (General/Lavadero/LASET), diagnóstico y corrección de cron de recordatorios
 - [[Bily/bitacoras/2026-06-03|2026-06-03]] — Revisión operativa de Kanban General, recordatorios de pendientes, confirmación de turno DNI
 - [[Bily/bitacoras/2026-06-04|2026-06-04]] — Actualización de finanzas personales, gestión de la obra del lavadero y registro de ideas de producto
+- [[Bily/bitacoras/2026-06-12|2026-06-12]] — Recordatorio Brevo (alarmas asíncronas quedaron en log local, no llegaron a WhatsApp; Catriel resolvió), resumen del Kanban General por heartbeat
 
 ## Ver también
 
