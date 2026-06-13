@@ -34,6 +34,8 @@ Cada precio comparte color con sus utilidades: 🟠 UNIT+PL1/PL2 · 🩷 MAY+MAY
 
 Dos bloques de columnas: **mayoristas** (Invid/Ceven/Stylus/Air, USD sin IVA,
 con Δ% vs UNIT y semáforo) y **resellers** (37 tiendas PreciosGamer, ARS).
+Cada precio mínimo muestra una flecha de **tendencia** (▲ subió / ▼ bajó,
+tooltip con el precio anterior) que viene de partpicker con `tendencia=1`.
 
 - Matching por unión de dos vías: SKU exacto (== `nro_parte`) y keywords de
   `scrap_hg.search_keys` matcheadas como **palabra completa** contra títulos

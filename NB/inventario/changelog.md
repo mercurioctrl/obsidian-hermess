@@ -1,5 +1,19 @@
 # Changelog — inventario
 
+## 2026-06-12
+
+### Frontend (inventario-web-app)
+- **feat**: Señal de **tendencia** de precios (▲ subió rojo / ▼ bajó verde, tooltip con precio anterior) junto al mínimo de competencia y de resellers en la grilla, y en cada fila del modal de detalle
+- **fix**: Cabeceras de la columna Título que se "metían dentro" de otras al scrollear horizontal → `<th>` sticky con estilo **inline** vía `customHeaderCell` (la CSS class no llega confiable al th en la tabla de header separada de antd)
+- **fix**: Sombra del borde derecho del Título reducida a `2px/5%` (era demasiado marcada)
+
+### Backend (ms-metadata)
+- **feat**: `competition/` descarga catálogos con `tendencia=1` → cada oferta lleva `tendencia` (sube/baja/igual) + `precioAnterior`
+
+### Deploy / Ops
+- Commits `9d88670` (front) y `51fb1e9` (back) pusheados a `catri-fine-tuning`. El `.env` del backend NO se commitea (credenciales)
+- Prod: sin variables `.env` nuevas; requiere salida HTTPS a `partpicker.blustudioinc.com`, `requests` instalado y permiso de escritura en `scrap_hg`. `OPENSSL_CONF` NO hace falta en prod (solo dev local)
+
 ## 2026-06-11
 
 ### Frontend (inventario-web-app)
