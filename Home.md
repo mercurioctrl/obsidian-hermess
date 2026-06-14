@@ -24,6 +24,7 @@
 - [[pega]] — Proyecto Pega
 - [[aplus-server]] — Servidor A+
 - `Laset/` — Laset
+  - [[Laset/Martes|Martes]] · [[Laset/Miercoles|Miércoles]]
 
 ## 🟠 NB (NewBytes)
 
@@ -45,6 +46,9 @@
 - Reformas del hogar
   - [[Hogar/Lavadero/Lavadero|Lavadero]] — reforma del lavadero
   - [[Hogar/Oficina/Oficina|Oficina]] — reforma de la oficina
+  - [[Hogar/Impuestos-y-Servicios|Impuestos y Servicios]] — pagos del hogar
+  - [[Hogar/Presupuesto_Mario_2026|Presupuesto Mario 2026]] — presupuesto del contratista
+  - [[Hogar/Servicios/Edesur|Edesur]] · [[Hogar/Servicios/Metrogas|Metrogas]] — servicios domiciliarios
 
 ## 🌐 Red & Infra
 
@@ -60,8 +64,9 @@
 
 - [[Planilla Acciones Bully]] — Acciones y bots
 - `Claude/` — Notas sobre Claude
+  - [[Claude/Image-OCR|Image OCR]] · [[Claude/Vault-Wrappers|Vault Wrappers]] · [[Claude/Whisper|Whisper]]
 - [[Skills/Skills|Skills]] — Skills de Claude Code
 
 ---
 
-*Actualizado: 2026-06-13*
+*Actualizado: 2026-06-14*
