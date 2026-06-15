@@ -40,6 +40,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-06-04|2026-06-04]] — Actualización de finanzas personales, gestión de la obra del lavadero y registro de ideas de producto
 - [[Bily/bitacoras/2026-06-12|2026-06-12]] — Recordatorio Brevo (alarmas asíncronas quedaron en log local, no llegaron a WhatsApp; Catriel resolvió), resumen del Kanban General por heartbeat
 - [[Bily/bitacoras/2026-06-13|2026-06-13]] — Jornada sin actividad: sin interacciones ni pedidos nuevos por WhatsApp
+- [[Bily/bitacoras/2026-06-14|2026-06-14]] — Jornada sin actividad: stand-by en segundo plano, sin directivas por WhatsApp
 
 ## Ver también
 
