@@ -11,6 +11,7 @@ Nueva columna `depositos.stock_ilimitado` (boolean default false). Al armar una 
 - `OrdenItems.vue`: si el depósito es ilimitado libera el tope de cantidad, permite agregar aunque el stock sea 0, lo incluye siempre en el selector y muestra **∞**.
 - Stock Bodega: la columna de un depósito ilimitado muestra ícono `lucide:infinity`.
 - ⚠️ El backend HOY no descuenta ni valida stock en ningún momento — el tope real solo lo imponía el frontend, que es lo que el flag libera.
+- Fix (`8a9eee5`): en Stock Bodega el `+` del pedido estaba deshabilitado para productos sin stock físico. `depositoDe` ahora cae al depósito ilimitado si no hay stock real y `maxStock` devuelve `Infinity`, habilitando el stepper sin tope → se pueden agregar al pedido los productos disponibles por depósito infinito.
 
 ### Definición de "producto propio" y filtro de stock por depósito
 
