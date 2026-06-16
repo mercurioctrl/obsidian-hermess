@@ -71,6 +71,13 @@ inventario/
   items) se indexan por MPN y por palabras de título; refresh en thread con
   stale-while-revalidate para no bloquear requests.
 - **Anclaje de columnas por CSS sticky** (no `fixed` de antd) — ver gotchas en [[contexto]].
+- **Path liviano para la grilla de Precios** (2026-06-15): Precios y Stock comparten
+  `GET /itemsStocks`, pero Precios no usa las subqueries pesadas de stock-delta.
+  Con `pricesView=1` el endpoint enruta a `get_items_prices_grid` (query slim) +
+  `get_items_prices_grid_count` (`COUNT(DISTINCT)`), corridas en paralelo. Flag
+  opt-in para no tocar el camino de Stock. ~5s → ~1,5s. Ver [[modulo-precios]].
+- **Render**: las celdas editables de Precios montan el input de Ant solo al
+  editar (lazy), para no instanciar miles de componentes con listas grandes.
 
 ## Deployment
 

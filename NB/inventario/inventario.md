@@ -2,7 +2,7 @@
 
 Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
-**Última sincronización:** 2026-06-13
+**Última sincronización:** 2026-06-15
 
 ## Sub-proyectos
 

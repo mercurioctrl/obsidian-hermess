@@ -1,5 +1,25 @@
 # Changelog — inventario
 
+## 2026-06-15
+
+Más sobre la grilla de **Precios** (`/itemsPrices`), rama `catri-fine-tuning`. Commit `d1fb0e4`. Ver [[modulo-precios]] y [[competencia-partpicker-cache]].
+
+### Frontend (inventario-web-app)
+- **feat**: Columna fija **Compra-Gamer** en Resellers (siempre ese reseller, aunque no sea el más barato) + sorter + export.
+- **feat**: Modal de competencia muestra **SKU** (`codigo`) y **Part #** (`nroParte`) por oferta.
+- **feat**: **Título en una sola línea** con ellipsis; al hacer **hover** la fila se agranda y muestra el título completo. SKU sacado de abajo del título → **columna SKU visible por defecto**.
+- **perf**: **Celdas editables lazy** (`EditablePriceCell`): muestran texto y montan el input de Ant solo al hacer click. Evita montar miles de inputs (clave con "Todo") → render/orden/scroll más fluidos. *UX:* se clickea para editar; no hay tab entre celdas.
+- **perf**: La grilla pide `pricesView=1` → query liviana del backend.
+- **fix**: Checkbox **"seleccionar todos"** en la cabecera no aparecía: Ant solo aplica `slots.title` si `column.title === undefined` (`lib/table/index.js`); un `title:""` lo bloqueaba → se quitó el title.
+
+### Backend (ms-metadata)
+- **perf**: `get_items_prices_grid` (query liviana, sin las subqueries pesadas de Stock) + `get_items_prices_grid_count` (`COUNT(DISTINCT)`); el endpoint las corre **en paralelo** (`ThreadPoolExecutor`) cuando `pricesView=1`. Total de la grilla ~5s → ~1,5s (y menos con paralelo). `get_items_stocks` (Stock) intacto.
+- **perf**: `prewarm_catalog` en `@app.on_event("startup")` → baja el catálogo de partpicker en background al arrancar; el primer "Actualizar competencia" no espera ~30s.
+- **feat**: `competition` devuelve `compragamer` por item (mejor oferta de `preciosgamer_compra-gamer`); `_build_offer` agrega `nroParte`.
+- **chore**: quitado `print(con_string)` de debug en `get_items_stocks`.
+
+Archivos: `pages/itemsPrices.vue`, `store/itemsPrices.js`, `plugins/api.js`, `components/Modal/CompetitionDetail.vue`, `components/Table/EditablePriceCell.vue`, `core/controllers/stocks/stocks.py`, `core/controllers/competition/competition.py`, `main.py`.
+
 ## 2026-06-13
 
 Sesión de mejoras grandes a la grilla de **Precios** (`/itemsPrices`), rama `catri-fine-tuning`. Ver [[modulo-precios]].

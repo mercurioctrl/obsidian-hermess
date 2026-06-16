@@ -15,8 +15,16 @@ Cómo se cachea la data de competencia que muestra la grilla de [[modulo-precios
 - Fuente: `https://partpicker.blustudioinc.com` (paginado 500, 8 workers). Dos
   catálogos: mayorista (USD s/IVA) y resellers (ARS).
 - Matching: MPN/SKU exacto + `scrap_hg.search_keys` (palabra completa).
-- **Implicancias**: reiniciar el backend vacía el cache (el 1ro paga ~30s);
-  cada worker de uvicorn tiene su propio catálogo.
+- **Implicancias**: reiniciar el backend vacía el cache; cada worker de uvicorn
+  tiene su propio catálogo.
+- **Pre-calentamiento (2026-06-15)**: `prewarm_catalog` en `@app.on_event("startup")`
+  dispara la descarga en background al arrancar → el primer `/itemsCompetition`
+  ya no paga los ~30s de warm-up.
+- **Oferta `compragamer` (2026-06-15)**: además de `wholesale`/`resellers`, la
+  respuesta trae la mejor oferta de `preciosgamer_compra-gamer` por item (para la
+  columna fija Compra-Gamer de la grilla), aunque no entre en el top.
+- Cada oferta (`_build_offer`) incluye `codigo` (SKU del listing) y `nroParte`
+  (part number) — usados en las columnas SKU/Part# del modal de detalle.
 
 ## Frontend — cache local (agregado 2026-06-13)
 

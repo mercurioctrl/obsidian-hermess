@@ -1,7 +1,7 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-06-13. (Memoria local también en
+Última sincronización: 2026-06-15. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
@@ -17,6 +17,19 @@ Memoria de Claude Code del proyecto, consolidada por tipo.
 - Persistencia localStorage por usuario: `itemsPricesColumnsVisibility`,
   `itemsPricesPageSize`, `itemsPricesCompetition` (ver [[competencia-partpicker-cache]]).
 - Gotcha: `npm install` con `npm run dev` corriendo rompe HMR → reiniciar dev server.
+
+### Grilla de Precios — mejoras 2026-06-15
+- **Performance ~5s → ~1,5s**: el cuello NO era `get_items_prices` (0.08s) sino la
+  query principal `get_items_stocks` (~3.8s, subqueries que Precios no usa). Path
+  liviano `get_items_prices_grid` + count `COUNT(DISTINCT)` con flag `pricesView=1`,
+  corridos en paralelo. `get_items_stocks` (Stock) intacto.
+- **Celdas editables lazy** (`EditablePriceCell`): input de Ant solo al click (no
+  miles de inputs). UX: click para editar, sin tab entre celdas.
+- **Compra-Gamer** como columna fija en Resellers (backend devuelve `compragamer`).
+- Modal competencia: SKU (`codigo`) + Part # (`nroParte`). Título 1 línea + hover.
+- `prewarm_catalog` al startup → competencia sin esperar 30s.
+- Gotcha Ant 1.x: `slots.title` solo se aplica si `column.title === undefined`
+  (`title:""` deja el header vacío).
 
 
 

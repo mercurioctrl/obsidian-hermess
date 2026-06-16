@@ -96,6 +96,27 @@ tooltip con el precio anterior) que viene de partpicker con `tendencia=1`.
 - **Densidad** ~21px/fila y **altura dinámica** (`updateTableBodyHeight` mide
   `.ant-table-body`, no estima header).
 
+## Mejoras 2026-06-15 (rama catri-fine-tuning)
+
+- **Columna fija Compra-Gamer** (Resellers): siempre muestra ese reseller aunque
+  no sea el más barato. Backend agrega `compragamer` por item (mejor oferta de
+  `preciosgamer_compra-gamer`). Ver [[competencia-partpicker-cache]].
+- **Modal competencia**: columnas **SKU** (`codigo`) y **Part #** (`nroParte`).
+- **Título en una sola línea** (ellipsis); hover sobre el título agranda la fila y
+  lo muestra completo (funciona porque es UNA tabla con sticky CSS, no el overlay
+  de Ant). SKU sacado de abajo del título → **columna SKU visible por defecto**.
+- **Performance** (la grilla pasó de ~5s a ~1,5s):
+  - Backend: `get_items_prices_grid` (query liviana, sin las subqueries pesadas de
+    Stock) + `get_items_prices_grid_count` (`COUNT(DISTINCT)`), enrutadas con
+    `pricesView=1` y corridas **en paralelo** (`ThreadPoolExecutor`).
+  - `get_items_stocks` (Stock) **intacto** — el flag `pricesView` solo lo usa Precios.
+  - **Celdas editables lazy** (`EditablePriceCell`): texto por defecto, el input de
+    Ant se monta solo al click. Evita montar miles de inputs. *UX:* click para
+    editar; sin tab entre celdas.
+  - `prewarm_catalog` al startup del backend (competencia lista, sin esperar 30s).
+- **Fix** checkbox "seleccionar todos" en cabecera: Ant solo aplica `slots.title`
+  si `column.title === undefined`; `title:""` lo bloqueaba. Ver [[contexto#Gotchas conocidos]].
+
 ## Ver también
 
 - [[arquitectura]] · [[contexto]] · [[changelog]] · [[inventario]]
