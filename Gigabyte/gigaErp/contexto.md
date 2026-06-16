@@ -122,6 +122,16 @@ Productos cargados desde el archivo del contacto de GIGABYTE (sin distribuidor):
 - Tabla `stock_deposito` (modelo `StockDeposito`) — usado por Stock Bodega (`/mercaderia/stock`)
 - Son independientes — no se sincronizan automáticamente
 - Las importaciones XLSX actualizan `stock_deposito` (no el campo `stock`)
+- ⚠️ Para productos propios la **verdad del stock es `stock_deposito`**, NO la columna global `productos.stock` (queda desactualizada / con basura del import: `StockController@update` solo escribe `stock_deposito`, nunca la columna global).
+
+### Stock y depósitos — reglas (2026-06-16)
+
+- **Producto propio = `distribuidor_id IS NULL`** (creado a mano o por carga masiva de catálogo). Los productos con distribuidor van a Stock Distri / APIs Distri / Resellers y NO se mezclan. Tanto **Catálogo** (`solo_catalogo`) como **Stock Bodega** (`solo_inventario`) muestran TODOS los propios, tengan o no stock.
+- **Depósito con "Stock Ilimitado"** (`depositos.stock_ilimitado`, migración `0041`): al armar orden/pre-orden con ese depósito se puede poner cualquier cantidad sin tope. Se setea en Mercadería → Depósitos. Frontend: `OrdenItems.vue` libera el tope y muestra ∞; Stock Bodega muestra ícono `lucide:infinity` en esa columna. El backend NO descuenta stock — el tope solo lo imponía el front.
+- **Filtro de stock** (pestañas Todos / Con stock / Sin stock, en Catálogo y Stock Bodega), 100% sobre `stock_deposito`:
+  - `con_stock` = existe `stock_deposito.cantidad > 0` en un depósito **no** ilimitado.
+  - `sin_stock` = negación exacta (sin filas, todo en 0, o stock solo en depósito ilimitado).
+  - **Depósito ilimitado NO cuenta como "con stock"** (el infinito no es stock real).
 
 ### Importaciones de stock (XLSX)
 
@@ -159,6 +169,7 @@ BORRADOR → APROBADA → FACTURADA
 
 ## TODOs pendientes
 
+- [ ] **Limpieza data**: ~1807 productos propios (`distribuidor_id` NULL) sin inventario real — entraron sin distribuidor pero sin filas de stock, codigo_distribuidor numérico, columna global stock del import. Decidir si borrar o reasignar distribuidor. Hoy visibles en Catálogo bajo "Sin stock".
 - [ ] Reconstruir imagen del backend para habilitar import xlsx (PhpSpreadsheet) — hoy solo CSV
 - [ ] Cargar precios/listas al catálogo GIGABYTE (la carga masiva trae productos sin precio)
 - [ ] Agregar SKUs reales a productos de Elit y Air (Ceven/Stylus ya los tienen via vincular-skus)
@@ -168,6 +179,7 @@ BORRADOR → APROBADA → FACTURADA
 - [ ] Vista/edición de Ventas directa (hoy solo se accede via orden)
 - [ ] Campo `shipping_usd` editable en alguna UI (hoy default 0)
 - [ ] Anular nota de crédito (endpoint de estado ANULADA)
+- [x] Depósito con "Stock Ilimitado" (mig 0041) + filtro de stock por depósito (Todos/Con/Sin) en Catálogo y Stock Bodega
 - [x] Carga masiva del catálogo GIGABYTE (campos del mail) + pestaña Catálogo editable
 - [x] Integración real partpicker: sync Air/Ceven/Invid/Stylus con vincular-skus
 - [x] Módulo Resellers live (sin DB) con filtros

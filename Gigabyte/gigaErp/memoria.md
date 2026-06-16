@@ -47,6 +47,12 @@ Patrones recurrentes, gotchas y workflow del proyecto. Consultar antes de cada s
 ->get()->keyBy(fn($v) => $v->estado->value)
 ```
 
+### 7. Columna global `productos.stock` está desactualizada para productos propios
+
+**Síntoma:** El filtro "con stock" trae productos sin stock real (o al revés).
+**Causa:** `StockController@update` solo escribe `stock_deposito.cantidad`, nunca toca la columna `productos.stock`. Para productos propios esa columna es basura del import.
+**Fix:** Filtrar/sumar siempre por `stock_deposito`, no por `productos.stock`. Ver [[contexto#Stock y depósitos — reglas]].
+
 ---
 
 ## Workflow de deploy (sin rebuild)

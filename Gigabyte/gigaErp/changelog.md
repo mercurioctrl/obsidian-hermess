@@ -1,3 +1,35 @@
+## 2026-06-16 — Depósito con stock ilimitado + reglas de catálogo/stock propio
+
+Sesión de trabajo sobre depósitos, stock y qué entra en Catálogo / Stock Bodega. Detalle en [[contexto#Stock y depósitos — reglas|contexto]].
+
+### Depósito "Stock Ilimitado" (migración `0041`)
+
+Nueva columna `depositos.stock_ilimitado` (boolean default false). Al armar una orden o pre-orden con un depósito ilimitado se puede poner **cualquier cantidad**, sin tope de stock.
+
+- Backend: `Deposito` (fillable + cast), `DepositoController` (validación en store/update). El endpoint `/depositos` ya devuelve el flag.
+- Frontend Depósitos: checkbox "Stock ilimitado" en el modal + badge ∞ en la card.
+- `OrdenItems.vue`: si el depósito es ilimitado libera el tope de cantidad, permite agregar aunque el stock sea 0, lo incluye siempre en el selector y muestra **∞**.
+- Stock Bodega: la columna de un depósito ilimitado muestra ícono `lucide:infinity`.
+- ⚠️ El backend HOY no descuenta ni valida stock en ningún momento — el tope real solo lo imponía el frontend, que es lo que el flag libera.
+
+### Definición de "producto propio" y filtro de stock por depósito
+
+- **Producto propio = `distribuidor_id IS NULL`** (creado a mano o por carga masiva de catálogo). Los productos con distribuidor van a Stock Distri / APIs Distri / Resellers y NO se mezclan.
+- **Catálogo** (`solo_catalogo`) y **Stock Bodega** (`solo_inventario`) ahora filtran `whereNull('distribuidor_id')` — muestran TODOS los propios, tengan o no stock. La disponibilidad la maneja el filtro de stock, no la membresía.
+- Se agregaron pestañas **Todos / Con stock / Sin stock** a la pantalla Catálogo.
+- **Filtro de stock 100% basado en `stock_deposito`**, NO en la columna global `productos.stock` (basura del import: `StockController@update` solo toca `stock_deposito`, nunca la columna global):
+  - `con_stock` = existe `stock_deposito.cantidad > 0` en un depósito **no** ilimitado.
+  - `sin_stock` = negación exacta (sin filas, todo en 0, o solo en depósito ilimitado).
+  - **Depósito ilimitado NO cuenta como "con stock"** (el infinito no es stock real).
+
+### Quirk de datos detectado
+
+~1819 productos propios pero solo **12 con inventario real** (seedeados GIGABYTE, codigo_distribuidor `GB-*`); los otros ~1807 entraron sin distribuidor pero sin filas de stock. Quedan visibles en Catálogo bajo "Sin stock"/"Todos". Pendiente decidir limpieza. Ver [[contexto#TODOs pendientes]].
+
+**Archivos:** `backend/database/migrations/0041_add_stock_ilimitado_to_depositos_table.php` (nuevo), `app/Models/Deposito.php`, `app/Http/Controllers/DepositoController.php`, `app/Http/Controllers/ProductoController.php`, `frontend/components/OrdenItems.vue`, `frontend/pages/mercaderia/depositos/index.vue`, `frontend/pages/mercaderia/stock/index.vue`, `frontend/pages/mercaderia/catalogo/index.vue`
+
+---
+
 ## 2026-06-11 — Carga masiva y edición de catálogo GIGABYTE
 
 Pedido del contacto de GIGABYTE (mail): poder cargar la base de productos con campos propios del catálogo (sin stock) y cruzar el stock después.

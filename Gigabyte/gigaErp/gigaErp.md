@@ -3,7 +3,7 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `d08b3a4` · **Última sincronización:** 2026-06-11
+**Último commit:** `34232cd` (+ cambios locales sin commitear) · **Última sincronización:** 2026-06-16
 
 ---
 
@@ -38,7 +38,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 | Notas de crédito | ✅ | Desde CC (libre) y desde orden FACTURADA (parciales/totales) |
 | Órdenes de Venta | ✅ | BORRADOR → APROBADA → FACTURADA, permisos granulares |
 | Invoice (PDF + preview) | ✅ | html2pdf.js, preview pública por token |
-| Stock Bodega | ✅ | Depósitos, importaciones XLSX, columnas por depósito |
+| Stock Bodega | ✅ | Depósitos (+ flag Stock Ilimitado, mig 0041), importaciones XLSX, columnas por depósito, filtro Todos/Con/Sin stock |
 | Catálogo (carga masiva) | ✅ | Carga base GIGABYTE (item_no, bu_code, chipset, carton...), upsert por item_no, pestaña editar |
 | Stock Distri | ✅ | Tabla cruzada SKU × distribuidor, filtro marca default GIGABYTE |
 | APIs Distri | ✅ | Sync real desde partpicker (Air/Ceven/Invid/Stylus), vincular-skus, filtro GIGABYTE |
@@ -81,7 +81,7 @@ Admin:        Configuración (solo admin)
 | Ventas / Invoices | 34 |
 | Productos (demo+seeders) | ~259 base |
 | Productos (post-sync) | +miles (Air ~8k, Invid ~1.2k, Ceven ~466, Stylus ~908) |
-| Migraciones | 0001–0040 |
+| Migraciones | 0001–0041 |
 
 ### Usuarios demo
 
@@ -96,6 +96,6 @@ Admin:        Configuración (solo admin)
 
 ## Ver también
 
-- [[changelog]] — últimos: carga masiva catálogo GIGABYTE (d08b3a4) · partpicker real + resellers (b7c7377)
+- [[changelog]] — últimos: depósito stock ilimitado + reglas catálogo/stock propio (2026-06-16) · carga masiva catálogo GIGABYTE (d08b3a4)
 - [[arquitectura]] — SincronizarApiController, ResellersController, ImportacionCatalogoController
 - [[contexto]] — reglas de negocio y TODOs pendientes
