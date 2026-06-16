@@ -140,6 +140,7 @@ Las 4 listas son columnas fijas `productos.precio_lista_1..4` (no hay tabla de l
 - **Nombres configurables**: en la tabla `configuraciones` (claves `nombre_lista_1..4`) vía `/api/config`. Se editan en Configuración → "Listas de precio". Se muestran como "Lista N · Nombre". Composable `useListasPrecio` (`labelLista(n)`).
 - **Lista por defecto del cliente** (`clientes.lista_precio_defecto`, mig `0042`): lista inicial al armar órdenes para ese cliente; overrideable por ítem.
 - **Permisos de lista por usuario** (`usuarios.listas_precio` JSON, mig `0043`): qué listas puede usar cada usuario. **Admin = todas; no-admin = exactamente las asignadas; vacío/null = todas.** Los selectores muestran solo las permitidas; el backend (`OrdenVentaController`) valida 422 si se manda una no permitida. Un usuario logueado necesita re-login para ver nuevas restricciones.
+- **Importación masiva por global_part**: botón Importar en Precios. El Excel/CSV se parsea en el navegador (SheetJS) y se mandan las filas como JSON a `POST /precios/importar` → esquiva la falta de PhpSpreadsheet en el container. Update por global_part sobre productos propios; solo columnas de lista con valor.
 
 ### Importaciones de stock (XLSX)
 

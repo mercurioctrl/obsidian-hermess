@@ -19,6 +19,12 @@ Tres features sobre las 4 listas de precio (`productos.precio_lista_1..4`). Deta
 - `OrdenVentaController::validar()` rechaza con 422 si un no-admin manda una lista no permitida.
 - ⚠️ Un usuario ya logueado no ve sus nuevas restricciones hasta re-login (front cachea `usuario`); el backend sí las aplica siempre.
 
+### Importación masiva de precios por global_part (commit `554527a`)
+- Botón **Importar** en Mercadería → Precios (junto al export existente). Flujo: exportar `.xlsx` → editar → re-importar.
+- **El archivo se parsea en el navegador** con SheetJS (misma librería del export) y se mandan las filas como JSON → esquiva que el container NO tenga PhpSpreadsheet. Funciona `.xlsx` y `.csv`.
+- Detección tolerante de columnas: `Global Part` + `Lista N` (aunque el header tenga el nombre, ej. "Lista 1 · Mayorista"). Solo actualiza las columnas de lista con valor; las vacías quedan igual.
+- Backend `POST /api/precios/importar` (`ProductoController@importarPrecios`): update por `global_part` sobre productos propios. Devuelve `{ actualizados, productos_afectados, omitidos, errores }`. Sin migración.
+
 **Archivos:** `migrations/0042,0043`, `Cliente.php`, `Usuario.php`, `Cliente/UsuarioResource.php`, `Cliente/Usuario/OrdenVentaController.php`, `frontend/composables/useListasPrecio.ts` (nuevo), `frontend/pages/{clientes,configuracion,mercaderia/{stock,precios},productos,ordenes-venta/{nueva,[id]}}`, `components/OrdenItems.vue`
 
 ---
