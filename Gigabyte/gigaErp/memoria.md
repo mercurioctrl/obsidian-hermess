@@ -53,6 +53,17 @@ Patrones recurrentes, gotchas y workflow del proyecto. Consultar antes de cada s
 **Causa:** `StockController@update` solo escribe `stock_deposito.cantidad`, nunca toca la columna `productos.stock`. Para productos propios esa columna es basura del import.
 **Fix:** Filtrar/sumar siempre por `stock_deposito`, no por `productos.stock`. Ver [[contexto#Stock y depósitos — reglas]].
 
+### 8. `<select>` de Vue mezcla mal number/string
+
+**Síntoma:** Un select con `:value="l"` (number) y v-model string no preselecciona la opción al editar.
+**Fix:** Usar strings consistentemente en el form (`String(l)` en las options) y convertir con `Number()` al guardar. Caso real: lista de precio por defecto del cliente.
+
+### 9. Permisos nuevos no aplican hasta re-login
+
+**Síntoma:** Cambiás permisos/listas de un usuario y no ve el efecto.
+**Causa:** El front cachea el objeto `usuario` en localStorage (authStore); no se refresca solo.
+**Fix:** El usuario debe cerrar e iniciar sesión. El backend sí valida siempre. Ver [[contexto#Listas de precio — reglas]].
+
 ---
 
 ## Workflow de deploy (sin rebuild)

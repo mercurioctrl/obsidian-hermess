@@ -30,6 +30,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-laset-wipe-reimport|Borrar todo comp=11 + reimport limpio]] — wipe transaccional con barrido de huérfanos + validación de stocks; flujo Borrar todo → Importar todo
 - [[feature-sync-laset-botones|Patrón Sync Laset — botones de mantenimiento]] — service+command+controller+UI para fixes Laset
 - [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN por familia × proveedor para comp=11
+- [[feature-pedidos-olvidados|Feature: Pedidos Olvidados]] — filtro oculto de órdenes pendientes/remitidas >2 meses hasta 3 años; fix de timeout acotando la ventana de fecha
 
 ## Esquema ERP — Tablas y relaciones
 
@@ -66,4 +67,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-02 — Depuración del import Laset (rama `lasetImportFramework`): stock-only doble conteo, dedup multi-renglón, factura tardía que partía OCs, y decisión de modelo "la planilla más reciente es la verdad" → **Reimportar planilla reemplaza el staging completo**, stock vía Fase D (`--skip-stock`), ganador stock-only por (vpi,sku,depósito). Ver [[changelog#2026-06-02 — Import Laset: reconciliación, dedup multi-renglón y modelo "snapshot completo"]] y el modelo final en [[feature-laset-import#Modelo de import — actualizado 2026-06-02]].*
+*Última sincronización: 2026-06-16 — Filtro "Pedidos Olvidados" en la lista de órdenes (rama `feature/pedidos-olvidados`): órdenes pendientes/remitidas no facturadas con >2 meses hasta 3 años de antigüedad. Fix de timeout de SQL Server acotando la ventana de fecha (sin tope escaneaba ~59.6k órdenes → 30s). Ver [[feature-pedidos-olvidados]] y [[changelog#2026-06-16 — Filtro Pedidos Olvidados + fix de timeout]].*

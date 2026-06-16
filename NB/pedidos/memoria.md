@@ -322,7 +322,6 @@ Caso real: `laset_import_staging.match_status` era `NVARCHAR(20)`. Agregué `STO
 4. **Verify integrado con invariantes**: si el delta no es exactamente lo esperado, THROW + rollback.
 5. **Idempotencia obligatoria**: re-correr sobre data limpia = 0 cambios.
 6. **dblib-safe**: tabla tmp + UPDATE FROM JOIN single-statement. NUNCA loops de UPDATE individuales (segfault).
-<<<<<<< HEAD
 
 
 ## articulo.Id_Marca → NB_WEB.dbo.marcas (NO FP_Marcas)
@@ -418,7 +417,6 @@ Sesión depurando casos reales del import comp=11. Modelo final en [[feature-las
 - **CSUPROF_TEMP = vendor_pi completo** (cExped varchar(20) trunca). Fecha de compras stock-only = invoice_date.
 - **Flujo operativo:** Reimportar planilla → Borrar todo → Importar todo. Nunca incremental sin Borrar todo.
 - **Gotcha verificación:** el guard de auto-mode bloquea correr Fase C/D desde sesión de investigación → verificar con simulaciones read-only en tinker.
-=======
 ## 2026-05-30 — albclit recibe columna companyCode
 
 `albclit` no tenía `companyCode`. Fix ejecutado:
@@ -453,4 +451,7 @@ Documentación completa de relaciones entre tablas, PKs, FKs y reglas de integri
 - **13.462 pedclil con ID_Articulo ≠ cref:** son líneas Laset donde `cref` apunta al gemelo cc=4 y `ID_Articulo` al cc=11. Siempre usar `ID_Articulo`.
 
 ---
->>>>>>> origin/main
+
+## Filtro Pedidos Olvidados (2026-06-16)
+
+Filtro oculto en la lista de órdenes: pendientes o remitidas (no facturadas) con >2 meses hasta 3 años de antigüedad. El front setea el `between` a esa ventana (nunca lo deja vacío); el backend con `forgottenOrders=1` agrega solo la condición de estado. **Sin tope de fecha la query expira** (escaneaba ~59.6k órdenes) → se acota a 3 años. Detalle en [[feature-pedidos-olvidados]]. Rama `feature/pedidos-olvidados`.

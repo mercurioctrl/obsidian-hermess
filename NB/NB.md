@@ -12,7 +12,7 @@ Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.
 - [[pedidos/contexto|Contexto]] — reglas de negocio, gotchas, empresas
 - [[pedidos/memoria|Memoria]] — contexto acumulado de sesiones con Claude
 - [[pedidos/modulo-makesale|MakeSale]] · [[pedidos/modulo-removesale|RemoveSale]] · [[pedidos/modulo-dashboard-lo|Dashboard LO]]
-- [[pedidos/feature-laset-import|Laset Import]] · [[pedidos/feature-asignacion-oc|Asignación OC]] · [[pedidos/feature-asignacion-oc-cookbook|Cookbook OC]] · [[pedidos/feature-integrar-eccn|ECCN]]
+- [[pedidos/feature-laset-import|Laset Import]] · [[pedidos/feature-asignacion-oc|Asignación OC]] · [[pedidos/feature-asignacion-oc-cookbook|Cookbook OC]] · [[pedidos/feature-integrar-eccn|ECCN]] · [[pedidos/feature-pedidos-olvidados|Pedidos Olvidados]]
 - [[pedidos/feature-laset-snapshot-restore|Snapshot/Restore Laset]] · [[pedidos/feature-laset-fix-pedprot-stockonly|Fix bugs Fase C Laset]] · [[pedidos/feature-laset-fix-marcas-comp11|Fix marcas comp=11]] · [[pedidos/feature-laset-wipe-reimport|Borrar todo + reimport limpio]] · [[pedidos/feature-sync-laset-botones|Patrón botones Sync Laset]] · [[pedidos/nota-catalogo-laset|Nota Catálogo Laset]]
 - **Esquema ERP:** [[pedidos/relacion-tablas-ped-alb|ventas]] · [[pedidos/relacion-tablas-pedprot-pedprol-pedproi|compras]] · [[pedidos/relacion-tablas-albprot-albprol|remitos compra]] · [[pedidos/relacion-tablas-articulo-stocks|artículo/stocks]] · [[pedidos/relacion-tablas-stocks-almacen|depósitos]] · [[pedidos/relacion-companycode|companyCode]]
 

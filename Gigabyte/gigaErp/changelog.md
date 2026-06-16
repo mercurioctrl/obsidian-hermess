@@ -1,3 +1,28 @@
+## 2026-06-16 — Listas de precio: nombres, default por cliente, permisos por usuario
+
+Tres features sobre las 4 listas de precio (`productos.precio_lista_1..4`). Detalle en [[contexto#Listas de precio — reglas|contexto]].
+
+### Nombres configurables de listas (commit `cfa87c1`)
+- Se guardan en la tabla `configuraciones` (claves `nombre_lista_1..4`) vía `/api/config` — sin migración ni tabla nueva.
+- Composable `frontend/composables/useListasPrecio.ts`: cachea nombres en `useState` y expone `labelLista(n)` → "Lista N · Nombre" (fallback "Lista N").
+- Se editan en Configuración → pestaña "Listas de precio". Se muestran en OrdenItems, stock, precios y edición de productos.
+
+### Lista de precio por defecto del cliente (commit `b1dd6f4`)
+- Migración `0042`: `clientes.lista_precio_defecto` (tinyint nullable).
+- Al armar orden, los ítems entran con la lista preasignada del cliente (overrideable por ítem). `OrdenItems` recibe prop `cliente`.
+- Selector en la edición del cliente (con nombres de lista).
+
+### Permisos de lista por usuario (commit `c33be1e`)
+- Migración `0043`: `usuarios.listas_precio` (JSON). **Admin = todas; no-admin = exactamente las asignadas; vacío/null = todas** (no bloquea).
+- `Usuario::listasPermitidas()`; `UsuarioResource` expone `listas_precio` (cruda) y `listas_permitidas` (efectiva).
+- Checkboxes por lista en Configuración → Usuarios. Los selectores muestran solo las listas permitidas; la lista inicial respeta permisos.
+- `OrdenVentaController::validar()` rechaza con 422 si un no-admin manda una lista no permitida.
+- ⚠️ Un usuario ya logueado no ve sus nuevas restricciones hasta re-login (front cachea `usuario`); el backend sí las aplica siempre.
+
+**Archivos:** `migrations/0042,0043`, `Cliente.php`, `Usuario.php`, `Cliente/UsuarioResource.php`, `Cliente/Usuario/OrdenVentaController.php`, `frontend/composables/useListasPrecio.ts` (nuevo), `frontend/pages/{clientes,configuracion,mercaderia/{stock,precios},productos,ordenes-venta/{nueva,[id]}}`, `components/OrdenItems.vue`
+
+---
+
 ## 2026-06-16 — Depósito con stock ilimitado + reglas de catálogo/stock propio
 
 Sesión de trabajo sobre depósitos, stock y qué entra en Catálogo / Stock Bodega. Detalle en [[contexto#Stock y depósitos — reglas|contexto]].

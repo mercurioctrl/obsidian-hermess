@@ -1,3 +1,18 @@
+## 2026-06-16 — Filtro Pedidos Olvidados + fix de timeout
+
+Nuevo filtro oculto en la lista de órdenes: **"Pedidos olvidados"** — órdenes pendientes o remitidas (no facturadas) con más de 2 meses, hasta 3 años de antigüedad. Detalle completo en [[feature-pedidos-olvidados]]. Rama `feature/pedidos-olvidados` (ambos repos). Commits front `15df1ee`→`5214032`, back `307dedfc`/`da311088`.
+
+### Highlights
+
+- **Fix de timeout (clave):** la versión inicial usaba `dfecped < hace 3 meses` sin tope inferior → escaneaba ~59.642 órdenes en la query gigante de listado (joins + subconsultas correlacionadas + GROUP BY de ~50 cols) → `Adaptive Server connection timed out` a los 30s. Solución: acotar la ventana a 3 años (el front envía `between` = 3 años atrás excluyendo los últimos 2 meses) → query completa ~6.3s.
+- **Estado:** `forgottenOrders=1` agrega solo `(cestado='p' OR (cestado='s' AND MS_VENTAS_REMITOS.REMITO_FP IS NULL))`; la fecha la maneja el `between` normal.
+- **UX (decisión del usuario):** el filtro **escribe** el rango de fecha en el datepicker (3 años → 2 meses), nunca lo deja vacío. Al desactivar, restaura los 15 días por defecto.
+- **Fix de re-render:** el range-picker se keyea sobre `$route.query.between` y se sincroniza vía `syncDateFromQuery()` en el watcher profundo de `$route.query` (el path-watcher específico no era confiable).
+
+Archivos: back `OrderList.php`, `OrderListRepository.php`. Front `components/Filters/Orders.vue`, `components/Filters/General.vue`.
+
+---
+
 ## 2026-06-02 — Import Laset: reconciliación, dedup multi-renglón y modelo "snapshot completo"
 
 Sesión larga depurando casos reales del import comp=11 (rama `lasetImportFramework`). Varios bugs sistémicos que sólo aparecían al correr el pipeline real. Commits back `7e92c5ee` → `32f49b81`. Modelo final consolidado en [[feature-laset-import]].
