@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-04-16 (iteración: WhatsApp links fix, OG preview, APP_URL fix, opcache gotcha)
+Ultima sincronizacion: 2026-06-16 (iteración: cols Gasto/Ganancia + totales en presupuestos, pagos de sueldo generan gasto vinculado)
 
 ---
 
@@ -90,6 +90,7 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 - **Suscripciones:** Renovacion automatica mensual. Campos: `es_suscripcion`, `suscripcion_inicio`, `suscripcion_meses`, `suscripcion_frecuencia`. Scheduler `monthlyOn(1,'03:00')`
 - **Etiquetas:** Etiquetas de colores asignables desde presupuesto y proyecto. Pivot migraciones 0044-0045. Filtrable en ambos listados. Ver [[Reglas de Negocio#Etiquetas de Presupuestos]]
 - **Dominio invoice:** PDF de presupuesto usa `blustudioinc.com` (cambio desde `blu.inc` el 2026-03-30)
+- **Listado: Gasto/Ganancia + totales (2026-06-16):** Columnas Gasto y Ganancia a la derecha de Total; fila de totales al pie **agrupada por moneda** sobre todo el set filtrado (`->additional(['totales'])`). `Presupuesto::gastosConvertidos()` convierte gastos del proyecto a la moneda del presupuesto. Permite ver entró/gasté/gané por período con los filtros. Ver [[Backend - API#Presupuestos]]
 
 ### Gastos
 - **Cotizacion e IVA:** Cada gasto registra tasa_cambio (BCRA) e IVA (0/10.5/21/27%). Monto final = subtotal + IVA. Migracion 0047. Ver [[Reglas de Negocio#IVA en Gastos]]
@@ -100,6 +101,11 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 - **Adjuntos:** Enlaces y archivos adjuntos por proyecto. Upload a `storage/public`. Max 10MB. Ver [[Backend - API#Proyectos]]
 - **Jira multi-board:** Multiples tableros Jira por proyecto. Tabla `proyecto_jira_boards`. Las columnas `jira_project_key/name` ya NO existen en proyectos
 - **Orden por actividad:** Presupuestos y proyectos ordenados por `updated_at` DESC. Touch automatico al modificar hijos
+
+### Personal (Pagos)
+- **Pago = Gasto vinculado (2026-06-16):** Decisión de diseño clave — un pago de personal genera un `Gasto` (categoría "Sueldos", tipo OPERATIVO) que es la **única fuente del descuento de saldo** (evita doble conteo). El pago guarda `gasto_id`; al eliminarlo se borra el gasto y vuelve el saldo. Así los sueldos aparecen en /gastos y Dashboard. Migración 0057. Ver [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)]]
+- **Período mes/año:** El pago tiene `periodo_mes`/`periodo_anio` (≠ fecha real de pago); el gasto se fecha al primer día del período → impacta en el mes elegido. Frontend usa `<input type="month">`
+- **Tipos:** SUELDO, BONO, AGUINALDO, ADELANTO, COMISION, OTRO. Moneda del pago debe coincidir con la del banco/caja (422 si no)
 
 ### Activaciones
 - **Copiar:** Copiar activaciones entre proyectos del mismo cliente. Periodo opcional. Estructura copiada, datos de ejecucion vacios

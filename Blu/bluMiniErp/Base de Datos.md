@@ -251,12 +251,15 @@ Sin timestamps. Ver [[Errores Comunes#withTimestamps en la relacion proyecto_emp
 |---------|------|-------|
 | id | bigint PK | |
 | empleado_id | FK -> empleados | cascade delete |
-| tipo | enum | SUELDO, BONO, AGUINALDO |
+| tipo | enum | SUELDO, BONO, AGUINALDO, ADELANTO, COMISION, OTRO (migración 0057) |
 | monto | decimal(10,2) | |
-| moneda | varchar(3) | |
-| fecha | date | |
+| moneda | varchar(3) | ARS/USD — debe coincidir con la del banco/caja |
+| fecha | date | fecha real del pago |
+| periodo_mes | tinyint unsigned | nullable — mes al que corresponde (1-12). Migración 0057 |
+| periodo_anio | smallint unsigned | nullable — año del período. Migración 0057 |
 | descripcion | varchar(300) | nullable |
 | banco_caja_id | FK -> bancos_cajas | |
+| gasto_id | FK -> gastos | nullable, `nullOnDelete`. Gasto vinculado (cat. "Sueldos"), fuente del descuento de saldo. Migración 0057. Ver [[Modulo Personal]] |
 
 ### `pruebas_ejecucion` (Activaciones)
 | Columna | Tipo | Notas |

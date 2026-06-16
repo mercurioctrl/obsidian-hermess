@@ -53,6 +53,9 @@ Las rutas de teléfonos se registran **antes** del `apiResource('clientes', …)
 GET    /api/presupuestos              -> index
          filtros: estado, cliente_id, search, etiqueta_id, mes, anio
          (mes y anio filtran sobre presupuestos.fecha)
+         cada item incluye gastos_monto y ganancia (= total - gastosConvertidos), respetan VER_MONTOS_SALDOS
+         respuesta incluye además { totales: [...] } via ->additional(): suma Total/Gasto/Ganancia
+         agrupada POR MONEDA sobre todo el set filtrado (no solo la página). Ver [[Modulo Personal]] (gastosConvertidos)
 POST   /api/presupuestos              -> store [con wrapper data:]
 GET    /api/presupuestos/{id}         -> show [con wrapper data:]
 PUT    /api/presupuestos/{id}         -> update [con wrapper data:]
@@ -149,8 +152,8 @@ GET    /api/staff                  -> usuarios del sistema (sin wrapper)
 GET|POST|PUT|DELETE /api/empleados/{id}
 POST   /api/empleados/{id}/proyectos
 DELETE /api/empleados/{id}/proyectos/{proy}
-GET|POST /api/empleados/{id}/pagos
-DELETE /api/empleados/{id}/pagos/{pago}
+GET|POST /api/empleados/{id}/pagos    (POST body: tipo, monto, moneda, fecha, periodo_mes, periodo_anio, banco_caja_id, descripcion; genera gasto vinculado cat. "Sueldos")
+DELETE /api/empleados/{id}/pagos/{pago}  (borra el gasto vinculado y devuelve el saldo)
 ```
 
 ## Jira (integracion externa)

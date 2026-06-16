@@ -4,6 +4,19 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-06-16
+
+- feat: **Presupuestos — columnas Gasto y Ganancia + fila de totales.** En `/presupuestos`, a la derecha de Total se agregaron **Gasto** (rojo) y **Ganancia** (verde/rojo según signo). Nuevo método `Presupuesto::gastosConvertidos()` suma los gastos del proyecto asociado convertidos a la moneda del presupuesto (misma lógica que `Proyecto::rentabilidad`). `PresupuestoResource` expone `gastos_monto` y `ganancia` (respetan `VER_MONTOS_SALDOS`). Ver [[Backend - API#Presupuestos]] y [[Reglas de Negocio]]
+- feat: **Fila de totales al pie del listado de presupuestos**, agrupada **por moneda** (ARS/USD separados, no se mezclan), sumando Total/Gasto/Ganancia sobre **todo el set filtrado** (no solo la página). El controller `index` calcula con `(clone $query)->get()` y los devuelve via `->additional(['totales' => ...])`. Se agregó un slot `#footer` a [[Componentes UI|DataTable.vue]]. Reacciona a todos los filtros (estado, etiqueta, cliente, mes, año, búsqueda) → permite ver "cuánto entró, cuánto gasté, cuánto gané" por período
+- feat: **Personal — los pagos de sueldo ahora generan un gasto vinculado.** Decisión de diseño: un pago de personal **ES un gasto**. `EmpleadoController::registrarPago` crea un `Gasto` (tipo OPERATIVO, categoría **"Sueldos"** via `firstOrCreate`, fechado al primer día del período) que es la **única fuente del descuento de saldo** (evita doble conteo); el pago guarda `gasto_id`. Al eliminar el pago se borra el gasto y se devuelve el saldo. Ver [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)]]
+- feat: **Pagos de personal con período mes/año** (`<input type="month">` en el form) separado de la fecha real de pago — el gasto se fecha al período elegido y aparece en `/gastos` y Dashboard de ese mes. El dropdown banco/caja se filtra por moneda (debe coincidir, 422 si no)
+- feat: **Nuevos tipos de pago**: además de SUELDO/BONO/AGUINALDO ahora hay **ADELANTO, COMISION, OTRO** (enum alterado en migración 0057). Historial muestra período + 6 badges de color; resumen dinámico por tipo presente
+- db: Migración 0057 — `pagos_personal` + `periodo_mes` (tinyint), `periodo_anio` (smallint), `gasto_id` (FK→gastos `nullOnDelete`); enum `tipo` ampliado. Categoría "Sueldos" agregada al `CategoriaGastoSeeder`
+
+Archivos: `backend/app/Models/Presupuesto.php` (gastosConvertidos), `backend/app/Http/Controllers/PresupuestoController.php` (totales + eager-load gastos), `backend/app/Http/Resources/PresupuestoResource.php` (gastos_monto, ganancia), `backend/app/Models/PagoPersonal.php` (campos + relación gasto), `backend/app/Http/Controllers/EmpleadoController.php` (registrarPago/eliminarPago con gasto vinculado), `backend/database/migrations/0057_add_periodo_gasto_to_pagos_personal.php`, `backend/database/seeders/CategoriaGastoSeeder.php`, `frontend/components/ui/DataTable.vue` (slot footer), `frontend/pages/presupuestos/index.vue` (columnas + totales), `frontend/pages/staff/[id].vue` (período, tipos, filtro moneda, historial)
+
+---
+
 ## 2026-04-16
 
 - fix: **Envío WhatsApp — mensajes con links correctos.** Se intentó usar `mediaBase64` y `mediaUrl` para enviar archivos como adjuntos nativos de WhatsApp, pero el worker del bot no procesa media (solo texto). Se revirtió a mensajes de texto con links:
