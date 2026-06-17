@@ -68,8 +68,11 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 
 - [[NB/Borradores/[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]|[NewBytes_DBF].[dbo].[albclit] y [NewBytes_DBF].[dbo].[albclil]]]
 
+## [[limpieza-contactos-brevo/limpieza-contactos-brevo|Limpieza de Contactos Brevo]]
+- [[limpieza-contactos-brevo/limpieza-contactos-brevo|Índice]] · [[limpieza-contactos-brevo/arquitectura|Arquitectura]] · [[limpieza-contactos-brevo/stack|Stack]] · [[limpieza-contactos-brevo/changelog|Changelog]] · [[limpieza-contactos-brevo/contexto|Contexto]] · [[limpieza-contactos-brevo/memoria|Memoria]]
+
 ---
-*Última actualización: 2026-06-12 — Inventario: señal de tendencia de precios en competencia, fix de cabecera sticky, notas de deploy a prod.*
+*Última actualización: 2026-06-17 — Limpieza de Contactos Brevo: validación/clasificación de ~231k contactos (226.113 válidos + 5.114 a bloquear).*
 
 ## Ver también
 
