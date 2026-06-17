@@ -19,7 +19,7 @@
 ## Conexión
 
 ```
-Servidor:  10.10.10.7,1433   (localhost,1433 en el server)
+Servidor:  10.10.10.47,1433   (localhost,1433 en el server)
 Admin:     sa  / <password fuera de esta nota>
 App/devs:  <usuario> / <password único de dev — fuera de esta nota>
 ```
