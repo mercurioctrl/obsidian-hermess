@@ -40,7 +40,9 @@ Así el sueldo aparece en [[Frontend#Gastos]] (`/gastos`) y en el [[Dashboard UI
 
 Al eliminar: si el pago tiene `gasto_id`, se borra el gasto (que devuelve el saldo via `sumarSaldo`); pagos legacy (pre-0057) usan fallback de saldo directo.
 
-**⚠️ Período ≠ fecha de pago.** `periodo_mes`/`periodo_anio` definen en qué mes impacta el gasto; `fecha` es cuándo se pagó realmente.
+**⚠️ Período ≠ fecha de pago ≠ mes en curso.** `periodo_mes`/`periodo_anio` definen en qué mes impacta el gasto; `fecha` es cuándo se pagó realmente. El **gasto** se fecha al **día 1 del mes del período** (`Carbon::create(anio, mes, 1)`), NO a `now()` ni a la fecha de pago (ej: período 5/2026 → gasto `2026-05-01` aunque se pague el 16/06).
+
+**Interacción con el Dashboard.** "Gastos del Período" suma `gastos` por `fecha` y **por defecto muestra el mes actual**. Un sueldo imputado a otro mes no aparece mirando el mes en curso — hay que mover el filtro de período del Dashboard. No es bug: confusión real porque el selector "Período" del form defaultea al mes actual. Ver [[Errores Comunes#El gasto de un pago de sueldo aparece en el mes en curso (no es bug)]].
 
 Ver [[Reglas de Negocio#Bancos y Cajas - Saldo automatico]].
 

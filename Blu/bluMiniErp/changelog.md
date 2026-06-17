@@ -4,6 +4,12 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-06-17
+
+- docs: **Aclaración — el gasto de un pago de sueldo se imputa al período, no al mes en curso.** Se verificó (no era bug) que el gasto se fecha al **día 1 del mes del período** (`Carbon::create(anio,mes,1)`), nunca a `now()` ni a la fecha de pago. La confusión venía de que tanto el selector "Período" del form como el Dashboard ("Gastos del Período") defaultean al mes actual. Documentado en [[Errores Comunes#El gasto de un pago de sueldo aparece en el mes en curso (no es bug)]] y [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)]]. Solo cambios de documentación (CLAUDE.md, arquitectura 06/08, memoria)
+
+---
+
 ## 2026-06-16
 
 - feat: **Presupuestos — columnas Gasto y Ganancia + fila de totales.** En `/presupuestos`, a la derecha de Total se agregaron **Gasto** (rojo) y **Ganancia** (verde/rojo según signo). Nuevo método `Presupuesto::gastosConvertidos()` suma los gastos del proyecto asociado convertidos a la moneda del presupuesto (misma lógica que `Proyecto::rentabilidad`). `PresupuestoResource` expone `gastos_monto` y `ganancia` (respetan `VER_MONTOS_SALDOS`). Ver [[Backend - API#Presupuestos]] y [[Reglas de Negocio]]

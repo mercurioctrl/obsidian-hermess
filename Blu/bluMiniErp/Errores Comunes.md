@@ -257,6 +257,21 @@ Y en el `composer update` agregar `--no-audit` (en el Dockerfile ya está).
 
 ---
 
+## El gasto de un pago de sueldo "aparece en el mes en curso" (no es bug)
+
+**Síntoma:** Tras registrar un pago de personal, el gasto del sueldo parece imputarse al mes actual y no al período que se eligió.
+
+**Causa real:** No es un bug. El gasto se fecha al **día 1 del mes del período** (`Carbon::create(periodo_anio, periodo_mes, 1)`), NUNCA a `now()` ni a la fecha de pago. La confusión surge porque (1) el selector "Período" del form defaultea al **mes actual** — si no se cambia, el gasto cae en el mes en curso por coincidencia; y (2) el **Dashboard** ("Gastos del Período") defaultea a mostrar el mes actual, así que un sueldo imputado a otro mes no se ve mirando el mes en curso.
+
+**Cómo verificar / usar bien:**
+- Cambiar el campo "Período" del form a otro mes → el gasto se fecha al día 1 de ESE mes (ej: período 5/2026 → `2026-05-01`).
+- Para verlo en el Dashboard, mover el **filtro de período** del Dashboard a ese mes.
+- Prueba determinante: si hoy es 16/06 y el gasto quedó fechado `2026-06-01` (día 1, no 16), está usando el período correctamente — si usara `now()` sería `2026-06-16`.
+
+Ver [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)]].
+
+---
+
 ## Ver tambien
 
 - [[Stack e Infraestructura]] - Errores de Docker y deploy

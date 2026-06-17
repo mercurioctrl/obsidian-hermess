@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-06-16 (iteración: cols Gasto/Ganancia + totales en presupuestos, pagos de sueldo generan gasto vinculado)
+Ultima sincronizacion: 2026-06-17 (iteración: aclaración — el gasto del sueldo se imputa al día 1 del período, no al mes en curso)
 
 ---
 
@@ -104,7 +104,8 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 
 ### Personal (Pagos)
 - **Pago = Gasto vinculado (2026-06-16):** Decisión de diseño clave — un pago de personal genera un `Gasto` (categoría "Sueldos", tipo OPERATIVO) que es la **única fuente del descuento de saldo** (evita doble conteo). El pago guarda `gasto_id`; al eliminarlo se borra el gasto y vuelve el saldo. Así los sueldos aparecen en /gastos y Dashboard. Migración 0057. Ver [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)]]
-- **Período mes/año:** El pago tiene `periodo_mes`/`periodo_anio` (≠ fecha real de pago); el gasto se fecha al primer día del período → impacta en el mes elegido. Frontend usa `<input type="month">`
+- **Período mes/año:** El pago tiene `periodo_mes`/`periodo_anio` (≠ fecha real de pago ≠ mes en curso); el gasto se fecha al **día 1 del mes del período** (`Carbon::create(anio,mes,1)`, NO `now()`) → impacta en el mes elegido. Frontend usa `<input type="month">`
+- **Confusión "aparece en el mes en curso" (resuelta 2026-06-16):** el selector "Período" y el Dashboard defaultean al mes actual, por eso parecía que el gasto caía siempre en el mes en curso. No es bug — el gasto usa el período (prueba: queda fechado día 1, no hoy). Ver [[Errores Comunes#El gasto de un pago de sueldo aparece en el mes en curso (no es bug)]]
 - **Tipos:** SUELDO, BONO, AGUINALDO, ADELANTO, COMISION, OTRO. Moneda del pago debe coincidir con la del banco/caja (422 si no)
 
 ### Activaciones
