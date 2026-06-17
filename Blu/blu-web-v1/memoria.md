@@ -37,6 +37,18 @@ npm run build && pm2 restart BLUWeb
 - Backend Laravel `blu-api-laravel` en Docker → `:8060`. MySQL `:3308`, Redis `:6381`.
 - El dev server (`npm run dev`, 3000) puede chocar con un container Docker que ocupa `127.0.0.1:3000` (Nuxt bindea IPv6 `[::1]:3000`). Ver [[changelog#2026-05-07 — Polish visual de la propuesta Gigabyte|gotcha IPv4/IPv6]].
 
+### Assets estáticos rompen en dev desde rutas con corchetes
+
+En `npm run dev`, `<img src="/...">` **estático** da **400** en SSR (`virtual:public?... 400`)
+cuando el archivo de ruta tiene **corchetes en el nombre** (`pages/propuestas/[slug].vue`).
+El transform de assets de vite-node no resuelve la URL pública en archivos `[ ]`. Solo pasa
+en dev — en producción (PM2 build) los `src` estáticos sirven bien.
+
+- **Fix:** binding dinámico contra una `const` string → `const bluLogo='/img/logo.svg'`,
+  luego `:src="bluLogo"`. El string en runtime evita el transform.
+- Aplica a logos/imágenes de `[slug].vue` y `MonitorPresentation.vue`.
+- Ver [[changelog#2026-06-17 — Toggle del fee + gotcha de assets estáticos en dev|changelog 2026-06-17]].
+
 ## Ver sitios que bloquean bots (Gigabyte, AORUS)
 
 WebFetch y `curl` reciben **403 Access Denied** (Akamai) en gigabyte.com y aorus.com. Para ver/capturar la página real:

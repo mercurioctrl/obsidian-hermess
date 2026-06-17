@@ -578,3 +578,48 @@ Existe un skill `/replicarMicrosite <url>` que automatiza esto. Ver
 27" QHD 2560×1440, 280Hz, 0.03ms, WOLED 4ta gen (Primary RGB Tandem OLED), DisplayHDR True
 Black 500, 99.5% DCI-P3. Estrategia: el producto es superior pero caro en USD vs Chile/Uruguay
 y nadie comunica su valor en Argentina → ganar en valor percibido, no en precio.
+
+## 2026-06-17 — Toggle del fee + gotcha de assets estáticos en dev
+
+Sesión de cierre sobre las propuestas. Dos cosas que faltaban documentar.
+
+### Toggle ojo para ocultar/mostrar el fee mensual (commit `fc176ff`)
+
+En `pages/propuestas/[slug].vue`: el monto del fee mensual arranca **oculto** detrás de
+una máscara `*,***` y se revela con un botón tipo ojo. El contador (`animateFee`) no
+corre mientras el monto está en `display:none`, así que se dispara al revelar si todavía
+no había animado:
+
+```js
+const feeHidden = ref(true);
+function toggleFee() {
+	feeHidden.value = !feeHidden.value;
+	if (!feeHidden.value && feeDisplay.value === 0 && proposal.value) {
+		animateFee(proposal.value.monthlyFee);
+	}
+}
+```
+
+Estructura visual: `.fee-value` contiene `.fee-mask` (`*,***`, `aria-hidden`) + `.fee-real`
+(el contador), y la clase `.amount--hidden` alterna cuál se ve. Sirve para presentar la
+propuesta y revelar el precio recién al final.
+
+### Gotcha: assets estáticos rompen en dev desde archivos de ruta con corchetes
+
+Al previsualizar la landing del monitor con `npm run dev`, las imágenes daban **400** en
+SSR. El log mostraba `__nuxt_vite_node__/resolve/virtual:public?/clients/.../gigabyte.png
+... 400 Bad Request`. **Causa:** el transform de assets estáticos de Vite (vite-node) no
+resuelve `<img src="/...">` cuando el archivo importador tiene **corchetes en el nombre**
+(`[slug].vue`). `index.vue` y demás funcionan; solo rompe en rutas dinámicas con `[ ]`.
+
+**Fix:** pasar el `src` a **binding dinámico** contra una `const` string — el string en
+runtime evita el transform de assets:
+
+```js
+const bluLogo = '/img/logo.svg';        // luego  :src="bluLogo"
+const clientLogo = '/clients/gigabyte/gigabyte.png';
+```
+
+Se aplicó a los 3 logos de `[slug].vue` y a los de `MonitorPresentation.vue`. **Solo afecta
+al dev server** — en producción (PM2 build) los `src` estáticos sirven bien, por eso nunca
+se había notado. Ver [[memoria#Assets estáticos rompen en dev desde rutas con corchetes|memoria]].
