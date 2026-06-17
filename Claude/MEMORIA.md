@@ -61,3 +61,15 @@ Cron nocturno que escribe `Bily/dreams/YYYY-MM-DD.md` cada noche, generado por C
 - **Fix infra 1 — tesseract instalado:** `sudo apt-get install -y tesseract-ocr tesseract-ocr-spa tesseract-ocr-eng`. Binario `/usr/bin/tesseract` v5.3.4, langs `spa+eng+osd`. Verificado contra imagen real (extrajo correctamente texto de comprobante VISA).
 - **Fix infra 2 — hook image-ocr-preflight:** plugin OpenClaw espejo del [[Claude/Whisper|whisper preflight]]. Detecta imágenes entrantes en `~/.openclaw/media/inbound/`, corre `tesseract <path> stdout -l spa+eng`, inyecta texto al prompt antes del LLM via `before_prompt_build`. Ubicación: `~/.openclaw/extensions/image-ocr-preflight/`. Registrado en `plugins.entries` con `allowConversationAccess:true`. Latencia medida: **~2.5s end-to-end** (detected → INJECTING). Ver [[Claude/Image-OCR]] para topología, troubleshooting y defaults.
 - **Razón hook y no skill:** Bily demostró dos veces seguidas que no elige tesseract aunque esté instalado y disponible en PATH. El hook elimina la decisión del modelo — el texto OCR llega siempre pre-extraído, junto al bloque multimodal original.
+
+## Infraestructura: SQL Server (contenedor mssql-dev, 2026-06-17)
+
+Migración de 7 bases de dev (refrescadas de prod) a un contenedor SQL Server 2022 en el host `hermess` (`10.10.10.47`). Runbook completo: [[Migracion_SQLServer_Dev]]. Script de mantenimiento: [[Script-Optimizacion-SQLServer]].
+
+- **Contenedor `mssql-dev`** gestionado por `~/mssql/docker-compose.yml` (imagen custom `mssql-dev-fts:2022-cu25` con Full-Text horneado). `docker compose up -d / down`. Datos en volumen externo `mssql-data`.
+- **Bases:** CS, LO, NB_WEB, NEW_BYTES, NewBytes_DBF, PRODUCTOS, SEARCH_ENGINE_LO. Todas compat 160.
+- **NEW_BYTES corrupta** (catálogo de sistema, viene de prod = hardware con fallas). Reparada con REPAIR_ALLOW_DATA_LOSS; quedan 2 tablas TMP fantasma que rompen CHECKDB pero la base es funcional. El mantenimiento las saltea.
+- **Producción = SQL Server 2012 SP4 Enterprise**, tiene la misma corrupción en las mismas 2 tablas. Pendiente CHECKDB completo + revisar discos del Windows.
+- **Expuesto a internet:** port-forward UniFi `41433` → `10.10.10.47:1433` (USG en DMZ, IP pública dinámica `190.189.93.116`).
+- **Pendientes:** rutina de backups (no hay copias), rotar passwords de logins de app, DDNS.
+- Credenciales (sa, logins de app, controlador UniFi): out-of-band con Catriel, NO en la bóveda.

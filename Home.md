@@ -55,6 +55,7 @@
 - [[Red]] — Infraestructura de red hogareña
 - [[hermess-pc]] — PC principal
 - [[n950-research]] — Investigación N950
+- [[Claude/Migracion_SQLServer_Dev|SQL Server (mssql-dev)]] — migración de 7 bases dev a contenedor en `hermess` (10.10.10.47)
 
 ## 🟣 Recurso Humano
 
@@ -64,9 +65,9 @@
 
 - [[Planilla Acciones Bully]] — Acciones y bots
 - `Claude/` — Notas sobre Claude
-  - [[Claude/Image-OCR|Image OCR]] · [[Claude/Vault-Wrappers|Vault Wrappers]] · [[Claude/Whisper|Whisper]]
+  - [[Claude/Image-OCR|Image OCR]] · [[Claude/Vault-Wrappers|Vault Wrappers]] · [[Claude/Whisper|Whisper]] · [[Claude/Migracion_SQLServer_Dev|Migración SQL Server]] · [[Claude/Script-Optimizacion-SQLServer|Script Optimización SQL]]
 - [[Skills/Skills|Skills]] — Skills de Claude Code
 
 ---
 
-*Actualizado: 2026-06-14*
+*Actualizado: 2026-06-17*
