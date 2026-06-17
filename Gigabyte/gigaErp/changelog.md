@@ -1,3 +1,30 @@
+## 2026-06-17 — Guía interactiva / tour de onboarding por sección
+
+Sistema de **ayuda paso a paso** que se activa en cada sección del ERP. Sin dependencias externas — motor propio. Detalle en [[arquitectura#Guía interactiva (onboarding tour)|arquitectura]] y [[contexto#Guía interactiva — reglas|contexto]]. *(En working tree, sin commit aún.)*
+
+### Cómo funciona
+- **Botón "Ayuda"** (`lucide:circle-help`) en el topbar → arranca la guía de la sección actual. Solo aparece si hay guía para esa ruta.
+- **Auto-inicio**: la primera vez que se visita una sección, la guía salta sola. Una vez cerrada queda marcada como vista en `localStorage` (key `gigaerp_guias_vistas`) y no vuelve a saltar.
+- Cada paso resalta un elemento real con *spotlight* (`box-shadow: 0 0 0 9999px`) + tooltip, o se muestra centrado si no hay `target`.
+- Navegación: Anterior / Siguiente / Finalizar, puntitos de progreso clickeables, contador "X de N", atajos de teclado (→/Enter, ←, Esc).
+
+### Piezas (todo en `frontend/`)
+- `utils/guias.ts` (nuevo) — contenido por sección. `guias: GuiaSeccion[]`, cada una `{ clave, titulo, pasos[] }`. `PasoGuia = { titulo, texto, target?, posicion? }`. `target` = selector CSS; sin él, paso centrado.
+- `composables/useGuia.ts` (nuevo) — estado global singleton (patrón `useNotification`). Match de ruta por la clave-prefijo más larga. `localStorage` de vistas. Expone `iniciar`, `iniciarSiPrimeraVez`, `siguiente`, `anterior`, `irA`, `cerrar`, `hayGuia`.
+- `components/GuiaTour.vue` (nuevo) — overlay con `<Teleport to="body">`, spotlight + tooltip, recálculo en resize/scroll.
+- `layouts/default.vue` — botón Ayuda en topbar, auto-inicio (`onMounted` + `watch(route.path)`), `<GuiaTour />` montado.
+- `components/NavItem.vue` — `:data-guia="'nav-' + to"` para anclar pasos a los ítems del menú.
+
+### Anclajes `data-guia` disponibles
+`nav-<ruta>` (cada ítem del sidebar), `topbar-search`, `topbar-ayuda`.
+
+### Para extender
+Editar solo `utils/guias.ts`. Para anclar a un botón de página, agregar `data-guia="..."` al elemento y referenciarlo en el paso. Hoy los pasos de página son centrados (no se tocaron las páginas); solo los de menú están anclados.
+
+**Archivos:** `frontend/utils/guias.ts` (nuevo), `frontend/composables/useGuia.ts` (nuevo), `frontend/components/GuiaTour.vue` (nuevo), `frontend/layouts/default.vue`, `frontend/components/NavItem.vue`
+
+---
+
 ## 2026-06-16 — Listas de precio: nombres, default por cliente, permisos por usuario
 
 Tres features sobre las 4 listas de precio (`productos.precio_lista_1..4`). Detalle en [[contexto#Listas de precio — reglas|contexto]].

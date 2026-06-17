@@ -22,9 +22,13 @@ gigaErp/
 ├── frontend/         ← Nuxt 3 SPA (ssr: false)
 │   ├── components/
 │   │   ├── ui/               ← Modal, FormField, DataTable, StatsCard, StatusBadge, Toast
-│   │   └── OrdenItems.vue    ← picker de productos para órdenes de venta
-│   ├── composables/          ← useApi, useNotification
-│   ├── layouts/              ← default (sidebar+topbar), auth
+│   │   ├── OrdenItems.vue    ← picker de productos para órdenes de venta
+│   │   ├── GlobalSearch.vue  ← buscador del topbar
+│   │   ├── NavItem.vue       ← ítem del sidebar (data-guia para el tour)
+│   │   └── GuiaTour.vue      ← overlay de la guía interactiva
+│   ├── composables/          ← useApi, useNotification, useGuia, useListasPrecio, useExcelExport, useHistoriaLabel, useProyectoLabel
+│   ├── utils/                ← guias.ts (contenido del tour de onboarding)
+│   ├── layouts/              ← default (sidebar+topbar+botón Ayuda+GuiaTour), auth
 │   ├── middleware/           ← auth.global.ts (NO usar definePageMeta)
 │   ├── pages/
 │   │   ├── clientes/
@@ -177,6 +181,24 @@ POST /api/importaciones-catalogo                    body: staged_id, mapping{ite
    - sku = codigo_distribuidor = item_no · nombre/modelo = global_part · marca=GIGABYTE
 5. Devuelve { creados, actualizados, omitidos, errores }
 ```
+
+## Guía interactiva (onboarding tour)
+
+Sistema de ayuda paso a paso por sección. Motor propio, sin librerías. Ver [[changelog#2026-06-17 — Guía interactiva]] y [[contexto#Guía interactiva — reglas|contexto]].
+
+```
+utils/guias.ts            ← contenido: guias[] por clave de ruta, pasos { titulo, texto, target?, posicion? }
+composables/useGuia.ts    ← estado global (singleton módulo, patrón useNotification)
+                            match de ruta por clave-prefijo más larga · localStorage de vistas
+components/GuiaTour.vue    ← overlay (Teleport a body): spotlight + tooltip + navegación
+layouts/default.vue       ← botón Ayuda (topbar) + auto-inicio 1ª vez + <GuiaTour/>
+components/NavItem.vue     ← :data-guia="'nav-'+to" para anclar pasos al menú
+```
+
+- **Resaltado**: el paso con `target` (selector CSS) hace `scrollIntoView` + spotlight con `box-shadow: 0 0 0 9999px rgba(...)`. Sin `target`, el paso va centrado con overlay completo.
+- **Persistencia**: `localStorage['gigaerp_guias_vistas']` = array de claves ya vistas. `iniciarSiPrimeraVez(path)` solo arranca si no está vista.
+- **Anclajes disponibles**: `data-guia="nav-<ruta>"` (sidebar), `topbar-search`, `topbar-ayuda`.
+- **Para extender**: editar solo `utils/guias.ts`; para anclar a botones de una página, agregar `data-guia` al elemento y referenciarlo en el paso (hoy los pasos de página son centrados).
 
 ## Patrones Frontend
 

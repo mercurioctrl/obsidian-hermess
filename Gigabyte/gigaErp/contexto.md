@@ -116,6 +116,15 @@ Productos cargados desde el archivo del contacto de GIGABYTE (sin distribuidor):
 - 4 columnas: POR_HACER → EN_CURSO → READY_FOR_QA → LISTO
 - Drag & drop HTML5 nativo, click → modal detalle estilo Jira
 
+### Guía interactiva — reglas (2026-06-17)
+
+Ayuda paso a paso por sección (onboarding tour). Detalle técnico en [[arquitectura#Guía interactiva (onboarding tour)|arquitectura]].
+
+- Se activa con el botón **Ayuda** del topbar, o **automáticamente la primera vez** que se entra a cada sección.
+- "Vista" se persiste en `localStorage` (`gigaerp_guias_vistas`) — por navegador/dispositivo, no por usuario en DB. Borrar esa key reactiva el auto-inicio.
+- El contenido de cada sección vive en `frontend/utils/guias.ts`; para editar/agregar pasos se toca solo ese archivo. La clave de cada guía es un **prefijo de ruta** (gana el más largo).
+- Los pasos pueden resaltar un elemento (selector `target`, ej. `[data-guia="nav-/productos"]`) o mostrarse centrados. Hoy los pasos específicos de página son centrados; solo el menú (sidebar) y el topbar tienen anclas reales.
+
 ### Stock de productos — dos sistemas independientes
 
 - Campo `stock` directo en `productos` — usado por APIs Distri / Stock Distri
@@ -188,6 +197,7 @@ BORRADOR → APROBADA → FACTURADA
 - [ ] Vista/edición de Ventas directa (hoy solo se accede via orden)
 - [ ] Campo `shipping_usd` editable en alguna UI (hoy default 0)
 - [ ] Anular nota de crédito (endpoint de estado ANULADA)
+- [x] Guía interactiva / tour de onboarding paso a paso por sección (2026-06-17)
 - [x] Depósito con "Stock Ilimitado" (mig 0041) + filtro de stock por depósito (Todos/Con/Sin) en Catálogo y Stock Bodega
 - [x] Carga masiva del catálogo GIGABYTE (campos del mail) + pestaña Catálogo editable
 - [x] Integración real partpicker: sync Air/Ceven/Invid/Stylus con vincular-skus
