@@ -16,7 +16,7 @@
 ## 🏢 Clientes & Proyectos
 
 - [[BluPartPicker]] — Comparador de precios hardware
-- [[Gigabyte]] → gigaErp — ERP Gigabyte
+- [[Gigabyte]] → gigaErp (ERP) · informe-landing (deck paid media con BLU)
 - [[Catirel]] — Proyectos Catirel
 - [[Asus]] — Contrataciones y mini sitio
 - [[naevo]] — Proyecto Naevo
