@@ -23,6 +23,16 @@ Cada slide es `<section class="section" id="...">` con `.slide-tag` (etiqueta ar
 - **Edición de textos** inline (contenteditable) con toolbar: negrita, blanco, naranja, limpiar y **A−/A+/↺ tamaño**. Persiste en `localStorage.deckTexts` y `localStorage.deckSizes`. Solo textos sin SVG son editables (para no romper iconos).
 - **Export "Descargar HTML"**: clona el DOM, quita las herramientas de edición (queda solo Presentar + ojito), hornea textos/tamaños y quita slides ocultos.
 
+## Dos variantes del deck
+- **`index.html`** — versión **interna** (14 slides, pitch GIGABYTE+BLU, ventajas para la marca, casos con datos).
+- **`reseller.html`** — versión **de cara al reseller** (7 slides). Derivada de `index.html` por **cirugía con Python**: se quitan las secciones internas (situación, oportunidad, impacto, atribución, efecto-red, modelo, ventajas-Gigabyte, diferencial), se reconstruyen `#dots`/`nav`, se renumeran los `slide-no` y se reescriben los textos a segunda persona **sin nombrar a BLU** ("GIGABYTE coordina"). Reutiliza el mismo CSS, fuentes base64 y capa de herramientas → sigue siendo editable, presentable y exportable.
+- Para regenerar la variante se parte de una **copia** de `index.html`; mantener ambas en sync es manual (la reseller es un recorte curado, no un build automático).
+
+## Sección de instalación (solo en `reseller.html`)
+- Slide `#instalacion` con 4 tags listos para copiar: **GTM** (snippet head + body), **Meta Pixel**, **Google tag/GA4** y **conversión Google Ads**. IDs de ejemplo que el reseller reemplaza.
+- Cada snippet va en `<pre><code id="snip-…">` con el HTML **escapado** (`&lt;script&gt;`); el botón `.copybtn` lee `code.innerText` (el navegador lo desescapa) y lo copia con `navigator.clipboard.writeText` + fallback `textarea`+`execCommand`.
+- Los `<pre><code>` quedan **fuera** del selector de edición de textos (no son contenteditable) → los snippets no se pueden romper editando.
+
 ## Decisiones / gotchas
 - **localStorage**: `deckState` (orden/ocultos), `deckTexts` (innerHTML por `ekey = slideId:n`), `deckSizes` (font-size inline).
 - **Bug del export resuelto**: el editor mueve las secciones al final del body → el export debe **reubicarlas antes de los scripts** (si no, los scripts corren sin encontrarlas y los slides salen vacíos) y marcar `.reveal` como `.in`.

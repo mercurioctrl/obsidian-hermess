@@ -10,8 +10,15 @@ Pieza para **vender internamente** a GIGABYTE la idea de **centralizar el paid m
 - Esquemas con estética **AORUS** (monocromo + naranja, esquinas en bisel).
 - Detalle: ver [[gigabyte-marca-estilo]] en la memoria de Claude.
 
+## Variante reseller (`reseller.html`)
+- Se pidió una **segunda versión de cara al reseller**: GIGABYTE invitando al reseller, "no se puede decir todo" (no es el pitch interno).
+- **No se nombra a BLU** → "GIGABYTE coordina" (interlocutor único).
+- Secciones elegidas: ventajas para el reseller, campaña de ejemplo, caso de éxito + por qué centralizar (algoritmo/píxel) + **herramientas para instalar el tag manager y el píxel de Meta con explicación de cómo hacerlo**.
+- En la variante reseller, el **ROAS 277 se quita** del caso (dato sensible) → se reemplaza por "Tu costo de gestión: $0".
+- Tags incluidos con botón copiar: **GTM, Meta Pixel, Google tag/GA4, conversión Google Ads**, con IDs de ejemplo.
+
 ## Decisiones del usuario
-- **ROAS 277** del caso de éxito se dejó textual del `Ventajas Gigabyte.docx` aunque parezca un typo de 2,77x.
+- **ROAS 277** del caso de éxito se dejó textual del `Ventajas Gigabyte.docx` en la versión **interna** (aunque parezca un typo de 2,77x); se **oculta** en la versión reseller.
 - GitHub Pages **no** se activó (lo dejó así).
 - Las funcionalidades de editor/textos/tamaño se piden persistentes pero **sin base de datos**: se resolvió con localStorage + botón "Descargar HTML" (export horneado y portable).
 - La versión descargada debe salir **sin herramientas de edición** (solo Presentar + ojito).
