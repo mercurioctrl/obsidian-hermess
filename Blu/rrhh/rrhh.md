@@ -32,6 +32,7 @@ Consultora RRHH externa incorporada para diagnóstico organizacional y gestión 
 - [[contexto]] — Objetivo estratégico e infraestructura RRHH armada
 - [[agenda-primera-reunion]] — Agenda reunión 2026-05-15
 - [[actividades-rrhh-it]] — Referencia de actividades típicas RRHH en IT
+- [[seguimiento-rrhh-2026-06-17]] — Reunión de seguimiento RRHH — Ayelén (2026-06-17)
 - [[changelog]] — Registro de lo trabajado
 
 ## Ver también
