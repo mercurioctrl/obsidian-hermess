@@ -73,3 +73,9 @@ Migración de 7 bases de dev (refrescadas de prod) a un contenedor SQL Server 20
 - **Expuesto a internet:** port-forward UniFi `41433` → `10.10.10.47:1433` (USG en DMZ, IP pública dinámica `190.189.93.116`).
 - **Pendientes:** rutina de backups (no hay copias), rotar passwords de logins de app, DDNS.
 - Credenciales (sa, logins de app, controlador UniFi): out-of-band con Catriel, NO en la bóveda.
+
+## Infraestructura: Monitoreo WAN + Skills por grupo de Bily (2026-06-18)
+
+- **Monitoreo de las 2 WANs** (Telecom/Telecentro) en `~/wan-mon/`: caídas cada 1min (`uptime.sh`) + velocidad cada 1h (`speed.sh`) + estado on-demand (`status.sh`). Avisos por WhatsApp al grupo **Infra Blu**. Detalle: [[Monitoreo_WAN]].
+- **UniFi:** balanceo weighted 90% Telecentro / 10% Telecom (por destino). Telecom se degradó a <1 Mbps el 18/06 y se recuperó a ~680. `report_wan_event` activado en ambas WANs.
+- **Skills por grupo de Bily:** plugin `group-skill-router` — cada grupo de WhatsApp con su `~/openclaw-groups/<jid>/instructions.md`, inyectado al prompt según origen. Infra Blu corre `status.sh` on-demand. Detalle: [[Bily_Skills_Por_Grupo]].
