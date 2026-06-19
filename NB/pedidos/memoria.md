@@ -455,3 +455,9 @@ Documentación completa de relaciones entre tablas, PKs, FKs y reglas de integri
 ## Filtro Pedidos Olvidados (2026-06-16)
 
 Filtro oculto en la lista de órdenes: pendientes o remitidas (no facturadas) con >2 meses hasta 3 años de antigüedad. El front setea el `between` a esa ventana (nunca lo deja vacío); el backend con `forgottenOrders=1` agrega solo la condición de estado. **Sin tope de fecha la query expira** (escaneaba ~59.6k órdenes) → se acota a 3 años. Detalle en [[feature-pedidos-olvidados]]. Rama `feature/pedidos-olvidados`.
+
+---
+
+## Descarga xlsx de listados — pedidos y clientes (2026-06-18)
+
+Endpoint nuevo `GET /v1/orders/download` que exporta el listado de pedidos filtrado a xlsx, **reutilizando `OrderListRepository::getOrders($filters, ['offset'=>0,'limit'=>ORDER_DOWNLOAD_MAX_ROWS])`** (público, sin paginar) → mismas filas/filtros/totales que el listado. Replica el patrón de `clients/download` (clientes ya tenía descarga). Front: botón solo-icono en `Filters/Orders.vue` y `Filters/Clients.vue`. Rama `descargarListadoXlsx`, a development y gamma en ambos repos. Detalle en [[feature-descarga-listado-xlsx]].

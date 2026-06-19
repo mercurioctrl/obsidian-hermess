@@ -1,3 +1,25 @@
+## 2026-06-18 — Descarga xlsx de listados (pedidos y clientes)
+
+Botón (solo icono `download`) en las pestañas de **pedidos** y **clientes** que descarga el listado actual a `.xlsx` **respetando todos los filtros de la URL**. Detalle completo en [[feature-descarga-listado-xlsx]]. Rama `descargarListadoXlsx` (ambos repos). Back `d6c7e13` / cherry-pick Gamma `b433f53`; front `2d4ba8e` / cherry-pick gamma `64d4c9d`.
+
+- **Endpoint nuevo:** `GET /v1/orders/download` — replica el patrón de `clients/download` (genera el xlsx en disco `public/downloads`, responde `{ success, path }`).
+- **Clave de implementación:** el service **reutiliza `OrderListRepository::getOrders($filters, ['offset'=>0,'limit'=>ORDER_DOWNLOAD_MAX_ROWS])`** — el mismo método público del listado, sin paginar → mismas filas, filtros y totales que ve el usuario, sin duplicar la query gigante.
+- **Medio de envío:** se resuelve `id → nombre` vía `LO.dbo.mediosEnvio` (`ShippingMethodRepository`).
+- **Clientes:** ya tenía `clients/download`; solo se unificó el botón a solo-icono.
+
+Archivos: back `OrderDownloadController.php`, `OrderDownloadService.php`, `ExcelExportOrders.php`, `routes/api.php`. Front `components/Filters/Orders.vue`, `components/Filters/Clients.vue`.
+
+---
+
+## 2026-06-17 — Ranking de vendedores (travel miles) + Incentivo Netac
+
+Dos features de dashboard previas a la descarga xlsx (commits back/front `bd063bd`, `7275ca1`, `0083994`).
+
+- **Ranking de vendedores (rama `rankingTravelVendedores`):** pestaña "Ranking de vendedores" junto a "Ranking de aceleración"; rankea vendedores por la suma de **puntos** (travel miles) que generan sus clientes, con modal de desglose por objetivo cumplido (cliente, objetivo, fecha, puntos). Endpoints `clientsObjectives/acelerateRankingSellers` y `clientsObjectives/sellers/{sellerId}/travelMiles`. Incluye descripción del juego "NB Travel Mundial de resellers". La columna "Millas" se renombró a "Puntos".
+- **Incentivo Netac (rama `incentivoNetac`):** reemplaza el "Incentivo Gigabyte" (oculto, no borrado). Suma unidades vendidas de productos marca **Netac** (`articulo.Id_Marca = 211`), solo categorías Memorias (`ID_FAMILIA=1`) y Discos SSD (`ID_FAMILIA=56`); cada 12 unidades = USD 4; período 10–24/06/2026. Endpoint `objectives/netacIncentive` + detalle por vendedor (`objectives/netacIncentive/sellers/{sellerId}`) con producto, fecha y pedido (pedclit/pedclil). Conteo por remitos.
+
+---
+
 ## 2026-06-16 — Filtro Pedidos Olvidados + fix de timeout
 
 Nuevo filtro oculto en la lista de órdenes: **"Pedidos olvidados"** — órdenes pendientes o remitidas (no facturadas) con más de 2 meses, hasta 3 años de antigüedad. Detalle completo en [[feature-pedidos-olvidados]]. Rama `feature/pedidos-olvidados` (ambos repos). Commits front `15df1ee`→`5214032`, back `307dedfc`/`da311088`.

@@ -31,6 +31,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-sync-laset-botones|Patrón Sync Laset — botones de mantenimiento]] — service+command+controller+UI para fixes Laset
 - [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN por familia × proveedor para comp=11
 - [[feature-pedidos-olvidados|Feature: Pedidos Olvidados]] — filtro oculto de órdenes pendientes/remitidas >2 meses hasta 3 años; fix de timeout acotando la ventana de fecha
+- [[feature-descarga-listado-xlsx|Feature: Descarga xlsx de listados]] — botón solo-icono que exporta el listado filtrado de pedidos/clientes a xlsx; endpoint `orders/download` reutilizando `OrderListRepository` sin paginar
 
 ## Esquema ERP — Tablas y relaciones
 
@@ -67,4 +68,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-16 — Filtro "Pedidos Olvidados" en la lista de órdenes (rama `feature/pedidos-olvidados`): órdenes pendientes/remitidas no facturadas con >2 meses hasta 3 años de antigüedad. Fix de timeout de SQL Server acotando la ventana de fecha (sin tope escaneaba ~59.6k órdenes → 30s). Ver [[feature-pedidos-olvidados]] y [[changelog#2026-06-16 — Filtro Pedidos Olvidados + fix de timeout]].*
+*Última sincronización: 2026-06-18 — Descarga xlsx de listados de pedidos y clientes (rama `descargarListadoXlsx`): botón solo-icono que exporta el listado filtrado a xlsx vía endpoint nuevo `GET /v1/orders/download`, reutilizando `OrderListRepository::getOrders` sin paginar. Pusheado a development y gamma en ambos repos. Ver [[feature-descarga-listado-xlsx]] y [[changelog#2026-06-18 — Descarga xlsx de listados (pedidos y clientes)]].*
