@@ -49,5 +49,6 @@
 
 - [[BluPartPicker]] — índice del proyecto
 - [[arquitectura]] — detalles técnicos
+- [[matching-productos]] — matching de `oracular_sku` y curación
 - [[changelog]] — historial completo
 - [[resellers]] — auth, formatos y gotchas por fuente

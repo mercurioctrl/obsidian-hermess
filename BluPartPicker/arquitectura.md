@@ -153,6 +153,16 @@ CASE WHEN moneda = 'USD' THEN precio_final ELSE precio_final / {tc_venta} END  -
 - Tipo de cambio activo: TTL 5 min
 - Se invalida sola al expirar; sin lógica de invalidación explícita
 
+## Matching de productos (`oracular_sku`) — ver [[matching-productos]]
+
+Subsistema **no destructivo** que agrupa items de distintas fuentes que son el mismo producto físico bajo un `oracular_sku` canónico. Generado por `match_products.py` (NO por los syncs); idempotente, recalcula todo cada corrida sin tocar `itemsRepository`.
+
+**Tablas nuevas:** `product_groups` (producto canónico), `item_oracular_map` (mapeo item→grupo + `metodo`/`confianza`), `manual_matches` (adjudicados durables humano/LLM), `match_candidates` (cola de revisión). Columna espejo `oracular_sku` en `itemsRepository` (puede ser `null`).
+
+**Pipeline por niveles** (precisión decreciente): 1 deterministas (EAN/nro_parte/nombre+marca, con filtro de promiscuidad) · 1.5 alias de marca · 3b adjudicados (`manual_matches`) · 2/3a fuzzy IDF-Jaccard con vetos (spec/variant/marca/token-raro) · 4 imagen (opt-in) · auditoría que deja en NULL los conflictos. Cobertura ~63-65%. Detalle completo en [[matching-productos]].
+
+**Endpoints:** `GET /groups`, `GET /groups/{oracular_sku}` (comparador), `GET /candidates`, `POST /match` (curación, único de escritura). **Frontend de curación** en `/ui` (`frontend/index.html`). Cola precomputada por `gen_candidates.py`.
+
 ## Sync PreciosGamer — particularidades
 
 **Inferencia de categoría** (`extract_categoria()`): primera palabra → categoría, con skip de marcas y abreviaciones. **92.8% cobertura.**
@@ -184,6 +194,7 @@ CASE WHEN moneda = 'USD' THEN precio_final ELSE precio_final / {tc_venta} END  -
 ## Ver también
 
 - [[BluPartPicker]] — índice del proyecto
+- [[matching-productos]] — pipeline de `oracular_sku`, curación y consola `/ui`
 - [[resellers]] — auth, formatos y gotchas por fuente
 - [[contexto]] — decisiones de diseño y casos de uso
 - [[changelog]] — historial de cambios
