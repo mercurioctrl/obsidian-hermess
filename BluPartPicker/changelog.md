@@ -142,3 +142,23 @@ Archivos modificados: `api.py`, `sync_invid.py`, `sync_exchange_rates.py` (nuevo
 - Manual run funcionó OK: 466 items, 462 procesados
 - Commit `7e34d62` pusheado a main
 
+
+## 2026-06-18 — Matching de productos (`oracular_sku`) + consola de curación
+
+Feature grande: agrupar items de distintas fuentes que son el mismo producto físico, con UI para curar. Ver [[matching-productos]].
+
+### Pipeline de matching (`match_products.py`, no destructivo)
+- Tablas nuevas: `product_groups`, `item_oracular_map` (+ columna espejo `oracular_sku`), `manual_matches`, `match_candidates`. No tocan `itemsRepository`.
+- Niveles por precisión decreciente: 1 deterministas (EAN/nro_parte/nombre+marca con filtro de promiscuidad) · 1.5 alias de marca · 3b adjudicados · 2/3a fuzzy IDF-Jaccard con vetos (spec/variant/marca/token-raro) · 4 imagen (opt-in) · auditoría que deja en NULL los conflictos.
+- Cobertura ~63-65%. Precisión > cobertura (sin evidencia → NULL).
+
+### Adjudicación con LLM (Haiku) a escala
+- 2 pasadas de agentes Haiku (workflow) sobre 2.482 clusters → veredictos a `manual_matches`.
+- 3 redes de seguridad sobre las decisiones del LLM (vetos deterministas + audit + token-raro). Aprendizaje: al nivel de precisión exigido la ganancia neta del LLM sobre el determinista es chica; el valor fue eliminar errores duros y dejar corpus durable.
+
+### API + frontend
+- Endpoints: `GET /groups`, `GET /groups/{oracular_sku}` (comparador), `GET /candidates`, `POST /match` (curación, único endpoint de escritura; CORS ahora GET+POST). `/items` ahora trae `oracular_sku`.
+- `gen_candidates.py` → cola `match_candidates` (~15.8k candidatos).
+- Consola de curación en `/ui` (`frontend/index.html`, vanilla JS): navegar matcheados + revisar candidatos (Mismo/Distinto/Saltar). API v2.2.0.
+
+Archivos: `match_products.py`, `gen_candidates.py`, `frontend/index.html`, `api.py`, `ejemplo_comparar.sh`.

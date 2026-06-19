@@ -1,11 +1,13 @@
 # Memoria — BluPartPicker
 
-## Estado actual (2026-06-04)
+## Estado actual (2026-06-18)
 
-- **4 fuentes:** invid, ceven, stylus, preciosgamer_* (37 resellers)
-- **~10k productos activos de PreciosGamer** (últimas 48h) + 2.565 mayoristas
-- **API v2.1.0** — conversión de precios en tiempo real con tipos de cambio
-- Todos los syncs con cron: invid cada 4h, ceven/stylus/preciosgamer cada 4h desfasados, exchange rates cada 30 min
+- **5 mayoristas:** invid, ceven, stylus, **nb, air** + ~37 resellers preciosgamer_*
+- **API v2.2.0** — conversión de precios en tiempo real + **matching de productos** (`oracular_sku`) + consola de curación en `/ui`
+- ~37.9k items agrupados (~63-65% del catálogo de ~59.6k) bajo `oracular_sku`
+- Syncs con cron a horas fijas de madrugada (ver `crontab -l`). **Falta agregar `match_products.py` + `gen_candidates.py` al cron** (correr después de los syncs).
+
+> Estado 2026-06-04: 4 fuentes (sin nb/air), API v2.1.0, sin matching ni frontend.
 
 ## Gotchas activos
 
@@ -18,11 +20,20 @@
 - Los precios en la API están en moneda original. Para comparar USD vs ARS usar `moneda_out`; sin eso `precio_final` es el valor crudo de cada fuente.
 - Ceven puede tener timeouts de login transitorios — si falla en cron, correr manual primero para confirmar que el sitio esté operativo.
 
+### Matching (`oracular_sku`) — ver [[matching-productos]]
+- `match_products.py` recalcula TODO cada corrida (borra `product_groups`/`item_oracular_map`); idempotente, no destructivo. Las decisiones humanas/LLM viven en `manual_matches` y sobreviven.
+- Part number NO es clave única: compatibles de terceros citan el código OEM (cromink "ALT. HP CE320A" ≠ HP). Por eso `audit_group` rechaza grupos con marcas en conflicto.
+- EAN: nunca extraer dígitos de un alfanumérico (`BX80768225F` ≠ EAN; la F distingue 225 de 225F).
+- `oracular_sku` se deriva del item representante (consenso) + sufijo de unicidad — evita colisiones por un part number mal cargado en origen (caso UPS con part number de CPU).
+- Correr siempre `match_products.py` **y luego** `gen_candidates.py` (la cola de curación depende del estado de asignación).
+
 ## Próximos pasos posibles
 
 - Alertas de precio: webhook/email cuando `precio_final` baja N% en `price_stock_history`
-- Endpoint `/items/comparar?codigo=X` — mismo producto en múltiples fuentes
-- Frontend mínimo de comparación de precios
+- Agregar `match_products.py && gen_candidates.py` al cron (después del último sync, ej. 03:45)
+- Escalar la curación: limpiar el residuo de clusters caóticos (Raptor) a mano vía `/ui` o `manual_matches` `veredicto='different'`
+- **HECHO** ✅ Comparador del mismo producto en N fuentes → `GET /groups/{oracular_sku}`
+- **HECHO** ✅ Frontend de comparación + curación → `/ui`
 
 ## Credenciales y accesos
 

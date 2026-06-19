@@ -1,42 +1,43 @@
 # BluPartPicker
 
-Catálogo unificado de tecnología argentina. API REST que consolida mayoristas y resellers en una sola DB SQLite con historial de precios y conversión de moneda en tiempo real.
+Catálogo unificado de tecnología argentina. API REST que consolida mayoristas y resellers en una sola DB SQLite con historial de precios, conversión de moneda en tiempo real y **matching de productos** (`oracular_sku`) con consola de curación web.
 
-**Última sync:** 2026-06-04 · **Commit:** `7e34d62`
+**Última sync:** 2026-06-18 · **Commit:** `89c9716` (+ matching/frontend sin commitear)
 
 ## Stack
 
 - Python 3 · SQLite (WAL) · FastAPI · uvicorn · systemd · cron
 - Playwright (solo Ceven, por Akamai)
 - dolarapi.com (tipos de cambio, sin auth)
+- Frontend de curación: HTML + vanilla JS (sin build), servido en `/ui`
 
-## Fuentes
+## Fuentes — 5 mayoristas (USD) + ~37 resellers (ARS)
 
-| Source | Tipo | Items activos | Moneda |
-|--------|------|---------------|--------|
-| `invid` | Mayorista | ~1.197 | USD |
-| `ceven` | Mayorista | ~466 | USD |
-| `stylus` | Mayorista | ~906 | USD |
-| `preciosgamer_{slug}` (37) | Resellers | ~8-10k (últimas 48h) | ARS |
+| Source | Tipo | Moneda |
+|--------|------|--------|
+| `invid` · `ceven` · `stylus` · `nb` · `air` | Mayoristas (`distribuidor=1`) | USD |
+| `preciosgamer_{slug}` (~37) | Resellers (`distribuidor=0`) | ARS |
 
-## API — http://10.10.10.7:4444
+## API — http://10.10.10.7:4444 · consola `/ui` · docs `/docs`
 
 ```bash
-GET /items?categoria=MOUSE&fabricante=Logitech&distribuidor=0
+# Catálogo
+GET /items?categoria=MOUSE&fabricante=Logitech&distribuidor=0   # incluye oracular_sku
 GET /items?distribuidor=1&moneda_out=ARS&tc=mayorista&sort_by=precio
-GET /items?moneda_out=USD&tc=blue&precio_min=100&precio_max=500
-GET /exchange-rates
-GET /categorias?distribuidor=0
-GET /fabricantes?categoria=MOUSE&distribuidor=1
-GET /items/{source}/{codigo}
-GET /items/{source}/{codigo}/historia
+GET /items?tendencia=1                                          # señal suba/baja de precio
+GET /exchange-rates  |  GET /categorias  |  GET /fabricantes
 GET /sources  |  GET /sync/log
+# Matching de productos
+GET  /groups?solo_cruzados=1&sort_by=ahorro                     # productos canónicos
+GET  /groups/{oracular_sku}                                     # comparador (mismo producto, N fuentes)
+GET  /candidates  |  POST /match                                # curación (único endpoint de escritura)
 ```
 
 ## Notas
 
-- [[arquitectura]] — schema DB completo, endpoints, índices, conversión de precios
-- [[resellers]] — auth, formatos y gotchas por fuente (Invid, Ceven, Stylus, PreciosGamer)
+- [[arquitectura]] — schema DB completo, endpoints, índices, conversión de precios, pipeline de matching
+- [[matching-productos]] — `oracular_sku`: pipeline por niveles, tablas, loop de curación, consola `/ui`
+- [[resellers]] — auth, formatos y gotchas por fuente (Invid, Ceven, Stylus, NB, Air, PreciosGamer)
 - [[stack]] — dependencias y versiones
 - [[contexto]] — decisiones de diseño y casos de uso
 - [[changelog]] — historial de lo implementado sesión a sesión
