@@ -32,6 +32,8 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN por familia × proveedor para comp=11
 - [[feature-pedidos-olvidados|Feature: Pedidos Olvidados]] — filtro oculto de órdenes pendientes/remitidas >2 meses hasta 3 años; fix de timeout acotando la ventana de fecha
 - [[feature-descarga-listado-xlsx|Feature: Descarga xlsx de listados]] — botón solo-icono que exporta el listado filtrado de pedidos/clientes a xlsx; endpoint `orders/download` reutilizando `OrderListRepository` sin paginar
+- [[feature-ranking-vendedores|Feature: Ranking de vendedores]] — pestaña que rankea vendedores por la suma de puntos (travel miles) de sus clientes en el juego NB Travel Mundial de resellers; modal de desglose por cumplimiento
+- [[feature-incentivo-netac|Feature: Incentivo Netac]] — incentivo por unidades vendidas de Netac (Memorias + SSD): cada 12 u = USD 4; reemplaza al Incentivo Gigabyte; detalle por pedido/producto/fecha
 
 ## Esquema ERP — Tablas y relaciones
 
@@ -68,4 +70,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-18 — Descarga xlsx de listados de pedidos y clientes (rama `descargarListadoXlsx`): botón solo-icono que exporta el listado filtrado a xlsx vía endpoint nuevo `GET /v1/orders/download`, reutilizando `OrderListRepository::getOrders` sin paginar. Pusheado a development y gamma en ambos repos. Ver [[feature-descarga-listado-xlsx]] y [[changelog#2026-06-18 — Descarga xlsx de listados (pedidos y clientes)]].*
+*Última sincronización: 2026-06-19 — Notas dedicadas de las features de dashboard de la tanda 17–19/06: [[feature-ranking-vendedores|Ranking de vendedores]] (millas→puntos + descripción del juego NB Travel Mundial de resellers; rama `ranking-vendedores-puntos`) y [[feature-incentivo-netac|Incentivo Netac]] (Id_Marca 211, familias 1 y 56, 12u=USD4, reemplaza Gigabyte). Ver [[changelog#2026-06-17 — Ranking de vendedores (travel miles) + Incentivo Netac]].*
