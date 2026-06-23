@@ -6,6 +6,18 @@ Memoria de Claude Code del proyecto, consolidada por tipo.
 
 ## Proyecto
 
+### Rama catri-fine-tuning2 (2026-06-20)
+- Front: export **XLSX/CSV** en Stock+Precios (botones en la barra de filtros, emiten eventos a la página) + default **companyCode** por pestaña vía middleware. Back: fix **N+1** en `/items` y `/item`.
+- Pendiente de mergear a `development`/`gamma`. Front `983d58e`, back `6b9eeb4`, pusheadas.
+- La pestaña **Precios** vivía solo en `catri-fine-tuning`; el **link del menú nunca estuvo en git** (prod tenía edición manual de `basic.vue`) → agregado y propagado.
+- Git: `Development` (mayúscula) es la canónica del back; borrar `development` minúscula la dejó huérfana (macOS case-insensitive) → `git reset --mixed origin/Development`.
+
+### N+1 con dbconnection (backend) — clave
+`dbconnection()` abre una conexión pyodbc **NUEVA por llamada** (handshake TLS 1.0) y **nunca se cierra** → cualquier `for x in rta: getImages(x)` es N+1 catastrófico. `/items` con 300 items: **~11,5s → ~1,2s** usando query bulk con `IN` (`getImagesBulk` en `products.py`). Regla: ante listados lentos, buscar `for ... in rta` con helper que llama `dbconnection()` y pasarlo a bulk. Los N+1 de **escritura** transaccional (transfer_stock, sync de kits) se dejan.
+
+### Defaults de query van en middleware, no en created()
+Los defaults de query que afectan el fetch (ej. `companyCode`) deben setearse en **middleware de ruta**, no en `created()` del filtro. `General.vue` tiene un watcher `immediate` que dispara el fetch; `updateMet` **descarta el 2do fetch en vuelo** (`window.__generalUpdateRunning`). Si `created()` agrega el param DESPUÉS del fetch inicial, el refetch se descarta → grilla sin filtrar hasta refrescar. Fix: `middleware/companyCode.js` setea companyCode (usuario o 4) al entrar a la pestaña, antes del fetch; respeta el borrado manual dentro de la misma pestaña.
+
 ### Grilla de Precios — mejoras 2026-06-13 (rama catri-fine-tuning)
 - Precios NO tiene endpoint propio: reusa `GET /itemsStocks?controlPrices=1`; precios en
   `record.controlPrices`; edición por `PATCH /itemsPrice`. La query con `controlPrices`

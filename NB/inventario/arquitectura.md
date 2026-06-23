@@ -65,6 +65,10 @@ inventario/
 
 ### Decisiones de diseño relevantes
 
+- **Export de grillas (XLSX/CSV)** *(rama catri-fine-tuning2)*: Stock y Precios exportan las columnas visibles; los botones viven en el componente de filtros y emiten eventos a la página. XLSX con `import('xlsx')` dinámico (chunk aparte), CSV con BOM. `xlsx` es dep declarada → deploys necesitan `npm ci`.
+- **Default de companyCode en middleware de ruta** *(catri-fine-tuning2)*: `middleware/companyCode.js` setea el companyCode (usuario o 4) ANTES del fetch de la página; hacerlo en `created()` lo pierde por una carrera con el watcher de `General.vue` (descarta el 2do fetch en vuelo). Ver [[contexto]] y [[memoria]].
+- **Evitar N+1 con `dbconnection()`** *(catri-fine-tuning2)*: cada `dbconnection()` abre conexión nueva (TLS 1.0) y no cierra; los listados traen las imágenes en una query bulk con `IN` (`getImagesBulk`), no por fila. `/items` ~11,5s → ~1,2s.
+
 - **Precio = costo × (1 + Σ utilidades/100)** para todas las listas; el detalle de
   pares de utilidades y la regla "ajustar siempre la primera" está en [[modulo-precios]].
 - **Competencia con cache en memoria** (no DB): los catálogos de partpicker (~75k

@@ -2,6 +2,22 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-06-20
+
+> Rama de funcionalidad **`catri-fine-tunning`** (ambos repos, pusheada a origin). Aún **no mergeada** a development. Ver [[contexto#Filtro de Empresa (companyCode) por defecto en pestañas|contexto]].
+
+- feat: **IVA por defecto del artículo al agregar un ítem.** El buscador de productos (`/v1/items`) ahora devuelve `articulo.ivaCompra` como `iva` (`ItemRepository` + `ItemDto`); al agregar un ítem a una orden el selector de IVA arranca con ese valor en vez de 0 (sigue editable). El detalle ya caía a `ISNULL(PL.nivaserv, AR.ivaCompra)` (API + `Orders/AddItem.vue`).
+- ui: **Desplegable de búsqueda de productos más legible** — título destacado, metadata (categoría · marca · SKU · stock) en línea aparte, mejor contraste y espaciado. Antes el `line-height: 0` aplastaba la 2da línea (`Orders/AddItem.vue`).
+- feat: **Filtros nuevos en el listado de Órdenes**: SKU (`articulo.ID_PRODUCTO`), ID interno (`articulo.ID_ARTICULO`) y **serial**. El de serial usa un `EXISTS` sobre `NEW_BYTES.dbo.ST_DETALLE_STOCK` (`ID_COMPRA = pedprot.nNumPed`) que **solo se agrega al WHERE cuando se usa** (sin impacto de rendimiento si no se filtra). `count()` pasó a `COUNT(DISTINCT nnumped)` con joins a `pedprol`/`articulo` para no inflar la paginación (API `ProviderOrderRepository` + `Filters/Orders.vue`).
+- feat: **Filtro por serial en Ingresos** — `EXISTS` correlacionado con la línea del ingreso (`albprol.ID_ARTICULO` ↔ artículo del `cref` del serial). Se habilitó el param `serial` en el controller (`$request->only`). Los filtros SKU / ID interno ya existían en Ingresos; se alineó el wording al de Órdenes (API `ProviderOrderInboundRepository` + controller + `Filters/ProviderOrderInbound.vue`).
+- feat: **Columna "Serializado" (Sí/No) en el listado de Órdenes** — `fullSerialized` calculado con la misma lógica que Ingresos (`COUNT(líneas) = COUNT(serialized=1)`). ⚠️ Una orden **sin líneas** da "Sí" (0=0), heredado de Ingresos (API `ProviderOrderRepository`/`ProviderOrderDto` + `pages/orders.vue` + `store/orders.js`).
+- ui: **Filtros de Órdenes compactados** (anchos 110-150px, placeholders cortos) para que los 8 entren en una sola línea, manteniendo `flex-wrap` (`Filters/Orders.vue`).
+- feat/fix: **Filtro de Empresa (companyCode) por defecto en todas las pestañas** — al entrar a CUALQUIER pestaña arranca en `Number($auth.user.companyCode) || 4` (default 4 si el usuario no tiene empresa asignada). Antes quedaba en null para usuarios sin empresa. Solo queda libre si se limpia a mano. Aplicado a las **9** `components/Filters/*.vue` (Orders, ProviderOrderInbound, Categories, Providers, Forwarders, Warehouses, ProviderVoucher, TariffTax, TariffPosition).
+- infra: el `.env` de la API quedó apuntando a la DB **`10.10.10.47:1433`** (user `fcallipo`, DB `NB_WEB`). Ver [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
+
+Commits: API `0446aa2`, `8458e8d` · Front `f427c83`, `3e8214b`.
+Archivos: `app/Repositories/Items/ItemRepository.php`, `app/Dto/Item/ItemDto.php`, `app/Repositories/Provider/ProviderOrder/ProviderOrderRepository.php`, `app/Dto/Provider/ProviderOrderDto.php`, `app/Repositories/Provider/OrderInbound/ProviderOrderInboundRepository.php`, `app/Http/Controllers/Provider/ProviderOrderInbound.php`, `components/Orders/AddItem.vue`, `components/Filters/*.vue`, `pages/orders.vue`, `store/orders.js`
+
 ## 2026-06-10
 
 > Cambios en working tree (aún sin commitear/mergear al cierre de la sesión).

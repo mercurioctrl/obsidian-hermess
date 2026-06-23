@@ -1,5 +1,24 @@
 # Changelog — inventario
 
+## 2026-06-20
+
+Sesión sobre `development`/`gamma` + nueva rama de funcionalidad **`catri-fine-tuning2`** (front y back, pusheada, sin mergear). Ver [[memoria]], [[contexto]] y [[modulo-precios]].
+
+### Frontend (inventario-web-app)
+- **feat**: Export **XLSX y CSV** también en la pestaña **Stock** (antes solo en Precios). Los botones (etiquetas cortas "XLSX"/"CSV") viven **dentro de la barra de filtros**, al lado de "Columnas", y emiten eventos a la página; exportan las columnas visibles. XLSX con `import('xlsx')` dinámico, CSV con BOM + `;`.
+- **fix/UX**: el filtro **empresa (companyCode)** ahora se setea al `companyCode` del usuario (o **4** por defecto) **al entrar a cada pestaña**, vía `middleware/companyCode.js` (en `router.middleware`). Antes el select quedaba puesto pero los datos **sin filtrar** por una **carrera**: el watcher `immediate` de `General.vue` dispara el fetch y `updateMet` descarta el 2do fetch en vuelo (`window.__generalUpdateRunning`). Se resolvió seteando el default **antes** del fetch (middleware). Solo queda libre si se borra a mano dentro de la misma pestaña.
+- **feat**: Agregada la entrada **Precios** al menú (`layouts/basic.vue`) — nunca estuvo en git (prod tenía una edición manual). Commiteada en `catri-fine-tuning` y mergeada a `development`/`gamma`.
+
+### Backend (ms-metadata)
+- **perf**: Eliminado **N+1** en `/items` y `/item` (`products.py`). `searchProducts` trae todas las imágenes en una sola query (`getImagesBulk`) en vez de abrir una conexión por producto (cada `dbconnection()` es un handshake TLS 1.0 y nunca se cierra). `GET /items?itemsPerPage=300`: **~11,5s → ~1,2s**. `getDetailProduct` pide atributos/imágenes una sola vez por artículo. Quitados los `print()` de debug.
+
+### Git / Ops
+- Mergeado `catri-fine-tuning` → `development` y `gamma` (front); en el back ya estaba contenido en `Development`/`Gamma`. Lo pendiente quedó en **`catri-fine-tuning2`** (front `983d58e`, back `6b9eeb4`), pusheada en ambos repos.
+- **Gotcha git**: la rama `Development` (mayúscula) del back es la canónica (trackea `origin/Development`); borrar la `development` minúscula la dejó huérfana (macOS case-insensitive) → recuperada con `git reset --mixed origin/Development`.
+- `xlsx` ya estaba en package.json; faltaba `npm install`. Los deploys necesitan `npm ci`/`npm install` o el `import('xlsx')` da 500.
+
+Archivos: `pages/itemsStock.vue`, `pages/itemsPrices.vue`, `components/Filters/*.vue`, `middleware/companyCode.js`, `nuxt.config.js`, `layouts/basic.vue`, `core/controllers/products/products.py`.
+
 ## 2026-06-15
 
 Más sobre la grilla de **Precios** (`/itemsPrices`), rama `catri-fine-tuning`. Commit `d1fb0e4`. Ver [[modulo-precios]] y [[competencia-partpicker-cache]].

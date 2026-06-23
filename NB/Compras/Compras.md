@@ -31,4 +31,4 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 Las tareas se trackean con prefijo `COM-` en Jira.
 
 ---
-*Última sincronización: 2026-06-10*
+*Última sincronización: 2026-06-20 — rama `catri-fine-tunning`: IVA por defecto, filtros SKU/ID interno/serial, columna Serializado, filtros compactos y companyCode por defecto.*

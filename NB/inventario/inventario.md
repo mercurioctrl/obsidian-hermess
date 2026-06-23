@@ -2,7 +2,9 @@
 
 Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
-**Última sincronización:** 2026-06-15
+**Última sincronización:** 2026-06-20
+
+> **Estado:** rama de funcionalidad `catri-fine-tuning2` (front y back, pusheada, sin mergear): export XLSX/CSV en Stock+Precios, default de empresa por pestaña (middleware) y fix N+1 en `/items`. Ver [[changelog]] y [[memoria]].
 
 ## Sub-proyectos
 

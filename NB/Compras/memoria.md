@@ -1,7 +1,7 @@
 # Memoria del proyecto
 
 Consolidado de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-10.
+(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-20.
 
 ## Estructura
 
@@ -23,7 +23,7 @@ Consolidado de la memoria persistente de Claude Code para este proyecto
 
 Patrón por feature: **Controller invokable (`__invoke`) → Service → Repository (SQL crudo, `DB::select`) → DTO**. Rutas en `routes/api.php`. Auth JWT via `App\Support\TokenManager` (+ `PermissionMiddleware`, requiere `compras > 0`).
 
-Tabla clave `articulo` (alias `A`): `ID_ARTICULO`=id interno (entero, sargable), `ID_PRODUCTO`=SKU, `CDETALLE`=título, `cRef`=referencia string (la que usan PedProL/albprol/ST_DETALLE_STOCK), `companyCode`, flags `EXCLUIR<>1` y `ocultarDeNb<>1` (siempre en el WHERE).
+Tabla clave `articulo` (alias `A`): `ID_ARTICULO`=id interno (entero, sargable), `ID_PRODUCTO`=SKU, `CDETALLE`=título, `cRef`=referencia string (la que usan PedProL/albprol/ST_DETALLE_STOCK), `ivaCompra`=IVA de compra por defecto, `companyCode`, flags `EXCLUIR<>1` y `ocultarDeNb<>1` (siempre en el WHERE).
 
 Compras/ingresos: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(nnumalb)/`albprol` = ingreso/remito; seriales en `NEW_BYTES.dbo.ST_DETALLE_STOCK`. Detalle en [[arquitectura#Reglas de datos transversales|arquitectura]].
 
@@ -38,13 +38,20 @@ Compras/ingresos: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(nnumalb)/`albp
 
 - **`currencyQuote === 1` = pesos** (no dólares): símbolo `$`, colores `.peso`, fila Cotización fiscal sin cálculo.
 - **`companyCode = 4` = NB**; depósito **SAFcom** = `warehousesId` 2 / `CCODALM` 'SAF'. Limpieza de datos 2026-06-10 (ver [[contexto#Decisiones tomadas (2026-06-10)|contexto]]).
+- **Filtro de Empresa por defecto (2026-06-20):** al entrar a cualquier pestaña arranca en `$auth.user.companyCode || 4`; solo queda libre si se limpia a mano. En las 9 `components/Filters/*.vue` (ver [[contexto#Filtro de Empresa (companyCode) por defecto en pestañas|contexto]]).
+- **IVA por defecto = `articulo.ivaCompra`** al agregar ítem a una orden (editable). El buscador `/v1/items` ya devuelve `iva` (ver [[contexto#IVA por defecto del artículo al agregar ítem|contexto]]).
+- **Filtro por serial (Órdenes/Ingresos):** `EXISTS` sobre `ST_DETALLE_STOCK` que solo se aplica si se usa el filtro. SKU/ID interno/serial igual (ver [[contexto#Filtro por serial — Órdenes e Ingresos|contexto]]).
 - **UPDATEs masivos en prod**: contar primero y confirmar alcance — base externa sin migraciones, sin rollback fácil.
-- **`fullSerialized` del detalle de ingreso viene hardcodeado a 0** → usar `serializedAmount > 0` por ítem.
+- **`fullSerialized` del detalle de ingreso viene hardcodeado a 0** → usar `serializedAmount > 0` por ítem. (El del **listado** sí se calcula; órdenes sin líneas dan "Sí".)
+
+## Rama en curso
+
+- **`catri-fine-tunning`** (ambos repos, pusheada a origin, NO mergeada): IVA default, filtros sku/itemId/serial en Órdenes e Ingresos, columna Serializado en Órdenes, filtros compactos, companyCode por defecto. Ver [[changelog#2026-06-20|changelog 2026-06-20]].
 
 ## Base de datos
 
 - Driver `DB_CONNECTION=sqlsrv` → en runtime usa `pdo_dblib` (FreeTDS).
-- Server canónico: `190.210.23.97:4444`, DB `NB_WEB`, user `web`. Detalle y gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
+- **En uso (2026-06-20): `10.10.10.47:1433`**, DB `NB_WEB`, user `fcallipo`. Canónica histórica: `190.210.23.97:4444` (user `web`). Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
 - Bases en juego: `NewBytes_DBF` (ERP), `NB_WEB` (web), `NEW_BYTES` (stock/seriales/despachos), `PRODUCTOS`.
 
 ## Ver también

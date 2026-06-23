@@ -60,7 +60,7 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 ---
 
 ## [[Compras/Compras|Compras]]
-- [[Compras/Compras|Índice]] · [[Compras/arquitectura|Arquitectura]] · [[Compras/stack|Stack]] · [[Compras/changelog|Changelog]] · [[Compras/contexto|Contexto]] · [[Compras/memoria|Memoria]]
+- [[Compras/Compras|Índice]] · [[Compras/arquitectura|Arquitectura]] · [[Compras/stack|Stack]] · [[Compras/changelog|Changelog]] · [[Compras/contexto|Contexto]] · [[Compras/memoria|Memoria]] · [[Compras/competencia|Competencia]]
 
 ---
 
@@ -72,7 +72,7 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 - [[limpieza-contactos-brevo/limpieza-contactos-brevo|Índice]] · [[limpieza-contactos-brevo/arquitectura|Arquitectura]] · [[limpieza-contactos-brevo/stack|Stack]] · [[limpieza-contactos-brevo/changelog|Changelog]] · [[limpieza-contactos-brevo/contexto|Contexto]] · [[limpieza-contactos-brevo/memoria|Memoria]]
 
 ---
-*Última actualización: 2026-06-17 — Limpieza de Contactos Brevo: validación/clasificación de ~231k contactos (226.113 válidos + 5.114 a bloquear).*
+*Última actualización: 2026-06-20 — Compras: rama `catri-fine-tunning` (IVA por defecto, filtros SKU/ID interno/serial, columna Serializado, companyCode por defecto).*
 
 ## Ver también
 

@@ -53,6 +53,12 @@ NODE_ENV=development
 
 ## Gotchas conocidos
 
+> **Actualización 2026-06-20** (rama catri-fine-tuning2, ver [[memoria]]):
+> - **Filtro empresa quedaba sin aplicar al cambiar de pestaña**: el select se veía puesto pero los datos sin filtrar; carrera (`General.vue` dispara el fetch y `updateMet` descarta el 2do fetch en vuelo con `window.__generalUpdateRunning`). Fix: setear `companyCode` (usuario o **4**) en `middleware/companyCode.js` ANTES del fetch, no en `created()`. Solo queda libre si se borra a mano dentro de la misma pestaña.
+> - **N+1 catastrófico en `/items` y `/item`**: cada `dbconnection()` abre conexión nueva (TLS 1.0) y nunca cierra; un `for x in rta: getImages(x)` hace N handshakes. ~11,5s → ~1,2s con query bulk `IN` (`getImagesBulk`). Ante listados lentos buscar `for ... in rta` con helper que llama `dbconnection()`.
+> - **Git (back)**: `Development` (mayúscula) es la rama canónica (trackea `origin/Development`); borrar `development` minúscula la deja huérfana (macOS case-insensitive) → `git reset --mixed origin/Development`.
+> - **Nav "Precios"** nunca estuvo en git (prod tenía edición manual de `basic.vue`); agregado en `catri-fine-tuning`. `xlsx` ya estaba en package.json; deploys necesitan `npm ci`.
+
 | Problema | Causa | Solución |
 |----------|-------|---------|
 | **`npm install <pkg>` con el dev server corriendo → RuntimeError / loader infinito** (ej. al instalar `xlsx`) | Instalar deps mientras `npm run dev` corre deja webpack/HMR con estado inconsistente | **Reiniciar `npm run dev`** después de instalar; en el browser hard-reload |
