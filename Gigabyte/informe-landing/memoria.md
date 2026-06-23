@@ -8,6 +8,7 @@ Espejo de la memoria de Claude del proyecto (`~/.claude/projects/-var-www-Inform
 
 ## Feedback / estilo (cómo trabajar)
 - Texto **solo naranja `#FF6400` o blanco**; los colores de marca solo como gráficos. Esquemas con estética **AORUS**. Iconos SVG monoline, no emojis.
+- En layouts SÍ/NO usar **naranja (positivo) / gris neutro (negativo)**, nunca mint/magenta en texto.
 - Coherencia entre esquemas: clonar el patrón de los slides 02/03 (header de panel con barra naranja, contenedores sólidos, escala de fuentes/iconos).
 - Persistencia **sin base de datos** → localStorage + export horneado.
 - Git: nunca `Co-Authored-By`, los commits son del usuario. Simplicidad sobre complejidad, no agregar features no pedidas.

@@ -34,5 +34,20 @@
 
 Archivos principales: `informe-gigabyte-landing/index.html` (interno), `informe-gigabyte-landing/reseller.html` (reseller).
 
+## 2026-06-23
+
+- **`reseller.html` simplificado a "Resellers Argentina"** (commit `e6a6f35`): se quitaron los slides de **campaña de ejemplo** y **caso de éxito**; el deck queda enfocado en el programa de pauta coordinada para resellers de Argentina. Pasó de 7 a **8 slides**.
+- **2 slides nuevos** (privacidad + medición), adaptados a 2ª persona y **a GIGABYTE en vez de BLU**, con paleta de marca (naranja = positivo, gris neutro = negativo; sin mint/magenta):
+  - **Privacidad · Meta Ads** (`#privacidad`, eyebrow 04): qué SÍ / qué NO puede ver GIGABYTE con el permiso de Ads acotado sobre el Business Manager del reseller (sin acceso a orgánico, mensajes ni leads).
+  - **Medición · GTM** (`#gtm`, eyebrow 05): los **5 escenarios de GTM** según cuánto acceso comparta el reseller (del más eficiente al más costoso), con badge "Sin costo extra" / "Fee único" y opción 01 marcada RECOMENDADA.
+- **Ocultar individualmente cada uno de los 5 escenarios GTM** desde el panel editor (sub-filas anidadas con ojito bajo el slide GTM), persistido en `deckState.cards` y excluido del export.
+- **Texto de las tarjetas GTM editable**: se sumaron `.gtm-when/.gtm-k/.gtm-v/.gtm-fee` (y `.perm-list li`, `.perm-h h3`) al selector de edición de textos.
+- **Toggle del badge de fee por escenario** (ícono de etiqueta en cada sub-fila del editor): muestra/oculta "Fee único" / "Sin costo extra", persistido en `deckState.fees` y excluido del export.
+- **Renumeración dinámica de los escenarios GTM visibles**: al ocultar uno, las tarjetas visibles se renumeran `01, 02, 03…` en orden (sin huecos); también queda baked en el export.
+- **Slide nuevo "Privacidad · Tu sitio"** (`#privacidad-sitio`, eyebrow 06, entre GTM y cierre): qué ve / NO ve el código de medición instalado. SÍ: solo eventos de la capa de usuario (clics, vistas, conversiones) con el único fin de medir las campañas. NO: cPanel, backend, bases de datos, archivos del sitio, nada no-público, otros códigos de tracking (Analytics/Meta), campañas del reseller o de terceros, ni analítica web/UX.
+- Todo verificado con Chrome headless (estructura, edición, ocultado, renumeración) y **pusheado a `main`**.
+
+Archivos principales: `informe-gigabyte-landing/reseller.html` (foco activo del proyecto).
+
 ## Ver también
 - [[informe-landing]] · [[arquitectura]] · [[contexto]]
