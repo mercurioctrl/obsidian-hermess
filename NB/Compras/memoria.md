@@ -1,7 +1,7 @@
 # Memoria del proyecto
 
 Consolidado de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-20.
+(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-22.
 
 ## Estructura
 
@@ -25,28 +25,31 @@ Patrón por feature: **Controller invokable (`__invoke`) → Service → Reposit
 
 Tabla clave `articulo` (alias `A`): `ID_ARTICULO`=id interno (entero, sargable), `ID_PRODUCTO`=SKU, `CDETALLE`=título, `cRef`=referencia string (la que usan PedProL/albprol/ST_DETALLE_STOCK), `ivaCompra`=IVA de compra por defecto, `companyCode`, flags `EXCLUIR<>1` y `ocultarDeNb<>1` (siempre en el WHERE).
 
-Compras/ingresos: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(nnumalb)/`albprol` = ingreso/remito; seriales en `NEW_BYTES.dbo.ST_DETALLE_STOCK`. Detalle en [[arquitectura#Reglas de datos transversales|arquitectura]].
+Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(nnumalb)/`albprol` = ingreso/remito; `FACPROT`(IDFACPROT)/`FACPROL` = comprobante de compra; seriales en `NEW_BYTES.dbo.ST_DETALLE_STOCK`. Detalle en [[arquitectura#Reglas de datos transversales|arquitectura]].
 
 ## Frontend — Arranque y convenciones
 
 - Dev: `cd compras-web-app-v1-/app && npm run dev` → **http://localhost:3867/** (puerto = `NODE_PORT`; el 3002 lo ocupa pedidos). Usa `NODE_OPTIONS=--openssl-legacy-provider` (webpack 4 + Node nuevo). Prod: pm2.
 - `.env` front: `API_HOST=http://localhost:8096/v1`, `NODE_PORT=3867`.
-- Moneda: `currencyId` con `'PSO'` (pesos) / `'DOL'` (dólar) decide editabilidad de cotización; `currencyQuote === 1` (valor numérico) decide el **display** (signo `$`, fila fiscal sin cálculo) — ver [[contexto#Cotización en pesos (currencyQuote === 1) — display|contexto]]. `companyCode == 11` = LASET (oculta varias columnas, ver `plugins/permissions.js`).
+- Componentes auto-importados (Nuxt `components: true`): el nombre = carpeta + archivo (`components/Provider/CurrentAccount.vue` → `<ProviderCurrentAccount>`).
+- Moneda: `currencyId` con `'PSO'` (pesos) / `'DOL'` (dólar) decide editabilidad de cotización; `currencyQuote === 1` (valor numérico) decide el **display** — ver [[contexto#Cotización en pesos (currencyQuote === 1) — display|contexto]]. `companyCode == 11` = LASET (oculta varias columnas, ver `plugins/permissions.js`).
 - Dos componentes Detail casi iguales (Órdenes vs Ingresos) — no confundir, ver [[arquitectura#Detalle de Órdenes vs Ingresos (no confundir)|arquitectura]].
 
 ## Reglas / gotchas destacados
 
 - **`currencyQuote === 1` = pesos** (no dólares): símbolo `$`, colores `.peso`, fila Cotización fiscal sin cálculo.
 - **`companyCode = 4` = NB**; depósito **SAFcom** = `warehousesId` 2 / `CCODALM` 'SAF'. Limpieza de datos 2026-06-10 (ver [[contexto#Decisiones tomadas (2026-06-10)|contexto]]).
-- **Filtro de Empresa por defecto (2026-06-20):** al entrar a cualquier pestaña arranca en `$auth.user.companyCode || 4`; solo queda libre si se limpia a mano. En las 9 `components/Filters/*.vue` (ver [[contexto#Filtro de Empresa (companyCode) por defecto en pestañas|contexto]]).
-- **IVA por defecto = `articulo.ivaCompra`** al agregar ítem a una orden (editable). El buscador `/v1/items` ya devuelve `iva` (ver [[contexto#IVA por defecto del artículo al agregar ítem|contexto]]).
-- **Filtro por serial (Órdenes/Ingresos):** `EXISTS` sobre `ST_DETALLE_STOCK` que solo se aplica si se usa el filtro. SKU/ID interno/serial igual (ver [[contexto#Filtro por serial — Órdenes e Ingresos|contexto]]).
+- **Filtro de Empresa por defecto (2026-06-20):** al entrar a cualquier pestaña arranca en `$auth.user.companyCode || 4`; solo libre si se limpia a mano (las 9 `components/Filters/*.vue`).
+- **IVA por defecto = `articulo.ivaCompra`** al agregar ítem a una orden (editable). El buscador `/v1/items` ya devuelve `iva`.
+- **Filtro por serial (Órdenes/Ingresos):** `EXISTS` sobre `ST_DETALLE_STOCK` que solo se aplica si se usa el filtro. SKU/ID interno/serial igual.
+- **Cuenta corriente de proveedores (2026-06-22):** ojito en Proveedores → modal. Movimientos = comprobantes `FACPROT` (total desde `FACPROL`, fallback `FOB`); débito/crédito por `FP_TiposDocumentosCobro.signo`; `companyCode` derivado del proveedor; **pagos pendientes**. Ver [[contexto#Cuenta corriente de proveedores (2026-06-22)|contexto]].
+- **`FACPROT.companyCode` está 100% NULL** → derivar del proveedor (`ISNULL(FACPROT.companyCode, FP_Proveedores.companyCode)`). Aplica también a `providerVoucher`.
 - **UPDATEs masivos en prod**: contar primero y confirmar alcance — base externa sin migraciones, sin rollback fácil.
 - **`fullSerialized` del detalle de ingreso viene hardcodeado a 0** → usar `serializedAmount > 0` por ítem. (El del **listado** sí se calcula; órdenes sin líneas dan "Sí".)
 
 ## Rama en curso
 
-- **`catri-fine-tunning`** (ambos repos, pusheada a origin, NO mergeada): IVA default, filtros sku/itemId/serial en Órdenes e Ingresos, columna Serializado en Órdenes, filtros compactos, companyCode por defecto. Ver [[changelog#2026-06-20|changelog 2026-06-20]].
+- **`catri-fine-tunning`** (ambos repos): ya mergeada a `development` y `gamma` (PRs #274, #276). Incluye: IVA default, filtros sku/itemId/serial, columna Serializado, companyCode por defecto, **cuenta corriente de proveedores**, SKU inline en detalle de orden. Ver [[changelog#2026-06-22|changelog 2026-06-22]].
 
 ## Base de datos
 

@@ -541,3 +541,14 @@ Tras una sesión depurando casos reales (ver [[changelog#2026-06-02]]), el pipel
 **Flujo operativo correcto:** Reimportar planilla (reemplaza staging) → **Borrar todo** → **Importar todo**. Nunca importar incremental sin Borrar todo en el medio.
 
 **Gotcha verificación:** el guard de auto-mode bloquea correr Fase C/D desde sesión de investigación (modifican ERP compartido) → verificar con simulaciones read-only en tinker; el usuario corre el ciclo por la UI.
+
+## FLETE
+
+El **FLETE** (art `121944`, comp=11) modela un cargo de flete. Regla (usuario 2026-06-22): se factura a la VENTA pero **NUNCA va en la compra**. Constante `LasetImportFaseCCommand::INTERNAL_NO_PURCHASE_ARTICULOS=[121944]`:
+
+- **excluido de `buildPedprolGroups`** → no genera `pedprol`.
+- **excluido de la asignación OC↔venta** → la venta-FLETE queda IMPORTED con `matched_pedprol_nlinea=NULL`, sin fila en `pedclil_oc_asignacion`. 4d null-safe para FLETE duplicado.
+- **Fase D deriva `albprol` de `pedprol`** → al no haber pedprol, tampoco hay remito de compra con FLETE.
+- **`pedclil`/`albclil` lo conservan** para facturarlo al cliente.
+
+Ortogonal a `INTERNAL_NO_STOCK_ARTICULOS` (Fase D, no impacta inventario). Cleanup en dev: removidas 4 pedprol + 4 albprol + 4 `pedclil_oc_asignacion` FLETE comp=11 (OCs 13339/13439/13795/13808). Commit `9181b687`. Ver [[contexto#FLETE nunca en la compra]].

@@ -2,6 +2,27 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-06-22
+
+> Sigue en `catri-fine-tunning`. La rama ya se mergeó a `development` (PRs #274, #276) y a `gamma`; el último commit (SKU inline) entra limpio.
+
+### Cuenta corriente de proveedores (feature nueva — backend + frontend)
+
+- feat: **Endpoint** `GET v1/providers/{providerCode}/currentAccount` — devuelve los comprobantes (`FACPROT`) del proveedor como movimientos de cuenta corriente, con filtros de fecha (`from`/`to`) y búsqueda, paginación y **saldos separados en u\$d y \$** (controller `ProviderCurrentAccount` → `ProviderCurrentAccountService` → `ProviderCurrentAccountRepository` + `ProviderCurrentAccountDto`). Reglas de cálculo en [[contexto#Cuenta corriente de proveedores (2026-06-22)|contexto]].
+- feat: **Modal en Proveedores** — ícono 👁️ (columna "Cta Cte") en cada fila del listado abre un modal draggable con cabecera de saldos + tabla de movimientos (débitos/créditos), filtros de fecha/búsqueda y paginación (`components/Provider/CurrentAccount.vue`, `$api.providers.getCurrentAccount`, registro en `layouts/basic.vue`, columna en `store/providers.js`).
+- fix: **`providerVoucher` deriva el `companyCode` del proveedor** (`ISNULL(FACPROT.companyCode, FP_Proveedores.companyCode)`), porque en `FACPROT` está **100% NULL** → antes el filtro de empresa nunca matcheaba; ahora ~36k comprobantes caen en empresa 4.
+
+### Detalle de orden
+
+- feat: **SKU junto al nombre del producto** en el detalle de orden, inline y en otro color (magenta), para identificarlo claro. Oculto para LASET (que ya tiene columna SKU dedicada) (`Orders/Detail.vue`).
+
+### Git / merges
+
+- La feature "eliminar ítem de una orden de compra" (otra rama, PR #273) entró a `development`/`gamma` y tocó `Orders/Detail.vue`. Se resolvió el conflicto con el SKU inline **combinando ambos**: nombre + SKU agrupados a la izquierda (`.product-title-group`) y el botón de eliminar a la derecha, vía `flex-between`. Tras mergear `development` dentro de `catri-fine-tunning` (commit `a5d4b57`), el merge a `development` y a `gamma` quedó limpio.
+
+Commits: API `dcc1b6e` · Front `79f47df`, `a891afe`, merge `a5d4b57`.
+Archivos: `app/Http/Controllers/Provider/ProviderCurrentAccount.php`, `app/Services/Provider/Provider/ProviderCurrentAccountService.php`, `app/Repositories/Provider/Provider/ProviderCurrentAccountRepository.php`, `app/Dto/Provider/ProviderCurrentAccountDto.php`, `app/Repositories/Provider/ProviderOrder/ProviderVoucherRepository.php`, `app/routes/api.php`, `components/Provider/CurrentAccount.vue`, `pages/providers.vue`, `store/providers.js`, `plugins/api.js`, `layouts/basic.vue`, `components/Orders/Detail.vue`
+
 ## 2026-06-20
 
 > Rama de funcionalidad **`catri-fine-tunning`** (ambos repos, pusheada a origin). Aún **no mergeada** a development. Ver [[contexto#Filtro de Empresa (companyCode) por defecto en pestañas|contexto]].

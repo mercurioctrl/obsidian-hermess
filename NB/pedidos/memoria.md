@@ -461,3 +461,21 @@ Filtro oculto en la lista de órdenes: pendientes o remitidas (no facturadas) co
 ## Descarga xlsx de listados — pedidos y clientes (2026-06-18)
 
 Endpoint nuevo `GET /v1/orders/download` que exporta el listado de pedidos filtrado a xlsx, **reutilizando `OrderListRepository::getOrders($filters, ['offset'=>0,'limit'=>ORDER_DOWNLOAD_MAX_ROWS])`** (público, sin paginar) → mismas filas/filtros/totales que el listado. Replica el patrón de `clients/download` (clientes ya tenía descarga). Front: botón solo-icono en `Filters/Orders.vue` y `Filters/Clients.vue`. Rama `descargarListadoXlsx`, a development y gamma en ambos repos. Detalle en [[feature-descarga-listado-xlsx]].
+
+## Cuenta corriente histórica Laset
+
+Import de cuenta corriente USD de clientes exclusivos Laset (CODEMP=11) a `NEW_BYTES.dbo.MC_CCORRIENTES_MOVIMIENTOS` (`ID_PROCEDENCIA=99`). Botón en `/syncLaset`, parser Python `scripts/laset_ccte_to_json.py`, service `LasetCtaCteImportService`. Detalle vivo en [[feature-laset-cuenta-corriente]].
+
+- **Reemplazo por cuenta**: `execute()` borra/recarga solo las cuentas (`ID_CLIENTE`) del archivo → planillas parciales OK; las ausentes intactas; no toca manuales (`proc IS NULL`).
+- **NB Inc = cliente distinto**: una hoja `-NBinc` nunca matchea el cliente normal y viceversa. Si no, la hoja quedaba ambigua → omitida → con dato viejo (EMAP daba 63.160,50 vs 14.761,50 real). Una hoja ambigua/omitida deja la cuenta stale → revisar advertencias del preview.
+- **Signo**: `CC_IMPORTEUSD` siempre +, el signo lo da `TR_CODIGO`; el ERP invierte (`tr24` negativo, `tr42` positivo). "ajuste faltante"→tr42, "ajuste sobrante"→tr24.
+- **Parser**: openpyxl 3.1.x crashea con autoFilter `customFilter` inválido → parche en `CustomFilterValueDescriptor`. Bloque USD en columnas variables (anclar header "Debe").
+- **Exclusiones**: intercompañía, tesorería USDT (incl. hoja suelta `USDT`), `MG Interno`. Ambiguas reales (`I y T`) se omiten y avisan.
+
+## FLETE nunca en la compra
+
+El FLETE (art `121944`) se factura a la VENTA (pedclil/albclil) pero NUNCA va en la compra (pedprol/albprol). `LasetImportFaseCCommand::INTERNAL_NO_PURCHASE_ARTICULOS=[121944]`. Ortogonal a INTERNAL_NO_STOCK. Ver [[contexto#FLETE nunca en la compra]].
+
+## Conexión DB dev (remota)
+
+`.env` no versionado. A 2026-06-19 la DB dev es remota: `db-nb-dev.blu.net.ar:41433`. Error `Adaptive Server unavailable (10.10.10.47)` = host viejo en `.env`, no bug → cambiar host/puerto + `config:clear`. Ver [[contexto#Conexión a la base de datos dev]].

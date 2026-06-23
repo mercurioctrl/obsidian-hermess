@@ -27,7 +27,7 @@ Cada dominio sigue una estructura de 4 capas:
 
 ### Dominios principales
 
-- **Provider** — El más complejo. Gestión de proveedores, órdenes de compra, ingresos (inbound), comprobantes (vouchers), distribución de impuestos
+- **Provider** — El más complejo. Gestión de proveedores, órdenes de compra, ingresos (inbound), comprobantes (vouchers), cuenta corriente, distribución de impuestos
 - **TariffPosition** — Posiciones arancelarias. Búsqueda interna, sincronización con API externa, gestión de prefijos de impuestos (`tariffTax`)
 - **Warehouse** — CRUD de depósitos
 - **Forwarder** — CRUD de despachantes de aduana
@@ -70,7 +70,9 @@ El store raíz (`store/index.js`) gestiona un sistema de modales dinámicos con 
 - Múltiples modales simultáneos con z-index gestionado
 - Minimizar/maximizar
 - Arrastre (drag) via `components/Modal/Draggable.vue`
-- Modales tipados: Provider, Warehouse, TariffPosition, Order, ProviderOrderInboundDetail
+- Modales tipados: `OrderDetail`, `ProviderOrderInboundDetail`, `ProviderCurrentAccount` (renderizados en `layouts/basic.vue` por `modal.type`)
+
+Se abre con `this.$store.dispatch('addModal', { title, id, type, props })`. ⚠️ El binding `:status` en `basic.vue` toleraba solo modales con `props.orderDetail`; se hizo tolerante (`modal.props.orderDetail ? ... : ''`) para soportar modales sin orderDetail (ej. cuenta corriente).
 
 El detalle de orden (`Orders/Detail.vue`) recibe props `orderDetail` (respuesta del endpoint de detalle) y `order` (el registro del listado, que trae `currencyId`). Regla de cotización por moneda: ver [[contexto#Cotización según moneda del proveedor|contexto]].
 
@@ -80,7 +82,7 @@ El detalle de orden (`Orders/Detail.vue`) recibe props `orderDetail` (respuesta 
 
 Hay **dos componentes Detail casi idénticos**:
 
-- `components/Orders/Detail.vue` → vista **Órdenes** (modal type `OrderDetail`). Tiene filas resumen **Cotización** (`type:'resumen'`) **y Cotización fiscal** (`type:'resumenfiscal'`); columnas Subtotal/Subtotal Final en u\$d **y** \$. Reglas de display de cotización en pesos: ver [[contexto#Cotización en pesos (currencyQuote === 1) — display|contexto]].
+- `components/Orders/Detail.vue` → vista **Órdenes** (modal type `OrderDetail`). Tiene filas resumen **Cotización** (`type:'resumen'`) **y Cotización fiscal** (`type:'resumenfiscal'`); columnas Subtotal/Subtotal Final en u\$d **y** \$. Muestra el **SKU** (`articulo.ID_PRODUCTO`) inline junto al nombre del producto, en otro color (oculto para LASET, que tiene columna SKU dedicada). Incluye botón de **eliminar ítem** (`canDeleteOrderItem`/`deleteOrderItem`). Reglas de display de cotización en pesos: ver [[contexto#Cotización en pesos (currencyQuote === 1) — display|contexto]].
 - `components/ProviderOrderInbound/Detail.vue` → vista **Ingresos** (modal type `ProviderOrderInboundDetail`; son órdenes ya remitidas). Solo fila **Cotización**. ⚠️ Su `name:` interno también es `'OrderDetail'` (colisión confusa, no es el de Órdenes).
 
 `orderDetail.numPed` = `PedProT.nNumPed` (id de orden). `record.id` del ítem = `ID_ARTICULO`.
@@ -104,10 +106,18 @@ En el detalle de Ingreso, los productos serializados (`record.serializedAmount >
 
 Flujo: `$api.providerOrderInbound.getSerials(numPed, ID_ARTICULO)` → `GET /v1/providerOrderInbound/{orderId}/serials/{itemId}` → `ProviderOrderInboundSerials` (controller) → `ProviderOrderInboundDetailService::getSerials` → `ProviderOrderInboundRepository::getSerials` → lee `NEW_BYTES.dbo.ST_DETALLE_STOCK` (col `SERIAL`) join `articulo` por `cRef`, filtrando `ID_COMPRA = nNumPed` + `ID_ARTICULO`.
 
+### Cuenta corriente de proveedores
+
+Desde el listado de Proveedores, el ícono 👁️ (columna "Cta Cte") abre el modal `components/Provider/CurrentAccount.vue` (type `ProviderCurrentAccount`) con la cuenta corriente del proveedor.
+
+Flujo: `$api.providers.getCurrentAccount(providerCode, {from,to,search,currentPage,itemsPerPage})` → `GET /v1/providers/{providerCode}/currentAccount` → `ProviderCurrentAccount` (controller) → `ProviderCurrentAccountService` → `ProviderCurrentAccountRepository` + `ProviderCurrentAccountDto`.
+
+El repo lee los comprobantes (`FACPROT`) del proveedor, calcula el total desde las líneas `FACPROL` (con fallback a `FOB`), aplica `signo` de `FP_TiposDocumentosCobro` para débito/crédito y deriva `companyCode` del proveedor. Devuelve movimientos paginados + saldos `balanceUsd` / `balancePeso` (separados por moneda). Reglas y gotchas en [[contexto#Cuenta corriente de proveedores (2026-06-22)|contexto]]. **Pagos: pendientes de integrar.**
+
 ### Plugins clave
 
-- `plugins/api.js` — Wrapper `$api` con métodos tipados por dominio (orders, providerOrderInbound, tariffPosition, company)
-- `plugins/formats.js` — Formateo de números/fechas
+- `plugins/api.js` — Wrapper `$api` con métodos tipados por dominio (orders, providerOrderInbound, **providers**, tariffPosition, company)
+- `plugins/formats.js` — Formateo de números/fechas (`formatNum`)
 - `plugins/vue-mixin-common-methods.js` — Métodos compartidos entre componentes (`mixinInputOnlyNumber`, `mixinObjCompare`, etc.)
 - `plugins/vee-validate.js` — Validación de formularios
 - `plugins/permissions.js` — Permisos globales de visibilidad (oculta columnas sensibles para `companyCode == 11` / LASET)
@@ -119,15 +129,17 @@ Flujo: `$api.providerOrderInbound.getSerials(numPed, ID_ARTICULO)` → `GET /v1/
 - `Table/` — Celdas editables inline (`EditableCell.vue`, `EditableCell2.vue` con prop `currency`), menú contextual (`ClickRightCell.vue`)
 - `Orders/` — Detalle de orden, agregar items, agregar posición arancelaria
 - `ProviderOrderInbound/` — Detalle de ingreso (ver arriba)
+- `Provider/` — `CurrentAccount.vue` (modal de cuenta corriente)
 - `Report/` — Sistema de tickets/chat de soporte
 
 ## Reglas de datos transversales
 
 Convenciones que atraviesan varias queries y conviene tener presentes (detalle y motivos en [[contexto|Contexto y reglas]]):
 
-- **Multi-base:** las queries joinean entre varias bases del mismo SQL Server — `NewBytes_DBF` (maestro/ERP: `PedProT`/`PedProL` compras, `albprot`/`albprol` ingresos-remitos, `articulo`, `FP_Almacen`, `FP_PROVEEDORES`, `FP_IMPUESTOS`, `FP_Empresas`…), `NB_WEB` (capa web), `NEW_BYTES` (`ST_DETALLE_STOCK` seriales, `ST_*_DESPACHOS_*`) y `PRODUCTOS`. Se referencian con nombre completo `[Base].[dbo].[tabla]`.
+- **Multi-base:** las queries joinean entre varias bases del mismo SQL Server — `NewBytes_DBF` (maestro/ERP: `PedProT`/`PedProL` compras, `albprot`/`albprol` ingresos-remitos, `FACPROT`/`FACPROL` comprobantes de compra, `articulo`, `FP_Almacen`, `FP_PROVEEDORES`, `FP_IMPUESTOS`, `FP_Empresas`, `FP_TiposDocumentosCobro`…), `NB_WEB` (capa web), `NEW_BYTES` (`ST_DETALLE_STOCK` seriales, `ST_*_DESPACHOS_*`) y `PRODUCTOS`. Se referencian con nombre completo `[Base].[dbo].[tabla]`.
 - **Compras vs ingresos:** orden = `PedProT.nNumPed` (líneas en `PedProL`). Ingreso/remito = `albprot.nnumalb` (líneas en `albprol`), vinculado por `albprot.nNumPed = PedProT.nNumPed`.
-- **`articulo` tiene dos ids:** `ID_ARTICULO` (numérico, el `item.id` del front) y `cRef` (string, el `cref` que usan PedProL/albprol/`ST_DETALLE_STOCK`). No son lo mismo.
+- **Comprobantes de compra (`FACPROT`/`FACPROL`):** cabecera `FACPROT` (key `IDFACPROT`; trae los **importes en 0**) + líneas `FACPROL` (join por `CSERIE` + `CNUMFAC`; ahí están `NPREUNIT`, `NCANENT`, `NDTO`, `NIVA`). Importaciones guardan el total en `FACPROT.FOB`. `FACPROT.companyCode` está **100% NULL** → derivar del proveedor. `FACPROT.NTIPOCOMP` → `FP_TiposDocumentosCobro.Id_TipoDocCobro` (columna `signo`: Factura/ND +1, Nota de Crédito −1; `cod_A/B/C/E` = códigos AFIP).
+- **`articulo` tiene dos ids:** `ID_ARTICULO` (numérico, el `item.id` del front) y `cRef` (string, el `cref` que usan PedProL/albprol/`ST_DETALLE_STOCK`). No son lo mismo. El proveedor: `ID_PROVEEDOR` (num) y `CCODPRO` (código, **único**, el que usan PedProT/albprot/FACPROT).
 - **Seriales:** `NEW_BYTES.dbo.ST_DETALLE_STOCK`, col `SERIAL`, key `ID_COMPRA = PedProT.nNumPed` + `cref = articulo.cRef` (no tiene vínculo directo al ingreso/`nnumalb`). `serializedAmount` = COUNT de esas filas. `serialized` (1/0) por línea está en `PedProL`. El filtro por serial de los listados se hace con `EXISTS` sobre esta tabla (solo cuando se usa).
 - **Depósito:** `FP_Almacen` mapea `ID_ALMACEN` (num) ↔ `CCODALM` (char3) ↔ `cnombre`. `PedProT` guarda `warehousesId`+`cCodAlm`; `albprot` solo `ccodalm`. SAFcom = id 2 / 'SAF' (ver [[contexto#companyCode 4 (NB) y depósito SAFcom|contexto]]).
 - **Impuestos globales:** en `FP_IMPUESTOS`, `companyCode = NULL` = impuesto global (aplica a todas las empresas). Filtrar con `(companyCode = :cc OR companyCode IS NULL)`, nunca solo `= :cc`.

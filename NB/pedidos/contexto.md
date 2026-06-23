@@ -261,3 +261,15 @@ tablas, incl. `NB_WEB.registro_stock`) exactamente como estaba. Probado
 end-to-end. Es restauración a un PUNTO (no undo incremental). Detalle en
 [[feature-laset-snapshot-restore]]. Pedido explícito del usuario: "si pasa
 algo malo en producción, dejar todo como estaba antes".
+
+## FLETE nunca en la compra
+
+Regla de negocio (usuario, 2026-06-22): el **FLETE** (art `121944`, comp=11) es un **cargo a la VENTA**, NO una línea de la OC al proveedor. Va SOLO en `pedclil`/`albclil` (venta, para facturarlo al cliente), NUNCA en `pedprol`/`albprol` (compra). Implementado con `LasetImportFaseCCommand::INTERNAL_NO_PURCHASE_ARTICULOS=[121944]` (excluido de pedprol + asignación OC↔venta). Ortogonal a INTERNAL_NO_STOCK (Fase D). Ver [[feature-laset-import#FLETE]] y [[feature-laset-cuenta-corriente]].
+
+## Cuenta corriente Laset — convención de signo y ajustes
+
+`CC_IMPORTEUSD` SIEMPRE magnitud positiva; el signo lo da `TR_CODIGO`. **Este ERP invierte el signo**: en `AccountRepository`, `tr ∈ (4,24,125,14,34,32,41)` se multiplica ×(−1). Por lo tanto **tr24 (débito) se muestra NEGATIVO** y **tr42 (crédito/pago) POSITIVO**. Decisión usuario: **"ajuste faltante" → tr42 (se muestra +)**, **"ajuste sobrante" → tr24 (se muestra −)**. El importador deriva el tr de la dirección del Saldo (delta), que en la planilla coincide con la etiqueta — pero NO está forzado por etiqueta (riesgo latente si una planilla futura carga un ajuste con el Saldo al revés). Ver [[feature-laset-cuenta-corriente]].
+
+## Conexión a la base de datos dev
+
+El `.env` del backend (no versionado) define `DB_HOST`/`DB_PORT`. A 2026-06-19 la DB dev pasó a ser **remota**: `db-nb-dev.blu.net.ar:41433`. Hosts viejos: `10.10.10.47` (LAN), `192.168.4.12`. Si una query tira `SQLSTATE[HY000] Unable to connect: Adaptive Server is unavailable or does not exist (10.10.10.47)` con timeout ~32s, es el `.env` apuntando a una red que ya no está → editar host/puerto + `php artisan config:clear`. NO es bug de código.

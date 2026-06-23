@@ -1,6 +1,6 @@
 # Compras
 
-Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear órdenes de compra, gestionar proveedores, ingresos parciales/totales, comprobantes, posiciones arancelarias y depósitos.
+Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear órdenes de compra, gestionar proveedores, ingresos parciales/totales, comprobantes, cuenta corriente de proveedores, posiciones arancelarias y depósitos.
 
 ## Stack
 
@@ -31,4 +31,4 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 Las tareas se trackean con prefijo `COM-` en Jira.
 
 ---
-*Última sincronización: 2026-06-20 — rama `catri-fine-tunning`: IVA por defecto, filtros SKU/ID interno/serial, columna Serializado, filtros compactos y companyCode por defecto.*
+*Última sincronización: 2026-06-22 — cuenta corriente de proveedores (endpoint + modal con ojito en Proveedores), fix companyCode en providerVoucher, y SKU junto al nombre en el detalle de orden.*

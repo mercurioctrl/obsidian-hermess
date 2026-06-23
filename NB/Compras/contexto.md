@@ -40,6 +40,17 @@ Cuando una orden/ingreso tiene `currencyQuote === 1` **está en pesos** (no en d
 - **Ingresos:** `EXISTS` correlacionado con la línea del ingreso (`albprol.ID_ARTICULO` = artículo cuyo `cRef` = `sds.cref`), para acotar al artículo del serial dentro del ingreso.
 - **Rendimiento:** el `EXISTS` **solo se concatena al WHERE cuando el filtro está presente**; si no se filtra por serial, el listado corre igual que antes (sin subqueries extra). Misma idea para SKU / ID interno.
 
+### Cuenta corriente de proveedores (2026-06-22)
+
+Modal accesible desde el ojito 👁️ en el listado de Proveedores. Endpoint `GET v1/providers/{providerCode}/currentAccount`. Detalle de flujo en [[arquitectura#Cuenta corriente de proveedores|arquitectura]].
+
+- **Fuente de datos:** los movimientos son los **comprobantes del proveedor en `FACPROT`** (lo de `providerVoucher`). **Los pagos NO están integrados todavía** → el "saldo" es el total de comprobantes (deuda), no el neto con pagos.
+- **Total del comprobante:** la cabecera `FACPROT` trae los importes en **0**. El total se calcula desde las **líneas `FACPROL`** (join por `CSERIE` + `CNUMFAC`): por línea `NCANENT × NPREUNIT × (1 − NDTO/100) × (1 + NIVA/100)` (cantidad × precio, **con descuento y con IVA**). Las **importaciones no tienen líneas** y guardan el monto en la cabecera **`FOB`** → fallback a `FOB` (que es valor FOB, **sin IVA**).
+- **Débito / crédito:** por `FACPROT.NTIPOCOMP` → `FP_TiposDocumentosCobro.Id_TipoDocCobro`, que tiene columna **`signo`**: Factura / Nota de Débito = **+1** (débito, suma deuda); **Nota de Crédito = −1** (resta). ⚠️ A confirmar la etiqueta: muchos comprobantes salen con `NTIPOCOMP=3` ("NOTA DE DEBITO"); el signo (+1) es correcto igual.
+- **`companyCode`:** en `FACPROT` está **100% NULL**. Se deriva del proveedor: `ISNULL(FACPROT.companyCode, FP_Proveedores.companyCode)`. `CCODPRO` es **único** en `FP_Proveedores` → el link no duplica. Mismo criterio se aplicó al fix de `providerVoucher`.
+- **Monedas:** los comprobantes en **pesos guardan `NVALDIV = 1`** (no la cotización USD real), así que **no se puede derivar USD de un comprobante en pesos**. Por eso los saldos se reportan **separados**: `balanceUsd` = neto de comprobantes en **DOL**; `balancePeso` = neto de comprobantes en **PSO**. No se cross-convierte.
+- **Id de proveedor:** el listado expone `id` = `ID_PROVEEDOR` y `providerCode` = `CCODPRO`. El endpoint recibe el **`providerCode` (CCODPRO)** porque `FACPROT` linkea por ahí.
+
 ### Impuestos globales (NULL = todas las empresas)
 
 - En `NewBytes_DBF.dbo.FP_IMPUESTOS`, las filas con `companyCode = NULL` son **impuestos base globales** que aplican a TODAS las empresas: SIN IMPUESTO, POR PORCENTAJE, IVA, RETENCIONES, GANANCIAS, TASA ESTADISTICA, DERECHOS, BANCARIOS + percepciones de IIBB (Caba y BA).
@@ -65,8 +76,17 @@ Cuando una orden/ingreso tiene `currencyQuote === 1` **está en pesos** (no en d
 - **Limpieza de companyCode/depósito (sí se tocaron datos, prod)**: `companyCode IS NULL` → 4 en `PedProT` (78) y `albprot` (11.914). Depósito SAFcom seteado **solo donde faltaba/estaba vacío** para `companyCode=4` (`PedProT.warehousesId=2` en 10.319 filas que ya tenían `cCodAlm='SAF'`; `albprot.ccodalm='SAF'` en 3 vacías). **No** se pisaron 7 filas con depósito puesto a propósito (3×DE1 + 2×Miami; 1×DOM + 1×006). Criterio del usuario: normalizar sin sobrescribir lo intencional.
 - **Regla operativa para UPDATEs masivos en prod**: contar primero (`SELECT COUNT`) y confirmar alcance con el usuario antes de ejecutar. La base es externa, productiva y sin migraciones → no hay rollback fácil.
 
+## Decisiones tomadas (2026-06-22)
+
+- **companyCode de comprobantes vía query, no vía datos**: igual que con tariffTax, se decidió derivar `companyCode` de `FACPROT` desde el proveedor en la query (`ISNULL(...)`) en vez de hacer un `UPDATE` masivo (37k filas, 161 quedarían NULL igual por proveedores sin empresa). No se tocó dato.
+- **Cuenta corriente sin pagos (primera versión)**: se decidió arrancar la cuenta corriente solo con comprobantes (deuda) y dejar los **pagos para una segunda iteración** (no se sabe aún de qué tabla salen / no se linkean todavía).
+- **Saldos separados por moneda**: en vez de un saldo único cross-convertido (imposible porque los PSO guardan cotización 1), se muestran `balanceUsd` (comprobantes DOL) y `balancePeso` (comprobantes PSO) por separado.
+
 ## Deuda técnica / TODOs
 
+- **Cuenta corriente de proveedores — pagos**: faltan integrar los pagos (créditos que reducen la deuda). Hoy el saldo es solo el total de comprobantes. Tablas candidatas en la DB: `disPago`, `pagos_remitos`, `FP_FormasPagos`. **Pendiente.**
+- **Etiqueta de tipo de comprobante (`NTIPOCOMP`)**: a confirmar con el usuario; muchos comprobantes salen como "NOTA DE DEBITO". El `signo` para débito/crédito es correcto igual.
+- **FOB en importaciones**: el total de comprobantes de importación usa `FOB` (sin IVA ni impuestos de importación). A validar si alcanza para la cuenta corriente.
 - **Bug latente** en `TariffTaxPrefixRepository::filterByTaxExclusive`: hace `$params = ['taxExclusive' => ...]` (pisa todo el array `$params`) en vez de `$params['taxExclusive'] = ...`. Si se combina `taxExclusive` con `id`, se pierde el binding de `id`. No afecta hoy porque rara vez se combinan. **Pendiente de corregir.**
 - **`/v1/items` sin paginación SQL**: recibe `itemsPerPage`/`currentPage` pero no los aplica — devuelve TODAS las filas que matchean (con `ORDER BY`). Oportunidad de optimización con `OFFSET/FETCH`.
 - **SKU con `LIKE '%term%'`** (contains) no usa índice. Si se confirma que el SKU se busca por prefijo, cambiar a `'term%'` para habilitar index seek.

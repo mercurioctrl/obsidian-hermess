@@ -23,6 +23,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-asignacion-oc|Feature: Asignación OC ↔ Venta]] — Trazabilidad pedclil ↔ pedprol antes de serializar
 - [[feature-asignacion-oc-cookbook|Cookbook Asignación OC]] — Recetas, SQL de debug, curl examples y mapa de archivos
 - [[feature-laset-import|Feature: Laset Import Framework]] — Importación de operación FOB de Laset (CODEMP=11) desde planilla histórica al ERP existente
+- [[feature-laset-cuenta-corriente|Feature: Import Cuenta Corriente Laset]] — cuenta corriente histórica USD (comp=11) a MC_CCORRIENTES_MOVIMIENTOS; parser Python + reemplazo por cuenta + NB Inc
 - [[nota-catalogo-laset|Nota a Catálogo — alta 39 SKUs Laset]] — pedido de alta de artículos comp=11 que destraban Fase D
 - [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
 - [[feature-laset-fix-pedprot-stockonly|Fix bugs históricos Fase C Laset]] — pedprot/pedprol duplicados + stock-only descartado
@@ -70,4 +71,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-19 — Notas dedicadas de las features de dashboard de la tanda 17–19/06: [[feature-ranking-vendedores|Ranking de vendedores]] (millas→puntos + descripción del juego NB Travel Mundial de resellers; rama `ranking-vendedores-puntos`) y [[feature-incentivo-netac|Incentivo Netac]] (Id_Marca 211, familias 1 y 56, 12u=USD4, reemplaza Gigabyte). Ver [[changelog#2026-06-17 — Ranking de vendedores (travel miles) + Incentivo Netac]].*
+*Última sincronización: 2026-06-23 — Tanda Laset 19–23/06: nueva [[feature-laset-cuenta-corriente|Import de cuenta corriente histórica comp=11]] (parser Python, reemplazo por cuenta, matching NB Inc, exclusión USDT, fix autoFilter openpyxl) y regla [[contexto#FLETE nunca en la compra|FLETE nunca en la compra]] (Fase C). DB dev pasó a remota (db-nb-dev.blu.net.ar:41433). Ver [[changelog#2026-06-22 — Cuenta corriente histórica Laset (botón) + FLETE nunca en la compra]].*

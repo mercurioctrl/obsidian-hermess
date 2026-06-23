@@ -855,3 +855,17 @@ Las órdenes Laset comp=11 quedaban con `pedclit.orderTypeId=NULL` y `cobserv=''
 - **Decisión usuario**: Laset = **INTERNO (orderTypeId=2)**.
 - **Importador**: `LasetImportFaseCCommand` ahora setea `cobserv='INTERNO'`+`orderTypeId=2` en el INSERT del pedclit (commit back `f31fceb2`). Vale para todo re-import tras "Borrar todo".
 - **Backfill**: `UPDATE pedclit SET orderTypeId=2, cobserv='INTERNO' WHERE companyCode=11` → 423 órdenes actualizadas en dev (sin tocar `cestado`, no dispara el trigger de asignación).
+
+## 2026-06-22 — Cuenta corriente histórica Laset (botón) + FLETE nunca en la compra
+
+Nueva feature [[feature-laset-cuenta-corriente|Import de cuenta corriente histórica comp=11]] y dos reglas de negocio nuevas. Rama `lasetImportFramework`.
+
+- **Botón "Importar cuenta corriente"** en `/syncLaset` (preview→confirmar): parser Python `scripts/laset_ccte_to_json.py` + `LasetCtaCteImportService` + `laset:ccte-import` + `POST /v1/laset/ccte-import`. Carga `MC_CCORRIENTES_MOVIMIENTOS` con `proc=99`. Commits back `73b284b2`, front `1c2e21e`.
+- **Incremental POR CUENTA** (back `eecb793e`, front `0261587`): `execute()` reemplaza solo las cuentas presentes en el archivo; las ausentes quedan intactas → se pueden subir planillas parciales. Preview muestra "cuentas a reemplazar" vs "agregar".
+- **Parser tolera autoFilter inválido** (`65ac1b16`): bug openpyxl 3.1.x con `customFilter` no numérico/comodín; se parchea `CustomFilterValueDescriptor`.
+- **Matching consciente de NB Inc** (`e7f162ae`): una cuenta `-NBinc` es cliente distinto. Antes EMAP quedaba ambigua (096882 vs 100122 NB Inc) → omitida → con dato viejo (daba 63.160,50 en vez de 14.761,50). Ahora hoja NB Inc solo matchea clientes NB Inc y viceversa. Import real: 5.640 movs / 125 cuentas.
+- **Excluir hoja USDT** (`33dafcfd`): tesorería que entraba como cliente trucho (cierre ~1,47M).
+- **FLETE nunca en la COMPRA** (`9181b687`): el FLETE (art 121944) es un cargo a la VENTA, no una línea de la OC al proveedor. Fase C deja de meterlo en `pedprol`/asignación (`INTERNAL_NO_PURCHASE_ARTICULOS=[121944]`); Fase D deriva `albprol` de `pedprol` → también sale del remito de compra. La venta (pedclil/albclil) lo conserva. Se removieron en dev las 4 pedprol + 4 albprol + 4 asignaciones FLETE comp=11 (OCs 13339/13439/13795/13808). Ver [[feature-laset-import#FLETE]] y [[contexto#FLETE nunca en la compra]].
+- **DB dev pasó a remota** (`db-nb-dev.blu.net.ar:41433`, `.env` no versionado): si aparece `Adaptive Server unavailable (10.10.10.47)` es host viejo, no bug. Ver [[contexto#Conexión a la base de datos dev]].
+
+Archivos: `app/Services/Laset/LasetCtaCteImportService.php`, `scripts/laset_ccte_to_json.py`, `app/Console/Commands/{LasetCtaCteImportCommand,LasetImportFaseCCommand}.php`, `app/Http/Controllers/Laset/LasetCtaCteImportRun.php`, `pages/syncLaset.vue`, `plugins/api.js`.
