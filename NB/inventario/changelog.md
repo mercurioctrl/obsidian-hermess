@@ -1,5 +1,27 @@
 # Changelog — inventario
 
+## 2026-06-23
+
+Sesión profunda de **Regularización de stock**: investigación de deltas, restauración de `albprol` y diagnóstico cross-company. Rama `regularizacion-stock` (front y back, pusheadas). Ver [[modulo-regularizacion]], [[memoria]] y [[contexto]].
+
+### Investigación del delta (item 111454 RYZEN 7 5700G)
+- El delta del grid es **pura aritmética de documentos** (compra − venta − créditos − stock), no de seriales. El −412 del 5700G resultó ser una **OC física recibida y vendida pero nunca documentada** (OC **11568**, estado "P", 500 u serializadas sin `albprol`). Es el espejo-compra del caso `albclil` de ventas: sobrevive el `pedprol`, falta el `albprol`.
+- **Causa estructural**: artículos **duplicados del mismo SKU entre empresas** (5700G: 113950/113147 en cc4 + 121729 en cc11). Habilita ingresos cruzados.
+
+### Backend (ms-metadata)
+- **feat**: `apply_albprol_restoration` (`regularization.py`) — restaura el `albprol` faltante desde el `pedprol` sobreviviente, como **puro asiento (cost-neutral)**: no toca stock ni costo (sin triggers, `NCOSTEPROM` almacenado, FOB usa el último albprol por fecha). Una sola cabecera canónica, **maneja parciales** (inserta faltante = pedido − documentado), idempotente, gateada por `gerencia`. Preview con **cruce de seriales** (`serialMatch`, `perfecto`, `gapFisico`). **Aplicada en prod sobre OC 11568** (14 líneas / 2470 u en cabecera 15844, 7 ítems perfectos).
+- **feat**: filtro de delta **"distinto de cero"** en la grilla de stock (`stocks.py`).
+
+### Frontend (inventario-web-app)
+- **feat/UX**: la pestaña **Stock** ya **no obliga** a elegir marca/categoría/búsqueda — con solo la **empresa** carga (paginado). Filtro Delta combinable; opción "Distinto de cero". (`api.js`, `store/index.js`, `General.vue`, `ItemsStock.vue`, `itemsStock.vue`).
+- **feat**: el modal de Regularización muestra el **delta real del grid vs el race neto** (`RegularizationDetail.vue`).
+
+### Hallazgo: cc11 no serializa
+- El barrido de "OC recibida sin albprol" dio falsos positivos en cc11/cc9. Razón: **cc11 prácticamente no usa el ledger de seriales** (16 de 602 artículos; 955 seriales vs 107.058 u de albprol). Su "albprol fantasma" es un **artefacto de medición**, no un error a revertir. Los deltas raros de cc11 son descuadres de **columnas de stock**, no cruces ocultos con cc4 (verificado en ambos sentidos: ni el albprol de cc11 es de cc4, ni los seriales de cc11 son items que le falten a cc4).
+
+### Git / Ops
+- Pusheado a `regularizacion-stock` en ambos repos (ms-metadata `c5ac6f9`/`a634f50`; web `3e31d70`/`db53701`), para PR con base `development`/`gamma`. `.env` y `.DS_Store` sin commitear.
+
 ## 2026-06-20
 
 Sesión sobre `development`/`gamma` + nueva rama de funcionalidad **`catri-fine-tuning2`** (front y back, pusheada, sin mergear). Ver [[memoria]], [[contexto]] y [[modulo-precios]].

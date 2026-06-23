@@ -273,3 +273,35 @@ Regla de negocio (usuario, 2026-06-22): el **FLETE** (art `121944`, comp=11) es 
 ## Conexión a la base de datos dev
 
 El `.env` del backend (no versionado) define `DB_HOST`/`DB_PORT`. A 2026-06-19 la DB dev pasó a ser **remota**: `db-nb-dev.blu.net.ar:41433`. Hosts viejos: `10.10.10.47` (LAN), `192.168.4.12`. Si una query tira `SQLSTATE[HY000] Unable to connect: Adaptive Server is unavailable or does not exist (10.10.10.47)` con timeout ~32s, es el `.env` apuntando a una red que ya no está → editar host/puerto + `php artisan config:clear`. NO es bug de código.
+
+## Compra completa y reservas (stock-only)
+
+Regla de negocio (usuario, 2026-06-23): **una compra Laset se carga COMPLETA** — todas las líneas de la OC, aunque el ítem no se haya vendido. Nunca una compra parcial/rota. Las filas stock-only (compra sin venta) se clasifican por `razon_social`:
+- **cliente real** → **RESERVA**: `pedclit cestado='P'` + `pedclil` + asignación, **sin remito** (`albclit`/`albclil`). Mercadería en stock, comprometida, no entregada.
+- **`'STOCK'` (sentinel)** → stock puro (compra + stock, sin venta).
+- **`RMA%`** → IGNORED (ajuste, no es stock real).
+
+El auto-create de catálogo (artículo/marca/proveedor comp=11) que antes vivía solo en Fase C (venta) ahora también corre para stock-only vía `laset:stockonly-autocreate-catalog`. **Reconciliación**: `compras − entregado(albclil) − stock = 0` (las reservas no descuentan stock → se cuenta lo entregado, no lo pedido). Detalle: [[feature-laset-stockonly-completa]].
+
+## Laset (comp=11) — siempre IVA 0
+
+Regla de negocio (usuario, 2026-06-23): los artículos de **Laset (companyCode=11)** llevan **SIEMPRE IVA 0** (operación FOB/exportación en USD). En `NewBytes_DBF.dbo.articulo` el IVA 0 se representa con **`ctipoiva = NULL` y `ctipoivac = NULL`**; `ivaCompra`/`ivaVenta` son columnas **calculadas** que derivan del tipo → con tipo NULL quedan en 0 (no se setean directo).
+
+**Gotcha**: el auto-create de artículos copiaba el `ctipoiva` del **gemelo NB** (comp=4 → `'M'`=10,5% o `'G'`=21%) o defaulteaba a `'M'`, metiendo IVA donde debía ir 0. Corregido en los **3 lugares que crean artículo comp=11**: `LasetImportFaseCCommand::planArticulosAutoCreate`, `LasetStockOnlyAutocreateCatalogCommand`, `LasetFixCrossCompanyCommand` → todos setean `ctipoiva/ctipoivac=NULL`. Fix de datos: 209 artículos comp=11 con IVA≠0 corregidos (scoped comp=11). El gemelo solo aporta descripción/marca/familia, NUNCA el IVA. Commits `75ac0782` + `476a97a0`. Ver [[feature-laset-stockonly-completa]] y [[feature-laset-fix-marcas-comp11]].
+
+## País de la OC (countryId) — columna H de la planilla
+
+Regla (usuario, 2026-06-23): el `countryId` de la orden de compra (`pedprot`) sale de la **columna H de la planilla** = `laset_import_staging.pais_proveedor`, mapeada a `NewBytes_DBF.dbo.FP_Paises.Id_Pais`. Antes estaba **hardcodeado a 5 (USA)** en todas las OC — mal, porque muchas son de Chile (15) / Paraguay (17) / Colombia (12) / Taiwán (19) / China (21).
+
+El mapeo lo hace **`App\Support\LasetCountryResolver::resolve()`**: matchea contra `FP_Paises.Descripcion` normalizado + un set de **alias de "Estados Unidos"** (puede venir escrito distinto: USA, EEUU, United States, Estados Unidos de America, etc. → 5). Fallback a USA (5) si viene vacío/desconocido. Solo 2 lugares crean `pedprot` (Fase C y `fix-stock-only` cat D), ambos lo usan → durable en "Borrar todo/Importar todo". Mapeo de columnas de la planilla en `LasetImportStagingCommand` (col 0=`pais`, col 7/H=`pais_proveedor`).
+
+
+## Remito de compra (albprol) — gating por OC en Fase D
+
+Fase D crea el remito de compra (`albprot`/`albprol` = el "ingreso" de mercadería) decidiendo a **nivel OC**: agarra `pedprot` comp=11 sin `albprot`. Una vez que la OC tiene albprot, no la vuelve a mirar. Si después se le agregan líneas de `pedprol` (stock-only de un import incremental), quedan **sin albprol → stock colgado sin ingreso** (compra incompleta).
+
+`laset:fix-albprol-faltante {--dry-run} {--skip-stock}` cierra el gap a **nivel línea**: append de albprol al albprot existente, o crea header+líneas si la OC no tiene. Con `--skip-stock` no toca stock (backfill retroactivo, stock ya presente); sin el flag suma el stock. Idempotente, dblib-safe, comp=11. Wireado en `laset:run-import-job` tras Fase D, antes de reconciliar → durable. Nota: un wipe+reimport limpio ya cerraba solo (Fase D pasa una vez); el gap aparece en el flujo **incremental** ("Importar seleccionadas"). Ver [[feature-laset-stockonly-completa]].
+
+## ID fiscal de clientes Laset (cdnicif)
+
+El ID fiscal va en `NewBytes_DBF.dbo.clientes.cdnicif`, **formato compacto sin puntos/guiones** (convención ERP: `ClientRepository` hace `str_replace(-,)`; sirve para CUIT AR, RUT CL, EIN US, RFC MX, etc.). Los clientes que crea el import Laset (Fase C, cuenta corriente, reservas) NO lo setean. Backfill desde la pestaña **Database Clientes** de `docs/laser.xlsx` (col A=razón social → col C=NRO ID FISCAL). Los gemelos **NB Inc comparten el CUIT** del cliente real subyacente (no son de NEW BYTES INC). Pendiente: wirearlo en el alta del importador para que sea durable.

@@ -1,10 +1,16 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-06-15. (Memoria local también en
+Última sincronización: 2026-06-23. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Regularización de stock — albprol restoration (2026-06-23)
+Rama `regularizacion-stock`. El **delta del grid es documental** (compra−venta−créditos−stock), no de seriales. Caso 111454 (5700G, −412) = **OC 11568 recibida y vendida sin `albprol`** (estado "P"); se sumó `apply_albprol_restoration` que restaura el albprol desde el `pedprol`, **cost-neutral** (asiento puro: sin triggers, NCOSTEPROM almacenado, FOB usa el último albprol por fecha), una cabecera canónica, maneja parciales, idempotente, preview con cruce de seriales. **Aplicada en prod sobre OC 11568** (cabecera 15844, 7 perfectos). Ver [[modulo-regularizacion]].
+
+### cc11 NO serializa (clave para deltas cross-company)
+cc11 prácticamente no usa el ledger de seriales: **16 de 602 artículos con seriales, 955 seriales vs 107.058 u de albprol**. Su "albprol fantasma" es **artefacto de medición**, no error. Hay 209 SKUs duplicados cc4↔cc11. Verificado: el albprol de cc11 son OCs propias (no de cc4) y los seriales de cc11 no son items que le falten a cc4. Deltas raros de cc11 = descuadre de **columnas de stock**, NO restaurar/revertir albprol. El FOB sale del **último `albprol.nprediv`** por `albprot.dfecalb`.
 
 ### Rama catri-fine-tuning2 (2026-06-20)
 - Front: export **XLSX/CSV** en Stock+Precios (botones en la barra de filtros, emiten eventos a la página) + default **companyCode** por pestaña vía middleware. Back: fix **N+1** en `/items` y `/item`.

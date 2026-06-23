@@ -479,3 +479,21 @@ El FLETE (art `121944`) se factura a la VENTA (pedclil/albclil) pero NUNCA va en
 ## Conexión DB dev (remota)
 
 `.env` no versionado. A 2026-06-19 la DB dev es remota: `db-nb-dev.blu.net.ar:41433`. Error `Adaptive Server unavailable (10.10.10.47)` = host viejo en `.env`, no bug → cambiar host/puerto + `config:clear`. Ver [[contexto#Conexión a la base de datos dev]].
+
+## Compra completa para stock-only + Reservas
+
+Regla (2026-06-23): la compra Laset se carga COMPLETA aunque el ítem no se haya vendido. Las stock-only categoría C (SKU/proveedor sin catálogo comp=11) ya NO se saltean: `laset:stockonly-autocreate-catalog` auto-crea artículo/marca/proveedor (como Fase C) y fix-stock-only las materializa. Las que traen cliente real (no el sentinel `STOCK`) se cargan como RESERVA (`laset:stockonly-reservas`): `pedclit cestado='P'` + `pedclil` + asignación, sin remito. RMA → IGNORED. Fase D excluye `cestado='P'` del remito; `reconcile()` usa `albclil` (entregado). Wireado en Fase C → durable en Borrar todo/Importar todo. Detalle: [[feature-laset-stockonly-completa]].
+
+## País de la OC y IVA 0 (comp=11)
+
+- **IVA 0**: artículos Laset comp=11 SIEMPRE IVA 0 (`ctipoiva/ctipoivac=NULL`). El auto-create copiaba el del gemelo NB (10,5/21%) → corregido en los 3 sitios de alta (Fase C, stockonly-autocreate-catalog, fix-cross-company) + 209 datos. Ver [[contexto#Laset (comp=11) — siempre IVA 0]].
+- **País OC**: `pedprot.countryId` desde la **columna H** de la planilla (`pais_proveedor`) vía `LasetCountryResolver` (alias de USA + fallback USA), no más hardcode 5. 2 sitios crean pedprot (Fase C + fix-stock-only) → ambos wireados. 191/523 OCs corregidas. Ver [[contexto#País de la OC (countryId) — columna H de la planilla]].
+
+
+## Remito de compra faltante (albprol) — gating por OC
+
+Fase D gatea el remito de compra por OC (`pedprot` sin `albprot`); líneas stock-only adjuntadas a una OC ya remitada quedan sin albprol → stock sin ingreso (compra incompleta). `laset:fix-albprol-faltante` cierra el gap a nivel línea (idempotente, comp=11, dblib-safe), wireado en `run-import-job` tras Fase D. El gap aparece en imports incrementales, no en wipe+reimport limpio. Backfill dev: 12 albprol. Ver [[contexto#Remito de compra (albprol) — gating por OC en Fase D]].
+
+## ID fiscal de clientes (cdnicif)
+
+Backfill del `cdnicif` de los 47 clientes comp=11 creados por el import (sin ID fiscal) desde la pestaña Database Clientes de `docs/laser.xlsx` (col C), formato compacto. 36 completados; gemelos NB Inc comparten el CUIT del cliente real. Ver [[contexto#ID fiscal de clientes Laset (cdnicif)]].

@@ -53,6 +53,11 @@ NODE_ENV=development
 
 ## Gotchas conocidos
 
+> **Actualización 2026-06-23** (rama regularizacion-stock, ver [[modulo-regularizacion]]):
+> - **cc11 no serializa**: solo 16/602 artículos con seriales (955 ser vs 107.058 albprol). Su delta no es comparable con el modelo serializado de cc4 — sus deltas raros son descuadres de columnas de stock, NO albprol faltante/sobrante. Hay 209 SKUs duplicados cc4↔cc11.
+> - **Restaurar `albprol` es cost-neutral**: el recálculo de costo lo hace el flujo de recepción, no la fila. Sin triggers en albprol/albprot/articulo/stocks; `NCOSTEPROM` almacenado; el FOB usa el **último** albprol por fecha → un asiento backdated no cambia costo ni FOB.
+> - **Stock ya no obliga filtro**: la pestaña Stock carga con **solo la empresa** (sin marca/categoría/búsqueda). Más pesado pero paginado. Filtro Delta combinable ("Distinto de cero").
+
 > **Actualización 2026-06-20** (rama catri-fine-tuning2, ver [[memoria]]):
 > - **Filtro empresa quedaba sin aplicar al cambiar de pestaña**: el select se veía puesto pero los datos sin filtrar; carrera (`General.vue` dispara el fetch y `updateMet` descarta el 2do fetch en vuelo con `window.__generalUpdateRunning`). Fix: setear `companyCode` (usuario o **4**) en `middleware/companyCode.js` ANTES del fetch, no en `created()`. Solo queda libre si se borra a mano dentro de la misma pestaña.
 > - **N+1 catastrófico en `/items` y `/item`**: cada `dbconnection()` abre conexión nueva (TLS 1.0) y nunca cierra; un `for x in rta: getImages(x)` hace N handshakes. ~11,5s → ~1,2s con query bulk `IN` (`getImagesBulk`). Ante listados lentos buscar `for ... in rta` con helper que llama `dbconnection()`.

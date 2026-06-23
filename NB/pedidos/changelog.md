@@ -869,3 +869,34 @@ Nueva feature [[feature-laset-cuenta-corriente|Import de cuenta corriente histó
 - **DB dev pasó a remota** (`db-nb-dev.blu.net.ar:41433`, `.env` no versionado): si aparece `Adaptive Server unavailable (10.10.10.47)` es host viejo, no bug. Ver [[contexto#Conexión a la base de datos dev]].
 
 Archivos: `app/Services/Laset/LasetCtaCteImportService.php`, `scripts/laset_ccte_to_json.py`, `app/Console/Commands/{LasetCtaCteImportCommand,LasetImportFaseCCommand}.php`, `app/Http/Controllers/Laset/LasetCtaCteImportRun.php`, `pages/syncLaset.vue`, `plugins/api.js`.
+
+## 2026-06-23 — Compra completa para stock-only + Reservas
+
+Regla: una compra se carga COMPLETA aunque el ítem no se haya vendido. Antes las stock-only categoría C (SKU/proveedor sin alta en catálogo comp=11) se salteaban → OC rota. Nueva nota [[feature-laset-stockonly-completa]]. Commit back `e2828cd8` (rama `lasetImportFramework`).
+
+- **`laset:stockonly-autocreate-catalog`** (command nuevo): auto-crea artículo (clone gemelo/fresh) + marca + proveedor comp=11 para las stock-only cat C. Excluye RMA (→ IGNORED).
+- **`laset:stockonly-reservas`** (command nuevo): las stock-only con razón social de cliente real (no el sentinel `STOCK`) se cargan como RESERVA: `pedclit cestado='P'` + `pedclil` + asignación, SIN remito.
+- **Wiring**: Fase C delega `autocreate-catalog → fix-stock-only → reservas` → durable en "Borrar todo/Importar todo".
+- **Fase D**: `collectPedclitSinRemito` excluye `cestado='P'` (reservas sin remito).
+- **`reconcile()`**: ventas = entregado (`albclil`), no pedido (`pedclil`) → la reserva no marca falso delta (compras − entregado − stock = 0).
+- **aggregate-match + fix-stock-only**: RMA fuera del predicado stock-only.
+- Dev: 11 artículos + 1 proveedor (EVGA), 12 compras materializadas, 4 reservas SIPO en OC 13812 (sin remito), 0 STOCK_ONLY pendientes.
+
+Archivos: `app/Console/Commands/{LasetStockOnlyAutocreateCatalog,LasetStockOnlyReservas,LasetImportFaseC,LasetImportFaseD,LasetRunImportJob,LasetFixStockOnlyPedprol,LasetAggregateMatch}Command.php`.
+
+## 2026-06-23 (cont.) — IVA 0 comp=11 + país de la OC desde columna H
+
+Dos correcciones de datos de Laset (comp=11) detectadas por el usuario. Rama `lasetImportFramework`.
+
+- **Artículos comp=11 SIEMPRE IVA 0** (commits `75ac0782` + `476a97a0`): el auto-create copiaba el `ctipoiva` del gemelo NB (10,5%/21%) o defaulteaba `'M'`. Laset es FOB/exportación → IVA 0 (`ctipoiva/ctipoivac=NULL`, ivaCompra/ivaVenta calculadas = 0). Corregido en los **3 sitios** que crean artículo comp=11 (Fase C, `stockonly-autocreate-catalog`, `fix-cross-company`). Data fix: 209 artículos corregidos. Regla en [[contexto#Laset (comp=11) — siempre IVA 0]].
+- **País de la OC desde la columna H de la planilla** (commit `aa5e6b53`): antes Fase C y fix-stock-only hardcodeaban `countryId=5` (USA) en TODAS las OC, pero muchas son de Chile/Paraguay/Colombia/Taiwán/China. Ahora sale de `laset_import_staging.pais_proveedor` (col H) mapeado a `FP_Paises.Id_Pais` vía **`LasetCountryResolver`** (`app/Support/`), con alias de "Estados Unidos" (USA/EEUU/United States/…) y fallback USA. Solo 2 sitios crean `pedprot` (Fase C + fix-stock-only cat D), ambos wireados. Data fix: 191 de 523 OCs corregidas (Chile 102, Paraguay 48, Colombia 38, Taiwán 2, China 1). Ver [[contexto#País de la OC (countryId) — columna H de la planilla]].
+
+Archivos: `app/Support/LasetCountryResolver.php`, `app/Console/Commands/{LasetImportFaseC,LasetFixStockOnlyPedprol,LasetFixCrossCompany}Command.php`.
+
+
+## 2026-06-23 (cont. 2) — Remito de compra faltante (albprol) + ID fiscal de clientes
+
+- **Remito de compra a nivel línea** (commit `4e983957`): Fase D crea el remito (`albprot`/`albprol`) gateando por OC (`pedprot` sin `albprot`); una vez remitada, no la vuelve a mirar. Las líneas stock-only adjuntadas a una OC ya remitada (import incremental) quedaban **sin albprol → stock colgado sin ingreso** (compra incompleta). Nuevo **`laset:fix-albprol-faltante {--dry-run} {--skip-stock}`** cierra el gap a nivel línea (append al albprot existente o crea header+líneas), suma stock salvo `--skip-stock`. Idempotente, dblib-safe, comp=11. Wireado en `laset:run-import-job` tras Fase D, antes de reconciliar. Backfill dev: 12 albprol (OCs 13737/13749/13812/13826/13858/13859/13860/13861). Ver [[contexto#Remito de compra (albprol) — gating por OC en Fase D]].
+- **ID fiscal de clientes creados** (data, sin código): los 47 clientes comp=11 sin `cdnicif` (NB Inc + nuevos del 2026-06-18) recibieron su NRO ID FISCAL desde la pestaña **Database Clientes** (col C) de `docs/laser.xlsx`, formato compacto sin separadores. 36 completados (los gemelos NB Inc comparten CUIT con su cliente normal); 11 sin dato (7 no figuran en la planilla, 4 con placeholder `-`/`INACTIVE`).
+
+Archivos: `app/Console/Commands/{LasetFixAlbprolFaltante,LasetRunImportJob}Command.php`.

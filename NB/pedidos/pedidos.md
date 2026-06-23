@@ -27,6 +27,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[nota-catalogo-laset|Nota a Catálogo — alta 39 SKUs Laset]] — pedido de alta de artículos comp=11 que destraban Fase D
 - [[feature-laset-snapshot-restore|Snapshot/Restore Laset]] — punto de restauración comp=11
 - [[feature-laset-fix-pedprot-stockonly|Fix bugs históricos Fase C Laset]] — pedprot/pedprol duplicados + stock-only descartado
+- [[feature-laset-stockonly-completa|Compra completa stock-only + Reservas]] — la compra se carga completa aunque el ítem no se venda; auto-create de catálogo + reservas (pedclit cestado=P sin remito)
 - [[feature-laset-fix-marcas-comp11|Fix marcas comp=11]] — refactor Fase C marcas + backfill articulo.Id_Marca + cleanup FP_Marcas dups
 - [[feature-laset-wipe-reimport|Borrar todo comp=11 + reimport limpio]] — wipe transaccional con barrido de huérfanos + validación de stocks; flujo Borrar todo → Importar todo
 - [[feature-sync-laset-botones|Patrón Sync Laset — botones de mantenimiento]] — service+command+controller+UI para fixes Laset
@@ -71,4 +72,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-23 — Tanda Laset 19–23/06: nueva [[feature-laset-cuenta-corriente|Import de cuenta corriente histórica comp=11]] (parser Python, reemplazo por cuenta, matching NB Inc, exclusión USDT, fix autoFilter openpyxl) y regla [[contexto#FLETE nunca en la compra|FLETE nunca en la compra]] (Fase C). DB dev pasó a remota (db-nb-dev.blu.net.ar:41433). Ver [[changelog#2026-06-22 — Cuenta corriente histórica Laset (botón) + FLETE nunca en la compra]].*
+*Última sincronización: 2026-06-23 — Remito de compra faltante (albprol) a nivel línea: Fase D gatea el remito por OC y las líneas stock-only adjuntadas a una OC ya remitada quedaban sin ingreso; nuevo `laset:fix-albprol-faltante` (idempotente, wireado tras Fase D) + backfill 12 albprol. También: ID fiscal (`cdnicif`) de 36 clientes desde la pestaña Database Clientes. Ver [[feature-laset-fix-albprol-faltante]] y [[changelog#2026-06-23 (cont. 2) — Remito de compra faltante (albprol) + ID fiscal de clientes]].*
