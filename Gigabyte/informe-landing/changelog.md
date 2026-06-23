@@ -20,7 +20,19 @@
 - **Nueva variante `reseller.html`** (deck de cara al reseller): se derivó de `index.html` por cirugía. 7 slides (hero · por qué centralizar · lo que ganás · campaña de ejemplo · caso real · **instalación** · próximos pasos). Sin pitch interno y **sin mención a BLU** ("GIGABYTE coordina"). Caso de éxito reescrito **sin el ROAS 277** (se reemplazó por "Tu costo de gestión: $0"). Header "Para Resellers".
 - **Sección de instalación** nueva: snippets de **Google Tag Manager** (head + body), **Meta Pixel**, **Google tag / GA4** y **conversión Google Ads**, cada uno con botón **Copiar** (clipboard API + fallback `execCommand`). IDs de ejemplo (`GTM-XXXXXXX`, `TU_PIXEL_ID`, `G-XXXXXXXXXX`, `AW-…`) que el reseller reemplaza. Estética AORUS (paneles biselados, code-blocks monocromos), texto solo naranja/blanco/gris.
 
+## 2026-06-19
+
+- `reseller.html`: se simplificó el caso/copys a **Resellers Argentina** (commit `e6a6f35`).
+
+## 2026-06-23
+
+- **`index.html`: 2 slides nuevos** sobre privacidad y medición, intercalados después de "Ventajas para el reseller" → el deck interno pasa de **14 a 16 slides**. Contenido tomado del Excel fuente `Gigabyte - Acceso Meta Ads para resellers y GTM.xlsx` (hojas *Meta* y *GTM*).
+  - **Slide 12 · Privacidad · Meta Ads** ("El reseller mantiene el control. BLU solo toca lo que pauta"): dos columnas enfrentadas **SÍ puede** (verde AERO, ✓) vs **NO puede** (magenta AORUS, ✕). Deja claro que el permiso de Ads es acotado: BLU gestiona solo los anuncios de GIGABYTE y no accede a orgánico, mensajes, leads ni a la cuenta del reseller.
+  - **Slide 13 · Medición · GTM** ("Cómo medimos según cuánto comparta el reseller"): 5 tarjetas, una por escenario de GTM, con caso / qué hacemos / ventaja-riesgo + chip de **fee** ("Sin costo extra" verde vs "Fee único por reseller" naranja). La opción 1 (un GTM por país, actual) lleva ribbon **RECOMENDADA**.
+  - Añadidos dot de navegación y link "Privacidad" en el menú superior; eyebrows de Campaña/Caso renumerados (12/13); README actualizado a 16 slides. Los `slide-no` y el contador de presentación los recalcula el JS desde el orden del DOM, así que "/ 16" se ajusta solo.
+- Commit `24812f4` pusheado a `main`. El `.xlsx` fuente se dejó **sin trackear** en el repo.
+
 Archivos principales: `informe-gigabyte-landing/index.html` (interno), `informe-gigabyte-landing/reseller.html` (reseller).
 
 ## Ver también
-- [[informe-landing]] · [[arquitectura]]
+- [[informe-landing]] · [[arquitectura]] · [[contexto]]

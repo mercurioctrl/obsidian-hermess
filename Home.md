@@ -72,4 +72,4 @@
 
 ---
 
-*Actualizado: 2026-06-18*
+*Actualizado: 2026-06-23*

@@ -6,11 +6,12 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 
 - **Tipo:** presentación / landing page estática autocontenida, sin build ni servidor. **Dos variantes**: `index.html` (interno) y `reseller.html` (de cara al reseller).
 - **Marca:** GIGABYTE / AORUS — texto solo naranja `#FF6400` o blanco; estética AORUS (esquinas en bisel, monocromo + naranja) en los esquemas.
-- **`index.html` (interno):** 14 slides (situación → oportunidad → argumentos de centralización → ventajas Gigabyte/reseller → campaña de ejemplo → caso de éxito).
+- **`index.html` (interno):** **16 slides** (situación → oportunidad → argumentos de centralización → ventajas Gigabyte/reseller → **privacidad Meta Ads** → **escenarios GTM** → campaña de ejemplo → caso de éxito → cierre).
 - **`reseller.html` (reseller):** 7 slides, sin pitch interno ni mención a BLU ("GIGABYTE coordina"); caso sin el ROAS 277. Incluye una **sección de instalación** con GTM, Meta Pixel, GA4 y conversión Google Ads + botón **Copiar**.
+- **Privacidad / medición (slides 12-13 del interno):** explican qué puede y qué NO puede ver BLU con el permiso de Ads sobre la Página del reseller, y los 5 escenarios de GTM según el acceso que comparta el reseller. Fuente: Excel `Gigabyte - Acceso Meta Ads para resellers y GTM.xlsx`.
 - **Extras:** editor para ocultar/reordenar slides, edición de textos con formato y tamaño, modo presentación fullscreen, export "Descargar HTML" (viewer self-contained). Persiste en localStorage.
 - **Repo:** `git@github.com:BluIncStudio/informe-gigabyte-landing.git` (rama `main`).
-- **Ubicación local:** `/var/www/Informe gigabyte/informe-gigabyte-landing/`
+- **Ubicación local:** `/var/www/Informe gigabyte/informe-gigabyte-landing/` (también clonado en `~/www/informe-gigabyte-landing` en la Mac).
 
 ## Notas
 
@@ -25,4 +26,4 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[Gigabyte]]
 - [[gigaErp]] — otro proyecto Gigabyte (ERP) en esta bóveda
 
-_Última sincronización: 2026-06-18_
+_Última sincronización: 2026-06-23_

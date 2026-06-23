@@ -9,13 +9,20 @@ Para que funcione desde cualquier carpeta y los **exports sean portables**, fuen
 - La máscara de mascota se usa como `mask-image` para teñir los 3 gatos AORUS (cian/naranja/magenta).
 - 0 referencias `assets/` externas; la carpeta `assets/` queda solo como fuente original.
 
-## Sistema de slides (14)
-Cada slide es `<section class="section" id="...">` con `.slide-tag` (etiqueta arriba-derecha + subrayado RGB), `.slide-no` (`NN / 14`) y `.shead` (eyebrow + h2). Navegación por dots laterales + barra de progreso. `IntersectionObserver` para los reveals y el dot activo.
+## Sistema de slides (16)
+Cada slide es `<section class="section" id="...">` con `.slide-tag` (etiqueta arriba-derecha + subrayado RGB), `.slide-no` (`NN / 16`) y `.shead` (eyebrow + h2). Navegación por dots laterales + barra de progreso. `IntersectionObserver` para los reveals y el dot activo.
+- **El número y el total de cada `.slide-no` los recalcula el JS** (`apply()` en el IIFE del editor) según el orden de las secciones **visibles** en el DOM. Por eso al agregar/ocultar/reordenar slides el "`NN / total`" y el contador del modo presentación se ajustan solos; los valores estáticos en el HTML son solo cosméticos. Los **eyebrow** ("06 · …") sí son numeración manual y hay que renumerarlos a mano.
 
 ## Iconos y esquemas (estética AORUS)
 - **Iconos = SVG monoline inline** (no emojis). Los de tarjetas se inyectan por JS desde un objeto `ICONS` vía `data-i`. Los de esquemas son SVG inline directos: necesitan la regla base `#seccion svg{fill:none;stroke:currentColor}` o salen rellenos negros.
 - Esquemas (slides 02·03·06·07): paneles con `clip-path` (bisel), etiqueta vertical naranja, fondo oscuro en degradado, header con icono + título mayúscula + barra naranja. Flechas SVG, desconexión de píxeles con punteado + icono de enlace roto, conexión con "embudo" naranja.
 - **Responsive**: los esquemas colapsan a 1 columna en mobile. Ojo: el `.disc` centralizado tiene grid inline → hay que vencerlo con `!important` en el media query.
+
+## Slides de privacidad y medición (12-13 del interno)
+Agregados 2026-06-23, intercalados tras "Ventajas para el reseller". Llevan un **`<style>` scoped propio** inyectado justo antes de las secciones (clases `perm-*` y `gtm-*`), con su propia regla `#privacidad svg,#gtm svg{fill:none;stroke:currentColor}` y media queries para colapsar en mobile.
+- **#privacidad (Meta Ads)**: layout `.perm-wrap` de 2 columnas (`.perm.good` verde AERO / `.perm.bad` magenta AORUS), cada una con header de icono ✓/✕, una `.perm-list` (pseudo-elemento `::before` con el check o la cruz según la columna) y un `.vstrip` de cierre. Reutiliza la estética de `.vspanel`/`.vstrip` ya existentes.
+- **#gtm (escenarios GTM)**: `.gtm-grid` de 5 `.gtm-card`. La tarjeta recomendada (`.rec`) lleva un ribbon "RECOMENDADA" en `::after` rotado. Cada card: `.gtm-n` (número Teko), título, `.gtm-when` (caso), filas `.gtm-row` (qué hacemos / ventaja-riesgo) y un chip `.gtm-fee` (`.no` verde "Sin costo extra" / `.yes` naranja "Fee único por reseller").
+- Fuente del contenido: Excel `Gigabyte - Acceso Meta Ads para resellers y GTM.xlsx` (hojas *Meta* y *GTM*), leído con `openpyxl`.
 
 ## Capa de herramientas (3 IIFEs de JS al final del body)
 - **Editor** (botón Editar): ocultar/mostrar slides (ojito) y reordenar (↑↓). Mueve las `<section>` en el DOM, persiste en `localStorage.deckState`. "Restablecer original" limpia las 3 claves y recarga.
@@ -24,9 +31,9 @@ Cada slide es `<section class="section" id="...">` con `.slide-tag` (etiqueta ar
 - **Export "Descargar HTML"**: clona el DOM, quita las herramientas de edición (queda solo Presentar + ojito), hornea textos/tamaños y quita slides ocultos.
 
 ## Dos variantes del deck
-- **`index.html`** — versión **interna** (14 slides, pitch GIGABYTE+BLU, ventajas para la marca, casos con datos).
+- **`index.html`** — versión **interna** (16 slides, pitch GIGABYTE+BLU, ventajas para la marca, privacidad/medición, casos con datos).
 - **`reseller.html`** — versión **de cara al reseller** (7 slides). Derivada de `index.html` por **cirugía con Python**: se quitan las secciones internas (situación, oportunidad, impacto, atribución, efecto-red, modelo, ventajas-Gigabyte, diferencial), se reconstruyen `#dots`/`nav`, se renumeran los `slide-no` y se reescriben los textos a segunda persona **sin nombrar a BLU** ("GIGABYTE coordina"). Reutiliza el mismo CSS, fuentes base64 y capa de herramientas → sigue siendo editable, presentable y exportable.
-- Para regenerar la variante se parte de una **copia** de `index.html`; mantener ambas en sync es manual (la reseller es un recorte curado, no un build automático).
+- Para regenerar la variante se parte de una **copia** de `index.html`; mantener ambas en sync es manual (la reseller es un recorte curado, no un build automático). **Los slides de privacidad/GTM nuevos viven solo en `index.html`** por ahora.
 
 ## Sección de instalación (solo en `reseller.html`)
 - Slide `#instalacion` con 4 tags listos para copiar: **GTM** (snippet head + body), **Meta Pixel**, **Google tag/GA4** y **conversión Google Ads**. IDs de ejemplo que el reseller reemplaza.
