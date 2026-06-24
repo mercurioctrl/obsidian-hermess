@@ -623,3 +623,82 @@ const clientLogo = '/clients/gigabyte/gigabyte.png';
 Se aplicó a los 3 logos de `[slug].vue` y a los de `MonitorPresentation.vue`. **Solo afecta
 al dev server** — en producción (PM2 build) los `src` estáticos sirven bien, por eso nunca
 se había notado. Ver [[memoria#Assets estáticos rompen en dev desde rutas con corchetes|memoria]].
+
+## 2026-06-17 — Onboarding de resellers Gigabyte (`gigabyte-ads`)
+
+Segundo componente delegado por `kind` en las propuestas: `kind: 'reseller-ads'` →
+`<ResellerAdsOnboarding>` (`components/Propuestas/ResellerAdsOnboarding.vue`). Slug
+`gigabyte-ads`, token `gbt-ads-2026`. Guía de onboarding de campañas para los resellers:
+requisitos (GTM por país con ID + instructivo descargable + snippets copiables, accesos
+en Meta), requerimientos de contenido (formatos de imagen/video para Google y Meta Ads,
+carrusel) y 3 escenarios de inversión (solo Google / solo Meta / combinado) con desglose
+de presupuesto por campaña y link a la planilla. Estética Gigabyte (azul `#00A0E9`,
+Aldrich, textwall). Commits `492955d`..`0785184`.
+
+## 2026-06-23 — Propuesta de negocios Gigabyte + doc interna de la API BluPartPicker
+
+Tercer componente por `kind`: `kind: 'negocios'` → `<NegociosPresentation>`
+(`components/Propuestas/NegociosPresentation.vue`). Slug `gigabyte-negocios`, token
+`gbt-biz-2026`. Una sola propuesta con **tres líneas de negocio**:
+
+- **ERP** — features con iconos SVG de línea animados, captura del dashboard, panel
+  destacado de la **API BluPartPicker** (6 mayoristas + 50 resellers, catálogos/precios
+  en vivo), botón a la **demo del ERP** (`https://gigaerp.blustudioinc.com/`), y 3 planes
+  (Start preseleccionado como "más elegido", Business, Evolution) con barras de nivel SVG.
+- **Marketing** — `USD 1.000/mes`, 6 servicios en grid de cards de **altura uniforme**
+  (`grid-auto-rows: 1fr`), card al estudio de mercado del monitor (caso modelo) y los
+  **editores online** (`edit.to-aor.us`, `edit.to-aor.us/reseller.html`).
+- **Ads** — tabla comparativa Básico/Regular/Premium con **Básico preseleccionado**, y
+  las **pautas por país** (centralizada + Chile/Uruguay/Paraguay) en HTML autocontenido
+  para ver/descargar (copiadas a `public/clients/gigabyte/negocios/presentaciones/`).
+
+### Identidad AORUS en el hero
+
+Las 3 métricas del hero se reemplazaron por una **banda identitaria AORUS**: logo real
++ el lema oficial **"Team up. Fight on."** con los puntos en naranja AORUS `#FF6600`
+(acento puntual; el resto sigue en azul Gigabyte). El nombre AORUS viene de Horus (dios
+halcón egipcio) → velocidad y precisión. Fuente: el sitio oficial bloquea bots (403), se
+tomó vía búsqueda.
+
+### Doc interna de la API — `/apis/blupartpicker` (ruta nueva, fuera de `/propuestas/`)
+
+En vez de linkear al Swagger/Redoc crudo, se generó una **página de docs con estética Blu**
+a partir del OpenAPI real (`BluPartPicker API v2.2.0`, base `https://partpicker.blustudioinc.com`):
+hero + conceptos (mayoristas `distribuidor=1`, resellers `distribuidor=0`, `oracular_sku`
+canónico, conversión de moneda) + referencia de los **12 endpoints** agrupados (Catálogo /
+Comparador / Curación-matching / Sistema) con method badge GET/POST y tabla de parámetros.
+
+- Vive en `pages/apis/blupartpicker.vue` (azul Blu `#0474f4`, `noindex`). Es una **ruta
+  estática nueva**, no una propuesta: `pages/apis/blupartpicker` gana sobre el dinámico
+  `[slug]`, pero **Nuxt necesita reiniciar el dev server** para registrar el page nuevo.
+- Excluida de i18n (`'apis/blupartpicker': false`) y de sitemap (`/apis/**`).
+
+### Fixes mobile
+
+- **Tabla de Ads:** primera columna ("Servicios") fija (`position: sticky`) + scroll
+  horizontal con snap y hint "Deslizá para comparar →"; columnas/paddings compactos. Solo
+  en `≤900px`, desktop intacto (conserva `min-width: 680px`).
+- **Cards de presentaciones:** en mobile se apilan (ícono+texto arriba, botones Ver/Descargar
+  a todo el ancho) para no desbordar.
+
+También: fix de copy del monitor (`c046f5b`) traído desde el remoto por fast-forward.
+Commits `a0d91f9`, `d025bad`. La carpeta fuente `propuesta/` (export del Doc + imágenes)
+queda fuera del repo a propósito.
+
+### 2026-06-23 (cont.) — Ronda de ajustes de copy con el cliente
+
+Pulido de textos de la propuesta `gigabyte-negocios` (`03c6772`, `3c83eba`) y de la doc
+de la API (`9dcfb09`, `ffd0b11`):
+
+- **Hero:** título → "Tres soluciones para ordenar, activar y escalar el negocio de Gigabyte";
+  bajada reescrita como "propuesta modular" (independiente o integrable).
+- **AORUS:** subline → "…aplicada a una nueva forma de potenciar el crecimiento comercial".
+- **ERP:** título → "Toda la operación comercial regional en una pantalla" + bajada que nombra
+  Argentina, Uruguay, Paraguay y Chile. El pilar del cierre aclara que la implementación es
+  **pago único** ("desde USD 1.990 única vez", NO mensual — el `99/mes` es solo el abono del plan Start).
+- **Marketing:** servicio 03 reescrito; heading del ejemplo → "Ejemplo Market Intelligence Report".
+- **Ads:** bajada y callout del kick off reescritos (suma "reporte mensual"); la pauta
+  "centralizada" pasa a llamarse **"Pauta.Argentina"** (el ícono globo se mantiene).
+- **Cierre:** "Un modelo flexible para avanzar según las prioridades de Gigabyte".
+- **Doc API:** se quitó "Es la API que alimenta el Gigabyte ERP" del hero — es una API propia de
+  Blu para cualquier cliente, no específica del ERP de Gigabyte.

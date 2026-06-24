@@ -126,8 +126,28 @@ internos pesados (PDFs/AI/zips) en `assets/html/<cliente>Brand/` **NO se commite
 
 Propuestas activas: **Gigabyte** marketing → `/propuestas/gigabyte?token=gbt-mkt-2026` (inline,
 acento naranja, Aldrich, sub-marcas AORUS/AERO/AORUS Mark); **Gigabyte monitor** →
-`/propuestas/gigabyte-monitor?token=gbt-mo27-2026` (componente, estética azul oficial).
-Detalles en [[changelog#2026-05-06 — Propuestas comerciales detrás de token propuestasslug|changelog]] y [[arquitectura#Propuestas comerciales detrás de token|arquitectura]].
+`/propuestas/gigabyte-monitor?token=gbt-mo27-2026` (componente, estética azul oficial);
+**Gigabyte ads** (onboarding resellers) → `gbt-ads-2026`; **Gigabyte negocios** (ERP+MKT+Ads) →
+`gbt-biz-2026`. Detalles en [[changelog#2026-05-06 — Propuestas comerciales detrás de token propuestasslug|changelog]] y [[arquitectura#Propuestas comerciales detrás de token|arquitectura]].
+
+## Servicios externos de la propuesta de negocios (2026-06-23)
+
+La propuesta `gigabyte-negocios` linkea a servicios externos de Blu:
+
+- **API BluPartPicker** — `https://partpicker.blustudioinc.com` (catálogo unificado de tecnología
+  AR: 6 mayoristas + 50 resellers, `oracular_sku` canónico, 12 endpoints). **NO usar la IP interna
+  `10.10.10.7:4444`** en nada client-facing. La doc interna Blu-styled vive en `/apis/blupartpicker`
+  (generada del OpenAPI real).
+- **Demo del ERP** — `https://gigaerp.blustudioinc.com/` (botón en la sección ERP).
+- **Editores de pauta** — `edit.to-aor.us` (interno) y `edit.to-aor.us/reseller.html` (resellers, uno por país).
+
+### Gotcha: page estático nuevo bajo un dir con `[slug]` requiere reiniciar el dev server
+
+`pages/apis/blupartpicker.vue` es una ruta estática que **gana** sobre el dinámico `[slug]`, pero
+Nuxt **no la registra en caliente** al crearla: hay que **reiniciar el dev server** (matar y
+relanzar `npm run dev`), si no la captura el `[slug]` y muestra el gate. Misma lógica aplicaría a
+cualquier page nuevo que conviva con una ruta dinámica. Toda ruta nueva fuera de `/propuestas/` que
+deba quedar oculta hay que agregarla a mano a `i18n.pages` (`false`) y a `sitemap.exclude`.
 
 ## Commits importantes
 

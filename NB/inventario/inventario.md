@@ -18,6 +18,7 @@ Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 - [[arquitectura]] — Arquitectura del sistema y decisiones de diseño
 - [[modulo-precios]] — Sección Precios: edición bidireccional + competencia (BluPartPicker)
 - [[modulo-regularizacion]] — Regularización de stock: delta documental, restauración albprol/albclil, Acción 1 (Control), cc11 no serializa
+- [[regularizacion-buckets]] — clasificación de deltas cc4: auto-cerrables (lógica) vs a recontar (físico) vs revisar/granel
 - [[competencia-partpicker-cache]] — Cache de competencia (backend 30min SWR + cache local en Precios)
 - [[stack]] — Tecnologías, versiones y dependencias
 - [[changelog]] — Historial de cambios recientes

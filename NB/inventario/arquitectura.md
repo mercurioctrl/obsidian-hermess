@@ -91,3 +91,14 @@ inventario/
 ## Ver también
 
 - [[inventario]] · [[stack]] · [[changelog]] · [[contexto]] · [[modulo-precios]]
+
+
+## Grilla de Stock — fast-path de performance
+
+`get_items_stocks` (`ms-metadata/core/controllers/stocks/stocks.py`) calcula un delta por artículo a partir de ~9 subconsultas correlacionadas sobre tablas grandes (`albclil` 1.27M, `ST_DETALLE_STOCK` 5.4M). Para no escanearlas por cada fila hay 3 caminos:
+
+- **Sin warehouse + con filtro de delta**: CTE que pre-agrega `albclil`/`albprol` en una sola pasada (GROUP BY) y difiere las columnas solo-display (pedprol, regularizaciones, conteo de seriales) a las filas YA paginadas.
+- **Sin warehouse + sin filtro de delta (paginate-first)**: pagina la página de artículos primero (cheap, ordenado/indexado) y recién enriquece esas ~500 filas con OUTER APPLY/subqueries; el delta se arma en Python.
+- **Con warehouse**: path correlacionado viejo (poco usado por la grilla).
+
+Detalles: la construcción del `ItemStock` es por NOMBRE de columna (`_itemstock_from_named`), no por índice fijo — robusto ante cambios de orden de columnas (una regresión real fue meter columnas en el medio del SELECT del path por-índice). Orden del listado: marca → familia → título (case-insensitive), sin-marca al final, `ID_ARTICULO` de desempate. Resultado **byte-idéntico** al path viejo; ~15.5s → ~2.5s (sin delta), ~16s → ~4s (con delta). Las flags de ocultamiento por canal (`ocultarDeNb`/`ocultar_lo`/`ocultarNbe`) se togglean con `PATCH /itemsStocks/{itemId}/visibility`.

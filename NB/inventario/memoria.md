@@ -6,6 +6,14 @@ Memoria de Claude Code del proyecto, consolidada por tipo.
 
 ## Proyecto
 
+### Grilla de Stock — fast-path + orden (2026-06-23 tarde)
+`get_items_stocks` optimizada: pre-agrega `albclil`/`albprol` (GROUP BY) y difiere subqueries solo-display a las filas paginadas. Sin filtro de delta usa **paginate-first** (pagina artículos y enriquece 500 filas con OUTER APPLY). ~15.5s → ~2.5s, byte-idéntico. Parseo del `ItemStock` por NOMBRE (`_itemstock_from_named`), no por índice — meter columnas en el medio del SELECT rompe el path por-índice (regresión 121696: −398 en vez de 0). Orden: marca→familia→título, sin-marca al final, ID de desempate. Flags Ocultar NB/LO/NBE (`articulo.ocultarDeNb/ocultar_lo/ocultarNbe`) via `PATCH /itemsStocks/{itemId}/visibility`. Forense: **122572** (+1 = RMA-reemplazo/canje, no contemplado por la fórmula), **122535** (+1 = venta sin remito; pareja = `pedclil` anulado 10457582 sin `albclil`, sin cobro en CC = faltante real). Ver [[changelog]] y [[arquitectura#Grilla de Stock — fast-path de performance]].
+
+### Clasificación de deltas por bucket + reposición (2026-06-23)
+Identidad exacta `delta = INB(ingreso) − HELD(stock) − OUT(salida)` (documento vs ledger de seriales, vale por la invariante creados=presentes+egresados) para clasificar deltas. cc4: 1.365 con delta≠0. Buckets: **24 `auto_stock`** (reconciliar stock↔serial), **74 `recontar`** (ledger inconsistente: creados≠pres+egres), `revisar_legacy`/`revisar_doc`, **428 `no_serializado`** (granel, −1,17M concentrado en art 102157). CSV en `/Users/hermess/www/inventario/regularizacion_buckets_cc4.csv` + nota [[regularizacion-buckets]].
+**Aplicado en prod**: los 24 `auto_stock` repuestos a Control (295 u, `registro_stock` marcador "Regularizacion stock recuperable (seriales presentes)", igual que la Acción 1). 22/24 a delta 0.
+**Caveat clave (auto_con_doc no se sostiene)**: el cierre limpio por albprol (11568) es RARO. "restaurar-albprol" solo vale si `pedprol > albprol`; si `pedprol ≤ albprol` el gap son seriales sin documento (legacy, no restaurable). Los pocos restaurables suelen tener delta positivo → restaurar sobre-corrige. Solo `auto_stock` es auto-cerrable seguro.
+
 ### Regularización de stock — albprol restoration (2026-06-23)
 Rama `regularizacion-stock`. El **delta del grid es documental** (compra−venta−créditos−stock), no de seriales. Caso 111454 (5700G, −412) = **OC 11568 recibida y vendida sin `albprol`** (estado "P"); se sumó `apply_albprol_restoration` que restaura el albprol desde el `pedprol`, **cost-neutral** (asiento puro: sin triggers, NCOSTEPROM almacenado, FOB usa el último albprol por fecha), una cabecera canónica, maneja parciales, idempotente, preview con cruce de seriales. **Aplicada en prod sobre OC 11568** (cabecera 15844, 7 perfectos). Ver [[modulo-regularizacion]].
 

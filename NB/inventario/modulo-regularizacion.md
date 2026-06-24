@@ -77,6 +77,27 @@ propias (no de cc4), y los seriales de cc11 no son items que le falten a cc4
 raros de cc11 son descuadres de **columnas de stock**, no cruces con cc4. Hay que
 mirarlos con lente de reconciliación de stock, NO restaurar/revertir albprol.
 
+## Clasificación catálogo-wide de deltas (cc4)
+
+Identidad exacta: `delta = INB − HELD − OUT`, con INB = ingreso_doc − seriales_creados,
+HELD = stock_sistema − seriales_presentes, OUT = salida_doc − seriales_egresados. Cada delta
+se descompone en 3 discrepancias contra el ledger de seriales (vale por la invariante
+creados = presentes + egresados). Scan cc4: 1.365 items con delta ≠ 0. Buckets:
+
+- **auto_stock (24)**: solo HELD (stock ≠ serials) → reconciliar a serial, **sin recuento**.
+  Aplicados a Control (295 u, `registro_stock` marcador "Regularizacion stock recuperable
+  (seriales presentes)").
+- **recontar (74)**: ledger inconsistente (creados ≠ pres + egres) → **recuento físico**.
+- **revisar_legacy / revisar_doc / no_serializado** (granel, −1,17M en pocos): otra lente.
+
+Ver [[regularizacion-buckets]] + el CSV `regularizacion_buckets_cc4.csv`.
+
+**Caveat: el cierre limpio por albprol (11568) es RARO.** "restaurar-albprol" solo aplica si
+`pedprol > albprol` (OC con cantidad sin documentar). Si `pedprol ≤ albprol`, el gap son
+seriales sin ningún documento (legacy / ingreso no trackeado), NO restaurable. Y los pocos con
+OC sin documentar suelen tener delta positivo → restaurar **sobre-corrige** (como cc11). El
+bucket "auto_con_doc" no se sostiene; solo `auto_stock` es auto-cerrable seguro.
+
 ## Pendientes
 
 - 13164/13209/13171 fueron falsos positivos (cc11/cc9 sobre-documentados).

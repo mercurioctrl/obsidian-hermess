@@ -262,8 +262,26 @@ Cada entrada de `PROPOSALS` puede renderizarse de dos formas:
 - **Inline** (default): el contenido se arma dentro de `[slug].vue` con el objeto
   `brand`, `services`, etc. (ej. slug `gigabyte`).
 - **Delegado a componente:** si la entrada tiene `kind: '<tipo>'`, la página despacha
-  a un componente dedicado. Hoy `kind: 'monitor'` → `<MonitorPresentation>`
-  (`components/Propuestas/MonitorPresentation.vue`). El gate por token es idéntico.
+  a un componente dedicado. El gate por token es idéntico. Componentes hoy
+  (todos en `components/Propuestas/`):
+  - `kind: 'monitor'` → `<MonitorPresentation>` (slug `gigabyte-monitor`)
+  - `kind: 'reseller-ads'` → `<ResellerAdsOnboarding>` (slug `gigabyte-ads`) — onboarding
+    de campañas para resellers (GTM por país, accesos Meta, contenido, escenarios de inversión)
+  - `kind: 'negocios'` → `<NegociosPresentation>` (slug `gigabyte-negocios`) — propuesta de
+    negocios con 3 líneas: ERP (+ panel API BluPartPicker + botón demo `gigaerp.blustudioinc.com`),
+    Marketing (6 servicios + editores `edit.to-aor.us`) y Ads (tabla de planes + pautas por país).
+    El hero usa una banda identitaria AORUS (lema "Team up. Fight on.", naranja `#FF6600`).
+- Ver detalle en [[changelog#2026-06-23 — Propuesta de negocios Gigabyte + doc interna de la API BluPartPicker|changelog 2026-06-23]] y [[changelog#2026-06-17 — Onboarding de resellers Gigabyte gigabyte-ads|onboarding 2026-06-17]].
+
+### Doc interna de API — `/apis/blupartpicker` (fuera de `/propuestas/`)
+
+Página standalone con estética Blu que documenta la **API BluPartPicker** (catálogo
+unificado de tecnología AR: 6 mayoristas + 50 resellers, `oracular_sku` canónico,
+12 endpoints) a partir de su OpenAPI real (`https://partpicker.blustudioinc.com`). No es
+una propuesta: `pages/apis/blupartpicker.vue` es una **ruta estática** que gana sobre el
+dinámico `[slug]` — pero **Nuxt requiere reiniciar el dev server** para registrar el page
+nuevo. Excluida de i18n (`'apis/blupartpicker': false`) y sitemap (`/apis/**`), `noindex`.
+La alimenta el [[#Propuestas comerciales detrás de token|panel ERP de la propuesta de negocios]].
 
 ### Patrón `--brand` para identidad por cliente (modo inline)
 
@@ -308,5 +326,9 @@ Componente dedicado para la propuesta `gigabyte-monitor`. Características:
 |------|---------|-------|--------|
 | `gigabyte` | Gigabyte | `gbt-mkt-2026` | inline (propuesta marketing general) |
 | `gigabyte-monitor` | Gigabyte | `gbt-mo27-2026` | `kind: 'monitor'` → MonitorPresentation |
+| `gigabyte-ads` | Gigabyte | `gbt-ads-2026` | `kind: 'reseller-ads'` → ResellerAdsOnboarding |
+| `gigabyte-negocios` | Gigabyte | `gbt-biz-2026` | `kind: 'negocios'` → NegociosPresentation |
 
 URL: `/propuestas/<slug>?token=<token>` (dominio `blustudioinc.com` en prod, `localhost:3008` en dev).
+
+> Doc de API relacionada (sin token): `/apis/blupartpicker` — ver [[#Doc interna de API — apisblupartpicker fuera de propuestas|sección arriba]].

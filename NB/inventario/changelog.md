@@ -1,5 +1,33 @@
 # Changelog — inventario
 
+## 2026-06-23 (tarde) — Performance grilla de Stock + columnas Ocultar + orden
+
+Sesión de optimización y features sobre la grilla de **Stock** (`get_items_stocks` en `stocks.py`). Cambios **locales, sin commitear** al momento de esta nota. Ver [[arquitectura#Grilla de Stock — fast-path de performance]] y [[memoria]].
+
+### Performance: ~15.5s → ~2.5s
+- **Problema**: el grid calculaba ~9 subconsultas correlacionadas por CADA artículo de la empresa (las 3 de `albclil` escanean 1.27M filas ×3; 2 cuentan `ST_DETALLE_STOCK` de 5.4M) ANTES de filtrar/paginar.
+- **fast-path con delta**: pre-agrega `albclil`/`albprol` en una pasada (GROUP BY) y difiere las columnas solo-display (pedprol, regularizaciones, conteo de seriales) a las 500 filas ya paginadas. 16s → ~4s.
+- **fast-path sin delta (paginate-first)**: como no hay filtro de delta, pagina la página de artículos PRIMERO (indexado por ID_ARTICULO) y recién enriquece esas 500 filas via OUTER APPLY. 15.5s → ~2.5s.
+- **byte-idéntico** verificado fila por fila contra el path viejo. Helper `_itemstock_from_named` compartido.
+- DB ya bien indexada (índices compuestos covering). Índice opcional sugerido: `ST_DETALLE_STOCK (CREF) INCLUDE (FECHA_EGRESO)`.
+
+### feat: columnas Ocultar NB / LO / NBE
+- 3 flags de `articulo` (`ocultarDeNb`, `ocultar_lo`, `ocultarNbe`; int 0/1) como columnas toggleables con checkbox por fila. Endpoint `PATCH /itemsStocks/{itemId}/visibility` (`{flag, value}`) con whitelist de columnas. Front: `columnsConfig` + slots `a-checkbox` + action optimista (revert si falla). Default ocultas.
+
+### fix: regresión de índices por las columnas Ocultar
+- Insertar las columnas en el MEDIO del SELECT del path normal (que parsea por índice fijo) corrió los índices → el delta leía un flag en vez del inbound (ej. **121696** daba −398 en vez de 0). Fix: columnas al FINAL del proyectado + lookup por nombre.
+
+### feat: orden marca → familia → título
+- `ORDER BY` server-side multinivel (marca, familia, título; `ID_ARTICULO` de desempate para paginación estable), case-insensitive. Sin-marca/sin-familia (~29% de cc4) empujados al final.
+
+### UX: Stock no auto-carga al entrar
+- Al entrar a la pestaña ya no dispara el fetch compulsivo company-wide; espera a "Mostrar". Deep-links con filtro sí cargan. (`General.vue`, `itemsStock.vue`).
+
+### Forense de deltas (casos puntuales)
+- **122572** (+1): placa salió por **RMA-reemplazo** (canje; la RMA apunta a otro CREF) — canal no contemplado por la fórmula. Stock físico sano. Sin pase.
+- **122535** (+1): **venta sin remito** — su pareja es un `pedclil` **anulado** (10457582) que nunca generó `albclil`; egreso no revertido y sin cobro en cuenta corriente → faltante real, no doc borrado.
+
+
 ## 2026-06-23
 
 Sesión profunda de **Regularización de stock**: investigación de deltas, restauración de `albprol` y diagnóstico cross-company. Rama `regularizacion-stock` (front y back, pusheadas). Ver [[modulo-regularizacion]], [[memoria]] y [[contexto]].
@@ -21,6 +49,12 @@ Sesión profunda de **Regularización de stock**: investigación de deltas, rest
 
 ### Git / Ops
 - Pusheado a `regularizacion-stock` en ambos repos (ms-metadata `c5ac6f9`/`a634f50`; web `3e31d70`/`db53701`), para PR con base `development`/`gamma`. `.env` y `.DS_Store` sin commitear.
+
+### Clasificación catálogo-wide de deltas + reposición (cc4)
+- **Método**: identidad exacta `delta = INB(ingreso) − HELD(stock) − OUT(salida)` — cada delta se descompone en 3 discrepancias documentales contra el ledger de seriales. Scan de los 1.365 items de cc4 con delta ≠ 0.
+- **Buckets**: 24 `auto_stock` (solo reconciliar stock↔serial), `auto_con_doc`, 74 `recontar` (ledger inconsistente), `revisar_legacy`/`revisar_doc`, 428 `no_serializado` (granel, −1,17M concentrado en pocos como art 102157). Exportado a CSV (`/Users/hermess/www/inventario/regularizacion_buckets_cc4.csv`) y a la nota [[regularizacion-buckets]].
+- **Aplicado en prod**: los **24 `auto_stock` repuestos a Control** (`nstock_ctrl`, 295 u) con línea en `registro_stock` (marcador "Regularizacion stock recuperable (seriales presentes)", agente Catriel, automática en lote). 22/24 cerraron a 0; 2 (115804, 116357) en delta 1 (recuperable capado a lo respaldado por seriales).
+- **Hallazgo — `auto_con_doc` NO se sostiene**: el cierre limpio por albprol (negativo que cierra al documentar una OC recibida, como 11568) es RARO. De 62, solo ~2 tienen OC sin documentar (`pedprol > albprol`) y encima con delta positivo (sobre-corrigen). Los ~35 "restaurar-albprol" tienen `pedprol ≤ albprol` → el gap son seriales SIN documento (legacy), no restaurable. Lo único auto-cerrable seguro fueron los 24 de stock.
 
 ## 2026-06-20
 
