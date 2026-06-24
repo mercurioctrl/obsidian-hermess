@@ -62,6 +62,7 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 
 ## [[Compras/Compras|Compras]]
 - [[Compras/Compras|Índice]] · [[Compras/arquitectura|Arquitectura]] · [[Compras/stack|Stack]] · [[Compras/changelog|Changelog]] · [[Compras/contexto|Contexto]] · [[Compras/memoria|Memoria]] · [[Compras/competencia|Competencia]]
+- [[compras/reglas-compras|Reglas de negocio — NB / Compras]]
 
 ---
 
