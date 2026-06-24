@@ -40,6 +40,8 @@
 
 - [[Bily/Bily|Bily]] — Índice Bily
   - [[Bily/Finanzas/Finanzas|Finanzas]] · [[Bily/bitacoras/bitacoras|bitácoras]] · [[Bily/Productos/Productos|Productos]]
+  - [[Bily/jira/jira|Jira]] · [[Bily/personas/personas|Personas]] · [[Bily/proyectos/proyectos|Proyectos]] · [[Bily/tareas/tareas|Tareas]] · [[Bily/todos/todos|Todos]] · [[Bily/kanban/kanban|Kanban]]
+  - [[Bily/pagos/pagos|Pagos]] · [[Bily/media/media|Media]] · [[Bily/dreams/dreams|Dreams]] · [[Bily/aprendizajes/aprendizajes|Aprendizajes]]
 
 ## 🏠 Hogar
 
