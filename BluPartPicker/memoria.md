@@ -1,12 +1,15 @@
 # Memoria — BluPartPicker
 
-## Estado actual (2026-06-18)
+## Estado actual (2026-06-25)
 
-- **5 mayoristas:** invid, ceven, stylus, **nb, air** + ~37 resellers preciosgamer_*
-- **API v2.2.0** — conversión de precios en tiempo real + **matching de productos** (`oracular_sku`) + consola de curación en `/ui`
-- ~37.9k items agrupados (~63-65% del catálogo de ~59.6k) bajo `oracular_sku`
-- Syncs con cron a horas fijas de madrugada (ver `crontab -l`). **Falta agregar `match_products.py` + `gen_candidates.py` al cron** (correr después de los syncs).
+- **5 mayoristas:** invid, ceven, stylus, nb, air + ~37 resellers preciosgamer_*
+- **API v2.3.0** — matching (`oracular_sku`) + curación `/ui` + auth por API Key + Swagger completo
+- ~37.9k items agrupados (~63-65%) bajo `oracular_sku`; spec-conflict=0; 10.061 pares en manual_matches
+- **Rama activa:** `feat/api-auth` — auth X-Api-Key (tablas `api_keys`/`api_usage`, `/admin/*`), no mergeada a main
+- **Para activar auth en producción:** `AUTH_REQUIRED=1` + `ADMIN_KEY=<secret>` en el env del servicio systemd
+- Syncs en cron; **matching sin cron** — cron sugerido en `docs/runbook.md` §4 listo para pegar
 
+> Estado 2026-06-18: API v2.2.0, matching completo pero sin auth.
 > Estado 2026-06-04: 4 fuentes (sin nb/air), API v2.1.0, sin matching ni frontend.
 
 ## Gotchas activos
@@ -29,9 +32,13 @@
 
 ## Próximos pasos posibles
 
+- **Mergear `feat/api-auth` a main** y configurar `AUTH_REQUIRED=1` + `ADMIN_KEY` en producción
+- **Agregar cron del matching** (comando listo en `docs/runbook.md` §4): `45 23 * * * cd /var/www/blupartpicker && python3 match_products.py >> match_products.log 2>&1 && python3 gen_candidates.py >> gen_candidates.log 2>&1`
 - Alertas de precio: webhook/email cuando `precio_final` baja N% en `price_stock_history`
-- Agregar `match_products.py && gen_candidates.py` al cron (después del último sync, ej. 03:45)
-- Escalar la curación: limpiar el residuo de clusters caóticos (Raptor) a mano vía `/ui` o `manual_matches` `veredicto='different'`
+- Escalar la curación: limpiar residuo de clusters caóticos (Raptor) via `/ui` o `manual_matches veredicto='different'`
+- **HECHO** ✅ Auth por API Key con gestión de usuarios y tracking de consumo
+- **HECHO** ✅ Swagger v2.3.0 completamente documentado (tags, security scheme, responses)
+- **HECHO** ✅ Runbook de producción en `docs/runbook.md`
 - **HECHO** ✅ Comparador del mismo producto en N fuentes → `GET /groups/{oracular_sku}`
 - **HECHO** ✅ Frontend de comparación + curación → `/ui`
 

@@ -2,7 +2,7 @@
 
 Catálogo unificado de tecnología argentina. API REST que consolida mayoristas y resellers en una sola DB SQLite con historial de precios, conversión de moneda en tiempo real y **matching de productos** (`oracular_sku`) con consola de curación web.
 
-**Última sync:** 2026-06-18 · **Commit:** `89c9716` (+ matching/frontend sin commitear)
+**Última sync:** 2026-06-25 · **Commit:** `44c858d` · **Rama activa:** `feat/api-auth` (auth + Swagger)
 
 ## Stack
 
@@ -27,11 +27,18 @@ GET /items?distribuidor=1&moneda_out=ARS&tc=mayorista&sort_by=precio
 GET /items?tendencia=1                                          # señal suba/baja de precio
 GET /exchange-rates  |  GET /categorias  |  GET /fabricantes
 GET /sources  |  GET /sync/log
-# Matching de productos
+# Matching / comparador
 GET  /groups?solo_cruzados=1&sort_by=ahorro                     # productos canónicos
 GET  /groups/{oracular_sku}                                     # comparador (mismo producto, N fuentes)
-GET  /candidates  |  POST /match                                # curación (único endpoint de escritura)
+GET  /candidates  |  POST /match                                # curación
+# Admin (requiere X-Api-Key: <ADMIN_KEY>)
+POST  /admin/keys                    # crear key para usuario
+GET   /admin/keys                    # listar todas
+PATCH /admin/keys/{key}             # activar/desactivar
+GET   /admin/keys/{key}/usage       # consumo por endpoint
 ```
+
+**Auth:** header `X-Api-Key`. `AUTH_REQUIRED=0` (default, API pública) / `AUTH_REQUIRED=1` (activa validación). Ver [[contexto#Decisiones recientes]].
 
 ## Notas
 
