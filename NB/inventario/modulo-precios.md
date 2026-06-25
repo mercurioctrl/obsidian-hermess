@@ -26,6 +26,16 @@ Fórmula base: `precio = NCOSTEPROM × (1 + Σ utilidades / 100)`.
 - Costo editable solo con permiso `gerencia`.
 - **Items sin fila en `ST_GANANCIA_ESTIPULADA_ARTICULOS`** (típicamente los más nuevos): `_update_gain_column` es **upsert** — inserta la fila sembrada si no existe. Antes el `UPDATE` puro afectaba 0 filas en silencio y la utilidad no persistía. La tabla no tiene PK; clave = `articulo.cRef` (nvarchar). Ver [[contexto#Gotchas conocidos]] y [[memoria]].
 
+## Columnas de costo: FOB vs NCOSTEPROM
+
+El grid muestra **dos** costos, que NO son lo mismo:
+
+- **Costo (`NCOSTEPROM`)** — costo promedio almacenado en `articulo`; es la **base del cálculo de precios** (la fórmula de arriba).
+- **FOB** — sale de `NewBytes_DBF.dbo.albprol.nprediv`, tomando la **última línea de albarán de proveedor** del artículo:
+  `OUTER APPLY (SELECT TOP(1) albprol.nprediv FROM albprol JOIN albprot ON albprol.nnumalb = albprot.nnumalb WHERE albprol.cref = articulo.cref ORDER BY albprot.dfecalb DESC)`.
+  Es el FOB del ingreso de compra más reciente. Subquery **idéntica** en `prices.py` (`_read_current_prices`) y `stocks.py` → FOB consistente entre Precios y Stock. Si el artículo no tiene líneas en `albprol`, devuelve NULL → `0.0`.
+  *(Detalle relevante para [[modulo-regularizacion]]: restaurar un `albprol` backdated NO mueve el FOB mostrado, porque este usa el albarán más reciente por fecha.)*
+
 ## Código de colores (heredado del sistema legacy)
 
 Cada precio comparte color con sus utilidades: 🟠 UNIT+PL1/PL2 · 🩷 MAY+MAY1/MAY2
@@ -118,7 +128,15 @@ tooltip con el precio anterior) que viene de partpicker con `tendencia=1`.
 - **Fix** checkbox "seleccionar todos" en cabecera: Ant solo aplica `slots.title`
   si `column.title === undefined`; `title:""` lo bloqueaba. Ver [[contexto#Gotchas conocidos]].
 
+## Búsqueda tolerante a paréntesis (2026-06-24)
+
+La búsqueda por slug fallaba con títulos que tienen `()`/símbolos (ej. el slug
+`procesador_intel_lga1700` no matcheaba "PROCESADOR INTEL (LGA1700)"): en `LIKE`
+el `_` es comodín de 1 char y los paréntesis agregan caracteres. Se reemplaza `_`
+y espacio por `%`. Aplicado en Precios, Stock y Productos (back `7534f92`/`0c0cfcf`).
+
 ## Ver también
 
 - [[arquitectura]] · [[contexto]] · [[changelog]] · [[inventario]]
+- [[modulo-regularizacion]] — comparte la grilla de Stock y el costo FOB
 - [[BluPartPicker]] — la API que provee los precios de competencia

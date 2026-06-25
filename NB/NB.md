@@ -74,4 +74,4 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 - [[limpieza-contactos-brevo/limpieza-contactos-brevo|Índice]] · [[limpieza-contactos-brevo/arquitectura|Arquitectura]] · [[limpieza-contactos-brevo/stack|Stack]] · [[limpieza-contactos-brevo/changelog|Changelog]] · [[limpieza-contactos-brevo/contexto|Contexto]] · [[limpieza-contactos-brevo/memoria|Memoria]]
 
 ---
-*Última actualización: 2026-06-24 — Compras: la cuenta corriente de proveedores se refactorizó para leer el ledger NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES (antes FACPROT).*
+*Última actualización: 2026-06-25 — Compras: cuenta corriente de proveedores lee el ledger NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES.*

@@ -9,6 +9,9 @@ Memoria de Claude Code del proyecto, consolidada por tipo.
 ### Upsert de utilidades en ST_GANANCIA (2026-06-24)
 Marcar precio/utilidad a un item **sin fila** en `NEW_BYTES.dbo.ST_GANANCIA_ESTIPULADA_ARTICULOS` fallaba **en silencio**: `_update_gain_column` hacía `UPDATE ... WHERE ID_ARTICULO=?` puro → 0 filas, sin error (`success:true`), la utilidad no persistía y quedaba inconsistente con el precio (que sí se escribe en `articulo`). Afecta edición de utilidad y de precio (la inversa delega en el mismo punto). **Fix**: `_update_gain_column` es **upsert** — si `rowcount==0` inserta la fila sembrada desde `simulated_gains` (`GAIN_COLUMNS`, las 9 que lee `_fetch_gain_margins`), cubriendo las NOT NULL (`ESTIPLO/LO1/CF`). Tabla **sin PK**; clave = `articulo.cRef` (nvarchar, NO el int `ID_ARTICULO`; hay legacy no numérico como `'ACARREO'`). Eran **432** items sin fila (los más nuevos). Validado con ROLLBACK, sin escribir prod. Ver [[modulo-precios]] y [[changelog]].
 
+### Origen del costo FOB (Precios y Stock)
+El **FOB** que muestran las grillas de Precios y Stock NO es `NCOSTEPROM`. Sale de `NewBytes_DBF.dbo.albprol.nprediv`, tomando la **última línea de albarán de proveedor** del artículo: `OUTER APPLY (SELECT TOP(1) albprol.nprediv FROM albprol JOIN albprot ON nnumalb WHERE albprol.cref = articulo.cref ORDER BY albprot.dfecalb DESC)`. Subquery **idéntica** en `prices.py` (`_read_current_prices`) y `stocks.py` → consistente entre pestañas. `NCOSTEPROM` (costo promedio, columna de `articulo`) es la base del cálculo de precios. Relevante para regularización: un `albprol` restaurado backdated NO mueve el FOB mostrado (usa el albarán más reciente por fecha). Ver [[modulo-precios#Columnas de costo: FOB vs NCOSTEPROM]].
+
 ### Memory leak en grilla de Stock (2026-06-24)
 `setScroll()` reasignaba `window.onscroll` en cada evento (closure nueva + handler duplicado, sin limpiar en `beforeDestroy`) → ahora solo actualiza `scrollY`. Auditoría de RAM: el grueso es la grilla de Stock **sin virtualización** (`scroll.y` comentado, 500×~50 en DOM); virtualizar (patrón de Precios) queda pendiente por el riesgo de alineación antd 1.x.
 
@@ -28,7 +31,7 @@ cc11 prácticamente no usa el ledger de seriales: **16 de 602 artículos con ser
 
 ### Rama catri-fine-tuning2 (2026-06-20)
 - Front: export **XLSX/CSV** en Stock+Precios (botones en la barra de filtros, emiten eventos a la página) + default **companyCode** por pestaña vía middleware. Back: fix **N+1** en `/items` y `/item`.
-- Pendiente de mergear a `development`/`gamma`. Front `983d58e`, back `6b9eeb4`, pusheadas.
+- **Ya mergeada** a `development`/`gamma` (PRs #377 front / #274 back; verificado 2026-06-25 contra `origin/Development` y `origin/Gamma`). Front `983d58e`, back `6b9eeb4`. Las ramas **locales** quedaron atrasadas → `git checkout Development && git pull` antes de seguir.
 - La pestaña **Precios** vivía solo en `catri-fine-tuning`; el **link del menú nunca estuvo en git** (prod tenía edición manual de `basic.vue`) → agregado y propagado.
 - Git: `Development` (mayúscula) es la canónica del back; borrar `development` minúscula la dejó huérfana (macOS case-insensitive) → `git reset --mixed origin/Development`.
 
@@ -109,4 +112,4 @@ Resellers (`distribuidor=0`): 37 tiendas `preciosgamer_*` (ARS, ~60k items).
 
 ## Ver también
 
-- [[inventario]] · [[contexto]] · [[modulo-precios]] · [[competencia-partpicker-cache]]
+- [[inventario]] · [[contexto]] · [[modulo-precios]] · [[modulo-regularizacion]] · [[competencia-partpicker-cache]]

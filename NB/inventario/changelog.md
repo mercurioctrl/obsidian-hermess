@@ -1,5 +1,13 @@
 # Changelog — inventario
 
+## 2026-06-25 — Documentación: origen del FOB + verificación de merge
+
+Sesión de documentación/sync (sin commits). Ver [[memoria]] y [[modulo-precios#Columnas de costo: FOB vs NCOSTEPROM]].
+
+- **Documentado el origen del costo FOB** de las grillas Precios y Stock: `NewBytes_DBF.dbo.albprol.nprediv` de la **última línea de albarán de proveedor** (`OUTER APPLY ... JOIN albprot ON nnumalb WHERE albprol.cref = articulo.cref ORDER BY albprot.dfecalb DESC`). Idéntico en `prices.py` y `stocks.py`. Distinto de `NCOSTEPROM` (costo promedio, base del cálculo de precios). Un `albprol` backdated no mueve el FOB (usa el albarán más reciente).
+- **Verificado que `catri-fine-tuning2` YA está mergeada** a `Development`/`Gamma` en ambos repos (PRs #377 front / #274 back; `origin/Development..catri-fine-tuning2` vacío). Corregida la memoria que aún la marcaba "sin mergear". Las ramas locales quedaron atrasadas.
+
+
 ## 2026-06-24 — Fixes: memory leak (Stock) + upsert de utilidades + subcolumnas seriales
 
 Continuación sobre la rama `regularizacion-stock` (front `653c025`, back `f3954fa`). Ver [[memoria]] y [[modulo-precios]].
