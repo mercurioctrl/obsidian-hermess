@@ -30,6 +30,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-laset-stockonly-completa|Compra completa stock-only + Reservas]] — la compra se carga completa aunque el ítem no se venda; auto-create de catálogo + reservas (pedclit cestado=P sin remito)
 - [[feature-laset-fix-marcas-comp11|Fix marcas comp=11]] — refactor Fase C marcas + backfill articulo.Id_Marca + cleanup FP_Marcas dups
 - [[feature-laset-wipe-reimport|Borrar todo comp=11 + reimport limpio]] — wipe transaccional con barrido de huérfanos + validación de stocks; flujo Borrar todo → Importar todo
+- [[feature-laset-fix-albprol-faltante|Remito de compra faltante (albprol)]] — cierra el gap de artículos comp=11 con stock pero sin ingreso (albprot/albprol)
 - [[feature-sync-laset-botones|Patrón Sync Laset — botones de mantenimiento]] — service+command+controller+UI para fixes Laset
 - [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN por familia × proveedor para comp=11
 - [[feature-pedidos-olvidados|Feature: Pedidos Olvidados]] — filtro oculto de órdenes pendientes/remitidas >2 meses hasta 3 años; fix de timeout acotando la ventana de fecha
