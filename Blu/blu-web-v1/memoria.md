@@ -141,6 +141,18 @@ La propuesta `gigabyte-negocios` linkea a servicios externos de Blu:
 - **Demo del ERP** — `https://gigaerp.blustudioinc.com/` (botón en la sección ERP).
 - **Editores de pauta** — `edit.to-aor.us` (interno) y `edit.to-aor.us/reseller.html` (resellers, uno por país).
 
+### Gotcha: precios duplicados en `NegociosPresentation.vue`
+
+En `components/Propuestas/NegociosPresentation.vue` (slug `gigabyte-negocios`) cada precio
+vive **duplicado en 2–3 lugares** y hay que cambiarlos todos a la vez:
+
+- **Ads** (3 abonos): el array `adsPlans` (`<script setup>`), la tabla comparativa
+  (`<td class="total">`) y el pilar del cierre ("Ads desde USD x/mes").
+- **Marketing** (abono mensual): el `price-pill` del bloque + el resumen de pilares.
+
+Precios vigentes (**2026-06-25**): Marketing **USD 1.500/mes**; Ads Básico **USD 1.250**,
+Regular **USD 2.000**, Premium **USD 2.700**. Ver [[changelog#2026-06-25 — Ajuste de precios propuesta de negocios Gigabyte|changelog 2026-06-25]].
+
 ### Gotcha: page estático nuevo bajo un dir con `[slug]` requiere reiniciar el dev server
 
 `pages/apis/blupartpicker.vue` es una ruta estática que **gana** sobre el dinámico `[slug]`, pero

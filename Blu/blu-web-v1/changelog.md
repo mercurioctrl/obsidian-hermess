@@ -702,3 +702,22 @@ de la API (`9dcfb09`, `ffd0b11`):
 - **Cierre:** "Un modelo flexible para avanzar según las prioridades de Gigabyte".
 - **Doc API:** se quitó "Es la API que alimenta el Gigabyte ERP" del hero — es una API propia de
   Blu para cualquier cliente, no específica del ERP de Gigabyte.
+
+## 2026-06-25 — Ajuste de precios propuesta de negocios Gigabyte
+
+Cambios de pricing en `components/Propuestas/NegociosPresentation.vue` (slug
+`gigabyte-negocios`, token `gbt-biz-2026`), pedidos por el cliente:
+
+- **Marketing:** abono mensual **USD 1.000 → USD 1.500/mes**. Actualizado en los dos
+  lugares donde vive el dato: el `price-pill` del bloque Marketing y el resumen de
+  pilares del cierre ("Marketing USD x/mes").
+- **Ads:** los tres abonos bajan USD 500 cada uno → Básico **1750 → 1250**, Regular
+  **2500 → 2000**, Premium **3200 → 2700**. Tocados en los tres puntos donde se
+  duplica el precio: el array `adsPlans` (`<script setup>`), la tabla comparativa
+  (`<td class="total">`) y el pilar "Ads desde USD x/mes" del cierre.
+
+> **Gotcha confirmado:** en `NegociosPresentation.vue` los precios están duplicados
+> en 2–3 lugares (array + tabla + resumen). Cambiar uno solo deja la landing
+> inconsistente — hay que actualizar todos. Ver [[memoria]].
+
+Build + restart de PM2 (`BLUWeb`, cluster, puerto **3008**) para reflejar los cambios.
