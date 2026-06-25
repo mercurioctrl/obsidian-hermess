@@ -39,11 +39,19 @@ Proyecto propio para consolidar catálogos de distribuidores mayoristas y resell
 
 ## Estado actual (jun 2026)
 
-- 4 fuentes activas (3 mayoristas + 37 resellers via PreciosGamer)
-- ~147.673 productos totales — 2.565 mayoristas · 145.108 resellers
-- API pública en red local 10.10.10.7:4444
-- Syncs automáticos cada 4h, desfasados entre sí
+- 5 mayoristas + 37 resellers vía PreciosGamer activos
+- ~159.050 productos totales (13.942 mayoristas + 145.108 resellers)
+- API en https://partpicker.blustudioinc.com (Apache reverse proxy → :4444), docs en `/docs`
+- Syncs automáticos cron, desfasados; matching NO está en cron todavía (se corre a mano)
 - Exchange rates actualizados cada 30 min
+- **Auth:** rama `feat/api-auth` lista, no mergeada a main. Para activar: `AUTH_REQUIRED=1` + `ADMIN_KEY` en el env del servicio.
+
+## Decisiones recientes (jun 2026)
+
+- **Auth por API Key** (no OAuth): mínima fricción, sin DB externa. `active=0` corta el acceso en el request (303). Plan es campo libre, no hay quota hardcodeada en el servidor.
+- **Log de usage async**: escribir cada request a SQLite bloquearía bajo carga → queue asyncio con flush cada 5s en background.
+- **`AUTH_REQUIRED=0` por default**: el deploy existente no se rompe hasta que se configure explícitamente.
+- **SQLite sigue siendo suficiente**: WAL mode maneja lecturas concurrentes bien. El cuello de botella potencial (writes de usage) está mitigado con el batch async. Migrar a Postgres cuando haya 20+ usuarios activos simultáneos con requests frecuentes.
 
 ---
 
