@@ -900,3 +900,17 @@ Archivos: `app/Support/LasetCountryResolver.php`, `app/Console/Commands/{LasetIm
 - **ID fiscal de clientes creados** (data, sin código): los 47 clientes comp=11 sin `cdnicif` (NB Inc + nuevos del 2026-06-18) recibieron su NRO ID FISCAL desde la pestaña **Database Clientes** (col C) de `docs/laser.xlsx`, formato compacto sin separadores. 36 completados (los gemelos NB Inc comparten CUIT con su cliente normal); 11 sin dato (7 no figuran en la planilla, 4 con placeholder `-`/`INACTIVE`).
 
 Archivos: `app/Console/Commands/{LasetFixAlbprolFaltante,LasetRunImportJob}Command.php`.
+
+
+## 2026-06-24 — Cuenta corriente de PROVEEDORES Laset (comp=11)
+
+Import de la cta cte histórica de proveedores Laset a `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES` (análogo al de clientes). Detalle: [[feature-laset-cuenta-corriente-proveedores]].
+
+- Parser `scripts/laset_prov_ccte_to_json.py` + comando `laset:prov-ccte-import` (idempotente por `USU=Laset`, dblib-safe, comp=11).
+- Saldo objetivo = `A favor/Deuda` neto de `NC Disponible` **solo si hay deuda**; movimientos magnitud+TR (factura→38, pago→40, NC→30, ajuste→30/32).
+- **Clave correcta = `FP_Proveedores.CCODPRO`** (no el Id_Proveedor interno): Asus 16679 → CCODPRO `002605`. 1er intento bajo `016679` no se veía → rollback (`USU=Laset`) + re-import con CCODPRO.
+- Estado dev: 66 proveedores comp=11, 5.573 movimientos, 66/66 reconcilian; legacy NB (29.171) intacto.
+- Pendiente: 17 hojas EUR (2ª pasada) + 10 hojas con saldo que no son comp=11.
+- Aparte: se restauró el host de DB en `.env` a `db-nb-dev.blu.net.ar:41433` (estaba en el viejo 10.10.10.47).
+
+Commit `ed45cfaf`. Archivos: `app/Console/Commands/LasetProvCtaCteImportCommand.php`, `scripts/laset_prov_ccte_to_json.py`.

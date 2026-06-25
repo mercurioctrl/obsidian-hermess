@@ -24,6 +24,7 @@ Fórmula base: `precio = NCOSTEPROM × (1 + Σ utilidades / 100)`.
   (`prices.py`), que delega en `update_item_price` → hereda validación de
   utilidad mínima, `historial_precios` y recálculo.
 - Costo editable solo con permiso `gerencia`.
+- **Items sin fila en `ST_GANANCIA_ESTIPULADA_ARTICULOS`** (típicamente los más nuevos): `_update_gain_column` es **upsert** — inserta la fila sembrada si no existe. Antes el `UPDATE` puro afectaba 0 filas en silencio y la utilidad no persistía. La tabla no tiene PK; clave = `articulo.cRef` (nvarchar). Ver [[contexto#Gotchas conocidos]] y [[memoria]].
 
 ## Código de colores (heredado del sistema legacy)
 

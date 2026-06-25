@@ -40,16 +40,21 @@ Cuando una orden/ingreso tiene `currencyQuote === 1` **está en pesos** (no en d
 - **Ingresos:** `EXISTS` correlacionado con la línea del ingreso (`albprol.ID_ARTICULO` = artículo cuyo `cRef` = `sds.cref`), para acotar al artículo del serial dentro del ingreso.
 - **Rendimiento:** el `EXISTS` **solo se concatena al WHERE cuando el filtro está presente**; si no se filtra por serial, el listado corre igual que antes (sin subqueries extra). Misma idea para SKU / ID interno.
 
-### Cuenta corriente de proveedores (2026-06-22)
+### Cuenta corriente de proveedores (ledger MS_MOV_CTACTE_PROVEEDORES)
 
 Modal accesible desde el ojito 👁️ en el listado de Proveedores. Endpoint `GET v1/providers/{providerCode}/currentAccount`. Detalle de flujo en [[arquitectura#Cuenta corriente de proveedores|arquitectura]].
 
-- **Fuente de datos:** los movimientos son los **comprobantes del proveedor en `FACPROT`** (lo de `providerVoucher`). **Los pagos NO están integrados todavía** → el "saldo" es el total de comprobantes (deuda), no el neto con pagos.
-- **Total del comprobante:** la cabecera `FACPROT` trae los importes en **0**. El total se calcula desde las **líneas `FACPROL`** (join por `CSERIE` + `CNUMFAC`): por línea `NCANENT × NPREUNIT × (1 − NDTO/100) × (1 + NIVA/100)` (cantidad × precio, **con descuento y con IVA**). Las **importaciones no tienen líneas** y guardan el monto en la cabecera **`FOB`** → fallback a `FOB` (que es valor FOB, **sin IVA**).
-- **Débito / crédito:** por `FACPROT.NTIPOCOMP` → `FP_TiposDocumentosCobro.Id_TipoDocCobro`, que tiene columna **`signo`**: Factura / Nota de Débito = **+1** (débito, suma deuda); **Nota de Crédito = −1** (resta). ⚠️ A confirmar la etiqueta: muchos comprobantes salen con `NTIPOCOMP=3` ("NOTA DE DEBITO"); el signo (+1) es correcto igual.
-- **`companyCode`:** en `FACPROT` está **100% NULL**. Se deriva del proveedor: `ISNULL(FACPROT.companyCode, FP_Proveedores.companyCode)`. `CCODPRO` es **único** en `FP_Proveedores` → el link no duplica. Mismo criterio se aplicó al fix de `providerVoucher`.
-- **Monedas:** los comprobantes en **pesos guardan `NVALDIV = 1`** (no la cotización USD real), así que **no se puede derivar USD de un comprobante en pesos**. Por eso los saldos se reportan **separados**: `balanceUsd` = neto de comprobantes en **DOL**; `balancePeso` = neto de comprobantes en **PSO**. No se cross-convierte.
-- **Id de proveedor:** el listado expone `id` = `ID_PROVEEDOR` y `providerCode` = `CCODPRO`. El endpoint recibe el **`providerCode` (CCODPRO)** porque `FACPROT` linkea por ahí.
+> **Refactor 2026-06-24:** la fuente es el **ledger oficial `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES`** (~29k movimientos). La primera versión (armar desde `FACPROT`/`FACPROL`) **fue descartada**.
+
+- **Fuente de datos:** tabla `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES`. Vínculo `ID_PROVEEDOR` (char, = `CCODPRO` con ceros). Se excluyen anulados (`ANULADO <> 'SI'`). Incluye pagos (es un ledger completo, no solo comprobantes).
+- **Importe:** `IMPORTE_USD` (**siempre positivo**; la dirección la da el tipo de transacción). Pesos = `IMPORTE_USD × COTIZACION`. (`MONEDA` es un código interno; el importe ya viene normalizado a USD.)
+- **Tipo de movimiento:** `TR_CODIGO` → `NEW_BYTES.dbo.GL_TRANSACCIONES.TR_NOMBRE` (Pedidos Proveedores, Pago a Proveedores, Pago con Cheque, Créditos/Débitos Varios, Cobro a Proveedores).
+- **Débito / crédito (mapeo confirmado por el usuario; saldo = deuda con el proveedor):** **suman deuda** `38` (Pedidos Proveedores), `32` (Débitos Varios); **restan** `30` (Créditos Varios), `40` (Pago a Proveedores), `128` (Pago con Cheque), `44` (Cobro a Proveedores). El indicador `GL_TRANSACCIONES.TR_INDICADOR_SIGNO_F10` es ambiguo ('X' en la mayoría), por eso el mapeo se definió a mano.
+- **Fecha:** `FECHA_MOV` es **float YYYYMMDD** (ej. `20180717`). Los filtros `from`/`to` (YYYY-MM-DD) se convierten a ese número.
+- **Saldos:** `balanceUsd` = Σ(signo × `IMPORTE_USD`); `balancePeso` = Σ(signo × `IMPORTE_USD` × `COTIZACION`). Ambas monedas se calculan (todo normalizado a USD con cotización real).
+- **Comprobante:** `INVOICE` o, si vacío, `DATOS_FACTURA` (en pagos suele venir vacío).
+- **Id de proveedor:** el endpoint recibe `providerCode` = `CCODPRO` = `ID_PROVEEDOR` del ledger.
+- El DTO mantiene la misma forma de respuesta que la v1 (FACPROT) → el front no cambió; `currency` queda fijo en `'USD'`.
 
 ### Impuestos globales (NULL = todas las empresas)
 
@@ -84,9 +89,7 @@ Modal accesible desde el ojito 👁️ en el listado de Proveedores. Endpoint `G
 
 ## Deuda técnica / TODOs
 
-- **Cuenta corriente de proveedores — pagos**: faltan integrar los pagos (créditos que reducen la deuda). Hoy el saldo es solo el total de comprobantes. Tablas candidatas en la DB: `disPago`, `pagos_remitos`, `FP_FormasPagos`. **Pendiente.**
-- **Etiqueta de tipo de comprobante (`NTIPOCOMP`)**: a confirmar con el usuario; muchos comprobantes salen como "NOTA DE DEBITO". El `signo` para débito/crédito es correcto igual.
-- **FOB en importaciones**: el total de comprobantes de importación usa `FOB` (sin IVA ni impuestos de importación). A validar si alcanza para la cuenta corriente.
+- **Cuenta corriente de proveedores**: ✅ ya lee el ledger `MS_MOV_CTACTE_PROVEEDORES` (incluye pagos). Lo de FACPROT/NTIPOCOMP/FOB quedó obsoleto (era la v1). Si aparece un `TR_CODIGO` nuevo, revisar el mapeo de signo en `ProviderCurrentAccountRepository`.
 - **Bug latente** en `TariffTaxPrefixRepository::filterByTaxExclusive`: hace `$params = ['taxExclusive' => ...]` (pisa todo el array `$params`) en vez de `$params['taxExclusive'] = ...`. Si se combina `taxExclusive` con `id`, se pierde el binding de `id`. No afecta hoy porque rara vez se combinan. **Pendiente de corregir.**
 - **`/v1/items` sin paginación SQL**: recibe `itemsPerPage`/`currentPage` pero no los aplica — devuelve TODAS las filas que matchean (con `ORDER BY`). Oportunidad de optimización con `OFFSET/FETCH`.
 - **SKU con `LIKE '%term%'`** (contains) no usa índice. Si se confirma que el SKU se busca por prefijo, cambiar a `'term%'` para habilitar index seek.
@@ -95,7 +98,7 @@ Modal accesible desde el ojito 👁️ en el listado de Proveedores. Endpoint `G
 
 ## Infraestructura / Base de datos (gotcha importante)
 
-- **DB en uso (2026-06-20):** el `.env` de la API apunta a **`10.10.10.47:1433`** (DB `NB_WEB`, user `fcallipo`). El puerto correcto es **1433** (el `4444` del server externo viejo está cerrado en ese host). Tras tocar `.env`, correr `php artisan config:clear` en el contenedor.
+- **DB en uso (2026-06-24):** el `.env` de la API apunta a **`db-nb-dev.blu.net.ar:41433`** (DB `NB_WEB`, user `fcallipo`). Antes era `10.10.10.47:1433`, que se cayó. Tras tocar `.env`, correr `php artisan config:clear` en el contenedor.
 - DB canónica histórica: **`190.210.23.97:4444`** (DB `NB_WEB`, user `web`). Server alternativo `190.210.23.108`: SQL en **1433** (user `eferreyra_devweb01`).
 - ⚠️ **`190.210.23.108:4444` es un servidor SSH (OpenSSH), NO SQL.** El TCP abre pero el handshake TDS falla con `SQLSTATE[01002] Adaptive Server connection failed (severity 9)`. Si aparece ese error, casi seguro `DB_PORT` apunta a un puerto que no es SQL.
 - El login y muchas queries hacen **joins cross-database**: las 4 bases (`NewBytes_DBF`, `NB_WEB`, `NEW_BYTES`, `PRODUCTOS`) deben existir en el server elegido.

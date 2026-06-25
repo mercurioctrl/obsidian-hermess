@@ -2,6 +2,10 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-06-24
+
+- refactor: **La cuenta corriente de proveedores ahora lee el ledger oficial `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES`** en vez de armarse desde `FACPROT`/`FACPROL` (esa fue la primera versión, descartada). El recurso (`GET v1/providers/{providerCode}/currentAccount`) toma los movimientos del proveedor (`ID_PROVEEDOR = CCODPRO`), excluye anulados (`ANULADO <> 'SI'`), el tipo desde `GL_TRANSACCIONES.TR_NOMBRE`, importe en `IMPORTE_USD` (+ `COTIZACION` → pesos), fecha desde `FECHA_MOV` (float YYYYMMDD). Débito/crédito por `TR_CODIGO`: **suman 38, 32; restan 30, 40, 128, 44**. Saldos `balanceUsd`/`balancePeso`. Se mantuvo la forma de respuesta → **el front no cambió**. Detalle en [[contexto#Cuenta corriente de proveedores (ledger MS_MOV_CTACTE_PROVEEDORES)|contexto]]. Commit API `14b208d`. Archivos: `ProviderCurrentAccountRepository.php`, `ProviderCurrentAccountDto.php`.
+
 ## 2026-06-22
 
 > Sigue en `catri-fine-tunning`. La rama ya se mergeó a `development` (PRs #274, #276) y a `gamma`; el último commit (SKU inline) entra limpio.

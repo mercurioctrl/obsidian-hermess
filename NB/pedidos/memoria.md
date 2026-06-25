@@ -497,3 +497,8 @@ Fase D gatea el remito de compra por OC (`pedprot` sin `albprot`); líneas stock
 ## ID fiscal de clientes (cdnicif)
 
 Backfill del `cdnicif` de los 47 clientes comp=11 creados por el import (sin ID fiscal) desde la pestaña Database Clientes de `docs/laser.xlsx` (col C), formato compacto. 36 completados; gemelos NB Inc comparten el CUIT del cliente real. Ver [[contexto#ID fiscal de clientes Laset (cdnicif)]].
+
+
+## Cuenta corriente de proveedores Laset (comp=11)
+
+Import a `MS_MOV_CTACTE_PROVEEDORES` (NEW_BYTES). **Clave = CCODPRO**, no Id_Proveedor (Asus 16679→002605). Magnitud+TR (38 deuda / 40 pago / 30 NC / 32 débito), rollback por `USU=Laset`, MAX+1 fila a fila. Saldo = "A favor/Deuda" neto de "NC Disponible" solo si hay deuda. 66 prov / 5.573 movs / 66 reconcilian (dev 2026-06-24). Pendiente EUR (17) + 10 no-comp11. Ver [[feature-laset-cuenta-corriente-proveedores]].

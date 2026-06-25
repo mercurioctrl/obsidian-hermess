@@ -83,6 +83,8 @@ NODE_ENV=development
 | `FastAPIDeprecationWarning: regex has been deprecated` | `main.py` usa parámetro `regex` deprecado | No rompe nada, es un warning |
 | `Cannot find module ../build-version.json` al iniciar dev | Lo genera `scripts/update-build-version.js` solo al hacer `npm run build` | No rompe nada en dev |
 | 401 al iniciar el frontend | El middleware `auth` redirige todas las rutas a `/login` si no hay token | Comportamiento normal |
+| **Editar precio/utilidad no persiste en items nuevos** | El item no tiene fila en `ST_GANANCIA_ESTIPULADA_ARTICULOS`; `_update_gain_column` hacía `UPDATE` puro (0 filas, sin error) | **Resuelto (2026-06-24)**: upsert — inserta la fila sembrada desde los gains. Tabla sin PK, clave `cRef` nvarchar |
+| **Búsqueda no encuentra items con `()` en el título** | `_` del slug es comodín de 1 char en LIKE; "(LGA1700)" agrega caracteres que no matchean | Reemplazar `_` y espacio por `%` en el término (aplicado en Stock/Precios/Productos) |
 
 ## Deploy a producción
 

@@ -2,9 +2,9 @@
 
 Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
-**Última sincronización:** 2026-06-23
+**Última sincronización:** 2026-06-25
 
-> **Estado:** rama `regularizacion-stock` (front y back, pusheadas, para PR a `development`/`gamma`): pestaña/lógica de **Regularización de stock**, restauración de `albprol` desde `pedprol` (cost-neutral), filtro de delta y Stock sin filtro obligatorio. Hallazgo: **cc11 no serializa**. Ver [[modulo-regularizacion]], [[changelog]] y [[memoria]].
+> **Estado:** rama `regularizacion-stock` (front `653c025`, back `f3954fa`). Últimos fixes: **upsert de utilidades** para items sin fila en `ST_GANANCIA` y **memory leak** de `window.onscroll` en Stock. Antes: rama `regularizacion-stock` (front y back, pusheadas, para PR a `development`/`gamma`): pestaña/lógica de **Regularización de stock**, restauración de `albprol` desde `pedprol` (cost-neutral), filtro de delta y Stock sin filtro obligatorio. Hallazgo: **cc11 no serializa**. Ver [[modulo-regularizacion]], [[changelog]] y [[memoria]].
 
 ## Sub-proyectos
 

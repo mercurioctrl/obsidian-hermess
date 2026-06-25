@@ -163,3 +163,22 @@ Mapeo conceptual de los nombres legacy en `NewBytes_DBF.dbo` para que nadie se p
 ## Multi-empresa
 
 El sistema soporta **11 empresas activas** filtrando por `companyCode` (`NewBytes_DBF.dbo.FP_Empresas`). NO solo NB/NBElectric/Libreopción — también OXXEN, NBGLOBAL, MUGELLO, **LASET** (CODEMP=11, importadora uruguaya), etc. Ver [[contexto#Empresas activas (FP_Empresas)]].
+
+
+## Cuenta corriente (cross-DB, base `NEW_BYTES`)
+
+La cuenta corriente NO vive en `NewBytes_DBF` (el ERP transaccional) sino en la base legacy **`NEW_BYTES`** (módulo MS_/MC_), accedida por nombre de 3 partes sobre la misma conexión `sqlsrv`.
+
+| | Clientes | Proveedores |
+|---|---|---|
+| **Movimientos** | `MC_CCORRIENTES_MOVIMIENTOS` | `MS_MOV_CTACTE_PROVEEDORES` |
+| **Master** | `clientes` (NewBytes_DBF, ID_CLIENTE compartido) | `MS_PROVEEDORES` (NEW_BYTES, propio) |
+| **PK movimiento** | `ID_CCMOVIMIENTO` (float, no identity → MAX+1) | `ID_MOVIMIENTO` (int, no identity → MAX+1) |
+| **Clave del titular** | `ID_CLIENTE` (= `clientes.ID_CLIENTE`) | `ID_PROVEEDOR` = **`FP_Proveedores.CCODPRO`** (código legacy, NO el `Id_Proveedor` interno) |
+| **Importe** | `CC_IMPORTEUSD` magnitud + signo por `TR_CODIGO` | `IMPORTE_USD` magnitud + signo por `TR_CODIGO` |
+| **TR (ventas/compras)** | 24 débito / 42 crédito | 38 factura(deuda) / 40 pago / 30 NC / 32 débito |
+| **Marca de import Laset** | `ID_PROCEDENCIA=99` | `USU_IDENTIFICACION='Laset'` (no hay ID_PROCEDENCIA) |
+
+Definiciones de cada `TR_CODIGO` en `NEW_BYTES.dbo.GL_TRANSACCIONES`. El **signo** lo da el TR (importe siempre magnitud positiva). Los proveedores comp=11 no existían en `MS_PROVEEDORES` → se crean al importar (saldo 0).
+
+**Gotcha clave**: la cta cte de proveedores keyea por **CCODPRO**, no por `Id_Proveedor`. Asus `Id_Proveedor=16679` → `CCODPRO=002605`; cargar bajo `016679` no aparece en la pantalla del proveedor. Ver [[feature-laset-cuenta-corriente|cta cte clientes]] y [[feature-laset-cuenta-corriente-proveedores|cta cte proveedores]].

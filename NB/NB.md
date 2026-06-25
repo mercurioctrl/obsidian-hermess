@@ -12,7 +12,7 @@ Sistema de gestión de pedidos multi-empresa. Backend Laravel 9 + Frontend Nuxt.
 - [[pedidos/contexto|Contexto]] — reglas de negocio, gotchas, empresas
 - [[pedidos/memoria|Memoria]] — contexto acumulado de sesiones con Claude
 - [[pedidos/modulo-makesale|MakeSale]] · [[pedidos/modulo-removesale|RemoveSale]] · [[pedidos/modulo-dashboard-lo|Dashboard LO]]
-- [[pedidos/feature-laset-import|Laset Import]] · [[pedidos/feature-laset-cuenta-corriente|Cuenta Corriente Laset]] · [[pedidos/feature-asignacion-oc|Asignación OC]] · [[pedidos/feature-asignacion-oc-cookbook|Cookbook OC]] · [[pedidos/feature-integrar-eccn|ECCN]] · [[pedidos/feature-pedidos-olvidados|Pedidos Olvidados]]
+- [[pedidos/feature-laset-import|Laset Import]] · [[pedidos/feature-laset-cuenta-corriente|Cuenta Corriente Laset]] · [[pedidos/feature-laset-cuenta-corriente-proveedores|Cta Cte Proveedores Laset]] · [[pedidos/feature-asignacion-oc|Asignación OC]] · [[pedidos/feature-asignacion-oc-cookbook|Cookbook OC]] · [[pedidos/feature-integrar-eccn|ECCN]] · [[pedidos/feature-pedidos-olvidados|Pedidos Olvidados]]
 - [[pedidos/feature-laset-snapshot-restore|Snapshot/Restore Laset]] · [[pedidos/feature-laset-fix-pedprot-stockonly|Fix bugs Fase C Laset]] · [[pedidos/feature-laset-stockonly-completa|Compra completa stock-only + Reservas]] · [[pedidos/feature-laset-fix-marcas-comp11|Fix marcas comp=11]] · [[pedidos/feature-laset-wipe-reimport|Borrar todo + reimport limpio]] · [[pedidos/feature-laset-fix-albprol-faltante|Remito compra faltante (albprol)]] · [[pedidos/feature-sync-laset-botones|Patrón botones Sync Laset]] · [[pedidos/nota-catalogo-laset|Nota Catálogo Laset]]
 - **Esquema ERP:** [[pedidos/relacion-tablas-ped-alb|ventas]] · [[pedidos/relacion-tablas-pedprot-pedprol-pedproi|compras]] · [[pedidos/relacion-tablas-albprot-albprol|remitos compra]] · [[pedidos/relacion-tablas-articulo-stocks|artículo/stocks]] · [[pedidos/relacion-tablas-stocks-almacen|depósitos]] · [[pedidos/relacion-companycode|companyCode]]
 
@@ -74,4 +74,4 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 - [[limpieza-contactos-brevo/limpieza-contactos-brevo|Índice]] · [[limpieza-contactos-brevo/arquitectura|Arquitectura]] · [[limpieza-contactos-brevo/stack|Stack]] · [[limpieza-contactos-brevo/changelog|Changelog]] · [[limpieza-contactos-brevo/contexto|Contexto]] · [[limpieza-contactos-brevo/memoria|Memoria]]
 
 ---
-*Última actualización: 2026-06-23 — Inventario: módulo Regularización de stock, restauración de `albprol` desde `pedprol` (cost-neutral, aplicada en prod OC 11568) y hallazgo cc11-no-serializa. Ver [[inventario/changelog]] y [[inventario/modulo-regularizacion]].*
+*Última actualización: 2026-06-24 — Compras: la cuenta corriente de proveedores se refactorizó para leer el ledger NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES (antes FACPROT).*

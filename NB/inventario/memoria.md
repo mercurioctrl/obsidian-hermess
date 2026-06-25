@@ -1,10 +1,16 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-06-23. (Memoria local también en
+Última sincronización: 2026-06-25. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Upsert de utilidades en ST_GANANCIA (2026-06-24)
+Marcar precio/utilidad a un item **sin fila** en `NEW_BYTES.dbo.ST_GANANCIA_ESTIPULADA_ARTICULOS` fallaba **en silencio**: `_update_gain_column` hacía `UPDATE ... WHERE ID_ARTICULO=?` puro → 0 filas, sin error (`success:true`), la utilidad no persistía y quedaba inconsistente con el precio (que sí se escribe en `articulo`). Afecta edición de utilidad y de precio (la inversa delega en el mismo punto). **Fix**: `_update_gain_column` es **upsert** — si `rowcount==0` inserta la fila sembrada desde `simulated_gains` (`GAIN_COLUMNS`, las 9 que lee `_fetch_gain_margins`), cubriendo las NOT NULL (`ESTIPLO/LO1/CF`). Tabla **sin PK**; clave = `articulo.cRef` (nvarchar, NO el int `ID_ARTICULO`; hay legacy no numérico como `'ACARREO'`). Eran **432** items sin fila (los más nuevos). Validado con ROLLBACK, sin escribir prod. Ver [[modulo-precios]] y [[changelog]].
+
+### Memory leak en grilla de Stock (2026-06-24)
+`setScroll()` reasignaba `window.onscroll` en cada evento (closure nueva + handler duplicado, sin limpiar en `beforeDestroy`) → ahora solo actualiza `scrollY`. Auditoría de RAM: el grueso es la grilla de Stock **sin virtualización** (`scroll.y` comentado, 500×~50 en DOM); virtualizar (patrón de Precios) queda pendiente por el riesgo de alineación antd 1.x.
 
 ### Grilla de Stock — fast-path + orden (2026-06-23 tarde)
 `get_items_stocks` optimizada: pre-agrega `albclil`/`albprol` (GROUP BY) y difiere subqueries solo-display a las filas paginadas. Sin filtro de delta usa **paginate-first** (pagina artículos y enriquece 500 filas con OUTER APPLY). ~15.5s → ~2.5s, byte-idéntico. Parseo del `ItemStock` por NOMBRE (`_itemstock_from_named`), no por índice — meter columnas en el medio del SELECT rompe el path por-índice (regresión 121696: −398 en vez de 0). Orden: marca→familia→título, sin-marca al final, ID de desempate. Flags Ocultar NB/LO/NBE (`articulo.ocultarDeNb/ocultar_lo/ocultarNbe`) via `PATCH /itemsStocks/{itemId}/visibility`. Forense: **122572** (+1 = RMA-reemplazo/canje, no contemplado por la fórmula), **122535** (+1 = venta sin remito; pareja = `pedclil` anulado 10457582 sin `albclil`, sin cobro en CC = faltante real). Ver [[changelog]] y [[arquitectura#Grilla de Stock — fast-path de performance]].

@@ -1,7 +1,7 @@
 # Memoria del proyecto
 
 Consolidado de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-22.
+(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-24.
 
 ## Estructura
 
@@ -42,8 +42,8 @@ Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(n
 - **Filtro de Empresa por defecto (2026-06-20):** al entrar a cualquier pestaña arranca en `$auth.user.companyCode || 4`; solo libre si se limpia a mano (las 9 `components/Filters/*.vue`).
 - **IVA por defecto = `articulo.ivaCompra`** al agregar ítem a una orden (editable). El buscador `/v1/items` ya devuelve `iva`.
 - **Filtro por serial (Órdenes/Ingresos):** `EXISTS` sobre `ST_DETALLE_STOCK` que solo se aplica si se usa el filtro. SKU/ID interno/serial igual.
-- **Cuenta corriente de proveedores (2026-06-22):** ojito en Proveedores → modal. Movimientos = comprobantes `FACPROT` (total desde `FACPROL`, fallback `FOB`); débito/crédito por `FP_TiposDocumentosCobro.signo`; `companyCode` derivado del proveedor; **pagos pendientes**. Ver [[contexto#Cuenta corriente de proveedores (2026-06-22)|contexto]].
-- **`FACPROT.companyCode` está 100% NULL** → derivar del proveedor (`ISNULL(FACPROT.companyCode, FP_Proveedores.companyCode)`). Aplica también a `providerVoucher`.
+- **Cuenta corriente de proveedores (refactor 2026-06-24):** ojito en Proveedores → modal. Lee el **ledger `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES`** (NO FACPROT). `ID_PROVEEDOR`=`CCODPRO`; importe `IMPORTE_USD` (+`COTIZACION`→pesos); tipo desde `GL_TRANSACCIONES.TR_NOMBRE`; signo por `TR_CODIGO` (suman 38/32; restan 30/40/128/44); excluye `ANULADO='SI'`; incluye pagos. Ver [[contexto#Cuenta corriente de proveedores (ledger MS_MOV_CTACTE_PROVEEDORES)|contexto]].
+- **`FACPROT.companyCode` está 100% NULL** → derivar del proveedor (`ISNULL(FACPROT.companyCode, FP_Proveedores.companyCode)`). Aplica al listado `providerVoucher`.
 - **UPDATEs masivos en prod**: contar primero y confirmar alcance — base externa sin migraciones, sin rollback fácil.
 - **`fullSerialized` del detalle de ingreso viene hardcodeado a 0** → usar `serializedAmount > 0` por ítem. (El del **listado** sí se calcula; órdenes sin líneas dan "Sí".)
 
@@ -54,7 +54,7 @@ Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(n
 ## Base de datos
 
 - Driver `DB_CONNECTION=sqlsrv` → en runtime usa `pdo_dblib` (FreeTDS).
-- **En uso (2026-06-20): `10.10.10.47:1433`**, DB `NB_WEB`, user `fcallipo`. Canónica histórica: `190.210.23.97:4444` (user `web`). Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
+- **En uso (2026-06-24): `db-nb-dev.blu.net.ar:41433`**, DB `NB_WEB`, user `fcallipo` (antes `10.10.10.47:1433`, que se cayó). Canónica histórica: `190.210.23.97:4444` (user `web`). Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
 - Bases en juego: `NewBytes_DBF` (ERP), `NB_WEB` (web), `NEW_BYTES` (stock/seriales/despachos), `PRODUCTOS`.
 
 ## Ver también

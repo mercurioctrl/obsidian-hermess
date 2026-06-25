@@ -1,5 +1,23 @@
 # Changelog — inventario
 
+## 2026-06-24 — Fixes: memory leak (Stock) + upsert de utilidades + subcolumnas seriales
+
+Continuación sobre la rama `regularizacion-stock` (front `653c025`, back `f3954fa`). Ver [[memoria]] y [[modulo-precios]].
+
+### fix: utilidad/precio no persistía en items sin fila en ST_GANANCIA (backend)
+- Marcar un precio o utilidad a un artículo que **aún no tiene fila** en `NEW_BYTES.dbo.ST_GANANCIA_ESTIPULADA_ARTICULOS` fallaba **en silencio**: `_update_gain_column` hacía un `UPDATE ... WHERE ID_ARTICULO=?` puro → 0 filas afectadas, sin error (`success:true`), pero la utilidad no se guardaba. El precio sí se escribía en `articulo` → inconsistente (al releer la grilla la utilidad volvía a 0). Afectaba edición de utilidad **y** de precio (la inversa `update_item_price_by_target` delega en el mismo punto).
+- **Fix**: `_update_gain_column` ahora es **upsert** — si el UPDATE afecta 0 filas, inserta la fila completa sembrada desde `simulated_gains` (`GAIN_COLUMNS`, las 9 que lee `_fetch_gain_margins`), consistente con el precio recién calculado y cubriendo las 3 columnas `NOT NULL` (`PORC_GANAN_ESTIPLO/LO1/CF`). Para items con fila existente el camino es idéntico. Validado con UPDATE+INSERT dentro de una transacción con `ROLLBACK` (sin escribir en prod). Había **432 artículos** (los más nuevos) sin fila.
+- Datos de la tabla: **sin PK**; clave = `articulo.cRef` (nvarchar, no el int `ID_ARTICULO`; hay valores legacy no numéricos como `'ACARREO'`).
+
+### fix: memory leak en la grilla de Stock (frontend)
+- `setScroll()` reasignaba `window.onscroll` en **cada** evento de scroll (closure nueva por evento) y además estaba registrado como listener de `scroll` → handler duplicado; el `window.onscroll` tampoco se limpiaba en `beforeDestroy`. Ahora `setScroll` solo actualiza `scrollY` (el listener ya está vía `addEventListener`/`removeEventListener`).
+- Auditoría de RAM del front: el consumidor dominante es la grilla de Stock **sin virtualización** (`scroll.y` comentado) → 500 filas × ~50 columnas en el DOM. La virtualización (copiar el patrón de Precios) queda como cambio aparte por el riesgo de alineación antd 1.x.
+
+### feat (post-23): subcolumnas de Seriales + Últ. ingreso/venta + fix búsqueda con paréntesis
+- **Seriales** pasó a columna agrupada con 3 subcolumnas: **Us/Tot** (usados/total), **Disp.** (presentes = total − usados) y **Δ ser.** (presentes − stockTotal; verde si 0, rojo si ≠0). Toggleables y persistidas. (web `0dbaeef`)
+- Columnas **Últ. ingreso / Últ. venta** también en Stock (de `articulo.ULTIMO_INGRESO`/`ULTIMA_VENTA`). (web `86f3108`)
+- **Búsqueda tolerante a paréntesis/símbolos** en Stock, Precios y Productos: el slug `procesador_intel_lga1700...` no matcheaba "PROCESADOR INTEL (LGA1700)..." porque `_` es comodín de 1 char en LIKE y los `()` agregan caracteres → se reemplaza `_` y espacio por `%`. (back `7534f92`/`0c0cfcf`)
+
 ## 2026-06-23 (tarde) — Performance grilla de Stock + columnas Ocultar + orden
 
 Sesión de optimización y features sobre la grilla de **Stock** (`get_items_stocks` en `stocks.py`). Cambios **locales, sin commitear** al momento de esta nota. Ver [[arquitectura#Grilla de Stock — fast-path de performance]] y [[memoria]].

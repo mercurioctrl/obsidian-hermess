@@ -72,4 +72,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-23 — Remito de compra faltante (albprol) a nivel línea: Fase D gatea el remito por OC y las líneas stock-only adjuntadas a una OC ya remitada quedaban sin ingreso; nuevo `laset:fix-albprol-faltante` (idempotente, wireado tras Fase D) + backfill 12 albprol. También: ID fiscal (`cdnicif`) de 36 clientes desde la pestaña Database Clientes. Ver [[feature-laset-fix-albprol-faltante]] y [[changelog#2026-06-23 (cont. 2) — Remito de compra faltante (albprol) + ID fiscal de clientes]].*
+*Última sincronización: 2026-06-24 — Import de la **cuenta corriente de proveedores Laset (comp=11)** a `MS_MOV_CTACTE_PROVEEDORES`: parser + `laset:prov-ccte-import`, 66 proveedores / 5.573 movimientos / 66 reconcilian. Clave correcta = `CCODPRO` (no Id_Proveedor; Asus 16679→002605). Ver [[feature-laset-cuenta-corriente-proveedores]] y [[changelog#2026-06-24 — Cuenta corriente de PROVEEDORES Laset (comp=11)]].*
