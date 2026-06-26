@@ -1,10 +1,19 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-06-25. (Memoria local también en
+Última sincronización: 2026-06-26. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Corrección de ACREDITADO fantasma vía NC real (2026-06-26)
+`albclil.ACREDITADO` mal cargado (> ncanent = imposible) infla el delta+. La NC real está en `FP_FactWebCliEncabezado/Detalle` (NTIPODOCU=2), vinculada por `ID_NROREMCLI_ENC`; cantidad real = `SUM(FP_FactWebCliDetalle.NCANENT)`. `apply_acreditado_correction` (key `IdDetalleRemito`) corrige el campo (no toca NC real/AFIP), aplicado en prod (Catriel): **88 líneas / 772 u**, 0 imposibles restantes en cc4, traza en registro_stock. **CAVEAT**: alcance seguro SOLO `ACREDITADO>ncanent`; `>nc_real` explota a 2.615 líneas porque el enlace FP es incompleto → "sin NC ⇒ 0" es FALSO; cap a `ncanent`, nunca 0. Ver [[modulo-regularizacion]].
+
+### Gap serial↔columnas → reponer a Control + barrido cc4 (2026-06-25)
+Tras restaurar un albprol (o en cualquier item), un **delta+ residual** suele ser **gapFísico de columnas**: seriales presentes que `nstock/nstock_d1/...` no reflejan. `apply_serial_gap_to_control` (regularization.py) lo repone a Control sin depender del race; tope=delta canónico, idempotente (`MARCADOR_SERIAL_GAP`), `COUNT(DISTINCT SERIAL)`. **Test de "gap limpio" (3 identidades)** antes de reponer: `albprol==filas_serial`, `egresados==ventas+RMA−notasCrédito` (¡incluir NC: devolución re-ingresa el serial!), `presentes==albprol−ventas−rma+nc`, `delta==presentes−columnas`. **Barrido cc4**: de 2.751 delta>0 solo 150 "gap limpio"; aplicados como Catriel (7463) → **143 cerraron a 0** (355 u), 0 negativos; 7 residuos legacy con filas de serial duplicadas/blank (contar con `COUNT(*)` infla; usar DISTINCT). El resto (2.601) son causas documentales/re-tagueo. Esfuerzo total: **170 items** realineados a la verdad física. Ver [[modulo-regularizacion]] y [[changelog]].
+
+### 111454 cerrado — no todo delta es albprol restaurable (2026-06-25)
+El 111454 (5700G) quedó en **−21** tras reponer 19 a Control y corregir una **NC de 2022** con error de carga (`ACREDITADO 100→10`). El −21 NO es restaurable: el cruce serial(`ID_COMPRA`)↔albprol(`albprot.nnumped`) **por orden** muestra que el albprol ya existe, solo mal numerado en la era vieja (4.277 u seriales sin albprol espejadas por 4.705 de albprol sin seriales → neto +17). **Restaurar duplicaría.** La "reg +983" de notas viejas no existía (eran movimientos `nstock→nstock_d1`). Regla: detectar albprol-faltante-real = gap **por orden** con `pedprol` vivo (como OC 11568), NO el neto agregado. `columnas==presentes` = item sano aunque delta≠0.
 
 ### Upsert de utilidades en ST_GANANCIA (2026-06-24)
 Marcar precio/utilidad a un item **sin fila** en `NEW_BYTES.dbo.ST_GANANCIA_ESTIPULADA_ARTICULOS` fallaba **en silencio**: `_update_gain_column` hacía `UPDATE ... WHERE ID_ARTICULO=?` puro → 0 filas, sin error (`success:true`), la utilidad no persistía y quedaba inconsistente con el precio (que sí se escribe en `articulo`). Afecta edición de utilidad y de precio (la inversa delega en el mismo punto). **Fix**: `_update_gain_column` es **upsert** — si `rowcount==0` inserta la fila sembrada desde `simulated_gains` (`GAIN_COLUMNS`, las 9 que lee `_fetch_gain_margins`), cubriendo las NOT NULL (`ESTIPLO/LO1/CF`). Tabla **sin PK**; clave = `articulo.cRef` (nvarchar, NO el int `ID_ARTICULO`; hay legacy no numérico como `'ACARREO'`). Eran **432** items sin fila (los más nuevos). Validado con ROLLBACK, sin escribir prod. Ver [[modulo-precios]] y [[changelog]].

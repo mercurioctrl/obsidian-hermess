@@ -2,9 +2,9 @@
 
 Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
-**Última sincronización:** 2026-06-25
+**Última sincronización:** 2026-06-26
 
-> **Estado:** rama `regularizacion-stock` (front `653c025`, back `f3954fa`). Últimos fixes: **upsert de utilidades** para items sin fila en `ST_GANANCIA` y **memory leak** de `window.onscroll` en Stock. Antes: rama `regularizacion-stock` (front y back, pusheadas, para PR a `development`/`gamma`): pestaña/lógica de **Regularización de stock**, restauración de `albprol` desde `pedprol` (cost-neutral), filtro de delta y Stock sin filtro obligatorio. Hallazgo: **cc11 no serializa**. Ver [[modulo-regularizacion]], [[changelog]] y [[memoria]].
+> **Estado:** regularización de stock + documental (scripts en `ms-metadata`, sin commit). Hecho en prod (agente Catriel): **170 items** de stock realineados a seriales (gap serial↔columnas) y **88 líneas de `albclil.ACREDITADO`** corregidas (772 u de crédito fantasma) cruzando la NC real de `FP_FactWebCli` (NTIPODOCU=2). Caveat: el enlace NC es incompleto → solo `ACREDITADO>ncanent` es corregible con confianza. Ver [[modulo-regularizacion]], [[changelog]] y [[memoria]].
 
 ## Sub-proyectos
 

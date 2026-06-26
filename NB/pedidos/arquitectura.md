@@ -182,3 +182,6 @@ La cuenta corriente NO vive en `NewBytes_DBF` (el ERP transaccional) sino en la 
 Definiciones de cada `TR_CODIGO` en `NEW_BYTES.dbo.GL_TRANSACCIONES`. El **signo** lo da el TR (importe siempre magnitud positiva). Los proveedores comp=11 no existían en `MS_PROVEEDORES` → se crean al importar (saldo 0).
 
 **Gotcha clave**: la cta cte de proveedores keyea por **CCODPRO**, no por `Id_Proveedor`. Asus `Id_Proveedor=16679` → `CCODPRO=002605`; cargar bajo `016679` no aparece en la pantalla del proveedor. Ver [[feature-laset-cuenta-corriente|cta cte clientes]] y [[feature-laset-cuenta-corriente-proveedores|cta cte proveedores]].
+
+### Botones de mantenimiento Laset (/syncLaset)
+Patrón uniforme: **servicio idempotente** (lógica canónica, compartida con el comando CLI) + **controller `__invoke {dry_run}`** + ruta `POST /v1/laset/*` + entrada en `plugins/api.js` + botón/modal **preview→confirmar** en `pages/syncLaset.vue`. Casos: reimport, wipe-transactional, fix-marcas-comp11, relink-facturas, **ccte-import** (clientes) y **prov-ccte-import** (proveedores). Los imports de cta cte suben el xlsx (multipart) y corren el parser Python sidecar.

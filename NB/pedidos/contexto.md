@@ -315,3 +315,7 @@ Destino `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES` (análogo de clientes `MC_CCOR
 - `ID_MOVIMIENTO` no es identity → MAX+1 fila a fila. Sin `ID_PROCEDENCIA` → rollback/idempotencia por `USU_IDENTIFICACION=Laset`.
 - Saldo objetivo del Excel = celda **"A favor / Deuda"** (al pie de la hoja) neta de **"NC Disponible"** solo cuando hay deuda (afd>0). Positivo = deuda, negativo = a favor.
 - Los proveedores comp=11 no estaban en el master `MS_PROVEEDORES` → se crean (saldo 0). Detalle: [[feature-laset-cuenta-corriente-proveedores]].
+
+
+### Cta cte proveedores — correcciones (2026-06-26)
+El saldo de la cta cte de proveedores = celda "A favor / Deuda" **bruta** (NO netear "NC Disponible", que es crédito informativo). "LST Global" se excluye (C1 = New Bytes Inc., intercompañía). Las hojas EUR se convierten a USD al **TC de cierre** y el TC real de cada pago se guarda en `COTIZACION`. Ver [[feature-laset-cuenta-corriente-proveedores]].

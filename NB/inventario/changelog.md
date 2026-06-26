@@ -1,5 +1,39 @@
 # Changelog — inventario
 
+## 2026-06-26 — Corrección de ACREDITADO (NC fantasma) vía NC real FP_FactWebCli
+
+Sesión sobre `ms-metadata` (scripts ad-hoc, sin commit). Limpieza documental del delta+. Ver [[modulo-regularizacion]] y [[memoria]].
+
+### Fuente de la NC real (dato del usuario)
+Las notas de crédito viven en `NewBytes_DBF.dbo.FP_FactWebCliEncabezado` + `FP_FactWebCliDetalle`, vinculadas a `albclit` por `ID_NROREMCLI_ENC`; **`NTIPODOCU=2` = Nota de Crédito** (`LANULADA` bit). La cantidad realmente acreditada por artículo = `SUM(FP_FactWebCliDetalle.NCANENT)` de las NC del remito. (El archivo viejo `MS_NOTASCREDITO_*` termina abril-2021 y NO sirve.)
+
+### feat: `apply_acreditado_correction` (regularization.py) — aplicado en prod
+- Corrige `albclil.ACREDITADO` mal cargado (> lo realmente acreditado) que infla el delta+ con crédito fantasma. Key = `IdDetalleRemito` (único por línea). Recalcula el valor autoritativo EN VIVO desde la NC real; dry-run, idempotente, gateada por `gerencia`, traza en `registro_stock`. NO toca la NC real ni AFIP (solo el campo denormalizado del lado stock).
+- **Aplicado (Catriel 7463): 88 líneas / 772 u** de crédito fantasma removido → 0 líneas imposibles en cc4. 65 corregidas a su NC real, 23 capeadas a `ncanent`.
+
+### Landmine evitado (clave)
+El alcance seguro es SOLO `ACREDITADO > ncanent` (imposible: acreditás más de lo vendido). El primer dry-run con `ACREDITADO > nc_real` explotó a **2.615 líneas / 9.105 u** porque el enlace FP_FactWebCli es **incompleto** (la mayoría de los ACREDITADO no encuentran su NC) → "sin NC ⇒ corregir a 0" es FALSO en general. Regla segura: NC real si existe, si no **cap a `ncanent` (nunca 0)`**. Bajar ACREDITADO baja el +creditNote → algunos items quedan delta negativo (benigno).
+
+### Entregable a contabilidad
+CSV `nc_errores_acreditado_cc4.csv` (88 líneas, `cliente`, `acreditado_correcto_NC`, `corregir_a`, `error_infla_delta`).
+
+## 2026-06-25 (tarde) — Regularización: gap serial↔columnas a Control + cola OC 11568 + barrido cc4
+
+Sesión sobre `ms-metadata` (scripts ad-hoc, sin commit). Continuación de la regularización de stock. Ver [[modulo-regularizacion]] y [[memoria]].
+
+### feat: `apply_serial_gap_to_control` (regularization.py)
+- Cierra el delta+ residual reponiendo a **Control** (`nstock_ctrl`) el **gapFísico** = `seriales_presentes − columnas_stock` por depósito, **sin depender del universo del race** (`_compute`/`DELTA_RACE`). Generaliza la Acción 1 para la cola de la restauración de albprol. Tope = delta canónico actual (no sobre-corrige), dry-run por defecto, idempotente (marcador `MARCADOR_SERIAL_GAP`), gateada por `gerencia`. Usa `COUNT(DISTINCT SERIAL)`.
+- **Test de "gap limpio" (3 identidades del ledger)** para saber si un delta+ es seguro de reponer: `albprol==filas_serial`, `egresados==ventas+RMA−notasCrédito` (¡incluir NC: las devoluciones re-ingresan el serial!), `presentes==albprol−ventas−rma+nc`, y `delta==presentes−columnas`. Si los 4 cierran, el descuadre vive solo en columnas.
+
+### Cola de OC 11568 cerrada (aplicado en prod, agente Catriel 7463)
+- **4 limpios** (119143:60, 119760:2, 118920:1, 118963:1 = 64 u) → delta 0.
+- **111454** (+88): repuestos 19 físicos (→69); el resto 69 es **documental**, NO físico. Hallazgos: (a) la "reg +983" de la memoria vieja **no existe** (eran movimientos `nstock→nstock_d1`); (b) el usuario corrigió la **NC de 2022** (`X000200545212`, `ACREDITADO 100→10`, error de carga de 90 u) → delta 69→**−21**; (c) el −21 NO es albprol restaurable: el cruce serial(`ID_COMPRA`)↔albprol(`albprot.nnumped`) por orden muestra que el albprol **ya existe**, solo mal numerado en la era vieja (4.277 u de seriales sin albprol espejadas por 4.705 de albprol sin seriales → neto +17). Estado sano: `columnas=977==presentes`.
+
+### Barrido "gap limpio" cc4 (aplicado en prod)
+- De **2.751** items cc4 con delta>0, solo **150 "gap limpio"** (test de 3 identidades). Aplicados: **143 cerraron a delta 0**, 355 u a Control, **0 negativos**. 7 residuos legacy (101484, 6816, 6814...) tienen filas de serial **duplicadas/blank** presentes (item viejo) — el barrido las contó con `COUNT(*)` e infló el gap; la función (`COUNT(DISTINCT SERIAL)`) repuso solo el real → residuo = duplicados fantasma. **Gotcha**: el barrido debe contar presentes con `COUNT(DISTINCT SERIAL)` (corregido). Los 2.601 restantes son causas documentales/re-tagueo (no tocar).
+- Total del esfuerzo: **170 items** (24 auto_stock + 5 cola OC 11568 + 143 barrido) con stock vendible realineado a la verdad física de seriales.
+
+
 ## 2026-06-25 — Documentación: origen del FOB + verificación de merge
 
 Sesión de documentación/sync (sin commits). Ver [[memoria]] y [[modulo-precios#Columnas de costo: FOB vs NCOSTEPROM]].

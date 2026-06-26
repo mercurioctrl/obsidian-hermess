@@ -914,3 +914,24 @@ Import de la cta cte histórica de proveedores Laset a `NEW_BYTES.dbo.MS_MOV_CTA
 - Aparte: se restauró el host de DB en `.env` a `db-nb-dev.blu.net.ar:41433` (estaba en el viejo 10.10.10.47).
 
 Commit `ed45cfaf`. Archivos: `app/Console/Commands/LasetProvCtaCteImportCommand.php`, `scripts/laset_prov_ccte_to_json.py`.
+
+
+## 2026-06-25 — Botón "Importar cta cte proveedores" en /syncLaset
+
+Expone el import de cta cte de proveedores (comp=11) como botón preview→confirmar, mismo patrón que el de clientes. Detalle: [[feature-laset-cuenta-corriente-proveedores#Botón en /syncLaset (preview→confirmar)]].
+
+- Backend (`431219cf`): `LasetProvCtaCteImportService` (lógica canónica) + `LasetProvCtaCteImportRun` (`POST /v1/laset/prov-ccte-import`) + ruta; comando refactorizado a wrapper que delega al servicio.
+- Frontend (`cbd8d50`): `provCctImport()` en `api.js` + botón/modal en `syncLaset.vue`.
+- Aparte: `.env` a host local de casa `10.10.10.47:1433` (oficina = `db-nb-dev:41433`; misma base, según ubicación).
+
+Archivos: `app/Services/Laset/LasetProvCtaCteImportService.php`, `app/Http/Controllers/Laset/LasetProvCtaCteImportRun.php`, `pages/syncLaset.vue`, `plugins/api.js`.
+
+
+## 2026-06-26 — Cta cte proveedores: saldo bruto + LST Global + conversión EUR
+
+Commit `d05ddd4c`. Correcciones tras revisar contra la pantalla del ERP:
+- **Saldo = celda "A favor / Deuda" TAL CUAL (bruto)** — la "NC Disponible" es crédito informativo y NO va al ledger. Antes la neteaba → Asus daba 47.896 en vez de **53.258,11** (lo que muestra la pantalla). Afectó también AllPlus y TDS (los 3 con deuda + NC). Todos corregidos.
+- **"LST Global" excluida**: su C1 es "New Bytes Inc." (intercompañía), no el proveedor LST GLOBAL (le atribuía US$11,3M).
+- **2ª pasada EUR**: 13 hojas europeas (Tiroler 79.982 · Winter 7.445 · Danicoop −11.790 + 10 saldadas) convertidas a USD al **TC de cierre** (facturas y pagos EUR × TC_cierre → saldo = afd_EUR × TC_cierre); el **TC real de cada pago se guarda en COTIZACION**. El servicio importa USD + EUR.
+- Estado dev: **78 proveedores comp=11 (65 USD + 13 EUR), 5.303 movimientos, todos reconcilian**.
+- Pendiente (no comp=11): Rational (EUR US$451k), La Guera, Santa Margherita, Egre + 10 USD con saldo. Ver [[feature-laset-cuenta-corriente-proveedores]].

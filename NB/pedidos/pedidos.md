@@ -72,4 +72,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-24 — Import de la **cuenta corriente de proveedores Laset (comp=11)** a `MS_MOV_CTACTE_PROVEEDORES`: parser + `laset:prov-ccte-import`, 66 proveedores / 5.573 movimientos / 66 reconcilian. Clave correcta = `CCODPRO` (no Id_Proveedor; Asus 16679→002605). Ver [[feature-laset-cuenta-corriente-proveedores]] y [[changelog#2026-06-24 — Cuenta corriente de PROVEEDORES Laset (comp=11)]].*
+*Última sincronización: 2026-06-26 — Cta cte proveedores: saldo = "A favor/Deuda" bruto (no netear NC; Asus 53.258,11), LST Global excluida (= NB Inc), y 2ª pasada EUR (13 hojas convertidas al TC de cierre, TC real por pago en COTIZACION). 78 proveedores / 5.303 movimientos. Commit `d05ddd4c`. Ver [[feature-laset-cuenta-corriente-proveedores]].*
