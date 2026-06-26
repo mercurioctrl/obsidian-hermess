@@ -4,6 +4,23 @@ Clasificación de los items de cc4 con delta ≠ 0: si la **lógica los cierra**
 
 > CSV completo (1.365 filas) fuera de la bóveda: `/Users/hermess/www/inventario/regularizacion_buckets_cc4.csv`
 
+## Worklist de recuento físico actual (2026-06-26)
+
+Reconstrucción accionable del bucket "recontar": items serializados de cc4 (distribuidora 1, no excluidos) donde **`stock_columnas != seriales_presentes`** — solo un conteo físico dice cuál es el correcto.
+
+> CSV (721 filas, sobreventa primero) fuera de la bóveda: `/Users/hermess/www/inventario/ms-metadata/worklist_recuento_cc4.csv` · generador `worklist_recuento_cc4.py`
+
+**GOTCHA**: el criterio crudo `columnas != presentes` da **1.033 items**, pero la mayoría son **ledgers de seriales ROTOS** (presentes inflados de legacy: ej. SFX_500 con 8.090 presentes vs 4.059 stock — no se cuentan). Se filtra por **`max(stock, presentes) <= 50`** (lo realmente contable):
+
+| bucket | items | acción |
+|---|--:|---|
+| **FALTA en serial (stock fantasma / SOBREVENTA)** | **66** | **PRIORIDAD**: stock>seriales presentes → el sistema muestra vendible que no está (ej. 118131 stock=30 ser=0) |
+| SOBRA en serial (stock sub-cargado) | 655 | secundario: seriales>stock, benigno (muchos fallaron el test gap-limpio) |
+| ledger roto (no contable) | 313 | arreglo de ledger, NO recuento |
+
+El depósito arranca por los **66 de sobreventa**. Ver [[modulo-regularizacion]].
+
+
 ## Resumen
 
 | bucket | items | u delta | qué hacer |

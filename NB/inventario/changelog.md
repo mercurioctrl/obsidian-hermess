@@ -1,5 +1,18 @@
 # Changelog — inventario
 
+## 2026-06-26 (cont.) — Filtro distribuidora en grillas + fix delta "nonzero" + worklist recuento
+
+Sesión sobre `ms-metadata`. Commits en `regularizacion-stock` (pusheados). Ver [[modulo-regularizacion]], [[regularizacion-buckets]] y [[memoria]].
+
+### feat(stock): ocultar distribuidoras 2/3/4 de Stock y Precios (commit 923a783)
+Pedido del usuario: las grillas de **Stock y Precios nunca muestran** `articulo.id_distribuidora IN (2,3,4)` (solo 1/NULL). Filtro `AND (A.id_distribuidora IS NULL OR A.id_distribuidora NOT IN (2,3,4))` tras cada `WHERE A.EXCLUIR=0` en `stocks.py` (7 queries: count ×2, prices_grid, get_items_stocks ×4 ramas). Counts y exports lo heredan. Count cc4: 13.078 → 5.309. Si un item "no aparece", chequear su `id_distribuidora`.
+
+### fix(stock): aceptar delta=nonzero en /itemsStocks (commit 7f67d7b)
+El filtro **"distinto de cero"** rebotaba con 400: el front mandaba `nonzero` y los controllers ya lo resolvían (`DELTA <> 0`), pero la **validación del endpoint** en `main.py` solo permitía `positive/negative/neutral`. Se agregó `nonzero` a la whitelist. cc4 ahora: 896 items con delta ≠ 0.
+
+### Worklist de recuento físico (cc4)
+Items serializados donde `stock_columnas != seriales_presentes` → solo el conteo físico resuelve. **GOTCHA**: el criterio crudo da 1.033 pero la mayoría son **ledgers rotos** (presentes inflados de legacy, ej. 8.090 fuentes). Filtrando por contable (`max(stock,ser)<=50`): **721 contables = 66 "stock fantasma/sobreventa" (prioridad) + 655 sub-cargado**; **313 ledger-roto** quedan fuera (arreglo de ledger, no recuento). CSV en `/Users/hermess/www/inventario/ms-metadata/worklist_recuento_cc4.csv` (generador `worklist_recuento_cc4.py`).
+
 ## 2026-06-26 — Corrección de ACREDITADO (NC fantasma) vía NC real FP_FactWebCli
 
 Sesión sobre `ms-metadata` (scripts ad-hoc, sin commit). Limpieza documental del delta+. Ver [[modulo-regularizacion]] y [[memoria]].
