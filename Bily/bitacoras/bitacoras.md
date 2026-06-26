@@ -44,6 +44,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-06-15|2026-06-15]] — Día de baja interacción ("días fatales" de Catriel): contención, resumen del Kanban General y propuesta de delegar tickets en Jira (Marbe hoja membretada, Franco SNB-3963)
 - [[Bily/bitacoras/2026-06-16|2026-06-16]] — Consulta sobre el sistema de stock/inventario de NB: arquitectura (Nuxt.js + FastAPI), modelo de datos (articulo/stocks), flujos de actualización y auditorías recientes
 - [[Bily/bitacoras/2026-06-18|2026-06-18]] — Limpieza y estructuración del Kanban General, priorización de tareas de desarrollo (filtro de fechas, checkbox de acciones masivas, hoja membretada de Marbe, armados de postventa) y verificación de la sincronización con Obsidian
+- [[Bily/bitacoras/2026-06-26|2026-06-26]] — Jornada sin actividad: sin interacciones significativas ni pedidos por WhatsApp
 
 ## Ver también
 

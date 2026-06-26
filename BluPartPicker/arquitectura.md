@@ -81,6 +81,18 @@ id, source, codigo, precio, stock, isinstock, recorded_at
 id, source, started_at, finished_at, status, items_total, items_new, items_updated, message
 ```
 
+### Tablas `api_keys` / `api_usage` (auth)
+
+Creadas automáticamente al iniciar `api.py`.
+
+```sql
+api_keys(key PK, user_name, email, active INT DEFAULT 1, plan TEXT DEFAULT 'free', note, created_at)
+api_usage(id PK, key, endpoint, method, ip, ts)  -- índice en (key, ts)
+```
+
+- `active=0` → 403 Forbidden en el siguiente request
+- `api_usage` se escribe en batch async (flush cada 5s, queue asyncio) — no bloquea responses
+
 ### Tabla `exchange_rates`
 
 Tipos de cambio USD/ARS. Actualizada cada 30 min desde `dolarapi.com/v1/dolares`.
@@ -115,20 +127,33 @@ idx_psh_source_codigo       ON price_stock_history(source, codigo)
 idx_psh_recorded_at         ON price_stock_history(recorded_at)
 ```
 
-## API REST — `api.py` (v2.1.0)
+## API REST — `api.py` (v2.3.0)
 
-**Puerto:** 4444 · **Docs:** http://10.10.10.7:4444/docs · **Framework:** FastAPI + uvicorn
+**Puerto:** 4444 · **Docs:** https://partpicker.blustudioinc.com/docs · **Framework:** FastAPI + uvicorn
 
-| Endpoint | Descripción |
-|----------|-------------|
-| `GET /sources` | Estadísticas por fuente |
-| `GET /items` | Listado paginado con filtros y conversión de moneda |
-| `GET /items/{source}/{codigo}` | Ficha completa |
-| `GET /items/{source}/{codigo}/historia` | Historial precio/stock |
-| `GET /fabricantes` | Marcas con conteo — acepta `source`, `categoria`, `distribuidor` |
-| `GET /categorias` | Categorías con conteo — acepta `source`, `fabricante`, `distribuidor` |
-| `GET /exchange-rates` | Tipos de cambio USD/ARS actuales (7 casas) |
-| `GET /sync/log` | Últimas ejecuciones de sync |
+### Autenticación (rama `feat/api-auth`)
+
+Header `X-Api-Key`. Controlado por env vars: `AUTH_REQUIRED=1` activa validación (default `0` = pública), `ADMIN_KEY` protege `/admin/*`. Sin clave → 401; key desactivada → 403. Ver [[contexto#Decisiones recientes]].
+
+### Endpoints
+
+| Grupo | Endpoint | Descripción |
+|-------|----------|-------------|
+| **Catálogo** | `GET /sources` | Estadísticas por fuente |
+| | `GET /items` | Listado paginado con filtros y conversión de moneda |
+| | `GET /items/{source}/{codigo}` | Ficha completa |
+| | `GET /items/{source}/{codigo}/historia` | Historial precio/stock |
+| **Comparador** | `GET /groups` | Productos canónicos con ahorro entre fuentes |
+| | `GET /groups/{oracular_sku}` | Comparador: mismo producto en N fuentes |
+| **Curación** | `GET /candidates` | Cola de pares pendientes |
+| | `POST /match` | Veredicto same/different → `manual_matches` |
+| **Referencia** | `GET /fabricantes` · `GET /categorias` | Marcas/categorías con conteo (caché 5 min) |
+| | `GET /exchange-rates` | Tipos de cambio actuales (7 casas) |
+| | `GET /sync/log` | Últimas ejecuciones de sync |
+| **Admin** | `POST /admin/keys` | Crear API key para usuario |
+| | `GET /admin/keys` | Listar todas las keys |
+| | `PATCH /admin/keys/{key}` | Activar/desactivar, cambiar plan |
+| | `GET /admin/keys/{key}/usage` | Consumo por endpoint (ventana N días) |
 
 ### Filtros de `/items`
 
@@ -173,11 +198,14 @@ Subsistema **no destructivo** que agrupa items de distintas fuentes que son el m
 
 | Script | Horario | Duración |
 |--------|---------|----------|
+| `sync_exchange_rates.py` | `*/30 * * * *` | <5 seg |
 | `sync_invid.py` | `0 */4 * * *` | ~5 min |
 | `sync_ceven.py` | `0 1,5,9,13,17,21 * * *` | ~15-20 min |
 | `sync_stylus.py` | `0 2,6,10,14,18,22 * * *` | ~5 min |
-| `sync_preciosgamer.py` | `0 3,7,11,15,19,23 * * *` | ~10 min (1er sync) |
-| `sync_exchange_rates.py` | `*/30 * * * *` | <5 seg |
+| `sync_preciosgamer.py` | `0 3,7,11,15,19,23 * * *` | ~10 min |
+| `sync_air.py` | `30 0,4,8,12,16,20 * * *` | ~5 min |
+| `sync_nb.py` | `30 2,6,10,14,18,22 * * *` | ~5 seg |
+| `match_products.py` + `gen_candidates.py` | **⚠️ sin cron** | — (cron sugerido: `45 23 * * *`) |
 
 ## Volumen actual (jun 2026)
 

@@ -162,3 +162,44 @@ Feature grande: agrupar items de distintas fuentes que son el mismo producto fí
 - Consola de curación en `/ui` (`frontend/index.html`, vanilla JS): navegar matcheados + revisar candidatos (Mismo/Distinto/Saltar). API v2.2.0.
 
 Archivos: `match_products.py`, `gen_candidates.py`, `frontend/index.html`, `api.py`, `ejemplo_comparar.sh`.
+
+
+## 2026-06-25 — Auth por API Key + Swagger completo
+
+### Sistema de autenticación (`feat/api-auth`)
+
+Diseño: API Key estática en header `X-Api-Key`. CORS sigue abierto — cualquier frontend puede consumirla, pero necesita la key. Sin OAuth ni DB externa, mínima fricción.
+
+**Tablas nuevas en `invid.db`** (creadas automáticamente al iniciar `api.py`):
+- `api_keys(key PK, user_name, email, active, plan, note, created_at)` — `active=0` → 403
+- `api_usage(id, key, endpoint, method, ip, ts)` — log de requests, escritura async en batch cada 5s
+
+**Variables de entorno:**
+- `AUTH_REQUIRED=0` (default) → API pública, sin romper deploy existente
+- `AUTH_REQUIRED=1` + `ADMIN_KEY=<secret>` → activa validación en producción
+
+**Endpoints `/admin/*`** (requieren `X-Api-Key: <ADMIN_KEY>`):
+- `POST /admin/keys` — crear key (token_urlsafe(32), devuelve la key una sola vez)
+- `GET /admin/keys` — listar todas
+- `PATCH /admin/keys/{key}` — activar/desactivar, cambiar plan
+- `GET /admin/keys/{key}/usage?days=30` — consumo por endpoint en ventana de N días
+
+### Swagger v2.3.0 documentado
+
+- 5 grupos de endpoints con tags: Catálogo · Comparador · Curación · Referencia · Admin
+- Botón **Authorize** en Swagger UI via `APIKeyHeader` security scheme
+- Docstrings completos en cada endpoint: campos de respuesta, ejemplos, errores (401/403/404)
+- `Field()` con descriptions en todos los campos de modelos Pydantic
+- Descripción general de la API con sección de autenticación y sección de matching
+
+### Runbook de producción (`docs/runbook.md`)
+
+Nuevo archivo con el proceso completo documentado:
+- Mapa visual del pipeline (syncs → matching → API → curación)
+- Comandos exactos para corrida manual completa
+- Verificación funcional (queries SQLite + curl)
+- Tabla de crons activos, nota de hueco del matching (no está en cron)
+- Troubleshooting rápido por síntoma
+
+Archivos: `api.py`, `docs/architecture.md`, `docs/runbook.md`, `.claude/CLAUDE.md`
+
