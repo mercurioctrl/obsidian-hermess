@@ -1,10 +1,16 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-06-26. (Memoria local también en
+Última sincronización: 2026-06-27. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Índices de performance + refactor IN revertido (2026-06-27)
+Auditoría con el **DMV real** de SQL Server (login `web` tiene VIEW SERVER STATE). Aplicados en prod (Enterprise → `ONLINE=ON`): **P2 `ST_DETALLE_STOCK (CREF, FECHA_EGRESO)` = gran win, grilla 1.63s → 0.54s (−67%)**; P3 RVDS covering (modal seriales −14%); P1 albclit covering dfecalb (neutro por-query, gana en agregado; score DMV 298M pero NO toca la grilla). **Lección**: batchear las subqueries escalares de `get_items_stocks` con `IN` se probó y empeoró 2.5–3.7× (round trips sobre TLS 1.0) → el fix correcto era el índice, no reestructurar; revertido byte-idéntico. Fix N+1: `selldiscount.get_current_cost` reutiliza el cursor del loop. Script `ms-metadata/scripts/perf_indexes_p1_p3.sql`. Ver [[performance-indices]].
+
+### Modal de seriales: documentos, RMA-cambio y compra (2026-06-27)
+`get_item_serials` reconstruye por serial: estado (present = `FECHA_EGRESO` null), cadena `serial→RVD→albclit→factura/NC+pedido` (`OUTER APPLY TOP 1` = 1 fila/serial), **Cambio RMA** (cruce `ST_RMADETALLE.SERIAL` devuelto ↔ `ST_DETALLE_STOCK.ID_RMACLIENTE` reemplazo, ambas direcciones; 1 query + dicts, la correlacionada tardaba 12.6s), y **Compra** (`ID_COMPRA` a 8 dígitos). Bug: el endpoint serializaba solo 6 campos a mano (faltaba `present` → "todos despachados"); fix = objeto completo + default depósito "Todos". Ver [[modulo-seriales]].
 
 ### Corrección de ACREDITADO fantasma vía NC real (2026-06-26)
 `albclil.ACREDITADO` mal cargado (> ncanent = imposible) infla el delta+. La NC real está en `FP_FactWebCliEncabezado/Detalle` (NTIPODOCU=2), vinculada por `ID_NROREMCLI_ENC`; cantidad real = `SUM(FP_FactWebCliDetalle.NCANENT)`. `apply_acreditado_correction` (key `IdDetalleRemito`) corrige el campo (no toca NC real/AFIP), aplicado en prod (Catriel): **88 líneas / 772 u**, 0 imposibles restantes en cc4, traza en registro_stock. **CAVEAT**: alcance seguro SOLO `ACREDITADO>ncanent`; `>nc_real` explota a 2.615 líneas porque el enlace FP es incompleto → "sin NC ⇒ 0" es FALSO; cap a `ncanent`, nunca 0. Ver [[modulo-regularizacion]].

@@ -53,6 +53,12 @@ NODE_ENV=development
 
 ## Gotchas conocidos
 
+> **Actualización 2026-06-27** (modal de seriales + índices, ver [[modulo-seriales]] y [[performance-indices]]):
+> - **No batchear las subqueries de la grilla con `IN`**: se probó y empeoró 2.5–3.7× (los round trips sobre el link TLS 1.0 a prod pesan más que las subqueries inline, que corren server-side en un round trip y pegan a tablas indexadas). El fix correcto fue el índice **P2** (`ST_DETALLE_STOCK (CREF, FECHA_EGRESO)`): grilla 1.63s → 0.54s. **Medir siempre contra la DB real**; comparar viejo vs nuevo con `git show HEAD:archivo.py > _temp.py`.
+> - **Palabras que se parten a la mitad en las tablas**: antd usa `word-break: break-all` en `.ant-table-row-cell-break-word`. Regla global en `assets/ant/main.less` (`word-break: keep-all; overflow-wrap: normal`) → solo corta en espacios. Un token largo se excede en vez de partirse.
+> - **DDL en prod**: el SQL Server es **Enterprise** → crear índices con `WITH (ONLINE = ON)` para no lockear. El login `web` tiene ALTER+CONTROL.
+> - **Modal de seriales "todos despachados"**: el endpoint serializaba a mano solo 6 campos (faltaba `present`); siempre serializar el objeto completo. Y default de depósito = **"Todos"** o esconde los disponibles.
+
 > **Actualización 2026-06-23** (rama regularizacion-stock, ver [[modulo-regularizacion]]):
 > - **cc11 no serializa**: solo 16/602 artículos con seriales (955 ser vs 107.058 albprol). Su delta no es comparable con el modelo serializado de cc4 — sus deltas raros son descuadres de columnas de stock, NO albprol faltante/sobrante. Hay 209 SKUs duplicados cc4↔cc11.
 > - **Restaurar `albprol` es cost-neutral**: el recálculo de costo lo hace el flujo de recepción, no la fila. Sin triggers en albprol/albprot/articulo/stocks; `NCOSTEPROM` almacenado; el FOB usa el **último** albprol por fecha → un asiento backdated no cambia costo ni FOB.

@@ -102,3 +102,26 @@ inventario/
 - **Con warehouse**: path correlacionado viejo (poco usado por la grilla).
 
 Detalles: la construcción del `ItemStock` es por NOMBRE de columna (`_itemstock_from_named`), no por índice fijo — robusto ante cambios de orden de columnas (una regresión real fue meter columnas en el medio del SELECT del path por-índice). Orden del listado: marca → familia → título (case-insensitive), sin-marca al final, `ID_ARTICULO` de desempate. Resultado **byte-idéntico** al path viejo; ~15.5s → ~2.5s (sin delta), ~16s → ~4s (con delta). Las flags de ocultamiento por canal (`ocultarDeNb`/`ocultar_lo`/`ocultarNbe`) se togglean con `PATCH /itemsStocks/{itemId}/visibility`.
+
+
+## Modal de seriales — documentos, RMA y compra
+
+`get_item_serials` (`stocks.py`) + `Modal/ItemStock/SerialsById.vue` muestran los
+seriales de un artículo con su estado y trazabilidad. Cadena documental por serial:
+`ST_DETALLE_STOCK → RVD (ST_REMITOS_VENTA_DETALLE_SALIDA, por SERIAL) → albclit
+(REMITO_FP=cnumalb + SUCURSAL_REMITO=cnumsuc) → factura/NC (FP_FactWebCliEncabezado.NTIPODOCU)`.
+`OUTER APPLY ... TOP 1` por `HORA_EXACTA DESC` deja 1 fila por serial. El **Cambio RMA**
+(reemplazó a / reemplazado por) se reconstruye cruzando `ST_RMADETALLE.SERIAL` (devuelto)
+con `ST_DETALLE_STOCK.ID_RMACLIENTE` (reemplazo) — 1 query + dicts, no correlacionada.
+Detalle completo en [[modulo-seriales]].
+
+## Estrategia de índices / performance
+
+Las mejoras de DB se guían por el **DMV de missing indexes** de SQL Server (carga real
+de prod; el login `web` tiene `VIEW SERVER STATE`), no por análisis estático de código.
+Índices P1–P3 aplicados en prod (Enterprise → `ONLINE=ON`): el gran win fue **P2
+(`ST_DETALLE_STOCK (CREF, FECHA_EGRESO)`) que bajó la grilla de Stock 1.63s → 0.54s**.
+Lección importante: el refactor "obvio" de batchear las subqueries de la grilla con `IN`
+se probó y **empeoró 2.5–3.7×** (round trips sobre TLS 1.0) → el fix correcto era el
+índice, no reestructurar. Script `ms-metadata/scripts/perf_indexes_p1_p3.sql`. Detalle
+en [[performance-indices]].

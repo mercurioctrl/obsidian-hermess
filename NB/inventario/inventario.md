@@ -2,9 +2,9 @@
 
 Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
-**Última sincronización:** 2026-06-26
+**Última sincronización:** 2026-06-27
 
-> **Estado:** regularización de stock + documental (scripts en `ms-metadata`, sin commit). Hecho en prod (agente Catriel): **170 items** de stock realineados a seriales (gap serial↔columnas) y **88 líneas de `albclil.ACREDITADO`** corregidas (772 u de crédito fantasma) cruzando la NC real de `FP_FactWebCli` (NTIPODOCU=2). Caveat: el enlace NC es incompleto → solo `ACREDITADO>ncanent` es corregible con confianza. Ver [[modulo-regularizacion]], [[changelog]] y [[memoria]].
+> **Estado:** modal de **seriales** clickeable (estado, documentos factura/NC/pedido, **Cambio RMA**, compra, export, filtros en vivo) y **índices de performance** aplicados en prod — P2 bajó la grilla de Stock **1.63s → 0.54s (−67%)**. El refactor de subqueries con `IN` se probó y se revirtió (más lento). Ver [[modulo-seriales]], [[performance-indices]] y [[changelog]].
 
 ## Sub-proyectos
 
@@ -18,6 +18,8 @@ Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 - [[arquitectura]] — Arquitectura del sistema y decisiones de diseño
 - [[modulo-precios]] — Sección Precios: edición bidireccional + competencia (BluPartPicker)
 - [[modulo-regularizacion]] — Regularización de stock: delta documental, restauración albprol/albclil, Acción 1 (Control), cc11 no serializa
+- [[modulo-seriales]] — Modal de seriales por artículo: estado, documentos (factura/NC/pedido), Cambio RMA, compra, export
+- [[performance-indices]] — Índices P1–P3 (DMV real), por qué el refactor con IN se revirtió, fix N+1 selldiscount
 - [[regularizacion-buckets]] — clasificación de deltas cc4: auto-cerrables (lógica) vs a recontar (físico) vs revisar/granel
 - [[competencia-partpicker-cache]] — Cache de competencia (backend 30min SWR + cache local en Precios)
 - [[stack]] — Tecnologías, versiones y dependencias

@@ -37,6 +37,8 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 - [[inventario/competencia-partpicker-cache|Cache de competencia]] — cache backend 30min SWR + cache local en la grilla de Precios
 - [[inventario/modulo-regularizacion|Módulo Regularización]] — delta documental del grid; restauración `albprol`/`albclil`, reposición a Control (gap serial↔columnas), test de 3 identidades; cc11 no serializa
 - [[inventario/regularizacion-buckets|Buckets de delta cc4]] — clasificación auto-cerrables vs recuento físico vs revisar/granel
+- [[inventario/modulo-seriales|Módulo Seriales]] — modal de seriales por artículo: estado, documentos (factura/NC/pedido), Cambio RMA, compra, export
+- [[inventario/performance-indices|Performance e índices]] — índices P1–P3 (DMV real); por qué el refactor con IN se revirtió; fix N+1 selldiscount
 
 ---
 

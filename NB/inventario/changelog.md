@@ -1,5 +1,51 @@
 # Changelog — inventario
 
+## 2026-06-27 — Modal de seriales (documentos/RMA/cambios/compra) + índices de performance en prod
+
+Sesión sobre `ms-metadata` e `inventario-web-app` (cambios locales sin commit, salvo
+los **índices aplicados en prod**). Ver [[modulo-seriales]], [[performance-indices]] y [[memoria]].
+
+### feat: modal de seriales clickeable (front + back)
+Click en las celdas de Seriales abre `Modal/ItemStock/SerialsById.vue` con la lista de
+seriales del artículo. `get_item_serials` reconstruye por serial: estado, devuelto, y la
+cadena **serial → RVD → albclit → factura/NC + pedido**. Columnas, filtros en vivo, chips
+de conteo, paginación + "Ver todos", export CSV/XLSX. Detalle en [[modulo-seriales]].
+
+### fix: el modal mostraba "todos despachados" / total inflado
+(1) `GET /serials/{itemId}` serializaba solo 6 campos a mano → el front nunca recibía
+`present` → todo "despachado". (2) los LEFT JOIN multiplicaban filas. Fix: serializar el
+objeto completo + `OUTER APPLY ... TOP 1` (última salida) → 1 fila/serial. Item 118151:
+1945→1943, en stock 0→217.
+
+### feat: Cambio RMA (reemplazo ↔ reemplazado) + columna Compra
+`ST_RMADETALLE` (ID_ACCION=2) = serial devuelto; `ST_DETALLE_STOCK.ID_RMACLIENTE` = RMA
+del reemplazo. Cruzados marcan "reemplazó a X" / "reemplazado por Y" (UNA query + dicts;
+la correlacionada tardaba 12.6s → 1.1s). **Compra** = `ID_COMPRA` a 8 dígitos (13191 →
+`00013191`).
+
+### fix global: las palabras solo cortan en espacios (todas las tablas)
+Regla en `assets/ant/main.less` que sobrescribe `.ant-table-row-cell-break-word`
+(`word-break: break-all` de antd) con `word-break: keep-all; overflow-wrap: normal`. Un
+token sin espacios queda en una línea en vez de partirse a la mitad.
+
+### perf: análisis de índices (DMV real) + P1–P3 aplicados en prod (ONLINE=ON)
+Con el DMV de missing indexes (login `web` tiene VIEW SERVER STATE) + Enterprise Edition:
+**P2 = gran win, grilla de Stock 1.63s → 0.54s (−67%)**; P3 modal seriales −14%; P1 (albclit
+covering dfecalb) neutro por-query, gana en agregado. Ver [[performance-indices]].
+
+### lección: refactor de subqueries con IN — probado y REVERTIDO
+Batchear las subqueries escalares post-paginación de `get_items_stocks` con `IN` resultó
+**2.5–3.7× más lento** (round trips sobre TLS 1.0). El cuello era real pero el fix correcto
+era el **índice P2**, no reestructurar. Revertido (byte-idéntico).
+
+### fix: N+1 de conexiones en selldiscount
+`get_current_cost` abría una conexión TLS nueva por acción en `sync_up_sell_discounts`;
+ahora reutiliza el cursor del loop.
+
+### UX: tooltip en la columna Δ ser. de la grilla
+Header con ícono ℹ y tooltip: `Δ ser. = Disponibles − Stock del sistema`; 0 = cuadra,
+≠0 = discrepancia ledger↔columnas; solo aplica a artículos que serializan.
+
 ## 2026-06-26 (cont.) — Filtro distribuidora en grillas + fix delta "nonzero" + worklist recuento
 
 Sesión sobre `ms-metadata`. Commits en `regularizacion-stock` (pusheados). Ver [[modulo-regularizacion]], [[regularizacion-buckets]] y [[memoria]].
