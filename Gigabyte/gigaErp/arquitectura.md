@@ -145,6 +145,12 @@ POST /api/importaciones-mercaderia                  body: staged_id, deposito_id
 # Carga masiva de catálogo (productos, no stock)
 POST /api/importaciones-catalogo/parsear            multipart: archivo
 POST /api/importaciones-catalogo                    body: staged_id, mapping{item_no...}, marca, categoria
+
+# Onboarding (asistente de configuración inicial)
+GET  /api/onboarding/estado                         autodetecta pasos: usuarios→mercadería→precios→stock→distribuidores
+
+# Precios (importación/exportación masiva por global_part)
+POST /api/precios/importar                          body: filas[] (parseadas en navegador con SheetJS)
 ```
 
 ## Módulo Nota de Crédito — flujo
@@ -199,6 +205,14 @@ components/NavItem.vue     ← :data-guia="'nav-'+to" para anclar pasos al menú
 - **Persistencia**: `localStorage['gigaerp_guias_vistas']` = array de claves ya vistas. `iniciarSiPrimeraVez(path)` solo arranca si no está vista.
 - **Anclajes disponibles**: `data-guia="nav-<ruta>"` (sidebar), `topbar-search`, `topbar-ayuda`.
 - **Para extender**: editar solo `utils/guias.ts`; para anclar a botones de una página, agregar `data-guia` al elemento y referenciarlo en el paso (hoy los pasos de página son centrados).
+
+## Onboarding — vaciado + asistente de configuración inicial (2026-06-23, commit `2c45e61`)
+
+Distinto de la [[#Guía interactiva (onboarding tour)|guía interactiva]] (que es solo UI). Esto prepara el ERP para un cliente nuevo:
+
+- **`php artisan erp:vaciar`** (`Console/Commands/VaciarErp.php`): borra datos transaccionales **conservando admin, depósitos y configuración**; evita el re-seed de boot. `/backups/` está en `.gitignore`.
+- **Asistente** (`frontend/components/AsistenteInicial.vue` + `utils/onboarding.ts`, montado en `pages/index.vue`): guía el camino **usuarios → mercadería → precios → stock → distribuidores**, autodetectando cada paso vía `GET /api/onboarding/estado` (`OnboardingController`).
+- **Autor de productos** (`created_by`, migración `0044`): alta manual e importación masiva graban el usuario; `ProductoResource` lo expone y el catálogo lo muestra.
 
 ## Patrones Frontend
 

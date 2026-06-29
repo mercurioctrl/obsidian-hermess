@@ -3,7 +3,7 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `320a645` · **Última sincronización:** 2026-06-17
+**Último commit:** `72268f7` · **Última sincronización:** 2026-06-29
 **En desarrollo (working tree):** guía interactiva / tour de onboarding por sección — ver [[changelog#2026-06-17 — Guía interactiva]]
 
 ---
@@ -83,7 +83,7 @@ Admin:        Configuración (solo admin)
 | Ventas / Invoices | 34 |
 | Productos (demo+seeders) | ~259 base |
 | Productos (post-sync) | +miles (Air ~8k, Invid ~1.2k, Ceven ~466, Stylus ~908) |
-| Migraciones | 0001–0041 |
+| Migraciones | 0001–0044 |
 
 ### Usuarios demo
 
@@ -98,6 +98,6 @@ Admin:        Configuración (solo admin)
 
 ## Ver también
 
-- [[changelog]] — últimos: depósito stock ilimitado + reglas catálogo/stock propio (2026-06-16) · carga masiva catálogo GIGABYTE (d08b3a4)
+- [[changelog]] — últimos: filtro de stock por origen (propios/terceros, `72268f7`) · onboarding/vaciado de ERP + autor de productos (`2c45e61`) · importaciones con cartón/qty/kg (`e9ec075`) — 2026-06-23
 - [[arquitectura]] — SincronizarApiController, ResellersController, ImportacionCatalogoController
 - [[contexto]] — reglas de negocio y TODOs pendientes
