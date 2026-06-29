@@ -155,6 +155,16 @@ Las 4 listas son columnas fijas `productos.precio_lista_1..4` (no hay tabla de l
 - **Permisos de lista por usuario** (`usuarios.listas_precio` JSON, mig `0043`): qué listas puede usar cada usuario. **Admin = todas; no-admin = exactamente las asignadas; vacío/null = todas.** Los selectores muestran solo las permitidas; el backend (`OrdenVentaController`) valida 422 si se manda una no permitida. Un usuario logueado necesita re-login para ver nuevas restricciones.
 - **Importación masiva por global_part**: botón Importar en Precios. El Excel/CSV se parsea en el navegador (SheetJS) y se mandan las filas como JSON a `POST /precios/importar` → esquiva la falta de PhpSpreadsheet en el container. Update por global_part sobre productos propios; solo columnas de lista con valor.
 
+### Permisos por sección — reglas (2026-06-29)
+
+Cada sección del sidebar tiene un permiso `VER_SECCION_*` que se guarda en el array `usuario.permisos` (mismo array que `aprobaciones`/`VER_MONTOS`, sin enum ni migración). Ver [[arquitectura#Permisos de visualización por sección|arquitectura]] y [[changelog#2026-06-29 — Permisos de visualización por sección]].
+
+- **Opt-in**: el no-admin **solo ve las secciones cuyo permiso tenga marcado**. Si no tiene ninguna, cae en `/sin-acceso`. (Distinto del patrón de listas de precio, donde vacío = todas.)
+- **Admin ve todo** (bypass en `authStore.tienePermiso` y en el middleware).
+- Se configuran en **Configuración → Usuarios** (checkboxes "Secciones visibles", con "Marcar/Desmarcar todas").
+- **Doble enforcement (solo frontend)**: el sidebar oculta el ítem Y el middleware `secciones.global.ts` bloquea el acceso directo por URL (redirige a la 1ª sección permitida). ⚠️ Los endpoints de API NO están restringidos — falta policies por endpoint para seguridad real.
+- Las 13 keys: `VER_SECCION_DASHBOARD`, `_CLIENTES` (Distribuidores), `_PROVEEDORES`, `_MERCADERIA` (Stock Bodega), `_EXISTENCIAS` (Stock Distri), `_PRODUCTOS` (APIs Distri), `_RESELLERS`, `_ORDENES`, `_NOTAS_CREDITO`, `_MARKETING` (Fondos), `_CALENDARIO`, `_PROYECTOS`, `_TAREAS`.
+
 ### Importaciones de stock (XLSX)
 
 - Flujo 3 pasos: subir archivo → mapear columnas → confirmar

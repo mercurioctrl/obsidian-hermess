@@ -98,6 +98,6 @@ Admin:        Configuración (solo admin)
 
 ## Ver también
 
-- [[changelog]] — últimos: filtro de stock por origen (propios/terceros, `72268f7`) · onboarding/vaciado de ERP + autor de productos (`2c45e61`) · importaciones con cartón/qty/kg (`e9ec075`) — 2026-06-23
+- [[changelog]] — últimos: permisos de visualización por sección (VER_SECCION_*, opt-in) — 2026-06-29 · filtro de stock por origen (`72268f7`) · onboarding/vaciado de ERP (`2c45e61`) — 2026-06-23
 - [[arquitectura]] — SincronizarApiController, ResellersController, ImportacionCatalogoController
 - [[contexto]] — reglas de negocio y TODOs pendientes

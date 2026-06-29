@@ -1,3 +1,24 @@
+## 2026-06-29 — Permisos de visualización por sección (sidebar + bloqueo de ruta)
+
+Cada sección del ERP pasa a tener su permiso `VER_SECCION_*`. **Semántica opt-in**: un no-admin solo ve una sección si tiene su permiso; **el admin ve todo**. Detalle en [[arquitectura#Permisos de visualización por sección|arquitectura]] y [[contexto#Permisos por sección — reglas|contexto]].
+
+### Backend — sin cambios
+El array `permisos` (`usuarios.permisos`, cast `array`) ya aceptaba strings arbitrarios y `UsuarioController@{store,update}` lo valida como `nullable|array`. Las keys `VER_SECCION_*` se guardan ahí mismo junto a `aprobaciones`/`VER_MONTOS`. **Sin enum ni migración.**
+
+### Frontend
+- **`utils/secciones.ts`** (nuevo) — fuente única de verdad: `SECCIONES[]` (key, label, ruta, ícono, grupo) + `permisoDeRuta(path)`. Las 13 secciones: Dashboard, Distribuidores, Proveedores, Stock Bodega, Stock Distri, APIs Distri, Resellers, Órdenes de Venta, Notas de Crédito, Fondos, Calendario, Proyectos, Tareas.
+- **`middleware/secciones.global.ts`** (nuevo) — bloquea el acceso directo por URL; si falta el permiso redirige a la primera sección permitida (o `/sin-acceso`). Blinda también `/configuracion` (solo admin). Corre después de `auth.global.ts`.
+- **`pages/sin-acceso.vue`** (nuevo) — landing para usuarios sin ninguna sección.
+- **`layouts/default.vue`** — sidebar generado desde `SECCIONES`, agrupado, oculta encabezados de grupo vacíos (reemplaza los `v-if puedeVer()` parciales anteriores).
+- **`pages/configuracion/index.vue`** — checkboxes "Secciones visibles" por usuario (reusa `togglePermiso`, las keys viven en el mismo array `permisos`), atajo "Marcar/Desmarcar todas", badges legibles.
+- **Seeders** (`UsuarioSeeder`, `DemoSeeder`) — operativos demo con secciones para no romper la demo bajo opt-in; se corrigieron claves viejas (`VER_SECCION_ACCIONES`→`CALENDARIO`, `VER_SECCION_VENTAS`→`ORDENES`).
+
+⚠️ **El bloqueo es solo de frontend** (sidebar + route guard). Los endpoints siguen abiertos a cualquier usuario autenticado — para rechazo real falta agregar policies por endpoint en el backend.
+
+**Archivos:** `frontend/utils/secciones.ts` (nuevo), `frontend/middleware/secciones.global.ts` (nuevo), `frontend/pages/sin-acceso.vue` (nuevo), `frontend/layouts/default.vue`, `frontend/pages/configuracion/index.vue`, `backend/database/seeders/{UsuarioSeeder,DemoSeeder}.php`.
+
+---
+
 ## 2026-06-23 — Filtro de stock por origen, onboarding/vaciado, e importaciones con peso
 
 ### Filtro `con_stock`/`sin_stock` ahora contempla stock de terceros (commit `72268f7`)

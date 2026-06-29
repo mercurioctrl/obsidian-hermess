@@ -214,6 +214,17 @@ Distinto de la [[#Guía interactiva (onboarding tour)|guía interactiva]] (que e
 - **Asistente** (`frontend/components/AsistenteInicial.vue` + `utils/onboarding.ts`, montado en `pages/index.vue`): guía el camino **usuarios → mercadería → precios → stock → distribuidores**, autodetectando cada paso vía `GET /api/onboarding/estado` (`OnboardingController`).
 - **Autor de productos** (`created_by`, migración `0044`): alta manual e importación masiva graban el usuario; `ProductoResource` lo expone y el catálogo lo muestra.
 
+## Permisos de visualización por sección (2026-06-29)
+
+Permisos `VER_SECCION_*` por sección del sidebar, **opt-in** (admin ve todo). Reglas en [[contexto#Permisos por sección — reglas|contexto]].
+
+- **Backend: sin cambios.** Las keys se guardan en `usuario.permisos` (array JSON ya existente, validado `nullable|array`). No hay enum ni migración.
+- **`utils/secciones.ts`** (fuente única de verdad): `SECCIONES[]` con `{ key, label, to, icon, grupo, exact? }` + `permisoDeRuta(path)` (Dashboard matchea `/` exacto; el resto por prefijo del primer segmento).
+- **`layouts/default.vue`**: renderiza el sidebar desde `SECCIONES` filtrando por `authStore.tienePermiso(s.key)`; agrupa por `grupo` y **oculta el encabezado de grupo si no hay ítems visibles**.
+- **`middleware/secciones.global.ts`**: route guard global. Corre después de `auth.global.ts` (orden alfabético), llama `authStore.init()` defensivo, deja pasar admin / rutas públicas, y si el no-admin entra a una sección sin permiso lo manda a `primeraRutaPermitida()` (1ª de `SECCIONES` que tenga, o `/sin-acceso`). Blinda además `/configuracion` (solo admin).
+- **`pages/configuracion/index.vue`**: checkboxes "Secciones visibles" reusando `togglePermiso` (las keys conviven en `permisos`), atajo "Marcar/Desmarcar todas", badges con `labelPermiso()`.
+- ⚠️ **Solo frontend**: no hay enforcement de API. Para seguridad real falta middleware/policies por endpoint en el backend.
+
 ## Patrones Frontend
 
 ### Desempaquetar respuestas API
