@@ -51,7 +51,7 @@ Patrones recurrentes, gotchas y workflow del proyecto. Consultar antes de cada s
 
 **Síntoma:** El filtro "con stock" trae productos sin stock real (o al revés).
 **Causa:** `StockController@update` solo escribe `stock_deposito.cantidad`, nunca toca la columna `productos.stock`. Para productos propios esa columna es basura del import.
-**Fix:** Filtrar/sumar siempre por `stock_deposito`, no por `productos.stock`. Ver [[contexto#Stock y depósitos — reglas]].
+**Fix:** El filtro de stock (commit `72268f7`) ramifica por origen: **propios** (`distribuidor_id IS NULL`) por `stock_deposito`; **terceros** (`distribuidor_id NOT NULL`) por la columna `productos.stock` (que sí es su fuente de verdad, sincronizada desde el mayorista; no tienen filas en `stock_deposito`). Ver [[contexto#Stock y depósitos — reglas]].
 
 ### 8. `<select>` de Vue mezcla mal number/string
 

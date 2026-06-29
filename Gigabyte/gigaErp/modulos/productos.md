@@ -94,7 +94,7 @@ eso es lo que permite la vinculación en [[modulos/existencias|Stock Distri]].
 
 ## Endpoints
 
-- `GET /api/productos` — paginado 50, filtros: `search` (nombre/cod/sku/item_no/global_part/ean), `marca`, `distribuidor_id`, `stock`
+- `GET /api/productos` — paginado 50, filtros: `search` (nombre/cod/sku/item_no/global_part/ean), `marca`, `distribuidor_id`, `stock` (`con_stock`/`sin_stock` — ramifica por origen: propios por `stock_deposito`, terceros por columna `productos.stock`; ver [[contexto#Stock y depósitos — reglas|contexto]])
 - `GET /api/productos/seleccionables` — liviano para picker OV (ruta estática antes del apiResource)
 - `POST /api/productos` — alta manual (acepta campos de catálogo)
 - `PUT /api/productos/{id}` — actualiza listas de precio y/o campos de catálogo

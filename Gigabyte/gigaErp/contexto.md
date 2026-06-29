@@ -137,10 +137,14 @@ Ayuda paso a paso por sección (onboarding tour). Detalle técnico en [[arquitec
 
 - **Producto propio = `distribuidor_id IS NULL`** (creado a mano o por carga masiva de catálogo). Los productos con distribuidor van a Stock Distri / APIs Distri / Resellers y NO se mezclan. Tanto **Catálogo** (`solo_catalogo`) como **Stock Bodega** (`solo_inventario`) muestran TODOS los propios, tengan o no stock.
 - **Depósito con "Stock Ilimitado"** (`depositos.stock_ilimitado`, migración `0041`): al armar orden/pre-orden con ese depósito se puede poner cualquier cantidad sin tope. Se setea en Mercadería → Depósitos. Frontend: `OrdenItems.vue` libera el tope y muestra ∞; Stock Bodega muestra ícono `lucide:infinity` en esa columna. El backend NO descuenta stock — el tope solo lo imponía el front.
-- **Filtro de stock** (pestañas Todos / Con stock / Sin stock, en Catálogo y Stock Bodega), 100% sobre `stock_deposito`:
-  - `con_stock` = existe `stock_deposito.cantidad > 0` en un depósito **no** ilimitado.
-  - `sin_stock` = negación exacta (sin filas, todo en 0, o stock solo en depósito ilimitado).
-  - **Depósito ilimitado NO cuenta como "con stock"** (el infinito no es stock real).
+- **Filtro de stock** (pestañas Todos / Con stock / Sin stock), **ramifica por origen del producto** (actualizado 2026-06-23, commit `72268f7`; antes era 100% `stock_deposito` y eso rompía a los terceros):
+  - **Propios** (`distribuidor_id IS NULL`): la verdad es `stock_deposito`.
+    - `con_stock` = existe `stock_deposito.cantidad > 0` en un depósito **no** ilimitado.
+    - `sin_stock` = negación exacta (sin filas, todo en 0, o stock solo en depósito ilimitado).
+    - **Depósito ilimitado NO cuenta como "con stock"** (el infinito no es stock real).
+  - **Terceros** (`distribuidor_id NOT NULL`, APIs Distri / Resellers): la verdad es la columna `productos.stock` (no tienen filas en `stock_deposito`; la sincroniza SincronizarApiController desde el mayorista).
+    - `con_stock` = `stock > 0`.
+    - `sin_stock` = `stock <= 0 OR stock IS NULL`.
 
 ### Listas de precio — reglas (2026-06-16)
 

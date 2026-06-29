@@ -1,3 +1,31 @@
+## 2026-06-23 — Filtro de stock por origen, onboarding/vaciado, e importaciones con peso
+
+### Filtro `con_stock`/`sin_stock` ahora contempla stock de terceros (commit `72268f7`)
+El filtro de stock en `ProductoController@index` solo miraba `stock_deposito`, que únicamente existe para productos propios. Los productos de **terceros** (distribuidores con API / Resellers) guardan su disponibilidad en la columna `productos.stock` (la sincroniza [[modulos/resellers|SincronizarApiController]] desde el mayorista) y **nunca tienen filas en `stock_deposito`** → con el filtro viejo, `con_stock` los excluía a todos y `sin_stock` los incluía a todos.
+
+Ahora el filtro **ramifica por origen** (un `where(fn)` con dos sub-`where` unidos por `orWhere`):
+- **Propios** (`distribuidor_id IS NULL`): por `stock_deposito.cantidad > 0` en depósito NO ilimitado (igual que antes; la columna global `productos.stock` no cuenta).
+- **Terceros** (`distribuidor_id NOT NULL`): `con_stock` = `stock > 0`; `sin_stock` = `stock <= 0 OR stock IS NULL`.
+
+Matiz importante: la columna `productos.stock` es basura del import **para los propios**, pero es la fuente de verdad **para los terceros**. Ver [[contexto#Reglas de stock|contexto]].
+
+Precursor relacionado (commit `320a645`, 2026-06-16): `precios()` ahora filtra `whereNull(distribuidor_id) + whereHas(stocks)` para listar/exportar **solo internos con inventario real**, excluyendo los ~1800 productos sin distribuidor y sin stock (basura del import).
+
+### Onboarding: vaciado de ERP, asistente inicial y autor de productos (commit `2c45e61`)
+Prepara el ERP para entregarlo a un cliente nuevo desde cero.
+- **`php artisan erp:vaciar`** (`Console/Commands/VaciarErp.php`): deja la base limpia conservando **admin, depósitos y configuración**; evita el re-seed de boot. Ignora `/backups/` en git (dumps de base).
+- **Asistente de configuración inicial** en el dashboard (`components/AsistenteInicial.vue` + `utils/onboarding.ts`): guía el camino **usuarios → mercadería → precios → stock → distribuidores**, con autodetección de cada paso vía `GET /api/onboarding/estado` (`OnboardingController`).
+- **Autor de productos** (`created_by`, migración `0044`): alta manual e importación masiva registran el usuario; se muestra en el catálogo. `ProductoResource` expone el campo.
+
+**Archivos:** `Console/Commands/VaciarErp.php` (nuevo), `OnboardingController.php` (nuevo), `frontend/components/AsistenteInicial.vue` (nuevo), `frontend/utils/onboarding.ts` (nuevo), migración `0044`, `Producto.php`, `ProductoResource.php`, `ImportacionCatalogoController.php`, `frontend/pages/{index,mercaderia/catalogo}`, `routes/api.php`.
+
+### Importaciones de mercadería: cartón, qty y kg por ítem (commit `e9ec075`)
+Columnas `carton`/`qty`/`kg` por ítem de importación y totales de cabecera (`total_carton`/`total_qty`/`total_kg`), con captura en el wizard de importación y la vista de detalle.
+
+**Archivos:** `ImportacionMercaderiaController.php`, `Models/{ImportacionMercaderia,ItemImportacionMercaderia}.php`, migración `add_carton_qty_kg_to_importaciones_mercaderia`, `frontend/pages/mercaderia/importaciones/{nueva,[id],index}.vue`.
+
+---
+
 ## 2026-06-17 — Guía interactiva / tour de onboarding por sección
 
 Sistema de **ayuda paso a paso** que se activa en cada sección del ERP. Sin dependencias externas — motor propio. Detalle en [[arquitectura#Guía interactiva (onboarding tour)|arquitectura]] y [[contexto#Guía interactiva — reglas|contexto]]. *(En working tree, sin commit aún.)*
