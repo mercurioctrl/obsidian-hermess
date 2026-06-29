@@ -19,6 +19,7 @@
 - [[Gigabyte]] → gigaErp (ERP) · informe-landing (deck paid media con BLU)
 - [[Catirel]] — Proyectos Catirel
 - [[Asus]] — Contrataciones y mini sitio
+- [[D-Link/D-Link|D-Link]] — Reposicionamiento de marca en Argentina (vs TP-Link)
 - [[naevo]] — Proyecto Naevo
 - [[pacman]] — Proyecto Pacman
 - [[pega]] — Proyecto Pega
@@ -74,4 +75,4 @@
 
 ---
 
-*Actualizado: 2026-06-23*
+*Actualizado: 2026-06-29*
