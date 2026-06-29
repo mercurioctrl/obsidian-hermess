@@ -2,7 +2,7 @@
 
 Reposicionamiento de marca **D-Link Argentina** (estudio de marketing). Objetivo: remontar prestigio y presencia, y competir contra TP-Link.
 
-Proyecto local: `/var/www/d-link/`
+Proyecto local: `/var/www/d-link/`  ·  Pitch (deck visual): `/var/www/d-link/04-pitch/index.html`
 
 ## Investigación
 - [[informe-mercado|Informe de mercado]] — diagnóstico verificado (TP-Link, MercadoLibre, dolor router-ISP, macro arancel cero)
@@ -14,6 +14,9 @@ Proyecto local: `/var/www/d-link/`
 ## Campaña
 - [[plan-campana|Plan de campaña]] — reparto USD 2.000/mes, planes B2C + B2B, calendario 90 días, KPIs
 
+## Pitch
+- Deck visual HTML en `04-pitch/index.html` (15 slides, navegable con flechas)
+- [[pitch-guion-presentador|Guión del presentador]] — qué decir slide por slide + manejo de objeciones
+
 ## Pendiente
-- Pitch para el cliente
-- Cerrar gaps de data: scraping MercadoLibre + sell-through de D-Link
+- Cerrar gaps de data: scraping MercadoLibre + sell-through de D-Link (para fijar metas numéricas)
