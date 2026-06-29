@@ -11,7 +11,9 @@ Proyecto local: `/var/www/d-link/`
 ## Estrategia
 - [[estrategia-marca|Estrategia de marca]] — posicionamiento "Confiabilidad simple", pilares ANDA/FÁCIL/RESPALDADO, vs TP-Link
 
+## Campaña
+- [[plan-campana|Plan de campaña]] — reparto USD 2.000/mes, planes B2C + B2B, calendario 90 días, KPIs
+
 ## Pendiente
-- Plan de campaña digital (B2C + B2B, budget ~USD 2.000/mes)
 - Pitch para el cliente
 - Cerrar gaps de data: scraping MercadoLibre + sell-through de D-Link
