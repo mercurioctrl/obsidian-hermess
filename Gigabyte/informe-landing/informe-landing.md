@@ -26,4 +26,4 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[Gigabyte]]
 - [[gigaErp]] — otro proyecto Gigabyte (ERP) en esta bóveda
 
-_Última sincronización: 2026-06-23_
+_Última sincronización: 2026-06-30_

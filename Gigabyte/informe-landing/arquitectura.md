@@ -28,13 +28,20 @@ Agregados 2026-06-23, intercalados tras "Ventajas para el reseller". Llevan un *
 - **Editor** (botón Editar): ocultar/mostrar slides (ojito) y reordenar (↑↓). Mueve las `<section>` en el DOM, persiste en `localStorage.deckState`. "Restablecer original" limpia las 3 claves y recarga.
 - **Presentación** (botón Presentar): fullscreen, 1 slide por vez, teclado/click/barra. El ojito oculta los controles.
 - **Edición de textos** inline (contenteditable) con toolbar: negrita, blanco, naranja, limpiar y **A−/A+/↺ tamaño**. Persiste en `localStorage.deckTexts` y `localStorage.deckSizes`. Solo textos sin SVG son editables (para no romper iconos).
-- **Export "Descargar HTML"**: clona el DOM, quita las herramientas de edición (queda solo Presentar + ojito), hornea textos/tamaños y quita slides ocultos (y, en reseller, tarjetas GTM / badges de fee ocultos).
+- **Export "Descargar HTML"**: clona el DOM, quita las herramientas de edición (queda solo Presentar + ojito), hornea textos/tamaños y quita slides ocultos (y, en reseller, tarjetas GTM / badges de fee ocultos, y los controles de listas editables `.acc-del`/`.acc-add`).
 
 ## Ocultar tarjetas y renumerar (reseller — escenarios GTM)
 A partir de 2026-06-23, el editor de `reseller.html` no solo oculta **slides** sino también **tarjetas individuales** dentro del slide GTM:
 - Cada `.gtm-card` lleva una clave estable `data-gk="1..5"`. El panel editor muestra **5 sub-filas anidadas** bajo el slide GTM, cada una con ojito (ocultar/mostrar el escenario) y un ícono de **etiqueta** (ocultar/mostrar su badge de fee).
 - Estado nuevo en `localStorage.deckState`: `cards` (claves de escenarios ocultos) y `fees` (claves de fees ocultos). `applyCards()` / `applyFees()` togglean `.is-hidden`; el export elimina `.gtm-card.is-hidden` y `.gtm-fee.is-hidden`.
 - **Renumeración dinámica**: `renumberCards()` reescribe los `.gtm-n` de las tarjetas visibles a `01, 02, 03…` en orden de DOM, así no quedan huecos al ocultar (ej.: oculto el 01 → los visibles muestran 01,02,03,04). Corre en `apply()` y en cada toggle, y queda baked en el export.
+
+## Listas editables — agregar/quitar/editar items (reseller)
+A partir de 2026-06-30, el bloque "Dale acceso a tus redes" del slide `#instalacion` usa un mecanismo genérico de **lista editable** (`<ul data-elist="meta-acc">` con items `.acc-item` / texto `.acc-t`). Lo maneja un **IIFE propio** (separado del de textos):
+- En modo `body.text-edit`: cada item recibe una **×** (`.acc-del`) para borrarlo y la lista un botón **"+ Agregar acceso"** (`.acc-add`) que clona un item nuevo (`"Nuevo acceso."`), lo enfoca y lo deja `contenteditable`. La visibilidad de los controles es puro CSS (`body.text-edit .acc-del/.acc-add`).
+- **Persistencia**: guarda el HTML **limpio** de los items (sin controles ni `contenteditable`) en `localStorage.deckLists` bajo la clave del `data-elist`. Restaura desde ahí al cargar. Es **independiente de `deckTexts`** (que indexa por `ekey`) — por eso soporta agregar/quitar items sin romper la numeración de ekeys.
+- Sincroniza el `contenteditable` de los `.acc-t` con la clase `text-edit` del body vía **`MutationObserver`** (no depende del orden de los IIFEs). El formato (negrita/blanco/naranja) funciona porque `execCommand` opera sobre la selección y dispara `input` → guarda.
+- **Export**: `exportHTML` elimina `.acc-del,.acc-add` del clon; los items quedan horneados.
 
 ## Layout SÍ/NO de privacidad (`.perm`)
 Los slides de privacidad (`#privacidad` Meta Ads y `#privacidad-sitio` Tu sitio) usan un grid de 2 tarjetas `.perm`: columna **good** (SÍ, naranja, ✓) y **bad** (NO, gris neutro, ✗). **Respeta la marca**: se reemplazó el mint/magenta del original interno por naranja/gris (igual que el override de `.vstrip`). Los SVG de íconos dependen de la regla `#privacidad svg,#gtm svg,#privacidad-sitio svg{fill:none;stroke:currentColor}` (si no, salen rellenos negros).
@@ -50,7 +57,7 @@ Los slides de privacidad (`#privacidad` Meta Ads y `#privacidad-sitio` Tu sitio)
 - Los `<pre><code>` quedan **fuera** del selector de edición de textos (no son contenteditable) → los snippets no se pueden romper editando.
 
 ## Decisiones / gotchas
-- **localStorage**: `deckState` (orden/ocultos + `cards`/`fees` en reseller), `deckTexts` (innerHTML por `ekey = slideId:n`), `deckSizes` (font-size inline).
+- **localStorage**: `deckState` (orden/ocultos + `cards`/`fees` en reseller), `deckTexts` (innerHTML por `ekey = slideId:n`), `deckSizes` (font-size inline), `deckLists` (items de listas editables `data-elist`, en reseller).
 - **Bug del export resuelto**: el editor mueve las secciones al final del body → el export debe **reubicarlas antes de los scripts** (si no, los scripts corren sin encontrarlas y los slides salen vacíos) y marcar `.reveal` como `.in`.
 - **Validación visual**: editar con Python (`str.replace`) y renderizar con `google-chrome --headless --screenshot`. Para el export real: capturar la salida del Blob con `--dump-dom`.
 

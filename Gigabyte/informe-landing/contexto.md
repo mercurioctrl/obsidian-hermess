@@ -35,6 +35,7 @@ Se sumaron 2 slides al deck interno para **explicar a GIGABYTE/resellers los esc
 - La versión descargada debe salir **sin herramientas de edición** (solo Presentar + ojito).
 - Práctica de git: features en ramas `feature/*`, luego merge a `main` y borrar la rama. (Los 2 slides de privacidad/GTM se commitearon directo a `main` por pedido — `24812f4`.)
 - El `.xlsx` fuente **no** se sube al repo (queda untracked).
+- **Accesos Meta del slide de instalación** (reseller): se pidió poder **editar / quitar / agregar** esos items como cualquier otro contenido → se resolvió con un mecanismo de listas editables (`data-elist` + `deckLists`). Texto por defecto: "Permiso para crear anuncios a nombre de tu página de Facebook / cuenta de Instagram".
 
 ## Cosas que se intentaron / aprendizajes
 - El export rompía (slides vacíos) porque el editor mueve las secciones al final del body → hay que reubicarlas antes de los scripts en el clon.

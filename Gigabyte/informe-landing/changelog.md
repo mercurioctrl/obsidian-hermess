@@ -49,5 +49,15 @@ Archivos principales: `informe-gigabyte-landing/index.html` (interno), `informe-
 
 Archivos principales: `informe-gigabyte-landing/reseller.html` (foco activo del proyecto).
 
+## 2026-06-30
+
+- **Lista de accesos Meta editable** en el slide de instalación (`#instalacion`, bloque "Dale acceso a tus redes"): los items del permiso ahora se pueden **editar, quitar y agregar** desde el modo edición, igual que el resto del contenido (commits `45af532`, `c618343`).
+  - En modo *Editar textos*: cada item muestra una **×** roja para borrarlo y aparece un botón **"+ Agregar acceso"** que crea uno nuevo (editable y enfocado al instante). El texto de cada item es `contenteditable` (negrita / blanco / naranja desde la toolbar).
+  - Mecanismo nuevo de **listas editables** (`[data-elist]`): IIFE propio que persiste el HTML limpio de los items en `localStorage.deckLists` (clave `meta-acc`), sincroniza el `contenteditable` con la clase `body.text-edit` vía `MutationObserver`, y **excluye los controles** (`.acc-del`, `.acc-add`) del export. Independiente del sistema `deckTexts`.
+  - **Textos por defecto** de los dos accesos cambiados a "Permiso para crear anuncios a nombre de tu **página de Facebook** / **cuenta de Instagram**".
+- Verificado con Chrome headless (agregar→3 items, item nuevo editable+enfocado, quitar→2, controles ocultos fuera de edición) y **pusheado a `main`**.
+
+Archivos principales: `informe-gigabyte-landing/reseller.html`.
+
 ## Ver también
 - [[informe-landing]] · [[arquitectura]] · [[contexto]]
