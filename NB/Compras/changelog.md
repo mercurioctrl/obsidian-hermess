@@ -2,6 +2,14 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-06-30
+
+- feat: **Columna "Pedido" (remitos / `inboundIds`) en el listado de Órdenes** (COM-444). El API concatena los `nnumalb` de `NewBytes_DBF.dbo.albprot` por pedido vía `STUFF(... FOR XML PATH(''))` y los expone en `ProviderOrderDto.inboundIds`; el front agrega la columna con botones que navegan a la pestaña Ingresos filtrando por `nNumAlb` (`store/orders.js`, `pages/orders.vue`). PRs API #409/#410, front #281.
+- fix: **Moneda y cotizaciones del Ingreso ahora desde `PedProt`** (rama `arreglos-divisa`, PRs #411–#414). `providerOrderInbound`: `currencyId` ← `PedProt.ccoddiv` (código `PSO`/`DOL`, antes `albprot.ccoddiv` devolvía el id numérico `1`); `currencyQuote` ← `PedProt.nValDiv`; nuevo `currencyFiscalQuote` ← `PedProt.nvaldiv_FISCAL`. DTO `ProviderOrderInboundDetailDto` actualizado. Ver [[contexto#Moneda y cotizaciones del Ingreso vienen de PedProt (2026-06-30)|contexto]].
+- fix: **Recurso `items` ya no oculta artículos con `ocultarDeNb = 1`** (rama `quitar-filtro-ocultarDeNb-items`, PRs #415/#416). Ese flag es para la tienda web; en compras se deben poder buscar/ingresar. Se quitó `AND ocultarDeNb <> 1` del listado y del `count` (`ItemRepository`). Síntoma: buscar `104495` (Ducky One 2 SF White) no traía nada.
+- fix: **Ingresos duplicados en el listado de `providerOrderInbound`** (rama `fix-ingresos-duplicados`, commit `e845061`). El `GROUP BY` incluía `albprol.nnumalb` (nullable por LEFT JOIN) además de `albprot.nnumalb` → cada remito salía 2 veces (uno con total real, otro con total 0/NULL). Se quitó `albprol.nnumalb` del GROUP BY. Además `count()` pasó de `COUNT(albprot.nnumalb)` a `COUNT(DISTINCT albprot.nnumalb)` (antes contaba filas del join → páginas de más). Ver [[contexto#Duplicados en listado de Ingresos (GROUP BY nullable) (2026-06-30)|contexto]].
+- infra: el `.env` de la API se apuntó a **`10.10.10.47:1433`** con user **`cmercurio`** (entorno **saftel** / `compras.saftel.com`, companyCode 4). Ver [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
+
 ## 2026-06-29
 
 - feat: **`currencyId` en los detalles** de Órdenes e Ingresos. El detalle de orden (`GET /v1/providerOrder/{id}`) ahora devuelve `currencyId` desde `PedProT.cCodDiv`; el de ingreso (`GET /v1/providerOrderInbound/{id}`) desde `albprot.ccoddiv` (ej. `PSO`/`DOL`), además de `currencyQuote`. Commits API `0c8249a`, `dc8240b` (`ProviderOrderDetailRepository`/`ProviderOrderDetailDto`, `ProviderOrderInboundRepository::getDetail`/`ProviderOrderInboundDetailDto`).

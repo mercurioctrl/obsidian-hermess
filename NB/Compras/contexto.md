@@ -103,9 +103,23 @@ Modal accesible desde el ojito 👁️ en el listado de Proveedores. Endpoint `G
 - **`fullSerialized` hardcodeado a 0** en el **detalle** de ingreso (`ProviderOrderInboundRepository::getDetail`). No es confiable a nivel orden; usar `serializedAmount > 0` por ítem. (Distinto del `fullSerialized` del **listado**, que sí se calcula — ver abajo.)
 - **`fullSerialized` del listado** (Órdenes e Ingresos) marca "Sí" cuando una orden **no tiene líneas** (`COUNT=0 = COUNT=0`). Edge heredado; si molesta, agregar `COUNT(líneas) > 0` a la condición.
 
+### Moneda y cotizaciones del Ingreso vienen de PedProt (2026-06-30)
+
+En el recurso `providerOrderInbound` los datos de moneda del ingreso deben salir de **`PedProt`** (cabecera del pedido), **no de `albprot`** (remito):
+
+- `albprot.ccoddiv` guarda el **id numérico** de moneda (ej. `1`); `PedProt.ccoddiv` guarda el **código** `PSO`/`DOL`. El listado/detalle de orden ya usaban `PedProt`/`PT`; el ingreso quedó alineado.
+- `currencyId` ← `PedProt.ccoddiv` · `currencyQuote` ← `PedProt.nValDiv` · `currencyFiscalQuote` ← `PedProt.nvaldiv_FISCAL`.
+- `PedProt` ya estaba joineada en el query del ingreso (no se agregaron joins). Regla general: en compras, los datos de cabecera de un ingreso (moneda, cotización) vienen del **pedido**, no del remito.
+
+### Duplicados en listado de Ingresos (GROUP BY nullable) (2026-06-30)
+
+`providerOrderInbound` (listado) mostraba cada remito **dos veces** (uno con total real, otro con total 0/NULL). Causa: el `GROUP BY` incluía **`albprol.nnumalb`** además de `albprot.nnumalb`. Como `albprol` entra por **LEFT JOIN**, las líneas del pedido (`PedProL`) que **no** están en ese remito dejan `albprol.nnumalb = NULL` → se forma un segundo grupo "fantasma". Fix: quitar `albprol.nnumalb` del `GROUP BY` (queda solo `albprot.nnumalb`, no nullable). Lección: **cuidado con columnas nullable de un LEFT JOIN dentro del GROUP BY.**
+
+Relacionado: el `count()` de paginación usaba `COUNT(albprot.nnumalb)` **sin GROUP BY** → contaba todas las filas del join (inflado, generaba páginas de más). Pasó a `COUNT(DISTINCT albprot.nnumalb)`.
+
 ## Infraestructura / Base de datos (gotcha importante)
 
-- **DB en uso (2026-06-29):** el `.env` de la API apunta a **`10.10.10.47:1433`** (DB `NB_WEB`, user `fcallipo`). El 2026-06-24 se usó `db-nb-dev.blu.net.ar:41433` pero **se cayó** (puerto 41433 inalcanzable), así que se volvió a `10.10.10.47:1433`. Ambos hosts van y vienen; si el login falla con `Adaptive Server is unavailable`, probar el otro. Tras tocar `.env`, correr `php artisan config:clear` en el contenedor.
+- **DB en uso (2026-06-30):** el `.env` de la API apunta a **`10.10.10.47:1433`** con user **`cmercurio`** (DB `NB_WEB`), entorno **saftel** (`compras.saftel.com`, companyCode 4). La DB canónica histórica `190.210.23.97:4444` (user `web`) quedó **comentada** en el `.env`. El 2026-06-29 se usó el mismo host con user `fcallipo`; el 2026-06-24 `db-nb-dev.blu.net.ar:41433` (cayó). Las 3 bases del join de login (`NB_WEB.dbo.usuarios_nb`, `NewBytes_DBF.dbo.agentes`, `NEW_BYTES.dbo.PGM_USUARIOS`) existen en `10.10.10.47` y conectan OK. Tras tocar `.env`, correr `php artisan config:clear && php artisan cache:clear` en el contenedor.
 - DB canónica histórica: **`190.210.23.97:4444`** (DB `NB_WEB`, user `web`). Server alternativo `190.210.23.108`: SQL en **1433** (user `eferreyra_devweb01`).
 - ⚠️ **`190.210.23.108:4444` es un servidor SSH (OpenSSH), NO SQL.** El TCP abre pero el handshake TDS falla con `SQLSTATE[01002] Adaptive Server connection failed (severity 9)`. Si aparece ese error, casi seguro `DB_PORT` apunta a un puerto que no es SQL.
 - El login y muchas queries hacen **joins cross-database**: las 4 bases (`NewBytes_DBF`, `NB_WEB`, `NEW_BYTES`, `PRODUCTOS`) deben existir en el server elegido.

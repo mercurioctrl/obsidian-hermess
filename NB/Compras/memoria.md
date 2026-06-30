@@ -1,7 +1,7 @@
 # Memoria del proyecto
 
 Consolidado de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-30.
+(`~/.claude/projects/-var-www-nb-compras/memory/`). Sincronizado el 2026-06-30.
 
 ## Estructura
 
@@ -47,7 +47,11 @@ Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(n
 - **UPDATEs masivos en prod**: contar primero y confirmar alcance — base externa sin migraciones, sin rollback fácil.
 - **`fullSerialized` del detalle de ingreso viene hardcodeado a 0** → usar `serializedAmount > 0` por ítem. (El del **listado** sí se calcula; órdenes sin líneas dan "Sí".)
 - **Export XLSX/CSV (2026-06-26):** util `utils/tableExport.js` (SheetJS); botones en Órdenes/Ingresos (bajan todo lo filtrado) y en la tabla de items del detalle. Ver [[export-xlsx-csv]].
-- **`currencyId` en los detalles (2026-06-29):** orden = `PedProT.cCodDiv`, ingreso = `albprot.ccoddiv` (ej. PSO/DOL).
+- **`currencyId` en los detalles (2026-06-29 → corregido 2026-06-30):** orden = `PedProT.cCodDiv`. En el **ingreso** la moneda/cotización ahora salen de **`PedProt`** (no `albprot`): `currencyId`=`PedProt.ccoddiv` (PSO/DOL, antes `albprot.ccoddiv` daba el id numérico `1`), `currencyQuote`=`PedProt.nValDiv`, `currencyFiscalQuote`=`PedProt.nvaldiv_FISCAL`. Ver [[contexto#Moneda y cotizaciones del Ingreso vienen de PedProt (2026-06-30)|contexto]].
+- **Listado de Ingresos sin duplicados (2026-06-30):** se quitó `albprol.nnumalb` (nullable por LEFT JOIN) del `GROUP BY` y el `count` pasó a `COUNT(DISTINCT albprot.nnumalb)`. Ver [[contexto#Duplicados en listado de Ingresos (GROUP BY nullable) (2026-06-30)|contexto]].
+- **`items` ya no filtra `ocultarDeNb` (2026-06-30):** ese flag es de la tienda web; en compras se buscan/ingresan igual. Se quitó del listado y del count de `ItemRepository`.
+- **Columna "Pedido"/`inboundIds` en Órdenes (COM-444, 2026-06-30):** los `nnumalb` de `albprot` por pedido (concatenados con `STUFF/FOR XML`) salen como botones que linkean a Ingresos.
+- ⚠️ **Convención de commits: NUNCA agregar co-autoría de Claude.** Commits y PRs van a nombre del usuario (Catriel) exclusivamente — sin `Co-Authored-By` ni "Generated with Claude".
 
 ## Rama en curso
 
@@ -56,7 +60,7 @@ Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(n
 ## Base de datos
 
 - Driver `DB_CONNECTION=sqlsrv` → en runtime usa `pdo_dblib` (FreeTDS).
-- **En uso (2026-06-29): `10.10.10.47:1433`**, DB `NB_WEB`, user `fcallipo` (db-nb-dev.blu.net.ar:41433 se cayó). Canónica histórica: `190.210.23.97:4444` (user `web`). Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
+- **En uso (2026-06-30): `10.10.10.47:1433`**, DB `NB_WEB`, user **`cmercurio`** (entorno **saftel** / `compras.saftel.com`, companyCode 4). El 2026-06-29 fue el mismo host con `fcallipo`. Canónica histórica `190.210.23.97:4444` (user `web`) quedó comentada en el `.env`. Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
 - Bases en juego: `NewBytes_DBF` (ERP), `NB_WEB` (web), `NEW_BYTES` (stock/seriales/despachos), `PRODUCTOS`.
 
 ## Ver también
