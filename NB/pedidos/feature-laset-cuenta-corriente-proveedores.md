@@ -66,3 +66,10 @@ Mismo patrón que la cta cte de clientes (`ccte-import`):
 - **Saldo = "A favor / Deuda" bruto** (NO netear NC Disponible — es crédito informativo, no va al ledger). La pantalla muestra el bruto: Asus = 53.258,11. (El neteo afectaba a los proveedores con deuda + NC: Asus, AllPlus, TDS.)
 - **"LST Global" excluida** (C1 = "New Bytes Inc.", intercompañía).
 - **EUR convertidas a USD al TC de cierre** (último TC de la hoja); facturas y pagos en EUR × TC_cierre → saldo = afd_EUR × TC_cierre. El **TC real de cada pago se guarda en `COTIZACION`** (`scripts/laset_prov_ccte_to_json.py`). El servicio importa USD + EUR. Total: 78 proveedores (65 USD + 13 EUR), 5.303 movimientos.
+
+
+## Actualización 2026-06-30 — Alta automática + cierre
+- **Alta automática de proveedores faltantes**: las hojas que no matchean ningún proveedor comp=11 (ni por nombre de pestaña ni por el nombre real de la celda "Proveedor") se **dan de alta** en `FP_Proveedores` con `CCODPRO` secuencial (`MAX(CAST(CCODPRO AS INT))+1`; `ID_PROVEEDOR` es IDENTITY → INSERT sin especificarlo). Parser emite `prov_name` + `nb_inc`; resolución con **paridad NB Inc** (Seaside NB Inc 002641 ≠ Seaside 002454). El nombre real evita duplicar existentes (PNY Tech Asia → 002449). Idempotente. El modal muestra "Proveedores a dar de alta" antes de confirmar. Commit `6388b771`. Doc de repo: `docs/cuenta-corriente/proveedores.md`.
+- **Estado final**: **110 proveedores comp=11**, todos reconcilian, Σ saldos ≈ 1.620.307,25 USD (83→114 filas FP comp=11; 31 altas `CCODPRO 002611–002641`).
+- **Saldo = "A favor / Deuda" BRUTO** (corrige la regla vieja de "afd + NC" de arriba: NO netear NC Disponible). Asus = 53.258,11.
+- **Excluidos a propósito** (SKIP del parser): **Transcargo** (fletes, hojas "Trans" 1.592,58 / "Trans Laset" 0 — el usuario decidió que NO va en comp=11), `Egre`/`Egresos` (logs globales), `Pendiente Euros` (contactos), `LST Global` (=NB Inc), templates, `Cálculos Trans`. **No falta ninguna cuenta real.**

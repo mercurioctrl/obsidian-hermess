@@ -502,3 +502,9 @@ Backfill del `cdnicif` de los 47 clientes comp=11 creados por el import (sin ID 
 ## Cuenta corriente de proveedores Laset (comp=11)
 
 Import a `MS_MOV_CTACTE_PROVEEDORES` (NEW_BYTES). **Clave = CCODPRO**, no Id_Proveedor (Asus 16679→002605). Magnitud+TR (38 deuda / 40 pago / 30 NC / 32 débito), rollback por `USU=Laset`, MAX+1 fila a fila. Saldo = "A favor/Deuda" neto de "NC Disponible" solo si hay deuda. 66 prov / 5.573 movs / 66 reconcilian (dev 2026-06-24). Pendiente EUR (17) + 10 no-comp11. Ver [[feature-laset-cuenta-corriente-proveedores]].
+
+## (2026-06-30) Stock por almacén comp=11 — depósito por línea
+Bug del importador Laset: `pedclil` heredaba el `ID_ALMACEN` del encabezado del pedido en vez del `deposito` por línea → pedidos multi-depósito → stock negativo por almacén (total por artículo OK). Fix en `LasetImportFaseCCommand` (depósito en la clave de consolidación de pedclil) + comando retroactivo `laset:fix-stock-almacen-comp11` (re-apunta ventas pedclil+albclil por DELTA exacto + balancea negativos con transferencias inter-depósito; invariante de total por artículo; idempotente; wireado a `laset:run-import-job` paso 3.6). Dev: 14→0 negativos. **Gotcha aparte**: total comp=11 = planilla (comprado−facturado); diferencia vs archivo físico = compra no registrada en la planilla, no es bug, no detectable desde la DB. Ver [[feature-laset-stock-almacen]].
+
+## (2026-06-30) Cta cte proveedores — alta automática + Transcargo fuera
+Las hojas de la planilla de cta cte de proveedores que no matchean un proveedor comp=11 se dan de alta solas en `FP_Proveedores` (CCODPRO secuencial; ID_PROVEEDOR es IDENTITY). Paridad NB Inc (Seaside NB Inc ≠ Seaside). Saldo = "A favor/Deuda" bruto (no netear NC). 110 proveedores comp=11, todos reconcilian. **Transcargo NO va en comp=11** (decisión del usuario); Egre/Egresos (logs), Pendiente Euros (contactos), LST Global (=NB Inc) tampoco son cuentas. Ver [[feature-laset-cuenta-corriente-proveedores]].

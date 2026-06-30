@@ -319,3 +319,16 @@ Destino `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES` (análogo de clientes `MC_CCOR
 
 ### Cta cte proveedores — correcciones (2026-06-26)
 El saldo de la cta cte de proveedores = celda "A favor / Deuda" **bruta** (NO netear "NC Disponible", que es crédito informativo). "LST Global" se excluye (C1 = New Bytes Inc., intercompañía). Las hojas EUR se convierten a USD al **TC de cierre** y el TC real de cada pago se guarda en `COTIZACION`. Ver [[feature-laset-cuenta-corriente-proveedores]].
+
+## Stock por almacén Laset (comp=11) — depósito por línea (2026-06-30)
+
+El stock comp=11 se reparte por almacén (DOM/GRI/BON/URU/ASI). Dos cosas a tener presentes:
+
+- **Bug histórico (arreglado)**: el `pedclil` heredaba el `ID_ALMACEN` del **encabezado** del pedido, no el `deposito` de cada línea de la planilla. Pedidos multi-depósito dejaban líneas en el almacén equivocado → stock negativo en uno e inflado en otro (el **total por artículo siempre queda bien**). Fix en Fase C (depósito en la clave de consolidación de pedclil) + comando retroactivo `laset:fix-stock-almacen-comp11` (re-apunta + transfiere inter-depósito) wireado al orquestador. Ver [[feature-laset-stock-almacen]].
+- **Gotcha planilla-vs-físico**: el stock total comp=11 = lo que dice la **planilla** (comprado − facturado). Si el archivo físico descargado difiere (ej. G5060: archivo 921 vs ERP 833), es una **compra real no registrada en la planilla** — NO un bug del import. No se detecta desde la DB; hay que cruzar `stock_comp11.csv` por SKU contra el archivo físico.
+
+## Cuenta corriente de proveedores — alta automática y Transcargo (2026-06-30)
+
+- **Un proveedor pertenece a una sola empresa**: si una hoja de la planilla de cta cte no matchea ningún proveedor comp=11, se **da de alta** como proveedor comp=11 nuevo (no se reusa el de otra empresa). El import lo hace solo (idempotente). Estado: **110 proveedores comp=11**, todos reconcilian.
+- **Saldo = "A favor / Deuda" BRUTO** (NO netear "NC Disponible").
+- **Transcargo (fletes) NO va en comp=11** (decisión del usuario). Tampoco son cuentas: `Egre`/`Egresos` (logs globales), `Pendiente Euros` (contactos), `LST Global` (=NB Inc). Todas en la SKIP list del parser.

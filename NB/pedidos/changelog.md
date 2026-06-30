@@ -1,3 +1,24 @@
+## 2026-06-30 — Cta cte proveedores (alta automática) + Stock por almacén (depósito por línea)
+
+Cierre de dos arcos sobre la operación Laset comp=11 (rama `lasetImportFramework`). Commits back `ed45cfaf`→`6388b771` (proveedores) y `057fefbd` (stock). Docs nuevos: `docs/cuenta-corriente/proveedores.md`, `docs/laset-stock-almacen.md`.
+
+### Cuenta corriente de PROVEEDORES — completa ([[feature-laset-cuenta-corriente-proveedores]])
+
+- **Alta automática de faltantes**: un proveedor pertenece a una sola empresa; las hojas que no matchean ningún proveedor comp=11 (ni por nombre de pestaña ni por el nombre real de la celda "Proveedor") se **dan de alta** en `FP_Proveedores` con `CCODPRO` secuencial (`MAX(CAST(CCODPRO AS INT))+1`, 6 díg.; `ID_PROVEEDOR` es IDENTITY → INSERT sin especificarlo). El parser emite `prov_name` + `nb_inc`; resolución con **paridad NB Inc** (Seaside NB Inc 002641 ≠ Seaside 002454). El nombre real evita duplicar existentes (PNY Tech Asia → 002449). Idempotente. El modal de `/syncLaset` muestra "Proveedores a dar de alta" antes de confirmar.
+- **Estado final**: **110 proveedores comp=11**, todos reconcilian, Σ saldos ≈ 1.620.307,25 USD. (83→114 filas en FP comp=11; 31 altas `CCODPRO 002611–002641`.)
+- **Excluidos a propósito** (SKIP del parser): **Transcargo** (fletes — hojas "Trans"/"Trans Laset"; decisión del usuario: NO va en comp=11), `Egre`/`Egresos` (logs globales de todos los proveedores), `Pendiente Euros` (lista de contactos), `LST Global` (=NB Inc), templates y `Cálculos Trans`. **No falta ninguna cuenta real.**
+
+### Stock por almacén comp=11 ([[feature-laset-stock-almacen]])
+
+- **Bug** (`LasetImportFaseCCommand`): el `pedclil` heredaba el `ID_ALMACEN` del **encabezado** del pedido en vez del `deposito` de cada línea → pedidos multi-depósito dejaban líneas en el almacén equivocado → stock negativo en un almacén e inflado en otro (el total por artículo queda bien). La compra (pedprol/albprol) sí respeta el depósito por línea.
+- **Fix importador**: el depósito entra en la clave de consolidación de `pedclil` (`pedclit_key|ID_Articulo|ID_ALMACEN`); cada línea va a su almacén (+ ajuste en linkeo de asignación 4c y dup-links 4d).
+- **Fix retroactivo** `laset:fix-stock-almacen-comp11` (`{--dry-run}`, comp=11, idempotente): re-apunta ventas (pedclil+albclil) al depósito de la planilla por DELTA exacto + balancea negativos remanentes con **transferencias inter-depósito** (planilla compró en un depósito y vendió desde otro). Invariante: stock total por artículo no cambia. Wireado a `laset:run-import-job` (paso 3.6). Aplicado dev: **14 → 0 almacenes negativos**.
+- **Gotcha planilla-vs-físico** (distinto del bug): el total comp=11 = lo que dice la planilla (comprado − facturado); si el archivo físico difiere (G5060: archivo 921 vs ERP 833) es una compra real no registrada en la planilla, NO un bug — no detectable desde la DB (cruzar `stock_comp11.csv` por SKU). Export de 218 artículos generado para diff.
+
+Archivos: back `scripts/laset_prov_ccte_to_json.py`, `app/Services/Laset/LasetProvCtaCteImportService.php`, `app/Console/Commands/{LasetProvCtaCteImportCommand,LasetImportFaseCCommand,LasetFixStockAlmacenComp11Command,LasetRunImportJobCommand}.php`, `app/Http/Controllers/Laset/LasetProvCtaCteImportRun.php`, `routes/api.php`. Front `plugins/api.js`, `pages/syncLaset.vue`.
+
+---
+
 ## 2026-06-18 — Descarga xlsx de listados (pedidos y clientes)
 
 Botón (solo icono `download`) en las pestañas de **pedidos** y **clientes** que descarga el listado actual a `.xlsx` **respetando todos los filtros de la URL**. Detalle completo en [[feature-descarga-listado-xlsx]]. Rama `descargarListadoXlsx` (ambos repos). Back `d6c7e13` / cherry-pick Gamma `b433f53`; front `2d4ba8e` / cherry-pick gamma `64d4c9d`.

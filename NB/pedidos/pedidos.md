@@ -31,6 +31,8 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-laset-fix-marcas-comp11|Fix marcas comp=11]] — refactor Fase C marcas + backfill articulo.Id_Marca + cleanup FP_Marcas dups
 - [[feature-laset-wipe-reimport|Borrar todo comp=11 + reimport limpio]] — wipe transaccional con barrido de huérfanos + validación de stocks; flujo Borrar todo → Importar todo
 - [[feature-laset-fix-albprol-faltante|Remito de compra faltante (albprol)]] — cierra el gap de artículos comp=11 con stock pero sin ingreso (albprot/albprol)
+- [[feature-laset-cuenta-corriente-proveedores|Feature: Cuenta corriente de PROVEEDORES Laset]] — cta cte de proveedores comp=11 a MS_MOV_CTACTE_PROVEEDORES; clave CCODPRO, saldo bruto, EUR al TC de cierre, alta automática de faltantes (110 proveedores)
+- [[feature-laset-stock-almacen|Feature: Stock por almacén Laset]] — depósito por línea en pedclil (no del encabezado); fix en Fase C + comando retroactivo laset:fix-stock-almacen-comp11 (re-apunta + transfiere inter-depósito)
 - [[feature-sync-laset-botones|Patrón Sync Laset — botones de mantenimiento]] — service+command+controller+UI para fixes Laset
 - [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN por familia × proveedor para comp=11
 - [[feature-pedidos-olvidados|Feature: Pedidos Olvidados]] — filtro oculto de órdenes pendientes/remitidas >2 meses hasta 3 años; fix de timeout acotando la ventana de fecha
@@ -73,4 +75,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-26 — Cta cte proveedores: saldo = "A favor/Deuda" bruto (no netear NC; Asus 53.258,11), LST Global excluida (= NB Inc), y 2ª pasada EUR (13 hojas convertidas al TC de cierre, TC real por pago en COTIZACION). 78 proveedores / 5.303 movimientos. Commit `d05ddd4c`. Ver [[feature-laset-cuenta-corriente-proveedores]].*
+*Última sincronización: 2026-06-30 — Cta cte proveedores cerrada: alta automática de faltantes (110 proveedores comp=11, todos reconcilian); Transcargo/Egre/LST Global excluidos. + Stock por almacén: bug de depósito por línea en pedclil arreglado en Fase C + comando retroactivo `laset:fix-stock-almacen-comp11` (14→0 negativos). Ver [[feature-laset-cuenta-corriente-proveedores]] y [[feature-laset-stock-almacen]].*
