@@ -2,6 +2,18 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-06-29
+
+- feat: **`currencyId` en los detalles** de Órdenes e Ingresos. El detalle de orden (`GET /v1/providerOrder/{id}`) ahora devuelve `currencyId` desde `PedProT.cCodDiv`; el de ingreso (`GET /v1/providerOrderInbound/{id}`) desde `albprot.ccoddiv` (ej. `PSO`/`DOL`), además de `currencyQuote`. Commits API `0c8249a`, `dc8240b` (`ProviderOrderDetailRepository`/`ProviderOrderDetailDto`, `ProviderOrderInboundRepository::getDetail`/`ProviderOrderInboundDetailDto`).
+- infra: la DB dev `db-nb-dev.blu.net.ar:41433` se cayó; se repuntó el `.env` a **`10.10.10.47:1433`** (mismas credenciales `fcallipo`/`NB_WEB`). Ver [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
+
+## 2026-06-26
+
+- feat: **Export XLSX / CSV** (frontend, dep nueva **SheetJS `xlsx`**). Ver [[arquitectura#Exportación XLSX/CSV|arquitectura]] y [[contexto#Exportación de tablas (XLSX/CSV)|contexto]].
+  - Botones XLSX/CSV en la línea de filtros de **Órdenes** e **Ingresos** que bajan **todo lo filtrado** (re-consultan el endpoint con los mismos filtros pero `itemsPerPage` alto, no solo la página visible). Reusan las columnas visibles del listado.
+  - Botones en el **detalle de la orden** (barra arriba de la tabla de items) para exportar la tabla de items (`newItems`, excluye filas resumen). Subtotales calculados igual que en pantalla; para LASET omite columnas en `$`.
+  - Util reutilizable `app/utils/tableExport.js` (`exportTable(columns, rows, filename, format)`): columnas por `dataIndex` o por función `value`. Commit front `b1a01c2`.
+
 ## 2026-06-24
 
 - refactor: **La cuenta corriente de proveedores ahora lee el ledger oficial `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES`** en vez de armarse desde `FACPROT`/`FACPROL` (esa fue la primera versión, descartada). El recurso (`GET v1/providers/{providerCode}/currentAccount`) toma los movimientos del proveedor (`ID_PROVEEDOR = CCODPRO`), excluye anulados (`ANULADO <> 'SI'`), el tipo desde `GL_TRANSACCIONES.TR_NOMBRE`, importe en `IMPORTE_USD` (+ `COTIZACION` → pesos), fecha desde `FECHA_MOV` (float YYYYMMDD). Débito/crédito por `TR_CODIGO`: **suman 38, 32; restan 30, 40, 128, 44**. Saldos `balanceUsd`/`balancePeso`. Se mantuvo la forma de respuesta → **el front no cambió**. Detalle en [[contexto#Cuenta corriente de proveedores (ledger MS_MOV_CTACTE_PROVEEDORES)|contexto]]. Commit API `14b208d`. Archivos: `ProviderCurrentAccountRepository.php`, `ProviderCurrentAccountDto.php`.

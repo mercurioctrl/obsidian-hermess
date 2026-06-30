@@ -87,6 +87,13 @@ Modal accesible desde el ojito 👁️ en el listado de Proveedores. Endpoint `G
 - **Cuenta corriente sin pagos (primera versión)**: se decidió arrancar la cuenta corriente solo con comprobantes (deuda) y dejar los **pagos para una segunda iteración** (no se sabe aún de qué tabla salen / no se linkean todavía).
 - **Saldos separados por moneda**: en vez de un saldo único cross-convertido (imposible porque los PSO guardan cotización 1), se muestran `balanceUsd` (comprobantes DOL) y `balancePeso` (comprobantes PSO) por separado.
 
+## Exportación de tablas (XLSX/CSV) — 2026-06-26
+
+- Los botones de export en **Órdenes** e **Ingresos** bajan **todo lo filtrado**, no solo la página visible: se decidió re-consultar el endpoint con los mismos filtros (`route.query`) pero `itemsPerPage` alto (100000). Interpretación de "bajar lo que veo según los filtros".
+- Export 100% **en el browser** con SheetJS (`xlsx`) — no se agregó endpoint ni dependencia en el backend.
+- El export reusa **las columnas visibles** de cada tabla (incluye las que dependen de permisos en Órdenes) para que coincida con lo que se ve; valores legibles (`status`→Pendiente/Remitido, `serializado`→Si/No).
+- En el detalle de orden, los botones se ubicaron **arriba de la tabla** (primero estaban junto a "Columnas opcionales" y tapaban los checkboxes).
+
 ## Deuda técnica / TODOs
 
 - **Cuenta corriente de proveedores**: ✅ ya lee el ledger `MS_MOV_CTACTE_PROVEEDORES` (incluye pagos). Lo de FACPROT/NTIPOCOMP/FOB quedó obsoleto (era la v1). Si aparece un `TR_CODIGO` nuevo, revisar el mapeo de signo en `ProviderCurrentAccountRepository`.
@@ -98,7 +105,7 @@ Modal accesible desde el ojito 👁️ en el listado de Proveedores. Endpoint `G
 
 ## Infraestructura / Base de datos (gotcha importante)
 
-- **DB en uso (2026-06-24):** el `.env` de la API apunta a **`db-nb-dev.blu.net.ar:41433`** (DB `NB_WEB`, user `fcallipo`). Antes era `10.10.10.47:1433`, que se cayó. Tras tocar `.env`, correr `php artisan config:clear` en el contenedor.
+- **DB en uso (2026-06-29):** el `.env` de la API apunta a **`10.10.10.47:1433`** (DB `NB_WEB`, user `fcallipo`). El 2026-06-24 se usó `db-nb-dev.blu.net.ar:41433` pero **se cayó** (puerto 41433 inalcanzable), así que se volvió a `10.10.10.47:1433`. Ambos hosts van y vienen; si el login falla con `Adaptive Server is unavailable`, probar el otro. Tras tocar `.env`, correr `php artisan config:clear` en el contenedor.
 - DB canónica histórica: **`190.210.23.97:4444`** (DB `NB_WEB`, user `web`). Server alternativo `190.210.23.108`: SQL en **1433** (user `eferreyra_devweb01`).
 - ⚠️ **`190.210.23.108:4444` es un servidor SSH (OpenSSH), NO SQL.** El TCP abre pero el handshake TDS falla con `SQLSTATE[01002] Adaptive Server connection failed (severity 9)`. Si aparece ese error, casi seguro `DB_PORT` apunta a un puerto que no es SQL.
 - El login y muchas queries hacen **joins cross-database**: las 4 bases (`NewBytes_DBF`, `NB_WEB`, `NEW_BYTES`, `PRODUCTOS`) deben existir en el server elegido.

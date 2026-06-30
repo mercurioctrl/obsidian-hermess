@@ -1,7 +1,7 @@
 # Memoria del proyecto
 
 Consolidado de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-24.
+(`~/.claude/projects/-Users-hermess-www-compras/memory/`). Sincronizado el 2026-06-30.
 
 ## Estructura
 
@@ -46,15 +46,17 @@ Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(n
 - **`FACPROT.companyCode` está 100% NULL** → derivar del proveedor (`ISNULL(FACPROT.companyCode, FP_Proveedores.companyCode)`). Aplica al listado `providerVoucher`.
 - **UPDATEs masivos en prod**: contar primero y confirmar alcance — base externa sin migraciones, sin rollback fácil.
 - **`fullSerialized` del detalle de ingreso viene hardcodeado a 0** → usar `serializedAmount > 0` por ítem. (El del **listado** sí se calcula; órdenes sin líneas dan "Sí".)
+- **Export XLSX/CSV (2026-06-26):** util `utils/tableExport.js` (SheetJS); botones en Órdenes/Ingresos (bajan todo lo filtrado) y en la tabla de items del detalle. Ver [[export-xlsx-csv]].
+- **`currencyId` en los detalles (2026-06-29):** orden = `PedProT.cCodDiv`, ingreso = `albprot.ccoddiv` (ej. PSO/DOL).
 
 ## Rama en curso
 
-- **`catri-fine-tunning`** (ambos repos): ya mergeada a `development` y `gamma` (PRs #274, #276). Incluye: IVA default, filtros sku/itemId/serial, columna Serializado, companyCode por defecto, **cuenta corriente de proveedores**, SKU inline en detalle de orden. Ver [[changelog#2026-06-22|changelog 2026-06-22]].
+- **`catri-fine-tunning`** (ambos repos): ya mergeada a `development` y `gamma` (PRs #274, #276); siguen acumulándose commits posteriores. Incluye: IVA default, filtros sku/itemId/serial, columna Serializado, companyCode por defecto, **cuenta corriente de proveedores** (ledger), SKU inline, **export XLSX/CSV**, **currencyId** en detalles. Ver [[changelog]].
 
 ## Base de datos
 
 - Driver `DB_CONNECTION=sqlsrv` → en runtime usa `pdo_dblib` (FreeTDS).
-- **En uso (2026-06-24): `db-nb-dev.blu.net.ar:41433`**, DB `NB_WEB`, user `fcallipo` (antes `10.10.10.47:1433`, que se cayó). Canónica histórica: `190.210.23.97:4444` (user `web`). Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
+- **En uso (2026-06-29): `10.10.10.47:1433`**, DB `NB_WEB`, user `fcallipo` (db-nb-dev.blu.net.ar:41433 se cayó). Canónica histórica: `190.210.23.97:4444` (user `web`). Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
 - Bases en juego: `NewBytes_DBF` (ERP), `NB_WEB` (web), `NEW_BYTES` (stock/seriales/despachos), `PRODUCTOS`.
 
 ## Ver también

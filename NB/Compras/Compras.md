@@ -31,4 +31,4 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 Las tareas se trackean con prefijo `COM-` en Jira.
 
 ---
-*Última sincronización: 2026-06-25 — verificación (sin cambios de código). La cuenta corriente de proveedores lee NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES.*
+*Última sincronización: 2026-06-30 — export XLSX/CSV (Órdenes, Ingresos y tabla de items del detalle) y currencyId en los detalles de orden e ingreso.*

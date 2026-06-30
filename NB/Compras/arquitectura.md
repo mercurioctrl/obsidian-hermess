@@ -87,6 +87,8 @@ Hay **dos componentes Detail casi idénticos**:
 
 `orderDetail.numPed` = `PedProT.nNumPed` (id de orden). `record.id` del ítem = `ID_ARTICULO`.
 
+Ambos endpoints de detalle devuelven **`currencyId`** (ej. `PSO`/`DOL`): el de orden desde `PedProT.cCodDiv`, el de ingreso desde `albprot.ccoddiv` (además de `currencyQuote`).
+
 ### Agregar ítem a una orden / selector de IVA
 
 En `Orders/AddItem.vue`, el buscador usa `/v1/items` (cada ítem trae `iva` = `articulo.ivaCompra`). Al agregar, el `price.iva` arranca con ese valor (PATCH a `/providerOrder/{n}`), que se guarda en `PedProL.nivaserv`. El selector de IVA en el detalle ofrece 0 / 10.5 / 21. Ver [[contexto#IVA por defecto del artículo al agregar ítem|contexto]].
@@ -115,6 +117,15 @@ Flujo: `$api.providers.getCurrentAccount(providerCode, {from,to,search,currentPa
 El repo lee el ledger oficial **`NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES`** (movimientos del proveedor por `ID_PROVEEDOR = CCODPRO`, excluyendo anulados), toma el tipo desde `GL_TRANSACCIONES.TR_NOMBRE`, el importe de `IMPORTE_USD` (+ `COTIZACION` → pesos) y aplica el signo según `TR_CODIGO` (suman 38/32; restan 30/40/128/44). Devuelve movimientos paginados + saldos `balanceUsd` / `balancePeso`. Incluye pagos (es un ledger). Reglas y gotchas en [[contexto#Cuenta corriente de proveedores (ledger MS_MOV_CTACTE_PROVEEDORES)|contexto]].
 
 > La v1 armaba la cuenta corriente desde `FACPROT`/`FACPROL` — **descartada** en el refactor 2026-06-24.
+
+### Exportación XLSX/CSV
+
+Util `app/utils/tableExport.js` (SheetJS `xlsx`): `exportTable(columns, rows, filename, format)`. Cada columna puede ser `{title|header, dataIndex}` (toma `row[dataIndex]`, listados) o `{header, value(row)}` (valor calculado). Genera xlsx/csv en el browser (`XLSX.writeFile`).
+
+- **Listados** (Órdenes/Ingresos): los botones viven en `components/Filters/*.vue` y emiten `@export`; la página re-consulta el endpoint con `route.query` + `itemsPerPage` alto (baja **todo lo filtrado**) y exporta con las columnas visibles.
+- **Detalle de orden:** `components/Orders/Detail.vue` (`exportItems`) exporta `newItems` (sin filas resumen) con subtotales calculados como los slots.
+
+Detalle y decisiones en [[contexto#Exportación de tablas (XLSX/CSV) — 2026-06-26|contexto]].
 
 ### Plugins clave
 
