@@ -272,6 +272,28 @@ Ver [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ d
 
 ---
 
+## "Deployé pero no veo los cambios" — SPA + caché de chunks (2026-06-30)
+
+La app es **SPA pura** (`ssr: false`). Tras rebuildear, el container nuevo tiene el código pero el navegador puede seguir mostrando la versión vieja (incluso con pestaña nueva o `?nocache`), porque cachea el entry + los chunks `/_nuxt/*.js` (immutable) en disk-cache.
+
+**Diagnóstico (server-side, NO confiar en el navegador):**
+- El chunk que pide el navegador da **404** en el server pero el nuevo da **200** → es caché del navegador, el deploy está bien.
+- `curl -s <ruta> | grep -oE 'entry\.[A-Za-z0-9_-]+'` muestra el entry que sirve el server.
+- `docker exec minisaas-frontend grep -rl '<string nuevo>' /app/.output/public/_nuxt` confirma el bundle.
+
+**Solución:** **Cmd+Shift+R** (hard refresh), o DevTools → "Disable cache" / incógnito. El server manda el HTML con `Cache-Control: no-store`, así que un hard refresh basta.
+
+## ⚠️ NO usar start.sh en producción (2026-06-30)
+
+`start.sh` es para levantar de cero. En prod rompe cosas:
+- **Regenera `backend/.env` SIEMPRE** → borra `MAIL_PASSWORD` (mail), `DEEPSEEK_API_KEY` (IA) y pone `APP_URL=http://localhost`.
+- Corre `docker compose build` (rebuild backend — el `composer update` puede fallar — y frontend).
+- Corre `db:seed --force` (seeders SÍ idempotentes por `exists()`/`firstOrCreate`, no pisan datos — seguro pero innecesario).
+
+**Para redeploy de backend:** `git pull origin main` + `bash mini-saas/deploy-backend.sh` (docker cp + `migrate --force` + `optimize:clear` + restart). Ver [[Stack e Infraestructura]].
+
+---
+
 ## Ver tambien
 
 - [[Stack e Infraestructura]] - Errores de Docker y deploy

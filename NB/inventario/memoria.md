@@ -1,10 +1,13 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-06-27. (Memoria local también en
+Última sincronización: 2026-06-29. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Estado git: tanda pusheada a regularizacion-stock (2026-06-29)
+El trabajo de seriales + competencia + índices + word-break + fix N+1 quedó commiteado y pusheado a `regularizacion-stock` (back `ms-metadata` 4 commits `7f67d7b..bf2c8d1`; front `inventario-web-app` 3 commits `653c025..481be0f`), sin `Co-Authored-By`. Sin commitear: `.env`, `.DS_Store`, scripts ad-hoc (diag/run/sweep/worklist + CSVs). Índices P1–P3 = DDL en prod (fuera de git). Rama lista para PR a Development/Gamma. Ver [[changelog]] y [[performance-indices]].
 
 ### Índices de performance + refactor IN revertido (2026-06-27)
 Auditoría con el **DMV real** de SQL Server (login `web` tiene VIEW SERVER STATE). Aplicados en prod (Enterprise → `ONLINE=ON`): **P2 `ST_DETALLE_STOCK (CREF, FECHA_EGRESO)` = gran win, grilla 1.63s → 0.54s (−67%)**; P3 RVDS covering (modal seriales −14%); P1 albclit covering dfecalb (neutro por-query, gana en agregado; score DMV 298M pero NO toca la grilla). **Lección**: batchear las subqueries escalares de `get_items_stocks` con `IN` se probó y empeoró 2.5–3.7× (round trips sobre TLS 1.0) → el fix correcto era el índice, no reestructurar; revertido byte-idéntico. Fix N+1: `selldiscount.get_current_cost` reutiliza el cursor del loop. Script `ms-metadata/scripts/perf_indexes_p1_p3.sql`. Ver [[performance-indices]].

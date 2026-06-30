@@ -4,6 +4,16 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-06-30
+
+- feat: **Descargar PDF/invoice requiere permiso `VER_MONTOS_SALDOS`**. Los endpoints públicos `/presupuestos/{id}/pdf`, `/preview` y `/mercury/invoices/{id}/pdf` resuelven el usuario del token y devuelven **403** si no tiene el permiso (admin bypassa). El frontend además oculta los botones de descarga (`v-if="authStore.verMontos"`) en listado y detalle. Los documentos tienen montos → mismo criterio que el masking. Ver [[Modulo Mercury Invoicing]] y [[Modulo Permisos]]
+- chore: **`mini-saas/deploy-backend.sh`** — redeploy seguro del backend en prod (docker cp + migrate + optimize:clear + restart, sin tocar .env/seeders/build). ⚠️ NO usar `start.sh` en prod (regenera backend/.env y corre build+seed). Ver [[Errores Comunes]]
+- docs: documentada toda la sesión en CLAUDE.md + arquitectura (05-frontend, 08-errores-comunes, 10-medios-de-pago) y memoria de Claude. Diagnóstico clave: la app es **SPA pura**, tras rebuild el navegador sirve chunks viejos → verificar deploy server-side + Cmd+Shift+R. Ver [[Errores Comunes]]
+
+Archivos: `backend/app/Http/Controllers/PresupuestoController.php` (pdf/preview gate), `backend/app/Http/Controllers/MercuryInvoiceController.php` (pdf gate), `frontend/pages/presupuestos/{index,[id]}.vue` (ocultar botones), `mini-saas/deploy-backend.sh` (nuevo)
+
+---
+
 ## 2026-06-29
 
 - feat: **Vista unificada de Operación con tabs** (`components/OperacionTabs.vue`). Presupuesto y proyecto (1:1) se presentan como una sola Operación con fases **Cotización · Ejecución · Activaciones · Cobranza**. Breadcrumb `Cliente › Operación «nombre»` + barra de tabs montada en ambos detalles. Las fases navegan entre `/presupuestos/{id}` y `/proyectos/{id}` + query `?fase=`

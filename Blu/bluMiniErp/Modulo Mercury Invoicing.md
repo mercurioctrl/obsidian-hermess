@@ -105,6 +105,8 @@ Migraciones:
 - **0051** — `presupuestos.mercadopago_payment_url` y `presupuestos.stripe_payment_url`. Antes los links de pago de MP/Stripe se generaban on-the-fly y eran ephemeral; ahora se persisten al crearlos para reusarlos en el modal de envío de invoice por email.
 - **0058** (2026-06-29) — `presupuestos.mercury_invoice_number` (varchar 64). Guarda el `invoiceNumber` **tal como lo devuelve Mercury** en create/link/refresh (`$invoice['invoiceNumber']`). ⚠️ Al crear desde la app se le manda `invoiceNumber = presupuesto.numero`, así que para invoices creados acá vale `BLU-…`; para invoices **vinculados** (numerados por Mercury) vale su correlativo `INV-40X`. Se muestra en el listado `/presupuestos` al lado del botón de descarga del invoice **solo cuando difiere** del `presupuesto.numero` (evita repetir el BLU-). Backfill de existentes leyendo el `invoiceNumber` real de la API.
 
+**Descargas gateadas (2026-06-30):** las rutas públicas (token por query) `/presupuestos/{id}/pdf`, `/preview` y `/mercury/invoices/{id}/pdf` resuelven el usuario del token y devuelven **403** si NO tiene `VER_MONTOS_SALDOS` (admin bypassa via `Usuario::tienePermiso`). Los documentos tienen montos, por eso se gatean igual que los saldos. El frontend además oculta los botones de descarga (`v-if="authStore.verMontos"`) en listado y detalle. Ver [[Modulo Permisos]].
+
 Ver [[Base de Datos#presupuestos]] y [[Base de Datos#clientes]].
 
 ---

@@ -267,6 +267,18 @@ donde `|` es un separador vertical (`<div class="w-px h-6 bg-[#E8E8E3] mx-1"></d
 
 Ver [[memoria#Action bar — jerarquía visual]] para el contexto del feedback del usuario.
 
+## Descargas en listado de presupuestos (2026-06-30)
+
+Columna de acciones en `/presupuestos`: PDF del presupuesto siempre + PDF del invoice
+Mercury si existe (`window.open` a `/presupuestos/{id}/pdf?token=` y
+`/mercury/invoices/{id}/pdf?token=`, rutas públicas con token por query). El número de
+invoice Mercury se muestra al lado **solo si difiere** del nº de presupuesto.
+
+**⚠️ Requieren permiso `VER_MONTOS_SALDOS`**: el backend devuelve **403** si el usuario
+del token no lo tiene (admin bypassa); el frontend además oculta los botones
+(`v-if="authStore.verMontos"`) en listado y detalle. Los documentos tienen montos →
+mismo criterio que el masking. Ver [[Modulo Mercury Invoicing]] y [[Modulo Permisos]].
+
 ---
 
 ## Ver tambien

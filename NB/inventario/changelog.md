@@ -1,5 +1,24 @@
 # Changelog — inventario
 
+## 2026-06-29 — Commits + push de la tanda a `regularizacion-stock`
+
+Toda la tanda quedó **commiteada y pusheada** a `regularizacion-stock` en ambos repos
+(sin `Co-Authored-By`, regla del usuario). Lista para PR a `Development`/`Gamma`.
+
+**ms-metadata** (`7f67d7b..bf2c8d1`):
+- `4af6e9e` feat(competition): cache materializada `scrap_competition` + cron — ver [[competencia-partpicker-cache]]
+- `a3cb2e2` feat(stock): modal de seriales (docs/RMA/compra) + visibilidad masiva + competencia en grilla — ver [[modulo-seriales]]
+- `cba3c13` perf(selldiscount): reutilizar cursor en `get_current_cost` (N+1) — ver [[performance-indices]]
+- `bf2c8d1` chore(perf): script de índices P1–P3 — ver [[performance-indices]]
+
+**inventario-web-app** (`653c025..481be0f`):
+- `046dd4d` feat(stock): mejoras de grilla (ID/sticky/orden/ocultar masivo/filtro rápido/tooltip Δ) + modal de seriales
+- `724fc19` feat(precios): competencia en grilla + filtro rápido por título + export
+- `481be0f` fix(ui): cortar palabras solo en espacios en todas las tablas
+
+Sin commitear (a propósito): `.env`, `.DS_Store` y scripts ad-hoc de diagnóstico
+(diag/run/sweep/worklist + CSVs). Los índices P1–P3 son **DDL en prod, fuera de git**.
+
 ## 2026-06-27 — Modal de seriales (documentos/RMA/cambios/compra) + índices de performance en prod
 
 Sesión sobre `ms-metadata` e `inventario-web-app` (cambios locales sin commit, salvo
