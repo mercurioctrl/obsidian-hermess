@@ -91,8 +91,17 @@ Seccion "Personal asignado" con lista, asignar/desasignar inline.
 
 ---
 
+## Vínculo Empleado ↔ Usuario del sistema (2026-06-30)
+
+- `empleados.usuario_id` (migración 0066): FK nullable **unique** a `usuarios` (1:1), `nullOnDelete`. Relaciones `Empleado::usuario()` / `Usuario::empleado()`.
+- En el detalle del empleado (tab Información, card "Usuario del sistema") se puede **crear** un usuario (prefill nombre/email), **vincular** uno existente o **desvincular** (no borra la cuenta). Solo **admin**. Endpoints `POST/PUT/DELETE /api/empleados/{id}/usuario`.
+- El usuario **creado desde Personal** nace acotado: rol `USUARIO`, `permisos: ['VER_SECCION_TAREAS']`, sin `VER_MONTOS_SALDOS`. Pensado para que el empleado solo gestione sus tareas. Ver [[Modulo Tareas]] y [[Modulo Permisos]].
+
+---
+
 ## Ver tambien
 
+- [[Modulo Tareas]] - Tareas asignadas al usuario del empleado
 - [[Base de Datos#empleados]] - Esquema de tablas
 - [[Backend - API#Staff y Empleados]] - Endpoints
 - [[Reglas de Negocio#Personal - Asignacion a Proyectos]] - Reglas de asignacion

@@ -18,7 +18,8 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 
 | Documento | Contenido |
 |-----------|-----------|
-| [[Modulo Personal]] | Empleados, asignacion a proyectos, pagos |
+| [[Modulo Tareas]] | Tablero kanban estilo Jira: seguimiento (watchers) y notificaciones in-app / correo / push (VAPID) / WhatsApp |
+| [[Modulo Personal]] | Empleados, asignacion a proyectos, pagos, vínculo con usuario del sistema |
 | [[Reglas de Negocio]] | Reglas de dominio criticas y comportamientos no obvios |
 | [[Modulo Permisos]] | Sistema de permisos granular por usuario |
 | [[Medios de Pago]] | MercadoPago, Stripe y Mercury (cuenta + invoicing) |
