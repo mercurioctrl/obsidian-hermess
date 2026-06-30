@@ -100,6 +100,18 @@ api.delete<T>(endpoint)
 const { success, error, info } = useNotification()
 ```
 
+### `composables/useFiltroPersistente.ts` (2026-06-29)
+Filtro de listado que **persiste en localStorage** entre recargas y navegación.
+Wrapper sobre `useLocalStorage` (VueUse) con `StorageSerializers.object` para
+preservar tipos mixtos (número / `''` / `string[]`).
+```ts
+const filtroMes = useFiltroPersistente<string | number>('presupuestos.mes', mesActual)
+```
+Clave namespaced `erp:filtro:<key>`. Usado en los listados de **presupuestos,
+proyectos, gastos, clientes, activaciones y staff** (reemplaza los `ref()` de
+filtros sin tocar templates ni watchers). Default de mes/año = mes actual, pero
+una vez que el usuario elige queda fijo (trade-off explícito de "mantener filtros").
+
 ## Componentes UI
 
 Usados SIN prefijo gracias a `pathPrefix: false`. Ver [[Componentes UI]] para specs detalladas.
@@ -139,8 +151,6 @@ Tipografia: Inter (UI) + JetBrains Mono (numeros)
 Principal:
   / (Dashboard)        lucide:layout-dashboard
   /presupuestos        lucide:clipboard-list
-  /proyectos           lucide:bar-chart-2
-  /evidencias          lucide:folder (Activaciones)
   /clientes            lucide:building-2
   /cuenta-corriente    lucide:arrow-left-right
 Operaciones:
@@ -153,6 +163,37 @@ Administracion (solo admin):
   /usuarios            lucide:shield
   /configuracion       lucide:settings
 ```
+
+> **⚠️ Desde 2026-06-29: Proyectos y Activaciones ya NO están en el sidebar.**
+> Se acceden desde los tabs de la Operación (ver más abajo). Las rutas siguen
+> existiendo (`/proyectos`, `/evidencias`).
+
+### Sidebar colapsable (2026-06-29)
+`layouts/default.vue`. Por defecto **colapsado a solo íconos** (72px). Se **expande
+al hover** (280px) como **overlay** (aside `position:absolute` + z-30, no empuja el
+contenido → sin layout shift), y vuelve a colapsar al salir. Un **chinche** (📌
+`lucide:pin`/`pin-off`) abajo lo **fija abierto**; estado persistido en
+`useLocalStorage('erp:sidebar:pinned')`. El layout `provide('sidebarCollapsed', …)`
+y `NavItem` lo inyecta para ocultar el label (con `:title` tooltip) cuando colapsa.
+
+## Vista de Operación (tabs) — `components/OperacionTabs.vue` (2026-06-29)
+
+Barra compartida que unifica **presupuesto ↔ proyecto** (relación 1:1) como una sola
+"Operación" con fases. Se monta arriba del detalle de presupuesto y de proyecto.
+
+```
+{cliente} › Operación «{nombre}»
+[ Cotización ] [ Ejecución ] [ Activaciones ] [ Cobranza ]
+```
+
+- **Cotización** → `/presupuestos/{id}` (items del presupuesto)
+- **Ejecución** → `/proyectos/{id}` (rentabilidad, gastos, personal, Jira) — deshabilitado si aún no hay proyecto
+- **Activaciones** → `/proyectos/{id}?fase=activaciones` (vista dedicada; sacada del aside de Ejecución)
+- **Cobranza** → `/presupuestos/{id}?fase=cobranza` (panel con métodos de cobro Mercury/Stripe/MP, enviar invoice, marcar cobrado)
+
+Las "fases" son navegación entre las 2 rutas existentes + un query param (`?fase=`)
+que el detalle lee para mostrar la vista correspondiente (bajo riesgo, reusa todo).
+Reemplaza el back-link "← Proyectos/Presupuestos" de cada pantalla.
 
 ## Modulo Activaciones
 

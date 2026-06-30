@@ -103,6 +103,7 @@ Migraciones:
 - **0049** — `clientes.mercury_customer_id` (varchar 64). UUID del customer en Mercury, persistido tras find-or-create. Permite resolver el nombre del cliente al listar invoices y reutilizar el customer entre presupuestos.
 - **0050** — `presupuestos.mercury_invoice_id`, `mercury_invoice_slug`, `mercury_invoice_status`, `mercury_invoice_tasa_cambio` (decimal 12,4 — auditoría), `mercury_invoice_created_at`. Referencia + auditoría del invoice creado desde el presupuesto.
 - **0051** — `presupuestos.mercadopago_payment_url` y `presupuestos.stripe_payment_url`. Antes los links de pago de MP/Stripe se generaban on-the-fly y eran ephemeral; ahora se persisten al crearlos para reusarlos en el modal de envío de invoice por email.
+- **0058** (2026-06-29) — `presupuestos.mercury_invoice_number` (varchar 64). Guarda el `invoiceNumber` **tal como lo devuelve Mercury** en create/link/refresh (`$invoice['invoiceNumber']`). ⚠️ Al crear desde la app se le manda `invoiceNumber = presupuesto.numero`, así que para invoices creados acá vale `BLU-…`; para invoices **vinculados** (numerados por Mercury) vale su correlativo `INV-40X`. Se muestra en el listado `/presupuestos` al lado del botón de descarga del invoice **solo cuando difiere** del `presupuesto.numero` (evita repetir el BLU-). Backfill de existentes leyendo el `invoiceNumber` real de la API.
 
 Ver [[Base de Datos#presupuestos]] y [[Base de Datos#clientes]].
 

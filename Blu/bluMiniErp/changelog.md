@@ -4,6 +4,22 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-06-29
+
+- feat: **Vista unificada de Operación con tabs** (`components/OperacionTabs.vue`). Presupuesto y proyecto (1:1) se presentan como una sola Operación con fases **Cotización · Ejecución · Activaciones · Cobranza**. Breadcrumb `Cliente › Operación «nombre»` + barra de tabs montada en ambos detalles. Las fases navegan entre `/presupuestos/{id}` y `/proyectos/{id}` + query `?fase=`
+- feat: **Panel Cobranza** (`?fase=cobranza` en presupuesto): consolida métodos de cobro Mercury/Stripe/MercadoPago, enviar invoice y marcar cobrado, reusando los métodos existentes
+- feat: **Tab Activaciones** (`?fase=activaciones` en proyecto): vista dedicada a lo ancho, **sacada del aside de Ejecución**
+- feat: **Sidebar colapsable con chinche** (`layouts/default.vue`, `NavItem.vue`). Por defecto solo íconos; se expande al hover (overlay, sin empujar contenido) o queda fijo con el chinche (📌, persistido en localStorage). **Proyectos y Activaciones salen del menú** (se acceden por los tabs). Ver [[Frontend#Sidebar colapsable (2026-06-29)]]
+- feat: **Filtros de listados persistentes** en localStorage (`composables/useFiltroPersistente.ts`) en presupuestos, proyectos, gastos, clientes, activaciones y staff
+- feat: **Descargas de PDF en el listado de presupuestos** — columna de acciones: PDF del presupuesto siempre, y PDF del **invoice Mercury** cuando existe. Las rutas `/presupuestos/{id}/pdf` e `/mercury/invoices/{id}/pdf` validan token por query (públicas)
+- feat: **Número de invoice Mercury** persistido (`mercury_invoice_number`, migración 0058) al crear/vincular/refrescar; se muestra en el listado al lado de la descarga **solo si difiere** del número de presupuesto. Descubrimiento: al crear un invoice se le manda `invoiceNumber = numero del presupuesto`, por eso los creados desde la app muestran `BLU-…`; los vinculados muestran la numeración propia de Mercury (`INV-40X`). Ver [[Modulo Mercury Invoicing]]
+- ui: listado de presupuestos — número de presupuesto más chico y en una línea, título de proyecto a 2 líneas (`line-clamp-2`) con tooltip nativo, badge de estado alineado (ancho fijo del nombre), todas las celdas `align-top`
+- ops: restaurada DB de **producción** desde backup local; reseteadas passwords de `admin@empresa.com` y `cmercurio@blustudioinc.com` a `admin123` para acceso local (el backup trae los users de prod con sus passwords). Whitelisteada IP de egress de dev en el token de Mercury (recordar agregar también la IP de prod)
+
+Archivos: `frontend/components/OperacionTabs.vue` (nuevo), `frontend/components/NavItem.vue`, `frontend/layouts/default.vue`, `frontend/composables/useFiltroPersistente.ts` (nuevo), `frontend/pages/presupuestos/index.vue`, `frontend/pages/presupuestos/[id].vue`, `frontend/pages/proyectos/[id].vue`, `frontend/pages/{clientes,gastos,evidencias,proyectos,staff}/index.vue`, `backend/app/Services/MercuryInvoiceService.php`, `backend/app/Http/Controllers/MercuryInvoiceController.php`, `backend/app/Http/Resources/PresupuestoResource.php`, `backend/app/Models/Presupuesto.php`, `backend/database/migrations/0058_add_mercury_invoice_number_to_presupuestos.php`
+
+---
+
 ## 2026-06-17
 
 - docs: **Aclaración — el gasto de un pago de sueldo se imputa al período, no al mes en curso.** Se verificó (no era bug) que el gasto se fecha al **día 1 del mes del período** (`Carbon::create(anio,mes,1)`), nunca a `now()` ni a la fecha de pago. La confusión venía de que tanto el selector "Período" del form como el Dashboard ("Gastos del Período") defaultean al mes actual. Documentado en [[Errores Comunes#El gasto de un pago de sueldo aparece en el mes en curso (no es bug)]] y [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)]]. Solo cambios de documentación (CLAUDE.md, arquitectura 06/08, memoria)
