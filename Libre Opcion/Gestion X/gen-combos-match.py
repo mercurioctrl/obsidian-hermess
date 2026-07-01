@@ -146,6 +146,36 @@ def classify_kit(name):
     if has_mother and 'COOLER' in t and not has_cpu: return 'MOTHER+COOLER'
     return 'OTRO'
 
+# ---------------------------------------------------------------- parseo de specs
+def cap_gb(text):
+    t = norm(text)
+    m = re.search(r'(\d+(?:[.,]\d+)?)\s*TB', t)
+    if m: return int(float(m.group(1).replace(',', '.')) * 1000)
+    m = re.search(r'(\d{2,4})\s*GB', t)
+    if m: return int(m.group(1))
+    return None
+
+def ddr_gen(text):
+    t = norm(text)
+    if 'DDR5' in t: return 5
+    if 'DDR4' in t: return 4
+    return None
+
+def watts(text):
+    m = re.search(r'(\d{3,4})\s*W', norm(text))
+    return int(m.group(1)) if m else None
+
+def platform_ddr(socket):
+    return 4 if socket in ('AM4', 'LGA1700', 'LGA1151', 'LGA1200') else 5  # AM5/1851 = DDR5
+
+# vram + watts recomendados por GPU
+def gpu_watts(model):
+    m = (model or '').upper()
+    if '5070TI' in m or '5080' in m or '5090' in m: return 750
+    if '5070' in m or '9070' in m: return 700
+    if any(x in m for x in ('5060', '9060', 'B580', '3050')): return 650
+    return 500
+
 # ---------------------------------------------------------------- índice de partes del usuario
 class Parts:
     def __init__(self, rows):
@@ -170,38 +200,102 @@ class Parts:
         if model:
             for c in self.cpus:
                 if c[0] == model:
-                    return ('EXACTO', c)
-        # sustituto: mismo socket, tier más cercano
+                    return ('EXACTO', c, 0)
         want = TIER.get(model, None)
         cands = [c for c in self.cpus if c[1] == socket]
         if not cands:
-            return ('FALTA', None)
+            return ('FALTA', None, None)
         if want is None:
             cands.sort(key=lambda c: c[2] or 9e9)
-            return ('SUSTITUTO', cands[0])
+            return ('SUSTITUTO', cands[0], None)
         cands.sort(key=lambda c: abs(TIER.get(c[0], 99) - want))
-        return ('SUSTITUTO', cands[0])
+        best = cands[0]
+        gap = abs(TIER.get(best[0], 99) - want)
+        status = 'SUSTITUTO' if gap <= 3 else 'LEJANO'
+        return (status, best, gap)
 
-    def find_mother(self, socket, chipset, prefer='cheap'):
+    def find_mother(self, socket, chipset):
         cands = [m for m in self.mothers if m[0] == socket]
         if not cands:
             return ('FALTA', None)
-        # exacto por chipset
         exact = [m for m in cands if m[1] == chipset]
         if exact:
             exact.sort(key=lambda m: m[2] or 9e9)
             return ('EXACTO', exact[0])
-        # mismo tier de chipset
         wt = chipset_tier(chipset)
         same = [m for m in cands if chipset_tier(m[1]) == wt]
         pool = same or cands
         pool.sort(key=lambda m: m[2] or 9e9)
         return ('SUSTITUTO', pool[0])
 
+    def pick_ram(self, cap, ddr):
+        best = None
+        for det, price, r in self.by_cat.get('MEMORIAS', []):
+            t = norm(det)
+            if 'SODIMM' in t or not price:   # SODIMM = RAM de notebook
+                continue
+            c, g = cap_gb(t), ddr_gen(t)
+            score = (0 if c == cap else 1, 0 if g == ddr else 1, price)
+            if best is None or score < best[0]:
+                best = (score, (det, price))
+        return best[1] if best else None
+
+    def pick_ssd(self, cap, nvme):
+        best = None
+        for det, price, r in self.by_cat.get('DISCOS SSD', []):
+            t = norm(det)
+            if not price: continue
+            c = cap_gb(t)
+            is_nvme = 'NVME' in t or 'PCIE' in t
+            below = 1 if (c or 0) < cap else 0       # penalizá quedarte corto
+            score = (0 if c == cap else 1, below, 0 if is_nvme == nvme else 1, price)
+            if best is None or score < best[0]:
+                best = (score, (det, price))
+        return best[1] if best else None
+
+    def pick_psu(self, min_w):
+        cands = []
+        for det, price, r in self.by_cat.get('FUENTES', []):
+            if not price: continue
+            w = watts(det) or 0
+            cands.append((w, price, det))
+        ok = [c for c in cands if c[0] >= min_w]
+        pool = ok or cands
+        pool.sort(key=lambda c: (0 if c[0] >= min_w else 1, c[1]))
+        return (pool[0][2], pool[0][1]) if pool else None
+
+    def pick_water_cooler(self):
+        best = None
+        for det, price, r in self.by_cat.get('COOLERS', []):
+            if not price or 'WATER COOLER' not in norm(det):
+                continue
+            if best is None or price < best[1]:
+                best = (det, price)
+        return best
+
+    def pick_gpu(self, gpu_model):
+        want = re.sub(r'\s+', '', (gpu_model or '').upper())          # 'RTX 5070 TI' -> 'RTX5070TI'
+        wantnum = re.sub(r'(RTX|RX|ARC|GEFORCE|RADEON)', '', want)     # '5070TI'
+        exact, subs = [], []
+        for det, price, r in self.by_cat.get('PLACA DE VIDEO', []):
+            if not price: continue
+            t = re.sub(r'\s+', '', norm(det))
+            tnum = re.sub(r'.*?((?:RTX|RX)\d{4}(?:TI|XT)?).*', r'\1', t)
+            tnum = re.sub(r'(RTX|RX)', '', tnum)
+            if wantnum and wantnum in t:
+                exact.append((det, price))
+            subs.append((det, price, tnum))
+        if exact:
+            exact.sort(key=lambda x: x[1])
+            return ('EXACTO', exact[0])
+        # sustituto: la más barata (aprox. gama de entrada) si no hay match
+        subs.sort(key=lambda x: x[1])
+        return ('SUSTITUTO', (subs[0][0], subs[0][1])) if subs else ('FALTA', None)
+
     def cheapest(self, cat_substr, contains=None):
         best = None
         for cat, items in self.by_cat.items():
-            if cat_substr in cat:
+            if cat == cat_substr or cat_substr == cat:
                 for det, price, r in items:
                     if contains and not all(k in norm(det) for k in contains):
                         continue
@@ -225,7 +319,7 @@ def match_kits(kits, parts):
         if key in seen:   # dedup: CG repite mother×cpu, nos importa la receta única
             continue
         seen.add(key)
-        cst_cpu, cpu = parts.find_cpu(cpu_model, sk)
+        cst_cpu, cpu, _gap = parts.find_cpu(cpu_model, sk)
         cst_mb,  mb  = parts.find_mother(sk, cs)
         armable = cpu is not None and mb is not None
         price = (cpu[2] + mb[2]) if (armable and cpu[2] and mb[2]) else None
@@ -241,48 +335,44 @@ def parse_pc(name):
     t = norm(name)
     cpu = extract_cpu_model(name)
     sk = socket_from_cpu(cpu) if cpu else None
-    ram = None
-    m = re.search(r'(\d{1,2})GB(?!\s*(?:RTX|RX))', t)
-    # RAM: primer "NGB" que no sea de la placa; heurística: el que sigue al patrón del build
-    rams = re.findall(r'(\d{1,2})GB', t)
-    ssd = None
-    m = re.search(r'(\d+(?:TB|GB)) SSD', t)
-    if m: ssd = m.group(1)
+    # sacar la GPU (con su VRAM) antes de leer la RAM del sistema
     gpu = None
-    m = re.search(r'(RTX \d{4}(?: TI)?|RX \d{4}(?: XT)?|ARC B\d{3})', t)
-    if m: gpu = m.group(1)
-    return dict(cpu=cpu, socket=sk, ram=rams, ssd=ssd, gpu=gpu, gamer='GAMER' in t)
+    gm = re.search(r'(RTX \d{4}(?: TI)?|RX \d{4}(?: XT)?|ARC B\d{3})(?:\s+\d{1,2}GB)?', t)
+    if gm:
+        gpu = re.sub(r'\s+', '', gm.group(1))
+        t = t[:gm.start()] + ' ' + t[gm.end():]
+    ram = None
+    rm = re.search(r'(\d{1,3})GB', t)
+    if rm: ram = int(rm.group(1))
+    ssd = None
+    sm = re.search(r'(\d+)\s*(TB|GB)\s*SSD', t)
+    if sm: ssd = int(sm.group(1)) * (1000 if sm.group(2) == 'TB' else 1)
+    nvme = 'NVME' in t
+    return dict(cpu=cpu, socket=sk, ram=ram or 16, ssd=ssd or 1000,
+                nvme=nvme, gpu=gpu, water='WATER CO' in t,
+                gamer='GAMER' in t)
 
 def match_pc(name, parts):
     p = parse_pc(name)
-    cst_cpu, cpu = parts.find_cpu(p['cpu'], p['socket'])
+    cst_cpu, cpu, _g = parts.find_cpu(p['cpu'], p['socket'])
     cst_mb, mb = parts.find_mother(p['socket'], None) if p['socket'] else ('FALTA', None)
-    ssd = None
-    if p['ssd']:
-        want = p['ssd'].replace('TB','000GB') if p['ssd'].endswith('TB') else p['ssd']
-        ssd = parts.cheapest('DISCOS SSD', contains=[p['ssd'].replace('TB',' TB') if False else p['ssd'][:-2]])
-    if ssd is None:
-        ssd = parts.cheapest('DISCOS SSD')
-    ram = parts.cheapest('MEMORIAS')
-    gpu = None
-    if p['gpu']:
-        toks = p['gpu'].split()
-        gpu = parts.cheapest('PLACA DE VIDEO', contains=[toks[-1]])
-        if gpu is None:
-            gpu = parts.cheapest('PLACA DE VIDEO')
-    case = parts.cheapest('GABINETE')
-    psu = parts.cheapest('FUENTES')
-    comps = dict(cpu=cpu, mb=mb, ram=ram, ssd=ssd, gpu=gpu, case=case, psu=psu)
-    needed = ['cpu','mb','ram','ssd','case','psu'] + (['gpu'] if p['gpu'] else [])
+    ram = parts.pick_ram(p['ram'], platform_ddr(p['socket']))
+    ssd = parts.pick_ssd(p['ssd'], p['nvme'])
+    gpu_status, gpu = (parts.pick_gpu(p['gpu']) if p['gpu'] else (None, None))
+    case = parts.cheapest('GABINETE GAMER') or parts.cheapest('GABINETE')
+    psu = parts.pick_psu(gpu_watts(p['gpu']) if p['gpu'] else 500)
+    water = parts.pick_water_cooler() if p['water'] else None
+    comps = dict(cpu=cpu, mb=mb, ram=ram, ssd=ssd, gpu=gpu, case=case, psu=psu, water=water)
+    needed = ['cpu', 'mb', 'ram', 'ssd', 'case', 'psu'] + (['gpu'] if p['gpu'] else []) + (['water'] if p['water'] else [])
     missing = [k for k in needed if not comps[k]]
     price = 0.0
     for k in needed:
         v = comps[k]
-        pv = (v[2] if k in ('cpu','mb') else v[1]) if v else None
+        pv = (v[2] if k in ('cpu', 'mb') else v[1]) if v else None
         if pv: price += pv
     return dict(cg=name, parsed=p, comps=comps, missing=missing,
                 armable=not missing, price=price if not missing else None,
-                cpu_status=cst_cpu, cg_price=None)
+                cpu_status=cst_cpu, gpu_status=gpu_status, cg_price=None)
 
 # ---------------------------------------------------------------- main
 def money(x):
@@ -315,17 +405,28 @@ def main():
              f'**armables con tu stock:** {n_kit_arm} · **match exacto (CPU y mother):** {n_kit_ex}\n')
     L.append(f'**PCs de escritorio de CG:** {len(pres)} · **armables:** {n_pc_arm}\n')
 
+    n_lejano = sum(1 for k in kres if k['cpu_status'] == 'LEJANO')
+    L.append('\n> [!warning] Hallazgos\n'
+             '> - **Podés cubrir casi todo el lineup**: no hay socket que te falte (AM4/AM5/LGA1700/LGA1851).\n'
+             '> - **Hueco de gama media AM5**: tu línea AM5 es toda alta gama X3D (7800/9800/9900/9950X3D). '
+             f'Cuando CG kitea un Ryzen 5/7 no-X3D (7600, 8500G/8600G/8700G/8700F, 9600X, 9700X) tu único sustituto '
+             f'es un 7800X3D — más caro y de otra gama ({n_lejano} kits marcados 🟠). Si querés competir esos precios '
+             'necesitás sumar 1-2 CPUs AM5 baratos (un 7600 o un 8500G/8600G).\n'
+             '> - **Los precios son de costo+utilidad tuyo, no PVP**: comparalos contra el precio de CG para ver el margen.\n')
+
     # -------- KITS
     L.append('\n## Kits de actualización (CPU + Mother)\n')
-    L.append('Estado: 🟢 exacto · 🟡 sustituto (misma familia/socket) · 🔴 falta la pieza.\n')
+    L.append('Estado: 🟢 exacto · 🟡 sustituto cercano · 🟠 sustituto lejano (gama distinta) · 🔴 falta.\n')
     L.append('| Kit Compra Gamer | Socket | Tu CPU | Tu Mother | Precio combo (u$s) |')
     L.append('|---|---|---|---|--:|')
-    def ico(s): return {'EXACTO':'🟢','SUSTITUTO':'🟡','FALTA':'🔴'}[s]
+    def ico(s): return {'EXACTO':'🟢','SUSTITUTO':'🟡','LEJANO':'🟠','FALTA':'🔴'}[s]
     # ordenar: armables primero, por socket
+    def clean_cpu(d): return re.sub(r'^PROCESADOR (AMD|INTEL)\s*\([^)]*\)\s*', '', d).strip()
+    def clean_mb(d):  return re.sub(r'^MOTHER\s+', '', d).strip()
     for k in sorted(kres, key=lambda k:(not k['armable'], k['socket'] or 'zz', -(TIER.get(k['cpu_model'],0)))):
-        cg = re.sub(r'^Kit (Mother |Procesador )?', '', k['cg'])[:60]
-        cpu_txt = f"{ico(k['cpu_status'])} {k['cpu'][3][:34]}" if k['cpu'] else f"🔴 falta {k['cpu_model'] or '?'}"
-        mb_txt  = f"{ico(k['mb_status'])} {k['mb'][3][:34]}" if k['mb'] else '🔴 falta mother'
+        cg = re.sub(r'^Kit (Mother |Procesador )?', '', k['cg'])[:56]
+        cpu_txt = f"{ico(k['cpu_status'])} {clean_cpu(k['cpu'][3])}" if k['cpu'] else f"🔴 falta {k['cpu_model'] or '?'}"
+        mb_txt  = f"{ico(k['mb_status'])} {clean_mb(k['mb'][3])[:38]}" if k['mb'] else '🔴 falta mother'
         L.append(f"| {cg} | {k['socket'] or '?'} | {cpu_txt} | {mb_txt} | {money(k['price'])} |")
 
     # -------- PCs
@@ -343,8 +444,11 @@ def main():
     for p in pres:
         if not p['armable']:
             continue
-        L.append(f"\n**{p['cg']}** — {money(p['price'])}")
-        for k in ['cpu','mb','ram','ssd','gpu','case','psu']:
+        flag = ''
+        if p['cpu_status'] in ('SUSTITUTO','LEJANO'): flag += ' ⚠️CPU sustituto'
+        if p.get('gpu_status') == 'SUSTITUTO': flag += ' ⚠️GPU sustituta'
+        L.append(f"\n**{p['cg']}** — {money(p['price'])}{flag}")
+        for k in ['cpu','mb','ram','ssd','gpu','water','case','psu']:
             v = p['comps'][k]
             if not v: continue
             det = v[3] if k in ('cpu','mb') else v[0]
