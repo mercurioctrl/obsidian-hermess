@@ -12,6 +12,9 @@ No hay build/test/lint. Las únicas operaciones reales:
 # Regenerar los combos/PCs armables cruzando Compra Gamer vs stock de la distribuidora
 python3 gen-combos-match.py         # lee items/*.csv + adjuntos/…CompraGamer.xlsx → escribe combos-armables.md
 
+# Regenerar dashboard de ventas + proyección de compra (correr si cambia items/ventas-por-sku-2026.csv)
+python3 gen-ventas-forecast.py      # escribe ventas-data.js → Ventas-y-Proyeccion-LibreOpcion.html
+
 # Regenerar los datos del cubo desde los CSV de meses/ (correr si cambia meses/)
 python3 gen-cube-data.py            # escribe cube-data.js
 
@@ -33,6 +36,11 @@ Los HTML son **autocontenidos salvo**: Chart.js por CDN, `cube-data.js` (solo el
 `items/catalogoDistribuidoraJulio.csv` (catálogo de la distribuidora, ~1.367 items) + `adjuntos/…CompraGamer.xlsx` → `gen-combos-match.py` → `combos-armables.md`.
 
 Replica los **kits de actualización** y **PCs de escritorio** de Compra Gamer usando el stock propio: parsea CPU/mother/RAM/SSD/GPU desde el texto de cada nombre, matchea contra las partes del catálogo (exacto/sustituto/lejano/falta) y reconstruye cada combo con precio a **costo+utilidad** (columna `PRECIO USD CON UTILIDAD`). Reglas clave dentro del script: RAM nunca cruza generación de DDR (usa varios módulos p/ llegar a la capacidad — ej. 2×16GB), fuente por wattaje según GPU (evita SFX en ATX), y CPU sustituto por cercanía de `TIER`. Salida usada en la landing `Plan-Estrategico-LibreOpcion-Marca.html` (secciones "Qué combos/PCs armaría para arrancar ya"). Hallazgo vigente: **hueco de gama media AM5** (línea propia toda X3D). Ver [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]] y [[combos-armables]].
+
+### Pipeline de ventas mensuales + proyección de compra
+`benefits-report.php` de gestion.saftel.com (una request POST por mes, ventas por SKU) → `items/ventas-por-sku-2026.csv` → `gen-ventas-forecast.py` → `ventas-data.js` → `Ventas-y-Proyeccion-LibreOpcion.html`.
+
+El reporte trae por SKU: cantidad, costo unit/total, venta, ganancia, benf/cost %, benf/vent %, proveedor (13 celdas por fila para 10 headers — el mapeo correcto está en el parser). El generador agrega por SKU×mes, deriva categoría/marca (mismas funciones que el cubo) y calcula una **proyección de compra 6 meses adelante**: base = promedio ponderado del último trimestre (peso 1·2·3 hacia el mes más nuevo) × crecimiento mensual compuesto de la categoría (acotado ±10-15%/mes); descarta SKUs sin recurrencia y las líneas no-producto (Financiero/Envío). Es **demanda esperada**, no orden final: no descuenta stock actual. El HTML es navegable mes a mes (charts Chart.js + tablas) + tabla de compra jul–dic. Para actualizar el rango de meses, cambiar `fechap`/`fecha1p` en el curl y `MONTHS` en el generador.
 
 ### Dos granos de datos que NO se pueden cruzar (lo más importante)
 - **`item-group_*.csv`** = producto × mes → tiene SKU, categoría, **marca**, costo, renta, cantidad. **No** tiene medio de pago/envío.
