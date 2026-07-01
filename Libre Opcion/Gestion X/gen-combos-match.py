@@ -575,6 +575,13 @@ def main():
             pr  = v[2] if k in ('cpu','mb') else v[1]
             L.append(f"- {k}: {det} — {money(pr)}")
 
+    # -------- Enlaces (wikilinks de la bóveda)
+    L.append('\n## Ver también\n')
+    L.append('- [[09 - Estudio de Catálogo - Compra Gamer]] — el estudio del que salen estos kits/PCs a replicar')
+    L.append('- [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]] — la estrategia que estos combos ejecutan')
+    L.append('- [[Plan-Estrategico-LibreOpcion-Marca.html|Plan Estratégico (Marca)]] — la landing lista el catálogo de arranque (combos + PCs con SKU)')
+    L.append('- [[00 - Índice Gestión X]]')
+
     with open(OUT_MD, 'w', encoding='utf-8') as f:
         f.write('\n'.join(L) + '\n')
 

@@ -424,3 +424,10 @@ Los combos CPU+Mother con una RAM de 16GB del DDR correcto sumada (el combo de 3
 - gpu: PLACA DE VIDEO ZOTAC RTX 5060TI 8GB TWIN EDGE OC — u$s485
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
 - psu: FUENTE GAMER AUREOX 650W BRONZE 80+PSU — u$s37
+
+## Ver también
+
+- [[09 - Estudio de Catálogo - Compra Gamer]] — el estudio del que salen estos kits/PCs a replicar
+- [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]] — la estrategia que estos combos ejecutan
+- [[Plan-Estrategico-LibreOpcion-Marca.html|Plan Estratégico (Marca)]] — la landing lista el catálogo de arranque (combos + PCs con SKU)
+- [[00 - Índice Gestión X]]
