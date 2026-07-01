@@ -45,6 +45,7 @@ Mapa de contenido de toda la investigación y estrategia de negocio de **LibreOp
 ## 🧩 Catálogo de combos y PCs
 
 - [[combos-armables]] — 🆕 ⭐ **catálogo de arranque**: 31 combos + 15 PCs replicando a Compra Gamer con stock real, cada uno con SKU y costo (gen por `gen-combos-match.py`). Ejecuta [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]].
+- [[Ventas-y-Proyeccion-LibreOpcion.html|📊 Ventas & Proyección de compra (HTML)]] — 🆕 ⭐ dashboard navegable mes a mes (ene–jun 2026: ventas por SKU/categoría/marca) + **proyección de compra 6 meses adelante** (cuánto comprar de cada SKU, jul–dic). Datos reales del reporte de beneficios; gen por `gen-ventas-forecast.py`.
 
 ## 📎 Adjuntos (PDF / Excel / HTML)
 

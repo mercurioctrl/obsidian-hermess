@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LibreOpción · Ventas & Proyección de compra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{--azul:#0044a4;--azul2:#0059d6;--rojo:#f90000;--verde:#22ac4b;--amarillo:#fccc00;--naranja:#ff5a36;
+        --bg:#f5f7f8;--card:#fff;--ink:#1b1b1f;--gris:#7e7e83;--line:#e9e9ea;--shadow:0 2px 10px rgba(16,40,80,.06)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.55}
+  h1,h2,h3,h4,.cond{font-family:'Roboto Condensed','Inter',sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  header.bar{background:#111;color:#fff;padding:12px 0;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+  header.bar .wrap{display:flex;align-items:center;gap:14px}
+  header.bar img{height:26px}
+  header.bar .htag{font-family:'Roboto Condensed';font-weight:700;letter-spacing:.02em;color:#fff}
+  header.bar .sep{width:1px;height:20px;background:#444}
+  header.bar .back{margin-left:auto;color:#bcd0ee;font-size:13px;text-decoration:none}
+  header.bar .back:hover{color:#fff}
+  .intro{padding:30px 0 8px}
+  .intro h1{font-size:30px;margin:0 0 6px}
+  .intro p{color:var(--gris);max-width:860px;margin:0}
+  section{margin:26px 0}
+  .stitle{display:flex;align-items:center;gap:12px;margin:34px 0 4px}
+  .stitle .n{font-size:13px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--azul),var(--naranja));width:30px;height:30px;border-radius:8px;display:grid;place-items:center}
+  .stitle h2{font-size:23px;margin:0}
+  .sub{color:var(--gris);margin:2px 0 16px;max-width:880px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:18px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:14px 0}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;position:relative;overflow:hidden}
+  .kpi:before{content:"";position:absolute;top:0;left:0;width:40px;height:3px;background:linear-gradient(90deg,var(--azul),var(--naranja))}
+  .kpi .l{font-size:12px;color:var(--gris)}
+  .kpi .v{font-family:'Roboto Condensed';font-size:26px;font-weight:700;margin-top:2px}
+  .kpi .v.pos{color:var(--verde)}.kpi .v.az{color:var(--azul)}.kpi .v.na{color:var(--naranja)}
+  .seg{display:inline-flex;flex-wrap:wrap;gap:4px;background:#eef1f4;border-radius:10px;padding:4px}
+  .seg button{border:0;background:transparent;padding:7px 14px;border-radius:8px;font-family:'Roboto Condensed';font-weight:700;font-size:14px;color:var(--gris);cursor:pointer;transition:.15s}
+  .seg button.on{background:var(--azul);color:#fff}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:780px){.grid2{grid-template-columns:1fr}}
+  .chart{position:relative;width:100%}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0 8px}
+  input.search,select{border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-family:inherit;font-size:14px;background:#fff}
+  input.search{min-width:220px;flex:1}
+  input.search:focus,select:focus{outline:none;border-color:var(--azul)}
+  .tblwrap{max-height:520px;overflow:auto;border:1px solid var(--line);border-radius:12px}
+  table{width:100%;border-collapse:collapse;font-size:13px;background:#fff}
+  thead th{position:sticky;top:0;background:#fafaf8;font-family:'Roboto Condensed';font-weight:700;font-size:11.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--gris);padding:9px 10px;text-align:right;cursor:pointer;z-index:2;white-space:nowrap}
+  thead th:first-child,thead th.l{text-align:left}
+  thead th:hover{color:var(--azul)}
+  tbody td{padding:7px 10px;border-top:1px solid #f0f0ee;text-align:right;white-space:nowrap}
+  tbody td.l{text-align:left;white-space:normal}
+  tbody tr:hover td{background:#f7faff}
+  .pos{color:var(--verde)}.neg{color:var(--rojo)}
+  .chip{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:#eef1f4;color:var(--gris)}
+  .tr-up{color:var(--verde);font-weight:700}.tr-down{color:var(--rojo);font-weight:700}.tr-flat{color:var(--gris)}
+  .muted{color:var(--gris)}
+  .note{background:#fff7f2;border:1px solid #ffd9c9;border-left:4px solid var(--naranja);border-radius:10px;padding:12px 16px;margin:14px 0;font-size:13.5px}
+  .note b{color:var(--ink)}
+  footer{background:#111;color:#9aa0ab;text-align:center;padding:20px;margin-top:40px;font-size:12px}
+  .num{font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <img src="assets/logo-libreopcion.png" alt="LibreOpción">
+  <span class="sep"></span><span class="htag">Ventas & Proyección de compra</span>
+  <a class="back" href="Plan-Estrategico-LibreOpcion-Marca.html">← Volver al plan</a>
+</div></header>
+
+<div class="wrap">
+  <div class="intro">
+    <h1>Ventas mes a mes & proyección de compra</h1>
+    <p>Qué se vendió de cada cosa entre <b>enero y junio 2026</b> (unidades, montos, margen) y —lo más importante— <b>cuánto vamos a necesitar comprar de cada SKU los próximos 6 meses</b>. Datos reales del reporte de beneficios; valores en u$s.</p>
+  </div>
+
+  <div class="kpis" id="kpiTop"></div>
+
+  <!-- ============ SECCIÓN 1 · VENTAS MES A MES ============ -->
+  <div class="stitle"><span class="n">1</span><h2>Ventas mes a mes</h2></div>
+  <p class="sub">Evolución de los 6 meses y detalle navegable por mes: elegí un mes para ver su mix por categoría, por marca y el detalle SKU por SKU.</p>
+
+  <div class="card">
+    <h3 style="margin:0 0 10px;font-size:16px">📈 Evolución · ene–jun 2026</h3>
+    <div class="chart" style="height:300px"><canvas id="chEvo"></canvas></div>
+  </div>
+
+  <div class="toolbar">
+    <span class="cond" style="font-weight:700;color:var(--azul)">Mes:</span>
+    <div class="seg" id="segMes"></div>
+  </div>
+
+  <div class="kpis" id="kpiMes"></div>
+
+  <div class="grid2">
+    <div class="card"><h3 style="margin:0 0 8px;font-size:15px">🧩 Venta por categoría</h3><div class="chart" style="height:340px"><canvas id="chCat"></canvas></div></div>
+    <div class="card"><h3 style="margin:0 0 8px;font-size:15px">🏷️ Venta por marca (top 12)</h3><div class="chart" style="height:340px"><canvas id="chMar"></canvas></div></div>
+  </div>
+
+  <div class="toolbar">
+    <input class="search" id="qMes" placeholder="🔎 Buscar SKU en el mes seleccionado…">
+    <select id="catMes"></select>
+    <span class="muted" id="cntMes" style="font-size:13px"></span>
+  </div>
+  <div class="tblwrap">
+    <table id="tblMes"><thead><tr>
+      <th class="l" data-k="det">Detalle</th><th class="l" data-k="cat">Categoría</th><th class="l" data-k="mar">Marca</th>
+      <th data-k="q">Cant.</th><th data-k="v">Venta u$s</th><th data-k="g">Ganancia</th><th data-k="m">Margen</th>
+    </tr></thead><tbody></tbody></table>
+  </div>
+
+  <!-- ============ SECCIÓN 2 · PROYECCIÓN DE COMPRA ============ -->
+  <div class="stitle"><span class="n">2</span><h2>Proyección de compra · próximos 6 meses</h2></div>
+  <p class="sub">Cuánto vamos a necesitar de cada SKU, mes a mes, de <b>julio a diciembre 2026</b>. Base: promedio ponderado del último trimestre (peso hacia junio) proyectado con el crecimiento mensual de cada categoría, anclado al último trimestre.</p>
+
+  <div class="kpis" id="kpiFc"></div>
+
+  <div class="card">
+    <h3 style="margin:0 0 10px;font-size:16px">💰 Compra proyectada por mes (u$s)</h3>
+    <div class="chart" style="height:280px"><canvas id="chCompra"></canvas></div>
+  </div>
+
+  <div class="note" id="noteFc"></div>
+
+  <div class="toolbar">
+    <input class="search" id="qFc" placeholder="🔎 Buscar SKU a comprar…">
+    <select id="catFc"></select>
+    <span class="muted" id="cntFc" style="font-size:13px"></span>
+  </div>
+  <div class="tblwrap">
+    <table id="tblFc"><thead><tr>
+      <th class="l" data-k="det">SKU</th><th class="l" data-k="cat">Categoría</th><th data-k="trend">Tend.</th>
+      <th data-k="u0">Jul</th><th data-k="u1">Ago</th><th data-k="u2">Sep</th><th data-k="u3">Oct</th><th data-k="u4">Nov</th><th data-k="u5">Dic</th>
+      <th data-k="total">Σ 6m</th><th data-k="costU">Costo u.</th><th data-k="costTot">Costo total u$s</th>
+    </tr></thead><tbody></tbody></table>
+  </div>
+</div>
+
+<footer>LibreOpción · Ventas &amp; Proyección — generado desde <code>gen-ventas-forecast.py</code> · datos ene–jun 2026 (u$s)</footer>
+
+<script src="ventas-data.js"></script>
+<script>
+const COLORS=['#0044a4','#22ac4b','#ff5a36','#fccc00','#f90000','#0059d6','#8f00ff','#00a3a3','#ff8000','#34aaff','#b78a00','#e03d1a','#666'];
+const fmt=n=>'u$s '+Math.round(n).toLocaleString('es-AR');
+const fmtu=n=>Number(n).toLocaleString('es-AR',{maximumFractionDigits:1});
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+Chart.defaults.font.family="Inter";Chart.defaults.font.size=11;
+
+/* ---------- KPIs top (6 meses) ---------- */
+(()=>{
+  const V=MONTHLY.reduce((a,m)=>a+m.venta,0), C=MONTHLY.reduce((a,m)=>a+m.costo,0), G=MONTHLY.reduce((a,m)=>a+m.ganancia,0);
+  const U=MONTHLY.reduce((a,m)=>a+m.unidades,0);
+  const k=document.getElementById('kpiTop');
+  const items=[['Venta 6m',fmt(V),'az'],['Costo 6m',fmt(C),''],['Ganancia 6m',fmt(G),'pos'],
+    ['Margen prom.',(G/V*100).toFixed(1)+'%','na'],['Unidades',U.toLocaleString('es-AR'),''],['SKUs distintos',SKUS.length.toLocaleString('es-AR'),'']];
+  items.forEach(([l,v,c])=>k.appendChild(el('div','kpi',`<div class="l">${l}</div><div class="v ${c}">${v}</div>`)));
+})();
+
+/* ---------- Evolución ---------- */
+new Chart(document.getElementById('chEvo'),{
+  type:'line',
+  data:{labels:MONTHLY.map(m=>m.label),datasets:[
+    {label:'Venta u$s',data:MONTHLY.map(m=>m.venta),borderColor:'#0044a4',backgroundColor:'rgba(0,68,164,.08)',fill:true,tension:.3,borderWidth:3,pointRadius:4},
+    {label:'Ganancia u$s',data:MONTHLY.map(m=>m.ganancia),borderColor:'#22ac4b',backgroundColor:'rgba(34,172,75,.06)',fill:true,tension:.3,borderWidth:2,pointRadius:3},
+  ]},
+  options:{maintainAspectRatio:false,plugins:{legend:{position:'bottom'},tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmt(c.parsed.y)}}},
+    scales:{y:{ticks:{callback:v=>(v/1000)+'k'}}}}
+});
+
+/* ---------- Selector de mes ---------- */
+let selMes=5; // jun por defecto
+const seg=document.getElementById('segMes');
+MONTHLY.forEach((m,i)=>{const b=el('button',i===5?'on':'',m.label);b.onclick=()=>{selMes=i;[...seg.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');renderMes();};seg.appendChild(b);});
+const bAll=el('button','','Todos 6m');bAll.onclick=()=>{selMes=-1;[...seg.children].forEach(x=>x.classList.remove('on'));bAll.classList.add('on');renderMes();};seg.appendChild(bAll);
+
+let chCat,chMar;
+function renderMes(){
+  const all=selMes<0;
+  // KPIs del mes
+  const kp=document.getElementById('kpiMes');kp.innerHTML='';
+  let V,C,G,U,N;
+  if(all){V=MONTHLY.reduce((a,m)=>a+m.venta,0);C=MONTHLY.reduce((a,m)=>a+m.costo,0);G=MONTHLY.reduce((a,m)=>a+m.ganancia,0);U=MONTHLY.reduce((a,m)=>a+m.unidades,0);N=SKUS.length;}
+  else{const m=MONTHLY[selMes];V=m.venta;C=m.costo;G=m.ganancia;U=m.unidades;N=m.skus;}
+  [['Venta',fmt(V),'az'],['Ganancia',fmt(G),'pos'],['Margen',(G/V*100).toFixed(1)+'%','na'],['Unidades',Math.round(U).toLocaleString('es-AR'),''],['SKUs',N,'']]
+    .forEach(([l,v,c])=>kp.appendChild(el('div','kpi',`<div class="l">${l}${all?' (6m)':''}</div><div class="v ${c}">${v}</div>`)));
+  // charts categoría / marca
+  const catData=CATMONTH.map(c=>({k:c.key,v:all?c.total:c.ven[selMes]})).filter(x=>x.v>0).sort((a,b)=>b.v-a.v);
+  const marData=BRANDMONTH.map(c=>({k:c.key,v:all?c.total:c.ven[selMes]})).filter(x=>x.v>0).sort((a,b)=>b.v-a.v).slice(0,12);
+  chCat=bar(chCat,'chCat',catData);
+  chMar=bar(chMar,'chMar',marData);
+  renderTblMes();
+}
+function bar(inst,id,rows){
+  if(inst)inst.destroy();
+  return new Chart(document.getElementById(id),{type:'bar',
+    data:{labels:rows.map(r=>r.k),datasets:[{data:rows.map(r=>r.v),backgroundColor:rows.map((_,i)=>COLORS[i%COLORS.length]),borderRadius:4}]},
+    options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.parsed.x)}}},
+      scales:{x:{ticks:{callback:v=>(v/1000)+'k'}}}}});
+}
+
+/* ---------- tabla del mes ---------- */
+let sortMes={k:'v',dir:-1};
+const catSel=document.getElementById('catMes');
+['(todas las categorías)',...[...new Set(SKUS.map(s=>s.cat))].sort()].forEach((c,i)=>catSel.appendChild(el('option',null,c)));
+function rowsMes(){
+  const all=selMes<0;
+  let rows=SKUS.map(s=>({det:s.det,cat:s.cat,mar:s.mar,q:all?s.tq:s.qty[selMes],v:all?s.tv:s.ven[selMes],g:all?s.tg:s.gan[selMes]}))
+    .filter(r=>r.v!==0||r.q!==0);
+  rows.forEach(r=>r.m=r.v?(r.g/r.v*100):0);
+  const q=document.getElementById('qMes').value.toLowerCase(), cat=catSel.value;
+  if(q)rows=rows.filter(r=>r.det.toLowerCase().includes(q));
+  if(catSel.selectedIndex>0)rows=rows.filter(r=>r.cat===cat);
+  rows.sort((a,b)=>{const x=a[sortMes.k],y=b[sortMes.k];return (typeof x==='string'?x.localeCompare(y):x-y)*sortMes.dir;});
+  return rows;
+}
+function renderTblMes(){
+  const rows=rowsMes(),tb=document.querySelector('#tblMes tbody');tb.innerHTML='';
+  document.getElementById('cntMes').textContent=rows.length+' SKUs';
+  const frag=document.createDocumentFragment();
+  rows.slice(0,400).forEach(r=>{
+    const tr=el('tr',null,`<td class="l">${r.det}</td><td class="l"><span class="chip">${r.cat}</span></td><td class="l">${r.mar}</td>
+      <td class="num">${fmtu(r.q)}</td><td class="num">${fmt(r.v)}</td><td class="num ${r.g<0?'neg':'pos'}">${fmt(r.g)}</td><td class="num ${r.m<0?'neg':''}">${r.m.toFixed(1)}%</td>`);
+    frag.appendChild(tr);
+  });
+  tb.appendChild(frag);
+}
+document.querySelectorAll('#tblMes thead th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortMes.dir=(sortMes.k===k)?-sortMes.dir:-1;sortMes.k=k;renderTblMes();});
+document.getElementById('qMes').oninput=renderTblMes;
+catSel.onchange=renderTblMes;
+
+/* ---------- Sección 2 · proyección ---------- */
+(()=>{
+  const T=FTOTALS.reduce((a,m)=>a+m.costo,0), U=FTOTALS.reduce((a,m)=>a+m.unidades,0);
+  const avgVenta=MONTHLY.slice(3).reduce((a,m)=>a+m.venta,0)/3;
+  const k=document.getElementById('kpiFc');
+  [['Compra total 6m',fmt(T),'az'],['Unidades a comprar',U.toLocaleString('es-AR'),''],
+   ['Promedio mensual',fmt(T/6),'na'],['SKUs a reponer',FORECAST.length.toLocaleString('es-AR'),''],
+   ['Venta prom. últ. trim.',fmt(avgVenta),'pos']]
+    .forEach(([l,v,c])=>k.appendChild(el('div','kpi',`<div class="l">${l}</div><div class="v ${c}">${v}</div>`)));
+  document.getElementById('noteFc').innerHTML=
+    '<b>Cómo leerla:</b> es la <b>demanda esperada</b> (lo que se va a vender) de cada SKU, no una orden de compra final: <b>no descuenta el stock que ya tenés</b> ni mínimos de proveedor. Base = promedio ponderado abr·may·jun (peso 1·2·3 hacia junio) × crecimiento mensual de la categoría (acotado a ±10-15%/mes). SKUs sin recurrencia (vendidos en &lt;2 meses) quedan fuera para no meter ruido.';
+})();
+new Chart(document.getElementById('chCompra'),{type:'bar',
+  data:{labels:FTOTALS.map(m=>m.label),datasets:[{label:'Compra u$s',data:FTOTALS.map(m=>m.costo),backgroundColor:'#0044a4',borderRadius:5}]},
+  options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmt(c.parsed.y)+'  ·  '+FTOTALS[c.dataIndex].unidades+' u.'}}},
+    scales:{y:{ticks:{callback:v=>(v/1000)+'k'}}}}});
+
+let sortFc={k:'costTot',dir:-1};
+const catFc=document.getElementById('catFc');
+['(todas las categorías)',...[...new Set(FORECAST.map(s=>s.cat))].sort()].forEach(c=>catFc.appendChild(el('option',null,c)));
+const TR={up:'<span class="tr-up">▲</span>',down:'<span class="tr-down">▼</span>',flat:'<span class="tr-flat">▬</span>'};
+function rowsFc(){
+  let rows=FORECAST.slice();
+  const q=document.getElementById('qFc').value.toLowerCase();
+  if(q)rows=rows.filter(r=>r.det.toLowerCase().includes(q));
+  if(catFc.selectedIndex>0)rows=rows.filter(r=>r.cat===catFc.value);
+  rows.sort((a,b)=>{let x,y;
+    if(sortFc.k.startsWith('u')){const i=+sortFc.k[1];x=a.units[i];y=b.units[i];}
+    else{x=a[sortFc.k];y=b[sortFc.k];}
+    return (typeof x==='string'?x.localeCompare(y):x-y)*sortFc.dir;});
+  return rows;
+}
+function renderTblFc(){
+  const rows=rowsFc(),tb=document.querySelector('#tblFc tbody');tb.innerHTML='';
+  document.getElementById('cntFc').textContent=rows.length+' SKUs · Σ '+fmt(rows.reduce((a,r)=>a+r.costTot,0));
+  const frag=document.createDocumentFragment();
+  rows.slice(0,500).forEach(r=>{
+    const u=r.units.map(x=>`<td class="num">${x}</td>`).join('');
+    const tr=el('tr',null,`<td class="l">${r.det}</td><td class="l"><span class="chip">${r.cat}</span></td><td>${TR[r.trend]}</td>
+      ${u}<td class="num" style="font-weight:700">${r.total}</td><td class="num muted">${fmt(r.costU)}</td><td class="num" style="font-weight:700;color:var(--azul)">${fmt(r.costTot)}</td>`);
+    frag.appendChild(tr);
+  });
+  tb.appendChild(frag);
+}
+document.querySelectorAll('#tblFc thead th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortFc.dir=(sortFc.k===k)?-sortFc.dir:-1;sortFc.k=k;renderTblFc();});
+document.getElementById('qFc').oninput=renderTblFc;
+catFc.onchange=renderTblFc;
+
+/* init */
+renderMes();
+renderTblFc();
+</script>
+</body>
+</html>
