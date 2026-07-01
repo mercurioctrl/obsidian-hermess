@@ -136,10 +136,10 @@ Los combos CPU+Mother con una RAM de 16GB del DDR correcto sumada (el combo de 3
 
 | PC Compra Gamer | Armable | Falta | Precio partes (u$s) |
 |---|:--:|---|--:|
-| PC Intel Core I5 12400 16GB 1TB SSD WIFI | ✅ | — | u$s482 |
-| PC AMD Ryzen 3 5300G 16GB 1TB SSD WIFI | ✅ | — | u$s540 |
-| PC AMD Ryzen 5 5600GT 16GB 1TB SSD WIFI | ✅ | — | u$s540 |
-| PC AMD Ryzen 7 5700G 16GB 1TB SSD NVMe WIFI | ✅ | — | u$s590 |
+| PC Intel Core I5 12400 16GB 1TB SSD WIFI | ✅ | — | u$s485 |
+| PC AMD Ryzen 3 5300G 16GB 1TB SSD WIFI | ✅ | — | u$s543 |
+| PC AMD Ryzen 5 5600GT 16GB 1TB SSD WIFI | ✅ | — | u$s543 |
+| PC AMD Ryzen 7 5700G 16GB 1TB SSD NVMe WIFI | ✅ | — | u$s592 |
 | PC AMD Ryzen 5 3400G 16GB 1TB SSD WIFI | ❌ | cpu, mb | — |
 | PC Gamer AMD Ryzen 7 9800X3D RTX 5070 Ti Y70 TOUCH SNOW B8 | ✅ | — | u$s2.605 |
 | PC Gamer AMD Ryzen 7 9800X3D RTX 5070 Ti Y70 TOUCH PANDA B | ✅ | — | u$s2.605 |
@@ -151,15 +151,15 @@ Los combos CPU+Mother con una RAM de 16GB del DDR correcto sumada (el combo de 3
 | PC Gamer AMD Ryzen 5 9600X RTX 5060 8GB Y60 BLACK B850M 16 | ✅ | — | u$s1.463 |
 | PC Gamer AMD Ryzen 5 9600X RTX 5060 8GB Y40 SNOW B850M 16G | ✅ | — | u$s1.463 |
 | PC Gamer AMD Ryzen 5 9600X RTX 5060 8GB Y40 PANDA B850M 16 | ✅ | — | u$s1.463 |
-| PC AMD Ryzen 5 5600GT 16GB 512GB SSD WIFI | ✅ | — | u$s465 |
-| PC AMD Ryzen 3 5300G 16GB 512GB SSD WIFI | ✅ | — | u$s465 |
-| PC AMD Ryzen 7 5700G 16GB 512GB SSD WIFI | ✅ | — | u$s498 |
-| PC AMD Ryzen 5 5600GT 16GB 512GB SSD + Monitor ASUS 22" Fu | ✅ | — | u$s465 |
+| PC AMD Ryzen 5 5600GT 16GB 512GB SSD WIFI | ✅ | — | u$s468 |
+| PC AMD Ryzen 3 5300G 16GB 512GB SSD WIFI | ✅ | — | u$s468 |
+| PC AMD Ryzen 7 5700G 16GB 512GB SSD WIFI | ✅ | — | u$s500 |
+| PC AMD Ryzen 5 5600GT 16GB 512GB SSD + Monitor ASUS 22" Fu | ✅ | — | u$s468 |
 | PC Gamer AMD Ryzen 7 5700 ARC B580 12GB B550 16GB 1TB SSD | ✅ | — | u$s850 |
 | PC Gamer AMD Ryzen 5 8400F ARC B580 12GB B850M-X 16GB 1TB  | ✅ | — | u$s1.204 |
-| PC AMD Ryzen 3 5300G 8GB 256GB SSD WIFI | ✅ | — | u$s386 |
+| PC AMD Ryzen 3 5300G 8GB 256GB SSD WIFI | ✅ | — | u$s439 |
 | PC Gamer AMD Ryzen 7 5700 RTX 3050 6GB A520M 16GB 1TB SSD  | ✅ | — | u$s850 |
-| PC Gamer AMD Ryzen 7 5700 RTX 5060 8GB A520M 32GB 1TB SSD  | ✅ | — | u$s1.505 |
+| PC Gamer AMD Ryzen 7 5700 RTX 5060 8GB A520M 32GB 1TB SSD  | ✅ | — | u$s1.178 |
 | PC Gamer AMD Ryzen 5 9600X RTX 5060 Ti 16GB Y60 BLACK B850 | ✅ | — | u$s1.510 |
 | PC Gamer AMD Ryzen 5 9600X RTX 5060 Ti 16GB Y60 PANDA B850 | ✅ | — | u$s1.510 |
 | PC Gamer AMD Ryzen 5 9600X RTX 5060 Ti 16GB Y60 CHERRY B85 | ✅ | — | u$s1.510 |
@@ -169,37 +169,37 @@ Los combos CPU+Mother con una RAM de 16GB del DDR correcto sumada (el combo de 3
 ### Receta de las PCs armables
 
 
-**PC Intel Core I5 12400 16GB 1TB SSD WIFI** — u$s482 ⚠️CPU sustituto
+**PC Intel Core I5 12400 16GB 1TB SSD WIFI** — u$s485 ⚠️CPU sustituto
 - cpu: PROCESADOR INTEL (LGA1700) CORE I3 13100F — u$s108
 - mb: MOTHER ASUS (LGA1700) PRIME H610M-F D4 R2.0 — u$s64
 - ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: DISCO SSD 1TB ADATA SU650 SATA — u$s155
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
-**PC AMD Ryzen 3 5300G 16GB 1TB SSD WIFI** — u$s540 ⚠️CPU sustituto
+**PC AMD Ryzen 3 5300G 16GB 1TB SSD WIFI** — u$s543 ⚠️CPU sustituto
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5600GT — u$s181
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
 - ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: DISCO SSD 1TB ADATA SU650 SATA — u$s155
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
-**PC AMD Ryzen 5 5600GT 16GB 1TB SSD WIFI** — u$s540
+**PC AMD Ryzen 5 5600GT 16GB 1TB SSD WIFI** — u$s543
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5600GT — u$s181
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
 - ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: DISCO SSD 1TB ADATA SU650 SATA — u$s155
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
-**PC AMD Ryzen 7 5700G 16GB 1TB SSD NVMe WIFI** — u$s590 ⚠️CPU sustituto
+**PC AMD Ryzen 7 5700G 16GB 1TB SSD NVMe WIFI** — u$s592 ⚠️CPU sustituto
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5500X3D — u$s213
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
 - ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: DISCO SSD PATRIOT P300 1TB M.2 2280 PCIE GEN3 X4 PE000693 — u$s172
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
 **PC Gamer AMD Ryzen 7 9800X3D RTX 5070 Ti Y70 TOUCH SNOW B850-E 32GB 1TB SSD NVMe WIFI Water Coo** — u$s2.605
 - cpu: PROCESADOR AMD (AM5) RYZEN 7 9800X3D — u$s492
@@ -300,37 +300,37 @@ Los combos CPU+Mother con una RAM de 16GB del DDR correcto sumada (el combo de 3
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
 - psu: FUENTE GAMER AUREOX 650W BRONZE 80+PSU — u$s37
 
-**PC AMD Ryzen 5 5600GT 16GB 512GB SSD WIFI** — u$s465
+**PC AMD Ryzen 5 5600GT 16GB 512GB SSD WIFI** — u$s468
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5600GT — u$s181
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
 - ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: DISCO SSD 512GB ADATA SU650 SATA — u$s80
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
-**PC AMD Ryzen 3 5300G 16GB 512GB SSD WIFI** — u$s465 ⚠️CPU sustituto
+**PC AMD Ryzen 3 5300G 16GB 512GB SSD WIFI** — u$s468 ⚠️CPU sustituto
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5600GT — u$s181
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
 - ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: DISCO SSD 512GB ADATA SU650 SATA — u$s80
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
-**PC AMD Ryzen 7 5700G 16GB 512GB SSD WIFI** — u$s498 ⚠️CPU sustituto
+**PC AMD Ryzen 7 5700G 16GB 512GB SSD WIFI** — u$s500 ⚠️CPU sustituto
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5500X3D — u$s213
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
 - ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: DISCO SSD 512GB ADATA SU650 SATA — u$s80
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
-**PC AMD Ryzen 5 5600GT 16GB 512GB SSD + Monitor ASUS 22" Full HD IPS** — u$s465
+**PC AMD Ryzen 5 5600GT 16GB 512GB SSD + Monitor ASUS 22" Full HD IPS** — u$s468
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5600GT — u$s181
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
 - ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: DISCO SSD 512GB ADATA SU650 SATA — u$s80
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
 **PC Gamer AMD Ryzen 7 5700 ARC B580 12GB B550 16GB 1TB SSD** — u$s850 ⚠️CPU sustituto ⚠️GPU sustituta
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5500X3D — u$s213
@@ -350,13 +350,13 @@ Los combos CPU+Mother con una RAM de 16GB del DDR correcto sumada (el combo de 3
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
 - psu: FUENTE GAMER AUREOX 650W BRONZE 80+PSU — u$s37
 
-**PC AMD Ryzen 3 5300G 8GB 256GB SSD WIFI** — u$s386 ⚠️CPU sustituto
+**PC AMD Ryzen 3 5300G 8GB 256GB SSD WIFI** — u$s439 ⚠️CPU sustituto
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5600GT — u$s181
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
-- ram: MEMORIA NETAC BASIC DDR4 DIMM 8GB 3200 C16 — u$s74
+- ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s124
 - ssd: PEN DRIVE 256GB SANDISK ULTRA LUXE USB 3.2 — u$s50
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
-- psu: FUENTE SFX 500W 20+4 SATA — u$s11
+- psu: FUENTE AUREOX 500W ARXE-500 — u$s14
 
 **PC Gamer AMD Ryzen 7 5700 RTX 3050 6GB A520M 16GB 1TB SSD 4x Fans RGB** — u$s850 ⚠️CPU sustituto
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5500X3D — u$s213
@@ -367,10 +367,10 @@ Los combos CPU+Mother con una RAM de 16GB del DDR correcto sumada (el combo de 3
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20
 - psu: FUENTE GAMER AUREOX 650W BRONZE 80+PSU — u$s37
 
-**PC Gamer AMD Ryzen 7 5700 RTX 5060 8GB A520M 32GB 1TB SSD NVMe 4x Fans RGB** — u$s1.505 ⚠️CPU sustituto
+**PC Gamer AMD Ryzen 7 5700 RTX 5060 8GB A520M 32GB 1TB SSD NVMe 4x Fans RGB** — u$s1.178 ⚠️CPU sustituto
 - cpu: PROCESADOR AMD (AM4) RYZEN 5 5500X3D — u$s213
 - mb: MOTHER ASROCK (AM4) A520M-HDV — u$s49
-- ram: MEMORIA PATRIOT DDR5 VIPER ELITE 5 32GB 6000 MHZ RGB CL42 WHITE SINGLE PE000940 — u$s576
+- ram: MEMORIA ADATA DDR4 16GB 3200 G22 SGN — u$s249
 - ssd: DISCO SSD PATRIOT P300 1TB M.2 2280 PCIE GEN3 X4 PE000693 — u$s172
 - gpu: PLACA DE VIDEO ZOTAC RTX 5060 8GB TWIN EDGE OC — u$s438
 - case: GABINETE GAMER AUREOX SKOLL ARX 200G — u$s20

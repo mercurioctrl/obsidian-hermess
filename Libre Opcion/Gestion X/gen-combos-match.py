@@ -229,15 +229,26 @@ class Parts:
         return ('SUSTITUTO', pool[0])
 
     def pick_ram(self, cap, ddr):
-        best = None
+        """Devuelve (detalle, precio_total, qty). Nunca cruza generación de DDR; llega a la
+        capacidad con varios módulos iguales (ej. 2×16GB para 32GB)."""
+        mods = []
         for det, price, r in self.by_cat.get('MEMORIAS', []):
             t = norm(det)
             if 'SODIMM' in t or not price:   # SODIMM = RAM de notebook
                 continue
             c, g = cap_gb(t), ddr_gen(t)
-            score = (0 if c == cap else 1, 0 if g == ddr else 1, price)
+            if not c: continue
+            mods.append((det, price, c, g))
+        same = [x for x in mods if x[3] == ddr]
+        pool = same or mods                  # si no hay del DDR correcto, caé a lo que haya
+        best = None
+        for det, price, c, g in pool:
+            import math
+            qty = max(1, math.ceil(cap / c))
+            total_cap, total_price = c * qty, price * qty
+            score = (0 if total_cap == cap else 1, 0 if qty <= 2 else 1, total_price)
             if best is None or score < best[0]:
-                best = (score, (det, price))
+                best = (score, (det, total_price, qty))
         return best[1] if best else None
 
     def pick_ssd(self, cap, nvme):
@@ -258,10 +269,11 @@ class Parts:
         for det, price, r in self.by_cat.get('FUENTES', []):
             if not price: continue
             w = watts(det) or 0
-            cands.append((w, price, det))
+            sfx = 'SFX' in norm(det)          # SFX no entra en gabinete ATX estándar
+            cands.append((w, price, det, sfx))
         ok = [c for c in cands if c[0] >= min_w]
         pool = ok or cands
-        pool.sort(key=lambda c: (0 if c[0] >= min_w else 1, c[1]))
+        pool.sort(key=lambda c: (0 if c[0] >= min_w else 1, c[3], c[1]))
         return (pool[0][2], pool[0][1]) if pool else None
 
     def pick_water_cooler(self):
