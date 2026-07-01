@@ -138,6 +138,17 @@
       <th data-k="total">Σ 6m</th><th data-k="costU">Costo u.</th><th data-k="costTot">Costo total u$s</th>
     </tr></thead><tbody></tbody></table>
   </div>
+
+  <h3 style="margin:30px 0 4px;font-size:18px" class="cond">🏷️ Compra por marca · 6 meses agrupados</h3>
+  <p class="sub" style="margin-bottom:10px">Lo mismo de arriba pero consolidado por marca: cuánto hay que comprar de cada una en todo el semestre jul–dic 2026 (unidades y u$s sumados).</p>
+  <div class="toolbar"><span class="muted" id="cntFb" style="font-size:13px"></span></div>
+  <div class="tblwrap" style="max-height:none">
+    <table id="tblFb"><thead><tr>
+      <th class="l" data-k="marca">Marca</th><th data-k="skus">SKUs</th>
+      <th data-k="um0">Jul</th><th data-k="um1">Ago</th><th data-k="um2">Sep</th><th data-k="um3">Oct</th><th data-k="um4">Nov</th><th data-k="um5">Dic</th>
+      <th data-k="unidades">Unidades Σ6m</th><th data-k="costo">Costo Σ6m u$s</th><th data-k="pct">% del total</th>
+    </tr></thead><tbody></tbody></table>
+  </div>
 </div>
 
 <footer>LibreOpción · Ventas &amp; Proyección — generado desde <code>gen-ventas-forecast.py</code> · datos ene–jun 2026 (u$s)</footer>
@@ -280,9 +291,34 @@ document.querySelectorAll('#tblFc thead th').forEach(th=>th.onclick=()=>{const k
 document.getElementById('qFc').oninput=renderTblFc;
 catFc.onchange=renderTblFc;
 
+/* ---------- tabla compra por marca (6m agrupados) ---------- */
+let sortFb={k:'costo',dir:-1};
+const TOTFB=FBRAND.reduce((a,b)=>a+b.costo,0);
+function renderTblFb(){
+  let rows=FBRAND.slice();
+  rows.sort((a,b)=>{let x,y;
+    if(sortFb.k.startsWith('um')){const i=+sortFb.k.slice(2);x=a.um[i];y=b.um[i];}
+    else{x=a[sortFb.k];y=b[sortFb.k];}
+    return (typeof x==='string'?x.localeCompare(y):x-y)*sortFb.dir;});
+  const tb=document.querySelector('#tblFb tbody');tb.innerHTML='';
+  document.getElementById('cntFb').textContent=rows.length+' marcas · Σ '+fmt(TOTFB);
+  const frag=document.createDocumentFragment();
+  rows.forEach(b=>{
+    const um=b.um.map(x=>`<td class="num">${x}</td>`).join('');
+    const pct=(b.costo/TOTFB*100);
+    frag.appendChild(el('tr',null,`<td class="l" style="font-weight:600">${b.marca}</td><td class="num muted">${b.skus}</td>
+      ${um}<td class="num" style="font-weight:700">${b.unidades.toLocaleString('es-AR')}</td>
+      <td class="num" style="font-weight:700;color:var(--azul)">${fmt(b.costo)}</td>
+      <td class="num muted">${pct.toFixed(1)}%</td>`));
+  });
+  tb.appendChild(frag);
+}
+document.querySelectorAll('#tblFb thead th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortFb.dir=(sortFb.k===k)?-sortFb.dir:-1;sortFb.k=k;renderTblFb();});
+
 /* init */
 renderMes();
 renderTblFc();
+renderTblFb();
 </script>
 </body>
 </html>

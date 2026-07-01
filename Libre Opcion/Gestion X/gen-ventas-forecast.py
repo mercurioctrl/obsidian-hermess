@@ -202,6 +202,19 @@ for k in range(6):
     c = sum(x['costM'][k] for x in FORECAST)
     FTOTALS.append(dict(mes=FMONTHS[k], label=MLABEL[FMONTHS[k]], unidades=u, costo=c))
 
+# compra proyectada agrupada por MARCA (6 meses sumados)
+_fb = defaultdict(lambda: dict(skus=0, unidades=0, costo=0, um=[0]*6))
+for x in FORECAST:
+    b = _fb[x['mar']]
+    b['skus'] += 1
+    b['unidades'] += x['total']
+    b['costo'] += x['costTot']
+    for k in range(6):
+        b['um'][k] += x['units'][k]
+FBRAND = [dict(marca=k, skus=v['skus'], unidades=v['unidades'], costo=v['costo'], um=v['um'])
+          for k, v in _fb.items()]
+FBRAND.sort(key=lambda x: -x['costo'])
+
 # ------------------------------------------------ escribir JS
 def js(name, obj):
     return f'const {name} = {json.dumps(obj, ensure_ascii=False)};\n'
@@ -218,6 +231,7 @@ with open(OUT, 'w', encoding='utf-8') as out:
     out.write(js('SKUS', SKUS))
     out.write(js('FORECAST', FORECAST))
     out.write(js('FTOTALS', FTOTALS))
+    out.write(js('FBRAND', FBRAND))
 
 # resumen consola
 print(f'SKUs únicos: {len(SKUS)} | en proyección: {len(FORECAST)}')
