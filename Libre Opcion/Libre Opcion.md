@@ -88,6 +88,7 @@ Diagnóstico y fixes de Core Web Vitals para libreopcion.com.ar.
   - [[Libre Opcion/Gestion X/18 - Analisis Performance Ventas 12 Meses (FODA)|18 · Análisis de Performance de Ventas — 12 Meses (FODA)]]
   - [[Libre Opcion/Gestion X/19 - Politica de Envios|19 · Política de Envíos]]
   - [[Libre Opcion/Gestion X/Informe Diagnostico Conversion - Mayo 2026|Informe de diagnóstico de conversión — Mayo 2026]]
+  - [[Libre Opcion/Gestion X/combos-armables|Combos y PCs armables con tu catálogo (vs Compra Gamer)]]
 
 ## Otras notas
 

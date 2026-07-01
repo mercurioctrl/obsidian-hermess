@@ -374,6 +374,76 @@ def match_pc(name, parts):
                 armable=not missing, price=price if not missing else None,
                 cpu_status=cst_cpu, gpu_status=gpu_status, cg_price=None)
 
+# ---------------------------------------------------------------- otros combos (GPU+PSU, Gabinete+PSU, CPU+Mother+RAM)
+def gpu_key(text):
+    """(numero, sufijo) -> ('5060','') / ('9070','XT'). None si no hay GPU."""
+    t = norm(text)
+    m = re.search(r'(?:RTX|RX)\s*(\d{4})\s*(TI|XT)?', t)
+    return (m.group(1), m.group(2) or '') if m else None
+
+def match_gpu_psu(parts, cg_rows):
+    out = []
+    for r in cg_rows:
+        name = r[1]
+        if classify_kit(name) != 'GPU+FUENTE':
+            continue
+        gk = gpu_key(name)
+        gw = watts(name)                     # watt de la fuente que ellos ponen
+        gpu = None; gstatus = 'FALTA'
+        if gk:
+            cands = []
+            for det, price, rr in parts.by_cat.get('PLACA DE VIDEO', []):
+                if not price: continue
+                k = gpu_key(det)
+                if k == gk:
+                    cands.append((det, price))
+            if cands:
+                cands.sort(key=lambda x: x[1])
+                gpu, gstatus = cands[0], 'EXACTO'
+        need_w = gw or gpu_watts((gk[0] if gk else ''))
+        psu = parts.pick_psu(need_w)
+        armable = gpu is not None and psu is not None
+        price = (gpu[1] + psu[1]) if armable else None
+        out.append(dict(cg=name, cg_price=r[5], gpu=gpu, gpu_status=gstatus,
+                        psu=psu, need_w=need_w, armable=armable, price=price))
+    return out
+
+def match_case_psu(parts, cg_rows):
+    out = []
+    cases = sorted([(d, p) for d, p, r in parts.by_cat.get('GABINETE GAMER', []) if p], key=lambda x: x[1])
+    for r in cg_rows:
+        name = r[1]
+        if classify_kit(name) != 'GABINETE+FUENTE':
+            continue
+        need_w = watts(name) or 650
+        case = cases[0] if cases else None
+        psu = parts.pick_psu(need_w)
+        armable = case is not None and psu is not None
+        price = (case[1] + psu[1]) if armable else None
+        out.append(dict(cg=name, cg_price=r[5], case=case, psu=psu,
+                        need_w=need_w, armable=armable, price=price))
+    return out
+
+def build_cpu_mother_ram(kres, parts):
+    """Toma los combos CPU+Mother únicos por (cpu,mother) y les suma una RAM del DDR de la plataforma."""
+    seen = {}
+    for k in kres:
+        if not k['armable']:
+            continue
+        key = (k['cpu'][3], k['mb'][3])
+        if key in seen:
+            continue
+        seen[key] = k
+    out = []
+    for k in seen.values():
+        ddr = platform_ddr(k['socket'])
+        ram = parts.pick_ram(16, ddr)        # 16GB, el piso razonable
+        armable = ram is not None
+        price = (k['price'] + ram[1]) if (armable and k['price']) else None
+        out.append(dict(socket=k['socket'], cpu=k['cpu'], mb=k['mb'], ram=ram,
+                        ddr=ddr, armable=armable, price=price, base=k['price']))
+    return out
+
 # ---------------------------------------------------------------- main
 def money(x):
     return f"u$s{x:,.0f}".replace(',', '.') if x else '—'
@@ -385,6 +455,9 @@ def main():
 
     kres = match_kits(kits, parts)
     pres = [match_pc(r[1], parts) for r in pcs]
+    gres = match_gpu_psu(parts, kits)
+    cres = match_case_psu(parts, kits)
+    rres = build_cpu_mother_ram(kres, parts)
 
     n_kit_arm = sum(1 for k in kres if k['armable'])
     n_kit_ex  = sum(1 for k in kres if k['cpu_status']=='EXACTO' and k['mb_status']=='EXACTO')
@@ -428,6 +501,41 @@ def main():
         cpu_txt = f"{ico(k['cpu_status'])} {clean_cpu(k['cpu'][3])}" if k['cpu'] else f"🔴 falta {k['cpu_model'] or '?'}"
         mb_txt  = f"{ico(k['mb_status'])} {clean_mb(k['mb'][3])[:38]}" if k['mb'] else '🔴 falta mother'
         L.append(f"| {cg} | {k['socket'] or '?'} | {cpu_txt} | {mb_txt} | {money(k['price'])} |")
+
+    # -------- GPU + Fuente
+    L.append('\n## Combos GPU + Fuente\n')
+    L.append('Réplica de los combos "placa + fuente" de Compra Gamer, con tu placa y una fuente del wattaje adecuado.\n')
+    L.append('| Combo Compra Gamer | Tu placa | Tu fuente | Precio (u$s) |')
+    L.append('|---|---|---|--:|')
+    def clean_gpu(d): return re.sub(r'^PLACA DE VIDEO\s+', '', d).strip()
+    for g in gres:
+        cg = re.sub(r'^Combo\s+', '', g['cg'])[:50]
+        gpu = f"{ico(g['gpu_status'])} {clean_gpu(g['gpu'][0])[:38]}" if g['gpu'] else '🔴 falta placa'
+        psu = f"{g['psu'][0][:34]} ({g['need_w']}W)" if g['psu'] else '🔴 falta fuente'
+        L.append(f"| {cg} | {gpu} | {psu} | {money(g['price'])} |")
+
+    # -------- Gabinete + Fuente
+    L.append('\n## Combos Gabinete + Fuente\n')
+    L.append('| Combo Compra Gamer | Tu gabinete | Tu fuente | Precio (u$s) |')
+    L.append('|---|---|---|--:|')
+    for c in cres:
+        cg = re.sub(r'^Combo (XYZ )?', '', c['cg'])[:50]
+        case = c['case'][0][:34] if c['case'] else '🔴 falta gabinete'
+        psu = f"{c['psu'][0][:30]} ({c['need_w']}W)" if c['psu'] else '🔴 falta fuente'
+        L.append(f"| {cg} | {case} | {psu} | {money(c['price'])} |")
+
+    # -------- CPU + Mother + RAM
+    L.append('\n## Combos CPU + Mother + RAM (full upgrade)\n')
+    L.append('Los combos CPU+Mother con una RAM de 16GB del DDR correcto sumada (el combo de 3 piezas que propone la landing).\n')
+    L.append('| Socket | CPU | Mother | RAM (16GB) | Precio (u$s) |')
+    L.append('|---|---|---|---|--:|')
+    order = {'AM5':0,'AM4':1,'LGA1851':2,'LGA1700':3}
+    for x in sorted(rres, key=lambda x:(order.get(x['socket'],9), -(x['price'] or 0))):
+        if not x['armable']: continue
+        cpu = clean_cpu(x['cpu'][3])
+        mb = clean_mb(x['mb'][3])[:26]
+        ram = re.sub(r'^MEMORIA\s+', '', x['ram'][0])[:30]
+        L.append(f"| {x['socket']} | {cpu} | {mb} | {ram} | {money(x['price'])} |")
 
     # -------- PCs
     L.append('\n## PC de escritorio (build completa)\n')
