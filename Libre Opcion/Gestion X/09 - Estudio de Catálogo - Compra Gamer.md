@@ -58,7 +58,12 @@ Compra Gamer **no es un retailer amplio**: es un **especialista profundo en arma
 ## Próximo paso sugerido
 Cruzar este catálogo contra el de libreopcion.com para ver solapamientos, huecos y dónde el precio/exclusividad gana.
 
+> [!done] Hecho parcialmente (2026-07-01)
+> Se replicaron sus **kits de actualización** y **PCs armadas** contra el stock real de la distribuidora → [[combos-armables]]: **31 combos + 15 PCs** listos para publicar, cada uno con SKU y costo. Alimenta directamente [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]].
+
 ## Enlaces
 - [[06 - Ventajas Competitivas y Posicionamiento]]
 - [[01 - Estudio de Mercado - Referentes]]
+- [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]]
+- [[combos-armables]]
 - [[00 - Índice Gestión X]]

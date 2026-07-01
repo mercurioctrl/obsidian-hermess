@@ -54,6 +54,14 @@ tags:
 
 **3 · App de vendedores (clonado de builds).** El armador alimenta una **aplicación para vendedores/creadores** donde **clonan builds y combos con un toque** y los ofrecen a su audiencia con su margen (+1–3%). Nosotros ponemos stock, precio, garantía, cuotas y logística; el vendedor no opera nada. Convierte el armador en un **canal de ventas distribuido** — cada creador es una tienda más. Se conecta con [[12 - Modelo Operativo - Importador-Mayorista con Red de Vendedores]].
 
+## 🧩 Catálogo de arranque validado contra stock real (2026-07-01)
+
+> [!success] Ya hay lista concreta para el día uno
+> Se cruzaron los kits y PCs de Compra Gamer contra el catálogo real de la distribuidora (`items/catalogoDistribuidoraJulio.csv`) con el script `gen-combos-match.py`. Resultado en [[combos-armables]]: **31 combos** (26 CPU+Mother, 3 GPU+Fuente, 2 Gabinete+Fuente) y **15 PCs armadas** (oficina → gamer tope), cada uno con SKU y costo. El armador dinámico **arranca con vidriera**, no de cero.
+
+- **Hallazgo para decidir compras:** hay un **hueco de gama media AM5** — la línea AM5 propia es toda alta gama X3D, así que los combos de Ryzen no-X3D (7600, 8500G/8600G/8700G, 9600X, 9700X) hoy solo se cubren con un 7800X3D (más caro). Conviene **sumar 1-2 CPUs AM5 baratos** para competir esos precios.
+- Todo quedó listado en la landing [[Plan-Estrategico-LibreOpcion-Marca.html|Plan Estratégico (Marca)]] bajo "Qué combos/PCs armaría para arrancar ya".
+
 ## Dónde se ofrece
 
 - **Sección propia** ("Armá tu upgrade / tu PC").

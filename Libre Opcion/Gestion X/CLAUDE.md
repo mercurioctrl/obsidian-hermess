@@ -9,6 +9,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 No hay build/test/lint. Las únicas operaciones reales:
 
 ```bash
+# Regenerar los combos/PCs armables cruzando Compra Gamer vs stock de la distribuidora
+python3 gen-combos-match.py         # lee items/*.csv + adjuntos/…CompraGamer.xlsx → escribe combos-armables.md
+
 # Regenerar los datos del cubo desde los CSV de meses/ (correr si cambia meses/)
 python3 gen-cube-data.py            # escribe cube-data.js
 
@@ -25,6 +28,11 @@ Los HTML son **autocontenidos salvo**: Chart.js por CDN, `cube-data.js` (solo el
 `meses/*.csv` → `gen-cube-data.py` → `cube-data.js` → `Cubo-Datos-LibreOpcion.html`
 
 `gen-cube-data.py` deriva **categoría** y **marca** desde el texto de la descripción (no hay columnas limpias; ver las funciones `categoria()` y `BRANDS`/`marca()`), y emite 4 consts: `MONTHS`, `SKUS={sku:[detalle,categoria,marca]}`, `FACTS=[[mes,sku,cantidad,venta,costo,renta]]` (item-group) y `OPS` (grilla pre-agregada por mes×pago×envío×vendedor). El cubo `Cubo-Datos-LibreOpcion.html` es una app vanilla JS que pivotea estos arrays (tabla dinámica + explorador de evolución mensual).
+
+### Pipeline de combos/PCs armables
+`items/catalogoDistribuidoraJulio.csv` (catálogo de la distribuidora, ~1.367 items) + `adjuntos/…CompraGamer.xlsx` → `gen-combos-match.py` → `combos-armables.md`.
+
+Replica los **kits de actualización** y **PCs de escritorio** de Compra Gamer usando el stock propio: parsea CPU/mother/RAM/SSD/GPU desde el texto de cada nombre, matchea contra las partes del catálogo (exacto/sustituto/lejano/falta) y reconstruye cada combo con precio a **costo+utilidad** (columna `PRECIO USD CON UTILIDAD`). Reglas clave dentro del script: RAM nunca cruza generación de DDR (usa varios módulos p/ llegar a la capacidad — ej. 2×16GB), fuente por wattaje según GPU (evita SFX en ATX), y CPU sustituto por cercanía de `TIER`. Salida usada en la landing `Plan-Estrategico-LibreOpcion-Marca.html` (secciones "Qué combos/PCs armaría para arrancar ya"). Hallazgo vigente: **hueco de gama media AM5** (línea propia toda X3D). Ver [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]] y [[combos-armables]].
 
 ### Dos granos de datos que NO se pueden cruzar (lo más importante)
 - **`item-group_*.csv`** = producto × mes → tiene SKU, categoría, **marca**, costo, renta, cantidad. **No** tiene medio de pago/envío.

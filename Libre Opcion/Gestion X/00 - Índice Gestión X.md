@@ -42,6 +42,10 @@ Mapa de contenido de toda la investigación y estrategia de negocio de **LibreOp
 - [[18 - Analisis Performance Ventas 12 Meses (FODA)]] — 🆕 ⭐ FODA con datos reales: turnaround, márgenes y mix
 - [[19 - Politica de Envios]] — 🆕 umbral de envío gratis: cortar la sangría sin perder la bandera
 
+## 🧩 Catálogo de combos y PCs
+
+- [[combos-armables]] — 🆕 ⭐ **catálogo de arranque**: 31 combos + 15 PCs replicando a Compra Gamer con stock real, cada uno con SKU y costo (gen por `gen-combos-match.py`). Ejecuta [[16 - Armador, Combos Dinamicos y Builds de la Comunidad]].
+
 ## 📎 Adjuntos (PDF / Excel / HTML)
 
 - [[adjuntos/LibreOpcion-Estudio-de-Mercado.pdf|📄 Estudio de Mercado (PDF)]]
@@ -55,7 +59,7 @@ Mapa de contenido de toda la investigación y estrategia de negocio de **LibreOp
 
 ## 🖥️ Entregable para socios
 
-- [[Plan-Estrategico-LibreOpcion-Marca.html|🌐 Plan Estratégico — Versión MARCA LibreOpción (HTML)]] — estética del sitio real: azul #0044a4, Roboto Condensed, logo y 4 colores de marca. ⭐ Recomendada para socios.
+- [[Plan-Estrategico-LibreOpcion-Marca.html|🌐 Plan Estratégico — Versión MARCA LibreOpción (HTML)]] — estética del sitio real: azul #0044a4, Roboto Condensed, logo y 4 colores de marca. ⭐ Recomendada para socios. Incluye el **catálogo de arranque** (31 combos + 15 PCs con SKU) desde [[combos-armables]].
 - [[Cubo-Datos-LibreOpcion.html|🧊 Cubo de Datos — App interactiva (HTML)]] — pivot OLAP de 12 meses: mes · categoría · marca · SKU · pago · envío · rentabilidad + evolución mensual. (necesita `cube-data.js` y `assets/`)
 - [[Plan-Estrategico-LibreOpcion-SaaS.html|🌐 Plan Estratégico — Versión mini-saas-ui (HTML)]] — estilo dashboard claro (Inter + mono, pixel-charts).
 - [[Plan-Estrategico-LibreOpcion.html|🌐 Plan Estratégico — Versión deck oscuro (HTML)]] — misma data, estética oscura con Chart.js.
@@ -67,3 +71,4 @@ Mapa de contenido de toda la investigación y estrategia de negocio de **LibreOp
 ---
 _Generado el 2026-06-02 a partir de la sesión de investigación de mercado._
 _Actualizado 2026-06-03: notas 10–19 (estrategia + FODA con datos reales de 12 meses), 3 versiones del sitio para socios, y cubo de datos interactivo._
+_Actualizado 2026-07-01: [[combos-armables]] (31 combos + 15 PCs replicando a Compra Gamer con stock real, vía `gen-combos-match.py`) y el catálogo de arranque embebido en la landing Marca._
