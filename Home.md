@@ -10,6 +10,7 @@
   - [[Blu/blu-web-v1/blu-web-v1|blu-web-v1]] — Sitio web v1
   - [[Blu/bluFixture/bluFixture|bluFixture]] — Prode Copa Mundial 2026
   - [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]] — Mini ERP interno
+  - [[Blu/finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
   - [[Blu/rrhh/rrhh|rrhh]] — Recursos Humanos
   - `direccion/` — Dirección
 

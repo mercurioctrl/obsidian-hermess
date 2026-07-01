@@ -6,7 +6,7 @@
 <title>LibreOpción · El Plan — Documento para Socios</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Inter:wght@400;500;600;700&family=Noto+Emoji&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root{
@@ -20,9 +20,9 @@
   html{scroll-behavior:smooth}
   ::selection{background:rgba(255,90,54,.22)}
   section[id]{scroll-margin-top:70px}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,,'Noto Emoji'"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:'Roboto Condensed','Inter',sans-serif;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+  h1,h2,h3{font-family:'Roboto Condensed','Inter',sans-serif,'Noto Emoji';line-height:1.15;font-weight:700;letter-spacing:-.01em}
   a{color:var(--accent);text-decoration:none}
   /* progress */
   #bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;z-index:100}
@@ -54,7 +54,7 @@
   .heronums{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:42px;animation:rise .8s cubic-bezier(.16,1,.3,1) .42s both}
   .heronums .hn{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 26px;min-width:150px;box-shadow:var(--shadow);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s}
   .heronums .hn:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(16,40,80,.12)}
-  .heronums .hn .v{font-family:'Roboto Condensed','Inter',sans-serif;font-size:31px;font-weight:700;letter-spacing:-.01em;color:var(--accent2)}
+  .heronums .hn .v{font-family:'Roboto Condensed','Inter',sans-serif,'Noto Emoji';font-size:31px;font-weight:700;letter-spacing:-.01em;color:var(--accent2)}
   .heronums .hn .l{font-size:12px;color:var(--muted);margin-top:2px}
   .scrolldown{margin-top:46px;color:var(--muted);font-size:13px;letter-spacing:.1em;animation:bob 2.6s ease-in-out 1.4s infinite}
   @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
@@ -95,10 +95,10 @@
   table.combos-tbl th{text-align:left;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:6px 10px;border-bottom:1px solid var(--line)}
   table.combos-tbl td{padding:7px 10px;border-bottom:1px solid var(--card2)}
   table.combos-tbl tr:hover td{background:var(--card2)}
-  table.combos-tbl td.sku{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);font-size:12px;white-space:nowrap}
-  table.combos-tbl td.pr{font-family:'Roboto Condensed','Inter',sans-serif;font-weight:700;color:var(--accent);text-align:right;white-space:nowrap}
+  table.combos-tbl td.sku{font-family:ui-monospace,SFMono-Regular,Menlo,monospace,'Noto Emoji';color:var(--muted);font-size:12px;white-space:nowrap}
+  table.combos-tbl td.pr{font-family:'Roboto Condensed','Inter',sans-serif,'Noto Emoji';font-weight:700;color:var(--accent);text-align:right;white-space:nowrap}
   .stat:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(16,40,80,.10);border-color:#d7e2f2}
-  .stat .v{font-family:'Roboto Condensed','Inter',sans-serif;font-size:34px;font-weight:700;letter-spacing:-.01em}
+  .stat .v{font-family:'Roboto Condensed','Inter',sans-serif,'Noto Emoji';font-size:34px;font-weight:700;letter-spacing:-.01em}
   .stat .l{color:var(--muted);font-size:13px;margin-top:4px}
   .stat.good .v{color:var(--green)} .stat.bad .v{color:var(--red)} .stat.warn .v{color:var(--amber)} .stat.acc .v{color:var(--accent)}
   /* cards */
@@ -146,7 +146,7 @@
   .sim .marks{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:6px}
   .simout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:24px}
   .simout .so{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
-  .simout .so .v{font-family:'Roboto Condensed','Inter',sans-serif;font-size:28px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+  .simout .so .v{font-family:'Roboto Condensed','Inter',sans-serif,'Noto Emoji';font-size:28px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
   .simout .so .l{font-size:12px;color:var(--muted);margin-top:2px}
   .simout .so.hl .v{color:var(--accent2);font-size:30px}
   .simout .so.hl{border-color:var(--accent2);background:rgba(255,90,54,.07)}
@@ -163,7 +163,7 @@
   .ladder{display:flex;align-items:flex-end;gap:10px;margin:24px 0 8px;flex-wrap:wrap}
   .ladder .rung{flex:1;min-width:120px;border-radius:12px 12px 0 0;padding:14px 10px 10px;text-align:center;border:1px solid var(--line);border-bottom:3px solid var(--accent2)}
   .ladder .rung .d{font-size:12px;color:var(--muted)}
-  .ladder .rung .p{font-family:'Roboto Condensed','Inter',sans-serif;font-size:20px;font-weight:700;margin-top:2px}
+  .ladder .rung .p{font-family:'Roboto Condensed','Inter',sans-serif,'Noto Emoji';font-size:20px;font-weight:700;margin-top:2px}
   .ladder .r1{height:150px;background:rgba(34,172,75,.12)} .ladder .r1 .p{color:#168a3a}
   .ladder .r2{height:128px;background:rgba(252,204,0,.16)} .ladder .r2 .p{color:#8a6d00}
   .ladder .r3{height:108px;background:rgba(252,204,0,.26)} .ladder .r3 .p{color:#8a6d00}
@@ -207,7 +207,7 @@
   .risk p b{color:#168a3a}
   footer{padding:72px 0 60px;text-align:center;background:#111;color:#b9b9bd}
   footer img{height:30px;width:auto;margin-bottom:28px}
-  footer .big{font-family:'Roboto Condensed','Inter',sans-serif;font-size:clamp(23px,3.4vw,34px);color:#fff;font-weight:700;max-width:780px;margin:0 auto 18px;letter-spacing:-.01em}
+  footer .big{font-family:'Roboto Condensed','Inter',sans-serif,'Noto Emoji';font-size:clamp(23px,3.4vw,34px);color:#fff;font-weight:700;max-width:780px;margin:0 auto 18px;letter-spacing:-.01em}
   footer .em{color:#fff}
   .em{color:var(--text);font-weight:700}
   /* depth on light theme */
