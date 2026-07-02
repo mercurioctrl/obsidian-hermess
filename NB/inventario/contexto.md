@@ -19,14 +19,17 @@ npm run dev   # http://localhost:3000 — API_HOST=http://0.0.0.0:8081
 - Venv del backend: `.venv` (Python 3.9), todas las deps instaladas
 - Ambos repos en rama `catri-fine-tuning` (2026-06-11)
 
-### Linux (/var/www/nb/inventario) — setup anterior
+### Linux (/var/www/nb/inventario) — setup activo (2026-07-02)
 
 ```bash
 cd ms-metadata && uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-cd inventario-web-app/app && npm run dev
+cd inventario-web-app/app && npm run dev   # http://localhost:3000 — API_HOST=http://localhost:8000
 ```
 
 - **Swagger UI**: http://localhost:{puerto}/docs
+- Ambos repos en rama `development` (front) / `Development` (back) a 2026-07-02.
+- **DB**: `10.10.10.47,1433` base `NB_WEB`, usuario `cmercurio`. Alternativa: `190.210.23.97,4444` / `emanzando_devweb01`.
+- ⚠️ Cambiar la DB en `.env` requiere **reiniciar uvicorn** (el `--reload` no relee `load_dotenv()`).
 
 ## Variables de entorno
 
@@ -34,9 +37,9 @@ cd inventario-web-app/app && npm run dev
 
 ```
 DB_DRIVER=ODBC Driver 18 for SQL Server
-DB_SERVER=190.210.23.97,4444        # formato host,puerto (no DB_HOST/DB_PORT)
+DB_SERVER=10.10.10.47,1433          # formato host,puerto (no DB_HOST/DB_PORT). Alt: 190.210.23.97,4444
 DB_NAME=NB_WEB
-DB_USER=web                          # (antes emanzando_devweb01)
+DB_USER=cmercurio                    # alt: emanzando_devweb01 / web
 DB_PASS=...                          # la variable es DB_PASS, no DB_PASSWORD
 ALLOWED_ORIGINS=http://localhost:3000,...
 OPENAI_API_KEY=...                   # placeholder alcanza para levantar; real para IA

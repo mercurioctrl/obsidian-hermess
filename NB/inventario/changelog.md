@@ -1,5 +1,16 @@
 # Changelog — inventario
 
+## 2026-07-02 — Merge a `development` + nuevo backend de DB (Linux)
+
+Sesión operativa en Linux (`/var/www/nb/inventario`), sin cambios de código propios.
+
+- **Merge integrado**: la tanda de `regularizacion-stock` ya está **mergeada a `development`/`Development`** en ambos repos (front `Merge PR #388`, back `Merge PR #288`). Ya no hace falta abrir PR: es la versión vigente en `development`.
+- **Cambio de rama**: ambos repos movidos de `catri-fine-tuning` → `development` (front) / `Development` (back, con mayúscula). No había commits locales pendientes; solo `.env` local y `ms-metadata/docs/` sin trackear (se preservaron).
+- **Nuevo backend de DB**: `.env` del back apunta ahora a `10.10.10.47,1433` con usuario `cmercurio` (antes `190.210.23.97,4444` / `emanzando_devweb01`, que sigue siendo alternativa válida). Login verificado `HTTP 200`.
+- **Gotcha confirmado**: cambiar la DB en `.env` NO se aplica con `--reload` (uvicorn vigila `.py`, no relee `load_dotenv()`) → hay que reiniciar el proceso uvicorn. Ver [[contexto]].
+
+Servicios locales levantados y verificados: front `:3000` (Nuxt, rama `development`), back `:8000` (FastAPI, DB nueva).
+
 ## 2026-06-29 — Commits + push de la tanda a `regularizacion-stock`
 
 Toda la tanda quedó **commiteada y pusheada** a `regularizacion-stock` en ambos repos

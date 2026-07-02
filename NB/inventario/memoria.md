@@ -1,10 +1,13 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-06-29. (Memoria local también en
+Última sincronización: 2026-07-02. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Estado git: tanda mergeada a development + DB nueva (2026-07-02)
+La tanda de `regularizacion-stock` ya está **mergeada a `development`/`Development`** en ambos repos (front `Merge PR #388`, back `Merge PR #288`). Ambos repos parados en `development` (front) / `Development` (back). No había commits locales pendientes; solo `.env` y `ms-metadata/docs/` sin trackear (preservados). **DB local** movida a `10.10.10.47,1433` usuario `cmercurio` (alt: `190.210.23.97,4444` / `emanzando_devweb01`). Gotcha: cambiar la DB en `.env` requiere **reiniciar uvicorn** (`--reload` no relee `load_dotenv()`). Ver [[changelog]] y [[contexto]].
 
 ### Estado git: tanda pusheada a regularizacion-stock (2026-06-29)
 El trabajo de seriales + competencia + índices + word-break + fix N+1 quedó commiteado y pusheado a `regularizacion-stock` (back `ms-metadata` 4 commits `7f67d7b..bf2c8d1`; front `inventario-web-app` 3 commits `653c025..481be0f`), sin `Co-Authored-By`. Sin commitear: `.env`, `.DS_Store`, scripts ad-hoc (diag/run/sweep/worklist + CSVs). Índices P1–P3 = DDL en prod (fuera de git). Rama lista para PR a Development/Gamma. Ver [[changelog]] y [[performance-indices]].
