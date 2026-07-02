@@ -61,12 +61,20 @@
 1. **Búsqueda por CUIT**: `C.ccodcli = {stringFilter}` sin comillas → falla si el input tiene `-`
 2. **companyCode = "null"**: el frontend envía el string literal `"null"` cuando no hay companyCode
 
+## Convención de ramas (importante)
+
+La rama de integración tiene distinta capitalización en cada repo:
+- `api-rest-cobros` → **`Development`** (D mayúscula), staging `Gamma`, prod `main`
+- `cobros-web-app-v1` → **`development`** (minúscula), staging `gamma`, prod `main`
+
+Ramas de trabajo con prefijos de ticket Jira: `COB-<n>-...`, `API-COB-...`, `APP-COB-...`, `PED-...`.
+
 ## TODOs / próximos pasos
 - ✅ ALTERs ejecutados en prod: `prestar_capital`, `cobrar_capital`, `ver_capital`
 - ✅ Permisos asignados: agentes 27 y 66 → `cobrar_capital=1`; agente 12 → los 3 permisos
-- Merge de `feature/prestamos-capital` a main en ambos repos
+- ✅ `feature/prestamos-capital` integrado en `Development`/`development` (2026-07-02)
 - Fix bug CUIT search en `Client.php:441`
 - Fix bug companyCode null en `Client.php:331`
 
 ## Ver también
-- [[arquitectura]] · [[stack]] · [[changelog]]
+- [[arquitectura]] · [[stack]] · [[changelog]] · [[memoria]]

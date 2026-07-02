@@ -74,6 +74,43 @@ ALTER TABLE NB_WEB.dbo.permisos_agente ADD ver_capital     BIT NOT NULL DEFAULT 
 
 ---
 
+## 2026-07-02 — Sync a ramas de integración + features nuevas en Development
+
+### chore: ambos repos a rama de integración y `git pull`
+
+- `api-rest-cobros`: `feature/prestamos-capital` → **`Development`** (fast-forward `91b9dc7..312014e`, 115 archivos). El feature de préstamos de capital ya quedó integrado.
+- `cobros-web-app-v1`: `feature/prestamos-capital` → **`development`** (fast-forward `e07a40c..5c8cd7f`, 38 archivos).
+- Build frontend OK (`npm run build` + `pm2 start ecosystem.config.js`, 2 instancias). Verificado en `http://localhost:3002` (302 → login). API respondiendo en `http://localhost:8083/v1`.
+- Ver [[memoria]] / [[contexto]] para el detalle del setup local reproducible.
+
+### feat: Módulo AFIP Purchases (Facturas de compra a proveedores)
+
+Grupo de rutas `/afipPurchases` (backend), `pages/afipPurchases.vue` + `components/AfipPurchases/*` + `store/afipPurchases.js` (frontend). Gestiona **remitos (Orders)** y **facturas (Invoices)** de compra a proveedores, con impuestos, divisas, tipos de compra y almacenes.
+
+- Endpoints: `GET /orders[/{filter}]`, `GET /orders/{id}`, `POST /orders/{id}/invoice`, `GET /invoices[/{filter}]`, `GET /invoices/{id}`, `POST /invoices`, `GET /invoices/check`, `GET /taxes` · `POST /taxes`, `GET /empresas|almacenes|tiposCompra|formasPago|divisas`.
+- **Check de duplicados por proveedor**: la validación de número de factura ahora considera el proveedor (antes era global). Archivos: `ServiceAfipPurchases.php`, `AfipInvoicesRepository.php` + espejo en front `ModalInvoice.vue`.
+- Soporte **multi-sucursal** en filtros de remitos y facturas.
+- UI: `InvoiceDetail.vue`, `InvoiceTotals.vue`, `InvoicesTab.vue`, `OrdersTab.vue`, `ModalInvoice.vue`, `ModalCompleteOrder.vue`, `TaxesSelector.vue`.
+
+### feat: Trade Audit Logger (auditoría del flujo de cobro)
+
+- Logger de auditoría **estructurado** para el flujo de trade/cobro. Archivos: `src/Support/TradeAuditLog.php`, `src/Service/Box/BoxTradeServiceAudit.php`, interfaces `BoxTradeRepositoryInterface` / `CreditBankInterface`.
+- Fix asociados: cast incorrecto `null → 0` en `movementBankId` de `nonTaxVoucher`; tipo de propiedad en `BoxTrade` para aceptar `BoxTradeServiceAudit`.
+- Tests unitarios nuevos: `tests/Unit/Service/Box/Trade/BankPaymentTest.php`, `BoxPaymentTest.php`.
+
+### Otros cambios que entraron en Development
+
+- Permisos de usuario para ver/ocultar el dashboard (PED-1376): `middleware/permissions.js`, `plugins/permissions.js`, `store` y `layouts/basic.vue`.
+- Columnas **FACTURA** y **RECIBO** en el Excel de cta cte (`ExportExcel.php`).
+- Reporte de seguros "Sin Nominar": total facturado del período + date pickers habilitados (`CreditInsuranceReport`, `ExportExcelCreditInsurance.php`).
+- Fix bancos en detalle de pedido dentro del modal de cobrar (filtrados desde `bank-accounts`).
+- Workflow CI `deploy-gamma.yml` agregado en el frontend.
+
+## Ver también
+- [[arquitectura]] · [[contexto]] · [[stack]] · [[memoria]]
+
+---
+
 ## 2026-05-20 — Refinamientos y nuevas funcionalidades del módulo de capital
 
 ### fix: payCapitalDebt no toca la CC del cliente
