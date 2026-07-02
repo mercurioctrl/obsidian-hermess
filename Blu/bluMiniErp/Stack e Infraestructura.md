@@ -96,9 +96,16 @@ MAIL_ENCRYPTION=ssl
 MAIL_FROM_ADDRESS=payments@blustudioinc.com
 MAIL_FROM_NAME="BluStudio Payments"
 MAIL_PAYMENTS_BCC=payments@blustudioinc.com
+
+# Web Push (VAPID) — módulo Tareas. Ver [[Modulo Tareas]]
+VAPID_PUBLIC_KEY=
+VAPID_PRIVATE_KEY=
+VAPID_SUBJECT=mailto:payments@blustudioinc.com
 ```
 
 > `DEEPSEEK_API_KEY` y `MAIL_PASSWORD` deben estar en el `.env` del container backend. Ver [[Errores Comunes#env no lee variables de entorno del container en PHP-FPM]]. `MAIL_PASSWORD` queda vacía en el repo — cada entorno la completa a mano.
+
+> **Notificaciones (módulo Tareas, 2026-06-30):** el `docker-compose.yml` mapea `MAIL_*` y `VAPID_*` a los containers **backend + scheduler** desde `mini-saas/.env` con `${VAR:-}`. ⚠️ Como declara default vacío, la var del container **pisa a `backend/.env`** → estas claves van en **`mini-saas/.env`**, no en `backend/.env`. Tras editar: `docker compose up -d backend scheduler`. WhatsApp NO va en `.env` (se configura en Configuración/DB). Push requiere HTTPS en prod.
 
 ## Volumenes Docker
 

@@ -180,9 +180,9 @@ Integración con un servicio externo tipo cola para enviar WhatsApp. Ver [[Modul
 ### Módulo Tareas (2026-06-30) — ver [[Modulo Tareas]]
 
 - Tablero kanban estilo Jira con drag & drop; tareas atadas a proyecto + asignadas a usuario; código `PREFIJO-N` copiable y linkeable (`/tareas/PLO-1`, ruta opcional). Detalle 2 columnas con descripción **WYSIWYG TipTap**, subtareas, vínculos bidireccionales, adjuntos, comentarios, prioridad, fechas.
-- **Seguimiento (watchers)** con 4 canales: in-app (campana), correo, **push (VAPID** — claves en `.env`, HTTPS en prod), **WhatsApp** (Inbox API, ver [[Modulo WhatsApp Inbox]]). Avisa cambios y comentarios a seguidores menos al actor. Prompts just-in-time de permiso/teléfono.
+- **Seguimiento (watchers)** con 4 canales: in-app (campana), correo, **push (VAPID** — claves en **`mini-saas/.env`**, mapeadas por docker-compose; HTTPS en prod), **WhatsApp** (Inbox API, ver [[Modulo WhatsApp Inbox]]). Avisa cambios y comentarios a seguidores menos al actor. Prompts just-in-time de permiso/teléfono.
 - **Empleado ↔ Usuario**: crear/vincular usuario desde el detalle del empleado (solo admin); el creado nace acotado a Tareas y sin ver saldos. Ver [[Modulo Personal]].
-- **Entrega**: PR #1, rama `feat/tareas-kanban`, no mergeado a main aún. ⚠️ El clasificador de Claude Code bloquea push/merge directo a main → usar flujo de PR.
+- **Entrega**: ✅ **mergeado a `main`** (2026-06-30) — PR #1 (código) + PR #2 (docs) + commit de env vars VAPID/MAIL en docker-compose. ⚠️ El clasificador de Claude Code bloquea push/merge directo a main → usar flujo de PR.
 - Gotcha: en `<script setup>`, `useHead`/`watch(<ref>)` van **después** de declarar el ref (si no, TDZ al montar). Ver [[Errores Comunes]].
 
 ---

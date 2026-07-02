@@ -44,4 +44,5 @@ Todos en marca LibreOpción (azul `#0044a4`, naranja `#ff5a36`, Roboto Condensed
 
 ## Ver también
 - [[contexto]] — orígenes de datos, decisiones y método de forecast
+- [[memoria]] · [[changelog]]
 - [[00 - Índice Gestión X]]
