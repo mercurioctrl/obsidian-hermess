@@ -120,9 +120,31 @@ docker restart gigaerp-nginx
 'mapping.*'       => 'nullable|integer|min:0',
 ```
 
+## 10. Rebuild limpio del backend falla (composer create-project)
+
+**Síntoma:** `docker compose build backend` (o `--no-cache`) revienta en la etapa `vendor`:
+```
+composer create-project laravel/laravel:^11.0 . --no-interaction --quiet
+Your requirements could not be resolved to an installable set of packages.
+```
+
+**Causa:** el `backend/Dockerfile` **reconstruye Laravel desde cero** en cada build vía `composer create-project laravel/laravel:^11.0`. El skeleton `^11.0` fue evolucionando y sus dependencias ya no resuelven contra la imagen `composer:2` actual. No depende del código propio; es fragilidad del Dockerfile.
+
+**Consecuencia:** no se puede regenerar la imagen del backend. Los cambios de backend se despliegan **en caliente**:
+```bash
+docker cp backend/app/... gigaerp-backend:/var/www/html/app/...
+# (si hace falta un ini nuevo, escribirlo en /usr/local/etc/php/conf.d/ dentro del container)
+docker restart gigaerp-backend    # el restart PRESERVA el writable layer; un recreate/compose up NO
+docker exec gigaerp-backend php artisan config:cache   # o cae a sqlite (gotcha #2)
+```
+⚠️ Un `docker compose up --build` / `down && up` **descarta** los cambios cp'ados (vuelve a la imagen vieja).
+
+**Fix de raíz (pendiente):** en el Dockerfile, pinear una versión exacta de `laravel/laravel` conocida-buena o agregar `--ignore-platform-reqs` al `create-project` (como ya se hace en el `composer require` de abajo). El feature de backup ([[changelog#2026-07-02 — Backup/restore completo en ZIP (datos + archivos)|backup ZIP]]) quedó desplegado en caliente por esto.
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources
 - [[modulos/invoice-preview]] — donde aparece la trampa html2canvas/SVG
 - [[modulos/productos]] — importador de catálogo (gotchas 8 y 9)
 - [[changelog]] — cuando se identificó cada uno
+
