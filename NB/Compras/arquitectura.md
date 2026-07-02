@@ -87,7 +87,7 @@ Hay **dos componentes Detail casi idénticos**:
 
 `orderDetail.numPed` = `PedProT.nNumPed` (id de orden). `record.id` del ítem = `ID_ARTICULO`.
 
-Ambos endpoints de detalle devuelven **`currencyId`** (ej. `PSO`/`DOL`): el de orden desde `PedProT.cCodDiv`, el de ingreso desde `albprot.ccoddiv` (además de `currencyQuote`).
+Ambos endpoints de detalle devuelven **`currencyId`** (ej. `PSO`/`DOL`) y las cotizaciones, **todo desde `PedProT`** (cabecera del pedido): `currencyId`←`PedProT.cCodDiv`, `currencyQuote`←`PedProt.nValDiv`, `currencyFiscalQuote`←`PedProt.nvaldiv_FISCAL`. En el **ingreso** originalmente salían de `albprot` (daba id numérico `1`) — corregido el 2026-06-30 para tomarlos del pedido. El front elige cuál cotización mostrar según moneda (`currencyQuoteComputed`): pesos→fiscal, dólares→quote. Ver [[contexto#Cotización única en el header del detalle (COM-320, 2026-07-02)|contexto]].
 
 ### Agregar ítem a una orden / selector de IVA
 
