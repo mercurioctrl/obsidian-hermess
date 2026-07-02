@@ -43,7 +43,7 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 ---
 
 ## [[cobros/cobros|Cobros]]
-- [[cobros/cobros|Índice]] · [[cobros/changelog|Changelog]] · [[cobros/arquitectura|Arquitectura]] · [[cobros/stack|Stack]] · [[cobros/contexto|Contexto]]
+- [[cobros/cobros|Índice]] · [[cobros/changelog|Changelog]] · [[cobros/arquitectura|Arquitectura]] · [[cobros/stack|Stack]] · [[cobros/contexto|Contexto]] · [[cobros/memoria|Memoria]]
 
 ---
 
