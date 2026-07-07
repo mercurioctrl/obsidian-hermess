@@ -508,3 +508,13 @@ Bug del importador Laset: `pedclil` heredaba el `ID_ALMACEN` del encabezado del 
 
 ## (2026-06-30) Cta cte proveedores — alta automática + Transcargo fuera
 Las hojas de la planilla de cta cte de proveedores que no matchean un proveedor comp=11 se dan de alta solas en `FP_Proveedores` (CCODPRO secuencial; ID_PROVEEDOR es IDENTITY). Paridad NB Inc (Seaside NB Inc ≠ Seaside). Saldo = "A favor/Deuda" bruto (no netear NC). 110 proveedores comp=11, todos reconcilian. **Transcargo NO va en comp=11** (decisión del usuario); Egre/Egresos (logs), Pendiente Euros (contactos), LST Global (=NB Inc) tampoco son cuentas. Ver [[feature-laset-cuenta-corriente-proveedores]].
+
+
+### Cta cte proveedores — actualización 2026-07-03 (LST GLOBAL)
+La línea de arriba (66 prov / 5.573 movs, 2026-06-24) quedó **obsoleta**. Estado actual: **111 cuentas
+comp=11** (110 con movs), **6.328 movimientos**, todas reconcilian, Σ saldos **12.914.427,59 USD**.
+Incluye **LST GLOBAL** (CCODPRO 002607, intercompañía Laset⟷NB Inc, saldo 11.294.120,34 — la hoja
+"LST Global" dice C1 "New Bytes Inc." pero se carga con el nombre de la pestaña por decisión del usuario;
+parser: fuera del SKIP + `prov_name='LST GLOBAL'` + `SUMMARY_LABELS` ignora filas de resumen con fecha).
+Saldo = "A favor/Deuda" **bruto** (NO netear NC Disponible). Excluidos: Transcargo/Egre/Pendiente Euros.
+Ver [[feature-laset-cuenta-corriente-proveedores]] · [[changelog#2026-07-03 — LST GLOBAL (cta cte proveedores, intercompañía) + aclaración Crown]].

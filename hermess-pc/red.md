@@ -123,3 +123,5 @@ curl -sk -b /tmp/unifi-cookie.txt -X POST \
 
 - [[hermess-pc/arquitectura|Arquitectura del sistema]]
 - [[hermess-pc/changelog|Changelog]]
+
+- [[hermess-pc/vpn-casa|VPN CASA — L2TP/IPSec]]

@@ -332,3 +332,22 @@ El stock comp=11 se reparte por almacén (DOM/GRI/BON/URU/ASI). Dos cosas a tene
 - **Un proveedor pertenece a una sola empresa**: si una hoja de la planilla de cta cte no matchea ningún proveedor comp=11, se **da de alta** como proveedor comp=11 nuevo (no se reusa el de otra empresa). El import lo hace solo (idempotente). Estado: **110 proveedores comp=11**, todos reconcilian.
 - **Saldo = "A favor / Deuda" BRUTO** (NO netear "NC Disponible").
 - **Transcargo (fletes) NO va en comp=11** (decisión del usuario). Tampoco son cuentas: `Egre`/`Egresos` (logs globales), `Pendiente Euros` (contactos), `LST Global` (=NB Inc). Todas en la SKIP list del parser.
+
+
+## Cta cte proveedores — LST GLOBAL intercompañía (2026-07-03)
+
+**Supersede** la exclusión de "LST Global" que decían las secciones 2026-06-26 y 2026-06-30.
+La hoja "LST Global" tiene C1 = "New Bytes Inc." pero **es una cuenta real** = el pasivo global
+Laset ⟷ New Bytes Inc. (saldo 11.294.120,34 USD, ≈7× el resto de proveedores juntos). Por
+**decisión del usuario** ahora **se carga** como proveedor comp=11 **"LST GLOBAL"** (nombre de la
+pestaña, NO el literal "New Bytes Inc."). Ya existía en `FP_Proveedores` (Id 16681 / CCODPRO 002607)
+→ solo linkea + crea master + 564 movs. Parser: fuera del SKIP + `prov_name` forzado a "LST GLOBAL"
++ nueva `SUMMARY_LABELS` (ignora filas de resumen con fecha, ej. "NC Disponible"/"ADEUDA" con Pagado).
+
+**Estado dev actualizado**: 111 cuentas comp=11 (110 con movimientos), 6.328 movimientos, todas
+reconcilian, Σ saldos = **12.914.427,59 USD** (LST GLOBAL 11.294.120,34 + 1.620.307,25 el resto).
+**Siguen excluidos**: Transcargo (fletes), `Egre`/`Egresos`, `Pendiente Euros`, templates, `Cálculos Trans`.
+
+**Caso Crown (no bug)**: el movimiento "de más" de 30.900 en el ERP es el pago de la factura Y25DG005,
+que sí está en la planilla (fila 173, Pagado) pero fechado 31/12/2026 (placeholder futuro) → ordena
+al final. Factura + pago se cancelan → saldo 0 (coincide). Ver [[feature-laset-cuenta-corriente-proveedores]].

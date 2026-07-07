@@ -57,6 +57,7 @@
 
 - [[Red]] — Infraestructura de red hogareña
 - [[hermess-pc]] — PC principal
+  - [[hermess-pc/vpn-casa|VPN CASA]] — VPN L2TP/IPSec a db-nb-dev.blu.net.ar
 - [[n950-research]] — Investigación N950
 - [[Claude/Migracion_SQLServer_Dev|SQL Server (mssql-dev)]] — migración de 7 bases dev a contenedor en `hermess` (10.10.10.47)
 - [[Claude/Monitoreo_WAN|Monitoreo WAN]] — caídas + velocidad de las 2 WANs (Telecom/Telecentro), avisos por Bily
@@ -75,4 +76,4 @@
 
 ---
 
-*Actualizado: 2026-06-29*
+*Actualizado: 2026-06-30*

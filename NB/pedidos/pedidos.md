@@ -31,7 +31,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-laset-fix-marcas-comp11|Fix marcas comp=11]] — refactor Fase C marcas + backfill articulo.Id_Marca + cleanup FP_Marcas dups
 - [[feature-laset-wipe-reimport|Borrar todo comp=11 + reimport limpio]] — wipe transaccional con barrido de huérfanos + validación de stocks; flujo Borrar todo → Importar todo
 - [[feature-laset-fix-albprol-faltante|Remito de compra faltante (albprol)]] — cierra el gap de artículos comp=11 con stock pero sin ingreso (albprot/albprol)
-- [[feature-laset-cuenta-corriente-proveedores|Feature: Cuenta corriente de PROVEEDORES Laset]] — cta cte de proveedores comp=11 a MS_MOV_CTACTE_PROVEEDORES; clave CCODPRO, saldo bruto, EUR al TC de cierre, alta automática de faltantes (110 proveedores)
+- [[feature-laset-cuenta-corriente-proveedores|Feature: Cuenta corriente de PROVEEDORES Laset]] — cta cte de proveedores comp=11 a MS_MOV_CTACTE_PROVEEDORES; clave CCODPRO, saldo bruto, EUR al TC de cierre, alta automática de faltantes; **LST GLOBAL** intercompañía incluido (111 cuentas, Σ 12.914.427,59 USD)
 - [[feature-laset-stock-almacen|Feature: Stock por almacén Laset]] — depósito por línea en pedclil (no del encabezado); fix en Fase C + comando retroactivo laset:fix-stock-almacen-comp11 (re-apunta + transfiere inter-depósito)
 - [[feature-sync-laset-botones|Patrón Sync Laset — botones de mantenimiento]] — service+command+controller+UI para fixes Laset
 - [[feature-integrar-eccn|Feature: integrarECCN]] — clasificación ECCN por familia × proveedor para comp=11
@@ -75,4 +75,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-06-30 — Cta cte proveedores cerrada: alta automática de faltantes (110 proveedores comp=11, todos reconcilian); Transcargo/Egre/LST Global excluidos. + Stock por almacén: bug de depósito por línea en pedclil arreglado en Fase C + comando retroactivo `laset:fix-stock-almacen-comp11` (14→0 negativos). Ver [[feature-laset-cuenta-corriente-proveedores]] y [[feature-laset-stock-almacen]].*
+*Última sincronización: 2026-07-03 — **LST GLOBAL** (cta cte proveedores): la hoja "LST Global" (C1 "New Bytes Inc.", pasivo intercompañía Laset⟷NB Inc, saldo 11.294.120,34) ahora SÍ se carga como proveedor comp=11 "LST GLOBAL" (CCODPRO 002607) por decisión del usuario. Parser: fuera del SKIP + `prov_name` forzado + `SUMMARY_LABELS` ignora filas de resumen con fecha. Estado: 111 cuentas comp=11, 6.328 movs, Σ saldos 12.914.427,59 USD. Aclarado caso Crown (pago 30.900 de Y25DG005 fechado 31/12/2026 en la planilla, no es duplicado). Ver [[feature-laset-cuenta-corriente-proveedores]] y [[changelog#2026-07-03 — LST GLOBAL (cta cte proveedores, intercompañía) + aclaración Crown]].*

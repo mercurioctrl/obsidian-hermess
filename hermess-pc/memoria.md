@@ -1,6 +1,6 @@
 # Memoria de Claude — hermess-pc
 
-Contexto y preferencias guardadas por Claude para este proyecto. Sincronizado: 2026-05-18.
+Contexto y preferencias guardadas por Claude para este proyecto. Sincronizado: 2026-06-30.
 
 ---
 
@@ -21,6 +21,12 @@ Ver [[hermess-pc/red]] para detalle completo.
 - Controller UniFi en Docker, config override en `config.gateway.json`
 - Telecentro modem en modo router (DHCP activo, da 10.131.202.19/24)
 - Ambas WANs Active, modo Failover Only
+
+### VPN
+Ver [[hermess-pc/vpn-casa]] para detalle completo.
+- VPN CASA: **L2TP/IPSec** hacia `db-nb-dev.blu.net.ar`, usuario `hermess87`, auth por Pre-Shared Key
+- Origen en la Mac (VPN nativa de macOS); migrable a Ubuntu con `network-manager-l2tp` + keyfile `.nmconnection`
+- NO es OpenVPN ni WireGuard (incompatibles); secretos cifrados en System Keychain de la Mac
 
 ### Monitores
 Ver [[hermess-pc/monitores]] para detalle completo.
@@ -53,5 +59,6 @@ Ver [[hermess-pc/sync-curls]] para detalle completo.
 
 - [[hermess-pc/arquitectura]]
 - [[hermess-pc/red]]
+- [[hermess-pc/vpn-casa]]
 - [[hermess-pc/changelog]]
 - [[hermess-pc/hermess-pc|Índice]]

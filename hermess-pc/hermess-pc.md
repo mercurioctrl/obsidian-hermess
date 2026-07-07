@@ -2,7 +2,7 @@
 
 Base de conocimiento de la PC personal de hermess: configuración del sistema, red, monitores, extensiones GNOME, servicios, scripts y optimizaciones.
 
-Última sincronización: 2026-05-20
+Última sincronización: 2026-06-30
 
 ---
 
@@ -10,6 +10,7 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 
 - [[hermess-pc/arquitectura|Arquitectura del sistema]]
 - [[hermess-pc/red|Red — UniFi dual WAN failover]]
+- [[hermess-pc/vpn-casa|VPN CASA — L2TP/IPSec]]
 - [[hermess-pc/earlyoom|earlyoom — protección OOM]]
 - [[hermess-pc/monitores|Configuración de monitores]]
 - [[hermess-pc/sync-curls|Servicio sync-curls]]
@@ -42,6 +43,7 @@ Descargador de playlists de YouTube a MP3 organizado en `Artista/Álbum/`.
 - **RAM:** 32 GB
 - **Monitores:** 3 (Gigabyte 1440p centro, BenQ portrait izq, LG portrait der)
 - **Red:** USG-3P dual WAN — Telecom (primary) + Telecentro (failover)
+- **VPN:** VPN CASA (L2TP/IPSec) hacia `db-nb-dev.blu.net.ar`
 - **Servicios activos:** earlyoom, sync-curls, Docker, libvirt/QEMU, MySQL, Apache2
 - **Entorno de trabajo:** VMs (libvirt/QEMU), contenedores Docker, apps Electron (Slack, Warp)
 
@@ -51,4 +53,5 @@ Descargador de playlists de YouTube a MP3 organizado en `Artista/Álbum/`.
 
 - [[hermess-pc/arquitectura]]
 - [[hermess-pc/red]]
+- [[hermess-pc/vpn-casa]]
 - [[hermess-pc/changelog]]

@@ -58,3 +58,16 @@ Archivos modificados:
 Archivos modificados:
 - `/var/www/hermess/unifi/config/data/sites/default/config.gateway.json` (solo eth2)
 - `/config/config.boot` en USG (eth2 habilitado con DHCP, NAT rules limpiadas)
+
+---
+
+## 2026-06-30
+
+### Documentada VPN CASA (L2TP/IPSec) y migración a Ubuntu
+
+- Identificada VPN nativa de la Mac: **VPN CASA**, tipo L2TP/IPSec, server `db-nb-dev.blu.net.ar`, usuario `hermess87`
+- Aclarado que NO es OpenVPN ni WireGuard (protocolos incompatibles) → en Ubuntu requiere cliente L2TP/IPSec
+- Generado keyfile `vpn-casa.nmconnection` (UUID `db921be1-16c1-4511-9a50-110c02efb26d`) para importar en NetworkManager
+- Documentado flujo de extracción de secretos del System Keychain de la Mac y la instalación del keyfile
+
+Ver [[hermess-pc/vpn-casa|VPN CASA]]. Archivos generados en la Mac: `~/vpn-casa.nmconnection`, `~/vpn-casa-README.md`.

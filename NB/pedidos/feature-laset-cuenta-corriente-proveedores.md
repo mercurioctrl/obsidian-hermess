@@ -73,3 +73,18 @@ Mismo patrón que la cta cte de clientes (`ccte-import`):
 - **Estado final**: **110 proveedores comp=11**, todos reconcilian, Σ saldos ≈ 1.620.307,25 USD (83→114 filas FP comp=11; 31 altas `CCODPRO 002611–002641`).
 - **Saldo = "A favor / Deuda" BRUTO** (corrige la regla vieja de "afd + NC" de arriba: NO netear NC Disponible). Asus = 53.258,11.
 - **Excluidos a propósito** (SKIP del parser): **Transcargo** (fletes, hojas "Trans" 1.592,58 / "Trans Laset" 0 — el usuario decidió que NO va en comp=11), `Egre`/`Egresos` (logs globales), `Pendiente Euros` (contactos), `LST Global` (=NB Inc), templates, `Cálculos Trans`. **No falta ninguna cuenta real.**
+
+
+## Actualización 2026-07-03 — LST GLOBAL (intercompañía, SÍ se carga)
+
+**Corrige la exclusión de 2026-06-26**: la hoja "LST Global" ya **NO** se excluye.
+
+Su celda "Proveedor" dice "New Bytes Inc." (contraparte intercompañía), pero **es una cuenta real**: el pasivo global de Laset ⟷ New Bytes Inc. — 831 líneas, 335 facturas / 210 pagos, saldo **11.294.120,34 USD** (≈7× la suma del resto de proveedores). Por **decisión del usuario** se carga como proveedor comp=11 **"LST GLOBAL"** (nombre de la pestaña, NO el literal "New Bytes Inc.").
+
+- Ya existía en `FP_Proveedores` (`Id_Proveedor 16681 / CCODPRO 002607`, 0 movimientos) → el import solo linkea + crea master + 564 movimientos. No hay alta de proveedor nuevo.
+- **Parser** (`scripts/laset_prov_ccte_to_json.py`): (1) `'LST Global'` fuera del `SKIP`; (2) `if norm(name)=='LST GLOBAL': prov_name='LST GLOBAL'`; (3) nueva `SUMMARY_LABELS` — ignora como movimiento las filas de resumen que llevan fecha ("NC Disponible", "ADEUDA" con valor en Pagado), que si no generaban pagos espurios. Fix general para todas las hojas.
+- Ajuste de cierre residual ≈ 179.901,40 (0,35 % del facturado de 50 M), normal. Snapshot previo `laset:snapshot prov_ccte_lstglobal`.
+- **Estado dev**: 111 cuentas comp=11 (110 con movimientos), 6.328 movimientos, todas reconcilian. Σ saldos = **12.914.427,59 USD** (LST GLOBAL 11.294.120,34 + 1.620.307,25 el resto).
+
+### Caso Crown (aclaración, no bug)
+El "movimiento de más" de 30.900 en la cta cte del ERP es el **pago de la factura Y25DG005** (30.900), que **sí está en la planilla** (fila 173, columna Pagado), pero fechado **31/12/2026** (fecha futura, placeholder) → ordena al final, después del último movimiento visible (23.920, marzo). Factura + pago se cancelan → saldo Crown = 0 (coincide con la planilla). Sin ese pago, Crown quedaría debiendo 30.900. No hay duplicado.
