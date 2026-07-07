@@ -2,6 +2,10 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-07-02
+
+- feat (front, **COM-320**): **Moneda y cotización única en el header del detalle** de Orden e Ingreso. Consume los campos de divisa que se agregaron en la API (`currencyId`, `currencyQuote`, `currencyFiscalQuote`). Se muestra **una sola** fila "Cotización" según el caso: **pesos** (`currencyId === 'PSO'`) → usa `currencyFiscalQuote` (porque `currencyQuote` queda fijo en 1); **dólares** → usa `currencyQuote`. Nuevo computed `currencyQuoteComputed` / `isProviderInPesos` que unifica el cálculo de subtotales. Archivos front: `Orders/Detail.vue`, `ProviderOrderInbound/Detail.vue`, `Modal/Draggable.vue`, `layouts/basic.vue`, `pages/providerOrderInbound.vue`. Commits `877b288`, `02af31f`, `44252b7`, `fabad7e`. **Estado: mergeado a `gamma` (PRs #283/#285), pendiente de `development`.** Ver [[contexto#Cotización única en el header del detalle (COM-320, 2026-07-02)|contexto]].
+
 ## 2026-06-30
 
 - feat: **Columna "Pedido" (remitos / `inboundIds`) en el listado de Órdenes** (COM-444). El API concatena los `nnumalb` de `NewBytes_DBF.dbo.albprot` por pedido vía `STUFF(... FOR XML PATH(''))` y los expone en `ProviderOrderDto.inboundIds`; el front agrega la columna con botones que navegan a la pestaña Ingresos filtrando por `nNumAlb` (`store/orders.js`, `pages/orders.vue`). PRs API #409/#410, front #281.

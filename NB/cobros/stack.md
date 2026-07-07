@@ -42,4 +42,4 @@
 - Backend API: `https://api.cashbox.lio.red/v1`
 
 ## Ver también
-- [[arquitectura]] · [[contexto]]
+- [[arquitectura]] · [[contexto]] · [[memoria]] · [[changelog]]

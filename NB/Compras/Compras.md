@@ -31,4 +31,5 @@ Sistema de gestión de compras a proveedores para New Bytes (NB). Permite crear 
 Las tareas se trackean con prefijo `COM-` en Jira.
 
 ---
-*Última sincronización: 2026-06-30 — columna "Pedido"/inboundIds en Órdenes (COM-444); moneda y cotizaciones del Ingreso desde PedProt; `items` sin filtro `ocultarDeNb`; fix de Ingresos duplicados (GROUP BY nullable + count distinct); `.env` apuntado a saftel `10.10.10.47` (cmercurio).*
+*Última sincronización: 2026-07-02 — front COM-320: moneda y cotización única en el header del detalle (pesos→fiscal, dólares→quote), consumiendo los campos de divisa de la API. En `gamma`, pendiente de `development`.*
+*2026-06-30 — columna "Pedido"/inboundIds en Órdenes (COM-444); moneda y cotizaciones del Ingreso desde PedProt; `items` sin filtro `ocultarDeNb`; fix de Ingresos duplicados (GROUP BY nullable + count distinct); `.env` apuntado a saftel `10.10.10.47` (cmercurio).*

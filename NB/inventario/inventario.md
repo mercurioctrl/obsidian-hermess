@@ -2,9 +2,9 @@
 
 Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
-**Última sincronización:** 2026-06-29
+**Última sincronización:** 2026-07-02
 
-> **Estado:** toda la tanda (modal de **seriales**, cache de competencia, **índices P1–P3** en prod —grilla de Stock −67%—, word-break global, fix N+1 en selldiscount, mejoras de grilla) **commiteada y pusheada a `regularizacion-stock`** (back `7f67d7b..bf2c8d1`, front `653c025..481be0f`). Lista para PR a Development/Gamma. Ver [[changelog]], [[modulo-seriales]] y [[performance-indices]].
+> **Estado:** la tanda de `regularizacion-stock` (modal de **seriales**, cache de competencia, **índices P1–P3** en prod —grilla de Stock −67%—, word-break global, fix N+1 en selldiscount, mejoras de grilla) ya está **mergeada a `development`/`Development`** (front PR #388, back PR #288). Trabajo local ahora sobre `development`. DB local movida a `10.10.10.47,1433` (usuario `cmercurio`). Ver [[changelog]], [[contexto]] y [[performance-indices]].
 
 ## Sub-proyectos
 

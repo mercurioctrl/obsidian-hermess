@@ -6,15 +6,15 @@
 <title>LibreOpción · Cubo de Datos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Inter:wght@400;500;600&family=Noto+Emoji&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="cube-data.js"></script>
 <style>
   :root{--azul:#0044a4;--azul2:#0059d6;--rojo:#f90000;--verde:#22ac4b;--amarillo:#fccc00;--naranja:#ff5a36;
     --ink:#1b1b1f;--gris:#7e7e83;--borde:#e9e9ea;--bg:#fff;--bg2:#f5f7f8;}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg2);color:var(--ink);font-family:'Inter',-apple-system,sans-serif;font-size:14px}
-  h1,h2,h3,.cond{font-family:'Roboto Condensed','Inter',sans-serif}
+  body{background:var(--bg2);color:var(--ink);font-family:'Inter',-apple-system,sans-serif,'Noto Emoji';font-size:14px}
+  h1,h2,h3,.cond{font-family:'Roboto Condensed','Inter',sans-serif,'Noto Emoji'}
   .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
   header.bar{background:#111;position:sticky;top:0;z-index:30}
   header.bar .wrap{display:flex;align-items:center;gap:16px;height:60px}
@@ -28,13 +28,13 @@
   /* panel */
   .panel{background:#fff;border:1px solid var(--borde);border-radius:14px;padding:18px 20px;margin:18px 0;box-shadow:0 1px 3px rgba(16,40,80,.05)}
   .seg{display:inline-flex;background:var(--bg2);border:1px solid var(--borde);border-radius:9px;padding:3px;gap:2px}
-  .seg button{border:none;background:none;font-family:'Inter';font-size:13px;font-weight:600;color:var(--gris);padding:7px 16px;border-radius:7px;cursor:pointer}
+  .seg button{border:none;background:none;font-family:'Inter','Noto Emoji';font-size:13px;font-weight:600;color:var(--gris);padding:7px 16px;border-radius:7px;cursor:pointer}
   .seg button.on{background:#111;color:#fff}
   .seg.brand button.on{background:var(--azul)}
   .ctrls{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;margin-top:16px}
   .fld{display:flex;flex-direction:column;gap:5px}
   .fld label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris)}
-  select,input.search{font-family:'Inter';font-size:13.5px;color:var(--ink);background:#fff;border:1px solid var(--borde);border-radius:8px;padding:8px 10px;min-width:140px;cursor:pointer}
+  select,input.search{font-family:'Inter','Noto Emoji';font-size:13.5px;color:var(--ink);background:#fff;border:1px solid var(--borde);border-radius:8px;padding:8px 10px;min-width:140px;cursor:pointer}
   select:focus,input.search:focus{outline:none;border-color:var(--azul)}
   input.search{cursor:text;min-width:180px}
   .filtros{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;padding-top:16px;border-top:1px solid var(--borde)}
@@ -43,14 +43,14 @@
   .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
   .kpi{background:#fff;border:1px solid var(--borde);border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(16,40,80,.04)}
   .kpi .l{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--gris);font-weight:600}
-  .kpi .v{font-family:'Roboto Condensed';font-size:28px;font-weight:700;margin-top:4px}
+  .kpi .v{font-family:'Roboto Condensed','Noto Emoji';font-size:28px;font-weight:700;margin-top:4px}
   .kpi .v.pos{color:var(--verde)}.kpi .v.neg{color:var(--rojo)}.kpi .v.az{color:var(--azul)}
   /* chart */
   .cbox{background:#fff;border:1px solid var(--borde);border-radius:14px;padding:20px;margin:18px 0;box-shadow:0 1px 3px rgba(16,40,80,.04)}
   .cbox h3{font-size:16px;margin-bottom:14px}
   .chart{position:relative;height:300px}
   .evogrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:16px}
-  .evogrid h4{font-family:'Roboto Condensed';font-size:15px;margin-bottom:6px;color:var(--ink)}
+  .evogrid h4{font-family:'Roboto Condensed','Noto Emoji';font-size:15px;margin-bottom:6px;color:var(--ink)}
   @media(max-width:780px){.evogrid{grid-template-columns:1fr}}
   /* table */
   .tbox{background:#fff;border:1px solid var(--borde);border-radius:14px;margin:18px 0 60px;box-shadow:0 1px 3px rgba(16,40,80,.04);overflow:hidden}
@@ -59,7 +59,7 @@
   .tscroll{overflow-x:auto;max-height:620px;overflow-y:auto}
   table{border-collapse:collapse;width:100%;font-size:13px}
   th,td{padding:9px 12px;border-bottom:1px solid #f0f0eb;white-space:nowrap}
-  thead th{position:sticky;top:0;background:#fafaf8;font-family:'Roboto Condensed';font-weight:700;font-size:12px;letter-spacing:.03em;text-align:right;color:var(--gris);cursor:pointer;z-index:2}
+  thead th{position:sticky;top:0;background:#fafaf8;font-family:'Roboto Condensed','Noto Emoji';font-weight:700;font-size:12px;letter-spacing:.03em;text-align:right;color:var(--gris);cursor:pointer;z-index:2}
   thead th.lbl{text-align:left}
   thead th:hover{color:var(--azul)}
   td.lbl{text-align:left;font-weight:500;max-width:340px;overflow:hidden;text-overflow:ellipsis}
@@ -100,7 +100,7 @@
 
   <div class="panel">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-      <h3 style="font-family:'Roboto Condensed';font-size:18px">🔎 Explorador de evolución — cualquier dimensión, mes a mes</h3>
+      <h3 style="font-family:'Roboto Condensed','Noto Emoji';font-size:18px">🔎 Explorador de evolución — cualquier dimensión, mes a mes</h3>
       <div class="seg brand" id="evoDs"><button data-ds="productos" class="on">📦 Productos</button><button data-ds="operaciones">🧾 Operaciones</button></div>
     </div>
     <div class="ctrls">

@@ -1,3 +1,24 @@
+## 2026-07-02 — Backup/restore completo en ZIP (datos + archivos)
+
+El backup dejó de ser un JSON de solo-base-de-datos y pasó a ser un **ZIP con el dataset completo**, pensado para que *clonando el repo + restaurando el ZIP* se recupere todo (datos, usuarios, documentos e imágenes) sin pasos extra. Rama `feat/backup-completo-zip` (commit `b12ecee`). Detalle en [[arquitectura#Backup/restore completo (ZIP)|arquitectura]] y [[contexto#Backup/restore — reglas|contexto]].
+
+### Backend — `BackupController`
+- **`generate()`** arma un `.zip` con `ZipArchive`: `database.json` (volcado de todas las tablas, mismo orden FK de antes) + `files/…` = todo `storage/app/public` recursivo (adjuntos de marketing e imágenes del editor). Se sirve con `response()->download()->deleteFileAfterSend()`.
+- **`restore()`** acepta el ZIP nuevo **o** el JSON viejo (compat): detecta el tipo por extensión y por firma `PK\x03\x04`. Restaura tablas (truncate + insert con `FOREIGN_KEY_CHECKS=0`) y extrae `files/*` a `storage/app/public` (merge/overwrite, con guardia anti path-traversal).
+- Sube límites en runtime: `ini_set('memory_limit','512M')` + `set_time_limit(300)`.
+
+### Infra — límites para archivos pesados
+- **`backend/Dockerfile`**: `conf.d/uploads.ini` con `upload_max_filesize/post_max_size/memory_limit=512M`, `max_execution_time=300`. Antes eran 2M/8M → cualquier ZIP con imágenes fallaba.
+- **`nginx/default.conf`**: `client_max_body_size 20M → 512M` + `proxy_read/send_timeout 600s` en `/api/`.
+
+### Frontend — `pages/configuracion/index.vue`
+Tab Backups: acepta `.zip,.json`, ícono `lucide:file-archive`, descarga como `.zip`, textos actualizados (datos + documentos + imágenes).
+
+### ⚠️ Gotcha de deploy detectado
+El **rebuild limpio del backend está roto**: `docker compose build backend` falla en `composer create-project laravel/laravel:^11.0`. Los cambios se desplegaron **en caliente** (`docker cp` + ini + `docker restart`). Ver [[troubleshooting#10. Rebuild limpio del backend falla (composer create-project)|troubleshooting #10]].
+
+**Verificado local:** genera ZIP (`database.json` 23 MB + 6 archivos), restaura y quedan 15.962 productos + 6 usuarios + archivos en disco intactos.
+
 ## 2026-06-29 — Permisos de visualización por sección (sidebar + bloqueo de ruta)
 
 Cada sección del ERP pasa a tener su permiso `VER_SECCION_*`. **Semántica opt-in**: un no-admin solo ve una sección si tiene su permiso; **el admin ve todo**. Detalle en [[arquitectura#Permisos de visualización por sección|arquitectura]] y [[contexto#Permisos por sección — reglas|contexto]].
@@ -227,3 +248,4 @@ El filtro se puede borrar para ver todas las marcas.
 **Archivos:** `backend/app/Http/Controllers/ProductoController.php`, `backend/app/Http/Controllers/ExistenciaController.php`, `frontend/pages/productos/index.vue`, `frontend/pages/existencias/index.vue`
 
 ---
+

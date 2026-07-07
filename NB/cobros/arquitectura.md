@@ -145,10 +145,77 @@ Frontend:
 | `cobrar_capital` | `cobrarCapital` | `PermissionPayCapitalMiddleware` | `POST /payCapitalDebt` |
 | `ver_capital` | `verCapital` | (frontend only) | Ojito en modal CapitalDebt |
 
+## Módulo AFIP Purchases (Facturas de compra) — archivos
+
+Compras a proveedores: remitos (Orders) y facturas (Invoices), con impuestos, divisas,
+tipos de compra, almacenes y empresas. Grupo de rutas `/afipPurchases` protegido por
+`PermissionMiddleware`.
+
+```
+Backend (src/{capa}/AfipPurchases/):
+  Controller/  AllOrders, OrderDetail, InvoiceOrder, AllInvoices, InvoiceDetail,
+               CreateInvoice, CheckInvoiceCsufac, CreateTax, AllTaxes,
+               AllEmpresas, AllAlmacenes, AllTiposCompra, AllFormasPago,
+               AllDivisas, AllAfipPurchases, AfipPurchaseDetail
+  Service/     AfipPurchasesService, AfipOrdersService, AfipInvoicesService, AfipSharedService
+  Repository/  AfipPurchasesRepository, AfipOrdersRepository, AfipInvoicesRepository, AfipSharedRepository
+  Dto/         OrderListDto, OrderDetailDto, InvoiceListDto, InvoiceDetailDto, TaxDto, DivisaDto, ...
+  Support/     CompanyCodes.php
+
+Frontend:
+  pages/afipPurchases.vue          Página con tabs Remitos / Facturas
+  store/afipPurchases.js           Store Vuex
+  components/AfipPurchases/         OrdersTab, InvoicesTab, InvoiceDetail, InvoiceTotals,
+                                    ModalInvoice, ModalCompleteOrder, TaxesSelector
+```
+
+### Endpoints principales
+| Método | Ruta | Uso |
+|---|---|---|
+| GET | `/afipPurchases/orders[/{filter}]` | Listar remitos (multi-sucursal) |
+| GET | `/afipPurchases/orders/{id}` | Detalle de remito |
+| POST | `/afipPurchases/orders/{id}/invoice` | Facturar un remito |
+| GET | `/afipPurchases/invoices[/{filter}]` | Listar facturas |
+| GET | `/afipPurchases/invoices/{id}` | Detalle de factura |
+| POST | `/afipPurchases/invoices` | Crear factura |
+| GET | `/afipPurchases/invoices/check` | Check de duplicado (por proveedor) |
+| GET/POST | `/afipPurchases/taxes` | Listar / crear impuestos |
+| GET | `/afipPurchases/{empresas,almacenes,tiposCompra,formasPago,divisas}` | Catálogos |
+
+### Decisiones de diseño
+- **Check de factura duplicada por proveedor**: la validación de número de factura usa
+  `(número + proveedor)` en vez de número global — dos proveedores pueden repetir número.
+- **Multi-sucursal**: los filtros de remitos/facturas soportan múltiples sucursales
+  (`CompanyCodes.php` centraliza los códigos de empresa).
+- Separación `AfipShared*` para lógica común entre Orders e Invoices.
+
+## Trade Audit Logger
+
+Auditoría estructurada del flujo de cobro (trade). Registra cada paso del `ExecuteTrade`
+para trazabilidad.
+
+```
+src/Support/TradeAuditLog.php               Logger estructurado (formato de auditoría)
+src/Service/Box/BoxTradeServiceAudit.php    Wrapper de auditoría sobre el trade
+src/Repository/Box/BoxTradeRepositoryInterface.php   Interface para inyección/mock
+src/Service/Bank/Transfer/CreditBankInterface.php    Interface para inyección/mock
+tests/Unit/Service/Box/Trade/{BankPayment,BoxPayment}Test.php   Tests
+```
+
+- Se introdujeron **interfaces** (`BoxTradeRepositoryInterface`, `CreditBankInterface`)
+  para poder testear el flujo de pago con mocks.
+- Fixes de tipos: `movementBankId` de `nonTaxVoucher` casteaba mal `null → 0`; se ajustó
+  el tipo de propiedad en `BoxTrade` para aceptar `BoxTradeServiceAudit`.
+
 ## Docker (dev)
-- Container: `cobros-api-rest`, puerto `8083:80`
-- OpenSSL legacy provider habilitado para compatibilidad TLS con SQL Server
-- `display_errors = Off` en PHP para evitar warnings en respuestas JSON
+- Container: `cobros-api-rest`, `network_mode: host`, Apache escuchando en **puerto 8083**
+  (`docker/apache/ports.conf` → `Listen 8083`). `app/` montado por volumen (PHP live sin rebuild).
+- Base reescrita a imagen `php:8.2-apache-bookworm` (Dockerfile local, no commiteado).
+- DSN sqlsrv con `Encrypt=0; TrustServerCertificate=1` (`Database.php`, cambio local).
+- OpenSSL legacy provider habilitado para compatibilidad TLS con SQL Server.
+- `display_errors = Off` en PHP para evitar warnings en respuestas JSON.
+- Frontend Nuxt 2 en **puerto 3002** vía PM2 (`ecosystem.config.js`, cluster 2 instancias,
+  `NODE_OPTIONS=--openssl-legacy-provider`). Ver [[memoria]].
 
 ## Ver también
-- [[stack]] · [[contexto]] · [[changelog]]
+- [[stack]] · [[contexto]] · [[changelog]] · [[memoria]]

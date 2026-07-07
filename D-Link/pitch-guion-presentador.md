@@ -1,7 +1,7 @@
 # Guión del presentador — Pitch D-Link
 
 > Notas de qué decir en cada slide del deck (`index.html`). Tono: seguro, cercano, sin leer la
-> pantalla. Duración objetivo: 12-15 min + preguntas. Abrí `index.html` en pantalla completa
+> pantalla. Duración objetivo: 14-17 min + preguntas. Abrí `index.html` en pantalla completa
 > (F11) y navegá con las flechas.
 
 | # | Slide | Qué decir (idea central) |
@@ -17,10 +17,12 @@
 | 9 | **Presupuesto** | Transparencia total con los USD 2.000/mes. Poca plata bien apuntada: orgánico-first, paid quirúrgico. |
 | 10 | **MercadoLibre** | La prioridad #1. Antes de gastar en ads, ganamos donde se decide la compra. Quick wins casi gratis. |
 | 11 | **Contenido** | El motor orgánico. Mostrar los títulos de la serie "Tu WiFi tiene que andar" — se ríen, se identifican. |
-| 12 | **B2B** | El negocio que nadie cuida = mejor ROI. El instalador que prescribe, vende. Programa Partner. |
-| 13 | **Roadmap 90 días** | Cimientos → Tracción → Escala. Mostrar que hay método, no improvisación. |
-| 14 | **KPIs** | Resultados, no humo. Y la honestidad clave: las metas numéricas se fijan tras el mes 1, con baseline real. |
-| 15 | **Cierre** | "No vamos a gritar más fuerte. Vamos a decir algo que ellos no dicen." Cerrar con el claim: **D-Link. El WiFi que anda.** Y el pedido de avanzar. |
+| 12 | **Canales digitales** | Tres canales, tres trabajos: Instagram engancha (reels del dolor), Facebook convierte + comunidad + puerta al B2B, Newsletter fideliza y pide reseñas. No publicamos lo mismo en todos lados. *(detalle en `03-plan-campana/instagram-plan.md`, `facebook-plan.md`, `newsletter-campana.md`)* |
+| 13 | **El recorrido** | Cómo se encadena: engancha (IG/FB) → acompaña (remarketing) → cierra (ML) → vuelve (email pide reseña → la reseña sube ML → trae la próxima venta). Remarcar el **círculo virtuoso** que rinde mes a mes. |
+| 14 | **B2B** | El negocio que nadie cuida = mejor ROI. El instalador que prescribe, vende. Programa Partner. |
+| 15 | **Roadmap 90 días** | Cimientos → Tracción → Escala. Mostrar que hay método, no improvisación. |
+| 16 | **KPIs** | Resultados, no humo. Y la honestidad clave: las metas numéricas se fijan tras el mes 1, con baseline real. |
+| 17 | **Cierre** | "No vamos a gritar más fuerte. Vamos a decir algo que ellos no dicen." Cerrar con el claim: **D-Link. El WiFi que anda.** Y el pedido de avanzar. |
 
 ## Manejo de objeciones (preparar respuestas)
 

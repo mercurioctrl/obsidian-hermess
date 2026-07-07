@@ -24,6 +24,9 @@ Proyectos y áreas de BLU Digital Agency.
 ### Dirección
 - [[direccion/reunion-directorio-pendiente|Reunión de Directorio Blu – Pendiente]]
 
+### [[finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
+- [[finanzas/caso-mercury-acer|Caso Mercury — Origen de fondos (Acer USD 12.322)]]
+
 ### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
 - [[rrhh/alertas-gestion|alertas de gestión]] · [[rrhh/cumpleanos|cumpleaños]] · [[rrhh/changelog|changelog]]
 - [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]]

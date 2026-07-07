@@ -199,10 +199,17 @@ BORRADOR → APROBADA → FACTURADA
 - Preview pública: `GET /api/ventas/{venta}/preview?token=...`
 - Datos de empresa en tabla `configuraciones` (claves `empresa_*` e `invoice_*`)
 
+### Backup/restore — reglas
+
+- El backup (Configuración → tab **Backups**, solo admin) es un **ZIP autosuficiente**: `database.json` (toda la DB) + `files/` (todos los documentos e imágenes de `storage/app/public`). Pensado para **recuperar todo el dataset en otra instancia**: clonar el repo, `docker compose up`, restaurar el ZIP.
+- **Restaurar sobreescribe TODO** (datos y archivos actuales). El restore acepta el ZIP nuevo o backups JSON viejos (solo datos).
+- Los archivos subidos viven en el volumen `uploads_storage` (`storage/app/public`) y persisten aunque se recree el container.
+- Implementación y decisiones en [[arquitectura#Backup/restore completo (ZIP)|arquitectura]].
+
 ## TODOs pendientes
 
 - [ ] **Limpieza data**: ~1807 productos propios (`distribuidor_id` NULL) sin inventario real — entraron sin distribuidor pero sin filas de stock, codigo_distribuidor numérico, columna global stock del import. Decidir si borrar o reasignar distribuidor. Hoy visibles en Catálogo bajo "Sin stock".
-- [ ] Reconstruir imagen del backend para habilitar import xlsx (PhpSpreadsheet) — hoy solo CSV
+- [ ] Reconstruir imagen del backend para habilitar import xlsx (PhpSpreadsheet) — hoy solo CSV. **Bloqueado**: el build limpio del backend falla (skeleton Laravel no resuelve), ver [[troubleshooting#10. Rebuild limpio del backend falla (composer create-project)|troubleshooting #10]]
 - [ ] Cargar precios/listas al catálogo GIGABYTE (la carga masiva trae productos sin precio)
 - [ ] Agregar SKUs reales a productos de Elit y Air (Ceven/Stylus ya los tienen via vincular-skus)
 - [ ] Resellers: comparativa de precios entre tiendas para el mismo SKU
@@ -211,6 +218,7 @@ BORRADOR → APROBADA → FACTURADA
 - [ ] Vista/edición de Ventas directa (hoy solo se accede via orden)
 - [ ] Campo `shipping_usd` editable en alguna UI (hoy default 0)
 - [ ] Anular nota de crédito (endpoint de estado ANULADA)
+- [x] Backup/restore completo en ZIP (datos + documentos + imágenes) — rama `feat/backup-completo-zip` (2026-07-02)
 - [x] Guía interactiva / tour de onboarding paso a paso por sección (2026-06-17)
 - [x] Depósito con "Stock Ilimitado" (mig 0041) + filtro de stock por depósito (Todos/Con/Sin) en Catálogo y Stock Bodega
 - [x] Carga masiva del catálogo GIGABYTE (campos del mail) + pestaña Catálogo editable
@@ -249,3 +257,4 @@ BORRADOR → APROBADA → FACTURADA
 ## Ver también
 
 [[gigaErp]] · [[arquitectura]] · [[changelog]] · [[memoria]] · [[modulos/productos]]
+

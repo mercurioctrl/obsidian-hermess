@@ -289,6 +289,19 @@ docker restart gigaerp-nginx   # SIEMPRE después de rebuild
 ```
 
 > ⚠️ El `docker cp` NO instala dependencias. Si el código usa una lib nueva (ej. PhpSpreadsheet vía `maatwebsite/excel`), hay que `docker compose build backend`. Ver [[troubleshooting#8. PhpSpreadsheet no instalado en el container|troubleshooting #8]].
+>
+> ⚠️ Hoy el `docker compose build backend` **falla** (skeleton Laravel no resuelve), así que el backend **solo** se puede actualizar en caliente vía `docker cp` + `docker restart`. Ver [[troubleshooting#10. Rebuild limpio del backend falla (composer create-project)|troubleshooting #10]].
+
+## Backup/restore completo (ZIP)
+
+`BackupController` (rutas admin `GET /api/backup/generate`, `POST /api/backup/restore`). Objetivo de diseño: **un solo artefacto autosuficiente** para levantar el dataset entero en otra instancia (clonar repo → `docker compose up` → restaurar ZIP).
+
+- **Formato:** ZIP con `ZipArchive` = `database.json` (volcado de las ~27 tablas en orden FK padres→hijos, igual que antes) + `files/…` con **todo** `storage/app/public` recursivo (adjuntos de marketing + imágenes del editor Markdown). Versión de payload `2.0`.
+- **Restore idempotente y retrocompatible:** detecta ZIP (por extensión o firma `PK\x03\x04`) vs JSON viejo. DB → `SET FOREIGN_KEY_CHECKS=0` + truncate en orden inverso + insert por chunks de 500. Archivos → extrae `files/*` a `storage/app/public` con merge/overwrite y guardia anti path-traversal (`..`).
+- **Storage persistente:** `storage/app/public` es un named volume (`uploads_storage`), sobrevive a rebuilds; el symlink `public/storage → storage/app/public` sirve los archivos.
+- **Límites subidos para archivos pesados:** PHP `upload_max_filesize/post_max_size/memory_limit=512M` (`conf.d/uploads.ini` en el Dockerfile) y nginx `client_max_body_size 512M` + timeouts 600s en `/api/`. Los defaults (2M/8M/20M) rompían cualquier ZIP con imágenes.
+
+Detalle de reglas en [[contexto#Backup/restore — reglas|contexto]] · registro en [[changelog#2026-07-02 — Backup/restore completo en ZIP (datos + archivos)|changelog]].
 
 ## Ver también
 
@@ -327,3 +340,4 @@ Para APIs externas públicas (ej. partpicker), el backend actúa como proxy:
 - `precio_sin_iva`, `precio_final`, `pct_iva` pueden ser null → defaults 0, 0, 21
 - Resellers: precio real en `precio_convertido`, no en `precio_ars` (siempre null)
 - `fabricante` = exact match case-insensitive; para LIKE usar `q`
+

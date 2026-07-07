@@ -1,7 +1,7 @@
 # Libre Opcion
 
 Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
-Última sincronización: 2026-06-13.
+Última sincronización: 2026-07-02.
 
 ---
 
@@ -89,6 +89,9 @@ Diagnóstico y fixes de Core Web Vitals para libreopcion.com.ar.
   - [[Libre Opcion/Gestion X/19 - Politica de Envios|19 · Política de Envíos]]
   - [[Libre Opcion/Gestion X/Informe Diagnostico Conversion - Mayo 2026|Informe de diagnóstico de conversión — Mayo 2026]]
   - [[Libre Opcion/Gestion X/combos-armables|Combos y PCs armables con tu catálogo (vs Compra Gamer)]]
+  - [[Libre Opcion/Gestion X/arquitectura|Arquitectura — pipelines de datos y entregables]]
+  - [[Libre Opcion/Gestion X/contexto|Contexto — orígenes de datos, forecast y decisiones]]
+  - [[Libre Opcion/Gestion X/memoria|Memoria operativa]] · [[Libre Opcion/Gestion X/changelog|Changelog]]
 
 ## Otras notas
 

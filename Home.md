@@ -10,6 +10,7 @@
   - [[Blu/blu-web-v1/blu-web-v1|blu-web-v1]] — Sitio web v1
   - [[Blu/bluFixture/bluFixture|bluFixture]] — Prode Copa Mundial 2026
   - [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]] — Mini ERP interno
+  - [[Blu/finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
   - [[Blu/rrhh/rrhh|rrhh]] — Recursos Humanos
   - `direccion/` — Dirección
 
@@ -30,7 +31,7 @@
 ## 🟠 NB (NewBytes)
 
 - [[NB]] — Índice general
-  - [[NB/Compras/Compras|Compras]] · [[NB/pedidos/pedidos|pedidos]] · `cobros/` · [[NB/inventario/inventario|inventario]] · `expedicion/` · `controldeprecios/` · `Comprobantes/` · `microservicio-envios/` · `sincroAfip/` · [[NB/limpieza-contactos-brevo/limpieza-contactos-brevo|limpieza-contactos-brevo]]
+  - [[NB/Compras/Compras|Compras]] · [[NB/pedidos/pedidos|pedidos]] · [[NB/cobros/cobros|cobros]] · [[NB/inventario/inventario|inventario]] · `expedicion/` · `controldeprecios/` · `Comprobantes/` · `microservicio-envios/` · `sincroAfip/` · [[NB/limpieza-contactos-brevo/limpieza-contactos-brevo|limpieza-contactos-brevo]]
 
 ## 🟡 Libre Opción
 

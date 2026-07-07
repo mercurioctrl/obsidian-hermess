@@ -117,6 +117,15 @@ En el recurso `providerOrderInbound` los datos de moneda del ingreso deben salir
 
 Relacionado: el `count()` de paginación usaba `COUNT(albprot.nnumalb)` **sin GROUP BY** → contaba todas las filas del join (inflado, generaba páginas de más). Pasó a `COUNT(DISTINCT albprot.nnumalb)`.
 
+### Cotización única en el header del detalle (COM-320, 2026-07-02)
+
+El detalle de Orden e Ingreso muestra **una sola** fila/valor de "Cotización" en el header (antes se mezclaban cotización y cotización fiscal). La regla, unificada en el computed `currencyQuoteComputed`:
+
+- **Pesos** (`orderDetail.currencyId === 'PSO'` → `isProviderInPesos`): usar **`currencyFiscalQuote`**, porque en pesos `currencyQuote` queda fijo en **1** y dividir/multiplicar por 1 no convierte nada. Los subtotales en dólares se calculan contra la fiscal.
+- **Dólares**: usar **`currencyQuote`**.
+
+Este trabajo (front) es el **consumidor** de los campos que se agregaron en la API el 2026-06-30 (ver [[contexto#Moneda y cotizaciones del Ingreso vienen de PedProt (2026-06-30)|arriba]]). Es coherente con la regla de display de [[contexto#Cotización en pesos (currencyQuote === 1) — display|más arriba]]. **Estado: en `gamma`, pendiente de bajar a `development`.**
+
 ## Infraestructura / Base de datos (gotcha importante)
 
 - **DB en uso (2026-06-30):** el `.env` de la API apunta a **`10.10.10.47:1433`** con user **`cmercurio`** (DB `NB_WEB`), entorno **saftel** (`compras.saftel.com`, companyCode 4). La DB canónica histórica `190.210.23.97:4444` (user `web`) quedó **comentada** en el `.env`. El 2026-06-29 se usó el mismo host con user `fcallipo`; el 2026-06-24 `db-nb-dev.blu.net.ar:41433` (cayó). Las 3 bases del join de login (`NB_WEB.dbo.usuarios_nb`, `NewBytes_DBF.dbo.agentes`, `NEW_BYTES.dbo.PGM_USUARIOS`) existen en `10.10.10.47` y conectan OK. Tras tocar `.env`, correr `php artisan config:clear && php artisan cache:clear` en el contenedor.

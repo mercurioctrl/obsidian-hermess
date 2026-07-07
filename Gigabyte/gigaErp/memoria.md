@@ -64,6 +64,12 @@ Patrones recurrentes, gotchas y workflow del proyecto. Consultar antes de cada s
 **Causa:** El front cachea el objeto `usuario` en localStorage (authStore); no se refresca solo.
 **Fix:** El usuario debe cerrar e iniciar sesión. El backend sí valida siempre. Ver [[contexto#Listas de precio — reglas]].
 
+### 10. El rebuild limpio del backend está roto (2026-07-02)
+
+**Síntoma:** `docker compose build backend` falla en `composer create-project laravel/laravel:^11.0` ("requirements could not be resolved").
+**Causa:** el Dockerfile reconstruye Laravel desde cero cada build y el skeleton ^11.0 ya no resuelve deps.
+**Consecuencia:** el backend **solo** se actualiza en caliente (`docker cp` + `docker restart`, que preserva el writable layer; un `compose up --build`/`down` lo descarta). Así se desplegó el backup ZIP. Ver [[troubleshooting#10. Rebuild limpio del backend falla (composer create-project)]].
+
 ---
 
 ## Workflow de deploy (sin rebuild)

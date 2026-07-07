@@ -20,7 +20,7 @@ Ver [[Base de Datos]]. Tablas: `tareas`, `tarea_adjuntos`, `tarea_comentarios`, 
 - `TareaController`: index (sin paginar), store (auto-sigue creador+asignado), show / showPorCodigo, update (detecta diffs → notifica), reordenar (drag&drop), adjuntos, imágenes, comentarios, subtareas, vínculos, seguir/dejar de seguir. Ver [[Backend - API]].
 - `Proyecto::derivarPrefijo`, `Tarea::getCodigoAttribute`, `Tarea::vinculadas` (ambas direcciones).
 - **NotificacionService** notifica a los seguidores (menos al actor): in-app (`notificaciones`) + push, correo (`TareaCambioMail`), WhatsApp.
-- **Web Push (VAPID, `minishlink/web-push`)**: `PushService`, endpoints `/push/*`, claves en `.env`. Requiere HTTPS en prod.
+- **Web Push (VAPID, `minishlink/web-push`)**: `PushService`, endpoints `/push/*`. Claves VAPID en **`mini-saas/.env`** (el docker-compose las inyecta en backend+scheduler; pisan a `backend/.env`). Requiere HTTPS en prod. Ver [[Stack e Infraestructura#Variables de entorno .env]].
 - **WhatsApp**: `WhatsAppService` reutiliza la Inbox API ([[Modulo WhatsApp Inbox]]); se configura en pantalla Configuración (DB).
 - Búsqueda global incluye tareas (link `/tareas/{codigo}`).
 
