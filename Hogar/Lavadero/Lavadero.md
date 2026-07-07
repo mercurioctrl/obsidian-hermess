@@ -119,7 +119,8 @@ Reforma del lavadero del hogar para instalar nuevo lavarropas, mesada con bacha,
 | 2026-05-15  | Mario (contratista) — pago 6                     | $1.000.000   |
 | 2026-05-21  | Mario (contratista) — pago                       | $400.000     |
 | 2026-06-04  | Mario (contratista) — pago 7                     | $500.000     |
-| **Total pagado** |                                             | **$6.300.000** |
+| 2026-07-07  | Mario (contratista) — pago 8                     | $1.000.000   |
+| **Total pagado** |                                             | **$7.300.000** |
 
 ## Planos
 
