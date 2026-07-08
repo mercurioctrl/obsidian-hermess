@@ -207,6 +207,49 @@ tests/Unit/Service/Box/Trade/{BankPayment,BoxPayment}Test.php   Tests
 - Fixes de tipos: `movementBankId` de `nonTaxVoucher` casteaba mal `null → 0`; se ajustó
   el tipo de propiedad en `BoxTrade` para aceptar `BoxTradeServiceAudit`.
 
+## Dashboard de Impuestos (Statistics/Taxes)
+
+Dashboard de carga impositiva mensual. Sigue el patrón **Domain** (vertical slice),
+calcado de `Statistics/Boxes`. Endpoint `GET /statistics/taxes` protegido por
+`PermissionMiddleware`.
+
+```
+Backend (src/Domain/Statistics/Taxes/):
+  Controller/TaxesStatistics.php   __invoke → service->getTaxesByMonth(queryParams)
+  Controller/TaxesException.php     success()/error() (helpers JSON)
+  Services/TaxesStatisticsService.php
+  Repositories/TaxesStatisticsRepository.php   toda la lógica de agregación SQL
+Wiring:
+  src/App/Repositories.php              → taxes_repository
+  src/App/Service/ServicesStatistics.php → taxes_service
+  src/App/Routes/StatisticsRoute.php    → GET /statistics/taxes (PermissionMiddleware)
+
+Frontend:
+  pages/dashboard/taxes.vue    ruta Nuxt `dashboard-taxes`, chart + tablas
+  store/taxes.js               store Vuex (getTaxes → statistics/taxes)
+  layouts/basic.vue            ítem de menú "Impuestos" (top-level, $can('viewTaxes'))
+```
+
+### Fuentes de datos (columnas de fecha = datetime)
+| Concepto | Tabla | Monto | Fecha | Jurisdicción |
+|---|---|---|---|---|
+| IVA débito (ventas) | `NewBytes_DBF.dbo.FP_FactWebCliEncabezado` | `TOTIVAS_EnviadoAFIP` | `DFECFAC` | — |
+| IVA crédito (compras) | `NewBytes_DBF.dbo.AfipComprobantesRecibidos` | `total_iva` | `fecha_emision` | — |
+| Percepciones IIBB | `NewBytes_DBF.dbo.FP_FactWebCliEncabezado` | `ImportePercepCLi` | `DFECFAC` | aprox. `clientes.ID_PROVINCIA` |
+| Retenciones IIBB | `NEW_BYTES.dbo.retentionIIBB` | `amountPaid` | `date` | exacta `provinceId` |
+| Retenciones Ganancias | `NEW_BYTES.dbo.ganancias` | `profit_amount` | `created_at` | — (tabla vacía hoy) |
+
+### Response (shape)
+- `range { from, to }` (Ymd)
+- `byMonth[]` — por mes: `ivaDebito/ivaCredito/ivaAPagar`, `percepcionesIibb` (+ `Arba/Agip/Otras`), `retencionesIibb` (+ `Arba/Agip/Otras`), `retencionesGanancias`, `total`
+- `totals` — mismos campos, sumados
+- `jurisdictions[]` — filas ARBA / AGIP / Otras (con `children` por provincia bajo Otras): `{ key, jurisdiccion, percepciones, retenciones, total }`
+
+### Decisiones de diseño
+- **IVA a pagar = débito − crédito**. Un valor negativo = saldo técnico a favor. `total` mensual = IVA a pagar + percepciones + retenciones IIBB + retenciones ganancias.
+- **Jurisdicciones**: mapeo `FP_Provincias.Id_Provincia` → AGIP=1 (Capital Federal), ARBA=2 (Buenos Aires), resto = "Otras". Retenciones tienen `provinceId` propio (exacto); percepciones no tienen jurisdicción a nivel factura → se **aproximan** por la provincia del cliente (reconcilia con el total `ImportePercepCLi`).
+- **Fechas SQL Server**: parámetros como `YYYYMMDD` (no `YYYY-MM-DD` — el locale interpreta Y-D-M y rompe con mes > 12). Filtro `>= inicio AND < finExclusivo` (día siguiente) para incluir todo el último día. `LANULADA` es `bit` → `= 0`.
+
 ## Docker (dev)
 - Container: `cobros-api-rest`, `network_mode: host`, Apache escuchando en **puerto 8083**
   (`docker/apache/ports.conf` → `Listen 8083`). `app/` montado por volumen (PHP live sin rebuild).

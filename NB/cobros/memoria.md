@@ -1,7 +1,7 @@
 # Memoria — CashBox Cobros
 
 Consolidación de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-var-www-nb-cobros/memory/`). Sincronizada: 2026-07-02.
+(`~/.claude/projects/-var-www-nb-cobros/memory/`). Sincronizada: 2026-07-08.
 
 ## Proyecto
 
@@ -30,6 +30,15 @@ web `development` (minúscula). Prod `main`, staging `Gamma`/`gamma`. Ver [[cont
    Ver [[arquitectura#Módulo de Préstamos de Capital — archivos]].
 3. **Trade Audit Logger** — logging de auditoría estructurado del flujo de cobro.
    Ver [[arquitectura#Trade Audit Logger]].
+4. **Dashboard de Impuestos** (2026-07-08) — carga impositiva mensual (IVA a pagar,
+   percepciones/retenciones IIBB con desglose ARBA/AGIP/Otras, retenciones ganancias).
+   Ver [[arquitectura#Dashboard de Impuestos (Statistics/Taxes)]].
+
+### Gotchas de la base (importante)
+- Fechas SQL Server: usar `YYYYMMDD` en parámetros (no `YYYY-MM-DD` — locale Y-D-M rompe).
+- `FP_FactWebCliEncabezado.LANULADA` es `bit` → comparar `= 0`.
+- `/heartbeat` da 500 aunque la base ande (bug SSL propio del repo). DB host real:
+  `190.210.23.97:4444` (`NB_WEB`). Ver [[contexto#Bugs conocidos (preexistentes, no del feature)]].
 
 ## Ver también
 - [[cobros]] · [[arquitectura]] · [[contexto]] · [[changelog]] · [[stack]]

@@ -25,6 +25,7 @@
 | @nuxtjs/auth-next | latest | Autenticación JWT |
 | vee-validate | 3.x | Validación de formularios |
 | chart.js | 3.x | Gráficos |
+| vue-chartjs | 4.x | Wrapper Vue para chart.js (dashboards) |
 | LESS | — | Estilos |
 | ESLint + Prettier | — | Linting |
 | PM2 | — | Process manager (cluster mode) |

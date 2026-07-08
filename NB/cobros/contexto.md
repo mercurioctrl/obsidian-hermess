@@ -35,6 +35,15 @@
 - No es `totalUsd × cotización actual`
 - Es la suma fila a fila de `amountUsd × quote` de cada movimiento individual
 
+### Dashboard de Impuestos (carga impositiva mensual)
+- **IVA a pagar** = IVA débito (ventas, `TOTIVAS_EnviadoAFIP`) − IVA crédito (compras, `AfipComprobantesRecibidos.total_iva`). Negativo = saldo técnico a favor.
+- **Carga impositiva total** del mes = IVA a pagar + percepciones IIBB + retenciones IIBB + retenciones ganancias.
+- **Jurisdicciones** (`FP_Provincias.Id_Provincia`): AGIP = 1 (Capital Federal), ARBA = 2 (Buenos Aires), resto = "Otras".
+- **Retenciones IIBB**: jurisdicción exacta (cada registro tiene `provinceId`).
+- **Percepciones IIBB**: NO tienen jurisdicción a nivel factura → se aproximan por la provincia registrada del cliente (`clientes.ID_PROVINCIA`). Es aproximado (cliente multi-jurisdicción puede no ser fiel) pero reconcilia con el total.
+- La tabla `NEW_BYTES.dbo.ganancias` (retenciones ganancias) está **vacía** hoy → esa categoría muestra 0 hasta que se carguen datos.
+- `MS_REMITO_PERCEPCIONES.IMPPERCEP_ARBA/CABA` NO sirve para desglosar percepciones: cubre solo remitos (miles vs millones), no reconcilia con `ImportePercepCLi`.
+
 ## Decisiones tomadas
 
 ### Fix OpenSSL para SQL Server (dev)
@@ -60,6 +69,8 @@
 ## Bugs conocidos (preexistentes, no del feature)
 1. **Búsqueda por CUIT**: `C.ccodcli = {stringFilter}` sin comillas → falla si el input tiene `-`
 2. **companyCode = "null"**: el frontend envía el string literal `"null"` cuando no hay companyCode
+3. **`/heartbeat` da 500 aunque la base esté OK**: `Repository/Health/HeartbeatRepository` arma su propio PDO **sin** `Encrypt=0; TrustServerCertificate=1`, entonces el ODBC Driver 18 falla la verificación del certificado self-signed. La conexión real (`src/App/Database.php`) sí los incluye y funciona. No confiar en el heartbeat para saber si la base está viva.
+4. **DB host en `app/.env`** (gitignored): server alcanzable = `190.210.23.97:4444` (DB `NB_WEB`). Traía `190.210.23.108:1433` que da login timeout. Si el front no carga datos, revisar `DB_HOST`/`DB_PORT`.
 
 ## Convención de ramas (importante)
 
