@@ -2,9 +2,9 @@
 
 Sistema de inventario de NB. Monorepo con frontend SPA y backend API REST.
 
-**Última sincronización:** 2026-07-02
+**Última sincronización:** 2026-07-08
 
-> **Estado:** la tanda de `regularizacion-stock` (modal de **seriales**, cache de competencia, **índices P1–P3** en prod —grilla de Stock −67%—, word-break global, fix N+1 en selldiscount, mejoras de grilla) ya está **mergeada a `development`/`Development`** (front PR #388, back PR #288). Trabajo local ahora sobre `development`. DB local movida a `10.10.10.47,1433` (usuario `cmercurio`). Ver [[changelog]], [[contexto]] y [[performance-indices]].
+> **Estado:** ambos repos en `development`/`Development`, actualizados por pull — entró **historial de costos/precios** (front PR #390, back PR #289/#290; columna **PCAM**, dockerización del back). En rama de feature sin PR: **ajuste manual crea la fila de stock** cuando no existe (`manualAdjustments`, en vez de 404). Trabajo local sobre `development`; DB local en `10.10.10.47,1433` (usuario `cmercurio`). Ver [[changelog]], [[modulo-regularizacion#Ajuste manual de nstock_d1 (manualAdjustments)]] y [[modulo-precios]].
 
 ## Sub-proyectos
 

@@ -1,5 +1,14 @@
 # Changelog — inventario
 
+## 2026-07-08 — Pull `development` + ajuste manual crea fila de stock inexistente
+
+Sesión operativa en Linux (`/var/www/nb/inventario`). Pull de ambos repos y un cambio de backend en rama de feature.
+
+- **Pull integrado**: ambos repos ya en `development`/`Development`, actualizados por fast-forward. Entró la feature **historial de costos/precios** (front PR #390 `44ac6fd`: `PriceCostHistoryModal.vue`, columna **PCAM**, DT2/DT3 editables; back PR #289/#290 `2b69c7a`: `core/controllers/prices/prices.py`, dockerización del microservicio + `requirements.txt` + workflow de staging). Ver [[modulo-precios]].
+- **feat(stocks): ajuste manual crea la fila de stock cuando no existe** (rama `feature/manual-adjust-crea-stock-inexistente`, commit `1b24882`, pusheada; **PR sin abrir**). `POST /itemsStocks/{itemId}/manualAdjustments` (`manual_adjust_item_stock` en `stocks.py`) devolvía `404 "Item no encontrado"` cuando el artículo no tenía fila en `stocks` para el `ID_ALMACEN` pedido (mensaje engañoso: el artículo existía, faltaba la fila de stock en ese almacén; `warehouseStockId` → `ID_ALMACEN`). Ahora, si la fila `(ID_ARTICULO, ID_ALMACEN)` no existe, **la crea** con todos los valores en 0 (mismo `INSERT` de 18 columnas que la transferencia entre almacenes `stocks.py:2100` / alta de producto / kits) y sigue el flujo normal (registro histórico `previous=0 → current=amount`). **Guards**: solo crea si el artículo existe en `articulo` y el almacén en `FP_Almacen` (si no, mantiene el 404); contempla creación concurrente (`IntegrityError` → re-SELECT). Verificado con `py_compile`; NO probado contra la DB. Ver [[modulo-regularizacion#Ajuste manual de nstock_d1 (manualAdjustments)]].
+
+Servicios locales levantados: front `:3000` (Nuxt, `development`), back `:8000` (FastAPI, rama feature).
+
 ## 2026-07-02 — Merge a `development` + nuevo backend de DB (Linux)
 
 Sesión operativa en Linux (`/var/www/nb/inventario`), sin cambios de código propios.

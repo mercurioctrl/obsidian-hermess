@@ -1,10 +1,16 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-07-02. (Memoria local también en
+Última sincronización: 2026-07-08. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Ajuste manual crea la fila de stock si no existe (2026-07-08)
+`POST /itemsStocks/{itemId}/manualAdjustments` (`manual_adjust_item_stock`, `stocks.py`) devolvía `404 "Item no encontrado"` cuando el artículo no tenía fila en `stocks` para el `ID_ALMACEN` pedido — mensaje engañoso: el artículo existía, faltaba la fila de stock en ese almacén (`warehouseStockId` → `ID_ALMACEN`). Ahora, si `(ID_ARTICULO, ID_ALMACEN)` no existe, **la crea** con todo en 0 (mismo `INSERT` de 18 columnas que la transferencia entre almacenes `stocks.py:2100` / alta de producto / kits) y sigue el flujo normal (`previous=0 → current=amount`). **Guards**: solo crea si el artículo existe en `articulo` y el almacén en `FP_Almacen`; concurrencia manejada (`IntegrityError` → re-SELECT). Rama `feature/manual-adjust-crea-stock-inexistente` (`1b24882`), **PR sin abrir**. `alter_stock_d1` (permiso `alterStock`) tiene el mismo patrón de 404 y NO se tocó. Verificado con `py_compile`; no probado contra la DB. Ver [[modulo-regularizacion#Ajuste manual de nstock_d1 (manualAdjustments)]].
+
+### Pull `development` + historial de costos/precios (2026-07-08)
+Ambos repos actualizados por pull (fast-forward) en `development`/`Development`. Entró la feature **historial de costos/precios**: front PR #390 (`PriceCostHistoryModal.vue`, columna **PCAM**, DT2/DT3 editables) y back PR #289/#290 (`core/controllers/prices/prices.py`, **dockerización** del microservicio con `Dockerfile`+`requirements.txt`+workflow de staging). El `.env` local del back se preservó. Ver [[changelog]] y [[modulo-precios]].
 
 ### Estado git: tanda mergeada a development + DB nueva (2026-07-02)
 La tanda de `regularizacion-stock` ya está **mergeada a `development`/`Development`** en ambos repos (front `Merge PR #388`, back `Merge PR #288`). Ambos repos parados en `development` (front) / `Development` (back). No había commits locales pendientes; solo `.env` y `ms-metadata/docs/` sin trackear (preservados). **DB local** movida a `10.10.10.47,1433` usuario `cmercurio` (alt: `190.210.23.97,4444` / `emanzando_devweb01`). Gotcha: cambiar la DB en `.env` requiere **reiniciar uvicorn** (`--reload` no relee `load_dotenv()`). Ver [[changelog]] y [[contexto]].

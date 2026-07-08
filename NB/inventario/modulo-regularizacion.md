@@ -159,6 +159,24 @@ fantasma removido, 0 imposibles restantes en cc4, traza en `registro_stock`. 65 
 si no cap a `ncanent` (nunca 0)**. Bajar ACREDITADO empuja algunos deltas a negativo (benigno).
 Es fix del campo denormalizado del lado stock, no contable.
 
+## Ajuste manual de nstock_d1 (manualAdjustments)
+
+`POST /itemsStocks/{itemId}/manualAdjustments` → `manual_adjust_item_stock` (`stocks.py`).
+Ajuste directo del campo `nstock_d1` de un artículo, gateado por permiso `regularizacion = 1`
+(en `NB_WEB.dbo.permisos_agente`), transaccional con `UPDLOCK/ROWLOCK`, no-op si
+`amount == nstock_d1` actual, y traza en `NB_WEB.dbo.registro_stock` (`justificacion = reason`).
+El body `warehouseStockId` mapea directo a `ID_ALMACEN`. Función hermana:
+`alter_stock_d1` (mismo patrón, permiso `alterStock`).
+
+**Crea la fila si no existe (2026-07-08)**: antes devolvía `404 "Item no encontrado"` cuando el
+artículo no tenía fila en `stocks` para ese `ID_ALMACEN` (mensaje engañoso: faltaba la fila de
+stock, no el artículo). Ahora, si `(ID_ARTICULO, ID_ALMACEN)` no existe, la crea con todo en 0
+(mismo `INSERT` de 18 columnas que la transferencia entre almacenes `stocks.py:2100` / alta de
+producto / kits) y el ajuste sigue normal (`previous=0 → current=amount`). **Guards**: solo crea
+si el artículo existe en `articulo` y el almacén en `FP_Almacen` (si no, 404); creación concurrente
+manejada (`IntegrityError` → re-SELECT). Rama `feature/manual-adjust-crea-stock-inexistente`
+(`1b24882`, **PR sin abrir**). `alter_stock_d1` **no** se tocó (mismo patrón de 404 pendiente).
+
 ## Pendientes
 
 - Ninguna acción de regularización está **wireada a endpoint** en `main.py` (todas vía scripts ad-hoc).
