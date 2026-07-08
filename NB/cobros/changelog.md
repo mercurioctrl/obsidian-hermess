@@ -111,6 +111,36 @@ Grupo de rutas `/afipPurchases` (backend), `pages/afipPurchases.vue` + `componen
 
 ---
 
+## 2026-07-08 — Dashboard de Impuestos por mes
+
+### chore: sync a ramas de integración + levantar servicios
+
+- Ambos repos ya estaban en su rama de integración (`Development` / `development`), `git pull` sin novedades.
+- Backend `cobros-api-rest` ya corriendo (8083). Frontend: PM2 estaba vacío → `npm run build` + `pm2 start ecosystem.config.js` (2 instancias online, 3002).
+
+### feat: Dashboard de Impuestos (Statistics/Taxes)
+
+Nuevo dashboard que muestra la carga impositiva mensual (IVA a pagar, percepciones, retenciones). Verificado end-to-end contra la base real (`NB_WEB` @ `190.210.23.97:4444`).
+
+**Backend (`api-rest-cobros`, patrón Domain):**
+- `GET /statistics/taxes?between=DD-MM-YYYY_DD-MM-YYYY` (default: mes en curso), `PermissionMiddleware`.
+- Dominio `src/Domain/Statistics/Taxes/` (Controller + Service + Repository), registrado en `Repositories.php` (`taxes_repository`), `Service/ServicesStatistics.php` (`taxes_service`), `Routes/StatisticsRoute.php`.
+- Agrega por mes: **IVA a pagar** = débito (`FP_FactWebCliEncabezado.TOTIVAS_EnviadoAFIP`) − crédito (`AfipComprobantesRecibidos.total_iva`); **Percepciones IIBB** (`ImportePercepCLi`); **Retenciones IIBB** (`retentionIIBB.amountPaid`); **Retenciones Ganancias** (`ganancias.profit_amount`, tabla hoy vacía → 0).
+- **Desglose por jurisdicción** (`jurisdictions`): ARBA (prov 2 Bs.As.) / AGIP (prov 1 CABA) / Otras (resto, con `children` por provincia). Retenciones con jurisdicción **exacta** (`retentionIIBB.provinceId`); percepciones **aproximadas** por provincia del cliente (`clientes.ID_PROVINCIA`) — reconcilia con el total.
+
+**Frontend (`cobros-web-app-v1`):**
+- `pages/dashboard/taxes.vue` (ruta Nuxt `dashboard-taxes`): selector de rango (mes en curso por defecto), tarjetas de totales, gráfico de barras (vue-chartjs), tabla mensual + fila de totales, y tabla "Por jurisdicción" con fila **Otras expandible** al detalle por provincia.
+- `store/taxes.js` (módulo Vuex auto-registrado).
+- Entrada de menú **"Impuestos"** en `layouts/basic.vue` (top-level, gateada por `$can('viewTaxes')`). Se agregó después del bloque Cobros para no romper los índices hardcodeados de `updateMenuPermissions`.
+
+**Fix de entorno (dev, no commiteado):**
+- `app/.env`: `DB_HOST`/`DB_PORT` pasados de `190.210.23.108:1433` (login timeout) a `190.210.23.97:4444` (alcanzable). Sin esto ni el front ni la API leían la base.
+
+## Ver también
+- [[arquitectura#Dashboard de Impuestos (Statistics/Taxes)]] · [[contexto]] · [[stack]] · [[memoria]]
+
+---
+
 ## 2026-05-20 — Refinamientos y nuevas funcionalidades del módulo de capital
 
 ### fix: payCapitalDebt no toca la CC del cliente
