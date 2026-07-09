@@ -18,7 +18,8 @@ Sistema financiero para gestión de cobros, pagos, cheques, cajas y cuentas corr
 - [[changelog]] — historial de cambios por fecha
 - [[contexto]] — reglas de negocio, decisiones, bugs conocidos, TODOs
 - [[memoria]] — memoria persistente de Claude (setup local, ramas, features)
-- [[intimacion-agip-percepciones]] — intimación AGIP $73M por percepciones IIBB CABA mal aplicadas (dos bloques: alícuota vieja + default 0 en vez de 6%)
+- [[intimacion-agip-percepciones]] — intimación AGIP $73M por percepciones IIBB CABA (dos bloques: $66,7M contestable + $6,4M error real)
+- [[mail-estudio-contable]] — borrador de mail al estudio contable con el análisis y el Excel adjunto
 
 ## Ver también
 
