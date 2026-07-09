@@ -1,4 +1,4 @@
-# Intimación AGIP — Percepciones IIBB CABA
+	# Intimación AGIP — Percepciones IIBB CABA
 
 > Análisis de la intimación de AGIP/ARCIBA a **NB DISTRIBUIDORA MAYORISTA SRL** (CUIT 30-70924663-8, agente de recaudación 14862-6) por aplicar mal la alícuota de percepción de Ingresos Brutos CABA (Res. 352-AGIP-2022).
 
