@@ -8,16 +8,22 @@
 
 ---
 
+## Regla que gobierna el análisis
+
+> **Si el sujeto NO figura en el "Padrón de Regímenes Generales", NO corresponde percibir (alícuota 0).**
+
+Esta es la regla operativa. El padrón publicado por AGIP (`ARDJU008`, mensual, alícuota por CUIT) es la **única** fuente que un agente de recaudación puede consultar para saber a quién percibir y a qué alícuota.
+
 ## Conclusión ejecutiva
 
-AGIP reclama **$73.103.974,46** en total (ene-2024 → may-2026, 27 periodos, 260 CUIT únicos, 694 líneas). Al cruzar cada CUIT intimado contra el padrón AGIP real de su mes, aparecen **dos bloques claramente distintos**:
+AGIP reclama **$73.103.974,46** en total (ene-2024 → may-2026, 27 periodos, 260 CUIT únicos, 694 líneas). Al cruzar cada CUIT intimado contra el padrón AGIP real de su mes, aparecen **dos bloques distintos, con consecuencias opuestas**:
 
-| Bloque | Periodos | ¿CUIT en padrón? | Qué pasó | Saldo | % del total |
-|---|---|---|---|---|---|
-| **A** | 2024/01 → 2025/05 | **SÍ (100%)** | Se aplicó una alícuota **menor** a la del padrón vigente | ~$6,4M | 9% |
-| **B** | 2025/06 → 2026/05 | **NO (≈0%)** | AGIP exige **6%** (máxima), el sistema aplicó **0%** | ~$66,7M | **91%** |
+| Bloque | Periodos | ¿CUIT en padrón? | Qué hizo el sistema | Interpretación | Saldo | % |
+|---|---|---|---|---|---|---|
+| **A** | 2024/01 → 2025/05 | **SÍ (100%)** | Aplicó **menos** que lo asignado | **Error real → rectificar** | ~$6,4M | 9% |
+| **B** | 2025/06 → 2026/05 | **NO (verificado)** | Aplicó **0%** | **Correcto → intimación CONTESTABLE** | ~$66,7M | **91%** |
 
-El quiebre arranca en **may-2025** (30/49 en padrón) y desde **jun-2025** los CUIT intimados dejan de figurar en el padrón, coincidiendo con la explosión del saldo mensual (de <$1M a $4–12M/mes).
+**El grueso de la deuda ($66,7M = 91%) es el bloque defendible:** esos CUIT no estaban en el padrón, así que aplicar 0% fue lo correcto según la regla. El quiebre arranca en **may-2025** (30/49) y desde **jun-2025** los CUIT intimados dejan de figurar en el padrón, coincidiendo con la explosión del saldo mensual (de <$1M a $4–12M/mes) y con un salto en la cantidad de sujetos intimados por mes (de ~15 a ~50).
 
 ---
 
@@ -27,26 +33,29 @@ En el **Bloque A**, donde los CUIT intimados figuran en el padrón, la alícuota
 
 > **235 de 235 casos coinciden, 0 difieren.**
 
-Esto descarta la duda de "¿AGIP usa otro padrón?". El padrón de **Regímenes Generales (`ARDJU008`)** es exactamente el que usa AGIP para intimar.
+Esto confirma que el padrón de **Regímenes Generales (`ARDJU008`)** es exactamente el que usa AGIP para intimar, y valida la metodología del cruce.
 
 ---
 
-## Causa raíz del Bloque B (el 91% de la deuda)
+## La contradicción del Bloque B (el 91% de la deuda)
 
-Cuando un CUIT **no está** en el padrón, la regla ARCIBA es percibir a la **alícuota máxima (6%)**. El sistema, en cambio, aplica **0%**. El desglose es contundente:
+La carta de AGIP afirma, textualmente:
 
-- **Lo que AGIP dice que debías aplicar:** 433 filas a **6%** + 4 a 5%.
-- **Lo que el sistema realmente aplicó:** 432 filas a **0%** + 5 a 3%.
+> *"...la alícuota por sujeto asignada en el **'Padrón de Regímenes Generales'**... Las alícuotas aplicadas a contribuyentes **que forman parte de este padrón**... es incorrecta..."*
 
-Es exactamente el bug de `percepciones_nb/guardarPercepcion_task.php`:
+**Pero es falso:** los CUIT intimados en el Bloque B **NO figuran** en el padrón `ARDJU008` publicado por AGIP para esos meses. Verificación decisiva (búsqueda cruda `grep -a`, sin parsear, sobre los archivos completos de 1,57M líneas):
 
-```php
-$alicuota = $DATOS ? (float) $DATOS["ALICUOTA_PERCEPCION"] : 0;
-```
+- Los CUIT intimados de 2025/06 aparecen **0 veces** en los padrones de 06, 07 **y** 08-2025.
+- Controles positivos OK: el CUIT propio de NB (30709246638) y un CUIT del Bloque A **sí** aparecen (1 vez cada uno).
+- Cruce completo de los 27 meses: 2025/06=0/50, 2025/07=0/47, 2025/08=0/43, 2025/09=0/31, 2025/11=0/27, 2026/03=0/48, 2026/05=0/52 (ver tabla abajo).
 
-Cuando el CUIT **no aparece** en el padrón (`$DATOS` vacío), el sistema pone **0 en lugar de 6%**.
+**Conclusión:** aplicar 0% a esos sujetos fue **correcto** según la regla. AGIP no puede sostener que "forman parte de este padrón" cuando su propio padrón publicado no los contiene. El Bloque B ($66,7M) es **contestable**, y el Excel — que marca "NO figura en padrón" fila por fila — es la prueba a favor de NB.
 
-A esto se suma que el cálculo del cobro usa `clientes.percepcion` directo con `ISNULL(...,0)` y **sin chequear `percepcion_vencimiento`** (ver `api-rest-cobros/app/src/Repository/{PendingCharges,Liquidation,Tradable}Repository.php`), y que el pipeline que actualiza esa columna (`percepciones_nb/`, repo aparte) **no corría por cron** — `aplicarPercepciones.log` aplicó 0 el 01-jun y 01-jul (staging vacío).
+---
+
+## Lo que sí es error real: Bloque A (~$6,4M)
+
+En 2024/01→2025/05 los sujetos **sí** estaban en el padrón y el sistema aplicó una alícuota **menor** a la asignada. Esto es una omisión genuina de percepción y corresponde rectificar. El origen técnico: el cálculo del cobro usa `clientes.percepcion` con `ISNULL(...,0)` y **sin chequear `percepcion_vencimiento`** (ver `api-rest-cobros/app/src/Repository/{PendingCharges,Liquidation,Tradable}Repository.php`), y el pipeline que actualiza esa columna (`percepciones_nb/`, repo aparte) quedó desactualizado / sin correr por cron.
 
 ---
 
@@ -96,13 +105,19 @@ Leyenda: **enPad/tot** = CUIT intimados que figuran en el padrón / total intima
 
 ---
 
-## Pregunta para el estudio contable
+## Postura para el estudio contable
 
-La duda ya **no** es "¿es el padrón correcto?" (lo es, probado 235/235). La pregunta es:
+La evidencia sostiene una defensa fuerte para el Bloque B:
 
-> **¿Confirman que la regla de "sujeto no incluido en padrón ⇒ 6% obligatorio" aplica?**
+1. **Regla:** sujeto no incluido en el padrón ⇒ no se percibe.
+2. **Hecho verificado:** los CUIT del Bloque B no figuran en el padrón `ARDJU008` publicado por AGIP de esos meses (grep crudo sobre los archivos completos, controles positivos OK).
+3. **Contradicción de AGIP:** la intimación afirma que "forman parte de este padrón", lo cual el propio padrón publicado desmiente.
 
-Si la respuesta es sí, el **Bloque B ($66,7M, 91% de la deuda) es indefendible** y el fix técnico es que el pipeline aplique **6% (no 0)** cuando el CUIT no está en el padrón.
+→ **Contestar el Bloque B ($66,7M)** aportando el padrón publicado como prueba de que esos sujetos no estaban incluidos. La carga de probar lo contrario queda en AGIP.
+
+→ **Reconocer/rectificar el Bloque A ($6,4M)**, donde sí hubo omisión (sujetos en padrón, alícuota aplicada menor a la asignada).
+
+**Punto a chequear con el estudio:** por qué AGIP intima esos sujetos como "parte del padrón" si no están publicados — si existe un padrón interno/de riesgo no publicado, o si es un error de la intimación masiva. No se encontró otro padrón AGIP publicado (solo `ARDJU008`); la landing de padrones no lista un padrón de "alto riesgo" separado.
 
 ---
 
