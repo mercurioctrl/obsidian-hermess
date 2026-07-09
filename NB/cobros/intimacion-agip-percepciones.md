@@ -53,6 +53,29 @@ La carta de AGIP afirma, textualmente:
 
 ---
 
+## Qué tienen en común los CUIT del Bloque B (patrón encontrado)
+
+Cruce de los 147 CUIT del Bloque B contra `clientes` (solo lectura). El eje que los separa del Bloque A es **la jurisdicción**:
+
+| Atributo | Bloque B (NO en padrón) | Bloque A (en padrón) |
+|---|---|---|
+| **Provincia = Buenos Aires** (`ID_PROVINCIA=2`) | **96%** (141/147) | 40% |
+| Provincia = CABA (`ID_PROVINCIA=1`) | 3% (4) | 55% |
+| **Tienen `percepcion_arba` > 0** | **92%** (135) | 64% |
+| Tienen `percepcion` (CABA) > 0 | **3%** (5) | 96% |
+| Personas físicas (CUIT 20/23/27) | 83% | 51% |
+| Solapamiento de CUIT entre bloques | **0** (conjuntos disjuntos) | — |
+
+**Denominador común = jurisdicción.** El Bloque B son clientes **domiciliados en provincia de Buenos Aires, sujetos a percepción de ARBA, no de AGIP/CABA**. Por eso:
+
+1. No figuran en el padrón de Regímenes Generales de AGIP (son contribuyentes de provincia, no de CABA).
+2. El sistema les aplica (correctamente) percepción **ARBA**, y CABA en 0.
+3. **AGIP los intima igual reclamando 6% de percepción CABA** → tiene toda la pinta de un **error de jurisdicción de la intimación**: AGIP reclama percepción de Capital Federal sobre sujetos de provincia de Buenos Aires.
+
+El resto de atributos (LibreOpción, `excluirPercepcion`, condición IVA, inactivo, año de alta, IIBB propio) **no diferencian** los bloques. Refuerza la postura de contestar el Bloque B.
+
+---
+
 ## Lo que sí es error real: Bloque A (~$6,4M)
 
 En 2024/01→2025/05 los sujetos **sí** estaban en el padrón y el sistema aplicó una alícuota **menor** a la asignada. Esto es una omisión genuina de percepción y corresponde rectificar. El origen técnico: el cálculo del cobro usa `clientes.percepcion` con `ISNULL(...,0)` y **sin chequear `percepcion_vencimiento`** (ver `api-rest-cobros/app/src/Repository/{PendingCharges,Liquidation,Tradable}Repository.php`), y el pipeline que actualiza esa columna (`percepciones_nb/`, repo aparte) quedó desactualizado / sin correr por cron.
@@ -117,7 +140,7 @@ La evidencia sostiene una defensa fuerte para el Bloque B:
 
 → **Reconocer/rectificar el Bloque A ($6,4M)**, donde sí hubo omisión (sujetos en padrón, alícuota aplicada menor a la asignada).
 
-**Punto a chequear con el estudio:** por qué AGIP intima esos sujetos como "parte del padrón" si no están publicados — si existe un padrón interno/de riesgo no publicado, o si es un error de la intimación masiva. No se encontró otro padrón AGIP publicado (solo `ARDJU008`); la landing de padrones no lista un padrón de "alto riesgo" separado.
+**Hipótesis con más fuerza (error de jurisdicción):** el 96% de los CUIT del Bloque B son de **provincia de Buenos Aires** y el 92% tienen percepción **ARBA** cargada, no CABA. AGIP estaría reclamando percepción de Capital Federal sobre sujetos de provincia — que ni corresponden a su padrón ni a su jurisdicción. Argumento adicional para contestar: aportar el domicilio/jurisdicción de esos clientes. No se encontró otro padrón AGIP publicado (solo `ARDJU008`); la landing de padrones no lista un padrón de "alto riesgo" separado.
 
 ---
 
