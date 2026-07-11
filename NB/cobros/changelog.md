@@ -1,5 +1,25 @@
 # Changelog — CashBox Cobros
 
+## 2026-07-09 / 2026-07-11
+
+### análisis: Intimación AGIP percepciones IIBB CABA (no es cambio de código)
+
+Diagnóstico completo de la intimación de AGIP/ARCIBA a NB (CUIT 30-70924663-8) por
+$73.103.974,46 en percepciones de IIBB CABA (27 períodos, ene-2024→may-2026).
+
+- Se parsearon los 27 anexos y se cruzó cada CUIT contra el **padrón de Regímenes
+  Generales real de AGIP** (`ARDJU008MMYYYY`, uno por mes, bajados de agip.gob.ar).
+- **Hallazgo (dos bloques):** Bloque A (2024/01–2025/05, ~$6,4M) los CUIT **sí** están
+  en el padrón y la alícuota coincide exacto (235/235) → error real, rectificar.
+  Bloque B (2025/06–2026/05, ~$66,7M = 91%) los CUIT **no** figuran en el padrón →
+  aplicar 0% fue correcto → **contestable**.
+- **Patrón del Bloque B:** 96% clientes de **provincia de Buenos Aires** + 92% con
+  percepción **ARBA** (no CABA) → probable **error de jurisdicción** de AGIP.
+- Entregables: `intimacion/Intimaciones_AGIP_percepciones.xlsx` (Resumen + 27 hojas),
+  nota [[intimacion-agip-percepciones]] y borrador [[mail-estudio-contable]].
+- Scripts en `intimacion/`: `parse_anexos.py`, `bajar_cruzar_padrones.py`, `armar_excel.py`,
+  `padron_por_periodo.csv`, `anexos_consolidado.csv`. Todos los cruces DB fueron solo lectura.
+
 ## 2026-05-18 / 2026-05-19
 
 ### feat: Módulo de Préstamos de Capital

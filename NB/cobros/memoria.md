@@ -1,7 +1,7 @@
 # Memoria — CashBox Cobros
 
 Consolidación de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-var-www-nb-cobros/memory/`). Sincronizada: 2026-07-08.
+(`~/.claude/projects/-var-www-nb-cobros/memory/`). Sincronizada: 2026-07-11.
 
 ## Proyecto
 
@@ -33,6 +33,13 @@ web `development` (minúscula). Prod `main`, staging `Gamma`/`gamma`. Ver [[cont
 4. **Dashboard de Impuestos** (2026-07-08) — carga impositiva mensual (IVA a pagar,
    percepciones/retenciones IIBB con desglose ARBA/AGIP/Otras, retenciones ganancias).
    Ver [[arquitectura#Dashboard de Impuestos (Statistics/Taxes)]].
+
+### Intimación AGIP percepciones (jul-2026)
+AGIP intimó $73,1M en percepciones IIBB CABA (ene-2024→may-2026). Cruzando cada CUIT
+contra el padrón real de AGIP: Bloque A (~$6,4M) sujetos EN padrón → error real; Bloque B
+(~$66,7M = 91%) sujetos NO en padrón (96% de provincia Bs.As. + percepción ARBA) →
+aplicar 0% fue correcto, contestable por jurisdicción. Ver [[intimacion-agip-percepciones]]
+y [[mail-estudio-contable]].
 
 ### Gotchas de la base (importante)
 - Fechas SQL Server: usar `YYYYMMDD` en parámetros (no `YYYY-MM-DD` — locale Y-D-M rompe).

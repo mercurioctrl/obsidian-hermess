@@ -44,6 +44,13 @@
 - La tabla `NEW_BYTES.dbo.ganancias` (retenciones ganancias) está **vacía** hoy → esa categoría muestra 0 hasta que se carguen datos.
 - `MS_REMITO_PERCEPCIONES.IMPPERCEP_ARBA/CABA` NO sirve para desglosar percepciones: cubre solo remitos (miles vs millones), no reconcilia con `ImportePercepCLi`.
 
+### Intimación AGIP percepciones IIBB CABA (jul-2026)
+AGIP intimó a NB por $73,1M en percepciones IIBB CABA mal aplicadas (Res. 352-AGIP-2022), 27 períodos ene-2024→may-2026. Análisis completo en [[intimacion-agip-percepciones]].
+- **Regla de negocio clave:** si un CUIT **no figura** en el padrón de Regímenes Generales de AGIP (`ARDJU008` mensual), **no corresponde percibirle** (alícuota 0). El padrón publicado es la única fuente que el agente puede consultar.
+- **Dos bloques:** A (2024/01–2025/05, ~$6,4M) sujetos EN padrón, se aplicó menos → error real. B (2025/06–2026/05, ~$66,7M = 91%) sujetos NO en padrón → 0% correcto → contestable.
+- **Patrón del Bloque B:** 96% son clientes de **provincia de Buenos Aires** (`ID_PROVINCIA=2`, ARBA) y 92% tienen `percepcion_arba`>0, no percepción CABA → probable error de jurisdicción (AGIP reclama percepción de Capital sobre sujetos de provincia). Coincide con el mapeo documentado arriba (1=AGIP/CABA, 2=ARBA/Bs.As.).
+- **Causa técnica secundaria (Bloque A):** el cálculo usa `clientes.percepcion` con `ISNULL(...,0)` sin chequear `percepcion_vencimiento`; el pipeline que actualiza esa columna (`percepciones_nb/`, repo aparte) quedó desactualizado/sin cron.
+
 ## Decisiones tomadas
 
 ### Fix OpenSSL para SQL Server (dev)
