@@ -4,6 +4,16 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-07-11
+
+- feat: **Módulo Documentos** — nueva sección para alojar y descargar documentos corporativos, cada uno con descarga del **Original** y de una versión con **formato BLU** (membretada, render Browsershot). Ver [[Modulo Documentos]]. Sin DB: registry curado en `config/documentos.php` + página dinámica → agregar documentos no requiere tocar frontend/rutas/permisos. `DocumentoController` (descargas fuera de `auth:sanctum` con `?token=` + permiso `VER_SECCION_DOCUMENTOS`), `PdfService::renderVistaPdf()` genérico. 5 documentos iniciales (Alta IIBB, Constancia ARCA, carta Mercury, wire Mercury 2p, constitución SRL 3p). Entregado en **PR #5** (rama `feat/documentos-empresa`). Ver [[Backend - API]], [[Frontend]], [[Modulo Permisos]]
+- fix: **build del backend por composer 2.10** — la imagen `composer:2` (tag flotante) se actualizó a 2.10.1 y activa por default `policy.advisories.block`, que bloquea la resolución de `laravel/framework ^11` (advisories abiertos) → `docker compose build backend` fallaba. Fix: `config.policy.advisories.block: false` en `composer.json` (el `audit.ignore` existente no cubre este caso). Entregado en **PR #4** (rama `fix/composer-advisories-block`). Ver [[Errores Comunes]]
+- ops: **permisos de la carpeta de backups + restore manual** — la carpeta `storage/app/backups` (bind-mount al host `backups/`) quedaba `root:root` → la app (`www-data`) no podía escribir y "Crear backup" fallaba silencioso. Fix: `chown www-data`. **No hay endpoint de restore**: se restauró un backup importando `database.sql` a mano en el container de MySQL. Ver [[Errores Comunes]]
+
+Archivos: `backend/config/documentos.php` (nuevo), `backend/app/Http/Controllers/DocumentoController.php` (nuevo), `backend/app/Services/PdfService.php` (renderVistaPdf), `backend/resources/views/pdf/documentos/*.blade.php` (5), `backend/composer.json` (policy), `frontend/pages/documentos/index.vue` (nuevo)
+
+---
+
 ## 2026-06-30
 
 - feat: **Módulo Tareas (tablero kanban estilo Jira)** — nuevo módulo completo. Ver [[Modulo Tareas]]. Tablero con drag & drop (`vue-draggable-plus`), 4 estados, filtros por proyecto/etiquetas. Código `PREFIJO-N` (prefijo editable por proyecto) **copiable** y **linkeable** (`/tareas/PLO-1`, ruta opcional). Detalle estilo Jira en 2 columnas: descripción **WYSIWYG con TipTap** (reemplazó md-editor-v3), subtareas (checklist), tareas vinculadas (bidireccional), adjuntos, comentarios, prioridad y fechas. Migraciones 0059–0065. Ver [[Base de Datos]], [[Backend - API]], [[Frontend]]
