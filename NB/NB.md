@@ -78,4 +78,10 @@ Sistema de inventario NB: Nuxt 2 (admin) + FastAPI (ms-metadata) sobre SQL Serve
 - [[limpieza-contactos-brevo/limpieza-contactos-brevo|Índice]] · [[limpieza-contactos-brevo/arquitectura|Arquitectura]] · [[limpieza-contactos-brevo/stack|Stack]] · [[limpieza-contactos-brevo/changelog|Changelog]] · [[limpieza-contactos-brevo/contexto|Contexto]] · [[limpieza-contactos-brevo/memoria|Memoria]]
 
 ---
+
+## [[camaras/camaras|Cámaras — CCTV MUGELLO]]
+Revisión del presupuesto de CCTV de C-Team para oficinas y depósitos (7 racks). Decisión: subir a cámaras 4MP + audio.
+- [[camaras/camaras|Índice]] · [[camaras/contexto|Contexto]] · [[camaras/memoria|Memoria]]
+
+---
 *Última actualización: 2026-07-02 — Compras: front COM-320 (cotización única en el header del detalle, pesos→fiscal / dólares→quote), en gamma pendiente de development.*
