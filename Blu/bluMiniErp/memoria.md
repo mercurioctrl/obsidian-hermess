@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-06-17 (iteración: aclaración — el gasto del sueldo se imputa al día 1 del período, no al mes en curso)
+Ultima sincronizacion: 2026-07-11 (módulo Documentos; fix build composer 2.10; permisos y restore de backups)
 
 ---
 
@@ -16,6 +16,8 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **APP_URL en docker-compose.yml (2026-04-16):** La variable `APP_URL` hardcodeada en `docker-compose.yml` overrideaba el `.env` de Laravel. Ahora usa `${APP_URL:-http://localhost:8823}` (configurable). PHP-FPM lee de `.env` de Laravel, no de env vars del container — ambos deben tener el puerto
 - **Nginx $http_host (2026-04-16):** La location `/api/` pasa `proxy_set_header Host $http_host` (con puerto) en vez de `$host`. Sin esto, `url()` de Laravel genera URLs sin el puerto 8823
 - **Deploy + opcache (2026-04-16):** `docker cp` + `optimize:clear` no limpia el opcache de PHP-FPM. Siempre `docker restart minisaas-backend` después de copiar archivos PHP
+- **Build backend / composer 2.10 (2026-07-11):** El Dockerfile copia el binario de la imagen `composer:2` (tag flotante); al actualizarse a 2.10.1 activa por default `policy.advisories.block` → bloquea la resolución de `laravel/framework ^11` (advisories abiertos) y `docker compose build backend` falla. Fix: `config.policy.advisories.block: false` en `composer.json` (el `config.audit.ignore` NO cubre esto — solo afecta al comando `composer audit`). Ver [[Errores Comunes]] y [[changelog#2026-07-11]]
+- **Backups: permisos + restore (2026-07-11):** `storage/app/backups` es bind-mount al host `backups/`; si queda `root:root`, la app (`www-data`) no puede escribir y "Crear backup" falla silencioso → `docker exec -u root minisaas-backend chown -R www-data:www-data storage/app/backups`. **No hay endpoint de restore**: restaurar = extraer el `.tar.gz` e importar `database.sql` a mano (`docker exec -i minisaas-db mysql ... < database.sql`) + `optimize:clear`. ⚠️ Sobrescribe la DB, hacer backup de seguridad antes
 
 ### PHP / Laravel
 - **env() vs config():** Nunca usar `env()` directo en controllers. PHP-FPM no hereda env vars del container. Registrar en `config/services.php` y leer con `config()`. Ver [[Errores Comunes#env no lee variables de entorno del container en PHP-FPM]]
