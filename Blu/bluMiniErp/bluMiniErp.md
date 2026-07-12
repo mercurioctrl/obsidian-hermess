@@ -19,6 +19,7 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | Documento | Contenido |
 |-----------|-----------|
 | [[Modulo Tareas]] | Tablero kanban estilo Jira: seguimiento (watchers) y notificaciones in-app / correo / push (VAPID) / WhatsApp |
+| [[Modulo GitHub]] | Integración GitHub solo lectura (PAT): dashboard de rendimiento por dev + vista detallada con commits día a día. Persistencia + sync incremental (2026-07-11) |
 | [[Modulo Documentos]] | Descarga de documentos corporativos: original + versión con formato BLU (registry en config, sin DB) (2026-07-11) |
 | [[Modulo Personal]] | Empleados, asignacion a proyectos, pagos, vínculo con usuario del sistema |
 | [[Reglas de Negocio]] | Reglas de dominio criticas y comportamientos no obvios |

@@ -279,6 +279,19 @@ GET|POST|PUT|DELETE /api/usuarios  -> solo admin [con wrapper data:]
 PUT    /api/usuarios/{id}/password -> solo admin
 ```
 
+## GitHub (integración solo lectura) — ver [[Modulo GitHub]]
+Todas dentro de `auth:sanctum`. Leen de la DB (persistencia + sync incremental, NO live).
+```
+GET    /api/github/test                       -> verifica el PAT (GET /user)
+GET    /api/github/repos-disponibles          -> repos de la org + del usuario (para agregar)
+GET|POST /api/github/repos                     -> registro de repos a trackear
+PATCH|DELETE /api/github/repos/{repo}          -> activar/desactivar, eliminar
+POST   /api/github/sync                        -> sync incremental manual (no apto para backfill inicial)
+GET    /api/github/rendimiento?desde=&hasta=   -> dashboard: ranking de devs + totales
+GET    /api/github/desarrollador/{login}?desde=&hasta= -> vista detallada: commits día a día, PRs pendientes/aceptados, reviews
+```
+Comandos artisan (también en el scheduler hourly): `github:sync`, `github:backfill-commits`. Permiso `VER_SECCION_GITHUB` (frontend).
+
 ## wrapper `data:` en respuestas
 
 | Con wrapper `data:` | Sin wrapper (JSON directo) |

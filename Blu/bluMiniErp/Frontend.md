@@ -223,6 +223,14 @@ Ver [[Medios de Pago#Stripe]] para detalle backend. Branding purpura `#635BFF`.
 
 ---
 
+## Modulo GitHub (2026-07-11)
+
+- **`/github`** (`pages/github/index.vue`): dashboard de rendimiento — repos trackeados colapsables, selector de período, tiles de totales, `PixelBarChart` de commits por dev y **ranking** clickeable (cada fila es un `NuxtLink` a `/github/{login}` conservando el período).
+- **`/github/[login]`** (`pages/github/[login].vue`): vista detallada del dev — tiles (commits, líneas, PRs aceptados, PRs pendientes + N hoy, reviews), **gráfico de commits día a día** (`PixelBarChart`) y listas de PRs pendientes/aceptados y reviews.
+- Gráficos con `components/ui/PixelBarChart.vue` (sin librería externa). Permiso `VER_SECCION_GITHUB` (sidebar + `middleware/auth.global.ts`). Ver [[Modulo GitHub]].
+
+---
+
 ## Action bar de pantallas de detalle
 
 **Patrón canónico** aplicado en `pages/presupuestos/[id].vue` (2026-04-14, por feedback del usuario). Reemplaza el spawn-eo de botones que generaba 9-10 acciones visibles por una jerarquía clara con máximo 2 CTAs visibles.

@@ -294,6 +294,24 @@ La app es **SPA pura** (`ssr: false`). Tras rebuildear, el container nuevo tiene
 
 ---
 
+## ⚠️ Opcache de FPM sirve código viejo tras `docker cp` (2026-07-11)
+
+Después de un `docker cp` de código PHP al container, el endpoint **HTTP** puede seguir sirviendo la versión **vieja** aunque hayas corrido `php artisan optimize:clear`. Pasó al reescribir `GithubService` para leer de la DB: el HTTP daba 504/comportamiento viejo mientras el CLI ya corría el código nuevo.
+
+- **Causa:** `optimize:clear` limpia los caches de Laravel (config/route/view), **NO el opcache de PHP-FPM**. El CLI (`artisan`) arranca un proceso nuevo cada vez (siempre fresco), por eso "por CLI anda pero por HTTP no" y confunde.
+- **Fix:** `docker restart minisaas-backend` (reinicia FPM → tira el opcache). Ver [[Modulo GitHub]].
+
+---
+
+## Query SQL directa contra la DB desde el container (2026-07-11)
+
+Para verificar datos sin tinker (no está en el container): `docker exec minisaas-backend sh -lc "mysql --skip-ssl -h db -u\$DB_USER -p\$DB_PASSWORD minisaas -N -e 'SELECT ...'"`.
+
+- El server MySQL tiene cert self-signed → sin SSL la conexión falla con `TLS/SSL error: self-signed certificate`. El cliente del container es **MariaDB** → la flag es **`--skip-ssl`** (NO `--ssl-mode=DISABLED`, que da "unknown variable").
+- Creds en `mini-saas/.env`: **`DB_USER`/`DB_PASSWORD`** (no `DB_USERNAME`/`DB_DATABASE`). Host = `db`, DB = `minisaas`.
+
+---
+
 ## Ver tambien
 
 - [[Stack e Infraestructura]] - Errores de Docker y deploy

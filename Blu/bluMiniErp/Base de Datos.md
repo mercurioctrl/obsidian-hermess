@@ -317,6 +317,16 @@ Enlaces y archivos adjuntos de un proyecto. Ver [[Backend - API#Proyectos]].
 Columna añadida en 2026-04-15 (migración 0056):
 - `public_token` — varchar(80), unique, nullable. Hex 64 chars generado on-demand por `ProyectoAdjunto::asegurarPublicToken()`. Permite acceso público sin auth via `GET /api/archivos/publico/{token}` para compartir adjuntos por WhatsApp. Ver [[Modulo WhatsApp Inbox#Public token para acceso sin auth]]
 
+### Tablas GitHub (2026-07-11) — ver [[Modulo GitHub]]
+
+Datos de la integración GitHub. Migraciones 0078–0085. Se persisten para leer las vistas sin llamar a la API (sync incremental).
+
+- `github_repos` (0079, +0082): repos a trackear. `owner`, `name`, `full_name` (unique), `activo`, `default_branch`, `last_synced_at` (marca el corte del sync incremental).
+- `github_pull_requests` (0083): PRs. `github_repo_id`, `number`, `author_login`, `author_avatar`, `title`, `base_ref`, `state`, `merged`, `commits` (conteo int), `additions`, `deletions`, `gh_created_at`/`gh_merged_at`/`gh_closed_at`/`gh_updated_at`.
+- `github_pr_reviews` (0084): reviews. `github_pull_request_id`, `reviewer_login`, `state`, `submitted_at`.
+- `github_commits` (0085): commits individuales. `github_repo_id`, `github_pull_request_id` (nullable), `sha`, `author_login`, `author_name`, `committed_at` (fecha real), `message`. Unique `(github_repo_id, sha)` → dedup. ⚠️ la relación en el modelo se llama `commitsSync()` (la columna `commits` del PR es el conteo).
+- En `configuracion`: `github_token` (0078), `github_org` (0078), `github_rama_destino` (0081, default `development`). En `empleados`: `github_username` (0080, mapea login→empleado).
+
 ---
 
 ## Ver tambien

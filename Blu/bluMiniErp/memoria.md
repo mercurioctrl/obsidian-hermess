@@ -187,11 +187,21 @@ Integración con un servicio externo tipo cola para enviar WhatsApp. Ver [[Modul
 - **Entrega**: ✅ **mergeado a `main`** (2026-06-30) — PR #1 (código) + PR #2 (docs) + commit de env vars VAPID/MAIL en docker-compose. ⚠️ El clasificador de Claude Code bloquea push/merge directo a main → usar flujo de PR.
 - Gotcha: en `<script setup>`, `useHead`/`watch(<ref>)` van **después** de declarar el ref (si no, TDZ al montar). Ver [[Errores Comunes]].
 
+### Integración GitHub (2026-07-11) — ver [[Modulo GitHub]]
+
+- **Solo lectura, auth por Personal Access Token** (classic, scope `repo`+`read:org`). Dashboard de rendimiento por dev + vista detallada `/github/{login}` con commits día a día. Entregado en **PR #9** (rama `feat/integracion-github`).
+- **⚠️ Decisión de arquitectura clave: persistencia + sync incremental, NO live.** Pegarle a la API en cada carga es lento y agota el rate limit → los datos se persisten en la DB (`github_*`, migraciones 0078–0085) y las vistas leen de ahí. `GithubService::sync()` (comando `github:sync`, scheduler hourly) trae solo PRs con `updated_at` nuevo. Los datos NO viajan en la imagen → en prod se resincroniza (scheduler/CLI) o se copia con mysqldump.
+- **Commits día a día:** tabla `github_commits` con la fecha real de autoría + `author_login`. El sync los trae por PR (`/pulls/{n}/commits`); `github:backfill-commits` completa los PRs viejos (idempotente, maneja rate limit). ⚠️ commit con email git no vinculado a GitHub (`author.login=null`) NO se atribuye. Líneas +/− quedan a nivel PR.
+- **Métricas:** "commits" del ranking = suma de `PR.commits` de PRs abiertos en el período. PRs "pendientes" = abiertos ahora (estado, no período). Bots excluidos (`login` termina en `[bot]`). Mapeo dev→empleado con `empleados.github_username` (case-insensitive).
+- **Gotcha opcache (FPM):** tras `docker cp` de PHP, si el endpoint HTTP sirve la versión vieja → `docker restart minisaas-backend`; `optimize:clear` NO limpia el opcache de FPM (el CLI corre fresco, por eso confunde). Ver [[Errores Comunes]].
+- **Gotcha query DB directa:** para verificar datos desde el container, `mysql --skip-ssl -h db -u$DB_USER -p$DB_PASSWORD minisaas` (cliente MariaDB, TLS self-signed → `--skip-ssl`, NO `--ssl-mode`; creds `DB_USER`/`DB_PASSWORD` en `mini-saas/.env`).
+
 ---
 
 ## Ver tambien
 
 - [[Modulo Tareas]] - Tablero kanban, seguimiento y notificaciones
+- [[Modulo GitHub]] - Integración GitHub (rendimiento por dev)
 - [[changelog|Changelog]] - Registro de commits recientes
 - [[Reglas de Negocio]] - Reglas de dominio
 - [[Errores Comunes]] - Bugs conocidos
