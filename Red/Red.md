@@ -19,6 +19,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 | nexus | 10.10.10.1/24 | 5GHz only | Dispositivos principales |
 | nexus-lot | 10.10.10.1/24 | 2.4GHz only | IoT / domótica |
 | nexus-invitados | 10.10.10.1/24 | 2.4GHz + 5GHz | Invitados |
+| nexus-printers | 10.10.10.1/24 | 2.4GHz only | Impresora P1102w (11v/11r/PMF/steering OFF) |
 | Dmz-server | 10.30.30.1/24 (VLAN 30) | — | Servidores |
 | VPN-Casa | 10.10.20.1/24 | — | VPN L2TP remota |
 
@@ -32,6 +33,10 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 
 - [[02-camaras]] — Inventario, diagnóstico y tareas pendientes
 
+## Impresoras
+
+- [[03-impresora-p1102w]] — HP LaserJet P1102w: config (driver hplip+plugin, SSID `nexus-printers`, IP fija 10.10.10.189) y diagnóstico
+
 ## ⚠️ Tareas pendientes
 
 - [ ] **Reemplazar cable del pasillo** — cámara PASILLO-C (10.10.10.192) negoció 10Mbps half-duplex, causa de los cortes de imagen
@@ -40,6 +45,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 ## Historial
 
 - [[01-cambios-2025-05]] — Sesión de diagnóstico y optimización (mayo 2025)
+- [[03-impresora-p1102w#Sesión de diagnóstico (2026-07-12)]] — Puesta a punto de la impresora P1102w (julio 2026)
 
 ## Notas
 
