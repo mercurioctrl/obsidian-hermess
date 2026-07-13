@@ -21,6 +21,9 @@ Proyectos y áreas de BLU Digital Agency.
 - [[bluMiniErp/Reglas de Negocio|Reglas de Negocio]] · [[bluMiniErp/Stack e Infraestructura|Stack e Infra]]
 - [[bluMiniErp/Errores Comunes|Errores Comunes]] · [[bluMiniErp/changelog|changelog]] · [[bluMiniErp/memoria|memoria]]
 
+### [[blu-crm/blu-crm|blu-crm]] — CRM multi-tenant (email masivo SES + WhatsApp)
+- Docker (8 servicios) · Laravel 11 + Nuxt 3 · pilar email completo · panel web con design system BLU
+
 ### Dirección
 - [[direccion/reunion-directorio-pendiente|Reunión de Directorio Blu – Pendiente]]
 
