@@ -2,7 +2,7 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-07-11
+**Ultima sincronizacion:** 2026-07-13
 
 ## Arquitectura
 
@@ -65,4 +65,4 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 ## Acceso
 
 - App: `http://localhost:8823`
-- Admin: `admin@empresa.com` / `admin123`
+- Admin: `admin@empresa.com` / `admin123` (⚠️ el default puede no aplicar en cada entorno si se restauró un backup de prod — la password puede estar cambiada. Para probar endpoints sin login: generar token Sanctum vía SQL directo, ver [[Errores Comunes]])

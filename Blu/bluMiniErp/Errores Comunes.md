@@ -312,6 +312,32 @@ Para verificar datos sin tinker (no está en el container): `docker exec minisaa
 
 ---
 
+## Reusar el mismo query builder para varias agregaciones (2026-07-12)
+
+En Eloquent/Query Builder, `where()` **muta** el builder y `sum()`/`get()` NO lo resetean. Encadenar varias agregaciones sobre el mismo objeto acumula los `where`:
+
+```php
+$q = Gasto::query();
+$totalArs = $q->where('moneda','ARS')->sum('monto');   // OK
+$totalUsd = $q->where('moneda','USD')->sum('monto');   // ⚠️ WHERE moneda='ARS' AND moneda='USD' → 0
+```
+
+Bug real en `GastoController::resumen()`: `total_usd` daba 0 y `por_categoria`/`por_tipo` vacíos. **Fix: `(clone $q)` antes de cada agregación** (o construir una sola query agrupada por moneda). Regla: si vas a derivar múltiples resultados de un builder base, cloná siempre.
+
+---
+
+## Devolver el modelo completo expone secretos (2026-07-12)
+
+`ConfiguracionController::show()` enmascaraba tokens, pero `update()` devolvía `$config->fresh()` **completo** → filtraba `mp_access_token`/`stripe_secret_key`/`mercury_api_key`/`inbox_api_token`/`jira_api_token` en texto plano al frontend/devtools/logs. **Fix: método `safeConfig()` compartido por `show()` Y `update()`** que enmascara y devuelve flags `*_tiene_token`. Regla: cualquier endpoint que devuelva la config (o modelos con secretos) debe pasar por el mismo serializador seguro — nunca `->fresh()`/`->toArray()` crudo. Entregado en PR #10, ver [[changelog#2026-07-12]] y [[Modulo Permisos]].
+
+---
+
+## AuthenticationException cae a 500 en vez de 401 (2026-07-12)
+
+Un token faltante/vencido lanza `AuthenticationException`, que **no tiene `getStatusCode()`** → el custom exception renderer (`bootstrap/app.php`) caía al fallback 500. Pero `useApi.ts:24` espera **401** para limpiar el token y redirigir a `/login` → el redirect por sesión vencida **nunca funcionaba**. **Fix: mapear explícitamente `AuthenticationException`→401** en el renderer. ⚠️ Relacionado: Nginx strippea `/api`, así que `is('api/*')` es false y el renderer JSON solo corre con header `Accept: application/json` (al testear con curl, incluirlo siempre). Ver [[memoria]].
+
+---
+
 ## Ver tambien
 
 - [[Stack e Infraestructura]] - Errores de Docker y deploy

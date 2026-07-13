@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-07-11 (módulo Documentos; fix build composer 2.10; permisos y restore de backups)
+Ultima sincronizacion: 2026-07-13 (auditoría técnica + PR #10 fixes de seguridad; gotcha Nginx strippea /api; enfoque decidido para integridad financiera)
 
 ---
 
@@ -25,6 +25,8 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **RolUsuario:** Es enum casteado. Comparar con `RolUsuario::ADMIN`, no con string ni `->value`. Ver [[Backend - Modelos#Usuario]]
 - **Rutas apiResource:** Las rutas especificas (`/gastos/categorias`) deben registrarse ANTES del `apiResource`. Ver [[Errores Comunes#Rutas especificas despues de apiResource colisionan con id]]
 - **Laravel 11 sin `config/mail.php`:** El skeleton de este repo no incluye `config/mail.php`. Hay que crearlo a mano para que el Mail facade funcione. Ver [[Errores Comunes#Laravel 11 sin config mail php por default]] y [[Stack e Infraestructura#Mail SMTP]]
+- **Nginx strippea `/api` → el exception renderer depende de `Accept: application/json` (2026-07-12):** Nginx quita el prefijo `/api` antes de pasar al backend, así que Laravel ve el path como `config`, NO `api/config`. En `bootstrap/app.php` el custom renderer usa `if ($request->expectsJson() || $request->is('api/*'))`, y como `is('api/*')` es **false** (el prefijo ya no está), el JSON de error solo se dispara con header `Accept: application/json`. El frontend (`useApi.ts`) siempre lo manda, pero **al testear endpoints con curl hay que incluir `-H "Accept: application/json"`** o los códigos de error engañan (ej. 500 en vez de 401). Ver [[changelog#2026-07-12]]
+- **`AuthenticationException` no mapea a 401 por default (2026-07-12):** un token faltante/vencido lanza `AuthenticationException`, que NO tiene `getStatusCode()` → el handler caía a 500. El frontend (`useApi.ts:24`) espera **401** para limpiar token y redirigir a `/login`, así que el redirect por sesión vencida nunca funcionaba. Fix en el renderer: `if ($e instanceof AuthenticationException) return json 401`. Regla general: cualquier custom exception renderer debe mapear explícitamente AuthenticationException→401 y AuthorizationException→403
 
 ### Frontend / Vue
 - **Modal:** Siempre usar `v-model`, nunca `v-if` + `@close`. Ver [[Frontend#Componentes UI]]

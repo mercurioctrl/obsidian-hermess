@@ -4,6 +4,21 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-07-12
+
+- fix: **Auditoría técnica — hallazgos de seguridad e integridad corregidos** (fixes "sin cambio de comportamiento"). Se analizó el documento `REPORTE_ANALISIS_TECNICO.md` (auditoría externa) verificando cada hallazgo contra el código real. Entregado en **PR #10** (rama `fix/hallazgos-reporte-seguridad`, base `feat/integracion-github`). Ver [[Errores Comunes]], [[Backend - API]], [[Modulo Permisos]]:
+  - **Secretos ya no se filtran al guardar configuración:** `ConfiguracionController::update()` devolvía `$config->fresh()` completo, exponiendo `mp_access_token`/`stripe_secret_key`/`mercury_api_key`/`inbox_api_token`/`jira_api_token` en texto plano. Se extrajo `safeConfig()` reusado por `show()` **y** `update()` (enmascara y devuelve flags `*_tiene_token`). El frontend usa `jira_tiene_token` (con fallback). También cerró una fuga de `jira_api_token` que `show()` tampoco enmascaraba
+  - **Bug en `GET /api/gastos-resumen`:** `resumen()` reutilizaba el mismo query builder → quedaba `WHERE moneda='ARS' AND moneda='USD'` → `total_usd` daba **0** y `por_categoria`/`por_tipo` vacíos. Fix: `(clone $query)` por agregación. Verificado en vivo: `total_usd` pasó de 0 a valor real
+  - **Excepciones internas no se exponen en producción:** el handler global (`bootstrap/app.php`) devolvía `message` + clase para todo error. Ahora en prod (`debug=false`) los **500** dan mensaje genérico; los `abort(4xx,'...')` conservan su mensaje. En dev queda idéntico
+  - **Bug latente resuelto — `AuthenticationException` → 401:** `useApi.ts` espera **401** para limpiar el token y redirigir a `/login`, pero el backend devolvía **500** en fallos de auth (AuthenticationException no mapea a getStatusCode) → el redirect por sesión vencida **nunca funcionaba**. Ahora devuelve 401. ⚠️ Nginx strippea `/api`, así que el renderer JSON solo se dispara con header `Accept: application/json` (que el frontend siempre manda; al testear con curl hay que incluirlo o los códigos engañan)
+  - **`mysqldump` con password escapado:** `escapeshellarg()` al password del dump de backup (`BackupController`)
+- feat: **Formato de montos sin cortes de línea** — espacio duro (NBSP) entre símbolo de moneda y número en `usePrivacyMode` (`$ 1.000` no se parte), + reglas CSS globales (`word-break: keep-all`, `overflow-wrap: normal`) en `app.vue`, y ajuste en `PixelBarChart`. Incluido en PR #10 (por pedido del usuario, los 3 temas van juntos)
+- **Pendiente del reporte (con enfoque ya decidido):** integridad financiera (transacción atómica `DB::transaction` en create/update/destroy de gastos + validación de moneda en `update()` — ambos solo-código, sin migración ni recálculo, verificado que no afectan datos: 0 gastos con moneda desajustada), throttle de login, CORS por dominio, paginación, agregaciones a SQL, índices, tests, PHP-FPM en prod, headers de seguridad Nginx
+
+Archivos: `backend/app/Http/Controllers/ConfiguracionController.php` (safeConfig), `backend/app/Http/Controllers/GastoController.php` (clone en resumen), `backend/bootstrap/app.php` (excepciones prod + AuthException→401), `backend/app/Http/Controllers/BackupController.php` (escapeshellarg), `frontend/pages/configuracion/index.vue` (jira_tiene_token), `frontend/composables/usePrivacyMode.ts` + `frontend/app.vue` + `frontend/components/ui/PixelBarChart.vue` (formato montos), `REPORTE_ANALISIS_TECNICO.md` (nuevo)
+
+---
+
 ## 2026-07-11
 
 - feat: **Integración GitHub (solo lectura, PAT)** — nuevo módulo completo. Ver [[Modulo GitHub]]. **Dashboard de rendimiento** por desarrollador (commits contados por PR, +/− líneas, PRs abiertos/mergeados/a rama destino, reviews) sobre 122 repos de BluIncStudio/New-Bytes/LibreOpción. **⚠️ Arquitectura persistencia + sync incremental (NO live):** los datos viven en la DB (`github_repos`, `github_pull_requests`, `github_pr_reviews`, `github_commits` — migraciones 0078–0085), `GithubService::sync()` (comando `github:sync`, scheduler hourly) trae solo PRs con `updated_at` nuevo; las vistas leen de la DB. Manejo de rate limit (corta y retoma). Bots excluidos. Mapeo dev→empleado con `empleados.github_username`. Permiso `VER_SECCION_GITHUB`. Entregado en **PR #9** (rama `feat/integracion-github`). Ver [[Base de Datos]], [[Backend - API]], [[Frontend]], [[Modulo Permisos]]
