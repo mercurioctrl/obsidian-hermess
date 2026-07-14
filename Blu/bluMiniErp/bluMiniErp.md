@@ -2,7 +2,7 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-07-13
+**Ultima sincronizacion:** 2026-07-14
 
 ## Arquitectura
 

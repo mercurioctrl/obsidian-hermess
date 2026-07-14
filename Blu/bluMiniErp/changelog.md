@@ -4,6 +4,18 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-07-14
+
+- feat: **Tareas — landing con resumen de proyectos por estado.** Al entrar a `/tareas` (sin proyecto seleccionado) se muestra una **grilla de proyectos** que tienen tareas en los estados filtrados (default: pendientes + en curso); cada proyecto muestra el conteo de sus tareas por estado (pendiente / en curso / en revisión / finalizado). Seleccionar un proyecto (card o el dropdown existente) entra a su board kanban, con botón "← Todos los proyectos" para volver. Ver [[Modulo Tareas]], [[Backend - API]]
+  - Backend: nuevo endpoint `GET /api/tareas/proyectos-resumen?estados=CSV` (`TareaController::proyectosResumen`) — devuelve los proyectos con ≥1 tarea en los estados filtrados, cada uno con los 4 conteos completos; **una sola query agrupada** (sin N+1), ordenado por tareas activas desc. Ruta estática **antes** de `/tareas/{tarea}`
+  - Frontend: componente nuevo `components/TareasResumenProyectos.vue` (chips de filtro multi-estado persistidos + grilla de cards, colores por estado iguales al board), integrado en `pages/tareas/[[codigo]].vue`. En modo resumen ya no se cargan todas las tareas de todos los proyectos. Deep-links `/tareas/{codigo}` intactos
+  - Entregado en **PR #13** (rama `feat/tareas-resumen-proyectos`, base `main`, sin mergear)
+  - ⚠️ UX pendiente de decisión: el filtro de proyecto se recuerda entre sesiones (comportamiento previo) → al volver a /tareas te reencuentra en el último board, no siempre en el resumen
+
+Archivos: `backend/app/Http/Controllers/TareaController.php` (proyectosResumen), `backend/routes/api.php`, `frontend/components/TareasResumenProyectos.vue` (nuevo), `frontend/pages/tareas/[[codigo]].vue`
+
+---
+
 ## 2026-07-12
 
 - fix: **Auditoría técnica — hallazgos de seguridad e integridad corregidos** (fixes "sin cambio de comportamiento"). Se analizó el documento `REPORTE_ANALISIS_TECNICO.md` (auditoría externa) verificando cada hallazgo contra el código real. Entregado en **PR #10** (rama `fix/hallazgos-reporte-seguridad`, base `feat/integracion-github`). Ver [[Errores Comunes]], [[Backend - API]], [[Modulo Permisos]]:

@@ -24,9 +24,17 @@ Ver [[Base de Datos]]. Tablas: `tareas`, `tarea_adjuntos`, `tarea_comentarios`, 
 - **WhatsApp**: `WhatsAppService` reutiliza la Inbox API ([[Modulo WhatsApp Inbox]]); se configura en pantalla Configuración (DB).
 - Búsqueda global incluye tareas (link `/tareas/{codigo}`).
 
+## Landing: resumen de proyectos por estado (2026-07-14, PR #13)
+
+- Al entrar a `/tareas` **sin proyecto seleccionado** se muestra una grilla de proyectos que tienen tareas en los estados filtrados (default: pendientes + en curso), cada uno con el conteo de sus tareas por estado (pendiente/en curso/en revisión/finalizado). Filtro multi-estado persistido (chips + "Todos").
+- Seleccionar un proyecto (card o dropdown) entra a su **board kanban**; botón "← Todos los proyectos" vuelve al resumen. Deep-links `/tareas/{codigo}` intactos.
+- Backend: `GET /api/tareas/proyectos-resumen?estados=CSV` (`TareaController::proyectosResumen`) — una sola query agrupada, ordenado por tareas activas. Ruta estática **antes** de `/tareas/{tarea}`.
+- Frontend: componente `components/TareasResumenProyectos.vue`; en modo resumen no se cargan todas las tareas de todos los proyectos.
+- ⚠️ El filtro de proyecto se recuerda entre sesiones → al volver a /tareas reencuentra el último board, no siempre el resumen (decisión de UX abierta).
+
 ## Frontend
 
-- `pages/tareas/[[codigo]].vue` (ruta opcional `/tareas/:codigo?`): tablero con drag & drop (`vue-draggable-plus`), filtros por proyecto/etiquetas, detalle estilo Jira en 2 columnas. La **URL es la fuente de verdad** de la tarea abierta; `useHead` setea título/og.
+- `pages/tareas/[[codigo]].vue` (ruta opcional `/tareas/:codigo?`): tablero con drag & drop (`vue-draggable-plus`), filtros por proyecto/etiquetas, detalle estilo Jira en 2 columnas. La **URL es la fuente de verdad** de la tarea abierta; `useHead` setea título/og. Sin proyecto seleccionado renderiza el resumen de proyectos (ver sección arriba).
 - `RichTextEditor.vue` — **WYSIWYG con TipTap** (reemplazó a md-editor-v3); guarda HTML, imágenes por paste/botón.
 - `CodigoCopiable.vue` — copia el código al portapapeles.
 - **Campana** de notificaciones en topbar (no-leídas, polling 60s). Push: `public/sw.js` + `usePush.ts`.
