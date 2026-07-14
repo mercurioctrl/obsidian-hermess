@@ -101,6 +101,7 @@ Seccion "Personal asignado" con lista, asignar/desasignar inline.
 
 ## Ver tambien
 
+- [[Modulo People Performance]] - RRHH sobre Personal: rol&expectativas, competencias, objetivos, ausencias, actividad GitHub/Jira (2026-07-14)
 - [[Modulo Tareas]] - Tareas asignadas al usuario del empleado
 - [[Base de Datos#empleados]] - Esquema de tablas
 - [[Backend - API#Staff y Empleados]] - Endpoints
