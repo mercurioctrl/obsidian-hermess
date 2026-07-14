@@ -93,6 +93,12 @@ Diagnóstico y fixes de Core Web Vitals para libreopcion.com.ar.
   - [[Libre Opcion/Gestion X/contexto|Contexto — orígenes de datos, forecast y decisiones]]
   - [[Libre Opcion/Gestion X/memoria|Memoria operativa]] · [[Libre Opcion/Gestion X/changelog|Changelog]]
 
+## Mini-juegos
+
+### shoppingAndGoblins
+Mini-juego *endless runner* (Grinch/Goblin) para activación de marca. HTML5 Canvas en un único archivo, sin dependencias. Repo: `git@github.com:BluIncStudio/miniJuegos-shoppingAndGoblins.git`.
+- [[shoppingAndGoblins/shoppingAndGoblins|shoppingAndGoblins]] — Índice del juego (LIBRE RUN)
+
 ## Otras notas
 
 - [[Libre Opcion/hot sale|Hot Sale 2026]] — ideas de landing pages
