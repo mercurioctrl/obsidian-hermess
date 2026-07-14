@@ -31,3 +31,4 @@ Presentación / landing HTML que le propone a Gigabyte centralizar el paid media
 - [[informe-landing/changelog|Changelog]]
 - [[informe-landing/memoria|Memoria]]
 - [[informe-landing/investigacion-notebooks|Investigación Notebooks — A16/Aero X16 por país]]
+- [[informe-landing/landing-ejemplo-ads|Landing — Ejemplo de anuncios (Familia GIGA40)]]

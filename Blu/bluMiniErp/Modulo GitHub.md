@@ -60,6 +60,7 @@ Página dedicada (`pages/github/[login].vue`) con:
 
 ## Ver también
 
+- [[Modulo People Performance]] — reusa `/github/desarrollador/{login}` como evidencia por empleado (tab Actividad)
 - [[Backend - API]] — rutas del módulo
 - [[Base de Datos]] — tablas `github_*`
 - [[Frontend]] — páginas `/github` y `/github/[login]`

@@ -52,6 +52,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 ## Runbooks y referencias
 
 - [[runbook-alta-usuario-interno|Runbook — Alta de usuario interno]] — pasos para dar de alta un agente interno en el sistema
+- [[runbook-descarga-comprobantes-venta|Runbook — Descarga masiva de comprobantes (PDF)]] — bajar en lote los PDF de facturas/NC vía Chrome headless (el link es un SPA con jsPDF, no un PDF server-side)
 
 ## Repos
 
@@ -75,4 +76,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-07-03 — **LST GLOBAL** (cta cte proveedores): la hoja "LST Global" (C1 "New Bytes Inc.", pasivo intercompañía Laset⟷NB Inc, saldo 11.294.120,34) ahora SÍ se carga como proveedor comp=11 "LST GLOBAL" (CCODPRO 002607) por decisión del usuario. Parser: fuera del SKIP + `prov_name` forzado + `SUMMARY_LABELS` ignora filas de resumen con fecha. Estado: 111 cuentas comp=11, 6.328 movs, Σ saldos 12.914.427,59 USD. Aclarado caso Crown (pago 30.900 de Y25DG005 fechado 31/12/2026 en la planilla, no es duplicado). Ver [[feature-laset-cuenta-corriente-proveedores]] y [[changelog#2026-07-03 — LST GLOBAL (cta cte proveedores, intercompañía) + aclaración Crown]].*
+*Última sincronización: 2026-07-14 — **Descarga masiva de comprobantes de venta (PDF)**: tarea operativa. Se bajaron 1.461 PDFs (facturas + NC/ND/export.) de NB DISTRIBUIDORA MAYORISTA (`companyCode=4`), primeros 4 días hábiles de ene/feb 2024 y may/dic 2025. Gotcha: el link `comprobantes.lio.red/voucher/F/{id}/{token}` es un SPA que arma el PDF con jsPDF en el navegador (no server-side) → se renderiza con Chrome headless + puppeteer-core (6 en paralelo, correlación por `frameId`). Ver [[runbook-descarga-comprobantes-venta]] y [[changelog#2026-07-14 — Descarga masiva de comprobantes de venta (PDF)]].*

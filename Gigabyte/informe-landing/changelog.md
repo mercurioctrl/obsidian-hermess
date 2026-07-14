@@ -72,3 +72,15 @@ Archivos principales: `informe-gigabyte-landing/reseller.html`.
   - **Nota de marca:** estos decks siguen el estilo del template "por pais" (gradiente RGB + emojis), que se desvía de la regla estricta de marca del deck principal — registrado en [[contexto]].
 
 Archivos principales: `por pais/investigacion-notebooks/generar_landings.py`, `data_paises.py`, `GIGABYTE - NOTEBOOKS - {PAIS}.html`.
+
+## 2026-07-14 — Landing "ejemplo de anuncios"
+
+- **Nuevo entregable: [[landing-ejemplo-ads]]** (`landing-ejemplo-ads/index.html`). Landing que le muestra al cliente **cómo se ven los anuncios reales** de la campaña **Familia GIGA40** (GIGABYTE 40 aniversario, "Rendimiento y Evolución / Team Up. Fight On.") antes de ejecutarlos. Separado del deck `informe-landing`.
+- **Data-driven desde el CSV** `BLU X GIGABYTE - BLU CUADRO.csv` (7 resellers foco UY/CL/AR, $270 c/u = **$1.890**) + creatividades reales de `Familia GIGA40/Redes+ADS/` en 4 formatos (Feed 2:1, Square 1:1, Post 4:5, Story 9:16).
+- **Selector de reseller interactivo** (estilo botón: activo naranja sólido, resto oscuro con borde) que actualiza en vivo **6 mockups** con los datos reales de cada reseller (nombre, handle de FB, país, foco, sitio/CTA).
+- **Meta:** Facebook Feed + Instagram Feed con **UI realista clara** (se rehízo desde el tema oscuro inicial a pedido del cliente) + 4 Stories 9:16 en frames de celular, cada una con un reseller real.
+- **Google (los 4 formatos):** Search (SERP con Patrocinado + sitelinks), Red de Display (banner en sitio publisher "HardZone" con nota real + sidebar), Demand Gen/Discover (card del feed) y YouTube in-stream (player con controles + skip + companion). Se subió la fidelidad de los 4 tras feedback ("no parecen reales").
+- **Decisión de marca:** los mockups reproducen la UI real de las plataformas (azul FB, gradiente IG, colores Google) → **excepción consciente** a "solo naranja/blanco", justificada por realismo; el chrome del deck sigue AORUS. Ver [[contexto]].
+- Resellers sin landing (Compumar, Compufan) → CTA "Enviar mensaje" (Messenger). Validado con Chrome headless en cada paso.
+
+Archivos principales: `landing-ejemplo-ads/index.html`, `landing-ejemplo-ads/assets/`.

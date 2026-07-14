@@ -21,10 +21,11 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[changelog]] — registro de lo trabajado por fecha.
 - [[memoria]] — espejo de la memoria de Claude del proyecto.
 - [[investigacion-notebooks]] — entregable aparte: investigación de mercado + 4 landings por país (AR/CL/UY/PY) de las notebooks GIGABYTE A16 / Aero X16.
+- [[landing-ejemplo-ads]] — entregable aparte: landing que le muestra al cliente los anuncios de ejemplo (Familia GIGA40) en mockups realistas de Meta + Google, por reseller.
 
 ## Ver también
 
 - [[Gigabyte]]
 - [[gigaErp]] — otro proyecto Gigabyte (ERP) en esta bóveda
 
-_Última sincronización: 2026-07-14_
+_Última sincronización: 2026-07-14 (landing-ejemplo-ads)_

@@ -56,3 +56,13 @@ Se sumaron 2 slides al deck interno para **explicar a GIGABYTE/resellers los esc
 - **Toda tienda/precio/fuente citada debe ser clicable** a la fuente real (pedido explícito del usuario).
 - Producto: el **A16 capa la GPU a ~85W** → no prometer "máximo rendimiento"; vender valor/pantalla/RTX 50. GIGABYTE es **challenger en notebooks**.
 - **Desviación de marca conocida:** los landings de notebooks usan el estilo del template "por pais" (gradiente RGB, texto cian/magenta, banderas emoji), que **contradice** la regla "solo naranja/blanco, sin emojis, AORUS" del deck principal. Pendiente decidir si se migran a la marca estricta.
+
+## Landing ejemplo de anuncios (2026-07) — decisiones
+- Entregable **separado** del deck `informe-landing`: mostrarle al cliente **cómo se ven los anuncios reales** de la campaña **Familia GIGA40** antes de ejecutarlos. Ver [[landing-ejemplo-ads]].
+- **Data-driven desde el CSV** `BLU X GIGABYTE - BLU CUADRO.csv` + creatividades reales de `Familia GIGA40/Redes+ADS/`. Todo lo personalizable (nombre, handle, país, foco, sitio/CTA) sale del objeto `RESELLERS` en JS y se elige con un **selector de reseller**.
+- **Se pidió personalizar por reseller** (no genérico) → cada mockup usa los datos reales del punto de venta.
+- **Fidelidad realista (excepción de marca consciente):** el cliente pidió que se vea "tal cual sale en la realidad" → los mockups reproducen la **UI real** de Facebook/Instagram/Google (fondo blanco, colores propios de cada plataforma: azul FB, gradiente IG, colores Google). Esto **rompe a propósito** la regla "solo naranja/blanco", pero solo dentro de las piezas que imitan plataformas externas; el **chrome del deck** (hero, secciones, tablas, selector) sigue AORUS oscuro.
+- **Iteración de feedback:** primero se hicieron los mockups en tema oscuro AORUS → el cliente los quiso realistas claros; y los de Google "no parecían reales" → se subió la fidelidad (Search con sitelinks, Display en sitio publisher con nota real, YouTube con controles de player, Discover con fila de fuente).
+- **Estilo del selector:** botones rectangulares tipo CTA del hero (activo naranja sólido con texto negro, resto oscuro con borde), en vez de pills con bisel y monograma.
+- Resellers **sin landing** en el CSV (Compumar, Compufan) → CTA **"Enviar mensaje"** (Messenger), no un sitio inventado.
+- **Fuera de alcance:** COMPRAGAMER y Armytech (en el CSV van bajo campaña "Laptops", sin presupuesto definido). YouTube se sirve con video real; en la landing se muestra el fotograma clave.

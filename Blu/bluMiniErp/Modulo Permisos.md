@@ -111,6 +111,7 @@ Verificacion siempre `=== null` (estricta), nunca falsy.
 
 ## Ver tambien
 
+- [[Modulo People Performance]] - `VER_SECCION_PERSONAL` gatea RRHH; fix del NavItem "Personal" fuera del bloque solo-admin (2026-07-14)
 - [[Backend - Modelos#Usuario]] - Modelo con metodo tienePermiso
 - [[Frontend#Middleware]] - Permisos de seccion en navegacion
 - [[Backend - API]] - Endpoints que aplican enmascaramiento

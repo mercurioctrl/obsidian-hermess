@@ -1,3 +1,14 @@
+## 2026-07-14 — Descarga masiva de comprobantes de venta (PDF)
+
+Tarea operativa (no cambio de código): bajar en lote los PDF de comprobantes de venta de **NB DISTRIBUIDORA MAYORISTA SRL** (`companyCode = 4`). Procedimiento completo en [[runbook-descarga-comprobantes-venta]].
+
+- **Pedido:** todos los comprobantes de los **primeros 4 días hábiles** (dentro de los primeros 10 días) de **enero 2024, febrero 2024, mayo 2025 y diciembre 2025** → **1.461 PDFs, 0 fallos** (1.335 facturas, 116 NC, 4 fact. export., 3 ND, 3 FCE). Salida en `/var/www/nb/pedidos/comprobantes de venta/{YYYY-MM}/` + `_manifiesto.json`.
+- **Gotcha clave:** el link `comprobantes.lio.red/voucher/F/{id}/{token}` NO es un PDF server-side — es un **SPA Nuxt que arma el PDF con jsPDF en el navegador** (pide JSON a `ms-comprobantes.lio.red/v2/F/{id}/{token}`). `curl` devuelve el HTML del SPA, no el PDF → hay que **renderizar con Chrome headless** e interceptar la descarga.
+- **Descargador:** `puppeteer-core` + `google-chrome`, 6 en paralelo (~7 min). `Page.setDownloadBehavior` es global y los workers se pisan → usar `Browser.setDownloadBehavior` (`allowAndName`, `eventsEnabled`) a un dir compartido y **correlacionar cada descarga por `frameId`** (`downloadWillBegin`/`downloadProgress`). Idempotente (saltea existentes).
+- **Selección:** SQL directo sobre `FP_FactWebCliEncabezado` con el filtro base del endpoint (`LANULADA=0`, `CAE NOT NULL`, `NCNOTOCASALDONISTOCK IS NULL`, `CODEMP=4`); "día hábil" ≈ Mon–Fri con actividad (salta feriados). Mayo 2025: 1 = feriado y 2–4 finde/puente → primeros hábiles = 5,6,7,8.
+
+---
+
 ## 2026-07-03 — LST GLOBAL (cta cte proveedores, intercompañía) + aclaración Crown
 
 Ajuste puntual sobre la cta cte de proveedores Laset comp=11 ([[feature-laset-cuenta-corriente-proveedores]]).
