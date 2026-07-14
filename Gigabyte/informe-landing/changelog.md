@@ -83,4 +83,4 @@ Archivos principales: `por pais/investigacion-notebooks/generar_landings.py`, `d
 - **Decisión de marca:** los mockups reproducen la UI real de las plataformas (azul FB, gradiente IG, colores Google) → **excepción consciente** a "solo naranja/blanco", justificada por realismo; el chrome del deck sigue AORUS. Ver [[contexto]].
 - Resellers sin landing (Compumar, Compufan) → CTA "Enviar mensaje" (Messenger). Validado con Chrome headless en cada paso.
 
-Archivos principales: `landing-ejemplo-ads/index.html`, `landing-ejemplo-ads/assets/`.
+Archivos principales: `landing-ejemplo-ads/familia-giga40.html` (antes `index.html`), `landing-ejemplo-ads/assets/`.
