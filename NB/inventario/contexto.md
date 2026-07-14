@@ -93,6 +93,8 @@ NODE_ENV=development
 | `Cannot find module ../build-version.json` al iniciar dev | Lo genera `scripts/update-build-version.js` solo al hacer `npm run build` | No rompe nada en dev |
 | 401 al iniciar el frontend | El middleware `auth` redirige todas las rutas a `/login` si no hay token | Comportamiento normal |
 | **Editar precio/utilidad no persiste en items nuevos** | El item no tiene fila en `ST_GANANCIA_ESTIPULADA_ARTICULOS`; `_update_gain_column` hacía `UPDATE` puro (0 filas, sin error) | **Resuelto (2026-06-24)**: upsert — inserta la fila sembrada desde los gains. Tabla sin PK, clave `cRef` nvarchar |
+| **Enter en una celda editable mandaba 2 PATCH** (y con la confirmación de utilidad mínima, 2 modales encadenados) | `onEnter` llama a `submit()` y además fuerza el `blur`, que vuelve a submitear: la prop `value` todavía no cambió (request en vuelo), así que el valor "sigue siendo distinto" | **Resuelto (2026-07-13)**: guard `pending` en `EditablePriceCell` — ignora el segundo submit del mismo valor mientras el primero está en vuelo |
+| **Celda editable se quedaba mostrando lo tipeado aunque el guardado fallara** | El componente sólo se resincroniza cuando cambia la prop `value`; si el PATCH fallaba, `value` no cambiaba | **Resuelto (2026-07-13)**: emite `{ value, done }`; `done(false)` (error o cancelación del modal) revierte al valor original |
 | **Búsqueda no encuentra items con `()` en el título** | `_` del slug es comodín de 1 char en LIKE; "(LGA1700)" agrega caracteres que no matchean | Reemplazar `_` y espacio por `%` en el término (aplicado en Stock/Precios/Productos) |
 
 ## Deploy a producción
@@ -114,6 +116,11 @@ hardcodeada en `competition.py`). Checklist al pasar a prod:
 
 - **Precios**: al fijar un precio a mano, la utilidad derivada se aplica SIEMPRE
   a la primera del par (PL1/MAY1/LO1/PML); la segunda queda fija. Ver [[modulo-precios]].
+- **Las utilidades pueden ser negativas** (2026-07-13): `MAY1=10 + MAY2=-9` ⇒ MAY = 1%;
+  `LO1=5 + LO2=-10` ⇒ LO = -5% (vender **bajo costo a propósito**). La **utilidad mínima**
+  (`PV_PARAMETROS_VARIOS.minUtility`) pasó a ser un **aviso confirmable**, no un bloqueo:
+  el 422 `MIN_UTILITY_NOT_MET` abre un modal y, si el usuario acepta, se reenvía el PATCH
+  con `force=true`. Ver [[modulo-precios#Utilidades negativas (2026-07-13)]].
 - **Mayoristas se comparan sin IVA** (campo `precio_sin_iva` de partpicker) contra
   los precios USD propios; resellers en ARS final como referencia de clientes.
 - `scrap_hg.search_keys` es compartida entre la sección Precios y el scraper de

@@ -21,8 +21,8 @@ Fórmula base: `precio = NCOSTEPROM × (1 + Σ utilidades / 100)`.
 - Editar un **precio** → deriva la utilidad total y ajusta **solo la primera**
   del par (PL1, MAY1, LO1, PML), dejando fija la segunda. Regla de negocio
   pedida explícitamente. Implementado en `update_item_price_by_target`
-  (`prices.py`), que delega en `update_item_price` → hereda validación de
-  utilidad mínima, `historial_precios` y recálculo.
+  (`prices.py`), que delega en `update_item_price` → hereda la validación de
+  utilidad mínima (hoy **no bloqueante**, ver abajo), `historial_precios` y recálculo.
 - Costo editable solo con permiso `gerencia`.
 - **Items sin fila en `ST_GANANCIA_ESTIPULADA_ARTICULOS`** (típicamente los más nuevos): `_update_gain_column` es **upsert** — inserta la fila sembrada si no existe. Antes el `UPDATE` puro afectaba 0 filas en silencio y la utilidad no persistía. La tabla no tiene PK; clave = `articulo.cRef` (nvarchar). Ver [[contexto#Gotchas conocidos]] y [[memoria]].
 
@@ -134,6 +134,23 @@ La búsqueda por slug fallaba con títulos que tienen `()`/símbolos (ej. el slu
 `procesador_intel_lga1700` no matcheaba "PROCESADOR INTEL (LGA1700)"): en `LIKE`
 el `_` es comodín de 1 char y los paréntesis agregan caracteres. Se reemplaza `_`
 y espacio por `%`. Aplicado en Precios, Stock y Productos (back `7534f92`/`0c0cfcf`).
+
+## Utilidades negativas (2026-07-13)
+
+Una utilidad puede ser **negativa**, y la utilidad **total** de un par también:
+
+- `MAY1 = 10` + `MAY2 = -9` ⇒ utilidad MAY = **1%**.
+- `LO1 = 5` + `LO2 = -10` ⇒ utilidad LO = **-5%** ⇒ el precio queda **por debajo del costo, a propósito**.
+
+Aplica igual en la pestaña **Precios** y en el *ctrl precios* de la grilla de **Stock** (comparten `EditablePriceCell` y `PATCH /itemsPrice`).
+
+- **Input**: `EditablePriceCell` tiene prop `allowNegative` (antes `:min="0"` fijo impedía tipear el menos). Activada en las 8 utilidades (PL, PLI, MAY1, MAY2, LO1, LO2, PML, PCAM). **Costo, precios y DT2/DT3 siguen `>= 0`**.
+- **Utilidad mínima = aviso, no bloqueo**: `_validate_min_utility` sigue comparando la **suma del par** contra `minUtility` (`PV_PARAMETROS_VARIOS`), pero el `422 MIN_UTILITY_NOT_MET` ahora es **confirmable** (lleva `totalUtility` / `minUtility` / `confirmable`). El front muestra el modal y reenvía el mismo PATCH con **`force=true`** (`ItemPriceUpdateRequest.force`). Sin `force`, el comportamiento es el de siempre. Las excepciones previas (`minUtilityExclude=1`, familia 65) siguen sin preguntar nada.
+- **Revert de la celda**: `EditablePriceCell` emite `{ value, done }`; `done(false)` (error o cancelación) devuelve la celda al valor original. Guard `pending` para no emitir dos veces con Enter (Enter + blur).
+- **Recálculo masivo**: sin clamp a 0; los cambios bajo la mínima se confirman juntos en un único modal al final.
+- Helper `app/utils/minUtility.js`: `minUtilityError()` / `confirmMinUtility()` / `minUtilityContent()`.
+
+Ramas `feature/utilidad-negativa` (front `03f23d7`, back `aa13999`), pusheadas, PRs sin abrir.
 
 ## Ver también
 

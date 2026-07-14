@@ -62,6 +62,9 @@ cc11 prácticamente no usa el ledger de seriales: **16 de 602 artículos con ser
 - La pestaña **Precios** vivía solo en `catri-fine-tuning`; el **link del menú nunca estuvo en git** (prod tenía edición manual de `basic.vue`) → agregado y propagado.
 - Git: `Development` (mayúscula) es la canónica del back; borrar `development` minúscula la dejó huérfana (macOS case-insensitive) → `git reset --mixed origin/Development`.
 
+### Utilidades negativas — regla de negocio (2026-07-13)
+Las utilidades pueden ser **negativas**, individualmente y **en su suma**: `MAY1=10 + MAY2=-9` ⇒ MAY = **1%**; `LO1=5 + LO2=-10` ⇒ LO = **-5%** ⇒ precio **por debajo del costo, a propósito**. Vale igual en Precios y en el *ctrl precios* de Stock. Por eso la **utilidad mínima** (`PV_PARAMETROS_VARIOS.minUtility`, validada sobre la SUMA del par) dejó de ser bloqueante: el `422 MIN_UTILITY_NOT_MET` es un **aviso confirmable** y el front reenvía el PATCH con `force=true`. **Costo, precios y DT2/DT3 siguen `>= 0`** — solo las utilidades admiten negativos. Ante un pedido de "permitir lo que hoy valida", preguntar si se elimina la validación o se vuelve confirmable: este usuario eligió **avisar pero permitir**. Ver [[modulo-precios#Utilidades negativas (2026-07-13)]].
+
 ### N+1 con dbconnection (backend) — clave
 `dbconnection()` abre una conexión pyodbc **NUEVA por llamada** (handshake TLS 1.0) y **nunca se cierra** → cualquier `for x in rta: getImages(x)` es N+1 catastrófico. `/items` con 300 items: **~11,5s → ~1,2s** usando query bulk con `IN` (`getImagesBulk` en `products.py`). Regla: ante listados lentos, buscar `for ... in rta` con helper que llama `dbconnection()` y pasarlo a bulk. Los N+1 de **escritura** transaccional (transfer_stock, sync de kits) se dejan.
 

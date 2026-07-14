@@ -1,5 +1,20 @@
 # Changelog — inventario
 
+## 2026-07-13 — Utilidades negativas (Precios + ctrl de precios)
+
+Las utilidades de un artículo ahora pueden ser **negativas**, tanto en la pestaña **Precios** como en el bloque *ctrl precios* de la grilla de **Stock**. Regla pedida por el usuario: `MAY1=10` + `MAY2=-9` ⇒ utilidad MAY = **1%**; `LO1=5` + `LO2=-10` ⇒ utilidad LO = **-5%** (se vende **bajo costo a propósito**). Ver [[modulo-precios#Utilidades negativas (2026-07-13)]].
+
+Ramas `feature/utilidad-negativa` en ambos repos (front `03f23d7`, back `aa13999`), pusheadas; **PRs sin abrir** (target `development` / `Development` a confirmar).
+
+- **Front — el freno real estaba en el input**: `components/Table/EditablePriceCell.vue` tenía `:min="0"` fijo, que no dejaba ni tipear el signo menos. Ahora es una prop `allowNegative`, activada en las **8 utilidades** (PL, PLI, MAY1, MAY2, LO1, LO2, PML, PCAM) de **ambas** grillas. **Costo, precios y DT2/DT3 siguen acotados a `>= 0`** (ahí un negativo no tiene sentido).
+- **Back — la utilidad mínima dejó de ser bloqueante**: `_validate_min_utility` (`prices.py`) valida la **suma del par** (PL+PLI, MAY1+MAY2, LO1+LO2) contra `minUtility` de `PV_PARAMETROS_VARIOS`; con `minUtility=0` el primer ejemplo pasaba solo, pero el segundo (suma negativa) se rechazaba con 422. Ahora el **422 `MIN_UTILITY_NOT_MET` es un aviso confirmable**: viaja con `totalUtility`, `minUtility` y `confirmable`, el front pide confirmación y **reenvía el mismo PATCH con `force=true`** (flag nuevo en `ItemPriceUpdateRequest`, propagado por `update_item_price` y `update_item_price_by_target`). Las excepciones que ya existían (`minUtilityExclude=1`, familia 65) siguen guardando sin preguntar.
+- **La celda se revierte sola** si el guardado falla o el usuario cancela: `EditablePriceCell` pasó a emitir `{ value, done }` y el padre llama `done(false)` → vuelve al valor original (antes se quedaba mostrando lo tipeado aunque no se hubiera guardado nada). Al emitir un **objeto** en el `$event` no hubo que tocar los 25 call-sites del template.
+- **Bug lateral arreglado**: con **Enter** se disparaba `submit()` dos veces (Enter + el blur que el propio Enter fuerza) ⇒ dos PATCH del mismo cambio, y con el modal hubieran sido **dos modales encadenados**. Guard `pending` en la celda.
+- **Recálculo masivo**: se quitó el clamp `if (next < 0) next = 0`; los cambios que caen bajo la mínima se juntan y se confirman **todos en un solo modal al final** (no uno por item).
+- Helper nuevo `app/utils/minUtility.js` (detección del error + modal de confirmación), compartido por las dos páginas.
+
+Verificado: `eslint` limpio en los 6 archivos del front y validación del back corrida en aislado con los dos ejemplos (`valid: True (1.0%)` / `valid: False (-5.0%)`). **No** se probó contra la DB ni se levantó la app.
+
 ## 2026-07-08 — Pull `development` + ajuste manual crea fila de stock inexistente
 
 Sesión operativa en Linux (`/var/www/nb/inventario`). Pull de ambos repos y un cambio de backend en rama de feature.
