@@ -37,7 +37,7 @@
 ## 🟡 Libre Opción
 
 - [[Libre Opcion/Libre Opcion|Libre Opción]] — SEO & Performance fixes
-  - [[Libre Opcion/enviosMailDrop/enviosMailDrop|enviosMailDrop]] · [[Libre Opcion/tareas/tareas|tareas]] · [[Libre Opcion/TareaWallet/TareaWallet|TareaWallet]]
+  - [[Libre Opcion/enviosMailDrop/enviosMailDrop|enviosMailDrop]] · [[Libre Opcion/tareas/tareas|tareas]] · [[Libre Opcion/TareaWallet/TareaWallet|TareaWallet]] · [[Libre Opcion/shoppingAndGoblins/shoppingAndGoblins|shoppingAndGoblins]]
 
 ## 🔴 Bily
 
