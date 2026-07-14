@@ -53,6 +53,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-07-07|2026-07-07]] — Recordatorio Brevo (alarmas asíncronas quedaron en log local), resumen del Kanban General por heartbeat
 - [[Bily/bitacoras/2026-07-11|2026-07-11]] — Jornada sin actividad: sin conversaciones, decisiones ni tareas relevantes por WhatsApp
 - [[Bily/bitacoras/2026-07-13|2026-07-13]] — Revisión de tareas pendientes en el Kanban y priorización de desarrollo urgente para el día siguiente
+- [[Bily/bitacoras/2026-07-14|2026-07-14]] — Seguimiento de proyectos de Blu, decisiones técnicas y actualización del Kanban alineada al sprint actual
 
 ## Ver también
 
