@@ -2,7 +2,7 @@
 
 Entregable **separado** del deck [[informe-landing]]: una landing HTML que le muestra al cliente (GIGABYTE) **cómo se van a ver los anuncios reales** de la campaña **Familia GIGA40** antes de ponerlos a rodar, en su contexto de plataforma (Meta + Google) y por cada reseller.
 
-- **Ubicación:** `/var/www/Informe gigabyte/landing-ejemplo-ads/familia-giga40.html` (autocontenida, assets locales en `assets/`).
+- **Ubicación:** `/var/www/Informe gigabyte/landing-ejemplo-ads/campana-q2-familia-giga40.html` (autocontenida, assets locales en `assets/`).
 - **Fuentes de datos:**
   - `BLU X GIGABYTE - BLU CUADRO.csv` → plan de medios (país, reseller, producto foco, presupuesto, link de Facebook, sitio).
   - `Familia GIGA40-…/Familia GIGA40/Redes+ADS/` → creatividades reales en 4 formatos: Feed **2:1** (1200×628), Square **1:1** (1080×1080), Post **4:5** (960×1200), Story **9:16** (1080×1920).
