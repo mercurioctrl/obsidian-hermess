@@ -49,3 +49,10 @@ Se sumaron 2 slides al deck interno para **explicar a GIGABYTE/resellers los esc
 
 ## Ver también
 - [[informe-landing]] · [[arquitectura]] · [[changelog]] · [[stack]]
+
+## Investigación Notebooks (2026-07) — decisiones
+- Entregable **separado** del deck `informe-landing`: análisis de mercado + pauta de las notebooks GIGABYTE **Gaming A16** y **Aero X16** (del `LAP + MONIS (2).xlsx`), en 4 landings HTML por país. Ver [[investigacion-notebooks]].
+- Generación **data-driven** (`generar_landings.py` + `data_paises.py`): se pidió poder actualizar precios/tiendas editando el dato y regenerando.
+- **Toda tienda/precio/fuente citada debe ser clicable** a la fuente real (pedido explícito del usuario).
+- Producto: el **A16 capa la GPU a ~85W** → no prometer "máximo rendimiento"; vender valor/pantalla/RTX 50. GIGABYTE es **challenger en notebooks**.
+- **Desviación de marca conocida:** los landings de notebooks usan el estilo del template "por pais" (gradiente RGB, texto cian/magenta, banderas emoji), que **contradice** la regla "solo naranja/blanco, sin emojis, AORUS" del deck principal. Pendiente decidir si se migran a la marca estricta.

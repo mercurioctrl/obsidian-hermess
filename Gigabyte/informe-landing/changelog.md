@@ -61,3 +61,14 @@ Archivos principales: `informe-gigabyte-landing/reseller.html`.
 
 ## Ver también
 - [[informe-landing]] · [[arquitectura]] · [[contexto]]
+
+## 2026-07-14
+
+- **Nuevo entregable: Investigación Notebooks GIGABYTE por país** (`por pais/investigacion-notebooks/`). Ver [[investigacion-notebooks]]. No toca el deck `informe-landing`; es un análisis de producto + estrategia de pauta con salida en 4 landings HTML tipo deck (AR/CL/UY/PY) generadas de forma **data-driven**.
+  - **Investigación web profunda** por país (4 agentes en paralelo): competencia por tier de GPU (RTX 4050/5050/5060/5070 vs ASUS/Lenovo/Acer/HP/MSI/Dell), precios locales, disponibilidad, demanda/keywords, posicionamiento — con fuentes verificadas.
+  - **Generador** `generar_landings.py` (template + design system GIGABYTE) + datos `data_paises.py` (por país: mercado, modelos+precios, competencia, demanda, posicionamiento, estrategia, creativos, **planes de ads $500/$1.000 USD**, oportunidades/riesgos). `index.html` de portada.
+  - **Enlaces clicables**: cada tienda/marketplace/precio/fuente citada linkea a la fuente real (`target="_blank"`) — chips de tienda por modelo, modelos clicables en tablas de competencia, footer "Fuentes (clic para abrir)". ~34-41 enlaces por archivo.
+  - HTML validado (0 tags sin cerrar) y render verificado con Chrome headless.
+  - **Nota de marca:** estos decks siguen el estilo del template "por pais" (gradiente RGB + emojis), que se desvía de la regla estricta de marca del deck principal — registrado en [[contexto]].
+
+Archivos principales: `por pais/investigacion-notebooks/generar_landings.py`, `data_paises.py`, `GIGABYTE - NOTEBOOKS - {PAIS}.html`.

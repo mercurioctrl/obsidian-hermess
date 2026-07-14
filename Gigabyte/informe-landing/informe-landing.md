@@ -20,10 +20,11 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[contexto]] — reglas de marca, decisiones del usuario, aprendizajes.
 - [[changelog]] — registro de lo trabajado por fecha.
 - [[memoria]] — espejo de la memoria de Claude del proyecto.
+- [[investigacion-notebooks]] — entregable aparte: investigación de mercado + 4 landings por país (AR/CL/UY/PY) de las notebooks GIGABYTE A16 / Aero X16.
 
 ## Ver también
 
 - [[Gigabyte]]
 - [[gigaErp]] — otro proyecto Gigabyte (ERP) en esta bóveda
 
-_Última sincronización: 2026-06-30_
+_Última sincronización: 2026-07-14_
