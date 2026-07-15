@@ -6,6 +6,7 @@ Entregable **separado** del deck [[informe-landing]]: una landing HTML que le mu
 - **Fuentes de datos:**
   - `BLU X GIGABYTE - BLU CUADRO.csv` → plan de medios (país, reseller, producto foco, presupuesto, link de Facebook, sitio).
   - `Familia GIGA40-…/Familia GIGA40/Redes+ADS/` → creatividades reales en 4 formatos: Feed **2:1** (1200×628), Square **1:1** (1080×1080), Post **4:5** (960×1200), Story **9:16** (1080×1920).
+  - `Redes+ADS/Key Words Campaña 40° Aniversario (1).pdf` → **copys exactos para Meta** (por producto: Familia, Monitores, Motherboards, VGA, PSU, Watercoolers, Notebooks) + **keywords de Google** por producto/país (amplia/frase/exacta + negativas). Se cargaron tal cual en los mockups: el copy de FB/IG y la query de Search salen de este PDF (mapeados por producto foco; la query usa la variante local — AR "placa madre"/"placa de video").
 - **Campaña:** GIGABYTE 40 aniversario — **"Rendimiento y Evolución"** / **"Team Up. Fight On."**, línea gamer GIGABYTE & AORUS.
 
 ## Cómo funciona
