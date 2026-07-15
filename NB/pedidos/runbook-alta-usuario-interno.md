@@ -148,3 +148,62 @@ FROM [NB_WEB].[dbo].[permisos_agente] WHERE id_usuario_web = 83729
 - `permisos_agente.agente_fp` = ccodage del agente
 - El campo `'statistics'` en permisos_agente tiene comillas simples en el nombre de columna (es palabra reservada) → usar `[statistics]` en queries
 - Todo el proceso se ejecuta dentro de una transacción (`DB::beginTransaction()` / `DB::commit()`)
+
+## ⚠️ Empresa del usuario (companyCode)
+
+El alta soporta cualquier empresa. El `companyCode` va en **4 lugares**:
+- `agentes.companyCode`
+- `clientes.companyCode`, `clientes.CODEMP`, `clientes.voucherCompanyCode`
+- `usuarios_nb.companyCode`
+
+Valores: **4=NB, 9=NBElectric (NBE), 5=Digito Binario, 11=Laset**.
+Ojo: `antonellalo` (template NB) tiene `usuarios_nb.companyCode` **vacío**, pero un usuario NBE real (`acarou`) lo tiene en **9** → para NBE hay que setearlo explícitamente en 9.
+
+`permisos_agente` NO lleva companyCode duro (solo `unlockedCompanyFilter`, que es un permiso): se clona tal cual del template para respetar "los mismos permisos que X".
+
+## ⚠️ GOTCHA CRÍTICO — segfault del driver pdo_sqlsrv con datetime
+
+El driver `pdo_sqlsrv` viejo del container **crashea (Segmentation fault)** al reinsertar valores `datetime` tal como los devuelve el `SELECT *`. Al leer, formatea las fechas como `'May 31 2026 12:00:00:AM'`, que NO se puede reconvertir a datetime → el proceso muere sin error atrapable.
+
+**Peor aún:** `php artisan tinker` **enmascara el segfault como exit 0** e imprime solo las líneas previas al crash. Parece que "no pasó nada" cuando en realidad murió.
+
+### Reglas para que funcione
+
+1. **NO correr el script con tinker.** Correrlo como PHP bootstrapeado normal para ver el error real:
+   ```php
+   // /tmp/alta_run.php
+   require '/var/www/app/vendor/autoload.php';
+   $app = require '/var/www/app/bootstrap/app.php';
+   $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
+   use Illuminate\Support\Facades\DB;
+   // ... logica ...
+   ```
+   ```bash
+   docker exec -i api-rest-pedidos-apirest-laravel bash -lc 'php /tmp/alta_run.php; echo "EXIT=$?"'
+   ```
+   EXIT=139 = SIGSEGV (el driver crasheó). EXIT=0 con COMMIT OK = éxito real.
+
+2. **Poner en NULL todas las columnas `datetime` del clon**, salvo `FECHA_ALTA = date('Y-m-d H:i:s')`. Una cuenta nueva no arrastra fechas del template.
+   - `clientes` datetime a nulear: `dateModified`, `FECHA_CAMBIO_VENDEDOR`, `ID_DIVISA_BK_DATE`, `percepcion_vencimiento`, `percepcion_vencimiento_arba`, `ULTIMA_COMPRA`.
+   - `usuarios_nb` datetime a nulear: `ssid_update`, `dateCreateToken`, `last_wp_update`.
+   - `permisos_agente`: no tiene columnas datetime.
+
+3. **Sanitizar `'' → null`** antes de insertar (el driver viejo devuelve NULL como `''`).
+
+4. Usar **INSERT con valores literales escapados** (`N'...'`, comillas duplicadas), no bind de parámetros — más robusto con este driver y ~110 columnas.
+
+5. `SET NOCOUNT ON` al inicio de la conexión (por las dudas, aunque estas tablas no tienen triggers).
+
+## Ejemplo concreto — Maximiliano Salomon / NBE ELECTRIC (2026-07-15)
+
+| Campo | Valor |
+|---|---|
+| `ccodage` / `ID_VENDEDOR` | 102 |
+| `ccodcli` / `ID_CLIENTE` | 100964 / 100964 |
+| `UserId` | 84051 |
+| `UserName` | msalomon |
+| `UserEmail` | msalomon@nbe.com.ar |
+| `companyCode` | **9 (NBE ELECTRIC)** — en agentes, clientes (companyCode/CODEMP/voucherCompanyCode) y usuarios_nb |
+| `permisos_agente.id` | 68 |
+| Template usado | antonellalo (ccodage 47, UserId 47847, permisos id 38) |
+| Nota | Permisos clonados de antonellalo (NB), pero empresa NBE (9). Targets personales (`monthlyTargetAmount`, etc.) reseteados a 0. |
