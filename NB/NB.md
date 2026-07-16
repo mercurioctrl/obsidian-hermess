@@ -90,4 +90,9 @@ E-commerce de New Bytes (nb.com.ar). Monorepo: frontend Nuxt 2 + API REST PHP Sl
 - [[sitio-web/arquitectura|Arquitectura]] · [[sitio-web/stack|Stack]] · [[sitio-web/infraestructura|Infraestructura]] · [[sitio-web/changelog|Changelog]] · [[sitio-web/contexto|Contexto]] · [[sitio-web/memoria|Memoria]]
 
 ---
+
+## [[qApp/qApp|qApp — Automatización QA]]
+Herramienta interna de QA para generar datos de prueba de negocio reproducibles, con evidencia y trazabilidad. Monorepo dockerizado: Nuxt 4 + NestJS + SQL Server (SQL crudo), ejecutores Playwright/HTTP y SSE. Repo `New-Bytes/qApp`.
+
+---
 *Última actualización: 2026-07-02 — Compras: front COM-320 (cotización única en el header del detalle, pesos→fiscal / dólares→quote), en gamma pendiente de development.*
