@@ -18,7 +18,7 @@ abajo — revisar la cadena al cambiar cosas de fondo.
 - **02** — [[estrategia-marca]]: territorio "Confiabilidad simple", 3 pilares, marca única + 2 relatos.
 - **03** — [[plan-campana]] + planes por canal: [[instagram-plan]], [[facebook-plan]], [[newsletter-campana]].
 - **04** — deck en slides (`04-pitch/index.html`) + [[pitch-guion-presentador]] + [[pitch-punchlines-propuesta]].
-- **Raíz** — dos landings HTML: ver [[landings]].
+- **Raíz** — dos landings HTML de campaña: ver [[landings]].
 
 ## Piezas HTML (todas autocontenidas, sin dependencias)
 
@@ -27,10 +27,21 @@ abajo — revisar la cadena al cambiar cosas de fondo.
 | `04-pitch/index.html` | D-Link (presentación en vivo, 17 slides) | navy `#0a1f44` + naranja `#ff7a00` |
 | `index.html` (raíz) | Consumidor final | azul insignia `#4481a7` + neutros |
 | `propuesta.html` (raíz) | D-Link (cliente, propuesta de Blu) | azul insignia `#4481a7` + neutros |
+| `brand-guidelines/index.html` | Guía de marca como web (documento) | teal oficial `#0087A9` |
+| `m15-2/index.html` | Landing de producto M15 EAGLE PRO AI | teal `#0083A5`, fuentes Inter + Plus Jakarta |
 
-Las dos landings web usan la **paleta corporativa real de D-Link** (azul insignia + blancos/negros/
-grises, estilo la.dlink.com) con **íconos SVG flat** (sin emojis a color). Solo el deck de slides
-conserva navy + naranja.
+Las dos landings **de campaña** (raíz) usan la paleta corporativa `#4481a7` + íconos SVG flat.
+`m15-2/` es una landing de producto con su propio sistema de estilos (fuentes self-hosted, cards,
+reveal-on-scroll) y **sirvió de base visual** para `brand-guidelines/` (que adopta ese sistema pero
+con el teal oficial `#0087A9`). El deck de slides conserva navy + naranja.
+
+## Generación de PDF — dos caminos distintos
+- **`md2pdf.py`** (md → PDF): convierte los `.md` de entregables (carpetas 01–04) a PDF con estilo
+  de marca (navy + naranja) vía Chrome headless. Cada carpeta queda con `.md` + `.pdf`.
+- **HTML → PDF directo** (Chrome headless `--print-to-pdf`): usado para
+  `brand-guidelines/D-Link-Brand-Guidelines.pdf`. Requiere un bloque `@media print` en el HTML que
+  fuerce `.reveal` visible (el contenido depende de IntersectionObserver), oculte la nav fija y
+  controle saltos de página. Las landings de raíz NO se pasan a PDF.
 
 ## Invariantes editoriales (reglas duras)
 - **Filtro de 3 pilares:** todo refuerza ANDA / FÁCIL / RESPALDADO, o no va.
@@ -44,4 +55,4 @@ conserva navy + naranja.
   marca (Chrome headless). Cada carpeta queda con `.md` + `.pdf`.
 
 ## Ver también
-[[contexto]] · [[changelog]] · [[D-Link]]
+[[contexto]] · [[changelog]] · [[landings]] · [[D-Link]]

@@ -3,8 +3,8 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `b12ecee` · **Última sincronización:** 2026-07-02
-**Último trabajo:** backup/restore completo en ZIP (datos + documentos + imágenes), rama `feat/backup-completo-zip` — ver [[changelog#2026-07-02 — Backup/restore completo en ZIP (datos + archivos)]] y [[arquitectura#Backup/restore completo (ZIP)]]
+**Último commit:** `455663e` · **Última sincronización:** 2026-07-16
+**Último trabajo:** sección **Addons** en Marketing — lanzadores a apps externas (url + token) en pestaña nueva, commit `455663e` — ver [[changelog#2026-07-16 — Addons de marketing (lanzadores externos url + token)|changelog]] y [[modulos/addons]]
 
 ---
 
@@ -25,6 +25,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 - [[modulos/invoice-preview]] — preview Blu-style + html2pdf client-side
 - [[modulos/productos]] — sync partpicker + carga masiva de catálogo GIGABYTE, 4 listas de precio
 - [[modulos/resellers]] — resellers live desde partpicker, sin importar a DB
+- [[modulos/addons]] — lanzadores a apps externas (url + token) que abren en pestaña nueva
 
 ---
 
@@ -56,7 +57,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 ```
 Principal:    Dashboard · Distribuidores · Proveedores
 Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Resellers · Órdenes de Venta
-Marketing:    Fondos · Calendario · Tareas
+Marketing:    Fondos · Calendario · Proyectos · Tareas · Addons
 Admin:        Configuración (solo admin)
 ```
 

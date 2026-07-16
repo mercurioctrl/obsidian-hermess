@@ -4,6 +4,21 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-07-14 (continuación — People & Performance Fase 2 inicial + Calendario)
+
+- feat: **Sección Calendario** (`/calendario`, vista mensual) que unifica **todo lo que tiene fecha y es de los usuarios**: tareas por su **deadline** (`fecha_vencimiento`, vencidas sin finalizar en rojo), **ausencias/vacaciones** por rango, **reuniones 1:1** y **objetivos** por fecha límite. Filtros por tipo y por persona. `CalendarioController` + `GET /api/calendario?desde=&hasta=`. Gateada con `VER_SECCION_CALENDARIO`. Entregado en PR #17. Ver [[Modulo Calendario]]
+- feat: **Suscripción de calendario externa (feeds iCal .ics)** — cada usuario suscribe su calendario en Google/Apple/Outlook. `usuarios.calendar_token` (mig `0089`, oculto). Auth: `GET /calendario/suscripcion` + `POST …/regenerar`. Públicos por token: `GET /api/calendario/{token}/personal.ics` (solo lo suyo) y `/equipo.ics` (todo). Eventos all-day, VCALENDAR a mano. Modal "Suscribir a mi calendario" con copiar + `webcal://` + instrucciones. Solo lectura, refresh ~horas. Ver [[Modulo Calendario]]
+- feat: **Reuniones 1:1 por empleado** — primer bloque de la Fase 2. Tab en la ficha con lista + modal (título/fecha/observaciones). Tabla `reuniones_uno_a_uno` (mig `0088`), `ReunionUnoAUno` + `ReunionUnoAUnoController`. Endpoints `GET/POST /empleados/{id}/reuniones-1a1`, `PUT/DELETE /reuniones-1a1/{id}`. Ver [[Modulo People Performance]]
+- feat: **Ausencias con rango de fechas** — `ausencias` +`fecha_fin` opcional (mig `0087`) para vacaciones (sin `fecha_fin` = un solo día). Forms "Desde/Hasta", listado "inicio → fin · N días", validación `after_or_equal:fecha`.
+- fix: **La validación de la API devolvía 500 en vez de 422** — el render de excepciones (`bootstrap/app.php`, PR #10) capturaba todo `Throwable` y, como `ValidationException` no tiene `getStatusCode()`, caía en el 500 genérico → **ningún formulario mostraba errores por campo en producción**. Ahora `ValidationException` → **422 con `errors`**. Afecta a toda la app. Ver [[Errores Comunes]]
+- fix: **Pestañas de la ficha de empleado en una sola línea** — con 9 tabs se partían en dos líneas; ahora `whitespace-nowrap` + scroll horizontal (scrollbar oculta).
+
+Todo mergeado a `main` (PRs #14, #16, #17). Migraciones nuevas: `0087`, `0088`, `0089`. ⚠️ Al desplegar correr migraciones + seeders (`RolesExpectativasSeeder`, `CompetenciasSeeder`).
+
+Archivos: `backend/app/Http/Controllers/{Calendario,ReunionUnoAUno}Controller.php` (nuevos), `backend/app/Models/ReunionUnoAUno.php` (nuevo), `backend/bootstrap/app.php` (422), `backend/database/migrations/{0087,0088,0089}_*`, `frontend/pages/calendario/index.vue` (nuevo), `frontend/pages/staff/{[id],ausencias}.vue`, `frontend/layouts/default.vue`, `frontend/middleware/auth.global.ts`, `frontend/pages/usuarios/index.vue`
+
+---
+
 ## 2026-07-14
 
 - feat: **Módulo People & Performance (RRHH) sobre Personal — Fase 1 + integraciones.** Se volcaron al sistema la spec `Especificación Funcional y Técnica.docx`, la planilla de ausencias y el doc de roles/expectativas del equipo. Todo dentro de la sección Personal (`/staff`), por tabs en la ficha del empleado. Rama `feat/rrhh-ausencias-roles` (sin commitear). Ver [[Modulo People Performance]], [[Modulo Personal]], [[Backend - API]]

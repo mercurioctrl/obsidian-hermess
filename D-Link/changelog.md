@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-16
+- **Nueva landing `brand-guidelines/index.html`**: versión web del PDF `Brand_Guidelines_2015`
+  de D-Link (contenido 100% fiel, en inglés). Estilo basado en la landing de producto `m15-2/`,
+  con el **teal oficial `#0087A9`** (no el azul de campaña). Ver [[landings]].
+- **PDF gemelo** `D-Link-Brand-Guidelines.pdf` (25 págs, A4) generado con **Chrome headless**
+  directo del HTML mediante un bloque `@media print` (fuerza `.reveal` visible, oculta nav fija,
+  controla saltos de página; índice en flexbox). **NO usa `md2pdf.py`** (ese script es md→PDF).
+
 ## 2026-07-02
 - **Documentación + memoria:** actualizado `CLAUDE.md` (arquitectura, agencia Blu, herramientas) y
   la memoria del proyecto (3 notas: proyecto, [[contexto|Blu]], propuesta-landing). Sincronizada la bóveda.

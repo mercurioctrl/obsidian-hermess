@@ -12,7 +12,7 @@ gigaErp/
 │   │   ├── Models/           ← ~24 Eloquent models
 │   │   └── (no Services aún)
 │   ├── database/
-│   │   ├── migrations/       ← 0001–0041 (numeradas; 0041 = depositos.stock_ilimitado)
+│   │   ├── migrations/       ← 0001–0044 (numeradas; 0044 = addons_marketing)
 │   │   └── seeders/          ← DatabaseSeeder, DemoSeeder, ProductoInvidSeeder,
 │   │                            ProductoNewBytesSeeder, CuentaCorrienteSeeder, UsuarioSeeder
 │   ├── resources/views/

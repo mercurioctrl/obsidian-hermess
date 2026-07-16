@@ -1,3 +1,24 @@
+## 2026-07-16 — Addons de marketing (lanzadores externos url + token)
+
+Nueva sección **Addons** dentro del grupo Marketing: un catálogo de accesos rápidos a apps externas. Cada addon guarda **nombre, URL, token y descripción**; al hacer clic se abre en una pestaña nueva la **URL con el token concatenado literalmente al final** (`url + token`, sin separador). Commit `455663e`. Persistencia en backend (compartido entre usuarios). Detalle en [[modulos/addons]].
+
+### Backend — CRUD nuevo
+- Migración `0044_create_addons_marketing_table.php` → tabla `addons_marketing` (`nombre`, `url` text, `token` text nullable, `descripcion` text nullable, `usuario_id` FK a `usuarios` nullOnDelete).
+- Modelo `AddonMarketing` (`$table = 'addons_marketing'`, relación `creador`).
+- `AddonMarketingController` → `index` (orden por `created_at`) / `store` (setea `usuario_id` = usuario actual) / `update` / `destroy`.
+- Ruta: `apiResource('addons')->only(['index','store','update','destroy'])->parameters(['addons'=>'addon'])`, bajo `auth:sanctum`, en el grupo Marketing.
+
+### Frontend
+- `utils/secciones.ts` — sección nueva `VER_SECCION_ADDONS` (label "Addons", ícono `lucide:puzzle`, grupo Marketing). Ya son 14 secciones.
+- `pages/addons/index.vue` (nuevo) — botón **Agregar** → modal (nombre, URL, token, descripción); listado en cards; clic abre `url+token` en pestaña nueva (`noopener,noreferrer`); editar/eliminar al hover.
+
+### ⚠️ Notas
+- El token se guarda en **texto plano** en DB y viaja literal en la URL (queda en el historial del navegador y en logs del server destino).
+- Como todo el sistema de permisos por sección, el bloqueo es **solo frontend**; el endpoint `/api/addons` está abierto a cualquier usuario autenticado.
+- Deploy: migración aplicada en caliente (`docker cp` + `migrate --force` + `config:cache`) + rebuild del frontend. Se pusheó **solo Addons** a `main` (sin arrastrar otras ramas).
+
+**Archivos:** `backend/database/migrations/0044_create_addons_marketing_table.php`, `backend/app/Models/AddonMarketing.php`, `backend/app/Http/Controllers/AddonMarketingController.php`, `backend/routes/api.php`, `frontend/utils/secciones.ts`, `frontend/pages/addons/index.vue`.
+
 ## 2026-07-02 — Backup/restore completo en ZIP (datos + archivos)
 
 El backup dejó de ser un JSON de solo-base-de-datos y pasó a ser un **ZIP con el dataset completo**, pensado para que *clonando el repo + restaurando el ZIP* se recupere todo (datos, usuarios, documentos e imágenes) sin pasos extra. Rama `feat/backup-completo-zip` (commit `b12ecee`). Detalle en [[arquitectura#Backup/restore completo (ZIP)|arquitectura]] y [[contexto#Backup/restore — reglas|contexto]].

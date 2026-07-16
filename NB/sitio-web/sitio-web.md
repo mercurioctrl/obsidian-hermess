@@ -14,9 +14,10 @@ Ruta local: `/var/www/nb/sitioNB/`
 - [[infraestructura]] — Docker, PM2, Apache, Redis y setup local
 - [[changelog]] — Registro de lo trabajado por fecha
 - [[contexto]] — Reglas de negocio, decisiones y aprendizajes
+- [[memoria]] — Memoria consolidada de Claude: preferencias, servicios del host, problemas conocidos
 
 ## Bases de datos
 
 La API se conecta a **SQL Server** (no MySQL como sugería el genérico): bases `NB_WEB`, `NewBytes_DBF`, `PRODUCTOS`. El stock vive en `NewBytes_DBF.dbo.stocks` (una fila por almacén).
 
-Última sincronización: 2026-07-14
+Última sincronización: 2026-07-16
