@@ -70,6 +70,7 @@ Regla de la spec: la actividad GitHub/Jira es **evidencia consultable**, no punt
 ## Ver también
 
 - [[Modulo Personal]] — base de empleados/pagos que este módulo extiende
+- [[Modulo Calendario]] — vista mensual que consume ausencias/1:1/objetivos de este módulo
 - [[Modulo GitHub]] — fuente de evidencia de actividad de devs
 - [[Modulo Permisos]] — gating de la sección
 - [[Base de Datos]] · [[Backend - API]] · [[Frontend]] · [[Errores Comunes]]

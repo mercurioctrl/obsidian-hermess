@@ -87,7 +87,7 @@ Revisión del presupuesto de CCTV de C-Team para oficinas y depósitos (7 racks)
 
 ## [[sitio-web/sitio-web|Sitio Web NB]]
 E-commerce de New Bytes (nb.com.ar). Monorepo: frontend Nuxt 2 + API REST PHP Slim 4 sobre SQL Server.
-- [[sitio-web/arquitectura|Arquitectura]] · [[sitio-web/stack|Stack]] · [[sitio-web/infraestructura|Infraestructura]] · [[sitio-web/changelog|Changelog]] · [[sitio-web/contexto|Contexto]]
+- [[sitio-web/arquitectura|Arquitectura]] · [[sitio-web/stack|Stack]] · [[sitio-web/infraestructura|Infraestructura]] · [[sitio-web/changelog|Changelog]] · [[sitio-web/contexto|Contexto]] · [[sitio-web/memoria|Memoria]]
 
 ---
 *Última actualización: 2026-07-02 — Compras: front COM-320 (cotización única en el header del detalle, pesos→fiscal / dólares→quote), en gamma pendiente de development.*

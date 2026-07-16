@@ -53,4 +53,4 @@ Ver [[Base de Datos]]. Tablas: `tareas`, `tarea_adjuntos`, `tarea_comentarios`, 
 
 ## Ver también
 
-[[bluMiniErp]] · [[Base de Datos]] · [[Backend - API]] · [[Frontend]] · [[Modulo Personal]] · [[Modulo Permisos]] · [[Modulo WhatsApp Inbox]] · [[Errores Comunes]] · [[changelog]] · [[memoria]]
+[[bluMiniErp]] · [[Base de Datos]] · [[Backend - API]] · [[Frontend]] · [[Modulo Personal]] · [[Modulo Calendario]] · [[Modulo Permisos]] · [[Modulo WhatsApp Inbox]] · [[Errores Comunes]] · [[changelog]] · [[memoria]]
