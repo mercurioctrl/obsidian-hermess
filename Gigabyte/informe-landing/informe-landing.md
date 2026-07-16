@@ -22,6 +22,7 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[memoria]] — espejo de la memoria de Claude del proyecto.
 - [[investigacion-notebooks]] — entregable aparte: investigación de mercado + 4 landings por país (AR/CL/UY/PY) de las notebooks GIGABYTE A16 / Aero X16.
 - [[landing-ejemplo-ads]] — entregable aparte: landing que le muestra al cliente los anuncios de ejemplo (Familia GIGA40) en mockups realistas de Meta + Google, por reseller.
+- [[research-paid-media]] — dossier de investigación y estrategia (competencia, demanda/estacionalidad, benchmarks, roles de canal, medición/geo-lift) con fuentes verificables.
 
 ## Ver también
 
