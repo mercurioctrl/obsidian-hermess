@@ -1,8 +1,11 @@
 # Presupuesto Mario (Contratista) - Junio 2026
 
 **Total Mano de Obra:** $ 8.500.000
-**Total pagado a la fecha:** $ 7.300.000 (Incluye $500k iniciales de caños/nivelación)
-**Saldo pendiente:** $ 1.200.000
+**Total pagado a la fecha:** $ 8.300.000 (Incluye $500k iniciales de caños/nivelación)
+**Saldo pendiente:** $ 200.000
+
+## Registro de pagos
+- **2026-07-14 (martes):** $ 1.000.000
 
 ## Detalle de trabajos
 
