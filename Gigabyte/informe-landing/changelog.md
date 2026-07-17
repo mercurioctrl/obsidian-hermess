@@ -84,3 +84,12 @@ Archivos principales: `por pais/investigacion-notebooks/generar_landings.py`, `d
 - Resellers sin landing (Compumar, Compufan) → CTA "Enviar mensaje" (Messenger). Validado con Chrome headless en cada paso.
 
 Archivos principales: `landing-ejemplo-ads/campana-q2-familia-giga40.html` (ex `index.html`), `landing-ejemplo-ads/assets/`.
+
+## 2026-07-17 — Sección de estrategia en la landing de ejemplo
+
+- **Nueva sección "La estrategia detrás de las piezas"** en [[landing-ejemplo-ads]] (`campana-q2-familia-giga40.html`), insertada entre el Kit de formatos y el Plan de medios. Vuelca el dossier [[research-paid-media]] al entregable, con estética AORUS (solo naranja/blanco/gris, iconos SVG monoline, sin emojis) y **fuentes accesibles clicables** al pie.
+- **5 sub-bloques:** (1) *Por qué Google y Meta con el mismo peso* — captura vs generación de demanda (2 cards + nota del techo estructural de la búsqueda); (2) *Funnel* de 3 columnas (Awareness/Consideración/Conversión) con Meta+Google y KPI por etapa; (3) *Qué esperar en números reales* — anclas AR (CPC ~US$0,38 · CPM ~US$3,80 · ROAS 2–3×) + tabla de expectativas por presupuesto + banda de error honesta; (4) *Cómo se mide de verdad* — last-click subestima a Meta → geo-lift + GTM/Consent Mode; (5) *Calendario comercial por país* (AR/CL/UY no se unifican).
+- **Bloque "Fuentes accesibles"** con enlaces reales (Google Ads, Meta, Search Engine Land, AdAmigo, Store Growers, Triple Whale, CACE/CyberDay/CEDU) + caveat honesto: no se reportan montos de competidores ni volúmenes absolutos porque no son públicos.
+- **Print/PDF:** los nuevos bloques (`.scard/.fcol/.bcard/.mcard/.strat-note/.srcs`) llevan `break-inside:avoid` + aire arriba en `.sub-h`. Validado: PDF de 8 páginas, todos los bordes oscuros full-bleed, sin cortes sobre el contenido.
+
+Archivo: `landing-ejemplo-ads/campana-q2-familia-giga40.html`.
