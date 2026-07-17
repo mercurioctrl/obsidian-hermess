@@ -23,6 +23,10 @@ Un **selector de reseller** (estilo botón: activo naranja sólido `#FF6400` con
 - **Demand Gen · Discover & Gmail** — card del feed con fila de fuente, imagen 4:5, tag "Anuncio · url", titular y CTA.
 - **YouTube · in-stream** — player con badge "Anuncio", botón "Saltar anuncios", barra de controles, progreso amarillo y banner companion. *Se sirve con video; se muestra el fotograma clave a modo de referencia.*
 
+## Sección de estrategia (2026-07-17)
+
+Entre el Kit de formatos y el Plan de medios hay una sección **"La estrategia detrás de las piezas"** que vuelca el dossier [[research-paid-media]] al entregable, en estética AORUS (solo naranja/blanco/gris, iconos SVG monoline) y con **fuentes accesibles clicables**. Cinco sub-bloques: (1) por qué Google y Meta con el mismo peso (captura vs generación), (2) funnel de 3 columnas con KPI por etapa, (3) qué esperar en números reales (anclas AR: CPC ~US$0,38 · CPM ~US$3,80 · ROAS 2–3× + tabla por presupuesto + banda de error), (4) cómo se mide de verdad (last-click subestima a Meta → geo-lift + GTM/Consent Mode), (5) calendario comercial por país (AR/CL/UY no se unifican). Cierra con bloque de **Fuentes** y caveat de honestidad (montos de competidores y volúmenes absolutos no son públicos). Validado en pantalla y en PDF (8 págs, sin cortes).
+
 ## Resellers foco (Familia GIGA40, del CSV)
 
 | País | Reseller | Foco | Inversión | Destino |
@@ -45,4 +49,5 @@ Total foco: **7 resellers × US$ 270 = US$ 1.890**. (COMPRAGAMER/Armytech quedan
 
 ## Ver también
 - [[informe-landing]] · [[contexto]] · [[changelog]]
+- [[research-paid-media]] — dossier de research/estrategia que alimenta la sección de estrategia
 - [[investigacion-notebooks]] — otro entregable satélite del mismo proyecto
