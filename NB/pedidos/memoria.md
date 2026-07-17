@@ -518,3 +518,6 @@ Incluye **LST GLOBAL** (CCODPRO 002607, intercompañía Laset⟷NB Inc, saldo 11
 parser: fuera del SKIP + `prov_name='LST GLOBAL'` + `SUMMARY_LABELS` ignora filas de resumen con fecha).
 Saldo = "A favor/Deuda" **bruto** (NO netear NC Disponible). Excluidos: Transcargo/Egre/Pendiente Euros.
 Ver [[feature-laset-cuenta-corriente-proveedores]] · [[changelog#2026-07-03 — LST GLOBAL (cta cte proveedores, intercompañía) + aclaración Crown]].
+
+## (2026-07-15) Alta de usuario interno — proceso + gotcha datetime
+Alta de agente/usuario web = INSERT transaccional en 4 tablas: `agentes`+`clientes` (NewBytes_DBF), `usuarios_nb`+`permisos_agente` (NB_WEB), clonando un usuario template. `companyCode` va en 4 lugares (agentes, clientes ×3: companyCode/CODEMP/voucherCompanyCode, usuarios_nb). Empresas: **4=NB, 9=NBElectric/NBE, 5=Digito Binario, 11=Laset** (OJO: `contexto.md` dice erróneamente "9=Meli" — el correcto es 9=NBElectric, verificado contra usuarios NBE reales). **Gotcha crítico**: el driver `pdo_sqlsrv` viejo segfaultea (exit 139) al reinsertar `datetime` leídos con `SELECT *`; **tinker lo enmascara como exit 0**. Fix: correr como PHP bootstrapeado (no tinker) + nulear columnas datetime del clon salvo `FECHA_ALTA`. Último alta: Maximiliano Salomon (NBE, ccodage 102, UserId 84051, 2026-07-15). Ver [[runbook-alta-usuario-interno]].

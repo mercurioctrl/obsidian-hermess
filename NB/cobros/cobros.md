@@ -7,7 +7,7 @@ Sistema financiero para gestión de cobros, pagos, cheques, cajas y cuentas corr
 **Entorno dev:** Docker (puerto 8083 API, 3002 Frontend)
 **Ramas de integración:** `Development` (API, D mayúscula) · `development` (web, minúscula)
 
-Última sincronización: 2026-07-08
+Última sincronización: 2026-07-17
 
 ---
 

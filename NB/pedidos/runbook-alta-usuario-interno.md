@@ -207,3 +207,8 @@ El driver `pdo_sqlsrv` viejo del container **crashea (Segmentation fault)** al r
 | `permisos_agente.id` | 68 |
 | Template usado | antonellalo (ccodage 47, UserId 47847, permisos id 38) |
 | Nota | Permisos clonados de antonellalo (NB), pero empresa NBE (9). Targets personales (`monthlyTargetAmount`, etc.) reseteados a 0. |
+
+## Ver también
+- [[relacion-companycode]] — mapa de companyCode por empresa (9=NBElectric/NBE)
+- [[contexto]] — reglas de negocio y multi-empresa
+- [[pedidos]] — índice del proyecto

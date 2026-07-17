@@ -1,5 +1,14 @@
 # Changelog — CashBox Cobros
 
+## 2026-07-17 — Verificación en dev del Dashboard de Impuestos
+
+### chore: levantar frontend en modo dev + verificación end-to-end
+
+- Ramas confirmadas: API `Development` · web `development`. El **Dashboard de Impuestos** sigue como WIP **sin commitear** en ambos repos (back: `src/Domain/Statistics/Taxes/` + wiring en `Repositories.php`/`ServicesStatistics.php`/`StatisticsRoute.php`; front: `pages/dashboard/taxes.vue`, `store/taxes.js`, `layouts/basic.vue`).
+- `npm run dev` fallaba con `ERR_OSSL_EVP_UNSUPPORTED` (Node 18 + webpack viejo) → se levanta con `NODE_OPTIONS=--openssl-legacy-provider npm run dev`. Nuxt compila OK, front en `http://localhost:3002`.
+- Backend `cobros-api-rest` ya arriba (8083). `GET /v1/statistics/taxes` responde `401` (ruta viva; requiere login + `viewTaxes`) → confirma que los cambios sin commitear de `StatisticsRoute.php` se sirven en vivo desde el contenedor (volumen montado, PHP sin rebuild).
+
+
 ## 2026-07-09 / 2026-07-11
 
 ### análisis: Intimación AGIP percepciones IIBB CABA (no es cambio de código)

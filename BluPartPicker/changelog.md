@@ -203,3 +203,23 @@ Nuevo archivo con el proceso completo documentado:
 
 Archivos: `api.py`, `docs/architecture.md`, `docs/runbook.md`, `.claude/CLAUDE.md`
 
+
+
+## 2026-07-17 — Ceven: rotación de credenciales + prueba del importador
+
+### Credenciales de Ceven rotadas
+- El importador (`sync_ceven.py`) fallaba en login: el sitio devolvía "Correo electrónico o contraseña incorrectos".
+- Diagnóstico con Playwright + screenshot confirmó que las credenciales viejas (`mrebreg@nb.com.ar` / `Nb20262026`) habían sido dadas de baja/rotadas del lado del distribuidor.
+- Nuevas credenciales validadas y actualizadas en `sync_ceven.py:22-23`: `jdebello@nb.com.ar` / `Rmfrb001!`.
+
+### Prueba end-to-end del importador
+- Corrida completa OK: **513 items · 59 nuevos · 454 actualizados** · 343 entradas de historial.
+- Catálogo bajó los 514 productos en batches de 100; mapeo de las 26 categorías completo.
+- Estado en DB (`source=ceven`): 587 items · 563 con precio · 554 en stock · 443 con categoría.
+
+### Aprendizaje: el loop de categorías es frágil
+- Una corrida previa cortó con `Page.evaluate: TypeError: Failed to fetch` en la categoría 16/26 (throttling transitorio de Akamai por la ráfaga de requests).
+- El loop de categorías **no tiene retry**: una sola falla aborta todo el sync y descarta los 514 items ya bajados (el upsert es posterior al mapeo). El reintento manual pasó sin problemas.
+- Pendiente sugerido: agregar retry con backoff a las requests de categorías. Ver [[resellers#Ceven]].
+
+Archivos: `sync_ceven.py` (credenciales, sin commitear al cierre de la sesión).

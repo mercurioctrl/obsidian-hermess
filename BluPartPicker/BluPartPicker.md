@@ -2,7 +2,7 @@
 
 Catálogo unificado de tecnología argentina. API REST que consolida mayoristas y resellers en una sola DB SQLite con historial de precios, conversión de moneda en tiempo real y **matching de productos** (`oracular_sku`) con consola de curación web.
 
-**Última sync:** 2026-06-25 · **Commit:** `44c858d` · **Rama activa:** `feat/api-auth` (auth + Swagger)
+**Última sync:** 2026-07-17 · **Commit:** `44c858d` · **Rama activa:** `feat/api-auth` (auth + Swagger)
 
 ## Stack
 

@@ -985,3 +985,12 @@ Commit `d05ddd4c`. Correcciones tras revisar contra la pantalla del ERP:
 - **2ª pasada EUR**: 13 hojas europeas (Tiroler 79.982 · Winter 7.445 · Danicoop −11.790 + 10 saldadas) convertidas a USD al **TC de cierre** (facturas y pagos EUR × TC_cierre → saldo = afd_EUR × TC_cierre); el **TC real de cada pago se guarda en COTIZACION**. El servicio importa USD + EUR.
 - Estado dev: **78 proveedores comp=11 (65 USD + 13 EUR), 5.303 movimientos, todos reconcilian**.
 - Pendiente (no comp=11): Rational (EUR US$451k), La Guera, Santa Margherita, Egre + 10 USD con saldo. Ver [[feature-laset-cuenta-corriente-proveedores]].
+
+
+## 2026-07-15 — Alta de usuario interno: Maximiliano Salomon (NBE ELECTRIC)
+
+Alta de nuevo agente/usuario web en producción, empresa **NBE ELECTRIC (companyCode 9)**, con los permisos clonados de `antonellalo`. Inserción transaccional en 4 tablas: `agentes`, `clientes` (`NewBytes_DBF`), `usuarios_nb`, `permisos_agente` (`NB_WEB`).
+
+- Claves: `ccodage/ID_VENDEDOR 102`, `ccodcli/ID_CLIENTE 100964`, `UserId 84051`, `permisos_agente.id 68`. Login `msalomon` / `msalomon@nbe.com.ar`.
+- Se destrabó un **segfault del driver `pdo_sqlsrv`**: crashea al reinsertar valores `datetime` leídos con `SELECT *` (los devuelve como `'May 31 2026 12:00:00:AM'`, irreconvertible). Además **tinker enmascara el segfault como exit 0**. Fix: correr como PHP bootstrapeado normal (no tinker) + nulear todas las columnas datetime del clon salvo `FECHA_ALTA`.
+- Runbook actualizado con el fix y el mapeo de `companyCode` por empresa: [[runbook-alta-usuario-interno]].

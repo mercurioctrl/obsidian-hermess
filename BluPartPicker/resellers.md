@@ -39,18 +39,28 @@ La expresión SQL de la API usa `moneda = 'USD'` exacto. Si llega `"US$"`, la co
 - No es posible reusar cookies fuera del browser context
 ```
 URL: checkout.ssp?is=login&login=T&cur=USD&origin=customercenter&lang=es_AR
-Email: mrebreg@nb.com.ar | Password: Nb20262026
+Email: jdebello@nb.com.ar | Password: Rmfrb001!
 Esperar redirect a: **/my_account.ssp**
 ```
 
+### ⚠ GOTCHA — Credenciales rotadas (2026-07-17)
+- Las credenciales las rota el distribuidor sin aviso. Síntoma: login queda en `#login-register` con "Correo electrónico o contraseña incorrectos" → el script corta con `Timeout` esperando `my_account.ssp`.
+- Credenciales anteriores dadas de baja: `mrebreg@nb.com.ar` / `Nb20262026`.
+- Diagnóstico rápido: correr un login manual con Playwright y sacar screenshot (`page.screenshot`) — muestra el mensaje de error de la propia página.
+
 ### API de productos (NetSuite SCA)
 - Llamado via `page.evaluate(fetch(...))` dentro del contexto del browser
-- Paginar de 100 en 100 · ~466 productos totales
-- ~108 de 464 productos sin categoría (no aparecen en ninguna categoría del catálogo) — normal
+- Paginar de 100 en 100 · ~514 productos totales
+- ~70-108 productos sin categoría (no aparecen en ninguna categoría del catálogo) — normal
 
-### ⚠ GOTCHA — Timeouts transitorios
-- El cron puede fallar con `Locator.fill: Timeout 30000ms exceeded` si el sitio de Ceven está lento
-- No es un bug del script — correr manual para confirmar que el sitio esté operativo
+### ⚠ GOTCHA — Loop de categorías sin retry
+- Tras bajar el catálogo, el script mapea 26 categorías con una request cada una. Akamai puede throttlear la ráfaga → `Page.evaluate: TypeError: Failed to fetch`.
+- Ese error **aborta todo el sync** y descarta los items ya bajados (el upsert ocurre después del mapeo). El reintento manual suele pasar sin problema.
+- Pendiente: agregar retry con backoff a las requests de categorías para tolerar fallas transitorias.
+
+### ⚠ GOTCHA — Timeouts transitorios de login
+- El cron puede fallar con `Timeout 30000ms exceeded` si el sitio de Ceven está lento o durante el challenge JS de Akamai.
+- No es un bug del script — correr manual para confirmar que el sitio esté operativo (y descartar credenciales rotadas).
 
 ---
 
