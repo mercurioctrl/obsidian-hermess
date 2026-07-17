@@ -11,7 +11,7 @@ El sistema opera para tres marcas de la misma empresa:
 
 La mayoría de tablas y endpoints filtran por `companyCode`. Al loguearse, el usuario queda asociado a una empresa, pero puede cambiar desde la UI (engranaje). Al cambiar de empresa se recargan: vendedores, medios de envío y medios de pago.
 
-CompanyCodes conocidos: **4=NBE**, **9=Meli**, **11=LASET**, **12=Libreopción**.
+CompanyCodes conocidos: **2=Oxxen**, **4=NB**, **5=Digito Binario**, **8=Mugello**, **9=NBElectric (NBE)**, **11=LASET**, **12=Libre Opción**. Mapeo completo en [[contexto#Empresas activas (FP_Empresas)|la tabla FP_Empresas]] más abajo (`CODEMP`). ⚠️ El valor **9 es NBElectric, no Meli** (verificado contra usuarios NBE reales) — ver [[relacion-companycode]].
 
 ## Base de datos
 
