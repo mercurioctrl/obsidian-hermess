@@ -57,6 +57,14 @@ Se sumaron 2 slides al deck interno para **explicar a GIGABYTE/resellers los esc
 - Producto: el **A16 capa la GPU a ~85W** → no prometer "máximo rendimiento"; vender valor/pantalla/RTX 50. GIGABYTE es **challenger en notebooks**.
 - **Desviación de marca conocida:** los landings de notebooks usan el estilo del template "por pais" (gradiente RGB, texto cian/magenta, banderas emoji), que **contradice** la regla "solo naranja/blanco, sin emojis, AORUS" del deck principal. Pendiente decidir si se migran a la marca estricta.
 
+### Profundización 2026-07-18 (research verificado) — decisiones y aprendizajes
+- **Se pidió profundizar el research** con datos precisos, citando la fuente, y profundizar estrategias/ideas. Se corrió con **workflow multi-agente** (elección del usuario) + **verificación adversarial** de cada cifra contra su fuente. Regla operativa: lo que no se puede verificar se marca (`confidence` low / "estimado" / "no verificable"), no se presenta como firme.
+- **El hallazgo del cap 85 W TGP dejó de ser una nota y pasó a ser el eje del mensaje:** aplica a **toda la línea** (A16 y Aero X16, todos los tiers), no solo al A16. Se comunica el rendimiento real jugable (fps con DLSS), nunca "máximo rendimiento". La honestidad sobre el TGP se trató como **activo defendible** (los reviewers ya lo miden).
+- **Correcciones fiscales que cambian el pitch** (verificadas): AR **no** bajó el arancel de notebooks a 0% (sigue 8%; la baja fue celulares/consolas) — desmiente la percepción de "la tecnología bajó a 0"; CL sumó **IVA digital 19%** que juega **a favor** del canal local con garantía; PY tiene el **RTC** (IVA exento al turista) y su motor transfronterizo se movió de Argentina a **Brasil** → geo-targeting fronterizo en **portugués**.
+- **Volúmenes de keyword:** se dejaron como **estimaciones marcadas** (no hay data pública de Keyword Planner/Ahrefs por país); el deck lo aclara y recomienda validar con Keyword Planner logueado geo-segmentado antes de fijar pujas.
+- **Decisión de estilo:** las secciones nuevas mantuvieron el estilo "por pais" por consistencia con el deck (la desviación de marca sigue pendiente de decisión, ahora también en el contenido nuevo).
+- **Etiqueta "Investigación en curso"** en el header (pedido del usuario): los decks se comunican explícitamente como **documento vivo** en re-validación continua.
+
 ## Landing ejemplo de anuncios (2026-07) — decisiones
 - Entregable **separado** del deck `informe-landing`: mostrarle al cliente **cómo se ven los anuncios reales** de la campaña **Familia GIGA40** antes de ejecutarlos. Ver [[landing-ejemplo-ads]].
 - **Data-driven desde el CSV** `BLU X GIGABYTE - BLU CUADRO.csv` + creatividades reales de `Familia GIGA40/Redes+ADS/`. Todo lo personalizable (nombre, handle, país, foco, sitio/CTA) sale del objeto `RESELLERS` en JS y se elige con un **selector de reseller**.

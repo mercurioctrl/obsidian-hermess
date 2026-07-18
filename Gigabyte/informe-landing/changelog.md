@@ -93,3 +93,16 @@ Archivos principales: `landing-ejemplo-ads/campana-q2-familia-giga40.html` (ex `
 - **Print/PDF:** los nuevos bloques (`.scard/.fcol/.bcard/.mcard/.strat-note/.srcs`) llevan `break-inside:avoid` + aire arriba en `.sub-h`. Validado: PDF de 8 páginas, todos los bordes oscuros full-bleed, sin cortes sobre el contenido.
 
 Archivo: `landing-ejemplo-ads/campana-q2-familia-giga40.html`.
+
+## 2026-07-18 — Profundización de la investigación de notebooks (research verificado)
+
+- **Salto de profundidad en [[investigacion-notebooks]]** (`por pais/investigacion-notebooks/`): se corrió un **workflow multi-agente** (31 agentes, ~620 búsquedas/fetches web) con un pase de **verificación adversarial** que contrasta cada cifra contra su fuente vía WebFetch. Resultados integrados a `data_paises.py` + `generar_landings.py` y regenerados los 4 HTML.
+- **Hallazgo transversal elevado a sección propia:** GIGABYTE **capa la GPU a 85 W de TGP** en toda la línea (A16 y Aero X16, 5050/5060/5070), vs 100-115 W de rivales con la misma GPU. Medido por Notebookcheck y PC Gamer. Regla: nunca vender por fps brutos → precio/panel/batería/Copilot+/garantía.
+- **Nueva sección "Rendimiento real & benchmarks" (03)** en los 4 decks: callout del cap 85 W + tabla de fps reales con fuentes clicables. Los decks pasaron de 10 a **11 secciones**.
+- **Enriquecimiento de datos verificados:** precios re-verificados en vivo (con stock y `confidence` por SKU), **keywords con volumen/intención** (tabla), **playbook táctico** (7-12 jugadas por país: título+racional+táctica), **movidas de competencia**, market stats e **impuestos con fuente**. Fuentes por país subieron a 35-46.
+- **Correcciones fiscales clave** (verificadas): AR mantiene **arancel 8%** en notebooks (la baja a 0% de ene-2026 fue solo celulares/consolas); CL tiene **IVA digital 19%** que neutraliza el arbitraje de importación; PY con **RTC** exime IVA al turista y el eje transfronterizo se movió de AR a **Brasil** (+107%). Ver [[contexto]].
+- **Nuevos campos en `data_paises.py`:** `product_truth`, `benchmarks`, `keywords_detail`, `playbook`, `competitor_moves`, `tax_note`, `narrative`, `research_date`. Script de integración `enrich_data.py`; data cruda verificada en `research_out/*.json`. Backups `.bak`.
+- **Etiqueta "● Investigación en curso"** (pill naranja con punto pulsante) agregada al header fijo de los 4 decks — documento vivo, datos en re-validación continua.
+- Render validado con Chrome headless (11 secciones, tablas, playbook y movidas OK).
+
+Archivos principales: `por pais/investigacion-notebooks/data_paises.py`, `enrich_data.py`, `generar_landings.py`, `research_out/*.json`, `GIGABYTE - NOTEBOOKS - {PAIS}.html`.
