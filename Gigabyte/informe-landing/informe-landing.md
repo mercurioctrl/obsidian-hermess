@@ -20,7 +20,7 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[contexto]] — reglas de marca, decisiones del usuario, aprendizajes.
 - [[changelog]] — registro de lo trabajado por fecha.
 - [[memoria]] — espejo de la memoria de Claude del proyecto.
-- [[investigacion-notebooks]] — entregable aparte: investigación de mercado + 4 landings por país (AR/CL/UY/PY) de las notebooks GIGABYTE A16 / Aero X16.
+- [[investigacion-notebooks]] — entregable aparte: investigación de mercado + 4 landings por país (AR/CL/UY/PY) de las notebooks GIGABYTE A16 / Aero X16. **Profundizado 2026-07-18** con research verificado (workflow multi-agente): benchmarks/TGP 85 W, precios en vivo, keywords con volumen, playbook táctico e impuestos citados.
 - [[landing-ejemplo-ads]] — entregable aparte: landing que le muestra al cliente los anuncios de ejemplo (Familia GIGA40) en mockups realistas de Meta + Google, por reseller.
 - [[research-paid-media]] — dossier de investigación y estrategia (competencia, demanda/estacionalidad, benchmarks, roles de canal, medición/geo-lift) con fuentes verificables.
 
@@ -29,4 +29,4 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[Gigabyte]]
 - [[gigaErp]] — otro proyecto Gigabyte (ERP) en esta bóveda
 
-_Última sincronización: 2026-07-14 (landing-ejemplo-ads)_
+_Última sincronización: 2026-07-18 (profundización investigacion-notebooks)_

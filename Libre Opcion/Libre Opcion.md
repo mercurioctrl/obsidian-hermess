@@ -96,7 +96,7 @@ Diagnóstico y fixes de Core Web Vitals para libreopcion.com.ar.
 ## Mini-juegos
 
 ### shoppingAndGoblins
-Mini-juego *endless runner* (Grinch/Goblin) para activación de marca. HTML5 Canvas en un único archivo, sin dependencias. Repo: `git@github.com:BluIncStudio/miniJuegos-shoppingAndGoblins.git`.
+Mini-juego *endless runner* (Grinch/Goblin) para activación de marca. HTML5 Canvas en un único archivo, con ranking compartido opcional (microservicio PHP+SQLite). Repo: `git@github.com:LibreOpcion/shoppingGoblin.git`.
 - [[shoppingAndGoblins/shoppingAndGoblins|shoppingAndGoblins]] — Índice del juego (LIBRE RUN)
 
 ### Penales

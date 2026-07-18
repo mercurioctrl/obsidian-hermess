@@ -71,3 +71,17 @@ Archivos modificados:
 - Documentado flujo de extracción de secretos del System Keychain de la Mac y la instalación del keyfile
 
 Ver [[hermess-pc/vpn-casa|VPN CASA]]. Archivos generados en la Mac: `~/vpn-casa.nmconnection`, `~/vpn-casa-README.md`.
+
+
+---
+
+## 2026-07-17
+
+### Arreglado deslogueo masivo de Chrome (keyring GNOME roto)
+
+- Chrome deslogueaba de todos los sitios a la vez (Google, GitHub, X), intermitente y casi a diario, sin cerrar el navegador.
+- Descartado: hackeo, limpiadores/cron/políticas, borrado de cookies (persistían cifradas `v11`), VPN.
+- Causa: `~/.local/share/keyrings/default.keyring` corrupto + faltaba el puntero `default` → con Chrome crasheando, en cada reinicio no obtenía la llave del keyring y no podía desencriptar las cookies → logout masivo.
+- Fix: backup en `~/keyrings-backup-20260717-145137`, `default` → `login`, eliminado el `default.keyring` corrupto.
+
+Ver [[hermess-pc/chrome-keyring|Chrome — keyring roto]]. Pendiente: investigar por qué crashea Chrome.

@@ -2,7 +2,7 @@
 
 Base de conocimiento de la PC personal de hermess: configuración del sistema, red, monitores, extensiones GNOME, servicios, scripts y optimizaciones.
 
-Última sincronización: 2026-06-30
+Última sincronización: 2026-07-18
 
 ---
 
@@ -14,6 +14,7 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 - [[hermess-pc/earlyoom|earlyoom — protección OOM]]
 - [[hermess-pc/monitores|Configuración de monitores]]
 - [[hermess-pc/sync-curls|Servicio sync-curls]]
+- [[hermess-pc/chrome-keyring|Chrome — deslogueo por keyring roto]]
 - [[hermess-pc/changelog|Changelog]]
 - [[hermess-pc/memoria|Memoria de Claude]]
 
@@ -54,4 +55,5 @@ Descargador de playlists de YouTube a MP3 organizado en `Artista/Álbum/`.
 - [[hermess-pc/arquitectura]]
 - [[hermess-pc/red]]
 - [[hermess-pc/vpn-casa]]
+- [[hermess-pc/chrome-keyring]]
 - [[hermess-pc/changelog]]
