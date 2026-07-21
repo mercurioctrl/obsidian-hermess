@@ -95,4 +95,4 @@ E-commerce de New Bytes (nb.com.ar). Monorepo: frontend Nuxt 2 + API REST PHP Sl
 Herramienta interna de QA para generar datos de prueba de negocio reproducibles, con evidencia y trazabilidad. Monorepo dockerizado: Nuxt 4 + NestJS + SQL Server (SQL crudo), ejecutores Playwright/HTTP y SSE. Repo `New-Bytes/qApp`.
 
 ---
-*Última actualización: 2026-07-02 — Compras: front COM-320 (cotización única en el header del detalle, pesos→fiscal / dólares→quote), en gamma pendiente de development.*
+*Última actualización: 2026-07-21 — Compras: hotfix API `ncosteprom` en ingresos PSO (convierte con `nvaldiv_FISCAL`, no `nValDiv`); contraparte de backend de COM-320. Rama `hotfix-ncosteprom-cotizacion-fiscal-pso`.*

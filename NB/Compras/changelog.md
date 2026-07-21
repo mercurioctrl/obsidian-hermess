@@ -2,6 +2,10 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-07-21
+
+- fix (API, hotfix): **`ncosteprom` en ingresos de órdenes en pesos (PSO) ahora se convierte a dólares con la cotización correcta.** Al generar un ingreso, `AverageCostCalculator::toDollars` dividía el precio en pesos por `PedProt.nValDiv`, que en órdenes **PSO siempre vale 1** → el costo promedio quedaba guardado **en pesos sin convertir** (síntoma: orden 13973, guardó `100` en `articulo.ncosteprom` en vez de `100/1500 = 0,0667`). Es la contraparte de backend de lo que el front ya resolvió en COM-320 (usar la fiscal en pesos). **Fix:** usar **`nvaldiv_FISCAL`** como cotización del dólar para órdenes PSO. `getCurrencyInfoByOrder` ahora también trae `nvaldiv_FISCAL AS nValDivFiscal` y `toDollars` divide por ese campo. DOL no cambia. Rama `hotfix-ncosteprom-cotizacion-fiscal-pso` (base `Development`, commit `7e12bdc`, pusheada, sin PR aún). Corrige el hotfix previo `7ed7a29`/PR #425 (`hotfix-ncosteprom-conversion-dolares`), que había elegido el campo equivocado. Ver [[contexto#ncosteprom en ingresos PSO usa nvaldiv_FISCAL (2026-07-21)|contexto]] y [[arquitectura#Cálculo de ncosteprom (costo promedio ponderado)|arquitectura]].
+
 ## 2026-07-20
 
 - feat: **Eliminar una línea puntual de una orden pendiente** desde el tacho 🗑️ del detalle. Se detectó que el tacho (`deleteOrderItem` en `Orders/Detail.vue`) apuntaba al endpoint equivocado —`DELETE /providerOrder/{orderId}` (`DistributeTaxesDelete`, que borra impuestos distribuidos de `pedproi`)— y **no existía** ningún endpoint que borrara una línea de `pedprol` (síntoma: `500 "Error al eliminar el impuesto distribuido"` al enviar el `ID_Articulo` como id). 

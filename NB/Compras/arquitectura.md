@@ -163,6 +163,18 @@ Convenciones que atraviesan varias queries y conviene tener presentes (detalle y
 - **Impuestos globales:** en `FP_IMPUESTOS`, `companyCode = NULL` = impuesto global (aplica a todas las empresas). Filtrar con `(companyCode = :cc OR companyCode IS NULL)`, nunca solo `= :cc`.
 - **Búsqueda de items (`ItemRepository`):** un único `search` cubre SKU (`A.ID_PRODUCTO`), título (`A.CDETALLE`), `A.ID_ARTICULO` (exacto, sargable), marca y familia, todo **parametrizado** (reutiliza plan de SQL Server, sin inyección). Devuelve también `iva` (= `A.ivaCompra`) para el default del selector de IVA.
 
+## Generar ingreso — flujo y cálculo de ncosteprom
+
+Al generar un ingreso (`POST /v1/makeProviderOrderInbound`): `MakeProviderOrderInbound` (controller) → `MakeProviderOrderInboundService::processInboundOrder()` orquesta, en orden: validaciones → `verifyStock` → `GenerateInbound` (cabecera `albprot` + detalle `albprol`) → **`updateAverageCostForItemsIfRequested`** (actualiza `ncosteprom`) → suma stock al depósito → marca `ULTIMO_INGRESO` y `nCanEnt` en `PedProL` → si la orden quedó completa la pasa a estado `'s'` → recalcula `nstock_ingresando`.
+
+### Cálculo de ncosteprom (costo promedio ponderado)
+
+`AverageCostCalculator::updateAverageCost($item, $orderNumber)` actualiza `NewBytes_DBF.dbo.articulo.ncosteprom`, que se guarda **SIEMPRE en dólares**:
+
+- Si `updateAverageCost` del item es **false** → sobrescribe con el precio nuevo (convertido a u$d).
+- Si es **true** → promedio ponderado: `[(stock_ant × costo_ant) + (ingreso × precio_nuevo)] / stock_total` (si `stock_ant ≤ 0`, sobrescribe con el precio nuevo).
+- **Conversión a dólares (`toDollars`)**: la moneda/cotización se leen de `PedProt` (fuente de verdad) vía `getCurrencyInfoByOrder`, no del payload. Si `ccoddiv='PSO'`, divide el precio en pesos por **`nvaldiv_FISCAL`** (la cotización real del dólar; `nValDiv` en PSO es 1). Si `DOL`, el precio ya viene en dólares y no se toca. Detalle y el bug del 2026-07-21 en [[contexto#ncosteprom en ingresos PSO usa nvaldiv_FISCAL (2026-07-21)|contexto]].
+
 ## Base de datos
 
 SQL Server externo. No hay migraciones Laravel — el schema es gestionado fuera del proyecto. La conexión usa FreeTDS (`pdo_dblib`) por incompatibilidad del driver ODBC 18 con OpenSSL 3.0 en el contenedor Ubuntu 22.04. Servidores y gotchas de puerto en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].

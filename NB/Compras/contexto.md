@@ -132,6 +132,21 @@ El detalle de Orden e Ingreso muestra **una sola** fila/valor de "Cotización" e
 
 Este trabajo (front) es el **consumidor** de los campos que se agregaron en la API el 2026-06-30 (ver [[contexto#Moneda y cotizaciones del Ingreso vienen de PedProt (2026-06-30)|arriba]]). Es coherente con la regla de display de [[contexto#Cotización en pesos (currencyQuote === 1) — display|más arriba]]. **Estado: en `gamma`, pendiente de bajar a `development`.**
 
+### ncosteprom en ingresos PSO usa nvaldiv_FISCAL (2026-07-21)
+
+**Regla clave del par de campos de cotización en `PedProt`** (la fija `ProviderOrderCreateService::currencyAmount()`/`currencyAmountFiscal()`, con `pesos()=1` y `getQuote(dollar)`):
+
+| Moneda de la orden | `nValDiv` (comercial) | `nvaldiv_FISCAL` (fiscal) |
+|---|---|---|
+| **PSO** (pesos) | **1** | cotización real del dólar (ej. 1500) |
+| **DOL** (dólares) | cotización del dólar | 1 |
+
+→ Para convertir **pesos → dólares** en una orden PSO hay que dividir por **`nvaldiv_FISCAL`**, NO por `nValDiv` (que es 1). Es la misma razón por la que el front usa la fiscal en pesos ([[contexto#Cotización única en el header del detalle (COM-320, 2026-07-02)|COM-320]]).
+
+**Bug corregido:** al generar un ingreso, el costo promedio ponderado (`articulo.ncosteprom`, que se guarda **siempre en dólares**) lo calcula `AverageCostCalculator::toDollars`, que dividía por `nValDiv`. En órdenes PSO eso es `precio/1` → guardaba el monto **en pesos** (orden 13973: `100` en vez de `0,0667`). Fix: `getCurrencyInfoByOrder` trae `nvaldiv_FISCAL AS nValDivFiscal` y `toDollars` divide por él cuando `ccoddiv='PSO'`. DOL no se toca (el precio ya viene en dólares). Corrige el hotfix previo (`7ed7a29`) que había usado `nValDiv`. Único consumidor de `getCurrencyInfoByOrder` es `toDollars`. Ver [[arquitectura#Cálculo de ncosteprom (costo promedio ponderado)|arquitectura]].
+
+> **Cuidado:** el mapeo del DTO (`currencyQuote ← nValDiv`) del [[contexto#Moneda y cotizaciones del Ingreso vienen de PedProt (2026-06-30)|fix del 2026-06-30]] es correcto para **exponer** los campos, pero NO significa que `nValDiv` sea el divisor para convertir pesos→dólares. Para conversión en PSO, siempre la fiscal.
+
 ## Infraestructura / Base de datos (gotcha importante)
 
 - **DB en uso (2026-06-30):** el `.env` de la API apunta a **`10.10.10.47:1433`** con user **`cmercurio`** (DB `NB_WEB`), entorno **saftel** (`compras.saftel.com`, companyCode 4). La DB canónica histórica `190.210.23.97:4444` (user `web`) quedó **comentada** en el `.env`. El 2026-06-29 se usó el mismo host con user `fcallipo`; el 2026-06-24 `db-nb-dev.blu.net.ar:41433` (cayó). Las 3 bases del join de login (`NB_WEB.dbo.usuarios_nb`, `NewBytes_DBF.dbo.agentes`, `NEW_BYTES.dbo.PGM_USUARIOS`) existen en `10.10.10.47` y conectan OK. Tras tocar `.env`, correr `php artisan config:clear && php artisan cache:clear` en el contenedor.
