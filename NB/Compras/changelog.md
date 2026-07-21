@@ -2,6 +2,12 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-07-20
+
+- feat: **Eliminar una línea puntual de una orden pendiente** desde el tacho 🗑️ del detalle. Se detectó que el tacho (`deleteOrderItem` en `Orders/Detail.vue`) apuntaba al endpoint equivocado —`DELETE /providerOrder/{orderId}` (`DistributeTaxesDelete`, que borra impuestos distribuidos de `pedproi`)— y **no existía** ningún endpoint que borrara una línea de `pedprol` (síntoma: `500 "Error al eliminar el impuesto distribuido"` al enviar el `ID_Articulo` como id). 
+  - **API** (rama `feature/eliminar-linea-orden-pendiente`, commit `0d4cb47`): nuevo `DELETE /providerOrder/{orderId}/item/{itemId}` → `ProviderOrderDeleteItem` → `DeleteOrderItemService` → `DeleteOrderItemRepository`. Valida que la orden esté **pendiente** (`PedProT.cEstado = 'P'`, si no → 400); borra la línea de `PedProl` y su costo sugerido `PedProlSuggested` (`nNumPed` + `ID_Articulo`), si no matchea nada → 404; recalcula la distribución de impuestos (`DistributionCalculatorService`).
+  - **Front** (rama `feature/eliminar-linea-orden-pendiente`, commit `fd84b16`): `deleteOrderItem` ahora llama a `providerOrder/{orderNumber}/item/{record.id}`. `deleteTariffTaxDistribute` (impuestos) queda intacto sobre el endpoint viejo. El guard `canDeleteOrderItem` ya restringía a orden pendiente sin cantidad ingresada; ahora también se valida server-side. Ver [[contexto#Eliminar línea de orden pendiente (2026-07-20)|contexto]] y [[arquitectura#Eliminar línea de una orden pendiente|arquitectura]].
+
 ## 2026-07-02
 
 - feat (front, **COM-320**): **Moneda y cotización única en el header del detalle** de Orden e Ingreso. Consume los campos de divisa que se agregaron en la API (`currencyId`, `currencyQuote`, `currencyFiscalQuote`). Se muestra **una sola** fila "Cotización" según el caso: **pesos** (`currencyId === 'PSO'`) → usa `currencyFiscalQuote` (porque `currencyQuote` queda fijo en 1); **dólares** → usa `currencyQuote`. Nuevo computed `currencyQuoteComputed` / `isProviderInPesos` que unifica el cálculo de subtotales. Archivos front: `Orders/Detail.vue`, `ProviderOrderInbound/Detail.vue`, `Modal/Draggable.vue`, `layouts/basic.vue`, `pages/providerOrderInbound.vue`. Commits `877b288`, `02af31f`, `44252b7`, `fabad7e`. **Estado: mergeado a `gamma` (PRs #283/#285), pendiente de `development`.** Ver [[contexto#Cotización única en el header del detalle (COM-320, 2026-07-02)|contexto]].

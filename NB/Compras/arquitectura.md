@@ -93,6 +93,10 @@ Ambos endpoints de detalle devuelven **`currencyId`** (ej. `PSO`/`DOL`) y las co
 
 En `Orders/AddItem.vue`, el buscador usa `/v1/items` (cada ítem trae `iva` = `articulo.ivaCompra`). Al agregar, el `price.iva` arranca con ese valor (PATCH a `/providerOrder/{n}`), que se guarda en `PedProL.nivaserv`. El selector de IVA en el detalle ofrece 0 / 10.5 / 21. Ver [[contexto#IVA por defecto del artículo al agregar ítem|contexto]].
 
+### Eliminar línea de una orden pendiente
+
+`DELETE /v1/providerOrder/{orderId}/item/{itemId}` → `ProviderOrderDeleteItem` (controller invokable) → `DeleteOrderItemService::delete` → `DeleteOrderItemRepository`. Valida `PedProT.cEstado = 'P'` (si no → 400), hard-delete de la línea en `PedProl` + su `PedProlSuggested` por `nNumPed`+`ID_Articulo` (0 filas → 404), y recalcula la distribución (`DistributionCalculatorService::recalculateDistribution`). En el front lo dispara el tacho de `Orders/Detail.vue` (`deleteOrderItem`). **Ojo:** el `DELETE /providerOrder/{orderId}` (sin `/item`) es otro endpoint distinto: `DistributeTaxesDelete`, borra impuestos distribuidos de `pedproi`. Ver [[contexto#Eliminar línea de orden pendiente (2026-07-20)|contexto]].
+
 ### Filtros de listados
 
 Cada listado tiene su `components/Filters/{Dominio}.vue`. Los filtros escriben en `$route.query` (via `handleChange`) y el store reenvía toda la query como params al endpoint (`GET /v1/...`).

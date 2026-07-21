@@ -27,6 +27,12 @@ Cuando una orden/ingreso tiene `currencyQuote === 1` **está en pesos** (no en d
 - Para eso el buscador `/v1/items` devuelve el campo `iva` (= `ivaCompra`) en cada ítem (`ItemRepository` + `Dto/Item/ItemDto`), y `Orders/AddItem.vue` lo manda como `price.iva` al PATCH (antes hardcodeaba 0, que se guardaba en `PedProL.nivaserv` pisando el fallback del detalle).
 - El detalle de orden ya resolvía `ISNULL(PL.nivaserv, AR.ivaCompra)`, así que ítems sin `nivaserv` ya mostraban el IVA del artículo. El selector ofrece solo 0 / 10.5 / 21.
 
+### Eliminar línea de orden pendiente (2026-07-20)
+
+- El tacho 🗑️ de cada línea del detalle **solo elimina si la orden está pendiente** (`PedProT.cEstado = 'P'`). Doble candado: el front lo restringe (`canDeleteOrderItem`: `isPending`, sin cantidad ingresada, `id ≠ 102048`) y el backend lo valida (400 si no está pendiente).
+- **Gotcha histórico:** el tacho apuntaba a `DELETE /providerOrder/{orderId}` (endpoint de **impuestos distribuidos** `pedproi`, `DistributeTaxesDelete`), no a la línea. Como se enviaba el `ID_Articulo` como `id`, nunca matcheaba → `500 "Error al eliminar el impuesto distribuido"`. **No existía** endpoint para borrar líneas de `pedprol`. Se creó `DELETE /providerOrder/{orderId}/item/{itemId}`. Ver [[arquitectura#Eliminar línea de una orden pendiente|arquitectura]].
+- Al borrar la línea (`PedProl`) se borra también su costo sugerido (`PedProlSuggested`) y se **recalcula la distribución de impuestos**. Es **hard delete** (la tabla `PedProl` no tiene soft-delete); quedan huecos en `nLinea` pero no molesta porque el alta usa `MAX(nLinea)+1`. Una línea se identifica por `nNumPed` + `ID_Articulo`.
+
 ### Filtro de Empresa (companyCode) por defecto en pestañas (2026-06-20)
 
 - Al **entrar a cualquier pestaña** que tenga el filtro de empresa, este arranca en `Number($auth.user.companyCode) || 4` (el companyCode del usuario, o **4** por defecto si no tiene ninguno asignado). **Nunca queda en null al entrar.**
