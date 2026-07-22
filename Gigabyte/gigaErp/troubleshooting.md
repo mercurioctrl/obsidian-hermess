@@ -174,10 +174,29 @@ docker exec gigaerp-backend sh -c 'cd /var/www/html && \
 
 ⚠️ **No** copiar el `composer.json` del container al repo (ni viceversa): el container es un skeleton `laravel/laravel` **divergido** del `composer.json` del repo (`gigabyte/gigaerp`). Editar la dependencia en el repo a mano; instalar en el container con `composer.phar require`.
 
+## 13. Carácter no-ASCII en header HTTP se ve mal (Ã)
+
+**Síntoma:** el header `X-Res` del thumbnail de [[modulos/contenido|Contenido]] traía la resolución como `2880×600`, pero en la UI se veía **`2880Ã600 px`**.
+
+**Causa:** los **headers HTTP son ASCII/latin-1**. El `×` (U+00D7, multibyte UTF-8: `0xC3 0x97`) se transmite como esos bytes y el navegador (`fetch().headers.get`) los decodifica como latin-1 → `Ã` + un control char.
+
+**Fix:** en el header usar solo **ASCII** (`2880x600`, con `x` letra) y formatear a `×` en el cliente al mostrar. Regla general: nunca meter caracteres no-ASCII en un header; usarlos solo en el body/HTML.
+
+## 14. Editar un archivo bind-mounteado (un solo archivo) no se refleja en el container
+
+**Síntoma:** se edita un archivo montado como bind mount de **un solo archivo** (ej. `./nginx/default.conf.template`) pero el container sigue viendo la versión vieja; `docker cp` para pisarlo falla con `device or resource busy`.
+
+**Causa:** Docker bindea el **inode** del archivo host al crear el container. Los editores que guardan de forma atómica (escriben temp + rename) crean un **inode nuevo** → el mount sigue apuntando al viejo. Además no se puede `docker cp` sobre un path que es bind mount.
+
+**Fix:**
+- **Definitivo:** recrear el container (`docker compose up -d <svc>`) → re-bindea el inode actual. En prod esto alcanza (el deploy recrea).
+- **En caliente (sin recrear):** copiar el archivo a un path NO montado del container y regenerar/usar desde ahí. Ej. nginx con template: `docker cp tpl gigaerp-nginx:/tmp/x && docker exec gigaerp-nginx sh -c 'envsubst "\${CONTENT_DOMAIN}" < /tmp/x > /etc/nginx/conf.d/default.conf' && nginx -s reload`.
+- Alternativa: montar el **directorio** en vez del archivo (los cambios de archivos dentro sí se ven).
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources
-- [[modulos/contenido]] — disco S3, URLs firmadas, deploy en caliente (gotchas 10, 11, 12)
+- [[modulos/contenido]] — disco S3, URLs firmadas, deploy en caliente (gotchas 10-14)
 - [[modulos/invoice-preview]] — donde aparece la trampa html2canvas/SVG
 - [[modulos/productos]] — importador de catálogo (gotchas 8 y 9)
 - [[changelog]] — cuando se identificó cada uno

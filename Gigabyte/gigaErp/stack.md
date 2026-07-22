@@ -15,7 +15,8 @@
 ## Almacenamiento de archivos
 
 - **Disco local** (`storage/app/public`, volumen `uploads_storage`): adjuntos de marketing, imágenes del editor, importaciones. Es el default (`FILESYSTEM_DISK=public`).
-- **S3** (disco `contenido`): solo el módulo [[modulos/contenido|Contenido]]. Bucket privado en **sa-east-1** (São Paulo), archivos servidos con URLs firmadas. Vars: `AWS_ACCESS_KEY_ID/SECRET`, `AWS_DEFAULT_REGION`, `CONTENIDO_S3_BUCKET`, `CONTENIDO_S3_PREFIX`.
+- **S3** (discos `contenido` y `contenido_thumbs`): solo el módulo [[modulos/contenido|Contenido]]. Bucket privado en **sa-east-1** (São Paulo), archivos servidos con URLs firmadas; los thumbnails se generan on-demand (extensión **GD**) y se cachean en el prefijo `_thumbs`. Vars: `AWS_*`, `CONTENIDO_S3_BUCKET`, `CONTENIDO_S3_PREFIX`, `CONTENT_DOMAIN` (subdominio).
+- **nginx**: config por template envsubst (`nginx/default.conf.template`) — subdominio de Contenido + cache de thumbnails.
 
 ## Frontend
 

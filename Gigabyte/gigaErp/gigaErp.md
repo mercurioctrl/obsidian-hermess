@@ -3,8 +3,8 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `5926516` · **Última sincronización:** 2026-07-22
-**Último trabajo:** módulo **Contenido** migrado a **S3** (bucket privado + URLs firmadas) + UI de marca en la vista pública (logo GIGABYTE monocromo, orden por fecha de carga, resolución/formato) — commits `186e948`/`5926516` — ver [[changelog#2026-07-20 → 22 — Repositorio de Contenido migrado a S3 + UI de marca|changelog]] y [[modulos/contenido]]
+**Último commit:** `da0332e` · **Última sincronización:** 2026-07-22
+**Último trabajo:** módulo **Contenido** (S3) — subdominio propio + deep-links, descarga directa + abrir en pestaña, filtro por resolución y **thumbnails on-demand cacheados en S3** (~28× menos peso en la preview) — commits `1388ba5`/`4ad6b8b`/`da0332e` — ver [[changelog#2026-07-22 — Contenido: subdominio, deep-links, descarga, filtro y thumbnails|changelog]] y [[modulos/contenido]]
 
 ---
 

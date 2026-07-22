@@ -1,3 +1,23 @@
+## 2026-07-22 — Contenido: subdominio, deep-links, descarga, filtro y thumbnails
+
+Segunda tanda sobre el módulo [[modulos/contenido|Contenido]] (mismo día). Commits `1388ba5`, `4ad6b8b`, `da0332e`.
+
+### Subdominio propio + URLs linkeables (`1388ba5`)
+- La vista pública se puede servir en un **subdominio** configurable por `.env` (`CONTENT_DOMAIN`, ej. `content.gigabyte.com`). nginx pasó de config estática a **template con envsubst** (`nginx/default.conf.template`, reemplaza `default.conf`): nuevo `server` block que sirve Contenido en la raíz del subdominio y proxya `/api/` al backend. El server principal (ERP) queda igual.
+- **Deep-linking (History API)**: al entrar/salir de carpetas la URL cambia (`/Carpeta/Sub`), back/forward funciona y un deep-link abre directo esa carpeta. Detecta el base path (subdominio `''` vs localhost `/api/contenido/publico`). Ruta backend comodín `/contenido/publico/{ruta?}`.
+
+### Descarga directa + abrir en pestaña + filtro por resolución (`4ad6b8b`)
+- **Descargar** baja el archivo directo: URL firmada con `Content-Disposition=attachment` (el atributo `download` del navegador se ignora por ser cross-origin a S3). Ícono **↗** para abrir en pestaña nueva (URL inline).
+- **Filtro por resolución** (desplegable en el toolbar): junta las resoluciones presentes en la carpeta (leídas del thumbnail) y filtra las imágenes. 100% cliente, se resetea al cambiar de carpeta.
+
+### Thumbnails on-demand cacheados en S3 (`da0332e`)
+- Endpoint `/api/contenido/thumb`: genera el thumbnail (GD, máx 480px) la 1ª vez, lo cachea en el prefijo `_thumbs` del bucket (disco `contenido_thumbs`) y lo sirve del cache después. Header `X-Res` con la resolución ORIGINAL.
+- Frontend: carga los thumbnails **lazy** (IntersectionObserver) vía `fetch` (blob para la preview + `X-Res` para la resolución/filtro). nginx: `location = /api/contenido/thumb` cacheable (rompe el `no-store` global).
+- **Impacto: ~1.7 MB → ~60 KB por preview (~28×)**. Nadie espera la imagen full para ver la vista previa. Abrir/descargar siguen usando la imagen completa.
+- Fix de encoding: `X-Res` usa `x` ASCII (el `×` multibyte rompe el header HTTP); el front lo formatea a `×`. Ver [[troubleshooting#13. Carácter no-ASCII en header HTTP se ve mal (Ã)|troubleshooting #13]].
+
+**Archivos:** `nginx/default.conf.template` (nuevo), `docker-compose.yml`, `backend/routes/api.php`, `backend/config/filesystems.php`, `backend/app/Http/Controllers/ContenidoController.php`, `backend/resources/views/contenido/publico.blade.php`.
+
 ## 2026-07-20 → 22 — Repositorio de Contenido migrado a S3 + UI de marca
 
 El módulo **Contenido** (repositorio de material de marca) pasó de disco local (filesystem-backed + bind-mount SFTP) a un **bucket S3 privado**. Motivo: +10 GB de material que no debía comer disco EBS de la EC2. El resto de adjuntos siguen en disco local. Detalle en [[modulos/contenido]].
