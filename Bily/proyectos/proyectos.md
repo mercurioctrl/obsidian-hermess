@@ -9,4 +9,4 @@ Proyectos activos o planificados por Bily.
 ## Ver también
 
 - [[Bily/Bily|Inicio de Bily]]
-- [[Bily/jira/jira|Bily/jira (notas autosincronizadas)]]
+- [[jira|Bily/jira (notas autosincronizadas)]]

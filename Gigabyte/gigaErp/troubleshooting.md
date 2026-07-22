@@ -141,9 +141,43 @@ docker exec gigaerp-backend php artisan config:cache   # o cae a sqlite (gotcha 
 
 **Fix de raíz (pendiente):** en el Dockerfile, pinear una versión exacta de `laravel/laravel` conocida-buena o agregar `--ignore-platform-reqs` al `create-project` (como ya se hace en el `composer require` de abajo). El feature de backup ([[changelog#2026-07-02 — Backup/restore completo en ZIP (datos + archivos)|backup ZIP]]) quedó desplegado en caliente por esto.
 
+## 11. Flysystem S3 rompe copy/move por GetObjectAcl
+
+**Síntoma:** con el disco S3 del módulo [[modulos/contenido|Contenido]], renombrar/mover una carpeta o archivo tira:
+```
+League\Flysystem\UnableToMoveFile: Unable to copy file ...
+  → UnableToRetrieveMetadata: Unable to retrieve the visibility ...
+  → S3Exception: Error executing "GetObjectAcl" ... AccessDenied (s3:GetObjectAcl)
+```
+
+**Causa:** al copiar, Flysystem intenta **preservar la visibilidad** del objeto origen y para eso llama a `GetObjectAcl`. Con una policy IAM least-privilege (sin permisos de ACL) devuelve 403, y `move` (que es copy+delete) revienta.
+
+**Fix (aplicado):** decirle al disco que **no gestione ACLs por objeto** — correcto para bucket privado servido con URLs firmadas, y portable aunque el bucket tenga ACLs deshabilitadas (Object Ownership = bucket owner enforced). En `config/filesystems.php`, disco `contenido`:
+```php
+'visibility' => 'private',
+'retain_visibility' => false,   // evita el GetObjectAcl en copy/move
+```
+NO agregar permisos de ACL a la policy — la solución es no depender de ellos.
+
+## 12. Instalar una dependencia composer sin composer en el container
+
+**Síntoma:** hace falta un paquete nuevo (ej. `league/flysystem-aws-s3-v3`) pero `docker exec ... composer` da `composer: not found` y el rebuild limpio está roto (gotcha #10).
+
+**Fix (deploy en caliente):** bajar `composer.phar` dentro del container con el propio PHP y usarlo:
+```bash
+docker exec gigaerp-backend sh -c 'cd /var/www/html && \
+  [ -f composer.phar ] || (php -r "copy(\"https://getcomposer.org/installer\",\"composer-setup.php\");" \
+    && php composer-setup.php --quiet && rm -f composer-setup.php); \
+  php composer.phar require league/flysystem-aws-s3-v3:^3.0 --no-interaction'
+```
+⚠️ Sobrevive a `docker restart` (writable layer) pero NO a un recreate/`compose up`. Para el fix de raíz, la dependencia ya se agregó al build del Dockerfile (`b832208`).
+
+⚠️ **No** copiar el `composer.json` del container al repo (ni viceversa): el container es un skeleton `laravel/laravel` **divergido** del `composer.json` del repo (`gigabyte/gigaerp`). Editar la dependencia en el repo a mano; instalar en el container con `composer.phar require`.
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources
+- [[modulos/contenido]] — disco S3, URLs firmadas, deploy en caliente (gotchas 10, 11, 12)
 - [[modulos/invoice-preview]] — donde aparece la trampa html2canvas/SVG
 - [[modulos/productos]] — importador de catálogo (gotchas 8 y 9)
 - [[changelog]] — cuando se identificó cada uno

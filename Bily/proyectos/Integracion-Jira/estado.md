@@ -165,6 +165,6 @@ curl -s http://127.0.0.1:9002/issue/<KEY> >/dev/null && sleep 3 && vault-get Bil
 
 - [[Bily/proyectos/Integracion-Jira/Integracion-Jira|Diseño técnico completo]]
 - [[changelog|Cronología de fases]]
-- [[Bily/jira/jira|Notas autopobladas]]
+- [[jira|Notas autopobladas]]
 - [[Claude/Whisper|Whisper local]] (patrón sidecar análogo)
 - [[Claude/Vault-Wrappers|Vault Wrappers]] (mismo patrón anti-alucinación de URLs)

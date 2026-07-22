@@ -1,3 +1,25 @@
+## 2026-07-20 → 22 — Repositorio de Contenido migrado a S3 + UI de marca
+
+El módulo **Contenido** (repositorio de material de marca) pasó de disco local (filesystem-backed + bind-mount SFTP) a un **bucket S3 privado**. Motivo: +10 GB de material que no debía comer disco EBS de la EC2. El resto de adjuntos siguen en disco local. Detalle en [[modulos/contenido]].
+
+### Backend — Contenido sobre S3 (`186e948`)
+- **`config/filesystems.php`** (nuevo; antes se usaba el default de Laravel): disco `contenido` (s3, `root`=prefijo `contenido`, `visibility=private`, **`retain_visibility=false`** para no gestionar ACLs por objeto — ver [[troubleshooting#11. Flysystem S3 rompe copy/move por GetObjectAcl|troubleshooting #11]]).
+- **`ContenidoController`** reescrito sobre S3: árbol por listado del bucket (los uploads "por fuera" con `aws s3 cp` aparecen solos, reemplaza SFTP), carpeta vacía = placeholder `.keep`, rename = copy+delete por prefijo, archivos servidos con **URLs firmadas temporales** (`temporaryUrl`, TTL 60 min). Bucket **privado** (Block Public Access ON).
+- Dependencia `league/flysystem-aws-s3-v3`: en `composer.json` y en el build del Dockerfile (`b832208`); en caliente se instaló con `composer.phar` (el container no trae composer).
+- `docker-compose.yml`: vars `AWS_*`/`CONTENIDO_S3_*` (backend+scheduler); se quitó el bind-mount `./contenido-repo`.
+
+### Frontend — UI de la vista pública (`5926516`)
+Página pública `contenido/publico` (blade), estilo basado en la investigación de notebooks (Aldrich + Titillium Web + gradiente RGB):
+- **Header de marca**: logo oficial **GIGABYTE** (SVG de Wikimedia) en monocromo (`fill=currentColor`), barra RGB superior, pill "Aorus", naranja AORUS `#FF6400`.
+- **Orden por Nombre o Fecha de carga** (toggle asc/desc): el backend agrega `fecha` por archivo (S3 `lastModified` = fecha de subida) y la propaga a las carpetas.
+- **Metadatos por card**: resolución de imágenes (`ancho×alto`, leída del thumbnail con `onload`), formato de fuentes ("Fuente TTF/OTF") y de otros archivos (extensión), más la fecha.
+
+### ⚠️ Notas
+- **Decisión del usuario**: mismo bucket+prefijo (`gigaerp-contenido-dev`, sa-east-1, prefijo `contenido`) para **local y prod** (todo compartido, sin aislar). Versioning ON como red de seguridad. Ver [[contexto#Repositorio de Contenido — S3|contexto]].
+- Validado end-to-end contra el bucket real (put/list/URL firmada/rename/delete). Deploy prod: copiar filesystems + controller + blade al container, `config:cache` + `view:clear`; migración one-time `aws s3 sync ./contenido-repo s3://<bucket>/contenido/`.
+
+**Archivos:** `backend/config/filesystems.php` (nuevo), `backend/app/Http/Controllers/ContenidoController.php`, `backend/resources/views/contenido/publico.blade.php`, `backend/composer.json`, `backend/Dockerfile`, `docker-compose.yml`.
+
 ## 2026-07-16 — Addons de marketing (lanzadores externos url + token)
 
 Nueva sección **Addons** dentro del grupo Marketing: un catálogo de accesos rápidos a apps externas. Cada addon guarda **nombre, URL, token y descripción**; al hacer clic se abre en una pestaña nueva la **URL con el token concatenado literalmente al final** (`url + token`, sin separador). Commit `455663e`. Persistencia en backend (compartido entre usuarios). Detalle en [[modulos/addons]].
