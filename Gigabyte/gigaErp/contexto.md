@@ -206,6 +206,17 @@ BORRADOR → APROBADA → FACTURADA
 - Los archivos subidos viven en el volumen `uploads_storage` (`storage/app/public`) y persisten aunque se recree el container.
 - Implementación y decisiones en [[arquitectura#Backup/restore completo (ZIP)|arquitectura]].
 
+### Repositorio de Contenido — S3 (2026-07-20)
+
+El módulo **Contenido** (material de marca, vista pública sin login) es la **única parte del ERP en S3**; el resto de adjuntos siguen en disco local. Detalle en [[modulos/contenido]].
+
+- **Por qué S3**: +10 GB de material que no debía comer disco EBS de la EC2. Storage en S3 son centavos y las transferencias en la misma región son gratis.
+- **Bucket privado** (Block Public Access ON) en **sa-east-1** (São Paulo, donde está prod). Los archivos se sirven con **URLs firmadas temporales** (la app es el gatekeeper); nunca quedan públicos.
+- **Decisión del usuario**: usar el **mismo bucket+prefijo** (`gigaerp-contenido-dev`, prefijo `contenido`) para **local y prod** — todo compartido, sin aislar. Implica que tests locales tocan datos de prod; **versioning ON** en el bucket como red de seguridad.
+- La "coexistencia SFTP" de antes se reemplaza por **uploads directos al bucket** (`aws s3 cp` / consola AWS), que aparecen solos en el árbol porque la fuente de verdad es el listado de S3.
+- ⚠️ La access key se expuso en un chat de esta sesión → **rotar** y actualizar `.env` (local + prod) y `~/.aws/credentials`.
+- Gotchas S3: [[troubleshooting#11. Flysystem S3 rompe copy/move por GetObjectAcl|#11 retain_visibility]] y [[troubleshooting#12. Instalar una dependencia composer sin composer en el container|#12 composer.phar]].
+
 ## TODOs pendientes
 
 - [ ] **Limpieza data**: ~1807 productos propios (`distribuidor_id` NULL) sin inventario real — entraron sin distribuidor pero sin filas de stock, codigo_distribuidor numérico, columna global stock del import. Decidir si borrar o reasignar distribuidor. Hoy visibles en Catálogo bajo "Sin stock".

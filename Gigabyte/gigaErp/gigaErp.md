@@ -3,8 +3,8 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `455663e` · **Última sincronización:** 2026-07-16
-**Último trabajo:** sección **Addons** en Marketing — lanzadores a apps externas (url + token) en pestaña nueva, commit `455663e` — ver [[changelog#2026-07-16 — Addons de marketing (lanzadores externos url + token)|changelog]] y [[modulos/addons]]
+**Último commit:** `5926516` · **Última sincronización:** 2026-07-22
+**Último trabajo:** módulo **Contenido** migrado a **S3** (bucket privado + URLs firmadas) + UI de marca en la vista pública (logo GIGABYTE monocromo, orden por fecha de carga, resolución/formato) — commits `186e948`/`5926516` — ver [[changelog#2026-07-20 → 22 — Repositorio de Contenido migrado a S3 + UI de marca|changelog]] y [[modulos/contenido]]
 
 ---
 
@@ -26,6 +26,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 - [[modulos/productos]] — sync partpicker + carga masiva de catálogo GIGABYTE, 4 listas de precio
 - [[modulos/resellers]] — resellers live desde partpicker, sin importar a DB
 - [[modulos/addons]] — lanzadores a apps externas (url + token) que abren en pestaña nueva
+- [[modulos/contenido]] — repositorio de material de marca en S3 (bucket privado + URLs firmadas), vista pública con branding
 
 ---
 

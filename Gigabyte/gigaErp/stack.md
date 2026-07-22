@@ -10,6 +10,12 @@
 | barryvdh/laravel-dompdf | ^2.2 | Generación de PDF (stubs 501 por ahora) |
 | predis/predis | ^2.2 | Cliente Redis |
 | maatwebsite/excel | latest | Export Excel (stubs 501 por ahora) |
+| league/flysystem-aws-s3-v3 | ^3.0 | Driver S3 del módulo [[modulos/contenido\|Contenido]] (bucket privado) |
+
+## Almacenamiento de archivos
+
+- **Disco local** (`storage/app/public`, volumen `uploads_storage`): adjuntos de marketing, imágenes del editor, importaciones. Es el default (`FILESYSTEM_DISK=public`).
+- **S3** (disco `contenido`): solo el módulo [[modulos/contenido|Contenido]]. Bucket privado en **sa-east-1** (São Paulo), archivos servidos con URLs firmadas. Vars: `AWS_ACCESS_KEY_ID/SECRET`, `AWS_DEFAULT_REGION`, `CONTENIDO_S3_BUCKET`, `CONTENIDO_S3_PREFIX`.
 
 ## Frontend
 
