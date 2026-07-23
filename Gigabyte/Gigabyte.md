@@ -35,3 +35,7 @@ Presentación / landing HTML que le propone a Gigabyte centralizar el paid media
 - [[informe-landing/investigacion-notebooks|Investigación Notebooks — A16/Aero X16 por país]]
 - [[informe-landing/landing-ejemplo-ads|Landing — Ejemplo de anuncios (Familia GIGA40)]]
 - [[informe-landing/research-paid-media|Research & Estrategia — Paid Media]]
+
+## Reuniones
+
+- [[Reuniones/ERP Sugerencias|ERP Sugerencias]] — feedback y pedidos surgidos en reunión sobre el ERP
