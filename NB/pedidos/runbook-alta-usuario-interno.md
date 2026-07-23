@@ -212,3 +212,17 @@ El driver `pdo_sqlsrv` viejo del container **crashea (Segmentation fault)** al r
 - [[relacion-companycode]] — mapa de companyCode por empresa (9=NBElectric/NBE)
 - [[contexto]] — reglas de negocio y multi-empresa
 - [[pedidos]] — índice del proyecto
+
+## Ejemplo concreto — mscomprobantes (2026-07-23)
+
+| Campo | Valor |
+|---|---|
+| `ccodage` / `ID_VENDEDOR` | 103 |
+| `ccodcli` / `ID_CLIENTE` | 101230 / 101230 |
+| `UserId` | 84108 |
+| `UserName` | mscomprobantes |
+| `UserEmail` | comprobantes@nb.com.ar |
+| `companyCode` | 4 (NB) en agentes y clientes; vacío en usuarios_nb (igual que catriel) |
+| `permisos_agente.id` | 69 |
+| Template usado | **catriel** (UserId 7463, agente 12 "Sistema Web", permisos id 8) |
+| Nota | catriel es cuenta admin sobre el agente compartido 12; se optó por crear agente+cliente NUEVOS clonando su config. Se nuleó `tokenFb` (Firebase) e ip/os/browser/user_agent para no arrastrar sesión/push de catriel. El cliente hereda CUIT/tel/dir del template (cliente interno "no usar"). |

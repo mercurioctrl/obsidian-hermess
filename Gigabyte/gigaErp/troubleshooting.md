@@ -193,6 +193,24 @@ docker exec gigaerp-backend sh -c 'cd /var/www/html && \
 - **En caliente (sin recrear):** copiar el archivo a un path NO montado del container y regenerar/usar desde ahí. Ej. nginx con template: `docker cp tpl gigaerp-nginx:/tmp/x && docker exec gigaerp-nginx sh -c 'envsubst "\${CONTENT_DOMAIN}" < /tmp/x > /etc/nginx/conf.d/default.conf' && nginx -s reload`.
 - Alternativa: montar el **directorio** en vez del archivo (los cambios de archivos dentro sí se ven).
 
+## 15. Modelo con enum casteado revienta si la columna tiene default en DB pero no en `$attributes`
+
+**Síntoma:** crear un registro sin pasar un campo que tiene default en la DB (ej. `Tarea` sin `estado`) guarda bien la fila, pero el objeto devuelto rompe en el Resource con `Attempt to read property "value" on null` (`$this->estado->value`).
+
+**Causa:** el default vive en la migración (DB), no en el modelo. Eloquent no lee el default de la DB al construir el objeto en memoria, así que el atributo queda `null`; el cast a enum sobre `null` no falla al hidratar, pero acceder a `->value` sí.
+
+**Fix:** espejar los defaults de la DB en `protected $attributes` del modelo.
+
+```php
+protected $attributes = [
+    'estado'    => 'POR_HACER',
+    'prioridad' => 'MEDIA',
+];
+```
+
+Introducido en `4af7a34` (módulo [[modulos/contenido|Contenido]], commit que además tocó tareas).
+
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources

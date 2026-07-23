@@ -46,6 +46,30 @@ Estilo basado en la investigación de notebooks (Aldrich + Titillium Web + gradi
 - **Bucket usado (decisión del usuario)**: `gigaerp-contenido-dev` (sa-east-1), **mismo bucket+prefijo para local y prod** (todo compartido, sin aislar). Versioning ON como red de seguridad. Ver [[contexto#Repositorio de Contenido — S3|contexto]].
 - **Deploy prod** (deploy en caliente): `docker compose up -d nginx` (toma el template) recrea también el backend → rehacer el hot-deploy (reinstalar flysystem + copiar `config/filesystems.php`, `routes/api.php`, `ContenidoController.php`, la blade + `config:cache`/`route:clear`/`view:clear`). Runbook completo en el mensaje de los commits `1388ba5` y `da0332e`. Migración de archivos one-time: `aws s3 sync ./contenido-repo s3://<bucket>/contenido/`.
 
+## Suscripción por email y avisos (`4af7a34`, `a54da03`)
+
+Portal público con **footer de suscripción** (email, alta idempotente) para que los clientes reciban aviso cuando se sube material nuevo.
+
+- Tabla **`contenido_suscriptores`** (mig `0048`) + modelo `ContenidoSuscriptor`.
+- `POST /contenido/publico/suscribir` (throttle **10/min**) y `GET /contenido/publico/desuscribir?token` (baja con página de confirmación, blade `baja.blade.php`). Ambas **antes del comodín** `/{ruta?}` para que no las trague.
+- **`POST /contenido/notificar`** (auth): el ERP dispara **un** mail-resumen a los suscriptores activos al terminar de subir un lote (no un mail por archivo), tolerante a fallos (no rompe la subida si el mail falla).
+- Mailable `ContenidoNuevoMail` + plantilla HTML branded (barra RGB + link a la carpeta), blade `mail_nuevo.blade.php`. Vars `MAIL_*` en `docker-compose` (default `log` hasta cargar SMTP en el `.env`).
+- **Vista de suscriptores en el ERP** (`a54da03`): `GET /contenido/suscriptores` (total/activos/items) y `DELETE /contenido/suscriptores/{id}`. Botón "Suscriptores" en el header con contador, modal con lista, eliminar por fila y **exportar CSV**.
+
+## Deep-linking en el ERP y paridad de vistas (`4af7a34`, `2e64e44`)
+
+- La página del ERP pasó a **ruta catch-all** (`frontend/pages/contenido/[...ruta].vue`, renombrada de `index.vue`): navegar carpetas cambia la URL (`/contenido/A/B`), es recargable y anda back/forward. La **URL es la fuente de verdad** (watch sobre `route.params` + reconstrucción de la pila de navegación).
+- **"Copiar link" / "Ver público"** arman la URL pública de la carpeta actual, usando `CONTENT_DOMAIN` (vía `GET /contenido/config`, auth) o el mismo origen en local.
+- **Paridad admin ↔ pública** (`2e64e44`): la vista ERP ya tiene thumbnails on-demand, resolución/formato + fecha, orden Nombre/Fecha, filtro por resolución, abrir en pestaña (↗), descargar directo y **"Descargar todo"** (secuencial, respeta el filtro, con progreso — también en la blade pública).
+- Fix **"imagen rota"**: formatos no previsualizables (tif/psd/etc.) muestran ícono + badge de formato; preview solo si hay thumbnail (png/jpg/gif) o tipo nativo del navegador, con `onerror` de respaldo.
+
+## Endpoints (actualizado)
+
+Admin (`auth:sanctum`): `GET /contenido/arbol` · `GET /contenido/config` · `POST/PUT/DELETE /contenido/carpetas` · `POST/DELETE /contenido/archivos` · `GET /contenido/suscriptores` · `DELETE /contenido/suscriptores/{id}` · `POST /contenido/notificar`.
+
+Público (sin login): `GET /contenido/publico` + comodín `/contenido/publico/{ruta?}` (deep-links) · `GET /contenido/publico/arbol` · `GET /contenido/thumb?path=` · `POST /contenido/publico/suscribir` · `GET /contenido/publico/desuscribir?token`.
+
+
 ## Ver también
 
 - [[changelog]] · [[contexto]] · [[troubleshooting]] · [[stack]] · [[gigaErp]]

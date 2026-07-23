@@ -1,3 +1,38 @@
+## 2026-07-23 — Contenido: suscripción por email, deep-links en el ERP, paridad de vistas y OpenAPI
+
+Cuarta tanda del módulo [[modulos/contenido|Contenido]] + docs de API. Commits `2e64e44`, `4af7a34`, `a54da03`, `78daa74`.
+
+### Paridad de features en la vista ERP + descargar todo + fix preview (`2e64e44`)
+- La vista admin (`frontend/pages/contenido/index.vue`) alcanza a la pública: **thumbnails on-demand** (fetch a `/api/contenido/thumb`, lazy IntersectionObserver, resolución del header `X-Res`), **resolución/formato + fecha** por archivo, **orden** por Nombre/Fecha (asc/desc), **filtro por resolución**, **abrir en pestaña** (↗) y **descargar directo** (URL firmada `attachment`).
+- Botón **"Descargar todo"** (en ambas vistas): baja secuencialmente los archivos de la carpeta respetando el filtro, con progreso.
+- Fix **"imagen rota"**: formatos no previsualizables (tif/psd/etc.) muestran ícono + badge de formato en vez de un `<img>` que el navegador no puede dibujar; preview solo si hay thumbnail (png/jpg/gif) o es tipo nativo (webp/svg…), con `onerror` de respaldo.
+
+### Deep-links en el ERP + link público por carpeta (`4af7a34`)
+- La página del ERP pasó a **ruta catch-all** (`pages/contenido/[...ruta].vue`): navegar carpetas cambia la URL (`/contenido/A/B`), es recargable y anda back/forward. La **URL es la fuente de verdad** (watch sobre `route.params` + reconstrucción de la pila).
+- **"Copiar link" / "Ver público"** arman la URL pública de la carpeta donde estás parado, usando el dominio externo (`CONTENT_DOMAIN`) o el mismo origen en local.
+- Nuevo **`GET /contenido/config`** (auth) expone el dominio público al ERP; `config/contenido.php` (`dominio_publico` ← `CONTENT_DOMAIN`).
+
+### Suscripción por email + avisos (`4af7a34`)
+- **Footer de suscripción** en el portal público (email, alta idempotente). Tabla **`contenido_suscriptores`** (mig `0048`) + modelo `ContenidoSuscriptor`.
+- `POST /contenido/publico/suscribir` (throttle 10/min) y `GET /contenido/publico/desuscribir?token` (baja con página de confirmación, blade `baja`). Ambas **antes del comodín** para que no las trague.
+- **`POST /contenido/notificar`** (auth): un mail-resumen a los suscriptores activos. Lo dispara el ERP **una vez** al terminar de subir un lote (no un mail por archivo), tolerante a fallos (no rompe la subida si el mail falla).
+- Mailable `ContenidoNuevoMail` + plantilla HTML branded (barra RGB + link a la carpeta), blade `mail_nuevo`. Vars `MAIL_*` en `docker-compose` (default `log` hasta cargar SMTP).
+
+### Vista de suscriptores en el ERP (`a54da03`)
+- `GET /contenido/suscriptores` (total, activos, items) y `DELETE /contenido/suscriptores/{id}` (baja definitiva).
+- Header del ERP: botón **"Suscriptores"** con contador de activos → modal con la lista (email, fecha, estado), eliminar por fila y **exportar CSV**.
+
+### Fix tareas — estado null en memoria (`4af7a34`)
+- `Tarea::$attributes` ahora espeja los defaults de la DB (`estado=POR_HACER`, `prioridad=MEDIA`). Sin esto, una tarea creada sin estado quedaba con `estado=null` en memoria y `TareaResource` rompía en `$this->estado->value` aunque la fila se creara igual. Ver [[troubleshooting#15. Modelo con enum casteado revienta si la columna tiene default en DB pero no en $attributes|troubleshooting #15]].
+
+### Documentación OpenAPI 3.0 + Swagger UI (`78daa74`)
+- `backend/docs/openapi.yaml` — spec OpenAPI 3.0 de la API REST (Laravel 11 + Sanctum).
+- `backend/docs/index.html` — Swagger UI (CDN) que lee el yaml. `backend/docs/README.md` — cómo verla.
+
+**Archivos:** `frontend/pages/contenido/[...ruta].vue` (renombrado de `index.vue`), `backend/app/Http/Controllers/ContenidoController.php`, `backend/app/Mail/ContenidoNuevoMail.php`, `backend/app/Models/{ContenidoSuscriptor,Tarea}.php`, `backend/config/contenido.php`, `backend/database/migrations/0048_create_contenido_suscriptores_table.php`, `backend/resources/views/contenido/{publico,baja,mail_nuevo}.blade.php`, `backend/routes/api.php`, `docker-compose.yml`, `backend/docs/`.
+
+---
+
 ## 2026-07-22 — Contenido: subdominio, deep-links, descarga, filtro y thumbnails
 
 Segunda tanda sobre el módulo [[modulos/contenido|Contenido]] (mismo día). Commits `1388ba5`, `4ad6b8b`, `da0332e`.
