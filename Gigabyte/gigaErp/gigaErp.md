@@ -3,8 +3,9 @@
 ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, stock, órdenes de venta, cuenta corriente y documentos comerciales.
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
-**Último commit:** `78daa74` · **Última sincronización:** 2026-07-23
-**Último trabajo:** módulo **Contenido** — suscripción por email + avisos, vista de suscriptores en el ERP, deep-links y paridad admin↔pública, y docs **OpenAPI 3.0 / Swagger UI** — commits `2e64e44`/`4af7a34`/`a54da03`/`78daa74` — ver [[changelog#2026-07-23 — Contenido: suscripción por email, deep-links en el ERP, paridad de vistas y OpenAPI|changelog]] y [[modulos/contenido]]
+**Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
+**Último commit:** `eae97a3` · **Última sincronización:** 2026-07-23
+**Último trabajo:** **Clientes** — tipos distribuidor/reseller + sección **Contactos** e importación por bloques (commits `b3b27aa`/`eae97a3`), sobre la tanda de **Contenido** (suscripción por email con SMTP real, deep-links, suscriptores). Ver [[changelog#2026-07-23 — Clientes: tipos distribuidor/reseller + Contactos (rama `Development`)|changelog]], [[modulos/clientes]] y [[modulos/contenido]]
 
 ---
 
@@ -21,6 +22,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 ### Módulos
 
+- [[modulos/clientes]] — clientes distribuidor/reseller, sección Contactos, importación por bloques
 - [[modulos/ordenes-venta]] — pipeline Orden → Aprobación → Invoice → Nota de crédito
 - [[modulos/invoice-preview]] — preview Blu-style + html2pdf client-side
 - [[modulos/productos]] — sync partpicker + carga masiva de catálogo GIGABYTE, 4 listas de precio

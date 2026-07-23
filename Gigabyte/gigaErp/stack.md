@@ -18,6 +18,10 @@
 - **S3** (discos `contenido` y `contenido_thumbs`): solo el módulo [[modulos/contenido|Contenido]]. Bucket privado en **sa-east-1** (São Paulo), archivos servidos con URLs firmadas; los thumbnails se generan on-demand (extensión **GD**) y se cachean en el prefijo `_thumbs`. Vars: `AWS_*`, `CONTENIDO_S3_BUCKET`, `CONTENIDO_S3_PREFIX`, `CONTENT_DOMAIN` (subdominio).
 - **nginx**: config por template envsubst (`nginx/default.conf.template`) — subdominio de Contenido + cache de thumbnails.
 
+## Mail (avisos de Contenido)
+
+- **SMTP**: `box.lio.red:465` (`MAIL_SCHEME=smtps`), remitente `gigabyte@blustudioinc.com` (= usuario autenticado, si no el server rechaza). Vars `MAIL_*` en `.env` (gitignored) + `docker-compose.yml`. **Default `MAIL_MAILER=log`** → hasta cargar SMTP los avisos van al `laravel.log` sin romper. Lo usa la suscripción de [[modulos/contenido|Contenido]] (`ContenidoNuevoMail`).
+
 ## Frontend
 
 | Tecnología | Versión | Uso |

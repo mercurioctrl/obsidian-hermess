@@ -1,3 +1,16 @@
+## 2026-07-23 — Clientes: tipos distribuidor/reseller + Contactos (rama `Development`)
+
+Nuevo trabajo de otro dev integrado en la rama **`Development`** (la de deploy activa; `main` quedó atrás). Commits `b3b27aa`, `eae97a3`. Ver [[modulos/clientes]].
+
+- **Tipos de cliente**: `clientes.tipo` con default `distribuidor` (mig `0021`) ahora distingue **`reseller`**. El listado `/clientes` gana pestañas distribuidor/reseller; índices `clientes(tipo,pais)` (mig `0050`).
+- **Contactos** (mig `0049`, tabla `contactos`): CRUD (`apiResource('contactos')`) + **sección propia** `/contactos` (`pages/contactos/index.vue`) + entrada en el sidebar.
+- **Importación por bloques** (`/clientes/importar-contactos`, `ImportacionContactosController`): Excel con bloques CLIENTE/MAIL por país (hoja "LISTA MAILS CLIENTES"), crea clientes `reseller` + contactos, con **carry-forward** del nombre y bloque especial "Partners NVIDIA". PhpSpreadsheet ya instalado (fallback CSV).
+- **SMTP real cableado** para los avisos de Contenido: `box.lio.red:465` (`MAIL_SCHEME=smtps`), remitente `gigabyte@blustudioinc.com`. Vars `MAIL_*` en `.env` (gitignored) + `docker-compose.yml` (default `log`). Envío probado OK. Ver [[modulos/contenido#Config y deploy|contenido]].
+
+**Deploy:** hot-deploy backend (controllers + migraciones `0049`/`0050`, borrar dup Sanctum antes de migrar) + rebuild frontend con `--no-deps`. Ver [[troubleshooting]].
+
+---
+
 ## 2026-07-23 — Contenido: suscripción por email, deep-links en el ERP, paridad de vistas y OpenAPI
 
 Cuarta tanda del módulo [[modulos/contenido|Contenido]] + docs de API. Commits `2e64e44`, `4af7a34`, `a54da03`, `78daa74`.
