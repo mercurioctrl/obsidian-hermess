@@ -994,3 +994,13 @@ Alta de nuevo agente/usuario web en producción, empresa **NBE ELECTRIC (company
 - Claves: `ccodage/ID_VENDEDOR 102`, `ccodcli/ID_CLIENTE 100964`, `UserId 84051`, `permisos_agente.id 68`. Login `msalomon` / `msalomon@nbe.com.ar`.
 - Se destrabó un **segfault del driver `pdo_sqlsrv`**: crashea al reinsertar valores `datetime` leídos con `SELECT *` (los devuelve como `'May 31 2026 12:00:00:AM'`, irreconvertible). Además **tinker enmascara el segfault como exit 0**. Fix: correr como PHP bootstrapeado normal (no tinker) + nulear todas las columnas datetime del clon salvo `FECHA_ALTA`.
 - Runbook actualizado con el fix y el mapeo de `companyCode` por empresa: [[runbook-alta-usuario-interno]].
+
+
+## 2026-07-23 — Alta de usuario interno: mscomprobantes (template catriel, NB)
+
+Alta de agente/usuario web clonando **catriel** (cuenta admin sobre el agente compartido 12 "Sistema Web"). Empresa **NB (companyCode 4)**. Se optó por crear **agente + cliente nuevos** (no reusar los de catriel). Login `mscomprobantes` / `comprobantes@nb.com.ar`. Tiene permiso de **expedición** (`expedicion=1` y `expedicion_admin=1`, heredados de catriel).
+
+- **Prod (container local):** `ccodage/ID_VENDEDOR 103`, `ccodcli/ID_CLIENTE 101230`, `UserId 84108`, `permisos_agente.id 69`.
+- **Replicado en host dev** `db-nb-massql-dev.blu.net.ar,4444` (login `cmercurio`): keys **redescubiertas allí** = `ccodage 102`, `ccodcli 100141`, `UserId 84817`, `permisos_agente.id 68`. Conexión vía override en PHP de `database.connections.sqlsrv.*` + `DB::purge('sqlsrv')`; naming de 3 partes para no depender de la DB default.
+- Al clonar de catriel se nuleó `tokenFb` (Firebase) + `ip/os/browser/user_agent` para no arrastrar sesión/push; datetime del cliente nuleados salvo `FECHA_ALTA`. El cliente hereda CUIT/tel/dir del template (cliente interno "no usar").
+- Runbook actualizado con este ejemplo y el método de conexión a otro host: [[runbook-alta-usuario-interno]].
