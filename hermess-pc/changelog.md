@@ -85,3 +85,15 @@ Ver [[hermess-pc/vpn-casa|VPN CASA]]. Archivos generados en la Mac: `~/vpn-casa.
 - Fix: backup en `~/keyrings-backup-20260717-145137`, `default` → `login`, eliminado el `default.keyring` corrupto.
 
 Ver [[hermess-pc/chrome-keyring|Chrome — keyring roto]]. Pendiente: investigar por qué crashea Chrome.
+
+---
+
+## 2026-07-25
+
+### VM Windows 7 (libvirt/QEMU) — carpeta compartida y runtime faltante
+
+- VM `win7` en `qemu:///system` (IP `192.168.122.20`, hostname `hermess-PC`, disco `/var/lib/libvirt/images/vol.qcow2`). Comparte carpeta **desde el guest** por SMB: recurso **`RecordDownload`** → accesible en `smb://192.168.122.20/RecordDownload`. Correr un cliente Hikvision (descarga de grabaciones).
+- **No** es compartición del host (no hay virtiofs/9p ni Samba activo en el host). Win7 habla hasta **SMB 2.1** (montar con `vers=2.1`, no 3.0).
+- **Error al instalar componente Hikvision** (`LocalServiceControl.exe`): falta `api-ms-win-crt-runtime-l1-1-0.dll` = **Universal C Runtime**. Windows Update no sirve (error **80072EFE** — Win7 ya no negocia TLS/SHA-2 con los servidores MS).
+- **Solución (offline):** instalar `VC_redist.x64.exe` 2015-2019 (VS2019 14.29, compatible Win7 — las versiones 14.40+ ya no soportan Win7) o el KB **`windows6.1-kb2999226-x64.msu`**. Traen el UCRT y colocan el DLL faltante.
+- **Estado:** DLL diagnosticado y `VC_redist.x64.exe` bajado a `/tmp` del host. Transferencia por SMB falló (`NT_STATUS_LOGON_FAILURE` — cuenta sin pass o pass distinta). Alternativas para pasar el archivo: server web temporal (`python3 -m http.server 8000` → `http://192.168.122.1:8000/`) o adjuntar como ISO con `virsh attach-disk`. **Pendiente:** completar la instalación dentro del Win7.

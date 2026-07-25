@@ -32,6 +32,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 ## Cámaras
 
 - [[02-camaras]] — Inventario, diagnóstico y tareas pendientes
+- [[02-camaras#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] — WiFi PT motorizada (10.10.10.64), patrullaje "enfoque B" vía ISAPI JSON
 
 ## Impresoras
 
@@ -46,6 +47,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 
 - [[01-cambios-2025-05]] — Sesión de diagnóstico y optimización (mayo 2025)
 - [[03-impresora-p1102w#Sesión de diagnóstico (2026-07-12)]] — Puesta a punto de la impresora P1102w (julio 2026)
+- [[02-camaras#Sesión de configuración (2026-07-25) — patrullaje "enfoque B"]] — Config del patrullaje de la cámara PUERTA PTZ (julio 2026)
 
 ## Notas
 

@@ -6,6 +6,7 @@
 |---|---|---|---|---|---|
 | Ezviz (exterior) | 10.10.10.43 | 98:f1:12:3f:f0:a6 | Ezviz (Hikvision) | WiFi | AP Galeria |
 | PASILLO-C | 10.10.10.192 | 18:68:cb:d0:df:21 | DS-2CD1001-I | Cable | Switch (no administrado) |
+| PUERTA PTZ | 10.10.10.64 | — | DS-2CV1F23G2-LIDWF (WiFi PT ColorVu) | WiFi | — |
 
 ---
 
@@ -70,3 +71,49 @@ UniFi no soporta pinear un cliente a un AP específico de forma nativa. Si la c�
 
 - **Opción recomendada:** crear SSID `nexus-cam` asignado solo a AP Galeria y reconectar la cámara a esa red
 - **Alternativa:** kick manual desde el controlador para forzar reconexión (temporal)
+
+---
+
+## Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF
+
+**Modelo:** Hikvision WiFi PT ColorVu DS-2CV1F23G2-LIDWF (pan-tilt motorizada)  
+**Firmware:** V5.8.12  
+**Credenciales:** admin / (ver gestor de contraseñas)  
+**IP:** 10.10.10.64  
+**Ubicación:** apunta a la calle/vereda y a la entrada del edificio ("puerta")
+
+Tiene **6 presets** (no renombrables), todos mirando la misma escena con distinto zoom/encuadre. Preset 6 = vista amplia de la calle (posición "park"). Es una cámara aparte del NVR (ver memoria [[memoria]]).
+
+### Sesión de configuración (2026-07-25) — patrullaje "enfoque B"
+
+Configurada para quedar fija en la puerta la mayor parte del tiempo y hacer barridos cortos periódicos:
+
+| Paso | Preset | Permanencia |
+|---|---|---|
+| 1 | 6 (vista amplia — park) | 180 s (3 min) |
+| 2 | 1 | 15 s |
+| 3 | 3 | 15 s |
+| 4 | 4 | 15 s |
+| 5 | 5 | 15 s |
+
+→ loop. Queda **3 min fija en el preset 6** y cada tanto barre P1/P3/P4/P5 (~1 min de barrido). **Auto-inicio programado 00:00 y 12:00** → se reanuda solo tras corte de luz/reinicio.
+
+### API de esta cámara (ISAPI JSON) — importante
+
+Este modelo de consumo **NO** soporta el patrol clásico (`maxPatrolNum=0`, los PUT a `/patrols/1` se ignoran) ni `timeTasks` (Device Error). Su API real usa **`?format=json`** con endpoints **capitalizados**:
+
+- `GET/PUT /ISAPI/PTZCtrl/channels/1/OneTimePatrolParam?format=json` — pasos del barrido (`presetID` / `seqSpeed` 1-7 / `delay` 15-3600 s, 2-16 pasos)
+- `GET/PUT /ISAPI/PTZCtrl/channels/1/OneTimePatrolScheduleParam?format=json` — horarios de auto-inicio (máx 2)
+- `PUT /ISAPI/PTZCtrl/channels/1/StartOneTimePatrol` y `/StopOneTimePatrol` (body `{"patrolID":1}`)
+- `POST /ISAPI/PTZCtrl/channels/1/SearchOneTimePatrolStatus?format=json` → `{"patrolStatus":"running"}`
+- Snapshot: `GET /ISAPI/Streaming/channels/101/picture`
+- Auth **digest**. El schedule **no** se puede modificar con el patrullaje corriendo (`TOUR_BUSY`): hay que **Stop → PUT schedule → Start**.
+
+### Cómo tocarlo
+
+- **Pausar/reanudar:** botón ■/▶ del *Inspection Path* en la UI web (`10.10.10.64`), o `Stop/StartOneTimePatrol`.
+- **Cambiar tiempos/presets:** Configuration → PTZ → Inspection Path, o PUT a `OneTimePatrolParam`.
+
+## Ver también
+
+- [[Red]] — Infraestructura de red hogareña
