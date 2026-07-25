@@ -97,3 +97,8 @@ Ver [[hermess-pc/chrome-keyring|Chrome — keyring roto]]. Pendiente: investigar
 - **Error al instalar componente Hikvision** (`LocalServiceControl.exe`): falta `api-ms-win-crt-runtime-l1-1-0.dll` = **Universal C Runtime**. Windows Update no sirve (error **80072EFE** — Win7 ya no negocia TLS/SHA-2 con los servidores MS).
 - **Solución (offline):** instalar `VC_redist.x64.exe` 2015-2019 (VS2019 14.29, compatible Win7 — las versiones 14.40+ ya no soportan Win7) o el KB **`windows6.1-kb2999226-x64.msu`**. Traen el UCRT y colocan el DLL faltante.
 - **Estado:** DLL diagnosticado y `VC_redist.x64.exe` bajado a `/tmp` del host. Transferencia por SMB falló (`NT_STATUS_LOGON_FAILURE` — cuenta sin pass o pass distinta). Alternativas para pasar el archivo: server web temporal (`python3 -m http.server 8000` → `http://192.168.122.1:8000/`) o adjuntar como ISO con `virsh attach-disk`. **Pendiente:** completar la instalación dentro del Win7.
+
+### Cámara PUERTA PTZ — cron de loop del patrullaje
+
+- Agregado `~/.local/bin/ptz-puerta-loop.sh` + cron (`* * * * *`): relanza el patrullaje (OneTimePatrol) de la cámara PTZ `10.10.10.64` cuando queda `stopped`, porque este modelo hace **una sola pasada y no loopea** nativamente. Log en `/tmp/ptz_puerta_loop.log`.
+- Detalle completo de la cámara y su API en [[Red/02-camaras#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] (nota de [[Red/Red|Red]]).

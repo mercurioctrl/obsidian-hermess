@@ -90,13 +90,22 @@ Configurada para quedar fija en la puerta la mayor parte del tiempo y hacer barr
 
 | Paso | Preset | Permanencia |
 |---|---|---|
-| 1 | 6 (vista amplia — park) | 180 s (3 min) |
-| 2 | 1 | 15 s |
-| 3 | 3 | 15 s |
-| 4 | 4 | 15 s |
-| 5 | 5 | 15 s |
+| 1 | 1 | 15 s |
+| 2 | 3 | 15 s |
+| 3 | 4 | 15 s |
+| 4 | 5 | 15 s |
+| 5 | 6 (vista amplia — park) | 180 s (3 min) |
 
-→ loop. Queda **3 min fija en el preset 6** y cada tanto barre P1/P3/P4/P5 (~1 min de barrido). **Auto-inicio programado 00:00 y 12:00** → se reanuda solo tras corte de luz/reinicio.
+→ Barre P1/P3/P4/P5 (~1 min) y después queda **3 min fija en el preset 6** (el barrido va primero para que el descanso quede en la vista amplia). **Auto-inicio programado 00:00 y 12:00.**
+
+### ⚠️ OneTimePatrol = una sola pasada → cron para el loop
+
+El patrullaje de este modelo hace **UNA pasada y se detiene** (no hace loop nativo; el schedule solo admite 2 horarios/día). Para loop continuo hay un **cron en hermess-desktop**:
+
+- Script: `~/.local/bin/ptz-puerta-loop.sh` — cada 1 min: si `SearchOneTimePatrolStatus` = `stopped` → `StartOneTimePatrol`. Log en `/tmp/ptz_puerta_loop.log`.
+- Cron: `* * * * * /home/hermess/.local/bin/ptz-puerta-loop.sh`
+
+Sin este cron, la cámara barre una vez y se queda quieta en el preset 6.
 
 ### API de esta cámara (ISAPI JSON) — importante
 
@@ -113,6 +122,10 @@ Este modelo de consumo **NO** soporta el patrol clásico (`maxPatrolNum=0`, los 
 
 - **Pausar/reanudar:** botón ■/▶ del *Inspection Path* en la UI web (`10.10.10.64`), o `Stop/StartOneTimePatrol`.
 - **Cambiar tiempos/presets:** Configuration → PTZ → Inspection Path, o PUT a `OneTimePatrolParam`.
+
+### Sin seguimiento automático (auto-tracking)
+
+Este modelo **no soporta** auto-tracking (seguir gente que pasa). El endpoint `/ISAPI/PTZCtrl/channels/1/moveAutoTracking` devuelve `notSupport` (`SW_AUTO_TRACK_SUP` / `SW_AUTO_TRACK_VMD_SUP not support`); tampoco tiene EPTZ auto-track. Para seguimiento haría falta otro modelo (PTZ con Smart Tracking de fábrica) o Master-Slave con 2 cámaras (una fija que detecta + una PTZ que sigue). Además el auto-tracking es el uso que **más desgasta** el motor PT.
 
 ## Ver también
 
