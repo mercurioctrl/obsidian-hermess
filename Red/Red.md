@@ -34,6 +34,11 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[02-camaras]] — Inventario, diagnóstico y tareas pendientes
 - [[02-camaras#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] — WiFi PT motorizada (10.10.10.64), patrullaje "enfoque B" vía ISAPI JSON
 
+## Grabadores (DVR / NVR)
+
+- [[04-dvr-dahua]] — **DVR Dahua HCVR** (10.10.10.101): grabador principal, híbrido 4 analógicas + IP. Se opera por API RPC2. Mapeo de canales y cómo operarlo.
+- NVR Hikvision (kit wifi, 10.10.10.105) — equipo aparte, ver memoria de Claude.
+
 ## Impresoras
 
 - [[03-impresora-p1102w]] — HP LaserJet P1102w: config (driver hplip+plugin, SSID `nexus-printers`, IP fija 10.10.10.189) y diagnóstico
@@ -48,6 +53,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[01-cambios-2025-05]] — Sesión de diagnóstico y optimización (mayo 2025)
 - [[03-impresora-p1102w#Sesión de diagnóstico (2026-07-12)]] — Puesta a punto de la impresora P1102w (julio 2026)
 - [[02-camaras#Sesión de configuración (2026-07-25) — patrullaje "enfoque B"]] — Config del patrullaje de la cámara PUERTA PTZ (julio 2026)
+- [[04-dvr-dahua#Sesión de reordenamiento (2026-07-26)]] — Reordenamiento de canales del DVR Dahua: PTZ movida CH11→CH9 (julio 2026)
 
 ## Notas
 

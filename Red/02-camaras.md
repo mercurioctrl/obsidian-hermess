@@ -84,6 +84,8 @@ UniFi no soporta pinear un cliente a un AP específico de forma nativa. Si la c�
 
 Tiene **6 presets** (no renombrables), todos mirando la misma escena con distinto zoom/encuadre. Preset 6 = vista amplia de la calle (posición "park"). Es una cámara aparte del NVR (ver memoria [[memoria]]).
 
+> 📼 También se graba en el **DVR Dahua** en **CH9** (movida desde CH11 el 2026-07-26). Ver [[04-dvr-dahua]].
+
 ### Sesión de configuración (2026-07-25) — patrullaje "enfoque B"
 
 Configurada para quedar fija en la puerta la mayor parte del tiempo y hacer barridos cortos periódicos:
