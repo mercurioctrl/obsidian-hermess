@@ -58,6 +58,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-07-16|2026-07-16]] — Jornada sin actividad: sin interacciones, tareas ni decisiones registradas con Catriel por WhatsApp
 - [[Bily/bitacoras/2026-07-17|2026-07-17]] — Jornada sin actividad: sin conversaciones ni tareas registradas con Catriel por WhatsApp
 - [[Bily/bitacoras/2026-07-24|2026-07-24]] — Jornada sin actividad: conversación breve con Catriel por WhatsApp, sin decisiones ni pedidos registrados
+- [[Bily/bitacoras/2026-07-25|2026-07-25]] — Revisión de tareas pendientes en el Kanban y actualización de notas en Obsidian; priorización de tareas para la próxima semana
 
 ## Ver también
 
