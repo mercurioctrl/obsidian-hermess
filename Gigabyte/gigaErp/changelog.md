@@ -1,3 +1,24 @@
+## 2026-07-27 — Ploteos con mapa + estados de proyecto configurables
+
+Trabajo de otro dev integrado en `Development` y deployeado (hot-deploy backend + rebuild frontend). Commits `46e6dab`, `009b911`, `8e58069`, `815c284`. Migraciones `0051`–`0057`.
+
+### Módulo Ploteos (branding físico de resellers) — nuevo. Ver [[modulos/ploteos]]
+- Nueva sección `/ploteos` (grupo Marketing) para gestionar los **ploteos/vinilos de sucursales** de los resellers, con **mapa geolocalizado** (Leaflet + markercluster + tiles OSM).
+- Modelo `Ploteo` (migs `0051`–`0055`): `cliente_id`, `sucursal`, `ploteo`, `url`, `medidas_cm`, `ubicacion`, `lat`/`lng`, `fecha`, `estado` (`programado`/`en_proceso`). Historial de migraciones sinuoso: `0054` dropea `sucursal`, `0055` la re-agrega.
+- **Geocodificación vía Nominatim** (`PloteoController::geocodificar`): al crear/editar con `ubicacion`, le pega a OpenStreetMap con `User-Agent` de `config('services.nominatim.user_agent')` — **bloque nuevo en `config/services.php`** (requirió `config:cache` re-inyectando MAIL_*/CONTENT_DOMAIN). Falla silenciosa; ⚠️ Nominatim devuelve `lon` mapeado a `lng`.
+- **Endpoints**: `GET /ploteos/paises`, `GET /ploteos/mapa` (solo `whereNotNull(lat,lng)`), `apiResource('ploteos')` — estáticas antes del wildcard.
+- **Importación masiva** (`ImportacionPloteosController`, `/importaciones-ploteos/parsear` + `store`): Excel País/Reseller/Sucursal/Ploteo/Medidas/Fecha, mapea `sucursal`→`ubicacion` y geocodifica fuera de la transacción (rate-limit ~1 req/seg, tope 80). `pages/ploteos/importar.vue`.
+- **Gotcha (2026-07-27)**: los ploteos previos a `0053` no tienen `ubicacion`/coords → no aparecen en el mapa; hay que cargarles dirección o re-importar. No es bug de deploy.
+
+### Estados de proyecto configurables (mig `0057`) + calendario datetime (mig `0056`)
+- El enum `App\Enums\EstadoProyecto` **se eliminó**, reemplazado por tabla/modelo **`EstadoProyecto`** (`nombre`, `color`, `orden`, `activo`) con CRUD (`apiResource('estados-proyecto')`) editable desde **Configuración** (`pages/configuracion/index.vue`).
+- Migración `0057` crea la tabla, siembra los 4 estados legacy (Activo/En pausa/Pendiente de pago/Archivado), agrega FK `proyectos.estado_proyecto_id` (nullOnDelete), migra los datos por estado legacy y **dropea la columna `estado`** vieja. `StatusBadge` gana soporte de color por estado.
+- **Calendario**: `eventos_calendario.fecha_inicio`/`fecha_fin` pasan de `DATE` a `DATETIME` (mig `0056`) → eventos con hora. `EventoCalendarioController`/`EventoCalendario` y `pages/calendario/index.vue` ajustados.
+
+**Deploy:** borrar el enum eliminado del container (`rm app/Enums/EstadoProyecto.php`), copiar controllers/models, migrar (dup Sanctum antes), `config:cache` **con envs re-inyectadas** (por `services.php`), rebuild frontend (`package.json` cambió: Leaflet). Ver [[troubleshooting]].
+
+---
+
 ## 2026-07-23 — Clientes: tipos distribuidor/reseller + Contactos (rama `Development`)
 
 Nuevo trabajo de otro dev integrado en la rama **`Development`** (la de deploy activa; `main` quedó atrás). Commits `b3b27aa`, `eae97a3`. Ver [[modulos/clientes]].

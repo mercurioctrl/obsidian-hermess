@@ -4,6 +4,25 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-07-26
+
+- fix: **Ranking de GitHub — commits contados por `committed_at` dentro del rango** (PR #19). Antes `rendimiento()` sumaba `pr->commits` atribuidos a la **fecha de apertura del PR** (`gh_created_at`), así que mover el intervalo `desde`/`hasta` casi no cambiaba el ranking (se veía el histórico). Ahora los commits del ranking (y del gráfico "Commits por desarrollador") se cuentan desde `github_commits` agrupados por `author_login` filtrando por **`committed_at`** en el rango — misma lógica que la vista detallada del dev. Líneas +/− y contadores de PR siguen a nivel PR. Aprovecha el índice `(author_login, committed_at)` (~130ms frío / ~74ms caliente). Ver [[Modulo GitHub]]
+- docs: **CLAUDE.md — gastos siempre editables/eliminables** (parte del PR #19). Se corrigieron las secciones "Gastos — Edición" y "Gastos — Eliminación" que aún decían "No editables si COBRADO o FACTURADO", contradiciendo el comportamiento real tras el PR #18.
+- ops: se configuró `DEEPSEEK_API_KEY` en el entorno. ⚠️ Laravel lee `env()` desde el `.env` que carga Dotenv (`/var/www/html/.env`, horneado desde `backend/.env`), **no** desde las env vars que inyecta docker-compose. La key va en `backend/.env` (gitignoreado); tras cambiarla: `config:clear` + `docker restart` (no `--force-recreate`, que revierte el `.env` en caliente). Ver [[Errores Comunes]]
+
+Archivos: `backend/app/Services/GithubService.php` (rendimiento por `committed_at`), `CLAUDE.md`
+
+---
+
+## 2026-07-20
+
+- fix: **Los gastos son siempre editables y eliminables** (PR #18) — se quitó el bloqueo que impedía registrar/editar/eliminar gastos cuando el presupuesto del proyecto estaba COBRADO o FACTURADO. Caso real: llegan costos **después** de emitida la factura y hay que imputarlos. Se eliminó `validarNoProtegido()` de `GastoController::update()`/`destroy()`; `GastoResource.editable` pasa a ser siempre `true`; se quitó el gate `puedeEditarGastos` en `proyectos/[id].vue`. Ver [[Reglas de Negocio]]
+- fix: **Preselección de proyecto en forms de gasto** — pedían `/proyectos`, que oculta `propuesta`/`cancelado`, dejando el select vacío al entrar desde un proyecto en `propuesta` (y perdiendo la vinculación al guardar en edición). Ahora piden `/proyectos?estado=todos`.
+
+Archivos: `backend/app/Http/Controllers/GastoController.php`, `backend/app/Http/Resources/GastoResource.php`, `frontend/pages/gastos/[id].vue`
+
+---
+
 ## 2026-07-14 (continuación — People & Performance Fase 2 inicial + Calendario)
 
 - feat: **Sección Calendario** (`/calendario`, vista mensual) que unifica **todo lo que tiene fecha y es de los usuarios**: tareas por su **deadline** (`fecha_vencimiento`, vencidas sin finalizar en rojo), **ausencias/vacaciones** por rango, **reuniones 1:1** y **objetivos** por fecha límite. Filtros por tipo y por persona. `CalendarioController` + `GET /api/calendario?desde=&hasta=`. Gateada con `VER_SECCION_CALENDARIO`. Entregado en PR #17. Ver [[Modulo Calendario]]

@@ -4,8 +4,8 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
-**Último commit:** `eae97a3` · **Última sincronización:** 2026-07-23
-**Último trabajo:** **Clientes** — tipos distribuidor/reseller + sección **Contactos** e importación por bloques (commits `b3b27aa`/`eae97a3`), sobre la tanda de **Contenido** (suscripción por email con SMTP real, deep-links, suscriptores). Ver [[changelog#2026-07-23 — Clientes: tipos distribuidor/reseller + Contactos (rama `Development`)|changelog]], [[modulos/clientes]] y [[modulos/contenido]]
+**Último commit:** `815c284` · **Última sincronización:** 2026-07-27
+**Último trabajo:** **Ploteos** — módulo nuevo de branding físico de resellers con **mapa geolocalizado** (Leaflet + Nominatim) + importación por Excel; y **estados de proyecto configurables** (enum → tabla `estados_proyecto`, editable en Configuración) + **calendario con hora** (fechas a DATETIME). Commits `46e6dab`/`009b911`/`8e58069`/`815c284`. Ver [[changelog#2026-07-27 — Ploteos con mapa + estados de proyecto configurables|changelog]] y [[modulos/ploteos]]
 
 ---
 
@@ -29,6 +29,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 - [[modulos/resellers]] — resellers live desde partpicker, sin importar a DB
 - [[modulos/addons]] — lanzadores a apps externas (url + token) que abren en pestaña nueva
 - [[modulos/contenido]] — repositorio de material de marca en S3 (bucket privado + URLs firmadas), vista pública con branding
+- [[modulos/ploteos]] — branding físico de resellers (ploteos/vinilos) con mapa geolocalizado (Leaflet + Nominatim) e importación por Excel
 
 ---
 
@@ -60,7 +61,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 ```
 Principal:    Dashboard · Distribuidores · Proveedores
 Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Resellers · Órdenes de Venta
-Marketing:    Fondos · Calendario · Proyectos · Tareas · Addons
+Marketing:    Fondos · Calendario · Proyectos · Tareas · Ploteos · Addons
 Admin:        Configuración (solo admin)
 ```
 
@@ -87,7 +88,7 @@ Admin:        Configuración (solo admin)
 | Ventas / Invoices | 34 |
 | Productos (demo+seeders) | ~259 base |
 | Productos (post-sync) | +miles (Air ~8k, Invid ~1.2k, Ceven ~466, Stylus ~908) |
-| Migraciones | 0001–0044 |
+| Migraciones | 0001–0057 |
 
 ### Usuarios demo
 
@@ -102,6 +103,6 @@ Admin:        Configuración (solo admin)
 
 ## Ver también
 
-- [[changelog]] — últimos: permisos de visualización por sección (VER_SECCION_*, opt-in) — 2026-06-29 · filtro de stock por origen (`72268f7`) · onboarding/vaciado de ERP (`2c45e61`) — 2026-06-23
+- [[changelog]] — últimos: [[modulos/ploteos|Ploteos]] con mapa + estados de proyecto configurables + calendario datetime — 2026-07-27 · Clientes distribuidor/reseller + Contactos — 2026-07-23
 - [[arquitectura]] — SincronizarApiController, ResellersController, ImportacionCatalogoController
 - [[contexto]] — reglas de negocio y TODOs pendientes

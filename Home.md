@@ -58,6 +58,7 @@
 ## 🌐 Red & Infra
 
 - [[Red]] — Infraestructura de red hogareña
+  - [[Red/04-dvr-dahua|DVR Dahua]] · [[Red/05-nvr-hikvision|NVR Hikvision]] · [[Red/02-camaras|Cámaras]] · [[Red/03-impresora-p1102w|Impresora P1102w]]
 - [[hermess-pc]] — PC principal
   - [[hermess-pc/vpn-casa|VPN CASA]] — VPN L2TP/IPSec a db-nb-dev.blu.net.ar
   - [[hermess-pc/chrome-keyring|Chrome — keyring roto]] — deslogueo masivo por keyring GNOME corrupto (arreglado 2026-07-17)
@@ -79,4 +80,4 @@
 
 ---
 
-*Actualizado: 2026-06-30*
+*Actualizado: 2026-07-27*

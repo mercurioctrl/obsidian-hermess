@@ -102,13 +102,13 @@ Operaciones que usan este patron:
 - Desmarcar gasto como `realizado`
 - Transicion de presupuesto a COBRADO
 
-## Gastos - Proteccion por estado de presupuesto
+## Gastos - Edicion y eliminacion (siempre habilitadas)
 
-Los gastos de un proyecto **no se pueden editar ni eliminar** si el presupuesto esta COBRADO o FACTURADO.
+Los gastos son **siempre editables y eliminables**, sin importar el estado del presupuesto del proyecto (incluido COBRADO/FACTURADO). Cambiado en **PR #18** (2026-07-20): el caso real es que llegan costos **despues** de emitida la factura y hay que poder imputarlos.
 
-- Backend: `GastoController` valida con `validarNoProtegido()`. Retorna 422.
-- Frontend: campo `editable` en GastoResource controla visibilidad de botones.
-- Gastos sin proyecto (OPERATIVO, RETIRO) siempre son editables.
+- Backend: se quito la validacion `validarNoProtegido()` de `GastoController::update()` y `destroy()` (el metodo quedo sin uso). Ya no hay 422 por estado de presupuesto.
+- Frontend: `GastoResource.editable` pasa a ser **siempre `true`** (se conserva el campo por compatibilidad; se elimino el gate `puedeEditarGastos` en `proyectos/[id].vue`).
+- ⚠️ Preseleccion de proyecto: los forms de gasto piden `/proyectos?estado=todos` (antes `/proyectos`, que oculta `propuesta`/`cancelado` y dejaba el select vacio al entrar desde un proyecto en `propuesta`, perdiendo la vinculacion al guardar).
 
 ## Activaciones - Copiar entre proyectos
 

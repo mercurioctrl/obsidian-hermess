@@ -23,7 +23,9 @@ Pegarle a la API de GitHub en cada carga es lento y agota el rate limit. Por eso
 
 ## Dashboard `/github`
 
-Ranking de desarrolladores por período: **commits** (contados por PR), **+/− líneas** (nivel PR), **PRs abiertos / mergeados / a rama destino**, **reviews**. Gráfico `PixelBarChart` de commits por dev. Repos trackeados en sección **colapsable** (122 repos de BluIncStudio / New-Bytes / LibreOpción). Bots excluidos (`login` termina en `[bot]`). Cada fila del ranking navega a la vista detallada.
+Ranking de desarrolladores por período: **commits** (contados por `committed_at` real, dentro del rango — ver abajo), **+/− líneas** (nivel PR), **PRs abiertos / mergeados / a rama destino**, **reviews**. Gráfico `PixelBarChart` de commits por dev. Repos trackeados en sección **colapsable** (122 repos de BluIncStudio / New-Bytes / LibreOpción). Bots excluidos (`login` termina en `[bot]`). Cada fila del ranking navega a la vista detallada.
+
+⚠️ **Commits del ranking contados por `committed_at` (PR #19, 2026-07-26):** antes el ranking sumaba `pr->commits` atribuidos a la **fecha de apertura del PR** (`gh_created_at`), por lo que mover el intervalo casi no cambiaba nada (se veía el histórico). Ahora `rendimiento()` cuenta commits desde `github_commits` agrupados por `author_login` filtrando por **`committed_at` dentro del rango** `desde`/`hasta` — consistente con la vista detallada. Aprovecha el índice `(author_login, committed_at)` (~130ms frío / ~74ms caliente). Las **líneas +/−** y los **contadores de PR** siguen a nivel PR (por fecha del PR). Commits con `author_login` null no se atribuyen.
 
 ## Vista detallada por dev `/github/{login}` (2026-07-11)
 

@@ -211,6 +211,16 @@ protected $attributes = [
 Introducido en `4af7a34` (módulo [[modulos/contenido|Contenido]], commit que además tocó tareas).
 
 
+
+## Ploteos: no aparecen en el mapa (`/ploteos/mapa` devuelve `[]`)
+
+**Síntoma:** hay ploteos cargados pero el mapa está vacío.
+
+**Causa:** el endpoint filtra `whereNotNull('lat')->whereNotNull('lng')`. Las coordenadas se llenan **geocodificando el campo `ubicacion`** (Nominatim) al crear/editar/importar. Los ploteos **previos a la migración `0053`** (que agregó `ubicacion`) no tienen dirección → sin pin. No es un bug de deploy.
+
+**Fix:** cargarles `ubicacion` (al editar se re-geocodifica: dispara si cambió el texto o si quedó sin pin de un intento anterior) o re-importar desde la planilla (mapea `sucursal`→`ubicacion`). ⚠️ Nominatim devuelve `lon`, no `lng`; el `User-Agent` sale de `config('services.nominatim.user_agent')` — si tocaste `config/services.php`, correr `config:cache` re-inyectando MAIL_*/CONTENT_DOMAIN. Ver [[modulos/ploteos]].
+
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources

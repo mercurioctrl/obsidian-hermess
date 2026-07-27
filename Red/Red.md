@@ -23,6 +23,8 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 | Dmz-server | 10.30.30.1/24 (VLAN 30) | — | Servidores |
 | VPN-Casa | 10.10.20.1/24 | — | VPN L2TP remota |
 
+> Nota: el **NVR Hikvision** ([[05-nvr-hikvision]]) emite además su **propia WiFi** `NVRFM7479611` para las cámaras de su kit — es una red aislada, no gestionada por UniFi.
+
 ## Domótica
 
 - **Tuya/Smartlife** (switches): ~12 dispositivos en `nexus-lot`, OUI Tuya Smart Inc.
@@ -37,7 +39,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 ## Grabadores (DVR / NVR)
 
 - [[04-dvr-dahua]] — **DVR Dahua HCVR** (10.10.10.101): grabador principal, híbrido 4 analógicas + IP. Se opera por API RPC2. Mapeo de canales y cómo operarlo.
-- NVR Hikvision (kit wifi, 10.10.10.105) — equipo aparte, ver memoria de Claude.
+- [[05-nvr-hikvision]] — **NVR Hikvision** kit WiFi (10.10.10.105): headless, gestión **solo por Hik-Connect**. Emite su propia WiFi para las cámaras del kit. La clave/SSID del AP **no se puede cambiar en remoto** (investigación 2026-07-27).
 
 ## Impresoras
 
@@ -47,6 +49,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 
 - [ ] **Reemplazar cable del pasillo** — cámara PASILLO-C (10.10.10.192) negoció 10Mbps half-duplex, causa de los cortes de imagen
 - [ ] **Pinear Ezviz a AP Galeria** — crear SSID `nexus-cam` solo en AP Galeria y reconectar la cámara
+- [ ] **NVR Hikvision** — reservar IP fija en el USG y evaluar bloqueo de salida a WAN (ver [[05-nvr-hikvision#⚠️ Pendientes]])
 
 ## Historial
 
@@ -54,6 +57,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[03-impresora-p1102w#Sesión de diagnóstico (2026-07-12)]] — Puesta a punto de la impresora P1102w (julio 2026)
 - [[02-camaras#Sesión de configuración (2026-07-25) — patrullaje "enfoque B"]] — Config del patrullaje de la cámara PUERTA PTZ (julio 2026)
 - [[04-dvr-dahua#Sesión de reordenamiento (2026-07-26)]] — Reordenamiento de canales del DVR Dahua: PTZ movida CH11→CH9 (julio 2026)
+- [[05-nvr-hikvision]] — Conexión del NVR Hikvision kit WiFi (10.10.10.105) e investigación del cambio de clave de su WiFi (julio 2026)
 
 ## Notas
 
