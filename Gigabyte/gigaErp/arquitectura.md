@@ -334,6 +334,15 @@ Para APIs externas públicas (ej. partpicker), el backend actúa como proxy:
 - `GET /api/resellers/fuentes` — resellers con prefijo `preciosgamer_`
 - `GET /api/resellers/items` — proxy con max 200 items, filtros: source, fabricante, isinstock, q
 
+### Envíos (campañas de mailing)
+
+Otro proxy de solo lectura, pero **con token** (no es API pública). Ver [[modulos/envios]].
+- `EnvioController` → `envios.to-aor.us/api.php`, auth `Http::withToken(config('services.envios.token'))`
+- `GET /api/envios/campanias` (listado) · `GET /api/envios/campanias/{id}` (detalle, `?estado=`/`?lista=`)
+- Ruta con `->where('id','.*')` porque el id puede ser `(sin-campania)`
+- Token/URL en `config/services.php` (`services.envios`), env `ENVIOS_API_*` → requiere `config:cache`
+- El filtro Real/Test es **client-side** (la API externa no maneja esa categoría)
+
 ### Gotchas partpicker
 
 - `stock` puede ser negativo (Air): `max(0, (int)$item["stock"])`

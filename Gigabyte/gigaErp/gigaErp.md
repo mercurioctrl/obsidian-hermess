@@ -4,8 +4,8 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
-**Último commit:** `815c284` · **Última sincronización:** 2026-07-27
-**Último trabajo:** **Ploteos** — módulo nuevo de branding físico de resellers con **mapa geolocalizado** (Leaflet + Nominatim) + importación por Excel; y **estados de proyecto configurables** (enum → tabla `estados_proyecto`, editable en Configuración) + **calendario con hora** (fechas a DATETIME). Commits `46e6dab`/`009b911`/`8e58069`/`815c284`. Ver [[changelog#2026-07-27 — Ploteos con mapa + estados de proyecto configurables|changelog]] y [[modulos/ploteos]]
+**Último commit:** `f773a34` · **Última sincronización:** 2026-07-28
+**Último trabajo:** **Envíos** — sección nueva de solo lectura que proxea la API de campañas de mailing `envios.to-aor.us` (listado de campañas + detalle de destinatarios), con **filtro Real/Test prefiltrado en Real** resuelto client-side. Commit `f773a34`. Ver [[changelog#2026-07-28 — Sección Envíos (campañas de mailing)|changelog]] y [[modulos/envios]]
 
 ---
 
@@ -30,6 +30,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 - [[modulos/addons]] — lanzadores a apps externas (url + token) que abren en pestaña nueva
 - [[modulos/contenido]] — repositorio de material de marca en S3 (bucket privado + URLs firmadas), vista pública con branding
 - [[modulos/ploteos]] — branding físico de resellers (ploteos/vinilos) con mapa geolocalizado (Leaflet + Nominatim) e importación por Excel
+- [[modulos/envios]] — campañas de mailing (proxy a `envios.to-aor.us`, solo lectura) con filtro Real/Test prefiltrado en Real
 
 ---
 
@@ -61,7 +62,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 ```
 Principal:    Dashboard · Distribuidores · Proveedores
 Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Resellers · Órdenes de Venta
-Marketing:    Fondos · Calendario · Proyectos · Tareas · Ploteos · Addons
+Marketing:    Fondos · Calendario · Proyectos · Tareas · Ploteos · Addons · Contenido · Envíos
 Admin:        Configuración (solo admin)
 ```
 
@@ -103,6 +104,6 @@ Admin:        Configuración (solo admin)
 
 ## Ver también
 
-- [[changelog]] — últimos: [[modulos/ploteos|Ploteos]] con mapa + estados de proyecto configurables + calendario datetime — 2026-07-27 · Clientes distribuidor/reseller + Contactos — 2026-07-23
+- [[changelog]] — últimos: [[modulos/envios|Envíos]] (proxy campañas de mailing, filtro Real/Test) — 2026-07-28 · [[modulos/ploteos|Ploteos]] con mapa + estados de proyecto configurables — 2026-07-27 · Clientes distribuidor/reseller + Contactos — 2026-07-23
 - [[arquitectura]] — SincronizarApiController, ResellersController, ImportacionCatalogoController
 - [[contexto]] — reglas de negocio y TODOs pendientes

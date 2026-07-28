@@ -1,3 +1,17 @@
+## 2026-07-28 — Sección Envíos (campañas de mailing)
+
+Nueva sección **Envíos** de solo lectura que proxea la API de campañas de email `envios.to-aor.us`. Commit `f773a34` (rama `Development`, hot-deploy backend + rebuild frontend). Ver [[modulos/envios]].
+
+- **Backend `EnvioController`** (patrón proxy, mismo que [[modulos/resellers|Resellers]], sin DB): `GET /api/envios/campanias` (listado) y `GET /api/envios/campanias/{id}` (detalle, acepta `?estado=` y `?lista=`; la ruta usa `->where('id','.*')` porque el id puede ser `(sin-campania)`). Token en `config/services.php` → `services.envios.{url,token}` vía env `ENVIOS_API_URL`/`ENVIOS_API_TOKEN`, auth `Http::withToken`.
+- **Frontend**: `pages/envios/index.vue` (tarjetas por campaña + totales agregados) y `pages/envios/[id].vue` (5 StatsCards + pills de estado + tabla de destinatarios). Alta en `secciones.ts` (grupo Marketing, permiso `VER_SECCION_ENVIOS`).
+- **Filtro Real / Test / Todas** en ambas pantallas, **prefiltrado en Real**. Clasificación: lista *Test* si está vacía o su nombre contiene `prueba`/`test`; campaña *Test* si todas sus listas lo son. Se resuelve **client-side** (la API externa no maneja categorías): el detalle se trae completo una vez y el toggle recalcula StatsCards + tabla. Con datos de solo-prueba, el prefiltro Real deja la pantalla vacía a propósito.
+- **Gotcha**: los `destinatarios` no traen `id` y hay emails repetidos → id sintético por índice para el `:key` del DataTable. `useApi.get` devuelve el JSON crudo del proxy (sin `.data`).
+- **Imprevisto de deploy**: el container tenía `AddonMarketingController` + modelo `AddonMarketing` **sin desplegar** (referenciados en `api.php`) → al copiar el `api.php` actualizado, el ruteo tiraba 500. Se copiaron ambos archivos al container; la tabla `addons_marketing` ya existía (mig `0044`), no hubo migración. De paso quedó funcional `/api/addons`.
+
+**Deploy backend (en caliente):** `docker cp` de `EnvioController.php` + `services.php` + `api.php`, setear `ENVIOS_API_*` en el `.env` del container, `config:cache` + `route:clear`, `docker restart gigaerp-nginx`. **Frontend:** rebuild completo + `up -d --no-deps frontend` + restart nginx.
+
+---
+
 ## 2026-07-27 — Ploteos con mapa + estados de proyecto configurables
 
 Trabajo de otro dev integrado en `Development` y deployeado (hot-deploy backend + rebuild frontend). Commits `46e6dab`, `009b911`, `8e58069`, `815c284`. Migraciones `0051`–`0057`.

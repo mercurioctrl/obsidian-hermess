@@ -25,6 +25,7 @@ ERP interno — distribuidores, stock, órdenes de venta, facturación, marketin
 - [[gigaErp/modulos/contenido|Módulo Contenido (S3)]]
 - [[gigaErp/modulos/clientes|Módulo Clientes (distribuidor/reseller + Contactos)]]
 - [[gigaErp/modulos/ploteos|Módulo Ploteos (mapa + geocodificación)]]
+- [[gigaErp/modulos/envios|Módulo Envíos (campañas de mailing)]]
 
 ### informe-landing
 Presentación / landing HTML que le propone a Gigabyte centralizar el paid media (Google + Meta Ads) con la agencia BLU. Versión interna (16 slides, con BLU) + versión de cara al reseller (`reseller.html`).
