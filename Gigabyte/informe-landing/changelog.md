@@ -106,3 +106,14 @@ Archivo: `landing-ejemplo-ads/campana-q2-familia-giga40.html`.
 - Render validado con Chrome headless (11 secciones, tablas, playbook y movidas OK).
 
 Archivos principales: `por pais/investigacion-notebooks/data_paises.py`, `enrich_data.py`, `generar_landings.py`, `research_out/*.json`, `GIGABYTE - NOTEBOOKS - {PAIS}.html`.
+
+## 2026-07-28 — Reporte de estado de resellers (modo claro)
+
+- **Nuevo entregable: [[reporte-resellers]]** (`Reportes Ads/reporte-resellers.html`). Landing-tablero que le reporta al cliente **qué se trabajó con cada reseller** y en qué punto del setup de paid media está cada uno. Distinto de [[landing-ejemplo-ads]]: esa muestra la creativa, esta el **estado operativo**.
+- **Fuente:** `Reportes Ads/BLU X GIGABYTE.xlsx` (planilla de control, 17 columnas, más completa que el CSV). Se parseó el xlsx (sin libs, unzip + XML) y se convirtieron las **fechas seriales de Excel** a calendario (base 1899-12-30).
+- **Estética AORUS en modo claro** (a pedido): fondo `#eceef1`, paneles blancos, tinta charcoal, acento naranja `#FF6400`, footer oscuro. Design system clonado de [[landing-ejemplo-ads]] e invertido. Estados sin verde/rojo (naranja=activo, hueco=pendiente) para respetar la regla de marca.
+- **9 resellers, 3 estados** derivados de la planilla vía pipeline de 4 pasos (GTM→FB→Meta→Google): **5 en vivo** (MMSOFT, Sampler, Thot, Compumar, Compufan), **2 en preparación** (MegaBytes, Armytech), **2 pendientes** (NoXie, Compragamer). Fechas de inicio reales por reseller.
+- **Simplificación** (feedback "quedó complejo de leer"): se quitó la tabla-anexo redundante, la leyenda de pasos y el filtro por campaña; cards aligeradas. Página de ~4600px → ~3000px.
+- **Fix de márgenes de PDF:** `@page{margin}` se ignora con diálogo "Márgenes: Ninguno" → margen lateral como padding real del contenido (`.wrap` + `margin` en header/strip). Verificado con Chrome `--print-to-pdf` (5 páginas OK).
+
+Archivos principales: `Reportes Ads/reporte-resellers.html`, `Reportes Ads/assets/` (logos).

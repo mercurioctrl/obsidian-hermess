@@ -49,5 +49,6 @@ Total foco: **7 resellers × US$ 270 = US$ 1.890**. (COMPRAGAMER/Armytech quedan
 
 ## Ver también
 - [[informe-landing]] · [[contexto]] · [[changelog]]
+- [[reporte-resellers]] — entregable hermano: el **estado operativo** de la misma región (modo claro). Esta landing es la creativa; ese reporte es en qué punto del setup está cada reseller.
 - [[research-paid-media]] — dossier de research/estrategia que alimenta la sección de estrategia
 - [[investigacion-notebooks]] — otro entregable satélite del mismo proyecto

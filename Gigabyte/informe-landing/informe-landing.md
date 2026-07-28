@@ -22,6 +22,7 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[memoria]] — espejo de la memoria de Claude del proyecto.
 - [[investigacion-notebooks]] — entregable aparte: investigación de mercado + 4 landings por país (AR/CL/UY/PY) de las notebooks GIGABYTE A16 / Aero X16. **Profundizado 2026-07-18** con research verificado (workflow multi-agente): benchmarks/TGP 85 W, precios en vivo, keywords con volumen, playbook táctico e impuestos citados.
 - [[landing-ejemplo-ads]] — entregable aparte: landing que le muestra al cliente los anuncios de ejemplo (Familia GIGA40) en mockups realistas de Meta + Google, por reseller.
+- [[reporte-resellers]] — entregable aparte: tablero **en modo claro** que reporta el estado operativo del setup de paid media por reseller (9 resellers, pipeline GTM→FB→Meta→Google, 5 en vivo). Fuente: `BLU X GIGABYTE.xlsx`.
 - [[research-paid-media]] — dossier de investigación y estrategia (competencia, demanda/estacionalidad, benchmarks, roles de canal, medición/geo-lift) con fuentes verificables.
 
 ## Ver también
@@ -29,4 +30,4 @@ Base de conocimiento del proyecto **informe-landing**: presentación / landing p
 - [[Gigabyte]]
 - [[gigaErp]] — otro proyecto Gigabyte (ERP) en esta bóveda
 
-_Última sincronización: 2026-07-18 (profundización investigacion-notebooks)_
+_Última sincronización: 2026-07-28 (nuevo entregable reporte-resellers)_
