@@ -7,8 +7,15 @@ Documentación de análisis e implementación de features en la API Laravel v4 y
 - [[changelog]] — Historial de cambios por fecha
 - [[contexto]] — Decisiones de sesión, gotchas, flujos técnicos importantes
 - [[arquitectura-recategorizacion]] — Sistema de recategorización de productos (Job, Matcher, DB tables)
+- [[calificaciones-vendedor]] — Reseñas del vendedor: endpoints, validación principal y script de verificación
 
 ## Resumen por área
+
+### Calificaciones del vendedor (2026-07-30)
+Verificación de la "Validación principal" del endpoint de reseñas.
+- Script de caja negra `scripts/verify-calification-reviews.sh` (curl + jq)
+- **Bug abierto:** `pagination.total` sobrecuenta — `countCalificaciones` no aplica los filtros del SELECT de `data`
+- Detalle en [[calificaciones-vendedor]]
 
 ### Pasarelas de pago (2026-06-07)
 Integración de MODO, GetNet y Payway en el checkout.
@@ -26,4 +33,4 @@ Integración de MODO, GetNet y Payway en el checkout.
 
 ## Última sincronización
 
-2026-06-07
+2026-07-30

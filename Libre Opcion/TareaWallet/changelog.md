@@ -1,5 +1,17 @@
 # Changelog — TareaWallet
 
+## 2026-07-30
+
+### Verificación del endpoint calificationReviews (reseñas del vendedor)
+
+- **feat (script):** `scripts/verify-calification-reviews.sh` — verificador de caja negra de la "Validación principal" de `GET /v4/seller/{sellerId}/calificationReviews`. Golpea el endpoint real (público, sin JWT), compara vista `viewType=seller` vs pública y valida los 7 criterios de aceptación. Exit ≠ 0 si algo falla. Requiere `curl` + `jq`.
+- **bug detectado (criterio 7 — paginación):** `pagination.total` (de `countCalificaciones`) sobrecuenta porque no aplica los filtros `calificacionComentario <> ''` ni `calificacionType` que sí aplica el `SELECT` de `data`. Ej. seller 447: `total=3162` vs filas reales `963`. **Fix pendiente:** replicar filtros en `countCalificaciones()`.
+- **análisis:** los 3 endpoints (`calificationReviews`, `review`, `reply`) ya estaban implementados en `CalificacionesVendedor` / `CalificacionService` / `CalificacionRepository`. Detalle en [[calificaciones-vendedor]].
+- Gotcha confirmado: `status` llega como `"0"` (string) por tipado del driver PDO sqlsrv — no es fallo del ISNULL.
+- Archivos: `scripts/verify-calification-reviews.sh` (nuevo)
+
+---
+
 ## 2026-06-07
 
 ### Integración MODO (billetera digital) — Checkout
@@ -58,4 +70,5 @@
 
 - [[TareaWallet]]
 - [[arquitectura-recategorizacion]]
+- [[calificaciones-vendedor]]
 - [[contexto]]

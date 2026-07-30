@@ -1,5 +1,25 @@
 # Contexto — TareaWallet
 
+## 2026-07-30
+
+### Verificación del endpoint calificationReviews (reseñas del vendedor)
+
+**Objetivo:** escribir un script que verifique si `GET /v4/seller/{sellerId}/calificationReviews` cumple la "Validación principal" (7 criterios de aceptación).
+
+**Contexto del endpoint:** los 3 endpoints del módulo (listar reseñas, revisar, responder) ya estaban implementados. El GET es **público** (el grupo `seller` en `routes/api.php:415` no tiene `token.auth`). Detalle del módulo en [[calificaciones-vendedor]].
+
+**Decisión de diseño del verificador:** caja negra en Bash (`curl` + `jq`), no test PHPUnit. Motivos: la BD es SQL Server remoto y no hay infra de tests; el endpoint es público, así que un script HTTP es más robusto y reproducible. Compara la vista `viewType=seller` contra la pública y valida invariantes observables desde el JSON. Archivo: `scripts/verify-calification-reviews.sh`.
+
+**Bug real encontrado (criterio 7):** `pagination.total` sale de `countCalificaciones()`, que solo filtra por `calificacion > 0` + visibilidad, mientras que el `SELECT` de `data` (`obtenerCalificaciones()`) filtra además por `calificacionComentario <> ''` y `calificacionType IS NULL OR = 1`. Por eso el `total` sobrecuenta. Verificado con seller 447: `total=3162` vs filas reales `963` (paginando todo). Fix pendiente: replicar los filtros en `countCalificaciones()`.
+
+**Falso positivo corregido en el script (criterio 2):** `status` llega como `"0"` (string), no `0`. No es bug del `ISNULL` — el driver PDO de SQL Server devuelve **todos** los escalares como string (`idCalification`, `calification`, `pedidoID` igual). El script se ajustó para aceptar `0`/`"0"` y fallar solo ante `null`.
+
+**Dato de datos reales:** `calificacionReviewVisibilidad` está `NULL` en las 4893 filas de la BD (nadie ocultó reseñas nunca). Los criterios 5/6 (ocultas vs visibles) pasan de forma trivial porque no hay data que ejercite el camino de "ocultas".
+
+> Cómo correrlo: `./scripts/verify-calification-reviews.sh 447` (o cualquier `sellerId` con reseñas). Para hallar uno: `SELECT TOP 1 vendedorId FROM LO.dbo.pedidosCabeceraVendedor WHERE calificacion > 0 AND calificacionComentario <> ''`.
+
+---
+
 ## 2026-06-07
 
 ### Integración de pasarelas de pago — MODO, GetNet, Payway
@@ -168,4 +188,5 @@ token = hmac.new(HMAC_KEY.encode(), payload.encode(), hashlib.sha256).hexdigest(
 
 - [[TareaWallet]]
 - [[arquitectura-recategorizacion]]
+- [[calificaciones-vendedor]]
 - [[changelog]]

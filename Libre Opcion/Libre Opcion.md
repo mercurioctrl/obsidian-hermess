@@ -47,6 +47,7 @@ Análisis e implementación del módulo de billetera y features relacionadas. In
 - [[TareaWallet/contexto|Contexto]] — MODO QR fix, OPcache gotcha, flujo wallet, TR_CODIGO 476, queries, HMAC
 - [[TareaWallet/changelog|Changelog]] — Historial por fecha
 - [[TareaWallet/arquitectura-recategorizacion|Arquitectura recategorización]]
+- [[TareaWallet/calificaciones-vendedor|Calificaciones del vendedor]] — Reseñas: endpoints, validación principal, script de verificación
 
 ## SEO y Performance
 
