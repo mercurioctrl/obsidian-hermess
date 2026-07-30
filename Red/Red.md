@@ -58,6 +58,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[02-camaras#Sesión de configuración (2026-07-25) — patrullaje "enfoque B"]] — Config del patrullaje de la cámara PUERTA PTZ (julio 2026)
 - [[04-dvr-dahua#Sesión de reordenamiento (2026-07-26)]] — Reordenamiento de canales del DVR Dahua: PTZ movida CH11→CH9 (julio 2026)
 - [[05-nvr-hikvision]] — Conexión del NVR Hikvision kit WiFi (10.10.10.105) e investigación del cambio de clave de su WiFi (julio 2026)
+- [[06-sticky-client-roaming]] — Min RSSI activado en 5GHz en los 3 APs para resolver el "Mac" de Ale pegado a un AP lejano (julio 2026)
 
 ## Notas
 
