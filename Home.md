@@ -11,6 +11,7 @@
   - [[Blu/bluFixture/bluFixture|bluFixture]] — Prode Copa Mundial 2026
   - [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]] — Mini ERP interno
   - [[Blu/blu-crm/blu-crm|blu-crm]] — CRM: email masivo (SES) + WhatsApp
+  - [[Blu/enviosMasivosRapidos/enviosMasivosRapidos|enviosMasivosRapidos]] — Newsletters HTML por SMTP (PHP CLI)
   - [[Blu/finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
   - [[Blu/rrhh/rrhh|rrhh]] — Recursos Humanos
   - `direccion/` — Dirección
