@@ -50,6 +50,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [ ] **Reemplazar cable del pasillo** — cámara PASILLO-C (10.10.10.192) negoció 10Mbps half-duplex, causa de los cortes de imagen
 - [ ] **Pinear Ezviz a AP Galeria** — crear SSID `nexus-cam` solo en AP Galeria y reconectar la cámara
 - [ ] **NVR Hikvision** — reservar IP fija en el USG y evaluar bloqueo de salida a WAN (ver [[05-nvr-hikvision#⚠️ Pendientes]])
+- [ ] **Sticky client / roaming** — pasar `nexus` a doble banda y recién ahí activar Min RSSI en 5GHz (ver [[06-sticky-client-roaming#Pendientes / próximos pasos]])
 
 ## Historial
 
@@ -58,7 +59,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[02-camaras#Sesión de configuración (2026-07-25) — patrullaje "enfoque B"]] — Config del patrullaje de la cámara PUERTA PTZ (julio 2026)
 - [[04-dvr-dahua#Sesión de reordenamiento (2026-07-26)]] — Reordenamiento de canales del DVR Dahua: PTZ movida CH11→CH9 (julio 2026)
 - [[05-nvr-hikvision]] — Conexión del NVR Hikvision kit WiFi (10.10.10.105) e investigación del cambio de clave de su WiFi (julio 2026)
-- [[06-sticky-client-roaming]] — Min RSSI activado en 5GHz en los 3 APs para resolver el "Mac" de Ale pegado a un AP lejano (julio 2026)
+- [[06-sticky-client-roaming]] — Intento de resolver el "Mac" de Ale pegado a un AP lejano: Min RSSI en 5GHz rompió la conexión (nexus es solo-5GHz) e incidente DFS en Oficina; se revirtió y se fijó Oficina a canal 149 no-DFS (julio 2026)
 
 ## Notas
 

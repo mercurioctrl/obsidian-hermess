@@ -1,51 +1,57 @@
-# 06 — Sticky client 5GHz: Min RSSI en la banda de 5GHz (2026-07-30)
+# 06 — Sticky client 5GHz + incidente DFS (2026-07-30)
 
-## Problema
+## Problema inicial
 
-La notebook **"Mac" de Ale** quedaba **pegada al [[Red#Dispositivos|AP Galeria]]** (de otra planta) en vez de asociarse al AP más cercano. Aparecía con **dos MAC aleatorias** (macOS randomiza MAC e IP):
+La notebook **"Mac" de Ale** quedaba **pegada al AP Galeria** (de otra planta) en vez de asociarse al AP más cercano. Aparecía con **dos MAC aleatorias** (macOS randomiza MAC e IP):
 
 | Cliente | IP | AP | Banda | Señal | Estado |
 |---|---|---|---|---|---|
 | `9e:d2:49:38:40:68` | 10.10.10.98 | AP Galeria | 5GHz (ch 161) | **-85 dBm** | 9 roams, pésima |
 | `b6:8c:85:6d:31:6a` | 10.10.10.91 | AP Galeria | 5GHz (ch 161) | **-81 dBm** | mala |
 
-## Causa raíz
+## Causa raíz del sticky client
 
-El **Minimum RSSI** (mecanismo que desasocia al cliente con señal débil para forzarlo a reconectar al AP más cercano) estaba activado **solo en 2.4GHz**, pero **desactivado en 5GHz** en los 3 APs:
+El **Minimum RSSI** (mecanismo que desasocia al cliente con señal débil para forzarlo a reconectar al AP más cercano) estaba activado **solo en 2.4GHz** y **desactivado en 5GHz** en los 3 APs. Como 5GHz atenúa más entre plantas, el cliente se quedaba pegado a un AP lejano a -85 dBm y nada lo obligaba a soltarse.
 
-```
-                2.4GHz (ng)        5GHz (na)
-AP Vestidor     ON  @ -75      →   OFF   ✗
-AP Galeria      ON  @ -75      →   OFF   ✗
-AP Oficina      ON  @ -75      →   OFF   ✗
-```
+## ⚠️ Qué salió mal (y por qué NO se debe hacer así)
 
-Como 5GHz atenúa más entre plantas, el cliente se quedaba pegado a un AP lejano a -85 dBm y nada lo obligaba a soltarse. En 2.4GHz esto no ocurría porque a -75 dBm lo pateaba.
+**Intento fallido:** se activó Min RSSI -75 dBm en 5GHz en los 3 APs. Consecuencias:
 
-Antecedente relacionado: en mayo 2025 se activó Min RSSI **solo en 2.4GHz** ([[01-cambios-2025-05#Cambios aplicados]]).
+1. **`nexus` es solo-5GHz.** Con Min RSSI en 5GHz, un cliente que no cumple el umbral es rechazado, y como `nexus` no tiene 2.4GHz, **se queda sin red** (no hay banda donde caer). → Ale no podía conectar iPhone ni Mac.
+2. **El cambio de `radio_table` disparó reprovisionamiento de los APs**, y el VAP de `nexus` en 5GHz **no levantó en Vestidor ni Oficina** (quedó emitiendo solo en Galeria). → El SSID `nexus` "desapareció" para todos; solo se veía `nexus-lot` (2.4GHz).
 
-## Cambio aplicado
+**Lección:** nunca activar Min RSSI en una banda cuando el SSID es exclusivo de esa banda. Y todo cambio de `radio_table` reprovisiona el AP (corta clientes ~1 min).
 
-**Minimum RSSI = -75 dBm activado en la radio 5GHz (`na`) de los 3 APs** (Vestidor, Galeria, Oficina), igual que ya estaba en 2.4GHz. Vía API del controlador (`PUT /api/s/default/rest/device/{_id}` modificando `radio_table[na].min_rssi_enabled=true`, `min_rssi=-75`).
+## Resolución aplicada
 
-## Resultado
+1. **Revertido el Min RSSI de 5GHz** → OFF en los 3 APs (estado original).
+2. **Force-provision de Oficina y Vestidor** → reconstruyó el VAP de `nexus` en 5GHz (volvió a emitirse en los 3 APs).
+3. **Causa del "no aparece al lado de Oficina": canal DFS.** Oficina tenía autoselección de canal y había caído en **ch104 (DFS)**. En canales DFS el AP hace un chequeo de radar (o se calla si detecta uno) y **no emite beacon** aunque el controlador diga "RUN".
+   - **Fijado el 5GHz de Oficina a canal 149 (no-DFS)** y desactivada la optimización automática de canal (`channel_optimization_enabled=false`), para que no vuelva a saltar a un DFS.
 
-El "Mac" se soltó **solo** de Galeria durante la reconfiguración y reconectó al **AP Oficina** (el más cercano):
+## Estado final (verificado)
 
-| | Antes | Después |
-|---|---|---|
-| AP | Galeria (otra planta) | **Oficina** ✅ |
-| Banda | 5GHz ch 161 | 2.4GHz |
-| Señal | -85 / -81 dBm | **-40 dBm** ✅ |
-| MAC/IP | .91 / .98 | `02:d3:ea:97:8c:24` / 10.10.10.237 |
+| AP | 2.4GHz | 5GHz canal | tipo | `nexus` 5G |
+|---|---|---|---|---|
+| Vestidor | ch6 RUN | **40** | no-DFS | ✅ |
+| Galeria | ch11 RUN | **161** | no-DFS | ✅ |
+| Oficina | ch1 RUN | **149** (fijado) | no-DFS | ✅ (5 clientes) |
 
-No hizo falta kick manual: cayó y reconectó por sí mismo al bajar del umbral.
+- Min RSSI: **2.4GHz ON (-75), 5GHz OFF** en los 3 (estado original restaurado).
+- Canales 5GHz 40 / 149 / 161: no se pisan entre sí.
 
-## Notas para futuro
+## Pendientes / próximos pasos
 
-- **macOS usa MAC aleatoria** → el mismo equipo aparece con varias MAC/IP. Buscarlo por **nombre "Mac"** o por IP, no por MAC fija.
-- El cambio de Min RSSI en 5GHz afecta a **todos** los clientes de 5GHz (es lo deseado: cortar clientes lejanos).
-- **Siguiente escalón** si algún cliente vuelve a quedar pegado a Galeria: bajar la **potencia TX de la radio 5GHz de Galeria** (estaba en **22 dBm**, la más alta de los 3 APs; Oficina 21, Vestidor 14).
+- **El sticky client sigue sin resolverse** (se revirtió el Min RSSI de 5GHz). La solución correcta es:
+  1. Pasar **`nexus` a doble banda** (`wlan_band` de `5g` → `both`) para que haya 2.4GHz donde caer.
+  2. **Recién entonces** activar Min RSSI en 5GHz (con band-steering para preferir 5GHz cerca del AP).
+- Alternativa/complemento: bajar la **potencia TX de 5GHz de Galeria** (está en 22 dBm, la más alta) para que no "grite" a otras plantas.
+- **Vestidor 5GHz** tiene TX bajo (14 dBm) y 0 clientes — evaluar subir potencia para mejorar cobertura de esa zona.
+
+## Notas
+
+- **macOS/iOS usan MAC aleatoria** → el mismo equipo aparece con varias MAC/IP. Buscarlo por **nombre "Mac"** o por IP, no por MAC fija.
+- Todo cambio de `radio_table` vía API (`PUT /rest/device/{_id}`) reprovisiona el AP. Verificar siempre después que los VAPs volvieron a levantar.
 
 ## Ver también
 
