@@ -166,6 +166,9 @@ protected $table = ordenes_venta;  // Eloquent no sabe pluralizar bien en españ
 "unique:productos,sku,{$id},id,distribuidor_id,{$distribuidorId}"
 ```
 
+### Google Ads: métricas de conversión goal-aware (no por categoría)
+Compras y Monto de compra se toman **a nivel campaña** (`metrics.conversions` / `metrics.conversions_value`), que cuentan solo el **objetivo custom** de la campaña. Sumar por `conversion_action_category` duplica (acciones solapadas). API `v22`, `login-customer-id` por cuenta. Detalle en [[modulos/google-ads]] y [[troubleshooting#Google Ads]].
+
 ---
 
 ## Ver también
@@ -173,4 +176,5 @@ protected $table = ordenes_venta;  // Eloquent no sabe pluralizar bien en españ
 - [[gigaErp]] — índice del proyecto
 - [[arquitectura]] — estructura técnica completa
 - [[contexto]] — reglas de negocio
+- [[modulos/google-ads]] — integración Google Ads
 - [[troubleshooting]] — errores conocidos con más detalle

@@ -1,3 +1,18 @@
+## 2026-07-31 — Sección Google Ads (reportes)
+
+Nueva sección **Marketing → Google Ads**: reportes de Google Ads embebidos en el ERP, navegables entre fechas. Nativa Laravel + Nuxt (API REST + GAQL, **sin Python** — la guía proponía FastAPI). Mergeada a `Development` (PRs #4/#5/#6, + #7). Ver [[modulos/google-ads]] y `docs/DEPLOY_GOOGLE_ADS.md`.
+
+- **Backend**: `GoogleAdsService` (OAuth refresh→access token cacheado en Redis, `searchStream` GAQL, cache del reporte, modo demo con fixture), `GoogleAdsController` (`/api/google-ads/cuentas` y `/reporte`, valida `cid`). Migración `0059` `google_ads_cuentas` (+ seed AR/UY/CL) con `login_customer_id` por cuenta. Config `services.google_ads`. Script `obtener_refresh_token_google_ads.py`.
+- **Frontend**: `pages/google-ads/index.vue` (cuentas) + `[cid].vue` (reporte: presets, `SelectorFecha`, flechas ◀▶, StatsCards con ícono (i), gráfico SVG, tabla de campañas). Sección en `secciones.ts` (permiso `VER_SECCION_GOOGLE_ADS`). `StatsCard` ganó prop `info` (tooltip reutilizable).
+- **Métricas**: Presupuesto/día, Inversión, Impresiones, Clics, Agregar al carrito, Compras, Monto de compra, Costo por compra. Alcance/Frecuencia no aplican (son de Meta).
+- **Cuentas Gigabyte** (AR 9373933264 / UY 5837677270 / CL 9370009552, USD) cuelgan del MCC BLU STUDIO (3863921811).
+- **Gotchas resueltos**: `api_version=v22` (v18 sunseteada→404); `login-customer-id` por cuenta y opcional (forzarlo sobre cuenta directa → `USER_PERMISSION_DENIED`); default de fechas `LAST_30_DAYS` (mes pasado abría vacío); `docker exec` necesita `-i` para escribir al `.env`; strings con acentos vía tinker (utf8mb4), no `mysql -e` (mojibake).
+- **⚠️ Fix clave (feedback marketing / Leo Saran)**: Compras y Monto de compra se toman **a nivel campaña (objetivo custom, goal-aware)**, no sumando categorías de conversión que se solapan y duplicaban el monto (UY: 9.545,27 correcto vs 28.977 duplicado). Se quitaron ROAS y la tabla de Destinos. Pendiente: definir la acción de carrito canónica (ADD_TO_CART también puede duplicar).
+
+**Deploy backend (en caliente):** `docker cp` de service/controller/model/migración + `api.php` + `services.php`, credenciales `GOOGLE_ADS_*` al `.env` del container (`docker exec -i … 'cat >> .env'`), `config:cache`, `route:clear`. **Frontend:** rebuild completo + restart nginx. Credenciales **fuera de git**.
+
+---
+
 ## 2026-07-28 — Sección Envíos (campañas de mailing)
 
 Nueva sección **Envíos** de solo lectura que proxea la API de campañas de email `envios.to-aor.us`. Commit `f773a34` (rama `Development`, hot-deploy backend + rebuild frontend). Ver [[modulos/envios]].

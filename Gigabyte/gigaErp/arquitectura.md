@@ -10,7 +10,7 @@ gigaErp/
 │   │   ├── Http/Controllers/ ← ~25 controllers (incl. ImportacionCatalogoController)
 │   │   ├── Http/Resources/   ← 9 API resources
 │   │   ├── Models/           ← ~24 Eloquent models
-│   │   └── (no Services aún)
+│   │   └── Services/         ← GoogleAdsService (integración API Google Ads)
 │   ├── database/
 │   │   ├── migrations/       ← 0001–0044 (numeradas; 0044 = addons_marketing)
 │   │   └── seeders/          ← DatabaseSeeder, DemoSeeder, ProductoInvidSeeder,
@@ -342,6 +342,15 @@ Otro proxy de solo lectura, pero **con token** (no es API pública). Ver [[modul
 - Ruta con `->where('id','.*')` porque el id puede ser `(sin-campania)`
 - Token/URL en `config/services.php` (`services.envios`), env `ENVIOS_API_*` → requiere `config:cache`
 - El filtro Real/Test es **client-side** (la API externa no maneja esa categoría)
+
+### Google Ads (reportes)
+
+Integración **con capa de servicio** (primer `App\Services\` del proyecto) contra la **API REST de Google Ads** (GAQL). No es proxy directo: transforma la respuesta a un JSON de reporte. Ver [[modulos/google-ads]].
+- `App\Services\GoogleAdsService`: OAuth (refresh→access token cacheado en Redis 55min), `searchStream` GAQL, cache 5min del reporte, `esDemo()` + fixture.
+- `GoogleAdsController` → `GET /api/google-ads/cuentas` · `GET /api/google-ads/reporte?cid=&desde=&hasta=&preset=`; valida `cid` contra `google_ads_cuentas` (no confía en el navegador).
+- Config `services.google_ads` (env `GOOGLE_ADS_*`, `API_VERSION=v22`, `LOGIN_CUSTOMER_ID` vacío); migración `0059` + modelo `GoogleAdsCuenta` (columna `login_customer_id` por cuenta).
+- Credenciales **fuera de git** (solo `.env` del server). Modo demo automático sin credenciales.
+- ⚠️ Compras/Monto = **nivel campaña** (goal-aware), no por categoría de conversión (duplica). Ver [[troubleshooting#Google Ads]].
 
 ### Gotchas partpicker
 

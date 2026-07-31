@@ -221,10 +221,25 @@ Introducido en `4af7a34` (módulo [[modulos/contenido|Contenido]], commit que ad
 **Fix:** cargarles `ubicacion` (al editar se re-geocodifica: dispara si cambió el texto o si quedó sin pin de un intento anterior) o re-importar desde la planilla (mapea `sucursal`→`ubicacion`). ⚠️ Nominatim devuelve `lon`, no `lng`; el `User-Agent` sale de `config('services.nominatim.user_agent')` — si tocaste `config/services.php`, correr `config:cache` re-inyectando MAIL_*/CONTENT_DOMAIN. Ver [[modulos/ploteos]].
 
 
+## Google Ads
+
+Trampas de la integración con la API de Google Ads ([[modulos/google-ads]]).
+
+**a) Monto/compras duplicados si se suman por categoría de conversión.** Sumar `all_conversions_value` por `segments.conversion_action_category = PURCHASE` **duplica**, porque hay acciones de conversión que se solapan ("Compra todos" ya incluye "Compra GB" + "otros"). **Fix:** tomar Compras y Monto **a nivel campaña** (`metrics.conversions` / `metrics.conversions_value`), que son *goal-aware* (cuentan solo el objetivo custom de la campaña). Verificado UY: 9.545,27 correcto vs 28.977 duplicado. ⚠️ Los **carritos** (ADD_TO_CART, secundarios, se leen de `all_conversions`) pueden tener el mismo solapamiento; falta definir la acción canónica con marketing.
+
+**b) `404 Not Found` en la API.** La versión de la API fue **sunseteada** (Google rota versiones ~1/año). `v18` da 404; vigente = **`v22`** (`GOOGLE_ADS_API_VERSION`). Para detectar la vigente: `GET https://googleads.googleapis.com/vXX/customers:listAccessibleCustomers` probando v21..v24.
+
+**c) `USER_PERMISSION_DENIED` al pedir un reporte.** El `login-customer-id` es **por cuenta** (columna `login_customer_id` en `google_ads_cuentas`; `.env` global vacío). Se manda **solo** si la cuenta cuelga de un MCC (= CID del manager). Forzarlo sobre una cuenta de **acceso directo** (ej. Libre Opción) da `USER_PERMISSION_DENIED`. Las de Gigabyte cuelgan del MCC BLU STUDIO (3863921811) → lo llevan.
+
+**d) Sigue en modo demo (`"demo": true`) con credenciales cargadas.** Falta `php artisan config:cache` tras escribir el `.env` (gotcha #2: `env()` no anda en PHP-FPM). Además `docker exec` para escribir al `.env` necesita **`-i`** (stdin) o el `cat >>` no entra.
+
+**e) Acentos con mojibake (`Libre OpciÃ³n`) al sembrar cuentas.** El cliente `mysql -e` usa latin1 y guarda doble-encoded. **Fix:** escribir strings con acentos vía `php artisan tinker` (conexión utf8mb4), pasando el carácter como escape unicode ASCII (`\u{f3}`) para que el shell no lo rompa.
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources
 - [[modulos/contenido]] — disco S3, URLs firmadas, deploy en caliente (gotchas 10-14)
+- [[modulos/google-ads]] — integración con la API de Google Ads
 - [[modulos/invoice-preview]] — donde aparece la trampa html2canvas/SVG
 - [[modulos/productos]] — importador de catálogo (gotchas 8 y 9)
 - [[changelog]] — cuando se identificó cada uno

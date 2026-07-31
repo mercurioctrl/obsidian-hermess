@@ -4,8 +4,8 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
-**Último commit:** `f773a34` · **Última sincronización:** 2026-07-28
-**Último trabajo:** **Envíos** — sección nueva de solo lectura que proxea la API de campañas de mailing `envios.to-aor.us` (listado de campañas + detalle de destinatarios), con **filtro Real/Test prefiltrado en Real** resuelto client-side. Commit `f773a34`. Ver [[changelog#2026-07-28 — Sección Envíos (campañas de mailing)|changelog]] y [[modulos/envios]]
+**Último commit:** `2f936af` · **Última sincronización:** 2026-07-31
+**Último trabajo:** **Google Ads** — sección nueva de reportes de Google Ads embebidos en el ERP, navegables entre fechas (nativa Laravel + Nuxt, API REST + GAQL, **sin Python**). Cuentas AR/UY/CL bajo el MCC BLU STUDIO, funcionando con datos reales. Fix clave: Compras/Monto se toman a **nivel campaña (objetivo custom)** para no duplicar. Mergeado a `Development` (PRs #4/#5/#6, +#7). Ver [[changelog#2026-07-31 — Sección Google Ads (reportes)|changelog]] y [[modulos/google-ads]]
 
 ---
 
@@ -31,6 +31,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 - [[modulos/contenido]] — repositorio de material de marca en S3 (bucket privado + URLs firmadas), vista pública con branding
 - [[modulos/ploteos]] — branding físico de resellers (ploteos/vinilos) con mapa geolocalizado (Leaflet + Nominatim) e importación por Excel
 - [[modulos/envios]] — campañas de mailing (proxy a `envios.to-aor.us`, solo lectura) con filtro Real/Test prefiltrado en Real
+- [[modulos/google-ads]] — reportes de Google Ads (API REST + GAQL, nativo Laravel) navegables entre fechas; cuentas Gigabyte AR/UY/CL bajo MCC; métricas de negocio (compras/monto goal-aware)
 
 ---
 
