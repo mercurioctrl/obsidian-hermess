@@ -41,6 +41,10 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[04-dvr-dahua]] — **DVR Dahua HCVR** (10.10.10.101): grabador principal, híbrido 4 analógicas + IP. Se opera por API RPC2. Mapeo de canales y cómo operarlo.
 - [[05-nvr-hikvision]] — **NVR Hikvision** kit WiFi (10.10.10.105): headless, gestión **solo por Hik-Connect**. Emite su propia WiFi para las cámaras del kit. La clave/SSID del AP **no se puede cambiar en remoto** (investigación 2026-07-27).
 
+## Portero / Timbre
+
+- [[07-timbre-vto-telegram]] — **Timbre Dahua VTO2101E** (10.10.10.102, portero PoE): servicio `vto-timbre` en hermess-desktop que manda **foto a Telegram** ante movimiento (polling OpenCV, el VTO no publica `VideoMotion`) y ante el botón de llamada. Es el mismo equipo que graba como CH6 "PORTERO" en el [[04-dvr-dahua|DVR]].
+
 ## Impresoras
 
 - [[03-impresora-p1102w]] — HP LaserJet P1102w: config (driver hplip+plugin, SSID `nexus-printers`, IP fija 10.10.10.189) y diagnóstico
@@ -51,6 +55,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [ ] **Pinear Ezviz a AP Galeria** — crear SSID `nexus-cam` solo en AP Galeria y reconectar la cámara
 - [ ] **NVR Hikvision** — reservar IP fija en el USG y evaluar bloqueo de salida a WAN (ver [[05-nvr-hikvision#⚠️ Pendientes]])
 - [ ] **Sticky client / roaming** — pasar `nexus` a doble banda y recién ahí activar Min RSSI en 5GHz (ver [[06-sticky-client-roaming#Pendientes / próximos pasos]])
+- [ ] **Timbre VTO** — fijar IP en el USG (hoy DHCP) y evaluar bloqueo a WAN; capturar el código del botón (ver [[07-timbre-vto-telegram#⚠️ Pendientes]])
 
 ## Historial
 
@@ -60,6 +65,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[04-dvr-dahua#Sesión de reordenamiento (2026-07-26)]] — Reordenamiento de canales del DVR Dahua: PTZ movida CH11→CH9 (julio 2026)
 - [[05-nvr-hikvision]] — Conexión del NVR Hikvision kit WiFi (10.10.10.105) e investigación del cambio de clave de su WiFi (julio 2026)
 - [[06-sticky-client-roaming]] — Intento de resolver el "Mac" de Ale pegado a un AP lejano: Min RSSI en 5GHz rompió la conexión (nexus es solo-5GHz) e incidente DFS en Oficina; se revirtió y se fijó Oficina a canal 149 no-DFS (julio 2026)
+- [[07-timbre-vto-telegram]] — Timbre Dahua VTO2101E → Telegram: servicio con detección de movimiento server-side (OpenCV, ROI a la vereda) + aviso de botón; ajuste de sensibilidad y arquitectura pull/push (agosto 2025)
 
 ## Notas
 
