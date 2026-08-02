@@ -92,15 +92,17 @@ Automatizaciones en `automations.yaml` + scripts en `scripts.yaml` (formato nuev
 | Luces de calle (1,2) | atardecer (sunset) | amanecer (sunrise) |
 | Terraza (`lavadero_frente_switch_2` "Frente terraza princ") | atardecer | amanecer |
 | **Jardín — 5 WiZ** (`3f4298`,`3f5fc4`,`6d5a5e`,`6d6eb4`,`6d72a6`) | atardecer | **medianoche (00:00)** |
+| **Patio — 4 WiZ** (`afc136`,`afcbd2`,`afcdca`,`afce6a`) | atardecer | **medianoche (00:00)** |
 | Switch `luces y cámara jardín` (2 gangs) | — **siempre ON 24/7** — | **nunca** |
+| Switch `patio` (2 gangs) | — **siempre ON 24/7** — | **nunca** |
 
-- `automation.exterior_prender_al_atardecer` — al sunset: calle (1,2) + jardín/cámara switch (1,2) + terraza + las 5 WiZ del jardín.
+- `automation.exterior_prender_al_atardecer` — al sunset: calle (1,2) + jardín/cámara switch (1,2) + patio switch (1,2) + terraza + las **9 WiZ** (jardín + patio).
 - `automation.exterior_apagar_al_amanecer` — al sunrise: terraza + calle (1,2).
-- `automation.jardin_wiz_apagar_a_medianoche` — 00:00: apaga las 5 WiZ del jardín (el switch de la cámara NO se toca).
+- `automation.jardin_wiz_apagar_a_medianoche` (alias "Jardin + Patio WiZ") — 00:00: apaga las 9 WiZ de jardín y patio (los switches NO se tocan).
 - `automation.apagar_todo_2_am` — 02:00: llama `script.buenas_noches` (barrido de **interior**).
-- `script.buenas_noches` — apaga todas las luces + lista SEGURA de teclas. **NO** incluye calle ni terraza (para que el exterior quede prendido de noche). `script.apagar_teclas` (botón manual) sí las incluye.
+- `script.buenas_noches` — apaga todas las luces + lista SEGURA de teclas. **NO** incluye calle, terraza, jardín/cámara ni patio (para no cortar el exterior ni las cámaras/WiZ). `script.apagar_teclas` (botón manual) tampoco incluye jardín/cámara ni patio.
 
-> 🎥 **CÁMARA (regla dura):** el switch `luces y cámara jardín` (device .36, 2 gangs) **alimenta la cámara del jardín**, así que debe estar **siempre prendido (ambos gangs, 24/7)**. NO se apaga en ninguna rutina/script/botón. La **iluminación** del jardín se maneja con las **WiZ** (que cuelgan de ese switch y por eso siempre tienen corriente). Nunca agregar este switch a un `turn_off`.
+> 🔌 **SWITCHES SIEMPRE ON (regla dura):** los switches `luces y cámara jardín` (.36) y `patio` (.26), ambos de 2 gangs, **alimentan lámparas WiZ** (y el de jardín, además, **la cámara del jardín**). Deben estar **siempre prendidos (todos los gangs, 24/7)** — NO se apagan en ninguna rutina/script/botón. La **iluminación** de jardín y patio se maneja con las **WiZ** (que cuelgan de esos switches y por eso siempre tienen corriente). Nunca agregar estos switches a un `turn_off`. (Las 4 WiZ del patio aparecían `unavailable` porque el switch del patio estaba apagado; al dejarlo siempre ON, volvieron.)
 
 ### Avisos por Telegram
 
