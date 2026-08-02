@@ -65,7 +65,7 @@ Cada gang = `switch.<nombre>_switch_N` + entidades extra (timer/number DP 7-9, p
 
 ## Dashboard "Casa"
 
-Dashboard dedicado en **modo YAML** (`config/dashboards/casa.yaml`, registrado en `configuration.yaml` bajo `lovelace: dashboards: casa-tuya`, URL `/casa-tuya`). El Overview y los demás dashboards (Oficina, Jardin, Mapa) quedaron intactos. Layout `type: sections` por ambiente (Acciones rápidas, Escenas, **Calle**, Jardín/Exterior, Patio, Galería, Comedor, Escalera/Vestidor, Habitación, Oficina, Lavadero): teclas como toggle, WiZ con slider de brillo, 6 escenas, y botones de acción (Apagar todas las luces, Apagar teclas seguro, Buenas noches). Las luces de calle tienen su propia sección "🛣️ Calle" (separada del jardín). El Patio muestra sus 4 WiZ con slider (aparecen recién desde que el switch del patio quedó siempre ON).
+Dashboard dedicado en **modo YAML** (`config/dashboards/casa.yaml`, registrado en `configuration.yaml` bajo `lovelace: dashboards: casa-tuya`, URL `/casa-tuya`). El Overview y los demás dashboards (Oficina, Jardin, Mapa) quedaron intactos. Layout `type: sections` por ambiente (Acciones rápidas, Escenas, **Calle**, Jardín/Exterior, Patio, Galería, Comedor, Escalera/Vestidor, Habitación, Oficina, Lavadero): teclas como toggle, WiZ con slider de brillo, 6 escenas, y botones de acción (Apagar todas las luces, Apagar teclas seguro, Buenas noches). Las luces de calle tienen su propia sección "🛣️ Calle" (separada del jardín). El Patio muestra sus 4 WiZ con slider (aparecen recién desde que el switch del patio quedó siempre ON). La sección "🎬 Escenas" se **quitó** (las 6 escenas Tuya de escalera/vestidor quedaron obsoletas con la conmutación por mirror; backup `casa.yaml.bak_pre_quitar_escenas`).
 
 > ⚠️ **Footgun del dashboard:** las tiles de los switches `Patio 1/2` y `Jardín / cámara 1/2` cortan la corriente de las WiZ (y de la cámara) si se tocan. Son alimentación, no deberían operarse. Pendiente/opción: renombrarlas ("no apagar") o sacarlas del dashboard.
 
@@ -105,6 +105,18 @@ Automatizaciones en `automations.yaml` + scripts en `scripts.yaml` (formato nuev
 - `script.buenas_noches` — apaga todas las luces + lista SEGURA de teclas. **NO** incluye calle, terraza, jardín/cámara ni patio (para no cortar el exterior ni las cámaras/WiZ). `script.apagar_teclas` (botón manual) tampoco incluye jardín/cámara ni patio.
 
 > 🔌 **SWITCHES SIEMPRE ON (regla dura):** los switches `luces y cámara jardín` (.36) y `patio` (.26), ambos de 2 gangs, **alimentan lámparas WiZ** (y el de jardín, además, **la cámara del jardín**). Deben estar **siempre prendidos (todos los gangs, 24/7)** — NO se apagan en ninguna rutina/script/botón. La **iluminación** de jardín y patio se maneja con las **WiZ** (que cuelgan de esos switches y por eso siempre tienen corriente). Nunca agregar estos switches a un `turn_off`. (Las 4 WiZ del patio aparecían `unavailable` porque el switch del patio estaba apagado; al dejarlo siempre ON, volvieron.)
+
+### Conmutación escalera / vestidor (mirror bidireccional)
+
+Dos luces de la zona escalera se controlan desde **abajo** (`switch.escalera_vestidor_abajo_*`, .24) y **arriba** (`switch.vestidor_arriba_*`, .22). El cableado es **paralelo (OR)**: con cualquiera de los 2 gangs en ON la luz prende, así que sin sincronizar no se podía apagar desde el otro extremo. Se resolvió con 2 automatizaciones que mantienen **iguales** los 2 gangs de cada luz (conmutador real).
+
+| Luz | Gang abajo | Gang arriba |
+|---|---|---|
+| **Escalera** | `escalera_vestidor_abajo_switch_1` | `vestidor_arriba_switch_1` |
+| **Vestidor** | `escalera_vestidor_abajo_switch_2` | `vestidor_arriba_switch_2` |
+
+- Automatizaciones `automation.sync_luz_escalera` y `automation.sync_luz_vestidor` (`mode: restart`, acción `switch.turn_{{ trigger.to_state.state }}` sobre ambos gangs; sin bucles). Mapeo confirmado por prueba física (encender un gang a la vez y ver qué luz prendía). Backup `automations.yaml.bak_pre_escalera`.
+- Reemplazan a las 6 escenas Tuya viejas (ya sacadas del dashboard).
 
 ### Avisos por Telegram
 
