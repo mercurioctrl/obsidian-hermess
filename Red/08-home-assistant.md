@@ -97,16 +97,18 @@ Automatizaciones en `automations.yaml` + scripts en `scripts.yaml` (formato nuev
 | Terraza (`lavadero_frente_switch_2` "Frente terraza princ") | atardecer | amanecer |
 | **Jardín — 5 WiZ** (`3f4298`,`3f5fc4`,`6d5a5e`,`6d6eb4`,`6d72a6`) | atardecer | **medianoche (00:00)** |
 | **Patio — 4 WiZ** (`afc136`,`afcbd2`,`afcdca`,`afce6a`) | atardecer | **medianoche (00:00)** |
+| **Balcón (atrás lavadero) — 2 WiZ** (`fa3132`,`fa2fb0`, IP .246/.247) | atardecer | **medianoche (00:00)** |
 | Switch `luces y cámara jardín` (2 gangs) | — **siempre ON 24/7** — | **nunca** |
 | Switch `patio` (2 gangs) | — **siempre ON 24/7** — | **nunca** |
+| Switch `balcón lavadero` (1 gang, `switch.balcon_lavadero_switch_1`) | — **siempre ON 24/7** — | **nunca** |
 
-- `automation.exterior_prender_al_atardecer` — al sunset: calle (1,2) + jardín/cámara switch (1,2) + patio switch (1,2) + terraza + las **9 WiZ** (jardín + patio).
+- `automation.exterior_prender_al_atardecer` — al sunset: calle (1,2) + jardín/cámara switch (1,2) + patio switch (1,2) + balcón switch (`balcon_lavadero_switch_1`) + terraza + las **11 WiZ** (jardín + patio + balcón).
 - `automation.exterior_apagar_al_amanecer` — al sunrise: terraza + calle (1,2).
-- `automation.jardin_wiz_apagar_a_medianoche` (alias "Jardin + Patio WiZ") — 00:00: apaga las 9 WiZ de jardín y patio (los switches NO se tocan).
+- `automation.jardin_wiz_apagar_a_medianoche` (alias "Jardin + Patio + Balcon WiZ") — 00:00: apaga las 11 WiZ de jardín, patio y balcón (los switches NO se tocan).
 - `automation.apagar_todo_2_am` — 02:00: llama `script.buenas_noches` (barrido de **interior**).
 - `script.buenas_noches` — apaga todas las luces + lista SEGURA de teclas. **NO** incluye calle, terraza, jardín/cámara ni patio (para no cortar el exterior ni las cámaras/WiZ). `script.apagar_teclas` (botón manual) tampoco incluye jardín/cámara ni patio.
 
-> 🔌 **SWITCHES SIEMPRE ON (regla dura):** los switches `luces y cámara jardín` (.36) y `patio` (.26), ambos de 2 gangs, **alimentan lámparas WiZ** (y el de jardín, además, **la cámara del jardín**). Deben estar **siempre prendidos (todos los gangs, 24/7)** — NO se apagan en ninguna rutina/script/botón. La **iluminación** de jardín y patio se maneja con las **WiZ** (que cuelgan de esos switches y por eso siempre tienen corriente). Nunca agregar estos switches a un `turn_off`. (Las 4 WiZ del patio aparecían `unavailable` porque el switch del patio estaba apagado; al dejarlo siempre ON, volvieron.)
+> 🔌 **SWITCHES SIEMPRE ON (regla dura):** los switches `luces y cámara jardín` (.36, 2 gangs), `patio` (.26, 2 gangs) y `balcón lavadero` (.103, 1 gang, `switch.balcon_lavadero_switch_1`) **alimentan lámparas WiZ** (y el de jardín, además, **la cámara del jardín**). Deben estar **siempre prendidos (24/7)** — NO se apagan en ninguna rutina/script/botón. La **iluminación** de jardín/patio/balcón se maneja con las **WiZ**. Nunca agregar estos switches a un `turn_off`. (Las WiZ de patio y balcón aparecían `unavailable`/sin integrar porque su switch estaba apagado; al dejarlo siempre ON aparecieron. Las 2 del balcón se agregaron a HA por la integración `wiz` — config flow por IP; descubiertas con scan UDP `getPilot` puerto 38899.)
 
 ### Conmutación escalera / vestidor (mirror bidireccional)
 
