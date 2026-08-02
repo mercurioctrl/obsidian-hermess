@@ -102,6 +102,14 @@ Automatizaciones en `automations.yaml` + scripts en `scripts.yaml` (formato nuev
 
 > 🎥 **CÁMARA (regla dura):** el switch `luces y cámara jardín` (device .36, 2 gangs) **alimenta la cámara del jardín**, así que debe estar **siempre prendido (ambos gangs, 24/7)**. NO se apaga en ninguna rutina/script/botón. La **iluminación** del jardín se maneja con las **WiZ** (que cuelgan de ese switch y por eso siempre tienen corriente). Nunca agregar este switch a un `turn_off`.
 
+### Avisos por Telegram
+
+Cada rutina de exterior avisa por Telegram al **mismo bot del timbre** (`@Nmedina87bot`, chat `1019202411`, ver [[07-timbre-vto-telegram]]). Se implementa con un `rest_command: telegram_aviso` en `configuration.yaml` (POST a la API de Telegram, `payload: '{"chat_id":1019202411,"text":"{{ mensaje }}"}'`), y cada automatización llama `rest_command.telegram_aviso` con su `mensaje`. Avisan: atardecer ON, amanecer OFF, jardín WiZ 00:00 y barrido 2 AM.
+
+- ⚠️ `rest_command` es una **integración nueva** → hay que **reiniciar HA** (`sudo docker restart home-assistant`) para que cargue; `reload_all` no instancia integraciones nuevas.
+- Probar sin encender luces: `POST /api/services/rest_command/telegram_aviso` con `{"mensaje":"..."}`.
+- **Dónde ver los eventos en la UI:** Ajustes → Automatizaciones (cada una tiene "última ejecución" + Trazas), y el **Registro/Logbook** con cada cambio de estado.
+
 ## Ver también
 
 - [[Red]] — infraestructura de red hogareña (domótica Tuya/WiZ en `nexus-lot`)
