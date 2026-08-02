@@ -62,6 +62,8 @@ Cada gang = `switch.<nombre>_switch_N` + entidades extra (timer/number DP 7-9, p
 
 - El **proyecto Tuya IoT ya no se usa** — se puede borrar, las keys quedan locales en HA. Si se resetea/re-empareja una tecla, cambia su key y hay que re-extraer.
 - Hay **2 dispositivos Tuya extra** en la red (`10.10.10.27`, `10.10.10.219`) que **NO** están en la cuenta SmartLife — sin identificar, no tocados.
+- **WiZ = un solo cerebro (HA):** las WiZ del jardín se prendían "solas" a horas raras por un **horario/ritmo en la app WiZ** (nube), en paralelo a las automatizaciones de HA. Se comprobó por prueba controlada que el switch de la calle NO las alimenta (son independientes) → era la app WiZ. Recomendación aplicada: **borrar los horarios de la app WiZ** y dejar HA como único controlador (evita comportamientos fantasma). También conviene poner el "power-on behavior" de las WiZ en Apagado/Último estado. La integración `wiz` de HA es **local** (no depende de la nube).
+- **Wabee** (medidor de energía, `10.10.10.44`, MAC `5c:cf:7f:...`, Espressif): **solo-nube**, sin API local → NO integrable localmente como las Tuya. Eventual integración a HA sería vía su nube/API o MQTT (a evaluar). Ver [[Red#Domótica]].
 
 ## Dashboard "Casa"
 

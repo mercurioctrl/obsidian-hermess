@@ -31,6 +31,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - **Tuya/Smartlife** (switches/teclas): 13 teclas Macroled en `nexus-lot`, OUI Tuya (`38:1f:8d`, `00:33:7a`), puerto local 6668. Integradas a HA por **LocalTuya** (control local, sin nube) → ver [[08-home-assistant]].
 - **WiZ/Macroled** (luces): ~10 dispositivos en `nexus-lot`, prefijo hostname `wiz_`. En HA vía integración `wiz`.
 - **Ezviz Cam**: 10.10.10.43, MAC `98:f1:12:3f:f0:a6` → asignada a [[AP Galeria]]
+- **Wabee** (medidor de energía): `10.10.10.44`, MAC `5c:cf:7f:66:2e:cc` (Espressif/ESP). **Solo-nube** (todos los puertos TCP cerrados, sin API local): mide y sube a la nube Wabee, los datos se ven en su app. NO integrable localmente a HA; sí habría opción vía su API/nube o MQTT (a evaluar). Descubierto 2026-08-02.
 
 ## Cámaras
 
@@ -58,6 +59,8 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [ ] **Sticky client / roaming** — pasar `nexus` a doble banda y recién ahí activar Min RSSI en 5GHz (ver [[06-sticky-client-roaming#Pendientes / próximos pasos]])
 - [ ] **Timbre VTO** — fijar IP en el USG (hoy DHCP) y evaluar bloqueo a WAN; capturar el código del botón (ver [[07-timbre-vto-telegram#⚠️ Pendientes]])
 - [ ] **2 Tuya sin identificar** — `10.10.10.27` y `10.10.10.219` responden en puerto Tuya 6668 pero NO están en la cuenta SmartLife (ver [[08-home-assistant#Notas]])
+- [ ] **Wabee** (medidor energía, `10.10.10.44`) — reservar IP fija en el USG; evaluar llevar el consumo a HA vía su nube/API
+- [ ] **Telecentro (WAN2)** — venía caída, recuperó 2026-08-02 pero con flapping previo; vigilar estabilidad y verificar seed `wan-mon` con la IP nueva (ver [[Monitoreo_WAN#Incidente Telecentro caída (2026-07/08)]])
 
 ## Historial
 
@@ -70,6 +73,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[07-timbre-vto-telegram]] — Timbre Dahua VTO2101E → Telegram: servicio con detección de movimiento server-side (OpenCV, ROI a la vereda) + aviso de botón; ajuste de sensibilidad y arquitectura pull/push (agosto 2025)
 - [[08-home-assistant]] — Integración de las 13 teclas Tuya/Macroled a Home Assistant por **LocalTuya** (control local sin nube): proyecto Tuya IoT + extracción de local keys con tinytuya + mass_configure e inyección manual de las v3.5 (agosto 2025)
 - [[08-home-assistant#Rutinas / iluminación automática]] — Dashboard "Casa" (con sección propia "Calle") + rutinas de iluminación exterior (atardecer→amanecer calle/terraza; jardín y patio WiZ→medianoche), **avisos por Telegram** de cada rutina (reusa el bot del timbre vía `rest_command`), lectura de nombres por gang desde la app (`shadow/properties`) y regla dura: los switches de **jardín/cámara y patio** van SIEMPRE ON (alimentan WiZ/cámara); **conmutación escalera/vestidor** por mirror bidireccional (prender abajo/apagar arriba) reemplazando 6 escenas Tuya (agosto 2025)
+- [[Monitoreo_WAN#Incidente Telecentro caída (2026-07/08)]] — diagnóstico de Telecentro caída (WAN2 con IP `0.0.0.0`) desde la LAN vía egress Cloudflare + controlador UniFi; recuperó 2026-08-02 17:28 con IP nueva. Descubierto el **Wabee** (medidor de energía, `10.10.10.44`, solo-nube). Confirmado que el switch de la calle NO alimenta las WiZ del jardín (prueba controlada) → las WiZ se prendían por un horario de la app WiZ; se dejó HA como único cerebro (agosto 2025)
 
 ## Notas
 
