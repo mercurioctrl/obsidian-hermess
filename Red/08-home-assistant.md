@@ -63,7 +63,47 @@ Cada gang = `switch.<nombre>_switch_N` + entidades extra (timer/number DP 7-9, p
 - El **proyecto Tuya IoT ya no se usa** — se puede borrar, las keys quedan locales en HA. Si se resetea/re-empareja una tecla, cambia su key y hay que re-extraer.
 - Hay **2 dispositivos Tuya extra** en la red (`10.10.10.27`, `10.10.10.219`) que **NO** están en la cuenta SmartLife — sin identificar, no tocados.
 
+## Dashboard "Casa"
+
+Dashboard dedicado en **modo YAML** (`config/dashboards/casa.yaml`, registrado en `configuration.yaml` bajo `lovelace: dashboards: casa-tuya`, URL `/casa-tuya`). El Overview y los demás dashboards (Oficina, Jardin, Mapa) quedaron intactos. Layout `type: sections` por ambiente (Jardín, Patio, Galería, Comedor, Escalera/Vestidor, Habitación, Oficina, Lavadero): teclas como toggle, WiZ con slider de brillo, 6 escenas, y botones de acción (Apagar todas las luces, Apagar teclas seguro, Buenas noches).
+
+## Nombres por tecla — leer de la app SmartLife y aplicar a HA
+
+Cuando se le pone nombre a **cada gang** en la app SmartLife, ese `custom_name` **NO** sale por la API cloud común (`getfunctions`/`getstatus` dan genérico "switch 1/2"). SÍ sale por **`GET /v2.0/cloud/thing/{device_id}/shadow/properties`**. Flujo reutilizable (se irá repitiendo a medida que se bauticen más teclas), **2 comandos**:
+
+```bash
+V=/home/hermess/scripts/tuya-tools/venv/bin/python3
+$V /home/hermess/scripts/tuya-tools/leer_nombres.py   # lee de la nube → tabla + /tmp/tuya_nombres.json
+$V /home/hermess/scripts/tuya-tools/ha_ws.py rename    # aplica a HA en caliente (WebSocket)
+```
+
+- `leer_nombres.py` — lee el `custom_name` de cada gang (todas, o `leer_nombres.py <device_id>` para una).
+- `ha_ws.py rename` — token por login flow + **WebSocket** `config/entity_registry/update`. Mapea device_id+dp → entity_id por el `unique_id` de LocalTuya, que es `local_<device_id>_<dp>`. Cambia solo el `friendly_name` (**el `entity_id` NO cambia**, no rompe dashboard/rutinas). `ha_ws.py list-localtuya` lista las 24 switch entities. Ojo: si una tile del dashboard tiene `name:` fijo, hay que editarla aparte (pisa el friendly_name).
+- **Estado ago 2025:** la única bautizada por gang es **"Lavadero frente"** (.93): `switch_1` = **"Lavadero adentro"**, `switch_2` = **"Frente terraza princ"**. El resto sigue con el nombre del device.
+
+## Rutinas / iluminación automática
+
+Automatizaciones en `automations.yaml` + scripts en `scripts.yaml` (formato nuevo triggers/actions). Backups `*.bak_pre_*` de cada cambio.
+
+**Modelo de exterior — prender al ATARDECER, apagar según zona:**
+
+| Zona | Prende | Apaga |
+|---|---|---|
+| Luces de calle (1,2) | atardecer (sunset) | amanecer (sunrise) |
+| Terraza (`lavadero_frente_switch_2` "Frente terraza princ") | atardecer | amanecer |
+| **Jardín — 5 WiZ** (`3f4298`,`3f5fc4`,`6d5a5e`,`6d6eb4`,`6d72a6`) | atardecer | **medianoche (00:00)** |
+| Switch `luces y cámara jardín` (2 gangs) | — **siempre ON 24/7** — | **nunca** |
+
+- `automation.exterior_prender_al_atardecer` — al sunset: calle (1,2) + jardín/cámara switch (1,2) + terraza + las 5 WiZ del jardín.
+- `automation.exterior_apagar_al_amanecer` — al sunrise: terraza + calle (1,2).
+- `automation.jardin_wiz_apagar_a_medianoche` — 00:00: apaga las 5 WiZ del jardín (el switch de la cámara NO se toca).
+- `automation.apagar_todo_2_am` — 02:00: llama `script.buenas_noches` (barrido de **interior**).
+- `script.buenas_noches` — apaga todas las luces + lista SEGURA de teclas. **NO** incluye calle ni terraza (para que el exterior quede prendido de noche). `script.apagar_teclas` (botón manual) sí las incluye.
+
+> 🎥 **CÁMARA (regla dura):** el switch `luces y cámara jardín` (device .36, 2 gangs) **alimenta la cámara del jardín**, así que debe estar **siempre prendido (ambos gangs, 24/7)**. NO se apaga en ninguna rutina/script/botón. La **iluminación** del jardín se maneja con las **WiZ** (que cuelgan de ese switch y por eso siempre tienen corriente). Nunca agregar este switch a un `turn_off`.
+
 ## Ver también
 
 - [[Red]] — infraestructura de red hogareña (domótica Tuya/WiZ en `nexus-lot`)
-- [[02-camaras]] · [[04-dvr-dahua]] · [[07-timbre-vto-telegram]]
+- [[02-camaras]] — la cámara del jardín se alimenta del switch Tuya `luces y cámara jardín`
+- [[04-dvr-dahua]] · [[07-timbre-vto-telegram]]
