@@ -65,7 +65,9 @@ Cada gang = `switch.<nombre>_switch_N` + entidades extra (timer/number DP 7-9, p
 
 ## Dashboard "Casa"
 
-Dashboard dedicado en **modo YAML** (`config/dashboards/casa.yaml`, registrado en `configuration.yaml` bajo `lovelace: dashboards: casa-tuya`, URL `/casa-tuya`). El Overview y los demás dashboards (Oficina, Jardin, Mapa) quedaron intactos. Layout `type: sections` por ambiente (Jardín, Patio, Galería, Comedor, Escalera/Vestidor, Habitación, Oficina, Lavadero): teclas como toggle, WiZ con slider de brillo, 6 escenas, y botones de acción (Apagar todas las luces, Apagar teclas seguro, Buenas noches).
+Dashboard dedicado en **modo YAML** (`config/dashboards/casa.yaml`, registrado en `configuration.yaml` bajo `lovelace: dashboards: casa-tuya`, URL `/casa-tuya`). El Overview y los demás dashboards (Oficina, Jardin, Mapa) quedaron intactos. Layout `type: sections` por ambiente (Acciones rápidas, Escenas, **Calle**, Jardín/Exterior, Patio, Galería, Comedor, Escalera/Vestidor, Habitación, Oficina, Lavadero): teclas como toggle, WiZ con slider de brillo, 6 escenas, y botones de acción (Apagar todas las luces, Apagar teclas seguro, Buenas noches). Las luces de calle tienen su propia sección "🛣️ Calle" (separada del jardín). El Patio muestra sus 4 WiZ con slider (aparecen recién desde que el switch del patio quedó siempre ON).
+
+> ⚠️ **Footgun del dashboard:** las tiles de los switches `Patio 1/2` y `Jardín / cámara 1/2` cortan la corriente de las WiZ (y de la cámara) si se tocan. Son alimentación, no deberían operarse. Pendiente/opción: renombrarlas ("no apagar") o sacarlas del dashboard.
 
 ## Nombres por tecla — leer de la app SmartLife y aplicar a HA
 
