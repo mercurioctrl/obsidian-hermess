@@ -62,6 +62,9 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-07-26|2026-07-26]] — Jornada sin actividad: sin conversaciones, decisiones ni tareas registradas por WhatsApp
 - [[Bily/bitacoras/2026-07-31|2026-07-31]] — Jornada sin actividad: sin interacciones registradas por WhatsApp
 
+### Agosto
+- [[Bily/bitacoras/2026-08-03|2026-08-03]] — Chequeo de disponibilidad por WhatsApp ("¡volviste!") tras fallas previas del runtime/modelo; sin decisiones ni pedidos nuevos
+
 ## Ver también
 
 - [[Bily/Bily|Inicio de Bily]]
