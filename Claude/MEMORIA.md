@@ -62,6 +62,22 @@ Cron nocturno que escribe `Bily/dreams/YYYY-MM-DD.md` cada noche, generado por C
 - **Fix infra 2 — hook image-ocr-preflight:** plugin OpenClaw espejo del [[Claude/Whisper|whisper preflight]]. Detecta imágenes entrantes en `~/.openclaw/media/inbound/`, corre `tesseract <path> stdout -l spa+eng`, inyecta texto al prompt antes del LLM via `before_prompt_build`. Ubicación: `~/.openclaw/extensions/image-ocr-preflight/`. Registrado en `plugins.entries` con `allowConversationAccess:true`. Latencia medida: **~2.5s end-to-end** (detected → INJECTING). Ver [[Claude/Image-OCR]] para topología, troubleshooting y defaults.
 - **Razón hook y no skill:** Bily demostró dos veces seguidas que no elige tesseract aunque esté instalado y disponible en PATH. El hook elimina la decisión del modelo — el texto OCR llega siempre pre-extraído, junto al bloque multimodal original.
 
+### Estado 2026-08-02 — Fix GPT-5.1 (bug provider nativo) + update a 2026.7.1-2
+
+Sesión con Claude Opus 4.8. Catriel quería GPT como primary (mejor tooling). Detalle completo: [[Bily/aprendizajes/2026-08-02-fix-gpt5-openclaw-relink-whatsapp|aprendizaje 2026-08-02]].
+
+- **BUG provider nativo `openai`:** el runtime fuerza gpt-5.x → endpoint `https://api.openai.com/v1/responses`, ignora el `api` del config y **NO adjunta el bearer** → `401 "Missing bearer or basic <redacted> in header"`. Persiste en 2026.5.12 Y 2026.7.1-2 (el update NO lo arregló). Ni auth profile (`paste-token`) ni cambiar `api` lo resuelven.
+- **WORKAROUND vigente:** provider genérico con **otro nombre** (`oai`) → `{baseUrl:"https://api.openai.com/v1", apiKey:<key>, models:[{id:"gpt-5.1", api:"openai-completions", maxTokens:16384}]}`. Al no llamarse "openai" el runtime lo trata genérico (como openrouter), usa `/v1/chat/completions`, adjunta bearer desde `providers.apiKey`. `openclaw models set oai/gpt-5.1`. Test en vivo OK (`fallbackUsed:false`).
+- **Cascada vigente:** primary `oai/gpt-5.1` (OpenAI, créditos de Catriel) → fallback#1 `openrouter/openai/gpt-5.5` (`maxTokens:8192`) → fallback#2 `openrouter/deepseek/deepseek-chat`.
+- **Gemini:** SIN créditos (`429 prepayment depleted`) — sacado de la cascada. Recargar en AI Studio si se quiere volver a usar.
+- **OpenRouter:** balance bajo → `402` si `max_tokens` alto. Cap con `maxTokens` (NO `maxOutputTokens`, key inválida).
+- **Diagnóstico de qué modelo corre:** evento `model.fallback_step` en `sessions/*.trajectory.jsonl` (`fallbackStepFromModel` + `fallbackStepFromFailureReason` = auth/rate_limit/billing). Confirmar el que completó en el `.jsonl` de mensajes (último assistant con `provider`/`model`).
+- **Update OpenClaw:** `openclaw update` falla en "global install swap" (hardlink esbuild). Workaround: `npm install -g openclaw@latest` + `openclaw gateway restart`. Actualizado a **2026.7.1-2**; plugins whisper/ocr/group-router/memory-core sobrevivieron.
+- **WhatsApp** se había deslinkeado (creds Baileys perdidas ~1-jul, 612 msgs encolados). Re-linkeado por QR + purga de `~/.openclaw/delivery-queue/`. Canal `OK · linked`.
+- **Logins interactivos (QR/OAuth/paste-token):** no andan por `!` de Claude Code (sin TTY). Usar tmux + `load-buffer`/`paste-buffer` para pegar secretos sin exponerlos.
+- Backups: `~/.openclaw/openclaw.json.pre-*`.
+
+
 ## Infraestructura: SQL Server (contenedor mssql-dev, 2026-06-17)
 
 Migración de 7 bases de dev (refrescadas de prod) a un contenedor SQL Server 2022 en el host `hermess` (`10.10.10.47`). Runbook completo: [[Migracion_SQLServer_Dev]]. Script de mantenimiento: [[Script-Optimizacion-SQLServer]].
