@@ -104,7 +104,7 @@ Automatizaciones en `automations.yaml` + scripts en `scripts.yaml` (formato nuev
 | Switch `patio` (2 gangs) | — **siempre ON 24/7** — | **nunca** |
 | Switch `balcón lavadero` (1 gang, `switch.balcon_lavadero_switch_1`) | — **siempre ON 24/7** — | **nunca** |
 
-- `automation.exterior_prender_al_atardecer` — al sunset: calle (1,2) + jardín/cámara switch (1,2) + patio switch (1,2) + balcón switch (`balcon_lavadero_switch_1`) + terraza + las **11 WiZ** (jardín + patio + balcón).
+- `automation.exterior_prender_al_atardecer` — al sunset: calle (1,2) + jardín/cámara switch (1,2) + patio switch (1,2) + balcón switch (`balcon_lavadero_switch_1`) + terraza + las **11 WiZ** (jardín + patio + balcón) con **`brightness_pct: 100`** (fija el brillo parejo; sin eso cada WiZ volvía a su último valor y alguna arrancaba tenue, ej. JARDIN 4X2(b) en 48/255).
 - `automation.exterior_apagar_al_amanecer` — al sunrise: terraza + calle (1,2).
 - `automation.jardin_wiz_apagar_a_medianoche` (alias "Jardin + Patio + Balcon WiZ") — 00:00: apaga las 11 WiZ de jardín, patio y balcón (los switches NO se tocan).
 - `automation.apagar_todo_2_am` — 02:00: llama `script.buenas_noches` (barrido de **interior**).
