@@ -4,8 +4,8 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
-**Último commit:** `2f936af` · **Última sincronización:** 2026-07-31
-**Último trabajo:** **Google Ads** — sección nueva de reportes de Google Ads embebidos en el ERP, navegables entre fechas (nativa Laravel + Nuxt, API REST + GAQL, **sin Python**). Cuentas AR/UY/CL bajo el MCC BLU STUDIO, funcionando con datos reales. Fix clave: Compras/Monto se toman a **nivel campaña (objetivo custom)** para no duplicar. Mergeado a `Development` (PRs #4/#5/#6, +#7). Ver [[changelog#2026-07-31 — Sección Google Ads (reportes)|changelog]] y [[modulos/google-ads]]
+**Último commit:** `8a103fb` · **Última sincronización:** 2026-08-03
+**Último trabajo:** **Meta Ads** — sección nueva de reportes de Facebook/Instagram Ads embebidos en el ERP, navegables entre fechas. **Espejo de Google Ads**, nativa Laravel + Nuxt (Graph API / Marketing API, sin Python). Cuentas AR/UY/CL en el Business Manager de Blu, funcionando con datos reales (**PR #8**). System User token (sin refresh). Mismo gotcha de duplicación que Google → action_type canónico `omni_purchase`/`omni_add_to_cart`; suma **Alcance/Frecuencia/ROAS** nativos. Ver [[changelog#2026-08-03 — Sección Meta Ads (reportes)|changelog]] y [[modulos/meta-ads]]. Antes: **Google Ads** (reportes GAQL, nivel campaña goal-aware) — [[modulos/google-ads]]
 
 ---
 
@@ -32,6 +32,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 - [[modulos/ploteos]] — branding físico de resellers (ploteos/vinilos) con mapa geolocalizado (Leaflet + Nominatim) e importación por Excel
 - [[modulos/envios]] — campañas de mailing (proxy a `envios.to-aor.us`, solo lectura) con filtro Real/Test prefiltrado en Real
 - [[modulos/google-ads]] — reportes de Google Ads (API REST + GAQL, nativo Laravel) navegables entre fechas; cuentas Gigabyte AR/UY/CL bajo MCC; métricas de negocio (compras/monto goal-aware)
+- [[modulos/meta-ads]] — reportes de Meta Ads (Facebook/Instagram, Graph API) espejo de Google Ads; System User token; action_type canónico anti-duplicación; suma Alcance/Frecuencia/ROAS nativos
 
 ---
 

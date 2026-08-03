@@ -1,3 +1,18 @@
+## 2026-08-03 — Sección Meta Ads (reportes)
+
+Nueva sección **Marketing → Meta Ads**: reportes de Facebook/Instagram Ads embebidos en el ERP, navegables entre fechas. Espejo de [[modulos/google-ads]], nativa Laravel + Nuxt (Graph API / Marketing API, sin Python). **PR #8** contra `Development`, funcionando con datos reales. Ver [[modulos/meta-ads]] y `docs/DEPLOY_META_ADS.md`.
+
+- **Backend**: `MetaAdsService` (Graph API con **System User token**, sin refresh_token; `resumen()` agregado + `serieDiaria()` con `time_increment=1` + `topCampanias()`/`metaCampanias()` + `presupuestoDiario()`; cache 5 min; modo demo con fixture), `MetaAdsController` (`/api/meta-ads/cuentas` y `/reporte`, valida `act_id`). Migración `0060` `meta_ads_cuentas` (+ seed AR/UY/CL, act_id sin prefijo `act_`). Config `services.meta_ads`.
+- **Frontend**: `pages/meta-ads/index.vue` (cuentas) + `[cid].vue` (reporte: presets, `SelectorFecha`, flechas ◀▶, StatsCards con ícono (i), gráfico SVG, tabla de campañas). Sección en `secciones.ts` (permiso `VER_SECCION_META_ADS`).
+- **Métricas**: Presupuesto/día, Inversión, Impresiones, **Alcance**, **Frecuencia**, Clics, Agregar al carrito, Compras, Monto de compra, **ROAS**, Costo por compra. Alcance/Frecuencia/ROAS son **exclusivas de Meta** (Google no las tenía) y se leen del resumen agregado.
+- **Cuentas Gigabyte** (AR 1922499601658152 / UY 2533454380455971 / CL 865101106388536, USD) en el Business Manager de Blu; un solo token accede a todas.
+- **⚠️ Gotcha clave (mismo que Google)**: el array `actions` cuenta la misma compra ~5 veces (`purchase`, `omni_purchase`, `offsite_conversion.fb_pixel_purchase`…). Sumar duplicaba ×5. Se toma **un action_type canónico**: `omni_purchase` (compras/monto) + `omni_add_to_cart` (carritos). Verificado AR = 26 compras / USD 15.072,09 (no 130). Además: reach/frequency NO sumables entre días; presupuesto en centavos (/100).
+- **Pendiente (marketing/Leo)**: confirmar evento de compra/carrito canónico y ventana de atribución (default 7d clic/1d view).
+
+**Deploy backend (en caliente):** `docker cp` de service/controller/model/migración + `api.php` + `services.php`, credenciales `META_ADS_*` al `.env` del container (`docker exec -i … 'cat >> .env'`), `config:cache`, `route:clear`. **Frontend:** rebuild completo + restart nginx. Credenciales **fuera de git**.
+
+---
+
 ## 2026-07-31 — Sección Google Ads (reportes)
 
 Nueva sección **Marketing → Google Ads**: reportes de Google Ads embebidos en el ERP, navegables entre fechas. Nativa Laravel + Nuxt (API REST + GAQL, **sin Python** — la guía proponía FastAPI). Mergeada a `Development` (PRs #4/#5/#6, + #7). Ver [[modulos/google-ads]] y `docs/DEPLOY_GOOGLE_ADS.md`.

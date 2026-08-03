@@ -235,11 +235,26 @@ Trampas de la integración con la API de Google Ads ([[modulos/google-ads]]).
 
 **e) Acentos con mojibake (`Libre OpciÃ³n`) al sembrar cuentas.** El cliente `mysql -e` usa latin1 y guarda doble-encoded. **Fix:** escribir strings con acentos vía `php artisan tinker` (conexión utf8mb4), pasando el carácter como escape unicode ASCII (`\u{f3}`) para que el shell no lo rompa.
 
+## Meta Ads
+
+Trampas de la integración con la Marketing API de Meta ([[modulos/meta-ads]]).
+
+**a) Compras/monto/carritos multiplicados ×5 si se suma el array `actions`.** Meta devuelve la MISMA compra bajo muchos `action_type` solapados (`purchase`, `omni_purchase`, `offsite_conversion.fb_pixel_purchase`, `onsite_web_purchase`, `web_in_store_purchase`… todos con el mismo valor). Sumar el array entero duplica. **Fix:** tomar **un `action_type` canónico** con `valorAccion()`: `omni_purchase` para compras/monto (es el que Meta usa para `purchase_roas` y muestra como "Compras" en el Administrador) y `omni_add_to_cart` para carritos. Constantes `A_COMPRA`/`A_CARRITO` en `MetaAdsService`. Verificado AR: 26 compras / USD 15.072,09 (no 130). Es el mismo problema que en Google (allá era por categoría de conversión).
+
+**b) reach/frequency mal si se calculan desde la serie diaria.** `reach` son personas **únicas deduplicadas**: NO se pueden sumar entre días (daría más que el real). **Fix:** los totales (incluidos alcance/frecuencia/roas) salen de `resumen()`, **una** llamada agregada a nivel cuenta sobre todo el rango; la serie diaria solo alimenta el gráfico.
+
+**c) Presupuesto ×100.** `daily_budget` viene en la **mínima denominación** de la moneda (centavos): `"444"` = USD 4,44. Dividir por 100. Aplica a campañas (CBO) y adsets.
+
+**d) Sigue en modo demo con token cargado.** Igual que Google: falta `config:cache` tras escribir el `.env` (`env()` no anda en PHP-FPM), y `docker exec` para escribir al `.env` necesita **`-i`**.
+
+**e) `502` "Error validating access token".** El System User token se revocó o cambió la contraseña del usuario que lo generó. Regenerar desde Business Manager → Usuarios del sistema → Generar token (permiso `ads_read`) y correr `config:cache`.
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources
 - [[modulos/contenido]] — disco S3, URLs firmadas, deploy en caliente (gotchas 10-14)
 - [[modulos/google-ads]] — integración con la API de Google Ads
+- [[modulos/meta-ads]] — integración con la Marketing API de Meta
 - [[modulos/invoice-preview]] — donde aparece la trampa html2canvas/SVG
 - [[modulos/productos]] — importador de catálogo (gotchas 8 y 9)
 - [[changelog]] — cuando se identificó cada uno

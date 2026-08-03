@@ -10,7 +10,7 @@ gigaErp/
 │   │   ├── Http/Controllers/ ← ~25 controllers (incl. ImportacionCatalogoController)
 │   │   ├── Http/Resources/   ← 9 API resources
 │   │   ├── Models/           ← ~24 Eloquent models
-│   │   └── Services/         ← GoogleAdsService (integración API Google Ads)
+│   │   └── Services/         ← GoogleAdsService, MetaAdsService (integraciones API de ads)
 │   ├── database/
 │   │   ├── migrations/       ← 0001–0044 (numeradas; 0044 = addons_marketing)
 │   │   └── seeders/          ← DatabaseSeeder, DemoSeeder, ProductoInvidSeeder,
@@ -351,6 +351,15 @@ Integración **con capa de servicio** (primer `App\Services\` del proyecto) cont
 - Config `services.google_ads` (env `GOOGLE_ADS_*`, `API_VERSION=v22`, `LOGIN_CUSTOMER_ID` vacío); migración `0059` + modelo `GoogleAdsCuenta` (columna `login_customer_id` por cuenta).
 - Credenciales **fuera de git** (solo `.env` del server). Modo demo automático sin credenciales.
 - ⚠️ Compras/Monto = **nivel campaña** (goal-aware), no por categoría de conversión (duplica). Ver [[troubleshooting#Google Ads]].
+
+### Meta Ads (reportes)
+
+Espejo de Google Ads con capa de servicio contra la **Marketing API de Meta** (Graph API `act_<id>/insights`). Transforma la respuesta a un JSON de reporte. Ver [[modulos/meta-ads]].
+- `App\Services\MetaAdsService`: Graph API con **System User token** (sin refresh_token); `resumen()` agregado (totales + reach/frequency/roas), `serieDiaria()` con `time_increment=1`, `topCampanias()`+`metaCampanias()`, `presupuestoDiario()`, `valorAccion()` (action_type canónico). Cache 5min, `esDemo()` + fixture.
+- `MetaAdsController` → `GET /api/meta-ads/cuentas` · `GET /api/meta-ads/reporte?cid=&desde=&hasta=&preset=`; valida `act_id` contra `meta_ads_cuentas`.
+- Config `services.meta_ads` (env `META_ADS_*`, `API_VERSION=v21.0`); migración `0060` + modelo `MetaAdsCuenta` (`act_id` sin prefijo `act_`).
+- Credenciales **fuera de git**. Modo demo automático sin token.
+- ⚠️ Compras/monto/carritos = **un action_type canónico** (`omni_purchase`/`omni_add_to_cart`), no sumar el array `actions` (duplica ×5). reach/frequency no sumables entre días. Ver [[troubleshooting#Meta Ads]].
 
 ### Gotchas partpicker
 
