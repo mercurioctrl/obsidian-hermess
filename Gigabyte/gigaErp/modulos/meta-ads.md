@@ -1,6 +1,6 @@
 # Módulo Meta Ads (reportes)
 
-Sección **Marketing → Meta Ads**: espejo de [[modulos/google-ads]] para **Facebook/Instagram Ads**. Listado de cuentas y, al entrar, el reporte de cada cuenta **navegable entre fechas** (presets, `SelectorFecha`, flechas ◀▶), con métricas de negocio, gráfico diario y tabla de campañas. Funcionando con **datos reales** desde 2026-08-03; **PR #8** contra `Development`. Deploy en `docs/DEPLOY_META_ADS.md`.
+Sección **Marketing → Meta Ads**: espejo de [[modulos/google-ads]] para **Facebook/Instagram Ads**. Listado de cuentas y, al entrar, el reporte de cada cuenta **navegable entre fechas** (presets, `SelectorFecha`, flechas ◀▶), con métricas de negocio, gráfico diario y tabla de campañas. Funcionando con **datos reales** desde 2026-08-03; **mergeado a `Development`** (PR #8). Deploy en `docs/DEPLOY_META_ADS.md`.
 
 ## Decisión de arquitectura
 
@@ -37,14 +37,15 @@ El `act_id` se guarda **sin** el prefijo `act_` (se antepone en el service).
 
 ## Métricas del reporte
 
-Presupuesto/día · Inversión (+CPC) · Impresiones (+CTR) · **Alcance** · **Frecuencia** · Clics · Agregar al carrito · Compras · Monto de compra · **ROAS** · Costo por compra. Cada tarjeta con ícono **(i)** ([[componentes-ui|StatsCard]] prop `info`). **Alcance, Frecuencia y ROAS son exclusivas de Meta** (Google no las tenía). Tabla de campañas: objetivo, estado, presupuesto, compras, monto.
+Presupuesto/día · Inversión · Impresiones · **Alcance** · **Frecuencia** · Clics (salientes) · Agregar al carrito · Compras · Monto de compra · Costo por compra (10 tarjetas). Cada una con ícono **(i)** de texto literal del cliente ([[componentes-ui|StatsCard]] prop `info`). **Alcance y Frecuencia son exclusivas de Meta** (Google no las tiene). **ROAS se quitó** (2026-08-04, a pedido). Tabla de campañas: campaña, estado, presup./día, impr., clics, inversión, compras, monto (la columna **Objetivo se quitó** el 2026-08-04).
 
 ## ⚠️ Gotchas clave (ver [[troubleshooting#Meta Ads]])
 
 1. **Duplicación de conversiones (idéntico a Google)**: el array `actions` trae la MISMA compra contada ~5 veces (`purchase`, `omni_purchase`, `offsite_conversion.fb_pixel_purchase`, `onsite_web_purchase`, `web_in_store_purchase`, todas mismo valor). Sumar el array multiplica ×5. Se toma **un action_type canónico**: `omni_purchase` (compras/monto) y `omni_add_to_cart` (carritos) — constantes `A_COMPRA`/`A_CARRITO`. Verificado AR: **26 compras / USD 15.072,09** (no 130).
-2. **reach/frequency NO son sumables entre días** (reach = únicos deduplicados) → salen de `resumen()` (llamada agregada), nunca de la serie.
-3. **Presupuesto en centavos** (`daily_budget` "444" = USD 4,44) → /100.
-4. Sin `config:cache` tras cargar el token → sigue en modo demo (gotcha `env()` en PHP-FPM).
+2. **Clics = clics salientes (`outbound_clicks`), NO `clicks`** (2026-08-04): `clicks` cuenta toda interacción y da de más (AR 904). Los clics salientes son los que llevan fuera de Meta al sitio del reseller. Array `[{action_type:'outbound_click', value}]`, se extrae con `valorAccion()`/constante `A_CLIC`. Verificado AR Jul4-Ago2: 674 total (335 Compufan + 339 CompuMar). CPC/CTR derivan de este clic.
+3. **reach/frequency NO son sumables entre días** (reach = únicos deduplicados) → salen de `resumen()` (llamada agregada), nunca de la serie.
+4. **Presupuesto en centavos** (`daily_budget` "444" = USD 4,44) → /100.
+5. Sin `config:cache` tras cargar el token → sigue en modo demo (gotcha `env()` en PHP-FPM).
 
 ## Frontend
 

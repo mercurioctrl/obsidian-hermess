@@ -1,3 +1,18 @@
+## 2026-08-04 — Ajustes de Google/Meta Ads (feedback marketing)
+
+Tanda de ajustes finos sobre las dos secciones de ads, ya mergeadas a `Development` (PRs #8 Meta y #9 fix Google; de acá en más se trabaja **directo sobre `Development`**). Ver [[modulos/google-ads]] y [[modulos/meta-ads]].
+
+- **Meta — clics = salientes (`outbound_clicks`), no `clicks`**: el campo `clicks` cuenta toda interacción y daba de más (AR 904). Leo confirma que la métrica correcta son los **clics salientes** (los que llevan fuera de Meta al sitio del reseller). Constante `A_CLIC=['outbound_click']`, se extrae con `valorAccion()`. Verificado AR (Jul4-Ago2): 674 total, Compufan 335, CompuMar 339. Aplica a resumen/serie/campañas; CPC/CTR de Meta derivan de este clic. Ver [[troubleshooting#Meta Ads]].
+- **Meta — se quitó la tarjeta ROAS** y la **columna Objetivo** de la tabla de campañas (a pedido).
+- **Google — se quitaron los sublabels CPC (Inversión) y CTR (Impresiones)** de las tarjetas (PR #9). Los valores se siguen calculando en el backend, solo no se muestran.
+- **Google — "Agregar al carrito" ahora es entero** (redondeado, sin decimales).
+- **Ambos — se quitó el aviso amarillo** "No se registraron eventos de conversión…" cuando no venían conversiones (mostraba 0 sin cartel).
+- **Tooltips (i) con textos literales del cliente** en Google (8 métricas) y Meta (10 métricas), reemplazando los textos genéricos. Regla acordada: si una métrica no tiene explicación provista, no lleva "i" (en la práctica todas la tienen).
+
+**Deploy:** cambios de frontend → rebuild completo + `docker restart gigaerp-nginx`. El fix de clics (backend) fue hot-deploy (`docker cp` + `config:cache` + `cache:clear`), sin rebuild de frontend. Todo en `Development`.
+
+---
+
 ## 2026-08-03 — Sección Meta Ads (reportes)
 
 Nueva sección **Marketing → Meta Ads**: reportes de Facebook/Instagram Ads embebidos en el ERP, navegables entre fechas. Espejo de [[modulos/google-ads]], nativa Laravel + Nuxt (Graph API / Marketing API, sin Python). **PR #8** contra `Development`, funcionando con datos reales. Ver [[modulos/meta-ads]] y `docs/DEPLOY_META_ADS.md`.

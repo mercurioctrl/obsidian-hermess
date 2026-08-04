@@ -53,6 +53,37 @@ La carta de AGIP afirma, textualmente:
 
 ---
 
+## Por qué AGIP pudo intimar: el disparador fue "declarar en cero" (confirmado 2026-08-03)
+
+No percibir estuvo bien; el problema fue **de forma**: NB **declaraba esas operaciones en la DDJJ de percepciones CABA con alícuota 0** (bloque *"PADRÓN REGÍMENES GENERALES - 0%"* de la presentación ARCIBA), en vez de **no incluirlas**. Al declararlas, AGIP las tenía en su radar, las cruzó contra su padrón y les aplicó la alícuota que creía correspondiente. Si esos sujetos (provincia Bs.As. / ARBA) no hubieran entrado en la DDJJ CABA, no habría nada contra qué cruzar.
+
+**Prueba (cruce agregado DDJJ presentada vs anexos de intimación):** las presentaciones reales `intimacion/presentaciones/2025-0{6,7,8}.pdf` traen la línea *"PADRÓN REGÍMENES GENERALES - 0%"*, y **el 100% de las líneas intimadas del Bloque B tienen alícuota aplicada = 0**. La base intimada es un **subconjunto** (siempre ≤) de la base declarada al 0% de cada mes:
+
+| Período | DDJJ 0% (registros / base) | Anexo intimado (líneas / base) |
+|---|---|---|
+| 2025/06 | 183 / $256.556.932 | 50 / $209.816.091 |
+| 2025/07 | 169 / $139.427.318 | 47 / $133.047.234 |
+| 2025/08 | 163 / $159.008.670 | 43 / $150.625.290 |
+
+AGIP eligió las de mayor monto (jul/ago ~95% de la base 0% del mes en ~45 CUITs). *Caveat: cruce a nivel registros+base total; el borrador PDF de la DDJJ solo trae resumen por alícuota, no detalle nominal — para prueba 1-a-1 hace falta el TXT importado a ARCIBA.*
+
+## Causa raíz en el código + fix aplicado
+
+El TXT de percepciones CABA se genera en `GET /perceptioniibb?type=CABA`. El filtro por jurisdicción en `PerceptionRepository::setFilters()` comparaba contra `'AGIP'`, pero el endpoint **solo recibe `'CABA'` o `'ARBA'`** (el front solo ofrece esas dos opciones) → la rama `'AGIP'` era **código muerto**, así que el reporte CABA **nunca** aplicaba `AND MSR.IMPPERCEP_CABA > 0` y colaba las filas con CABA en 0/NULL.
+
+**Fix (`api-rest-cobros`, rama `fix/perception-caba-cero`, PRs #940 → `blu-dev-staff`, #941 → `Development`):**
+```diff
+-  if(strtoupper($filters['type']) == 'AGIP'){
++  if(strtoupper($filters['type']) == 'CABA'){
+       $filter .= " AND MSR.IMPPERCEP_CABA > 0";
+   }
+```
+`> 0` excluye **tanto NULL como 0** (`NULL > 0` → UNKNOWN, `0 > 0` → false). Queda simétrico con ARBA.
+
+**Verificación con datos reales (corrida 2026-08, datos de jul-2025):** los TXT generados `CABA_PERCEPTIONS_202608.txt` (1.208 filas) y `ARBA_PERCEPTIONS_202608.txt` (268 filas) tienen **0 filas con alícuota o importe de percepción en cero**. Antes del fix, CABA arrastraba ~180 filas en 0. Volúmenes normales de ARBA (reusando la query real): jun-2025 = 303, jul-2025 = 268 — ARBA es de forma estable ~20-25% de CABA (solo se percibe a los sujetos del padrón ARBA, que son pocos).
+
+---
+
 ## Qué tienen en común los CUIT del Bloque B (patrón encontrado)
 
 Cruce de los 147 CUIT del Bloque B contra `clientes` (solo lectura). El eje que los separa del Bloque A es **la jurisdicción**:

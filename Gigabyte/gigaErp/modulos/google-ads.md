@@ -29,7 +29,7 @@ Las cuentas de Gigabyte **cuelgan del MCC**, por eso llevan `login_customer_id`.
 
 ## Métricas del reporte
 
-Presupuesto/día (total cuenta) · Inversión (+CPC) · Impresiones (+CTR) · Clics · Agregar al carrito · Compras · Monto de compra · Costo por compra. Cada tarjeta tiene un ícono **(i)** con explicación (prop `info` nueva en [[componentes-ui|StatsCard]], reutilizable). Tabla de campañas: tipo, presupuesto, compras, monto. **Alcance y Frecuencia NO existen en Google** (son de Meta). Se quitaron ROAS y la tabla de Destinos (landing pages) a pedido de marketing (Leo Saran).
+Presupuesto/día (total cuenta) · Inversión · Impresiones · Clics · Agregar al carrito (entero) · Compras · Monto de compra · Costo por compra (8 tarjetas). Cada tarjeta tiene un ícono **(i)** con **texto literal del cliente** (prop `info` en [[componentes-ui|StatsCard]], reutilizable). Tabla de campañas: tipo, presupuesto, compras, monto. **Alcance y Frecuencia NO existen en Google** (son de Meta). Se quitaron ROAS y la tabla de Destinos (landing pages) a pedido de marketing (Leo Saran). Ajustes 2026-08-04: se quitaron los sublabels **CPC** (Inversión) y **CTR** (Impresiones) — PR #9; "Agregar al carrito" pasó a **entero**; textos (i) reemplazados por los literales del cliente.
 
 ## ⚠️ Gotchas clave (ver [[troubleshooting#Google Ads]])
 

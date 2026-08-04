@@ -4,8 +4,8 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
-**Último commit:** `8a103fb` · **Última sincronización:** 2026-08-03
-**Último trabajo:** **Meta Ads** — sección nueva de reportes de Facebook/Instagram Ads embebidos en el ERP, navegables entre fechas. **Espejo de Google Ads**, nativa Laravel + Nuxt (Graph API / Marketing API, sin Python). Cuentas AR/UY/CL en el Business Manager de Blu, funcionando con datos reales (**PR #8**). System User token (sin refresh). Mismo gotcha de duplicación que Google → action_type canónico `omni_purchase`/`omni_add_to_cart`; suma **Alcance/Frecuencia/ROAS** nativos. Ver [[changelog#2026-08-03 — Sección Meta Ads (reportes)|changelog]] y [[modulos/meta-ads]]. Antes: **Google Ads** (reportes GAQL, nivel campaña goal-aware) — [[modulos/google-ads]]
+**Último commit:** `94c5637` · **Última sincronización:** 2026-08-04
+**Último trabajo:** **Ajustes de Google/Meta Ads** (feedback marketing, directo sobre `Development`): Meta usa **clics salientes** (`outbound_clicks`, no `clicks` que inflaba); se quitaron ROAS y columna Objetivo en Meta, CPC/CTR en Google; "Agregar al carrito" entero en Google; **tooltips (i) con textos literales del cliente** en ambos; se sacó el aviso de "sin conversiones". Ver [[changelog#2026-08-04 — Ajustes de Google/Meta Ads (feedback marketing)|changelog]]. Antes: **Meta Ads** (sección espejo de Google, Graph API, System User token) — [[modulos/meta-ads]]; y **Google Ads** (GAQL, goal-aware) — [[modulos/google-ads]]. Ambas **mergeadas a `Development`** (PRs #8 y #9).
 
 ---
 

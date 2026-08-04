@@ -170,7 +170,7 @@ protected $table = ordenes_venta;  // Eloquent no sabe pluralizar bien en españ
 Compras y Monto de compra se toman **a nivel campaña** (`metrics.conversions` / `metrics.conversions_value`), que cuentan solo el **objetivo custom** de la campaña. Sumar por `conversion_action_category` duplica (acciones solapadas). API `v22`, `login-customer-id` por cuenta. Detalle en [[modulos/google-ads]] y [[troubleshooting#Google Ads]].
 
 ### Meta Ads: action_type canónico (no sumar el array `actions`)
-Compras, Monto y Carritos se toman de **un solo `action_type` canónico** (`omni_purchase` / `omni_add_to_cart`), no sumando el array `actions` que trae la misma compra contada ~5 veces (`purchase`, `omni_purchase`, `offsite_conversion.fb_pixel_purchase`…). Mismo problema que Google. Además: reach/frequency NO son sumables entre días (salen del resumen agregado), presupuesto en centavos (/100), System User token sin refresh. Detalle en [[modulos/meta-ads]] y [[troubleshooting#Meta Ads]].
+Compras, Monto y Carritos se toman de **un solo `action_type` canónico** (`omni_purchase` / `omni_add_to_cart`), no sumando el array `actions` que trae la misma compra contada ~5 veces (`purchase`, `omni_purchase`, `offsite_conversion.fb_pixel_purchase`…). Mismo problema que Google. **Clics = clics salientes (`outbound_clicks`), NO `clicks`** (que cuenta toda interacción e infla: AR 904 vs 674). Además: reach/frequency NO son sumables entre días (salen del resumen agregado), presupuesto en centavos (/100), System User token sin refresh. Detalle en [[modulos/meta-ads]] y [[troubleshooting#Meta Ads]].
 
 ---
 

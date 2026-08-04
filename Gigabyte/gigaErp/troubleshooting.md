@@ -241,13 +241,15 @@ Trampas de la integración con la Marketing API de Meta ([[modulos/meta-ads]]).
 
 **a) Compras/monto/carritos multiplicados ×5 si se suma el array `actions`.** Meta devuelve la MISMA compra bajo muchos `action_type` solapados (`purchase`, `omni_purchase`, `offsite_conversion.fb_pixel_purchase`, `onsite_web_purchase`, `web_in_store_purchase`… todos con el mismo valor). Sumar el array entero duplica. **Fix:** tomar **un `action_type` canónico** con `valorAccion()`: `omni_purchase` para compras/monto (es el que Meta usa para `purchase_roas` y muestra como "Compras" en el Administrador) y `omni_add_to_cart` para carritos. Constantes `A_COMPRA`/`A_CARRITO` en `MetaAdsService`. Verificado AR: 26 compras / USD 15.072,09 (no 130). Es el mismo problema que en Google (allá era por categoría de conversión).
 
-**b) reach/frequency mal si se calculan desde la serie diaria.** `reach` son personas **únicas deduplicadas**: NO se pueden sumar entre días (daría más que el real). **Fix:** los totales (incluidos alcance/frecuencia/roas) salen de `resumen()`, **una** llamada agregada a nivel cuenta sobre todo el rango; la serie diaria solo alimenta el gráfico.
+**b) Clics inflados si se usa el campo `clicks`.** `clicks` cuenta **toda interacción** con el anuncio (reacciones, expandir, etc.) y da mucho más que los clics reales al sitio (AR: 904 vs 674). **Fix:** usar **clics salientes** (`outbound_clicks`, array con `action_type: outbound_click`), que son los que llevan **fuera** de Meta al sitio del reseller — coincide con lo que ve marketing. Constante `A_CLIC=['outbound_click']`, se extrae con `valorAccion()`. Aplica a resumen, serie y campañas; CPC/CTR derivan de ahí.
 
-**c) Presupuesto ×100.** `daily_budget` viene en la **mínima denominación** de la moneda (centavos): `"444"` = USD 4,44. Dividir por 100. Aplica a campañas (CBO) y adsets.
+**c) reach/frequency mal si se calculan desde la serie diaria.** `reach` son personas **únicas deduplicadas**: NO se pueden sumar entre días (daría más que el real). **Fix:** los totales (incluidos alcance/frecuencia) salen de `resumen()`, **una** llamada agregada a nivel cuenta sobre todo el rango; la serie diaria solo alimenta el gráfico.
 
-**d) Sigue en modo demo con token cargado.** Igual que Google: falta `config:cache` tras escribir el `.env` (`env()` no anda en PHP-FPM), y `docker exec` para escribir al `.env` necesita **`-i`**.
+**d) Presupuesto ×100.** `daily_budget` viene en la **mínima denominación** de la moneda (centavos): `"444"` = USD 4,44. Dividir por 100. Aplica a campañas (CBO) y adsets.
 
-**e) `502` "Error validating access token".** El System User token se revocó o cambió la contraseña del usuario que lo generó. Regenerar desde Business Manager → Usuarios del sistema → Generar token (permiso `ads_read`) y correr `config:cache`.
+**e) Sigue en modo demo con token cargado.** Igual que Google: falta `config:cache` tras escribir el `.env` (`env()` no anda en PHP-FPM), y `docker exec` para escribir al `.env` necesita **`-i`**.
+
+**f) `502` "Error validating access token".** El System User token se revocó o cambió la contraseña del usuario que lo generó. Regenerar desde Business Manager → Usuarios del sistema → Generar token (permiso `ads_read`) y correr `config:cache`.
 
 ## Ver también
 

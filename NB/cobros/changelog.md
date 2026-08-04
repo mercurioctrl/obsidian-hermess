@@ -1,5 +1,17 @@
 # Changelog — CashBox Cobros
 
+## 2026-08-03 — Fix percepciones CABA en cero (raíz de la intimación AGIP)
+
+### fix(perception): excluir clientes con percepción CABA en 0/NULL del reporte
+
+- **Contexto:** se confirmó que el disparador de la [[intimacion-agip-percepciones|intimación de AGIP]] fue **declarar en la DDJJ CABA operaciones con alícuota 0** en vez de no incluirlas. Cruce DDJJ presentada (`intimacion/presentaciones/2025-0{6,7,8}.pdf`) vs anexos: 100% de las líneas intimadas del Bloque B tienen alíc. aplicada = 0, y la base intimada es subconjunto de la base declarada al 0% del mes.
+- **Causa raíz (código):** en `PerceptionRepository::setFilters()` el filtro CABA comparaba contra `'AGIP'`, pero el endpoint `GET /perceptioniibb` solo recibe `'CABA'`/`'ARBA'` (el front solo ofrece esas). La rama `'AGIP'` era código muerto → el TXT CABA nunca aplicaba `AND MSR.IMPPERCEP_CABA > 0` y colaba filas con CABA en 0/NULL.
+- **Fix:** `'AGIP'` → `'CABA'` (1 línea). `> 0` excluye NULL y 0. Rama `fix/perception-caba-cero`, commit `38dcfe6`. PRs **#940** (base `blu-dev-staff`) y **#941** (base `Development`).
+- **Verificación real:** TXT `CABA_PERCEPTIONS_202608.txt` (1.208 filas) y `ARBA_PERCEPTIONS_202608.txt` (268) → **0 filas con alícuota/importe en cero**. ARBA es de forma estable ~20-25% de CABA (jun-2025=303, jul-2025=268 vs CABA 1.041/1.208): solo se percibe a los pocos sujetos del padrón ARBA.
+- Archivo: `api-rest-cobros/app/src/Repository/Perception/PerceptionRepository.php`.
+
+---
+
 ## 2026-07-17 — Verificación en dev del Dashboard de Impuestos
 
 ### chore: levantar frontend en modo dev + verificación end-to-end
