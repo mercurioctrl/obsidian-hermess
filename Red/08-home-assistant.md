@@ -21,9 +21,9 @@ Después: `GET /api/states`, `POST /api/services/<dom>/<srv>`, config flows en `
 
 ## Entidades
 
-- **10 luces WiZ** RGBW (JARDIN x5, PATIO x4, una `fa33ac` unavailable) — OUI `6c:29:90:6d:xx`, integración `wiz`.
+- **~22 luces WiZ** RGBW, integración `wiz` (local), OUI `6c:29:90`/`a8:bb:50`/`44:4f:8e`. Grupos: **JARDIN x5**, **PATIO x4**, **Balcón atrás x2**, **Comedor 1–9** (x9). Una `fa33ac` quedó `unavailable` (bulbo ausente). Ver método de descubrimiento en Notas.
 - **13 teclas Tuya/Macroled** (ver abajo) → **24 entidades `switch`**, control local.
-- **6 escenas Tuya** (escalera/vestidor), TV `media_player.samsung_q70_85_tv` (dlna), `weather.forecast_casa`, `todo.lista_de_la_compra`, `person.hermess`, TTS, 15 sensores.
+- **6 escenas Tuya** (escalera/vestidor) — ya **fuera del dashboard** (reemplazadas por la conmutación mirror). TV `media_player.samsung_q70_85_tv` (dlna), `weather.forecast_casa`, `todo.lista_de_la_compra`, `person.hermess`, TTS, sensores.
 
 ## Teclas Tuya/Macroled por LocalTuya (control local, sin nube) ✅
 
@@ -97,16 +97,16 @@ Automatizaciones en `automations.yaml` + scripts en `scripts.yaml` (formato nuev
 |---|---|---|
 | Luces de calle (1,2) | atardecer (sunset) | amanecer (sunrise) |
 | Terraza (`lavadero_frente_switch_2` "Frente terraza princ") | atardecer | amanecer |
-| **Jardín — 5 WiZ** (`3f4298`,`3f5fc4`,`6d5a5e`,`6d6eb4`,`6d72a6`) | atardecer | **medianoche (00:00)** |
-| **Patio — 4 WiZ** (`afc136`,`afcbd2`,`afcdca`,`afce6a`) | atardecer | **medianoche (00:00)** |
-| **Balcón (atrás lavadero) — 2 WiZ** (`fa3132`,`fa2fb0`, IP .246/.247) | atardecer | **medianoche (00:00)** |
+| **Jardín — 5 WiZ** (`3f4298`,`3f5fc4`,`6d5a5e`,`6d6eb4`,`6d72a6`) | atardecer | **23:30** |
+| **Patio — 4 WiZ** (`afc136`,`afcbd2`,`afcdca`,`afce6a`) | atardecer | **23:30** |
+| **Balcón (atrás lavadero) — 2 WiZ** (`fa3132`,`fa2fb0`, IP .246/.247) | atardecer | **23:30** |
 | Switch `luces y cámara jardín` (2 gangs) | — **siempre ON 24/7** — | **nunca** |
 | Switch `patio` (2 gangs) | — **siempre ON 24/7** — | **nunca** |
 | Switch `balcón lavadero` (1 gang, `switch.balcon_lavadero_switch_1`) | — **siempre ON 24/7** — | **nunca** |
 
 - `automation.exterior_prender_al_atardecer` — al sunset: calle (1,2) + jardín/cámara switch (1,2) + patio switch (1,2) + balcón switch (`balcon_lavadero_switch_1`) + terraza + las **11 WiZ** (jardín + patio + balcón) con **`brightness_pct: 100`** (fija el brillo parejo; sin eso cada WiZ volvía a su último valor y alguna arrancaba tenue, ej. JARDIN 4X2(b) en 48/255).
 - `automation.exterior_apagar_al_amanecer` — al sunrise: terraza + calle (1,2).
-- `automation.jardin_wiz_apagar_a_medianoche` (alias "Jardin + Patio + Balcon WiZ") — 00:00: apaga las 11 WiZ de jardín, patio y balcón (los switches NO se tocan).
+- `automation.jardin_wiz_apagar_a_medianoche` (alias "Jardin + Patio + Balcon WiZ") — 23:30: apaga las 11 WiZ de jardín, patio y balcón (los switches NO se tocan).
 - `automation.apagar_todo_2_am` — 02:00: llama `script.buenas_noches` (barrido de **interior**).
 - `script.buenas_noches` — apaga todas las luces + lista SEGURA de teclas. **NO** incluye calle, terraza, jardín/cámara ni patio (para no cortar el exterior ni las cámaras/WiZ). `script.apagar_teclas` (botón manual) tampoco incluye jardín/cámara ni patio.
 
