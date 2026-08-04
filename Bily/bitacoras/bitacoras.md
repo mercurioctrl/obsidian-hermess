@@ -64,6 +64,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 
 ### Agosto
 - [[Bily/bitacoras/2026-08-03|2026-08-03]] — Chequeo de disponibilidad por WhatsApp ("¡volviste!") tras fallas previas del runtime/modelo; sin decisiones ni pedidos nuevos
+- [[Bily/bitacoras/2026-08-04|2026-08-04]] — Jornada sin actividad: cron de bitácora diaria y saludo de cierre; sin conversaciones ni pedidos visibles (primera corrida del job falló)
 
 ## Ver también
 
