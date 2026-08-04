@@ -23,6 +23,7 @@ Proyectos y áreas de BLU Digital Agency.
 
 ### [[blu-crm/blu-crm|blu-crm]] — CRM multi-tenant (email masivo SES + WhatsApp)
 - Docker (8 servicios) · Laravel 11 + Nuxt 3 · pilar email completo · panel web con design system BLU
+- [[blu-crm/arquitectura|arquitectura]] · [[blu-crm/stack|stack]] · [[blu-crm/changelog|changelog]] · [[blu-crm/contexto|contexto]] · [[blu-crm/memoria|memoria]]
 
 ### [[enviosMasivosRapidos/enviosMasivosRapidos|enviosMasivosRapidos]] — Envío de newsletters HTML por SMTP (PHP CLI)
 - [[enviosMasivosRapidos/arquitectura|arquitectura]] · [[enviosMasivosRapidos/stack|stack]] · [[enviosMasivosRapidos/changelog|changelog]] · [[enviosMasivosRapidos/contexto|contexto]]
