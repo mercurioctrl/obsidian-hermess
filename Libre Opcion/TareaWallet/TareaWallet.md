@@ -6,10 +6,19 @@ Documentación de análisis e implementación de features en la API Laravel v4 y
 
 - [[changelog]] — Historial de cambios por fecha
 - [[contexto]] — Decisiones de sesión, gotchas, flujos técnicos importantes
+- [[tiendas-oficiales]] — Módulo OfficialStore: branding CMS, scoping por marca, reemplazo de identidad en ficha
 - [[arquitectura-recategorizacion]] — Sistema de recategorización de productos (Job, Matcher, DB tables)
 - [[calificaciones-vendedor]] — Reseñas del vendedor: endpoints, validación principal y script de verificación
 
 ## Resumen por área
+
+### Tiendas Oficiales (2026-08-04)
+Módulo `OfficialStore` — LIO-720/769/771/772/776.
+- `GET /v4/tienda-oficial/{slug}` (público) devuelve branding cargado en CMS (colores, fuentes, banners, secciones hero/video, menús)
+- Tablas nuevas `official_store_branding` (+`_banners`) vinculan `seller_id` ↔ `brand_id`
+- Ficha de producto: reemplaza el nombre del vendedor por "Tienda oficial {name}" y bloquea su reputación
+- Inventario del seller scopeado a la marca de su tienda (`OfficialStoreInventoryScopeService`, 403/404)
+- Detalle en [[tiendas-oficiales]]
 
 ### Calificaciones del vendedor (2026-07-30)
 Verificación de la "Validación principal" del endpoint de reseñas.
@@ -33,4 +42,4 @@ Integración de MODO, GetNet y Payway en el checkout.
 
 ## Última sincronización
 
-2026-07-30
+2026-08-04

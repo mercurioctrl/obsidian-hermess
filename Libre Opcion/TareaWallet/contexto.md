@@ -190,3 +190,34 @@ token = hmac.new(HMAC_KEY.encode(), payload.encode(), hashlib.sha256).hexdigest(
 - [[arquitectura-recategorizacion]]
 - [[calificaciones-vendedor]]
 - [[changelog]]
+
+---
+
+## 2026-08-04
+
+### Tiendas Oficiales — modelo y decisiones
+
+**Modelo de datos:** una tienda oficial es una fila en `[LO].[dbo].[official_store_branding]` que
+vincula `seller_id` ↔ `brand_id`. Es decir: **un vendedor + una marca = una tienda oficial** con
+identidad propia. El branding (colores, fuentes, logo, banners, secciones hero/video, menús) se
+carga en un CMS externo y la API lo devuelve por `GET /v4/tienda-oficial/{slug}`. Detalle del
+módulo en [[tiendas-oficiales]].
+
+**Decisión — reemplazo de identidad, no un flag suelto:** en la ficha de producto no se agrega
+solo un booleano; se reescribe el bloque `seller` (`FichaProductoDto:214`): el nombre pasa a
+`"Tienda oficial {name}"`, la URI a `/tienda-oficial/{slug}`, y la reputación del vendedor real
+queda **bloqueada**. La idea de negocio: el comprador ve la marca, no al reseller detrás.
+
+**Decisión — scoping por marca en el inventario del seller:** cuando un vendedor con tienda
+oficial carga/lista inventario, `OfficialStoreInventoryScopeService` fuerza el filtro a su
+`brand_id`. Valida pertenencia: `404` si la tienda no existe, `403` si no es del seller
+autenticado. Esto evita que una tienda oficial mezcle marcas ajenas.
+
+**Alcance transversal (ojo al tocar catálogo):** la exclusión de sellers oficiales del "listado
+común de vendedores" y la priorización de tiendas oficiales se replicó en ~10 repositories
+(catálogo, sugerencias, marcas, categorías, atributos, precios, resellers, item) + `MainQuery`.
+Si se agrega un nuevo listado de vendedores/ofertas, hay que replicar ahí el mismo criterio o la
+tienda oficial "se filtra sola" o aparece duplicada.
+
+> Gotcha ya conocido y relevante acá: tras editar estos PHP, recargar php-fpm y verificar con
+> `curl` real al endpoint (OPcache `validate_timestamps=Off`), no solo con tinker.

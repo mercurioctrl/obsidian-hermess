@@ -72,3 +72,24 @@
 - [[arquitectura-recategorizacion]]
 - [[calificaciones-vendedor]]
 - [[contexto]]
+
+---
+
+## 2026-08-04
+
+### Tiendas Oficiales (LIO-720 / 769 / 771 / 772 / 776)
+
+- **feat:** Nuevo módulo `OfficialStore` — `GET /v4/tienda-oficial/{slug}` (público). Controller + `OfficialStoreService::getBySlug()` + `OfficialStoreRepository`. Tablas nuevas `official_store_branding` y `official_store_branding_banners`.
+- **feat:** `OfficialStoreInventoryScopeService` — scopea el inventario del vendedor a la `brand_id` de su tienda oficial (404 si no existe, 403 si la tienda no le pertenece).
+- **feat (CMS, LIO-720/769):** se traen al LO las secciones (hero, video), menús y banners cargados en el CMS de la tienda oficial (`buildSections`, `buildMenu`, `buildBanners`, `buildMedia`).
+- **feat:** Soporte de tienda oficial en auth/user, inventario del vendedor, catálogo público y búsqueda de productos. Filtro por marca de la tienda en inventario y catálogo (LIO-771).
+- **fix (ficha de producto, LIO-776):** cuando el item es de una tienda oficial, `FichaProductoDto` reemplaza el nombre del vendedor por `"Tienda oficial {name}"`, apunta la URI a `/tienda-oficial/{slug}`, marca `isOfficialStore=true` y **bloquea la reputación** del seller asociado.
+- **fix (búsqueda/facetas):** priorizar tiendas oficiales y excluir a los sellers oficiales del listado común de vendedores; excluir ofertas de marcas no permitidas en búsquedas, sugerencias y listado de vendedores. Alcance transversal a `CatalogueRepository`, `SuggestionRepository`, `BrandRepository`, `CategoryRepository`, `AttributesListRepository`, `IntervalPricesRepository`, `OnlyResellerRepository`, `ResellersByItemIdRepository`, `ItemRepository`, `MainQuery`.
+- **fix (LIO-762):** se refrescan juntos `id_brand` y `brand_name` para que queden alineados (item aparecía con marca genérica).
+- Detalle completo en [[tiendas-oficiales]].
+
+### Otros
+
+- **fix (LIO-735):** arreglo de email en review "calificar vendedor" (campo obligatorio `type`).
+- **hotfix:** `home-marcas` excluye marcas con `activa = 0`.
+- **chore:** ignorar `docker-compose.override.yml` en git.
