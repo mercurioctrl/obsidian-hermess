@@ -48,6 +48,7 @@ Análisis e implementación del módulo de billetera y features relacionadas. In
 - [[TareaWallet/changelog|Changelog]] — Historial por fecha
 - [[TareaWallet/arquitectura-recategorizacion|Arquitectura recategorización]]
 - [[TareaWallet/calificaciones-vendedor|Calificaciones del vendedor]] — Reseñas: endpoints, validación principal, script de verificación
+- [[TareaWallet/tiendas-oficiales|Tiendas Oficiales]] — Módulo OfficialStore: branding CMS, scoping por marca, reemplazo de identidad en ficha
 
 ## SEO y Performance
 
