@@ -1,4 +1,4 @@
-# 🏠 Home
+`# 🏠 Home
 
 Índice general de la bóveda.
 
@@ -29,7 +29,7 @@
 - [[aplus-server]] — Servidor A+
 - `Laset/` — Laset
   - [[Laset/Martes|Martes]] · [[Laset/Miercoles|Miércoles]]
-
+`
 ## 🟠 NB (NewBytes)
 
 - [[NB]] — Índice general
