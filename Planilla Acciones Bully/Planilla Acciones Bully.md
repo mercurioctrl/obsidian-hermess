@@ -41,5 +41,8 @@ Versiones del script `Code.gs` en la carpeta `codigo/`:
 - [[Planilla Acciones Bully/Documentacion Apps Script - Opciones API|Planilla Acciones Bully - Apps Script]]
 - [[Planilla Acciones Bully/arquitectura|Arquitectura — bully]]
 - [[Planilla Acciones Bully/bully|bully — API + Fair Value Scraper]]
+- [[Planilla Acciones Bully/stack|Stack — bully]]
+- [[Planilla Acciones Bully/changelog|Changelog — bully]]
+- [[Planilla Acciones Bully/contexto|Contexto y decisiones — bully]]
 - [[Planilla Acciones Bully/prompt-agregar-stock-data-api|Prompt para Claude Code - Agregar datos de stock a la API]]
 - [[Planilla Acciones Bully/prompt-optimizar-api|Prompt para Claude Code - Optimizar API Bully]]

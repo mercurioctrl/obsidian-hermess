@@ -5,7 +5,7 @@ Sirve opciones financieras desde yfinance y fair values scrapeados de investing.
 
 **API pública:** `https://api.bully.lio.red/options`
 **Repo:** `/var/www/bully/bully`
-**Última sincronización:** 2026-05-04
+**Última sincronización:** 2026-08-07
 
 ---
 
@@ -14,11 +14,16 @@ Sirve opciones financieras desde yfinance y fair values scrapeados de investing.
 | Archivo | Rol |
 |---|---|
 | `app.py` | Flask API — endpoint `/options` |
-| `fv2.py` | Scraper batch — 129 tickers → SQL Server |
-| `fv_watcher.py` | Watcher incremental — rellena nuevos tickers (cron cada 5 min) |
+| `fv2.py` | Scraper batch de **fair_value** — 139 tickers → SQL Server (cron cada 2h) |
+| `fv3.py` | Scraper batch de **nextReport** (próximos earnings) — cron cada 2h a los :45 |
+| `fv_watcher.py` | Watcher incremental — rellena fair_value/nextReport de tickers nuevos (cron cada 5 min) |
+| `fv_monitor.py` | Monitor — chequea el scraping cada hora y **avisa por mail** si se rompe |
 | `fv_cookies.py` | Harvester de cookies de investing.com (Camoufox) |
 | `fv_run.sh` | Wrapper VPN — refresca cookies + levanta gluetun + corre script |
 | `gluetun-compose.yml` | Docker compose — Surfshark VPN como proxy HTTP |
+
+> Todos los scrapers usan **`curl_cffi` con `impersonate="chrome"`** para pasar el
+> anti-bot de Cloudflare (la librería `requests` ya no funciona). Ver [[Planilla Acciones Bully/contexto|Contexto]].
 
 ---
 

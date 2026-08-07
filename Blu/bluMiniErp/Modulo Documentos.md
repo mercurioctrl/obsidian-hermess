@@ -36,6 +36,7 @@ Sección para alojar y descargar **documentos útiles de la empresa**. Cada docu
 | `mercury-bank-letter` | Bancario | Carta de verificación bancaria (inglés) — 1 pág. |
 | `mercury-wire-details` | Bancario | Datos wire doméstico + internacional — 2 págs. (`page-break-before`) |
 | `constitucion` | Societario | Escritura de constitución SRL — transcripción, 3 págs. |
+| `w9` | Fiscal | Formulario W-9 (IRS) de BLU STUDIO GROUP LLC — solo original, sin formato BLU (2026-08, PR #21 merged) |
 
 ## Ver también
 

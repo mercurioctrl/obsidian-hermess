@@ -65,7 +65,7 @@ pages/staff/[id].vue     <- ficha (3 tabs: Info / Proyectos / Pagos)
 ```
 
 ### Tab Informacion
-Formulario editable: nombre, cargo, email, telefono, tipo contrato, fecha ingreso, salario base, moneda, notas.
+Formulario editable: nombre, cargo, email, telefono, **direccion**, tipo contrato, fecha ingreso, **fecha nacimiento**, salario base, moneda, notas + sección **Datos bancarios** (banco, tipo cuenta, CBU/CVU, alias, titular, CUIL). Ver [[#Área de empleado y vacaciones (Mi Área) (2026-08)]].
 
 ### Tab Proyectos
 Lista proyectos asignados con rol. Formulario inline para asignar. Actualizacion local del estado sin recargar. Ver [[Errores Comunes#cargar completo causa error DOM]].
@@ -97,6 +97,22 @@ Seccion "Personal asignado" con lista, asignar/desasignar inline.
 - `empleados.usuario_id` (migración 0066): FK nullable **unique** a `usuarios` (1:1), `nullOnDelete`. Relaciones `Empleado::usuario()` / `Usuario::empleado()`.
 - En el detalle del empleado (tab Información, card "Usuario del sistema") se puede **crear** un usuario (prefill nombre/email), **vincular** uno existente o **desvincular** (no borra la cuenta). Solo **admin**. Endpoints `POST/PUT/DELETE /api/empleados/{id}/usuario`.
 - El usuario **creado desde Personal** nace acotado: rol `USUARIO`, `permisos: ['VER_SECCION_TAREAS']`, sin `VER_MONTOS_SALDOS`. Pensado para que el empleado solo gestione sus tareas. Ver [[Modulo Tareas]] y [[Modulo Permisos]].
+
+---
+
+## Área de empleado y vacaciones (Mi Área) (2026-08)
+
+Vista **self-service** `/mi-area` para que cada colaborador vea sus propios datos. Aparece para cualquier usuario con **empleado vinculado** (`empleados.usuario_id`); un usuario que solo es empleado (no admin, sin `VER_SECCION_DASHBOARD`) **aterriza ahí al loguear**. NavItem "Mi Área" en el sidebar gateado por `usuario.tiene_empleado` (campo nuevo en `UsuarioResource`). **No** expone sueldos → no depende de `VER_MONTOS_SALDOS`.
+
+- **Backend:** `MiAreaController@show` → `GET /api/mi-area` (JSON directo). Sin ficha → `{tiene_empleado:false}`. Devuelve: `empleado` (correo, teléfono, dirección, **fecha de cumpleaños**, inicio de actividades, tipo contrato), `rol` (área, reporta a, propósito, responsabilidades — desde [[Modulo People Performance|Rol & Expectativas]]), `banco` (banco, tipo cuenta, CBU/CVU, alias, titular, CUIL), `vacaciones` y `feriados` del año.
+- **Frontend:** `pages/mi-area/index.vue` — cards Mis datos · Mi rol · Datos bancarios (CBU/alias con botón copiar) · Vacaciones · **Política de Vacaciones** (colapsable) · **Feriados {año}** (listado, pasados atenuados). Las cards de rol/banco se ocultan si están vacías.
+- **Carga de datos:** los campos nuevos (dirección, cumpleaños, bancarios) los edita el **admin** en `/staff/[id]` tab Información (sección "Datos bancarios"); validación en `EmpleadoController::reglasDatosBancarios()`.
+
+### Vacaciones — días hábiles + feriados
+
+- **Asignados automáticos por antigüedad:** `Empleado::diasVacacionesAsignados()` = `<=5→14`, `<=10→21`, `<=20→28`, `>20→35`. `antiguedadAnios()` calcula años al 31/12.
+- **⚠️ Se cuentan en DÍAS HÁBILES (política Blu, no ley):** `diasHabilesEntre()` excluye sábados, domingos y **feriados nacionales** (tabla `feriados`). Los 14/21/28/35 se interpretan como hábiles (beneficio adicional al régimen legal). `vacacionesTomadas()`/`vacacionesDetalle()` suman `ausencias` con `motivo='Vacaciones'` del año, recortadas al año.
+- **Feriados:** modelo `Feriado` + `Feriado::fechasEntre($d,$h)`. Seeder `FeriadosSeeder` (idempotente, **2025+2026**, fuente argentina.gob.ar). Correr al empezar cada año con las fechas nuevas: `php artisan db:seed --class=FeriadosSeeder --force`. También se muestran en el [[Modulo Calendario]].
 
 ---
 

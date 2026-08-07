@@ -102,3 +102,20 @@ Ver [[hermess-pc/chrome-keyring|Chrome — keyring roto]]. Pendiente: investigar
 
 - Agregado `~/.local/bin/ptz-puerta-loop.sh` + cron (`* * * * *`): relanza el patrullaje (OneTimePatrol) de la cámara PTZ `10.10.10.64` cuando queda `stopped`, porque este modelo hace **una sola pasada y no loopea** nativamente. Log en `/tmp/ptz_puerta_loop.log`.
 - Detalle completo de la cámara y su API en [[Red/02-camaras#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] (nota de [[Red/Red|Red]]).
+
+---
+
+## 2026-08-06
+
+### Chrome — clic derecho no abre menú contextual: es una extensión (no GPU ni versión)
+
+- Síntoma: el clic derecho en Chrome dejó de abrir el menú en todas las páginas, junto con Slack colgado.
+- **Causa:** una de las ~31 extensiones intercepta `contextmenu` con `preventDefault`. Confirmado: con perfil limpio (`--user-data-dir`) y con `--disable-extensions` el clic derecho anda; con extensiones activas se rompe.
+- **Descartado con datos:** versión de Chrome (rollback 151→150 no sirvió), GPU (`--disable-gpu` no lo arregló), driver NVIDIA 580 sano (sin Xid en dmesg). El error `vaapi_wrapper: Could not get a valid VA display` es inofensivo.
+- **Pendiente:** aislar la extensión por bisección en `chrome://extensions`. Sospechosa #1: **Awesome Screen Recorder** (también listada en [[hermess-pc/chrome-keyring|chrome-keyring]]).
+
+### Slack "no responde" — cuelgue por presión de memoria
+
+- Apretón de RAM/swap (~10:29, swap libre ~16%) con la VM QEMU de 4 GB + apps Electron corriendo → Slack tildado. Fix: forzar salida y reabrir. Ver [[hermess-pc/earlyoom|earlyoom]].
+
+Detalle completo en [[hermess-pc/chrome-clic-derecho|Chrome — clic derecho (extensión)]].

@@ -2,7 +2,7 @@
 
 Base de conocimiento de la PC personal de hermess: configuración del sistema, red, monitores, extensiones GNOME, servicios, scripts y optimizaciones.
 
-Última sincronización: 2026-07-18
+Última sincronización: 2026-08-07
 
 ---
 
@@ -15,6 +15,7 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 - [[hermess-pc/monitores|Configuración de monitores]]
 - [[hermess-pc/sync-curls|Servicio sync-curls]]
 - [[hermess-pc/chrome-keyring|Chrome — deslogueo por keyring roto]]
+- [[hermess-pc/chrome-clic-derecho|Chrome — clic derecho roto (extensión) + Slack colgado]]
 - [[hermess-pc/changelog|Changelog]]
 - [[hermess-pc/memoria|Memoria de Claude]]
 
@@ -42,6 +43,7 @@ Descargador de playlists de YouTube a MP3 organizado en `Artista/Álbum/`.
 
 - **OS:** Ubuntu (GNOME)
 - **RAM:** 32 GB
+- **GPU:** NVIDIA GeForce RTX 5070 (driver 580)
 - **Monitores:** 3 (Gigabyte 1440p centro, BenQ portrait izq, LG portrait der)
 - **Red:** USG-3P dual WAN — Telecom (primary) + Telecentro (failover)
 - **VPN:** VPN CASA (L2TP/IPSec) hacia `db-nb-dev.blu.net.ar`
@@ -56,4 +58,5 @@ Descargador de playlists de YouTube a MP3 organizado en `Artista/Álbum/`.
 - [[hermess-pc/red]]
 - [[hermess-pc/vpn-casa]]
 - [[hermess-pc/chrome-keyring]]
+- [[hermess-pc/chrome-clic-derecho]]
 - [[hermess-pc/changelog]]

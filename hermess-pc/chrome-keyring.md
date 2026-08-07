@@ -59,9 +59,11 @@ sqlite3 ~/.config/google-chrome/Default/Cookies \
 
 - Investigar por qué **Chrome crashea** (`exit_type: Crashed`) — es el disparador que gatilla la carrera. Puede ser GPU o una extensión. Con el keyring arreglado ya no desloguea aunque crashee.
 - Extensiones activas que leen cookies y conviene revisar/quitar si no se usan: **Awesome Screen Recorder**, **uTab**.
+- **Actualización 2026-08-06:** **Awesome Screen Recorder** también quedó como sospechosa #1 de romper el clic derecho (evento `contextmenu`). Ver [[hermess-pc/chrome-clic-derecho|Chrome — clic derecho (extensión)]]. Buen candidato a desinstalar de una.
 
 ## Ver también
 
+- [[hermess-pc/chrome-clic-derecho|Chrome — clic derecho roto (extensión)]]
 - [[hermess-pc/earlyoom|earlyoom]] — presión de RAM en este equipo (Chrome es memory-heavy)
 - [[hermess-pc/memoria|Memoria de Claude]]
 - [[hermess-pc/hermess-pc|Índice hermess-pc]]

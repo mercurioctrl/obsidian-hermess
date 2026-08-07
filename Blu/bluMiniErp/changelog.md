@@ -4,6 +4,32 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-08-07
+
+- feat: **Mi Área — listado de feriados del año** (PR #24). `MiAreaController` devuelve `feriados[]` del año en curso y `/mi-area` los muestra en una card al final (día+fecha, nombre, badge de tipo; pasados atenuados). Solo lectura sobre la tabla `feriados`.
+
+Archivos: `backend/app/Http/Controllers/MiAreaController.php`, `frontend/pages/mi-area/index.vue`
+
+---
+
+## 2026-08-05
+
+- feat: **Vacaciones en días hábiles + feriados nacionales + Política de Vacaciones** (PR #23). El cálculo de vacaciones de Mi Área pasó de días corridos a **días hábiles** (política Blu): `Empleado::diasHabilesEntre()` excluye sábados, domingos y feriados. Nueva tabla `feriados` (mig 0092) + modelo `Feriado` + `FeriadosSeeder` (listado oficial **2025+2026** de argentina.gob.ar, idempotente). Los feriados también se muestran en el [[Modulo Calendario]] (evento `tipo='feriado'`, color rosa, visibles aunque se filtre por persona). En Mi Área, la nota legal se reemplazó por una card **"Política de Vacaciones"** colapsable. Ver [[Modulo Personal#Vacaciones — días hábiles + feriados]].
+
+Archivos: `backend/database/migrations/0092_*`, `backend/app/Models/Feriado.php`, `backend/database/seeders/FeriadosSeeder.php`, `backend/app/Models/Empleado.php`, `backend/app/Http/Controllers/CalendarioController.php`, `frontend/pages/{mi-area,calendario}/index.vue`
+
+---
+
+## 2026-08-04
+
+- feat: **Área de empleado — `/mi-area`** (PR #22). Vista self-service para usuarios con **empleado vinculado** (`empleados.usuario_id`): datos públicos (correo, teléfono, **dirección**, **cumpleaños**, inicio de actividades), **resumen de rol** (área, reporta a, propósito, responsabilidades desde [[Modulo People Performance|Rol & Expectativas]]), **datos bancarios** (banco, tipo cuenta, CBU/CVU, alias, titular, CUIL con copiar), y **vacaciones** por antigüedad. Campos nuevos en `empleados`: `direccion` (mig 0090), `fecha_nacimiento` + bancarios (mig 0091). `tiene_empleado` en `UsuarioResource`; login redirige a `/mi-area` si el usuario es solo-empleado; NavItem gateado. No expone sueldos. Ver [[Modulo Personal#Área de empleado y vacaciones (Mi Área) (2026-08)]].
+- feat: **Breadcrumb navegable en activaciones** (PR #22). `/evidencias/[id]` con breadcrumb clickeable (`Activaciones › Cliente › Presupuesto › Proyecto › Activación N° X`), visible al ver y editar. `PruebaEjecucionController` ahora incluye `proyecto.presupuesto` y `proyecto.cliente` en el payload con eager-load (sin N+1).
+- feat: **Documento W-9 (IRS)** de BLU STUDIO GROUP LLC en [[Modulo Documentos]] (PR #21). Entrada `w9` en `config/documentos.php`, solo original (sin formato BLU).
+
+Archivos: `backend/app/Http/Controllers/{MiAreaController,EmpleadoController,PruebaEjecucionController}.php`, `backend/app/Models/Empleado.php`, `backend/app/Http/Resources/UsuarioResource.php`, `backend/database/migrations/{0090,0091}_*`, `backend/config/documentos.php`, `frontend/pages/{mi-area,staff/[id],evidencias/[id],login}.vue`, `frontend/layouts/default.vue`
+
+---
+
 ## 2026-07-26
 
 - fix: **Ranking de GitHub — commits contados por `committed_at` dentro del rango** (PR #19). Antes `rendimiento()` sumaba `pr->commits` atribuidos a la **fecha de apertura del PR** (`gh_created_at`), así que mover el intervalo `desde`/`hasta` casi no cambiaba el ranking (se veía el histórico). Ahora los commits del ranking (y del gráfico "Commits por desarrollador") se cuentan desde `github_commits` agrupados por `author_login` filtrando por **`committed_at`** en el rango — misma lógica que la vista detallada del dev. Líneas +/− y contadores de PR siguen a nivel PR. Aprovecha el índice `(author_login, committed_at)` (~130ms frío / ~74ms caliente). Ver [[Modulo GitHub]]
