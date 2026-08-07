@@ -112,8 +112,8 @@ Panel de señales de atención por persona para la consultora RRHH.
 > [!danger] Riesgo de burnout
 > Combina simultáneamente: estudia, trabaja como desarrollador, trabaja como docente y entrena. Carga altísima para 23 años. Monitorear bienestar activamente.
 
-> [!warning] Dato faltante
-> El email en el CSV está incompleto (aparece solo `fcallipo` sin dominio). Verificar y actualizar.
+> [!success] Dato completado (2026-08-07)
+> Email resuelto con el alta de ERP: `fcallipo@blustudioinc.com`.
 
 > [!tip] Perfil docente aprovechable
 > Su experiencia como docente lo hace valioso para onboarding, mentoring junior o documentación interna. Aprovechar esa faceta sin sumarle más carga.

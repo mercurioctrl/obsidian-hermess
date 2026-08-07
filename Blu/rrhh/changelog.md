@@ -2,6 +2,29 @@
 
 ---
 
+## 2026-08-07 — Vacaciones + onboarding ERP (sync desde Slack `#talento`)
+
+### Política de vacaciones
+- Creada [[politica-vacaciones]] con la política formal comunicada el 2026-08-06:
+  vacaciones en **días hábiles** como beneficio Blu, escala por antigüedad (14/21/28/35),
+  regla de **períodos continuos** (sáb/dom/feriados cuentan para la extensión máxima aunque no descuenten saldo),
+  condiciones de uso y administración en el ERP.
+- Comunicada por mail (hoja membretada, correo RRHH de Blu) + Slack `#blu-team` + mensajes individuales.
+
+### ERP y ausencias
+- Creada [[ausencias]] — registro operativo de ausencias/vacaciones cargadas.
+- Alta de accesos al ERP para 6 colaboradores (Eze, Marbe, Emanuel, Guille, Franco, Belén).
+  Credenciales distribuidas por Slack — **no se persisten en la bóveda**.
+- Ausencias cargadas: Ezequiel (completas), Marbe (11/08, día ganado en el prode),
+  Guillermo (todas revisadas y OK; pendientes de NB no se trasladan).
+- Integración con Google Calendar funcionando (ausencias con color).
+
+### Datos del equipo
+- Emails corporativos unificados a `@blustudioinc.com` en [[rrhh]] (los perfiles individuales ya estaban actualizados).
+- Resuelta la alerta de email faltante de [[equipo/franco-callipo|Franco Callipo]] → `fcallipo@blustudioinc.com`.
+
+---
+
 ## 2026-05-15 — Sesión de arranque
 
 ### Primera reunión con consultora RRHH

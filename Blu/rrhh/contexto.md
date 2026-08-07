@@ -54,7 +54,7 @@ Incorporar una consultora de RRHH externa para:
 Los empleados contactan directamente a la consultora, no a los CEOs.
 Se define un canal único (ej. Slack) para esa comunicación.
 
-## Infraestructura RRHH armada (al 2026-05-16)
+## Infraestructura RRHH armada (al 2026-08-07)
 
 | Herramienta | Descripción |
 |---|---|
@@ -63,6 +63,10 @@ Se define un canal único (ej. Slack) para esa comunicación.
 | [[cumpleanos]] | Calendario de cumpleaños con próximos 12 meses |
 | `recordatorio-cumpleanos.sh` | Script cron — avisa 7 días antes de cada cumpleaños |
 | Crontab sistema | `7 9 * * *` — corre diario, log en `recordatorios.log` |
+| [[politica-vacaciones]] | Política formal de vacaciones (días hábiles, beneficio Blu) — ago 2026 |
+| **ERP** | Módulo de ausencias/vacaciones: saldo por antigüedad, calculadora, altas de usuarios |
+| [[ausencias]] | Registro operativo de ausencias/vacaciones cargadas en el ERP |
+| Google Calendar | Ausencias reflejadas con color para registro visible |
 
 ## Ver también
 
@@ -70,3 +74,5 @@ Se define un canal único (ej. Slack) para esa comunicación.
 - [[actividades-rrhh-it]]
 - [[alertas-gestion]]
 - [[cumpleanos]]
+- [[politica-vacaciones]]
+- [[ausencias]]
