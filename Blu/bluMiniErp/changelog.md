@@ -6,9 +6,12 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ## 2026-08-07
 
+- feat: **Días extra de vacaciones (premio)** (PR #27). Se pueden otorgar días libres extra a un empleado, cada uno con cantidad (decimal, permite 0.5), **motivo** y **fecha de vencimiento**; **suman a los días disponibles mientras no venzan**. Tabla `vacaciones_extra` (mig 0093) + modelo `VacacionExtra`. `Empleado::diasExtraVigentes()` suma solo no vencidos → `dias_disponibles = asignados + extra vigentes`. Endpoints `GET/POST/DELETE /api/empleados/{id}/vacaciones-extra` (devuelven `{items, resumen}`). Se cargan en `/staff/[id]` tab Ausencias; se ven en Mi Área con desglose `base + extra`. Ver [[Modulo Personal#Días extra de vacaciones (premio) (2026-08)]].
 - feat: **Mi Área — listado de feriados del año** (PR #24). `MiAreaController` devuelve `feriados[]` del año en curso y `/mi-area` los muestra en una card al final (día+fecha, nombre, badge de tipo; pasados atenuados). Solo lectura sobre la tabla `feriados`.
+- feat: **Favicon adaptativo** (PR #25). `favicon.svg` con `@media (prefers-color-scheme)` — la B de BLU se ve negra en tema claro y blanca en oscuro. Recortado al bounding box real del glyph. Fallbacks `favicon-16/32.png`, `favicon.ico` y `apple-touch-icon.png` (badge oscuro con B blanca, porque iOS no soporta transparencia adaptativa). Wireados en `nuxt.config.ts`.
+- chore: **Título "Blu Erp - Gestión Empresarial"** (PR #26). Reemplaza "Mini SaaS" en el `<title>` (`nuxt.config.ts`) y en el título fallback de notificaciones push (`public/sw.js`).
 
-Archivos: `backend/app/Http/Controllers/MiAreaController.php`, `frontend/pages/mi-area/index.vue`
+Archivos: `backend/database/migrations/0093_*`, `backend/app/Models/VacacionExtra.php`, `backend/app/Http/Controllers/{EmpleadoController,MiAreaController}.php`, `backend/app/Models/Empleado.php`, `frontend/pages/{mi-area,staff/[id]}.vue`, `frontend/nuxt.config.ts`, `frontend/public/{favicon*,apple-touch-icon.png,sw.js}`
 
 ---
 

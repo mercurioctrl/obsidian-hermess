@@ -114,6 +114,16 @@ Vista **self-service** `/mi-area` para que cada colaborador vea sus propios dato
 - **⚠️ Se cuentan en DÍAS HÁBILES (política Blu, no ley):** `diasHabilesEntre()` excluye sábados, domingos y **feriados nacionales** (tabla `feriados`). Los 14/21/28/35 se interpretan como hábiles (beneficio adicional al régimen legal). `vacacionesTomadas()`/`vacacionesDetalle()` suman `ausencias` con `motivo='Vacaciones'` del año, recortadas al año.
 - **Feriados:** modelo `Feriado` + `Feriado::fechasEntre($d,$h)`. Seeder `FeriadosSeeder` (idempotente, **2025+2026**, fuente argentina.gob.ar). Correr al empezar cada año con las fechas nuevas: `php artisan db:seed --class=FeriadosSeeder --force`. También se muestran en el [[Modulo Calendario]].
 
+### Días extra de vacaciones (premio) (2026-08)
+
+Días libres extra otorgados a un empleado (premios) que **suman a los días disponibles mientras no venzan**. Se pueden cargar varios, cada uno con su cantidad, motivo y vencimiento.
+
+- **Tabla `vacaciones_extra`** (migración `0093`): `empleado_id`, `dias` (decimal, permite 0.5), `motivo` (observación), `fecha_otorgado`, `fecha_vencimiento`, `usuario_id`. Modelo `VacacionExtra`.
+- `Empleado::diasExtraVigentes()` suma solo los **no vencidos** (`fecha_vencimiento >= hoy`); `vacacionesExtraDetalle(bool $soloVigentes)` lista con flag `vencido`. Un extra vencido queda en el historial pero deja de sumar.
+- **Cálculo:** `dias_disponibles = asignados (antigüedad, hábiles) + extra vigentes`; `dias_restantes = max(0, disponibles − tomados)`.
+- **Endpoints** (`EmpleadoController`): `GET/POST /api/empleados/{id}/vacaciones-extra` (POST body: `dias`, `motivo`, `fecha_vencimiento`, `fecha_otorgado?`) y `DELETE /api/empleados/{id}/vacaciones-extra/{extra}`. Devuelven `{ items, resumen }`.
+- **Frontend:** se gestionan en `/staff/[id]` **tab Ausencias** (card "Días extra de vacaciones": form + lista con badge vigente/vencido + resumen del año). En **Mi Área**, la card de Vacaciones muestra "Disponibles" con desglose `base + extra` y lista los extra vigentes con su vencimiento.
+
 ---
 
 ## Ver tambien

@@ -21,7 +21,7 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | [[Modulo Tareas]] | Tablero kanban estilo Jira: seguimiento (watchers) y notificaciones in-app / correo / push (VAPID) / WhatsApp |
 | [[Modulo GitHub]] | Integración GitHub solo lectura (PAT): dashboard de rendimiento por dev + vista detallada con commits día a día. Persistencia + sync incremental (2026-07-11) |
 | [[Modulo Documentos]] | Descarga de documentos corporativos: original + versión con formato BLU (registry en config, sin DB) (2026-07-11) |
-| [[Modulo Personal]] | Empleados, asignacion a proyectos, pagos, vínculo con usuario del sistema + **Área de empleado `/mi-area`** (datos, rol, banco, cumpleaños) y **vacaciones en días hábiles + feriados** (2026-08) |
+| [[Modulo Personal]] | Empleados, asignacion a proyectos, pagos, vínculo con usuario del sistema + **Área de empleado `/mi-area`** (datos, rol, banco, cumpleaños) y **vacaciones en días hábiles + feriados + días extra (premio)** (2026-08) |
 | [[Modulo People Performance]] | RRHH sobre Personal: rol&expectativas, competencias (1-5), objetivos (OKRs), ausencias (rango), reuniones 1:1, evidencia GitHub/Jira (tab Actividad, auto-vincular Jira). Fase 1 + inicio Fase 2 (2026-07-14) |
 | [[Modulo Calendario]] | Vista mensual que unifica tareas con deadline, ausencias/vacaciones, 1:1 y objetivos + suscripción externa iCal (Google/Apple/Outlook). `VER_SECCION_CALENDARIO` (2026-07-14) |
 | [[Reglas de Negocio]] | Reglas de dominio criticas y comportamientos no obvios |
