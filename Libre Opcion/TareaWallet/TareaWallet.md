@@ -6,11 +6,20 @@ Documentación de análisis e implementación de features en la API Laravel v4 y
 
 - [[changelog]] — Historial de cambios por fecha
 - [[contexto]] — Decisiones de sesión, gotchas, flujos técnicos importantes
+- [[entorno-local]] — Setup local del stack (v3+v4+front), dependencia login v4→v3, gotchas Docker/OPcache, CORS
 - [[tiendas-oficiales]] — Módulo OfficialStore: branding CMS, scoping por marca, reemplazo de identidad en ficha
 - [[arquitectura-recategorizacion]] — Sistema de recategorización de productos (Job, Matcher, DB tables)
 - [[calificaciones-vendedor]] — Reseñas del vendedor: endpoints, validación principal y script de verificación
 
 ## Resumen por área
+
+### Entorno local — v3 + v4 + front (2026-08-06)
+Setup del stack en local sobre rama `blu-dev-staff`.
+- El login de la v4 (`POST /v4/auth/login`) **depende de la API v3**: `loginV3` hace `curl` server-side; si la v3 no responde → 500 (`json_decode(false)`). No es CORS.
+- Se levantó la v3 legacy en local (`lo-website-api-rest`, 8081) con `docker-compose.yml` propio (`name: lo-api-rest-v3`, red de la v4).
+- Fix clave: `API_V3_URL=http://lo-website-api-rest` (nombre de contenedor, no `localhost`, porque la llamada es server-side desde el contenedor v4).
+- Gotchas: colisión de nombre de proyecto compose con `nb-api-rest`; recargar php-fpm tras cambiar `.env` (OPcache). CORS ya estaba en wildcard.
+- Detalle en [[entorno-local]]
 
 ### Tiendas Oficiales (2026-08-04)
 Módulo `OfficialStore` — LIO-720/769/771/772/776.
@@ -42,4 +51,4 @@ Integración de MODO, GetNet y Payway en el checkout.
 
 ## Última sincronización
 
-2026-08-04
+2026-08-06

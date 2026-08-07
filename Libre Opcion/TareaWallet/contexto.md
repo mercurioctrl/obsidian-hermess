@@ -221,3 +221,43 @@ tienda oficial "se filtra sola" o aparece duplicada.
 
 > Gotcha ya conocido y relevante acá: tras editar estos PHP, recargar php-fpm y verificar con
 > `curl` real al endpoint (OPcache `validate_timestamps=Off`), no solo con tinker.
+
+
+---
+
+## 2026-08-06
+
+### Entorno local: por qué el login v4 depende de la v3
+
+**Síntoma:** `POST /v4/auth/login` devolvía HTTP 500 con
+`json_decode(): Argument #1 ($json) must be of type string, false given` (`AuthService:247`).
+La pregunta original era de CORS, pero el navegador se quejaba del **status 500**, no de CORS.
+
+**Causa raíz:** el login de la v4 no valida contra su propia DB solamente; delega en la
+**API v3** vía `loginV3()`, que hace un `curl` server-side a `config('app.api_v3_url')/auth/login`
+y hace `json_decode($response)->token`. Si la v3 no responde, `curl_exec` = `false` → revienta.
+La v3 estaba apuntada a `localhost:8081` **sin nada corriendo ahí**.
+
+**Decisión — v3 local en vez de remota (omega):** se optó por levantar la v3 en local
+(rama `blu-dev-staff`, DB remota staff) en lugar de apuntar a `omega-api.libreopcion.com.ar`.
+Ver setup en [[entorno-local]].
+
+**Sutileza de red (la clave del fix):** `localhost` significa cosas distintas según quién llame:
+- El **front** (navegador + SSR Nuxt) corre en el host → `http://localhost:8081/` llega bien a la v3.
+- La **v4** llama a la v3 desde **adentro de su contenedor** → `localhost` sería el propio contenedor v4.
+  Por eso `API_V3_URL=http://lo-website-api-rest` (nombre de contenedor, resuelto en la red compartida).
+
+**Gotcha Docker Compose — colisión de proyecto:** compose deriva el nombre de proyecto del
+**basename del directorio**. Como `/var/www/lo/sitio-api-rest-v3` y `/var/www/nb/sitioNB/sitio-api-rest-v3`
+comparten basename, un `up` de uno borró `nb-api-rest` del otro. Fix: `name: lo-api-rest-v3` explícito.
+
+**CORS — no hubo que tocar nada:** la v4 ya manda `Access-Control-Allow-Origin: *`
+(`CorsMiddleware` con default `*` + `config/cors.php`). El 500 igual salía con los headers CORS
+correctos; una vez que la v3 respondió, el mismo request dio 200 con wildcard.
+
+**Persistencia:** los 2 archivos del arreglo (`app/.env` de la v4 y el `docker-compose.yml` de la v3)
+están **gitignorados** — si se reclonan los repos, hay que rehacerlos.
+
+> ⚠️ Tras cambiar `API_V3_URL` (o cualquier valor de `.env` usado en `config`), recargar php-fpm:
+> `docker exec sitio-api-rest-4.1-laravel sh -c 'kill -USR2 $(pgrep -o php-fpm)'`. OPcache
+> `validate_timestamps=Off` hace que `config:clear` no alcance para requests web.

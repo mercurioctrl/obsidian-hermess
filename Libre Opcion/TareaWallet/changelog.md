@@ -93,3 +93,18 @@
 - **fix (LIO-735):** arreglo de email en review "calificar vendedor" (campo obligatorio `type`).
 - **hotfix:** `home-marcas` excluye marcas con `activa = 0`.
 - **chore:** ignorar `docker-compose.override.yml` en git.
+
+
+---
+
+## 2026-08-06
+
+### Setup de entorno local — v3 + v4 + front (rama blu-dev-staff)
+
+- **chore:** Las 3 ramas (`sitio-api-rest-v3`, `sitio-api-rest-v4-laravel`, `sitio-web-app-v3`) cambiadas a `blu-dev-staff`; v4 actualizada por fast-forward (14 commits, incluye tests de DTOs).
+- **infra:** API v3 legacy levantada **en local** (`lo-website-api-rest`, puerto 8081). Se creó `sitio-api-rest-v3/docker-compose.yml` (gitignorado; el versionado es el `.example`) con `name: lo-api-rest-v3` y conexión a la red de la v4. Build de imagen (PHP 8.1 + driver SQL Server) + `composer install` dentro del contenedor. DB remota staff ya configurada en su `.env`.
+- **fix (login v4):** `POST /v4/auth/login` daba **HTTP 500** (`json_decode(): ... false given` en `AuthService:247`). Causa: la v4 delega el login en la v3 (`loginV3` hace `curl` server-side) y la v3 no respondía. **No era CORS.** Fix: `API_V3_URL` en el `.env` de la v4 pasa de `http://localhost:8081/` a **`http://lo-website-api-rest`** (nombre de contenedor, porque la llamada es server-side desde el contenedor v4). Login verificado → HTTP 200.
+- **gotcha (Docker):** `docker compose up` de LO borró `nb-api-rest` por **colisión de nombre de proyecto** (mismo basename `sitio-api-rest-v3`). Restaurado + `name:` explícito para evitar reincidencia.
+- **gotcha (reforzado):** tras cambiar `API_V3_URL` hubo que recargar php-fpm (`kill -USR2`) porque OPcache servía el `config.php` viejo — `config:clear` no alcanza.
+- **CORS:** confirmado que ya estaba en wildcard (`Access-Control-Allow-Origin: *`) sin cambios.
+- Detalle completo en [[entorno-local]] y [[contexto#2026-08-06]].
