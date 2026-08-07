@@ -1,5 +1,17 @@
 # Changelog — CashBox Cobros
 
+## 2026-08-07 — Rectificativas de percepción CABA reconstruidas (los 20 meses intimados)
+
+### entregable: reconstrucción de las DDJJ de percepción para presentar la rectificativa
+
+- **Objetivo:** generar el TXT ARCIBA de cada mes intimado con las alícuotas corregidas (Bloque A → alícuota del padrón) y **sin los sujetos que no van** (no en padrón / 0%), para la rectificativa (F.5225).
+- **Callejones descartados (ninguno reproduce lo presentado):** el endpoint `/perceptioniibb` (DB `190.210.23.97:4444`) toma la percepción de `MS_REMITO_PERCEPCIONES`, que recién existe desde **2025-05-14** → meses previos dan 0 filas; el sistema viejo **saftel** (`percepciones.saftel.com`) recalcula con el padrón de hoy; **e-Arciba** (`lb.agip.gob.ar/eArciba`, API REST `cc/rest/ddjjs/...`) solo devuelve el **resumen** por alícuota, no el detalle por comprobante de DDJJ importadas. La DB de hoy fue reprocesada y no reproduce las bases declaradas.
+- **Método validado:** cada mes = **facturas `FP_FactWebCliEncabezado` (base real) × alícuota del padrón histórico `ARDJU008` (por CUIT) + regla "0% no va"** (no en padrón o padrón=0 → excluir). Se bajaron los 20 padrones reales de AGIP y se volcaron las facturas de la DB (solo lectura).
+- **Validación (POC mayo-2025 vs el TXT presentado real):** 99% de alícuotas idénticas, 94% de bases idénticas, percepción total **$24,61M vs $24,80M (99,2%)**.
+- **Entregables:** `intimacion/recon/RECON_YYYY-MM.txt` (20 meses, **18.864 líneas, $522,9M** percep, formato 215-char válido) + `intimacion/Rectificativas_reconstruidas.xlsx` (hoja por mes + Resumen; **1.166 correcciones Bloque A resaltadas** con antes→después; **408 excluidos** "0% no van").
+- **Verificación puntual:** comprobante A 0004-132574 (jun-2024, CUIT 30708157569 @ COMPUTER S.A.) → **sí figura en el padrón a 6%** ⇒ error real, la reconstrucción ya lo pone en 6%.
+- **Caveats para el estudio contable:** universo = clientes percibidos (`ImportePercepCLi>0`) — los de padrón cobrados a 0 no se agregan; es DDJJ "fresca correcta" (recalcula todos con padrón), no edición quirúrgica; las bases de la intimación estaban infladas (posible defensa). Ver [[intimacion-agip-percepciones]].
+
 ## 2026-08-03 — Fix percepciones CABA en cero (raíz de la intimación AGIP)
 
 ### fix(perception): excluir clientes con percepción CABA en 0/NULL del reporte

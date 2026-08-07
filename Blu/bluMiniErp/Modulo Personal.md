@@ -4,9 +4,10 @@ Gestion completa de empleados: alta, asignacion a proyectos y pagos.
 
 ## Tablas involucradas
 
-- `empleados` - datos del empleado
+- `empleados` - datos del empleado. Columnas nuevas (2026-08): `direccion` (mig 0090); `fecha_nacimiento` + bancarios `banco`, `tipo_cuenta`, `cbu`, `alias_cbu`, `titular`, `cuil` (mig 0091)
 - `proyecto_empleado` - pivot de asignaciones (sin timestamps)
 - `pagos_personal` - historial de pagos. Cada pago genera un **gasto vinculado** que descuenta saldo de [[Base de Datos#bancos_cajas|bancos_cajas]] (migración 0057: `periodo_mes`, `periodo_anio`, `gasto_id`)
+- `feriados` - feriados nacionales (mig 0092): `fecha` (unique), `nombre`, `tipo`. Ver sección [[#Área de empleado y vacaciones (Mi Área) (2026-08)]]
 
 Ver columnas detalladas en [[Base de Datos#empleados]].
 

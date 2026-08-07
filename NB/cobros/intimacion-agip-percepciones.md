@@ -191,3 +191,27 @@ Todos en `/var/www/nb/cobros/intimacion/`:
 - [[contexto]] — bugs conocidos y reglas de negocio
 - [[arquitectura]] — repos y flujos
 - [[cobros]] — índice
+
+---
+
+## Rectificativas reconstruidas — los 20 meses (2026-08-07)
+
+Se generaron los TXT de rectificativa de **los 20 meses con líneas de Bloque A** (2024/01-03,05-12; 2025/01-05,10,12; 2026/01-02).
+
+**El problema:** no existían los TXT originales presentados, y **ninguna fuente los reproduce**: el endpoint `/perceptioniibb` da 0 para meses previos a 2025-05-14 (no existía la tabla `MS_REMITO_PERCEPCIONES`); el sistema viejo *saftel* recalcula con el padrón actual; e-Arciba solo entrega el **resumen** por alícuota (no el detalle por comprobante de DDJJ importadas). La DB de hoy fue reprocesada y no reproduce las bases declaradas.
+
+**El método (validado):**
+```
+Rectificativa = facturas FP (base real, congelada)
+              × alícuota del padrón histórico ARDJU008 de ese mes (por CUIT)
+              + regla "0% no va" (no en padrón o padrón=0 → excluir)
+```
+Como la alícuota del padrón **es** la correcta, la reconstrucción autocorrige el Bloque A y saca los no-padrón en un solo paso, sin depender de ARCIBA ni de archivos guardados.
+
+**Validación (POC mayo-2025 contra el TXT presentado real):** 99% alícuotas idénticas, 94% bases idénticas, percepción $24,61M vs $24,80M (**99,2%**).
+
+**Entregables:**
+- `intimacion/recon/RECON_YYYY-MM.txt` — 20 meses, **18.864 líneas, $522,9M** percep, formato ARCIBA 215-char.
+- `intimacion/Rectificativas_reconstruidas.xlsx` — legible, 1 hoja por mes + Resumen; **1.166 correcciones (Bloque A) resaltadas** con antes→después; **408 excluidos** ("0% no van").
+
+**Caveats (para el estudio):** universo = clientes percibidos (`ImportePercepCLi>0`), no incluye los de padrón cobrados a 0; es DDJJ "fresca correcta" (recalcula todos), no edición quirúrgica; las bases de la intimación estaban infladas → posible defensa adicional. Ver [[changelog]] y [[mail-estudio-contable]].
