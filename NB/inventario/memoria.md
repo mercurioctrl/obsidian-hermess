@@ -143,3 +143,14 @@ Resellers (`distribuidor=0`): 37 tiendas `preciosgamer_*` (ARS, ~60k items).
 ## Ver también
 
 - [[inventario]] · [[contexto]] · [[modulo-precios]] · [[modulo-regularizacion]] · [[competencia-partpicker-cache]]
+
+---
+
+## Actualización 2026-08-04 (nuevas memorias del proyecto)
+
+- **Modal de seriales tapaba NCs** — `get_item_serials` colapsaba factura+NC con `TOP 1` sin `ORDER BY` (~26k cfacturas comparten ambas); reparado con dos `OUTER APPLY` por `NTIPODOCU` (PR #309). No cambia el delta. Ver [[modulo-seriales]].
+- **Delta contaba NC "no toca stock"** — `stockDelta` sumaba `ACREDITADO` de NC `ncnotocasaldonistock=1`; fix (PR #310) las excluye en los 3 caminos; cc4: 213 items falsos-positivos→0. Gotcha SQL error 130 (no `EXISTS` dentro de `SUM(CASE)`). Ver [[modulo-regularizacion]].
+- **globalAlter 404 por warehouse null** — el fast-path del grid no expone `stockWarehouseId` (None), el modal manda null y `ID_ALMACEN=NULL` no matchea; fix (PR #312) resuelve depósito por mayor `nstock`; #315 hace el campo Optional (422 Pydantic).
+- **Stock: saldos vs movimientos** — 6 columnas son movimientos fechados (filtrables por rango) y 7 son saldos de `stocks` sin fecha; NO hay ledger de deltas por columna (`registro_stock` guarda fotos, no deltas). Por eso el Delta no aplica con rango.
+- **Cache de seriales + connection pool** (perf 2026-08-04) — ver [[performance-indices#2026-08-04 — Cache materializado de seriales + connection pool|performance]].
+- **Correcciones de OC en prod** (albprol 13309, costo 13373) — ver [[contexto#Correcciones de datos en producción (2026-08-04)|contexto]].

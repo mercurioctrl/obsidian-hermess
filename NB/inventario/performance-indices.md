@@ -53,3 +53,27 @@ de seriales es 1 query + dicts; `products.searchProducts` usa `getImagesBulk`;
 
 ## Ver también
 - [[modulo-seriales]] · [[arquitectura]] · [[changelog]] · [[memoria]] · [[inventario]]
+
+---
+
+## 2026-08-04 — Cache materializado de seriales + connection pool
+
+Reperfilado de la grilla de Stock a 500 filas (el default): **~19s**. Aislado componente por componente contra la DB de prod: **~14s (75%) son los conteos de seriales** (`usedSerialNumbers`/`totalSerialNumbers`, 2 `COUNT(*)` correlacionados por fila sobre `ST_DETALLE_STOCK`, 5.4M filas). El resto (albprol/albclil/RMA/pedprol/saldos) suma ~3-5s. **El índice P2 `(CREF, FECHA_EGRESO)` ya está** y ayuda por-item (1 item = 0.04s), pero contar los ~300k seriales de los 500 items de la página igual cuesta ~14s sobre el server remoto.
+
+### Lo que NO funcionó (probado y descartado)
+- **Contar en vivo scoped a la página** (`WHERE CREF IN (500)` + `GROUP BY`): **14s** — el optimizador elige un plan malo con el IN de 500.
+- **CTE `GROUP BY` completo + JOIN** (aislado 0.24s, pero dentro del query grande): **8-13s variable**, el plan se degrada.
+- **Materializar el `Base` (8 tablas) en `#Page` + batch único**: **8-35s, inestable** — peor que el original. Descartado.
+- Conclusión: la variabilidad está en el **plan del `fast_sql`** (el `Base` GROUP BY de 8 tablas re-evaluado por los ~6 OUTER APPLY correlacionados), no en los seriales.
+
+### Lo que SÍ (PR #319): tabla materializada + JOIN
+`NB_WEB.dbo.serial_counts (cref, total, usados, updated_at)` — un `GROUP BY CREF` sobre toda la tabla (**~1.2s para 15.445 CREF de todas las empresas**) que reemplaza el conteo en vivo. La grilla hace `LEFT JOIN` a esa tabla chica e indexada, **con fallback** (si la tabla no existe usa el conteo viejo → deploy seguro). Mismo patrón que la cache de competencia. `'usados' = FECHA_EGRESO IS NOT NULL` (idéntico a la subquery vieja, números no cambian). Grilla 500 filas: **~19s → ~9s** (los ~9s restantes son el `Base`+OUTER APPLY, cuello aparte no resuelto).
+
+**Refresco = SP + SQL Agent job** (`scripts/serial_counts_sp_and_job.sql`): `usp_refresh_serial_counts` (crea la tabla si no existe + snapshot `TRUNCATE/INSERT`) + job cada 5 min. **Ya creado y corriendo en prod** (SAFDB2 tiene Enterprise + Agent + 59 jobs, es el patrón que ya usan). Alternativa equivalente: el cron `refresh_serial_counts.py`. La app es agnóstica al mecanismo de refresco.
+
+### Connection pool (PR #320)
+`dbconnection()` abría una conexión nueva por llamada → **~116ms de handshake TLS** por request (peor en loops N+1). Ahora **reusa una conexión por thread**: thread-local (uvicorn corre sync en threadpool; pyodbc no se comparte entre threads) + `MARS_Connection=yes` (para que los N+1 con cursor abierto sigan andando) + liveness con `SELECT 1` **solo si estuvo idle ≥20s** (en uso seguido no paga el round-trip) + **no resetea autocommit** (los `finally` de las 23 transacciones ya la dejan limpia). Misma firma → los ~154 call-sites no cambian. Medido: 50 llamadas reusando ~0ms (vs ~5.8s con handshakes). El pool le ahorra poco a las **grillas** (1 conexión/request); el beneficio grande es en endpoints N+1. **Validar en gamma bajo carga real (writes concurrentes) antes de prod.**
+
+## Ver también
+
+- [[modulo-seriales]] · [[modulo-precios]] · [[changelog#2026-08-04 — Fixes de grilla/datos, performance de Stock, y correcciones de OC en prod|changelog 2026-08-04]] · [[inventario]]

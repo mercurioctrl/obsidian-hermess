@@ -1,5 +1,27 @@
 # Changelog — inventario
 
+## 2026-08-04 — Fixes de grilla/datos, performance de Stock, y correcciones de OC en prod
+
+Sesión larga. Tres bloques: correcciones de la grilla/datos (varios PRs), performance de la grilla de Stock, y correcciones puntuales de datos en producción (albprol/costos).
+
+### Backend (ms-metadata) — correcciones (todas mergeadas a Development)
+- **#309** `fix(seriales)`: el modal de seriales no mostraba las NC cuando una `cfactura` tiene factura **y** NC (el `TOP 1` sin `ORDER BY` colapsaba ambas). Se separó en dos `OUTER APPLY` por `NTIPODOCU`. Ver [[modulo-seriales]].
+- **#310** `fix(delta)`: el `stockDelta` sumaba el `ACREDITADO` de NC marcadas `ncnotocasaldonistock=1` ("NC que no toca stock") → falsos positivos (cc4: 213 items pasaban a delta 0). Se excluye ese ACREDITADO en los 3 caminos de `get_items_stocks`. Gotcha SQL error 130 (no se puede meter `EXISTS` dentro de `SUM(CASE…)` → `LEFT JOIN` al set de encabezados no-toca-stock). Ver [[modulo-regularizacion]].
+- **#312 / #315** `fix(globalAlter)`: la regularización global tiraba 404 porque el fast-path del grid no expone `stockWarehouseId` (el modal mandaba `null` → `ID_ALMACEN=NULL`). #312 resuelve el depósito por mayor `nstock`; #315 hace `warehouseStockId` **Optional** en el request (arregla el 422 de Pydantic).
+
+### Backend (ms-metadata) — performance de la grilla de Stock (PRs abiertos)
+- **#319** `perf(stock)`: la grilla de Stock a 500 filas (default) tardaba ~19s; **~14s eran los conteos de seriales** (2 `COUNT(*)` correlacionados por fila sobre `ST_DETALLE_STOCK`, 5.4M filas). Se materializa el conteo por CREF en **`NB_WEB.dbo.serial_counts`** (un `GROUP BY`, ~1.2s) y la grilla la JOINea (con fallback si la tabla no existe). Grilla 500 filas: **~19s → ~9s**. Refresco por **SP + SQL Agent job** cada 5 min (`scripts/serial_counts_sp_and_job.sql`, ya creado y corriendo en prod) — alternativa al cron `refresh_serial_counts.py`. Ver [[performance-indices]].
+- **#320** `perf(db)`: `dbconnection()` abría una conexión nueva por llamada (~116ms de handshake TLS, peor en loops N+1). Ahora **reusa una conexión por thread** (thread-local + `MARS_Connection=yes` + liveness solo si estuvo idle, sin resetear autocommit). Misma firma → los ~154 call-sites no cambian. Ver [[performance-indices]].
+
+### Frontend (inventario-web-app)
+- **#406** (mergeado) `fix(globalAlter)`: el modal de regularización global precarga "Cantidad" con el valor actual de Reg. Global (era un SET, no un delta; arrancaba en 0 y podía bajarlo a 0 sin querer).
+- **#408** (abierto) `feat(stock)`: renombrar la columna **"NC Pos." → "Cambios"** (es `aftersalesCreditNote`, RMA `ID_ACCION=2` = cambios post-venta).
+- **#411** (abierto) `feat(stock)`: al habilitar "Ctrl de precios" en Stock, las columnas de precio ahora se ven **igual que en Precios** (código de colores naranja/magenta/azul/violeta, precios UNIT/MAY/LO/ML **editables** bidireccional, subgrupos "Costo/Utilidades (%)/Precios ($)"). Ver [[modulo-precios]].
+
+### Correcciones de datos en producción (SAFDB2 / NB_WEB)
+- **OC 13309 / albarán 17778**: dos gabinetes (123527/123528) no habían ingresado (albprol + stock faltantes, aunque el pedido marcaba `nCanEnt`). Se replicó lo que hace `makeProviderOrderInbound`: `INSERT albprol` + `UPDATE stocks.nstock` (+185 / +95, depósito 2) + auditoría en `registro_stock`. Sin seriales (esos gabinetes no serializan). Ver [[contexto#Correcciones de datos en producción]].
+- **OC 13373 / albarán 17779**: en los 16 items THERMALTAKE, el ingreso pisó el `NCOSTEPROM` con el FOB, borrando el costo real (con flete/importación) que había cargado *darioelzurdo*. Se restauró el `NCOSTEPROM` desde `historial_costos`, se recalcularon los 6 precios derivados (fórmula `COST_RECALC_MAP`) y se registró el cambio de costo a nombre de **Sebastián (agente 12)** en `historial_costos` + `historial_precios` + `CS.productos`. Ver [[contexto#Correcciones de datos en producción]].
+
 ## 2026-07-13 — Utilidades negativas (Precios + ctrl de precios)
 
 Las utilidades de un artículo ahora pueden ser **negativas**, tanto en la pestaña **Precios** como en el bloque *ctrl precios* de la grilla de **Stock**. Regla pedida por el usuario: `MAY1=10` + `MAY2=-9` ⇒ utilidad MAY = **1%**; `LO1=5` + `LO2=-10` ⇒ utilidad LO = **-5%** (se vende **bajo costo a propósito**). Ver [[modulo-precios#Utilidades negativas (2026-07-13)]].

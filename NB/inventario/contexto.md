@@ -131,3 +131,22 @@ hardcodeada en `competition.py`). Checklist al pasar a prod:
 ## Ver también
 
 - [[inventario]] · [[arquitectura]] · [[stack]] · [[modulo-precios]]
+
+---
+
+## Correcciones de datos en producción (2026-08-04)
+
+Base: **SAFDB2 / NB_WEB** (prod, IP interna 192.168.4.12, vía `190.210.23.97:4444`). El `.env` local apunta directo a prod (no hay base de dev separada). Todas las correcciones se hicieron transaccionales, idempotentes y con verificación antes/después.
+
+### Modelo de datos de compras (aprendido)
+- **Pedido a proveedor (OC)** → `PedProT` (cabecera, `nNumPed`, `cEstado`) + `pedprol` (líneas, `ID_Articulo`, `nCanPed`, `nCanEnt`, `nPreDiv`=FOB).
+- **Ingreso / albarán** → `albprot` (cabecera, `nnumalb`, `nnumped`→pedido) + `albprol` (líneas, `ID_Articulo`, `ncanent`, `nprediv`=FOB, `stockWarehouseId`).
+- El proceso real de ingreso es **`makeProviderOrderInbound`** (servicio de compras, no ms-metadata): crea albprol + `UPDATE stocks.nstock` + audita en `NB_WEB.dbo.registro_stock` (`remito`=nº OC, `sAnterior→sPosterior`). **No hay triggers** en albprol/stocks → el stock se actualiza aparte.
+
+### OC 13309 / albarán 17778 — items que no ingresaron
+Dos gabinetes (**123527/123528**) tenían `pedprol.nCanEnt` seteado pero **sin línea albprol, stock 0, sin seriales** (el ingreso falló para ellos). Se replicó `makeProviderOrderInbound`: `INSERT albprol` (185 / 95 u, FOB 25.50 / 27.00, depósito 2, mismo formato que los vecinos 123525/123526) + `UPDATE stocks.nstock` + `registro_stock`. **Sin seriales** (esos gabinetes no serializan, igual que los vecinos). NCOSTEPROM y pedprol ya estaban correctos → no se tocaron.
+
+### OC 13373 / albarán 17779 — costo pisado por el ingreso
+En los 16 items THERMALTAKE (**123091–123106**), *darioelzurdo* (agente 13) había cargado el costo real (con flete/importación) el 03-08 15:32-15:40 vía "Control de Precios Web" (quedó en `historial_costos`). El ingreso del albarán a las 15:45 **pisó el `NCOSTEPROM` con el FOB** (precio crudo del pedido), sin tocar los precios → costo y precios quedaron basados en el FOB bajo. Corrección: se restauró `NCOSTEPROM` = costoPromNuevo de darioelzurdo, se **recalcularon los 6 precios derivados** (`COST_RECALC_MAP`: npvp1/nplo/npvp5/npvp3/npvp4/npvp6 = costo × utilidad, reusando los helpers de `prices.py`), y se registró el cambio a nombre de **Sebastián (agente 12)** en `historial_costos` (`NomAge='Control de Precios Web - Sebastian'`) + `historial_precios` + `CS.productos`. Nota: **agente 12 es el agente web/back-office compartido** (Catriel/Soporte/Sistema Web/Sebastián operan bajo él), no una persona fija.
+
+**Gotcha:** `ST_GANANCIA_ESTIPULADA_ARTICULOS.ID_ARTICULO` es **nvarchar** (hay valores como 'ACARREO') → consultarlo con string, no con `IN (ints)` (tira error de conversión 245). Ver [[modulo-precios]].
