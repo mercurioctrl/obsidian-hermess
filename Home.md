@@ -67,6 +67,7 @@
 - [[Claude/Migracion_SQLServer_Dev|SQL Server (mssql-dev)]] — migración de 7 bases dev a contenedor en `hermess` (10.10.10.47)
 - [[Claude/Monitoreo_WAN|Monitoreo WAN]] — caídas + velocidad de las 2 WANs (Telecom/Telecentro), avisos por Bily
 - [[Claude/Bily_Skills_Por_Grupo|Bily: skills por grupo]] — instrucciones por grupo de WhatsApp
+- [[Claude/Vault-MCP|Vault MCP]] — la bóveda como 6 tools nativas de Bily (reemplaza al skill `obsidian-mind`)
 
 ## 🟣 Recurso Humano
 
@@ -76,9 +77,9 @@
 
 - [[Planilla Acciones Bully]] — Acciones y bots
 - `Claude/` — Notas sobre Claude
-  - [[Claude/Image-OCR|Image OCR]] · [[Claude/Vault-Wrappers|Vault Wrappers]] · [[Claude/Whisper|Whisper]] · [[Claude/Migracion_SQLServer_Dev|Migración SQL Server]] · [[Claude/Script-Optimizacion-SQLServer|Script Optimización SQL]] · [[Claude/Monitoreo_WAN|Monitoreo WAN]] · [[Claude/Bily_Skills_Por_Grupo|Skills por grupo (Bily)]]
+  - [[Claude/Image-OCR|Image OCR]] · [[Claude/Vault-MCP|Vault MCP]] · [[Claude/Vault-Wrappers|Vault Wrappers]] · [[Claude/Whisper|Whisper]] · [[Claude/Migracion_SQLServer_Dev|Migración SQL Server]] · [[Claude/Script-Optimizacion-SQLServer|Script Optimización SQL]] · [[Claude/Monitoreo_WAN|Monitoreo WAN]] · [[Claude/Bily_Skills_Por_Grupo|Skills por grupo (Bily)]]
 - [[Skills/Skills|Skills]] — Skills de Claude Code
 
 ---
 
-*Actualizado: 2026-07-27*
+*Actualizado: 2026-08-08*

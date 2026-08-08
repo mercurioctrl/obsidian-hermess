@@ -74,8 +74,19 @@ vault-search "Catriel Mercurio" | jq -r '.[].filename' | head -5
 | `HTTP 404` con un path que existe | Ojo, la API es case-sensitive y diferencia espacios. `vault-ls` del padre confirma el nombre real. |
 | Timeout o `Connection refused` | API REST de Obsidian no escucha. Verificar plugin "Local REST API" del Obsidian de Catriel. |
 
+## Estado 2026-08-08 — para Bily esto pasó a ser el fallback
+
+El camino principal de Bily a la bóveda ahora son **6 tools MCP nativas** (`vault_search`, `vault_get`, `vault_ls`, `vault_append`, `vault_put`, `vault_delete`), servidas por `~/vault/mcp_server.py`. Ver [[Claude/Vault-MCP|Vault MCP]].
+
+Motivo: los wrappers resolvían que el modelo no alucinara la URL, pero seguían dependiendo de que **supiera que existían** — y esa información vivía en el skill `obsidian-mind`, que murió en el update del 2026-08-02. Una tool en la lista no se puede olvidar.
+
+Los wrappers siguen vivos y son:
+- el **fallback** de Bily vía `exec` si el MCP se cae,
+- el **camino principal de Claude Code** (que los invoca directo desde bash).
+
 ## Relacionado
 
+- [[Claude/Vault-MCP]] — el reemplazo para Bily: mismas operaciones como tools MCP
 - [[Claude/Whisper]] — stack de transcripción, mismo session origen
 - [[Bily/MEMORIA]] — reglas operativas que apuntan a esta API
 - [[Bily/Productos/Billy-Bot]] — producto que va a aprovechar esto a futuro
