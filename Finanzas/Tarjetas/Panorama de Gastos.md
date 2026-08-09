@@ -80,6 +80,18 @@ pie showData title Gasto por categoria (M ARS)
 | Bebidas/Vinos | 572.400,00 | 0.7% |
 | **Total** | **84.304.376,05** | 100% |
 
+## 📊 Todas las categorías en un gráfico (comparativa mensual)
+
+![[categorias-mensual.png]]
+
+> Cada línea es una categoría (ver leyenda con colores y totales). Permite comparar de un vistazo cuáles suben y bajan cada mes. Versión vectorial: [[categorias-mensual.svg]].
+
+## 📊 Composición del gasto (área apilada)
+
+![[categorias-apilado.png]]
+
+> La **altura total** de cada mes es el gasto total; cada franja de color es una categoría apilada. Se ve cómo cambia la torta mes a mes (ej.: el bulto de **Tecnología** en jun–jul). Versión vectorial: [[categorias-apilado.svg]].
+
 ## 📉 Cómo sube y baja cada categoría (M ARS por mes)
 
 ### Delivery/Restós

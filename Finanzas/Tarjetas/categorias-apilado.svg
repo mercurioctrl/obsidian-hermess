@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="600" viewBox="0 0 1040 600" font-family="Segoe UI, Arial, sans-serif">
+<rect width="1040" height="600" fill="#fff"/>
+<text x="70" y="30" font-size="20" font-weight="bold" fill="#222">Composicion del gasto — area apilada (millones ARS)</text>
+<text x="70" y="48" font-size="12" fill="#777">Santander Visa+Amex · Ene–Ago 2026 · la altura total = gasto del mes</text>
+<line x1="70" y1="530.0" x2="740" y2="530.0" stroke="#eee"/>
+<text x="62" y="534.0" font-size="11" fill="#999" text-anchor="end">0</text>
+<line x1="70" y1="498.7" x2="740" y2="498.7" stroke="#eee"/>
+<text x="62" y="502.7" font-size="11" fill="#999" text-anchor="end">1</text>
+<line x1="70" y1="467.3" x2="740" y2="467.3" stroke="#eee"/>
+<text x="62" y="471.3" font-size="11" fill="#999" text-anchor="end">2</text>
+<line x1="70" y1="436.0" x2="740" y2="436.0" stroke="#eee"/>
+<text x="62" y="440.0" font-size="11" fill="#999" text-anchor="end">3</text>
+<line x1="70" y1="404.7" x2="740" y2="404.7" stroke="#eee"/>
+<text x="62" y="408.7" font-size="11" fill="#999" text-anchor="end">4</text>
+<line x1="70" y1="373.3" x2="740" y2="373.3" stroke="#eee"/>
+<text x="62" y="377.3" font-size="11" fill="#999" text-anchor="end">5</text>
+<line x1="70" y1="342.0" x2="740" y2="342.0" stroke="#eee"/>
+<text x="62" y="346.0" font-size="11" fill="#999" text-anchor="end">6</text>
+<line x1="70" y1="310.7" x2="740" y2="310.7" stroke="#eee"/>
+<text x="62" y="314.7" font-size="11" fill="#999" text-anchor="end">7</text>
+<line x1="70" y1="279.3" x2="740" y2="279.3" stroke="#eee"/>
+<text x="62" y="283.3" font-size="11" fill="#999" text-anchor="end">8</text>
+<line x1="70" y1="248.0" x2="740" y2="248.0" stroke="#eee"/>
+<text x="62" y="252.0" font-size="11" fill="#999" text-anchor="end">9</text>
+<line x1="70" y1="216.7" x2="740" y2="216.7" stroke="#eee"/>
+<text x="62" y="220.7" font-size="11" fill="#999" text-anchor="end">10</text>
+<line x1="70" y1="185.3" x2="740" y2="185.3" stroke="#eee"/>
+<text x="62" y="189.3" font-size="11" fill="#999" text-anchor="end">11</text>
+<line x1="70" y1="154.0" x2="740" y2="154.0" stroke="#eee"/>
+<text x="62" y="158.0" font-size="11" fill="#999" text-anchor="end">12</text>
+<line x1="70" y1="122.7" x2="740" y2="122.7" stroke="#eee"/>
+<text x="62" y="126.7" font-size="11" fill="#999" text-anchor="end">13</text>
+<line x1="70" y1="91.3" x2="740" y2="91.3" stroke="#eee"/>
+<text x="62" y="95.3" font-size="11" fill="#999" text-anchor="end">14</text>
+<line x1="70" y1="60.0" x2="740" y2="60.0" stroke="#eee"/>
+<text x="62" y="64.0" font-size="11" fill="#999" text-anchor="end">15</text>
+<text x="70.0" y="550" font-size="12" fill="#666" text-anchor="middle">Ene</text>
+<text x="165.7" y="550" font-size="12" fill="#666" text-anchor="middle">Feb</text>
+<text x="261.4" y="550" font-size="12" fill="#666" text-anchor="middle">Mar</text>
+<text x="357.1" y="550" font-size="12" fill="#666" text-anchor="middle">Abr</text>
+<text x="452.9" y="550" font-size="12" fill="#666" text-anchor="middle">May</text>
+<text x="548.6" y="550" font-size="12" fill="#666" text-anchor="middle">Jun</text>
+<text x="644.3" y="550" font-size="12" fill="#666" text-anchor="middle">Jul</text>
+<text x="740.0" y="550" font-size="12" fill="#666" text-anchor="middle">Ago</text>
+<polygon points="70.0,447.2 165.7,490.7 261.4,491.5 357.1,438.4 452.9,449.1 548.6,458.4 644.3,464.2 740.0,443.5 740.0,530.0 644.3,530.0 548.6,530.0 452.9,530.0 357.1,530.0 261.4,530.0 165.7,530.0 70.0,530.0" fill="#e6194B" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,387.6 165.7,446.8 261.4,451.1 357.1,395.6 452.9,373.5 548.6,391.9 644.3,357.2 740.0,338.3 740.0,443.5 644.3,464.2 548.6,458.4 452.9,449.1 357.1,438.4 261.4,491.5 165.7,490.7 70.0,447.2" fill="#3cb44b" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,387.6 165.7,426.7 261.4,429.2 357.1,369.8 452.9,322.5 548.6,342.7 644.3,306.2 740.0,324.1 740.0,338.3 644.3,357.2 548.6,391.9 452.9,373.5 357.1,395.6 261.4,451.1 165.7,446.8 70.0,387.6" fill="#4363d8" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,350.6 165.7,398.8 261.4,403.5 357.1,346.9 452.9,291.5 548.6,318.8 644.3,278.5 740.0,299.8 740.0,324.1 644.3,306.2 548.6,342.7 452.9,322.5 357.1,369.8 261.4,429.2 165.7,426.7 70.0,387.6" fill="#f58231" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,327.3 165.7,374.9 261.4,379.0 357.1,315.7 452.9,261.9 548.6,294.2 644.3,238.0 740.0,299.1 740.0,299.8 644.3,278.5 548.6,318.8 452.9,291.5 357.1,346.9 261.4,403.5 165.7,398.8 70.0,350.6" fill="#911eb4" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,286.8 165.7,351.8 261.4,366.0 357.1,307.1 452.9,255.6 548.6,287.0 644.3,168.3 740.0,270.8 740.0,299.1 644.3,238.0 548.6,294.2 452.9,261.9 357.1,315.7 261.4,379.0 165.7,374.9 70.0,327.3" fill="#42d4f4" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,246.6 165.7,339.6 261.4,348.8 357.1,286.3 452.9,239.8 548.6,257.5 644.3,141.3 740.0,266.2 740.0,270.8 644.3,168.3 548.6,287.0 452.9,255.6 357.1,307.1 261.4,366.0 165.7,351.8 70.0,286.8" fill="#f032e6" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,238.6 165.7,331.7 261.4,340.9 357.1,278.4 452.9,231.8 548.6,155.0 644.3,133.4 740.0,258.2 740.0,266.2 644.3,141.3 548.6,257.5 452.9,239.8 357.1,286.3 261.4,348.8 165.7,339.6 70.0,246.6" fill="#bfaf00" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,238.6 165.7,314.0 261.4,323.2 357.1,260.7 452.9,214.1 548.6,137.3 644.3,115.6 740.0,258.2 740.0,258.2 644.3,133.4 548.6,155.0 452.9,231.8 357.1,278.4 261.4,340.9 165.7,331.7 70.0,238.6" fill="#469990" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,225.7 165.7,304.3 261.4,318.2 357.1,255.4 452.9,208.7 548.6,131.1 644.3,107.4 740.0,252.2 740.0,258.2 644.3,115.6 548.6,137.3 452.9,214.1 357.1,260.7 261.4,323.2 165.7,314.0 70.0,238.6" fill="#9A6324" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,194.6 165.7,297.3 261.4,317.1 357.1,254.4 452.9,201.7 548.6,120.4 644.3,107.4 740.0,252.2 740.0,252.2 644.3,107.4 548.6,131.1 452.9,208.7 357.1,255.4 261.4,318.2 165.7,304.3 70.0,225.7" fill="#800000" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,190.7 165.7,293.5 261.4,313.3 357.1,250.6 452.9,172.8 548.6,119.2 644.3,106.2 740.0,250.8 740.0,252.2 644.3,107.4 548.6,120.4 452.9,201.7 357.1,254.4 261.4,317.1 165.7,297.3 70.0,194.6" fill="#808000" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,176.0 165.7,288.7 261.4,313.3 357.1,245.1 452.9,167.7 548.6,114.1 644.3,104.2 740.0,246.1 740.0,250.8 644.3,106.2 548.6,119.2 452.9,172.8 357.1,250.6 261.4,313.3 165.7,293.5 70.0,190.7" fill="#000075" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,172.9 165.7,287.9 261.4,295.8 357.1,242.4 452.9,161.9 548.6,108.9 644.3,100.4 740.0,246.1 740.0,246.1 644.3,104.2 548.6,114.1 452.9,167.7 357.1,245.1 261.4,313.3 165.7,288.7 70.0,176.0" fill="#a9a9a9" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<polygon points="70.0,172.9 165.7,287.9 261.4,295.8 357.1,242.4 452.9,161.9 548.6,91.0 644.3,100.4 740.0,246.1 740.0,246.1 644.3,100.4 548.6,108.9 452.9,161.9 357.1,242.4 261.4,295.8 165.7,287.9 70.0,172.9" fill="#e67e22" fill-opacity="0.85" stroke="#fff" stroke-width="0.6"/>
+<line x1="70" y1="530" x2="740" y2="530" stroke="#ccc" stroke-width="1.5"/>
+<line x1="70" y1="60" x2="70" y2="530" stroke="#ccc" stroke-width="1.5"/>
+<text x="764" y="56" font-size="12" font-weight="bold" fill="#444">Categoria (de abajo hacia arriba)</text>
+<rect x="764" y="62" width="14" height="14" rx="3" fill="#e6194B" fill-opacity="0.85"/>
+<text x="784" y="74" font-size="12.5" fill="#333">Delivery/Restós</text>
+<text x="1026" y="74" font-size="12" fill="#888" text-anchor="end">$17.8M</text>
+<rect x="764" y="86" width="14" height="14" rx="3" fill="#3cb44b" fill-opacity="0.85"/>
+<text x="784" y="98" font-size="12.5" fill="#333">Otros</text>
+<text x="1026" y="98" font-size="12" fill="#888" text-anchor="end">$17.3M</text>
+<rect x="764" y="110" width="14" height="14" rx="3" fill="#4363d8" fill-opacity="0.85"/>
+<text x="784" y="122" font-size="12.5" fill="#333">Electro/Muebles</text>
+<text x="1026" y="122" font-size="12" fill="#888" text-anchor="end">$7.4M</text>
+<rect x="764" y="134" width="14" height="14" rx="3" fill="#f58231" fill-opacity="0.85"/>
+<text x="784" y="146" font-size="12.5" fill="#333">Transporte/Autos</text>
+<text x="1026" y="146" font-size="12" fill="#888" text-anchor="end">$7.0M</text>
+<rect x="764" y="158" width="14" height="14" rx="3" fill="#911eb4" fill-opacity="0.85"/>
+<text x="784" y="170" font-size="12.5" fill="#333">Salud</text>
+<text x="1026" y="170" font-size="12" fill="#888" text-anchor="end">$6.3M</text>
+<rect x="764" y="182" width="14" height="14" rx="3" fill="#42d4f4" fill-opacity="0.85"/>
+<text x="784" y="194" font-size="12.5" fill="#333">Indumentaria/Moda</text>
+<text x="1026" y="194" font-size="12" fill="#888" text-anchor="end">$6.3M</text>
+<rect x="764" y="206" width="14" height="14" rx="3" fill="#f032e6" fill-opacity="0.85"/>
+<text x="784" y="218" font-size="12.5" fill="#333">MercadoLibre/Compras</text>
+<text x="1026" y="218" font-size="12" fill="#888" text-anchor="end">$5.3M</text>
+<rect x="764" y="230" width="14" height="14" rx="3" fill="#bfaf00" fill-opacity="0.85"/>
+<text x="784" y="242" font-size="12.5" fill="#333">Tecnología</text>
+<text x="1026" y="242" font-size="12" fill="#888" text-anchor="end">$5.1M</text>
+<rect x="764" y="254" width="14" height="14" rx="3" fill="#469990" fill-opacity="0.85"/>
+<text x="784" y="266" font-size="12.5" fill="#333">Joyería</text>
+<text x="1026" y="266" font-size="12" fill="#888" text-anchor="end">$3.4M</text>
+<rect x="764" y="278" width="14" height="14" rx="3" fill="#9A6324" fill-opacity="0.85"/>
+<text x="784" y="290" font-size="12.5" fill="#333">Servicios/Hogar</text>
+<text x="1026" y="290" font-size="12" fill="#888" text-anchor="end">$1.9M</text>
+<rect x="764" y="302" width="14" height="14" rx="3" fill="#800000" fill-opacity="0.85"/>
+<text x="784" y="314" font-size="12.5" fill="#333">Viajes/Exterior</text>
+<text x="1026" y="314" font-size="12" fill="#888" text-anchor="end">$1.8M</text>
+<rect x="764" y="326" width="14" height="14" rx="3" fill="#808000" fill-opacity="0.85"/>
+<text x="784" y="338" font-size="12.5" fill="#333">Suscripciones/Digital</text>
+<text x="1026" y="338" font-size="12" fill="#888" text-anchor="end">$1.5M</text>
+<rect x="764" y="350" width="14" height="14" rx="3" fill="#000075" fill-opacity="0.85"/>
+<text x="784" y="362" font-size="12.5" fill="#333">Papelería/Varios</text>
+<text x="1026" y="362" font-size="12" fill="#888" text-anchor="end">$1.3M</text>
+<rect x="764" y="374" width="14" height="14" rx="3" fill="#a9a9a9" fill-opacity="0.85"/>
+<text x="784" y="386" font-size="12.5" fill="#333">Mascotas</text>
+<text x="1026" y="386" font-size="12" fill="#888" text-anchor="end">$1.2M</text>
+<rect x="764" y="398" width="14" height="14" rx="3" fill="#e67e22" fill-opacity="0.85"/>
+<text x="784" y="410" font-size="12.5" fill="#333">Bebidas/Vinos</text>
+<text x="1026" y="410" font-size="12" fill="#888" text-anchor="end">$0.6M</text>
+</svg>
