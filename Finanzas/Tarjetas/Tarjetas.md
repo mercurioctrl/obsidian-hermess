@@ -5,6 +5,7 @@
 Resúmenes de tarjetas de crédito Santander (Visa y Amex) y su análisis.
 
 ## Análisis
+- [[Panorama de Gastos]]
 - [[Índice Resúmenes]]
 - [[Cuotas Activas]]
 - [[Gastos por Comercio]]
