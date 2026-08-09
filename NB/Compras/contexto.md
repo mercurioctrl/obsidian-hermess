@@ -100,6 +100,13 @@ Modal accesible desde el ojito 👁️ en el listado de Proveedores. Endpoint `G
 - El export reusa **las columnas visibles** de cada tabla (incluye las que dependen de permisos en Órdenes) para que coincida con lo que se ve; valores legibles (`status`→Pendiente/Remitido, `serializado`→Si/No).
 - En el detalle de orden, los botones se ubicaron **arriba de la tabla** (primero estaban junto a "Columnas opcionales" y tapaban los checkboxes).
 
+## Check "no tocar costo" en ingresos (2026-08-09)
+
+- Se agregó una **3ra modalidad** por ítem al generar un ingreso: **no tocar `ncosteprom`**. Antes solo existían ponderado (`updateAverageCost=true`) y sobreescribe (`false`); ambas **siempre** escribían el costo. La nueva (`doNotUpdateCost=true`) lo saltea por completo y **tiene prioridad** sobre el ponderado.
+- El **valor de costo** es `NewBytes_DBF.dbo.articulo.ncosteprom`; `doNotUpdateCost`/`updateAverageCost` **no son costos**, son **flags por línea en `pedprol`** que deciden qué se le hace a `ncosteprom`.
+- **Persistencia**: `pedprol` es tabla **externa** (sin migraciones Laravel) → la columna se agrega con `ALTER` manual en cada entorno. Aplicado hasta ahora **solo** en `190.210.23.97`/`NewBytes_DBF`: `ALTER TABLE NewBytes_DBF.dbo.pedprol ADD doNotUpdateCost bit NULL CONSTRAINT DF_pedprol_doNotUpdateCost DEFAULT 0;`. **Pendiente en staging/prod** antes de mergear los PRs (#432/#433 API, #299/#300 front). Síntoma si falta: el detalle de orden tira "columna doNotUpdateCost inválida".
+- Los flags solo se ponen en `1` (nunca vuelven a 0): son la elección de la línea; una vez que la orden tiene un ingreso, el front deshabilita los checkboxes. Detalle técnico en [[arquitectura#Cálculo de ncosteprom (costo promedio ponderado)|arquitectura]].
+
 ## Deuda técnica / TODOs
 
 - **Cuenta corriente de proveedores**: ✅ ya lee el ledger `MS_MOV_CTACTE_PROVEEDORES` (incluye pagos). Lo de FACPROT/NTIPOCOMP/FOB quedó obsoleto (era la v1). Si aparece un `TR_CODIGO` nuevo, revisar el mapeo de signo en `ProviderCurrentAccountRepository`.
@@ -161,3 +168,4 @@ Este trabajo (front) es el **consumidor** de los campos que se agregaron en la A
 - [[changelog|Changelog]]
 - [[memoria|Memoria del proyecto]]
 - [[NB/compras/reglas-compras|Reglas de negocio — Compras]]
+

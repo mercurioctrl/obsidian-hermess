@@ -1,7 +1,7 @@
 # Memoria del proyecto
 
 Consolidado de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-var-www-nb-compras/memory/`). Sincronizado el 2026-06-30.
+(`~/.claude/projects/-var-www-nb-compras/memory/`). Sincronizado el 2026-08-09.
 
 ## Estructura
 
@@ -52,16 +52,18 @@ Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(n
 - **Listado de Ingresos sin duplicados (2026-06-30):** se quitó `albprol.nnumalb` (nullable por LEFT JOIN) del `GROUP BY` y el `count` pasó a `COUNT(DISTINCT albprot.nnumalb)`. Ver [[contexto#Duplicados en listado de Ingresos (GROUP BY nullable) (2026-06-30)|contexto]].
 - **`items` ya no filtra `ocultarDeNb` (2026-06-30):** ese flag es de la tienda web; en compras se buscan/ingresan igual. Se quitó del listado y del count de `ItemRepository`.
 - **Columna "Pedido"/`inboundIds` en Órdenes (COM-444, 2026-06-30):** los `nnumalb` de `albprot` por pedido (concatenados con `STUFF/FOR XML`) salen como botones que linkean a Ingresos.
+- **Costo promedio `ncosteprom` — 3 modalidades por ítem al ingresar (2026-08-09):** el costo vive en `articulo.ncosteprom`; los flags **por línea en `pedprol`** deciden qué se le hace: `doNotUpdateCost=1` **no tocar** (salta el update, prioridad), `updateAverageCost=1` **ponderado**, sin flags **sobreescribe**. `pedprol` es tabla externa → columnas nuevas por `ALTER` manual en cada entorno. Ver [[arquitectura#Cálculo de ncosteprom (costo promedio ponderado)|arquitectura]] y [[contexto#Check "no tocar costo" en ingresos (2026-08-09)|contexto]].
 - ⚠️ **Convención de commits: NUNCA agregar co-autoría de Claude.** Commits y PRs van a nombre del usuario (Catriel) exclusivamente — sin `Co-Authored-By` ni "Generated with Claude".
 
 ## Rama en curso
 
+- **`feat-check-no-tocar-costo-en-ordenes`** (ambos repos, 2026-08-09): 3ra modalidad "no tocar costo". PRs API #432→Development / #433→blu-dev-staff; front #299→development / #300→blu-dev-staff. **Pendiente: correr el `ALTER TABLE ... ADD doNotUpdateCost` en staging/prod** (solo aplicado en 190.210.23.97). Ver [[contexto#Check "no tocar costo" en ingresos (2026-08-09)|contexto]].
 - **`catri-fine-tunning`** (ambos repos): ya mergeada a `development` y `gamma` (PRs #274, #276); siguen acumulándose commits posteriores. Incluye: IVA default, filtros sku/itemId/serial, columna Serializado, companyCode por defecto, **cuenta corriente de proveedores** (ledger), SKU inline, **export XLSX/CSV**, **currencyId** en detalles. Ver [[changelog]].
 
 ## Base de datos
 
 - Driver `DB_CONNECTION=sqlsrv` → en runtime usa `pdo_dblib` (FreeTDS).
-- **En uso (2026-06-30): `10.10.10.47:1433`**, DB `NB_WEB`, user **`cmercurio`** (entorno **saftel** / `compras.saftel.com`, companyCode 4). El 2026-06-29 fue el mismo host con `fcallipo`. Canónica histórica `190.210.23.97:4444` (user `web`) quedó comentada en el `.env`. Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
+- **En uso (verificado 2026-08-09): `190.210.23.97:4444`**, DB `NB_WEB` (server SAFDB). El `.env` viene flipeando: 2026-06-30 fue saftel `10.10.10.47:1433` (`cmercurio`), 2026-07-08 volvió a `190.210.23.97:4444` (`eferreyra_devweb01`), y sigue ahí. Las alternativas quedan comentadas en el `.env`. Gotcha del puerto SSH en [[contexto#Infraestructura / Base de datos (gotcha importante)|contexto]].
 - Bases en juego: `NewBytes_DBF` (ERP), `NB_WEB` (web), `NEW_BYTES` (stock/seriales/despachos), `PRODUCTOS`.
 
 ## Ver también
@@ -70,3 +72,4 @@ Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(n
 - [[stack|Stack]]
 - [[contexto|Contexto y reglas]]
 - [[changelog|Changelog]]
+

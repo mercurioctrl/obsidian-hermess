@@ -51,4 +51,4 @@ Integración de MODO, GetNet y Payway en el checkout.
 
 ## Última sincronización
 
-2026-08-06
+2026-08-09

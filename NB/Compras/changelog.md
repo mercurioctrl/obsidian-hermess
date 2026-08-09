@@ -2,6 +2,13 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-08-09
+
+- feat: **Check "No tocar costo" en ingresos de órdenes** — nueva **3ra modalidad** por ítem al generar un ingreso, que **saltea por completo** la actualización de `articulo.ncosteprom` (el costo promedio queda como estaba). Convive con las 2 previas (ponderado / sobreescribe) y tiene **prioridad** sobre el ponderado.
+  - **API** (rama `feat-check-no-tocar-costo-en-ordenes`, commit `76114a5`, PRs **#432 → Development** y **#433 → blu-dev-staff**): `AverageCostCalculator` saltea el update si `doNotUpdateCost=true` y persiste el flag vía nuevo `MakeProviderOrderInboundRepository::markDoNotUpdateCost` (`SET pedprol.doNotUpdateCost=1`). `ProviderOrderDetailRepository` + `ProviderOrderDetailItemDto` leen/mapean la columna para el round-trip.
+  - **Front** (rama `feat-check-no-tocar-costo-en-ordenes`, commit `23b72ed`, PRs **#299 → development** y **#300 → blu-dev-staff**): nueva columna/checkbox "No tocar costo" en `Orders/Detail.vue` con select-all de header e ícono "i" que explica las 3 modalidades; al tildarla se deshabilita/limpia el check de ponderado del ítem.
+  - **⚠️ Requiere ALTER manual** en cada entorno (tabla externa, sin migración Laravel), aplicado solo en `190.210.23.97`/`NewBytes_DBF` hasta ahora: `ALTER TABLE NewBytes_DBF.dbo.pedprol ADD doNotUpdateCost bit NULL CONSTRAINT DF_pedprol_doNotUpdateCost DEFAULT 0;`. Ver [[contexto#Check "no tocar costo" en ingresos (2026-08-09)|contexto]] y [[arquitectura#Cálculo de ncosteprom (costo promedio ponderado)|arquitectura]].
+
 ## 2026-07-21
 
 - fix (API, hotfix): **`ncosteprom` en ingresos de órdenes en pesos (PSO) ahora se convierte a dólares con la cotización correcta.** Al generar un ingreso, `AverageCostCalculator::toDollars` dividía el precio en pesos por `PedProt.nValDiv`, que en órdenes **PSO siempre vale 1** → el costo promedio quedaba guardado **en pesos sin convertir** (síntoma: orden 13973, guardó `100` en `articulo.ncosteprom` en vez de `100/1500 = 0,0667`). Es la contraparte de backend de lo que el front ya resolvió en COM-320 (usar la fiscal en pesos). **Fix:** usar **`nvaldiv_FISCAL`** como cotización del dólar para órdenes PSO. `getCurrencyInfoByOrder` ahora también trae `nvaldiv_FISCAL AS nValDivFiscal` y `toDollars` divide por ese campo. DOL no cambia. Rama `hotfix-ncosteprom-cotizacion-fiscal-pso` (base `Development`, commit `7e12bdc`, pusheada, sin PR aún). Corrige el hotfix previo `7ed7a29`/PR #425 (`hotfix-ncosteprom-conversion-dolares`), que había elegido el campo equivocado. Ver [[contexto#ncosteprom en ingresos PSO usa nvaldiv_FISCAL (2026-07-21)|contexto]] y [[arquitectura#Cálculo de ncosteprom (costo promedio ponderado)|arquitectura]].
@@ -150,3 +157,4 @@ Archivos (esta sesión): `app/Http/Controllers/Provider/ProviderOrderInboundSeri
 ---
 
 Ver también: [[arquitectura|Arquitectura]] · [[stack|Stack]] · [[contexto|Contexto y reglas]]
+

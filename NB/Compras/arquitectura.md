@@ -169,11 +169,13 @@ Al generar un ingreso (`POST /v1/makeProviderOrderInbound`): `MakeProviderOrderI
 
 ### Cálculo de ncosteprom (costo promedio ponderado)
 
-`AverageCostCalculator::updateAverageCost($item, $orderNumber)` actualiza `NewBytes_DBF.dbo.articulo.ncosteprom`, que se guarda **SIEMPRE en dólares**:
+`AverageCostCalculator::updateAverageCost($item, $orderNumber)` actualiza `NewBytes_DBF.dbo.articulo.ncosteprom`, que se guarda **SIEMPRE en dólares**. **3 modalidades por ítem** (excluyentes), decididas por flags por línea en `NewBytes_DBF.dbo.pedprol` (agregadas en el front al generar el ingreso):
 
-- Si `updateAverageCost` del item es **false** → sobrescribe con el precio nuevo (convertido a u$d).
-- Si es **true** → promedio ponderado: `[(stock_ant × costo_ant) + (ingreso × precio_nuevo)] / stock_total` (si `stock_ant ≤ 0`, sobrescribe con el precio nuevo).
+- **No tocar costo** (`doNotUpdateCost=true`, agregado 2026-08-09) → saltea el update por completo; `ncosteprom` queda igual. **Prioridad sobre las otras.** Persiste el flag con `markDoNotUpdateCost` (`SET pedprol.doNotUpdateCost=1`).
+- **Ponderado** (`updateAverageCost=true`) → `[(stock_ant × costo_ant) + (ingreso × precio_nuevo)] / stock_total` (si `stock_ant ≤ 0`, sobrescribe con el precio nuevo).
+- **Sobreescribe** (`updateAverageCost=false` y sin "no tocar") → pisa `ncosteprom` con el precio nuevo (convertido a u$d).
 - **Conversión a dólares (`toDollars`)**: la moneda/cotización se leen de `PedProt` (fuente de verdad) vía `getCurrencyInfoByOrder`, no del payload. Si `ccoddiv='PSO'`, divide el precio en pesos por **`nvaldiv_FISCAL`** (la cotización real del dólar; `nValDiv` en PSO es 1). Si `DOL`, el precio ya viene en dólares y no se toca. Detalle y el bug del 2026-07-21 en [[contexto#ncosteprom en ingresos PSO usa nvaldiv_FISCAL (2026-07-21)|contexto]].
+- **Round-trip de los flags**: `ProviderOrderDetailRepository::getDetailOrder` selecciona `PL.updateAverageCost` y `PL.doNotUpdateCost`; `ProviderOrderDetailItemDto` los mapea con `(bool)(... ?? false)`, así el detalle muestra la elección al reabrir la orden pendiente. Front: `app/components/Orders/Detail.vue` (checkbox por ítem + select-all de header + tooltip con las 3 modalidades). Ver [[contexto#Check "no tocar costo" en ingresos (2026-08-09)|contexto]].
 
 ## Base de datos
 
@@ -185,3 +187,4 @@ SQL Server externo. No hay migraciones Laravel — el schema es gestionado fuera
 - [[changelog|Changelog]]
 - [[contexto|Contexto y reglas]]
 - [[memoria|Memoria del proyecto]]
+
