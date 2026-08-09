@@ -15,18 +15,22 @@ Hecha para [[Blu|BLU Studio]] (usa su logo). Los clips los fue pasando **Catriel
 ## Ubicación
 
 - Carpeta local: `~/Descargas/x-videos/`
-- ~30 videos (.mp4), ~113 MB. Thumbnails en `posters/`.
-- `urls.txt` — enlaces originales de X.
+- 30 videos (.mp4), ~113 MB. Un poster (frame `.jpg`) por video en `posters/`, mismo nombre base; el HTML los usa como placeholder durante el crossfade.
+- `urls.txt` — enlaces originales de X (histórico del batch inicial).
 - `blu-logo-orig.svg` — logo vectorial de BLU (también incrustado inline en el HTML).
+- **`CLAUDE.md`** en la carpeta — tiene el workflow completo, las convenciones (no romper) y la config de Obsidian. Leerlo antes de tocar; con eso `/sincronizar-boveda` detecta esta carpeta sola (no re-pregunta).
 
-## Cómo se bajaron los videos
+## Cómo agregar un video (workflow)
 
-`yt-dlp` con plantilla `%(uploader_id)s_%(id)s.%(ext)s`. El nombre lleva la cuenta que **posteó** el tweet (metadato de X), que no siempre es el autor original — cuando el tweet cita/repostea, yt-dlp baja el video fuente (por eso hay nombres con ID distinto al del tweet).
+`yt-dlp` con plantilla `%(uploader_id)s_%(id)s.%(ext)s`. El nombre lleva la cuenta que **posteó** el tweet (metadato de X), que no siempre es el autor original — cuando el tweet cita/repostea, yt-dlp baja el video fuente (por eso hay nombres con ID distinto al del tweet). No genera duplicados aunque el mismo uploader aparezca varias veces con ids distintos.
 
 ```bash
 cd ~/Descargas/x-videos
-yt-dlp -o "%(uploader_id)s_%(id)s.%(ext)s" "<url-del-tweet>"
-# luego agregar el nombre del archivo al array `videos` en index.html
+# 1. bajar
+yt-dlp -o "%(uploader_id)s_%(id)s.%(ext)s" --no-warnings "<url-del-tweet>"
+# 2. generar poster (mismo nombre base, frame representativo)
+f="NOMBRE.mp4"; ffmpeg -y -i "$f" -vf thumbnail -frames:v 1 "posters/${f%.mp4}.jpg"
+# 3. agregar el nombre del .mp4 al final del array `videos` en index.html
 ```
 
 ## Créditos (uploaders)

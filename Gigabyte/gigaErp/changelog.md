@@ -1,3 +1,14 @@
+## 2026-08-06 — Auditoría de credenciales AWS/IAM del bucket de Contenido
+
+Auditoría (sin cambios de código) del alcance de las claves AWS que usa la app, a raíz de la consulta del usuario sobre si compartir la key con un dev expone otra parte de la infra AWS. **Resultado: la key es de mínimo privilegio, seguro compartir (con salvedades).** Ver [[modulos/contenido#Seguridad — credenciales IAM (auditado 2026-08-06)|modulos/contenido]].
+
+- **Identidad**: `arn:aws:iam::830204833423:user/gigaerp-contenido-dev-svc` (service account dedicado). Bucket `gigaerp-contenido-dev` (sa-east-1, S3 nativo, sin endpoint custom).
+- **Scope verificado empíricamente** (`aws sts get-caller-identity` + probes): solo puede operar objetos sobre su bucket. Denegado: `ListAllMyBuckets`, políticas IAM propias, `GetBucketPolicy`/`GetBucketAcl`, EC2, RDS, Secrets Manager.
+- **Recomendación al usuario**: rotar la key tras compartirla; permite `PutObject`/`DeleteObject` (el dev puede borrar/sobrescribir dev); el bucket es compartido local↔prod.
+- **Tip operativo**: los valores S3 se inyectan por env de docker (NO están en `backend/.env`); leerlos con `docker exec gigaerp-backend sh -c 'env | grep -iE "CONTENIDO|AWS"'`. `aws` CLI vive en el host (`/home/hermess/.local/bin/aws`).
+
+---
+
 ## 2026-08-04 — Ajustes de Google/Meta Ads (feedback marketing)
 
 Tanda de ajustes finos sobre las dos secciones de ads, ya mergeadas a `Development` (PRs #8 Meta y #9 fix Google; de acá en más se trabaja **directo sobre `Development`**). Ver [[modulos/google-ads]] y [[modulos/meta-ads]].

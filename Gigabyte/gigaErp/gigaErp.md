@@ -4,8 +4,8 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
-**Último commit:** `94c5637` · **Última sincronización:** 2026-08-04
-**Último trabajo:** **Ajustes de Google/Meta Ads** (feedback marketing, directo sobre `Development`): Meta usa **clics salientes** (`outbound_clicks`, no `clicks` que inflaba); se quitaron ROAS y columna Objetivo en Meta, CPC/CTR en Google; "Agregar al carrito" entero en Google; **tooltips (i) con textos literales del cliente** en ambos; se sacó el aviso de "sin conversiones". Ver [[changelog#2026-08-04 — Ajustes de Google/Meta Ads (feedback marketing)|changelog]]. Antes: **Meta Ads** (sección espejo de Google, Graph API, System User token) — [[modulos/meta-ads]]; y **Google Ads** (GAQL, goal-aware) — [[modulos/google-ads]]. Ambas **mergeadas a `Development`** (PRs #8 y #9).
+**Último commit:** `94c5637` · **Última sincronización:** 2026-08-06
+**Último trabajo:** **Auditoría de credenciales AWS/IAM** del bucket de Contenido (`gigaerp-contenido-dev`): la key es un service account IAM de **mínimo privilegio** (`gigaerp-contenido-dev-svc`), acotado solo a ese bucket — seguro compartir con un dev (rotar después). Ver [[modulos/contenido#Seguridad — credenciales IAM (auditado 2026-08-06)|contenido]] y [[changelog#2026-08-06 — Auditoría de credenciales AWS/IAM del bucket de Contenido|changelog]]. Antes: **Ajustes de Google/Meta Ads** (feedback marketing) — [[modulos/meta-ads]], [[modulos/google-ads]].
 
 ---
 
