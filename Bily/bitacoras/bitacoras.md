@@ -67,6 +67,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-08-04|2026-08-04]] — Jornada sin actividad: cron de bitácora diaria y saludo de cierre; sin conversaciones ni pedidos visibles (primera corrida del job falló)
 - [[Bily/bitacoras/2026-08-06|2026-08-06]] — Jornada sin actividad: rutina nocturna de bitácora diaria (segunda corrida tras fallo previo); sin conversaciones ni pedidos nuevos por WhatsApp
 - [[Bily/bitacoras/2026-08-07|2026-08-07]] — Jornada sin actividad: sin interacciones, decisiones ni tareas registradas por WhatsApp
+- [[Bily/bitacoras/2026-08-08|2026-08-08]]
 
 ## Ver también
 
