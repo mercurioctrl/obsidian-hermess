@@ -15,4 +15,4 @@
 
 ### Dato de la sesión
 - El usuario **pagó $5.500.000 a Visa el 2026-08-08** y decidió pagar Amex por el mínimo.
-- **2026-08-09:** pagos parciales a **Amex** (tarjeta ****-34375): $1.000.000,00 + $2.400.000,00 = **$3.400.000,00**. Saldo pendiente del resumen Amex de agosto: $9.974.170,39 (vto 10-ago).
+- **2026-08-09:** pagos parciales a **Amex** (tarjeta ****-34375): $1.000.000 + $2.400.000 + $800.000 = **$4.200.000,00** → cubre el mínimo ($4.198.210). Saldo pendiente del resumen Amex de agosto: $9.174.170,39 (vto 10-ago). Plan: pagar el resto durante la semana.
