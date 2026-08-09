@@ -69,6 +69,12 @@
 - [[Claude/Bily_Skills_Por_Grupo|Bily: skills por grupo]] — instrucciones por grupo de WhatsApp
 - [[Claude/Vault-MCP|Vault MCP]] — la bóveda como 6 tools nativas de Bily (reemplaza al skill `obsidian-mind`)
 
+## 💳 Finanzas
+
+- [[Finanzas/Finanzas|Finanzas]] — Base de conocimiento financiera personal
+  - [[Tarjetas/Tarjetas|Tarjetas]] — Resúmenes Santander (Visa · Amex), cuotas, gastos y estrategia de pago
+    - [[Índice Resúmenes]] · [[Cuotas Activas]] · [[Gastos por Comercio]] · [[Pagos e Intereses]]
+
 ## 🟣 Recurso Humano
 
 - [[Recurso Humano]] — Convenios y paritarias
@@ -82,4 +88,4 @@
 
 ---
 
-*Actualizado: 2026-08-08*
+*Actualizado: 2026-08-09*
