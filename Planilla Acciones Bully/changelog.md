@@ -1,5 +1,12 @@
 # Changelog — bully
 
+## 2026-08-09
+
+- **docs: `CLAUDE.md`** en el repo (`/var/www/bully/bully/CLAUDE.md`) con contexto completo
+  para retomar el proyecto rápido: arquitectura, gotcha curl_cffi/Cloudflare, DB, cron,
+  secretos, tareas comunes y gotchas. Commit `70b02b4`.
+- Memoria de Claude: nuevo `fv-scraper.md` (apunta al CLAUDE.md + gotcha crítico).
+
 ## 2026-08-07
 
 - **fix: guardar NULL en vez del texto de error** en `fair_value`/`nextReport`.

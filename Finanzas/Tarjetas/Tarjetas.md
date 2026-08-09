@@ -4,6 +4,11 @@
 
 Resúmenes de tarjetas de crédito Santander (Visa y Amex) y su análisis.
 
+## Documentación
+- [[contexto]] — snapshot financiero, estrategia de pago y clasificación de comercios
+- [[memoria]] — memoria del proyecto
+- [[changelog]] — registro de lo trabajado
+
 ## Análisis
 - [[Proyección de Pago]]
 - [[Panorama de Gastos]]

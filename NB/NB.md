@@ -95,4 +95,10 @@ E-commerce de New Bytes (nb.com.ar). Monorepo: frontend Nuxt 2 + API REST PHP Sl
 Herramienta interna de QA para generar datos de prueba de negocio reproducibles, con evidencia y trazabilidad. Monorepo dockerizado: Nuxt 4 + NestJS + SQL Server (SQL crudo), ejecutores Playwright/HTTP y SSE. Repo `New-Bytes/qApp`.
 
 ---
+
+## [[arba/arba|ARBA Percepciones]]
+Automatización de la presentación de DDJJ de percepciones de IIBB ante ARBA (CUIT 30-70924663-8, agente de recaudación). Scripts Python que validan, renombran, comprimen y corrigen alícuotas contra el padrón oficial.
+- [[arba/arba|Índice]] · [[arba/arquitectura|Arquitectura]] · [[arba/proceso-correccion-padron|Corrección por padrón]] · [[arba/contexto|Contexto]] · [[arba/changelog|Changelog]] · [[arba/memoria|Memoria]]
+
+---
 *Última actualización: 2026-07-21 — Compras: hotfix API `ncosteprom` en ingresos PSO (convierte con `nvaldiv_FISCAL`, no `nValDiv`); contraparte de backend de COM-320. Rama `hotfix-ncosteprom-cotizacion-fiscal-pso`.*

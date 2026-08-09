@@ -59,6 +59,20 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - En el backend, leer con `$request->anio` / `$request->filled('anio')`
 - Aplica tambien a otros campos potenciales: usar `descripcion` no `descripción`, etc.
 
+### Git / PRs — cadencia de merge (2026-08)
+
+- **Push/merge directo a `main` lo bloquea el clasificador** → siempre flujo de PR (rama + `gh pr create`). **Commits sin firma** de Claude.
+- **El usuario mergea los PRs él mismo en GitHub, muy rápido** (a veces mientras sigo trabajando). Consecuencia: un commit de follow-up empujado a una rama **ya mergeada** queda **huérfano** (no reabre el PR, no llega a main) → hay que abrir un PR nuevo. Pasó con #24 y #26.
+- **Regla:** cada cambio nuevo = **rama fresca desde `origin/main`**. Antes de ramificar: `git fetch origin && git branch -f main origin/main` (el `main` local se queda atrás porque los merges pasan en GitHub). Verificar si un commit ya llegó: `git merge-base --is-ancestor <sha> origin/main`.
+- **Mergear yo está permitido** vía `gh pr merge <n> --merge --delete-branch` (es flujo de PR, no push directo). Tras mergear, sincronizar: `git checkout main && git merge --ff-only origin/main`.
+- `gh pr view <n> --json mergeable` da `UNKNOWN` unos segundos post-push (GitHub recalcula) — reintentar.
+
+### Verificación sin mutar la DB (2026-08)
+
+- El **clasificador bloquea mutar registros compartidos preexistentes** (`UPDATE empleados`, `INSERT ausencias`) para tests ad-hoc. En cambio, **crear+borrar registros propios** (tokens de test, un `vacaciones_extra` con motivo `"TEST %"` que borro después) sí pasa.
+- El container **no tiene `tinker` ni `mysqli`**. Para probar lógica pura de modelo sin DB: bootstrapear Laravel a mano (`require vendor/autoload.php` + `bootstrap/app.php` + `Kernel::bootstrap()`), instanciar el modelo en memoria (los casts funcionan) y usar `ReflectionMethod` para métodos privados. Cliente DB: `mysql --skip-ssl -h db` (ver [[Errores Comunes]] y las memorias `reference_verificacion_offline`, `reference_db_query_directo`, `reference_test_token_sin_tinker`).
+- Tras reiniciar nginx, `curl` puede dar HTTP 000 unos segundos → `curl --retry 6 --retry-connrefused --retry-delay 1`.
+
 ---
 
 ## Proyecto (features y decisiones)

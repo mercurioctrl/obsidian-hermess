@@ -1,5 +1,16 @@
 # Changelog — CashBox Cobros
 
+## 2026-08-09 — Validación de las rectificativas reconstruidas: NO reconcilian (veredicto)
+
+### análisis: la reconstrucción FP×padrón no reproduce lo presentado — no presentable
+
+- Se bajaron de **e-Arciba** los resúmenes presentados reales por mes (`cc/reporte/resumenOp.pdf?ddjjId=`, 16/20 meses; ARCIBA throttlea fuerte) → `intimacion/presentado_arciba.csv`.
+- **Comparación:** la reconstrucción `recon/RECON_*.txt` se desvía del objetivo (presentado + intimación) **entre −$2,3M y +$16M en ambas direcciones**, sin patrón útil. **No presentar.**
+- **Causa 1 — mezcla ARBA/CABA:** el universo `ImportePercepCLi>0` incluye percepción ARBA; como el cliente está en el padrón CABA se le aplica alícuota CABA → infla (ej. 2024/06 presentado $18,7M vs recon $34,9M = **+$16M**). En meses previos a 2025-05-14 no existe `MSR.IMPPERCEP_CABA` para separar.
+- **Causa 2 — base driftada:** `NVALDIV` mal grabado (may-2024 rango 307..984) y facturas reprocesadas a 0 → da de menos (2025/03, 05).
+- **Conclusión:** sin los TXT originales presentados (solo mayo, el `(38)`), **no se puede armar un TXT por comprobante fiel**; ARCIBA solo entrega el resumen. Lo firme que quedó: el **objetivo por mes** (presentado + intimación). Próximo paso = decisión del estudio contable.
+- **Doc de estado para retomar:** `intimacion/ESTADO_RECTIFICATIVAS.md` (fuentes y límites, scripts, próximos pasos) + `intimacion/earciba_ddjjids.txt`. Ver [[intimacion-agip-percepciones]].
+
 ## 2026-08-07 — Rectificativas de percepción CABA reconstruidas (los 20 meses intimados)
 
 ### entregable: reconstrucción de las DDJJ de percepción para presentar la rectificativa

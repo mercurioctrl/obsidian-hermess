@@ -1,0 +1,17 @@
+# Changelog — Tarjetas
+
+> [[Tarjetas]]
+
+## 2026-08-09
+
+- Procesados los **16 resúmenes** (Visa + Amex, Ene–Ago 2026) → 16 notas fieles con cada movimiento transcripto textualmente del PDF.
+- Notas de análisis creadas: [[Índice Resúmenes]], [[Cuotas Activas]], [[Gastos por Comercio]], [[Pagos e Intereses]].
+- Dashboard [[Panorama de Gastos]] con gráficos (Mermaid + imágenes de líneas y área apilada por categoría).
+- [[Proyección de Pago]] — escenarios para desarmar el saldo financiado + cálculo de interés pagando solo el mínimo.
+- Recategorización de comercios con datos aportados por el usuario: "Otros" bajó de 43% → 20% (ver [[contexto]]).
+- Gráficos generados como **SVG+PNG** (matplotlib bloqueado por PEP 668).
+- `Home.md` de la bóveda: agregada la sección **💳 Finanzas**.
+- Scripts y documentación técnica persistidos en el repo `/var/www/Tarjetas` (`scripts/`, `docs/PIPELINE.md`, `CLAUDE.md`).
+
+### Dato de la sesión
+- El usuario **pagó $5.500.000 a Visa el 2026-08-08** y decidió pagar Amex por el mínimo.

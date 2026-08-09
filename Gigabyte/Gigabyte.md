@@ -40,6 +40,14 @@ Presentación / landing HTML que le propone a Gigabyte centralizar el paid media
 - [[informe-landing/reporte-resellers|Reporte — Estado de resellers (modo claro)]]
 - [[informe-landing/research-paid-media|Research & Estrategia — Paid Media]]
 
+### muestra-fravega
+Activación de GIGABYTE en Frávega: "test de fluidez" para que el público adivine cuál de dos monitores corre a 200Hz y cuál a 60Hz. Web estática (Canvas 2D). Tres versiones: bola pura (`pura.html`), personaje águila que corre y deja estela (`gemini-code-…html`) y composición demo con quiz (`index.html`).
+- [[muestra-fravega/muestra-fravega|muestra-fravega — índice]]
+- [[muestra-fravega/arquitectura|Arquitectura]]
+- [[muestra-fravega/stack|Stack]]
+- [[muestra-fravega/changelog|Changelog]]
+- [[muestra-fravega/contexto|Contexto]]
+
 ## Reuniones
 
 - [[Reuniones/ERP Sugerencias|ERP Sugerencias]] — feedback y pedidos surgidos en reunión sobre el ERP

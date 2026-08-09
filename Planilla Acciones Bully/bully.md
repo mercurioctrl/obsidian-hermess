@@ -4,8 +4,8 @@ Backend Python de la [[Planilla Acciones Bully/Planilla Acciones Bully|Planilla 
 Sirve opciones financieras desde yfinance y fair values scrapeados de investing.com Pro.
 
 **API pública:** `https://api.bully.lio.red/options`
-**Repo:** `/var/www/bully/bully`
-**Última sincronización:** 2026-08-07
+**Repo:** `/var/www/bully/bully` (tiene su propio `CLAUDE.md` con todo el contexto para retomar rápido)
+**Última sincronización:** 2026-08-09
 
 ---
 

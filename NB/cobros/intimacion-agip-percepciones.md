@@ -215,3 +215,9 @@ Como la alícuota del padrón **es** la correcta, la reconstrucción autocorrige
 - `intimacion/Rectificativas_reconstruidas.xlsx` — legible, 1 hoja por mes + Resumen; **1.166 correcciones (Bloque A) resaltadas** con antes→después; **408 excluidos** ("0% no van").
 
 **Caveats (para el estudio):** universo = clientes percibidos (`ImportePercepCLi>0`), no incluye los de padrón cobrados a 0; es DDJJ "fresca correcta" (recalcula todos), no edición quirúrgica; las bases de la intimación estaban infladas → posible defensa adicional. Ver [[changelog]] y [[mail-estudio-contable]].
+
+### Veredicto (2026-08-09): la reconstrucción no reconcilia
+
+Al comparar `recon/RECON_*.txt` contra los **presentados reales de ARCIBA** (`intimacion/presentado_arciba.csv`, bajados de e-Arciba), la reconstrucción se desvía del objetivo (presentado + intimación) **entre −$2,3M y +$16M**, en ambas direcciones. Dos causas: (1) el universo `ImportePercepCLi>0` **mezcla percepción ARBA con CABA** (ej. 2024/06: presentado $18,7M vs recon $34,9M, +$16M); (2) la **base de la DB driftó** (tipos de cambio mal grabados, facturas reprocesadas a 0).
+
+**Conclusión:** sin los TXT originales presentados (solo tenemos mayo, el `(38)`), **no se puede reconstruir un TXT por comprobante fiel** — ni la DB ni ARCIBA (que solo da el resumen) tienen el detalle. Lo firme: el **objetivo por mes = presentado (ARCIBA) + intimación**. El resto es decisión del estudio contable (rectificativa por diferencias / recuperar originales / contestar Bloque B). Detalle completo en `intimacion/ESTADO_RECTIFICATIVAS.md`. Ver [[changelog]].

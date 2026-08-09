@@ -1,7 +1,7 @@
 # Memoria — CashBox Cobros
 
 Consolidación de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-var-www-nb-cobros/memory/`). Sincronizada: 2026-08-07.
+(`~/.claude/projects/-var-www-nb-cobros/memory/`). Sincronizada: 2026-08-09.
 
 ## Proyecto
 
@@ -42,8 +42,11 @@ aplicar 0% fue correcto, contestable por jurisdicción.
 **Rectificativas reconstruidas (ago-2026):** los 20 meses con Bloque A generados en
 `intimacion/recon/RECON_YYYY-MM.txt` (18.864 líneas, $522,9M) + Excel legible
 `Rectificativas_reconstruidas.xlsx`. Método: facturas FP + alícuota del padrón histórico
-ARDJU008 + regla "0% no va"; validado contra mayo (99% alíc, 99,2% percep). Ver
-[[intimacion-agip-percepciones]] y [[mail-estudio-contable]].
+ARDJU008 + regla "0% no va". **VEREDICTO (ago-2026): la reconstrucción NO reconcilia**
+con los presentados reales de ARCIBA (se desvía −$2,3M a +$16M; mezcla ARBA/CABA + base
+driftada) → no presentable. Lo firme: objetivo/mes = presentado + intimación. Sin los TXT
+originales (solo mayo) no hay TXT fiel; el resto es decisión del estudio contable. Ver
+`intimacion/ESTADO_RECTIFICATIVAS.md`, [[intimacion-agip-percepciones]] y [[mail-estudio-contable]].
 
 ### Gotchas de la base (importante)
 - Fechas SQL Server: usar `YYYYMMDD` en parámetros (no `YYYY-MM-DD` — locale Y-D-M rompe).
