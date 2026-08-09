@@ -16,4 +16,4 @@
 
 ## Estado (ago 2026)
 
-Deuda total ~$28,2M; saldo financiado ~$17,7M (TNA 77,9%). Pagó $5,5M a Visa el 2026-08-08; Amex por mínimo. Meta: financiado en $0 antes de fin de 2026.
+Deuda total ~$28,2M; saldo financiado ~$17,7M (TNA 77,9%). Pagó $5,5M a Visa el 2026-08-08 y $1,0M a Amex el 2026-08-09 (parcial, tarjeta ****-34375). Resumen Amex agosto: quedan $12,37M por pagar (vto 10-ago). Meta: financiado en $0 antes de fin de 2026.
