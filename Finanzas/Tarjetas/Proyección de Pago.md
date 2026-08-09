@@ -11,11 +11,11 @@ tags: [finanzas, tarjeta, estrategia, pago]
 | | Visa | Amex | Total |
 |---|--:|--:|--:|
 | Saldo total | 14.809.045,09 | 13.374.170,39 | 28.183.215,48 |
-| Pagos hechos | -5.500.000,00 | -1.000.000,00 | -6.500.000,00 |
-| Saldo pendiente del resumen | 9.309.045,09 | 12.374.170,39 | 21.683.215,48 |
+| Pagos hechos | -5.500.000,00 | -3.400.000,00 | -8.900.000,00 |
+| Saldo pendiente del resumen | 9.309.045,09 | 9.974.170,39 | 19.283.215,48 |
 | **Financiado (paga interés)** | 3.431.601,54 | 8.815.144,63 | **12.246.746,17** |
 
-> **Amex:** el pago parcial de **$1.000.000,00** (tarjeta ****-34375, 09-08-2026) se imputa al consumo nuevo del resumen (~$4,56M). Todavía **no toca** el financiado de $8.815.144,63. Para no sumar interés nuevo hay que cubrir el 100% del resumen ($12.374.170,39 restantes) antes del **vto 10-ago**.
+> **Amex:** pagos parciales de **$1.000.000,00 + $2.400.000,00 = $3.400.000,00** (tarjeta ****-34375, 09-08-2026). Cubren el consumo nuevo del resumen (~$4,56M); todavía **no tocan** el financiado de $8.815.144,63. Para no sumar interés nuevo hay que cubrir el 100% del resumen ($9.974.170,39 restantes) antes del **vto 10-ago**.
 
 El **saldo financiado** es la deuda cara: rinde **TEM 6.403% mensual (TNA 77,9%)**.
 Sobre $12.246.746,17 eso es **$784.159,16 de interés por mes** ($9.409.909,89/año) si no lo bajás.
