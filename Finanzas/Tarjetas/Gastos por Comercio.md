@@ -14,29 +14,36 @@ Compras en pesos procesadas: **1509**.
 
 | Categoría | Total $ | % |
 |---|--:|--:|
-| Otros | 40.115.211,59 | 47.6% |
-| Delivery/Restós | 15.623.656,06 | 18.5% |
+| Delivery/Restós | 17.774.490,05 | 21.1% |
+| Otros | 17.265.240,63 | 20.5% |
+| Electro/Muebles | 7.443.511,85 | 8.8% |
 | Transporte/Autos | 7.030.670,21 | 8.3% |
 | Salud | 6.333.687,97 | 7.5% |
-| Indumentaria/Moda | 5.285.857,45 | 6.3% |
-| MercadoLibre/Compras | 3.328.538,23 | 3.9% |
+| Indumentaria/Moda | 6.275.857,45 | 7.4% |
+| MercadoLibre/Compras | 5.338.082,87 | 6.3% |
+| Tecnología | 5.050.538,81 | 6.0% |
+| Joyería | 3.392.000,00 | 4.0% |
 | Servicios/Hogar | 1.876.527,17 | 2.2% |
 | Viajes/Exterior | 1.848.927,00 | 2.2% |
 | Suscripciones/Digital | 1.523.854,31 | 1.8% |
 | Papelería/Varios | 1.337.446,06 | 1.6% |
+| Mascotas | 1.241.141,67 | 1.5% |
+| Bebidas/Vinos | 572.400,00 | 0.7% |
 | **Total** | **84.304.376,05** | 100% |
 
 ## Gasto en dólares (U$S) por categoría
 
 | Categoría | Total U$S |
 |---|--:|
-| Indumentaria/Moda | 9.595,90 |
-| Otros | 4.197,61 |
-| Viajes/Exterior | 1.874,82 |
+| Tecnología | 5.793,64 |
+| Indumentaria/Moda | 4.623,57 |
+| Otros | 3.971,92 |
+| Viajes/Exterior | 1.169,30 |
 | Delivery/Restós | 658,64 |
 | Suscripciones/Digital | 584,70 |
 | Transporte/Autos | 396,97 |
 | MercadoLibre/Compras | 334,82 |
+| Bebidas/Vinos | 109,90 |
 | Salud | 20,13 |
 
 ## Top 30 comercios (pesos)
