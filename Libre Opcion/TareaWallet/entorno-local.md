@@ -71,6 +71,16 @@ header `Authorization` (JWT), con `supports_credentials => false`.
 
 Si se reclonan los repos, el arreglo **no persiste**: hay que rehacer el `.env` y el compose.
 
+## Documentación commiteable en el repo (persistida 2026-08-09)
+
+Para que el setup se reproduzca sin depender de esta nota:
+- `documentacion/guias_ejecucion/entorno-local-completo.md` — guía completa del stack local, dependencia login v4→v3, gotchas, CORS.
+- `documentacion/guias_ejecucion/api-legacy-v3.md` — sección "Correr en local (Docker)".
+- `sitio-api-rest-v3/docker-compose.example.yml` — ya trae `name: lo-api-rest-v3` + bloque comentado de la red v4.
+- `sitio-api-rest-v4-laravel/app/.env.example` — documenta la opción v3 local en `API_V3_URL`.
+
+Memoria de Claude: `project_v3_local_setup.md` y `project_cors.md`.
+
 ## Ver también
 
 - [[contexto#2026-08-06]]

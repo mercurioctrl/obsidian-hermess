@@ -33,6 +33,18 @@ Si ARBA observa operaciones por alícuota, se corrige contra el padrón con `cor
 
 Actividad P7 quincenal: **81 chars** (agrega Fecha Emisión en pos 71-80). Las posiciones de imponible/alícuota/percepción son iguales en 71 y 81 chars.
 
+### Posiciones para código (0-indexed, verificadas)
+
+| Campo | slice Python | Formato |
+|---|---|---|
+| CUIT | `[0:13]` | `XX-XXXXXXXX-X` |
+| Imponible | `[38:52]` | 14 · `NNNNNNNNNNN,NN` |
+| Alícuota | `[52:57]` | 5 · `NN,NN` |
+| Percepción | `[57:70]` | 13 · `NNNNNNNNNN,NN` |
+| Tipo operación | `[70]` / `[80]` | 1 |
+
+**Percepción = imponible × alícuota / 100**, redondeo comercial **HALF_UP** (`Decimal` + `ROUND_HALF_UP`). Coma decimal, no punto. Confirmado: recalcular 764/764 líneas ya correctas dio idéntico.
+
 ## Nomenclatura ARBA
 
 ```

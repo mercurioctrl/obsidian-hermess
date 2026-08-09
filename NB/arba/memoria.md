@@ -18,6 +18,16 @@ Automatiza la preparación del lote para presentar DDJJ de percepciones de IIBB,
 
 - **Corrección por padrón**: flujo mensual para arreglar alícuotas rechazadas cruzando contra el padrón de ARBA. Ver [[proceso-correccion-padron]].
 
+## Referencia
+
+- **Ubicación del padrón**: `~/Descargas/percepciones {mes}/PadronRGS{MMAAAA}.zip`. Usar `PadronRGSPer{MMAAAA}.TXT` (Percepciones), NO el `...Ret...` (Retenciones). Ver [[proceso-correccion-padron]].
+
+## Estado de presentaciones
+
+- **Julio 2026** (`2026070`, D7): **pendiente de subir** al 2026-08-09. LOTE1 observado → corregido por padrón → **LOTE2** generado (767 percepciones). No usar el LOTE1.
+- **Junio 2026** (`2026060`): presentado con corrección por padrón. Meses previos (abril, mayo): presentados.
+- Ver [[changelog]].
+
 ## Ver también
 
 - [[arba]]

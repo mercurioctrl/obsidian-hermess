@@ -108,3 +108,17 @@
 - **gotcha (reforzado):** tras cambiar `API_V3_URL` hubo que recargar php-fpm (`kill -USR2`) porque OPcache servía el `config.php` viejo — `config:clear` no alcanza.
 - **CORS:** confirmado que ya estaba en wildcard (`Access-Control-Allow-Origin: *`) sin cambios.
 - Detalle completo en [[entorno-local]] y [[contexto#2026-08-06]].
+
+
+---
+
+## 2026-08-09
+
+### Documentación y memoria persistidas (entorno local)
+
+- **docs:** nueva guía commiteable `documentacion/guias_ejecucion/entorno-local-completo.md` — stack local completo, dependencia login v4→v3, gotchas (colisión compose, php-fpm/OPcache), CORS wildcard.
+- **docs:** `api-legacy-v3.md` — agregada sección "Correr en local (Docker)" + nota de que el login v4 depende de la v3.
+- **chore:** `sitio-api-rest-v3/docker-compose.example.yml` — `name: lo-api-rest-v3` (fix colisión de proyecto) + bloque comentado de red v4; sacado el mount roto de `local.ini`.
+- **chore:** `sitio-api-rest-v4-laravel/app/.env.example` — documentada la opción v3 local (`API_V3_URL=http://lo-website-api-rest`).
+- **memoria:** nueva `project_cors.md` (CORS ya es wildcard, no reinvestigar); `project_v3_local_setup.md` enlazada a la guía del repo.
+- Detalle en [[entorno-local]].

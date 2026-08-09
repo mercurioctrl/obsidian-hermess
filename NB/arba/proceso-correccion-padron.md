@@ -8,8 +8,8 @@ NO es un error del script ni del ZIP: la alícuota que exporta el sistema contab
 
 ## Pasos
 
-1. **Bajar el padrón del mes** desde el portal ARBA (`Agentes → Agentes de Recaudación → Padrones → Regímenes Generales`, período `MMAAAA`). Viene en un ZIP con:
-   - `PadronRGSPer{MMAAAA}.TXT` → **Percepciones** (el que se usa; puede venir renombrado `padroARBARegimenesGenerales.txt`)
+1. **Bajar el padrón del mes** desde el portal ARBA (`Agentes → Agentes de Recaudación → Padrones → Regímenes Generales`, período `MMAAAA`). El usuario lo descarga en `~/Descargas/percepciones {mes}/PadronRGS{MMAAAA}.zip`. Viene con:
+   - `PadronRGSPer{MMAAAA}.TXT` → **Percepciones** (el que se usa, ~307 MB; puede venir renombrado `padroARBARegimenesGenerales.txt`)
    - `PadronRGSRet{MMAAAA}.TXT` → Retenciones (NO usar)
 2. **Correr `corregir_padron.py`**:
    ```bash

@@ -56,7 +56,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [ ] **Reemplazar cable del pasillo** — cámara PASILLO-C (10.10.10.192) negoció 10Mbps half-duplex, causa de los cortes de imagen
 - [ ] **Pinear Ezviz a AP Galeria** — crear SSID `nexus-cam` solo en AP Galeria y reconectar la cámara
 - [ ] **NVR Hikvision** — reservar IP fija en el USG y evaluar bloqueo de salida a WAN (ver [[05-nvr-hikvision#⚠️ Pendientes]])
-- [ ] **Sticky client / roaming** — pasar `nexus` a doble banda y recién ahí activar Min RSSI en 5GHz (ver [[06-sticky-client-roaming#Pendientes / próximos pasos]])
+- [x] **Sticky client / roaming** — RESUELTO 2026-08-09: `nexus` a doble banda + Min RSSI -78 en ambas bandas + canales 5GHz no-DFS (ver [[06-sticky-client-roaming#Resolución definitiva (2026-08-09)]])
 - [ ] **Timbre VTO** — fijar IP en el USG (hoy DHCP) y evaluar bloqueo a WAN; capturar el código del botón (ver [[07-timbre-vto-telegram#⚠️ Pendientes]])
 - [ ] **2 Tuya sin identificar** — `10.10.10.27` y `10.10.10.219` responden en puerto Tuya 6668 pero NO están en la cuenta SmartLife (ver [[08-home-assistant#Notas]])
 - [ ] **Wabee** (medidor energía, `10.10.10.44`) — reservar IP fija en el USG; evaluar llevar el consumo a HA vía su nube/API
@@ -69,7 +69,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[02-camaras#Sesión de configuración (2026-07-25) — patrullaje "enfoque B"]] — Config del patrullaje de la cámara PUERTA PTZ (julio 2026)
 - [[04-dvr-dahua#Sesión de reordenamiento (2026-07-26)]] — Reordenamiento de canales del DVR Dahua: PTZ movida CH11→CH9 (julio 2026)
 - [[05-nvr-hikvision]] — Conexión del NVR Hikvision kit WiFi (10.10.10.105) e investigación del cambio de clave de su WiFi (julio 2026)
-- [[06-sticky-client-roaming]] — Intento de resolver el "Mac" de Ale pegado a un AP lejano: Min RSSI en 5GHz rompió la conexión (nexus es solo-5GHz) e incidente DFS en Oficina; se revirtió y se fijó Oficina a canal 149 no-DFS (julio 2026)
+- [[06-sticky-client-roaming]] — Sticky client 5GHz RESUELTO (agosto 2026): `nexus` a doble banda + Min RSSI -78 en ambas bandas + canales no-DFS (Vestidor 40/Oficina 149/Galeria 161). Incluye runbook de la API UniFi y script `scripts/unifi_diag.py`. Registra también el intento fallido de julio (Min RSSI en 5GHz con nexus solo-5GHz rompió la conexión + incidente DFS)
 - [[07-timbre-vto-telegram]] — Timbre Dahua VTO2101E → Telegram: servicio con detección de movimiento server-side (OpenCV, ROI a la vereda) + aviso de botón; ajuste de sensibilidad y arquitectura pull/push (agosto 2025)
 - [[08-home-assistant]] — Integración de las 13 teclas Tuya/Macroled a Home Assistant por **LocalTuya** (control local sin nube): proyecto Tuya IoT + extracción de local keys con tinytuya + mass_configure e inyección manual de las v3.5 (agosto 2025)
 - [[08-home-assistant#Rutinas / iluminación automática]] — Dashboard "Casa" (con sección propia "Calle") + rutinas de iluminación exterior (atardecer→amanecer calle/terraza; jardín y patio WiZ→medianoche), **avisos por Telegram** de cada rutina (reusa el bot del timbre vía `rest_command`), lectura de nombres por gang desde la app (`shadow/properties`) y regla dura: los switches de **jardín/cámara y patio** van SIEMPRE ON (alimentan WiZ/cámara); **conmutación escalera/vestidor** por mirror bidireccional (prender abajo/apagar arriba) reemplazando 6 escenas Tuya (agosto 2025)

@@ -1,4 +1,6 @@
-# 06 — Sticky client 5GHz + incidente DFS (2026-07-30)
+# 06 — Sticky client 5GHz + incidente DFS
+
+> **Estado: RESUELTO (2026-08-09).** Ver [[#Resolución definitiva (2026-08-09)]]. El incidente de julio quedó abajo como registro de qué NO hacer.
 
 ## Problema inicial
 
@@ -40,13 +42,63 @@ El **Minimum RSSI** (mecanismo que desasocia al cliente con señal débil para f
 - Min RSSI: **2.4GHz ON (-75), 5GHz OFF** en los 3 (estado original restaurado).
 - Canales 5GHz 40 / 149 / 161: no se pisan entre sí.
 
-## Pendientes / próximos pasos
+## Resolución definitiva (2026-08-09)
 
-- **El sticky client sigue sin resolverse** (se revirtió el Min RSSI de 5GHz). La solución correcta es:
-  1. Pasar **`nexus` a doble banda** (`wlan_band` de `5g` → `both`) para que haya 2.4GHz donde caer.
-  2. **Recién entonces** activar Min RSSI en 5GHz (con band-steering para preferir 5GHz cerca del AP).
-- Alternativa/complemento: bajar la **potencia TX de 5GHz de Galeria** (está en 22 dBm, la más alta) para que no "grite" a otras plantas.
-- **Vestidor 5GHz** tiene TX bajo (14 dBm) y 0 clientes — evaluar subir potencia para mejorar cobertura de esa zona.
+Se aplicó el plan correcto que había quedado pendiente, **en este orden** (cada paso reprovisiona ~1-2 min; verificar VAPs antes de seguir al siguiente):
+
+1. **Min RSSI -78 dBm en AMBAS bandas** (ng + na) en los 3 APs.
+   - 2.4GHz: bajado de -75 → **-78** (las luces WiZ fijas vivían en el borde a -74/-75 y el -75 las podía patear en loop).
+   - 5GHz: estaba **OFF** → activado a **-78** (esto es lo que faltaba para soltar al sticky client).
+   - Por qué -78 y no -75: patea a los pegados reales (-80/-85) sin molestar a equipos legítimos a ~-75.
+2. **Canales 5GHz fijados no-DFS**: Vestidor **40**, Oficina **149**, Galeria **161**. Vestidor venía en **DFS 108** (autoselección lo había vuelto a mover a DFS desde julio). No-DFS evita dropouts por radar y acorta reprovisiones.
+3. **`nexus` pasado a doble banda** (`wlan_band` `5g` → `both`). **Este es el paso que hace seguro el Min RSSI de 5GHz**: el cliente pateado del 5GHz lejano ahora cae al **2.4GHz del AP cercano** en vez de quedar sin red (que fue lo que rompió en julio). Band steering (ON) lo vuelve a subir a 5GHz cuando la señal da.
+
+**Verificado (2026-08-09):** `nexus` UP en 2.4GHz **y** 5GHz en los 3 APs. Esta vez el VAP **no** se cayó (a diferencia de julio con -75).
+
+| AP | 2.4GHz | 5GHz canal | Min RSSI (ambas) | nexus 2.4 | nexus 5G |
+|---|---|---|---|---|---|
+| Vestidor | ch6 | **40** no-DFS | -78 | ✅ UP | ✅ UP |
+| Galeria | ch11 | **161** no-DFS | -78 | ✅ UP | ✅ UP |
+| Oficina | ch1 | **149** no-DFS | -78 | ✅ UP | ✅ UP |
+
+## Runbook — operar la red UniFi por API
+
+Controlador: `https://10.10.10.7:8443` (self-signed → `curl -sk`). Site: `default`.
+
+```bash
+# 1) Login (guarda cookie de sesión)
+curl -sk -c /tmp/unifi_cookie.txt -X POST https://10.10.10.7:8443/api/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"hermess","password":"<clave>"}'
+
+# 2) Leer APs / radios / clientes (todo bajo /api/s/default/)
+curl -sk -b /tmp/unifi_cookie.txt https://10.10.10.7:8443/api/s/default/stat/device   # APs: radio_table, radio_table_stats, vap_table, uplink
+curl -sk -b /tmp/unifi_cookie.txt https://10.10.10.7:8443/api/s/default/stat/sta       # clientes: rssi, signal(dBm), ap_mac, radio_proto, channel
+curl -sk -b /tmp/unifi_cookie.txt https://10.10.10.7:8443/api/s/default/list/wlanconf  # SSIDs: wlan_band, bss_transition(11v), fast_roaming(11r), band steering
+
+# 3) Cambiar Min RSSI o canal de un AP → PUT del radio_table completo
+#    (leer device, modificar radio_table[].min_rssi/min_rssi_enabled/channel, re-PUT)
+curl -sk -b /tmp/unifi_cookie.txt -X PUT https://10.10.10.7:8443/api/s/default/rest/device/{_id} \
+  -H "Content-Type: application/json" -d '{"radio_table":[...]}'
+
+# 4) Cambiar banda de un SSID → PUT wlanconf
+curl -sk -b /tmp/unifi_cookie.txt -X PUT https://10.10.10.7:8443/api/s/default/rest/wlanconf/{_id} \
+  -H "Content-Type: application/json" -d '{"wlan_band":"both"}'
+```
+
+**Interpretación de valores:** `signal` es el dBm real (-85 = pésimo, -50 = excelente); `rssi` en `stat/sta` es señal sobre ruido (~signal+96). Radio `ng`=2.4GHz, `na`=5GHz. Canales DFS 5GHz = 52–144; no-DFS = 36/40/44/48 y 149/153/157/161/165.
+
+**Reglas de oro (aprendidas a los golpes):**
+- ⚠️ **Nunca** activar Min RSSI en una banda si el SSID es exclusivo de esa banda → el cliente pateado se queda sin red. Pasar el SSID a doble banda primero.
+- Todo PUT a `radio_table` **o** `wlanconf` **reprovisiona** el AP (corta ~1-2 min). Aplicar de a un cambio y **verificar `vap_table`** que los SSID vuelvan antes de seguir.
+- Canales DFS pueden no emitir beacon (chequeo de radar) → fijar no-DFS y `channel_optimization` off para que la autoselección no los vuelva a mover.
+- macOS/iOS usan MAC/IP aleatoria → buscar por **nombre**, no por MAC.
+
+## Ajustes finos pendientes (opcionales, no urgentes)
+
+- Bajar **TX de 5GHz de Galeria** (~22 dBm, la más alta) para que no "grite" a otras plantas y las celdas sean más chicas (mejor roaming).
+- **Vestidor 5GHz** tenía TX bajo (14 dBm) — evaluar subir para mejor cobertura de esa zona.
+- Si en algún punto muerto real hay cortes con -78, aflojar ese AP puntual a **-80**.
 
 ## Notas
 

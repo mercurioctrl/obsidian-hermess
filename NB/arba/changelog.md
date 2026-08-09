@@ -18,6 +18,14 @@
 
 Archivos principales: `corregir_padron.py`, `generar_lote_arba.py`
 
+## 2026-08-09
+
+**Documentación y memoria**
+
+- `CLAUDE.md`: documentado `corregir_padron.py`, agregadas las **posiciones de campo 0-indexed verificadas** + fórmula de percepción (HALF_UP), y sección completa "Corrección por padrón".
+- Memoria de Claude: `referencia_padron` (ubicación en disco del padrón) y `estado_presentaciones` (historial de DDJJ).
+- Bóveda `NB/arba` creada y sincronizada con 6 notas.
+
 ## Ver también
 
 - [[arba]]

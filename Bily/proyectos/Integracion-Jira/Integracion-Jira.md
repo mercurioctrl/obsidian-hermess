@@ -263,6 +263,8 @@ Ver [[changelog|changelog]] para cronología detallada y [[estado|estado vivo]] 
 - [[Bily/proyectos/Integracion-Jira/changelog|Changelog]] — cronología detallada de las fases F1–F6.
 - [[Bily/proyectos/Integracion-Jira/estado|Estado vivo]] — componentes corriendo, paths, endpoints, performance medida.
 - [[jira|Bily/jira/]] — notas de tickets autopobladas por el vault sync.
+- [[Bily/aprendizajes/2026-08-09-jira-cheatsheet-operativo|Cheatsheet operativo de Jira]] — cloudId, account IDs, tipos por proyecto, epics/padres y gotchas de JQL para crear/consultar tickets rápido.
+- [[Bily/aprendizajes/2026-08-07-formato-titulos-jira|Formato de títulos Jira]] — convención `Área o flujo o sección: descripción`.
 - [[Bily/proyectos/proyectos|Proyectos]] (volver al índice)
 - [[Bily/Bily|Inicio Bily]]
 
