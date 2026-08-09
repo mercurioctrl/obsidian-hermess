@@ -45,3 +45,4 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 ## Ver también
 
 - [[Bily/Productos/Productos|Productos]] — ideas y productos en desarrollo impulsados por Bily y Catriel
+- [[Bily/finanzas/pagos-impuestos-personales|Pagos e impuestos personales]] — registro de pagos de impuestos (autónomos AFIP, VEPs)
