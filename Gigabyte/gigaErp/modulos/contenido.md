@@ -70,6 +70,27 @@ Admin (`auth:sanctum`): `GET /contenido/arbol` · `GET /contenido/config` · `PO
 Público (sin login): `GET /contenido/publico` + comodín `/contenido/publico/{ruta?}` (deep-links) · `GET /contenido/publico/arbol` · `GET /contenido/thumb?path=` · `POST /contenido/publico/suscribir` · `GET /contenido/publico/desuscribir?token`.
 
 
+## Seguridad — credenciales IAM (auditado 2026-08-06)
+
+Auditoría del alcance real de las claves AWS (`AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`) que usa la app, a raíz de: *"si comparto las claves con un dev, ¿le doy acceso a otra parte de mi infra AWS?"*. **Respuesta: no** — la key es de **mínimo privilegio**.
+
+- **Identidad**: usuario IAM dedicado `arn:aws:iam::830204833423:user/gigaerp-contenido-dev-svc` (service account, no admin ni usuario humano). Cuenta AWS `830204833423`.
+- **Alcance efectivo** (verificado con `aws sts get-caller-identity` + probes):
+
+  | Acción | Resultado |
+  |--------|-----------|
+  | Listar/leer/escribir su bucket `gigaerp-contenido-dev` | ✅ permitido |
+  | `s3:ListAllMyBuckets` (enumerar buckets de la cuenta) | ❌ denegado |
+  | Leer sus propias políticas IAM (`iam:List*UserPolicies`) | ❌ denegado |
+  | `s3:GetBucketPolicy` / `s3:GetBucketAcl` (admin del bucket) | ❌ denegado |
+  | EC2 / RDS / Secrets Manager | ❌ denegado |
+
+- **Blast radius si la key se filtra = solo el contenido del bucket de dev.** No puede siquiera *ver* qué otros recursos existen en la cuenta.
+- **Salvedades al compartir**: permite `PutObject`/`DeleteObject` → el dev puede borrar/sobrescribir el contenido de dev. Y es credencial de largo plazo → conviene **rotarla** (nueva access key + desactivar la compartida) al terminar. Mejor aún: crear una key nueva scoped solo al bucket en vez de reusar esta.
+- Recordar: este bucket es **compartido local↔prod** (mismo bucket+prefijo), así que "dev" en el nombre no implica datos aislados de prod.
+
+**Tips operativos** (para no reinvestigar): los valores S3 NO están en `backend/.env` — se inyectan por env en `docker-compose`; leerlos con `docker exec gigaerp-backend sh -c 'env | grep -iE "CONTENIDO|AWS|CONTENT_DOMAIN"'`. El `aws` CLI está en el **host** (`/home/hermess/.local/bin/aws`), no en el container.
+
 ## Ver también
 
 - [[changelog]] · [[contexto]] · [[troubleshooting]] · [[stack]] · [[gigaErp]]
