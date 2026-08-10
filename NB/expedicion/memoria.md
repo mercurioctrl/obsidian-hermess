@@ -18,6 +18,42 @@ Al entregar un retiro o envío con medio de pago **Pago Diferido**, el pedido pa
 
 ---
 
+## 2026-08-10 — Setup local en Linux (entorno distinto)
+
+> Máquina **Linux** (working dir `/var/www/nb/expedicion`), NO Apple Silicon. Las decisiones
+> difieren del setup de 2026-04-05: acá el Dockerfile se rebasó a `php:8.0-apache` con **ODBC 17**
+> y los `.so` precompilados (no ODBC 18 vía PECL), y la API corre en **8086**. Ambos setups son
+> válidos, cada uno en su máquina.
+
+### Problema: Dockerfile no buildea — `php8.0` no se encuentra / `pecl install sqlsrv` falla
+- **Causa:** Ubuntu 18.04 EOL; el PPA `ondrej/php` ya solo publica php7.2 para bionic. `pecl install sqlsrv` pide PHP ≥ 8.3.
+- **Solución:** Dockerfile reescrito sobre **`php:8.0-apache`** (Debian 11) + `msodbcsql17` + copiar `docker/sqlsrv.so`/`pdo_sqlsrv.so` (ABI 20200930) con `docker-php-ext-enable`. `vendor/` ya viene instalado. Original en `docker/Dockerfile.ubuntu18-backup`.
+
+### Problema: `Error 0x2746` al conectar SQL Server (TLS)
+- **Causa:** el SQL Server de PROD negocia TLS 1.0; OpenSSL 1.1.1 de Debian 11 exige TLS 1.2. (TCP sí llega).
+- **Solución:** en el Dockerfile, `/etc/ssl/openssl.cnf` → `MinProtocol = TLSv1.0`, `CipherString = DEFAULT@SECLEVEL=0`.
+
+### Problema: sin headers CORS y JSON corrupto
+- **Causa:** `use PDO;` en namespace global de `Database.php` genera warnings; al imprimirse (display_errors on) provocan "headers already sent" → se pierden headers CORS.
+- **Solución:** `docker/php/local.ini` (lo monta docker-compose; antes no existía) con `error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE & ~E_WARNING` y `display_errors = Off`. También `mkdir -p app/logs && chmod 777`.
+
+### Problema: login valida pero da 500 después
+- **`usuarios_nb no es válido`** → `DB_NAME` debe ser **`NB_WEB`** (no new_bytes): `TokenRepository.php` hace `UPDATE usuarios_nb` sin prefijo, depende de la base por defecto del DSN.
+- **`/auth/user` → 500 "Expired token"** → falta **`JWT_EXPIRATION_TIME`** en `app/.env`. `TokenManager.php:21` hace `strtotime($_ENV['JWT_EXPIRATION_TIME'])`; sin la var, `strtotime('')`=false → token con `exp:false` → firebase/php-jwt lo lee como `0 < now` → siempre expirado. Fix: `JWT_EXPIRATION_TIME='+1 day'`.
+
+### Problema: el front carga y muestra página de error 500 ("Ha ocurrido un error / Ir al Login")
+- **Causa:** con `FIREBASE_*` vacías, `getMessaging()` lanza error (sync y async vía Firebase Installations). Escapa a `globalHandleError` de Vue en un hook `mounted` → Nuxt renderiza `layouts/error.vue`. Un simple try/catch en el plugin NO alcanza (el error async escapa igual).
+- **Dos lugares** que usaban Firebase: `plugins/firebase-messaging.js` (ahora solo inicializa si hay `projectId && apiKey && appId`) y `layouts/basic.vue` mounted (~línea 636, `getMessaging()` directo → envuelto en try/catch).
+- **Método:** los errores del front se ven en la consola del browser, NO en el log del dev server (SSR).
+
+### Datos del entorno (2026-08-10)
+- DB SQL Server PROD: `190.210.23.97,4444`, user `web`, base `NB_WEB`
+- API: `http://localhost:8086/v1` · Front: `http://localhost:3000`
+- Node 18 → arrancar front con `NODE_OPTIONS=--openssl-legacy-provider`
+- `build-version.json` → `node scripts/update-build-version.js` (el prebuild no corre en dev)
+
+---
+
 ## 2026-04-05 — Setup inicial en Apple Silicon
 
 ### Problema: Dockerfile no buildea (Ubuntu 18.04 EOL)

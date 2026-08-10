@@ -4,6 +4,26 @@ Registro de cambios del proyecto, consolidado desde los repositorios de API y Fr
 
 ---
 
+## 2026-08-10
+
+### Setup local en máquina Linux (sesión con Claude)
+> ⚠️ Entorno **distinto** al de Apple Silicon documentado en 2026-04-05. Máquina Linux,
+> working dir `/var/www/nb/expedicion`. Otras decisiones de infra (ver [[memoria]]).
+
+- git: pull de ramas `Development` (API) y `development` (front)
+- fix(docker): **Dockerfile reescrito sobre `php:8.0-apache`** (Debian 11) — el original con Ubuntu 18.04 + PPA ondrej ya no consigue php8.0 (bionic EOL). Usa los `.so` precompilados de `docker/` (ODBC 17). Backup en `docker/Dockerfile.ubuntu18-backup`
+- fix(docker): puerto API cambiado a **8086** (el 8084 estaba ocupado por otro proyecto)
+- fix(tls): OpenSSL del contenedor bajado a TLSv1.0 / SECLEVEL=0 para SQL Server legacy (error 0x2746)
+- fix(php): `docker/php/local.ini` con `error_reporting` sin warnings — los `use PDO` de Database.php rompían headers CORS y JSON
+- fix(env API): `DB_NAME=NB_WEB` (no new_bytes) + **`JWT_EXPIRATION_TIME='+1 day'`** (faltaba → token `exp:false` → "Expired token" 500)
+- fix(front): plugin `firebase-messaging.js` y `layouts/basic.vue` — Firebase con `FIREBASE_*` vacías crasheaba el cliente (página 500). Ahora solo inicializa si hay config
+- docs: `docs/SETUP-LOCAL.md` + `docs/TROUBLESHOOTING-LOCAL.md` en el repo raíz
+- config front: `API_HOST=http://localhost:8086/v1`
+
+Archivos: `api-rest-expedicion/docker/Dockerfile`, `docker-compose.yml`, `docker/php/local.ini`, `app/.env`, `expedicion-web-app-v1/app/plugins/firebase-messaging.js`, `layouts/basic.vue`, `.env`. Ninguno commiteado.
+
+---
+
 ## 2026-05-13
 
 ### API

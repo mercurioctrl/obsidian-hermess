@@ -3,7 +3,7 @@
 Sistema de expedición y logística de warehouse para NB (distribuidor mayorista).
 Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 
-**Última sincronización:** 2026-05-13
+**Última sincronización:** 2026-08-10
 
 ---
 
@@ -37,8 +37,10 @@ Monorepo con API REST (PHP/Slim 4) y Frontend (Nuxt 2/Vue 2).
 
 ## Links rápidos
 
-- API local: `http://localhost:8084/v1`
-- Frontend local: `http://localhost:4149`
-- Repo API: `New-Bytes/api-rest-expedicion` (GitHub)
-- Repo Frontend: `New-Bytes/expedicion-web-app-v1` (GitHub)
+- API local: `http://localhost:8086/v1` (máquina Linux 2026-08-10) · `http://localhost:8084/v1` (Apple Silicon 2026-04)
+- Frontend local: `http://localhost:3000` (Linux) · `http://localhost:4149` (Apple Silicon)
+- Repo API: `New-Bytes/api-rest-expedicion` (GitHub) — rama `Development`
+- Repo Frontend: `New-Bytes/expedicion-web-app-v1` (GitHub) — rama `development`
 - Jira Tareas: prefijo `EXP-`
+
+> El setup local varía por máquina. Ver [[memoria]] (secciones 2026-08-10 Linux / 2026-04-05 Apple Silicon) y `docs/SETUP-LOCAL.md` + `docs/TROUBLESHOOTING-LOCAL.md` en el repo.
