@@ -4,6 +4,16 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-08-10
+
+- feat: **Reservas de reuniones tipo Calendly** (PR #30 base + #31 invitados). Cada usuario tiene un **link público** `/reservar/{booking_token}` (sin login) donde un externo reserva un slot, y configura su disponibilidad **self-service** en `/mi-disponibilidad`. Disponibilidad **híbrida**: reglas semanales recurrentes (`booking_reglas`) + bloqueos/extras puntuales (`booking_bloqueos`). `BookingService::slotsDisponibles()` descarta feriados, ausencias del empleado, bloqueos, reservas y pasado; `crearReserva()` revalida en transacción (**anti doble-booking**, 422). Al reservar: **email a todos los invitados + al dueño con invite `.ics`** (`IcsBuilder::invite`, múltiples `ATTENDEE`, `METHOD:REQUEST`), **evento `tipo='reserva'`** en el [[Modulo Calendario]] (color `#0A85E0`, con hora) y **notificación in-app + push** al dueño. Cancelaciones (público por `cancel_token` o dueño) liberan el slot y avisan a todos. **Invitados adicionales** (PR #31): botón "+ Agregar invitado", `booking_reservas.invitados_extra` JSON (mig 0100), `BookingReserva::todosInvitados()` deduplica por email. Nueva página pública `pages/reservar/[token].vue` (`layout: 'auth'`, whitelisteada en `middleware/auth.global.ts`); NavItem "Mi Disponibilidad" para todos. Ver [[Modulo Reservas Reuniones]].
+- fix: **La regla `gt`/`lt` de Laravel compara longitud de string** (no orden) → rompía la validación de rangos horarios (`booking_reglas`/`booking_bloqueos` no se guardaban, 422 silencioso). Fix = comparar `hora_fin <= hora_inicio` a mano. Ver [[Errores Comunes]].
+- docs: **`arquitectura/16-modulo-reservas-reuniones.md`** (nuevo) + secciones en `CLAUDE.md` y `arquitectura/08-errores-comunes.md` (PR #32).
+
+Archivos: `backend/database/migrations/{0095..0100}_*`, `backend/app/Models/Booking{Config,Regla,Bloqueo,Reserva}.php`, `backend/app/Services/BookingService.php`, `backend/app/Support/IcsBuilder.php`, `backend/app/Http/Controllers/{PublicBooking,MiDisponibilidad,Calendario}Controller.php`, `backend/app/Mail/ReservaReunionMail.php`, `backend/resources/views/emails/reserva-reunion.blade.php`, `frontend/pages/{reservar/[token],mi-disponibilidad/index,mi-area/index,calendario/index}.vue`, `frontend/middleware/auth.global.ts`, `frontend/layouts/default.vue`
+
+---
+
 ## 2026-08-07
 
 - feat: **Días extra de vacaciones (premio)** (PR #27). Se pueden otorgar días libres extra a un empleado, cada uno con cantidad (decimal, permite 0.5), **motivo** y **fecha de vencimiento**; **suman a los días disponibles mientras no venzan**. Tabla `vacaciones_extra` (mig 0093) + modelo `VacacionExtra`. `Empleado::diasExtraVigentes()` suma solo no vencidos → `dias_disponibles = asignados + extra vigentes`. Endpoints `GET/POST/DELETE /api/empleados/{id}/vacaciones-extra` (devuelven `{items, resumen}`). Se cargan en `/staff/[id]` tab Ausencias; se ven en Mi Área con desglose `base + extra`. Ver [[Modulo Personal#Días extra de vacaciones (premio) (2026-08)]].
