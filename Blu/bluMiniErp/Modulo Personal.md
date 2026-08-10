@@ -129,6 +129,7 @@ Días libres extra otorgados a un empleado (premios) que **suman a los días dis
 ## Ver tambien
 
 - [[Modulo People Performance]] - RRHH sobre Personal: rol&expectativas, competencias, objetivos, ausencias, actividad GitHub/Jira (2026-07-14)
+- [[Modulo Reservas Reuniones]] - Mi Área enlaza a "Mi Disponibilidad"; las ausencias del empleado bloquean los slots reservables
 - [[Modulo Tareas]] - Tareas asignadas al usuario del empleado
 - [[Base de Datos#empleados]] - Esquema de tablas
 - [[Backend - API#Staff y Empleados]] - Endpoints

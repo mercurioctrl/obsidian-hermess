@@ -338,8 +338,15 @@ Un token faltante/vencido lanza `AuthenticationException`, que **no tiene `getSt
 
 ---
 
+## La regla `gt`/`lt` de Laravel compara longitud de string → rompe validación de horas (2026-08-10)
+
+Al validar un rango horario con `'hora_fin' => ['regex:...','gt:hora_inicio']`, guardar "09:00"–"12:00" devolvía **422** y no persistía (parecía que "el POST no hacía nada"). Pasó construyendo el [[Modulo Reservas Reuniones]] (`booking_reglas`/`booking_bloqueos` no se guardaban). **Causa:** las reglas `gt`/`gte`/`lt`/`lte` con valores **string** comparan por **longitud de cadena** (`Str::length`), no lexicográficamente — "12:00" y "09:00" tienen el mismo largo (5) → `gt` siempre falso. **Fix:** validar solo el formato (`regex:/^\d{2}:\d{2}$/`) y comparar a mano: `if ($datos['hora_fin'] <= $datos['hora_inicio']) return 422;` (los strings "HH:MM" en 24h comparan bien con `<=`). Aplica a cualquier validación de horas/tiempos como string.
+
+---
+
 ## Ver tambien
 
+- [[Modulo Reservas Reuniones]] - Gotcha de la regla `gt` con horas
 - [[Stack e Infraestructura]] - Errores de Docker y deploy
 - [[Frontend]] - Errores de componentes y stores
 - [[Backend - API]] - Errores de rutas y wrappers

@@ -11,6 +11,7 @@ Sección propia (`/calendario`, ítem en el sidebar) que **unifica en una vista 
 | **Reunión 1:1** | `reuniones_uno_a_uno.fecha` | ese día |
 | **Objetivo** | `objetivos.fecha_fin` (fecha límite) | ese día |
 | **Feriado** | tabla `feriados` (feriados nacionales, seeder `FeriadosSeeder`) | ese día; color rosa `#DB2777`. No dependen de persona: se muestran **aunque se filtre por persona** (2026-08) |
+| **Reserva** | `booking_reservas` (reservas confirmadas del [[Modulo Reservas Reuniones]]) | ese día, **con hora**; color `#0A85E0`, chip "Reuniones". Se filtra por `usuario_id` dueño (2026-08-10) |
 
 Filtros por **tipo** (chips de color) y por **persona**. Navegación de mes + "Hoy". Grilla lunes-primero, 42 días.
 
@@ -37,6 +38,7 @@ Gateado con **`VER_SECCION_CALENDARIO`** (sidebar + `middleware/auth.global.ts` 
 ## Ver también
 
 - [[Modulo People Performance]] — fuente de ausencias/1:1/objetivos
+- [[Modulo Reservas Reuniones]] — las reservas aparecen como eventos con hora; comparte el helper `IcsBuilder`
 - [[Modulo Personal]] — tabla `feriados` y seeder (también usados en el cálculo de vacaciones de Mi Área)
 - [[Modulo Tareas]] — fuente de tareas con deadline
 - [[Modulo Permisos]] — `VER_SECCION_CALENDARIO`
