@@ -7,6 +7,7 @@ Tableros kanban de proyectos y operacionales.
 - [[Bily/kanban/General|Kanban – General (Trabajo y Personal)]]
 - [[Bily/kanban/LASET|Kanban – LASET]]
 - [[Bily/kanban/Lavadero|Kanban – Lavadero]]
+- [[Bily/kanban/Finanzas|Kanban – Finanzas]]
 
 ## Ver también
 
