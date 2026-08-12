@@ -186,6 +186,33 @@ Todos en `/var/www/nb/cobros/intimacion/`:
 - `armar_excel.py` — genera el Excel.
 - URLs de padrones reconstruibles vía `POST agip.gob.ar/api/pages/byPath` con `path` = `/agentes/agentes-de-recaudacion/ib-agentes-recaudacion/padrones/Padrón-de-Regímenes-Generales`.
 
+---
+
+## Actualización 2026-08-12 — Rectificativas (respuesta a la intimación)
+
+**Cómo se rectifica:** en e-Arciba se re-importa la DDJJ completa del mes con nueva secuencia (F.5225 + intereses). Cada rectificativa debe cumplir el criterio del estudio: **`rectificativa = presentado + intimación_rectificable`**.
+
+**El DB de hoy NO reproduce lo presentado** (reprocesó base + rate + `ImportePercepCLi` juntos). Se descartaron todas las vías de reconstrucción (generador con-padrón, saftel/descargarAGIP en vivo, campos "congelados"). **Única fuente fiel = el TXT que efectivamente se presentó cada mes.**
+
+**Regla de armado (confirmada por el dueño), quirúrgica desde el presentado real:**
+1. CUIT intimados **que SÍ están en el padrón** → suben a su alícuota del padrón.
+2. **Todo lo que se mandó en 0% se saca, salvo el punto 1** — incluye los intimados-por-error (Bloque B, no en padrón, "nos los intimaron por error porque no deberíamos haberlos mandado").
+3. El resto, intacto.
+
+**Estado: 7 de 18 meses listos** (`intimacion/PARA_PRESENTAR/`):
+- **Exactas** (base = e-Arciba al centavo): 2025/10, 2026/01.
+- **Dif mínima** (<0,05%): 2024/08, 09, 10, 11, 2025/02.
+- **Faltan 11** (sin TXT presentado original): 2024/01, 02, 03, 05, 12; 2025/01, 03, 04, 05, 12; 2026/02.
+
+**Recuperación de presentados:** los archivos del sistema viejo se llaman `PERCEPCIONES_AFIP_<timestamp>.txt/.docx` (no `CABA_PERCEPTIONS`). Buscar en disco **por contenido** (líneas que empiezan `2029`+fecha). Algunos guardados como `.docx` de Word (extraer XML + `html.unescape`).
+
+**e-Arciba API:** `GET cc/rest/ddjjs` (con sesión) da el total presentado OFICIAL de cada DDJJ (`liqImpuesto.totalOperaciones`) → `presentado_earciba_oficial.csv`.
+
+**Consulta abierta con el estudio:** la columna INTIMACIÓN de la planilla de Flor da más baja que sus propios PDF de intimación (nuestra corrección coincide al centavo con el PDF). Mail enviado 2026-08-12.
+
+Doc maestro para retomar: `intimacion/ESTADO_RECTIFICATIVAS.md`.
+
+
 ## Ver también
 
 - [[contexto]] — bugs conocidos y reglas de negocio

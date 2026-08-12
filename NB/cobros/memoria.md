@@ -39,13 +39,16 @@ AGIP intimó $73,1M en percepciones IIBB CABA (ene-2024→may-2026). Cruzando ca
 contra el padrón real de AGIP: Bloque A (~$6,4M) sujetos EN padrón → error real; Bloque B
 (~$66,7M = 91%) sujetos NO en padrón (96% de provincia Bs.As. + percepción ARBA) →
 aplicar 0% fue correcto, contestable por jurisdicción.
-**Rectificativas reconstruidas (ago-2026):** los 20 meses con Bloque A generados en
-`intimacion/recon/RECON_YYYY-MM.txt` (18.864 líneas, $522,9M) + Excel legible
-`Rectificativas_reconstruidas.xlsx`. Método: facturas FP + alícuota del padrón histórico
-ARDJU008 + regla "0% no va". **VEREDICTO (ago-2026): la reconstrucción NO reconcilia**
-con los presentados reales de ARCIBA (se desvía −$2,3M a +$16M; mezcla ARBA/CABA + base
-driftada) → no presentable. Lo firme: objetivo/mes = presentado + intimación. Sin los TXT
-originales (solo mayo) no hay TXT fiel; el resto es decisión del estudio contable. Ver
+**Rectificativas — ESTADO 2026-08-12 (actualiza el veredicto viejo):** la reconstrucción desde el DB
+NO sirve (el DB reprocesó base+rate+ImportePercepCLi; no reproduce lo presentado — descartadas también
+saftel/descargarAGIP en vivo y los campos "congelados"). **Solución: quirúrgica desde el TXT presentado
+real** (`generador/surgical_rectificar.py`): corrige los CUIT intimados en-padrón a su alícuota del
+padrón y saca TODOS los 0% salvo esos (incluye los intimados-por-error Bloque B). **7 de 18 meses listos**
+en `intimacion/PARA_PRESENTAR/`: exactas 2025/10 y 2026/01; dif mínima (<0,05%) 2024/08,09,10,11 y 2025/02;
+faltan 11 (2024/01,02,03,05,12; 2025/01,03,04,05,12; 2026/02). Los presentados se recuperan del disco
+buscando **por contenido** archivos `PERCEPCIONES_AFIP_<timestamp>.txt/.docx` (nombre del sistema viejo).
+e-Arciba `cc/rest/ddjjs` da el presentado oficial (`presentado_earciba_oficial.csv`). Consulta abierta:
+la col INTIMACIÓN de la planilla de Flor da más baja que sus PDF; mail enviado 2026-08-12. Ver
 `intimacion/ESTADO_RECTIFICATIVAS.md`, [[intimacion-agip-percepciones]] y [[mail-estudio-contable]].
 
 ### Gotchas de la base (importante)

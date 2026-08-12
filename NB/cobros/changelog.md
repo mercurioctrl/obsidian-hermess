@@ -243,5 +243,20 @@ Nuevo dashboard que muestra la carga impositiva mensual (IVA a pagar, percepcion
 - Nuevo ítem "Deudas de capital" en el submenú Clientes del `TabMenu.vue`
 - El título del submenú cambia dinámicamente según la sección activa
 
+## 2026-08-11 / 2026-08-12 — Rectificativas percepción CABA (respuesta a la intimación)
+
+**Objetivo:** rectificar la DDJJ de percepción CABA de cada mes intimado en e-Arciba (re-importar el TXT completo con nueva secuencia + F.5225).
+
+- **Criterio del estudio (Flor):** `rectificativa = presentado + intimación_rectificable(en-padrón)`. Ni menos ni de más.
+- **Descartado como fuente (todo drifta):** generador con-padrón desde el DB; saftel/descargarAGIP hoy (2025/10 da $29,25M vs presentado $26,64M); `ImportePercepCLi` congelado (también reprocesado). El DB de hoy NO reproduce lo presentado.
+- **Solución = quirúrgica desde el TXT presentado real** (`generador/surgical_rectificar.py`): corrige los CUIT intimados en-padrón a su alícuota del padrón, y saca TODOS los 0% salvo esos (incluye los intimados-por-error Bloque B).
+- **7 de 18 meses listos** → `intimacion/PARA_PRESENTAR/` (TXT 215-char + Excel + LEEME). Exactas: 2025/10, 2026/01. Dif mínima (<0,05%): 2024/08,09,10,11; 2025/02. Faltan 11 (sin TXT presentado).
+- **Presentados recuperados** del disco (por contenido, no por nombre; algunos como `.docx` de Word): `PERCEPCIONES_AFIP_<timestamp>` es el nombre del sistema viejo.
+- **e-Arciba API** (`cc/rest/ddjjs`) da el total presentado OFICIAL de cada DDJJ → validado.
+- **Hallazgo abierto:** la columna INTIMACIÓN de la planilla de Flor da más baja que sus propios PDF. Mail enviado 2026-08-12 pidiendo confirmación.
+
+Archivos: `intimacion/PARA_PRESENTAR/`, `intimacion/ESTADO_RECTIFICATIVAS.md`, `intimacion/Reconciliacion_intimacion_AGIP.xlsx`, `intimacion/generador/`
+
+
 ## Ver también
 - [[arquitectura]] · [[contexto]] · [[stack]]
