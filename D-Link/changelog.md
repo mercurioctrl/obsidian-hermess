@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-08-11
+
+- **Nueva familia `plan-trabajo.*`** (2º entregable cara al cliente, deployado en `dlink.blu.net.ar`):
+  landing `plan-trabajo.html` (convertida del docx `documentos/PORPUESTA DLINK INICIAL.docx`) +
+  **deck PDF** `plan-trabajo-dlink.pdf` (14 slides, landscape 16:9) + **video 16:9**
+  `plan-trabajo-video.mp4` + **video 9:16** vertical `plan-trabajo-video-vertical.mp4`. Ver [[plan-trabajo]].
+- **Motor de video reutilizable** `.claude/scripts/render_video.py` (Playwright + ffmpeg, cuadro a
+  cuadro) sobre presentaciones HTML con `window.__seek(t)` (scrubbing de animaciones CSS) → MP4
+  determinista, idéntico a la reproducción en vivo. Estética moderna: malla de gradientes viva,
+  blur-in, clip-reveal, count-ups, texto con brillo.
+- **Contenido incorporado por el cliente:** 6º workstream **Site** (mantenimiento web no programático /
+  monitoreo / seguridad) e **Inversión total USD 2.300/mes**. Divergencia propia de la familia:
+  **AR·PE·CL, USD 2.300** (ver [[plan-trabajo#Divergencias]]).
+- Ediciones de copy en la landing: título presupuesto → "Nuestra propuesta no contempla"; cierre →
+  "Visibilidad, presencia y relevancia en el momento de compra." + 3 párrafos; renglón Google/Meta Ads
+  → "(solicitar presupuesto)"; fix de márgenes en labels en negrita; "D-Link" con `nowrap` en el hero.
+- **Logo Blu:** convención **negro sobre claro / blanco sobre oscuro** (se sacó el azul `#0474f4`).
+- **Chibis** (`chibis/`): mascotas robot D-Link (PNG fondo negro) — pipeline chroma-key (flood-fill
+  desde bordes) + recolor azul→`#0083A5`; se probaron en la landing y **se removieron** a pedido.
+- Los 4 artefactos regenerados juntos con el contenido final; documentación (CLAUDE.md + memoria) y
+  bóveda sincronizadas.
+
 ## 2026-07-16
 - **Nueva landing `brand-guidelines/index.html`**: versión web del PDF `Brand_Guidelines_2015`
   de D-Link (contenido 100% fiel, en inglés). Estilo basado en la landing de producto `m15-2/`,
@@ -36,4 +58,4 @@
   [[plan-campana]] y deck del pitch. Vinculación con Obsidian.
 
 ## Ver también
-[[D-Link]] · [[arquitectura]] · [[contexto]]
+[[D-Link]] · [[arquitectura]] · [[contexto]] · [[plan-trabajo]]

@@ -4,10 +4,10 @@ Reposicionamiento de marca **D-Link Argentina** (estudio [[contexto|Blu]]). Obje
 prestigio y presencia, y competir contra TP-Link. Territorio: **"Confiabilidad simple"**
 (pilares ANDA / FÁCIL / RESPALDADO).
 
-Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-07-16**
+Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-08-12**
 
 ## Meta
-- [[arquitectura]] — cadena de entregables, piezas HTML, paletas, generación de PDF e invariantes
+- [[arquitectura]] — cadena de entregables, piezas HTML, paletas, generación de PDF/MP4 e invariantes
 - [[contexto]] — la agencia Blu, el cliente, decisiones del usuario, gaps
 - [[memoria]] — consolidado de la memoria del proyecto
 - [[changelog]] — registro de lo trabajado por fecha
@@ -31,6 +31,8 @@ Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-07-16**
 - [[pitch-punchlines-propuesta|Punchlines de la propuesta]] — chuleta de frases para presentar la landing
 - [[landings]] — `index.html` (consumidor), `propuesta.html` (propuesta de Blu, token-gated) y
   `brand-guidelines/` (guía de marca como web + su PDF)
+- [[plan-trabajo]] — **familia `plan-trabajo.*`** (2º entregable cara al cliente en `dlink.blu.net.ar`):
+  landing + PDF (14 slides) + video 16:9 + video 9:16; 6 workstreams, USD 2.300/mes, AR·PE·CL
 
 ## Pendiente
 - Cerrar gaps de data: scraping MercadoLibre + sell-through de D-Link (para fijar metas numéricas)
