@@ -19,16 +19,16 @@ fuente: Jira (todos los tableros)
 
 | Métrica | Valor |
 |---|---|
-| 🗂️ Tareas **trabajadas** (creadas o movidas) | **433** |
-| 🆕 Creadas en julio | 299 |
-| ✅ Completadas en julio | 144 |
+| 🗂️ Tareas **trabajadas** (creadas o movidas) | **395** |
+| 🆕 Creadas en julio | 274 |
+| ✅ Finalizadas (estado Listo/Finalizada) | 234 |
 | 🎧 Tickets de **soporte** (SNB) | 46 |
-| 👥 Personas involucradas | 12 |
-| 📋 Tableros con actividad | 19 |
+| 👥 Personas involucradas | 9 |
+| 📋 Tableros con actividad | 20 |
 
 ![Distribución por área](assets/02_areas.png)
 
-**Lectura:** el 48% del esfuerzo fue Diseño/Marketing (209 tareas), el 41% Desarrollo/Producto (178) y el 11% Soporte (46). Se cerraron 144 entregables pero ingresaron 299 nuevos: **el backlog creció ~2:1**, señal de fuerte demanda (arranque de GIGA, sistema de reputación de LIO, catálogo A+).
+**Lectura:** el 45% del esfuerzo fue Desarrollo/Producto (178 tareas), el 43% Diseño/Marketing (171) y el 11% Soporte (46). El equipo finalizó 234 tareas pero ingresaron 274 nuevas: **la demanda superó a la entrega**, señal de fuerte actividad (arranque de GIGA, sistema de reputación de LIO, catálogo A+).
 
 ![Tareas por tablero](assets/01_tableros.png)
 
@@ -48,36 +48,34 @@ Cómo se distribuyó la carga entre el equipo durante julio:
 | **Belu Ontivero** | 47 | Diseño Blu/LASET/FB (triadas, redes, obra) |
 | **Franco Callipo** | 32 | Backend LIO — reputación/calificaciones (API+CMS) |
 | **Emanuel Ferreyra** | 29 | Backend Pedidos/Billetera LO |
-| **Manu (Diseño NB)** | 29 | Diseño NB — ingresos de marca, promos, kits |
 | **Catriel** | 13 | Dirección + gestión de soporte |
-| Eloy, Guillermo, Alejandra | 17 | QA/research/eventos |
+| Guillermo, Alejandra | 8 | QA/research/eventos |
 
-> **Observación de gestión:** el equipo de diseño (Bárbara + Belu + Manu ≈ 165 tareas) sostuvo el mayor volumen operativo, mientras que el núcleo de desarrollo (Eze + Franco + Ema ≈ 115) concentró la complejidad técnica. Ezequiel fue el recurso más demandado por trabajar en **3 frentes en paralelo** (Pedidos/Postventa, ERP GIGA y soporte SNB).
+> **Observación de gestión:** el equipo de diseño (Bárbara + Belu ≈ 136 tareas) sostuvo el mayor volumen operativo, mientras que el núcleo de desarrollo (Eze + Franco + Ema ≈ 115) concentró la complejidad técnica. Ezequiel fue el recurso más demandado por trabajar en **3 frentes en paralelo** (Pedidos/Postventa, ERP GIGA y soporte SNB).
 
 ---
 
 ## 3. 🎧 Impacto del Soporte (SNB)
 
-El soporte transversal absorbió **46 tickets** en el mes, con **43 resueltos (93%)**.
+El soporte transversal absorbió **46 tickets** en el mes, atendidos por el propio equipo de desarrollo. Se lo analiza acá **por cantidad y por tiempo** (volumen de trabajo e impacto temporal).
 
 ![SNB por semana](assets/04_snb_semana.png)
 ![SNB por tipo](assets/05_snb_tipo.png)
 
-- **Composición:** 23 Errores (50%), 14 consultas de Support (30%), 9 Nuevas funciones (20%). Es decir, **la mitad fueron incidencias/bugs** que interrumpieron el trabajo planificado.
-- **Estacionalidad:** pico en la **semana 4** (14 tickets), más del doble de una semana normal (~6).
+- **Volumen:** 46 tickets, con un **pico en la semana 4** (14 tickets), más del doble de una semana normal (~6).
+- **Composición:** 23 Errores (50%), 14 consultas de Support (30%), 9 Nuevas funciones (20%). La mitad fueron **incidencias/bugs** que interrumpieron el trabajo planificado.
 
 ![SNB tiempo de resolución](assets/06_snb_tiempo.png)
 ![SNB quién atendió](assets/07_snb_personas.png)
 
 ### Impacto de tiempo
-Sobre los 43 tickets resueltos (proxy creación→última actualización):
 
 | Métrica | Valor |
 |---|---|
-| Tiempo de resolución **promedio** | **5,6 días** |
-| Tiempo de resolución **mediano** | **3,7 días** |
-| Resueltos en **< 1 día** | 15 (35%) |
-| Resueltos en **> 7 días** | 14 (33%) |
+| Tiempo de atención **promedio** | **5,6 días** |
+| Tiempo de atención **mediano** | **3,7 días** |
+| Atendidos en **< 1 día** | 15 (35%) |
+| Atendidos en **> 7 días** | 14 (33%) |
 | Esfuerzo estimado del equipo* | **~35–46 hs (≈ 4–6 jornadas)** |
 
 \* Estimación a 45–60 min de atención efectiva por ticket (no hay worklogs cargados; el tiempo calendario incluye esperas).
@@ -92,12 +90,12 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 
 ## 4. Detalle tablero por tablero
 
-**Referencias:** 🆕 creada en julio · ✅ completada · 🔄 en curso · ⏳ por hacer.
+**Referencias:** 🆕 creada en julio · ✅ finalizada · 🔄 en curso · ⏳ por hacer.
 
-## 🛒 Libre Opción — 116 tareas
+## 🛒 Libre Opción — 107 tareas
 
 #### LIO — LIO
-**87 tareas** · 🆕 70 nuevas · ✅ 54 completadas · 🔄 24 en curso
+**87 tareas** · 🆕 70 nuevas · ✅ 54 finalizadas · 🔄 24 en curso
 
 - ⏳ `LIO-679` · *Backlog* · Marbe Moreno — Opiniones de producto
 - 🆕⏳ `LIO-736` · *Backlog* · — — APP - API - OM - agregar cantidad de opiniones tipo: google maps o meli
@@ -171,7 +169,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕🔄 `LIO-720` · *Ready for QA* · Franco Callipo — API - LO - Feat - Traer la información cargada en el CMS de las tiendas oficiales (punto 2)
 - 🆕🔄 `LIO-721` · *Ready for QA* · Marbe Moreno — APP - Feat - Crear landing para AMD
 - 🆕🔄 `LIO-723` · *Ready for QA* · Emanuel Jesus Ferreyra — API - Feat - Cancelación de retiro pendiente en la Wallet
-- 🆕✅ `LIO-724` · *Ready for QA* · Emanuel Jesus Ferreyra — air drop -> Qr - En la Wallet
+- 🆕🔄 `LIO-724` · *Ready for QA* · Emanuel Jesus Ferreyra — air drop -> Qr - En la Wallet
 - 🆕🔄 `LIO-725` · *Ready for QA* · Emanuel Jesus Ferreyra — API - Modelado - Requerimientos
 - 🆕🔄 `LIO-727` · *Ready for QA* · Marbe Moreno — APP - CMS - Feat - Seccion para cargar info de las tiendas oficiales (punto 1)
 - 🆕🔄 `LIO-728` · *Ready for QA* · Emanuel Jesus Ferreyra — APP - Feat  - Cancelar retiro pendiente + monto máximo en la wallet
@@ -188,7 +186,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - ⏳ `LIO-1` · *Selected for Development* · — — Experiencia del Usuario (UX)
 
 #### LOMKT — LO | Marketing
-**29 tareas** · 🆕 19 nuevas · ✅ 2 completadas · 🔄 25 en curso
+**20 tareas** · 🆕 10 nuevas · ✅ 2 finalizadas · 🔄 16 en curso
 
 - 🔄 `LOMKT-267` · *Activaciones OK* · barbara — 1.Jul: 04/07 Sabias que si no cambias la pasta térmica o grasa siliconada de tu procesador cada 6 meses tu pc deja de rendir al máximo nivel?
 - 🔄 `LOMKT-268` · *Activaciones OK* · barbara — 3.Jul: 09/09 Pasta térmica + grasa siliconada
@@ -197,70 +195,25 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🔄 `LOMKT-274` · *Activaciones OK* · barbara — 5.Jul: 13/07 Tu primera PC Gamer, en cuotas_Armar copy
 - 🔄 `LOMKT-275` · *Activaciones OK* · barbara — 6.Jul: 15/07Dicionario Gamer Libre opción
 - 🔄 `LOMKT-276` · *Activaciones OK* · barbara — 4.Jul: 11/07 144hz , 240hz, 280 hz Quien gana?_Copy
-- 🆕🔄 `LOMKT-278` · *Activaciones OK* · Eloy Passarella — 9.Jul: Micrófono Trust
 - 🆕🔄 `LOMKT-280` · *Activaciones OK* · barbara — Jul: 02/07 Logos AMD, AORUS y TRUST para Remeras
-- 🆕🔄 `LOMKT-282` · *Activaciones OK* · Eloy Passarella — Jul: Story | LO Permanecerá cerrado
-- 🆕🔄 `LOMKT-284` · *Activaciones OK* · Eloy Passarella — Jul:LO_ Carteles de escritorio Palacio del Juego
 - 🆕🔄 `LOMKT-285` · *Activaciones OK* · Belu Ontivero — Jul: Folleto
-- 🆕🔄 `LOMKT-287` · *Activaciones OK* · Eloy Passarella — jul: Story | cerrado por partido
-- 🆕🔄 `LOMKT-288` · *Activaciones OK* · Eloy Passarella — 10.Jul:Post Patea Penales en LO
 - 🆕🔄 `LOMKT-290` · *Activaciones OK* · barbara — Jul: Flyer evento
-- 🆕🔄 `LOMKT-291` · *Activaciones OK* · Eloy Passarella — Jul: PALACIO DE JUEGOS, BANNER
 - 🆕🔄 `LOMKT-292` · *Activaciones OK* · barbara — Jul: Portada de videos_Programar
-- 🆕🔄 `LOMKT-295` · *Activaciones OK* · Eloy Passarella — Jul: Portada Video Loki
 - 🆕🔄 `LOMKT-294` · *En curso* · Belu Ontivero — Ago: Día del Gamer
 - 🆕✅ `LOMKT-289` · *Finalizada* · — — LO_PROMO NVIDIA
 - 🆕✅ `LOMKT-297` · *Finalizada* · barbara — 1.ACTIVACIONES EN EL ERP
 - 🔄 `LOMKT-19` · *PENDIENTE ERP* · Marbe Moreno — Site LO
 - 🆕🔄 `LOMKT-279` · *PENDIENTE ERP* · barbara — 7.jul: agosto Proyector Benq
-- 🆕🔄 `LOMKT-281` · *PENDIENTE ERP* · Eloy Passarella — 5..Jul: Ago Ventajas de una niintendo switch
 - 🆕🔄 `LOMKT-286` · *PENDIENTE ERP* · barbara — Jul: Ago Smartwatch
-- 🆕🔄 `LOMKT-283` · *REVISION E* · Eloy Passarella — 2. NUEVO INGRESO TVs TCL_Copy
 - 🔄 `LOMKT-271` · *REVISIÓN A* · Ezequiel manzano — Jun: Logo de Gigabyte Roto
 - ⏳ `LOMKT-272` · *Tareas por hacer* · — — 1.Jul: Banners Cambiar COLORES DEGRADE MAS PREGNANTE
 - 🆕⏳ `LOMKT-296` · *Tareas por hacer* · Alejandra Guidobono — LO_ IMAGEN PANTALLA
 
 
-## 🖥️ New Bytes — 109 tareas
-
-#### DNYL — DISEÑO NB
-**32 tareas** · 🆕 17 nuevas · ✅ 31 completadas · 🔄 1 en curso
-
-- ✅ `DNYL-1412` · *COMUNICADO* · md_mnuble — NB_ PROMO GIGA FUENTE DE REGALO
-- ✅ `DNYL-1439` · *COMUNICADO* · md_mnuble — NB_ INGRESO SOLARMAX
-- ✅ `DNYL-1450` · *COMUNICADO* · md_mnuble — NB_ NB TRAVEL 3era Edición
-- ✅ `DNYL-1457` · *COMUNICADO* · md_mnuble — NB_ NETAC DEALS
-- ✅ `DNYL-1458` · *COMUNICADO* · md_mnuble — NB_ MSI MUNDIALISTA
-- ✅ `DNYL-1459` · *COMUNICADO* · — — genius
-- ✅ `DNYL-1460` · *COMUNICADO* · md_mnuble — NB_ NB TRAVEL COMUNICACIONES
-- ✅ `DNYL-1464` · *COMUNICADO* · md_mnuble — NB_ PROMO GIGA
-- ✅ `DNYL-1465` · *COMUNICADO* · md_mnuble — NB_ AMD INGRESO
-- ✅ `DNYL-1466` · *COMUNICADO* · md_mnuble — NB_ DEAL MUNDIALISTA INTELAID
-- ✅ `DNYL-1469` · *COMUNICADO* · md_mnuble — NB_ INGRESO TRUST
-- ✅ `DNYL-1471` · *COMUNICADO* · md_mnuble — NB_ ACELERADOR GIGA PRODUCTOS DESTACADOS
-- ✅ `DNYL-1472` · *COMUNICADO* · — — NB_ ACELERADOR RAZER DESTACADO
-- ✅ `DNYL-1473` · *COMUNICADO* · md_mnuble — NB_ VIERNES CERRAMOS ANTES
-- 🆕✅ `DNYL-1474` · *COMUNICADO* · md_mnuble — NB_ AMD RELANZAMIENTO AM4 10 años
-- 🆕✅ `DNYL-1476` · *COMUNICADO* · md_mnuble — NB_ INGRESO GIGABYTE
-- 🆕✅ `DNYL-1477` · *COMUNICADO* · md_mnuble — NB_ BANNER ASUS
-- 🆕✅ `DNYL-1478` · *COMUNICADO* · md_mnuble — NB_ IMAGEN KIT
-- 🆕✅ `DNYL-1479` · *COMUNICADO* · md_mnuble — NB_ BANNER DLINK
-- 🆕✅ `DNYL-1480` · *COMUNICADO* · md_mnuble — NB_ INGRESO TCL
-- 🆕✅ `DNYL-1481` · *COMUNICADO* · — — NB_ JUEVES Y VIERNES CERRADOS
-- 🆕✅ `DNYL-1482` · *COMUNICADO* · md_mnuble — NB_PREMIOS NB TRAVEL VENDEDORES
-- 🆕✅ `DNYL-1483` · *COMUNICADO* · md_mnuble — NB_ IMAGENES KITS NB
-- 🆕✅ `DNYL-1484` · *COMUNICADO* · md_mnuble — NB_ NUEVA MARCA EN NB TRAVEL
-- 🆕✅ `DNYL-1485` · *COMUNICADO* · md_mnuble — NB_ ACELERADOR RAZER
-- 🆕✅ `DNYL-1486` · *COMUNICADO* · md_mnuble — NB_ KITS SIN IMAGENES
-- 🆕✅ `DNYL-1487` · *COMUNICADO* · md_mnuble — NB_ PIEZAS LANZAMIENTO AMD
-- 🆕✅ `DNYL-1488` · *COMUNICADO* · md_mnuble — NB_ BUNDLE AMD Y PASTERMAX
-- 🆕✅ `DNYL-1489` · *COMUNICADO* · md_mnuble — NB_ FAACTURA GENIUS
-- 🆕✅ `DNYL-1490` · *COMUNICADO* · md_mnuble — NB_ GENIUS BANNER MUNDIAL
-- 🆕✅ `DNYL-1491` · *COMUNICADO* · md_mnuble — NB_ KIT SIN IMAGEN
-- 🔄 `DNYL-1424` · *PARA COMUNICAR* · md_mnuble — NB_ INGRESO GIGABYTE
+## 🖥️ New Bytes — 80 tareas
 
 #### PED — Pedidos
-**24 tareas** · 🆕 23 nuevas · ✅ 9 completadas · 🔄 11 en curso
+**24 tareas** · 🆕 23 nuevas · ✅ 9 finalizadas · 🔄 11 en curso
 
 - 🆕🔄 `PED-1413` · *En curso* · Emanuel Jesus Ferreyra — API - Review - Market Place - Medio de pago -> Discrepancia en el medio de pago
 - ✅ `PED-1390` · *Finalizada* · Marbe Moreno — APP WEB - Agregar IPA a clientes y descargar reporte de INTEL 
@@ -288,7 +241,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕⏳ `PED-1410` · *Tareas por hacer* · Marbe Moreno — Filtro de empresa en dashboard: aplicar unlockCompanyCode + companyCode preseteado
 
 #### NBE — NBElectric
-**17 tareas** · 🆕 13 nuevas · ✅ 4 completadas · 🔄 10 en curso
+**17 tareas** · 🆕 13 nuevas · ✅ 4 finalizadas · 🔄 10 en curso
 
 - 🔄 `NBE-273` · *Activaciones OK* · Belu Ontivero — 1.Jun: Bienvenido al Equipo_Presentaciones 
 - 🔄 `NBE-277` · *Activaciones OK* · — — JUN: Actualización de fotos de perfil social media
@@ -309,7 +262,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕🔄 `NBE-290` · *Revisión* · Marbe Moreno — Nueva Firma Nbelectric con Vcard
 
 #### INV — Inventario
-**13 tareas** · 🆕 13 nuevas · ✅ 8 completadas · 🔄 5 en curso
+**13 tareas** · 🆕 13 nuevas · ✅ 8 finalizadas · 🔄 5 en curso
 
 - 🆕✅ `INV-353` · *Finalizada* · Marbe Moreno — Stock: ahorrar espacio vertical (subir buscador) + resolver mensaje del delta al filtrar por fecha
 - 🆕✅ `INV-354` · *Finalizada* · Ezequiel manzano — Backend: filtro Nacional / Importado / Todo (cuidando performance)
@@ -326,7 +279,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕🔄 `INV-364` · *Ready for QA* · Ezequiel manzano — Cambio masivo de precio: agregar columna PCAM (ajuste de utilidad por columna)
 
 #### NBWEB — NBWEB
-**9 tareas** · 🆕 7 nuevas · ✅ 6 completadas · 🔄 1 en curso
+**9 tareas** · 🆕 7 nuevas · ✅ 6 finalizadas · 🔄 1 en curso
 
 - ✅ `NBWEB-1030` · *Finalizada* · Marbe Moreno — APP WEB - Ver detalle postventa
 - ✅ `NBWEB-1031` · *Finalizada* · Ezequiel manzano — API - Ver detalle pase en pventa
@@ -339,7 +292,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕⏳ `NBWEB-1035` · *Tareas por hacer* · — — Generación de casos de prueba de negocio
 
 #### POS — Postventa
-**5 tareas** · 🆕 0 nuevas · ✅ 5 completadas · 🔄 0 en curso
+**5 tareas** · 🆕 0 nuevas · ✅ 5 finalizadas · 🔄 0 en curso
 
 - ✅ `POS-339` · *Finalizada* · Ezequiel manzano — API - Disparar email
 - ✅ `POS-340` · *Finalizada* · Ezequiel manzano — API - Mejorar wording mail ingreso
@@ -348,7 +301,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - ✅ `POS-343` · *Finalizada* · Marbe Moreno — APP WEB - Agregar razon cuando se rechazo
 
 #### COM — Compras
-**5 tareas** · 🆕 4 nuevas · ✅ 2 completadas · 🔄 2 en curso
+**5 tareas** · 🆕 4 nuevas · ✅ 2 finalizadas · 🔄 2 en curso
 
 - ✅ `COM-320` · *Finalizada* · Marbe Moreno — APP - Refactor - Color de moneda cruzado en ordenes de compra
 - 🆕✅ `COM-324` · *Finalizada* · Ezequiel manzano — API - Refacto - Incorporar key para el partpicker en todos los recursos donde se utiliza
@@ -357,14 +310,21 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕⏳ `COM-323` · *Tareas por hacer* · — — Partpicker
 
 #### COB — Cobros
-**3 tareas** · 🆕 3 nuevas · ✅ 0 completadas · 🔄 3 en curso
+**3 tareas** · 🆕 3 nuevas · ✅ 0 finalizadas · 🔄 3 en curso
 
 - 🆕🔄 `COB-649` · *Ready for QA* · Emanuel Jesus Ferreyra — API - Feat - Bloqueo temporal de PendingCashOut durante su procesamiento
 - 🆕🔄 `COB-650` · *Ready for QA* · Emanuel Jesus Ferreyra — APP - Feat - Bloqueo temporal de PendingCashOut durante su procesamiento
 - 🆕🔄 `COB-651` · *Ready for QA* · Emanuel Jesus Ferreyra — API/APP -  Feat - exponer monto pagado con billetera al cobrar pedido
 
+#### DNYL — DISEÑO NB
+**3 tareas** · 🆕 1 nuevas · ✅ 3 finalizadas · 🔄 0 en curso
+
+- ✅ `DNYL-1459` · *COMUNICADO* · — — genius
+- ✅ `DNYL-1472` · *COMUNICADO* · — — NB_ ACELERADOR RAZER DESTACADO
+- 🆕✅ `DNYL-1481` · *COMUNICADO* · — — NB_ JUEVES Y VIERNES CERRADOS
+
 #### EXP — Expedición
-**1 tareas** · 🆕 1 nuevas · ✅ 0 completadas · 🔄 1 en curso
+**1 tareas** · 🆕 1 nuevas · ✅ 0 finalizadas · 🔄 1 en curso
 
 - 🆕🔄 `EXP-560` · *Ready for QA* · Ezequiel manzano — Restringir créditos e ingreso de mercadería (serializar) solo a Diego Bordón y Daniel de expedición
 
@@ -372,7 +332,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 ## 🏢 GIGA (ERP) — 12 tareas
 
 #### GIGA — GIGA
-**12 tareas** · 🆕 12 nuevas · ✅ 9 completadas · 🔄 0 en curso
+**12 tareas** · 🆕 12 nuevas · ✅ 9 finalizadas · 🔄 0 en curso
 
 - 🆕✅ `GIGA-10` · *Listo* · Ezequiel manzano — Estados de proyectos configurables (nombre + color) y nuevo estado "Pendiente de pago"
 - 🆕✅ `GIGA-11` · *Listo* · Ezequiel manzano — Fondos: selector de cliente con búsqueda al agregar una nueva acción
@@ -391,7 +351,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 ## 🎨 BLU — Agencia y clientes — 150 tareas
 
 #### FB — Fontaine Bleau
-**58 tareas** · 🆕 21 nuevas · ✅ 54 completadas · 🔄 4 en curso
+**58 tareas** · 🆕 21 nuevas · ✅ 54 finalizadas · 🔄 4 en curso
 
 - ✅ `FB-100` · *ACTIVACIONES* · Belu Ontivero — FB: Tarjeta corporativa Felices fiestas para enviar por Whatsapp
 - ✅ `FB-101` · *ACTIVACIONES* · — — 5. Enviar por whatsapp Avance de obra Diciembre
@@ -453,7 +413,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕🔄 `FB-177` · *Revisión* · Marbe Moreno — Jul: Avance de Obra Julio Site
 
 #### ADATA — ADATA
-**42 tareas** · 🆕 21 nuevas · ✅ 9 completadas · 🔄 33 en curso
+**42 tareas** · 🆕 21 nuevas · ✅ 9 finalizadas · 🔄 33 en curso
 
 - 🔄 `ADATA-295` · *Activaciones OK* · barbara — 8.Jul: 1/4 Social Media Psu Kyber 850_Programar
 - 🔄 `ADATA-296` · *Activaciones OK* · barbara — 9.Jul: 2/4 Social Media Power Bank R050_Programar
@@ -499,7 +459,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕🔄 `ADATA-479` · *Revisión* · barbara — 6.Ago: Meme
 
 #### LAW — LASET
-**19 tareas** · 🆕 11 nuevas · ✅ 9 completadas · 🔄 10 en curso
+**19 tareas** · 🆕 11 nuevas · ✅ 9 finalizadas · 🔄 10 en curso
 
 - ✅ `LAW-1` · *Finalizada* · — — Sitio Web Actual_Etapa 1
 - 🆕✅ `LAW-106` · *Finalizada* · barbara — Jul: Triada 2 post 4 Macrovip  bienvenida_Copy
@@ -522,7 +482,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🔄 `LAW-74` · *Referencia* · Belu Ontivero — 2. TARJETA PERSONAL
 
 #### DLINK — D-LINK
-**12 tareas** · 🆕 12 nuevas · ✅ 2 completadas · 🔄 6 en curso
+**12 tareas** · 🆕 12 nuevas · ✅ 2 finalizadas · 🔄 6 en curso
 
 - 🆕✅ `DLINK-1` · *LISTO* · Belu Ontivero — Jul: D-link_subir lo que esta hecho hasta el momento
 - 🆕✅ `DLINK-7` · *LISTO* · barbara — Ago: descargar y subir material de Dlink HOY
@@ -538,7 +498,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕🔄 `DLINK-9` · *REVISIÓN* · barbara — 2.Ago: Triada 1 Post 2_COPY
 
 #### BLUWEB — Blu
-**11 tareas** · 🆕 6 nuevas · ✅ 10 completadas · 🔄 0 en curso
+**11 tareas** · 🆕 6 nuevas · ✅ 10 finalizadas · 🔄 0 en curso
 
 - ✅ `BLUWEB-290` · *LISTO* · — — 6- POST  - BLU.IT
 - ✅ `BLUWEB-293` · *LISTO* · Belu Ontivero — 6. Destacadas  Blu 5 unidades 
@@ -553,7 +513,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - ⏳ `BLUWEB-213` · *PENDIENTE DE COMUNICAR* · — — Cumples 2026
 
 #### CBL — CBL
-**6 tareas** · 🆕 6 nuevas · ✅ 3 completadas · 🔄 0 en curso
+**6 tareas** · 🆕 6 nuevas · ✅ 3 finalizadas · 🔄 0 en curso
 
 - 🆕✅ `CBL-2` · *Listo* · Alejandra Guidobono — MIC: Jul Evento Microglobal Cisco-Brotek
 - 🆕✅ `CBL-5` · *Listo* · — — BRO: Tarjeta Felices fiestas
@@ -563,7 +523,7 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 - 🆕⏳ `CBL-4` · *Por hacer* · — — LOGOS ACER
 
 #### PB — Proyectos.Blu
-**2 tareas** · 🆕 2 nuevas · ✅ 2 completadas · 🔄 0 en curso
+**2 tareas** · 🆕 2 nuevas · ✅ 2 finalizadas · 🔄 0 en curso
 
 - 🆕✅ `PB-7` · *Finalizada* · barbara — Jul: Brother Kids day
 - 🆕✅ `PB-8` · *Finalizada* · barbara — Jul: Ceven Friends Day
@@ -620,8 +580,8 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 
 ## 5. Conclusiones para la junta
 
-1. **Mes de alta demanda:** 433 tareas trabajadas, 299 nuevas — el negocio empujó más trabajo del que se pudo cerrar.
+1. **Mes de alta demanda:** 395 tareas trabajadas, 274 nuevas — el negocio empujó más trabajo del que se pudo cerrar.
 2. **Apuestas estratégicas:** LIO (reputación de vendedores) y GIGA (ERP nuevo, 100% completado en el mes) fueron los focos de producto.
-3. **Diseño/Marketing operó a plena capacidad** (48% del volumen; 59% sumado a soporte), sosteniendo activaciones de todas las marcas/clientes.
+3. **Diseño/Marketing operó a plena capacidad** (43% del volumen; 54% sumado a soporte), sosteniendo activaciones de todas las marcas/clientes.
 4. **El soporte pesa sobre el desarrollo:** 46 tickets ≈ 4–6 jornadas de dev, con Eze absorbiendo el 43%. Es la principal palanca para recuperar velocidad de roadmap.
-5. **Backlog en crecimiento:** priorización necesaria para agosto, especialmente en tableros con mucha tarea abierta (ADATA 33, LO Marketing 25 en curso).
+5. **Backlog en crecimiento:** priorización necesaria para agosto, especialmente en tableros con mucha tarea abierta (ADATA 33, LO Marketing 16 en curso).
