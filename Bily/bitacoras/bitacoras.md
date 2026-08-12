@@ -70,6 +70,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-08-08|2026-08-08]]
 - [[Bily/bitacoras/2026-08-09|2026-08-09]] — Saludo inicial de Catriel por WhatsApp ("Buen día") y mención de revisar algo de "billy"; sin pendientes registrados
 - [[Bily/bitacoras/2026-08-10|2026-08-10]] — Recepción de media sin texto; recordatorio de pago de quesos agendado por cron (2026-08-11 00:51 UTC), registrado en el Kanban de Finanzas
+- [[Bily/bitacoras/2026-08-12|2026-08-12]] — Creación de la bitácora diaria a pedido de Catriel; verificación del historial de WhatsApp, sin decisiones ni pedidos nuevos
 
 ## Ver también
 
