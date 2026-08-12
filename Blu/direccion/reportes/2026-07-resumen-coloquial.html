@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><style>
+@page{ size:A4; margin:14mm 13mm; }
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI','Noto Sans',Arial,sans-serif;color:#1a2430;font-size:12.5px;line-height:1.55;}
+.top{background:#0B1F3A;color:#fff;padding:22px 24px;border-radius:10px;}
+.top h1{font-size:27px;margin-bottom:4px;}
+.top p{color:#b9c9dc;font-size:12px;}
+.band{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;}
+.kpi{flex:1 1 30%;background:#eef3f9;border-left:5px solid #2E6FB7;border-radius:8px;padding:10px 14px;}
+.kpi .n{font-size:30px;font-weight:800;color:#0B1F3A;line-height:1;}
+.kpi .l{font-size:11px;color:#4a5b6e;margin-top:3px;}
+.kpi.o{border-left-color:#E8833A;} .kpi.o .n{color:#E8833A;}
+.kpi.t{border-left-color:#3FB8AF;} .kpi.t .n{color:#1f8f88;}
+.lead{background:#fff8ec;border-left:4px solid #E8833A;padding:10px 16px;border-radius:6px;margin:12px 0;font-size:13px;}
+img.chart{width:49%;border:1px solid #e3e8ee;border-radius:8px;vertical-align:top;margin:6px 0.5%;}
+.charts{margin:10px 0 4px;}
+h2{color:#0B1F3A;font-size:17px;margin:22px 0 8px;border-left:5px solid #2E6FB7;padding-left:10px;page-break-after:avoid;}
+.card{background:#f7fafd;border:1px solid #e3e8ee;border-radius:9px;padding:12px 16px;margin:10px 0;page-break-inside:avoid;}
+.card h3{font-size:15px;color:#0B1F3A;display:flex;align-items:center;gap:8px;margin-bottom:5px;}
+.badge{background:#2E6FB7;color:#fff;font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap;}
+.badge.big{background:#E8833A;}
+.card p{margin:4px 0;}
+strong{color:#0B1F3A;}
+.final{background:#0B1F3A;color:#fff;padding:16px 20px;border-radius:10px;margin-top:18px;font-size:15px;text-align:center;}
+.final b{color:#7Fc4ff;}
+.sub{color:#2E6FB7;font-weight:700;font-size:13px;margin:18px 0 4px;}
+</style></head><body>
+
+<div class="top">
+  <h1>🗣️ Julio 2026 en criollo</h1>
+  <p>Qué hizo cada equipo, proyecto por proyecto · BLU / New Bytes / Libre Opción · 1–31 julio 2026</p>
+</div>
+
+<div class="band">
+  <div class="kpi"><div class="n">395</div><div class="l">tareas trabajadas en el mes</div></div>
+  <div class="kpi"><div class="n">274</div><div class="l">tareas nuevas ingresadas</div></div>
+  <div class="kpi t"><div class="n">234</div><div class="l">tareas finalizadas</div></div>
+  <div class="kpi"><div class="n">20</div><div class="l">tableros / proyectos activos</div></div>
+  <div class="kpi t"><div class="n">9</div><div class="l">personas en cancha</div></div>
+  <div class="kpi o"><div class="n">46</div><div class="l">tickets de soporte atendidos</div></div>
+</div>
+
+<div class="lead">📈 <strong>En números gruesos:</strong> el equipo movió <strong>395 tareas repartidas en 20 proyectos</strong> durante julio — un promedio de <strong>~18 tareas por día hábil</strong>. Acá va el detalle, contado de corrido.</div>
+
+<div class="charts">
+  <img class="chart" src="assets/01_tableros.png">
+  <img class="chart" src="assets/03_personas.png">
+</div>
+
+<h2>🖥️ Producto y Desarrollo</h2>
+
+<div class="card"><h3>🛒 Libre Opción <span class="badge big">87 tareas</span></h3>
+<p>Lejos, el proyecto <strong>más movido del mes</strong>. Foco grande en el <strong>sistema de reputación y calificaciones</strong>: <strong>Franco</strong> en todo el backend (API + CMS) y <strong>Marbe</strong> en las pantallas. Ahora se puede calificar al <strong>vendedor</strong> y al <strong>producto</strong>, responder y replicar opiniones, y se sumaron los "penales" — con bastante QA fino (reseñas duplicadas, calificaciones heredadas, campos obligatorios).</p>
+<p>En paralelo, <strong>Marbe</strong> se comió una tanda enorme de <strong>A+ Content</strong> (+25 fichas de Gigabyte, Trust y AMD), arrancó la <strong>Wallet / Billetera LO</strong> (QR "air drop") y <strong>Eze</strong> sumó login de PartPicker y la actualización de la app de Vendedores.</p></div>
+
+<div class="card"><h3>🏢 GIGA — el ERP nuevo <span class="badge">12 tareas · 100% cerrado</span></h3>
+<p>Todo <strong>Eze</strong>, y cerró <strong>todo lo del mes</strong>: sección <strong>Contactos</strong> (importar listas + alta de clientes), login de PartPicker, etiquetas de cargo con autocompletar, <strong>estados de proyecto configurables</strong> + "Pendiente de pago", calendario con hora y el <strong>"Mapa de Ploteos"</strong>. Un mes redondo.</p></div>
+
+<div class="card"><h3>📦 Pedidos <span class="badge">24 tareas</span></h3>
+<p><strong>Ema</strong> y <strong>Eze</strong> con la <strong>Billetera LO</strong> (movimientos y saldo), fix de <strong>clientes de LASET</strong> en producción, y <strong>Marbe</strong> con la <strong>Volanta</strong> (mayúsculas + logo de cada empresa). También el arreglo del pedido pagado con wallet.</p></div>
+
+<div class="card"><h3>🔧 Postventa <span class="badge">5 tareas · todas cerradas</span></h3>
+<p>Quedó redondo el flujo de <strong>pre-ingreso</strong>: rechazar con motivo, disparar mail, mejorar wording y remitos (<strong>Eze</strong> + <strong>Marbe</strong>).</p></div>
+
+<div class="card"><h3>🌐 NBWEB / NBElectric <span class="badge">26 tareas</span></h3>
+<p><strong>Detalle de postventa</strong>, banners de aceleradores, marca <strong>Cooler Master</strong>. <strong>Guillermo</strong> arrancó un <strong>research de casos de prueba automáticos</strong> y actualizó la doc de developers. En NBE, ajustes web y logo nuevo.</p></div>
+
+<div class="card"><h3>🧾 Compras e Inventario <span class="badge">18 tareas</span></h3>
+<p>Refactors de <strong>PartPicker</strong>, arreglo del color de moneda en órdenes de compra y mejoras de <strong>Stock</strong> (buscador y delta por fecha).</p></div>
+
+<h2>🎨 Diseño y Marketing — BLU, agencia y clientes</h2>
+<div class="card"><h3>El músculo operativo del mes <span class="badge big">Bárbara + Belu</span></h3>
+<p>🏗️ <strong>Fontaine Bleau (58)</strong> — el cliente más cargado: avance de obra (fotos, ISO), triadas y activaciones al ERP.</p>
+<p>🎮 <strong>ADATA (42)</strong> — mes intenso y de coyuntura: contenido del <strong>Mundial</strong>, <strong>Adata Rewards</strong>, memes, banners y <strong>Brand Tour</strong>.</p>
+<p>💾 <strong>LASET (19)</strong> — triadas de posteos (ZOTAC, Patriot, Toshiba, ASUS, Genius) y ajustes al sitio.</p>
+<p>🔷 <strong>Blu (11)</strong> — BluTriada 1-2-3, posteos y cronograma. · 🤝 <strong>CBL (6)</strong> — eventos Cisco-Brotek. · 🟢 <strong>LO Marketing + D-Link</strong> — promos y material.</p></div>
+
+<h2>🎧 Soporte (SNB) — el "impuesto" invisible</h2>
+<div class="card"><h3>46 tickets atendidos por el equipo de dev <span class="badge o">Eze 20 · Catriel 12 · Ema 9</span></h3>
+<p>La mitad fueron <strong>errores/bugs</strong>, el resto consultas y pedidos de funciones nuevas. La <strong>semana 4</strong> fue la más pesada (14 tickets). Es tiempo que el equipo técnico le saca al roadmap — por eso importa tenerlo a la vista.</p></div>
+
+<div class="final">Julio fue un mes de <b>empuje fuerte de producto</b> (LIO y el ERP GIGA), con <b>Diseño/Marketing a pleno</b> sosteniendo todas las marcas, y un <b>soporte que pesó sobre el equipo de desarrollo</b>. <br>395 tareas. 20 proyectos. 9 personas. Un mes de mucho laburo.</div>
+
+</body></html>
