@@ -28,7 +28,7 @@ fuente: Jira (todos los tableros)
 
 ![Distribución por área](assets/02_areas.png)
 
-**Lectura:** el 61% del esfuerzo fue Desarrollo/Producto, el ~29% Diseño/Marketing y ~10% Soporte. Se cerraron 144 entregables pero ingresaron 299 nuevos: **el backlog creció ~2:1**, señal de fuerte demanda (arranque de GIGA, sistema de reputación de LIO, catálogo A+).
+**Lectura:** el 48% del esfuerzo fue Diseño/Marketing (209 tareas), el 41% Desarrollo/Producto (178) y el 11% Soporte (46). Se cerraron 144 entregables pero ingresaron 299 nuevos: **el backlog creció ~2:1**, señal de fuerte demanda (arranque de GIGA, sistema de reputación de LIO, catálogo A+).
 
 ![Tareas por tablero](assets/01_tableros.png)
 
@@ -622,6 +622,6 @@ Sobre los 43 tickets resueltos (proxy creación→última actualización):
 
 1. **Mes de alta demanda:** 433 tareas trabajadas, 299 nuevas — el negocio empujó más trabajo del que se pudo cerrar.
 2. **Apuestas estratégicas:** LIO (reputación de vendedores) y GIGA (ERP nuevo, 100% completado en el mes) fueron los focos de producto.
-3. **Diseño/Marketing operó a plena capacidad** (~55% del volumen si se suma a soporte), sosteniendo activaciones de todas las marcas/clientes.
+3. **Diseño/Marketing operó a plena capacidad** (48% del volumen; 59% sumado a soporte), sosteniendo activaciones de todas las marcas/clientes.
 4. **El soporte pesa sobre el desarrollo:** 46 tickets ≈ 4–6 jornadas de dev, con Eze absorbiendo el 43%. Es la principal palanca para recuperar velocidad de roadmap.
 5. **Backlog en crecimiento:** priorización necesaria para agosto, especialmente en tableros con mucha tarea abierta (ADATA 33, LO Marketing 25 en curso).
