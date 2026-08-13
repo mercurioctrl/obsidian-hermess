@@ -146,6 +146,17 @@ Rectificativas percepción CABA — avance grande. Ahora **13 de 19 meses listos
 
 Archivos: `intimacion/generador/msr_a_arciba.php`, `msr_a_arciba2.php`, `afip_a_arciba.py`, `surgical_v3.py`, `intimacion/ESTADO_RECTIFICATIVAS.md`, `intimacion/PARA_PRESENTAR/`
 
+## 2026-08-14
+
+Rectificativas CABA — cerrado a **18 de 19 meses** (antes 13). Todos en `intimacion/PARA_PRESENTAR/` ≥ declarado y ARCIBA-válidos.
+
+- **Método ancla-e-Arciba (nuevo, destrabó los últimos 5):** se bajan los `resumenOp.pdf?ddjjId=X` de e-Arciba (desglose por alícuota: registros/base/percep declarados) con cookies del usuario, y se **escala la reconstrucción de producción/MSR al target = declarado + intimación**. Resuelve 2025/01,03,04,05 y 2026/02 (que antes daban −4 a −6% por drift de base). Generadores: `generador/prod_a_arciba.php`, `msr_a_arciba2.php`; PDFs en `/tmp/resumen_*.pdf`.
+- **Query de producción del sistema** (facturas 1,4,7,8 − NC 2,5,9, CAE, PV=1): probada; no reproduce (NC infladas en 2025, filtros rompen por mes). El presentado ≈ facturas solas = la reconstrucción de producción.
+- **2024/06 y 07 irreconstruibles (Convenio Multilateral):** el cruce resumenOp muestra +176/+47 comprobantes de más — percepción asignada a otra jurisdicción, reparto no registrado en la DB. Intimación chica ($225.596). Pendiente decidir criterio con el estudio.
+- **Comparación declarado/Flor/nuestra:** Flor daba menos que lo declarado en 9 meses; la nuestra siempre ≥ declarado (+0,0 a +4,0% = declarado+intimación).
+
+Archivos: `intimacion/generador/prod_a_arciba.php`, `msr_a_arciba2.php`, `intimacion/ESTADO_RECTIFICATIVAS.md`, `intimacion/PARA_PRESENTAR/` (18 TXT + Excel)
+
 ## Ver también
 - [[arquitectura]] · [[contexto]] · [[stack]]
 
