@@ -45,3 +45,11 @@ Temas financieros, de cobranzas y de compliance de BLU Digital Agency.
 ### Notas adicionales
 - Registrar la comisión del 1% como gasto financiero.
 - Alinear esta salida con el flujo de fondos personal vs. Blu (definir imputación contable según corresponda).
+
+### Resumen de costo neto de la operatoria
+- Monto inicial enviado: **2,000 USD** desde Mercury.
+- Cashback esperado: **20 USD** (1% de 2,000 USD, cash out).
+- Comisión fija de cambio: **40 USD**.
+- Comisión retiro 1% (29,493.21 ARS): se asume neutralizada por el cashback del 1% sobre los 2,000 USD.
+
+**Costo neto final estimado de toda la operación:** **20 USD**.
