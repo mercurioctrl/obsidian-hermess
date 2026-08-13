@@ -30,6 +30,9 @@ Proyectos y áreas de BLU Digital Agency.
 
 ### Dirección
 - [[direccion/reunion-directorio-pendiente|Reunión de Directorio Blu – Pendiente]]
+- [[direccion/reportes/2026-07-reporte-detallado|Reporte Detallado — Julio 2026]]
+- [[direccion/reportes/2026-07-reporte-junta|Reporte de Julio 2026 — Resumen para la Junta]]
+- [[direccion/reportes/2026-07-resumen-coloquial|Julio 2026 en criollo — qué hizo cada equipo]]
 
 ### [[finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
 - [[finanzas/caso-mercury-acer|Caso Mercury — Origen de fondos (Acer USD 12.322)]]
