@@ -133,6 +133,19 @@ ALTER TABLE NB_WEB.dbo.permisos_agente ADD ver_capital     BIT NOT NULL DEFAULT 
 - Los tres permisos se incluyen en el JWT (`AuthRepository` — login y getById)
 - Archivos: `AuthRepository.php`, `PermissionLendCapitalMiddleware.php`, `PermissionPayCapitalMiddleware.php`, `LendCapitalRoute.php`
 
+## 2026-08-13
+
+Rectificativas percepción CABA — avance grande. Ahora **13 de 19 meses listos** en `intimacion/PARA_PRESENTAR/` (antes 7), todos ≥ presentado.
+
+- **Hallazgo MSR:** `[NEW_BYTES].dbo.MS_REMITO_PERCEPCIONES` separa CABA de ARBA por remito. CABA en pesos = `IMPPERCEP_CABA × NVALDIV`. Aísla CABA limpio desde 2025/06 → resolvió 2025/12. Generador `generador/msr_a_arciba.php` (+ híbrido con padrón `msr_a_arciba2.php`).
+- **AFIP base congelada** (`generador/afip_a_arciba.py`): reconstruyó 2024/01,02,03,05 (±1%). Pero "Otros Tributos" mezcla otras jurisdicciones desde mid-2024 → inservible para 2024/06+ y 2025 (+8% a +86%).
+- **Bug del Excel corregido:** la columna "Presentado (e-Arciba)" salía ×100 (el CSV usa punto decimal, `pf()` lo trataba como formato AR).
+- **Confirmado:** e-Arciba solo da montos por DDJJ, no el detalle comprobante-por-comprobante. La DB driftea (2026/02 da +48%). → Los 6 faltantes (2024/06,07; 2025/01,03,04,05; 2026/02) necesitan el TXT presentado real.
+- **2026/02 probado:** CABA correcta $29,64M (−1,4% del presentado); 109 de 111 fact A sin fila MSR no están en el padrón CABA (otra jurisdicción metida mal en el original).
+- **Comparación vs planilla de Flor:** los 13 cumplen "≥ presentado" donde su reconstrucción fallaba en 6.
+
+Archivos: `intimacion/generador/msr_a_arciba.php`, `msr_a_arciba2.php`, `afip_a_arciba.py`, `surgical_v3.py`, `intimacion/ESTADO_RECTIFICATIVAS.md`, `intimacion/PARA_PRESENTAR/`
+
 ## Ver también
 - [[arquitectura]] · [[contexto]] · [[stack]]
 

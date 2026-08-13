@@ -8,6 +8,19 @@
 
 ---
 
+## ⭐ ESTADO RECTIFICATIVAS (2026-08-13) — lo más actual
+
+Doc completo: `intimacion/ESTADO_RECTIFICATIVAS.md`. Alcance real: **19 meses intimados**.
+
+- **13 LISTOS** en `intimacion/PARA_PRESENTAR/` (TXT 215-char + Excel), todos ≥ presentado y ARCIBA-válidos: 2024/{01,02,03,05,08,09,10,11,12}, 2025/{02,10,12}, 2026/01.
+- **Fuente por mes:** TXT presentado real → `surgical_v3.py` (2024/08-12, 2025/02,10, 2026/01); AFIP base congelada → `afip_a_arciba.py` (2024/01,02,03,05, solo sirve early-2024); **MSR (CABA aislado)** → `msr_a_arciba.php` (2025/12).
+- **MSR = hallazgo clave:** `[NEW_BYTES].dbo.MS_REMITO_PERCEPCIONES` separa CABA de ARBA. CABA en pesos = `IMPPERCEP_CABA × NVALDIV`. Existe desde 2025-05-14 → sirve meses completos desde 2025/06.
+- **AFIP "Otros Tributos":** solo ≈ CABA en 2024/01-05. Desde mediados de 2024 mezcla percepciones de otras jurisdicciones (Convenio Multilateral) + ARBA → sobra +8% a +86%. No aísla CABA.
+- **FALTAN 6, todos necesitan el TXT presentado real** (pedir a Flor / buscar en `correo/`): 2024/06,07; 2025/01,03,04,05; 2026/02.
+- **Comparación vs planilla de Flor:** los 13 cumplen "≥ presentado"; la reconstrucción de Flor fallaba en 6 (daba menos). En los meses con TXT real la "a pagar" clava el intimado.
+- **2026/02 probado:** CABA correcta $29,64M (−1,4%); de 111 fact A sin fila MSR, 109 no están en padrón CABA (percepción de otra jurisdicción que el original metió mal). La DB no reproduce lo presentado (driftea a +48%).
+
+
 ## Regla que gobierna el análisis
 
 > **Si el sujeto NO figura en el "Padrón de Regímenes Generales", NO corresponde percibir (alícuota 0).**
