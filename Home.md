@@ -13,6 +13,7 @@
   - [[Blu/blu-crm/blu-crm|blu-crm]] — CRM: email masivo (SES) + WhatsApp
   - [[Blu/enviosMasivosRapidos/enviosMasivosRapidos|enviosMasivosRapidos]] — Newsletters HTML por SMTP (PHP CLI)
   - [[Blu/finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
+  - [[Blu/minutas/minutas|minutas]] — Minutas de reunión por cliente
   - [[Blu/rrhh/rrhh|rrhh]] — Recursos Humanos
   - `direccion/` — Dirección
 

@@ -37,6 +37,9 @@ Proyectos y áreas de BLU Digital Agency.
 ### [[finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
 - [[finanzas/caso-mercury-acer|Caso Mercury — Origen de fondos (Acer USD 12.322)]]
 
+### [[minutas/minutas|minutas]] — Minutas de reunión por cliente
+- [[minutas/naevo/naevo|NAEVO]] — [[minutas/naevo/2026-08-12-etiquetas-y-estrategia|2026-08-12 · Etiquetas, empaques y estrategia comercial]]
+
 ### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
 - [[rrhh/alertas-gestion|alertas de gestión]] · [[rrhh/cumpleanos|cumpleaños]] · [[rrhh/changelog|changelog]]
 - [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]]
