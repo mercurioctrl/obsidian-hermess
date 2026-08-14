@@ -8,16 +8,18 @@
 
 ---
 
-## ⭐ ESTADO RECTIFICATIVAS (2026-08-13, act.) — lo más actual
+## ⭐ ESTADO RECTIFICATIVAS (2026-08-14, act.) — lo más actual
 
 Doc completo: `intimacion/ESTADO_RECTIFICATIVAS.md`. Alcance: **19 meses intimados**.
 
-- **18 LISTOS** en `intimacion/PARA_PRESENTAR/` (18 TXT 215-char + Excel), todos ≥ declarado y ARCIBA-válidos. **FALTAN SOLO 2024/06 y 2024/07** (Convenio Multilateral, irreconstruibles).
-- **Fuente por mes:** TXT presentado real → `surgical_v3.py` (2024/08-12, 2025/02,10, 2026/01); AFIP base congelada → `afip_a_arciba.py` (2024/01,02,03,05); MSR → `msr_a_arciba.php` (2025/12); **ancla-e-Arciba** → `prod_a_arciba.php`/`msr_a_arciba2.php` (2025/01,03,04,05; 2026/02).
-- **MÉTODO ANCLA-E-ARCIBA (destrabó los últimos 5):** el estudio exige rectificativa ≥ declarado (se cobró). La DB driftea la base −5/−8% → reconstrucción queda abajo. FIX: bajar `resumenOp.pdf?ddjjId=X` de e-Arciba (desglose por alícuota con base+percep declarados) y **escalar la reconstrucción al target = declarado + intimación** (los CUIT intimados ya vienen a la alícuota ajustada en la DB de hoy). Cookies las pasa el usuario (throttlea: bajar de a uno con `--max-time`). Los 5 dan +0,0 a +4,0% sobre declarado.
-- **MSR:** `[NEW_BYTES].dbo.MS_REMITO_PERCEPCIONES` separa CABA de ARBA. CABA pesos = `IMPPERCEP_CABA × NVALDIV`. Existe desde 2025-05-14.
-- **Por qué faltan 2024/06,07:** el cruce del resumenOp vs la reconstrucción muestra +176/+47 comprobantes de más (base 173%/115%) — clientes cuya percepción NB asignó a otra jurisdicción (Convenio Multilateral); ese reparto por comprobante no está en la DB. Intimación chica ($225.596 total) → van con el número de la intimación o criterio del estudio.
-- **Comparación 3 criterios (declarado / Flor / nuestra):** la reconstrucción de Flor daba MENOS que lo declarado en 9 meses (inválido); la nuestra siempre da +0,0 a +4,0% (= declarado + intimación). Intimación total a pagar (Bloque A en padrón) ≈ $5,3M.
+- **17 PRESENTADOS en e-Arciba** ✅ (2024/01,02,03,05,08,09,10,11,12; 2025/01,02,03,04,05,12; 2026/01,02) + 2025/10 de yapa. **FALTAN SOLO 2024/06 y 2024/07** (Convenio Multilateral).
+- **⭐ 11 REGLAS DE VALIDACIÓN AL IMPORTAR** (todas descubiertas importando de verdad; ARCIBA rechaza fila por fila): (1) `BASE=MONTO−OTROS−IVA`; (2) `PERCEP=BASE×ALIC` redondeo **HALF-UP**; (3) `PERCEP==TOTAL`; (4) alícuota en grilla; (5) **sitIVA=3→IVA=0**; (6) sitIVA solo {1,3,4}; (7) tipoDoc de empresa (CUIT 30/33)=`3`, no CUIL; (8) CUIT dígito verificador (DNI relleno no sirve); (9) **razón social no vacía**; (10) sin acentos; (11) **letra B→IVA=0**. Reparador que cubre casi todo: `generador/reparar_arciba.py` (Decimal HALF-UP).
+- **MÉTODO escalar-a-target** (`generador/escalar_a_target.py`): para meses de reconstrucción, escalar BASE/IVA/OTROS por `factor=target/percep`, con `target=presentado + Saldo a rectificar` → Diferencia=Intimado exacto. Es el ancla-e-Arciba, ahora aplicado también a los 4 AFIP.
+- **⭐ CRITERIO FLOR DEFINITIVO:** `Saldo a rectificar = Total intimado − SOLO las líneas "aplicada 0 → ajustada 6"` (todo lo demás se rectifica, incluidas CONTESTAR que no son 0→6). En el Excel: columna **Diferencia (rect−presentado) debe = columna Intimado/Saldo a rectificar** (Cumple SI). Flor lo lee columna por columna.
+- **4 meses RE-rectificados** (2025/04,05,12; 2026/02): tenían líneas CONTESTAR-no-0→6 que se excluían de más → re-escalados al Saldo a rectificar de Flor. **HAY QUE RE-PRESENTARLOS (Rectificativa 2).**
+- **REGLA DURA: los meses ya presentados NO se tocan** (verificar en e-Arciba, lista "Rectificativa - Por importación", antes de modificar cualquier TXT).
+- **Por qué faltan 2024/06,07:** Convenio Multilateral (+176/+47 comprobantes de más). Intimación chica ($225.596). Pendiente aplicar escalar-a-target.
+
 
 ## Regla que gobierna el análisis
 

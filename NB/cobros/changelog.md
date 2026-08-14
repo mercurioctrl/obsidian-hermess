@@ -157,6 +157,21 @@ Rectificativas CABA — cerrado a **18 de 19 meses** (antes 13). Todos en `intim
 
 Archivos: `intimacion/generador/prod_a_arciba.php`, `msr_a_arciba2.php`, `intimacion/ESTADO_RECTIFICATIVAS.md`, `intimacion/PARA_PRESENTAR/` (18 TXT + Excel)
 
+## 2026-08-14 — Rectificativas CABA: importación real + criterio Flor definitivo
+
+Sesión de importar de verdad los TXT a e-Arciba y cerrar el criterio con el estudio.
+
+- **17 de 19 meses PRESENTADOS** (faltan solo 2024/06 y 07, Convenio Multilateral).
+- **11 reglas de validación de ARCIBA al importar** descubiertas una por una (cada error real): identidades `BASE=MONTO−OTROS−IVA` y `PERCEP=BASE×ALIC` **redondeo HALF-UP** (Python `round` bancario erraba 1 centavo), `PERCEP==TOTAL`, alícuota en grilla, **sitIVA=3→IVA=0**, sitIVA solo {1,3,4}, tipoDoc empresa=3 (no CUIL), CUIT dígito verificador, **razón social no vacía**, sin acentos, **letra B→IVA=0**. Todo en `generador/reparar_arciba.py` (Decimal HALF-UP).
+- **El método ancla (escalar) rompía las 2 identidades por redondeo** → reparador que recomputa MONTO/PERCEP sin tocar campos ancla. Impacto en montos: centavos.
+- **Método `escalar_a_target.py`**: reconstrucción escalada a `presentado + Saldo a rectificar` → Diferencia=Intimado exacto. Aplicado a los 4 AFIP (2024/01,02,03,05) que daban de menos.
+- **Criterio Flor DEFINITIVO:** `Saldo a rectificar = Total intimado − SOLO líneas "aplicada 0 → ajustada 6"`. La columna Diferencia del Excel debe = Saldo a rectificar (Cumple SI).
+- **4 meses re-rectificados** (2025/04,05,12; 2026/02): excluían de más las CONTESTAR-no-0→6 → re-escalados; **a re-presentar (Rectificativa 2)**.
+- **Regla operativa:** los meses ya presentados no se tocan.
+
+Archivos: `intimacion/generador/{reparar_arciba,escalar_a_target}.py`, `intimacion/PARA_PRESENTAR/` (18 TXT + Excel), `intimacion/ESTADO_RECTIFICATIVAS.md`.
+
+
 ## Ver también
 - [[arquitectura]] · [[contexto]] · [[stack]]
 
