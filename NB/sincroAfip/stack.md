@@ -13,6 +13,7 @@
 | `python-dotenv`   | 1.0.1   | Carga de credenciales desde `.env`.                     |
 | `PyYAML`          | 6.0.2   | Lectura de `cuits.yaml`.                                |
 | `pymssql`         | 2.3.1   | Driver SQL Server (TDS 7.4 para SQL 2012+).             |
+| `2captcha-python` | 1.5.1   | Cliente de 2Captcha para resolver el captcha del login. |
 
 ## Base de datos
 
@@ -20,10 +21,10 @@
 - Tabla: `NewBytes_DBF.dbo.AfipComprobantesRecibidos` — ver [[migracion]] y [[tabla-referencia]].
 - Patrón de carga: staging temp table + `MERGE` → idempotencia vía índice único.
 
-## Sistema externo
+## Servicios externos
 
-- Portal AFIP / ARCA: login en `auth.afip.gob.ar`, servicio Mis Comprobantes en `fes.afip.gob.ar/mcmp/`.
-- Sin 2FA (cuenta de Sebastián Fontán con relaciones de clave fiscal sobre los CUITs del grupo).
+- **Portal AFIP / ARCA:** login en `auth.afip.gob.ar`, servicio Mis Comprobantes en `fes.afip.gob.ar/mcmp/`. Sin 2FA (cuenta de Sebastián Fontán con relaciones de clave fiscal sobre los CUITs del grupo). Desde ago-2026 el login tiene captcha.
+- **2Captcha** (`2captcha.com`): resuelve el captcha del login. Cuenta prepaga de `hermess87@gmail.com`, API key en `.env` (`CAPTCHA_API_KEY`). ~USD 0.5-1 cada 1000 captchas. **Si se queda sin saldo, el login falla.** Ver [[arquitectura#2Captcha para el captcha del login]] y [[contexto]].
 
 ## Ver también
 

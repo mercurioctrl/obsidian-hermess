@@ -31,3 +31,16 @@
   - `CREATE TABLE #staging` en `afip/db.py` actualizado (`cae` NULL).
   - Actualizado `docs/MIGRACION.md` y [[migracion]] con la regla.
   - Actualizado `docs/TABLA.md` y [[tabla-referencia]].
+
+## 2026-08-14
+
+- **fix (login roto por captcha de AFIP):** El 2026-08-06 AFIP agregó un captcha de texto en el login de Clave Fiscal, que rompió el scraper. El cron falló en cada corrida desde las 16:15 de ese día con `Login fallo: seguimos en la pagina de login`.
+  - **Diagnóstico:** el login llegaba hasta "Ingresando clave..." y quedaba en la página de login. El screenshot post-login mostró el captcha nuevo (`img[alt='Captcha']`, JPEG en base64) + input `#F1:captchaSolutionInput`. También la clave fiscal había cambiado (se actualizó `AFIP_PASS`), pero eso solo no alcanzaba.
+  - **Caminos evaluados:** OCR local con tesseract (descartado — 0/6 en captchas reales, ni con preprocesado agresivo); modelo local CRNN (descartado — juntar el dataset implicaba pegarle mucho al login = riesgo de bloqueo de la cuenta); **servicio 2Captcha** (elegido — ~99% al primer intento, sin riesgo de bloqueo, ~EUR 0.05-0.10/día).
+  - **Solución:** nuevo módulo `afip/captcha.py` (`resolver_captcha_dataurl`) que terceriza a 2Captcha vía `twocaptcha`. `_login` completa el captcha y reintenta con uno nuevo hasta `LOGIN_INTENTOS` veces (`_reiniciar_login`).
+- **config:** nueva var `CAPTCHA_API_KEY` en `.env` (obligatoria, validada en `config.load_settings()`). Dep `2captcha-python==1.5.1` agregada; tesseract/Pillow descartados.
+- **hallazgo:** AFIP **no persiste la sesión** entre corridas (histórico: 2486 logins completos, 0 reusos de `storage_state`). Se hace login + captcha en **cada** ejecución del cron → cada corrida consume un captcha de 2Captcha.
+- **test:** login OK al primer intento; flujo completo hasta CSV con 37 filas reales.
+- **docs:** actualizados `ARQUITECTURA.md`, `DESPLIEGUE.md` (troubleshooting de saldo/captcha), `README.md`, `.env.example`, `CLAUDE.md` (gotcha #9).
+
+**Archivos principales:** `afip/captcha.py` (nuevo), `afip/scraper.py`, `afip/config.py`, `requirements.txt`, `.env.example`.

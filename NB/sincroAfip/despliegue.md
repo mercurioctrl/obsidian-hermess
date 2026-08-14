@@ -72,6 +72,16 @@ rm storage/sessions/<cuit_plano>.json
 docker compose run --rm sincro --ultimos-dias 3 --cuit <cuit>
 ```
 
+### Login falla en el captcha / "Login fallo: seguimos en la pagina de login"
+
+Desde 2026-08-06 el login de AFIP tiene captcha, resuelto por [[stack|2Captcha]]. Si el login cicla y falla justo después de "Ingresando clave...", revisar en orden:
+
+1. **Saldo de 2Captcha agotado** (lo más común). Entrar al dashboard de https://2captcha.com y recargar. Sin saldo, el servicio no resuelve y el login falla siempre.
+2. **`CAPTCHA_API_KEY` mal o vencida** en `.env`. Verificar contra el dashboard.
+3. **Clave fiscal cambiada** (AFIP fuerza cambio periódico). Actualizar `AFIP_PASS` en `.env`.
+
+Con `--debug`, mirar `storage/logs/shot_03_post_login.png`: "captcha incorrecto" → (1) o (2); clave incorrecta → (3). El log dice `2Captcha resolvio -> '...'` cuando el servicio respondió. Ver [[contexto]].
+
 ### "El ZIP no contiene CSV"
 
 Cambio de formato en AFIP. Inspeccionar el archivo temporal antes del `zipfile.extract` en `scraper._descargar_recibidos`.

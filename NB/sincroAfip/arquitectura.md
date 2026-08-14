@@ -30,15 +30,17 @@ Recibe parámetros, arma el plan (CUITs × rango), y por cada CUIT corre `scrape
 
 ### `afip/config.py` — configuración
 
-Carga `.env` y `cuits.yaml`. Dataclasses `Settings`, `Cuit`, `DbSettings`.
+Carga `.env` y `cuits.yaml`. Dataclasses `Settings`, `Cuit`, `DbSettings`. Valida credenciales mínimas: `AFIP_USER`, `AFIP_PASS` y `CAPTCHA_API_KEY` (esta última obligatoria desde ago-2026).
 
 ### `afip/scraper.py` — Playwright
 
-Navega AFIP con Chromium. Guarda `storageState` por CUIT en `storage/sessions/<cuit>.json` para reutilizar cookies entre corridas.
+Navega AFIP con Chromium. Guarda `storageState` por CUIT en `storage/sessions/<cuit>.json` con la intención de reutilizar cookies, aunque en la práctica AFIP no las conserva (ver decisión abajo).
 
 **Flujo interno:**
 
-1. **Login** en `https://auth.afip.gob.ar/contribuyente_/login.xhtml` (selectores `#F1:username`, `#F1:password`).
+1. **Login** en `https://auth.afip.gob.ar/contribuyente_/login.xhtml`.
+   - Selectores `#F1:username` + `#F1:btnSiguiente` → `#F1:password`.
+   - **Captcha** (desde 2026-08-06): AFIP muestra un captcha de texto (`img[alt='Captcha']`, JPEG base64). Se resuelve con [[stack|2Captcha]] vía `afip/captcha.py` y la solución va a `#F1:captchaSolutionInput` antes de `#F1:btnIngresar`. Si falla, se reintenta con un captcha nuevo hasta `LOGIN_INTENTOS` veces.
 2. Portal ARCA: buscador `input[placeholder*='Buscá']` → tipear "Mis Comprobantes".
 3. **Servicio abre en pestaña nueva** (`context.expect_page()`) en `fes.afip.gob.ar/mcmp/`.
 4. Pantalla "Elegí una persona": click en el CUIT a representar.
@@ -49,6 +51,10 @@ Navega AFIP con Chromium. Guarda `storageState` por CUIT en `storage/sessions/<c
 9. AFIP entrega **ZIP con CSV adentro** → extraer con `zipfile`.
 
 **Debug:** flag `--debug` toma screenshots en cada paso y dumpea HTML si falla la exportación.
+
+### `afip/captcha.py` — resolvedor de captcha
+
+Función `resolver_captcha_dataurl(src, api_key)`: recibe el `src` del `<img>` del captcha (data URL base64) y lo manda a **2Captcha** vía la librería oficial `twocaptcha`. Devuelve el texto reconocido (~99% al primer intento). La API key sale de `.env` (`CAPTCHA_API_KEY`). Único consumidor: `scraper.py:_login`.
 
 ### `afip/db.py` — loader
 
@@ -67,9 +73,19 @@ Los WS oficiales (WSFE, WSMTXCA) sirven para **emitir** comprobantes, no para li
 - Soporta TDS 7.4 nativo.
 - Tradeoff: en macOS requiere `brew install freetds`. En Docker anda directo.
 
-### Sesión persistente por CUIT
+### Sesión (no) persistente por CUIT
 
-Evita loguearse cada corrida. Cookies en `storage/sessions/<cuit>.json`.
+Se guarda `storage/sessions/<cuit>.json` con las cookies con la intención de reutilizar la sesión. **En la práctica AFIP no la conserva**: al volver a `login.xhtml` el form reaparece siempre, así que se hace login completo (y captcha) en **cada** corrida. Se sigue guardando el `storageState` por si AFIP cambia esto, pero hoy no evita el login. Consecuencia: **cada corrida del cron consume un captcha de 2Captcha**.
+
+### 2Captcha para el captcha del login
+
+El 2026-08-06 AFIP agregó un captcha de texto y rompió el scraper. Caminos evaluados:
+
+- **OCR local (tesseract)** → descartado: 0/6 en captchas reales (fuente distorsionada + líneas diagonales; ni con preprocesado agresivo el techo pasa de 0).
+- **Modelo local entrenado (CRNN)** → descartado: juntar el dataset implicaba pegarle mucho al login de AFIP, con **riesgo de bloquear la cuenta** (la misma que usa contabilidad).
+- **Servicio anti-captcha (2Captcha)** → elegido: ~99% al primer intento, sin riesgo de bloqueo, costo ~USD 0.5-1 cada 1000 (~EUR 0.05-0.10/día al ritmo cada-15-min).
+
+Tradeoff: 2Captcha es **prepago** — sin saldo, el cron deja de loguear. Vigilar el saldo. Ver [[contexto]] y [[despliegue]].
 
 ### Docker-first
 
@@ -83,7 +99,7 @@ El índice único `UX_AfipRec_natural` sobre `(cuit_titular, tipo_comprobante, p
 
 | Dato                    | Ubicación                                           |
 |-------------------------|-----------------------------------------------------|
-| Credenciales            | `.env` (`AFIP_USER`, `AFIP_PASS`, `DB_*`)           |
+| Credenciales            | `.env` (`AFIP_USER`, `AFIP_PASS`, `CAPTCHA_API_KEY`, `DB_*`) |
 | Lista de CUITs          | `cuits.yaml`                                        |
 | Sesiones / cookies      | `storage/sessions/<cuit>.json`                      |
 | CSVs finales            | `storage/output/<cuit>/recibidos_<desde>_<hasta>.csv` |
@@ -94,7 +110,8 @@ El índice único `UX_AfipRec_natural` sobre `(cuit_titular, tipo_comprobante, p
 
 | Archivo              | Zona                                                   |
 |----------------------|--------------------------------------------------------|
-| `scraper.py:_login`  | Selectores del login                                   |
+| `scraper.py:_login`  | Selectores del login + captcha (`img[alt='Captcha']`, `#F1:captchaSolutionInput`) |
+| `captcha.py`         | Falla de 2Captcha (sin saldo, API key inválida, servicio caído) |
 | `_open_mis_comprobantes` | Buscador del portal ARCA                           |
 | `_seleccionar_cuit_representado` | Pantalla "Elegí una persona"               |
 | `_descargar_recibidos` | Tab Recibidos + daterangepicker + BUSCAR + Exportar |
