@@ -11,11 +11,11 @@ tags: [finanzas, tarjeta, estrategia, pago]
 | | Visa | Amex | Total |
 |---|--:|--:|--:|
 | Saldo total | 14.809.045,09 | 13.374.170,39 | 28.183.215,48 |
-| Pagos hechos | -5.500.000,00 | -4.200.000,00 | -9.700.000,00 |
-| Saldo pendiente del resumen | 9.309.045,09 | 9.174.170,39 | 18.483.215,48 |
+| Pagos hechos | -5.500.000,00 | -5.100.000,00 | -10.600.000,00 |
+| Saldo pendiente del resumen | 9.309.045,09 | 8.274.170,39 | 17.583.215,48 |
 | **Financiado (paga interés)** | 3.431.601,54 | 8.815.144,63 | **12.246.746,17** |
 
-> **Amex:** pagos parciales de **$1.000.000 + $2.400.000 + $800.000 = $4.200.000,00** (tarjeta ****-34375, 09-08-2026). Ya **cubren el pago mínimo** ($4.198.210) → cuenta al día, sin mora. Quedan **$9.174.170,39** del resumen que empiezan a financiarse desde el vto 10-ago (~$23.700/día de interés+IVA); plan: pagar el resto **durante la semana**.
+> **Amex:** pagos parciales de **$1.000.000 + $2.400.000 + $800.000 + $900.000 = $5.100.000,00** (tarjeta ****-34375, 09→14-ago-2026). Ya **cubren el pago mínimo** ($4.198.210) → cuenta al día, sin mora. Quedan **$8.274.170,39** del resumen; el vto (10-ago) ya pasó, así que ese saldo está financiándose (~$23.700/día de interés+IVA) → conviene cancelarlo cuanto antes.
 
 El **saldo financiado** es la deuda cara: rinde **TEM 6.403% mensual (TNA 77,9%)**.
 Sobre $12.246.746,17 eso es **$784.159,16 de interés por mes** ($9.409.909,89/año) si no lo bajás.
