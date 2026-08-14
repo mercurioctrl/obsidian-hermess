@@ -18,6 +18,7 @@ PHP 8.3 + Laravel 10, Docker, SQL Server remoto. Patrón Controller → Service 
 
 - **SyncUp items** (`POST`/`PATCH /v4/syncUp/items`) — sincroniza el catálogo al motor de búsqueda; lo llama PEGA cada hora. Fix 2026-06-12: dedupe en los MERGE + logging en controllers. Ver [[changelog#2026-06-12|Changelog 2026-06-12]] y [[memoria#Backend API v4 — Gotchas|Memoria § Backend gotchas]].
 - **Gotcha OPcache**: tras editar PHP hay que recargar php-fpm (`kill -USR2`) y verificar por HTTP, no por tinker. Detalle en [[memoria#OPcache validate_timestamps=Off — el código editado no se aplica a requests web|Memoria]] y [[TareaWallet/contexto#2026-06-07|TareaWallet/contexto]].
+- **[[tienda-oficial-amd|Tienda Oficial AMD]]** — creación de la tienda AMD como vendedor dedicado (dev 2026-08-11 + prod 2026-08-12), mecanismo official store, técnica de replicación de catálogo (`CS.dbo.productos` + `productosFotos` + `vendedoresReputacion` + reindex `itemsSellers`), fix ficha sin foto y gotcha topología `.env` dev/prod. Ver [[changelog#2026-08-12|Changelog]].
 
 ## Pasarelas de pago (en desarrollo)
 
