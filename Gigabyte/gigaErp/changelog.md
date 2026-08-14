@@ -1,3 +1,25 @@
+## 2026-08-14 — Deploy release colaboración (Tareas 2.0, Solicitudes, Minutas, Notificaciones+Push, Campañas)
+
+`git pull` de `Development` (6 commits, `94c5637..57afd7e`, 196 archivos, migs **0061–0091**) y **deploy en caliente** de un bloque grande de trabajo del dev. Ver [[modulos/tareas]], [[modulos/solicitudes]], [[modulos/minutas]], [[modulos/notificaciones]], [[modulos/campanas]].
+
+**Qué entró:**
+- **Tareas 2.0** — el Kanban gana colaboración completa: subtareas (checklist), comentarios con **menciones `@usuario`** (`MencionParser`), adjuntos en disco S3 `tarea_adjuntos`, enlaces externos, seguidores (watchers), relaciones entre tareas, historial de cambios de estado, número correlativo (`#123`), color y `pais`. Muchos componentes nuevos (`TareaChecklist`, `TareaComentarios`, `TareaSeguidores`, `TareaRelacionadas`, `TareaEnlaces`, `TareaHistorialEstados`…).
+- **Solicitudes** — cola de pedidos que se convierten en Tarea (`/solicitudes/{s}/convertir` / `/rechazar`). Aprobación/rechazo **por email con link firmado** sin login (`middleware('signed')`, mails + blades).
+- **Minutas** — actas de reunión con puntos tipo checklist (reordenar/toggle).
+- **Notificaciones** — centro in-app + email + **push FCM** (`kreait/laravel-firebase`). Motor `TareaNotificador`, enum `TipoNotificacion` (ASIGNACION/CAMBIO_ESTADO/COMENTARIO/DEADLINE_PROXIMO/DEADLINE_VENCIDO/MENCION). `FcmSender` defensivo. Scheduler `tareas:notificar-deadlines` diario 09:00 ART (container `gigaerp-scheduler`). Push **aún no operativo**: falta VAPID key (frontend) + `service-account.json`/`FIREBASE_PROJECT_ID` (backend).
+- **Fusión Proyectos→Campañas** — la sección "Proyectos" pasó a **"Campañas"** (`/marketing/campanas`, key legacy). Un proyecto puede tener una campaña comercial con `tipo_id` configurable y líneas de cliente + presupuesto (`campana_clientes`). Servicio `CampanaSync`. Fondo también por proyecto.
+- **Handler de excepciones corregido** (`bootstrap/app.php`): `ValidationException→422` (con `errors`), `Authentication→401`, `Authorization→403`. **Invalida** la vieja regla "toda validación sale 500"; el 401 real vuelve a disparar el logout automático del front.
+- Otros: color de avatar por usuario (`PUT /usuarios/mi-avatar`, `Avatar.vue`), etiquetas con descripción, tipos de evento de calendario configurables.
+
+**Deploy (en caliente, sin rebuild del backend):**
+- Nueva dep PHP **`kreait/laravel-firebase`** + no hay `composer` en el runtime → se regeneró `vendor/` con la imagen **`composer:2`** montando `backend/` (desde el `composer.lock` commiteado) y se copió a **ambos** containers (`gigaerp-backend` + `gigaerp-scheduler`). Se borró el discovery cacheado (referenciaba `laravel/pail`, ya no en el lock) y `package:discover`. Ver [[troubleshooting]] y [[memoria#Deploy de dependencia PHP nueva sin rebuild|memoria]].
+- 31 migraciones aplicadas (borrando antes la dup de Sanctum).
+- `config:cache` **re-inyectando** `GOOGLE_ADS_*`/`META_ADS_*` (viven solo en el cache, no en el env) + `CONTENIDO_S3_BUCKET`.
+- Frontend rebuild `--no-cache` (deps npm nuevas `firebase`, `flag-icons`), `up -d --no-deps`, restart nginx.
+- Verificado: login + endpoints nuevos (tareas/solicitudes/minutas/notificaciones/campanas) 200, Google/Meta Ads intactos (demo=false), scheduler registra el comando de deadlines.
+
+---
+
 ## 2026-08-06 — Auditoría de credenciales AWS/IAM del bucket de Contenido
 
 Auditoría (sin cambios de código) del alcance de las claves AWS que usa la app, a raíz de la consulta del usuario sobre si compartir la key con un dev expone otra parte de la infra AWS. **Resultado: la key es de mínimo privilegio, seguro compartir (con salvedades).** Ver [[modulos/contenido#Seguridad — credenciales IAM (auditado 2026-08-06)|modulos/contenido]].

@@ -70,6 +70,11 @@ Patrones recurrentes, gotchas y workflow del proyecto. Consultar antes de cada s
 **Causa:** el Dockerfile reconstruye Laravel desde cero cada build y el skeleton ^11.0 ya no resuelve deps.
 **Consecuencia:** el backend **solo** se actualiza en caliente (`docker cp` + `docker restart`, que preserva el writable layer; un `compose up --build`/`down` lo descarta). Así se desplegó el backup ZIP. Ver [[troubleshooting#10. Rebuild limpio del backend falla (composer create-project)]].
 
+### 11. Handler global de excepciones — corregido a status por tipo (2026-08-14)
+
+**Antes:** `bootstrap/app.php` usaba `status = getStatusCode() ?? 500` → como `ValidationException` no tiene ese método, **toda validación salía HTTP 500**. Regla vieja documentada como "esperado".
+**Ahora (release colaboración):** un `match` mapea bien: `ValidationException→422` (con `errors`), `AuthenticationException→401`, `AuthorizationException→403`, resto `getStatusCode()`/500. **La regla vieja ya NO aplica.** El 401 real vuelve a disparar el logout automático del front (`plugins/refresh-usuario.client.ts`). Ver [[modulos/notificaciones]] y [[changelog#2026-08-14 — Deploy release colaboración (Tareas 2.0, Solicitudes, Minutas, Notificaciones+Push, Campañas)|changelog]].
+
 ---
 
 ## Workflow de deploy (sin rebuild)
@@ -91,8 +96,29 @@ docker exec gigaerp-backend php artisan route:clear
 
 **Frontend — siempre rebuild completo:**
 ```bash
-docker compose build --no-cache frontend && docker compose up -d frontend && docker restart gigaerp-nginx
+docker compose build --no-cache frontend && docker compose up -d --no-deps frontend && docker restart gigaerp-nginx
 ```
+> `--no-deps` obligatorio: `frontend depends_on backend` → sin él recrea el backend y mata el hot-deploy.
+
+### Hay DOS containers backend: `gigaerp-backend` + `gigaerp-scheduler`
+El scheduler corre el **mismo código** con `schedule:work` (deadlines de tareas 09:00 ART). Todo deploy de backend (código + vendor + `config:cache` + clears) va replicado a **ambos**. Las migraciones se corren **una sola vez** (DB compartida).
+
+### Deploy de dependencia PHP nueva sin rebuild (validado 2026-08-14)
+No hay `composer` en el runtime (`php:8.4-cli`). Para una dep nueva (ej. `kreait/laravel-firebase`), regenerar `vendor/` desde el `composer.lock` con la imagen `composer:2` y copiarlo:
+```bash
+docker run --rm -v "$(pwd)/backend:/app" -w /app composer:2 install \
+  --no-scripts --prefer-dist --optimize-autoloader --ignore-platform-reqs
+for C in gigaerp-backend gigaerp-scheduler; do
+  docker cp backend/vendor/. $C:/var/www/html/vendor
+  docker exec $C chown -R www-data:www-data /var/www/html/vendor
+done
+```
+- **NO `--no-dev`** (el discovery referencia deps de dev → rompe boot). `--ignore-platform-reqs` evita `platform_check.php` (composer.json pinnea 8.4.24, containers corren 8.4.21/22).
+- Si el lock **removió** una dep que el discovery cacheado referencia (`laravel/pail`, `laravel/tinker` ya no están) → `rm -f bootstrap/cache/{packages,services}.php` + `php artisan package:discover`.
+- **`tinker` ya no existe** → inspeccionar config con `php artisan config:show <clave>`.
+
+### ⚠️ `GOOGLE_ADS_*` / `META_ADS_*` viven SOLO en el config cache
+No están en el `.env` ni en el env del container → al re-cachear config **re-inyectarlos** con `docker exec -e ... config:cache` o Google/Meta Ads caen a modo demo. Igual `CONTENIDO_S3_BUCKET` (en `.env` pero no en el env del container). `MAIL_*`, `AWS_*`, `CONTENT_DOMAIN`, `BLUPARTPICKER_API_KEY` sí están en el env → esos los toma solo. Capturar antes con `php artisan config:show services.google_ads`.
 
 ---
 

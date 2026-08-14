@@ -46,8 +46,15 @@ Moneda: USD exclusivamente.
 | `/productos` | APIs Distri | Operaciones |
 | `/ordenes-venta` | Órdenes de Venta | Operaciones |
 | `/marketing` | Fondos | Marketing |
+| `/marketing/campanas` | **Campañas** (ex "Proyectos", key legacy `VER_SECCION_PROYECTOS`) | Marketing |
 | `/calendario` | Calendario | Marketing |
 | `/tareas` | Tareas | Marketing |
+| `/solicitudes` | **Solicitudes** | Marketing |
+| `/minutas` | **Minutas** | Marketing |
+| `/envios` · `/google-ads` · `/meta-ads` | Envíos · Google Ads · Meta Ads | Marketing |
+| `/contenido` | Contenido (`oculto`: fuera del sidebar, accesible por URL/permiso) | Marketing |
+
+> Secciones nuevas 2026-08 (release colaboración): **Campañas** ([[modulos/campanas]]), **Solicitudes** ([[modulos/solicitudes]]), **Minutas** ([[modulos/minutas]]). Tareas ampliado a 2.0 ([[modulos/tareas]]) + centro de [[modulos/notificaciones]].
 
 > Stock Bodega tiene 4 tabs: **Stock · Catálogo · Depósitos · Subir Masivo**.
 > "Subir Masivo" = importaciones de stock (XLSX). "Catálogo" (`/mercaderia/catalogo`) = editar parámetros de producto.

@@ -4,8 +4,8 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
-**Último commit:** `94c5637` · **Última sincronización:** 2026-08-06
-**Último trabajo:** **Auditoría de credenciales AWS/IAM** del bucket de Contenido (`gigaerp-contenido-dev`): la key es un service account IAM de **mínimo privilegio** (`gigaerp-contenido-dev-svc`), acotado solo a ese bucket — seguro compartir con un dev (rotar después). Ver [[modulos/contenido#Seguridad — credenciales IAM (auditado 2026-08-06)|contenido]] y [[changelog#2026-08-06 — Auditoría de credenciales AWS/IAM del bucket de Contenido|changelog]]. Antes: **Ajustes de Google/Meta Ads** (feedback marketing) — [[modulos/meta-ads]], [[modulos/google-ads]].
+**Último commit:** `57afd7e` · **Última sincronización:** 2026-08-14
+**Último trabajo:** **Deploy del release de colaboración** (6 commits, migs `0061–0091`) desplegado en caliente por Claude. Entra un bloque grande de trabajo del dev: **Tareas 2.0** (subtareas, comentarios con menciones, adjuntos S3, enlaces, seguidores, relaciones, historial de estados), **Solicitudes** (piden convertirse en Tarea, aprobación por email firmado), **Minutas**, **Notificaciones** in-app + email + **push FCM**, y la **fusión Proyectos→Campañas**. Ver [[modulos/tareas]], [[modulos/solicitudes]], [[modulos/minutas]], [[modulos/notificaciones]], [[modulos/campanas]] y [[changelog#2026-08-14 — Deploy release colaboración (Tareas 2.0, Solicitudes, Minutas, Notificaciones+Push, Campañas)|changelog]]. Detalle del deploy (nueva dep PHP `kreait/laravel-firebase`, vendor vía `composer:2`) en [[memoria#Deploy de dependencia PHP nueva sin rebuild|memoria]] y [[troubleshooting]].
 
 ---
 
@@ -33,6 +33,11 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 - [[modulos/envios]] — campañas de mailing (proxy a `envios.to-aor.us`, solo lectura) con filtro Real/Test prefiltrado en Real
 - [[modulos/google-ads]] — reportes de Google Ads (API REST + GAQL, nativo Laravel) navegables entre fechas; cuentas Gigabyte AR/UY/CL bajo MCC; métricas de negocio (compras/monto goal-aware)
 - [[modulos/meta-ads]] — reportes de Meta Ads (Facebook/Instagram, Graph API) espejo de Google Ads; System User token; action_type canónico anti-duplicación; suma Alcance/Frecuencia/ROAS nativos
+- [[modulos/tareas]] — **Tareas 2.0**: Kanban + subtareas, comentarios con menciones, adjuntos S3, enlaces, seguidores, relaciones, historial de estados, número correlativo (migs 0064–0091)
+- [[modulos/solicitudes]] — cola de pedidos que se convierten en Tarea; aprobar/rechazar desde el ERP o por **email con link firmado** sin login (mig 0077)
+- [[modulos/minutas]] — actas de reunión con puntos tipo checklist (reordenar/toggle) (migs 0087–0089)
+- [[modulos/notificaciones]] — centro in-app + email + **push FCM** (kreait/laravel-firebase); motor `TareaNotificador`; scheduler de deadlines 09:00 ART (migs 0079–0080)
+- [[modulos/campanas]] — fusión Proyectos→**Campañas**: campaña comercial opcional sobre un proyecto, con tipos configurables y líneas de cliente + presupuesto (migs 0061–0065, 0090)
 
 ---
 
@@ -62,11 +67,12 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 ### Sidebar
 
 ```
-Principal:    Dashboard · Distribuidores · Proveedores
-Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Resellers · Órdenes de Venta
-Marketing:    Fondos · Calendario · Proyectos · Tareas · Ploteos · Addons · Contenido · Envíos
+Principal:    Dashboard · Distribuidores · Contactos · Proveedores
+Operaciones:  Stock Bodega · Stock Distri · APIs Distri · Resellers · Órdenes de Venta · Notas de Crédito
+Marketing:    Fondos · Campañas · Mapa de Ploteos · Calendario · Tareas · Solicitudes · Addons · Minutas · Envíos · Google Ads · Meta Ads
 Admin:        Configuración (solo admin)
 ```
+> Cambios 2026-08: "Proyectos" → **Campañas** (`/marketing/campanas`, key legacy `VER_SECCION_PROYECTOS`) · nuevas **Solicitudes** y **Minutas** · **Contenido** pasó a `oculto` (accesible por URL/permiso, no en sidebar). Ver [[modulos/campanas]], [[modulos/solicitudes]], [[modulos/minutas]].
 
 > Inventario (Stock Bodega) tiene 4 pestañas: **Stock · Catálogo · Depósitos · Subir Masivo**.
 
@@ -91,7 +97,7 @@ Admin:        Configuración (solo admin)
 | Ventas / Invoices | 34 |
 | Productos (demo+seeders) | ~259 base |
 | Productos (post-sync) | +miles (Air ~8k, Invid ~1.2k, Ceven ~466, Stylus ~908) |
-| Migraciones | 0001–0057 |
+| Migraciones | 0001–0091 (release colaboración 0061–0091, ver [[changelog#2026-08-14 — Deploy release colaboración (Tareas 2.0, Solicitudes, Minutas, Notificaciones+Push, Campañas)|changelog]]) |
 
 ### Usuarios demo
 
