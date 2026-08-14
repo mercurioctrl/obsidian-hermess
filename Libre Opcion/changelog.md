@@ -4,6 +4,36 @@ Registro de trabajo en el proyecto Libre Opción.
 
 ---
 
+## 2026-08-14
+
+### Merges a Development/blu-dev-staff (PR de GitHub caído)
+
+- **merge**: `LIO-810-app-lo-revisar-errores-de-funcionamiento-en-la-web` → `Development` y → `blu-dev-staff` en `sitio-api-rest-v4-laravel` (sin conflictos; trae los fixes de official store del equipo — LIO-807/809 + `da14a539`).
+- **merge**: `blu-dev-staff` → `Development` en `cms-lo-api` (sección OfficialStore del CMS: `OfficialStoreBrandingRepository`/`Service`, workflow de deploy, ajustes Docker).
+- Todos mergeados y pusheados a mano porque el merge por PR de GitHub dejó de funcionar.
+
+---
+
+## 2026-08-12
+
+### Tienda oficial AMD creada en PRODUCCIÓN (SAFDB2)
+
+- **feat**: Tienda oficial de AMD creada en prod (`190.210.23.97`): usuario `amd@libreopcion.com` (id 332126), vendedor dedicado 279547, `official_store_branding` id=4, 150 productos AMD replicados de Exxit + 363 fotos + reputación + 2 banners + reindex `itemsSellers`. Branding creado desde cero (la tienda no existía en prod).
+- **gotcha**: el `.env` del contenedor de la API estaba repunteado a **prod** (no a dev), lo que confundió el diagnóstico ("parecía que dev se había borrado por un sync" — no había sync). Verificar siempre a qué DB apunta (`@@SERVERNAME`, prod=`SAFDB2`).
+- Detalle completo en [[tienda-oficial-amd|Tienda Oficial AMD]].
+
+---
+
+## 2026-08-11
+
+### Tienda oficial AMD en dev + fix ficha de producto sin foto
+
+- **feat**: Tienda oficial AMD armada en dev (usuario+vendedor dedicado, 156 productos replicados de Exxit + fotos + reputación + reindex `itemsSellers`).
+- **fix**: `FichaProductoDto.php:75` → `$fotos[0]->checksum ?? null`. Productos **sin foto** daban 500 "Undefined array key 0" en la ficha (`GET /v4/item/{id}`), en toda la plataforma. Sigue **pendiente de deploy** a prod.
+- Detalle del mecanismo y la técnica de replicación en [[tienda-oficial-amd|Tienda Oficial AMD]].
+
+---
+
 ## 2026-06-12
 
 ### API v4 — SyncUp items dejaba de sincronizar sin error visible

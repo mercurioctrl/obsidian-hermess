@@ -1,7 +1,7 @@
 # Libre Opcion
 
 Diagnóstico, mejoras de SEO/performance, features y landings para libreopcion.com.ar.
-Última sincronización: 2026-07-02.
+Última sincronización: 2026-08-14.
 
 ---
 
