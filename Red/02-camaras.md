@@ -78,36 +78,56 @@ UniFi no soporta pinear un cliente a un AP específico de forma nativa. Si la c�
 
 **Modelo:** Hikvision WiFi PT ColorVu DS-2CV1F23G2-LIDWF (pan-tilt motorizada)  
 **Firmware:** V5.8.12  
-**Credenciales:** admin / (ver gestor de contraseñas)  
+**Credenciales:** admin / (ver gestor de contraseñas — el cron usa `admin:chanteclair87`)  
 **IP:** 10.10.10.64  
 **Ubicación:** apunta a la calle/vereda y a la entrada del edificio ("puerta")
 
-Tiene **6 presets** (no renombrables), todos mirando la misma escena con distinto zoom/encuadre. Preset 6 = vista amplia de la calle (posición "park"). Es una cámara aparte del NVR (ver memoria [[memoria]]).
+Tiene **6 presets de hardware** (no renombrables). **Config actual (ago 2026): solo se usan 2** — preset **1 = Reposo Izquierda** (calle arriba, profundo) y preset **2 = Reposo Derecha** (vereda abajo hacia la esquina) — con barrido lento entre ambos que cubre toda la cuadra. Los presets 3/4/5/6 siguen guardados pero fuera del barrido. Es una cámara aparte del NVR (ver memoria [[memoria]]).
 
 > 📼 También se graba en el **DVR Dahua** en **CH9** (movida desde CH11 el 2026-07-26). Ver [[04-dvr-dahua]].
 
-### Sesión de configuración (2026-07-25) — patrullaje "enfoque B"
+### Configuración actual (2026-08-15) — barrido 2 reposos + optimización de desgaste
 
-Configurada para quedar fija en la puerta la mayor parte del tiempo y hacer barridos cortos periódicos:
+Rediseño total del patrullaje (a raíz de un corte de luz que dejó la cámara aparentemente "quieta"). En vez de 5 presets, ahora hay **2 posiciones de reposo + barrido lento** entre ellas:
 
-| Paso | Preset | Permanencia |
-|---|---|---|
-| 1 | 1 | 15 s |
-| 2 | 3 | 15 s |
-| 3 | 4 | 15 s |
-| 4 | 5 | 15 s |
-| 5 | 6 (vista amplia — park) | 180 s (3 min) |
+| Paso | Preset | Encuadre | Velocidad (`seqSpeed`) | Descanso (`delay`) |
+|---|---|---|---|---|
+| 1 | 1 (Reposo Izquierda) | calle arriba a la izquierda, profundo | 1 (mínima) | 90 s |
+| 2 | 2 (Reposo Derecha) | vereda abajo hacia la esquina | 1 (mínima) | 90 s |
 
-→ Barre P1/P3/P4/P5 (~1 min) y después queda **3 min fija en el preset 6** (el barrido va primero para que el descanso quede en la vista amplia). **Auto-inicio programado 00:00 y 12:00.**
+→ Descansa 90s a la izquierda → **barrido lento** cruzando toda la cuadra (ahí "se ve todo") → descansa 90s a la derecha → y de vuelta. El tránsito izq↔der **ES** el barrido. Zoom abierto para que entre toda la calle. Config JSON:
+
+```json
+{"patrolList":[{"patrolID":1,"oneTimePatrolParam":[
+  {"presetID":1,"seqSpeed":1,"delay":90},
+  {"presetID":2,"seqSpeed":1,"delay":90}]}]}
+```
+
+**Optimización de desgaste (clave en esta cámara de consumo):** los engranajes son plásticos y **no están hechos para patrullar 24/7**. Se subió el descanso de 25s → **90s** para bajar los barridos de **~1000/día a ~350/día (≈3× menos desgaste)** sin perder cobertura (se refresca cada ~3-4 min). El factor de desgaste #1 es la cantidad de barridos/día; alargar descansos es la palanca más efectiva (más que bajar la velocidad). Con el tiempo puede aparecer juego (backlash) y los reposos correrse un poco → reposicionar con el joystick y volver a guardar.
+
+**Cómo se guardan los reposos:** se posiciona la cámara con el **joystick de la app** (zoom abierto) y se fija la posición ACTUAL por API:
+`PUT /ISAPI/PTZCtrl/channels/1/presets/{id}` con body XML `<PTZPreset><enabled>true</enabled><id>N</id><presetName>...</presetName></PTZPreset>`. **Mover el joystick NO cambia un preset**; solo lo cambia un "set preset" explícito (por eso, si un reposo quedó raro, es que se guardó sin querer).
+
+**Límite de pan:** el recorrido hacia la izquierda es corto — al llegar al tope mecánico el `PUT /continuous` devuelve **HTTP 403**.
+
+### Recuperación ante cortes de luz
+
+Tras un corte, cámara y host se reinician. El barrido **se recupera solo**: el cron de relanzado (cada 1 min) lo vuelve a arrancar dentro de ~1 min de que la cámara agarra WiFi. Además se agregó un `@reboot` para adelantar el primer arranque post-boot. La duración del ciclo no importa (definido así con el usuario), por eso descansos largos y sin apuro.
 
 ### ⚠️ OneTimePatrol = una sola pasada → cron para el loop
 
 El patrullaje de este modelo hace **UNA pasada y se detiene** (no hace loop nativo; el schedule solo admite 2 horarios/día). Para loop continuo hay un **cron en hermess-desktop**:
 
 - Script: `~/.local/bin/ptz-puerta-loop.sh` — cada 1 min: si `SearchOneTimePatrolStatus` = `stopped` → `StartOneTimePatrol`. Log en `/tmp/ptz_puerta_loop.log`.
-- Cron: `* * * * * /home/hermess/.local/bin/ptz-puerta-loop.sh`
+- Crontab:
+  ```
+  * * * * * /home/hermess/.local/bin/ptz-puerta-loop.sh >> /tmp/ptz_puerta_loop.log 2>&1
+  @reboot sleep 90 && /home/hermess/.local/bin/ptz-puerta-loop.sh >> /tmp/ptz_puerta_loop.log 2>&1
+  ```
 
-Sin este cron, la cámara barre una vez y se queda quieta en el preset 6.
+Sin este cron, la cámara barre una vez y se queda quieta.
+
+> 💡 Al mandar `StartOneTimePatrol`, `SearchOneTimePatrolStatus` puede reportar `stopped` un instante mientras la cámara transiciona; reconsultar a los pocos segundos confirma `running`.
 
 ### API de esta cámara (ISAPI JSON) — importante
 
@@ -117,13 +137,30 @@ Este modelo de consumo **NO** soporta el patrol clásico (`maxPatrolNum=0`, los 
 - `GET/PUT /ISAPI/PTZCtrl/channels/1/OneTimePatrolScheduleParam?format=json` — horarios de auto-inicio (máx 2)
 - `PUT /ISAPI/PTZCtrl/channels/1/StartOneTimePatrol` y `/StopOneTimePatrol` (body `{"patrolID":1}`)
 - `POST /ISAPI/PTZCtrl/channels/1/SearchOneTimePatrolStatus?format=json` → `{"patrolStatus":"running"}`
+- `PUT /ISAPI/PTZCtrl/channels/1/presets/{id}/goto` — ir a un preset · `PUT /presets/{id}` (body XML) — guardar posición actual
+- `PUT /ISAPI/PTZCtrl/channels/1/continuous` (body XML `<PTZData><pan>±</pan><tilt>±</tilt><zoom>±</zoom></PTZData>`) — movimiento manual; enviar con ceros para frenar. Devuelve **403** al tope de pan.
 - Snapshot: `GET /ISAPI/Streaming/channels/101/picture`
-- Auth **digest**. El schedule **no** se puede modificar con el patrullaje corriendo (`TOUR_BUSY`): hay que **Stop → PUT schedule → Start**.
+- Auth **digest**. El schedule/param **no** se puede modificar con el patrullaje corriendo (`TOUR_BUSY`): hay que **Stop → PUT → Start**.
 
 ### Cómo tocarlo
 
 - **Pausar/reanudar:** botón ■/▶ del *Inspection Path* en la UI web (`10.10.10.64`), o `Stop/StartOneTimePatrol`.
 - **Cambiar tiempos/presets:** Configuration → PTZ → Inspection Path, o PUT a `OneTimePatrolParam`.
+- **Reposicionar un reposo:** joystick de la app hasta la vista deseada → guardar con `PUT /presets/{id}`.
+
+### Sesión de configuración (2026-07-25) — patrullaje "enfoque B" (histórico, reemplazado el 2026-08-15)
+
+Configuración previa: quedaba fija en la puerta la mayor parte del tiempo y hacía barridos cortos periódicos.
+
+| Paso | Preset | Permanencia |
+|---|---|---|
+| 1 | 1 | 15 s |
+| 2 | 3 | 15 s |
+| 3 | 4 | 15 s |
+| 4 | 5 | 15 s |
+| 5 | 6 (vista amplia — park) | 180 s (3 min) |
+
+→ Barría P1/P3/P4/P5 (~1 min) y después quedaba **3 min fija en el preset 6** (el barrido iba primero para que el descanso quedara en la vista amplia). Auto-inicio programado 00:00 y 12:00. **Reemplazado** el 2026-08-15 por el esquema de 2 reposos + barrido lento (ver arriba).
 
 ### Sin seguimiento automático (auto-tracking)
 

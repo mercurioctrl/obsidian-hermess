@@ -36,7 +36,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 ## Cámaras
 
 - [[02-camaras]] — Inventario, diagnóstico y tareas pendientes
-- [[02-camaras#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] — WiFi PT motorizada (10.10.10.64), patrullaje "enfoque B" vía ISAPI JSON
+- [[02-camaras#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] — WiFi PT motorizada (10.10.10.64), patrullaje **2 reposos (izq/der) + barrido lento** (rediseño ago 2026) vía ISAPI JSON
 
 ## Grabadores (DVR / NVR)
 
@@ -45,7 +45,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 
 ## Portero / Timbre
 
-- [[07-timbre-vto-telegram]] — **Timbre Dahua VTO2101E** (10.10.10.102, portero PoE): servicio `vto-timbre` en hermess-desktop que manda **foto a Telegram** ante movimiento (polling OpenCV, el VTO no publica `VideoMotion`) y ante el botón de llamada. Es el mismo equipo que graba como CH6 "PORTERO" en el [[04-dvr-dahua|DVR]].
+- [[07-timbre-vto-telegram]] — **Timbre Dahua VTO2101E** (10.10.10.102, portero PoE): servicio `vto-timbre` en hermess-desktop que manda **foto a Telegram** ante movimiento (polling OpenCV, el VTO no publica `VideoMotion`) y ante el botón de llamada. Es el mismo equipo que graba como CH6 "PORTERO" en el [[04-dvr-dahua]].
 
 ## Impresoras
 
@@ -67,6 +67,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[01-cambios-2025-05]] — Sesión de diagnóstico y optimización (mayo 2025)
 - [[03-impresora-p1102w#Sesión de diagnóstico (2026-07-12)]] — Puesta a punto de la impresora P1102w (julio 2026)
 - [[02-camaras#Sesión de configuración (2026-07-25) — patrullaje "enfoque B"]] — Config del patrullaje de la cámara PUERTA PTZ (julio 2026)
+- [[02-camaras#Configuración actual (2026-08-15) — barrido 2 reposos + optimización de desgaste]] — Rediseño del patrullaje PTZ PUERTA: de 5 presets a **2 reposos** (izq profundo / der a la esquina) + barrido lento, descansos 90s (**~3× menos desgaste**: ~350 vs ~1000 barridos/día), recuperación automática ante cortes con `@reboot` (agosto 2026)
 - [[04-dvr-dahua#Sesión de reordenamiento (2026-07-26)]] — Reordenamiento de canales del DVR Dahua: PTZ movida CH11→CH9 (julio 2026)
 - [[05-nvr-hikvision]] — Conexión del NVR Hikvision kit WiFi (10.10.10.105) e investigación del cambio de clave de su WiFi (julio 2026)
 - [[06-sticky-client-roaming]] — Sticky client 5GHz RESUELTO (agosto 2026): `nexus` a doble banda + Min RSSI -78 en ambas bandas + canales no-DFS (Vestidor 40/Oficina 149/Galeria 161). Incluye runbook de la API UniFi y script `scripts/unifi_diag.py`. Registra también el intento fallido de julio (Min RSSI en 5GHz con nexus solo-5GHz rompió la conexión + incidente DFS)
