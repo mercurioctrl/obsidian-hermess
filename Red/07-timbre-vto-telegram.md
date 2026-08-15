@@ -48,6 +48,8 @@ Servicio `vto-timbre` en `hermess-desktop`: `/home/hermess/scripts/vto-timbre/` 
 - Ante movimiento o botón → `sendPhoto` con la foto del momento; si no hay imagen, `sendMessage`.
 - `DEBOUNCE_SEC`=30 por vía para no spammear.
 
+> 🔗 **Este mismo bot lo reusa el servicio `ptz-captura`** de la cámara PUERTA PTZ, que manda una foto en cada reposo del barrido. Su `.service` carga el `config.env` del timbre como primer `EnvironmentFile` para tomar `TG_TOKEN`/`TG_CHAT_ID` (fuente única de las credenciales del bot). Ver [[02-camaras#Avisos a Telegram en cada reposo (servicio `ptz-captura`, 2026-08-15)|ptz-captura]].
+
 ## Disparo de llamada por API (no logrado)
 
 Con RPC2 (login digest MD5) se ve que `VideoTalkPeer.invite` **existe** (da "Invalid Request", es factory service) pero reconstruir sus params de sesión VideoTalk es un pozo. **No se logró hacer sonar el timbre por API** — el botón físico sigue siendo la prueba real.
@@ -68,4 +70,5 @@ Con RPC2 (login digest MD5) se ve que `VideoTalkPeer.invite` **existe** (da "Inv
 
 - [[04-dvr-dahua]] — el VTO se graba como CH6 "PORTERO"
 - [[02-camaras]] — inventario de cámaras IP del hogar
+- [[02-camaras#Avisos a Telegram en cada reposo (servicio `ptz-captura`, 2026-08-15)|ptz-captura (PTZ → Telegram)]] — reusa este mismo bot
 - [[Red]] — infraestructura de red hogareña

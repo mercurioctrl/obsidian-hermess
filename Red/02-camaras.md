@@ -114,6 +114,18 @@ Rediseño total del patrullaje (a raíz de un corte de luz que dejó la cámara 
 
 Tras un corte, cámara y host se reinician. El barrido **se recupera solo**: el cron de relanzado (cada 1 min) lo vuelve a arrancar dentro de ~1 min de que la cámara agarra WiFi. Además se agregó un `@reboot` para adelantar el primer arranque post-boot. La duración del ciclo no importa (definido así con el usuario), por eso descansos largos y sin apuro.
 
+### Avisos a Telegram en cada reposo (servicio `ptz-captura`, 2026-08-15)
+
+Servicio systemd aparte que **manda una foto a Telegram cada vez que la cámara se queda quieta en un reposo** (izquierda / derecha). Reusa el **mismo bot del timbre** (ver [[07-timbre-vto-telegram#Telegram]]).
+
+- **Ubicación:** `/home/hermess/scripts/ptz-captura/` → `ptz_captura.py`, `config.env` (perms 600), `ptz-captura.service` (systemd, `enabled`+`active`, User=hermess). Refs `ref_izq.jpg` / `ref_der.jpg`.
+- **No toca el barrido** — es solo-lectura sobre la cámara (snapshots). El sweep lento sigue igual.
+- **Cómo detecta el arribo:** sondea `GET /ISAPI/Streaming/channels/101/picture` cada `PTZ_POLL`=2s, compara frames (gris 320×240 + GaussianBlur + `absdiff().mean()`). **Calibrado:** quieto ≈ **1**, paneando ≈ **35–55** → umbral `PTZ_MOVE_DIFF`=**8** (enorme margen; ni un camión en la calle mueve la media). Dispara en la transición **paneando→quieto** (tras `PTZ_STILL_CONSEC`=2 frames quietos → foto sin motion-blur), una sola vez por reposo.
+- **Etiqueta 👈izq / 👉der (híbrida):** compara el frame con `ref_izq.jpg` / `ref_der.jpg`; si el margen `|di-dd|` ≥ `PTZ_ANCHOR_MARGIN`=8 confía en la ref (la izquierda siempre da margen amplio), si no usa **alternancia** izq↔der (los reposos alternan siempre). Robusto ante cambios de luz día/noche.
+- **Telegram:** reusa `TG_TOKEN` / `TG_CHAT_ID` del timbre — el `.service` carga **dos** `EnvironmentFile`: primero `vto-timbre/config.env` (aporta las credenciales del bot) y luego el propio `ptz-captura/config.env`.
+- **⚠️ Volumen:** con descansos de 90s son **~2 fotos cada ~4 min → ~600-700/día**. Dial para bajarlo sin tocar código: `PTZ_MIN_INTERVAL` en `config.env` (segundos mínimos entre avisos; `0` = cada reposo, default).
+- **Gestión:** `journalctl -u ptz-captura -f`, `sudo systemctl restart ptz-captura`. Deps: `cv2` + `requests` (ya instalados, los usa también el timbre).
+
 ### ⚠️ OneTimePatrol = una sola pasada → cron para el loop
 
 El patrullaje de este modelo hace **UNA pasada y se detiene** (no hace loop nativo; el schedule solo admite 2 horarios/día). Para loop continuo hay un **cron en hermess-desktop**:
