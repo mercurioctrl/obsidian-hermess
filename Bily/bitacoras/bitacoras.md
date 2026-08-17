@@ -73,6 +73,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-08-12|2026-08-12]] — Creación de la bitácora diaria a pedido de Catriel; verificación del historial de WhatsApp, sin decisiones ni pedidos nuevos
 - [[Bily/bitacoras/2026-08-15|2026-08-15]] — Bitácora diaria por cron y saludo de buenas noches; fallos de ejecución del agente antes de responder, Catriel consultó disponibilidad
 - [[Bily/bitacoras/2026-08-16|2026-08-16]] — Se retomó la bitácora tras fallos del runtime; posible corte de luz en casa (server reiniciado), y Catriel propuso sumar a Bily a un grupo con Ale para recorridos gastronómicos
+- [[Bily/bitacoras/2026-08-17|2026-08-17]] — Jornada sin actividad: bitácora diaria por cron, sin conversaciones, decisiones ni pedidos nuevos por WhatsApp
 
 ## Ver también
 
