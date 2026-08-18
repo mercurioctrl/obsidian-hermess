@@ -87,3 +87,47 @@ Pasos 1–2 son el corazón: refactor puro respaldado por el seed, no debe mover
 ## Alcance elegido
 
 "Catálogo en tabla + loop" (sin ABM por ahora; activación/nombres vía seed/SQL). El ABM sin deploy queda como mejora futura.
+
+---
+
+## Implementación paso 1 (2026-08-18) — HECHO en dev
+
+Rama `feature/listas-precios-nombradas` en ambos repos.
+
+### Columnas de la tabla `priceList` (ya existía vacía en NewBytes_DBF.dbo)
+Preexistentes: `id (identity, SIN PK)`, `natarifappId (NOT NULL)`, `name`, `description`, `algorithm`, `commission`.
+Agregadas: `code`, `source_column`, `type`, `discount_column`, `default_active (bit)`, `sort_order`, **`color` (nvarchar(9), hex '#RRGGBB')**.
+Índice: `UX_priceList_code` (único plano, NO filtrado — ver quirk abajo).
+
+### Tabla nueva `priceList_company` (override por empresa)
+`id`, `price_list_id` (FK lógica, no enforced), `companyCode`, `name`, `active (bit)`, **`color`**, `UX (price_list_id, companyCode)`.
+
+### Resolución efectiva (nombre + color + active)
+```sql
+COALESCE(pc.name,  pl.name)           -- nombre
+COALESCE(pc.color, pl.color)          -- color
+COALESCE(pc.active, pl.default_active) -- prendido/apagado
+FROM priceList pl LEFT JOIN priceList_company pc ON pc.price_list_id=pl.id AND pc.companyCode=@cc
+```
+Si la empresa no tiene fila → hereda el default global. Listas nuevas nacen `default_active=0`.
+
+### columnaCompanyCode verificados en articulo
+4=NB (23844 art.), 9=NBE (1461), 10=? (10), 11=Laset (924).
+
+### Ejemplo real sembrado
+Lista A: NB(4)="Lista A" #1677FF; NBE(9) hereda; Laset(11)="Minorista" #13C2C2.
+
+### Quirks del driver dblib/FreeTDS del container (¡importantes!)
+- **Índice filtrado** (`WHERE ... IS NOT NULL`) → todo INSERT falla con **20018** (exige ANSI_NULLS/QUOTED_IDENTIFIER ON, que dblib tiene OFF). Usar índice único **plano**.
+- **`IF NOT EXISTS(SELECT) + INSERT`** en un batch `unprepared()` → **20019** "results pending". Usar `INSERT ... SELECT ... WHERE NOT EXISTS`.
+- **`unprepared()` multi-statement** (varias sentencias + GO) ejecuta **solo la primera**. `USE`/`SET` en batch aparte SÍ persisten a llamadas siguientes; para `CREATE TABLE` en otra DB, abrir conexión Laravel con `database` override (default del container = NB_WEB, no NewBytes_DBF).
+- **Crear UNIQUE/PK** vía dblib exige setear antes (sentencias sueltas): `SET QUOTED_IDENTIFIER/ANSI_NULLS/ANSI_PADDING/ANSI_WARNINGS/CONCAT_NULL_YIELDS_NULL ON`.
+- `priceList.id` es IDENTITY pero **sin PK** → no se puede declarar FK que lo referencie: FK lógica.
+- El `.sql` para el DBA (sqlcmd, SET options ON por default) usa la forma canónica; estos workarounds son solo para aplicar en dev vía el driver viejo.
+
+### Pendiente (próximos pasos)
+2. Refactor `Price.php::getLetra()` a loop data-driven por companyCode.
+3. Ampliar SELECT de `ProductRepository` (npvp3/npvp4).
+4. DTO con `[{code, name, color, price}]` + `GET /v1/priceList` filtrado por companyCode/active.
+5. Frontend `Detail.vue`: dropdown por nombre + chip de color.
+6. Validación activando una lista hoy inactiva.
