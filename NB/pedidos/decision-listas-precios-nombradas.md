@@ -172,3 +172,32 @@ Falta: paso 3 (ProductRepository npvp3/4), 4 (DTO con name/color + GET /v1/price
 ### Falta
 - Paso 3: ampliar SELECT de ProductRepository (npvp3/npvp4) — necesario solo para activar listas nuevas.
 - Paso 6: validación end-to-end activando una lista hoy inactiva.
+
+---
+
+## Pasos 3 y 6 (2026-08-18) — HECHO: SELECT ampliado + demo de lista nueva
+
+### Paso 3 — `ProductRepository`
+SELECT y GROUP BY ahora traen **npvp1..npvp6 y ndto1..ndto6** (antes solo npvp1,2,5,6 y ndto2,3). Así el catálogo puede referenciar cualquiera de las 6 columnas sin tocar la query al activar una lista. `php -l` OK.
+
+### Paso 6 — validación end-to-end (con lista G demo, ya eliminada)
+Se creó una lista `G` (source_column=npvp3, direct, default_active=0) y se activó SOLO para Laset(11) con nombre "Mayorista 3" y color #2F54EB:
+- companyCode 4 (NB): `[A,B,C,D,E]` — G NO aparece (apagada por default, sin override).
+- companyCode 11 (Laset): `[A,B,C,D,E,G]` — G activa, `priceListMeta` la muestra con name="Mayorista 3", color=#2F54EB, price=npvp3 (10.3). `computeListValue` leyó npvp3 OK. A–E intactas.
+- La demo se eliminó para dejar dev en estado A–E limpio.
+- **Revalidación final legacy vs catálogo: 2400 comparaciones, 0 diferencias.**
+
+### FEATURE COMPLETA (backend + frontend) en dev. Falta solo:
+- Aplicar el `.sql` (2026_08_18_001) en staging/prod vía DBA (sqlcmd).
+- Rebuild frontend + `pm2 restart WebExpedition` para ver el dropdown con nombre+color.
+- Commit/push en ambos repos (rama feature/listas-precios-nombradas).
+
+### Follow-ups opcionales (NO bloqueantes)
+- `adivinarLetra`/`adivinarLetraSave` siguen hardcodeadas a A–E para la auto-detección de letra (el interval fallback usa A–E + "F"). Las listas nuevas igual son seleccionables (el frontend manda letra=code), pero la auto-detección no las reconoce. Generalizar el exact-match a los codes activos es low-risk si se quiere.
+- Mapeo `ntarifapp -> lista` sigue en ClientParametersService/Price switch; se podría leer de priceList.default_ntarifapp.
+- `GET /v1/priceList` (sin consumidores hoy) filtrado por companyCode para una futura ABM.
+
+### Cómo agregar una lista nueva (data-only, sin deploy)
+1. INSERT en priceList (code, source_column, type[, discount_column], default_active=0, name, color, natarifappId, sort_order).
+2. INSERT en priceList_company (price_list_id, companyCode, name, active=1[, color]) por cada empresa que la quiera.
+3. Esperar el TTL de caché (300s) o limpiar cache.
