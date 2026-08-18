@@ -131,3 +131,20 @@ Lista A: NB(4)="Lista A" #1677FF; NBE(9) hereda; Laset(11)="Minorista" #13C2C2.
 4. DTO con `[{code, name, color, price}]` + `GET /v1/priceList` filtrado por companyCode/active.
 5. Frontend `Detail.vue`: dropdown por nombre + chip de color.
 6. Validación activando una lista hoy inactiva.
+
+---
+
+## Paso 2 (2026-08-18) — HECHO y validado: refactor de Price::getLetra() data-driven
+
+Archivos:
+- **Nuevo `app/app/Support/PriceListCatalog.php`**: `forCompany($companyCode)` devuelve las listas ACTIVAS de la empresa (code, source_column, type, discount_column, name, color) con `COALESCE(pc.X, pl.X)`. Cacheado 300s (memo por request + `Cache::remember`, mismo criterio que products.currency_quote). Si las tablas no existen o falla la query → devuelve `[]` (try/catch).
+- **`app/app/Support/Price.php`**:
+  - `getLetra()` ahora es un dispatcher: pide el catálogo por `companyCode`; si está vacío → `getLetraLegacy()` (código original intacto, fallback seguro); si no → `getLetraFromCatalog()`.
+  - `getLetraFromCatalog()`: itera el catálogo y arma `$this->priceList[code]`. SP/MK/PM y utilidad base (categoría > ítem) se mantienen igual. `adivinarLetra`/`adivinarLetraSave` sin cambios.
+  - `computeListValue()`: direct = npvpN; discount = npvpN - npvpN*ndtoN/100; markup_from_cost = ncosteprom*(1+spc/100). Redondeo a 5 igual que legacy.
+
+**Deploy seguro**: si el backend deploya antes de que el DBA corra el SQL, el catálogo da `[]` y usa el legacy → cero riesgo. Como legacy y catálogo dan resultados idénticos para A–E, la transición es transparente.
+
+**Validación**: 400 productos × 6 escenarios (type 0/1, categoryBaseUtility, itemBaseUtility, specialPrice, specialPriceFromCost) × todas las empresas = **2400 comparaciones, 0 diferencias** en priceList, letra y savedPriceList (getLetraLegacy vs getLetraFromCatalog por reflexión).
+
+Falta: paso 3 (ProductRepository npvp3/4), 4 (DTO con name/color + GET /v1/priceList filtrado), 5 (frontend), 6 (validación activando lista nueva).
