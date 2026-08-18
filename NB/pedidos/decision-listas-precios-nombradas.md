@@ -148,3 +148,27 @@ Archivos:
 **Validación**: 400 productos × 6 escenarios (type 0/1, categoryBaseUtility, itemBaseUtility, specialPrice, specialPriceFromCost) × todas las empresas = **2400 comparaciones, 0 diferencias** en priceList, letra y savedPriceList (getLetraLegacy vs getLetraFromCatalog por reflexión).
 
 Falta: paso 3 (ProductRepository npvp3/4), 4 (DTO con name/color + GET /v1/priceList filtrado), 5 (frontend), 6 (validación activando lista nueva).
+
+---
+
+## Pasos 4 y 5 (2026-08-18) — HECHO: nombre + color al frontend
+
+### Backend (paso 4) — `Price.php`
+- Nueva propiedad `public $priceListMeta` en la clase Price.
+- `buildPriceListMeta($catalog)`: arma `[{code, name, color, price}]` respetando el orden de `priceList`. Con catálogo usa name/color por empresa; sin catálogo (legacy) name=code, color=null. Especiales: SP="Especial", MK="Markup", PM="Precio manual" (color null).
+- Se setea en `getLetraFromCatalog` (con catálogo) y `getLetraLegacy` (sin), y se copia a `$price->priceListMeta` en los 5 sitios de getPrice (junto a priceList). **El mapa `priceList` original queda intacto** → no rompe consumidores viejos.
+- Verificado: NB(4) A="Lista A" #1677FF; Laset(11) A="Minorista" #13C2C2; B–E heredan default.
+
+### Frontend (paso 5) — `Detail.vue`
+- Nuevo método `priceListOptions(price)`: prefiere `price.priceListMeta`; si no está, cae al mapa `price.priceList` (ítems viejos/kits). Devuelve `[{code,name,color,price}]`.
+- El `<a-select-option>` del selector de precio ahora itera `priceListOptions(record.price)`: muestra **chip de color** + `name` en vez de la letra cruda. El `value` sigue siendo `{price, letra: code}` (contrato intacto). Ese select no usa filterOption, el span no lo afecta.
+- Se copia también `priceListMeta` en el handler que actualiza el ítem (antes solo copiaba priceList).
+- ESLint OK.
+
+### Nota
+- `GET /v1/priceList` (PriceListController) **no se consume en el frontend** (solo `download/priceList`), así que su filtrado por companyCode queda como follow-up opcional.
+- Para ver los cambios en la app: rebuild del frontend (`NODE_OPTIONS=--openssl-legacy-provider npm run build` + `pm2 restart WebExpedition`) y, en backend, limpiar opcache/reload php-fpm si aplica (la validación de lógica ya se hizo por CLI).
+
+### Falta
+- Paso 3: ampliar SELECT de ProductRepository (npvp3/npvp4) — necesario solo para activar listas nuevas.
+- Paso 6: validación end-to-end activando una lista hoy inactiva.
