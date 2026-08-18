@@ -1,0 +1,89 @@
+# Decisión: Listas de precios nombradas y extensibles por companyCode
+
+> Estado: **planificado** (2026-08-18). Diseño acordado con Catriel. Aún sin implementar.
+
+## Problema
+
+Las listas de precios A–E están **hardcodeadas en 3 lugares**:
+- `app/app/Support/Price.php` → `getLetra()`: fórmulas escritas a mano.
+- `app/app/Repositories/Product/ProductRepository.php`: el SELECT solo trae `npvp1,npvp2,npvp5,npvp6`.
+- Frontend `pedidos-web-app-v1/app/components/Orders/Detail.vue`: el dropdown muestra la letra cruda, no un nombre.
+
+No se pueden nombrar las listas ni agregar nuevas sin editar PHP. Además cada empresa quiere **nombres distintos** para la misma lista.
+
+## Composición actual (referencia, `Price.php::getLetra`)
+
+Cliente normal (type != 1):
+- **A** = `npvp1`
+- **B** = `npvp1 - (npvp1 * ndto2 / 100)`
+- **C** = `npvp1 - (npvp1 * ndto3 / 100)`
+- **D** = `npvp5`
+- **E** = `npvp6`
+- Especiales: **SP** (si specialPrice>0) = `npvp5 + npvp5*specialPrice/100`; **MK** (si specialPriceFromCost>0) = `ncosteprom*(1+specialPriceFromCost/100)`; **PM** (precio manual, si no coincide con ninguna).
+- Utilidad base (`categoryBaseUtility` / `itemBaseUtility`) se suma a A–E al final.
+- La letra aplicada se persiste en `pedclil.listaPrecio`.
+
+Qué lista le toca al cliente: `ntarifapp` (tabla clientes) → hoy mapeado en `ClientParametersService`. (1→A/B/C, 5→D, 6→E, 2→npvp2).
+
+## Columnas disponibles en `articulo` (verificado 2026-08-18)
+
+`npvp1..npvp6` y `ndto1..ndto6` (todas decimal). **NO existen npvp7/npvp8** (los ESTIP7/8 son solo % de margen, sin columna de precio).
+→ Techo: **6 listas base** (una por npvp) + derivadas por descuento (ndtoN) + especiales (SP/MK/PM).
+
+Hoy sin usar como lista: `npvp2, npvp3, npvp4` y `ndto1, ndto4, ndto5, ndto6`.
+
+## Decisión: definiciones en datos + activación/nombre por companyCode (2 tablas)
+
+**`priceList`** — definición global (la fórmula, igual para todas las empresas):
+
+| columna | ejemplo | nota |
+|---|---|---|
+| id | 1 | |
+| code | A, B, D… | **clave inmutable** (la que guarda `pedclil.listaPrecio`) |
+| source_column | npvp1, npvp5 | qué npvpN |
+| type | direct / discount / markup_from_cost / special | operación |
+| discount_column | ndto2, ndto3 | solo para discount |
+| default_ntarifapp | 1, 5, 6 | tarifa de cliente que cae acá por defecto |
+| default_name | "Lista A" | fallback de nombre |
+| sort_order | 10, 20 | orden display |
+
+**`priceList_company`** — nombre + on/off por empresa:
+
+| columna | ejemplo | nota |
+|---|---|---|
+| id | | |
+| price_list_id | → priceList.id | |
+| companyCode | 4, 11, 9 | |
+| name | "Lista A" / "Minorista" | **el nombre varía por empresa** |
+| active | 1/0 | switch de prendido/apagado |
+
+### Ejemplo (requerimiento real)
+
+Lista A: mismo `code=A`, `source_column=npvp1`, `type=direct`.
+- companyCode **4 (NB)** → name = "Lista A"
+- companyCode **11 (Laset)** → name = "Minorista"
+
+companyCodes por ahora: **NB=4, Laset=11, NBE=9**.
+
+## Invariantes / riesgos
+
+- **`code` inmutable**: pedidos históricos lo referencian en `pedclil.listaPrecio`. Renombrar = cambiar `name`, nunca `code`. A–E se preservan.
+- **Fallback de nombre**: si una empresa tiene la lista activa pero sin fila de nombre → usar `default_name` (o el `code`). Nunca vacío.
+- **Qué companyCode manda**: el del **artículo** (`A.companyCode`, ya está en la query). Cuidado con casos cross-company (ver fix ya documentado).
+- **Cast numérico en PHP** al leer npvp (driver pdo_sqlsrv local devuelve strings).
+- El mapeo `ntarifapp → lista` debería leerse del catálogo (`default_ntarifapp`) para no dejar 2da fuente de verdad.
+
+## Plan de trabajo
+
+1. Migraciones de las 2 tablas + **seed que replica A–E exactas** para las empresas (nombres por empresa). Objetivo: **cero cambio de comportamiento** en el corte.
+2. Refactor `Price.php::getLetra()` → **loop sobre listas activas filtradas por companyCode**, con cache por companyCode. Validar precios idénticos a hoy.
+3. Ampliar SELECT de `ProductRepository` para traer todos los npvp1..npvp6 (+ ndto necesarios).
+4. DTO de precio con `[{code, name, price}]` (o mapa de nombres al lado). `GET /v1/priceList` filtrado por companyCode/active.
+5. Frontend `Detail.vue`: dropdown por `name`, sigue mandando `code`.
+6. Validación end-to-end activando una lista hoy inactiva (ej. npvp2/npvp3) en una empresa de prueba.
+
+Pasos 1–2 son el corazón: refactor puro respaldado por el seed, no debe mover ningún precio.
+
+## Alcance elegido
+
+"Catálogo en tabla + loop" (sin ABM por ahora; activación/nombres vía seed/SQL). El ABM sin deploy queda como mejora futura.
