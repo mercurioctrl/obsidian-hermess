@@ -2,6 +2,10 @@
 
 > [[Tarjetas]]
 
+## 2026-08-18
+
+- **Pago extra a Amex:** $1.000.000 más. Total pagado a Amex: **$6.100.000**. Baja el saldo financiado a **$7.815.144,63** y el pendiente del resumen de agosto a **$7.274.170,39**. Actualizados [[Proyección de Pago]], [[contexto]] y [[memoria]].
+
 ## 2026-08-14
 
 - **Pago extra a Amex:** $900.000 (tarjeta ****-34375). Total pagado a Amex: $5.100.000. Saldo pendiente del resumen de agosto: $8.274.170,39 (vto 10-ago ya pasó → financiándose). Actualizados [[Proyección de Pago]] y [[memoria]].

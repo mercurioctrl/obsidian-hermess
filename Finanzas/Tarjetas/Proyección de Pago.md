@@ -6,19 +6,19 @@ tags: [finanzas, tarjeta, estrategia, pago]
 
 > [[Tarjetas]] · [[Panorama de Gastos]] · [[Pagos e Intereses]] · [[Cuotas Activas]]
 
-## Punto de partida (hoy, 09-08-2026)
+## Punto de partida (hoy, 18-08-2026)
 
 | | Visa | Amex | Total |
 |---|--:|--:|--:|
 | Saldo total | 14.809.045,09 | 13.374.170,39 | 28.183.215,48 |
-| Pagos hechos | -5.500.000,00 | -5.100.000,00 | -10.600.000,00 |
-| Saldo pendiente del resumen | 9.309.045,09 | 8.274.170,39 | 17.583.215,48 |
-| **Financiado (paga interés)** | 3.431.601,54 | 8.815.144,63 | **12.246.746,17** |
+| Pagos hechos | -5.500.000,00 | -6.100.000,00 | -11.600.000,00 |
+| Saldo pendiente del resumen | 9.309.045,09 | 7.274.170,39 | 16.583.215,48 |
+| **Financiado (paga interés)** | 3.431.601,54 | 7.815.144,63 | **11.246.746,17** |
 
-> **Amex:** pagos parciales de **$1.000.000 + $2.400.000 + $800.000 + $900.000 = $5.100.000,00** (tarjeta ****-34375, 09→14-ago-2026). Ya **cubren el pago mínimo** ($4.198.210) → cuenta al día, sin mora. Quedan **$8.274.170,39** del resumen; el vto (10-ago) ya pasó, así que ese saldo está financiándose (~$23.700/día de interés+IVA) → conviene cancelarlo cuanto antes.
+> **Amex:** pagos parciales de **$1.000.000 + $2.400.000 + $800.000 + $900.000 (09→14-ago) + $1.000.000 (18-ago) = $6.100.000,00** (tarjeta ****-34375). Ya **cubren el pago mínimo** ($4.198.210) → cuenta al día, sin mora. Quedan **$7.274.170,39** del resumen; el vto (10-ago) ya pasó, así que ese saldo está financiándose (~$21.000/día de interés+IVA) → conviene cancelarlo cuanto antes.
 
 El **saldo financiado** es la deuda cara: rinde **TEM 6.403% mensual (TNA 77,9%)**.
-Sobre $12.246.746,17 eso es **$784.159,16 de interés por mes** ($9.409.909,89/año) si no lo bajás.
+Sobre $11.246.746,17 eso es **$720.129,56 de interés por mes** ($8.641.554,72/año) si no lo bajás.
 
 ## ⚠️ Regla de oro: nunca pagar el mínimo
 
