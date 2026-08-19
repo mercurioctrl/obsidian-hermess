@@ -39,6 +39,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-descarga-listado-xlsx|Feature: Descarga xlsx de listados]] — botón solo-icono que exporta el listado filtrado de pedidos/clientes a xlsx; endpoint `orders/download` reutilizando `OrderListRepository` sin paginar
 - [[feature-ranking-vendedores|Feature: Ranking de vendedores]] — pestaña que rankea vendedores por la suma de puntos (travel miles) de sus clientes en el juego NB Travel Mundial de resellers; modal de desglose por cumplimiento
 - [[feature-incentivo-netac|Feature: Incentivo Netac]] — incentivo por unidades vendidas de Netac (Memorias + SSD): cada 12 u = USD 4; reemplaza al Incentivo Gigabyte; detalle por pedido/producto/fecha
+- [[decision-listas-precios-nombradas|Decisión: Listas de precios nombradas y extensibles por companyCode]] — diseño acordado (2026-08-18), aún sin implementar
 
 ## Esquema ERP — Tablas y relaciones
 
