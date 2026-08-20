@@ -22,7 +22,7 @@ Dos problemas encadenados, importante no confundirlos:
 
 ## Identificación de WAN por IP de salida (rediseñado 2026-08-03)
 Como el USG balancea por destino, los scripts identifican cada WAN por su **IP pública de salida**, hiteando IPs Cloudflare (`curl --resolve` + `/cdn-cgi/trace`) y leyendo el campo `ip=`.
-- **Telecom** = ~~IP estática `190.189.93.116` → match exacto~~. **INCORRECTO**, ver incidente 2026-08-15. `lib.sh` sigue con este match exacto y por eso sigue roto; el fix es identificar por ASN.
+- **Telecom** = ~~IP estática `190.189.93.116` → match exacto~~. **Obsoleto desde 2026-08-20**: ahora ambas WANs se identifican por **ASN** (ver abajo).
 - **Telecentro** = residencial con IP **dinámica** → **NO se hardcodea**; se define como *"la salida que NO es Telecom"* (sólo hay 2 WANs), vía la función `egress_matches()` en `lib.sh`. Así se **auto-cura** ante cualquier rotación de IP. Exige salida no-vacía (un timeout no debe parecer Telecentro). La variable `TELECENTRO_IP` pasó a ser un sentinela/label (`"telecentro"`), ya no se usa para match.
 - **Detección de caída:** si ninguna IP sale por esa WAN (failover) o todas dan timeout → DOWN. Si Telecentro cae, todo el tráfico sale por Telecom → ningún egress ≠ Telecom → down correcto.
 
@@ -53,6 +53,21 @@ Escrito el 2026-08-04 anticipando exactamente este problema, pero nunca se habí
 
 **Gotcha del token — allowlist de IP + IP dinámica = deadlock.** El token original tenía *Client IP Address Filtering* atado a la IP de Telecom. Síntomas confusos: `/user/tokens/verify` devuelve `1000 Invalid API Token` (parece token mal copiado) pero `/zones` devuelve el error real **`9109 Cannot use the access token from location: <ip>`**. Como el USG balancea por destino y manda `api.cloudflare.com` por Telecentro, fallaba aunque el token estuviera bien. El problema de fondo no era el ruteo: **un allowlist atado a una IP que rota mata al token en la próxima rotación, y entonces el DDNS no puede autenticarse para publicar justamente esa rotación.** Se resolvió sacando el filtro — la protección real es el scope (`Zone:Zone:Read` + `Zone:DNS:Edit` sobre `blu.net.ar` y nada más). Para diagnosticar por qué WAN sale una request: `curl --resolve api.cloudflare.com:443:<ip-cloudflare-que-rutea-por-esa-wan>`.
 
+## Identificación por ASN en `lib.sh` (2026-08-20) — fix definitivo
+
+Se eliminó **toda** IP de enlace hardcodeada de `lib.sh`. `TELECOM_IP` y `TELECENTRO_IP` pasaron a ser **sentinelas/labels** (`"telecom"` / `"telecentro"`); los tres scripts consumidores (`uptime.sh`, `speed.sh`, `status.sh`) los siguen pasando igual, así que no hubo que tocarlos.
+
+- **`asn_of()`** — ASN dueño de una IPv4 vía Team Cymru por DNS, sin API key: `dig +short TXT <d.c.b.a>.origin.asn.cymru.com @1.1.1.1`. Se consulta 1.1.1.1 directo porque el pihole local puede filtrar/cachear raro.
+- **`asn_cached()`** — cache en RAM (por corrida) + **disco** (`state/asn.<ip>`, permanente: el dueño de una IP no cambia). Sin esto `uptime.sh` (cada 1 min) pegaría ~2880 consultas/día a Cymru.
+- **`egress_matches()`** — compara ASN contra `ASN_TELECOM=7303` / `ASN_TELECENTRO=27747`. Sigue rechazando salida vacía (un timeout no debe parecer WAN viva).
+- **Fallback si Cymru/DNS no responde:** compara contra la última IP conocida de esa WAN en `state/ddns.<label>`, que `ddns.sh` refresca cada 5 min. Sin fallback, un corte de DNS haría parecer que **se cayeron las dos WANs** y dispararía alarmas falsas por WhatsApp.
+
+Ya no queda "la salida que NO es la otra": **cada WAN se identifica positivamente**, así que la rotación de una no puede volver a contaminar la medición de la otra — que fue exactamente el modo de falla de julio y de agosto.
+
+**Verificación (2026-08-20 11:46):** `status.sh` → Telecom **550 Mbps ✅** / Telecentro **598 Mbps ✅**. `uptime.sh` se auto-curó en la corrida de 11:47:08 (`Telecom: down -> up`, contador `fail` reseteado de 5930 a 0) sin intervención manual.
+
+**Ojo con los números de "Telecentro" del 2026-08-15 al 20:** eran de Telecom. Pero eso **no** implica que Telecentro siga en los ~186 Mbps de julio — medido bien el 20/08 da ~598 Mbps. Los promedios de julio no sirven como línea de base actual.
+
 ## Monitores (carpeta `~/wan-mon/`)
 Avisan por WhatsApp (Bily) al grupo **Infra Blu** (target en `lib.sh`, variable `WHATSAPP`).
 
@@ -71,7 +86,6 @@ Avisan por WhatsApp (Bily) al grupo **Infra Blu** (target en `lib.sh`, variable 
 - El health-check con target propio (1.1.1.1) NO es configurable sin `config.gateway.json`; no hay SMTP/alertas nativas armadas. Por eso el monitor custom cubre el hueco.
 
 ## Pendientes
-- **`lib.sh` sigue roto (prioritario):** portar `asn_of()` de `ddns.sh` a `lib.sh` y que `egress_matches()` compare **ASN** en vez de IP. Hasta que se haga, `speed.sh` sigue reportando `Telecom=s/ruta` y atribuyendo mal las velocidades, y `uptime.sh` deja Telecom en `down`. Después: resetear `state/Telecom.state`→`up` y `state/Telecom.fail`→`0` sin disparar falsa alarma.
 - Identificar qué consume `telecommed.blu.net.ar` y evaluar rotación de credenciales.
 - Rebalanceo a 50/50 ahora que Telecom volvió (la DB seguiría en Telecom).
 - Vigilar Telecentro unos días: post-recuperación mide **~280 Mbps**, bastante por debajo de Telecom (~700). Ver si es normal del plan o degradación.
