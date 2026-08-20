@@ -1,5 +1,13 @@
 # Changelog — inventario
 
+## 2026-08-20 — Columna "Disp." en grilla de Stock + fix conexión DB prod
+
+### Frontend (inventario-web-app/app, rama `development`, sin commit aún)
+- **feat(stock)**: nueva columna calculada **Disp.** (disponible) en la pestaña Stock, después de **Reserv.**. Fórmula 100% frontend (los 3 campos ya llegan en el record): `Disp = stock + stockLio − stockInOrders` = `nstock + nstock_lo − nstock_reserva_pedidos`. Mapeo confirmado en el SQL de `stocks.py` (`nstock as stock`, `nstock_lo as stockLio`, `nstock_reserva_pedidos as stockInOrders`). Archivos: `store/itemsStock.js` (def col `available`), `pages/itemsStock.vue` (slots título+render, alta en `BALANCE_COLUMN_KEYS` para atenuar con rango de fechas, y caso `available` en `exportRawValue` para CSV/xlsx). Verificado con item **103094** (RYZEN 3 3200G) → **40 + 0 − 10 = 30** ✅.
+
+### Gotcha resuelto — DB de producción y credenciales
+- El valor daba **3 en vez de 30** porque el uvicorn estaba clavado en la DB `10.10.10.47` (otros valores) pese a que el `.env` apuntaba a `190.210.23.97,4444`: **`--reload` no relee `load_dotenv()`**, hay que **reiniciar el proceso**. Además ese server usa usuario **`emanzando_devweb01`/`npm8956`** (NO `cmercurio`, que da login **18456**). Corregido `.env` local + restart → conecta a prod y la columna muestra 30. Ver [[contexto]].
+
 ## 2026-08-04 — Fixes de grilla/datos, performance de Stock, y correcciones de OC en prod
 
 Sesión larga. Tres bloques: correcciones de la grilla/datos (varios PRs), performance de la grilla de Stock, y correcciones puntuales de datos en producción (albprol/costos).

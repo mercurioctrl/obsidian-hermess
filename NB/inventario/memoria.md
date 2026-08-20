@@ -1,10 +1,13 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-07-08. (Memoria local también en
+Última sincronización: 2026-08-20. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Columna "Disp." en grilla de Stock + fix DB prod (2026-08-20)
+Nueva columna calculada **Disp.** (disponible) en la pestaña Stock, tras **Reserv.**: `nstock + nstock_lo − nstock_reserva_pedidos` (mapea a `stock + stockLio − stockInOrders`, los 3 ya en el record → cambio 100% frontend). Archivos `store/itemsStock.js` + `pages/itemsStock.vue` (slots, `BALANCE_COLUMN_KEYS`, `exportRawValue`). Rama `development`, **sin commit**. Verificado item 103094 → 40+0−10=**30**. **Gotcha clave**: daba 3 porque uvicorn seguía en la DB `10.10.10.47` (el `--reload` no relee `.env`) → reiniciar el proceso; y el server `190.210.23.97,4444` usa `emanzando_devweb01`/`npm8956`, NO `cmercurio` (login 18456). Ver [[changelog]] y [[contexto]].
 
 ### Ajuste manual crea la fila de stock si no existe (2026-07-08)
 `POST /itemsStocks/{itemId}/manualAdjustments` (`manual_adjust_item_stock`, `stocks.py`) devolvía `404 "Item no encontrado"` cuando el artículo no tenía fila en `stocks` para el `ID_ALMACEN` pedido — mensaje engañoso: el artículo existía, faltaba la fila de stock en ese almacén (`warehouseStockId` → `ID_ALMACEN`). Ahora, si `(ID_ARTICULO, ID_ALMACEN)` no existe, **la crea** con todo en 0 (mismo `INSERT` de 18 columnas que la transferencia entre almacenes `stocks.py:2100` / alta de producto / kits) y sigue el flujo normal (`previous=0 → current=amount`). **Guards**: solo crea si el artículo existe en `articulo` y el almacén en `FP_Almacen`; concurrencia manejada (`IntegrityError` → re-SELECT). Rama `feature/manual-adjust-crea-stock-inexistente` (`1b24882`), **PR sin abrir**. `alter_stock_d1` (permiso `alterStock`) tiene el mismo patrón de 404 y NO se tocó. Verificado con `py_compile`; no probado contra la DB. Ver [[modulo-regularizacion#Ajuste manual de nstock_d1 (manualAdjustments)]].

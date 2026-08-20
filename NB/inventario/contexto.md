@@ -28,7 +28,7 @@ cd inventario-web-app/app && npm run dev   # http://localhost:3000 — API_HOST=
 
 - **Swagger UI**: http://localhost:{puerto}/docs
 - Ambos repos en rama `development` (front) / `Development` (back) a 2026-07-02.
-- **DB**: `10.10.10.47,1433` base `NB_WEB`, usuario `cmercurio`. Alternativa: `190.210.23.97,4444` / `emanzando_devweb01`.
+- **DB**: `10.10.10.47,1433` base `NB_WEB`, usuario `cmercurio`. Alternativa / **producción real**: `190.210.23.97,4444` con usuario `emanzando_devweb01`/`npm8956`. ⚠️ **Credenciales NO intercambiables**: `cmercurio` solo sirve en `10.10.10.47` (en el `.97` da login **18456**); `emanzando_devweb01` es el del `.97`. A **2026-08-20** el `.env` local quedó apuntando a `190.210.23.97,4444` con `emanzando_devweb01` (la "producción" con datos reales que usa el usuario).
 - ⚠️ Cambiar la DB en `.env` requiere **reiniciar uvicorn** (el `--reload` no relee `load_dotenv()`).
 
 ## Variables de entorno
