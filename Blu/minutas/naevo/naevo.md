@@ -4,6 +4,7 @@ Minutas de reunión del cliente **NAEVO** (línea de suplementos de bienestar), 
 
 ## Reuniones
 
+- [[2026-08-19-diseno-packaging-e-iconografia|2026-08-19 · Packaging, iconografía y diferenciación de marca]]
 - [[2026-08-12-etiquetas-y-estrategia|2026-08-12 · Etiquetas, empaques y estrategia comercial]]
 
 ## Ver también
