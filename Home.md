@@ -87,6 +87,11 @@
   - [[Claude/Image-OCR|Image OCR]] · [[Claude/Vault-MCP|Vault MCP]] · [[Claude/Vault-Wrappers|Vault Wrappers]] · [[Claude/Whisper|Whisper]] · [[Claude/Migracion_SQLServer_Dev|Migración SQL Server]] · [[Claude/Script-Optimizacion-SQLServer|Script Optimización SQL]] · [[Claude/Monitoreo_WAN|Monitoreo WAN]] · [[Claude/Bily_Skills_Por_Grupo|Skills por grupo (Bily)]]
 - [[Skills/Skills|Skills]] — Skills de Claude Code
 
+## 🛒 intencionDeCompra
+
+- [[intencionDeCompra/intencionDeCompra|intencionDeCompra]] — Investigación de intención de compra del consumidor de tecnología (mercado argentino: notebooks, monitores, tablets, all-in-one)
+  - [[intencionDeCompra/investigacion-canal-compra-tecnologia-argentina|Canal de compra (economy-wide)]] · [[intencionDeCompra/investigacion-categorias-notebooks-monitores-tablets-aio|Por categoría + metodología]]
+
 ---
 
-*Actualizado: 2026-08-09*
+*Actualizado: 2026-08-20*
