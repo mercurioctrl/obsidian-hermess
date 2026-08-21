@@ -1,5 +1,19 @@
 # Changelog — inventario
 
+## 2026-08-21 — Fixes de la grilla de Stock: historial, mutaciones Vuex
+
+Sesión de fixes sobre la pestaña Stock (DB dev `db-nb-massql-dev.blu.net.ar,4444`).
+
+### Backend (ms-metadata) — rama `fix/stock-history` (commit `17947ad`, pusheado)
+- **fix(stock-history)** — el endpoint `/stock-history` tenía dos bugs:
+  1. **Fecha invertida**: el parseo `DD-MM-YYYY` armaba `YYYY-DD-MM` (ej. `20-08-2026` → `2026-20-08`), lo que rompía con **error SQL 242** ("out-of-range") cuando el día era > 12. Ahora arma ISO `YYYY-MM-DD` en `date_from` y `date_to` (`stocks.py:get_stock_history`).
+  2. **Ajustes manuales invisibles**: el filtro por defecto `rs.fichero != 'PedidoModel.php'` descartaba en silencio las filas con `fichero` NULL (en SQL `NULL != 'x'` = NULL, no TRUE). Los ajustes manuales se guardaban con `fichero` NULL → nunca aparecían. Cambiado a `(rs.fichero IS NULL OR rs.fichero != 'PedidoModel.php')` (cubre también las filas ya guardadas así). Verificado en la DB: 16 filas totales para el item 100273, 12 con el filtro viejo, 16 con el corregido.
+  3. **Consistencia de escritura**: `manual_adjust_item_stock` ahora setea `fichero='regularizacion'` al insertar en `registro_stock`, igual que `alter_stock_d1`.
+  - Además se sacaron 2 `print()` de debug.
+
+### Frontend (inventario-web-app) — rama `feat/columna-disp-stock` (commit `ab65e93`, pusheado)
+- **fix(stock): mutación de Vuex** — al refrescar la grilla tras ajuste manual / movimiento entre columnas / transferencia entre almacenes / regularización global, el código hacía `.map()` sobre `this.itemsStock` (getter del state) y mutaba `item.X` directo. `.map()` no clona los objetos → se mutaba el state fuera de una mutation → en modo estricto (dev) la app crasheaba con `[vuex] do not mutate vuex store state outside mutation handlers`. Reemplazadas las **4 mutaciones in-place por updates inmutables (spread)** (`pages/itemsStock.vue`).
+
 ## 2026-08-20 — Columna "Disp." en grilla de Stock + fix conexión DB prod
 
 ### Frontend (inventario-web-app/app, rama `development`, sin commit aún)

@@ -56,6 +56,10 @@ NODE_ENV=development
 
 ## Gotchas conocidos
 
+> **Actualización 2026-08-21** (`/stock-history` y `registro_stock`, ver [[changelog]]):
+> - **`col != 'x'` descarta los NULL en SQL Server**: `NULL != 'x'` = NULL (no TRUE). El filtro `rs.fichero != 'PedidoModel.php'` ocultaba los ajustes manuales, que se insertan con `fichero` NULL. Usar `(col IS NULL OR col != 'x')`.
+> - **Fechas a SQL Server**: pasar siempre ISO `YYYY-MM-DD`. Armar `YYYY-DD-MM` (día/mes cambiados) tira **error 242** solo cuando el día es > 12 — con día ≤ 12 no falla pero guarda la fecha equivocada (bug silencioso).
+
 > **Actualización 2026-06-27** (modal de seriales + índices, ver [[modulo-seriales]] y [[performance-indices]]):
 > - **No batchear las subqueries de la grilla con `IN`**: se probó y empeoró 2.5–3.7× (los round trips sobre el link TLS 1.0 a prod pesan más que las subqueries inline, que corren server-side en un round trip y pegan a tablas indexadas). El fix correcto fue el índice **P2** (`ST_DETALLE_STOCK (CREF, FECHA_EGRESO)`): grilla 1.63s → 0.54s. **Medir siempre contra la DB real**; comparar viejo vs nuevo con `git show HEAD:archivo.py > _temp.py`.
 > - **Palabras que se parten a la mitad en las tablas**: antd usa `word-break: break-all` en `.ant-table-row-cell-break-word`. Regla global en `assets/ant/main.less` (`word-break: keep-all; overflow-wrap: normal`) → solo corta en espacios. Un token largo se excede en vez de partirse.

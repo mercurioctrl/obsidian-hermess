@@ -1,10 +1,13 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-08-20. (Memoria local también en
+Última sincronización: 2026-08-21. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Fixes grilla Stock: historial + mutación Vuex (2026-08-21)
+Tres bugs de la pestaña Stock. **Backend** (`fix/stock-history`, `17947ad`): (1) `/stock-history` parseaba `DD-MM-YYYY` como `YYYY-DD-MM` → error SQL 242 con día > 12; ahora ISO. (2) el filtro `rs.fichero != 'PedidoModel.php'` descartaba filas con `fichero` NULL (en SQL `NULL != 'x'` = NULL) → los ajustes manuales (guardados con fichero NULL) no aparecían; ahora `(rs.fichero IS NULL OR rs.fichero != 'PedidoModel.php')`. (3) `manual_adjust_item_stock` ahora setea `fichero='regularizacion'`. **Frontend** (`feat/columna-disp-stock`, `ab65e93`): 4 mutaciones in-place del state de Vuex en `itemsStock.vue` reemplazadas por updates inmutables (spread) → elimina el crash `[vuex] do not mutate vuex store state`. Ver [[changelog]] y [[contexto]].
 
 ### Columna "Disp." en grilla de Stock + fix DB prod (2026-08-20)
 Nueva columna calculada **Disp.** (disponible) en la pestaña Stock, tras **Reserv.**: `nstock + nstock_lo − nstock_reserva_pedidos` (mapea a `stock + stockLio − stockInOrders`, los 3 ya en el record → cambio 100% frontend). Archivos `store/itemsStock.js` + `pages/itemsStock.vue` (slots, `BALANCE_COLUMN_KEYS`, `exportRawValue`). Rama `development`, **sin commit**. Verificado item 103094 → 40+0−10=**30**. **Gotcha clave**: daba 3 porque uvicorn seguía en la DB `10.10.10.47` (el `--reload` no relee `.env`) → reiniciar el proceso; y el server `190.210.23.97,4444` usa `emanzando_devweb01`/`npm8956`, NO `cmercurio` (login 18456). Ver [[changelog]] y [[contexto]].
