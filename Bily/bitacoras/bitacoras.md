@@ -78,6 +78,7 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-08-18|2026-08-18]]
 - [[Bily/bitacoras/2026-08-19|2026-08-19]] — Jornada sin actividad: bitácora diaria por cron (reintento tras fallo previo), sin conversaciones ni pedidos visibles por WhatsApp
 - [[Bily/bitacoras/2026-08-20|2026-08-20]] — Bitácora diaria por cron y saludo de cierre; sin conversaciones operativas en el canal, solo el disparo del cron y un intento previo fallido del agente
+- [[Bily/bitacoras/2026-08-21|2026-08-21]] — Bitácora diaria por cron y saludo de buenas noches; sin conversaciones operativas en el canal, solo el disparo del cron y un intento previo fallido del agente
 
 ## Ver también
 
