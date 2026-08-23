@@ -24,6 +24,7 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **Gasto.categoria:** Es string plano, NO relacion Eloquent. Nunca usar `with('categoria')`
 - **RolUsuario:** Es enum casteado. Comparar con `RolUsuario::ADMIN`, no con string ni `->value`. Ver [[Backend - Modelos#Usuario]]
 - **Rutas apiResource:** Las rutas especificas (`/gastos/categorias`) deben registrarse ANTES del `apiResource`. Ver [[Errores Comunes#Rutas especificas despues de apiResource colisionan con id]]
+- **Logo en blades PDF (2026-08-23):** incluir con `@include('pdf._logo')` (renderiza el `<img>`), NO `@include('pdf.partials.logo')` — ese sólo define `$bluLogoBase64` en scope local del include → error 500 "Undefined variable" en el blade padre. Detectado en [[Modulo Remitos]]. Ver [[Errores Comunes#Blade PDF]]
 - **Laravel 11 sin `config/mail.php`:** El skeleton de este repo no incluye `config/mail.php`. Hay que crearlo a mano para que el Mail facade funcione. Ver [[Errores Comunes#Laravel 11 sin config mail php por default]] y [[Stack e Infraestructura#Mail SMTP]]
 - **Nginx strippea `/api` → el exception renderer depende de `Accept: application/json` (2026-07-12):** Nginx quita el prefijo `/api` antes de pasar al backend, así que Laravel ve el path como `config`, NO `api/config`. En `bootstrap/app.php` el custom renderer usa `if ($request->expectsJson() || $request->is('api/*'))`, y como `is('api/*')` es **false** (el prefijo ya no está), el JSON de error solo se dispara con header `Accept: application/json`. El frontend (`useApi.ts`) siempre lo manda, pero **al testear endpoints con curl hay que incluir `-H "Accept: application/json"`** o los códigos de error engañan (ej. 500 en vez de 401). Ver [[changelog#2026-07-12]]
 - **`AuthenticationException` no mapea a 401 por default (2026-07-12):** un token faltante/vencido lanza `AuthenticationException`, que NO tiene `getStatusCode()` → el handler caía a 500. El frontend (`useApi.ts:24`) espera **401** para limpiar token y redirigir a `/login`, así que el redirect por sesión vencida nunca funcionaba. Fix en el renderer: `if ($e instanceof AuthenticationException) return json 401`. Regla general: cualquier custom exception renderer debe mapear explícitamente AuthenticationException→401 y AuthorizationException→403
@@ -211,6 +212,19 @@ Integración con un servicio externo tipo cola para enviar WhatsApp. Ver [[Modul
 - **Métricas:** "commits" del ranking = suma de `PR.commits` de PRs abiertos en el período. PRs "pendientes" = abiertos ahora (estado, no período). Bots excluidos (`login` termina en `[bot]`). Mapeo dev→empleado con `empleados.github_username` (case-insensitive).
 - **Gotcha opcache (FPM):** tras `docker cp` de PHP, si el endpoint HTTP sirve la versión vieja → `docker restart minisaas-backend`; `optimize:clear` NO limpia el opcache de FPM (el CLI corre fresco, por eso confunde). Ver [[Errores Comunes]].
 - **Gotcha query DB directa:** para verificar datos desde el container, `mysql --skip-ssl -h db -u$DB_USER -p$DB_PASSWORD minisaas` (cliente MariaDB, TLS self-signed → `--skip-ssl`, NO `--ssl-mode`; creds `DB_USER`/`DB_PASSWORD` en `mini-saas/.env`).
+
+### Contabilidad — Libro IVA + liquidación (2026-08-21) — ver [[Modulo Contabilidad]]
+
+- Sección `/contabilidad` (`VER_SECCION_CONTABILIDAD`): liquidación de impuestos del período (IVA débito−crédito, IVA a pagar, Ganancias, IIBB, pesificado) + descarga del **Libro IVA** en Excel (Ventas/Compras). Mergeado **PR #34 + fix #35**.
+- **`ContabilidadService::liquidacion()` es la única fuente del cálculo** (`DashboardService::impuestosResumen()` delega ahí, para que Dashboard y Contabilidad no se desincronicen). **Ventas** = comprobantes AFIP `EMITIDA`/`ACREDITADA` (facturas+NC netean; Mercury NO entra). **Compras** = gastos con `iva_monto > 0`.
+- `LibroIvaExcelService` escribe el `.xlsx` a mano (ZIP+OOXML) con **`ext-zip`** ya presente → sin deps nuevas ni rebuild especial. **Migración 0101**: 7 columnas fiscales opcionales en `gastos` (proveedor/comprobante), cargadas desde `FacturaCompraFields.vue` (se auto-abre si el gasto tiene IVA>0).
+
+### Remitos — documento de entrega desde el presupuesto (2026-08-23) — ver [[Modulo Remitos]]
+
+- Desde `/presupuestos/{id}` → menú "Más" → "Generar remito": copia los ítems del presupuesto a un remito **independiente y editable** (varios por presupuesto). **Migración 0102** (`remitos` + `remito_items`).
+- **Decisión clave — independencia:** editar/eliminar el remito NO toca el presupuesto. Modelo `Remito` **sin `$touches`**; `update` hace delete+recreate de `remito_items` sin tocar `items_presupuesto` (verificado en vivo).
+- **Remito tradicional:** sólo descripción+cantidad, sin precios → el PDF **no requiere `VER_MONTOS_SALDOS`**. PDF formato BLU (`renderRemitoPdf()` + `pdf/remito.blade.php`, Browsershot). Numeración interna `REM-{AAAAMM}-NNN`.
+- **Gotcha del logo** (ver Feedback arriba y [[Errores Comunes]]): `@include('pdf._logo')`, no `pdf.partials.logo`.
 
 ---
 

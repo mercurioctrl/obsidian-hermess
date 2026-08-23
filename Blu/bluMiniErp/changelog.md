@@ -4,6 +4,15 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-08-23
+
+- feat: **Módulo Remitos** (migración 0102). Desde `/presupuestos/{id}` → menú "Más" → **Remito** → "Generar remito": crea un remito **copiando los ítems** del presupuesto y navega a `/remitos/{id}`. **Varios remitos por presupuesto.** **Independiente del presupuesto:** editar/eliminar el remito NO lo modifica (modelo `Remito` **sin `$touches`**; `update` hace delete+recreate de `remito_items` sin tocar `items_presupuesto` — verificado en vivo). **Remito tradicional:** sólo descripción+cantidad, **sin precios**; PDF formato BLU (`PdfService::renderRemitoPdf()` + blade `pdf/remito.blade.php`, Browsershot) que **no requiere `VER_MONTOS_SALDOS`**. Numeración interna `REM-{AAAAMM}-NNN`. Tablas `remitos` + `remito_items` (`cascadeOnDelete`). Rutas CRUD + `GET /api/remitos/{id}/pdf?token=`. Frontend `pages/remitos/[id].vue` (editar fecha/ítems/observaciones) + grupo "Remito" en el menú "Más" del presupuesto. Ver [[Modulo Remitos]].
+- fix/gotcha: en blades PDF el logo va con `@include('pdf._logo')` (renderiza el `<img>`), **NO** con `@include('pdf.partials.logo')` (ese sólo define `$bluLogoBase64` en el scope local del include → error 500 "Undefined variable" en el blade padre). Detectado al construir el remito. Ver [[Errores Comunes]].
+
+Archivos: `backend/database/migrations/0102_create_remitos_tables.php`, `backend/app/Models/{Remito,RemitoItem,Presupuesto}.php`, `backend/app/Http/Controllers/RemitoController.php`, `backend/app/Http/Resources/Remito{,Item}Resource.php`, `backend/app/Services/PdfService.php`, `backend/resources/views/pdf/remito.blade.php`, `backend/routes/api.php`, `frontend/pages/remitos/[id].vue`, `frontend/pages/presupuestos/[id].vue`, `arquitectura/17-modulo-remitos.md`
+
+---
+
 ## 2026-08-21
 
 - feat: **Módulo Contabilidad** (PR #34 + fix #35). Nueva sección `/contabilidad`: **liquidación de impuestos del período** (IVA débito − crédito, IVA a pagar, Ganancias, IIBB, todo pesificado) + descarga del **Libro IVA** en Excel con hojas **Ventas** y **Compras**, calcado del export de *Mis Comprobantes* de ARCA. **Ventas** = comprobantes AFIP `EMITIDA`/`ACREDITADA` (facturas y NC netean; Mercury NO entra). **Compras** = gastos con `iva_monto > 0`. `ContabilidadService::liquidacion()` es la **única fuente** del cálculo (`DashboardService::impuestosResumen()` delega ahí para no desincronizar). `LibroIvaExcelService` escribe el `.xlsx` a mano (ZIP + OOXML) con **`ext-zip`** ya presente → **sin dependencias nuevas ni rebuild especial**. Rutas `GET /api/contabilidad` y `GET /api/contabilidad/libro-iva?token=` (fuera de auth, token en query). Permiso **`VER_SECCION_CONTABILIDAD`**, ícono `lucide:calculator`. Fix #35: el IVA no se resta del margen después de impuestos. Ver [[Modulo Contabilidad]].

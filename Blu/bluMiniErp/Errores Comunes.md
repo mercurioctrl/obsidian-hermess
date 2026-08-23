@@ -344,9 +344,16 @@ Al validar un rango horario con `'hora_fin' => ['regex:...','gt:hora_inicio']`, 
 
 ---
 
+## Blade PDF: `@include('pdf.partials.logo')` da "Undefined variable $bluLogoBase64" (2026-08-23)
+
+Al crear un blade PDF nuevo (Browsershot, `resources/views/pdf/`) e incluir el logo con `@include('pdf.partials.logo')` seguido de `{{ $bluLogoBase64 }}`, el render tira **500** `Undefined variable $bluLogoBase64 (View: ...)`. Pasó construyendo el [[Modulo Remitos]]. **Causa:** `pdf/partials/logo.blade.php` sólo **define** la variable en un `@php` block, y Blade ejecuta el `@include` en un **scope local** → la variable **no llega al blade padre**. **Fix:** usar `@include('pdf._logo')`, que **renderiza el `<img>`** directamente (como hacen `factura-afip` y `remito`). Para el watermark del footer: contenedor con `opacity:0.12` + `.footer-brand img { height:32px !important }` (el `height:50px` inline del partial gana salvo con `!important`). El partial `_logo` usa `$config->empresa_nombre` en el `alt` → pasar `['config'=>Configuracion::first()]` al render. Ver [[Modulo Remitos]] y [[reference_logo_blu]].
+
+---
+
 ## Ver tambien
 
 - [[Modulo Reservas Reuniones]] - Gotcha de la regla `gt` con horas
+- [[Modulo Remitos]] - Gotcha del logo en blades PDF (`pdf._logo` vs `pdf.partials.logo`)
 - [[Stack e Infraestructura]] - Errores de Docker y deploy
 - [[Frontend]] - Errores de componentes y stores
 - [[Backend - API]] - Errores de rutas y wrappers

@@ -2,7 +2,7 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-08-21
+**Ultima sincronizacion:** 2026-08-23
 
 ## Arquitectura
 
@@ -26,6 +26,7 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | [[Modulo Calendario]] | Vista mensual que unifica tareas con deadline, ausencias/vacaciones, 1:1, objetivos, feriados **y reservas de reuniones** + suscripción externa iCal (Google/Apple/Outlook). `VER_SECCION_CALENDARIO` (2026-07-14) |
 | [[Modulo Reservas Reuniones]] | Link público tipo Calendly por usuario (`/reservar/{token}`): un externo agenda un slot; disponibilidad self-service (`/mi-disponibilidad`) híbrida (reglas semanales + bloqueos/extras); invitados múltiples con invite `.ics`, evento en Calendario y notificación in-app/push (2026-08-10) |
 | [[Modulo Contabilidad]] | Sección `/contabilidad`: liquidación de impuestos del período (IVA/Ganancias/IIBB) + Libro IVA en Excel (Ventas/Compras). Datos fiscales del gasto (mig 0101). `VER_SECCION_CONTABILIDAD` (2026-08-21) |
+| [[Modulo Remitos]] | Desde un presupuesto genera un remito (copia sus ítems) independiente y editable (no toca el presupuesto). Varios por presupuesto. Tradicional (descripción+cantidad, sin precios), PDF formato BLU. Mig 0102 (2026-08-23) |
 | [[Reglas de Negocio]] | Reglas de dominio criticas y comportamientos no obvios |
 | [[Modulo Permisos]] | Sistema de permisos granular por usuario |
 | [[Medios de Pago]] | MercadoPago, Stripe y Mercury (cuenta + invoicing) |
