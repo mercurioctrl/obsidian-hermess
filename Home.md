@@ -92,6 +92,12 @@
 - [[intencionDeCompra/intencionDeCompra|intencionDeCompra]] — Investigación de intención de compra del consumidor de tecnología (mercado argentino: notebooks, monitores, tablets, all-in-one)
   - [[intencionDeCompra/investigacion-canal-compra-tecnologia-argentina|Canal de compra (economy-wide)]] · [[intencionDeCompra/investigacion-categorias-notebooks-monitores-tablets-aio|Por categoría + metodología]]
 
+## 🖨️ Adata
+
+- [[Adata/Adata|Adata]] — Proyectos de ADATA y su marca gaming XPG
+  - [[Adata/Xpg/Xpg|Xpg]] — Marca XPG
+    - [[Adata/Xpg/adata-paradise-3d/adata-paradise-3d|adata-paradise-3d]] — Impresión 3D multicolor del logo ADATA PARADISE (Bambu A1 mini + AMS)
+
 ---
 
 *Actualizado: 2026-08-20*
