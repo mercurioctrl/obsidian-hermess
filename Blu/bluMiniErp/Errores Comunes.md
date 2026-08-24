@@ -4,6 +4,18 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 ---
 
+## El FormRequest no whitelistea un campo → el update lo descarta silenciosamente (2026-08-24)
+
+**Síntoma:** al editar un gasto y cambiarlo de proyecto, apretar "Guardar" no tomaba el cambio (el `proyecto_id` volvía al original). El frontend mandaba el `proyecto_id` nuevo correctamente.
+
+**Causa:** `UpdateGastoRequest` no incluía `proyecto_id` (ni `tipo`) en sus `rules()`. `$request->validated()` **sólo devuelve las claves whitelisteadas**, así que `$gasto->update($validated)` nunca recibía el `proyecto_id` → cambio ignorado, sin error.
+
+**Solución:** agregar `'tipo'` y `'proyecto_id'` a las reglas del request. Además: si el tipo deja de ser PROYECTO se limpia `proyecto_id`, y al mover de proyecto se toca el `updated_at` del anterior **y** el nuevo (orden por actividad). PR #38.
+
+**Regla general:** todo campo editable debe estar en las `rules()` del FormRequest de update, o `validated()` lo tira. Vale para cualquier módulo (mismo patrón que [[memoria]]: campo nuevo en gastos → agregarlo también en `GastoResource` y en el map de `ProyectoController::show`).
+
+---
+
 ## Costo real de una compra en el simulador de impuestos (2026-08-23)
 
 **Síntoma:** el "costo real después del ahorro" del simulador de compras daba muy bajo (44% al 21%+35%, cuando el real es 65%).

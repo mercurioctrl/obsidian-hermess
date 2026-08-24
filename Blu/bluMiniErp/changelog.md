@@ -4,6 +4,27 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-08-24 — Reservas: slug memorable + /agendar, gastos con IVA mixto, comunicados
+
+Tres bloques de trabajo. Todo desplegado y verificado en local.
+
+### Reservas — link memorable y URL `/agendar`
+- feat: **slug memorable del link de reuniones** (migración `0103`). Pasó de `/reservar/{hash-64}` a **`/agendar/{slug}`** (ej: `/agendar/juan-perez`). `usuarios.booking_slug` (unique) se auto-genera del nombre (`Usuario::asegurarBookingSlug()` con `Str::slug`, desambigua `-2/-3`) y es **editable** (`PUT /api/mi-disponibilidad/slug`, valida `[a-z0-9-]`, min 3, unicidad, reserva `cancelar`). **Fallback:** `PublicBookingController::resolverAnfitrion()` matchea por `booking_slug` **o** `booking_token` → los links viejos con hash siguen andando. Trade-off aceptado: slug enumerable, pero sólo permite *pedir* reunión (como Calendly). **PR #37 (mergeado).**
+- refactor: **URL pública `/reservar` → `/agendar`** (comunica mejor la acción). Rename `pages/reservar/[token].vue` → `pages/agendar/[token].vue`, whitelist del middleware y link builders del backend (show/regenerar/updateSlug/cancelUrl). La API interna `/api/reservas/*` NO cambia (no la ve el externo). Copy del kit de comunicados refuerza el verbo *agendá*. **PR #39.**
+- Verificado en vivo: auto-gen desde el nombre, personalización a `juan-perez`, 422 con slug inválido/ocupado, resolución por slug y por token viejo. Ver [[Modulo Reservas Reuniones]].
+
+### Gastos — IVA mixto (campo Exento / No gravado)
+- feat: **`gastos.monto_exento`** (migración `0104`). Un mismo gasto puede tener una parte **gravada** (neto × IVA%) y una parte **exenta / no gravada** (ej: propinas), como una Factura A con ítems mixtos. **Total = neto gravado + IVA + exento**; el banco/caja descuenta el total. El **Libro IVA compras** reporta `neto` (sólo gravado), columna `exento` y `total` correctos (`ContabilidadService::libroCompras`). Forms `gastos/nuevo` + `gastos/[id]` con campo "Exento / No gravado" y total recalculado en vivo. **⚠️ Limitación:** cubre 1 alícuota gravada + exento, no dos alícuotas gravadas distintas (para eso harían falta ítems por gasto). **PR #38.** Ver [[Modulo Contabilidad]].
+- fix: **al editar un gasto no se aplicaba el cambio de proyecto/tipo** — `UpdateGastoRequest` no whitelisteaba `proyecto_id` ni `tipo`, así que `validated()` los descartaba y el `update` los ignoraba. Ahora sí; además se limpia `proyecto_id` si el tipo deja de ser PROYECTO y se toca el `updated_at` del proyecto anterior y el nuevo. **PR #38.** Ver [[Errores Comunes]].
+- Verificado con la factura real GE-GASTRO: neto 1.440.000 @21% + exento 174.240 → IVA 302.400, total 1.916.640; libro OK. Cambio de proyecto 1→2 persiste en DB.
+
+### Comunicados internos
+- chore: **kit de anuncio de Mi Área y Mi Disponibilidad** (`mini-saas/comunicados/`): email HTML on-brand + mensaje de Slack + 2 capturas (mockups con datos ficticios, renderizados con Chromium headless del container). URL del sistema como placeholder (`erp.blustudioinc.com`, a confirmar).
+
+Archivos: `backend/database/migrations/{0103_add_booking_slug_to_usuarios,0104_add_monto_exento_to_gastos}.php`, `backend/app/Models/{Usuario,Gasto}.php`, `backend/app/Http/Controllers/{MiDisponibilidad,PublicBooking,Gasto,Proyecto}Controller.php`, `backend/app/Http/Requests/{Store,Update}GastoRequest.php`, `backend/app/Http/Resources/GastoResource.php`, `backend/app/Services/ContabilidadService.php`, `backend/routes/api.php`, `frontend/pages/agendar/[token].vue`, `frontend/pages/mi-disponibilidad/index.vue`, `frontend/pages/gastos/{nuevo,[id]}.vue`, `frontend/middleware/auth.global.ts`, `mini-saas/comunicados/`, `CLAUDE.md`, `arquitectura/16-modulo-reservas-reuniones.md`
+
+---
+
 ## 2026-08-23 (tarde) — Dashboard rentabilidad, cliente clickeable, simulador de impuestos
 
 Sesión de features frontend (backend mínimo). Desplegado y verificado en local; **sin PR aún**.

@@ -63,6 +63,22 @@ GET /api/contabilidad/libro-iva?anio=&mes=&token=   (fuera de auth, token en que
 Se cargan desde el componente `FacturaCompraFields.vue`, embebido en `/gastos/nuevo` y `/gastos/[id]`.
 La sección se **auto-abre cuando el gasto tiene IVA > 0** (ahí es cuando va a aparecer en el libro).
 
+### Gastos con IVA mixto — campo Exento / No gravado (migración 0104, 2026-08-24)
+
+Una Factura A puede traer ítems con distinto tratamiento (ej: **catering 21% + propinas exentas**). El
+gasto tenía un solo `iva_porcentaje`, así que no se podía cargar bien. Se agregó **`gastos.monto_exento`**
+(decimal 12,2):
+
+- El gasto lleva una parte **gravada** (`precio_unitario × cantidad` → neto, × `iva_porcentaje`) y una parte
+  **exenta / no gravada** (`monto_exento`). **Total = neto gravado + IVA + exento**; el banco/caja descuenta el total.
+- `ContabilidadService::libroCompras()`: `neto` = sólo la parte gravada (`monto − iva − exento`),
+  `exento` = `monto_exento`, `total` = `monto`. El `LibroIvaExcelService` ya leía esas claves → sin cambios.
+- Forms `/gastos/nuevo` y `/gastos/[id]`: campo "Exento / No gravado" con el total recalculado en vivo.
+- **⚠️ Limitación:** cubre 1 alícuota gravada + exento. NO cubre dos alícuotas gravadas distintas
+  (21% + 10,5%) en la misma factura — para eso harían falta ítems por gasto. Gastos 100% exentos
+  (`iva_monto = 0`) NO entran al libro (`gastosConFactura` filtra `iva_monto > 0`).
+- Verificado con factura real: neto 1.440.000 @21% + exento 174.240 → IVA 302.400, total 1.916.640. **PR #38.**
+
 ### Compras incompletas (2026-08-23)
 
 Un gasto con `iva_monto > 0` pero **sin CUIT, tipo o número** de comprobante sale al Excel con esas

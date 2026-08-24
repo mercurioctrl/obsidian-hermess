@@ -232,6 +232,16 @@ Integración con un servicio externo tipo cola para enviar WhatsApp. Ver [[Modul
 - **Remito tradicional:** sólo descripción+cantidad, sin precios → el PDF **no requiere `VER_MONTOS_SALDOS`**. PDF formato BLU (`renderRemitoPdf()` + `pdf/remito.blade.php`, Browsershot). Numeración interna `REM-{AAAAMM}-NNN`.
 - **Gotcha del logo** (ver Feedback arriba y [[Errores Comunes]]): `@include('pdf._logo')`, no `pdf.partials.logo`.
 
+### Reservas — slug memorable + URL /agendar (2026-08-24) — ver [[Modulo Reservas Reuniones]]
+
+- **Slug memorable (migración 0103, PR #37 mergeado):** el link de reuniones pasó de `/reservar/{hash-64}` a `/agendar/{slug}` (ej: `/agendar/juan-perez`). `usuarios.booking_slug` (unique) se auto-genera del nombre y es **editable** (`PUT /api/mi-disponibilidad/slug`). `PublicBookingController::resolverAnfitrion()` resuelve por `booking_slug` **o** `booking_token` (fallback de links viejos). Trade-off aceptado: slug enumerable pero sólo permite pedir reunión (como Calendly).
+- **URL `/reservar` → `/agendar` (PR #39):** rename `pages/agendar/[token].vue`, whitelist del middleware, link builders del backend. La API interna `/api/reservas/*` NO cambia.
+
+### Gastos — IVA mixto: campo Exento / No gravado (2026-08-24, PR #38) — ver [[Modulo Contabilidad#Gastos con IVA mixto — campo Exento / No gravado (migración 0104, 2026-08-24)]]
+
+- **Migración 0104** `gastos.monto_exento`: un gasto puede tener parte **gravada** (neto × IVA%) + parte **exenta** (propinas). **Total = neto + IVA + exento.** Libro IVA compras reporta neto (gravado), exento y total correctos. Elegido campo simple sobre ítems por gasto. Limitación: no cubre 2 alícuotas gravadas distintas en la misma factura.
+- **Fix asociado:** `UpdateGastoRequest` no whitelisteaba `proyecto_id` ni `tipo` → al editar un gasto el cambio de proyecto se descartaba silenciosamente. Regla: campo editable **debe** estar en `rules()` del FormRequest. Ver [[Errores Comunes#El FormRequest no whitelistea un campo → el update lo descarta silenciosamente (2026-08-24)]].
+
 ---
 
 ## Ver tambien

@@ -1,8 +1,9 @@
 # Módulo Reservas de Reuniones (link público tipo Calendly)
 
-Cada **usuario del ERP** tiene un **link público compartible** (`/reservar/{token}`) donde una persona externa (sin login) reserva un espacio de reunión entre los slots que el usuario preconfigura **self-service**. Al confirmarse: email a todas las partes con invite `.ics`, evento en el [[Modulo Calendario]] y notificación in-app/push al dueño.
+Cada **usuario del ERP** tiene un **link público compartible y memorable** (`/agendar/{slug}`, ej: `/agendar/juan-perez`) donde una persona externa (sin login) reserva un espacio de reunión entre los slots que el usuario preconfigura **self-service**. Al confirmarse: email a todas las partes con invite `.ics`, evento en el [[Modulo Calendario]] y notificación in-app/push al dueño.
 
 > PRs: #30 (base) + #31 (invitados adicionales) + #32 (docs). Migraciones `0095`–`0100`. Mergeado a `main` el 2026-08-10.
+> **2026-08-24:** #37 (slug memorable, migración `0103`) + #39 (URL pública `/reservar` → `/agendar`).
 
 ## Modelo de datos
 
@@ -10,7 +11,8 @@ Todo cuelga de `usuarios.id` (no de `empleados`), para que aplique también a ad
 
 | Tabla | Campos clave |
 |-------|--------------|
-| `usuarios.booking_token` | string(64) unique, `$hidden`. Lazy: `Usuario::asegurarBookingToken()` |
+| `usuarios.booking_slug` (0103) | string(60) unique. **Slug memorable** del link (`/agendar/juan-perez`). Auto-gen del nombre (`asegurarBookingSlug()`, `Str::slug` + desambigua `-2/-3`), **editable** por el usuario |
+| `usuarios.booking_token` | string(64) unique, `$hidden`. Lazy: `Usuario::asegurarBookingToken()`. Ahora **fallback** de links viejos con hash |
 | `booking_configs` (0096) | `usuario_id` (unique), `activo`, `duracion_minutos`, `buffer_minutos`, `dias_anticipacion`, `titulo`, `descripcion`, `ubicacion` |
 | `booking_reglas` (0097) | `usuario_id`, `dia_semana` (0=Dom..6=Sáb), `hora_inicio`, `hora_fin` — horarios semanales recurrentes |
 | `booking_bloqueos` (0098) | `tipo` (`bloqueo` día/rango · `extra` slot puntual), `fecha`, `hora_inicio?`, `hora_fin?`, `motivo?` |
@@ -22,7 +24,7 @@ Modelos: `BookingConfig`, `BookingRegla`, `BookingBloqueo`, `BookingReserva`. `B
 
 - **`app/Services/BookingService.php`** — `slotsDisponibles()` genera slots de reglas semanales + extras, descartando **feriados**, **ausencias** del empleado vinculado, bloqueos, reservas y horarios pasados; acota a `dias_anticipacion`. `crearReserva()` revalida en **transacción** → anti doble-booking (422). Todo en TZ `America/Argentina/Buenos_Aires`.
 - **`app/Support/IcsBuilder.php`** — helper `.ics` reutilizable (esc/fold + `invite()` con múltiples `ATTENDEE`, `METHOD:REQUEST`). El [[Modulo Calendario]] lo usa; su `respuestaIcs` ahora emite VEVENT con hora para las reservas.
-- **`PublicBookingController`** (público) + **`MiDisponibilidadController`** (self-service, opera sobre `auth()->user()`).
+- **`PublicBookingController`** (público) + **`MiDisponibilidadController`** (self-service, opera sobre `auth()->user()`). **`resolverAnfitrion($ref)`** resuelve al dueño por `booking_slug` **o** `booking_token` (fallback de links viejos).
 - **`ReservaReunionMail`** + blade `emails/reserva-reunion`: email a cada invitado (saludo personalizado) + al dueño, con `.ics` adjunto.
 
 ## Endpoints
@@ -37,6 +39,7 @@ POST /api/reservas/{token}                  (crea reserva; invitados_extra[] opc
 **Self-service** (`auth:sanctum`):
 ```
 GET/PUT /api/mi-disponibilidad
+PUT     /api/mi-disponibilidad/slug            (personaliza el slug; valida [a-z0-9-], min 3, unicidad; 422 si ocupado/reservado)
 POST    /api/mi-disponibilidad/regenerar-token
 POST|DELETE /api/mi-disponibilidad/reglas[/{regla}]
 POST|DELETE /api/mi-disponibilidad/bloqueos[/{bloqueo}]
@@ -52,8 +55,8 @@ DELETE  /api/mi-disponibilidad/reservas/{reserva}   (el dueño cancela; avisa a 
 
 ## Frontend
 
-- **`pages/reservar/[token].vue`** — PÚBLICA (`layout: 'auth'`, whitelisteada por prefijo `/reservar` en `middleware/auth.global.ts`). Flujo: elegir día → horario → datos + **"+ Agregar invitado"** → confirmar. Cancelación vía `?cancelar=<token>`.
-- **`pages/mi-disponibilidad/index.vue`** — link (copiar/regenerar/toggle activo), config, horarios semanales, excepciones y próximas reuniones (badge `+N` de invitados extra + cancelar).
+- **`pages/agendar/[token].vue`** — PÚBLICA (`layout: 'auth'`, whitelisteada por prefijo `/agendar` en `middleware/auth.global.ts`). Flujo: elegir día → horario → datos + **"+ Agregar invitado"** → confirmar. Cancelación vía `?cancelar=<token>`. (Antes `/reservar`; renombrada en #39.)
+- **`pages/mi-disponibilidad/index.vue`** — editor del **slug personalizable** (prefijo del dominio + input + Guardar), link (copiar/regenerar/toggle activo), config, horarios semanales, excepciones y próximas reuniones (badge `+N` de invitados extra + cancelar).
 - **Accesos:** NavItem "Mi Disponibilidad" en el sidebar (sin permiso, para todo usuario) + tarjeta en `/mi-area`.
 
 ## Gotchas
