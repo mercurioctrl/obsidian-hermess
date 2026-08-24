@@ -62,8 +62,17 @@ GET /api/contabilidad/libro-iva?anio=&mes=&token=   (fuera de auth, token en que
 
 Se cargan desde el componente `FacturaCompraFields.vue`, embebido en `/gastos/nuevo` y `/gastos/[id]`.
 La sección se **auto-abre cuando el gasto tiene IVA > 0** (ahí es cuando va a aparecer en el libro).
-Los gastos con IVA pero sin estos datos se listan con aviso ámbar en `/contabilidad` y salen al Excel
-con esas columnas vacías.
+
+### Compras incompletas (2026-08-23)
+
+Un gasto con `iva_monto > 0` pero **sin CUIT, tipo o número** de comprobante sale al Excel con esas
+columnas vacías. `ContabilidadService::libroCompras()` marca cada fila con `incompleto` (= falta
+alguno de los tres) y su `gasto_id`.
+
+El aviso ámbar de `/contabilidad` **lista cada compra incompleta** (proveedor/descripción, fecha,
+monto y **qué falta** — helper `faltantesDe(c)` sobre `cuit/tipo/numero`) con botón **"Completar"** →
+`/gastos/{gasto_id}`. Además resalta esas filas en la tabla Compras y les pinta el lápiz en ámbar. Al
+completar el gasto y volver, el aviso desaparece.
 
 ## Frontend
 

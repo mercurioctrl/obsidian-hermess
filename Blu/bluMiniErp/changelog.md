@@ -4,6 +4,21 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-08-23 (tarde) — Dashboard rentabilidad, cliente clickeable, simulador de impuestos
+
+Sesión de features frontend (backend mínimo). Desplegado y verificado en local; **sin PR aún**.
+
+- feat: **Dashboard — tabla "Rentabilidad por Cliente (ARS)"** (`pages/index.vue`, antes de "Últimos Movimientos"). Por cliente: **Facturación · Gasto · Ganancia bruta · Impuestos · Ganancia neta** + fila de totales (`#footer` de `DataTable`). Backend `DashboardService::rentabilidadPorCliente($desde,$hasta,$impuestosTotal)`: facturación = `CARGO` ARS por cliente; gasto = gastos ARS vía `gasto → proyecto (proyectos.cliente_id)`; **impuestos = prorrateo** del total global de `ContabilidadService::liquidacion()` por participación en la facturación (aproximación: los impuestos reales son globales). Gateado por `VER_MONTOS_SALDOS`. Se eligió el enfoque "antes vs después de impuestos". Ver [[Modulo Contabilidad#Dashboard — Rentabilidad por Cliente]].
+- feat: **Nombres de cliente clickeables en TODA la app** → link a `/clientes/{id}` (NuxtLink, hover verde). Aplicado en dashboard, presupuestos (listado+detalle), proyectos (card+detalle), cuenta-corriente, facturación (el controller ya trae `cliente_id`), remito detalle. En tablas/cards con navegación propia se usa `@click.stop`; en modales de confirmación queda como texto. Se agregó `cliente_id` a `ultimos_movimientos` en `DashboardService`.
+- feat: **Simulador de facturas de compra (what-if)** en `pages/proyectos/[id].vue` (pestaña Ejecución, botón "Simular compras" dentro de "Impuestos estimados"). 100% client-side reactivo. Ingresás compra neta + alícuota IVA y ves comparativa **Actual vs Simulado** de cada impuesto + botón "Neutralizar IVA". Ayuda a decidir qué facturas pedir a proveedores para bajar impuestos.
+- feat: **"Te queda después de impuestos"** = número que faltaba (el usuario no lo veía). Franja destacada en el bloque de impuestos + fila en el simulador. Fórmula = **Ganancia − Imp. Ganancias − IIBB** (el IVA es neutro: se cobra y se remite). Distinto del "Resultado" operativo.
+- fix: **Costo real del simulador** — estaba mal: restaba el ahorro sobre el **neto** (`P − ahorro`) cuando el desembolso real es el **total** (`P + IVA`). Corregido a `(P + IVA) − ahorro`. Al 21%+35% el costo real es 65% de la compra, no 44%. Ver [[Errores Comunes]].
+- feat: **Contabilidad — lista de compras incompletas con acceso a completar** (`pages/contabilidad/index.vue`). El aviso ámbar ahora **lista cada compra** con IVA a la que le faltan datos del comprobante (proveedor, fecha, monto, **qué falta** via helper `faltantesDe`) + botón **"Completar"** → `/gastos/{gasto_id}`. Las filas incompletas se resaltan en la tabla Compras. Los datos (`incompleto`, `gasto_id`) ya venían de `ContabilidadService::libroCompras()`. Ver [[Modulo Contabilidad#Compras incompletas]].
+
+Archivos: `backend/app/Services/DashboardService.php`, `frontend/pages/index.vue`, `frontend/pages/proyectos/[id].vue`, `frontend/pages/contabilidad/index.vue`, `frontend/pages/presupuestos/{index,[id]}.vue`, `frontend/pages/proyectos/index.vue`, `frontend/pages/cuenta-corriente/index.vue`, `frontend/pages/facturacion/index.vue`, `frontend/pages/remitos/[id].vue`, `arquitectura/16-modulo-contabilidad.md`, `CLAUDE.md`
+
+---
+
 ## 2026-08-23
 
 - feat: **Módulo Remitos** (migración 0102). Desde `/presupuestos/{id}` → menú "Más" → **Remito** → "Generar remito": crea un remito **copiando los ítems** del presupuesto y navega a `/remitos/{id}`. **Varios remitos por presupuesto.** **Independiente del presupuesto:** editar/eliminar el remito NO lo modifica (modelo `Remito` **sin `$touches`**; `update` hace delete+recreate de `remito_items` sin tocar `items_presupuesto` — verificado en vivo). **Remito tradicional:** sólo descripción+cantidad, **sin precios**; PDF formato BLU (`PdfService::renderRemitoPdf()` + blade `pdf/remito.blade.php`, Browsershot) que **no requiere `VER_MONTOS_SALDOS`**. Numeración interna `REM-{AAAAMM}-NNN`. Tablas `remitos` + `remito_items` (`cascadeOnDelete`). Rutas CRUD + `GET /api/remitos/{id}/pdf?token=`. Frontend `pages/remitos/[id].vue` (editar fecha/ítems/observaciones) + grupo "Remito" en el menú "Más" del presupuesto. Ver [[Modulo Remitos]].
