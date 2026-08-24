@@ -82,6 +82,34 @@ completar el gasto y volver, el aviso desaparece.
 - Permiso **`VER_SECCION_CONTABILIDAD`** (frontend: sidebar + `middleware/auth.global.ts` + `usuarios`),
   igual que el resto de las secciones. Ícono `lucide:calculator`.
 
+## Estimación de impuestos en pantalla + simulador (2026-08-23)
+
+La misma liquidación se muestra "en vivo" en presupuesto, proyecto y dashboard. **Todos los importes
+fiscales van netos de IVA** (Ganancias e IIBB se calculan sin IVA; el IVA va por su carril).
+
+Tres números que se confunden fácil:
+- **Ganancia (base fiscal)** = `ventas netas − compras netas con factura`. Es la **base imponible de
+  Ganancias**, NO utilidad de bolsillo. Sin gastos con factura, `Ganancia = total − IVA`.
+- **Resultado operativo** (tile de arriba en el proyecto) = `ingreso presupuestado − gastos registrados`.
+- **Te queda después de impuestos** = `Ganancia − Imp. Ganancias − IIBB`. El IVA **no** se resta (neutro:
+  se cobra al cliente y se remite a AFIP). Es "lo que te queda" real de la operación.
+
+### Simulador de facturas de compra (what-if) — `proyectos/[id].vue`
+Botón "Simular compras" dentro del bloque "Impuestos estimados" (pestaña Ejecución). 100% client-side
+reactivo, no toca backend. Se ingresa una compra neta `P` con alícuota `a`; muestra comparativa
+**Actual vs Simulado** de cada impuesto y de "Te queda después de impuestos".
+- Ahorro en impuestos = `P·a + P·(gan%)` (IIBB **no** cambia: es sobre ventas).
+- **Costo real de la compra** = `total desembolsado (P + P·a) − ahorro`. ⚠️ NO `P − ahorro` (bug ya
+  cometido, ver [[Errores Comunes]]). El costo real = cuánto baja "Te queda después de impuestos".
+- Botón "Neutralizar IVA" fija `P = IVA débito / a`; pasado ese punto el excedente es saldo a favor /
+  quebranto (se traslada).
+
+### Dashboard — Rentabilidad por Cliente
+`DashboardService::rentabilidadPorCliente()` arma una tabla por cliente (facturación `CARGO` ARS, gasto
+vía `proyectos.cliente_id`, ganancia bruta, **impuestos prorrateados** por facturación sobre el `total`
+global de la liquidación, ganancia neta). Los impuestos por cliente son **aproximación**: la liquidación
+real es global. Gateado por `VER_MONTOS_SALDOS`.
+
 ## Limitaciones conocidas
 - El libro cubre **sólo lo que pasó por el sistema**. No es el Libro IVA Digital completo (eso exige
   todos los comprobantes emitidos y recibidos del período, incluidos los de afuera del ERP). Conciliar
@@ -94,6 +122,8 @@ completar el gasto y volver, el aviso desaparece.
 ## Ver también
 - [[Reglas de Negocio]] — dominio: cuenta corriente vs gastos, IVA en gastos
 - [[Medios de Pago]] — Mercury/Stripe/MP (por qué no entran al Libro IVA)
-- [[Modulo Permisos]] — `VER_SECCION_CONTABILIDAD`
+- [[Modulo Permisos]] — `VER_SECCION_CONTABILIDAD`, `VER_MONTOS_SALDOS`
 - [[Base de Datos]] — tabla `gastos` (columnas fiscales), `comprobantes_afip`
+- [[Frontend]] — Dashboard (Rentabilidad por Cliente), proyecto (simulador de impuestos)
+- [[Errores Comunes#Costo real de una compra en el simulador de impuestos (2026-08-23)]]
 - [[changelog#2026-08-21]]

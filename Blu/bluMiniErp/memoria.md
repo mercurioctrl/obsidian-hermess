@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-07-13 (auditoría técnica + PR #10 fixes de seguridad; gotcha Nginx strippea /api; enfoque decidido para integridad financiera)
+Ultima sincronizacion: 2026-08-23 (Dashboard Rentabilidad por Cliente, nombres de cliente clickeables en toda la app, simulador de impuestos por proyecto + "Te queda después de impuestos", compras incompletas en Contabilidad. Antes: 2026-07-13 auditoría técnica + PR #10)
 
 ---
 
@@ -33,6 +33,12 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **Modal:** Siempre usar `v-model`, nunca `v-if` + `@close`. Ver [[Frontend#Componentes UI]]
 - **useApi.delete con body:** Usar `{ data: {...} }`, no `{ body: {...} }`
 - **useApi errores:** Los catch reciben Error estandar. Usar `e.message`, no `e?.data?.message`
+- **Nombre de cliente = enlace (2026-08-23):** todo nombre de cliente en la UI debe enlazar a su ficha `/clientes/{id}` (NuxtLink, hover verde accent). En tablas/cards con navegación propia usar `@click.stop`; en modales de confirmación queda como texto. Requiere `cliente_id` en el payload. Aplicado en dashboard, presupuestos, proyectos, cuenta-corriente, facturación, remitos.
+
+### Impuestos / fiscal (2026-08-23)
+- **Importes fiscales netos de IVA:** Ganancias e IIBB se calculan sin IVA; el IVA va por su carril (`IVA a pagar = débito − crédito`).
+- **3 números que se confunden:** *Ganancia (base fiscal)* = ventas netas − compras netas c/factura (base de Ganancias, ≠ utilidad); *Resultado operativo* = ingreso − gastos; *Te queda después de impuestos* = Ganancia − Ganancias − IIBB (IVA **neutro**, no se resta).
+- **Simulador de compras (`proyectos/[id].vue`):** costo real de una compra = `(neto + IVA) − ahorro` (total desembolsado − reducción de impuestos), NO `neto − ahorro`. Ver [[Errores Comunes#Costo real de una compra en el simulador de impuestos (2026-08-23)]] y [[Modulo Contabilidad#Estimación de impuestos en pantalla + simulador (2026-08-23)]].
 
 ### Action bar — jerarquía visual
 **Patrón canónico (2026-04-14, por feedback explícito del usuario):** En pantallas de detalle (presupuesto, proyecto, etc.), el action bar tiene como máximo `[Editar] [⋯ Más] | [CTA outline] [CTA primary]` — máximo 2 CTAs visibles + 1 dropdown único "Más" agrupado por sección con headers tipográficos. Ver [[Frontend#Action bar de pantallas de detalle]].

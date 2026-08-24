@@ -4,6 +4,18 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 ---
 
+## Costo real de una compra en el simulador de impuestos (2026-08-23)
+
+**Síntoma:** el "costo real después del ahorro" del simulador de compras daba muy bajo (44% al 21%+35%, cuando el real es 65%).
+
+**Causa:** se calculaba `costoReal = neto − ahorro`. Pero el desembolso real al proveedor es el **total** (`neto + IVA`), no el neto. Al restar el ahorro (que ya incluye el IVA recuperado) sobre el neto, se recuperaba dos veces el IVA.
+
+**Solución:** `costoReal = (neto + IVA) − ahorro` = **total desembolsado − reducción de impuestos**. Equivale a cuánto baja "Te queda después de impuestos". Ver [[Modulo Contabilidad#Estimación de impuestos en pantalla + simulador (2026-08-23)]].
+
+**Conceptos que no hay que confundir:** *Ganancia (base fiscal)* = ventas netas − compras netas c/factura (≠ utilidad de bolsillo); *Resultado operativo* = ingreso − gastos; *Te queda después de impuestos* = Ganancia − Ganancias − IIBB (el **IVA es neutro**, no se resta).
+
+---
+
 ## definePageMeta middleware auth rompe la navegacion
 
 **Sintoma:** Click en NavItem no navega. La URL no cambia.
