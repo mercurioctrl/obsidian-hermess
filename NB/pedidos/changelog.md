@@ -1,3 +1,23 @@
+## 2026-08-24 — Estadísticas por lista de precio + Reportes Laset (marca múltiple, países)
+
+### Estadísticas por lista de precio (nueva sección del dashboard)
+
+Nueva pestaña **"Estadísticas por lista"** (`/dashboard/estadisticasPorLista`). Detalle completo en [[feature-estadisticas-lista-precio]].
+
+- **Backend:** endpoint `GET /v1/statistics/priceListStatistics` (Controller → Service → Repository). Por lista de precio: facturación, costo, ganancia, rentabilidad %, **retorno sobre costo** y clientes, + desglose mensual. Filtra por `companyCode` + `year`, o por un rango `from`/`to` (prioritario). El costo sale de `facturación − ganancia` (sin query extra).
+- **Métrica clave — rentabilidad sobre costo** (`ganancia ÷ costo`): mide el rendimiento *dólar por dólar* de lo invertido, sin sesgo de volumen. Con datos NB 2026: **Lista C rinde 42% s/costo** (la más eficiente) vs **Lista D** que gana más en total (985k) pero solo 18% s/costo.
+- **Frontend:** KPIs + tortas (facturación / clientes) + barras (rentabilidad $ y rentabilidad s/costo) + evolución mensual + tabla. Respeta el filtro de fecha global del dashboard (`between`) con el selector de año como fallback.
+- Rama `feature/estadisticas-lista-precio` (front + back).
+
+### Reportes Laset — marca opcional/múltiple + países completos
+
+- `LasetReporteStock` y `LasetReporteVentas`: la **marca** ahora es opcional (sin marca = todas) y acepta **varias** (`marcas[]` → `Id_Marca IN (...)`), retrocompatible con `marca` simple. Frontend `reportesLaset.vue`: selector `mode="multiple"` + allow-clear (placeholder "Todas las marcas").
+- `LasetReporteOpciones`: los **países** salen de la tabla completa `FP_Paises` (antes un `DISTINCT` sobre `laset_import_staging` con `match_status='IMPORTED'` que dejaba países afuera).
+- **Matching del país:** en el reporte el país se ata a la **OC de compra** (`pedprot.CSUFAC_TEMP` = `staging.vendor_invoice`) y se resuelve por *nombre* contra `FP_Paises.Descripcion`. Existe `pedprot.countryId` (ya resuelto por `LasetCountryResolver`, con alias de USA + fallback) como mejora pendiente para matchear por id en vez de por texto.
+- Rama `feature/reportes-laset-marca-multiple-paises` (front + back).
+
+---
+
 ## 2026-07-14 — Descarga masiva de comprobantes de venta (PDF)
 
 Tarea operativa (no cambio de código): bajar en lote los PDF de comprobantes de venta de **NB DISTRIBUIDORA MAYORISTA SRL** (`companyCode = 4`). Procedimiento completo en [[runbook-descarga-comprobantes-venta]].

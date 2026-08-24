@@ -40,6 +40,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-ranking-vendedores|Feature: Ranking de vendedores]] — pestaña que rankea vendedores por la suma de puntos (travel miles) de sus clientes en el juego NB Travel Mundial de resellers; modal de desglose por cumplimiento
 - [[feature-incentivo-netac|Feature: Incentivo Netac]] — incentivo por unidades vendidas de Netac (Memorias + SSD): cada 12 u = USD 4; reemplaza al Incentivo Gigabyte; detalle por pedido/producto/fecha
 - [[decision-listas-precios-nombradas|Decisión: Listas de precios nombradas y extensibles por companyCode]] — diseño acordado (2026-08-18), aún sin implementar
+- [[feature-estadisticas-lista-precio|Feature: Estadísticas por lista de precio]] — sección del dashboard: facturación/costo/ganancia/rentabilidad % y **retorno sobre costo** por lista; endpoint `priceListStatistics`
 
 ## Esquema ERP — Tablas y relaciones
 
@@ -77,4 +78,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-07-23 — **Alta de usuario interno `mscomprobantes`** (template `catriel`, empresa NB): agente + cliente nuevos, con permiso de expedición. Creado en prod (`UserId 84108`, ccodage 103) y replicado en el host dev `db-nb-massql-dev.blu.net.ar,4444` (`UserId 84817`, ccodage 102, keys redescubiertas allí). Ver [[runbook-alta-usuario-interno]] y [[changelog#2026-07-23 — Alta de usuario interno: mscomprobantes (template catriel, NB)]].*
+*Última sincronización: 2026-08-24 — **Estadísticas por lista de precio** (nueva sección del dashboard: facturación/costo/ganancia/rentabilidad %/retorno sobre costo por lista) + **Reportes Laset** con marca opcional/múltiple y países completos desde `FP_Paises`. Ver [[feature-estadisticas-lista-precio]] y [[changelog#2026-08-24 — Estadísticas por lista de precio + Reportes Laset (marca múltiple, países)]].*
