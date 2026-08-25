@@ -4,6 +4,23 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-08-25 — Recuperación de clave + mailer erp@, simulador de aumentos, ajustes de comunicados
+
+### Recuperación de contraseña + cuenta de correo del sistema (PR #43, migración 0105)
+- feat: **flujo forgot/reset password** (no existía). Link "¿Olvidaste tu contraseña?" en `/login` → `/recuperar` (pide email) → email con link → `/restablecer` (nueva clave). `AuthController::forgotPassword`/`resetPassword`, rutas públicas `POST /auth/forgot-password` y `/auth/reset-password` (throttle 6/min). Tabla `password_reset_tokens` (mig 0105, token **hasheado**, expira **60 min**). Respuesta **genérica** (no filtra si el email existe) y al resetear **se cierran todas las sesiones** (`tokens()->delete()`). Frontend `pages/{recuperar,restablecer}.vue` whitelisteadas en `middleware/auth.global.ts`. Verificado E2E (forgot inserta token, reset cambia clave y permite login, inválido→422).
+- feat: **mailer `erp` nuevo** = `erp@blustudioinc.com` (box.lio.red:465 SSL), **separado de `payments@`** que queda SOLO para documentos de pago/cobro. `config/mail.php` sumó el mailer `erp` + `erp_from`; vars `MAIL_ERP_*` en `docker-compose.yml`; clave real en `mini-saas/.env` (gitignored). Ver [[Stack e Infraestructura#Mail]].
+- refactor: **ruteo de correos** — se movieron a `erp@` los correos que estaban mal en payments@: **reservas de reuniones** (`ReservaReunionMail` + cancelaciones `Mail::raw`) y **notificaciones de tareas** (`TareaCambioMail`). Sólo el invoice de presupuestos queda en `payments@`. ⚠️ **Gotcha:** `Mail::mailer('erp')` cambia el SMTP pero **no el From** (sigue el global payments@); con From≠usuario autenticado el server rechaza → hay que fijar `from` en el Mailable / `Mail::raw` desde `config('mail.erp_from')`. Ver [[Errores Comunes]].
+
+### Personal — Simulador de aumentos de sueldo (PR #41)
+- feat: nueva pantalla **`/staff/simulador`** (botón "Simular aumentos" en el header de Personal). Seleccionás uno o más empleados y aplicás aumentos **porcentuales o nominales** (en masa a los seleccionados o ajustando cada uno), y ves sueldo nuevo + extra/mes por empleado, totales por moneda (ARS/USD no se mezclan) y resumen de extra por mes y por año. **100% client-side** (what-if, sin persistencia ni backend). Lee `GET /empleados`, respeta `VER_MONTOS_SALDOS` (si los sueldos vienen enmascarados, muestra aviso). Montos con `fmtM`. Ver [[Modulo Personal#Simulador de aumentos]].
+
+### Comunicados — ajustes visuales (PR #42)
+- fix/style: al email de comunicación se le **sacó la barra de acento verde** superior y el **botón CTA pasó a negro** (`#1A1A1A`, como los botones primarios del sitio). Slack no tiene botones (texto), no se tocó.
+
+Archivos: `backend/database/migrations/0105_create_password_reset_tokens_table.php`, `backend/config/mail.php`, `backend/app/Http/Controllers/AuthController.php`, `backend/app/Mail/{RecuperarPasswordMail,ReservaReunionMail,TareaCambioMail}.php`, `backend/resources/views/emails/recuperar-password.blade.php`, `backend/app/Http/Controllers/{PublicBooking,MiDisponibilidad}Controller.php`, `backend/app/Services/NotificacionService.php`, `backend/routes/api.php`, `docker-compose.yml`, `frontend/pages/{login,recuperar,restablecer}.vue`, `frontend/pages/staff/{index,simulador}.vue`, `frontend/middleware/auth.global.ts`, `mini-saas/comunicados/`, `CLAUDE.md`
+
+---
+
 ## 2026-08-24 — Reservas: slug memorable + /agendar, gastos con IVA mixto, comunicados
 
 Tres bloques de trabajo. Todo desplegado y verificado en local.

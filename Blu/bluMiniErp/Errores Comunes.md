@@ -4,6 +4,18 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 ---
 
+## Mail::mailer('erp') cambia el SMTP pero NO el From → el server rechaza (2026-08-25)
+
+**Síntoma:** al mover correos al mailer `erp` (`Mail::mailer('erp')->to(...)`), el envío podía ser rechazado por el servidor SMTP.
+
+**Causa:** cambiar el mailer sólo cambia la **conexión/credenciales SMTP**. El header **From** sigue tomando el valor global `config('mail.from')` (= `payments@`). Autenticás como `erp@` pero mandás con From `payments@` → **From mismatch**, muchos servidores lo rechazan.
+
+**Solución:** fijar el `from` **explícito** en el Mailable (envelope: `from: new Address(config('mail.erp_from.address'), config('mail.erp_from.name'))`) y en los `Mail::raw` (`fn($m) => $m->to(...)->from(config('mail.erp_from.address'), config('mail.erp_from.name'))`). Ver [[Stack e Infraestructura#Mail]] y [[changelog#2026-08-25]].
+
+**Bonus (deploy):** tras editar `config/mail.php` hay que `docker cp` + `php artisan optimize:clear`. Si `config:show mail.mailers.erp` devuelve "does not exist", el archivo no llegó al container (el `docker cp` no aplicó).
+
+---
+
 ## El FormRequest no whitelistea un campo → el update lo descarta silenciosamente (2026-08-24)
 
 **Síntoma:** al editar un gasto y cambiarlo de proyecto, apretar "Guardar" no tomaba el cambio (el `proyecto_id` volvía al original). El frontend mandaba el `proyecto_id` nuevo correctamente.

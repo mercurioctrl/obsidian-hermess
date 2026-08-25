@@ -59,10 +59,23 @@ Ver [[Errores Comunes#withTimestamps en la relacion proyecto_empleado]].
 
 ### Paginas
 ```
-pages/staff/index.vue    <- listado
-pages/staff/nuevo.vue    <- formulario de alta
-pages/staff/[id].vue     <- ficha (3 tabs: Info / Proyectos / Pagos)
+pages/staff/index.vue      <- listado
+pages/staff/nuevo.vue      <- formulario de alta
+pages/staff/[id].vue       <- ficha (3 tabs: Info / Proyectos / Pagos)
+pages/staff/ausencias.vue  <- ausencias del equipo
+pages/staff/simulador.vue  <- simulador de aumentos (ver abajo)
 ```
+
+### Simulador de aumentos (2026-08-25, PR #41)
+Pantalla **`/staff/simulador`** (botón "Simular aumentos" en el header de Personal). Planifica aumentos:
+seleccionás uno o más empleados (checkbox / "todos") y aplicás aumentos **porcentuales (%)** o
+**nominales ($)** — en masa a los seleccionados ("Aplicar a seleccionados") o ajustando cada uno en su fila.
+Muestra por empleado el **sueldo nuevo** y el **extra/mes**, y al pie los **totales por moneda** (actual ·
+nuevo · extra/mes; ARS y USD no se mezclan) + resumen de **extra por mes** y **por año** (× 12).
+- **100% client-side** (what-if, sin persistencia → sin backend ni migración). Lee `GET /empleados`,
+  usa `empleados.salario_base` + `moneda_salario`.
+- Respeta `VER_MONTOS_SALDOS`: si los sueldos vienen enmascarados (`salario_base === null`), muestra un
+  aviso en lugar de la tabla. Montos con `fmtM` (modo privacidad). Ver [[Modulo Permisos]].
 
 ### Tab Informacion
 Formulario editable: nombre, cargo, email, telefono, **direccion**, tipo contrato, fecha ingreso, **fecha nacimiento**, salario base, moneda, notas + sección **Datos bancarios** (banco, tipo cuenta, CBU/CVU, alias, titular, CUIL). Ver [[#Área de empleado y vacaciones (Mi Área) (2026-08)]].

@@ -86,7 +86,7 @@ SESSION_DRIVER=redis
 NUXT_PUBLIC_API_BASE=http://localhost:8823/api
 DEEPSEEK_API_KEY=sk-...
 
-# Mail SMTP (pagos)
+# Mail — mailer 'smtp' (payments@): SOLO documentos de pago/cobro (invoice de presupuestos)
 MAIL_MAILER=smtp
 MAIL_HOST=box.lio.red
 MAIL_PORT=465
@@ -96,6 +96,15 @@ MAIL_ENCRYPTION=ssl
 MAIL_FROM_ADDRESS=payments@blustudioinc.com
 MAIL_FROM_NAME="BluStudio Payments"
 MAIL_PAYMENTS_BCC=payments@blustudioinc.com
+
+# Mail — mailer 'erp' (erp@): correos del SISTEMA (recuperación de clave, reservas, tareas)
+MAIL_ERP_HOST=box.lio.red
+MAIL_ERP_PORT=465
+MAIL_ERP_USERNAME=erp@blustudioinc.com
+MAIL_ERP_PASSWORD=            # va en mini-saas/.env (gitignored), vacía por default
+MAIL_ERP_ENCRYPTION=ssl
+MAIL_ERP_FROM_ADDRESS=erp@blustudioinc.com
+MAIL_ERP_FROM_NAME="Blu ERP"
 
 # Web Push (VAPID) — módulo Tareas. Ver [[Modulo Tareas]]
 VAPID_PUBLIC_KEY=

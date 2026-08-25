@@ -242,6 +242,16 @@ Integración con un servicio externo tipo cola para enviar WhatsApp. Ver [[Modul
 - **Migración 0104** `gastos.monto_exento`: un gasto puede tener parte **gravada** (neto × IVA%) + parte **exenta** (propinas). **Total = neto + IVA + exento.** Libro IVA compras reporta neto (gravado), exento y total correctos. Elegido campo simple sobre ítems por gasto. Limitación: no cubre 2 alícuotas gravadas distintas en la misma factura.
 - **Fix asociado:** `UpdateGastoRequest` no whitelisteaba `proyecto_id` ni `tipo` → al editar un gasto el cambio de proyecto se descartaba silenciosamente. Regla: campo editable **debe** estar en `rules()` del FormRequest. Ver [[Errores Comunes#El FormRequest no whitelistea un campo → el update lo descarta silenciosamente (2026-08-24)]].
 
+### Recuperación de contraseña + mailer erp@ del sistema (2026-08-25, PR #43) — migración 0105
+
+- **Flujo forgot/reset password** (no existía): `/login` → `/recuperar` → email con link → `/restablecer`. `password_reset_tokens` (mig 0105, token **hasheado**, expira **60 min**). Respuesta **genérica** (sin enumeración), y al resetear **se cierran todas las sesiones**. Rutas públicas con throttle 6/min. Verificado E2E.
+- **Decisión de correos — dos mailers:** `smtp`/`payments@` = SOLO documentos de pago/cobro (invoice de presupuestos, con BCC a payments). `erp`/`erp@blustudioinc.com` (nuevo) = **todo lo demás del sistema**: recuperación de clave + reservas de reuniones + notificaciones de tareas. Clave real de erp@ en `mini-saas/.env` (gitignored). Ver [[Stack e Infraestructura#Mail]].
+- **⚠️ Gotcha:** `Mail::mailer('erp')` no cambia el **From** (queda el global payments@) → hay que fijar `from` explícito desde `config('mail.erp_from')` en el Mailable/`Mail::raw` o el server rechaza. Ver [[Errores Comunes#Mail::mailer('erp') cambia el SMTP pero NO el From → el server rechaza (2026-08-25)]].
+
+### Personal — Simulador de aumentos de sueldo (2026-08-25, PR #41) — ver [[Modulo Personal#Simulador de aumentos]]
+
+- Pantalla `/staff/simulador` (100% client-side, what-if, sin backend). Seleccionar empleados + aumentos porcentuales/nominales (en masa o por fila) → sueldo nuevo, extra/mes por empleado, totales por moneda y extra por mes/año. Lee `GET /empleados`; respeta `VER_MONTOS_SALDOS` (aviso si `salario_base` enmascarado). Montos con `fmtM`.
+
 ---
 
 ## Ver tambien
