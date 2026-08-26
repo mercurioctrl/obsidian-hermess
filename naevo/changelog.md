@@ -308,3 +308,33 @@ Archivos principales: `frontend/pages/home/edit.vue` (grande), `frontend/pages/i
 `frontend/components/home/BestQuality.vue`, `NewsletterSection.vue`, `RewardsSection.vue`
 
 Commits: `e5b3894` (branding Umbra + NÆVO), `59acad5` (editor completo + reordenamiento)
+
+## 2026-08-26
+
+Sesión de **marketing / redes sociales** — sin cambios de código en git. Todo el output vive en `redes/` (untracked). Ver la nota dedicada [[redes]].
+
+### Estrategia de redes (Fase 0 pre-lanzamiento)
+
+- Decisión: **comunicar antes de que salga el producto**, con Fase 0 de comunidad + waitlist (8 semanas, `L-8→L-0`). Se educa sobre longevidad (NAD+, NMN, espermidina) y se captura audiencia para el día del lanzamiento.
+- 12 documentos creados en `redes/`: README, guía de marca social, calendario de contenido semana a semana, y por red (Instagram, TikTok, YouTube, LinkedIn) su estrategia + copys/guiones. 15 captions de IG, 10 guiones de TikTok, guiones de YouTube, 6 posts de LinkedIn.
+- Todo basado en el material real de `Naevo-informacion/` (Estrategia 360°, Plan LATAM) y el posicionamiento del sitio.
+
+### Pipeline de generación de imágenes
+
+- `redes/_assets/generar_posts.py` (Python + Pillow) genera **8 posts de Instagram 1080×1350** en `redes/instagram/imagenes/`. Reproducible.
+- Estilos calcados de `frontend/tailwind.config.js`: navy `#07142e`, azul editorial `#1530e6`, cream `#f7f5ef`, gold `#c0a062`, cian `#00cdcc`.
+- **Fuentes:** Manrope + Instrument Serif (fuentes reales del sitio, bajadas completas de Google Fonts porque las bundled estaban subseteadas → renderizaban tofu).
+- **Logo NÆVO:** extraído de la etiqueta Luteína en 3 variantes (el `logo.png` del repo está vacío).
+- **Frascos:** Luteína y Prebiótico recortados a fondo transparente con GrabCut (OpenCV). Son los únicos frascos con render; el de NMN Longevity no existe aún.
+
+### Gotchas de la sesión
+
+- **Entorno Linux, no macOS:** esta máquina (`/var/www/naevo`) SÍ tiene ImageMagick + OpenCV + Pillow. (El changelog viejo dice "no hay ImageMagick" — era en la Mac.)
+- **Pillow `rounded_rectangle(fill=(r,g,b,a))` con alpha REEMPLAZA píxeles** en canvas RGBA (crea agujeros transparentes en vez de componer). Fix: helper `panel()` que dibuja en una capa aparte y hace `alpha_composite`.
+- **Fuentes web subseteadas** (las de `frontend/public/banner-assets/*.woff2`) solo traen ~15 glyphs → inútiles para texto arbitrario. Bajar la fuente completa.
+
+### Archivos principales
+
+- `redes/**` (12 docs de estrategia)
+- `redes/_assets/generar_posts.py` + `redes/_assets/fonts/` + `redes/_assets/img/`
+- `redes/instagram/imagenes/*.png` (8 posts) + README

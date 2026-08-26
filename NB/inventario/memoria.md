@@ -1,10 +1,23 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-08-21. (Memoria local también en
+Última sincronización: 2026-08-26. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Feature APA/Soportes (2026-08-26)
+Feature completa de **AMD Price Adjustment** (aporte promocional temporal que baja el costo
+efectivo por período/cantidad, sin tocar el costo base; varios por item, solapables, se
+suman). Backend: tabla `st_apa`, CRUD `/apa`, `/apa/active`, y **job de cron**
+(`run_apa_job.py`, modelo incremental +/- sobre `NCOSTEPROM`, auditado en `historial_costos`,
+testigo + aviso al PM). Front: sección **"APAs/Soportes"** + columna "APA (u.)" en Precios.
+Ver [[modulo-apa]]. PRs #335/#336/#337 (mergeados) + `feat/apa-cron` y `feat/apa-rename-soportes`.
+
+### Depósito predeterminado + filtro en Precios (2026-08-26)
+`GET /warehouses` expone `FP_Almacen.Predeterminado`; el front preselecciona el depósito
+predeterminado por empresa en los selectores. Nuevo filtro "Depósito" en Precios (usa
+`warehouseId`, no `stockWarehouseId` que el backend ignora). PRs #333/#334. Ver [[modulo-precios]].
 
 ### Fixes grilla Stock: historial + mutación Vuex (2026-08-21)
 Tres bugs de la pestaña Stock. **Backend** (`fix/stock-history`, `17947ad`): (1) `/stock-history` parseaba `DD-MM-YYYY` como `YYYY-DD-MM` → error SQL 242 con día > 12; ahora ISO. (2) el filtro `rs.fichero != 'PedidoModel.php'` descartaba filas con `fichero` NULL (en SQL `NULL != 'x'` = NULL) → los ajustes manuales (guardados con fichero NULL) no aparecían; ahora `(rs.fichero IS NULL OR rs.fichero != 'PedidoModel.php')`. (3) `manual_adjust_item_stock` ahora setea `fichero='regularizacion'`. **Frontend** (`feat/columna-disp-stock`, `ab65e93`): 4 mutaciones in-place del state de Vuex en `itemsStock.vue` reemplazadas por updates inmutables (spread) → elimina el crash `[vuex] do not mutate vuex store state`. Ver [[changelog]] y [[contexto]].
@@ -160,3 +173,7 @@ Resellers (`distribuidor=0`): 37 tiendas `preciosgamer_*` (ARS, ~60k items).
 - **Stock: saldos vs movimientos** — 6 columnas son movimientos fechados (filtrables por rango) y 7 son saldos de `stocks` sin fecha; NO hay ledger de deltas por columna (`registro_stock` guarda fotos, no deltas). Por eso el Delta no aplica con rango.
 - **Cache de seriales + connection pool** (perf 2026-08-04) — ver [[performance-indices#2026-08-04 — Cache materializado de seriales + connection pool|performance]].
 - **Correcciones de OC en prod** (albprol 13309, costo 13373) — ver [[contexto#Correcciones de datos en producción (2026-08-04)|contexto]].
+
+## Feedback / preferencias
+
+- **Nunca poner atribución en commits**: no agregar `Co-Authored-By`/Claude en mensajes de commit ni PRs (pedido del usuario, 2026-08-21).

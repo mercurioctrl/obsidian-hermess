@@ -56,6 +56,11 @@ NODE_ENV=development
 
 ## Gotchas conocidos
 
+> **Actualización 2026-08-26** (APA + commits, ver [[modulo-apa]]):
+> - **`NCOSTEPROM` está en USD** (≈ FOB; verificado: 56.84 vs FOB 55). El APA se resta directo en USD; un APA en ARS se convierte con la cotización `PESOSLO` (`NEW_BYTES.dbo.MS_COTIZACIONES`).
+> - **Nunca poner atribución en commits**: el usuario pidió NO agregar `Co-Authored-By`/Claude en commits ni PRs.
+> - **Filtro de depósito**: el endpoint `/itemsStocks` honra `warehouseId`, NO `stockWarehouseId` (el filtro de Stock lo manda y se ignora → no filtra). El de Precios se hizo con `warehouseId`.
+
 > **Actualización 2026-08-21** (`/stock-history` y `registro_stock`, ver [[changelog]]):
 > - **`col != 'x'` descarta los NULL en SQL Server**: `NULL != 'x'` = NULL (no TRUE). El filtro `rs.fichero != 'PedidoModel.php'` ocultaba los ajustes manuales, que se insertan con `fichero` NULL. Usar `(col IS NULL OR col != 'x')`.
 > - **Fechas a SQL Server**: pasar siempre ISO `YYYY-MM-DD`. Armar `YYYY-DD-MM` (día/mes cambiados) tira **error 242** solo cuando el día es > 12 — con día ≤ 12 no falla pero guarda la fecha equivocada (bug silencioso).

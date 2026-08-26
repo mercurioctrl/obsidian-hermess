@@ -59,3 +59,18 @@ Contexto de negocio, decisiones del usuario y TODOs pendientes. No incluye cosas
 - [[arquitectura|Arquitectura]]
 - [[memoria|Memoria auto-guardada con gotchas y patterns]]
 - [[changelog|Changelog]]
+
+## Redes sociales / marketing (agosto 2026)
+
+Ver la nota completa: [[redes]].
+
+- **Por qué arrancar redes sin producto** — el nicho de longevidad se gana con educación (autoridad), que tarda meses en construirse. Empezar en Fase 0 permite juntar waitlist y llegar al lanzamiento con audiencia en vez de "al vacío". El producto inexistente se convierte en teaser/misterio, no en un problema. Único cuidado: no prometer fechas hasta tener stock.
+- **Prioridad de redes** — Instagram + TikTok primero (awareness + waitlist orgánica), YouTube y LinkedIn como siembra a largo plazo (SEO evergreen y partners/B2B).
+- **Frascos disponibles** — hoy solo hay render de **Luteína** y **Prebiótico** (de las etiquetas descartadas). El producto estrella de la estrategia, **NÆVO Longevity (NMN 300 mg)**, todavía NO tiene frasco renderizado — bloquea el post de producto "real" del lanzamiento.
+
+### TODOs marketing pendientes
+
+- Render del frasco **NMN Longevity** para los posts de lanzamiento.
+- Versiones **Stories 1080×1920** y frames de **Reels/TikTok**.
+- **Lead magnet / landing de waitlist** que conecte con las redes (captura de email).
+- Reservar los handles `@naevo.lat` en todas las plataformas (evitar squatting).

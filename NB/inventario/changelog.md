@@ -1,5 +1,29 @@
 # Changelog — inventario
 
+## 2026-08-26 — Feature APA/Soportes + depósito en Precios (filtro y predeterminado)
+
+### APA (AMD Price Adjustment) — feature completa, 4 fases. Ver [[modulo-apa]].
+Aporte promocional temporal que baja el costo efectivo (`NCOSTEPROM`) de un artículo por
+período/cantidad, sin distorsionar el costo base. Varios APAs por item, **solapables y que
+se SUMAN**. En la UI la sección se llama **"APAs/Soportes"**.
+- **Backend** (`ms-metadata`, PRs #335/#336/#337 + rama `feat/apa-cron`): tabla `st_apa`,
+  CRUD `/apa`, `GET /apa/active` (suma de vigentes por item), y **job de cron**
+  (`run_apa_job.py`) que baja/restituye `NCOSTEPROM` con modelo **incremental +/-**
+  (auditado en `historial_costos`; testigo de interferencia + aviso al PM). `NCOSTEPROM`
+  está en **USD**; APA en ARS se convierte por cotización `PESOSLO`.
+- **Frontend** (`inventario-web-app`): sección **"APAs/Soportes"** (listado + filtros +
+  alta/edición con buscador de artículo) y **columna seleccionable "APA (u.)"** en la
+  grilla de Precios (suma de vigentes, badge ×N).
+
+### Depósito en Precios + preseleccionado (PRs #333/#334). Ver [[modulo-precios]].
+- `GET /warehouses` expone `FP_Almacen.Predeterminado`; el front **preselecciona** el
+  depósito predeterminado de la empresa en los selectores (ajuste manual, mover stock,
+  sell-discount, filtro de Stock).
+- Nuevo **filtro "Depósito" en la grilla de Precios** (usa `warehouseId`, el param que el
+  backend honra; con "Con stock" muestra solo los que tienen stock en ese almacén).
+  Gotcha detectado: el filtro de Stock manda `stockWarehouseId` (que el backend **ignora**);
+  el de Precios se hizo bien con `warehouseId`.
+
 ## 2026-08-21 — Fixes de la grilla de Stock: historial, mutaciones Vuex
 
 Sesión de fixes sobre la pestaña Stock (DB dev `db-nb-massql-dev.blu.net.ar,4444`).

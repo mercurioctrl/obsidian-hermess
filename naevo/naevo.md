@@ -22,6 +22,7 @@ Ver [[stack|Stack y dependencias]] para el detalle.
 - [[naevo/contexto|Contexto]] — reglas de negocio, decisiones, TODOs pendientes
 - [[naevo/memoria|Memoria]] — memoria auto-guardada del proyecto (gotchas, patterns)
 - [[naevo/templates-preview|Templates & Preview Switcher]] — componentes de preview y switching de templates
+- [[naevo/redes|Redes & Marketing]] — estrategia de redes sociales + generador de imágenes de posts
 
 ## Accesos rápidos
 
@@ -39,10 +40,11 @@ Ver [[stack|Stack y dependencias]] para el detalle.
 
 ---
 
-_Última sincronización: 2026-05-14_
+_Última sincronización: 2026-08-26_
 - [[naevo/arquitectura|Arquitectura]]
 - [[naevo/changelog|Changelog]]
 - [[naevo/contexto|Contexto]]
 - [[naevo/memoria|Memoria]]
 - [[naevo/modulos|Módulos]]
+- [[naevo/redes|Redes & Marketing]]
 - [[naevo/templates-preview|Templates & Preview Switcher]]

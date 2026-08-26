@@ -59,6 +59,8 @@ DELETE  /api/mi-disponibilidad/reservas/{reserva}   (el dueño cancela; avisa a 
 - **`pages/mi-disponibilidad/index.vue`** — editor del **slug personalizable** (prefijo del dominio + input + Guardar), link (copiar/regenerar/toggle activo), config, horarios semanales, excepciones y próximas reuniones (badge `+N` de invitados extra + cancelar).
 - **Accesos:** NavItem "Mi Disponibilidad" en el sidebar (sin permiso, para todo usuario) + tarjeta en `/mi-area`.
 
+> ⏳ **En progreso (WIP sin commitear, al 2026-08-26):** editor **visual** de horarios semanales — componente `components/BookingWeekGrid.vue` (grilla de 7 días, click-and-drag para **pintar/borrar franjas**) que reemplaza el alta manual de rangos. Guarda el set completo con **`PUT /mi-disponibilidad/reglas`** → `MiDisponibilidadController::syncReglas()` (**delete + recreate en transacción**, valida `hora_fin > hora_inicio` a mano). No lo hizo esta sesión; documentar bien cuando se mergee.
+
 ## Gotchas
 
 - El link público se arma con `request()->getSchemeAndHttpHost()` (host real del request), NO con `config('app.url')` (que es `http://localhost`).

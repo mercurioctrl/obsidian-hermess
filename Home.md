@@ -97,6 +97,7 @@
 - [[Adata/Adata|Adata]] — Proyectos de ADATA y su marca gaming XPG
   - [[Adata/Xpg/Xpg|Xpg]] — Marca XPG
     - [[Adata/Xpg/adata-paradise-3d/adata-paradise-3d|adata-paradise-3d]] — Impresión 3D multicolor del logo ADATA PARADISE (Bambu A1 mini + AMS)
+    - [[Adata/Xpg/tickets-sorteo/tickets-sorteo|tickets-sorteo]] — Tickets de sorteo y cartelitos con nombres, imprimibles B&W (ADATA PARADISE Brasil 2026)
 
 ---
 
