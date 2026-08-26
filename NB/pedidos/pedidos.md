@@ -41,6 +41,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-incentivo-netac|Feature: Incentivo Netac]] — incentivo por unidades vendidas de Netac (Memorias + SSD): cada 12 u = USD 4; reemplaza al Incentivo Gigabyte; detalle por pedido/producto/fecha
 - [[decision-listas-precios-nombradas|Decisión: Listas de precios nombradas y extensibles por companyCode]] — diseño acordado (2026-08-18), aún sin implementar
 - [[feature-estadisticas-lista-precio|Feature: Estadísticas por lista de precio]] — sección del dashboard: facturación/costo/ganancia/rentabilidad % y **retorno sobre costo** por lista; endpoint `priceListStatistics`
+- [[feature-ficha-producto|Feature: Ficha de producto]] — endpoint `items/{id}/sheet` con la ficha del producto (fotos, descripción, videos, garantía, logística, stock) para modal in-app en vez de nb.com.ar
 
 ## Esquema ERP — Tablas y relaciones
 
@@ -78,4 +79,4 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - Corrección: albclil faltante en ventas cobradas (DIAMOND)]]
 
 ---
-*Última sincronización: 2026-08-24 — **Estadísticas por lista de precio** (nueva sección del dashboard: facturación/costo/ganancia/rentabilidad %/retorno sobre costo por lista) + **Reportes Laset** con marca opcional/múltiple y países completos desde `FP_Paises`. Ver [[feature-estadisticas-lista-precio]] y [[changelog#2026-08-24 — Estadísticas por lista de precio + Reportes Laset (marca múltiple, países)]].*
+*Última sincronización: 2026-08-26 — **Ficha de producto (backend)**: endpoint `GET /v1/items/{id}/sheet` que combina el ERP con la base `PRODUCTOS` (descripción IA, fotos, videos) para mostrar la ficha en un modal in-app. Ver [[feature-ficha-producto]] y [[changelog#2026-08-26 — Ficha de producto para vendedores (backend)]].*

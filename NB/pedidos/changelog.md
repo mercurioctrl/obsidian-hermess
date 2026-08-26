@@ -1,3 +1,16 @@
+## 2026-08-26 — Ficha de producto para vendedores (backend)
+
+Nuevo endpoint para ver la ficha de un producto **dentro de la app** (modal), en vez de mandar al vendedor a `nb.com.ar`. Detalle en [[feature-ficha-producto]].
+
+- **Endpoint:** `GET /v1/items/{id}/sheet` (Controller → Service → Repository), read-only, por `ID_ARTICULO`.
+- **Combina dos capas:** ERP (`articulo` + `marcas` + `familias` + `stocks`) con la base **`PRODUCTOS`** (donde vive el marketing): descripción de IA + bajada (`iaDescriptions`/`subheadline`, accepted=1), galería de fotos (`fotos_productos`→`PRODUCTOS.dbo.fotos`) y videos de YouTube (`PRODUCTOS.dbo.videos` por `codigo`).
+- **Devuelve:** sku, código, nombre, garantía, marca (+logo), categoría, descripción/bajada, imágenes, videos, logística (peso/medidas/packagePerUnit) y stock (total/en camino).
+- **Fixes durante la prueba:** categoría por `ID_FAMILIA` (el join por `ccodfam` falla por padding); videos deduplicados y acotados a 12 (la tabla tiene duplicados masivos — un código con 1263 filas / 402 distintas).
+- **A confirmar:** semántica de `articulo.packagePerUnit` (fracción, ej `0.1`, no u/caja entero). **Frontend pendiente** (modal + reemplazo del link a nb.com.ar).
+- Rama `feature/ficha-producto-backend` (desde `Development`) — PR #1621.
+
+---
+
 ## 2026-08-24 — Estadísticas por lista de precio + Reportes Laset (marca múltiple, países)
 
 ### Estadísticas por lista de precio (nueva sección del dashboard)
