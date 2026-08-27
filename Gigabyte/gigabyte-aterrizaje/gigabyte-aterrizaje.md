@@ -14,13 +14,13 @@ Sitio de aterrizaje / **catálogo GIGABYTE** tipo e-commerce **sin compra**: nav
 
 ## Notas
 
-- [[arquitectura]] — proxy, agrupación por `oracular_sku`, caché, endpoints internos, páginas.
-- [[stack]] — Nuxt 3, Tailwind (PostCSS nativo), Node 20, dependencias.
-- [[design-system]] — paleta, tokens de tema (CSS vars), tipografía, componentes, logo/iconos.
-- [[api-partpicker]] — endpoints usados, auth y mapeo de resellers a sources.
-- [[contexto]] — decisiones del usuario, reglas de negocio, gotchas.
-- [[changelog]] — registro de lo trabajado por fecha.
-- [[memoria]] — espejo de la memoria de Claude del proyecto.
+- [[gigabyte-aterrizaje/arquitectura|arquitectura]] — proxy, agrupación por `oracular_sku`, caché, endpoints internos, páginas.
+- [[gigabyte-aterrizaje/stack|stack]] — Nuxt 3, Tailwind (PostCSS nativo), Node 20, dependencias.
+- [[gigabyte-aterrizaje/design-system|design-system]] — paleta, tokens de tema (CSS vars), tipografía, componentes, logo/iconos.
+- [[gigabyte-aterrizaje/api-partpicker|api-partpicker]] — endpoints usados, auth y mapeo de resellers a sources.
+- [[gigabyte-aterrizaje/contexto|contexto]] — decisiones del usuario, reglas de negocio, gotchas.
+- [[gigabyte-aterrizaje/changelog|changelog]] — registro de lo trabajado por fecha.
+- [[gigabyte-aterrizaje/memoria|memoria]] — espejo de la memoria de Claude del proyecto.
 
 ## Ver también
 

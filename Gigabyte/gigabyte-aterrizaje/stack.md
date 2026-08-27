@@ -4,7 +4,7 @@
 |------|------|
 | Framework | Nuxt 3 (SSR) + Vue 3 |
 | Estilos | Tailwind CSS vía **PostCSS nativo** (`nuxt.config` → `postcss.plugins`), **NO** el módulo `@nuxtjs/tailwindcss` |
-| Datos | Server routes (`server/api/*`) como proxy contra [[api-partpicker|BluPartPicker]] |
+| Datos | Server routes (`server/api/*`) como proxy contra [[gigabyte-aterrizaje/api-partpicker|BluPartPicker]] |
 | Runtime | Node **>= 20.11** (obligatorio) |
 
 ## Dependencias clave
@@ -31,4 +31,4 @@ Google Fonts en `nuxt.config.ts`: **Rajdhani** (`font-display`), **Chakra Petch*
 
 ## Ver también
 
-- [[arquitectura]] · [[design-system]] · [[gigabyte-aterrizaje]]
+- [[gigabyte-aterrizaje/arquitectura|arquitectura]] · [[gigabyte-aterrizaje/design-system|design-system]] · [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]]

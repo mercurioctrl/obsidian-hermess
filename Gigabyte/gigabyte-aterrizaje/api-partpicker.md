@@ -1,6 +1,6 @@
 # API BluPartPicker
 
-Catálogo unificado de tecnología argentina (mayoristas + resellers). Fuente de datos de [[gigabyte-aterrizaje]]. Ver también la nota raíz [[BluPartPicker]].
+Catálogo unificado de tecnología argentina (mayoristas + resellers). Fuente de datos de [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]]. Ver también la nota raíz [[BluPartPicker]].
 
 - **Base:** `https://partpicker.blustudioinc.com`
 - **Spec:** `GET /openapi.json` (el `/docs` es Swagger UI JS).
@@ -37,4 +37,4 @@ Editar en `server/utils/config.ts`. Para sumar RETEC/COMPUFAN: poner su `source`
 
 ## Ver también
 
-- [[arquitectura]] · [[gigabyte-aterrizaje]]
+- [[gigabyte-aterrizaje/arquitectura|arquitectura]] · [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]]

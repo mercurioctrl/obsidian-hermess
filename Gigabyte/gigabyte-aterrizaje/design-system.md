@@ -39,4 +39,4 @@ Las fotos de los resellers vienen con fondo blanco o PNG transparente. Se muestr
 
 ## Ver también
 
-- [[arquitectura]] · [[stack]] · [[gigabyte-aterrizaje]]
+- [[gigabyte-aterrizaje/arquitectura|arquitectura]] · [[gigabyte-aterrizaje/stack|stack]] · [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]]

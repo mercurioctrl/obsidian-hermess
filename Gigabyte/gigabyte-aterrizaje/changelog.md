@@ -19,4 +19,4 @@ Archivos principales: `server/utils/partpicker.ts`, `server/utils/config.ts`, `s
 
 ## Ver también
 
-- [[gigabyte-aterrizaje]] · [[contexto]]
+- [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]] · [[gigabyte-aterrizaje/contexto|contexto]]

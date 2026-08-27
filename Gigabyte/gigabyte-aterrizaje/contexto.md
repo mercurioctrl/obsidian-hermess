@@ -1,6 +1,6 @@
 # Contexto
 
-Decisiones del usuario, reglas de negocio y aprendizajes de [[gigabyte-aterrizaje]].
+Decisiones del usuario, reglas de negocio y aprendizajes de [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]].
 
 ## Reglas de negocio
 
@@ -34,4 +34,4 @@ Decisiones del usuario, reglas de negocio y aprendizajes de [[gigabyte-aterrizaj
 
 ## Ver también
 
-- [[gigabyte-aterrizaje]] · [[arquitectura]] · [[changelog]]
+- [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]] · [[gigabyte-aterrizaje/arquitectura|arquitectura]] · [[gigabyte-aterrizaje/changelog|changelog]]

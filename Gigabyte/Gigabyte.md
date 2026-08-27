@@ -42,6 +42,17 @@ Presentación / landing HTML que le propone a Gigabyte centralizar el paid media
 - [[informe-landing/reporte-resellers|Reporte — Estado de resellers (modo claro)]]
 - [[informe-landing/research-paid-media|Research & Estrategia — Paid Media]]
 
+### gigabyte-aterrizaje
+Catálogo GIGABYTE tipo e-commerce (sin compra): navegar, buscar y ver la ficha con vendedores, precio ARS y link a su web. Nuxt 3 SSR + proxy contra BluPartPicker. Repo `giga-partpicker`.
+- [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje — índice]]
+- [[gigabyte-aterrizaje/arquitectura|Arquitectura]]
+- [[gigabyte-aterrizaje/stack|Stack]]
+- [[gigabyte-aterrizaje/design-system|Design System]]
+- [[gigabyte-aterrizaje/api-partpicker|API BluPartPicker]]
+- [[gigabyte-aterrizaje/contexto|Contexto]]
+- [[gigabyte-aterrizaje/changelog|Changelog]]
+- [[gigabyte-aterrizaje/memoria|Memoria]]
+
 ### muestra-fravega
 Activación de GIGABYTE en Frávega: "test de fluidez" para que el público adivine cuál de dos monitores corre a 200Hz y cuál a 60Hz. Web estática (Canvas 2D). Tres versiones: bola pura (`pura.html`), personaje águila que corre y deja estela (`gemini-code-…html`) y composición demo con quiz (`index.html`).
 - [[muestra-fravega/muestra-fravega|muestra-fravega — índice]]

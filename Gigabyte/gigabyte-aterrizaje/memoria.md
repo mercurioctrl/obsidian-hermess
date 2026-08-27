@@ -6,7 +6,7 @@ Espejo de la memoria de Claude del proyecto (`~/.claude/projects/-var-www-gigaby
 
 `/var/www/gigabyte/gigabyte-aterrizaje` — catálogo GIGABYTE tipo e-commerce **sin compra**. Repo `git@github.com:BluIncStudio/giga-partpicker.git` (rama `main`, commits sin firma de Claude, autor Catriel <catrielmercurio@gmail.com>).
 
-- Stack Nuxt 3 SSR + Tailwind (PostCSS nativo). Datos de [[api-partpicker|BluPartPicker]] vía `server/api/*` (oculta la key en `.env`).
+- Stack Nuxt 3 SSR + Tailwind (PostCSS nativo). Datos de [[gigabyte-aterrizaje/api-partpicker|BluPartPicker]] vía `server/api/*` (oculta la key en `.env`).
 - Catálogo `fabricante=Gigabyte` (~336 productos agrupados por `oracular_sku`) + whitelist de 7 resellers. RETEC/COMPUFAN `enabled:false`. Caché en memoria 30 min.
 - UI AORUS: logo oficial (SVG máscara), `CategoryIcon`, tema claro/oscuro (`useState`+cookie), fondos de imagen con `mix-blend-multiply`.
 - **Node ≥20.11 obligatorio** (portable en `~/.local/node20/bin`). Dev server: lanzar one-liner con `nohup` (multi-statement/`sleep` en foreground → exit 144).
@@ -19,4 +19,4 @@ Espejo de la memoria de Claude del proyecto (`~/.claude/projects/-var-www-gigaby
 
 ## Ver también
 
-- [[gigabyte-aterrizaje]] · [[contexto]] · [[arquitectura]]
+- [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]] · [[gigabyte-aterrizaje/contexto|contexto]] · [[gigabyte-aterrizaje/arquitectura|arquitectura]]

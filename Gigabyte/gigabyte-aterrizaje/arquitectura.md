@@ -1,6 +1,6 @@
 # Arquitectura
 
-Nuxt 3 SSR con una capa server que hace de **proxy** contra la API [[api-partpicker|BluPartPicker]].
+Nuxt 3 SSR con una capa server que hace de **proxy** contra la API [[gigabyte-aterrizaje/api-partpicker|BluPartPicker]].
 El browser nunca ve la API key ni pega directo a partpicker.
 
 ## Flujo de datos
@@ -38,4 +38,4 @@ Browser → Nuxt server routes (/api/*) → BluPartPicker (header X-Api-Key)
 
 ## Ver también
 
-- [[stack]] · [[design-system]] · [[api-partpicker]] · [[gigabyte-aterrizaje]]
+- [[gigabyte-aterrizaje/stack|stack]] · [[gigabyte-aterrizaje/design-system|design-system]] · [[gigabyte-aterrizaje/api-partpicker|api-partpicker]] · [[gigabyte-aterrizaje/gigabyte-aterrizaje|gigabyte-aterrizaje]]
