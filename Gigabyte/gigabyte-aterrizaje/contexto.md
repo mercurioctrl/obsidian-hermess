@@ -8,6 +8,7 @@ Decisiones del usuario, reglas de negocio y aprendizajes de [[gigabyte-aterrizaj
 - Solo marca **GIGABYTE** (`fabricante=Gigabyte`).
 - Solo estos vendedores (whitelist): VENEX, MAXIMUS, MEXX, ARMYTECH, FULL HARD, GAMING CITY, HARDCORE COMPUTACION. **RETEC** y **COMPUFAN** los pidió el cliente pero **no existen** como fuente en partpicker → quedan pre-configurados con `enabled:false` ("dejalos por ahora").
 - Estética objetivo definida por el usuario: **AORUS** (aorus.com/graphics-cards). AORUS bloquea scraping (403), así que la paleta se replicó de memoria (negro + naranja).
+- **Saneamiento de datos** (pedido del usuario): unificar categorías equivalentes (PLACA/PLACA DE VIDEO/TARJETA → PLACA DE VIDEO; WATER/WATER COOLER → WATER COOLER) y **no mostrar** productos cuyo nombre diga "outlet".
 
 ## Decisiones tomadas en sesión
 

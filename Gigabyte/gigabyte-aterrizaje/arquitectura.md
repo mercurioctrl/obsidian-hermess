@@ -11,8 +11,9 @@ Browser → Nuxt server routes (/api/*) → BluPartPicker (header X-Api-Key)
 ```
 
 1. `server/utils/partpicker.ts` trae todos los items `fabricante=Gigabyte` de cada reseller activo en paralelo (`limit=500`, `moneda_out=ARS`).
-2. Agrupa por producto canónico (`oracular_sku`; si falta, `source:codigo`) → un **producto** con N **ofertas**.
-3. Cachea el catálogo agrupado en memoria (**TTL 30 min**). Si una reconstrucción falla y hay caché vieja, sirve la vieja.
+2. **Excluye** ofertas cuyo nombre contenga `outlet` (case-insensitive) antes de agrupar.
+3. Agrupa por producto canónico (`oracular_sku`; si falta, `source:codigo`) → un **producto** con N **ofertas**. La categoría se normaliza con `normalizeCategoria()` (PLACA/PLACA DE VIDEO/TARJETA→PLACA DE VIDEO; WATER/WATER COOLER→WATER COOLER).
+4. Cachea el catálogo agrupado en memoria (**TTL 30 min**). Si una reconstrucción falla y hay caché vieja, sirve la vieja.
 
 ## Modelo agrupado
 
