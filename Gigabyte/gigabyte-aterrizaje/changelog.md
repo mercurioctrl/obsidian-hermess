@@ -14,6 +14,8 @@
 - **Fix filtros**: parámetros `undefined` como string rompían el filtrado → query limpio en cliente + server defensivo.
 - **Git**: publicado en `git@github.com:BluIncStudio/giga-partpicker.git` (rama `main`, sin firma de Claude).
 - **Docs**: README, CLAUDE.md y carpeta `docs/` (arquitectura, api-partpicker, design-system, deploy).
+- **Normalización de categorías**: `normalizeCategoria()` unifica PLACA/PLACA DE VIDEO/TARJETA → `PLACA DE VIDEO` y WATER/WATER COOLER → `WATER COOLER` (12 → 9 categorías).
+- **Filtro outlet**: se excluyen las ofertas cuyo nombre contenga "outlet" antes de agrupar (336 → 330 productos).
 
 Archivos principales: `server/utils/partpicker.ts`, `server/utils/config.ts`, `server/api/`, `components/`, `composables/useTheme.ts`, `assets/css/main.css`, `tailwind.config.ts`.
 
