@@ -16,6 +16,7 @@ Ver columnas detalladas en [[Base de Datos#empleados]].
 ### Rutas API
 ```
 GET    /api/empleados                       <- listado (filtros: activo, q)
+GET    /api/empleados/sueldos-pendientes     <- recordatorio: sueldos del mes vencido sin cobrar (⚠️ ANTES del apiResource)
 POST   /api/empleados                       <- crear
 GET    /api/empleados/{id}                  <- detalle con proyectos y pagos
 PUT    /api/empleados/{id}                  <- editar
@@ -136,6 +137,15 @@ Días libres extra otorgados a un empleado (premios) que **suman a los días dis
 - **Cálculo:** `dias_disponibles = asignados (antigüedad, hábiles) + extra vigentes`; `dias_restantes = max(0, disponibles − tomados)`.
 - **Endpoints** (`EmpleadoController`): `GET/POST /api/empleados/{id}/vacaciones-extra` (POST body: `dias`, `motivo`, `fecha_vencimiento`, `fecha_otorgado?`) y `DELETE /api/empleados/{id}/vacaciones-extra/{extra}`. Devuelven `{ items, resumen }`.
 - **Frontend:** se gestionan en `/staff/[id]` **tab Ausencias** (card "Días extra de vacaciones": form + lista con badge vigente/vencido + resumen del año). En **Mi Área**, la card de Vacaciones muestra "Disponibles" con desglose `base + extra` y lista los extra vigentes con su vencimiento.
+
+### Recordatorio de sueldos pendientes del mes vencido (PR #52/#53, 2026-08-27)
+
+Recordatorio en `/staff` de **qué empleados activos aún no cobraron el sueldo del mes vencido**. Como se paga **a mes vencido**, el período a cobrar es siempre el **mes anterior**: arrancado agosto, lista a quienes no tienen registrado el sueldo de julio, hasta que se paga.
+
+- **`GET /empleados/sueldos-pendientes`** (`EmpleadoController::sueldosPendientes`, declarada **antes del apiResource** para que `sueldos-pendientes` no caiga como `{empleado}`). Período = `Carbon::now()->subMonthNoOverflow()`. Toma **activos** que ya estaban en la empresa dentro del período (`fecha_ingreso <= fin de mes` o sin fecha) y **sin `PagoPersonal` tipo `SUELDO`** para ese `periodo_mes`/`periodo_anio`. El monto respeta `VER_MONTOS_SALDOS`. Devuelve `{ periodo_mes, periodo_anio, periodo_label, total, pagados, pendientes[] }`.
+- **Frontend (`staff/index.vue`):** card **ámbar** "Sueldos de {mes} pendientes de cobro · N de M" con un chip por persona; cuando no queda ninguno, card **verde** "Todos cobraron el sueldo de {mes}". No bloquea la página si el endpoint falla.
+- **Deep-link al pago (PR #53):** el chip enlaza a **`/staff/{id}?tab=pagos&sueldo=1`**. `staff/[id].vue` en `cargar()` lee `?tab` (abre esa pestaña) y `?sueldo` (precarga `formPago`): tipo SUELDO, período = mes vencido, **monto = salario base**, moneda del salario, **fecha de pago = día 5 del mes en curso**, y banco/caja autoseleccionado si hay uno solo de esa moneda. Queda listo para **Registrar pago**. Reusa el `pagoVacio()` existente (ya defaultea tipo SUELDO + período mes vencido).
+- La fecha de pago (día 5) queda como **`fecha_real`** del gasto generado; el gasto se sigue imputando al **día 1 del período** (ver [[Reglas de Negocio#Imputación contable vs fecha real (2026-08-27)]]).
 
 ---
 

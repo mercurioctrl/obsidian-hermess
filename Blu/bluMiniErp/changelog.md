@@ -4,6 +4,44 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-08-27 — Seguridad de Configuración, menú reordenable, imputación al mes contable, reservas (grilla + recordatorios), sueldos pendientes
+
+Sesión larga, cada cambio en su propio PR desde `main`. Todo desplegado y verificado en local.
+
+### Seguridad — Configuración solo admin + pantalla de acceso denegado (PR #44, #45)
+- fix: **la sección Configuración exponía tokens/datos sensibles a usuarios comunes** (Jira/GitHub/Inbox/Mercury/AFIP, backups). `ConfiguracionController::show` ahora ramifica por rol: los no-admin reciben sólo `publicConfig()` (6 campos básicos: nombre, logo, moneda, tasa, prefijo, vigencia). El backend es la barrera real (la UI se puede saltear por API). Ícono de engranaje del sidebar gateado con `isAdmin`.
+- feat: **pantalla `/acceso-denegado`** — el `middleware/auth.global.ts` manda ahí a los no-admin que entran a `/configuracion`, `/usuarios` o cualquier sección sin permiso (antes los tiraba al dashboard silenciosamente, que tampoco deberían ver). Mensaje claro + botón "Volver al inicio" al lugar correcto según el usuario (solo-empleado → `/mi-area`). Ver [[Modulo Permisos]].
+
+### Menú lateral reordenable por drag & drop (PR #46/#47, migración 0106)
+- feat: cada usuario **reordena los ítems del sidebar** arrastrándolos, dentro de su grupo (Principal/Operaciones/Administración). Botón de editar (↕) en el encabezado del primer grupo. Preferencia por usuario en `usuarios.menu_orden` (json, mig `0106`). `AuthController::actualizarMenuOrden` + `PUT /auth/menu-orden` (valida y normaliza ids). El menú de `layouts/default.vue` pasó a declarativo (`MENU_ITEMS` + `GRUPOS`); persistencia optimista con debounce en el store `auth`. Ver [[Frontend]].
+
+### Presupuestos — filtro "Pendientes de pago" (PR #48)
+- feat: toggle **"Pendientes de pago"** en el listado de presupuestos → muestra sólo los que representan deuda del cliente sin cobrar (estados **APROBADO** o **FACTURADO**). Coherente con la semántica de deuda (el CARGO en cuenta corriente nace al aprobar y se salda al cobrar). Backend `PresupuestoController::index` respeta `?pendiente_pago=1`; combina con los demás filtros y la fila de totales por moneda.
+
+### Finanzas — imputar ingreso/cobro/gastos al mes contable + guardar fecha real (PR #49, migración 0107)
+- feat: se separa la **fecha contable** (mes de imputación en las estadísticas) de la **fecha real** (cuándo ocurrió la operación). Antes el ingreso (aprobar) y el cobro (pagar) se estampaban con `now()`, cayendo en el mes del clic, no en el del presupuesto.
+  - **Aprobar (CARGO)** y **Cobrar (PAGO):** `fecha = presupuesto->fecha` (imputa al mes del presupuesto); `fecha_real = now()`.
+  - **Gastos:** `fecha` sigue siendo el mes de imputación (editable); `fecha_real = now()` (registro). **Sueldos:** `fecha` = día 1 del período, `fecha_real` = fecha de pago elegida en el form.
+  - Migración `0107`: `fecha_real` (nullable) en `movimientos_cuenta` y `gastos`. Resources + `ProyectoController::show` la exponen. Front: cuenta corriente (`clientes/[id]`) muestra "real DD/MM" cuando difiere; modal de gasto en proyecto muestra "Fecha real de pago". El saldo del banco/caja sigue registrando la plata que entra hoy (flujo de caja real, no cambia). Sin backfill. Ver [[Reglas de Negocio]] y [[Modulo Contabilidad]].
+
+### Reservas — editor visual de disponibilidad semanal / grilla (PR #50)
+- feat: componente **`BookingWeekGrid`** — grilla de 7 días donde se pintan las franjas de disponibilidad y se guardan todas juntas, en vez de cargar reglas una por una. Backend `MiDisponibilidadController::syncReglas` + `PUT /mi-disponibilidad/reglas` (borra-y-recrea en transacción; valida `HH:MM` comparando a mano — la regla `gt` de Laravel compara **longitud** de string). Los endpoints viejos POST/DELETE siguen. Ver [[Modulo Reservas Reuniones]].
+
+### Reservas — recordatorios al anfitrión: email + push, el día y 1h antes (PR #51, migración 0108, PR abierto)
+- feat: en **Mi Disponibilidad → Configuración**, sección **"Recordatorios para mí"** con dos checkboxes: **el día** de la reunión (a la mañana) y **una hora antes**. Cada uno manda **correo** (mailer `erp@`), **push** (VAPID) e **in-app** al anfitrión.
+  - Comando **`reservas:recordatorios`** agendado cada 15 min (scheduler `minisaas-scheduler`). *1h antes* dispara cuando faltan ≤60 min; *el día* dispara desde las **08:00**. Marca de envío por reserva (`recordatorio_*_enviado_at`) → **no duplica**.
+  - Migración `0108`: `recordatorio_dia`/`recordatorio_1h` en `booking_configs`; `recordatorio_*_enviado_at` en `booking_reservas`. Reusa `PushService::enviarAUsuario`, `Notificacion` y `Mail::mailer('erp')`. Es para el **anfitrión** (los invitados externos ya reciben el `.ics`). Verificado E2E sembrando una reserva de prueba. Ver [[Modulo Reservas Reuniones]].
+
+### Personal — recordatorio de sueldos pendientes del mes vencido (PR #52)
+- feat: en `/staff`, tarjeta que avisa **qué empleados activos aún no cobraron el sueldo del mes vencido**. Como se paga **a mes vencido**, el período es siempre el **mes anterior**: arrancado agosto, lista a quienes no tienen registrado el SUELDO de julio, hasta que se paga. `GET /empleados/sueldos-pendientes` (declarada **antes** del apiResource): período = `now()->subMonthNoOverflow()`; activos que ya estaban en la empresa sin `PagoPersonal` tipo SUELDO de ese período; monto respeta `VER_MONTOS_SALDOS`. Card ámbar con chips por persona, o verde "todos al día". Ver [[Modulo Personal]].
+
+### Personal — deep-link del recordatorio al form de pago precargado (PR #53, PR abierto)
+- feat: al clickear un chip pendiente, abre la ficha del empleado en la pestaña **Pagos con el sueldo listo para confirmar**: tipo SUELDO, período = mes vencido, **monto = salario base**, moneda del salario, **fecha de pago = día 5 del mes en curso**, y banco/caja autoseleccionado si hay uno solo de esa moneda. El chip enlaza a `/staff/{id}?tab=pagos&sueldo=1`; `staff/[id].vue` lee `?tab`/`?sueldo` en `cargar()` y precarga `formPago`. Ver [[Modulo Personal]].
+
+Archivos: `backend/database/migrations/{0106_add_menu_orden_to_usuarios,0107_add_fecha_real_to_movimientos_y_gastos,0108_add_recordatorios_to_booking}.php`, `backend/app/Http/Controllers/{Configuracion,Auth,Presupuesto,Gasto,Empleado,Proyecto,MiDisponibilidad}Controller.php`, `backend/app/Services/PresupuestoService.php`, `backend/app/Console/Commands/EnviarRecordatoriosReservas.php`, `backend/app/Models/{Usuario,MovimientoCuenta,Gasto,BookingConfig,BookingReserva}.php`, `backend/app/Http/Resources/{Usuario,MovimientoCuenta,Gasto}Resource.php`, `backend/routes/{api,console}.php`, `frontend/layouts/default.vue`, `frontend/stores/auth.ts`, `frontend/middleware/auth.global.ts`, `frontend/pages/{acceso-denegado,presupuestos/index,clientes/[id],proyectos/[id],mi-disponibilidad/index,staff/index,staff/[id]}.vue`, `frontend/components/BookingWeekGrid.vue`
+
+---
+
 ## 2026-08-25 — Recuperación de clave + mailer erp@, simulador de aumentos, ajustes de comunicados
 
 ### Recuperación de contraseña + cuenta de correo del sistema (PR #43, migración 0105)

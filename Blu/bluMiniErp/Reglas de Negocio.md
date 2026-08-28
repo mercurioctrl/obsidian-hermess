@@ -15,6 +15,27 @@ Son dos modulos separados con propositos distintos:
 
 Ver tablas en [[Base de Datos#movimientos_cuenta]] y [[Base de Datos#gastos]].
 
+## Imputación contable vs fecha real (2026-08-27)
+
+Cada operación de plata tiene **dos fechas** (mig `0107` sumó `fecha_real` a `movimientos_cuenta` y `gastos`):
+
+- **`fecha` = fecha CONTABLE** → el **mes al que se imputa** en las estadísticas del Dashboard.
+- **`fecha_real` = cuándo ocurrió de verdad** la operación.
+
+Reglas de asignación:
+
+| Acción | `fecha` (imputación) | `fecha_real` |
+|--------|----------------------|--------------|
+| Aprobar presupuesto (CARGO / Ingresos) | **fecha del presupuesto** | ahora (cuándo se aprobó) |
+| Cobrar presupuesto (PAGO / Cobrado) | **fecha del presupuesto** | ahora (cuándo se cobró) |
+| Gasto normal | la que elegís (mes de imputación, editable) | momento del registro |
+| Sueldo | día 1 del período | fecha de pago elegida en el form |
+
+- **Por qué:** antes el ingreso/cobro se estampaban con `now()`, cayendo en el mes del clic y no en el del presupuesto. Ahora las estadísticas atribuyen la plata al **mes que corresponde**.
+- El **saldo del banco/caja** y su movimiento (`COBRO`) siguen registrando la plata que entra **hoy** (flujo de caja real) — eso NO cambió.
+- Sin backfill: aplica a operaciones nuevas; lo viejo queda con `fecha_real = null` (el front no muestra nada raro).
+- Front: cuenta corriente (`clientes/[id]`) muestra "real DD/MM" cuando difiere; el modal de gasto en el proyecto muestra "Fecha real de pago". Ver [[Modulo Contabilidad]] y [[Modulo Personal]].
+
 ## Presupuestos - Flujo de estados
 
 ```

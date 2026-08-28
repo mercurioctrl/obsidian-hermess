@@ -42,6 +42,7 @@ GET/PUT /api/mi-disponibilidad
 PUT     /api/mi-disponibilidad/slug            (personaliza el slug; valida [a-z0-9-], min 3, unicidad; 422 si ocupado/reservado)
 POST    /api/mi-disponibilidad/regenerar-token
 POST|DELETE /api/mi-disponibilidad/reglas[/{regla}]
+PUT     /api/mi-disponibilidad/reglas            (syncReglas: reemplaza TODAS las reglas de una vez; lo usa la grilla visual)
 POST|DELETE /api/mi-disponibilidad/bloqueos[/{bloqueo}]
 DELETE  /api/mi-disponibilidad/reservas/{reserva}   (el dueño cancela; avisa a todos)
 ```
@@ -59,7 +60,20 @@ DELETE  /api/mi-disponibilidad/reservas/{reserva}   (el dueño cancela; avisa a 
 - **`pages/mi-disponibilidad/index.vue`** — editor del **slug personalizable** (prefijo del dominio + input + Guardar), link (copiar/regenerar/toggle activo), config, horarios semanales, excepciones y próximas reuniones (badge `+N` de invitados extra + cancelar).
 - **Accesos:** NavItem "Mi Disponibilidad" en el sidebar (sin permiso, para todo usuario) + tarjeta en `/mi-area`.
 
-> ⏳ **En progreso (WIP sin commitear, al 2026-08-26):** editor **visual** de horarios semanales — componente `components/BookingWeekGrid.vue` (grilla de 7 días, click-and-drag para **pintar/borrar franjas**) que reemplaza el alta manual de rangos. Guarda el set completo con **`PUT /mi-disponibilidad/reglas`** → `MiDisponibilidadController::syncReglas()` (**delete + recreate en transacción**, valida `hora_fin > hora_inicio` a mano). No lo hizo esta sesión; documentar bien cuando se mergee.
+### Editor visual de horarios / grilla semanal (PR #50, 2026-08-27)
+
+- Componente **`components/BookingWeekGrid.vue`** — grilla de 7 días con **click-and-drag para pintar/borrar franjas** de disponibilidad, en vez del alta manual de rangos uno por uno. La página `mi-disponibilidad` tiene toggle Lista/Calendario (grilla).
+- Guarda el **set completo** con **`PUT /mi-disponibilidad/reglas`** → `MiDisponibilidadController::syncReglas()` (**delete + recreate en una transacción**; valida `HH:MM` con regex y compara `hora_fin <= hora_inicio` a mano). Los endpoints POST/DELETE de reglas individuales siguen existiendo.
+
+## Recordatorios al anfitrión (PR #51, migración 0108, 2026-08-27)
+
+El anfitrión puede optar por recibir recordatorios de **sus** reuniones (no los invitados: ellos ya reciben el `.ics`).
+
+- **Config:** en Mi Disponibilidad, sección **"Recordatorios para mí"** con dos checkboxes en `booking_configs`: **`recordatorio_dia`** (el día, a la mañana) y **`recordatorio_1h`** (una hora antes). `MiDisponibilidadController` los expone y valida.
+- **Envío:** comando **`reservas:recordatorios`** (en `routes/console.php`, scheduler `everyFifteenMinutes`). Manda **correo (`erp@`) + push (VAPID) + in-app** al dueño. *1h antes* dispara cuando faltan ≤60 min; *el día* dispara desde las **08:00**.
+- **Anti-duplicado:** `booking_reservas.recordatorio_dia_enviado_at` / `recordatorio_1h_enviado_at` (mig `0108`) marcan el envío → cada recordatorio se manda una sola vez.
+- Reusa `PushService::enviarAUsuario`, `Notificacion` y `Mail::mailer('erp')` (mismo patrón que el aviso de nueva reserva). Un fallo de SMTP no corta el resto.
+- ⚠️ El **scheduler** corre en el contenedor `minisaas-scheduler` (`php artisan schedule:work`); al deployar hay que copiar el comando + `console.php` ahí y reiniciarlo.
 
 ## Gotchas
 

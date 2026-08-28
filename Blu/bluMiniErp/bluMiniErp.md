@@ -2,7 +2,7 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-08-26
+**Ultima sincronizacion:** 2026-08-28
 
 ## Arquitectura
 
@@ -21,10 +21,10 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | [[Modulo Tareas]] | Tablero kanban estilo Jira: seguimiento (watchers) y notificaciones in-app / correo / push (VAPID) / WhatsApp |
 | [[Modulo GitHub]] | Integración GitHub solo lectura (PAT): dashboard de rendimiento por dev + vista detallada con commits día a día. Persistencia + sync incremental (2026-07-11) |
 | [[Modulo Documentos]] | Descarga de documentos corporativos: original + versión con formato BLU (registry en config, sin DB) (2026-07-11) |
-| [[Modulo Personal]] | Empleados, asignacion a proyectos, pagos, vínculo con usuario del sistema + **Área de empleado `/mi-area`** (datos, rol, banco, cumpleaños) y **vacaciones en días hábiles + feriados + días extra (premio)** (2026-08) |
+| [[Modulo Personal]] | Empleados, asignacion a proyectos, pagos, vínculo con usuario del sistema + **Área de empleado `/mi-area`** (datos, rol, banco, cumpleaños), **vacaciones en días hábiles + feriados + días extra (premio)** (2026-08) y **recordatorio de sueldos pendientes del mes vencido** con deep-link al pago precargado (2026-08-27) |
 | [[Modulo People Performance]] | RRHH sobre Personal: rol&expectativas, competencias (1-5), objetivos (OKRs), ausencias (rango), reuniones 1:1, evidencia GitHub/Jira (tab Actividad, auto-vincular Jira). Fase 1 + inicio Fase 2 (2026-07-14) |
 | [[Modulo Calendario]] | Vista mensual que unifica tareas con deadline, ausencias/vacaciones, 1:1, objetivos, feriados **y reservas de reuniones** + suscripción externa iCal (Google/Apple/Outlook). `VER_SECCION_CALENDARIO` (2026-07-14) |
-| [[Modulo Reservas Reuniones]] | Link público tipo Calendly por usuario (`/reservar/{token}`): un externo agenda un slot; disponibilidad self-service (`/mi-disponibilidad`) híbrida (reglas semanales + bloqueos/extras); invitados múltiples con invite `.ics`, evento en Calendario y notificación in-app/push (2026-08-10) |
+| [[Modulo Reservas Reuniones]] | Link público tipo Calendly por usuario (`/agendar/{slug}`): un externo agenda un slot; disponibilidad self-service (`/mi-disponibilidad`) híbrida (reglas semanales + bloqueos/extras) con **editor visual de grilla semanal**; invitados múltiples con invite `.ics`, evento en Calendario, notificación in-app/push y **recordatorios al anfitrión (email+push, el día y 1h antes)** (2026-08-27) |
 | [[Modulo Contabilidad]] | Sección `/contabilidad`: liquidación de impuestos del período (IVA/Ganancias/IIBB) + Libro IVA en Excel (Ventas/Compras). Datos fiscales del gasto (mig 0101). Lista de compras incompletas con acceso a completar, simulador de compras (what-if) y "Te queda después de impuestos", Rentabilidad por Cliente en el dashboard (2026-08-23). `VER_SECCION_CONTABILIDAD` (2026-08-21) |
 | [[Modulo Remitos]] | Desde un presupuesto genera un remito (copia sus ítems) independiente y editable (no toca el presupuesto). Varios por presupuesto. Tradicional (descripción+cantidad, sin precios), PDF formato BLU. Mig 0102 (2026-08-23) |
 | [[Reglas de Negocio]] | Reglas de dominio criticas y comportamientos no obvios |
