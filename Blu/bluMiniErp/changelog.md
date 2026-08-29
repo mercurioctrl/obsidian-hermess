@@ -4,6 +4,20 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-08-29 — Nuevo módulo Flota GSM (líneas prepagas)
+
+### Flota GSM (PR #54, migración 0109)
+- feat: **módulo nuevo `/flota-gsm`** para administrar **líneas SIM prepagas** y no perder números (se pierden si no se recarga cada X meses). Permiso `VER_SECCION_FLOTA_GSM` (grupo Operaciones).
+- **Alta de líneas:** nombre, número, observaciones, **`meses_vigencia`** (cada cuántos meses vence) y una **lista de contactos** (nombre + email) por línea a quienes avisar.
+- **Cargas + vencimiento:** botón "Carga" (fecha + monto). Al registrar se actualiza la última carga (denormalizada en `gsm_lineas`), se recalcula **`vence_el = fecha_carga + meses_vigencia`** y se muestra el estado con badge de color (rojo ≤15 días / vencida, ámbar ≤30, verde). Historial en `gsm_cargas`.
+- **Avisos por email (mailer `erp@`):** (1) al registrar una carga → aviso a los contactos con monto y próximo vencimiento; (2) **15 días antes del vencimiento** → comando **`gsm:alertas-vencimiento`** (scheduler **diario 09:00**) avisa a los contactos, **una sola vez por ciclo** (`alerta_15d_enviada_at`, se rearma al cargar). ⚠️ El comando corre en el contenedor **`minisaas-scheduler`**.
+- **Decisión:** es un módulo de **seguimiento** — la carga NO genera gasto ni movimiento de banco/caja (a diferencia de sueldos). Verificado E2E con token real (alta → carga → `vence_el` = fecha + N meses). Ver [[Modulo Flota GSM]].
+- docs: se documentó en `CLAUDE.md` + `arquitectura/18-modulo-flota-gsm.md`.
+
+Archivos: `backend/database/migrations/0109_create_gsm_tables.php`, `backend/app/Models/{GsmLinea,GsmCarga,GsmContacto}.php`, `backend/app/Services/GsmAlertaService.php`, `backend/app/Http/Controllers/GsmLineaController.php`, `backend/app/Console/Commands/EnviarAlertasGsm.php`, `backend/routes/{api,console}.php`, `frontend/pages/flota-gsm/index.vue`, `frontend/layouts/default.vue`, `frontend/middleware/auth.global.ts`, `frontend/pages/usuarios/index.vue`, `CLAUDE.md`, `arquitectura/18-modulo-flota-gsm.md`
+
+---
+
 ## 2026-08-27 — Seguridad de Configuración, menú reordenable, imputación al mes contable, reservas (grilla + recordatorios), sueldos pendientes
 
 Sesión larga, cada cambio en su propio PR desde `main`. Todo desplegado y verificado en local.
