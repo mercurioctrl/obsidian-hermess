@@ -48,5 +48,30 @@ La web UI (`http://10.10.10.101`) necesita **plugin ActiveX** (IE/Windows). Pero
 
 ## Ver también
 
+## Sesión CH5 JARDIN — HD/remoto no andaban (2026-08-29)
+
+**Síntoma:** la cámara del jardín (CH5) solo se veía **local** (monitor/multivista). El **stream HD** y el **remoto (DMSS)** quedaban colgados.
+
+**Diagnóstico (todo por API/`ffprobe`, sin tocar nada físico):**
+- La cámara `10.10.10.216` (Dahua **DH-IPC-HFW1230DT-STW**, WiFi 2MP) figuraba **`Connected`** en el DVR → no estaba caída.
+- Pidiéndole el video **directo a la cámara**: main **H.265** 1080p y sub **H.264** 640×480 salen perfecto → la cámara está sana, y **no es ancho de banda** (el HD va a solo ~1 Mbps).
+- Pidiendo el **canal por el DVR**: `channel=5&subtype=0` (main) → **timeout, sin video**; `subtype=1` (sub) → H.264 640×480 OK.
+
+**Causa raíz:** el mainstream estaba en **H.265** y el DVR la levantaba por **ONVIF**. **Este HCVR viejo (build 2016) no decodifica/pasa H.265 por ONVIF** → el HD se colgaba local y remoto; el sub (H.264) sí, por eso la multivista local andaba.
+
+**Fix aplicado:**
+1. **Cámara:** mainstream **H.265 → H.264 @2048 kbps** (RPC2 `admin` / pass en gestor). Backup: `/tmp/cam_encode_backup.json`.
+2. **DVR canal 5:** protocolo **ONVIF → Dahua2** (nativo) en `RemoteDevice` INFO_4. Backup: `/tmp/nvr_remotedevice_backup.json`.
+3. **UniFi:** **IP fija reservada** `10.10.10.216` (Default LAN) y cliente **renombrado "IPC Portero" → "CAM Jardin"** (estaba mal nombrado). Login controlador: usuario `claude`.
+
+**Verificado:** `ffprobe` del main del canal por el DVR devuelve **h264 1080p** al primer intento; CH5 reconecta `Connected` por Dahua2.
+
+> 🔑 **REGLA:** este HCVR **no soporta H.265**. Toda cámara IP que se le conecte debe tener el **mainstream en H.264**.
+>
+> 📱 Pendiente del lado del usuario: reabrir el canal en **DMSS** para que suelte la conexión H.265 vieja.
+
+## Ver también
+
+- [[02-camaras#Cámara JARDIN — DH-IPC-HFW1230DT-STW|Cámara JARDIN]] — ficha de la cámara del jardín
 - [[02-camaras]] — Inventario de cámaras IP
 - [[Red]] — Infraestructura de red hogareña

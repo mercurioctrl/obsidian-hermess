@@ -37,6 +37,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 
 - [[02-camaras]] — Inventario, diagnóstico y tareas pendientes
 - [[02-camaras#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] — WiFi PT motorizada (10.10.10.64), patrullaje **2 reposos (izq/der) + barrido lento** (rediseño ago 2026) vía ISAPI JSON
+- [[02-camaras#Cámara JARDIN — DH-IPC-HFW1230DT-STW|JARDIN]] — Dahua WiFi 2MP (10.10.10.216 fija), graba en DVR CH5. Mainstream **debe ser H.264** (el DVR no soporta H.265)
 
 ## Grabadores (DVR / NVR)
 

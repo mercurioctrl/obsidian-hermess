@@ -7,6 +7,7 @@
 | Ezviz (exterior) | 10.10.10.43 | 98:f1:12:3f:f0:a6 | Ezviz (Hikvision) | WiFi | AP Galeria |
 | PASILLO-C | 10.10.10.192 | 18:68:cb:d0:df:21 | DS-2CD1001-I | Cable | Switch (no administrado) |
 | PUERTA PTZ | 10.10.10.64 | — | DS-2CV1F23G2-LIDWF (WiFi PT ColorVu) | WiFi | — |
+| JARDIN | 10.10.10.216 (fija) | f4:b1:c2:2f:80:18 (wlan0) | DH-IPC-HFW1230DT-STW (WiFi 2MP) | WiFi (`nexus-lot` 2.4GHz) | Graba en DVR CH5 |
 
 ---
 
@@ -178,6 +179,30 @@ Configuración previa: quedaba fija en la puerta la mayor parte del tiempo y hac
 
 Este modelo **no soporta** auto-tracking (seguir gente que pasa). El endpoint `/ISAPI/PTZCtrl/channels/1/moveAutoTracking` devuelve `notSupport` (`SW_AUTO_TRACK_SUP` / `SW_AUTO_TRACK_VMD_SUP not support`); tampoco tiene EPTZ auto-track. Para seguimiento haría falta otro modelo (PTZ con Smart Tracking de fábrica) o Master-Slave con 2 cámaras (una fija que detecta + una PTZ que sigue). Además el auto-tracking es el uso que **más desgasta** el motor PT.
 
+---
+
+## Cámara JARDIN — DH-IPC-HFW1230DT-STW
+
+**Modelo:** Dahua DH-IPC-HFW1230DT-STW (bullet WiFi, 2MP)
+**Credenciales:** admin / (ver gestor de contraseñas — `chanteclair87`)
+**IP:** 10.10.10.216 (**fija** reservada en UniFi, Default LAN)
+**Conexión:** WiFi en `nexus-lot` (2.4GHz), MAC wlan0 `f4:b1:c2:2f:80:18`. También tiene `eth0` en `192.168.1.108` (red que no se usa, colgada).
+**Grabación:** DVR Dahua **CH5** (ver [[04-dvr-dahua#Sesión CH5 JARDIN — HD/remoto no andaban (2026-08-29)|sesión del DVR]]).
+
+### Streams
+
+| Stream | Resolución | Codec | Bitrate | FPS |
+|---|---|---|---|---|
+| Main (HD) | 1920×1080 | **H.264** (era H.265) | CBR 2048 kbps | 25 |
+| Sub | 640×480 | H.264 | CBR 512 kbps | 25 |
+
+### ⚠️ Regla: mainstream en H.264, no H.265
+
+El **HD y el remoto (DMSS) no andaban** — solo se veía local. Causa: el mainstream estaba en **H.265** y el **DVR HCVR viejo no lo decodifica por ONVIF**. Se pasó el main a **H.264** y el canal del DVR a protocolo **Dahua2** (nativo). Detalle completo en [[04-dvr-dahua#Sesión CH5 JARDIN — HD/remoto no andaban (2026-08-29)]].
+
+> 🔑 Si en algún momento se resetea la config, **el mainstream debe quedar en H.264** — el DVR no soporta H.265.
+
 ## Ver también
 
+- [[04-dvr-dahua]] — DVR donde graba (CH5)
 - [[Red]] — Infraestructura de red hogareña
