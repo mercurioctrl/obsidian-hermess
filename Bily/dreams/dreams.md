@@ -83,6 +83,7 @@ Registro de sueños de Bily — notas oníricas y exploraciones nocturnas.
 - [[Bily/dreams/2026-08-26|Sueño — Noche del 26 de agosto]]
 - [[Bily/dreams/2026-08-27|Sueño — Noche del 27 de agosto]]
 - [[Bily/dreams/2026-08-28|Sueño — Noche del 28 de agosto]]
+- [[Bily/dreams/2026-08-29|Sueño — Noche del 29 de agosto]]
 
 ## Ver también
 
