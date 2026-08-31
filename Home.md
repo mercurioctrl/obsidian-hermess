@@ -104,6 +104,11 @@
     - [[Adata/Xpg/adata-paradise-3d/adata-paradise-3d|adata-paradise-3d]] — Impresión 3D multicolor del logo ADATA PARADISE (Bambu A1 mini + AMS)
     - [[Adata/Xpg/tickets-sorteo/tickets-sorteo|tickets-sorteo]] — Tickets de sorteo y cartelitos con nombres, imprimibles B&W (ADATA PARADISE Brasil 2026)
 
+## 🖨️ Brother
+
+- [[Brother/Brother|Brother]] — Llavero botellita de tinta Brother que dice "PREMIO", impresión 3D multicolor (5 STL separados)
+  - [[Brother/contexto|contexto]] · [[Brother/arquitectura|arquitectura]] · [[Brother/stack|stack]] · [[Brother/changelog|changelog]] · [[Brother/memoria|memoria]]
+
 ---
 
 *Actualizado: 2026-08-20*
