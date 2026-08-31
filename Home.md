@@ -1,4 +1,4 @@
-`# 🏠 Home
+# 🏠 Home
 
 Índice general de la bóveda.
 
@@ -12,6 +12,7 @@
   - [[Blu/bluMiniErp/bluMiniErp|bluMiniErp]] — Mini ERP interno
   - [[Blu/blu-crm/blu-crm|blu-crm]] — CRM: email masivo (SES) + WhatsApp
   - [[Blu/enviosMasivosRapidos/enviosMasivosRapidos|enviosMasivosRapidos]] — Newsletters HTML por SMTP (PHP CLI)
+  - [[Blu/botWhatsappBlu/botWhatsappBlu|botWhatsappBlu]] — Bot de WhatsApp para soporte MSP + Jira
   - [[Blu/finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
   - [[Blu/minutas/minutas|minutas]] — Minutas de reunión por cliente
   - [[Blu/rrhh/rrhh|rrhh]] — Recursos Humanos
@@ -30,7 +31,6 @@
 - [[aplus-server]] — Servidor A+
 - `Laset/` — Laset
   - [[Laset/Martes|Martes]] · [[Laset/Miercoles|Miércoles]]
-`
 ## 🟠 NB (NewBytes)
 
 - [[NB]] — Índice general
@@ -111,4 +111,4 @@
 
 ---
 
-*Actualizado: 2026-08-20*
+*Actualizado: 2026-08-31*

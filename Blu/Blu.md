@@ -28,6 +28,10 @@ Proyectos y áreas de BLU Digital Agency.
 ### [[enviosMasivosRapidos/enviosMasivosRapidos|enviosMasivosRapidos]] — Envío de newsletters HTML por SMTP (PHP CLI)
 - [[enviosMasivosRapidos/arquitectura|arquitectura]] · [[enviosMasivosRapidos/stack|stack]] · [[enviosMasivosRapidos/changelog|changelog]] · [[enviosMasivosRapidos/contexto|contexto]]
 
+### [[botWhatsappBlu/botWhatsappBlu|botWhatsappBlu]] — Bot de WhatsApp para soporte MSP (Blubot)
+- WhatsApp + LLM hibrido (DeepSeek/OpenAI) + Jira SNB · Node 22 sobre PM2, sin Docker
+- [[botWhatsappBlu/arquitectura|arquitectura]] · [[botWhatsappBlu/stack|stack]] · [[botWhatsappBlu/changelog|changelog]] · [[botWhatsappBlu/contexto|contexto]] · [[botWhatsappBlu/memoria|memoria]]
+
 ### Dirección
 - [[direccion/reunion-directorio-pendiente|Reunión de Directorio Blu – Pendiente]]
 - [[direccion/reportes/2026-07-reporte-detallado|Reporte Detallado — Julio 2026]]
