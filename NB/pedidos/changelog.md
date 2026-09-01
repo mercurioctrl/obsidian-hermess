@@ -1,3 +1,14 @@
+## 2026-09-01 — Módulo de Presupuestos + PDF por empresa
+
+Feature grande en dos ramas apiladas. Detalle en [[feature-modulo-presupuestos]] y [[feature-pdf-fiscal-por-empresa]].
+
+- **Módulo de Presupuestos** (`feature/modulo-presupuestos`, back+front): armar/guardar/editar/borrar/PDF presupuestos con ítems de inventario por empresa + ítems libres. Tablas nuevas `presupuestos`/`presupuestos_items` + permiso `presupuestos`. Es una **pestaña** junto a "Ordenes" (no menú superior). Listado con columna "Generado por".
+- **PDF/links por empresa** (`feature/presupuesto-pdf-por-empresa`): el presupuesto del pedido y la ficha salen con razón social/domicilio/logo según `companyCode` (datos de `FP_Empresas` vía `CompanyDto` extendido) + `config/companySites.php` para el dominio del sitio.
+- **Fix auth:** `UserDto` no exponía el permiso nuevo → la pestaña no aparecía. Checklist de permisos en [[decision-permiso-nuevo-agente]].
+- Fix listado: admin sin filtro ve presupuestos de todas las empresas.
+
+---
+
 ## 2026-08-31 — Ficha de producto: stock disponible + webUrl por empresa
 
 Dos ampliaciones a la [[feature-ficha-producto]] (rama `feature/ficha-producto-backend`, PR #1621):
