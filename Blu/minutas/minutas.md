@@ -5,6 +5,7 @@ Minutas de reunión elaboradas por Blu, organizadas por cliente. Se generan como
 ## Clientes
 
 - [[naevo]] — NAEVO (línea de suplementos de bienestar)
+- [[nbe]] — NBE (circuito de compras, pagos y recepción)
 
 ## Ver también
 
