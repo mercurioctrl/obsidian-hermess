@@ -43,6 +43,7 @@ _Registrar acá cada ajuste: fecha, personas, monto/porcentaje y motivo (mérito
 
 ## Ver también
 
+- [[propuesta-aumento-2026-08]] — Propuesta de aumento (Escenario A) para decisión de socios
 - [[rrhh]] — Índice del equipo
 - [[alertas-gestion]] — Señales de gestión por persona
 - [[changelog]] — Registro de lo trabajado
