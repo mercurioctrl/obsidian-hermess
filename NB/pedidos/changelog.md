@@ -1,3 +1,12 @@
+## 2026-08-31 — Ficha de producto: stock disponible + webUrl por empresa
+
+Dos ampliaciones a la [[feature-ficha-producto]] (rama `feature/ficha-producto-backend`, PR #1621):
+
+- **Stock disponible:** el bloque `stock` ahora devuelve `{ available, total, incoming }`. `available` = `SUM(nstock) − SUM(nstock_reserva_pedidos)` con piso en 0 (mismo criterio de reserva que `OrderRepository`). Antes solo traía total e incoming.
+- **webUrl por empresa:** el link al producto ya no es fijo a nb.com.ar; sale del `companyCode` vía nuevo `config/companySites.php` — 4=nb.com.ar, 9=nbe.com.ar, 11=laset.com.ar, resto → default nb.com.ar. Dominios overrideables por env (`SITE_URL_NB/NBE/LASET`).
+
+---
+
 ## 2026-08-26 — Ficha de producto para vendedores (backend)
 
 Nuevo endpoint para ver la ficha de un producto **dentro de la app** (modal), en vez de mandar al vendedor a `nb.com.ar`. Detalle en [[feature-ficha-producto]].
