@@ -58,3 +58,8 @@ Star Wars · Marvel · Terror · Interstellar · Pixar
 **A tener en cuenta:** Con 23 años y carga alta (estudio + dos trabajos + entrenamiento), hay riesgo real de burnout. Monitorear su bienestar y carga laboral activamente. Su perfil docente lo hace valioso para onboarding, documentación o mentoring junior — aprovechar esa faceta. Su email en el CSV no tiene dominio completo — verificar datos de contacto.
 
 **Cumpleaños:** 8 de octubre 🎂
+
+## Ver también
+
+- [[../blanqueo-franco|Blanqueo de Franco — análisis y costos]] 🧾
+- [[../salarios|Salarios del equipo]]
