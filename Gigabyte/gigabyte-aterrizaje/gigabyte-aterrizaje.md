@@ -29,4 +29,4 @@ Sitio de aterrizaje / **catálogo GIGABYTE** tipo e-commerce **sin compra**: nav
 - [[gigaErp/gigaErp|gigaErp]] — ERP interno; también consume partpicker.
 - [[BluPartPicker]] — la API de datos.
 
-_Última sincronización: 2026-08-27_
+_Última sincronización: 2026-09-01_
