@@ -2,6 +2,15 @@
 
 ---
 
+## 2026-08-31 — Registro de salarios
+
+- Creada [[salarios]] con la foto de salarios base vigentes del equipo (8 personas, total mensual **$14.390.000 ARS**).
+- Agregada tabla de **historial de aumentos** para trackear ajustes de acá en adelante (fecha, personas, monto/%, motivo).
+- No consta ningún aumento cargado en la bóveda durante 2026 → esta foto queda como línea base.
+- Pendiente: verificar traslado de la paritaria Comercio CCT 130-75 (abr-jun 2026).
+
+---
+
 ## 2026-08-07 — Vacaciones + onboarding ERP (sync desde Slack `#talento`)
 
 ### Política de vacaciones

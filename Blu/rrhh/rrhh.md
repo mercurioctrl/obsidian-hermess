@@ -29,6 +29,7 @@ Emails corporativos unificados al dominio `@blustudioinc.com` (altas de ERP 2026
 
 ## Documentación
 
+- [[salarios]] — Salarios base vigentes e historial de aumentos 💰
 - [[politica-vacaciones]] — Política de vacaciones (Beneficio Blu, días hábiles) 🏖️
 - [[ausencias]] — Registro de ausencias y vacaciones cargadas en el ERP 📅
 - [[alertas-gestion]] — Panel de alertas y señales de gestión por persona 🚨
