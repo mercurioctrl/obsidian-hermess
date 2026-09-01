@@ -65,3 +65,7 @@ Toggle **Real / Test / Todas** en **ambas** pantallas, que **arranca en Real**.
 - [[arquitectura]] — patrón proxy, EnvioController
 - [[troubleshooting]] — deploy en caliente, config:cache
 - [[changelog#2026-07-28 — Sección Envíos (campañas de mailing)|changelog]]
+
+## Reclamo de evidencias (POEs)
+
+En el detalle de una campaña, cada destinatario tiene **🔔 Reclamar**: dispara a mano un mail pidiéndole las POEs (con **carga directa** por link, remitente `mktgigabyte@`, **BCC** a forwarding, contador de reclamos y **"Para" multi-email** con directorio por empresa). La fecha límite sale del correo archivado (`GET /envios/campanias/{id}/fecha-limite`). Detalle completo en [[modulos/reclamo-evidencias]].

@@ -6,6 +6,9 @@ Temas financieros, de cobranzas y de compliance de BLU Digital Agency.
 
 - [[caso-mercury-acer|Caso Mercury — Origen de fondos (Acer USD 12.322)]] — verificación
   de origen de fondos ante Mercury por el pago de Acer. Deadline 2026-07-09.
+- [[pagos-freelance-guillermo-avila|Pagos freelance — Guillermo Avila (QA)]] — respaldo
+  Mercury de pagos salientes a colaborador freelance de QA en México, vía USDT/Binance
+  (jun–ago 2026).
 
 ## Ver también
 

@@ -1,3 +1,30 @@
+## 2026-09-01 — Reclamo de Evidencias (POEs) desde Envíos
+
+Se construyó de punta a punta el **reclamo de POEs** dentro de [[modulos/envios|Envíos]]
+(PRs #27→#38, mergeadas a `Development`). El proyecto arrancó como algo más grande
+(Google-native que copiaba/verificaba el Slides + wizard + réplica del deck PDF) y el usuario
+lo **simplificó**: se **eliminó** todo eso y quedó solo el reclamo. Ver [[modulos/reclamo-evidencias]].
+
+**Qué entró:**
+- **Reclamo por destinatario** desde el detalle del envío (🔔 Reclamar): mail con la estética del
+  **correo original** (wordmark, "CAMPAÑA {nombre}", **cuadro de vencimiento** crema con la fecha
+  en naranja), **vista previa** del HTML, **contador (N)** de reclamos con fechas.
+- **Remitente propio** `mktgigabyte@blustudioinc.com` (mailer `reclamos` en `config/mail.php`,
+  env `MAIL_RECLAMOS_*`); **copia oculta (BCC)** siempre a `giga-forwarding@blustudioinc.com`.
+- **Carga directa de POEs**: botón en el mail → página pública por token (`/subir/{token}`) donde
+  el partner sube archivos; quedan **enlazados** al reclamo (quién/cuándo/IP). Chip **📎 POE (N)**
+  y lista de archivos en el modal. Tabla `reclamo_evidencia_archivos` (mig 0103).
+- **Fecha límite** tomada del **correo archivado** de la campaña (`/envios/campanias/{id}/fecha-limite`),
+  única por campaña, `DD-MM-YY`.
+- **"Para" multi-email + directorio por empresa** (`partner_contactos`, mig 0104): una empresa puede
+  tener varios contactos; se precargan todos (editable), y se guardan solos al enviar. La API de
+  Envíos no expone los emails, por eso el directorio.
+- **Fixes:** subida bloqueada por *mixed content* detrás del proxy → fetch con URL **relativa**
+  (`970d71a`); link de ejemplo de la vista previa mostraba 404 crudo → **página amable**.
+
+**Migraciones:** `0102` (reclamos_evidencia), `0103` (subida/archivos), `0104` (partner_contactos).
+**Convención:** commits **sin** firma de Claude (pedido del usuario).
+
 ## 2026-08-14 — Deploy release colaboración (Tareas 2.0, Solicitudes, Minutas, Notificaciones+Push, Campañas)
 
 `git pull` de `Development` (6 commits, `94c5637..57afd7e`, 196 archivos, migs **0061–0091**) y **deploy en caliente** de un bloque grande de trabajo del dev. Ver [[modulos/tareas]], [[modulos/solicitudes]], [[modulos/minutas]], [[modulos/notificaciones]], [[modulos/campanas]].

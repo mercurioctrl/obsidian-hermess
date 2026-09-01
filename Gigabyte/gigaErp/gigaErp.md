@@ -5,7 +5,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
 **Último commit:** `57afd7e` · **Última sincronización:** 2026-08-14
-**Último trabajo:** **Deploy del release de colaboración** (6 commits, migs `0061–0091`) desplegado en caliente por Claude. Entra un bloque grande de trabajo del dev: **Tareas 2.0** (subtareas, comentarios con menciones, adjuntos S3, enlaces, seguidores, relaciones, historial de estados), **Solicitudes** (piden convertirse en Tarea, aprobación por email firmado), **Minutas**, **Notificaciones** in-app + email + **push FCM**, y la **fusión Proyectos→Campañas**. Ver [[modulos/tareas]], [[modulos/solicitudes]], [[modulos/minutas]], [[modulos/notificaciones]], [[modulos/campanas]] y [[changelog#2026-08-14 — Deploy release colaboración (Tareas 2.0, Solicitudes, Minutas, Notificaciones+Push, Campañas)|changelog]]. Detalle del deploy (nueva dep PHP `kreait/laravel-firebase`, vendor vía `composer:2`) en [[memoria#Deploy de dependencia PHP nueva sin rebuild|memoria]] y [[troubleshooting]].
+**Último trabajo (2026-09-01):** **Reclamo de Evidencias (POEs)** dentro de [[modulos/envios|Envíos]]: reclamo por partner con mail estilo correo original (cuadro de vencimiento), **botón de carga directa** de POEs, remitente propio `mktgigabyte@` + **BCC** a forwarding, contador de reclamos, **"Para" multi-email** con directorio por empresa (`partner_contactos`) y fecha límite tomada del correo original. Se **descartó** el flujo Google-native/wizard/deck. Migs `0102–0104`. Ver [[modulos/reclamo-evidencias]] y [[changelog#2026-09-01 — Reclamo de Evidencias (POEs) desde Envíos|changelog]].
 
 ---
 
@@ -31,6 +31,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 - [[modulos/contenido]] — repositorio de material de marca en S3 (bucket privado + URLs firmadas), vista pública con branding
 - [[modulos/ploteos]] — branding físico de resellers (ploteos/vinilos) con mapa geolocalizado (Leaflet + Nominatim) e importación por Excel
 - [[modulos/envios]] — campañas de mailing (proxy a `envios.to-aor.us`, solo lectura) con filtro Real/Test prefiltrado en Real
+- [[modulos/reclamo-evidencias]] — reclamo de POEs por partner desde el detalle del envío: mail con carga directa + remitente marketing + BCC, contador, directorio de contactos por empresa (migs 0102–0104)
 - [[modulos/google-ads]] — reportes de Google Ads (API REST + GAQL, nativo Laravel) navegables entre fechas; cuentas Gigabyte AR/UY/CL bajo MCC; métricas de negocio (compras/monto goal-aware)
 - [[modulos/meta-ads]] — reportes de Meta Ads (Facebook/Instagram, Graph API) espejo de Google Ads; System User token; action_type canónico anti-duplicación; suma Alcance/Frecuencia/ROAS nativos
 - [[modulos/tareas]] — **Tareas 2.0**: Kanban + subtareas, comentarios con menciones, adjuntos S3, enlaces, seguidores, relaciones, historial de estados, número correlativo (migs 0064–0091)

@@ -40,6 +40,7 @@ Proyectos y áreas de BLU Digital Agency.
 
 ### [[finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
 - [[finanzas/caso-mercury-acer|Caso Mercury — Origen de fondos (Acer USD 12.322)]]
+- [[finanzas/pagos-freelance-guillermo-avila|Pagos freelance — Guillermo Avila (QA)]]
 
 ### [[minutas/minutas|minutas]] — Minutas de reunión por cliente
 - [[minutas/naevo/naevo|NAEVO]] — [[minutas/naevo/2026-08-12-etiquetas-y-estrategia|2026-08-12 · Etiquetas, empaques y estrategia comercial]]
