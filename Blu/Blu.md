@@ -45,6 +45,7 @@ Proyectos y áreas de BLU Digital Agency.
 - [[minutas/naevo/naevo|NAEVO]] — [[minutas/naevo/2026-08-12-etiquetas-y-estrategia|2026-08-12 · Etiquetas, empaques y estrategia comercial]]
 
 ### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
+- [[rrhh/salarios|salarios]] · [[rrhh/propuesta-aumento-2026-08|propuesta de aumento]] · [[rrhh/politica-vacaciones|política de vacaciones]] · [[rrhh/ausencias|ausencias]]
 - [[rrhh/alertas-gestion|alertas de gestión]] · [[rrhh/cumpleanos|cumpleaños]] · [[rrhh/changelog|changelog]]
-- [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]]
+- [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]] · [[rrhh/seguimiento-rrhh-2026-06-17|seguimiento 2026-06-17]]
 - **Equipo:** [[rrhh/equipo/catriel-mercurio|Catriel]] · [[rrhh/equipo/ayelen-mercurio|Ayelen]] · [[rrhh/equipo/alejandra-guidobono|Alejandra]] · [[rrhh/equipo/belu-ontivero|Belu]] · [[rrhh/equipo/barbara-carrillo|Bárbara]] · [[rrhh/equipo/ezequiel-manzano|Ezequiel]] · [[rrhh/equipo/guillermo-avila|Guillermo]] · [[rrhh/equipo/marbe-moreno|Marbe]] · [[rrhh/equipo/emanuel-ferreyra|Emanuel]] · [[rrhh/equipo/franco-callipo|Franco]] · [[rrhh/equipo/sebastian-fontan|Sebastián]]
