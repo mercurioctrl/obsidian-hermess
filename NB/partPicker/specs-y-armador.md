@@ -348,3 +348,11 @@ La Fase 0 es media jornada de trabajo y desbloquea todo lo demás. La Fase 1 es 
 - Credenciales de SQL Server: `.env` del proyecto
 
 **Conteos al momento del sync (2026-09-02):** spec_definitions 179 · matches 2.413 · product_specs 26.141 · skus 13.998 · category_mapping 22
+
+> Actualización 2026-09-02 (sesión posterior): +11 matches / +102 specs por el scrape de in-stock. Ver [[changelog]].
+
+## Ver también
+
+- [[partPicker]] — índice del proyecto
+- [[operacion]] — cómo correr, origen de stock, reconstrucción desde SQL Server, cobertura
+- [[changelog]] — historial de sesiones
