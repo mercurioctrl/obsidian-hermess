@@ -29,7 +29,8 @@
 - [[pacman]] — Proyecto Pacman
 - [[pega]] — Proyecto Pega
 - [[aplus-server]] — Servidor A+
-- `Laset/` — Laset
+- [[Laset/Laset|Laset]] — ERP (7 fronts Nuxt + 7 backs PHP/Laravel/FastAPI) desplegado local
+  - [[Laset/arquitectura|Arquitectura]] · [[Laset/operaciones|Operaciones]] · [[Laset/troubleshooting|Troubleshooting]] · [[Laset/stack|Stack]] · [[Laset/contexto|Contexto]] · [[Laset/changelog|Changelog]]
   - [[Laset/Martes|Martes]] · [[Laset/Miercoles|Miércoles]]
 ## 🟠 NB (NewBytes)
 
