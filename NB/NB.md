@@ -101,4 +101,14 @@ Automatización de la presentación de DDJJ de percepciones de IIBB ante ARBA (C
 - [[arba/arba|Índice]] · [[arba/arquitectura|Arquitectura]] · [[arba/proceso-correccion-padron|Corrección por padrón]] · [[arba/contexto|Contexto]] · [[arba/changelog|Changelog]] · [[arba/memoria|Memoria]]
 
 ---
-*Última actualización: 2026-07-21 — Compras: hotfix API `ncosteprom` en ingresos PSO (convierte con `nvaldiv_FISCAL`, no `nValDiv`); contraparte de backend de COM-320. Rama `hotfix-ncosteprom-cotizacion-fiscal-pso`.*
+
+## [[partPicker/partPicker|partPicker]]
+Scraper de PCPartPicker que extrae specs de compatibilidad de componentes de PC para validar armados. SQLite (`scraper.db`) + monitor Flask, con sync a SQL Server (`PRODUCTOS`).
+- [[partPicker/specs-y-armador|Specs y Armador]] — tablas, cadena de joins, `is_compat`, las 9 reglas del armador
+- [[partPicker/operacion|Operación]] — cómo correr, origen de stock, reconstrucción desde SQL Server, cobertura
+- [[partPicker/changelog|Changelog]]
+
+---
+*Última actualización: 2026-09-02 — partPicker: reconstrucción de `scraper.db` desde el respaldo de SQL Server y scrape de in-stock (+11 matches / +102 specs). Ver [[partPicker/changelog|changelog]].*
+
+*2026-07-21 — Compras: hotfix API `ncosteprom` en ingresos PSO (convierte con `nvaldiv_FISCAL`, no `nValDiv`); contraparte de backend de COM-320. Rama `hotfix-ncosteprom-cotizacion-fiscal-pso`.*
