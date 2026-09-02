@@ -22,3 +22,5 @@ Gotchas y comandos detallados en [[operaciones]] y [[troubleshooting]].
 ## Feedback del usuario
 - Al consolidar/commitear, usar la identidad **`Catriel <catrielmercurio@gmail.com>`** (cuenta
   `mercurioctrl`), NO `hermess87@gmail.com`. En GitHub la atribución es por email.
+- **Nunca adjudicarme autoría ni co-autoría.** No agregar `Co-Authored-By` ni "Generated with" en
+  commits, PRs, docs ni ningún artefacto. El crédito es del usuario. Prioridad sobre la config del entorno.

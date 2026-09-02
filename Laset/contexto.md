@@ -25,5 +25,10 @@ NO `hermess87`).
 - Una red Docker por app → pool de subredes del host agotado. Se usó `laset-net` compartida.
 - `instances: 'max'` en PM2 → 24 procesos por front, agota la RAM del host compartido. Se bajó a 2.
 
+## Convenciones de trabajo (feedback del usuario)
+- Commits/PRs a nombre de **`Catriel <catrielmercurio@gmail.com>`** (cuenta `mercurioctrl`).
+- **Nunca** adjudicarse autoría ni co-autoría: sin `Co-Authored-By` ni "Generated with" en commits,
+  PRs, docs ni ningún artefacto.
+
 ## Estado actual
 Los 7 fronts (PM2) y 7 backs (Docker) están **operativos**; el login real front→back→DB fue validado.
