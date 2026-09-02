@@ -27,6 +27,7 @@ Resúmenes de tarjetas de crédito Santander (Visa y Amex) y su análisis.
 - [[Visa 2026-06]]
 - [[Visa 2026-07]]
 - [[Visa 2026-08]]
+- [[Visa 2026-09]] — *período en curso (preliminar)*
 
 ### Amex
 - [[Amex 2026-01]]
@@ -37,3 +38,4 @@ Resúmenes de tarjetas de crédito Santander (Visa y Amex) y su análisis.
 - [[Amex 2026-06]]
 - [[Amex 2026-07]]
 - [[Amex 2026-08]]
+- [[Amex 2026-09]] — *período en curso (preliminar)*

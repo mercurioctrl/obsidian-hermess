@@ -6,7 +6,7 @@ tags: [finanzas, tarjeta, indice]
 
 > [[Finanzas]] · [[Tarjetas]] · [[Cuotas Activas]] · [[Gastos por Comercio]] · [[Pagos e Intereses]]
 
-Base: 16 resúmenes mensuales (Ene–Ago 2026). Titulares: **Delorenzi Guidobono** (titular) y **Catriel Ed Mercurio** (adicional).
+Base: 16 resúmenes mensuales (Ene–Ago 2026) + el período en curso (Set/26, preliminar). Titulares: **Delorenzi Guidobono** (titular) y **Catriel Ed Mercurio** (adicional).
 
 ## Visa — cuenta 1103119048
 
@@ -33,6 +33,16 @@ Base: 16 resúmenes mensuales (Ene–Ago 2026). Titulares: **Delorenzi Guidobono
 | Junio/26 | 08 Jun 26 | 12.141.847,07 | 979,69 | 3.720.200,00 | 5.202.483,18 | [[Amex 2026-06]] |
 | Julio/26 | 14 Jul 26 | 13.312.474,63 | 401,78 | 4.096.560,00 | 5.627.853,92 | [[Amex 2026-07]] |
 | Agosto/26 | 10 Ago 26 | 13.374.170,39 | 428,24 | 4.198.210,00 | 8.815.144,63 | [[Amex 2026-08]] |
+
+## Período en curso — Setiembre/26 (preliminar, API)
+
+> Cierre 27-Ago-26. Sin resumen emitido todavía: no incluye intereses, IVA ni percepciones.
+
+| Período | Vto | Consumos $ | U$S | Pagos aplicados $ | Nota |
+|---|---|--:|--:|--:|---|
+| Setiembre/26 | 04 Set 26 | 4.320.096,64 | 131,85 | 5.500.000,00 | [[Visa 2026-09]] |
+| Setiembre/26 | 07 Set 26 | 5.785.780,19 | 462,11 | 6.108.796,53 | [[Amex 2026-09]] |
+| **Total** | | **10.105.876,83** | **593,96** | **11.608.796,53** | |
 
 ## Observaciones rápidas
 
