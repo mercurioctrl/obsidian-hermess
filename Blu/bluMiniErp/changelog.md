@@ -4,6 +4,21 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-03 — Nuevo módulo Novedades (blog público por cliente)
+
+### Novedades (rama `feat/novedades-cliente`, migración 0110)
+- feat: **blog público multi-tenant por cliente** en `/n/{token}`, accesible por un **enlace secreto rotable** (capability URL, mismo modelo que las reservas tipo Calendly). **Sin login:** quien tiene el link entra. **Aislamiento total** — el cliente se resuelve **desde el token** y toda query se scopea por `cliente_id` (nunca un id entra por la URL).
+- **Se alimenta solo de data existente:** `Cliente → proyectos → PruebaEjecucion (período = entrada) → HitoEjecucion (avances)` + `ProyectoAdjunto` de imagen como evidencias. **Decisión:** se publican todos los hitos (las activaciones ya son trabajo curado; `hito.estado` es texto libre sin catálogo). `categoria_servicio` agrupa como chips "por aplicación/servicio".
+- **Migración 0110:** `clientes` sumó `novedades_token` (string 64, nullable, unique, `Str::random(48)`) + `novedades_publicado` (bool, default true). Sin tablas nuevas.
+- **Backend:** `NovedadesPublicController@show($token)` público (`throttle:60,1`, headers `X-Robots-Tag: noindex` + `Referrer-Policy: no-referrer`); `Cliente::{asegurarNovedadesToken,regenerarNovedadesToken,novedadesLink}` + `proyectos()`; `ClienteController` asegura token en `show` y suma `novedadesRegenerarToken` + `novedadesPublicado`; `ClienteResource` expone `novedades:{token,publicado,link}`. Base del link = `config('app.novedades_url')` (env `NOVEDADES_URL`, subdominio de prod) con fallback al host del request.
+- **Frontend:** `pages/n/[token].vue` (público, `layout:'auth'`, `<meta robots noindex>`, `/n` en `RUTAS_PUBLICAS`) con chips de apps que filtran y entradas por período con avances + grid de evidencias; card **"Novedades"** en `pages/clientes/[id].vue` (link + Copiar/Abrir + Regenerar + Publicar/Despublicar).
+- **Verificado:** 404 sin token; armado read-only contra cliente real (8 períodos, labels ES "Septiembre 2026", apps agregadas); build frontend incluye la página; `php -l` limpio. **No** probado con imágenes reales (proyectos de prueba sin adjuntos imagen). **Es seguimiento:** NO toca finanzas. Ver [[Modulo Novedades]].
+- docs: `CLAUDE.md` + `arquitectura/19-modulo-novedades.md`. Pendiente ops del subdominio de prod. Sin commitear/PR al momento de escribir esto.
+
+Archivos: `backend/database/migrations/0110_add_novedades_token_to_clientes.php`, `backend/app/Models/Cliente.php`, `backend/app/Http/Controllers/{NovedadesPublicController,ClienteController}.php`, `backend/app/Http/Resources/ClienteResource.php`, `backend/config/app.php`, `backend/routes/api.php`, `frontend/pages/n/[token].vue`, `frontend/pages/clientes/[id].vue`, `frontend/middleware/auth.global.ts`, `CLAUDE.md`, `arquitectura/19-modulo-novedades.md`
+
+---
+
 ## 2026-08-29 — Nuevo módulo Flota GSM (líneas prepagas)
 
 ### Flota GSM (PR #54, migración 0109)

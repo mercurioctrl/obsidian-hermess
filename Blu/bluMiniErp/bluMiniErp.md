@@ -2,7 +2,7 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-08-29
+**Ultima sincronizacion:** 2026-09-03
 
 ## Arquitectura
 
@@ -28,6 +28,7 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | [[Modulo Contabilidad]] | Sección `/contabilidad`: liquidación de impuestos del período (IVA/Ganancias/IIBB) + Libro IVA en Excel (Ventas/Compras). Datos fiscales del gasto (mig 0101). Lista de compras incompletas con acceso a completar, simulador de compras (what-if) y "Te queda después de impuestos", Rentabilidad por Cliente en el dashboard (2026-08-23). `VER_SECCION_CONTABILIDAD` (2026-08-21) |
 | [[Modulo Remitos]] | Desde un presupuesto genera un remito (copia sus ítems) independiente y editable (no toca el presupuesto). Varios por presupuesto. Tradicional (descripción+cantidad, sin precios), PDF formato BLU. Mig 0102 (2026-08-23) |
 | [[Modulo Flota GSM]] | Líneas SIM prepagas: alta de números, cargas, vencimiento (`fecha_carga + meses_vigencia`) y **alertas por email** a contactos por línea (al cargar + 15 días antes vía comando `gsm:alertas-vencimiento`). Seguimiento, no toca finanzas. Mig 0109. `VER_SECCION_FLOTA_GSM` (2026-08-29) |
+| [[Modulo Novedades]] | **Blog público multi-tenant por cliente** con enlace secreto rotable (capability URL tipo Calendly, sin login). Se alimenta de activaciones→hitos + adjuntos imagen; aislamiento por `cliente_id` resuelto desde el token. Seguimiento, no toca finanzas. Mig 0110 (rama `feat/novedades-cliente`, 2026-09-03) |
 | [[Reglas de Negocio]] | Reglas de dominio criticas y comportamientos no obvios |
 | [[Modulo Permisos]] | Sistema de permisos granular por usuario |
 | [[Medios de Pago]] | MercadoPago, Stripe y Mercury (cuenta + invoicing) |

@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-08-23 (Dashboard Rentabilidad por Cliente, nombres de cliente clickeables en toda la app, simulador de impuestos por proyecto + "Te queda después de impuestos", compras incompletas en Contabilidad. Antes: 2026-07-13 auditoría técnica + PR #10)
+Ultima sincronizacion: 2026-09-03 (nuevo módulo [[Modulo Novedades]] — blog público multi-tenant por cliente con enlace secreto rotable, mig 0110, rama `feat/novedades-cliente`; seguimiento, no toca finanzas). Antes: 2026-08-29 [[Modulo Flota GSM]] (mig 0109); 2026-08-23 Dashboard Rentabilidad por Cliente, nombres de cliente clickeables, simulador de impuestos, compras incompletas en Contabilidad; 2026-07-13 auditoría técnica + PR #10)
 
 ---
 
