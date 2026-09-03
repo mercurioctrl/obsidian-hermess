@@ -34,6 +34,11 @@ _Desglose de qué parte del salario base se paga formalizada (en blanco, vía re
 | [[equipo/marbe-moreno\|Marbe Moreno]] | $1.213.370 | $1.416.630 | $2.630.000 |
 | [[equipo/ezequiel-manzano\|Ezequiel Manzano]] | $1.228.209 | $1.401.791 | $2.630.000 |
 | [[equipo/emanuel-ferreyra\|Emanuel Ferreyra]] | $1.228.209 | $1.401.791 | $2.630.000 |
+| **Total mensual** | **$3.669.788** | **$4.220.212** | **$7.890.000** |
+
+**Compromiso mensual para estos tres:**
+- **En efectivo (en mano):** $4.220.212
+- **En blanco (transferencia):** $3.669.788
 
 > [!note] Resto del equipo
 > Para los demás integrantes no consta desglose blanco/negro cargado. [[blanqueo-franco|Franco Callipo]] cobra la totalidad en mano (ver nota de blanqueo).
