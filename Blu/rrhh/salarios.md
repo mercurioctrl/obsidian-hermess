@@ -25,6 +25,21 @@ Registro de salarios base del equipo y seguimiento de aumentos.
 
 ---
 
+## Composición blanco / negro
+
+_Desglose de qué parte del salario base se paga formalizada (en blanco, vía recibo) y qué parte en mano (informal). Foto: 2026-09-03._
+
+| Empleado | En blanco (ARS) | En mano (ARS) | Total (ARS) |
+|---|---:|---:|---:|
+| [[equipo/marbe-moreno\|Marbe Moreno]] | $1.213.370 | $1.416.630 | $2.630.000 |
+| [[equipo/ezequiel-manzano\|Ezequiel Manzano]] | $1.228.209 | $1.401.791 | $2.630.000 |
+| [[equipo/emanuel-ferreyra\|Emanuel Ferreyra]] | $1.228.209 | $1.401.791 | $2.630.000 |
+
+> [!note] Resto del equipo
+> Para los demás integrantes no consta desglose blanco/negro cargado. [[blanqueo-franco|Franco Callipo]] cobra la totalidad en mano (ver nota de blanqueo).
+
+---
+
 ## Historial de aumentos
 
 _Registrar acá cada ajuste: fecha, personas, monto/porcentaje y motivo (mérito, inflación, paritaria)._
