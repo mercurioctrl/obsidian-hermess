@@ -6,45 +6,52 @@ tags: [finanzas, tarjeta, cuotas]
 
 > [[Tarjetas]] · [[Índice Resúmenes]] · [[Pagos e Intereses]] · [[Visa 2026-09]] · [[Amex 2026-09]]
 
-Planes en curso **derivados de los movimientos reales del home banking** (consulta 29-Ago-2026,
-período que cierra el 27-Ago-26). Reemplaza la proyección oficial del banco del resumen de agosto,
-que ya quedó vieja: se iniciaron **14 planes nuevos** en este período (7 en cada tarjeta).
+Planes en curso **según los resúmenes emitidos** (Visa N° 516131 y Amex N° 252693, cierre 27-Ago-26,
+vto Set/26). Corrige la versión preliminar (API 29-Ago), a la que le faltaban planes que sí figuran
+en el PDF: se iniciaron **17 planes nuevos** en este período (10 en Visa, 7 en Amex).
 
 > [!info] Cómo leerlo
 > `Cuota` = la que se cobra en **este** período (vto Set/26). `Restantes` = cuántas quedan **después** de ésta.
 > `Comprometido` = importe de cuota x restantes (sin ajustes por inflación: las cuotas son fijas).
 
-## Visa — 26 planes en curso
+## Visa — 33 planes en curso
 
 | Comercio | Tarjeta | Cuota | Importe cuota $ | Restantes | Comprometido $ |
 |---|:--:|:--:|--:|:--:|--:|
 | MERPAGO*HARTEFLOORING | 1949 | 4/24 | 58.931,53 | 20 | 1.178.630,60 |
 | ROUGE DEVOTO | 3890 | 1/10 | 28.600,00 | 9 | 257.400,00 |
+| ROUGE PASEO ALCORTA | 3890 | 1/10 | 20.454,00 | 9 | 184.086,00 |
 | PASEO ALCORTA | 3890 | 1/9 | 121.111,12 | 8 | 968.888,96 |
 | EL BURGUES PALERMO | 1949 | 1/9 | 99.861,22 | 8 | 798.889,76 |
 | MERPAGO*PINTURERIASMM | 1949 | 4/12 | 351,28 | 8 | 2.810,24 |
 | JULERIAQUE | 1949 | 1/6 | 54.385,85 | 5 | 271.929,25 |
 | MERPAGO*PRINTALOT | 1949 | 1/6 | 8.536,54 | 5 | 42.682,70 |
 | LAS MARGARITAS MATADERO | 3890 | 2/6 | 52.534,07 | 4 | 210.136,28 |
+| MERPAGO*REINABATATA | 3890 | 2/6 | 29.747,49 | 4 | 118.989,96 |
 | MERPAGO*MEGATONE | 1949 | 6/9 | 182.555,33 | 3 | 547.665,99 |
+| MERPAGO*SKINKO | 3890 | 3/6 | 92.348,41 | 3 | 277.045,23 |
 | MERPAGO*LAOPTICASA | 3890 | 3/6 | 49.800,00 | 3 | 149.400,00 |
 | JAZMIN CHEBAR | 3890 | 9/12 | 11.743,80 | 3 | 35.231,40 |
 | ZARA | 3890 | 1/3 | 88.863,03 | 2 | 177.726,06 |
+| CERINI | 3890 | 1/3 | 40.333,34 | 2 | 80.666,68 |
 | MERPAGO*CHEEKY | 3890 | 1/3 | 35.100,00 | 2 | 70.200,00 |
+| DRAGO BERETTA Y CIA SA | 3890 | 5/6 | 120.658,69 | 1 | 120.658,69 |
 | CHATELET | 3890 | 2/3 | 109.666,66 | 1 | 109.666,66 |
 | CERINI | 3890 | 2/3 | 70.000,00 | 1 | 70.000,00 |
 | NANDA ARGENTINA | 3890 | 2/3 | 69.000,00 | 1 | 69.000,00 |
 | GINEBRA | 3890 | 2/3 | 65.819,00 | 1 | 65.819,00 |
 | BULLRICH | 3890 | 2/3 | 44.143,33 | 1 | 44.143,33 |
+| MERPAGO*CLAUDIAADORNO | 3890 | 1/2 | 42.500,00 | 1 | 42.500,00 |
 | REX | 3890 | 5/6 | 31.991,60 | 1 | 31.991,60 |
 | MAS VISION | 3890 | 11/12 | 23.512,00 | 1 | 23.512,00 |
 | TM DOT | 3890 | 2/3 | 19.333,33 | 1 | 19.333,33 |
 | MERPAGO*RESPAWN | 1949 | 9/9 | 254.444,44 | 0 | 0,00 |
 | PAYU*AR*ZARA | 1949 | 3/3 | 200.000,00 | 0 | 0,00 |
 | MERPAGO*NESPRESSOMP | 3890 | 3/3 | 88.372,62 | 0 | 0,00 |
+| MERPAGO*METASARGENTIN | 3890 | 3/3 | 41.600,00 | 0 | 0,00 |
 | CERINI | 3890 | 3/3 | 36.666,66 | 0 | 0,00 |
 | ROUGE PASEO ALCORTA | 3890 | 3/3 | 26.756,66 | 0 | 0,00 |
-| **Total** | | | **1.832.080,07** | | **5.145.057,16** |
+| **Total** | | | **2.219.722,00** | | **5.969.003,72** |
 
 ## Amex — 12 planes en curso
 
