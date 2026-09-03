@@ -1,3 +1,14 @@
+## 2026-09-03 — Presupuestos: selector de lista de precios por ítem
+
+Detalle en [[feature-modulo-presupuestos#Selector de lista de precios por ítem (2026-09-03, commit c0d9fd3)]].
+
+- En el `Builder.vue`, cada ítem de inventario tiene una flechita junto al P.Unit que abre un menú con las listas de precios del artículo (A–E, PM/SP/MK). Al elegir una, se aplica el precio a la línea.
+- Réplica del comportamiento de las órdenes editables. **Solo frontend**, sin backend ni schema.
+- En modo edición, la lista se trae de forma diferida por SKU/código (la tabla solo persiste `unitPrice`).
+- Commit `c0d9fd3` en `feature/modulo-presupuestos` (front). Build + `pm2 restart WebExpedition` OK.
+
+---
+
 ## 2026-09-01 — Módulo de Presupuestos + PDF por empresa
 
 Feature grande en dos ramas apiladas. Detalle en [[feature-modulo-presupuestos]] y [[feature-pdf-fiscal-por-empresa]].
