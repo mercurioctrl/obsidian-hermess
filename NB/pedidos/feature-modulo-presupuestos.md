@@ -16,7 +16,7 @@ CRUD `GET/POST/PUT/DELETE /v1/presupuestos`, grupo con `PresupuestoMiddleware` d
 
 - **Repository**: insert con `OUTPUT INSERTED.id`; `updateHeader` bindea **solo** las columnas del UPDATE (PDO exige match exacto binds↔tokens, si no `HY093`).
 - **Service**: totales u$d (subtotal + iva% + internalTax%), `number` por empresa, cliente/sellerName. **Ojo listado:** `list()` NO fuerza la empresa del usuario desbloqueado (si no, oculta las de otras empresas) — solo la fuerza cuando `unlockedCompanyFilter` es falsy.
-- Búsqueda de inventario **reusa** `GET /v1/items?search=&companyCode=` (devuelve `{response:[ProductDto]}`, con `price.value/iva/internalTax`).
+- Búsqueda de inventario **reusa** `GET /v1/items?search=&companyCode=` (devuelve `{response:[ProductDto]}`, con `price.value/iva/internalTax` y también `price.priceList` (mapa `{A..E, PM/SP/MK}`) + `price.letra`).
 
 ## Frontend (`pedidos-web-app-v1`)
 
@@ -27,16 +27,28 @@ CRUD `GET/POST/PUT/DELETE /v1/presupuestos`, grupo con `PresupuestoMiddleware` d
 - `mixins/presupuestoPdf.js` — `getPresupuestoEmisor(companyCode)` + `buildPresupuestoPdf()` (jsPDF+autoTable, encabezado fiscal por empresa). `getPresupuestoEmisor` está **duplicado** con `pages/orders.vue` (follow-up: unificar).
 - `store/presupuestos.js` + grupo `presupuestos` en `plugins/api.js`.
 
+### Selector de lista de precios por ítem (2026-09-03, commit `c0d9fd3`)
+
+Réplica del comportamiento de las órdenes editables, dentro del `Builder.vue`. **Solo frontend, sin cambios de backend ni schema.**
+
+- Cada ítem **de inventario** muestra una flechita (`caret-down`) azul junto al `P.Unit u$d`. Al clickearla se abre un `a-dropdown`/`a-menu` con las listas de precios del artículo (`A — u$d …`, `B`, …, y `PM/SP/MK` si aplican). La lista actualmente aplicada aparece resaltada (`.pl-active`).
+- Al elegir una, `applyPriceList(it, letra)` setea `it.unitPrice = priceList[letra]` y guarda `it.letra`; se recalculan los totales.
+- Ítems **libres** no tienen flechita (no tienen lista de precios).
+- **Modo edición:** los ítems guardados vuelven de la DB sin `priceList` (la tabla `presupuestos_items` solo persiste `unitPrice`). Se resuelve con fetch **diferido** `ensurePriceList(it)`: la 1ª vez que se abre la flechita, busca por SKU/código vía `/v1/items`, matchea por `itemId` y rellena `priceList`/`letra`. Muestra "Cargando…" y, si falla, "Sin listas".
+- Se agregaron `priceList`/`letra`/`loadingPriceList` a los ítems en `mapItem`/`addInventoryItem`/`addFreeItem` (pre-declarados para reactividad de Vue 2).
+- **No se persiste la letra elegida** (evita columna nueva + backend): solo se aplica el precio a la línea, que es lo pedido.
+
 ## Gotcha resuelto — la pestaña no aparecía
 
 `$auth.user` se puebla desde `/auth/user`, que pasa por `Dto/Auth/UserDto.php` (lista blanca). Faltaba declarar `presupuestos` ahí → el flag no llegaba al front. Ver [[decision-permiso-nuevo-agente]].
 
 ## Estado y follow-ups
 
-Completo y funcionando en local (build + `pm2 restart WebExpedition`). PRs abiertos en ambos repos. Follow-ups: convertir a pedido, ítems ARS nativo, estados (enviado/vencido), unificar `getPresupuestoEmisor`.
+Completo y funcionando en local (build + `pm2 restart WebExpedition`). PRs abiertos en ambos repos. Follow-ups: convertir a pedido, ítems ARS nativo, estados (enviado/vencido), unificar `getPresupuestoEmisor`, persistir la letra elegida por ítem (opcional).
 
 ## Ver también
 
 - [[feature-pdf-fiscal-por-empresa]] — encabezado por empresa que reusa
 - [[feature-ficha-producto]] — comparte el patrón de reuso de `/v1/items` y datos de empresa
+- [[decision-listas-precios-nombradas]] — listas de precios (fuente del `priceList`/`letra`)
 - [[changelog]]
