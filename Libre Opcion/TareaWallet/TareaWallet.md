@@ -13,6 +13,12 @@ Documentación de análisis e implementación de features en la API Laravel v4 y
 
 ## Resumen por área
 
+### Rama SNB-3991 — kits + categorías (2026-09-03)
+Análisis de la rama `SNB-3991` (2 commits sobre `Development`), sin cambios de código.
+- **Ocultar kits** en `/v4/inventories/products` por flag `PRODUCTOS_KIT_HABILITADOS` (default oculta; solo `=1` muestra → `ISNULL([A].kit,0)=0`). Mismo commit corrige **duplicados por stock** con subquery agregado (`SUM ... GROUP BY ID_ARTICULO`).
+- **Resolución de categorías** con filtro `categorias` en SEARCH_ENGINE: helpers `CategoryCatalogueUrl` (URI `/productos?categorias=<slug>&o=rel`) y `CategoryFilterSql` (filtra por `category_id_lo` vía slug/directUrl, ya no por `category_name`).
+- Gotchas: cambio de `.env` requiere `config:clear` (config cacheado); el repo no cachea; **el v4 local apunta a la DB de PRODUCCIÓN `SAFDB2`**. Ver [[contexto#2026-09-03]] y [[changelog#2026-09-03]].
+
 ### Entorno local — v3 + v4 + front (2026-08-06)
 Setup del stack en local sobre rama `blu-dev-staff`.
 - El login de la v4 (`POST /v4/auth/login`) **depende de la API v3**: `loginV3` hace `curl` server-side; si la v3 no responde → 500 (`json_decode(false)`). No es CORS.
@@ -51,4 +57,4 @@ Integración de MODO, GetNet y Payway en el checkout.
 
 ## Última sincronización
 
-2026-08-09
+2026-09-03

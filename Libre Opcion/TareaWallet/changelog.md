@@ -122,3 +122,20 @@
 - **chore:** `sitio-api-rest-v4-laravel/app/.env.example` — documentada la opción v3 local (`API_V3_URL=http://lo-website-api-rest`).
 - **memoria:** nueva `project_cors.md` (CORS ya es wildcard, no reinvestigar); `project_v3_local_setup.md` enlazada a la guía del repo.
 - Detalle en [[entorno-local]].
+
+---
+
+## 2026-09-03
+
+### Análisis rama `SNB-3991` — sección Productos (kits) + resolución de categorías
+
+Rama `SNB-3991` (sobre `origin/Development`, merge-base `1f601ac0`), 2 commits propios. Análisis, sin cambios de código.
+
+- **fix `a4b2dc04` — ocultar kits + evitar duplicados por stock** en `GET /v4/inventories/products` (`ProductsRepository.php`):
+  - Nuevo `config/products.php` → `'kit_enabled' => env('PRODUCTOS_KIT_HABILITADOS', false)`. Método `applyKitFilter()`: si el flag NO es truthy, agrega al WHERE `ISNULL([A].kit, 0) = 0`. **Default (0/vacío/ausente) = kits OCULTOS**; solo `=1` los muestra (diseño fail-safe). El `ISNULL(...,0)` evita filtrar por error a productos sin fila en `articulo` (LEFT JOIN → `kit=NULL` → pasa como no-kit).
+  - Duplicados por stock: el `LEFT JOIN [NewBytes_DBF].[dbo].[stocks]` directo se reemplaza por subquery agregado `stockJoin()` (`SUM(...) GROUP BY ID_ARTICULO`) → una fila por artículo, sin multiplicar el producto. Aplicado en `findByIdComplete`, `listProducts` y `countProducts`.
+- **feat `b0a2667a` — categorías con filtro `categorias` en SEARCH_ENGINE:**
+  - `App\Support\CategoryCatalogueUrl` (nuevo): URI de categoría → `/productos?categorias=<slug>&o=rel`. Extrae el slug del `directUrl` (query `categorias=` o último segmento del path) o hace `Str::slug(nombre)`. Reemplaza el viejo `str_replace(' ','-',strtolower(...))` en `HomeCategoryDto` y `RepositoriesService::getHeaderCategories`.
+  - `App\Support\CategoryFilterSql` (nuevo): arma `AND category_id_lo IN (SELECT C.id FROM [LO].[dbo].[categorias] ...)` matcheando por `directUrl`, `categorias=` o nombre normalizado. Cableado (case `'categorias'`) en `Catalogue`, `Category`, `Brand`, `AttributesList`, `IntervalPrices`, `OnlyReseller` — antes filtraba por `category_name IN (...)`.
+  - Tests nuevos para ambos helpers y el DTO.
+- Detalle de gotchas (config cache, DB de producción) en [[contexto#2026-09-03]].

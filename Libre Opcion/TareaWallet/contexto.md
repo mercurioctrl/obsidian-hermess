@@ -261,3 +261,40 @@ están **gitignorados** — si se reclonan los repos, hay que rehacerlos.
 > ⚠️ Tras cambiar `API_V3_URL` (o cualquier valor de `.env` usado en `config`), recargar php-fpm:
 > `docker exec sitio-api-rest-4.1-laravel sh -c 'kill -USR2 $(pgrep -o php-fpm)'`. OPcache
 > `validate_timestamps=Off` hace que `config:clear` no alcance para requests web.
+
+---
+
+## 2026-09-03
+
+### Flag `PRODUCTOS_KIT_HABILITADOS` — cómo aplica y cómo se activa
+
+**Semántica del flag** (`config/products.php` → `applyKitFilter()` en `ProductsRepository`):
+solo un valor truthy (efectivamente `=1`) muestra los kits. `0`, vacío o ausente → los **oculta**
+(default fail-safe). En SQL, ocultar = agregar `AND ISNULL([A].kit, 0) = 0` al WHERE; mostrar =
+no tocar el WHERE. Detalle de commits en [[changelog#2026-09-03]].
+
+**Para que un cambio de `.env` aplique — hay que limpiar el config cache.** En este entorno
+existe `app/bootstrap/cache/config.php` (config **cacheado**), así que `env()` queda congelado y
+editar `.env` **no hace nada** hasta:
+
+```bash
+docker exec sitio-api-rest-4.1-laravel php /var/www/app/artisan config:clear   # o config:cache
+```
+
+- **No hace falta reiniciar el contenedor ni recargar php-fpm** para un cambio de `.env`: el gotcha
+  de php-fpm (`kill -USR2`) es para ediciones de archivos **`.php`** (OPcache), no para `.env`.
+  `.env` lo maneja Dotenv/config → alcanza con `config:clear`/`config:cache`.
+- **El repositorio NO cachea** resultados: `ProductsRepository` corre el `DB::select()` crudo en
+  cada request (grep sin `Redis`/`Cache`/`remember` en `Service|Repository|Controller` de Inventory).
+  Apenas cambia el valor efectivo del flag, la próxima query lo refleja.
+
+### ⚠️ v4 local apunta a la DB de PRODUCCIÓN (SAFDB2)
+
+Verificado en vivo (`SELECT @@SERVERNAME, DB_NAME(), SUSER_SNAME()`):
+- `DB_HOST=190.210.23.97`, `DB_PORT=4444`, `DB_DATABASE=LO`, `DB_USERNAME=web`, driver `sqlsrv`.
+- `@@SERVERNAME = SAFDB2` — el **mismo servidor de producción** donde se creó la tienda oficial AMD
+  en prod. **Este entorno local NO usa una réplica**: escribe/lee contra prod.
+- Es un server multi-base: las queries cruzan `[LO]`, `[CS]`, `[NewBytes_DBF]`, `[NEW_BYTES]`,
+  `[PRODUCTOS]` con nombres de tres partes (el user `web` tiene permisos cross-database).
+
+> ⚠️ Cuidado al probar flags o cualquier escritura desde el v4 local: impacta producción.
