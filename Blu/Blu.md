@@ -50,3 +50,6 @@ Proyectos y áreas de BLU Digital Agency.
 - [[rrhh/alertas-gestion|alertas de gestión]] · [[rrhh/cumpleanos|cumpleaños]] · [[rrhh/changelog|changelog]]
 - [[rrhh/contexto|contexto]] · [[rrhh/agenda-primera-reunion|agenda primera reunión]] · [[rrhh/actividades-rrhh-it|actividades RRHH IT]] · [[rrhh/seguimiento-rrhh-2026-06-17|seguimiento 2026-06-17]]
 - **Equipo:** [[rrhh/equipo/catriel-mercurio|Catriel]] · [[rrhh/equipo/ayelen-mercurio|Ayelen]] · [[rrhh/equipo/alejandra-guidobono|Alejandra]] · [[rrhh/equipo/belu-ontivero|Belu]] · [[rrhh/equipo/barbara-carrillo|Bárbara]] · [[rrhh/equipo/ezequiel-manzano|Ezequiel]] · [[rrhh/equipo/guillermo-avila|Guillermo]] · [[rrhh/equipo/marbe-moreno|Marbe]] · [[rrhh/equipo/emanuel-ferreyra|Emanuel]] · [[rrhh/equipo/franco-callipo|Franco]] · [[rrhh/equipo/sebastian-fontan|Sebastián]]
+
+### [[seguros/seguros|seguros]] — Certificados de seguros con formato BLU
+- Certificados de cobertura (Barbuss) restilizados al formato de documento del ERP, sin el logo de la aseguradora · pólizas 254194 y 254339

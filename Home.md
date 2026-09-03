@@ -16,6 +16,7 @@
   - [[Blu/finanzas/finanzas|finanzas]] — Finanzas, cobranzas y compliance
   - [[Blu/minutas/minutas|minutas]] — Minutas de reunión por cliente
   - [[Blu/rrhh/rrhh|rrhh]] — Recursos Humanos
+  - [[Blu/seguros/seguros|seguros]] — Certificados de seguros con formato BLU
   - `direccion/` — Dirección
 
 ## 🏢 Clientes & Proyectos
