@@ -4,6 +4,20 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-03 — Nuevo módulo Requerimientos (tablero Trello por cliente)
+
+### Requerimientos (rama `feat/requerimientos-cliente`, PR #56, migración 0111)
+- feat: **segundo tab del portal del cliente** (mismo enlace secreto / `novedades_token` que [[Modulo Novedades]]): un **tablero tipo Trello** donde el cliente **carga requerimientos fácil**. Sin login, aislamiento total (cliente resuelto DESDE el token, todo scopeado por `cliente_id`).
+- **Reparto:** el **cliente** tiene Trello completo sobre **tarjetas** (crear/editar/mover/borrar + drag); el **equipo** gestiona **columnas** y **convierte un requerimiento en una Tarea** interna del proyecto (crea `Tarea` con numero auto y vincula `tarjeta.tarea_id`). Ver [[Modulo Tareas]].
+- **Migración 0111:** `req_columnas` (cliente_id, nombre, color, orden, `es_final`) + `req_tarjetas` (titulo, descripcion, `prioridad`, orden, `origen` CLIENTE/EQUIPO, `tarea_id`, `created_by`) + `clientes.requerimientos_habilitado`. Columnas por defecto: Solicitado/En análisis/En progreso/Hecho.
+- **Backend:** `RequerimientoService` (board + reordenar scopeados); `RequerimientosPublicController` (público, `throttle:120,1`, noindex) con **notificación a admins (in-app + push) al recibir un requerimiento del cliente**; `RequerimientoController` (interno: landing con conteos, board, CRUD columnas, convertirEnTarea); toggle `requerimientos_habilitado` + `ClienteResource`.
+- **Frontend:** `components/RequerimientosBoard.vue` (kanban con `vue-draggable-plus`, prop `interno`); `pages/n/[token].vue` con **tabs**; `pages/requerimientos/index.vue` (landing) + `[id].vue` (board interno + modal convertir); sección `/requerimientos` (`VER_SECCION_REQUERIMIENTOS`); card **"Portal del cliente"** en la ficha con toggles Novedades/Requerimientos.
+- **Verificado** (offline, data propia desechable + limpieza): seed de columnas, CRUD de tarjetas, mover entre columnas, aislamiento, cascade, convertir-en-tarea, notificación (4 admins → 4 in-app + push). Es seguimiento/intake, no toca finanzas.
+
+Archivos: `backend/database/migrations/0111_create_requerimientos_tables.php`, `backend/app/Models/{ReqColumna,ReqTarjeta,Cliente}.php`, `backend/app/Services/RequerimientoService.php`, `backend/app/Http/Controllers/{RequerimientosPublicController,RequerimientoController,ClienteController}.php`, `backend/app/Http/Resources/ClienteResource.php`, `backend/routes/api.php`, `frontend/components/RequerimientosBoard.vue`, `frontend/pages/n/[token].vue`, `frontend/pages/requerimientos/{index,[id]}.vue`, `frontend/{layouts/default.vue,middleware/auth.global.ts,pages/usuarios/index.vue,pages/clientes/[id].vue}`, `CLAUDE.md`, `arquitectura/20-modulo-requerimientos.md`
+
+---
+
 ## 2026-09-03 — Nuevo módulo Novedades (blog público por cliente)
 
 ### Novedades (rama `feat/novedades-cliente`, migración 0110)
