@@ -14,6 +14,10 @@ Sección **Marketing → Addons**. Catálogo de lanzadores a apps/paneles extern
 - `AddonMarketingController`: `index` (orden por `created_at`), `store` (setea `usuario_id`), `update`, `destroy`.
 - Rutas: `apiResource('addons')->only([index,store,update,destroy])` bajo `auth:sanctum`.
 
+## Etiquetas por addon (2026-09-02)
+- Tabla pivote `addon_etiqueta` (mig `0107`) — un addon puede tener varias [[modulos/tareas|etiquetas]] (mismas `Etiqueta`).
+- Combobox `AddonEtiquetasCombobox.vue` en el modal / listado (`pages/addons/index.vue`); `AddonMarketingResource` expone las etiquetas.
+
 ## Permiso
 - `VER_SECCION_ADDONS` (opt-in). Admin ve todo. Bloqueo **solo frontend** — ver [[arquitectura#Permisos de visualización por sección|arquitectura]].
 
@@ -21,4 +25,4 @@ Sección **Marketing → Addons**. Catálogo de lanzadores a apps/paneles extern
 - Token en **texto plano** en DB; viaja literal en la URL al abrir. Tenerlo en cuenta si los tokens son sensibles.
 
 ## Ver también
-- [[arquitectura]] · [[changelog]] · [[gigaErp]]
+- [[modulos/campanas]] · [[arquitectura]] · [[changelog]] · [[gigaErp]]

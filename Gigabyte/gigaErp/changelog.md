@@ -1,3 +1,30 @@
+## 2026-09-02 — Deploy cambios de Eze: flujo de estados en Campañas + calendario de trabajo en Tareas (GIGA-45→53)
+
+Se bajaron y desplegaron en `Development` los commits de Ezequiel Manzano `9d1bc8d` ("feat: archivo 1-9") y `e069c44` ("fix tarea"), que cierran los tickets **GIGA-45 a GIGA-53**. Deploy en caliente (imagen horneada, rebuild backend roto): `docker cp` a los 2 containers (backend + scheduler), 10 migraciones `0105→0114`, `route:clear`+`view:clear` (**SIN** `config:cache`, para no perder los creds de Google/Meta Ads que viven solo en el config cache), rebuild del frontend + `docker restart nginx`. Sin deps nuevas (composer/package intactos).
+
+**Tareas / Calendario ([[modulos/tareas]]):**
+- **Vista calendario de trabajo** dentro de `/tareas` (toggle kanban/calendario): "sesiones de trabajo" por día calculadas del historial de estados — abre en columna `es_trabajo` (en curso), cierra en `es_cierre` (en revisión/listo). Reusa los mismos filtros del kanban. Componente `TareasCalendarioSesiones.vue`. (GIGA-46)
+- El **calendario original** (`/calendario`) **ya no muestra tareas**: solo fechas comerciales, efemérides, eventos y campañas. (GIGA-47)
+- **Card de detalle**: campos `fecha_inicio_trabajo`/`fecha_fin_trabajo` editables inline; **preset** de inicio (fecha futura → badge "Programado", se proyecta punteada en el calendario) con **auto-pase a "en curso"** (inmediato si ≤ hoy, o vía scheduler `AplicarInicioTrabajoTareas` de madrugada); la tarea se **extiende** hasta finalizar y se **tacha** (`line-through`) en el calendario al quedar `es_finalizada`. (GIGA-48)
+- **Enlaces/comentarios/adjuntos** guardan inline (Enter / auto-subida) y el enlace **conserva su nombre** (resuelve el `<title>` real). (GIGA-49) — *Nota: en Enlaces persiste el botón "+"; se dio por cumplido igual.*
+
+**Campañas ([[modulos/campanas]]):**
+- **Varias acciones por campaña**: `tipo_id` se movió de la campaña a cada línea `campana_clientes` (mig 0110); cada línea = 1 acción con `presupuesto_usd`, subtotal por cliente y total general. Botón **+Agregar acción** desde la campaña. (GIGA-51)
+- **Estado condicional por tipo de acción**: resolutor único `App\Support\FlujoEstadoAccion`; `tipos_accion.flujo_estado` (mig 0111). Tipo "Publicidad digital" → flujo `EstadoFondoCliente` (Mail enviado → Rechazó → En curso → Pendiente de reporte → Reporte recibido → Pago en procesamiento → Finalizado); resto → `EstadoAccionGenerico` (Planificada, En curso, Pausada, Finalizada, Cancelada). Composable `useEstadosAccion.ts`. (GIGA-52)
+- **Integración Campañas ⇄ Fondos**: `App\Services\CampanaFondoSync` refleja cada línea con presupuesto como fila en Fondos (`acciones_marketing`, `origen_campana=true`, **misma fila, sin duplicar**); **alta unificada multi-cliente** (`clientes[]`); editar una acción `origen_campana` desde Fondos redirige a la campaña. (GIGA-53)
+
+**Fondos:** **fila de total** al pie de la tabla de Fondos (`marketing/index.vue`, slot `footer` nuevo en `DataTable.vue`; total sobre todas las páginas filtradas, `meta.total_monto_usd`). (GIGA-50)
+
+**Solicitudes ([[modulos/solicitudes]]):** borrar/editar una solicitud queda restringido a **el autor o quien tiene `VALIDAR_SOLICITUDES`** (antes lo podía borrar cualquiera). *Nota: el PDF pedía que borrar fuese solo de "Vale"/validador, no el autor; se dio por cumplido igual por ahora.* (GIGA-45)
+
+**Addons ([[modulos/addons]]):** etiquetas por addon (`addon_etiqueta`, mig 0107) con combobox `AddonEtiquetasCombobox.vue`.
+
+**Migraciones:** `0105` (es_trabajo/es_cierre en columnas_tarea), `0106` (fechas_trabajo en tareas), `0107` (addon_etiqueta), `0108` (tarea_cliente), `0109` (solicitud_cliente), `0110` (tipo_id → campana_clientes), `0111` (flujo_estado en tipos_accion), `0112` (limpiar estado ciclo fuera de flujo), `0113` (campos_accion en campana_clientes), `0114` (es_finalizada en columnas_tarea).
+
+**Nuevos backend:** enums `EstadoAccionGenerico`/`EstadoFondoCliente`, `Support\FlujoEstadoAccion`, service `CampanaFondoSync`, middleware `EnsurePuedeGestionarTareas`, command `AplicarInicioTrabajoTareas`.
+
+---
+
 ## 2026-09-01 — Reclamo de Evidencias (POEs) desde Envíos
 
 Se construyó de punta a punta el **reclamo de POEs** dentro de [[modulos/envios|Envíos]]
