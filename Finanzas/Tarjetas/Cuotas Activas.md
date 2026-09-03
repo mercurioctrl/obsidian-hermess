@@ -73,31 +73,21 @@ en el PDF: se iniciaron **17 planes nuevos** en este período (10 en Visa, 7 en 
 
 ## Cuota fija mensual comprometida
 
-**Este período (vto Set/26): $2.767.722,35/mes** entre las dos tarjetas.
+**Facturado este período (vto Set/26): $3.155.364,28/mes** (Visa $2.219.722,00 + Amex $935.642,28).
+
+Proyección de las **próximas cuotas a vencer** según ambos resúmenes emitidos (los meses son los que informa el banco en cada PDF):
 
 | Mes | Visa $ | Amex $ | Total $ |
 |---|--:|--:|--:|
-| Setiembre/26 | 1.832.080,07 | 935.642,28 | 2.767.722,35 |
-| Octubre/26 | 1.225.839,69 | 693.700,14 | 1.919.539,83 |
-| Noviembre/26 | 792.373,77 | 693.700,14 | 1.486.073,91 |
-| Diciembre/26 | 668.410,74 | 193.742,40 | 862.153,14 |
-| Enero/27 | 424.311,61 | 193.742,40 | 618.054,01 |
-| Febrero/27 | 371.777,54 | 193.742,40 | 565.519,94 |
-| Marzo/27 | 308.855,15 | 0,00 | 308.855,15 |
-| Abril/27 | 308.855,15 | 0,00 | 308.855,15 |
-| Mayo/27 | 308.855,15 | 0,00 | 308.855,15 |
-| Junio/27 | 87.531,53 | 0,00 | 87.531,53 |
-| Julio/27 | 58.931,53 | 0,00 | 58.931,53 |
-| Agosto/27 | 58.931,53 | 0,00 | 58.931,53 |
-| Setiembre/27 | 58.931,53 | 0,00 | 58.931,53 |
-| Octubre/27 | 58.931,53 | 0,00 | 58.931,53 |
-| Noviembre/27 | 58.931,53 | 0,00 | 58.931,53 |
-| Diciembre/27 | 58.931,53 | 0,00 | 58.931,53 |
-| Enero/28 | 58.931,53 | 0,00 | 58.931,53 |
-| Febrero/28 | 58.931,53 | 0,00 | 58.931,53 |
-| Marzo/28 | 58.931,53 | 0,00 | 58.931,53 |
-| Abril/28 | 58.931,53 | 0,00 | 58.931,53 |
-| Mayo/28 | 58.931,53 | 0,00 | 58.931,53 |
+| Setiembre/26 | 1.571.881,46 | 693.700,01 | 2.265.581,47 |
+| Octubre/26 | 975.256,85 | 693.700,01 | 1.668.956,86 |
+| Noviembre/26 | 810.960,49 | 193.742,28 | 1.004.702,77 |
+| Diciembre/26 | 474.512,95 | 193.742,28 | 668.255,23 |
+| Enero/27 | 392.231,39 | 193.742,28 | 585.973,67 |
+| Febrero/27 | 329.309,07 | 0,00 | 329.309,07 |
+| Marzo/27 en adelante | 1.414.850,50 | 0,00 | 1.414.850,50 |
+
+> El remanente "Marzo/27 en adelante" de la Visa incluye sobre todo **HARTEFLOORING** (1949, 4/24 → sigue a ~$58.931,53/mes hasta ~Mayo/28) y las cuotas largas de **ROUGE** (1/10). El Express Plan de la Amex se agota en Enero/27.
 
 ## Planes nuevos de este período
 
@@ -114,16 +104,19 @@ en el PDF: se iniciaron **17 planes nuevos** en este período (10 en Visa, 7 en 
 | RAPSODIA | 4375 | 1/3 | 80.000,00 | 240.000,00 |
 | JULERIAQUE | 1949 | 1/6 | 54.385,85 | 326.315,10 |
 | LAS PEPAS | 4375 | 1/6 | 49.999,70 | 299.998,20 |
+| MERPAGO*CLAUDIAADORNO | 3890 | 1/2 | 42.500,00 | 85.000,00 |
+| CERINI | 3890 | 1/3 | 40.333,34 | 121.000,02 |
 | MERPAGO*CHEEKY | 3890 | 1/3 | 35.100,00 | 105.300,00 |
 | PRUNE | 4375 | 1/6 | 34.368,62 | 206.211,72 |
 | ROUGE DEVOTO | 3890 | 1/10 | 28.600,00 | 286.000,00 |
 | MERPAGO*ADIDAS | 4375 | 1/6 | 22.740,88 | 136.445,28 |
+| ROUGE PASEO ALCORTA | 3890 | 1/10 | 20.454,00 | 204.540,00 |
 | MERPAGO*PRINTALOT | 1949 | 1/6 | 8.536,54 | 51.219,24 |
-| **Total** | | | **1.086.383,90** | **5.555.180,11** |
+| **Total** | | | **1.189.671,24** | **5.965.720,13** |
 
 ## Planes que terminan en este período
 
-> Última cuota ahora: liberan **$848.182,52/mes** a partir de Octubre/26.
+> Última cuota ahora: liberan **$889.782,52/mes** a partir de Octubre/26.
 
 | Comercio | Tarjeta | Cuota | Importe $ |
 |---|:--:|:--:|--:|
@@ -133,12 +126,13 @@ en el PDF: se iniciaron **17 planes nuevos** en este período (10 en Visa, 7 en 
 | PAYU-ZARA 853639 | 4375 | 3/3 | 100.000,00 |
 | MERPAGO*NESPRESSOMP | 3890 | 3/3 | 88.372,62 |
 | JAZMIN CHEBAR PASEO | 4375 | 12/12 | 41.942,14 |
+| MERPAGO*METASARGENTIN | 3890 | 3/3 | 41.600,00 |
 | CERINI | 3890 | 3/3 | 36.666,66 |
 | ROUGE PASEO ALCORTA | 3890 | 3/3 | 26.756,66 |
 
-**Neto:** +$1.086.383,90 de planes nuevos − $848.182,52 que terminan = **+$238.201,38/mes**.
+**Neto:** +$1.189.671,24 de planes nuevos − $889.782,52 que terminan = **+$299.888,72/mes**.
 
 Contradice la regla 6 de [[contexto]] ("freno a compras nuevas en cuotas largas"). Ver [[Proyección de Pago]].
 
 ---
-*Derivado de la API del home banking Santander, 2026-08-29. Actualizar contra el PDF del resumen cuando se emita.*
+*Actualizado contra los PDF de los resúmenes emitidos (Visa N° 516131 · Amex N° 252693, cierre 27-08-2026), consultados 2026-09-03.*
