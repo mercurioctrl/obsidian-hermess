@@ -4,7 +4,7 @@ Reposicionamiento de marca **D-Link Argentina** (estudio [[contexto|Blu]]). Obje
 prestigio y presencia, y competir contra TP-Link. Territorio: **"Confiabilidad simple"**
 (pilares ANDA / FÁCIL / RESPALDADO).
 
-Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-08-12**
+Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-09-03**
 
 ## Meta
 - [[arquitectura]] — cadena de entregables, piezas HTML, paletas, generación de PDF/MP4 e invariantes
@@ -25,6 +25,11 @@ Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-08-12**
 - [[facebook-plan|Plan Facebook]] — comunidad, Marketplace, remarketing + puerta al B2B
 - [[newsletter-campana|Campaña de Newsletter]] — email propio: reseñas (B2C) + Partners (B2B)
 
+## Contenido / Producción
+- [[videos-clips-ia|Videos / Clips IA]] — clips verticales de producto para ML/Reels/TikTok generados
+  con IA (explainer con presentadora + reel "CONEXIÓN EN CADA RINCÓN"); pipeline fal.ai + ffmpeg +
+  motion graphics HTML. En `/var/www/d-link/clips/`.
+
 ## Pitch y landings
 - Deck visual HTML en `04-pitch/index.html` (**17 slides**, navegable con flechas)
 - [[pitch-guion-presentador|Guión del presentador]] — qué decir slide por slide + objeciones
@@ -36,3 +41,4 @@ Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-08-12**
 
 ## Pendiente
 - Cerrar gaps de data: scraping MercadoLibre + sell-through de D-Link (para fijar metas numéricas)
+- Videos: derechos de la voz clonada antes de publicar; extender el pipeline a otros héroes

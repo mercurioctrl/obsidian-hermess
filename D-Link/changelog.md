@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-09-03
+
+- **Nuevo formato: [[videos-clips-ia|videos/clips de producto con IA]]** para MercadoLibre / Reels /
+  TikTok (en `/var/www/d-link/clips/`). Dos entregables finales: **explainer con presentadora IA**
+  (`explainer_rico2_final.mp4`, 16.9s) y **reel de producto** "CONEXIÓN EN CADA RINCÓN"
+  (`reel_conexion.mp4`, 25.5s).
+- **Pipeline nuevo con fal.ai:** Veo 3 (video de producto/base de presentadora), `sync-lipsync/v2`
+  (lip-sync), `flux-pro` (retrato), `minimax/voice-clone` (voz argentina clonada), Whisper
+  (subtítulos). Kling con **`CFG=0.2`** para evitar rayos de luz inventados. Scripts reutilizables en
+  `clips/` (`generate.sh`, `veo_generate.sh`, `build_*.sh`) + `clips/README.md`.
+- **Esquemas + placa como motion graphics animados** (no imágenes pegadas): `clips/scheme-anim.html`
+  renderizado con `.claude/scripts/render_video.py`. La placa final replica la pieza oficial
+  `dlink_brand_garantia` con logo real.
+- **Voz:** se clonó una voz **argentina real** (sample de YouTube) porque el TTS neutro no convencía.
+  ⚠️ **Derechos de voz** pendientes para publicar. Copy final corto y rioplatense (sin "che").
+- **Estética:** azul D-Link real **`#0187AA`**, badges **redondeados**, logos reales, claim
+  "El WiFi que anda". Material/stock del M15 organizado en `clips/material/`.
+- Documentación (`clips/README.md` + memoria del proyecto) y bóveda sincronizadas.
+
 ## 2026-08-11
 
 - **Nueva familia `plan-trabajo.*`** (2º entregable cara al cliente, deployado en `dlink.blu.net.ar`):
@@ -58,4 +77,4 @@
   [[plan-campana]] y deck del pitch. Vinculación con Obsidian.
 
 ## Ver también
-[[D-Link]] · [[arquitectura]] · [[contexto]] · [[plan-trabajo]]
+[[D-Link]] · [[arquitectura]] · [[contexto]] · [[plan-trabajo]] · [[videos-clips-ia]]

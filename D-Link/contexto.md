@@ -30,10 +30,18 @@ el problema es **relevancia**, no calidad.
   `dlink.blu.net.ar`. El cliente sumó el workstream **Site** e **Inversión USD 2.300/mes**. El usuario
   pide regenerar los **4 artefactos juntos** (landing + PDF + 2 videos) al cambiar contenido, y numerar
   workstreams/slides **secuencialmente sin saltos**. Los **chibis** se probaron y se removieron.
+- **[[videos-clips-ia|Videos/clips con IA] (sep-2026):** el usuario pidió clips de producto para
+  MercadoLibre/redes generados por IA. Feedback iterado y confirmado:
+  - Estilo **UGC "sin manos"** full-bleed (rechazó el recuadro con barras y el "collage" de imágenes
+    pegadas); los esquemas deben ir **animados** (motion graphics), no estáticos.
+  - **Calidad:** Veo 3 (el turbo de Kling le pareció flojo). Sin "rayos de luz" sobre el router.
+  - **Voz argentina real clonada** (el TTS neutro no le gustó); más calma, sin decir "che".
+  - Badges/gráficos con **esquinas redondeadas** y **logos reales**; placa final estilo pieza oficial.
+  - ⚠️ **Derechos de voz** pendientes (la voz clonada es de un tercero).
 
 ## Gap a cerrar (antes de fijar metas)
 Scraping de MercadoLibre (share-of-shelf, precios, reviews vs TP-Link/Mercusys) + sell-through de
 D-Link. Las metas numéricas se fijan **después del mes 1**, con baseline real.
 
 ## Ver también
-[[arquitectura]] · [[landings]] · [[plan-trabajo]] · [[memoria]] · [[D-Link]]
+[[arquitectura]] · [[landings]] · [[plan-trabajo]] · [[videos-clips-ia]] · [[memoria]] · [[D-Link]]
