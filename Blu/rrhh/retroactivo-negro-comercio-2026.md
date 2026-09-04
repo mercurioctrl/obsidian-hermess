@@ -18,17 +18,20 @@ _Cálculo de la deuda acumulada sobre la **parte en negro** de Marbe, Eze y Ema,
 
 ## Supuestos del cálculo
 
-- **Criterio elegido: solo porcentajes** (el más conveniente para la empresa entre los costeados).
-- Se aplica **solo el porcentaje** de la paritaria sobre el monto en negro de cada uno. **No** se incluyen las sumas fijas no remunerativas.
-- El monto en negro se considera **fijo** en su valor actual durante todo 2026 (**congelado desde principio de año, sin ningún aumento**).
+- **Criterio elegido: solo porcentajes** — y es además el criterio **completo y correcto**, no un recorte.
+- **Las sumas fijas no remunerativas de la paritaria (ene-sep) ya se pagaron a través de la parte en blanco.** Por eso el ajuste sobre el negro es únicamente el **porcentaje**: sumarle también las fijas sería pagarlas dos veces.
+- Aplicado sobre el monto en negro de cada uno. El negro se considera **congelado en su valor actual desde principio de 2026** (sin ningún aumento).
 - Los % son **acumulados sobre la base** combinando los acuerdos paritarios de abril-septiembre.
+- **Resultado combinado:** blanco (porcentajes + sumas fijas ya dadas) + negro (porcentaje con este ajuste) ≈ los chicos reciben prácticamente **toda la paritaria real**. No queda hueco.
 
 > [!info] La parte en mano se paga como "bonos"
 > El componente en negro se abona vía bonos y equivale a ~la mitad del sueldo (Marbe 53,9%, Eze/Ema 53,3% del total). Como el sueldo total está **muy por encima del básico de convenio**, ese excedente es "mayor beneficio" **absorbible** (LCT art. 260). Legalmente la empresa podría sostener que **no adeuda** ajuste sobre esa porción; aplicar el % es un **gesto de retención**, no una obligación.
 
-## Tramo enero–marzo 2026 (excluido por el criterio)
+## Tramo enero–marzo 2026 y sumas fijas — ya cubiertas por el blanco
 
-El aumento de Comercio de ene-mar 2026 **no fue porcentaje sino suma fija**: $100.000/mes (refuerzo $40.000 + $60.000, acuerdo dic-2025/mar-2026), incorporado al básico en abril. Al usar el criterio "solo porcentajes", este tramo **no suma** al retroactivo. Si en algún momento se decidiera reconocer las sumas fijas de todo el año, se agregarían ~$960.000 por persona (ene-sep), llevando el total a ~$4.461.313.
+El aumento de Comercio de ene-mar 2026 **no fue porcentaje sino suma fija** ($100.000/mes, refuerzo $40.000 + $60.000, acuerdo dic-2025/mar-2026), y las sumas fijas continuaron abr-jun ($100.000) y jul-sep ($120.000). **Todas esas sumas fijas se pagaron a través de la parte en blanco**, así que no corresponde volver a darlas sobre el negro. Por eso el ajuste del negro es correctamente solo porcentual y el cálculo queda **completo**.
+
+**Paritaria real (contexto):** sobre el sueldo de convenio (Maestranza/Administrativo A), la paritaria ene-sep 2026 fue **≈30% acumulado** (~$1.155.795 → ~$1.502.759), porque las sumas fijas pesan mucho sobre un básico de ~$1,05M. Ese 30% es lo que cobró un trabajador en el mínimo; para sueldos de $2,63M (2,5× el básico) las fijas representan un % mucho menor, y el excedente sobre convenio es "mayor beneficio" absorbible (art. 260).
 
 Fuentes: [FAECYS — Circular escalas dic-2025/abr-2026](https://www.faecys.org.ar/circular-escalas-salariales-diciembre-2025-abril-2026-cct-130-75-sec-de-as-laborales/) · [SEC — Nuevo acuerdo CCT 130/75](https://www.sec.org.ar/novedades.php?pid=733%3Fp%3D)
 
