@@ -40,6 +40,9 @@ _Desglose de qué parte del salario base se paga formalizada (en blanco, vía re
 - **En efectivo (en mano):** $4.220.212
 - **En blanco (transferencia):** $3.669.788
 
+> [!important] Dinámica de ajustes
+> La **parte en blanco** viene recibiendo los aumentos de la **paritaria Comercio (CCT 130-75)** hasta el día de hoy — por eso los montos formalizados son distintos entre empleados (reflejan su antigüedad/categoría). La **parte en negro se mantiene fija**, no se le aplicaron esos ajustes. Al evaluar aumentos, tener presente que solo la porción en blanco quedó actualizada por paritaria.
+
 > [!note] Resto del equipo
 > Para los demás integrantes no consta desglose blanco/negro cargado. [[blanqueo-franco|Franco Callipo]] cobra la totalidad en mano (ver nota de blanqueo).
 

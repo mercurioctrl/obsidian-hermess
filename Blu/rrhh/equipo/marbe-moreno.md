@@ -57,6 +57,9 @@ _Foto: 2026-09-03. Ver [[../salarios|Salarios — Equipo BLU]]._
 | En mano (efectivo) | $1.416.630 |
 | **Total mensual** | **$2.630.000** |
 
+> [!important] Dinámica de ajustes
+> La parte en blanco viene recibiendo los aumentos de la paritaria Comercio (CCT 130-75) hasta hoy; la parte en negro se mantiene fija sin esos ajustes.
+
 ---
 
 ## Perfil RRHH
