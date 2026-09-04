@@ -30,5 +30,18 @@ NO `hermess87`).
 - **Nunca** adjudicarse autoría ni co-autoría: sin `Co-Authored-By` ni "Generated with" en commits,
   PRs, docs ni ningún artefacto.
 
+## Decisiones (2026-09-04)
+- **Flujo de trabajo del front**: toda funcionalidad sale de una rama `feature/*` creada desde
+  **`origin/blu-dev-staff` (remoto)** y se abre PR contra `blu-dev-staff`. No usar `main` local (divergió).
+  Ver [[memoria#Flujo git del front (monorepo `frontErp`)]].
+- **Ocultamientos reversibles**: los pedidos de "sacar/ocultar" columnas, pestañas, botones y checkboxes se
+  implementan **comentando** el código (HTML en templates, `/* */` en JS), no borrando, para poder revertir.
+- **Módulo presupuestos**: vivía en el repo interno New-Bytes y no estaba en el monorepo; se portó a
+  `frontErp` de forma aditiva, ya sin IVA/Imp. Interno.
+- **Columna en blanco de Órdenes (compras)**: no existía como columna; era artefacto de columnas
+  `fixed: 'left'`. Se resolvió quitando `fixed` de Fecha/Nº Orden/Pedido (dejan de quedar fijas al scrollear).
+- Detalle de los 5 PRs en [[changelog]].
+
 ## Estado actual
 Los 7 fronts (PM2) y 7 backs (Docker) están **operativos**; el login real front→back→DB fue validado.
+En curso: 5 PRs de simplificación de UI del front abiertos contra `blu-dev-staff` (2026-09-04).

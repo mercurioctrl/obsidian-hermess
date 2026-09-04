@@ -24,4 +24,4 @@ usa sufijo `laset` (contenedores, red Docker, instancias PM2) y puertos propios 
 - [[Martes]] · [[Miercoles]] — ayudamemoria y tickets del equipo.
 
 ---
-Última sincronización: 2026-09-02
+Última sincronización: 2026-09-04

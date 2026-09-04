@@ -24,3 +24,17 @@ Gotchas y comandos detallados en [[operaciones]] y [[troubleshooting]].
   `mercurioctrl`), NO `hermess87@gmail.com`. En GitHub la atribución es por email.
 - **Nunca adjudicarme autoría ni co-autoría.** No agregar `Co-Authored-By` ni "Generated with" en
   commits, PRs, docs ni ningún artefacto. El crédito es del usuario. Prioridad sobre la config del entorno.
+
+## Flujo git del front (monorepo `frontErp`)
+- Para cambios en el front (`/var/www/laset/frontLaset` → `LasetCorp/frontErp`): **partir SIEMPRE de
+  `origin/blu-dev-staff` (el remoto)** con una rama `feature/*`, y PR contra `blu-dev-staff`. Una
+  funcionalidad = una rama = un PR.
+- `blu-dev-staff` divergió de `main` local (tiene commits de CI/infra); no usar `main` local como base ni
+  empujar syncs enteros encima (pisa trabajo remoto).
+- El código de "producción" que ve el usuario (incluida la empresa LASET) corre desde el repo interno
+  `New-Bytes` (`/var/www/nb/...`); el monorepo `frontErp` iba atrasado y se está sincronizando.
+
+## Proyecto — Simplificación de UI del front (2026-09-04)
+5 PRs abiertos contra `blu-dev-staff` que quitan IVA/Imp. Interno y ocultan columnas/pestañas/botones para
+Laset (ver [[changelog]]). Ocultamientos con comentarios (reversibles); las columnas se ocultan sobre el
+getter `columns` del store correspondiente. `companyCode 11 == LASET`.
