@@ -66,6 +66,7 @@ _Registrar acá cada ajuste: fecha, personas, monto/porcentaje y motivo (mérito
 
 ## Ver también
 
+- [[retroactivo-negro-comercio-2026]] — Deuda de la parte negra por aumentos de Comercio no aplicados (abr-sep 2026)
 - [[propuesta-aumento-2026-08]] — Propuesta de aumento (Escenario A) para decisión de socios
 - [[blanqueo-franco]] — Análisis y costos de blanquear a Franco (CCT 130/75)
 - [[rrhh]] — Índice del equipo
