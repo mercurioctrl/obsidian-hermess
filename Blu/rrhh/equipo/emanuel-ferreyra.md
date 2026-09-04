@@ -47,6 +47,18 @@ En Busca de la Felicidad · Contra lo Imposible · La Gran Apuesta · El Lobo de
 
 ---
 
+## Remuneración
+
+_Foto: 2026-09-03. Ver [[../salarios|Salarios — Equipo BLU]]._
+
+| Concepto | Monto (ARS) |
+|---|---:|
+| En blanco (transferencia) | $1.228.209 |
+| En mano (efectivo) | $1.401.791 |
+| **Total mensual** | **$2.630.000** |
+
+---
+
 ## Perfil RRHH
 
 **Motivaciones clave:** Pasión por lo que hace — su logro es vivir de lo que ama. Esto lo convierte en alguien intrínsecamente motivado, que no trabaja solo por el salario.

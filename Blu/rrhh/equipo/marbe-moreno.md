@@ -47,6 +47,18 @@ Pelis de Pixar
 
 ---
 
+## Remuneración
+
+_Foto: 2026-09-03. Ver [[../salarios|Salarios — Equipo BLU]]._
+
+| Concepto | Monto (ARS) |
+|---|---:|
+| En blanco (transferencia) | $1.213.370 |
+| En mano (efectivo) | $1.416.630 |
+| **Total mensual** | **$2.630.000** |
+
+---
+
 ## Perfil RRHH
 
 **Motivaciones clave:** Autonomía y crecimiento autodidacta — creció como frontend sin equipo de soporte directo, se certificó como educadora canina, vivió en el exterior. Perfil de alta iniciativa propia.

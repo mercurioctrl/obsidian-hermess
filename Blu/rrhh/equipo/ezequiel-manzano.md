@@ -47,6 +47,18 @@ El Padrino
 
 ---
 
+## Remuneración
+
+_Foto: 2026-09-03. Ver [[../salarios|Salarios — Equipo BLU]]._
+
+| Concepto | Monto (ARS) |
+|---|---:|
+| En blanco (transferencia) | $1.228.209 |
+| En mano (efectivo) | $1.401.791 |
+| **Total mensual** | **$2.630.000** |
+
+---
+
 ## Perfil RRHH
 
 **Motivaciones clave:** La disciplina como valor central — tanto en lo personal como en lo laboral. Perfil autónomo, ordenado y orientado a resultados concretos.
