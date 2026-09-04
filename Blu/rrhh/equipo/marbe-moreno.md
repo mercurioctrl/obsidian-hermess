@@ -49,16 +49,16 @@ Pelis de Pixar
 
 ## Remuneración
 
-_Foto: 2026-09-03. Ver [[../salarios|Salarios — Equipo BLU]]._
+_Foto: 2026-09-03 (con ajuste [[../retroactivo-negro-comercio-2026|Opción B]] aplicado). Ver [[../salarios|Salarios — Equipo BLU]]._
 
 | Concepto | Monto (ARS) |
 |---|---:|
 | En blanco (transferencia) | $1.213.370 |
-| En mano (efectivo) | $1.416.630 |
-| **Total mensual** | **$2.630.000** |
+| En mano (efectivo) | $1.572.247 |
+| **Total mensual** | **$2.785.617** |
 
 > [!important] Dinámica de ajustes
-> La parte en blanco viene recibiendo los aumentos de la paritaria Comercio (CCT 130-75) hasta hoy; la parte en negro se mantiene fija sin esos ajustes.
+> La parte en blanco viene recibiendo los aumentos de la paritaria Comercio (CCT 130-75). La parte en mano estaba congelada desde principio de 2026; el 2026-09-03 se puso al día con +$155.617 (~5,9% s/ total) vía bono. Ver [[../retroactivo-negro-comercio-2026|nota del retroactivo]].
 
 ---
 

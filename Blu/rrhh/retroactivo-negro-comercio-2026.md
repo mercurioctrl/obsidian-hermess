@@ -9,6 +9,11 @@ _Cálculo de la deuda acumulada sobre la **parte en negro** de Marbe, Eze y Ema,
 **Período:** abril – septiembre 2026 (6 meses)
 **Base:** ver [[salarios|Salarios — Equipo BLU]] · paritarias en [[../../Recurso Humano/Paritaria Comercio CCT 130-75 Abril-Junio 2026|Paritaria abr-jun]] y [[blanqueo-franco]]
 
+> [!success] Decisión tomada (2026-09-03): Opción B
+> Por baja liquidez, se aplica **aumento recurrente de +$463.591/mes** (vía bono/en mano, sin cargas) **sin pagar el retroactivo** de $1.581.313, que queda **absorbido** (mayor beneficio, LCT art. 260). Es un gesto de retención hacia adelante, no un reconocimiento de deuda. Si mejora la caja, se podrá dar algo del atrasado como gesto puntual.
+>
+> **Nuevos montos en mano:** Marbe $1.572.247 · Eze $1.555.778 · Ema $1.555.778.
+
 ---
 
 ## Supuestos del cálculo
