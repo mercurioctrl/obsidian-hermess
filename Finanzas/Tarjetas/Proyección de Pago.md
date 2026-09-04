@@ -4,65 +4,69 @@ tags: [finanzas, tarjeta, estrategia, pago]
 
 # 🎯 Proyección de Pago — Desarmar la deuda financiada
 
-> [[Tarjetas]] · [[Panorama de Gastos]] · [[Pagos e Intereses]] · [[Cuotas Activas]]
+> [[Tarjetas]] · [[Panorama de Gastos]] · [[Pagos e Intereses]] · [[Cuotas Activas]] · [[Visa 2026-09]] · [[Amex 2026-09]]
 
-## Punto de partida (hoy, 18-08-2026)
+## Punto de partida (03-09-2026, resúmenes Set/26 emitidos)
 
 | | Visa | Amex | Total |
 |---|--:|--:|--:|
-| Saldo total | 14.809.045,09 | 13.374.170,39 | 28.183.215,48 |
-| Pagos hechos | -5.500.000,00 | -6.100.000,00 | -11.600.000,00 |
-| Saldo pendiente del resumen | 9.309.045,09 | 7.274.170,39 | 16.583.215,48 |
-| **Financiado (paga interés)** | 3.431.601,54 | 7.815.144,63 | **11.246.746,17** |
+| Saldo total del resumen | 14.689.557,63 | 13.995.697,52 | 28.685.255,15 |
+| Pago hecho | -5.300.000,00 | pendiente (vto 07-Set) | — |
+| **Saldo que se financia** | 9.389.557,63 | ~7.916.298,66 ¹ | **~17,3M** |
 
-> **Amex:** pagos parciales de **$1.000.000 + $2.400.000 + $800.000 + $900.000 (09→14-ago) + $1.000.000 (18-ago) = $6.100.000,00** (tarjeta ****-34375). Ya **cubren el pago mínimo** ($4.198.210) → cuenta al día, sin mora. Quedan **$7.274.170,39** del resumen; el vto (10-ago) ya pasó, así que ese saldo está financiándose (~$21.000/día de interés+IVA) → conviene cancelarlo cuanto antes.
+¹ Amex: saldo financiado del resumen anterior; el definitivo depende de cuánto pagues el 07-Set (mínimo $4.882.430).
 
-El **saldo financiado** es la deuda cara: rinde **TEM 6.403% mensual (TNA 77,9%)**.
-Sobre $11.246.746,17 eso es **$720.129,56 de interés por mes** ($8.641.554,72/año) si no lo bajás.
+Costo de cargar ~$17,3M: **TEM 6,411% + IVA 21% ≈ 7,76%/mes real ≈ $1,34M/mes** de interés+IVA (~$16M/año si no se baja).
 
-## ⚠️ Regla de oro: nunca pagar el mínimo
+## La cuenta que decide todo
 
-Cada mes hay **dos cosas distintas** que pagar:
-1. **El resumen del mes** (consumos nuevos + cuotas del mes) → pagá el **100% del saldo**, no el mínimo. Así **nada nuevo** entra a financiarse.
-2. **La deuda financiada vieja** ($12.246.746,17) → atacala con un pago **extra** fijo por mes.
+> **Pagás − Consumís − Interés = cuánto BAJA la deuda**
 
-Si pagás solo el mínimo, tirás **$784.159,16/mes** a intereses y la deuda casi no baja (o crece).
+Con presupuesto de **$10M/mes**, el resultado depende de a cuánto bajes los consumos (hoy ~$9,65M/mes entre las dos tarjetas):
 
-## 💰 Escenarios: cuánto extra/mes para matar los $12.246.746,17
+| Consumos/mes | Ataque ($10M − consumos) | Resultado |
+|---|--:|---|
+| $9,65M (sin cambios) | ~$0,35M | ❌ < interés ($1,34M) → la deuda **crece** |
+| $6,5M | ~$3,5M | ✅ salís en ~6–7 meses |
+| **$5,0M** | **~$5,0M** | ✅ salís en **~5 meses** |
+| $4,5M | ~$5,5M | ✅ salís en ~4 meses |
 
-| Pago extra/mes | Meses para saldar | Interés total que pagás | Total desembolsado |
-|--:|:--:|--:|--:|
-| 1.000.000,00 | 25 | 12.463.615,54 | 24.710.361,71 |
-| 1.500.000,00 | 12 | 5.635.816,13 | 17.882.562,30 |
-| 2.000.000,00 | 9 | 3.793.198,76 | 16.039.944,93 |
-| 3.000.000,00 | 5 | 2.408.201,27 | 14.654.947,44 |
-| 4.000.000,00 | 4 | 1.847.592,95 | 14.094.339,12 |
-| 5.000.000,00 | 3 | 1.525.372,33 | 13.772.118,50 |
-| 6.000.000,00 | 3 | 1.329.182,49 | 13.575.928,66 |
+**$10M/mes alcanza para salir rápido, pero solo si cortás consumos.** Con consumos intactos, no salís nunca.
 
-> A mayor pago, **menos interés total**. El salto grande está entre $1M y $2M/mes; de $5M a $6M casi no cambia (ambos ~3 meses).
+## Cronograma recomendado ($10M/mes · consumos ~$5M · ataque $5M)
 
-## 📉 Cómo baja el saldo financiado (millones ARS)
+Sobre ~$17,3M financiados, a 7,76%/mes (interés + IVA):
+
+| Mes | Saldo inicial | Interés+IVA | A capital | Saldo final |
+|---|--:|--:|--:|--:|
+| Oct/26 | 17.300.000 | 1.341.961 | 3.658.039 | 13.641.961 |
+| Nov/26 | 13.641.961 | 1.058.207 | 3.941.793 | 9.700.168 |
+| Dic/26 | 9.700.168 | 752.442 | 4.247.558 | 5.452.610 |
+| Ene/27 | 5.452.610 | 422.969 | 4.577.031 | 875.579 |
+| Feb/27 | 875.579 | 67.918 | 875.579 | **0** |
+
+**Financiado en $0 en ~5 meses (Feb/27).** Interés+IVA total pagado en el camino: **~$3,64M**.
 
 ```mermaid
 xychart-beta
-    title "Saldo financiado — línea A: $3M/mes · línea B: $5M/mes"
-    x-axis [Mes0, Mes1, Mes2, Mes3, Mes4, Mes5]
-    y-axis "M ARS" 0 --> 13
-    line [12.25, 10.03, 7.67, 5.16, 2.5, 0.0, 0.0]
-    line [12.25, 8.03, 3.55, 0.0, 0.0, 0.0, 0.0]
+    title "Saldo financiado con $5M/mes de ataque (millones ARS)"
+    x-axis [Set26, Oct26, Nov26, Dic26, Ene27, Feb27]
+    y-axis "M ARS" 0 --> 18
+    line [17.3, 13.64, 9.70, 5.45, 0.88, 0.0]
 ```
 
-- **Línea A ($3M/mes):** saldás en ~5 meses (Ene 2027), interés total ~$2,41M.
-- **Línea B ($5M/mes):** saldás en ~3 meses (Nov 2026), interés total ~$1,53M.
+## ⚠️ Reglas de oro
 
-## ✅ Recomendación
+1. **Nunca solo el mínimo.** Cada mes pagá el **100% de los consumos nuevos** + el **ataque fijo** a la deuda vieja. Así nada nuevo entra a financiarse.
+2. **Frená las compras en cuotas.** Venís sumando **+$299.888/mes** netos de planes nuevos ([[Cuotas Activas]]) — es el motor que infla la bola.
+3. **Consumos en USD → pagalos en dólares** antes del vto: zafás la percepción del 30% (en la Amex son ~$210k/mes).
+4. **No adelantes cuotas ya pactadas:** ya tienen el interés incluido, seguí el cronograma.
+5. **Bajá el gasto diario a débito/efectivo** (Rappi, Uber, super, suscripciones): es lo que baja los consumos de ~$9,65M a ~$5M.
 
-1. **Este mes:** pagá el **100%** del resumen de Amex (vence ~10-ago) para frenar que sume interés. Ya hiciste bien en meter $5,5M a Visa.
-2. **Elegí un pago extra fijo** ($3–5M/mes es el rango eficiente) y sostenelo hasta llegar a $0 financiado.
-3. **Frená compras nuevas en cuotas largas** hasta desarmar esto: cada compra en cuotas al 78–106% TNA vuelve a inflar el financiado (fue lo que pasó con muebles + tecno + joyería, ver [[Panorama de Gastos]]).
-4. **Cuotas fijas ya pactadas** ([[Cuotas Activas]]): NO conviene adelantarlas, ya tienen el interés incluido; seguí el cronograma.
-5. Objetivo realista: **financiado en $0 antes de fin de 2026**, ahorrando entre **$3,9M y $7,9M** de intereses vs. seguir pagando mínimos.
+## Este mes (recordatorio)
+
+- **Visa:** ✅ pagado $5.300.000 (03-Sep), por encima del mínimo.
+- **Amex:** pagá **≥ $4.882.430 antes del 07-Set** (mejor más, para no engrosar el financiado). Traé la plata por la **ruta cripto barata** (Mercury → USDC → P2P, ~$1.570/USD) en vez de tarjeta.
 
 ---
-*Supuestos: TEM 6,403% constante; el pago extra se imputa 100% al saldo financiado; se paga el 100% del consumo nuevo cada mes. Si me decís tu tope real de pago mensual, ajusto el plan a fechas concretas.*
+*Supuestos: TEM 6,411% + IVA 21% ≈ 7,76%/mes constante; base financiada ~$17,3M; consumos nuevos pagados al 100%; ataque imputado a capital. Actualizado 03-09-2026 con los resúmenes Set/26 emitidos.*
