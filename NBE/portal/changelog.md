@@ -2,8 +2,22 @@
 
 Parte de [[portal]].
 
-> El repo del portal todavía no está bajo git, así que las entradas se registran por sesión de
-> trabajo, no por commit.
+> El repo se creó el 2026-09-01. Las entradas anteriores a esa fecha se registraron por sesión
+> de trabajo, porque el código todavía no estaba versionado.
+
+## 2026-09-01
+
+**Repositorio en GitHub** — `git init` y primer commit (67 archivos, 19.730 líneas) en
+[New-Bytes/nbelectric-portal](https://github.com/New-Bytes/nbelectric-portal), privado, rama
+`main`.
+
+El `.gitignore` de la raíz **excluye `sitio-api-rest-v3/`**: es un clon del repo del backend, con
+su propio remote, y su `app/.env-example` trae credenciales reales (base, mailers, token de
+static) más el secreto JWT hardcodeado en `TokenManager.php:10`. Antes de commitear se escaneó
+el contenido staged buscando esos patrones. Ver [[contexto#El backend queda fuera del repo]].
+
+Se agregó la sección `## Obsidian` al `CLAUDE.md` del proyecto, así esta sincronización ya no
+pregunta la carpeta.
 
 ## 2026-08-29
 

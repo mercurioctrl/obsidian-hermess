@@ -2,7 +2,7 @@
 
 Estructura de tablas que vincula el catálogo de New Bytes con las especificaciones de hardware scrapeadas por `partPicker`, qué llega a SQL Server y qué no, y propuesta de proyecto para un armador de PC encima.
 
-**Verificado:** 2026-09-02 · **Origen:** `~/www/partPicker/scraper.db` · **Destino:** `db-nb-massql-dev.blu.net.ar:4444` → `PRODUCTOS`
+**Verificado:** 2026-09-05 · **Origen:** `~/www/partPicker/scraper.db` · **Destino:** `db-nb-massql-dev.blu.net.ar:4444` → `PRODUCTOS`
 
 > No confundir con [[BluPartPicker]], que es otro proyecto: el agregador de mayoristas y resellers con `oracular_sku`. Este es el scraper de PCPartPicker que extrae specs para validar compatibilidad.
 
@@ -40,8 +40,8 @@ Hay dos mundos. **SQLite es la fuente de verdad**: ahí escribe el scraper y ah�
 | Tabla | Qué guarda | Filas | En SQL Server |
 |---|---|---:|---|
 | `skus` | SKU del inventario: `id_interno` + `id_fabricante` (part number) | 13.998 | ✅ |
-| `matches` | Vínculo SKU ↔ producto scrapeado, con `match_type` | 2.413 | ✅ |
-| `product_specs` | Una fila por spec de cada producto | 26.141 | ✅ |
+| `matches` | Vínculo SKU ↔ producto scrapeado, con `match_type` | 2.424 | ✅ |
+| `product_specs` | Una fila por spec de cada producto | 26.243 | ✅ |
 | `spec_definitions` | Catálogo de specs por categoría: `is_compat`, `nombre_es` | 179 | ✅ |
 | `category_mapping` | Categoría PCPartPicker ↔ categoría del inventario (N:N) | 22 | ✅ |
 | `products` | Productos indexados: `url`, `name`, `category` | 42.725 | ❌ |
@@ -241,8 +241,10 @@ De los 25.782 artículos del ERP, 2.413 tienen specs. Repartidos por categoría:
 
 Un armado necesita las 7 categorías simultáneamente, así que **la categoría más pobre define el techo**. Con 81 fuentes y 90 coolers hay suficiente para que el armador funcione, pero no para que ofrezca variedad en esas dos. Subir la cobertura de PSU y cooler es el trabajo de datos de mayor impacto.
 
-> [!danger] Bloqueante en dev
-> De los 2.413 productos con specs, **uno solo** tiene `stock_cliente > 0` y `activo = 1` en este server. En toda la tabla hay 254 `id_interno` distintos con stock. O el dato de stock en dev está vacío, o el stock real vive en otro lado. **Hay que resolverlo contra producción antes de prometer un armador que filtre por disponibilidad**, porque hoy el filtro deja la pantalla vacía.
+> [!success] Resuelto — el stock sale de otra tabla
+> `CS.dbo.productos.stock_cliente` **no es la fuente de stock**: de los productos con specs, uno solo lo tiene en cero positivo. Ese campo refleja el catálogo web/marketplace, no la existencia real.
+>
+> **"En stock" = fila en `NewBytes_DBF.dbo.stocks` con `nstock > 0`** para cualquier almacén (`ID_ALMACEN`), vinculado por `stocks.ID_ARTICULO = id_interno`. Con esa fuente hay **2.869 artículos en stock, 243 de ellos con specs**. Detalle en [[operacion#Origen del stock dato clave]].
 
 ---
 
@@ -327,7 +329,7 @@ Ordenados por cuánto pueden hundir el proyecto.
 
 | Riesgo | Impacto | Cómo se mitiga |
 |---|---|---|
-| **Stock vacío** — 1 producto con specs y stock | alto | Verificar contra producción antes de la Fase 1. Si el stock no es confiable, mostrar disponibilidad como aviso, no como filtro. |
+| ~~Stock vacío~~ — **resuelto** | — | El stock sale de `NewBytes_DBF.dbo.stocks.nstock`, no de `stock_cliente`. 243 artículos en stock con specs. Ver [[operacion]]. |
 | **PSU y cooler escasos** — 81 y 90 productos | alto | Priorizar esas dos categorías en el scraper y en el match manual. Son las que cortan la variedad de armados. |
 | **Parseo pierde productos** — formatos mixtos | medio | Medirlo explícitamente en la Fase 1: NULLs por columna. Lo que no parsea se arregla o se documenta, no se ignora. |
 | **Sync manual** — nada lo dispara | medio | Fase 0. Barato de resolver y evita que el armador sirva datos viejos sin que nadie se entere. |
@@ -347,12 +349,11 @@ La Fase 0 es media jornada de trabajo y desbloquea todo lo demás. La Fase 1 es 
 - Arquitectura del pipeline: `CLAUDE.md` del repo
 - Credenciales de SQL Server: `.env` del proyecto
 
-**Conteos al momento del sync (2026-09-02):** spec_definitions 179 · matches 2.413 · product_specs 26.141 · skus 13.998 · category_mapping 22
-
-> Actualización 2026-09-02 (sesión posterior): +11 matches / +102 specs por el scrape de in-stock. Ver [[changelog]].
+**Conteos verificados 2026-09-05:** spec_definitions 179 · matches 2.424 · product_specs 26.243 · skus 13.998 · category_mapping 22
 
 ## Ver también
 
 - [[partPicker]] — índice del proyecto
-- [[operacion]] — cómo correr, origen de stock, reconstrucción desde SQL Server, cobertura
+- [[operacion]] — cómo correr, origen del stock, reconstruir `scraper.db`, cobertura in-stock
 - [[changelog]] — historial de sesiones
+- [[contexto]] — decisiones abiertas y próximos pasos

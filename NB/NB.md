@@ -104,11 +104,15 @@ Automatización de la presentación de DDJJ de percepciones de IIBB ante ARBA (C
 
 ## [[partPicker/partPicker|partPicker]]
 Scraper de PCPartPicker que extrae specs de compatibilidad de componentes de PC para validar armados. SQLite (`scraper.db`) + monitor Flask, con sync a SQL Server (`PRODUCTOS`).
-- [[partPicker/specs-y-armador|Specs y Armador]] — tablas, cadena de joins, `is_compat`, las 9 reglas del armador
+- [[partPicker/specs-y-armador|Specs y Armador]] — tablas, cadena de joins, `is_compat`, las 9 reglas del armador, propuesta de proyecto
 - [[partPicker/operacion|Operación]] — cómo correr, origen de stock, reconstrucción desde SQL Server, cobertura
+- [[partPicker/contexto|Contexto]] — decisiones, pendientes y qué no funcionó
+- [[partPicker/memoria|Memoria]] — preferencias de trabajo, inventario, SQL Server
 - [[partPicker/changelog|Changelog]]
 
 ---
-*Última actualización: 2026-09-02 — partPicker: reconstrucción de `scraper.db` desde el respaldo de SQL Server y scrape de in-stock (+11 matches / +102 specs). Ver [[partPicker/changelog|changelog]].*
+*Última actualización: 2026-09-05 — partPicker: documentada la estructura de tablas y la propuesta del armador; corregido el origen del stock (`NewBytes_DBF.dbo.stocks.nstock`, no `stock_cliente`). Ver [[partPicker/changelog|changelog]].*
+
+*2026-09-02 — partPicker: reconstrucción de `scraper.db` desde el respaldo de SQL Server y scrape de in-stock (+11 matches / +102 specs).*
 
 *2026-07-21 — Compras: hotfix API `ncosteprom` en ingresos PSO (convierte con `nvaldiv_FISCAL`, no `nValDiv`); contraparte de backend de COM-320. Rama `hotfix-ncosteprom-cotizacion-fiscal-pso`.*

@@ -42,6 +42,19 @@ persistido en la API, pero **no hay dónde guardarlo**: `defaultParameters` del 
 columnas fijas de `PV_PARAMETROS_VARIOS` del ERP, no es un key-value genérico. Ver
 [[configuracion#Secciones activables]].
 
+### El backend queda fuera del repo
+
+`sitio-api-rest-v3/` está clonado adentro de la carpeta del proyecto, pero el `.gitignore` de la
+raíz lo excluye. Dos razones:
+
+1. **Es un repo aparte** (`New-Bytes/sitio-api-rest-v3`) con su propio remote. Versionarlo acá
+   lo duplicaría.
+2. **Su `app/.env-example` trae credenciales reales** — contraseña de la base, de los dos
+   mailers y token de static — y el secreto JWT está hardcodeado en `TokenManager.php:10`.
+   Publicarlas en un repo nuevo sería una filtración.
+
+Antes del primer commit se escaneó el contenido staged buscando esos patrones.
+
 ### Marca tomada del sitio real
 
 Logo, paleta y tipografía se extrajeron del CSS y el DOM de `nbe.com.ar`, no se inventaron.

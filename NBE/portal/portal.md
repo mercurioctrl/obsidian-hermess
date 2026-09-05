@@ -4,7 +4,8 @@ Portal B2B de autogestión para clientes mayoristas de **NB Electric (NBE)**, co
 API REST existente del grupo New Bytes. Reemplaza el pedido por WhatsApp/teléfono: el cliente
 entra, ve su lista de precios con su bonificación, arma el pedido y lo confirma él mismo.
 
-**Repo:** `~/portalNBE` — `portal/` es el frontend, `sitio-api-rest-v3/` está solo como referencia.
+**Repo:** [New-Bytes/nbelectric-portal](https://github.com/New-Bytes/nbelectric-portal) (privado) — local en `~/portalNBE`
+**Backend:** [New-Bytes/sitio-api-rest-v3](https://github.com/New-Bytes/sitio-api-rest-v3) — clonado en la carpeta, **fuera** de este repo
 **API:** `https://api.nbe.com.ar/v1` (companyCode 9)
 **Local:** `cd portal && npm run dev -- --port 3400`
 
@@ -33,4 +34,4 @@ que son los de NB. El depósito de NBE es el 8. Verificar antes del primer pedid
 [[estado#Bloqueado por backend]].
 
 ---
-Última sincronización: 2026-08-29
+Última sincronización: 2026-09-05

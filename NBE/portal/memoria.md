@@ -15,6 +15,10 @@ queda documentado en [[estado]], no se parchea.
 
 **Confirmar un pedido escribe en el ERP.** `POST /carrito/process` crea una nota de pedido real.
 
+**El backend no se versiona en este repo.** `sitio-api-rest-v3/` está en el `.gitignore` de la
+raíz: es un repo aparte y su `.env-example` tiene credenciales reales. Si alguna vez hay que
+mover el `.gitignore`, verificar que siga excluido antes de commitear.
+
 ## Trampas que ya costaron tiempo
 
 1. **La barra final** — `GET /v1?query` da 404; el preflight también, y el navegador aborta con
@@ -39,6 +43,8 @@ Detalle en [[api-nbe#Trampas]].
 Ver [[contexto#Donde la API no da el dato se dice en pantalla]].
 
 ## Entorno
+
+Repo: [New-Bytes/nbelectric-portal](https://github.com/New-Bytes/nbelectric-portal) (privado).
 
 ```bash
 cd portal && npm run dev -- --port 3400
