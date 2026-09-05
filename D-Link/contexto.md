@@ -19,6 +19,14 @@ D-Link Argentina está por contratar a Blu. En ~10 años perdió prestigio y top
 ya no se identifica con la marca y le cuesta competir contra TP-Link (líder). El producto es bueno:
 el problema es **relevancia**, no calidad.
 
+## Cómo trabajar (reglas del usuario)
+- **Pedir autorización antes de conectarse o ejecutar procesos (confirmada sep-2026):** siempre pedir
+  el OK antes de **conectarse a un servicio externo** (fal.ai, API de Obsidian, yt-dlp/YouTube, subir a
+  storage, cualquier API con token) o **ejecutar un proceso** (renders de video/audio, generaciones IA,
+  scripts pesados). Si en la sesión se va a hacer **varias veces**, **avisar el lote por adelantado**
+  ("voy a hacer N llamadas a fal para X") en vez de pedir permiso uno por uno. Extiende la regla de costo
+  de video/audio a **toda** conexión/proceso. Motivo: control de costo y de cuándo se sale a la red.
+
 ## Decisiones del usuario durante el trabajo
 - La `propuesta.html` se editó mucho: se **removieron** Roadmap, Entregables y "Necesitamos"; copy en
   tono más positivo ("D-Link tiene producto, garantía y respaldo; el desafío es la relevancia").
