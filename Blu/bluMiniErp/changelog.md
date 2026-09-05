@@ -4,6 +4,19 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-05 — Requerimientos: tarjetas ricas (comentarios, adjuntos, checklist, fecha)
+
+### Requerimientos — herramientas de la tarjeta (rama `feat/requerimientos-tarjeta-rica`, PR #58, migración 0112)
+- feat: las tarjetas del tablero de [[Modulo Requerimientos]] suman las mismas herramientas que una [[Modulo Tareas|Tarea]], usables por el cliente (portal público, por token) y el equipo (board interno): **comentarios** (cliente↔equipo), **adjuntos** (archivo o **enlace con fetch del título** + guarda anti-SSRF), **checklist/subtareas** (con progreso) y **fecha límite** (chip con color según vencimiento).
+- **Migración 0112:** tablas `req_comentarios`, `req_adjuntos`, `req_subtareas` + `req_tarjetas.fecha_limite`.
+- **Backend:** `RequerimientoService` extendido (serialización rica dentro de cada tarjeta + operaciones + `fetchTitulo()` con `urlSegura()` anti-SSRF). Archivos servidos por token público (`GET /api/requerimientos/adjuntos/{token}`). 15 rutas de sub-recursos (par público-por-token / interno). El cliente sólo borra sus comentarios.
+- **Frontend:** `RequerimientosBoard.vue` con modal rico (checklist, pegar enlace/subir archivo, comentarios, fecha) con guardado inmediato de sub-recursos + badges en la cara de la tarjeta. Elige endpoint público o interno según props `token`/`interno`.
+- **Verificado** (offline, data propia + limpieza): serialización de fecha/subtareas/comentarios/adjuntos; guarda anti-SSRF (localhost/hosts internos/ftp bloqueados, example.com OK, `fetchTitulo(localhost)`=null); 15 rutas registradas; build FE con el modal rico.
+
+Archivos: `backend/database/migrations/0112_add_requerimientos_tarjeta_tools.php`, `backend/app/Models/{ReqComentario,ReqAdjunto,ReqSubtarea,ReqTarjeta}.php`, `backend/app/Services/RequerimientoService.php`, `backend/app/Http/Controllers/{RequerimientosPublicController,RequerimientoController}.php`, `backend/routes/api.php`, `frontend/components/RequerimientosBoard.vue`, `frontend/pages/n/[token].vue`, `CLAUDE.md`, `arquitectura/20-modulo-requerimientos.md`
+
+---
+
 ## 2026-09-03 — Nuevo módulo Requerimientos (tablero Trello por cliente)
 
 ### Requerimientos (rama `feat/requerimientos-cliente`, PR #56, migración 0111)

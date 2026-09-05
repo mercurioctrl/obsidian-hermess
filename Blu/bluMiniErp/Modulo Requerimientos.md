@@ -71,12 +71,28 @@ PUT    /api/clientes/{cliente}/requerimientos/habilitado
 - **`pages/clientes/[id].vue`** — la card del aside pasó a **"Portal del cliente"**: un link secreto único
   (Copiar/Abrir/Regenerar) + toggles **Novedades** y **Requerimientos** (+ "Ver tablero").
 
+## Herramientas de la tarjeta (2026-09-05, migración 0112, PR #58)
+
+La tarjeta tiene las mismas herramientas que una [[Modulo Tareas|Tarea]] interna, usables por el
+cliente (público, por token) y el equipo:
+- **Comentarios** (`req_comentarios`): hilo cliente↔equipo. El cliente sólo borra los `origen=CLIENTE`.
+- **Adjuntos** (`req_adjuntos`): subir archivo o pegar **enlace**; si es enlace, el backend trae el
+  `<title>`/`og:title` (`RequerimientoService::fetchTitulo`, timeout 5s) con **guarda anti-SSRF**
+  (`urlSegura`: sólo http/https, bloquea localhost/hosts internos/IPs privadas). Archivos servidos por
+  token público (`GET /api/requerimientos/adjuntos/{token}`, patrón [[Modulo WhatsApp Inbox|adjuntos por token]]).
+- **Checklist** (`req_subtareas`): subtareas con barra de progreso.
+- **Fecha límite** (`req_tarjetas.fecha_limite`): chip en la tarjeta (rojo vencida / ámbar ≤3 días).
+
+Todo se serializa dentro de cada tarjeta del board (sin fetch extra). 15 rutas de sub-recursos
+(par público-por-token / interno). Frontend: `RequerimientosBoard.vue` con modal rico (guardado
+inmediato de sub-recursos) + badges en la cara de la tarjeta; elige endpoint según props `token`/`interno`.
+
 ## Limitaciones / futuro
 
 - Columnas configurables **sólo por el equipo** (el cliente mueve tarjetas, no gestiona columnas).
-- Sin adjuntos ni comentarios en las tarjetas (a diferencia de [[Modulo Tareas]]).
+- Adjuntos hasta 10 MB. `fetchTitulo` best-effort (si el sitio no responde, queda la URL).
 - Notificación sólo **in-app + push** (sin email). El landing lista sólo clientes con ≥1 tarjeta.
-- La conversión a Tarea es **one-way** (no sincroniza estado tarea↔tarjeta después).
+- La conversión a Tarea es **one-way** (no sincroniza estado ni comentarios/adjuntos tarea↔tarjeta después).
 
 ## Ver también
 
