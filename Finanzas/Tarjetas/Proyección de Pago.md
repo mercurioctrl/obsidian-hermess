@@ -65,7 +65,7 @@ xychart-beta
 
 ## Este mes (recordatorio)
 
-- **Visa:** ✅ pagado $5.300.000 (03-Sep), por encima del mínimo.
+- **Visa:** ✅ pagado $5.350.000 ($5,3M el 03-Sep + $50k el 05-Sep), por encima del mínimo.
 - **Amex:** pagá **≥ $4.882.430 antes del 07-Set** (mejor más, para no engrosar el financiado). Traé la plata por la **ruta cripto barata** (Mercury → USDC → P2P, ~$1.570/USD) en vez de tarjeta.
 
 ---
