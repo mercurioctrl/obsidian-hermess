@@ -4,6 +4,13 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-05 — Operación: restore de backup local + deploy
+
+- ops: **restauración** de la DB local desde el backup del día (`backup_20260905_161719.tar.gz`, a migración 0112). Restore **limpio** (drop total de tablas + reimport + `migrate` → "Nothing to migrate" + restaurar `uploads`/`pdfs` + `chown www-data`), con `pre-restore_*.sql` de seguridad previo. Descubierto el gotcha del import a migración vieja → ver [[Errores Comunes#Restaurar un backup a migración vieja deja tablas colgadas → import parcial / `migrate` explota (2026-09-05)|Errores Comunes]].
+- ops: `git pull` en `main` (sin commits nuevos) + **deploy** estándar (backend `docker cp` + `optimize:clear` + restart; frontend rebuild + restart nginx). App sana en **http://localhost:8823** (único puerto expuesto: Nginx reverse-proxy; `/api/*`→backend, resto→frontend).
+
+---
+
 ## 2026-09-05 — Requerimientos: tarjetas ricas (comentarios, adjuntos, checklist, fecha)
 
 ### Requerimientos — herramientas de la tarjeta (rama `feat/requerimientos-tarjeta-rica`, PR #58, migración 0112)

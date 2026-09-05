@@ -4,6 +4,18 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 ---
 
+## Restaurar un backup a migración vieja deja tablas colgadas → import parcial / `migrate` explota (2026-09-05)
+
+**Síntoma:** al importar `database.sql` de un backup encima de la DB actual, `php artisan migrate` falla con `SQLSTATE[42S01] ... Table 'req_comentarios' already exists`, y la DB queda inconsistente.
+
+**Causa:** `mysqldump` sólo hace `DROP TABLE IF EXISTS` de las tablas **que están en el dump**. Si el backup es de una migración **más vieja** que la DB (ej. backup a `0111`, DB a `0112`): la tabla `migrations` se resetea a la del backup (0111), pero las tablas creadas por migraciones posteriores (`req_comentarios/adjuntos/subtareas`, columnas nuevas) **no se dropean** y quedan colgadas → `migrate` intenta recrearlas y choca. Peor: `mysql` corta ante el primer error de FK/CREATE → **import parcial** (las tablas posteriores alfabéticamente no se cargan).
+
+**Solución:** restore **limpio** = dropear TODAS las tablas primero, reimportar de cero, y recién ahí `migrate --force` (aplica las migraciones que el backup no tenga). Correr el cliente MariaDB desde el container backend (`--skip-ssl`, host `db`, env `DB_*`). Hacer un `mysqldump` de seguridad (`pre-restore_*.sql`) antes. Restaurar también `uploads/`→`storage/app/public` y `pdfs/`→`storage/app/pdfs` + `chown www-data`. Procedimiento completo en la memoria de referencia de backups y [[Stack e Infraestructura]].
+
+**Nota de acceso:** si el backup es de producción, el admin puede NO ser `admin@empresa.com/admin123` (queda la password de prod).
+
+---
+
 ## Mail::mailer('erp') cambia el SMTP pero NO el From → el server rechaza (2026-08-25)
 
 **Síntoma:** al mover correos al mailer `erp` (`Mail::mailer('erp')->to(...)`), el envío podía ser rechazado por el servidor SMTP.
