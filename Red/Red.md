@@ -52,6 +52,10 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 
 - [[03-impresora-p1102w]] — HP LaserJet P1102w: config (driver hplip+plugin, SSID `nexus-printers`, IP fija 10.10.10.189) y diagnóstico
 
+## Acceso remoto
+
+- [[09-boveda-remota-cloudflare]] — **Bóveda Obsidian expuesta al exterior** vía Cloudflare Tunnel + Access sobre `cmer-boveda.blustudioinc.com`. Origen: plugin Local REST API (27124) en `10.10.10.7`. Doble auth (service token de Access + Bearer del plugin). Sin abrir puertos en el USG. Credenciales en `~/.config/boveda-remota/creds.env` (fuera de git).
+
 ## ⚠️ Tareas pendientes
 
 - [ ] **Reemplazar cable del pasillo** — cámara PASILLO-C (10.10.10.192) negoció 10Mbps half-duplex, causa de los cortes de imagen
