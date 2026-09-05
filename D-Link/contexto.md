@@ -39,6 +39,14 @@ el problema es **relevancia**, no calidad.
   - Badges/gráficos con **esquinas redondeadas** y **logos reales**; placa final estilo pieza oficial.
   - ⚠️ **Derechos de voz** pendientes (la voz clonada es de un tercero).
 
+- **Videos IA — avances (sep-2026):** biblioteca reutilizable de **avatares y voces clonadas**
+  (mujer morocha, mujer ojos verdes, hombre común; voces arg-01 fem y arg-02-hombre). El personaje
+  masculino: "menos cliché", "más normal, no tan atractivo", "menos canas" (se eligió de una tanda de 10).
+  **Regla de costo:** no generar video/voz (fal) sin preguntar. **Comerciales de animación pura** (sin
+  personas). **Paleta real** tomada del **PSD oficial** (teal brillante `#0CCBD7→#0587a2` + textura de
+  líneas concéntricas); se rechazó el teal/verde oscuro. El usuario iba a subir el fondo real a
+  `clips/material/fondos/`. Ver [[videos-clips-ia]].
+
 ## Gap a cerrar (antes de fijar metas)
 Scraping de MercadoLibre (share-of-shelf, precios, reviews vs TP-Link/Mercusys) + sell-through de
 D-Link. Las metas numéricas se fijan **después del mes 1**, con baseline real.

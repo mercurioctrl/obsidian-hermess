@@ -4,7 +4,7 @@ Reposicionamiento de marca **D-Link Argentina** (estudio [[contexto|Blu]]). Obje
 prestigio y presencia, y competir contra TP-Link. Territorio: **"Confiabilidad simple"**
 (pilares ANDA / FÁCIL / RESPALDADO).
 
-Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-09-03**
+Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-09-05**
 
 ## Meta
 - [[arquitectura]] — cadena de entregables, piezas HTML, paletas, generación de PDF/MP4 e invariantes

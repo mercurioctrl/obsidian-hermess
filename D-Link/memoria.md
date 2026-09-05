@@ -1,6 +1,6 @@
 # Memoria del proyecto
 
-Consolidado de la memoria de Claude (`~/.claude/projects/-var-www-d-link*/memory/`) al 2026-09-03.
+Consolidado de la memoria de Claude (`~/.claude/projects/-var-www-d-link*/memory/`) al 2026-09-05.
 
 ## Proyecto (project)
 Estudio [[contexto|Blu]] contratado por D-Link Argentina para reposicionar la marca (perdió
@@ -46,6 +46,13 @@ badges redondeados y logos reales.
 Cerrar gaps de data (scraping MercadoLibre + sell-through) antes de fijar metas numéricas. En videos:
 **derechos de la voz clonada** antes de publicar; opcional aplicar el motor animado + placa al reel
 y extender el pipeline a otros héroes (R15, M30, etc.).
+
+
+## Videos IA (sep-2026) — resumen
+Biblioteca `clips/biblioteca/` (avatares + voces clonadas reutilizables por `custom_voice_id` de MiniMax
++ casos). 3 comerciales de **animación pura** 30s (overview / EAGLE PRO AI / cobertura). **Paleta real
+del PSD**: teal `#0CCBD7→#0587a2` + textura de líneas concéntricas (nunca el teal oscuro). Regla: no
+generar video/voz sin preguntar. Detalle en [[videos-clips-ia]].
 
 ## Ver también
 [[D-Link]] · [[contexto]] · [[arquitectura]] · [[plan-trabajo]] · [[videos-clips-ia]]

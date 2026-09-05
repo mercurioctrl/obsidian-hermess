@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-09-05
+
+- **Biblioteca de activos reutilizables** (`clips/biblioteca/`): avatares (A-morocha, B-ojos-verdes,
+  C-hombre-comun), **voces clonadas** (arg-01 fem, arg-02-hombre) reutilizables por `custom_voice_id`,
+  y casos. Scripts `clone_voice.sh`/`veo_generate.sh`. Ver [[videos-clips-ia]].
+- **2 nuevos avatares:** mujer ojos verdes (B) y hombre común 40 (C, elegido de una tanda de 10 caras).
+  Voz masculina clonada de un video de YouTube. Regla del usuario: **no generar video/voz (fal) sin
+  preguntar** (cuesta); imágenes/transcripción sí.
+- **3 comerciales de animación pura 30s** (sin personas, render HTML local, sin costo): overview,
+  **EAGLE PRO AI / red inteligente** (gauge + self-healing, reusa el HUD animado del microsite m15-3),
+  **cobertura / pack de 3** (500 m², ambientes, familia, roaming). Íconos de línea flat (no emojis).
+- **Paleta REAL de marca desde el PSD oficial** (`clips/material/PSD/CUS_DLINK_TRIADA...`, pieza de la
+  cámara DCS-6501LH + mydlink): degradado **teal** `#0CCBD7→#0587a2` con **textura de líneas
+  concéntricas**; se **descartó el teal/verde oscuro** anterior. Logo teal, ink teal, fondos claros.
+  Los 3 comerciales rehechos con esta lógica. Assets en `clips/material/psd_assets/`.
+
+
 ## 2026-09-03
 
 - **Nuevo formato: [[videos-clips-ia|videos/clips de producto con IA]]** para MercadoLibre / Reels /
