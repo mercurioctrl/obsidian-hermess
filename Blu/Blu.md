@@ -42,6 +42,9 @@ Proyectos y áreas de BLU Digital Agency.
 - [[finanzas/caso-mercury-acer|Caso Mercury — Origen de fondos (Acer USD 12.322)]]
 - [[finanzas/pagos-freelance-guillermo-avila|Pagos freelance — Guillermo Avila (QA)]]
 
+### [[Estado de situacion/Estado de situacion|Estado de situación]] — Informes periódicos con datos del ERP
+- [[Estado de situacion/2026-09-05 - Estado de situacion|2026-09-05 · Cierre a agosto 2026]]
+
 ### [[minutas/minutas|minutas]] — Minutas de reunión por cliente
 - [[minutas/naevo/naevo|NAEVO]] — [[minutas/naevo/2026-08-12-etiquetas-y-estrategia|2026-08-12 · Etiquetas, empaques y estrategia comercial]]
 
