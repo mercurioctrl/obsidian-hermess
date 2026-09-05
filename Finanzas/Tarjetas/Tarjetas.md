@@ -16,6 +16,8 @@ Resúmenes de tarjetas de crédito Santander (Visa y Amex) y su análisis.
 - [[Cuotas Activas]]
 - [[Gastos por Comercio]]
 - [[Pagos e Intereses]]
+- [[Informe Pareja|Nuestro plan para ordenar las tarjetas]]
+- [[Plan de Recorte|Plan de Recorte — Bajar consumos a ~$5M/mes]]
 
 ## Resúmenes por mes
 ### Visa
