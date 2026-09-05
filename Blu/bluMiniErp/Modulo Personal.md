@@ -153,6 +153,7 @@ Recordatorio en `/staff` de **qué empleados activos aún no cobraron el sueldo 
 
 - [[Modulo People Performance]] - RRHH sobre Personal: rol&expectativas, competencias, objetivos, ausencias, actividad GitHub/Jira (2026-07-14)
 - [[Modulo Reservas Reuniones]] - Mi Área enlaza a "Mi Disponibilidad"; las ausencias del empleado bloquean los slots reservables
+- [[Modulo Gastos Personal]] - el empleado carga sus gastos de bolsillo con evidencia desde `/mi-area`; admin los aprueba/rechaza (tab "Gastos" en `/staff/{id}`) (2026-09-05)
 - [[Modulo Tareas]] - Tareas asignadas al usuario del empleado
 - [[Base de Datos#empleados]] - Esquema de tablas
 - [[Backend - API#Staff y Empleados]] - Endpoints

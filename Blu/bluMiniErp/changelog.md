@@ -4,6 +4,19 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-05 — Gastos de personal (rendición de reembolsos con evidencia)
+
+### Nuevo módulo [[Modulo Gastos Personal]] (rama `feat/gastos-personal`, PR #60, migración 0113)
+- feat: el empleado carga desde el **Área de empleado** ([[Modulo Personal|/mi-area]]) los gastos que tuvo de su bolsillo (taxi, insumos) adjuntando **evidencia** (imagen/PDF: ticket, captura). Quedan **PENDIENTE** hasta que un admin los **aprueba** o **rechaza** (con motivo, notifica al empleado). Es **intake/seguimiento — NO toca finanzas**: no genera un `Gasto` real ni descuenta de banco/caja (como [[Modulo Requerimientos]]/[[Modulo Novedades]]).
+- **Migración 0113:** `gastos_empleado` (empleado, descripcion, monto, moneda, fecha, categoria, `estado` PENDIENTE/APROBADO/RECHAZADO, motivo_rechazo, revisor) + `gasto_empleado_adjuntos` (evidencias servidas por capability token).
+- **Backend:** `MiGastoController` (self-service: CRUD de lo propio **sólo en PENDIENTE**, adjuntos imagen/pdf 10MB, notifica a admins al cargar) y `GastoPersonalController` (gate **real** `VER_SECCION_PERSONAL`: lista consolidada con filtros, por empleado, aprobar/rechazar, sirve la evidencia fuera de auth). `GastoEmpleadoResource` con `monto` sin enmascarar (gasto propio, no saldo de la empresa).
+- **Frontend:** `MisGastos.vue` embebido en Mi Área; `GastosPersonalPanel.vue` reutilizable en la nueva sección `/gastos-personal` (sidebar Administración) y en un tab **"Gastos"** de `/staff/[id]`. NavItem + prefijo de middleware (`/gastos-personal` no colisiona con `/gastos`).
+- **Verificado** (E2E real con tokens Sanctum + limpieza): crear (PENDIENTE) → listar → admin ve pendiente → aprobar (APROBADO + revisor) → guard 422 al editar un gasto ya aprobado. Migración corrida, rutas registradas, build FE OK.
+
+Archivos: `backend/database/migrations/0113_create_gastos_empleado_tables.php`, `backend/app/Models/{GastoEmpleado,GastoEmpleadoAdjunto}.php`, `backend/app/Http/Resources/GastoEmpleadoResource.php`, `backend/app/Http/Controllers/{MiGastoController,GastoPersonalController}.php`, `backend/routes/api.php`, `frontend/components/{MisGastos,GastosPersonalPanel}.vue`, `frontend/pages/gastos-personal/index.vue`, `frontend/pages/{mi-area/index,staff/[id]}.vue`, `frontend/{layouts/default.vue,middleware/auth.global.ts}`, `CLAUDE.md`, `arquitectura/21-modulo-gastos-personal.md`
+
+---
+
 ## 2026-09-05 — Operación: restore de backup local + deploy
 
 - ops: **restauración** de la DB local desde el backup del día (`backup_20260905_161719.tar.gz`, a migración 0112). Restore **limpio** (drop total de tablas + reimport + `migrate` → "Nothing to migrate" + restaurar `uploads`/`pdfs` + `chown www-data`), con `pre-restore_*.sql` de seguridad previo. Descubierto el gotcha del import a migración vieja → ver [[Errores Comunes#Restaurar un backup a migración vieja deja tablas colgadas → import parcial / `migrate` explota (2026-09-05)|Errores Comunes]].
