@@ -2,7 +2,7 @@
 
 Consolidacion de la memoria persistente de Claude para este proyecto. Organizada por tipo.
 
-Ultima sincronizacion: 2026-09-03 (portal del cliente: [[Modulo Novedades]] blog público, mig 0110 — y [[Modulo Requerimientos]] tablero Trello en el mismo portal/token, mig 0111, PR #56, con notificación a admins y convertir-en-tarea; ambos seguimiento, no tocan finanzas). Antes: 2026-08-29 [[Modulo Flota GSM]] (mig 0109); 2026-08-23 Dashboard Rentabilidad por Cliente, nombres de cliente clickeables, simulador de impuestos, compras incompletas en Contabilidad; 2026-07-13 auditoría técnica + PR #10)
+Ultima sincronizacion: 2026-09-05 ([[Modulo Requerimientos]] tarjetas ricas — comentarios/adjuntos(enlace con fetch de título+anti-SSRF)/checklist/fecha límite, mig 0112, PR #58). Antes: 2026-09-03 portal del cliente: [[Modulo Novedades]] blog público, mig 0110 — y [[Modulo Requerimientos]] tablero Trello en el mismo portal/token, mig 0111, PR #56, con notificación a admins y convertir-en-tarea; ambos seguimiento, no tocan finanzas. Antes: 2026-08-29 [[Modulo Flota GSM]] (mig 0109); 2026-08-23 Dashboard Rentabilidad por Cliente, nombres de cliente clickeables, simulador de impuestos, compras incompletas en Contabilidad; 2026-07-13 auditoría técnica + PR #10)
 
 ---
 
