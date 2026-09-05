@@ -27,8 +27,9 @@ Proyecto local: `/var/www/d-link/` · Última sincronización: **2026-09-05**
 
 ## Contenido / Producción
 - [[videos-clips-ia|Videos / Clips IA]] — clips verticales de producto para ML/Reels/TikTok generados
-  con IA (explainer con presentadora + reel "CONEXIÓN EN CADA RINCÓN"); pipeline fal.ai + ffmpeg +
-  motion graphics HTML. En `/var/www/d-link/clips/`.
+  con IA (fal.ai + **OpenAI gpt-image** + **OmniHuman**) + ffmpeg + motion graphics HTML. Incluye
+  comerciales M15 (B2C) y el **caso VLAN B2B** (switch DGS-1210-28P + **presentadora IA** con subtítulos).
+  En `/var/www/d-link/clips/`.
 
 ## Pitch y landings
 - Deck visual HTML en `04-pitch/index.html` (**17 slides**, navegable con flechas)

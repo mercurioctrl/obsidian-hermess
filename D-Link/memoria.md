@@ -28,7 +28,7 @@ cliente; logo Blu **negro sobre claro / blanco sobre oscuro** (nunca el azul `#0
 íconos flat, no emojis a color; cuando cambia contenido de [[plan-trabajo]] pide regenerar los 4
 artefactos juntos. En **[[videos-clips-ia|videos IA]]**: prefiere UGC "sin manos" full-bleed, esquemas
 **animados** (no collage), máxima calidad (Veo 3), **voz argentina real clonada** (no TTS neutro),
-badges redondeados y logos reales.
+badges redondeados y logos reales. Reglas de trabajo: pedir OK antes de conectarse/ejecutar (avisar lotes); nunca pisar recursos, versionar.
 
 ## Referencia (reference)
 - Propuesta modelo (Gigabyte): `blustudioinc.com/propuestas/gigabyte?token=gbt-mkt-2026`.
@@ -53,6 +53,13 @@ Biblioteca `clips/biblioteca/` (avatares + voces clonadas reutilizables por `cus
 + casos). 3 comerciales de **animación pura** 30s (overview / EAGLE PRO AI / cobertura). **Paleta real
 del PSD**: teal `#0CCBD7→#0587a2` + textura de líneas concéntricas (nunca el teal oscuro). Regla: no
 generar video/voz sin preguntar. Detalle en [[videos-clips-ia]].
+
+**Caso VLAN B2B (sep-2026):** primer contenido B2B (switches/VLAN), superando un video que rebotó
+gerencia. Producto héroe **DGS-1210-28P**. Sumamos **gpt-image-1 (OpenAI vía fal)** para ilustración de
+alta calidad (switch ilustrado, edificio, red plana, grupos de PCs) y **OmniHuman** para **presentadora
+IA** (foto→habla) intercalada 3× con animaciones; subtítulos solo cuando ella habla. Nuevo avatar
+`D-ojos-verdes-openai`. Reglas confirmadas: **pedir autorización antes de conectarse/ejecutar procesos**
+(avisar si es en lote) y **nunca pisar recursos → versionar** (`-v2`).
 
 ## Ver también
 [[D-Link]] · [[contexto]] · [[arquitectura]] · [[plan-trabajo]] · [[videos-clips-ia]]

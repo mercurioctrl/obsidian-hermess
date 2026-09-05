@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-09-05 — Caso VLAN B2B + presentadora IA (OpenAI)
+
+- **Nuevo comercial B2B "VLAN"** (`clips/comercial_vlan.mp4`, 9:16, ~50s): versión **superadora** del
+  ejemplo que rebotó gerencia (`clips/ejemplo guion.mp4`, sobre switches/VLANs). Reencuadre a venta de
+  resultado (ahorro + orden + seguridad), producto héroe real **DGS-1210-28P** (Smart Managed PoE),
+  motion graphics con paleta/textura del PSD, voz clonada femenina (`arg-01`). Ver [[videos-clips-ia]].
+- **Imágenes con gpt-image-1 (OpenAI) vía fal:** foto oficial real del switch (fondo removido),
+  **switch redibujado en estilo ilustrado** (edit con referencia), esquema del **edificio/oficina**,
+  ilustración "red plana / todo mezclado", y **grupos de PCs** verde/azul/naranja. Mejor calidad de
+  ilustración que Kling/flux para este uso.
+- **Variantes (versionadas, sin pisar):** `comercial_vlan_edificio.mp4` (escena extra del edificio),
+  `comercial_vlan_v2.mp4` + `_edificio_v2.mp4` (switch y PCs ilustrados, look unificado).
+- **Explainer con presentadora IA** (`comercial_vlan_presentadora.mp4`, ~48s): mujer ojos verdes
+  generada con **gpt-image-1** y animada con **OmniHuman** (foto+audio→habla con lipsync), intercalada
+  **3 veces** con las animaciones. Diálogo adaptado, voz clonada. Versión con **subtítulos** solo en los
+  tramos de ella (`_subs.mp4`). Nuevo avatar `biblioteca/avatares/D-ojos-verdes-openai/`.
+- **Reglas de trabajo confirmadas:** pedir autorización antes de **conectarse/ejecutar procesos**
+  (avisar si es en lote); **nunca borrar/pisar recursos → crear versiones nuevas** (`-v2`, etc.).
+- **Fix pipeline:** `render_video.py` requiere ruta HTML **absoluta** (relativa → `ERR_INVALID_URL`,
+  render fallaba en silencio).
+
+
 ## 2026-09-05
 
 - **Biblioteca de activos reutilizables** (`clips/biblioteca/`): avatares (A-morocha, B-ojos-verdes,
