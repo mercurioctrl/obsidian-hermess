@@ -6,7 +6,8 @@
 |---|---|---|---|---|---|
 | Ezviz (exterior) | 10.10.10.43 | 98:f1:12:3f:f0:a6 | Ezviz (Hikvision) | WiFi | AP Galeria |
 | PASILLO-C | 10.10.10.192 | 18:68:cb:d0:df:21 | DS-2CD1001-I | Cable | Switch (no administrado) |
-| PUERTA PTZ | 10.10.10.64 | — | DS-2CV1F23G2-LIDWF (WiFi PT ColorVu) | WiFi | — |
+| PUERTA PTZ | 10.10.10.64 | — | DS-2CV1F23G2-LIDWF (WiFi PT ColorVu, luz disuasión) | WiFi | — |
+| PASILLO (ColorVu) | 10.10.10.65 | — | DS-2CV1023G2-LIDWF (ColorVu fija, luz disuasión) — **nueva sep 2026** | WiFi | — |
 | JARDIN | 10.10.10.216 (fija) | f4:b1:c2:2f:80:18 (wlan0) | DH-IPC-HFW1230DT-STW (WiFi 2MP) | WiFi (`nexus-lot` 2.4GHz) | Graba en DVR CH5 |
 
 ---
@@ -201,6 +202,45 @@ Este modelo **no soporta** auto-tracking (seguir gente que pasa). El endpoint `/
 El **HD y el remoto (DMSS) no andaban** — solo se veía local. Causa: el mainstream estaba en **H.265** y el **DVR HCVR viejo no lo decodifica por ONVIF**. Se pasó el main a **H.264** y el canal del DVR a protocolo **Dahua2** (nativo). Detalle completo en [[04-dvr-dahua#Sesión CH5 JARDIN — HD/remoto no andaban (2026-08-29)]].
 
 > 🔑 Si en algún momento se resetea la config, **el mainstream debe quedar en H.264** — el DVR no soporta H.265.
+
+## Cámara PASILLO (ColorVu) — DS-2CV1023G2-LIDWF
+
+**Modelo:** Hikvision ColorVu fija DS-2CV1023G2-LIDWF (2MP, luz blanca de disuasión)
+**Firmware:** V5.8.12 build 240723
+**SN:** DS-2CV1023G2-LIDWF20240902AAWRFM7789424
+**Credenciales:** admin / `chanteclair87` (mismo que la PTZ)
+**IP:** 10.10.10.65 (WiFi) — **agregada sep 2026**
+**Hik-Connect (nube):** deshabilitado ✅
+
+Es la misma familia "LIDWF" que la [[#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] pero **fija** (sin pan-tilt). Acceso OK por ISAPI (deviceInfo + snapshot). Comparte la config de disuasión de abajo.
+
+> ⚠️ **Ojo con el nombre:** ya existe una **PASILLO-C** vieja en `10.10.10.192` (DS-2CD1001-I, 2017, con cable degradado — ver [[#Cámara PASILLO-C — DS-2CD1001-I|arriba]]). Esta `.65` es una cámara **distinta y nueva**. Definir si reemplaza a la `.192` o convive con ella.
+
+**Pendiente:** reservar IP fija en UniFi (hoy por DHCP), igual criterio que [[03-impresora-p1102w]] y la JARDIN.
+
+---
+
+## Luz de disuasión ColorVu (PUERTA PTZ `.64` + PASILLO `.65`)
+
+Ambas cámaras "LIDWF" tienen **luz blanca de disuasión activa** y quedaron con **config idéntica y óptima** (verificado sep 2026):
+
+| Parámetro | Valor | Efecto |
+|---|---|---|
+| `supplementLightMode` | `eventIntelligence` | de noche va en IR (invisible); ante evento pasa a luz blanca |
+| `associatedVMDHuman` | `true` | el destello blanco salta ante **movimiento humano** |
+| Motion detection | ON, sensibilidad 60 | es lo que dispara el evento |
+| Día/noche (ICR) | `auto` | la luz solo actúa de noche |
+| `brightnessRegulatMode` | `auto` (tope 100) | destello fuerte **pero sin quemar el video** |
+
+> 💡 **Por qué `auto` y no manual 100%:** en manual a full la luz quema la imagen justo cuando hay alguien y deja la grabación inservible. `auto` da la disuasión y mantiene el video usable. Se dejó a propósito así.
+
+**Endpoints (ISAPI, auth digest):**
+- `GET/PUT /ISAPI/Image/channels/1/supplementLight` — modo y brillo de la luz de disuasión
+- `GET /ISAPI/Image/channels/1/supplementLight/capabilities` — modos soportados (`eventIntelligence,colorVuWhiteLight,irLight,close`)
+- `GET/PUT /ISAPI/System/Video/inputs/channels/1/motionDetection` — el motion que dispara el destello
+- `GET /ISAPI/Streaming/channels/101/picture` — snapshot
+
+Nota: estos modelos económicos **no exponen** detección AI por ISAPI (`SmartCap` viene vacío); la disuasión va por VMD (movimiento), no por analítica de línea/intrusión.
 
 ## Ver también
 
