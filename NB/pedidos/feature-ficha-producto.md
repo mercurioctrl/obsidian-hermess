@@ -2,7 +2,7 @@
 
 Ficha de detalle de producto pensada para que los vendedores la vean **dentro de la app** (modal), en vez de mandarlos al sitio `nb.com.ar`. Hoy el nombre del producto en el detalle de una orden linkea a `https://www.nb.com.ar/fromPedidos_-_{ID_ARTICULO}`; la idea es reemplazar ese link por un modal con la ficha.
 
-Rama backend: `feature/ficha-producto-backend` (desde `Development`). Implementado 2026-08-26; ampliado 2026-08-31 (stock disponible + webUrl por empresa). **Frontend pendiente.**
+Rama backend: `feature/ficha-producto-backend` (desde `Development`). Implementado 2026-08-26; ampliado 2026-08-31 (stock disponible + webUrl por empresa); 2026-09-07 (`unitsPerBox` como cantidad por caja, PR #1636). **Frontend pendiente.**
 
 ## Endpoint
 
@@ -21,7 +21,7 @@ El ERP tiene lo logístico/comercial; el **contenido de marketing** vive en la b
 | marca (+logo) | `NB_WEB.dbo.marcas` (`referencia`, `imagen` = URL completa) |
 | categoría | `familias` — **join por `ID_FAMILIA`** (el join por `ccodfam` falla por padding inconsistente: `'58'` vs `'0023 '`) |
 | peso / medidas | `articulo.weightAverage` (g), `high/width/lengthAverage` (mm) |
-| cantidad por caja | `articulo.packagePerUnit` ⚠️ (aparece como fracción, ej `0.1` — semántica a confirmar) |
+| cantidad por caja | `articulo.packagePerUnit` — viene como **fracción de caja que ocupa 1 unidad** (ej `0.0083`); `unitsPerBox` devuelve su **inverso** `round(1/x)` = u/caja (ej. 120). Ver [[#unitsPerBox como cantidad por caja (2026-09-07)]] |
 | stock (disponible / total / en camino) | `stocks`: `available` = SUM(`nstock`) − SUM(`nstock_reserva_pedidos`) con piso en 0; `total` = SUM(`nstock`); `incoming` = SUM(`nstock_ingresando`) |
 | descripción + bajada | `PRODUCTOS.dbo.iaDescriptions` / `subheadline` (`accepted=1`), por `itemId = ID_ARTICULO` |
 | galería de fotos | `NB_WEB.dbo.fotos_productos` → `PRODUCTOS.dbo.fotos` (portada primero); URL = `STATIC_URL + checksum` = `https://static.nb.com.ar/img/{checksum}` |
@@ -33,6 +33,10 @@ El bloque `stock` expone tres números, con el mismo criterio de reserva que usa
 - **`available`** = `SUM(nstock) − SUM(nstock_reserva_pedidos)`, con piso en 0 (lo realmente vendible).
 - **`total`** = físico total (`SUM(nstock)`).
 - **`incoming`** = ingresando (`SUM(nstock_ingresando)`).
+
+## unitsPerBox como cantidad por caja (2026-09-07)
+
+`articulo.packagePerUnit` **no** es "unidades por caja": es la **fracción de caja que ocupa una unidad** (ej. `0.0083`). La cantidad por caja es su inverso, así que `logistics.unitsPerBox` ahora devuelve `round(1 / packagePerUnit)` → `1 / 0.0083 = 120`. Si el valor crudo es `0`/`null` (sin dato de bulto), devuelve `null` en vez de dividir por cero. Cambio en `ProductSheetService.php` (commit `71fdb788`, PR #1636).
 
 ## webUrl por empresa (2026-08-31)
 

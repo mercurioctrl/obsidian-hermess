@@ -1,3 +1,12 @@
+## 2026-09-07 — Ficha de producto: `unitsPerBox` como cantidad por caja
+
+Se resolvió la semántica pendiente de `articulo.packagePerUnit` en la [[feature-ficha-producto]]. El campo del ERP viene como la **fracción de caja que ocupa una unidad** (ej. `0.0083`), no como un conteo. Ahora `logistics.unitsPerBox` devuelve su **inverso redondeado** → `1 / 0.0083 = 120` (unidades por caja). Cuando el valor es `0`/`null` devuelve `null` (sin dato de bulto, sin división por cero).
+
+- Commit `71fdb788` en `feature/ficha-producto-backend`. Solo `ProductSheetService.php`.
+- PR #1636 → `Development` (los PRs previos de la rama —1621/1622/1627— ya estaban mergeados).
+
+---
+
 ## 2026-09-03 — Presupuestos: selector de lista de precios por ítem
 
 Detalle en [[feature-modulo-presupuestos#Selector de lista de precios por ítem (2026-09-03, commit c0d9fd3)]].
