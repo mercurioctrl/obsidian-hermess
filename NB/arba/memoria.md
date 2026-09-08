@@ -24,9 +24,12 @@ Automatiza la preparación del lote para presentar DDJJ de percepciones de IIBB,
 
 ## Estado de presentaciones
 
-- **Julio 2026** (`2026070`, D7): **pendiente de subir** al 2026-08-09. LOTE1 observado → corregido por padrón → **LOTE2** generado (767 percepciones). No usar el LOTE1.
+- **Agosto 2026** (`2026080`, D7): **LOTE2 pendiente de subir** al 2026-09-07. Fuente `ARBA_PERCEPTIONS_202609.txt` pero contenido de agosto (regla del período). LOTE1 observado (2 alícuotas ≠ padrón) → corregido → **LOTE2** (706 percepciones). **Total DDJJ = $21.878.962,25.** No usar el LOTE1.
+- **Julio 2026** (`2026070`, D7): LOTE1 observado → corregido por padrón → **LOTE2** generado (767 percepciones). No usar el LOTE1.
 - **Junio 2026** (`2026060`): presentado con corrección por padrón. Meses previos (abril, mayo): presentados.
 - Ver [[changelog]].
+
+Nota de negocio: cuando un lote es observado, se resube el **archivo completo corregido como nuevo lote** (LOTE2, LOTE3…) — el lote nuevo **reemplaza** al anterior, los lotes **no se suman** para el total de la DDJJ.
 
 ## Ver también
 

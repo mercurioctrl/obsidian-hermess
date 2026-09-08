@@ -26,6 +26,19 @@ Archivos principales: `corregir_padron.py`, `generar_lote_arba.py`
 - Memoria de Claude: `referencia_padron` (ubicación en disco del padrón) y `estado_presentaciones` (historial de DDJJ).
 - Bóveda `NB/arba` creada y sincronizada con 6 notas.
 
+## 2026-09-07
+
+**Presentación DDJJ percepciones agosto 2026 (período 2026080, D7)**
+
+- Archivo fuente `ARBA_PERCEPTIONS_202609.txt` (707 líneas), pero **todas las fechas internas eran 08/2026** → período real **agosto `2026080`**, no septiembre. Caso concreto de la regla "el nombre del archivo no define el período".
+- Validación previa: 707/707 percepciones con cálculo correcto (HALF_UP), formato OK, sin líneas al 0%. Generado LOTE1.
+- ARBA observó 2 operaciones por *"la alícuota difiere de las del contribuyente"*:
+  - Línea 501 — CUIT `30-71929695-1`: 1,20% → **0% en padrón de agosto → línea quitada**.
+  - Línea 652 — CUIT `30-71833023-4`: 6,00% → **0,50%** (percepción $14.318,79 → $1.193,23).
+- Corregido con `corregir_padron.py` contra `PadronRGSPer082026.TXT` (control: 705/705 líneas ya correctas recalcularon idénticas). Quedaron **706 líneas**.
+- Generado **LOTE2** `AR-30709246638-2026080-D7-LOTE2_7c86ed64d09b80c43508f5c49c96e272.zip` — pendiente de subir. **No usar el LOTE1.**
+- **Total DDJJ agosto = $21.878.962,25** (el LOTE2 reemplaza al LOTE1; NO se suman lotes).
+
 ## Ver también
 
 - [[arba]]
