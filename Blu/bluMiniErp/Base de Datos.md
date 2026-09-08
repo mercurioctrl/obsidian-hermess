@@ -1,6 +1,6 @@
 # Base de Datos
 
-MySQL 8. 57 migraciones. 23 tablas principales.
+MySQL 8. 59 migraciones. 24 tablas principales.
 
 ## Diagrama de relaciones
 
@@ -195,7 +195,23 @@ Salidas reales de dinero. Siempre requiere `banco_caja_id`. Ver [[Reglas de Nego
 | usuario_id | FK -> usuarios | |
 | tasa_cambio | decimal(10,4) | nullable |
 | banco_caja_id | FK -> bancos_cajas | requerido |
+| empresa_id | FK -> empresas | nullable. Razón social propia (BLU/DIGITO). Mig 0115, histórico backfilleado a BLU. Ver [[Modulo Contabilidad#Multi-empresa — dos razones sociales (2026-09-08)]] |
 | realizado | boolean | default false |
+
+Datos fiscales de la factura de compra (mig 0101, todos nullable): `proveedor_nombre`, `proveedor_cuit`, `comprobante_tipo`, `comprobante_pto_vta`, `comprobante_numero`, `comprobante_fecha`, `comprobante_cae`. Parte exenta/no gravada: `monto_exento` (mig 0104).
+
+### `empresas` (2026-09-08, mig 0114)
+Razones sociales propias del negocio (contabilidades separadas). Catálogo chico y fijo. Ver [[Modulo Contabilidad#Multi-empresa — dos razones sociales (2026-09-08)]].
+
+| Columna | Tipo | Notas |
+|---------|------|-------|
+| id | bigint PK | |
+| nombre | varchar(200) | Ej: "BLU INC S.R.L", "DIGITO BINARIO SRL" |
+| cuit | varchar(13) | nullable (DIGITO quedó sin CUIT) |
+| es_principal | boolean | la que factura por AFIP (BLU) |
+| activo | boolean | default true |
+
+`comprobantes_afip` también sumó `empresa_id` (FK -> empresas, nullable, mig 0115). AFIP emite bajo la principal; la NC hereda el de su factura.
 
 ### `bancos_cajas`
 | Columna | Tipo | Notas |

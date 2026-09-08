@@ -126,6 +126,42 @@ vía `proyectos.cliente_id`, ganancia bruta, **impuestos prorrateados** por fact
 global de la liquidación, ganancia neta). Los impuestos por cliente son **aproximación**: la liquidación
 real es global. Gateado por `VER_MONTOS_SALDOS`.
 
+## Multi-empresa — dos razones sociales (2026-09-08)
+
+El negocio opera con **dos empresas de contabilidades separadas**: **BLU INC S.R.L** (principal, la
+única que factura por AFIP) y **DIGITO BINARIO SRL**. Algunas facturas de **compra** las emiten a
+DIGITO; las **ventas** por AFIP son todas de BLU. Se agregó atribución por empresa para poder liquidar
+cada una por separado. **Decisión del usuario: solo etiquetado** — AFIP sigue emitiendo bajo BLU (no se
+implementó emisión electrónica bajo el CUIT de DIGITO, que exigiría su cert/PV propios).
+
+- **Migración 0114** — tabla `empresas` (`nombre`, `cuit`, `es_principal`, `activo`). Seed: BLU
+  (principal, CUIT tomado de `configuracion`) + DIGITO BINARIO SRL (`cuit` NULL, cargable después).
+  Modelo `Empresa` con `principal()` / `principalId()`.
+- **Migración 0115** — `empresa_id` (FK nullable) en `gastos` y `comprobantes_afip`. **Todo el histórico
+  se backfilleó a BLU** para que nada quede fuera de una contabilidad.
+- **Gasto:** `GastoController::store` defaultea a la principal si no viene `empresa_id`. Selector de
+  empresa en `/gastos/nuevo` y `/gastos/[id]`. `GastoResource` expone `empresa_id` / `empresa_nombre`.
+- **Ventas (AFIP):** `AfipComprobanteService::emitir()` setea `empresa_id = principalId()` (BLU); la NC
+  hereda el `empresa_id` de su factura.
+- **`ContabilidadService`** — `liquidacion()` / `libroVentas()` / `libroCompras()` (+ helpers privados
+  `comprobantesVenta` / `gastosConFactura`) aceptan `?int $empresaId`. Null = consolidado (todas). Las
+  filas del libro exponen `empresa_id` / `empresa_nombre` (y `comprobante_id` en ventas) para el
+  selector inline.
+- **Frontend `/contabilidad`:** selector global **BLU / DIGITO / Todas** que filtra liquidación, libros,
+  serie de 12 meses y **la descarga del Excel**. Al entrar, el filtro **arranca en BLU** (la principal),
+  no en "Todas", para que el Libro IVA baje por empresa por defecto. Además, **selector inline por fila**
+  en Ventas y Compras para reasignar al toque (refetch tras el cambio). El selector solo aparece si hay
+  >1 empresa.
+
+### Rutas nuevas
+```
+GET   /api/empresas                          (catálogo para los selectores; JSON directo, sin wrapper)
+PATCH /api/contabilidad/asignar-empresa      (body: tipo=compra|venta, id, empresa_id — reasigna una fila)
+GET   /api/contabilidad?...&empresa_id=       (filtro opcional; también en /contabilidad/libro-iva)
+```
+
+**Pendiente:** no hay CRUD de empresas (catálogo fijo de 2, editable por DB); DIGITO quedó sin CUIT.
+
 ## Limitaciones conocidas
 - El libro cubre **sólo lo que pasó por el sistema**. No es el Libro IVA Digital completo (eso exige
   todos los comprobantes emitidos y recibidos del período, incluidos los de afuera del ERP). Conciliar

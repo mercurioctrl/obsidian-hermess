@@ -4,6 +4,24 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-08 — Contabilidad multi-empresa (dos razones sociales) + restore de backup
+
+### Multi-empresa en [[Modulo Contabilidad]] (migraciones 0114 + 0115, sin commitear aún)
+- feat: el negocio factura y recibe facturas a **dos razones sociales de contabilidades separadas** — **BLU INC S.R.L** (principal) y **DIGITO BINARIO SRL**. Ahora cada **compra** (gasto) y cada **venta** (comprobante AFIP) se atribuye a una empresa para liquidar por separado. **Solo etiquetado** (decisión del usuario): AFIP sigue emitiendo bajo BLU; a DIGITO se le asignan facturas de compra a mano.
+- **Migración 0114:** tabla `empresas` (`nombre`, `cuit`, `es_principal`, `activo`) + seed BLU (principal, CUIT de `configuracion`) y DIGITO BINARIO SRL. Modelo `Empresa` con `principal()`/`principalId()`.
+- **Migración 0115:** `empresa_id` (FK nullable) en `gastos` y `comprobantes_afip`; **backfill de todo el histórico a BLU** (247 gastos + 11 comprobantes) para que nada quede en limbo.
+- **Backend:** `GastoController::store` defaultea a la principal; `AfipComprobanteService::emitir()` setea BLU (la NC hereda el de su factura); `ContabilidadService` (`liquidacion`/`libroVentas`/`libroCompras` + helpers) acepta filtro `?int $empresaId`; `ContabilidadController` con param `empresa_id` + `asignarEmpresa()`; nuevo `EmpresaController`. Requests/`GastoResource` exponen `empresa_id`.
+- **Rutas:** `GET /api/empresas`, `PATCH /api/contabilidad/asignar-empresa` (`{tipo:compra|venta, id, empresa_id}`), y `empresa_id` opcional en `/contabilidad` y `/contabilidad/libro-iva`.
+- **Frontend:** selector de empresa en el form de gasto (nuevo + edición); en `/contabilidad`, selector global **BLU / DIGITO / Todas** que filtra liquidación, libros y **el Excel**, **arrancando en BLU por defecto** (así el Libro IVA baja por empresa), + selector inline por fila para reasignar. El selector solo aparece con >1 empresa.
+- **Verificado** (E2E con token Sanctum + limpieza): `/empresas` y `/contabilidad` devuelven las 2 empresas; reasignar un gasto BLU→DIGITO lo mueve entre liquidaciones (aparece en DIGITO, desaparece de BLU) y se revierte OK. Migraciones corridas, rutas registradas, build FE.
+
+Archivos: `backend/database/migrations/{0114_create_empresas_table,0115_add_empresa_id_to_gastos_and_comprobantes}.php`, `backend/app/Models/{Empresa,Gasto,ComprobanteAfip}.php`, `backend/app/Http/Controllers/{EmpresaController,ContabilidadController,GastoController}.php`, `backend/app/Http/Requests/{Store,Update}GastoRequest.php`, `backend/app/Http/Resources/GastoResource.php`, `backend/app/Services/{ContabilidadService,AfipComprobanteService}.php`, `backend/routes/api.php`, `frontend/pages/contabilidad/index.vue`, `frontend/pages/gastos/{nuevo,[id]}.vue`
+
+### Operación
+- ops: **restore** de la DB local desde el backup del día (`backup_20260908_093224.tar.gz`, a migración 0113). Procedimiento robusto (drop total de tablas + reimport + `migrate` "Nothing to migrate" + restaurar `uploads`/`pdfs` + `chown www-data`), con `pre-restore_*.sql` de seguridad previo. Ver [[Errores Comunes]] (gotcha import a migración vieja).
+
+---
+
 ## 2026-09-05 — Gastos de personal (rendición de reembolsos con evidencia)
 
 ### Nuevo módulo [[Modulo Gastos Personal]] (rama `feat/gastos-personal`, PR #60, migración 0113)

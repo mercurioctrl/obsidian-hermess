@@ -2,7 +2,7 @@
 
 Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: clientes, presupuestos, proyectos, gastos, bancos/cajas, cuenta corriente y personal.
 
-**Ultima sincronizacion:** 2026-09-05
+**Ultima sincronizacion:** 2026-09-08
 
 ## Arquitectura
 
@@ -25,7 +25,7 @@ Sistema de gestion interna (ERP) para BluInc Studio. Cubre el ciclo completo: cl
 | [[Modulo People Performance]] | RRHH sobre Personal: rol&expectativas, competencias (1-5), objetivos (OKRs), ausencias (rango), reuniones 1:1, evidencia GitHub/Jira (tab Actividad, auto-vincular Jira). Fase 1 + inicio Fase 2 (2026-07-14) |
 | [[Modulo Calendario]] | Vista mensual que unifica tareas con deadline, ausencias/vacaciones, 1:1, objetivos, feriados **y reservas de reuniones** + suscripción externa iCal (Google/Apple/Outlook). `VER_SECCION_CALENDARIO` (2026-07-14) |
 | [[Modulo Reservas Reuniones]] | Link público tipo Calendly por usuario (`/agendar/{slug}`): un externo agenda un slot; disponibilidad self-service (`/mi-disponibilidad`) híbrida (reglas semanales + bloqueos/extras) con **editor visual de grilla semanal**; invitados múltiples con invite `.ics`, evento en Calendario, notificación in-app/push y **recordatorios al anfitrión (email+push, el día y 1h antes)** (2026-08-27) |
-| [[Modulo Contabilidad]] | Sección `/contabilidad`: liquidación de impuestos del período (IVA/Ganancias/IIBB) + Libro IVA en Excel (Ventas/Compras). Datos fiscales del gasto (mig 0101). Lista de compras incompletas con acceso a completar, simulador de compras (what-if) y "Te queda después de impuestos", Rentabilidad por Cliente en el dashboard (2026-08-23). `VER_SECCION_CONTABILIDAD` (2026-08-21) |
+| [[Modulo Contabilidad]] | Sección `/contabilidad`: liquidación de impuestos del período (IVA/Ganancias/IIBB) + Libro IVA en Excel (Ventas/Compras). Datos fiscales del gasto (mig 0101). Lista de compras incompletas con acceso a completar, simulador de compras (what-if) y "Te queda después de impuestos", Rentabilidad por Cliente en el dashboard (2026-08-23). **Multi-empresa: dos razones sociales (BLU + DIGITO BINARIO) con `empresa_id` en gastos/comprobantes para separar contabilidades — solo etiquetado, filtro BLU/DIGITO/Todas + reasignar inline, mig 0114/0115 (2026-09-08)**. `VER_SECCION_CONTABILIDAD` (2026-08-21) |
 | [[Modulo Remitos]] | Desde un presupuesto genera un remito (copia sus ítems) independiente y editable (no toca el presupuesto). Varios por presupuesto. Tradicional (descripción+cantidad, sin precios), PDF formato BLU. Mig 0102 (2026-08-23) |
 | [[Modulo Flota GSM]] | Líneas SIM prepagas: alta de números, cargas, vencimiento (`fecha_carga + meses_vigencia`) y **alertas por email** a contactos por línea (al cargar + 15 días antes vía comando `gsm:alertas-vencimiento`). Seguimiento, no toca finanzas. Mig 0109. `VER_SECCION_FLOTA_GSM` (2026-08-29) |
 | [[Modulo Novedades]] | **Blog público multi-tenant por cliente** con enlace secreto rotable (capability URL tipo Calendly, sin login). Se alimenta de activaciones→hitos + adjuntos imagen; aislamiento por `cliente_id` resuelto desde el token. Seguimiento, no toca finanzas. Mig 0110 (rama `feat/novedades-cliente`, 2026-09-03) |
