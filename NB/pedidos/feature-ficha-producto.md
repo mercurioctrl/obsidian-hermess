@@ -73,11 +73,10 @@ Validado end-to-end contra la base: items por empresa (NB=4, NBE=9, Laset=11) de
 ## Pendientes
 
 - **Frontend:** modal `ProductSheet` (galería + videos + descripción + logística + stock) reemplazando el `<a href="{webUrl}">` en `Orders/Detail.vue` (y ~6 lugares más: `Products/Compact.vue`, `Gallery.vue`, `AddTagItem.vue`, `SerialsModal.vue`, `Client/UserItemsModal.vue`). Dejar un botón "Ver en el sitio" usando `webUrl` como fallback.
-- **`packagePerUnit`:** confirmar qué representa (fracción, no u/caja entero) o buscar otra fuente para "cantidad por caja".
 - **Path del webUrl:** confirmar si NBE/Laset usan el mismo `/fromPedidos_-_{id}` o uno distinto (hoy es común a las tres).
 - **Atributos estructurados:** no existen como dato (van implícitos en la descripción de IA). Fase 2: parsear/estructurar o pedir el JSON de specs a nb.com.ar.
 
 ## Ver también
 
 - [[relacion-tablas-articulo-stocks]] — maestro de productos y stock
-- [[changelog]] — entradas 2026-08-26 y 2026-08-31
+- [[changelog]] — entradas 2026-08-26, 2026-08-31 y 2026-09-07
