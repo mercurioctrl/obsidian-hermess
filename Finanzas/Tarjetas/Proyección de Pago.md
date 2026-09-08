@@ -66,7 +66,9 @@ xychart-beta
 ## Este mes (recordatorio)
 
 - **Visa:** ✅ pagado $5.350.000 ($5,3M el 03-Sep + $50k el 05-Sep), por encima del mínimo.
-- **Amex:** pagá **≥ $4.882.430 antes del 07-Set** (mejor más, para no engrosar el financiado). Traé la plata por la **ruta cripto barata** (Mercury → USDC → P2P, ~$1.570/USD) en vez de tarjeta.
+- **Amex:** ✅ pagado $7.000.000 (07-Set), muy por encima del mínimo. Saldo que se financia: ~$6.995.698.
+
+**Financiado combinado tras ambos pagos: ~$16,3M** (Visa ~$9,34M + Amex ~$7,0M).
 
 ---
 *Supuestos: TEM 6,411% + IVA 21% ≈ 7,76%/mes constante; base financiada ~$17,3M; consumos nuevos pagados al 100%; ataque imputado a capital. Actualizado 03-09-2026 con los resúmenes Set/26 emitidos.*
