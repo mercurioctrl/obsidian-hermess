@@ -214,7 +214,7 @@ El **HD y el remoto (DMSS) no andaban** — solo se veía local. Causa: el mains
 
 Es la misma familia "LIDWF" que la [[#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] pero **fija** (sin pan-tilt). Acceso OK por ISAPI (deviceInfo + snapshot). Comparte la config de disuasión de abajo.
 
-> ⚠️ **Ojo con el nombre:** ya existe una **PASILLO-C** vieja en `10.10.10.192` (DS-2CD1001-I, 2017, con cable degradado — ver [[#Cámara PASILLO-C — DS-2CD1001-I|arriba]]). Esta `.65` es una cámara **distinta y nueva**. Definir si reemplaza a la `.192` o convive con ella.
+> 📍 **Dos cámaras en el pasillo (conviven):** esta `.65` (ColorVu nueva) y la **PASILLO-C** `10.10.10.192` (DS-2CD1001-I, 2017 — ver [[#Cámara PASILLO-C — DS-2CD1001-I|arriba]]) están **ambas en el pasillo apuntando cada una hacia un lado opuesto** (cobertura de las dos direcciones). No es un reemplazo.
 
 **Pendiente:** reservar IP fija en UniFi (hoy por DHCP), igual criterio que [[03-impresora-p1102w]] y la JARDIN.
 

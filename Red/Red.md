@@ -38,6 +38,8 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[02-camaras]] — Inventario, diagnóstico y tareas pendientes
 - [[02-camaras#Cámara PUERTA PTZ — DS-2CV1F23G2-LIDWF|PUERTA PTZ]] — WiFi PT motorizada (10.10.10.64), patrullaje **2 reposos (izq/der) + barrido lento** (rediseño ago 2026) vía ISAPI JSON
 - [[02-camaras#Cámara JARDIN — DH-IPC-HFW1230DT-STW|JARDIN]] — Dahua WiFi 2MP (10.10.10.216 fija), graba en DVR CH5. Mainstream **debe ser H.264** (el DVR no soporta H.265)
+- [[02-camaras#Cámara PASILLO (ColorVu) — DS-2CV1023G2-LIDWF|PASILLO (ColorVu)]] — Hikvision ColorVu fija 2MP (10.10.10.65, **nueva sep 2026**), luz de disuasión. Convive con la PASILLO-C `.192` apuntando cada una a un lado del pasillo
+- [[02-camaras#Luz de disuasión ColorVu (PUERTA PTZ .64 + PASILLO .65)|Luz de disuasión ColorVu]] — PTZ `.64` + PASILLO `.65`: modo `eventIntelligence` + destello ante movimiento humano, brillo auto para no quemar el video
 
 ## Grabadores (DVR / NVR)
 
