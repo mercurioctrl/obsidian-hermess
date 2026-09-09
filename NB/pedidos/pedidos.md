@@ -44,6 +44,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-ficha-producto|Feature: Ficha de producto]] — endpoint `items/{id}/sheet` con la ficha del producto (fotos, descripción, videos, garantía, logística, stock) para modal in-app en vez de nb.com.ar
 - [[feature-modulo-presupuestos|Feature: Módulo de Presupuestos]] — armar/guardar/editar/PDF presupuestos con ítems de inventario por empresa + ítems libres; pestaña junto a "Ordenes"; tablas `presupuestos`/`presupuestos_items`
 - [[feature-pdf-fiscal-por-empresa|Feature: PDF y links por empresa]] — datos fiscales del emisor por `companyCode` desde `FP_Empresas` (CompanyDto extendido) + `config/companySites.php`; encabezado/logo del PDF según empresa
+- [[feature-cuentas-bancarias-empresa|Feature: Cuentas bancarias por empresa]] — muestra en Pedido + Info las cuentas de la empresa de facturación del cliente (`voucherCompanyCode`) para saber a dónde transferir; tabla `empresas_cuentas_bancarias` (1:N contra `FP_Empresas`)
 - [[decision-permiso-nuevo-agente|Checklist: agregar un permiso nuevo]] — los 4 lugares (tabla, AuthRepository x2, UserDto, middleware); el gotcha del UserDto que oculta el flag al front
 
 ## Esquema ERP — Tablas y relaciones

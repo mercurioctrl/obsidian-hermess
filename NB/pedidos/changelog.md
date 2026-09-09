@@ -1,3 +1,15 @@
+## 2026-09-09 — Cuentas bancarias por empresa en Pedido + Info (a dónde transferir)
+
+En "Pedido + Info" ahora se muestran las cuentas bancarias de la empresa de facturación del cliente (`clientes.voucherCompanyCode`), para saber a dónde transferir. Detalle en [[feature-cuentas-bancarias-empresa]].
+
+- **Tabla nueva** `NewBytes_DBF.dbo.empresas_cuentas_bancarias` (1:N contra `FP_Empresas`; `company_code` INT → `CODEMP`, sin FK física por el mismatch nvarchar/int). CUIT afuera (ya está en `FP_Empresas.CNIF`). `.sql` create+drop `2026_09_09_001`. Seed: solo Digito Binario (5).
+- **Backend:** `aboutOrder` suma `voucherCompanyCode` (SELECT+GROUP BY) y adjunta `bankAccounts` vía `CompanyRepository::bankAccountsByCompanyCode` + `CompanyBankAccountDto`. `AboutOrderInfoDto.voucherCompanyCode` + `AboutOrderDto.bankAccounts`.
+- **Frontend (`pages/orders.vue`):** sección verde **colapsable** ("Recordá pasar los datos correctos para transferencia" + flechita) con copiar por cuenta/alias; los datos también van dentro del textarea (para copiar/PDF).
+- Rama `feature/cuentas-bancarias-transferencia` en ambos repos. PRs: back #1638/#1639, front #1332/#1333 (→development y →blu-dev-staff).
+- ⚠️ Falta correr el `.sql` en staging/prod (la tabla solo existe en dev) y cargar cuentas de NB/NBE/Pisos/Laset.
+
+---
+
 ## 2026-09-07 — Ficha de producto: `unitsPerBox` como cantidad por caja
 
 Se resolvió la semántica pendiente de `articulo.packagePerUnit` en la [[feature-ficha-producto]]. El campo del ERP viene como la **fracción de caja que ocupa una unidad** (ej. `0.0083`), no como un conteo. Ahora `logistics.unitsPerBox` devuelve su **inverso redondeado** → `1 / 0.0083 = 120` (unidades por caja). Cuando el valor es `0`/`null` devuelve `null` (sin dato de bulto, sin división por cero).
