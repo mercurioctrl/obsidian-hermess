@@ -29,6 +29,8 @@ La web UI (`http://10.10.10.101`) necesita **plugin ActiveX** (IE/Windows). Pero
 | Canal | Tipo | Cámara | Nombre DVR |
 |---|---|---|---|
 | CH1–4 | Analógica | 4 analógicas | FRENTE DER / FRENE IZQ ⚠️(typo) / NEGOCIO / CAM 4 |
+
+> 📸 **CH1 (FRENTE DER) y CH2 (FRENTE IZQ)** mandan foto a Telegram por detección de movimiento vía el servicio `frente-captura` → ver [[10-frente-captura]].
 | CH5 | IP | Dahua `10.10.10.216` | JARDIN |
 | CH6 | IP | Portero VTO `10.10.10.102` | PORTERO |
 | CH7 | IP | Hik `10.10.10.192` (PASILLO-C) | PUERTA |
@@ -74,4 +76,5 @@ La web UI (`http://10.10.10.101`) necesita **plugin ActiveX** (IE/Windows). Pero
 
 - [[02-camaras#Cámara JARDIN — DH-IPC-HFW1230DT-STW|Cámara JARDIN]] — ficha de la cámara del jardín
 - [[02-camaras]] — Inventario de cámaras IP
+- [[10-frente-captura]] — avisos a Telegram por movimiento en las analógicas CH1/CH2
 - [[Red]] — Infraestructura de red hogareña

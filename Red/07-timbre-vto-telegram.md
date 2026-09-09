@@ -71,4 +71,5 @@ Con RPC2 (login digest MD5) se ve que `VideoTalkPeer.invite` **existe** (da "Inv
 - [[04-dvr-dahua]] — el VTO se graba como CH6 "PORTERO"
 - [[02-camaras]] — inventario de cámaras IP del hogar
 - [[02-camaras#Avisos a Telegram en cada reposo (servicio `ptz-captura`, 2026-08-15)|ptz-captura (PTZ → Telegram)]] — reusa este mismo bot
+- [[10-frente-captura]] — mismo esquema para las analógicas del frente (CH1/CH2); reusa este mismo bot
 - [[Red]] — infraestructura de red hogareña

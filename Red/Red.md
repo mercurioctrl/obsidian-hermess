@@ -40,6 +40,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[02-camaras#Cámara JARDIN — DH-IPC-HFW1230DT-STW|JARDIN]] — Dahua WiFi 2MP (10.10.10.216 fija), graba en DVR CH5. Mainstream **debe ser H.264** (el DVR no soporta H.265)
 - [[02-camaras#Cámara PASILLO (ColorVu) — DS-2CV1023G2-LIDWF|PASILLO (ColorVu)]] — Hikvision ColorVu fija 2MP (10.10.10.65, **nueva sep 2026**), luz de disuasión. Convive con la PASILLO-C `.192` apuntando cada una a un lado del pasillo
 - [[02-camaras#Luz de disuasión ColorVu (PUERTA PTZ .64 + PASILLO .65)|Luz de disuasión ColorVu]] — PTZ `.64` + PASILLO `.65`: modo `eventIntelligence` + destello ante movimiento humano, brillo auto para no quemar el video
+- [[10-frente-captura]] — **FRENTE DER / IZQ** (analógicas CH1/CH2 del [[04-dvr-dahua|DVR Dahua]]): servicio `frente-captura` que manda **foto a Telegram** por detección de movimiento (OpenCV server-side, mismo esquema que el timbre). Agregado sep 2026
 
 ## Grabadores (DVR / NVR)
 
@@ -83,6 +84,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[08-home-assistant]] — Integración de las 13 teclas Tuya/Macroled a Home Assistant por **LocalTuya** (control local sin nube): proyecto Tuya IoT + extracción de local keys con tinytuya + mass_configure e inyección manual de las v3.5 (agosto 2025)
 - [[08-home-assistant#Rutinas / iluminación automática]] — Dashboard "Casa" (con sección propia "Calle") + rutinas de iluminación exterior (atardecer→amanecer calle/terraza; jardín y patio WiZ→medianoche), **avisos por Telegram** de cada rutina (reusa el bot del timbre vía `rest_command`), lectura de nombres por gang desde la app (`shadow/properties`) y regla dura: los switches de **jardín/cámara y patio** van SIEMPRE ON (alimentan WiZ/cámara); **conmutación escalera/vestidor** por mirror bidireccional (prender abajo/apagar arriba) reemplazando 6 escenas Tuya (agosto 2025)
 - [[Monitoreo_WAN#Incidente Telecentro caída (2026-07/08)]] — diagnóstico de Telecentro caída (WAN2 con IP `0.0.0.0`) desde la LAN vía egress Cloudflare + controlador UniFi; recuperó 2026-08-02 17:28 con IP nueva. Descubierto el **Wabee** (medidor de energía, `10.10.10.44`, solo-nube). Confirmado que el switch de la calle NO alimenta las WiZ del jardín (prueba controlada) → las WiZ se prendían por un horario de la app WiZ; se dejó HA como único cerebro (agosto 2025)
+- [[02-camaras#Sesión (2026-09-08) — limpieza de presets + reencuadre]] — PTZ PUERTA: **borrados los presets 3–6** y **reencuadrados los 2 reposos** (más hacia la calle, pared fuera de cuadro); se documentó que el control `momentary` es errático (reencuadrar con joystick). Además se creó el servicio [[10-frente-captura]] para mandar a Telegram la detección de movimiento de las analógicas **FRENTE DER/IZQ** del DVR (septiembre 2026)
 
 ## Notas
 

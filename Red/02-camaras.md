@@ -84,7 +84,9 @@ UniFi no soporta pinear un cliente a un AP específico de forma nativa. Si la c�
 **IP:** 10.10.10.64  
 **Ubicación:** apunta a la calle/vereda y a la entrada del edificio ("puerta")
 
-Tiene **6 presets de hardware** (no renombrables). **Config actual (ago 2026): solo se usan 2** — preset **1 = Reposo Izquierda** (calle arriba, profundo) y preset **2 = Reposo Derecha** (vereda abajo hacia la esquina) — con barrido lento entre ambos que cubre toda la cuadra. Los presets 3/4/5/6 siguen guardados pero fuera del barrido. Es una cámara aparte del NVR (ver memoria [[memoria]]).
+Tenía 6 presets de hardware (no renombrables). **Config actual: solo existen 2** — preset **1 = Reposo Izquierda** y preset **2 = Reposo Derecha** — con barrido lento entre ambos que cubre toda la cuadra. Los presets **3/4/5/6 se borraron el 2026-09-08** (estaban fuera del barrido, y 5/6 se habían corrido apuntando a la pared/puerta del zaguán). Es una cámara aparte del NVR (ver memoria [[memoria]]).
+
+> 🗓️ **2026-09-08:** se borraron los presets 3–6 y se **reencuadraron los dos reposos** (ver [[#Sesión (2026-09-08) — limpieza de presets + reencuadre]] abajo).
 
 > 📼 También se graba en el **DVR Dahua** en **CH9** (movida desde CH11 el 2026-07-26). Ver [[04-dvr-dahua]].
 
@@ -111,6 +113,15 @@ Rediseño total del patrullaje (a raíz de un corte de luz que dejó la cámara 
 `PUT /ISAPI/PTZCtrl/channels/1/presets/{id}` con body XML `<PTZPreset><enabled>true</enabled><id>N</id><presetName>...</presetName></PTZPreset>`. **Mover el joystick NO cambia un preset**; solo lo cambia un "set preset" explícito (por eso, si un reposo quedó raro, es que se guardó sin querer).
 
 **Límite de pan:** el recorrido hacia la izquierda es corto — al llegar al tope mecánico el `PUT /continuous` devuelve **HTTP 403**.
+
+### Sesión (2026-09-08) — limpieza de presets + reencuadre
+
+- **Borrados los presets 3, 4, 5 y 6** (`DELETE /ISAPI/PTZCtrl/channels/1/presets/{id}`, respondieron `OK`). Estaban fuera del barrido; además 5 quedaba casi todo contra la pared y 6 (la vieja "vista amplia") se había corrido apuntando a la puerta del zaguán y al techo. Quedan **solo preset 1 y 2**, los del barrido.
+- **Reencuadrados los dos reposos** con el joystick de la app y guardados con `PUT /presets/{id}`:
+  - **Preset 1 (Reposo Izquierda):** movido un poco más a la izquierda para **enganchar la profundidad de la calle**, dejando la columna de ladrillo en una franja mínima a la derecha. Queda casi en el tope izquierdo de pan.
+  - **Preset 2 (Reposo Derecha):** alineado hacia la izquierda / calle abajo, con la pared fuera de cuadro. Ahora **ambos reposos miran más hacia la calle** → el arco del barrido quedó más acotado.
+- ⚠️ **El control por pulsos `momentary` es errático** en este modelo: el mismo comando a veces mueve un poquito y a veces pega un volantazo (sobre todo cerca de los topes) → **no sirve para encuadre fino**. Reencuadrar siempre con el **joystick de la app** y fijar con `PUT /presets/{id}`. El `goto preset` además tarda ~12–14 s en asentar; sacar snapshot antes captura la cámara en pleno movimiento (parece "descalibrado", pero es transitorio). El status PTZ (`/PTZCtrl/channels/1/status`) siempre devuelve 0 (no reporta posición absoluta).
+- Al regrabar los reposos se actualizaron las refs del servicio `ptz-captura`: `ref_izq.jpg` y `ref_der.jpg` (backups `*.bak-20260908`).
 
 ### Recuperación ante cortes de luz
 
