@@ -6,7 +6,7 @@ Ver [[botWhatsappBlu]] · [[stack]] · [[contexto]]
 
 | Archivo | LOC | Responsabilidad |
 |---|---|---|
-| `webhook.js` | 2273 | Express: webhooks de Jira, Chat Viewer, Inbox web, API HTTP, cola de envios |
+| `webhook.js` | 2365 | Express: webhooks de Jira, Chat Viewer, Inbox web, API HTTP, cola de envios |
 | `bot.js` | 1537 | Orquestador: recibe mensajes de WhatsApp y despacha |
 | `db.js` | 892 | SQLite; migraciones idempotentes en cada arranque |
 | `chat.js` | 687 | Motor de conversacion; arma el contexto y rutea al LLM |
@@ -55,8 +55,29 @@ usuario de WhatsApp: sobrevive a que el cliente cambie de numero o de chatId.
 
 - `POST /jira-webhook/:secret` — eventos de Jira
 - **Chat Viewer** `/chat/user/:chatId` — la conversacion completa, linkeada desde cada ticket
-- **Inbox web** — lista de conversaciones, toggle bot on/off por chat, envio de archivos
+- **Inbox web** `/inbox` — lista de conversaciones, toggle bot on/off por chat, envio de archivos
+- **Deep link** `/inbox/c/:chatId` — la misma SPA, abierta en esa conversacion (ver abajo)
 - **API publica** — `POST /inbox/send` y afines, autenticadas por `INBOX_API_TOKEN`
+
+Las paginas HTML pasan por `requiereAuth` (redirige al login) y los endpoints JSON por
+`requiereAuthApi` (401). Ambos aceptan cookie de sesion **o** `INBOX_API_TOKEN`.
+
+## El Inbox es una SPA servida desde un template literal
+
+`generarHTMLInbox()` devuelve HTML + CSS + JS en un solo template literal de `webhook.js`; no hay
+build, ni framework, ni archivos estaticos. Consecuencia practica al editarlo: el JS **del cliente**
+esta dentro de un string, asi que las barras invertidas y los `${` van escapados, y
+`node --check webhook.js` no lo valida (para el parser es texto). Ver [[contexto]].
+
+**Deep links (2026-09-08).** `/inbox/c/:chatId` sirve exactamente el mismo HTML que `/inbox`: el
+routing real es del lado del cliente, que lee el chatId de `location.pathname` y abre esa conversacion
+al cargar. `abrirChat()` empuja `history.pushState` y un handler de `popstate` cubre back/forward. La
+URL deja el `@` sin escapar para que sea legible y pegable.
+
+Para que un link compartido sobreviva al login, `requiereAuth` redirige a `/inbox/login?next=<ruta>`
+y el POST del login vuelve a ese destino. `rutaInternaSegura()` acepta solo rutas que empiecen con
+`/` y no con `//`; cualquier otra cosa cae a `/inbox`. **El link no es un secreto por conversacion**:
+la barrera sigue siendo la sesion del Inbox, no la URL.
 
 ## MCP `whatsapp-blu`
 

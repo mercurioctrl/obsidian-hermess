@@ -17,6 +17,7 @@
   - [[Blu/minutas/minutas|minutas]] — Minutas de reunión por cliente
   - [[Blu/rrhh/rrhh|rrhh]] — Recursos Humanos
   - [[Blu/seguros/seguros|seguros]] — Certificados de seguros con formato BLU
+  - [[Blu/Estado de situacion/Estado de situacion|Estado de situación]] — Informes periódicos con datos del ERP
   - `direccion/` — Dirección
 
 ## 🏢 Clientes & Proyectos

@@ -2,6 +2,31 @@
 
 Ver [[botWhatsappBlu]] · [[contexto]]
 
+## 2026-09-08
+
+- `feat`: link unico por conversacion en el Inbox (`/inbox/c/<chatId>`)
+
+El Inbox es una SPA: `abrirChat()` cambiaba el estado en memoria y la URL quedaba siempre en `/inbox`,
+asi que **no habia forma de pasarle a un companero la ruta de una conversacion**. Ese fue el pedido.
+
+Se agrego la ruta `GET /inbox/c/:chatId`, que sirve el mismo HTML; el cliente lee el chatId del
+`location.pathname` y abre ese chat al cargar. `abrirChat()` ahora empuja `history.pushState`, hay
+handler de `popstate` (back/forward entre chats y vuelta al estado vacio) y el titulo de la pestana
+pasa a ser el nombre del contacto. Boton 🔗 en el header para copiar el link, con fallback a `prompt()`
+si el portapapeles esta bloqueado.
+
+**Login que respeta el destino:** `requiereAuth` redirige a `/inbox/login?next=<ruta>` y el POST del
+login vuelve ahi, asi el deep link sobrevive al login. `rutaInternaSegura()` descarta cualquier `next`
+que no empiece con `/` o que empiece con `//`, para no dejar un open redirect.
+
+**Push:** las notificaciones ahora traen el link al chat que las disparo y el service worker navega la
+pestana del Inbox ya abierta (`w.navigate`) en vez de solo enfocarla.
+
+Verificado con curl: 302 con el `next` correcto sin sesion, 200 con token, `next` externo o `//host`
+cae a `/inbox`, y el POST del login redirige al chat. `pm2 restart whatsapp-bot` hecho.
+
+Archivos: `webhook.js`, `push.js`
+
 ## 2026-08-31
 
 - `docs`: documentada la cuenta de servicio de Jira, los permisos de SNB y el 403 del webhook

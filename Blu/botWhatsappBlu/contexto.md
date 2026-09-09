@@ -60,6 +60,10 @@ evaluaron parchear el codigo y darle ADMINISTER al bot; el usuario eligio dejarl
 - **`summary` de Jira de una sola linea**: un `\n` da 400
 - **Los envios del MCP van a clientes reales y son irreversibles**: siempre previsualizar con
   `confirmado=false` antes de mandar
+- **El Inbox vive dentro de un template literal**: el JS del cliente esta en un string de
+  `webhook.js`, asi que `\` y `${` van escapados y `node --check webhook.js` **no** lo valida — para
+  el parser es texto. Para validarlo de verdad hay que extraer la funcion, evaluarla, sacar el bloque
+  `<script>` a un archivo y correrle `node --check`. Ver [[arquitectura]]
 
 ## Convenciones
 
@@ -72,4 +76,8 @@ hunks. Al mencionar un ticket, escribirlo siempre como `SNB-XXXX - Titulo comple
 - **Prueba de punta a punta del cambio de cuenta**: falta ver un ticket real creado desde WhatsApp con
   reporter Soporte Blu. Lo verificado es que la cuenta tiene permisos y ve los mismos campos
 - **Ticket de Andrea (New Bytes)**: fallo el 2026-07-07 y nunca se creo
+- **Deep links del Inbox sin commitear** (al 2026-09-09): los cambios de `webhook.js` y `push.js` del
+  2026-09-08 estan aplicados y corriendo bajo PM2, pero todavia en el working tree
+- **Compartir un chat con alguien sin cuenta del Inbox** no es posible hoy: el deep link exige sesion.
+  Haria falta un token de solo lectura por conversacion; se menciono como opcion y quedo pendiente
 - Backups `.env.bak`, `jira.js.bak` y `webhook.js.bak` quedaron en la VM, ignorados por git

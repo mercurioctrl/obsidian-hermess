@@ -24,6 +24,7 @@ Corre en la VM `hermessbot` bajo PM2 (`ngrok` + `whatsapp-bot`), sin Docker.
 | Tickets | Jira Cloud REST v3 (ADF), proyecto SNB |
 | Storage | SQLite (`bot.db`, WAL) |
 | HTTP | Express 5 en puerto 3100 + ngrok |
-| Tamano | ~9.300 lineas de JS |
+| Inbox | SPA en `/inbox`, con link propio por chat en `/inbox/c/<chatId>` |
+| Tamano | ~9.400 lineas de JS |
 
-Ultima sincronizacion: 2026-08-31
+Ultima sincronizacion: 2026-09-09

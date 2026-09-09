@@ -1,7 +1,7 @@
 # Memoria — botWhatsappBlu
 
 Consolidacion de la memoria de Claude del proyecto
-(`~/.claude/projects/-home-hermessbot-botWhatsappBlu/memory/`), 24 notas al 2026-08-31.
+(`~/.claude/projects/-home-hermessbot-botWhatsappBlu/memory/`), 24 notas al 2026-09-09.
 Esta nota es un espejo legible: la fuente de verdad son esos archivos.
 
 Ver [[botWhatsappBlu]] · [[contexto]] · [[arquitectura]]
@@ -24,7 +24,8 @@ Ver [[botWhatsappBlu]] · [[contexto]] · [[arquitectura]]
 - **Handoff y Slack**: reenvio de mensajes del cliente mientras espera, con recordatorios; truco de
   msgId-tracking para distinguir mensajes del bot de los de un humano
 - **Esquema SQLite**: tablas, indices, WAL y el patron de migraciones idempotentes
-- **Inbox y Chat Viewer**: endpoints del Express en 3100, panel de edicion de contacto, `/send-media`
+- **Inbox y Chat Viewer**: endpoints del Express en 3100, panel de edicion de contacto, `/send-media`,
+  deep links `/inbox/c/:chatId` y la trampa de editar JS dentro de un template literal
 - **XPG Rewards**: flujo paralelo al MSP, 3 tablas, scripts de invitacion, lookup self-healing
 - **LLM hibrido**: DeepSeek para texto por costo, OpenAI solo para vision; ruteo en `chat.js`
 - **Jira SNB**: issue types, custom fields, labels, categorias, webhooks, link al Chat Viewer
