@@ -2,6 +2,17 @@
 
 > [[Tarjetas]]
 
+## 2026-09-08
+
+- **Pago extra a Visa:** $1.000.000 (08-09-2026, tras el vto del 04-09). Total pagado del resumen [[Visa 2026-09]]: **$6.350.000**. Baja el saldo financiándose a **~$8.339.557,63** y el costo financiero estimado del próximo mes a **~$646.900** (~$59.500 menos). Margen sobre el mínimo: +$1.280.660.
+- **Decisión:** Visa y [[Amex 2026-09]] empataban en **TNA 78%**, así que el ahorro del millón era idéntico en ambas → se priorizó Visa por tener la **mayor base financiada** ($9,34M vs $7,0M Amex) para cortar más interés compuesto. Ver [[Pagos e Intereses]].
+- El pago entra al ciclo de octubre → aparecerá como `SU PAGO EN PESOS` en el próximo resumen; **no** se cargó todavía en la tabla de [[Pagos e Intereses]] (registra pagos de ciclos ya cerrados).
+
+### Dato de la sesión
+
+- Pago de este mes a Amex ya registrado: **$7.000.000** (07-09, vto del resumen). Saldo Amex financiándose: ~$6.995.697,52.
+- Tras ambos pagos, saldo financiándose combinado: **~$15,34M** (Visa $8,34M + Amex $7,0M), ambos a TNA 78%.
+
 ## 2026-08-29
 
 - **Nuevo origen de datos: API del home banking.** Los movimientos del período en curso se pueden traer de `POST /obp-servicios/bff/cards/cards/{cardId}/movements` (payload con `accountId`, `accountNumber`, `cardId`, `cardData`). El token JWT dura **10 minutos**, así que hay que copiar el cURL desde DevTools y correrlo enseguida.
