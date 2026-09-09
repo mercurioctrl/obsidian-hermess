@@ -83,6 +83,9 @@ Registro cronológico de sesiones de trabajo con Catriel.
 - [[Bily/bitacoras/2026-08-27|2026-08-27]]
 - [[Bily/bitacoras/2026-08-28|2026-08-28]] — Jornada sin actividad: bitácora diaria por cron y saludo de buenas noches; sin conversaciones, pedidos ni decisiones nuevas por WhatsApp
 
+### Septiembre
+- [[Bily/bitacoras/2026-09-09|2026-09-09]] — Bitácora diaria por cron tras varios fallos del runtime ("Volvisteeee"); consultas de Catriel sobre visibilidad de grupos de WhatsApp y saldo de OpenRouter (no accesible por falta de key en shell)
+
 ## Ver también
 
 - [[Bily/Bily|Inicio de Bily]]
