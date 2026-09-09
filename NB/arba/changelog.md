@@ -38,6 +38,7 @@ Archivos principales: `corregir_padron.py`, `generar_lote_arba.py`
 - Corregido con `corregir_padron.py` contra `PadronRGSPer082026.TXT` (control: 705/705 líneas ya correctas recalcularon idénticas). Quedaron **706 líneas**.
 - Generado **LOTE2** `AR-30709246638-2026080-D7-LOTE2_7c86ed64d09b80c43508f5c49c96e272.zip` — pendiente de subir. **No usar el LOTE1.**
 - **Total DDJJ agosto = $21.878.962,25** (el LOTE2 reemplaza al LOTE1; NO se suman lotes).
+- **Verificación final:** cruce completo de las 706 líneas del LOTE2 contra `PadronRGSPer082026.TXT` → **0 alícuotas difieren, 0 percepciones mal, 0 líneas al 0%** (192 CUITs). El LOTE2 es el archivo único y completo listo para subir de una. El chequeo que corrió `corregir_padron.py` corrige contra **todo** el padrón, no solo las líneas observadas → no deberían quedar sorpresas.
 
 ## Ver también
 
