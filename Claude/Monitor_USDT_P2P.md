@@ -66,4 +66,24 @@ Para ver el estado sin esperar: `python3 ~/usdt-mon/monitor.py --status`
 
 Son ~2.880 requests por día contra Binance. Hay backoff exponencial ante fallos (hasta 10 min) y un jitter de 0-4 s en el poll para no ser un robot perfectamente periódico. Si el monitor queda 10 minutos sin datos avisa por WhatsApp, y avisa también cuando se recupera.
 
+## Preguntarle a Bily sobre la serie
+
+Bily **no ve las alertas** que postea el monitor: salen por un canal directo que no genera turno (por eso no gastan IA). Pero sí puede consultar el historial si lo mencionás en el grupo.
+
+```
+bily, ¿a qué hora estuvo más barato hoy?
+bily, ¿cómo viene comparado con ayer?
+bily, ¿cuál fue el mínimo de la semana?
+```
+
+Corre `usdt-stats`, que expone la serie por **SQL en modo lectura**. No hay menú de comandos fijos: Bily arma la consulta según lo que le preguntes. Desde terminal también sirve:
+
+```bash
+usdt-stats                     # resumen: actual + min/max/prom por horizonte
+usdt-stats --schema            # estructura de la tabla
+usdt-stats --sql "SELECT ..."  # consulta libre, solo lectura
+```
+
+Las instrucciones del grupo están en `~/openclaw-groups/120363431722893957@g.us/instructions.md`.
+
 Relacionado: [[Monitoreo_WAN]] · [[MEMORIA]]
