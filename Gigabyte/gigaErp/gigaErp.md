@@ -4,8 +4,9 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 **Stack:** Laravel 11 + Nuxt 3 SPA + MySQL 8 + Docker · Puerto `8824`
 **Rama activa:** **`Development`** (integración/deploy; con D mayúscula, `main` quedó atrás)
-**Último commit:** `57afd7e` · **Última sincronización:** 2026-08-14
-**Último trabajo (2026-09-01):** **Reclamo de Evidencias (POEs)** dentro de [[modulos/envios|Envíos]]: reclamo por partner con mail estilo correo original (cuadro de vencimiento), **botón de carga directa** de POEs, remitente propio `mktgigabyte@` + **BCC** a forwarding, contador de reclamos, **"Para" multi-email** con directorio por empresa (`partner_contactos`) y fecha límite tomada del correo original. Se **descartó** el flujo Google-native/wizard/deck. Migs `0102–0104`. Ver [[modulos/reclamo-evidencias]] y [[changelog#2026-09-01 — Reclamo de Evidencias (POEs) desde Envíos|changelog]].
+**Último commit:** `e67040b` · **Última sincronización:** 2026-09-10
+**Último trabajo (2026-09-08):** **[[modulos/dashboard|Dashboard]] reducido** (solo Tareas + Calendario) + tabla nueva de **POEs subidas** (Reseller · Acción/envío · POEs · Última subida) con **descarga** desde el chip (directo si es 1, modal si son varios). De paso se recuperó un **crash-loop del backend** (config cache en 0 bytes; ver [[troubleshooting#16. Backend en crash-loop por config cache en 0 bytes|troubleshooting #16]]) y se endureció `docker-entrypoint.sh`. PRs #44 (mergeada) / #45 (abierta). Ver [[modulos/dashboard]] y [[changelog#2026-09-08 — Dashboard reducido + descarga de POEs (+ recuperación de crash-loop)|changelog]].
+**Trabajo previo (2026-09-01):** **Reclamo de Evidencias (POEs)** dentro de [[modulos/envios|Envíos]]: reclamo por partner con mail estilo correo original (cuadro de vencimiento), **botón de carga directa** de POEs, remitente propio `mktgigabyte@` + **BCC** a forwarding, contador de reclamos, **"Para" multi-email** con directorio por empresa (`partner_contactos`) y fecha límite tomada del correo original. Se **descartó** el flujo Google-native/wizard/deck. Migs `0102–0104`. Ver [[modulos/reclamo-evidencias]] y [[changelog#2026-09-01 — Reclamo de Evidencias (POEs) desde Envíos|changelog]].
 
 ---
 
@@ -22,6 +23,7 @@ ERP interno para la marca **Gigabyte** (hardware IT). Gestiona distribuidores, s
 
 ### Módulos
 
+- [[modulos/dashboard]] — pantalla de inicio: Tareas + Calendario + tabla de **POEs subidas** con descarga (rediseño 2026-09-08)
 - [[modulos/clientes]] — clientes distribuidor/reseller, sección Contactos, importación por bloques
 - [[modulos/ordenes-venta]] — pipeline Orden → Aprobación → Invoice → Nota de crédito
 - [[modulos/invoice-preview]] — preview Blu-style + html2pdf client-side

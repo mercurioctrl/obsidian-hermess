@@ -75,6 +75,10 @@ Patrones recurrentes, gotchas y workflow del proyecto. Consultar antes de cada s
 **Antes:** `bootstrap/app.php` usaba `status = getStatusCode() ?? 500` → como `ValidationException` no tiene ese método, **toda validación salía HTTP 500**. Regla vieja documentada como "esperado".
 **Ahora (release colaboración):** un `match` mapea bien: `ValidationException→422` (con `errors`), `AuthenticationException→401`, `AuthorizationException→403`, resto `getStatusCode()`/500. **La regla vieja ya NO aplica.** El 401 real vuelve a disparar el logout automático del front (`plugins/refresh-usuario.client.ts`). Ver [[modulos/notificaciones]] y [[changelog#2026-08-14 — Deploy release colaboración (Tareas 2.0, Solicitudes, Minutas, Notificaciones+Push, Campañas)|changelog]].
 
+### 12. Backend en crash-loop por `bootstrap/cache/config.php` en 0 bytes (2026-09-08)
+
+Un `config:cache` interrumpido dejó `config.php` (y `routes-v7.php`) en **0 bytes** → el repo `config` no se puebla → **ningún** artisan bootea (`Target class [config] does not exist`, enmascarando el `TypeError` real con `APP_DEBUG=false`). Con `set -e` en `docker-entrypoint.sh`, el seed-check con `tinker` lo volvía fatal → **crash-loop** (`RestartCount` altísimo, exit 255). Un container fresco booteaba bien → la corrupción vivía en la capa de escritura del container. **Fix sin recrear** (código hot-deployed): inyectar caches válidos de un one-off y dejar que el entrypoint regenere. **Durable:** auto-sanación en el entrypoint (`if ! php artisan --version; then rm bootstrap/cache/*.php`) + seed-check no-fatal. Ver [[troubleshooting#16. Backend en crash-loop por config cache en 0 bytes|troubleshooting #16]].
+
 ---
 
 ## Workflow de deploy (sin rebuild)
@@ -152,6 +156,7 @@ No están en el `.env` ni en el env del container → al re-cachear config **re-
 ```
 
 ### Dashboard pixel bar chart (parámetros validados)
+> ⚠️ **Desde 2026-09-08 el gráfico ya NO se muestra** en el dashboard (rediseño, ver abajo). Params conservados por si se reusa.
 ```ts
 PX_SIZE=5, PX_GAP=2, CHART_H=140, MAX_PX=20
 barW debe IGUALAR PX_SIZE (si no, los píxeles son rectangulares)
@@ -160,7 +165,13 @@ Gastos:   fill=#C0392B  empty=#F5E8E8
 ```
 
 ### Layout dashboard (pages/index.vue)
+> ⚠️ **Rediseñado 2026-09-08** (ver [[modulos/dashboard]]): quedó **solo la fila de Tareas + Calendario** + una tabla nueva de **POEs subidas**. El resto de las filas de abajo se **quitaron del front** (el endpoint `/dashboard` las sigue devolviendo).
 ```
+ACTUAL (post 2026-09-08):
+Row 1:   Tareas por estado  |  Próximos 14 días (calendario)
+Row 2:   POEs subidas (tabla full width, con descarga por chip)
+
+LEGACY (pre 2026-09-08, ya no se pinta):
 Row 1-2: 6 KPI cards (grid-cols-3)
 Row 3:   Pixel bar chart 12 meses (full width)
 Row 4:   Tareas por estado  |  Próximos 14 días (calendario)

@@ -251,6 +251,22 @@ Trampas de la integración con la Marketing API de Meta ([[modulos/meta-ads]]).
 
 **f) `502` "Error validating access token".** El System User token se revocó o cambió la contraseña del usuario que lo generó. Regenerar desde Business Manager → Usuarios del sistema → Generar token (permiso `ads_read`) y correr `config:cache`.
 
+## 16. Backend en crash-loop por config cache en 0 bytes
+
+**Síntoma:** `gigaerp-backend` (y `gigaerp-scheduler`) reinician sin parar (`docker ps` los muestra `Restarting (255)`, `RestartCount` altísimo). En los logs: `Target class [config] does not exist` mientras el handler intenta loguear un `TypeError` — el error real queda **enmascarado** con `APP_DEBUG=false`.
+
+**Causa:** `bootstrap/cache/config.php` (y a veces `routes-v7.php`) quedó en **0 bytes** — un `config:cache` interrumpido. Un cache vacío hace que `require` devuelva vacío → el repositorio `config` nunca se puebla → **ningún** comando artisan puede siquiera bootear. Y como `docker-entrypoint.sh` corre con `set -e` y el seed-check es `NEEDS_SEED=$(php artisan tinker …)` **sin guarda**, el fallo propaga y mata el boot → loop infinito.
+
+**Diagnóstico:** un container **fresco** (one-off `docker compose run … --entrypoint sh backend`) bootea bien → la corrupción vive solo en la **capa de escritura** del container persistente. Confirmar: `docker cp gigaerp-backend:/var/www/html/bootstrap/cache /tmp/bc && ls -la /tmp/bc` → `config.php` en 0 bytes.
+
+**Fix (SIN recrear — el código es hot-deployed, recrear lo perdería):**
+1. Frenar el loop: `docker update --restart=no gigaerp-backend gigaerp-scheduler` y esperar que caigan a `Exited` (NO `docker stop` — puede estar bloqueado como infra compartida).
+2. Generar caches válidos en un one-off y extraerlos: `docker compose run --rm --no-deps -v /tmp/gc:/out --entrypoint sh backend -c 'php artisan config:cache; php artisan route:cache; cp bootstrap/cache/config.php /out/; cp bootstrap/cache/routes-v7.php /out/'`.
+3. `docker cp /tmp/gc/config.php` y `routes-v7.php` a `…/bootstrap/cache/` de **ambos** containers (funciona con el container `Exited`).
+4. `docker update --restart=unless-stopped …` + `docker start …`. El entrypoint corre `optimize:clear`+`config:cache`+`route:cache` y regenera todo limpio desde el código real.
+
+**Fix durable (aplicado en `docker-entrypoint.sh` + hot-cp a ambos):** auto-sanación al inicio — `if ! php artisan --version >/dev/null 2>&1; then rm -f bootstrap/cache/{config,routes-v7,packages,services}.php; fi` (artisan no puede limpiar su propia cache corrupta, hay que borrarla a nivel FS) — y seed-check no-fatal (`NEEDS_SEED=$(… || echo 'no')`). Ver [[changelog#2026-09-08 — Dashboard reducido + descarga de POEs (+ recuperación de crash-loop)|changelog]].
+
 ## Ver también
 
 - [[arquitectura]] — patrones de controllers/rutas/resources

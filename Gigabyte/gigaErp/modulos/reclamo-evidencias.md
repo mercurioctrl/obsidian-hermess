@@ -67,8 +67,16 @@ REPORTES_PLANTILLA_SLIDES_URL=.../presentation/d/1zLQk6.../copy
 La **página de subida** usa fetch con URL **relativa** (hereda esquema/host) — con `url()` salía
 `http://` detrás del proxy y el navegador bloqueaba el POST por mixed content (fix `970d71a`).
 
+## En el dashboard (2026-09-08)
+
+Las POEs cargadas también se ven en el **[[modulos/dashboard|dashboard inicial]]**: tabla
+"POEs subidas" (Reseller · Acción/envío · POEs · Última subida) con **descarga** de cada archivo
+desde el chip (directo si es uno, modal si son varios). El endpoint `/dashboard` agrupa
+`reclamo_evidencia_archivos` por empresa+campaña y expone `files[]`.
+
 ## Ver también
 
 - [[modulos/envios]] — donde vive el reclamo (detalle de campaña)
+- [[modulos/dashboard]] — visibilidad + descarga de las POEs subidas
 - [[modulos/campanas]] · [[modulos/clientes]] — partners = clientes/resellers
 - [[changelog]] · [[troubleshooting]]

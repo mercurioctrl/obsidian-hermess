@@ -1,3 +1,36 @@
+## 2026-09-08 — Dashboard reducido + descarga de POEs (+ recuperación de crash-loop)
+
+Rediseño del **[[modulos/dashboard|dashboard inicial]]** a pedido del usuario y, de paso,
+recuperación de un incidente de infra que tenía el backend caído hacía días. PRs **#44**
+(mergeada a `Development`) y **#45** (abierta). Commits `6d29d0f`, `e67040b` (rama
+`feat/dashboard-poes`, **sin** firma de Claude).
+
+**Dashboard ([[modulos/dashboard]]):**
+- Se quitó casi todo (KPIs, gráfico 12m, últimas OV, cuentas corrientes, ventas por estado,
+  productos por distri) y quedó **solo Tareas + Calendario** + una tabla nueva de **POEs subidas**
+  (Reseller · Acción/envío · POEs · Última subida). El endpoint `/dashboard` sigue devolviendo el
+  resto, solo que el front no lo pinta.
+- `DashboardController` agrega `poes_subidas`: `reclamo_evidencia_archivos` JOIN `reclamos_evidencia`
+  agrupado **en PHP** por empresa+campaña, con `files[]` (`{nombre, url, subido_en}`). El título de
+  la acción se resuelve por `acciones_marketing.envio_campania` **solo si la columna existe**
+  (`Schema::hasColumn`; la mig 0116 **no está aplicada en dev**), con fallback al slug.
+- **Descarga desde el chip 📎**: 1 archivo baja directo, >1 abre un modal para elegir. Ver [[modulos/reclamo-evidencias]].
+
+**🔥 Incidente — backend en crash-loop (config cache en 0 bytes):** `gigaerp-backend` y
+`gigaerp-scheduler` reiniciaban en loop (`RestartCount=1657`, exit 255) desde el 3-sep. Causa:
+`bootstrap/cache/config.php` y `routes-v7.php` quedaron en **0 bytes** → el repo `config` no se
+puebla → **ningún** `artisan` bootea, y el `set -e` del entrypoint (en el seed-check con `tinker`)
+lo volvía fatal. **Fix sin recrear** (el código es hot-deployed, recrear lo perdía): inyectar
+`config.php`/`routes-v7.php` válidos generados en un container one-off; el entrypoint regenera todo
+limpio al arrancar. **Fix durable** en `docker-entrypoint.sh` (hot-cp a ambos): auto-sanación
+(`if ! php artisan --version; then rm bootstrap/cache/*.php`) + seed-check no-fatal. Ver [[troubleshooting#16. Backend en crash-loop por config cache en 0 bytes|troubleshooting #16]].
+
+**Nota migraciones:** la DB dev llega solo hasta **0114**; las **0115–0119 no están aplicadas**
+(el `migrate` del boot corta ahí con `|| true`). Por eso `acciones_marketing.envio_campania` no
+existe todavía. Ver [[contexto#Estado de migraciones en dev (2026-09-08)|contexto]].
+
+---
+
 ## 2026-09-02 — Deploy cambios de Eze: flujo de estados en Campañas + calendario de trabajo en Tareas (GIGA-45→53)
 
 Se bajaron y desplegaron en `Development` los commits de Ezequiel Manzano `9d1bc8d` ("feat: archivo 1-9") y `e069c44` ("fix tarea"), que cierran los tickets **GIGA-45 a GIGA-53**. Deploy en caliente (imagen horneada, rebuild backend roto): `docker cp` a los 2 containers (backend + scheduler), 10 migraciones `0105→0114`, `route:clear`+`view:clear` (**SIN** `config:cache`, para no perder los creds de Google/Meta Ads que viven solo en el config cache), rebuild del frontend + `docker restart nginx`. Sin deps nuevas (composer/package intactos).

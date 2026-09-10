@@ -253,8 +253,18 @@ El módulo **Contenido** (material de marca, vista pública sin login) es la **�
 - [x] Estado APROBADA en órdenes + permisos configurables
 - [x] PDF Commercial Invoice + preview Blu-style
 
+## Estado de migraciones en dev (2026-09-08)
+
+La tabla `migrations` de la DB dev llega solo hasta **0114**; las **0115–0119 no están aplicadas**
+(el `migrate --force` del entrypoint tiene `|| true` y corta ahí sin ruido). Consecuencia concreta:
+`acciones_marketing.envio_campania` (mig 0116) **no existe** todavía. Regla al escribir queries que
+la usen: guardarlas con `Schema::hasColumn('acciones_marketing','envio_campania')` y degradar
+(fallback al slug de `campania`), como hace el [[modulos/dashboard|dashboard de POEs]]. Pendiente:
+revisar por qué corta la 0115 y aplicar el bloque completo cuando corresponda.
+
 ## Bugs corregidos (historial)
 
+- **backend en crash-loop por `bootstrap/cache/config.php` en 0 bytes** (2026-09-08): cache vacío rompe el bootstrap de todo artisan; fix con auto-sanación en el entrypoint. Ver [[troubleshooting#16. Backend en crash-loop por config cache en 0 bytes|troubleshooting #16]].
 - `mapping.*` necesario en `validate()`: con solo `mapping.item_no` se descartan las demás claves del array
 - `productos.codigo_distribuidor` NOT NULL sin default → setear = item_no al crear desde catálogo
 - `config:cache` debe correr SIEMPRE después de `optimize:clear` (PHP-FPM no lee env vars)
