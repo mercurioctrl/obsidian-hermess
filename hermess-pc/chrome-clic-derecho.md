@@ -66,4 +66,5 @@ Con el perfil normal (extensiones activas) el clic derecho se rompe → **es una
 
 - [[hermess-pc/chrome-keyring|Chrome — deslogueo por keyring roto]]
 - [[hermess-pc/earlyoom|earlyoom — presión de RAM]]
+- [[hermess-pc/ghostty|Ghostty — clic derecho (otro caso, causa distinta: config, no extensión)]]
 - [[hermess-pc/hermess-pc|Índice hermess-pc]]

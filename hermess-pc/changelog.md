@@ -119,3 +119,17 @@ Ver [[hermess-pc/chrome-keyring|Chrome — keyring roto]]. Pendiente: investigar
 - Apretón de RAM/swap (~10:29, swap libre ~16%) con la VM QEMU de 4 GB + apps Electron corriendo → Slack tildado. Fix: forzar salida y reabrir. Ver [[hermess-pc/earlyoom|earlyoom]].
 
 Detalle completo en [[hermess-pc/chrome-clic-derecho|Chrome — clic derecho (extensión)]].
+
+---
+
+## 2026-09-10
+
+### Ghostty 1.2.2 — el update pisó defaults de la config (clic derecho + Shift+Enter)
+
+- Tras actualizar a Ghostty **1.2.2**, el **clic derecho pasó a pegar** en vez de abrir el menú, y **Shift+Enter** dejó de hacer salto de línea (mandaba enter pelado). Ambos porque la config no fijaba esos comportamientos explícitos y quedaban atados al default de la versión.
+- **Fix (en `~/.config/ghostty/config`):**
+  - `right-click-action = context-menu` (fijado explícito).
+  - `keybind = shift+enter=text:\n` (antes `text:\x1b\r`; el CR disparaba *enviar*).
+- Recordatorio: recargar con `Ctrl+Shift+,` o reabrir Ghostty. El doble backslash en `+list-keybinds` es solo formato de impresión, no un escape roto.
+
+Detalle completo en [[hermess-pc/ghostty|Ghostty — terminal]].

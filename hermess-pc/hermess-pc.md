@@ -2,7 +2,7 @@
 
 Base de conocimiento de la PC personal de hermess: configuración del sistema, red, monitores, extensiones GNOME, servicios, scripts y optimizaciones.
 
-Última sincronización: 2026-08-07
+Última sincronización: 2026-09-10
 
 ---
 
@@ -16,6 +16,7 @@ Base de conocimiento de la PC personal de hermess: configuración del sistema, r
 - [[hermess-pc/sync-curls|Servicio sync-curls]]
 - [[hermess-pc/chrome-keyring|Chrome — deslogueo por keyring roto]]
 - [[hermess-pc/chrome-clic-derecho|Chrome — clic derecho roto (extensión) + Slack colgado]]
+- [[hermess-pc/ghostty|Ghostty — terminal (config + fixes post-update 1.2.2)]]
 - [[hermess-pc/changelog|Changelog]]
 - [[hermess-pc/memoria|Memoria de Claude]]
 
@@ -47,6 +48,7 @@ Descargador de playlists de YouTube a MP3 organizado en `Artista/Álbum/`.
 - **Monitores:** 3 (Gigabyte 1440p centro, BenQ portrait izq, LG portrait der)
 - **Red:** USG-3P dual WAN — Telecom (primary) + Telecentro (failover)
 - **VPN:** VPN CASA (L2TP/IPSec) hacia `db-nb-dev.blu.net.ar`
+- **Terminal:** Ghostty 1.2.2 (principal) — ver [[hermess-pc/ghostty|Ghostty]]
 - **Servicios activos:** earlyoom, sync-curls, Docker, libvirt/QEMU, MySQL, Apache2
 - **Entorno de trabajo:** VMs (libvirt/QEMU), contenedores Docker, apps Electron (Slack, Warp)
 
@@ -59,4 +61,5 @@ Descargador de playlists de YouTube a MP3 organizado en `Artista/Álbum/`.
 - [[hermess-pc/vpn-casa]]
 - [[hermess-pc/chrome-keyring]]
 - [[hermess-pc/chrome-clic-derecho]]
+- [[hermess-pc/ghostty]]
 - [[hermess-pc/changelog]]
