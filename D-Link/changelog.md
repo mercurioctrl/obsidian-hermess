@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-09-10 — Email M15 (HTML animado) + envío por SMTP
+
+Pieza de **email HTML del Mesh Router M15** (héroe B2C) producida y enviada a lista de prueba (equipo Blu
++ contactos D-Link). Vive en `/var/www/newsletter/` (no en `/var/www/d-link/`). Operacionaliza el track
+B2C de [[newsletter-campana]].
+
+- **Email:** `router-mesh-v2-fondo-gif.html` (rutas locales, para editar) + `router-mesh-v2-fondo-gif.SEND.html`
+  (URLs absolutas, para enviar). Hero teal plano `#07a0bb`; secciones: stats, rendimiento Wi-Fi 6, video,
+  tecnología, specs, CTA **"Dónde comprar"**, botón **ficha técnica** bajo specs, contacto/vCard, footer con
+  **registro de garantía 10 años**.
+- **Hero animado (GIF):** `img/m15_mesh_v3.gif` (600×452, loop 15s, ~3.2 MB). Escena "mesh": routers
+  flotando 1→2→3 nodos con red/anillos/haces + Pack x1/x2/x3 + cobertura 210/370/500 m². Fuente
+  `gif-src/hero-mesh-opaque.html`, render con `reels-dlink-para-compartir/tools/capture-gif.mjs` (Chrome
+  headless frame-a-frame + FFmpeg, paleta 256 + dither bayer).
+- **Aprendizaje clave (GIF):** el GIF **transparente** da "manchas" (alfa de 1 bit → fundidos y sombras
+  blandas se posterizan; frames de transición mezclados por desajuste de fps del matte). Se resolvió con
+  **bloque OPACO** cuyo fondo se funde a `#07a0bb` (igual que el hero → sin costura) y **cortes secos**
+  entre estados. Ver [[contexto#Newsletter / envío de emails (sep-2026)]].
+- **Envío:** por **SMTP** (`box.lio.red:465` SSL, `testing@blustudioinc.com`) con `tools/enviar-smtp.py`.
+  La integración de Gmail de Claude **borra las `<img>` externas** (verificado con el `.eml`) → NO usarla
+  para newsletters. Imágenes hosteadas en WordPress `https://la.dlink.com/la/wp-content/uploads/AAAA/MM/`.
+- Enviado a hermess87, cmercurio@blustudioinc.com, axguidobono, catrielmercurio@outlook.com.ar y
+  sol.verkindere / gaston.finkelstein / mcaycho @la.dlink.com.
+
+
 ## 2026-09-10 — Clip orgánico M15 (UGC con persona real IA)
 
 - **Nuevo formato: clip UGC "orgánico"** (`clips/clip_m15_organico_v2_subs.mp4`, 9:16, ~25s): una

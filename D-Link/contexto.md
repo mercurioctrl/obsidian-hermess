@@ -75,6 +75,22 @@ el problema es **relevancia**, no calidad.
   con movimiento acotado). Veo 3 = lo más caro → validar **toma por toma**. **Google Flow** = misma Veo 3
   (se usa por la API de fal). Ver [[videos-clips-ia]].
 
+## Newsletter / envío de emails (sep-2026)
+- **Enviar por SMTP propio, NO por la integración de Gmail de Claude.** Esa integración **sanitiza el HTML
+  y borra las `<img>` externas** (verificado con el `.eml`: llegan 0 imágenes; por eso el mail se ve sin
+  imágenes en todos los clientes y sin cartel de "mostrar imágenes"). Para newsletters usar SMTP crudo:
+  `/var/www/newsletter/tools/enviar-smtp.py` (credenciales por variables de entorno).
+- **SMTP de Blu:** `box.lio.red`, puerto **465 (SSL/TLS implícito, no STARTTLS)**, usuario = email completo
+  (`testing@blustudioinc.com`), pass = la del correo. (Rotar si se usó en pruebas expuestas.)
+- **Hosting de imágenes del email:** biblioteca de WordPress de D-Link
+  `https://la.dlink.com/la/wp-content/uploads/AAAA/MM/`. WordPress **sanitiza los nombres** al subir
+  (espacios/paréntesis → guiones, ej. `badge-garantia-10 (4).png` → `badge-garantia-10-4.png`). Las `<img>`
+  del email van con **URL absoluta** a esa base, nunca rutas relativas.
+- **GIF para email:** hacerlo **opaco** (bloque completo, con los bordes fundiéndose a un color plano que
+  también se pone como fondo del email → sin costura). El GIF **transparente** da manchas (alfa de 1 bit).
+  Transiciones con **corte seco** (sin crossfade). Render: Chrome headless frame-a-frame + FFmpeg (paleta
+  256 + dither bayer), script `reels-dlink-para-compartir/tools/capture-gif.mjs`.
+
 ## Gap a cerrar (antes de fijar metas)
 Scraping de MercadoLibre (share-of-shelf, precios, reviews vs TP-Link/Mercusys) + sell-through de
 D-Link. Las metas numéricas se fijan **después del mes 1**, con baseline real.

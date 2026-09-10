@@ -66,5 +66,11 @@ movimiento). Avatar `E-hombre-casa-openai`. **Fondo nuevo de marca** `fondo.png`
 Veo 3 = lo más caro → validar toma por toma. Google Flow usa Veo 3 (acceso por fal). Reglas confirmadas: **pedir autorización antes de conectarse/ejecutar procesos**
 (avisar si es en lote) y **nunca pisar recursos → versionar** (`-v2`).
 
+## Referencia (reference)
+- **Envío de newsletters — SMTP, no la integración de Gmail (sep-2026):** la tool de Gmail de Claude
+  **borra las `<img>` externas** del HTML; usar SMTP crudo (`box.lio.red:465` SSL, `testing@blustudioinc.com`,
+  `/var/www/newsletter/tools/enviar-smtp.py`). Imágenes hosteadas en WordPress `la.dlink.com/.../uploads/`.
+  GIF de email = **opaco** (el transparente mancha). Detalle en [[contexto#Newsletter / envío de emails (sep-2026)|contexto]] y [[changelog]].
+
 ## Ver también
-[[D-Link]] · [[contexto]] · [[arquitectura]] · [[plan-trabajo]] · [[videos-clips-ia]]
+[[D-Link]] · [[contexto]] · [[arquitectura]] · [[plan-trabajo]] · [[videos-clips-ia]] · [[newsletter-campana]]

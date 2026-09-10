@@ -140,3 +140,21 @@ A contactos inactivos 90 días: *"¿Tu WiFi sigue andando como el primer día?"*
    es el de mayor impacto inmediato en la reputación de ML.
 4. Cargar la secuencia de captación **Partner** y enlazarla a la Lead Ad de Facebook.
 5. Definir remitente con cara/persona y plantilla base de marca (logo, paleta navy/naranja, firma).
+
+---
+
+## 9. Pieza producida — Email M15 (2026-09-10)
+
+Primer email HTML concreto de la campaña (track **B2C**, héroe **Mesh Router M15**). Archivos en
+`/var/www/newsletter/`. Detalle técnico y de envío en [[changelog#2026-09-10 — Email M15 (HTML animado) + envío por SMTP|changelog]] y [[contexto#Newsletter / envío de emails (sep-2026)|contexto]].
+
+- **Estructura:** hero teal plano `#07a0bb` con **GIF animado** (routers mesh 1→2→3 nodos + Pack + cobertura),
+  barra de stats, rendimiento Wi-Fi 6, teaser de video (YouTube), tecnología, specs, CTA **"Dónde comprar"**,
+  botón **ficha técnica**, contacto/vCard con QR, footer con **registro de garantía 10 años**.
+- **Producción del GIF:** bloque **opaco** (evita manchas del alfa GIF) + cortes secos; render por Chrome
+  headless + FFmpeg. Reutilizable para otros SKUs.
+- **Envío:** SMTP `box.lio.red` (`testing@blustudioinc.com`) con `tools/enviar-smtp.py` — **no** la
+  integración de Gmail (borra las imágenes). Imágenes en WordPress de `la.dlink.com`.
+
+> Pendiente antes de un envío real: link **"Darse de baja"** (quedó como placeholder `#`) y rotar la clave
+> SMTP que se usó en pruebas.
