@@ -91,6 +91,7 @@ Sube gradualmente porque los $120.000 NR se incorporan al básico (dic-2026 → 
 
 ## Ver también
 
+- [[propuesta-incorporacion-franco]] — Documento para entregar a Franco (sin datos sensibles)
 - [[salarios]] — Salarios base vigentes e historial de aumentos
 - [[equipo/franco-callipo|Franco Callipo]] — Ficha del empleado
 - [[propuesta-aumento-2026-08]] — Propuesta de aumento general del equipo
