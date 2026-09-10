@@ -72,6 +72,7 @@
 - [[hermess-pc]] — PC principal
   - [[hermess-pc/vpn-casa|VPN CASA]] — VPN L2TP/IPSec a db-nb-dev.blu.net.ar
   - [[hermess-pc/chrome-keyring|Chrome — keyring roto]] — deslogueo masivo por keyring GNOME corrupto (arreglado 2026-07-17)
+  - [[hermess-pc/ghostty|Ghostty]] — terminal principal; el update a 1.2.2 pisó defaults de clic derecho y Shift+Enter (arreglado 2026-09-10)
 - [[n950-research]] — Investigación N950
 - [[Claude/Migracion_SQLServer_Dev|SQL Server (mssql-dev)]] — migración de 7 bases dev a contenedor en `hermess` (10.10.10.47)
 - [[Claude/Monitoreo_WAN|Monitoreo WAN]] — caídas + velocidad de las 2 WANs (Telecom/Telecentro), avisos por Bily
