@@ -92,7 +92,7 @@
 
 - [[Planilla Acciones Bully]] — Acciones y bots
 - `Claude/` — Notas sobre Claude
-  - [[Claude/Image-OCR|Image OCR]] · [[Claude/Vault-MCP|Vault MCP]] · [[Claude/Vault-Wrappers|Vault Wrappers]] · [[Claude/Whisper|Whisper]] · [[Claude/Migracion_SQLServer_Dev|Migración SQL Server]] · [[Claude/Script-Optimizacion-SQLServer|Script Optimización SQL]] · [[Claude/Monitoreo_WAN|Monitoreo WAN]] · [[Claude/Bily_Skills_Por_Grupo|Skills por grupo (Bily)]]
+  - [[Claude/Image-OCR|Image OCR]] · [[Claude/Vault-MCP|Vault MCP]] · [[Claude/Vault-Wrappers|Vault Wrappers]] · [[Claude/Whisper|Whisper]] · [[Claude/Migracion_SQLServer_Dev|Migración SQL Server]] · [[Claude/Script-Optimizacion-SQLServer|Script Optimización SQL]] · [[Claude/Monitoreo_WAN|Monitoreo WAN]] · [[Claude/Bily_Skills_Por_Grupo|Skills por grupo (Bily)]] · [[Claude/Monitor_USDT_P2P|Monitor USDT/ARS P2P]]
 - [[Skills/Skills|Skills]] — Skills de Claude Code
 
 ## 🛒 intencionDeCompra

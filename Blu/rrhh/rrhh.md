@@ -32,6 +32,8 @@ Emails corporativos unificados al dominio `@blustudioinc.com` (altas de ERP 2026
 - [[salarios]] — Salarios base vigentes e historial de aumentos 💰
 - [[propuesta-aumento-2026-08]] — Propuesta de aumento (Escenario A) para decisión de socios 📈
 - [[blanqueo-franco]] — Análisis y costos de blanquear a Franco (CCT 130/75) 🧾
+- [[propuesta-incorporacion-franco|Propuesta incorporación Franco — versión completa]] — propuesta de relación de dependencia (borrador de trabajo) 📄
+- [[propuesta-incorporacion-franco-limpia|Propuesta incorporación Franco — versión limpia (PDF)]] — documento formal membretado que se le entrega 📄
 - [[retroactivo-negro-comercio-2026]] — Retroactivo de la parte en negro por la paritaria Comercio 2026 🧾
 - [[politica-vacaciones]] — Política de vacaciones (Beneficio Blu, días hábiles) 🏖️
 - [[ausencias]] — Registro de ausencias y vacaciones cargadas en el ERP 📅
