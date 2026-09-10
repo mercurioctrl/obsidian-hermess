@@ -29,7 +29,7 @@ Esto te da un marco de derechos garantizados:
 
 ## 3. La obra social
 
-- Tendrías **OSECAC** (la obra social de Empleados de Comercio), con cobertura para vos y tu grupo familiar.
+- Tendrías **OSECAC** (la obra social de Empleados de Comercio).
 - Si en algún momento quisieras una **prepaga**, podrías **derivar tus aportes** a la que elijas y usarlos para esa cobertura. Te acompañamos con el trámite si decidís hacerlo.
 
 ## 4. Qué ganás al estar en relación de dependencia
@@ -37,7 +37,7 @@ Esto te da un marco de derechos garantizados:
 Estar registrado formalmente te sumaría una red de respaldo importante:
 
 - **Aportes jubilatorios:** cada mes suma para tu jubilación futura.
-- **Obra social (OSECAC):** cobertura de salud para vos y tu familia.
+- **Obra social (OSECAC):** cobertura de salud.
 - **ART:** quedás cubierto ante cualquier accidente de trabajo.
 - **Aguinaldo:** medio sueldo extra en junio y en diciembre.
 - **Vacaciones pagas** y **licencias** garantizadas.
@@ -50,7 +50,7 @@ Estar registrado formalmente te sumaría una red de respaldo importante:
 
 ## 6. Próximos pasos
 
-Para avanzar vamos a necesitar algunos datos tuyos (DNI, CUIL, datos bancarios para la cuenta sueldo y datos de tu grupo familiar para la obra social). Cualquier duda que tengas sobre cualquier punto, hablémoslo con total confianza — la idea es que estés cómodo y entiendas bien cada cosa.
+Para avanzar vamos a necesitar algunos datos tuyos (DNI, CUIL y datos bancarios para la cuenta sueldo). Cualquier duda que tengas sobre cualquier punto, hablémoslo con total confianza — la idea es que estés cómodo y entiendas bien cada cosa.
 
 ¡Contentos de dar este paso con vos!
 
