@@ -15,6 +15,13 @@
 - Sin apuro de fecha: la ventana del PER (28/11/2026) **no aplica** a este camino.
 - Alta común en **ARCA (Mi Simplificación)** + ART + seguro de vida + encuadre en **CCT 130/75**.
 
+## Encuadre (confirmado)
+
+- **Convenio:** CCT 130/75 — **Empleados de Comercio** (FAECYS / SEC), categoría **Administrativo A**, jornada completa 48 hs.
+- **Obra social:** **OSECAC** (Obra Social de los Empleados de Comercio y Actividades Civiles) — 3% aporte del empleado + 6% contribución patronal. Derivable a una prepaga más adelante si Franco lo quiere.
+- **Sindicato:** SEC → cuota sindical + cuota solidaria Art. 100 (ya contempladas en los aportes calculados).
+- Se descartó el encuadre "fuera de convenio" (opción válida para devs, pero se prioriza alinearlo con el resto del equipo bajo Comercio).
+
 ## Contexto normativo (sept-2026)
 
 - Paritaria FAECYS vigente: **+5,7% en 3 tramos** (1,9% jul + 1,9% ago + 1,9% sep) sobre básicos de junio.
