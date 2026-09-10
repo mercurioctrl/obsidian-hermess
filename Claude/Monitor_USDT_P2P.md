@@ -31,21 +31,34 @@ Segundo hallazgo: **el endpoint no pide autenticación**. El "Copy as cURL" del 
 
 ## Cuándo avisa
 
-Dos alertas independientes, cada una con su cooldown. Si disparan juntas sale un solo mensaje.
+Tres disparadores. **Un mínimo de 24 h es siempre también mínimo de 60 min**, así que cuando varios dan positivo sale **un solo mensaje**, nombrando la ventana más larga.
 
-1. **Mínimo móvil** — el precio rompe el mínimo de las últimas 24 h. Tiene que ganarle al mínimo previo por al menos 0,15% (banda muerta) o spamearía por centavos. Cooldown 30 min.
-2. **Umbral fijo** — cruza hacia abajo los $1.575. Es **por flanco**: dispara una vez y se re-arma recién cuando el precio vuelve a subir 0,30% por encima del umbral.
+| Disparador | Condición | Anti-spam |
+|---|---|---|
+| 📉 **Mínimo de 60 min** | es **estrictamente** el más bajo de la última hora | ninguno — avisa siempre |
+| 📉 **Mínimo de 24 h** | rompe el mínimo del día | tiene que ganarle por 0,15% + cooldown 30 min |
+| 🎯 **Umbral fijo** | baja de $1.575 | por flanco: re-arma al subir 0,30% |
 
-Hay un **warm-up de 45 minutos** al arrancar: sin él, la primera muestra es trivialmente el mínimo de la ventana y el monitor se avisaría a sí mismo apenas prende.
+La ventana de 60 min va sin banda muerta ni cooldown a pedido explícito de Catriel: *"cuando comparado con los últimos 59, es el más bajo, ahí avisame"*. Si termina siendo mucho volumen, los diales son `dead_band_pct` (probar 0.05) y `cooldown_minutes` en `config.json`.
+
+Hay un **warm-up** por ventana (20 min para la de 1 h, 45 para la de 24 h): sin él la primera muestra es trivialmente el mínimo y el monitor se avisaría solo apenas prende.
+
+## El bug que casi queda vivo
+
+`tick()` graba la muestra **antes** de evaluar las alertas. Como la consulta del mínimo no tenía techo temporal, **el mínimo de la ventana incluía el precio que se estaba evaluando** — y "precio menor que el mínimo" nunca puede ser cierto si el precio *es* el mínimo. Resultado: las alertas de mínimo móvil **no habrían disparado jamás**, sólo andaba la de umbral fijo.
+
+Se detectó inyectando un precio absurdo ($1.000) y viendo que no sonaba la alarma. La ventana ahora se calcula con `before=now`, que excluye la muestra actual.
+
+Lección para el próximo test: **llamar a `check_alerts()` directo no reproduce producción**, porque se saltea el `record()` previo. Hay que grabar la muestra primero, como hace `tick()`.
 
 ## Ajustes
 
 Todo se toca en `config.json` y después `systemctl --user restart usdt-mon`. Lo que más se va a mover:
 
 - `threshold` — el precio fijo que dispara la alerta (hoy 1575).
-- `window_hours` — la ventana del mínimo móvil (hoy 24).
+- `windows` — la lista de ventanas de mínimo móvil (hoy 60 min y 24 h). Se pueden agregar más (ej. 168 para 7 días).
 - `trans_amount` — el monto que querés operar (hoy 145.001). **Importa**: hay anuncios más baratos cuyos límites no aceptan tu monto, y el monitor los descarta a propósito.
-- `min_cooldown_minutes` — si te parece que avisa mucho, subilo.
+- `cooldown_minutes` / `dead_band_pct` dentro de cada ventana — si te parece que avisa mucho, subilos.
 
 Para ver el estado sin esperar: `python3 ~/usdt-mon/monitor.py --status`
 
