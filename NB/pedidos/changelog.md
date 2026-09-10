@@ -1089,3 +1089,14 @@ Alta de agente/usuario web clonando **catriel** (cuenta admin sobre el agente co
 - **Replicado en host dev** `db-nb-massql-dev.blu.net.ar,4444` (login `cmercurio`): keys **redescubiertas allí** = `ccodage 102`, `ccodcli 100141`, `UserId 84817`, `permisos_agente.id 68`. Conexión vía override en PHP de `database.connections.sqlsrv.*` + `DB::purge('sqlsrv')`; naming de 3 partes para no depender de la DB default.
 - Al clonar de catriel se nuleó `tokenFb` (Firebase) + `ip/os/browser/user_agent` para no arrastrar sesión/push; datetime del cliente nuleados salvo `FECHA_ALTA`. El cliente hereda CUIT/tel/dir del template (cliente interno "no usar").
 - Runbook actualizado con este ejemplo y el método de conexión a otro host: [[runbook-alta-usuario-interno]].
+
+
+## 2026-09-10 — Reportes Intel DGP-S: completar mapeo de part numbers
+
+Cuatro SKU de procesadores Intel con stock salían en el CSV de inventory sin descripción de CPU y con warning `Part number sin mapeo en tabla`. Se agregaron a `IntelDgpService::PART_NUMBER_MAP` con el nombre oficial de Intel ARK. Ver [[feature-reportes-intel-dgp]].
+
+- `BX8071514100` → Intel Core **i3**-14100 (era i3, no i5) · `BX8071514900K` → i9-14900K · `BX8071514900KF` → i9-14900KF · `BX80768250K` → Intel Core Ultra 5 **250K Plus**.
+- El mapeo es una constante PHP hardcodeada (no tabla de BD); al aparecer un warning se agrega el SKU a mano. Sin migración ni seeder.
+- Rama `feature/intel-dgp-partnumbers`, commit `840c65ed`. PR contra `Development` y `blu-dev-staff`.
+
+Archivo: `app/Services/Report/IntelDgpService.php`.
