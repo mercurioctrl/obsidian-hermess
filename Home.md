@@ -74,6 +74,8 @@
   - [[hermess-pc/chrome-keyring|Chrome — keyring roto]] — deslogueo masivo por keyring GNOME corrupto (arreglado 2026-07-17)
   - [[hermess-pc/ghostty|Ghostty]] — terminal principal; el update a 1.2.2 pisó defaults de clic derecho y Shift+Enter (arreglado 2026-09-10)
 - [[n950-research]] — Investigación N950
+- [[fire/fire|fire]] — Fire HD 10 (KFMUWI) como kiosco de cámaras Dahua (gDMSS Plus), gestionada por ADB
+  - [[fire/diagnostico|Diagnóstico]] — apagones por batería degradada (~50%) · [[fire/optimizaciones-adb|Optimizaciones ADB]] — 20 apps desactivadas + cómo revertir · [[fire/contexto|Contexto]]
 - [[Claude/Migracion_SQLServer_Dev|SQL Server (mssql-dev)]] — migración de 7 bases dev a contenedor en `hermess` (10.10.10.47)
 - [[Claude/Monitoreo_WAN|Monitoreo WAN]] — caídas + velocidad de las 2 WANs (Telecom/Telecentro), avisos por Bily
 - [[Claude/Bily_Skills_Por_Grupo|Bily: skills por grupo]] — instrucciones por grupo de WhatsApp
