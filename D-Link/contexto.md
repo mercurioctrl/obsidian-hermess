@@ -67,6 +67,14 @@ el problema es **relevancia**, no calidad.
   subtítulos solo cuando ella habla. Costo: OpenAI directo es algo más barato que vía fal, pero fal reusa
   la misma key (para volumen conviene OpenAI directo). Ver [[videos-clips-ia]].
 
+- **Fondo/colores NUEVOS de marca (sep-2026):** `clips/material/fondos/fondo.png` (teal `#03B6C9→#029FB9`
+  + textura) son los colores nuevos que el usuario quiere imponer; usarlo de **bitmap** en placas/animaciones
+  con el producto **transparente** encima (no tarjeta blanca). Reemplaza el degradado CSS del PSD.
+- **Videos IA — clip orgánico UGC (sep-2026):** persona realista IA (**Veo 3** i2v) moviéndose por la casa
+  + producto real. Técnica **"producto en la mano"** validada (gpt-image **edit** con vistas reales + Veo 3
+  con movimiento acotado). Veo 3 = lo más caro → validar **toma por toma**. **Google Flow** = misma Veo 3
+  (se usa por la API de fal). Ver [[videos-clips-ia]].
+
 ## Gap a cerrar (antes de fijar metas)
 Scraping de MercadoLibre (share-of-shelf, precios, reviews vs TP-Link/Mercusys) + sell-through de
 D-Link. Las metas numéricas se fijan **después del mes 1**, con baseline real.

@@ -1,6 +1,6 @@
 # Contexto
 
-Ver también: [[Laset]] · [[arquitectura]] · [[changelog]]
+Ver también: [[Laset]] · [[arquitectura]] · [[changelog]] · [[memoria]]
 
 ## Origen
 El ERP Laset estaba repartido en repos individuales (mayormente `New-Bytes` / `LibreOpcion`).
@@ -42,6 +42,24 @@ NO `hermess87`).
   `fixed: 'left'`. Se resolvió quitando `fixed` de Fecha/Nº Orden/Pedido (dejan de quedar fijas al scrollear).
 - Detalle de los 5 PRs en [[changelog]].
 
+## Decisiones (2026-09-09)
+- **Firebase opcional en expedición**: si faltan las `FIREBASE_*` en el `.env`, el front no debe romper.
+  Se inicializa Firebase solo con config válida (`projectId`/`apiKey`/`appId`) y se protegen las llamadas
+  (`getMessaging()` rompía el arranque del cliente con un 500). Patrón defensivo.
+- **Cobro múltiple transaccional (cobros)**: el cobro conjunto escribe en dos fases (registro por pedido +
+  consolidación en caja `MC_LOG_OPERACIONES`/`MC_SALDOS_CAJA`). Ahora van dentro de una única transacción y
+  se valida cta cte **antes** de escribir, para evitar cobros a medias (cliente cobrado / caja sin impactar).
+- **`ultimaVenta` con fallback (metadata)**: `A.ULTIMA_VENTA` del ERP no se actualiza para algunos artículos;
+  se usa `MAX(albclit.dfecalb)` de ventas reales (`ntipoalb > 1`, excluye reservas) como fallback.
+- **`AfterSaleRepository` COUNT sin `$joins`**: decisión explícita del usuario — dejar el método de conteo
+  sin concatenar `$joins` (no aplica esos filtros de estado). No es un bug pendiente.
+- **Libre Opción fuera del menú (pedidos)**: sección oculta con `visible: false` (no se usa en Laset); no se
+  borran rutas/páginas/store de `libreOpcion`.
+- **Secretos en `.env-example`**: se detectaron credenciales reales en el `.env-example` de postventa del
+  working tree local; se dejaron **sin subir**. `.env-example` está trackeado (a diferencia del `.env`), así
+  que no debe contener secretos. **Pendiente**: rotar esas credenciales si son válidas.
+
 ## Estado actual
 Los 7 fronts (PM2) y 7 backs (Docker) están **operativos**; el login real front→back→DB fue validado.
-En curso: 5 PRs de simplificación de UI del front abiertos contra `blu-dev-staff` (2026-09-04).
+Mergeado a `blu-dev-staff`: simplificación de UI (2026-09-04), Firebase defensivo y fixes de back (2026-09-09).
+Abierto: PR #8 (ocultar Libre Opción) contra `blu-dev-staff`, y PRs de promoción a `main` (#7 front, #3 back).

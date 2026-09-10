@@ -112,6 +112,11 @@
 - [[Brother/Brother|Brother]] — Llavero botellita de tinta Brother que dice "PREMIO", impresión 3D multicolor (5 STL separados)
   - [[Brother/contexto|contexto]] · [[Brother/arquitectura|arquitectura]] · [[Brother/stack|stack]] · [[Brother/changelog|changelog]] · [[Brother/memoria|memoria]]
 
+## ⌨️ blu-terminal
+
+- [[blu-terminal/blu-terminal|blu-terminal]] — Terminal de bolsillo tipo cyberdeck: shell de bash real (Linux) por WiFi, con LCD y teclado QWERTY físico
+  - [[blu-terminal/contexto|contexto]] · [[blu-terminal/hardware-placa|placa]] · [[blu-terminal/hardware-pantalla|pantalla]] · [[blu-terminal/hardware-teclado|teclado]] · [[blu-terminal/hardware-energia|energía]] · [[blu-terminal/proyectos-referencia|referencias]] · [[blu-terminal/lista-compra|lista de compra]] · [[blu-terminal/changelog|changelog]]
+
 ---
 
-*Actualizado: 2026-08-31*
+*Actualizado: 2026-09-10*

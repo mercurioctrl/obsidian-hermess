@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-09-10 — Clip orgánico M15 (UGC con persona real IA)
+
+- **Nuevo formato: clip UGC "orgánico"** (`clips/clip_m15_organico_v2_subs.mp4`, 9:16, ~25s): una
+  persona realista se mueve por la casa mostrando el M15 mesh (B2C). Persona con **Veo 3** (image-to-video
+  vía fal), varias tomas hilvanadas (hook / acción con el celu / **producto en la mano** / cierre). Voz
+  masculina clonada `arg-02` + **lipsync** (`sync-lipsync/v2`) + subtítulos solo cuando habla. Ver [[videos-clips-ia]].
+- **Avatar E** `biblioteca/avatares/E-hombre-casa-openai/` (retrato gpt-image, look argentino, elegido de
+  4 opciones) animado con Veo 3.
+- **Técnica validada "producto en la mano":** **gpt-image edit** con retrato + varias **vistas reales**
+  del producto (M15 oficial de dlink.com, fondo transparente, `material/m15_angles/`) → producto fiel en
+  la mano → **Veo 3 con movimiento acotado** → el producto se mantiene estable. Camino IA más cercano al
+  look "clip de MercadoLibre" (los reales son filmación; la IA no maneja el producto exacto sin este truco).
+- **Fondo NUEVO de marca:** `clips/material/fondos/fondo.png` (1080×1920, teal `#03B6C9→#029FB9` +
+  textura) = colores a imponer; se usa como **bitmap directo** en placas/animaciones (producto
+  transparente encima), no el degradado CSS.
+- **Costo/estrategia:** Veo 3 = lo más caro (≈USD 3-4 por toma de 8s). Validar **toma por toma**, b-roll
+  local (gratis) + producto real, Kling como alternativa barata. Saldo en `fal.ai/dashboard/billing`.
+  **Google Flow** usa Veo 3 → mismo motor, se accede por la API de fal.
+
+
 ## 2026-09-05 — Caso VLAN B2B + presentadora IA (OpenAI)
 
 - **Nuevo comercial B2B "VLAN"** (`clips/comercial_vlan.mp4`, 9:16, ~50s): versión **superadora** del

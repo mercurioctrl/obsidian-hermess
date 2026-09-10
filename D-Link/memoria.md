@@ -58,7 +58,12 @@ generar video/voz sin preguntar. Detalle en [[videos-clips-ia]].
 gerencia. Producto héroe **DGS-1210-28P**. Sumamos **gpt-image-1 (OpenAI vía fal)** para ilustración de
 alta calidad (switch ilustrado, edificio, red plana, grupos de PCs) y **OmniHuman** para **presentadora
 IA** (foto→habla) intercalada 3× con animaciones; subtítulos solo cuando ella habla. Nuevo avatar
-`D-ojos-verdes-openai`. Reglas confirmadas: **pedir autorización antes de conectarse/ejecutar procesos**
+`D-ojos-verdes-openai`.
+
+**Clip orgánico M15 UGC (sep-2026):** persona realista IA (**Veo 3** i2v) moviéndose por la casa +
+producto real; técnica **"producto en la mano"** validada (gpt-image edit con vistas reales + Veo 3 con
+movimiento). Avatar `E-hombre-casa-openai`. **Fondo nuevo de marca** `fondo.png` (colores a imponer).
+Veo 3 = lo más caro → validar toma por toma. Google Flow usa Veo 3 (acceso por fal). Reglas confirmadas: **pedir autorización antes de conectarse/ejecutar procesos**
 (avisar si es en lote) y **nunca pisar recursos → versionar** (`-v2`).
 
 ## Ver también

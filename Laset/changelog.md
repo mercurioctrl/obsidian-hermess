@@ -2,6 +2,30 @@
 
 Ver también: [[Laset]] · [[contexto]]
 
+## 2026-09-09
+
+**Fixes de código en front y back + promoción a `main`**
+Mismo circuito: `feature/*` desde `origin/blu-dev-staff` → PR contra `blu-dev-staff`. En cada commit va
+solo el cambio real; el sync en progreso (`.env-example`, `ecosystem.config.js`, `package-lock.json`) queda afuera.
+
+- **front `fix(expedicion)`** (PR #6, mergeado) — Firebase se inicializa de forma defensiva:
+  `plugins/firebase-messaging.js` solo crea `messaging` si hay `projectId`/`apiKey`/`appId`; `layouts/basic.vue`
+  envuelve `onMessage`/`requestPermission` en try/catch. Sin config Firebase el front ya no rompe con un 500.
+- **back `fix(back)`** (PR #2, mergeado) — correcciones en 4 servicios:
+  - `api-rest-cobros/App/Database.php`: DSN `sqlsrv` con `Encrypt=0` + `TrustServerCertificate=1`; `#[\ReturnTypeWillChange]` en `query()`/`prepare()` (compat PHP 8).
+  - `api-rest-cobros/Service/Box/Trade/Trade.php`: cobro múltiple ahora **transaccional** (valida cta cte antes de escribir, rollback si falla la consolidación en caja; respeta transacción abierta más arriba).
+  - `api-rest-expedicion/Repository/Providers/ProvidersRepository.php`: reescritura del cálculo de cantidad serializada partiendo de `PedProl` y acotando por remito de proveedor.
+  - `api-rest-postventa/Repository/AfterSaleRepository.php`: joins de estado con alias correctos (`C.`/`D.`). El método de `COUNT` **no** concatena `$joins`, de forma intencional.
+  - `ms-metadata/controllers/stocks/stocks.py`: `ultimaVenta` con fallback a `MAX(albclit.dfecalb)` de ventas reales (`ntipoalb > 1`) cuando `A.ULTIMA_VENTA` es NULL.
+- **feat(pedidos): ocultar Libre Opción** (PR #8, abierto) — `pedidos-web-app-v1/layouts/basic.vue`: la entrada
+  del navbar pasa a `visible: false` (no se usa en Laset). No se tocan rutas, páginas ni store de `libreOpcion`.
+- **Promoción `blu-dev-staff → main`** — PR #7 (front, 16 commits) y PR #3 (back, 10 commits).
+
+⚠️ **Hallazgo de seguridad**: `api-rest-postventa/.env-example` (working tree local) tenía credenciales reales en
+texto plano (`NB_WEB_PASS`, `ACCOUNT_MAILER_PASSWORD`, `PASSWORD_MS_ENVIOS`). Se dejó **sin commitear**. En
+`blu-dev-staff` ya existe un commit "Config Laset: .env-example sanitizados". Pendiente: rotar esas credenciales
+si son válidas (`.env-example` está trackeado, no debe llevar secretos).
+
 ## 2026-09-04
 
 **Simplificación de UI del front (monorepo `frontErp`, PRs contra `blu-dev-staff`)**

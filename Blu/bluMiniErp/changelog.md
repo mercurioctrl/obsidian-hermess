@@ -4,9 +4,24 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-08 — Fix PDF de activaciones: portrait paginado (Browsershot) + PRs
+
+### PDF de activaciones — reemplazo de html2pdf por Browsershot (rama `fix/activaciones-pdf-portrait`, PR #62)
+- fix: el botón **"Descargar PDF"** de una [[Modulo Contabilidad|activación]] usaba **html2pdf.js** en el cliente: rasterizaba todo el documento a imagen y lo cortaba a ciegas en páginas **landscape** → salía apaisado, partía filas a la mitad y no repetía la cabecera de la tabla. Ahora el PDF lo genera el **servidor con Browsershot (Chromium)** — el mismo motor de presupuestos/remitos — en **portrait** y paginado de verdad: **repite el `<thead>` en cada página** y **no parte las filas** (`page-break-inside: avoid`), con márgenes consistentes por página.
+- **Backend:** `PruebaEjecucionController::pdf()` usa Browsershot (portrait + márgenes) sobre el mismo blade que el preview, en vez de DomPDF landscape. `PdfService::renderVistaPdf()` acepta márgenes/orientación opcionales (sin afectar presupuestos ni remitos). Blade `activacion-preview` con `@media print` (repetir cabecera, evitar cortes) y el botón ahora baja el PDF del servidor (se quitó html2pdf y el `<script>` de la CDN).
+- **Verificado:** activación de 85 hitos → PDF **6 páginas, A4 portrait**; cabecera repetida en la pág. 2, filas completas sin cortes (render a imagen). Solo backend, sin rebuild de frontend. Ver [[Errores Comunes#PDF de activaciones con html2pdf en el cliente sale landscape y corta filas (2026-09-08)|Errores Comunes]].
+
+Archivos: `backend/app/Http/Controllers/PruebaEjecucionController.php`, `backend/app/Services/PdfService.php`, `backend/resources/views/pdf/activacion-preview.blade.php`
+
+### PRs abiertos (2026-09-08)
+- **PR #62** `fix/activaciones-pdf-portrait` — fix del PDF de activaciones (3 archivos).
+- **PR #63** `feat/contabilidad-multiempresa` — multi-empresa de [[Modulo Contabilidad]] (17 archivos, migraciones 0114/0115). Ambas ramas parten de un commit ya en `main`, así que el diff de cada PR es limpio; independientes entre sí.
+
+---
+
 ## 2026-09-08 — Contabilidad multi-empresa (dos razones sociales) + restore de backup
 
-### Multi-empresa en [[Modulo Contabilidad]] (migraciones 0114 + 0115, sin commitear aún)
+### Multi-empresa en [[Modulo Contabilidad]] (migraciones 0114 + 0115, PR #63)
 - feat: el negocio factura y recibe facturas a **dos razones sociales de contabilidades separadas** — **BLU INC S.R.L** (principal) y **DIGITO BINARIO SRL**. Ahora cada **compra** (gasto) y cada **venta** (comprobante AFIP) se atribuye a una empresa para liquidar por separado. **Solo etiquetado** (decisión del usuario): AFIP sigue emitiendo bajo BLU; a DIGITO se le asignan facturas de compra a mano.
 - **Migración 0114:** tabla `empresas` (`nombre`, `cuit`, `es_principal`, `activo`) + seed BLU (principal, CUIT de `configuracion`) y DIGITO BINARIO SRL. Modelo `Empresa` con `principal()`/`principalId()`.
 - **Migración 0115:** `empresa_id` (FK nullable) en `gastos` y `comprobantes_afip`; **backfill de todo el histórico a BLU** (247 gastos + 11 comprobantes) para que nada quede en limbo.

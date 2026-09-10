@@ -1,6 +1,6 @@
 # Memoria (Claude Code)
 
-Ver también: [[Laset]] · [[arquitectura]] · [[operaciones]]
+Ver también: [[Laset]] · [[arquitectura]] · [[operaciones]] · [[contexto]] · [[changelog]]
 
 Consolidado de la memoria del proyecto (`~/.claude/projects/-var-www-laset/memory/`).
 
@@ -33,8 +33,19 @@ Gotchas y comandos detallados en [[operaciones]] y [[troubleshooting]].
   empujar syncs enteros encima (pisa trabajo remoto).
 - El código de "producción" que ve el usuario (incluida la empresa LASET) corre desde el repo interno
   `New-Bytes` (`/var/www/nb/...`); el monorepo `frontErp` iba atrasado y se está sincronizando.
+- Al commitear se sube **solo el cambio real**; el sync en progreso (`.env-example`, `ecosystem.config.js`,
+  `package-lock.json`) queda afuera de cada PR.
 
 ## Proyecto — Simplificación de UI del front (2026-09-04)
-5 PRs abiertos contra `blu-dev-staff` que quitan IVA/Imp. Interno y ocultan columnas/pestañas/botones para
-Laset (ver [[changelog]]). Ocultamientos con comentarios (reversibles); las columnas se ocultan sobre el
-getter `columns` del store correspondiente. `companyCode 11 == LASET`.
+5 PRs (mergeados a `blu-dev-staff`) que quitan IVA/Imp. Interno y ocultan columnas/pestañas/botones para
+Laset (ver [[changelog]]). Ocultamientos con comentarios/`visible:false` (reversibles); las columnas se
+ocultan sobre el getter `columns` del store correspondiente. `companyCode 11 == LASET`.
+
+## Proyecto — Fixes y ocultamientos (2026-09-09)
+- **front**: Firebase defensivo en expedición (PR #6, mergeado); ocultar sección Libre Opción del menú de
+  pedidos con `visible:false` (PR #8, abierto).
+- **back**: fixes en cobros (DSN sqlsrv + cobro múltiple transaccional), expedicion (query serializados),
+  postventa (alias de joins), metadata (fallback de `ultimaVenta`) — PR #2, mergeado.
+- **Promoción a `main`**: PR #7 (front) y PR #3 (back) desde `blu-dev-staff`.
+- **Seguridad**: `.env-example` de postventa (working tree) tenía secretos reales; no se subieron. Rotar
+  si son válidas. Ver [[contexto#Decisiones (2026-09-09)]].

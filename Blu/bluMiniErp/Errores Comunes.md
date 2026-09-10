@@ -4,6 +4,18 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 ---
 
+## PDF de activaciones con html2pdf en el cliente sale landscape y corta filas (2026-09-08)
+
+**Síntoma:** el "Descargar PDF" de una activación generaba un PDF **apaisado**, con las filas de la tabla **cortadas a la mitad** entre páginas y **sin repetir la cabecera** de la tabla en las páginas siguientes.
+
+**Causa:** el botón usaba **html2pdf.js** (html2canvas + jsPDF) en el navegador con `orientation: 'landscape'`. Ese enfoque **rasteriza** todo el documento a una imagen y la **rebana a ciegas** a la altura de página — no entiende de filas ni de `<thead>`, así que corta donde caiga y nunca reimprime la cabecera.
+
+**Solución:** generar el PDF en el **servidor con Browsershot (Chromium)** — el mismo motor de presupuestos/remitos (`PdfService::renderVistaPdf`). Chromium imprime respetando el CSS `@media print`: **repite `<thead>` en cada página** por default y respeta `tr { page-break-inside: avoid; }` para no partir filas. Puntos clave: (1) portrait; (2) márgenes por página vía Browsershot `->margins(t,r,b,l)` (mm) — se aplican a **todas** las páginas, a diferencia del padding de un `.page` que sólo vale en la primera; (3) resetear ese padding en `@media print` para no duplicar margen; (4) el botón del preview navega al endpoint del server (`/preview` → `/pdf`) en vez de invocar html2pdf. Ver [[changelog#2026-09-08 — Fix PDF de activaciones: portrait paginado (Browsershot) + PRs]].
+
+**Regla:** para tablas largas que deben paginar bien (cabecera repetida, filas enteras), **nunca** rasterizar en el cliente (html2pdf/print-to-image). Usar Browsershot/Chromium server-side con `<thead>` + `page-break-inside: avoid`.
+
+---
+
 ## Restaurar un backup a migración vieja deja tablas colgadas → import parcial / `migrate` explota (2026-09-05)
 
 **Síntoma:** al importar `database.sql` de un backup encima de la DB actual, `php artisan migrate` falla con `SQLSTATE[42S01] ... Table 'req_comentarios' already exists`, y la DB queda inconsistente.

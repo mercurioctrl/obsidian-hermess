@@ -31,10 +31,23 @@ ni errores de armado. Versiones (todas conservadas, **no se pisan**):
   (las animaciones ya tienen su texto).
 - Fuente HTML: `comercial-vlan*.html` + `comercial-vlan-explainer-anim.html`. Guion: `guion-vlan-*.md`.
 
+## ⭐ Caso M15 orgánico — UGC con persona real IA (sep-2026)
+Primer clip **UGC "orgánico" B2C**: una persona realista se mueve por la casa y muestra el M15 mesh.
+En `biblioteca/casos/m15-organico-ugc/` (`clip_m15_organico.mp4` v1, `clip_m15_organico_v2.mp4` con
+producto en mano, `_subs`).
+- **Persona:** avatar `E-hombre-casa-openai` (retrato gpt-image) → **Veo 3 image-to-video** (tomas: hook
+  hablando, camina/mira el celu, **producto en la mano**, cierre) → **lipsync** con voz clonada `arg-02`.
+  Subtítulos solo cuando habla.
+- **Producto en la mano (técnica clave):** gpt-image **edit** con retrato + **vistas reales** del M15
+  (oficiales dlink.com, `material/m15_angles/`, fondo transparente) → composición fiel → Veo 3 con
+  movimiento acotado (producto estable). Lo más cercano al look "clip de ML" con IA.
+- **B-roll/placas:** fondo real de marca `material/fondos/fondo.png` con el producto **transparente**
+  encima (no tarjeta blanca). Render local, sin costo.
+
 ## Biblioteca reutilizable (`clips/biblioteca/`)
 Cada activo con su `ficha.md` (prompt + IDs de fal):
 - **Avatares:** `A-morocha`, `B-ojos-verdes`, `C-hombre-comun` (flux + Veo); **`D-ojos-verdes-openai`**
-  (retrato **gpt-image-1** + base **OmniHuman**). ⭐
+  (retrato **gpt-image-1** + base **OmniHuman**); **`E-hombre-casa-openai`** (gpt-image + **Veo 3** orgánico). ⭐
 - **Voces (clonadas MiniMax):** `arg-01` fem (`Voiceffd48d031788466565`), `arg-02-hombre`
   (`Voice250301861788470495`). Reutilizables por `custom_voice_id`.
 - **Casos:** los videos finales (incluye `vlan-b2b/`).
@@ -43,7 +56,7 @@ Cada activo con su `ficha.md` (prompt + IDs de fal):
 - **Video de producto:** foto real → **Veo 3**. Kling con **`CFG=0.2`** evita rayos de luz.
 - **Persona (2 caminos):** (a) retrato `flux-pro` → base **Veo 3** → `sync-lipsync/v2` (máx calidad, caro);
   (b) **OmniHuman** (`fal-ai/bytedance/omnihuman`): foto + audio → habla con lipsync en 1 paso
-  (realista, mejor costo). Voz: clon **MiniMax**. Subtítulos: **Whisper** → ASS quemado.
+  (realista, mejor costo). **(c) orgánica en movimiento:** retrato gpt-image → **Veo 3 i2v** (camina/gesticula) → `sync-lipsync/v2`; **producto en la mano** = gpt-image **edit** con vistas reales + Veo 3 con movimiento acotado. Voz: clon **MiniMax**. Subtítulos: **Whisper** → ASS quemado.
 - **Ilustración (OpenAI):** **gpt-image-1 vía fal** (`fal-ai/gpt-image-1/text-to-image` y `/edit-image`
   con imagen de referencia) — mejor calidad que Kling/flux para infografía/ilustración. Fondo removido con
   ImageMagick flood-fill + trim. **Costo:** OpenAI directo es algo más barato (sin margen); vía fal reusa
