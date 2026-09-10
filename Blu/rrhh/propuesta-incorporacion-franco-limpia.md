@@ -15,7 +15,7 @@ Queremos proponerte formalizar tu incorporación al equipo **en relación de dep
 - Tu remuneración correspondería a la escala del convenio, con los valores vigentes y las actualizaciones de paritaria.
 - En el recibo vas a ver un **sueldo bruto** del cual se descuentan tus aportes (jubilación, obra social, etc.). Eso es normal: esos aportes **trabajan para vos** (se explica en el punto 4).
 - **Aguinaldo (SAC):** además de tu sueldo, cobrarías **dos medios aguinaldos al año** (junio y diciembre). Es dinero adicional.
-- Tu sueldo se **actualiza con las paritarias**, así que no pierde contra la inflación.
+- Tu sueldo se **actualiza con las paritarias** del convenio.
 
 ## 2. El convenio
 
