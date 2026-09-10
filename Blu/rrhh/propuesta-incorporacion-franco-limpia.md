@@ -2,7 +2,7 @@
 
 **Para:** Franco Callipo
 **De:** Dirección
-**Fecha:** 2026-09-01
+**Fecha:** 2026-09-10
 
 ---
 
@@ -12,11 +12,10 @@ Queremos proponerte formalizar tu incorporación al equipo **en relación de dep
 
 ## 1. Tu sueldo
 
-- **Tu ingreso de bolsillo seguiría siendo el mismo: $1.450.000 por mes.** No perdés nada.
-- Una parte se formalizaría **por recibo**, según la categoría que te corresponde en el convenio (con sus aportes, obra social, aguinaldo, etc.), y **el resto se completa aparte, como venimos haciendo**. La suma final en tu bolsillo no cambia.
-- En el recibo vas a ver un **sueldo bruto** del cual se descuentan tus aportes (jubilación, obra social, etc.). Eso es normal: esos aportes **trabajan para vos** (se explica en el punto 4).
-- **Aguinaldo (SAC):** sobre la parte registrada, cobrarías además **dos medios aguinaldos al año** (junio y diciembre). Es dinero adicional.
-- La parte de convenio se **actualiza con las paritarias**, así que ese piso no pierde contra la inflación.
+- Tu remuneración correspondería a la categoría **Administrativo A** del convenio, con la escala vigente y las actualizaciones de paritaria.
+- En el recibo verías un **sueldo bruto**, del cual se descuentan tus aportes (jubilación, obra social, etc.). Esos aportes **trabajan para vos** (se explica en el punto 4).
+- **Aguinaldo (SAC):** además de tu sueldo, cobrarías **dos medios aguinaldos al año** (junio y diciembre).
+- Tu sueldo se **actualizaría con las paritarias** del convenio, así no pierde contra la inflación.
 
 ## 2. El convenio
 
