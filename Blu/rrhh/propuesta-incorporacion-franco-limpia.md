@@ -12,14 +12,14 @@ Queremos proponerte formalizar tu incorporación al equipo **en relación de dep
 
 ## 1. Tu sueldo
 
-- Tu remuneración correspondería a la categoría **Administrativo A** del convenio, con la escala vigente y las actualizaciones de paritaria.
-- En el recibo verías un **sueldo bruto**, del cual se descuentan tus aportes (jubilación, obra social, etc.). Esos aportes **trabajan para vos** (se explica en el punto 4).
-- **Aguinaldo (SAC):** además de tu sueldo, cobrarías **dos medios aguinaldos al año** (junio y diciembre).
-- Tu sueldo se **actualizaría con las paritarias** del convenio, así no pierde contra la inflación.
+- Tu remuneración correspondería a la escala del convenio, con los valores vigentes y las actualizaciones de paritaria.
+- En el recibo vas a ver un **sueldo bruto** del cual se descuentan tus aportes (jubilación, obra social, etc.). Eso es normal: esos aportes **trabajan para vos** (se explica en el punto 4).
+- **Aguinaldo (SAC):** además de tu sueldo, cobrarías **dos medios aguinaldos al año** (junio y diciembre). Es dinero adicional.
+- Tu sueldo se **actualiza con las paritarias**, así que no pierde contra la inflación.
 
 ## 2. El convenio
 
-Quedarías encuadrado en el **Convenio Colectivo de Trabajo 130/75 — Empleados de Comercio**, en la categoría **Administrativo A**.
+Quedarías encuadrado en el **Convenio Colectivo de Trabajo 130/75 — Empleados de Comercio**.
 
 Esto te da un marco de derechos garantizados:
 - Escalas salariales que se actualizan por paritaria.
@@ -47,8 +47,6 @@ Estar registrado formalmente te sumaría una red de respaldo importante:
 ## 5. Modalidad
 
 - **Jornada:** tiempo completo.
-- **Modalidad y horario:** [a confirmar entre ambos]
-- **Fecha de inicio:** [a definir]
 
 ## 6. Próximos pasos
 
