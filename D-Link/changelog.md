@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-09-11 — Newsletters de switches (DGS-1250 + DGS-3130) — 6º y 7º templates
+
+Dos newsletters **B2B de switches** con el mismo sistema. Specs reales de las fichas oficiales (WebFetch).
+Escena de hero adaptada: como los switches no son inalámbricos, se reemplazaron los anillos Wi-Fi por
+**líneas de datos fluyendo** (throughput) detrás del producto + specs rotando (`gif-src/hero-dgs*.html`).
+Imágenes oficiales bajadas de dlink.com (con el hash de query requerido) a `img/dgs-1250/` y `img/dgs-3130/`.
+
+- **DGS-1250-52XMP** (`dgs-1250-52xmp-email.html`) — Smart Managed PoE: 48 puertos Gigabit PoE + 4× 10G SFP+,
+  370W PoE, 176 Gbps, L2+. Hero rota 52 puertos → 370W → 176 Gbps → L2+. GIF `img/dgs_hero.gif`.
+- **DGS-3130-30PS** (`dgs-3130-30ps-email.html`) — Managed Lite Layer 3 **apilable**: 24 PoE + 2× 10GBASE-T +
+  4× 10G SFP+, 740W PoE (con RPS), stacking hasta 9, OSPF/RIP, ERPS <50 ms, surge 6 kV. Hero rota 30 puertos →
+  9 en stack → L3 → 740W. GIF `img/dgs3130_hero.gif`.
+- **Integrados al set:** 6ª y 7ª pestañas en el editor, tarjetas en la muestra, keys `dgs` y `dgs3130` en `servidor.py`.
+
+
 ## 2026-09-11 — Newsletter DAP-E9560 (Access Point Wi-Fi 7 B2B) — 5º template
 
 **5º newsletter** del set: **DAP-E9560** (`dap-e9560-email.html`), Access Point **Wi-Fi 7 BE9500** — el AP más

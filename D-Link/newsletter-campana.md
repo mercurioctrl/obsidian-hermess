@@ -163,10 +163,10 @@ Primer email HTML concreto de la campaña (track **B2C**, héroe **Mesh Router M
 
 ## 10. Set de templates + editor web (2026-09-11)
 
-Hay **5 emails** listos con el mismo sistema de diseño:
+Hay **7 emails** listos con el mismo sistema de diseño:
 - **B2C:** **M15** (EAGLE PRO AI AX1500), **M30 AQUILA PRO AI** (router mesh AX3000) y **DCS-6501LH** (cámara PTZ 2K).
-- **B2B:** **DAP-X3060** (Access Point Wi-Fi 6 AX3000 PoE) y **DAP-E9560** (Access Point **Wi-Fi 7 BE9500**, el más
-  top), ambos con gestión Nuclias — el track B2B (instaladores/integradores).
+- **B2B (track instaladores/integradores):** access points **DAP-X3060** (Wi-Fi 6 AX3000) y **DAP-E9560** (Wi-Fi 7
+  BE9500); switches **DGS-1250-52XMP** (Smart Managed PoE) y **DGS-3130-30PS** (Managed Lite Layer 3, apilable).
 
 Cada uno con su GIF de hero opaco; los B2C llevan además **teaser de video** (fragmentos distintos del mismo
 video de YouTube). Detalle técnico en
