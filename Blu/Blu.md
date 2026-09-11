@@ -47,6 +47,7 @@ Proyectos y áreas de BLU Digital Agency.
 
 ### [[minutas/minutas|minutas]] — Minutas de reunión por cliente
 - [[minutas/naevo/naevo|NAEVO]] — [[minutas/naevo/2026-08-12-etiquetas-y-estrategia|2026-08-12 · Etiquetas, empaques y estrategia comercial]]
+- [[minutas/nbe/nbe|NBE]] — [[minutas/nbe/2026-08-28-circuito-compras-pagos-recepcion|2026-08-28 · Circuito de compras, pagos y recepción]]
 
 ### [[rrhh/rrhh|rrhh]] — Recursos Humanos (10 personas)
 - [[rrhh/salarios|salarios]] · [[rrhh/propuesta-aumento-2026-08|propuesta de aumento]] · [[rrhh/politica-vacaciones|política de vacaciones]] · [[rrhh/ausencias|ausencias]]
