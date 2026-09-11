@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-11 — Fix: heroes "producto + specs" centrados
+
+En los GIF de hero tipo **producto fijo + specs rotando** (DAP-X3060 y DCS-6501LH) el número quedaba
+**separado del texto**: la caja del número era de ancho fijo, así que valores angostos ("2.5G", "2K", "8 m")
+dejaban un hueco. Se rearmó la métrica como **líneas completas (número + texto) centradas como unidad**
+(`.cam-line` con flex `justify-content:center`, en `gif-src/hero-dap.html` y `gif-src/hero-dcs.html`) y se
+re-renderizaron `img/dap_hero.gif` e `img/dcs_hero.gif`. Los heroes mesh (M15/M30) usan otra estructura y no
+tenían el problema.
+
+
 ## 2026-09-11 — Newsletter DAP-X3060 (Access Point B2B) — 4º template
 
 Se agregó el **4º newsletter** al set: **DAP-X3060** (`dap-x3060-email.html`), Access Point Wi-Fi 6 AX3000 PoE.
