@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-09-11 — Set de 3 newsletters (M30 + DCS) + editor web con versiones
+
+Se completó el **juego de 3 templates** de email y se armó una herramienta para **editarlos y versionarlos
+en equipo**. Todo en `/var/www/newsletter/`. Operacionaliza el track B2C de [[newsletter-campana]] (ver
+[[newsletter-campana#10. Set de 3 templates + editor web (2026-09-11)|sección 10]]).
+
+- **2 newsletters nuevos** con la estructura/diseño del M15 (datos **reales** de los reels, nada inventado):
+  - **M30 AQUILA PRO AI** (`m30-aquila-email.html`) — Router Mesh Wi-Fi 6 AX3000. Stats: 3 Gbps · 360° ·
+    5 puertos · IA. Hero mesh (routers M30 1→2→3, "360° de cobertura esférica"). GIF `img/m30_mesh.gif`,
+    fuente `gif-src/hero-m30.html`.
+  - **DCS-6501LH** (`dcs-6501lh-email.html`) — Cámara Wi-Fi PTZ 2K. Stats: 2K · 355° · 180° · 8 m. Hero
+    cámara fija + specs rotando (nueva animación, distinta al mesh). GIF `img/dcs_hero.gif`, fuente `gif-src/hero-dcs.html`.
+  - **Video teaser:** fragmentos DISTINTOS del mismo video de YouTube (`mJUJVnljncg`) — M30 = onda "Better
+    Wi-Fi Channel" (~27s), DCS = escena hogar+app (~47s); el M15 usó el principio. Bajado con **yt-dlp** + FFmpeg.
+- **Muestra** (`muestra-newsletters.html`): los 3 templates lado a lado (iframes a **680px = desktop real**).
+- **Editor web** (`editor-newsletters.html`): edición inline de **todo el texto** (contentEditable por
+  elemento, con hover resaltado), doble-click en imagen → cambiar URL, toggle **Desktop (680) / Mobile (375)**.
+  Detalle: el email gatilla su CSS mobile con `max-width:620px`, por eso el "desktop" usa viewport 680.
+- **Versiones COMPARTIDAS** (`servidor.py`, http.server + API): "Guardar versión" con nombre → se guarda
+  **en disco del servidor** (`versiones/<k>/<id>.html` + `versiones/index.json`), **no en localStorage** →
+  todos los que entran al mismo server ven la misma lista y persiste. Cargar / descargar / borrar. Server en
+  `0.0.0.0:8000`; el equipo entra por `http://<IP>:8000/editor-newsletters.html`.
+
+Pendiente a confirmar: URLs de ficha técnica (`/productos/m30/`, `/productos/dcs-6501lh/` supuestas), si el
+badge de garantía 10 años aplica a la cámara, y el "Darse de baja" placeholder.
+
+
 ## 2026-09-10 — Email M15 (HTML animado) + envío por SMTP
 
 Pieza de **email HTML del Mesh Router M15** (héroe B2C) producida y enviada a lista de prueba (equipo Blu

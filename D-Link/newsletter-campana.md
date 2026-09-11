@@ -158,3 +158,21 @@ Primer email HTML concreto de la campaña (track **B2C**, héroe **Mesh Router M
 
 > Pendiente antes de un envío real: link **"Darse de baja"** (quedó como placeholder `#`) y rotar la clave
 > SMTP que se usó en pruebas.
+
+---
+
+## 10. Set de 3 templates + editor web (2026-09-11)
+
+El track **B2C** tiene ahora **3 emails** listos con el mismo sistema de diseño: **M15**, **M30 AQUILA PRO AI**
+(router mesh AX3000) y **DCS-6501LH** (cámara PTZ 2K). Cada uno con su GIF de hero opaco y su **teaser de video**
+(fragmentos distintos del mismo video de YouTube). Detalle técnico en
+[[changelog#2026-09-11 — Set de 3 newsletters (M30 + DCS) + editor web con versiones|changelog]] y
+[[contexto#Newsletter / envío de emails (sep-2026)|contexto]].
+
+- **Muestra:** `muestra-newsletters.html` (los 3 lado a lado, vista desktop).
+- **Editor de equipo:** `editor-newsletters.html` + `servidor.py` — editar textos/imágenes inline, vista
+  desktop/mobile, y **guardar versiones compartidas** (en disco del servidor: todos ven la misma lista).
+  Se usa entrando por `http://<IP-del-server>:8000/editor-newsletters.html` (dejar `servidor.py` corriendo).
+
+> Sirve para **iterar el copy en equipo** antes de enviar. Ojo: el hero animado y el badge son imágenes/GIF,
+> su texto no se edita en el editor (se regenera desde `gif-src/` con el pipeline de Chrome headless + FFmpeg).

@@ -90,6 +90,12 @@ el problema es **relevancia**, no calidad.
   también se pone como fondo del email → sin costura). El GIF **transparente** da manchas (alfa de 1 bit).
   Transiciones con **corte seco** (sin crossfade). Render: Chrome headless frame-a-frame + FFmpeg (paleta
   256 + dither bayer), script `reels-dlink-para-compartir/tools/capture-gif.mjs`.
+- **Editor + versiones para el equipo (sep-2026):** `editor-newsletters.html` (edición inline de textos e
+  imágenes, toggle desktop/mobile) servido por `servidor.py` (http.server + API). Las **versiones se guardan
+  en el servidor** (`versiones/` en disco: `index.json` + un `.html` por versión), **no en localStorage** →
+  son **compartidas** y persisten. El equipo entra por `http://<IP>:8000/editor-newsletters.html` (server en
+  `0.0.0.0:8000`; dejar `servidor.py` corriendo — el `http.server` simple no tiene la API). Los emails gatillan
+  su CSS mobile con `max-width:620px`, por eso la vista "desktop" usa un viewport de **680px**.
 
 ## Gap a cerrar (antes de fijar metas)
 Scraping de MercadoLibre (share-of-shelf, precios, reviews vs TP-Link/Mercusys) + sell-through de

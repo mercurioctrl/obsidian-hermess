@@ -71,6 +71,9 @@ Veo 3 = lo más caro → validar toma por toma. Google Flow usa Veo 3 (acceso po
   **borra las `<img>` externas** del HTML; usar SMTP crudo (`box.lio.red:465` SSL, `testing@blustudioinc.com`,
   `/var/www/newsletter/tools/enviar-smtp.py`). Imágenes hosteadas en WordPress `la.dlink.com/.../uploads/`.
   GIF de email = **opaco** (el transparente mancha). Detalle en [[contexto#Newsletter / envío de emails (sep-2026)|contexto]] y [[changelog]].
+- **Editor + versiones de newsletters (sep-2026):** `editor-newsletters.html` + `servidor.py` (API que guarda
+  versiones en disco `versiones/`, **compartidas** por todo el equipo vía `http://<IP>:8000`). Juego de 3
+  templates: **M15, M30, DCS-6501LH**. Ver [[newsletter-campana#10. Set de 3 templates + editor web (2026-09-11)|newsletter-campana]].
 
 ## Ver también
 [[D-Link]] · [[contexto]] · [[arquitectura]] · [[plan-trabajo]] · [[videos-clips-ia]] · [[newsletter-campana]]
