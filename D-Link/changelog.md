@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-09-11 — Newsletter DAP-X3060 (Access Point B2B) — 4º template
+
+Se agregó el **4º newsletter** al set: **DAP-X3060** (`dap-x3060-email.html`), Access Point Wi-Fi 6 AX3000 PoE.
+Es la **primera pieza de email B2B** de la campaña (negocio/instaladores), en línea con el track B2B de
+[[newsletter-campana]].
+
+- **Specs reales** traídas de la ficha oficial (`dlink.com/.../dap-x3060...`) con WebFetch — **nada inventado**:
+  AX3000 (2882 Mbps 5 GHz + 574 Mbps 2.4 GHz), puerto **2.5G PoE 802.3at**, 4 antenas internas 3 dBi, MU-MIMO 2×2 ·
+  OFDMA · Beamforming · Band Steering, WPA3 Personal/Enterprise + RADIUS + captive portal, gestión **Nuclias
+  Connect**, montaje techo/pared, 190×190×42,8 mm.
+- **Hero animado** (`img/dap_hero.gif`, 2.4 MB): AP + anillos de cobertura Wi-Fi + specs rotando (3 Gbps →
+  2.5G PoE → 2×2 MU-MIMO → WPA3). Fuente `gif-src/hero-dap.html` (misma técnica que la cámara: producto fijo +
+  rings + specs). Imagen oficial bajada a `img/dap-x3060/`.
+- **Sin sección de video** (el único video disponible es el del router EAGLE PRO AI consumer, no pega en un AP B2B).
+- **Integrado al set:** 4ª pestaña en el editor, 4ª tarjeta en la muestra, y key `dap` en `servidor.py`
+  (versiones compartidas también para el AP).
+
+A confirmar: "Dónde comprar" (usé el genérico LATAM, puede no listar este SKU global), ficha técnica (apunta a la
+página global `dlink.com`), y si el badge de garantía 10 años aplica a un producto B2B global.
+
+
 ## 2026-09-11 — Set de 3 newsletters (M30 + DCS) + editor web con versiones
 
 Se completó el **juego de 3 templates** de email y se armó una herramienta para **editarlos y versionarlos
