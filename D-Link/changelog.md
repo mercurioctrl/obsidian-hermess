@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-09-11 — Newsletter DAP-E9560 (Access Point Wi-Fi 7 B2B) — 5º template
+
+**5º newsletter** del set: **DAP-E9560** (`dap-e9560-email.html`), Access Point **Wi-Fi 7 BE9500** — el AP más
+top de la línea (B2B premium). Misma estructura y flujo que el DAP-X3060.
+
+- **Specs reales** de la ficha oficial (WebFetch): Wi-Fi 7 (802.11be) **BE9500 tri-banda** (6 GHz 5764 +
+  5 GHz 2882 + 2.4 GHz 688 Mbps ≈ 9,5 Gbps), **puerto 10G PoE 802.3bt** + 2.5G LAN, 6 antenas internas, **MLO ·
+  4K-QAM · canales 320 MHz · Multi-RU/puncturing**, WPA3 + Nuclias + VLAN por SSID + RADIUS, 223×223×46,7 mm.
+- **Hero animado** (`img/e9560_hero.gif`, 2.4 MB): AP + anillos de cobertura + specs rotando (9.5 Gbps → 10G
+  PoE → MLO → 6 GHz), con la métrica ya centrada (`.cam-line`). Fuente `gif-src/hero-e9560.html`, imagen oficial
+  en `img/dap-e9560/`. Sin video (B2B).
+- **Integrado al set:** 5ª pestaña en el editor, 5ª tarjeta en la muestra, key `e9560` en `servidor.py`.
+
+
 ## 2026-09-11 — Fix: heroes "producto + specs" centrados
 
 En los GIF de hero tipo **producto fijo + specs rotando** (DAP-X3060 y DCS-6501LH) el número quedaba
