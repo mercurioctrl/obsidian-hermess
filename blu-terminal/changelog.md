@@ -19,3 +19,19 @@
   [[construccion-teclado-droid]]. Hallazgo estrella: **Zero Terminal v3 (NODE)** ya hace
   un slider casero con PCB de Bobricius + SAMD21 + soportes 3D. La cruceta del Droid da
   las flechas físicas que no se consiguen comprando.
+
+## 2026-09-12
+
+- 🏆 **PIVOTE del proyecto:** de "construir con Raspberry Pi" a **flashear un Motorola
+  Droid 4 (XT894) con postmarketOS**. Nueva nota [[flashear-droid4-postmarketos]] y
+  [[caminos]] (flashear / reshell / construir).
+- research: reshell (vaciar Droid, meter Pi) → verificado que se puede reusar teclado
+  (flex→Pico auto-scan) y slider; pantalla original casi seguro se reemplaza.
+- research: postmarketOS en Droid 4 → teclado + WiFi + consola framebuffer funcionan
+  (bash real). Gráfico roto en pmOS pero OK en Maemo Leste. Flasheo por `droid4-kexecboot`.
+- research: Droid X → **descartado** (sin teclado + bootloader eFuse). Ver [[modelos-droid]].
+- research: cursor dorado → es el **Droid original A855** (D-pad físico dorado); el Droid 4
+  no lo tiene pero sí flechas dedicadas. [[modelos-droid]].
+- research: comparativa de teclados para construir → [[teclado-comparativa]]
+  (uConsole 74 teclas vs Bobricius mini(Pi)QWERTY $28 vs teclado Droid 4 salvado).
+- Nuevos [[render|renders]] de alta calidad del dispositivo (hero 2400×1800, estilo Droid).

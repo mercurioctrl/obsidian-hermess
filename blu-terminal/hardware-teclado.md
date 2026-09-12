@@ -67,3 +67,5 @@ Enlaces:
 - [[blu-terminal]]
 - [[hardware-pantalla]]
 - [[proyectos-referencia]]
+- [[teclado-comparativa]] — comparativa de teclados por tamaño/comodidad vs Droid 4
+- [[caminos]] · [[flashear-droid4-postmarketos]] — recordá: el Droid 4 real ya trae el teclado

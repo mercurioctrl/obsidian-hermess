@@ -7,7 +7,13 @@
 - **Pantalla LCD** (posiblemente cristal líquido).
 - **Teclado físico QWERTY**.
 
-## Decisión de arquitectura clave
+## 🏆 Decisión principal (pivote 2026-09-12)
+El proyecto pasó de "construir con Raspberry Pi" a **comprar un Motorola Droid 4 (XT894)
+y flashear postmarketOS**. Cumple todos los requisitos sin construir nada: bash real,
+WiFi, teclado slider QWERTY con flechas, tamaño de bolsillo. Ver
+[[flashear-droid4-postmarketos]] y [[caminos]]. La vía Raspberry Pi queda como plan B.
+
+## Decisión de arquitectura clave (vía construir, plan B)
 Una pantalla **DPI se come casi todos los pines GPIO** de la Pi. Por eso el teclado
 **no puede ir por GPIO** — debe ir por **USB o I2C** (solo 2 pines). Esto define todo
 el diseño. El [[proyectos-referencia|Beepy]] resuelve esto usando Sharp Memory LCD

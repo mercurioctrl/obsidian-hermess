@@ -1,4 +1,13 @@
-# Lista de compra — dos caminos
+# Lista de compra
+
+## 🏆 Opción recomendada — Motorola Droid 4 + postmarketOS
+Comprar un **Motorola Droid 4 (XT894)** usado (~$60–300, Swappa/eBay) y flashear
+**postmarketOS**. No hay que comprar componentes ni construir nada. Ver
+[[flashear-droid4-postmarketos]] y [[modelos-droid]]. Considerar importación a Argentina.
+
+---
+
+## Vía "construir con Raspberry Pi" (plan B)
 
 ## Camino A — el rápido
 Comprar un **[[proyectos-referencia|Beepy]]** semi-ensamblado + tu propia
