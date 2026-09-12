@@ -17,7 +17,7 @@ La vía "construir con **Raspberry Pi Zero 2 W** + Beepy" queda como plan B ([[c
 - [[caminos]] — los 3 caminos (flashear / reshell / construir) comparados
 - [[flashear-droid4-postmarketos]] — 🏆 el camino ganador
 - [[modelos-droid]] — Droid 4 vs A855 (cursor dorado) vs Droid X (descartado)
-- [[render]] — render conceptual del dispositivo
+- [[render]] — renders (hero, ficha del build, planos con cotas, vistas 3D)
 - [[contexto]] — requisitos, decisiones y preguntas abiertas
 - [[lista-compra]] — qué comprar
 
@@ -26,6 +26,9 @@ La vía "construir con **Raspberry Pi Zero 2 W** + Beepy" queda como plan B ([[c
 - [[hardware-pantalla]] — opciones de LCD y el conflicto GPIO
 - [[hardware-teclado]] — teclados QWERTY físicos (y el problema de las flechas)
 - [[teclado-comparativa]] — qué teclado se parece más al Droid 4 para construir
+- [[bom-construccion]] — BOM verificada del build (~$108–160) y restricción DPI
+- [[pantallas-wide]] — ranking de pantallas 4–4.3" y la corrección "la Zero no tiene DSI"
+- [[grosor-y-medidas]] — planos, apilado de grosores, variante slim 24 mm
 - [[construccion-teclado-droid]] — construir el teclado slider tipo Droid desde cero
 - [[hardware-energia]] — batería LiPo y gestión de energía
 - [[proyectos-referencia]] — Beepy, ZeroPhone y comunidad cyberdeck
@@ -37,4 +40,4 @@ La vía "construir con **Raspberry Pi Zero 2 W** + Beepy" queda como plan B ([[c
 - [[n950-research]] — otra investigación de hardware relacionada
 
 ---
-Última sincronización: 2026-09-10
+Última sincronización: 2026-09-12

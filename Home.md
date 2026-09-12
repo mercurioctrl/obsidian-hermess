@@ -119,7 +119,7 @@
 
 - [[blu-terminal/blu-terminal|blu-terminal]] — Terminal de bolsillo tipo cyberdeck: shell de bash real (Linux) por WiFi, con LCD y teclado QWERTY físico
   - 🏆 [[blu-terminal/caminos|caminos]] · [[blu-terminal/flashear-droid4-postmarketos|flashear Droid 4 + postmarketOS]] · [[blu-terminal/modelos-droid|modelos Droid]] · [[blu-terminal/render|render]]
-  - [[blu-terminal/contexto|contexto]] · [[blu-terminal/hardware-placa|placa]] · [[blu-terminal/hardware-pantalla|pantalla]] · [[blu-terminal/hardware-teclado|teclado]] · [[blu-terminal/teclado-comparativa|comparativa de teclados]] · [[blu-terminal/construccion-teclado-droid|construir teclado slider Droid]] · [[blu-terminal/hardware-energia|energía]] · [[blu-terminal/proyectos-referencia|referencias]] · [[blu-terminal/lista-compra|lista de compra]] · [[blu-terminal/changelog|changelog]]
+  - [[blu-terminal/contexto|contexto]] · [[blu-terminal/hardware-placa|placa]] · [[blu-terminal/hardware-pantalla|pantalla]] · [[blu-terminal/hardware-teclado|teclado]] · [[blu-terminal/teclado-comparativa|comparativa de teclados]] · [[blu-terminal/bom-construccion|BOM construcción]] · [[blu-terminal/pantallas-wide|pantallas wide]] · [[blu-terminal/grosor-y-medidas|grosor y medidas]] · [[blu-terminal/construccion-teclado-droid|construir teclado slider Droid]] · [[blu-terminal/hardware-energia|energía]] · [[blu-terminal/proyectos-referencia|referencias]] · [[blu-terminal/lista-compra|lista de compra]] · [[blu-terminal/changelog|changelog]]
 
 ---
 

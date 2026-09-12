@@ -39,14 +39,36 @@ funciona en postmarketOS. Si quisieras escritorio gráfico completo → **Maemo 
 - Maemo Leste Droid 4: https://leste.maemo.org/Motorola_Droid_4
 - droid4-kexecboot: https://github.com/tmlind/droid4-kexecboot
 
-## Dónde comprar (⚠️ precios sin verificar en 2026)
-- **Swappa** (swappa.com) — usados verificados, mejor estado.
-- **eBay** — mayor oferta de "Motorola Droid 4 XT894".
-- **Back Market** — refurbished con garantía (si aparece).
-- Referencia histórica ~$60–300 USD usado. Es de Verizon USA → hay que importar.
-- **Uso como terminal:** WiFi-only sin línea celular → debería andar sin activar Verizon.
-- **Argentina:** Decreto 604/2026 unificó correo/courier; revisar franquicia USD 400 y
-  tema ENACOM/homologación antes de importar (no verificado).
+## Dónde comprar en buen estado (research 2026-09-12)
+⚠️ El research **no pudo verificar stock ni precios 2026** (modelo de 2012, poca data pública).
+- **Swappa** — la mejor para "buen estado": *grading* Mint/Good/Fair, IMEI verificado, sin robados.
+- **eBay** — la mayor oferta de "Motorola Droid 4 XT894". Vendedor con reputación, fotos reales.
+- Back Market / Amazon Renewed — poco probable para un modelo tan viejo.
+- Referencia histórica ~$60–150 usado (no confirmado).
+
+### Versión correcta
+**XT894** (codename *maserati*). No confundir con **Droid 3** (XT862/XT860, el anterior) ni
+**Droid MAXX/RAZR** (el sucesor, sin teclado).
+
+### Qué revisar (teléfono de ~14 años)
+1. 🔋 **Batería = riesgo #1.** LiPo interna **no removible** de 1785 mAh; se degrada/hincha.
+   Reemplazo OEM **Motorola EB41** (SNN5905A/B, 3.8 V ~1735 mAh) existe, pero cambiarla
+   **no es trivial** (abrir con Torx T5 + spudger, adhesivo fuerte, iFixit 4/10). Stock/precio 2026 sin confirmar.
+2. Slider y teclado: que deslice firme y respondan las teclas.
+3. Pantalla sin burn-in.
+4. Pedir **IMEI**; sin bloqueo Google/FRP ni reporte de robo. (Aunque esté *blacklisteado* en
+   Verizon, el WiFi funciona y Linux ni corre el firmware que lo chequea.)
+
+### Uso técnico
+Verizon CDMA, pero como terminal **WiFi-only con Linux** no necesita red celular. ✅
+
+### 🚨 Importación a Argentina (verificado 3-0)
+El **régimen courier** (Decreto 604/2026 + RG 5884/2026: franquicia USD 400 FOB, 5 envíos/año,
+IVA 21%) **prohíbe importar "artículos usados"** → **no entra un Droid 4 usado por
+Aerobox/courier puerta a puerta.** Es el obstáculo central.
+Workarounds (confirmar caso por caso): traerlo **en equipaje** con alguien que viaje desde
+USA (la vía más limpia); intermediarios (TiendaMIA, Grabr), que suelen rechazar usados;
+buscar uno vendido como "refurbished" (zona gris). Tema ENACOM/homologación sin verificar.
 
 ## Ver también
 - [[blu-terminal]]

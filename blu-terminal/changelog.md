@@ -35,3 +35,20 @@
 - research: comparativa de teclados para construir → [[teclado-comparativa]]
   (uConsole 74 teclas vs Bobricius mini(Pi)QWERTY $28 vs teclado Droid 4 salvado).
 - Nuevos [[render|renders]] de alta calidad del dispositivo (hero 2400×1800, estilo Droid).
+
+## 2026-09-12 (tarde)
+
+- research: dónde comprar Droid 4 en buen estado → Swappa/eBay; **la aduana argentina
+  (courier) prohíbe usados** → traer en equipaje. Batería EB41 no removible. Actualizada
+  [[flashear-droid4-postmarketos]].
+- research: BOM completa de construcción → nueva [[bom-construccion]] (~$108–160 núcleo;
+  DPI ≤10 cm ⇒ Pi en la mitad pantalla; Bobricius $28.72 es solo PCB; Zero Terminal v3 no robusto).
+- render: ficha del build con piezas verificadas (`blu-terminal-build.png`).
+- research: pantallas wide 4–4.3" → **corrección: la Zero 2 W no tiene DSI** (premisa mía
+  refutada 0-3). Ganadora HyperPixel 4.0 (68% del ancho). Nueva [[pantallas-wide]]; build re-renderizado.
+- planos: lámina de 7 vistas con cotas en mm (`blu-terminal-planos.png`).
+- render 3D: 4 vistas isométricas con mini motor SVG (`blu-terminal-iso.png`).
+- análisis de grosor: v1 34 mm → **variante slim ~24 mm** (header bajo, vidrio al ras,
+  switches 5 mm, LiPo 505060). No llega a 13.7. Nueva [[grosor-y-medidas]]; planos e iso
+  regenerados en slim, v1 guardada como `*-v1-34mm.png`. [[render]] reescrita.
+
