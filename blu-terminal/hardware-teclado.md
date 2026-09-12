@@ -32,13 +32,32 @@ editar dependen de las flechas. Se resuelven de dos formas:
 
 El **Beepy** usa teclado tipo Q20 → tiene trackpad, pero **no flechas físicas reales**.
 
-### Si las flechas físicas son requisito duro (salir del formato BlackBerry)
-- **M5Stack Cardputer** — teclado QWERTY completo, verificar cluster de flechas.
-- Teclados mini QWERTY USB/BT con fila de flechas (AliExpress, Rii, teclados de handheld).
-- Teclados de teclas mecánicas compactas con fila de flechas.
+### Conclusión del research de flechas (2026-09-10) ✅ verificado
+**No existe un teclado de pulgar QWERTY ultracompacto con flechas físicas dedicadas.**
+Todos los "de bolsillo" resuelven flechas por firmware (Fn/capas) o trackpad óptico.
 
-> Research enfocado en teclados con flechas físicas lanzado 2026-09-10 — pendiente de
-> completar y actualizar esta sección con enlaces/precios verificados.
+#### Formato bolsillo — SIN flechas físicas
+| Teclado | Conexión a la Pi | Flechas | Nota |
+|---|---|---|---|
+| Beepy / BBQ20 (Solder Party) | I2C | ❌ firmware/trackpad | Trackpad óptico como cursor |
+| **ZitaoTech Q20** | ✅ USB-C, HID teclado+ratón | ❌ firmware/trackpad | BBQ20 modificado +2 botones de hombro. **Mejor para la Pi**: es USB HID directo, remapeás flechas en QMK/Vial |
+| HackberryPi Cyberdeck | integrado | ❌ capa 3 | Trackpad necesita shim evdev en TTY |
+| M5Stack CardKB | ❌ solo I2C 0x5F | ❌ Fn | NO es USB HID ni BT — no plug-and-play |
+| M5Stack Cardputer | ❌ no es periférico | ❌ Fn | Es un ESP32-S3 autónomo con pantalla propia; USB-C solo carga/programa |
+
+#### Con flechas físicas reales — más grandes, ya no de bolsillo
+| Teclado | Conexión | Precio | Nota |
+|---|---|---|---|
+| **8BitDo Retro Mechanical Keyboard** | BT / 2.4G / USB-C | ~$100 | TKL 87 teclas, cluster de flechas real, hot-swap. Mejor opción confirmada con flechas físicas |
+| Mecánicos 60%/62 teclas (MonkeyKing / pc-100) | USB-C cableado | varía | Cluster de flechas dedicado, más chico que TKL pero no de pulgar |
+
+#### El trade-off
+- **Bolsillo real** → aceptás flechas por combo/trackpad → **ZitaoTech Q20** (recomendado).
+- **Flechas físicas innegociables** → subís a 60%/TKL → **8BitDo**, deja de ser de bolsillo.
+
+Enlaces:
+- ZitaoTech Q20 (Tindie): https://www.tindie.com/products/zitaotech/q20-usb-keyboard-with-trackpad/
+- 8BitDo Retro Mechanical: https://www.amazon.com/dp/B0CCP8KYGG
 
 ## Enlaces
 - Solder Party (Tindie): https://www.tindie.com/stores/arturo182/ — buscar "BB Q20 Keyboard"
