@@ -78,7 +78,7 @@ Las tablas legacy del ERP nunca se modifican desde features nuevos. Toda metadat
 ## Tareas
 
 - [[API - Fix - Corregir doble-descuento de stock por race en MakeSale|API - Fix - Doble-descuento de stock (race MakeSale/RemoveSale)]]
-- [[API - Fix - Script de regularizaciÃ³n stock doble-descuento|API - Fix - Script de regularizaciÃ³n stock doble-descuento]]
+- [[API - Fix - Script de regularización stock doble-descuento|API - Fix - Script de regularización stock doble-descuento]]
 - [[API - Research - Causas del stockDelta distinto de cero|API - Research - Causas del stockDelta != 0 (auditorÃ­a global)]]
 - [[API - Research - Stock en estanteria no reflejado en el sistema|API - Research - Stock en estanterÃ­a no reflejado en el sistema]]
 - [[API - Fix - Correccion albclil faltante en ventas cobradas (caso DIAMOND)|API - Fix - CorrecciÃ³n: albclil faltante en ventas cobradas (DIAMOND)]]
