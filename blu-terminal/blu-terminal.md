@@ -12,7 +12,8 @@ El cerebro es una **Raspberry Pi Zero 2 W** (único combo barato y verificado de
 - [[contexto]] — requisitos, decisiones y preguntas abiertas
 - [[hardware-placa]] — la SBC (cerebro)
 - [[hardware-pantalla]] — opciones de LCD y el conflicto GPIO
-- [[hardware-teclado]] — teclados QWERTY físicos
+- [[hardware-teclado]] — teclados QWERTY físicos (y el problema de las flechas)
+- [[construccion-teclado-droid]] — construir el teclado slider tipo Motorola Droid desde cero
 - [[hardware-energia]] — batería LiPo y gestión de energía
 - [[proyectos-referencia]] — Beepy, ZeroPhone y comunidad cyberdeck
 - [[lista-compra]] — dos caminos con precios

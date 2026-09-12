@@ -118,7 +118,7 @@
 ## ⌨️ blu-terminal
 
 - [[blu-terminal/blu-terminal|blu-terminal]] — Terminal de bolsillo tipo cyberdeck: shell de bash real (Linux) por WiFi, con LCD y teclado QWERTY físico
-  - [[blu-terminal/contexto|contexto]] · [[blu-terminal/hardware-placa|placa]] · [[blu-terminal/hardware-pantalla|pantalla]] · [[blu-terminal/hardware-teclado|teclado]] · [[blu-terminal/hardware-energia|energía]] · [[blu-terminal/proyectos-referencia|referencias]] · [[blu-terminal/lista-compra|lista de compra]] · [[blu-terminal/changelog|changelog]]
+  - [[blu-terminal/contexto|contexto]] · [[blu-terminal/hardware-placa|placa]] · [[blu-terminal/hardware-pantalla|pantalla]] · [[blu-terminal/hardware-teclado|teclado]] · [[blu-terminal/construccion-teclado-droid|construir teclado slider Droid]] · [[blu-terminal/hardware-energia|energía]] · [[blu-terminal/proyectos-referencia|referencias]] · [[blu-terminal/lista-compra|lista de compra]] · [[blu-terminal/changelog|changelog]]
 
 ---
 
