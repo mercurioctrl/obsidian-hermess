@@ -47,3 +47,6 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/Productos/Productos|Productos]] — ideas y productos en desarrollo impulsados por Bily y Catriel
 - [[Bily/finanzas/pagos-impuestos-personales|Pagos e impuestos personales]] — registro de pagos de impuestos (autónomos AFIP, VEPs)
 - [[Bily/Inicio|Inicio de Bily]] — nota legacy de punto de entrada a la memoria
+- [[Bily/grupos/shared-billy/Enlaces|Enlaces del Grupo Shared & Billy]] — links compartidos en el grupo (Instagram, Twitter/X, etc.)
+- [[Bily/grupos/shared-billy/2026-09-09|Shared & billy — 2026-09-09]] — registro de conversación del grupo
+- [[Bily/grupos/shared-billy/2026-09-11|Shared & billy — 2026-09-11]] — registro de conversación del grupo
