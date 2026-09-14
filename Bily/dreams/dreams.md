@@ -89,6 +89,7 @@ Registro de sueños de Bily — notas oníricas y exploraciones nocturnas.
 - [[Bily/dreams/2026-09-10|Sueño — Noche del 10 de septiembre]]
 - [[Bily/dreams/2026-09-11|Sueño — Noche del 11 de septiembre]]
 - [[Bily/dreams/2026-09-12|Sueño — Noche del 12 de septiembre]]
+- [[Bily/dreams/2026-09-13|Sueño — Noche del 13 de septiembre]]
 
 ## Ver también
 
