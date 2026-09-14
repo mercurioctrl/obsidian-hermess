@@ -8,3 +8,4 @@
 - https://www.instagram.com/reel/DdJVzaXjPXz/?stkn=MTh0YmMzZDVoc3FmYg==
 - https://www.instagram.com/p/Dc4afs9DCAI/?stkn=MWZxbm9oMHJudjJhbg==
 - https://www.instagram.com/reel/DcmKy9-FJ-u/?stkn=Nmt5czZxYmFva3U=
+- https://x.com/joacopanzas/status/2099144065656733949
