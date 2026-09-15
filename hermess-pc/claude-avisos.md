@@ -58,8 +58,14 @@ Otros modos del script: `--marcar-todas` (pone 🔵 en toda pestaña con sesión
 3. **`bell-features` es un set de flags que parte de los defaults.** Listar sólo los que quiero **no apaga** el resto: para sacar la campanita del título hay que escribir `no-title` explícito. Verificar siempre con `ghostty +show-config | grep bell-features`, que puede diferir de lo que dice el archivo.
 4. **El hook corre sin `DISPLAY`.** Zenity no abría desde el comando. El script ahora lo saca del entorno del proceso de Ghostty (`/proc/<pid>/environ`).
 5. **La `Notification` de sesión ociosa hay que filtrarla.** Claude Code la dispara no sólo para permisos, sino también cuando el prompt queda idle ~60 s ("waiting for your input"). Tomada como 🟡 quedaba **pegada para siempre**, porque el watcher que pasa a 🔵 sólo se arma en 🟢. El script la ignora entera, y el filtro va **antes** de matar el proceso de fondo —- si no, cortaba el watcher. Los mensajes se loguean en `$XDG_RUNTIME_DIR/claude-estado/notif.log` por si hay que afinar el patrón.
-6. **El hook `Stop` también dispara** con `/clear`, `/compact` y al retomar sesión.
-7. **Los avisos salen de cualquiera de las sesiones abiertas.** Con muchas sesiones puede volverse ruidoso; si molesta, dejar notificación sólo para el 🟡.
+6. **tmux se come el título.** Dentro de tmux el pty del proceso `claude` es el del *pane*: la secuencia OSC la captura tmux (queda en `pane_title`) y **no llega a Ghostty**, porque `set-titles` viene en `off` por default. Síntoma: la pestaña se queda con el comando (`tmux new -t cobrosNB`) y nunca muestra emoji. Fix en `~/.tmux.conf`:
+   ```
+   set -g set-titles on
+   set -g set-titles-string "#{?#{==:#{pane_title},#{host}},#S,#{pane_title}}"
+   ```
+   El condicional hace que un pane sin título propio (donde `pane_title` es el hostname) muestre el nombre de la sesión tmux en lugar de `hermess-desktop`. Recargar con `tmux source-file ~/.tmux.conf`. Para diagnosticar: `tmux list-panes -a -F "#{session_name} '#{pane_title}' #{pane_tty}"`.
+7. **El hook `Stop` también dispara** con `/clear`, `/compact` y al retomar sesión.
+8. **Los avisos salen de cualquiera de las sesiones abiertas.** Con muchas sesiones puede volverse ruidoso; si molesta, dejar notificación sólo para el 🟡.
 
 ---
 

@@ -57,6 +57,7 @@ Compras/ingresos/comprobantes: `PedProT`(nNumPed)/`PedProL` = orden; `albprot`(n
 
 ## Rama en curso
 
+- **`feature/anular-ingreso-proveedor`** (ambos repos, 2026-09-10): anular un ingreso (remito) y dejar la orden editable. API commits `ee08d32`/`a11e647`/`facbc8d`, front `796a1c7` (pusheados; PRs contra `blu-dev-staff` y `Development`/`development`). Endpoint `DELETE /v1/providerOrderInbound/{albaranId}`. **Pendiente: correr el DDL (`ALTER albprol` + `CREATE provider_inbound_anulacion`) en staging/prod** (solo en 190.210.23.97). Bloquea si hay seriales tomados; NO revierte seriales no-vendidos (gap). Ver [[contexto#Anular ingreso de proveedor (2026-09-10)|contexto]] y [[arquitectura#Anular ingreso (reversa)|arquitectura]].
 - **`feat-check-no-tocar-costo-en-ordenes`** (ambos repos, 2026-08-09): 3ra modalidad "no tocar costo". PRs API #432→Development / #433→blu-dev-staff; front #299→development / #300→blu-dev-staff. **Pendiente: correr el `ALTER TABLE ... ADD doNotUpdateCost` en staging/prod** (solo aplicado en 190.210.23.97). Ver [[contexto#Check "no tocar costo" en ingresos (2026-08-09)|contexto]].
 - **`catri-fine-tunning`** (ambos repos): ya mergeada a `development` y `gamma` (PRs #274, #276); siguen acumulándose commits posteriores. Incluye: IVA default, filtros sku/itemId/serial, columna Serializado, companyCode por defecto, **cuenta corriente de proveedores** (ledger), SKU inline, **export XLSX/CSV**, **currencyId** en detalles. Ver [[changelog]].
 

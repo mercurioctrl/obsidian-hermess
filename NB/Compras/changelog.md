@@ -2,6 +2,16 @@
 
 Historial de cambios del proyecto Compras, basado en los commits de ambos repositorios.
 
+## 2026-09-10
+
+- feat: **Anular ingreso de proveedor** — botón/endpoint para deshacer un ingreso (remito) y dejar la orden **editable** de nuevo (`PedProT.cEstado='p'`, verde). Ramas `feature/anular-ingreso-proveedor` en ambos repos (base `Development`/`development`). Ver doc `docs/features/anular-ingreso-proveedor.md`, [[arquitectura#Anular ingreso (reversa)|arquitectura]] y [[contexto#Anular ingreso de proveedor (2026-09-10)|contexto]].
+  - **API** (commits `ee08d32`, `a11e647`, `facbc8d`): nuevo `DELETE /v1/providerOrderInbound/{inboundId}` (inboundId = `albprot.nnumalb`) → `AnnulProviderOrderInbound` → `AnnulProviderOrderInboundService` → `AnnulProviderOrderInboundRepository`. Reversa en transacción: resta stock (**permite negativo**), **movimiento inverso append-only** en `NB_WEB.dbo.registro_stock` (no borra el original), resta `pedprol.nCanEnt`, limpia flags de costo, restaura `ncosteprom` y `ULTIMO_INGRESO` desde snapshot, `cEstado='p'`, **borra** `albprot`/`albprol`, y audita en `NB_WEB.dbo.provider_inbound_anulacion`.
+  - **Snapshot de costo**: al ingresar, `MakeProviderOrderInboundService` guarda por línea en `albprol` (`prevCosteProm`, `prevUltimoIngreso`, `costMode`) para reversa exacta en las 3 modalidades.
+  - **Validaciones**: no facturado (`albprot.lfacturado=0`) + reciente (`config('inbound.annul_window_days')`, default **10 días**, env `INBOUND_ANNUL_WINDOW_DAYS`) + **seriales no tomados** (bloquea 409 si algún serial está vendido/egresado/en RMA en `ST_DETALLE_STOCK`). El listado expone `canAnnul: bool`.
+  - **Front** (commit `796a1c7`): columna "Acciones" con botón **"Anular"** (visible solo si `canAnnul`) + **modal de advertencia** (`this.$confirm`) que detalla el proceso y exige confirmación antes del `DELETE` (`pages/providerOrderInbound.vue`, `store/providerOrderInbound.js`).
+  - **⚠️ DDL manual** (idempotente, en `database/sql/anular-ingreso/`, aplicar por entorno): `ALTER albprol ADD prevCosteProm/prevUltimoIngreso/costMode` + `CREATE NB_WEB.dbo.provider_inbound_anulacion`. Aplicado solo en `190.210.23.97`/`NB_WEB` hasta ahora.
+  - **Gap pendiente**: la anulación NO revierte/desliga los seriales *no vendidos* (decisión de negocio). Ver [[contexto#Anular ingreso de proveedor (2026-09-10)|contexto]].
+
 ## 2026-08-09
 
 - feat: **Check "No tocar costo" en ingresos de órdenes** — nueva **3ra modalidad** por ítem al generar un ingreso, que **saltea por completo** la actualización de `articulo.ncosteprom` (el costo promedio queda como estaba). Convive con las 2 previas (ponderado / sobreescribe) y tiene **prioridad** sobre el ponderado.
