@@ -8,12 +8,18 @@ Sistema para darse cuenta, de un vistazo y desde otra ventana, qué está hacien
 
 | Emoji | Significado | Qué lo dispara |
 |---|---|---|
-| 🟡 | Claude espera una respuesta (permiso o pregunta) | hook `Notification` |
-| 🟢 | Terminó la tarea y todavía no miré la pestaña | hook `Stop` |
-| 🔵 | Terminó y ya la vi / sesión inactiva | el mantenedor, al detectar que miré; o `SessionStart` |
-| 🙃🫠🤐🤨… | Trabajando — rota 34 caritas cada 1,5 s | hooks `UserPromptSubmit` y `PostToolUse` |
+| caritas | Trabajando — rota 34 caritas cada 1,5 s | `UserPromptSubmit`, `PostToolUse`, `PostCompact` |
+| 🟡 | Espera una respuesta (permiso o pregunta) | `PermissionRequest`, `Notification` |
+| 🟢 | Terminó y todavía no miré la pestaña | `Stop` |
+| 🔴 | Terminó **con error**, y no lo miré | `StopFailure` |
+| 🔵 | Terminó y ya la vi / sesión inactiva | el mantenedor al detectar que miré; `SessionStart` |
+| 😵 | Una herramienta falló (vuelve solo a los 6 s) | `PostToolUseFailure` |
+| ⛔ | Denegué un permiso (vuelve solo a los 6 s) | `PermissionDenied` |
+| 🗜️ | Compactando el contexto | `PreCompact` |
+| 🤖 | Hay subagentes trabajando | `SubagentStart` / `SubagentStop` |
+| ⚙️ | Hay tareas en background | `TaskCreated` / `TaskCompleted` |
 
-Además: 🟡 y 🟢 mandan notificación de escritorio (`notify-send`, el amarillo con urgencia *critical* para que quede pegada) y sonido (`paplay` con sonidos de `freedesktop`), y Ghostty resalta la ventana con borde.
+Además: 🟡, 🟢 y 🔴 mandan notificación de escritorio (`notify-send`, el amarillo y el rojo con urgencia *critical* para que queden pegados; el rojo con sonido de error) y sonido (`paplay` con sonidos de `freedesktop`), y Ghostty resalta la ventana con borde.
 
 ---
 
@@ -27,10 +33,17 @@ Además: 🟡 y 🟢 mandan notificación de escritorio (`notify-send`, el amari
 | `~/.local/bin/titulo` | Wrapper corto para nombrar la pestaña |
 | `~/.config/ghostty/config` | `bell-features` y los keybinds |
 | `~/.tmux.conf` | `set-titles on`, si no tmux no le pasa el título a Ghostty |
-| `$XDG_RUNTIME_DIR/claude-estado/<pts>.estado` | Estado de cada pestaña (`estado\|nombre`) — lo escriben los hooks, lo lee el mantenedor |
+| `$XDG_RUNTIME_DIR/claude-estado/<pts>.estado` | Estado de cada pestaña (`estado\|nombre\|expira`) — lo escriben los hooks, lo lee el mantenedor |
+| `$XDG_RUNTIME_DIR/claude-estado/<pts>.cuenta` | Contadores de subagentes y tareas en background |
 | `$XDG_RUNTIME_DIR/claude-estado/<pts>.pid` | PID del mantenedor de esa pestaña |
 
-Hooks registrados (todos `async: true`): `Notification`→atencion, `Stop`→listo, `UserPromptSubmit`/`PostToolUse`→trabajando, `SessionStart`→visto, `SessionEnd`→apagar.
+Hooks registrados (16, todos `async: true`): `UserPromptSubmit`/`PostToolUse`/`PostCompact`→trabajando · `Notification`→atencion · `PermissionRequest`→espera · `PermissionDenied`→denegado · `Stop`→listo · `StopFailure`→fallo · `PostToolUseFailure`→error · `PreCompact`→compactando · `SubagentStart`/`SubagentStop`→subagente± · `TaskCreated`/`TaskCompleted`→tarea± · `SessionStart`→visto · `SessionEnd`→apagar.
+
+**Estados transitorios.** 😵 y ⛔ se escriben con una marca de expiración en el tercer campo del archivo de estado (`estado|nombre|expira`); el mantenedor los devuelve solos a `trabajando` a los 6 s. Igual, si mientras tanto corre otra herramienta, `PostToolUse` ya los limpia antes.
+
+**Contadores.** 🤖 y ⚙️ no son estados sino contadores en `<pts>.cuenta` (`subagentes tareas`), porque puede haber varios a la vez. Los hooks `Subagent*`/`Task*` sólo suman o restan ahí —- ni siquiera invocan `jq` —- y el mantenedor los mira cuando el estado es `trabajando`. Se resetean a `0 0` al terminar el turno, para que un evento desbalanceado no deje el 🤖 pegado.
+
+**Prioridad:** un estado explícito (🟡 🟢 🔴 🔵 😵 ⛔ 🗜️) siempre gana; los contadores sólo pintan cuando el estado es `trabajando`.
 
 ---
 
