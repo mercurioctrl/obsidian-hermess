@@ -1,10 +1,36 @@
 # Memoria — inventario
 
 Memoria de Claude Code del proyecto, consolidada por tipo.
-Última sincronización: 2026-08-26. (Memoria local también en
+Última sincronización: 2026-09-15. (Memoria local también en
 `~/.claude/projects/-var-www-nb-inventario/memory/` — entorno Linux.)
 
 ## Proyecto
+
+### Transferencias entre depósitos — cómo funciona (2026-09-15)
+`POST /stock-transfers` (`transfer_stock_between_warehouses`, `stocks.py`) corre **todo en
+una transacción**: valida que ambos almacenes existan y compartan `companyCode` (400 si no),
+lee origen con `UPDLOCK, ROWLOCK`, valida `nstock >= quantity` (409), resta en origen, suma
+en destino **creando la fila si no existe** (mismo INSERT de 18 col. que el ajuste manual) e
+inserta **dos filas** en `registro_stock` (`TRANSFER OUT` −q / `TRANSFER IN` +q, con
+`agente` = `usuario` del JWT). El `transferId` es el `SCOPE_IDENTITY()` del primer insert:
+**no hay tabla de cabecera de transferencia**. Límites: mueve **solo el bucket `nstock`**
+(Control/Oculto/D1/reservas quedan donde están) y **no actualiza seriales**. UI: modal en
+`pages/itemsStock.vue` (~864/~1695), manda **un item** aunque la API acepta lote.
+Ver [[modulo-transferencias-stock]].
+
+### Portal público de certificados eléctricos (2026-08-31)
+Primeras rutas del backend **sin `JWTBearer()`**: `GET /public/electricalCertificates` y
+`/categories` (INV-370, back #341 / front #460). El front tiene página con `auth: false` +
+`layout: "public"` y un **cliente axios separado** hacia `METADATA_HOST` para no heredar el
+`Authorization` del JWT interno; `nuxtServerInit` no dispara llamadas del back-office ahí.
+Contrato en `ms-metadata/docs/portal-publico-certificados.md`.
+
+### Filtro con/sin stock duplicaba items — WHERE vs HAVING (2026-08-28)
+Las grillas fanean `articulo × FP_Almacen` y solo la fila del almacén con stock trae
+`stocks`; con el filtro en el WHERE el mismo artículo aparecía en **ambos** filtros. Fix
+(#340): `HAVING` sobre los `SUM` en `get_items_stocks`, `get_items_prices_grid` y
+`get_items_stocks_count` (que además contaba una fila por almacén: empresa 4 5983 → 4391).
+Regla general: **si la grilla muestra un agregado, el filtro va sobre el agregado**.
 
 ### Feature APA/Soportes (2026-08-26)
 Feature completa de **AMD Price Adjustment** (aporte promocional temporal que baja el costo

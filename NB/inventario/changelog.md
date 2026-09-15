@@ -1,5 +1,54 @@
 # Changelog — inventario
 
+## 2026-09-15 — Sync: portal público de certificados, fix filtro con/sin stock, videos de YouTube
+
+Sin cambios de código en esta sesión (fue de lectura: se documentó el flujo de
+transferencias entre depósitos en [[modulo-transferencias-stock]]). Lo que entró a
+`Development`/`development` desde la sync anterior (2026-08-26):
+
+### Portal público de certificados eléctricos (INV-370, back #341 / front #460)
+Página **sin login** para consultar certificados eléctricos por producto.
+- **Backend**: `GET /public/electricalCertificates` (listado con búsqueda por SKU/nombre
+  y filtro por categoría, paginado) y `GET /public/electricalCertificates/categories`.
+  Son las **únicas rutas sin `JWTBearer()`** además de auth. Contrato documentado en
+  `docs/portal-publico-certificados.md`.
+- **Frontend**: `pages/certificados-electricos.vue` (`auth: false`, `layout: "public"`),
+  nuevo `layouts/public.vue` minimal con logo NB, buscador con debounce + filtro de
+  categoría + tabla paginada server-side dirigidos por query params, y acceso directo al PDF.
+- **Nueva env var `METADATA_HOST`**: el portal usa un **cliente axios aparte**
+  (`plugins/api.js`) hacia ese host para **no heredar el header `Authorization`** del JWT
+  interno. También se evita que `nuxtServerInit` dispare llamadas del back-office en esa ruta.
+
+### fix(stock): el filtro con/sin stock duplicaba items (back #340)
+Las grillas de Stock y Precios fanean `articulo × FP_Almacen` (la empresa 4 tiene 6
+almacenes) y solo la fila del almacén con stock trae `stocks`; las otras quedan en NULL.
+El filtro estaba en el **WHERE** (por fila, antes de agregar), así que "Sin stock" se
+quedaba con las filas fantasma y **el mismo artículo salía en los dos filtros**
+(en "Sin stock" con saldos 0 y Delta = movimientos − 0).
+- Pasó a **HAVING sobre los SUM** (`_stock_having_sql`, `STOCK_SUM_AGG` en `stocks.py`),
+  que es el total que muestra la grilla: `get_items_stocks` (ambos fast-paths),
+  `get_items_prices_grid` y `get_items_stocks_count`. Con `warehouseId` la query no
+  agrupa y ahí el filtro por fila sí es correcto, se mantiene.
+- El count además contaba **una fila por almacén** → inflaba total y paginación
+  (empresa 4: 5983 → 4391 reales), y no excluía las NC `ncnotocasaldonistock=1` que la
+  grilla sí excluye (quedó fuera del PR #310) → grilla y count ahora coinciden.
+- Verificado en empresas 4, 9 y 11: intersección con/sin siempre 0, con+sin == total.
+  LYONN/empresa 4: antes Con=12 / Sin=20 con 12 repetidos; ahora Con=12 / Sin=8.
+
+### fix(stocks): `ultimaVenta` con fallback vía `albclil` (SNB-4143, back #344)
+`articulo.ULTIMA_VENTA` del ERP no se actualiza para algunos artículos aunque se sigan
+vendiendo (ej. `C11CL61302`). Se agregó un `COALESCE` con `MAX(albclit.dfecalb)` de
+ventas reales (`ntipoalb > 1`, excluye reservas) en los **5 lugares** donde se arma
+`ultimaVenta`, reusando las agregaciones de `albclil`/`albclit` que los fast-paths ya
+hacían para `sales` → sin costo extra de performance.
+
+### Productos: videos de YouTube (SNB-3866 / SNB-3867, front #457/#458)
+- **Fix de guardado de video**: al borrar la URL ahora persiste `videoId = null` y no se
+  regenera `videoUrl`; una URL válida sí se persiste. Validaciones de
+  `sindicateContentImg` y `officialSiteUrl` (permiten limpiar, exigen `https`, revierten
+  en UI si son inválidas) y de SKU (no vacío, control de duplicado antes de guardar).
+- **YouTube Shorts** soportados en videos descriptivos (`components/ProductsOtherParameters.vue`).
+
 ## 2026-08-26 — Feature APA/Soportes + depósito en Precios (filtro y predeterminado)
 
 ### APA (AMD Price Adjustment) — feature completa, 4 fases. Ver [[modulo-apa]].

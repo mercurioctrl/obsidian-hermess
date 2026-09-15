@@ -50,11 +50,27 @@ STATIC_URL=https://static.nb.com.ar/ # sin esto revienta models.py con productos
 
 ```
 API_HOST=http://0.0.0.0:8081   # (en linux era :8000)
+METADATA_HOST=http://127.0.0.1:8085   # (2026-08-31) solo para el portal PÚBLICO de certificados
 NODE_PORT=3000
 NODE_ENV=development
 ```
 
+> **`METADATA_HOST`** (agregado con el portal público de certificados): la página
+> `/certificados-electricos` usa una instancia de axios **aparte** contra este host para no
+> mandar el header `Authorization` del JWT interno. Si falta, el portal público no carga.
+> Ver [[changelog#2026-09-15 — Sync: portal público de certificados, fix filtro con/sin stock, videos de YouTube|changelog]].
+
 ## Gotchas conocidos
+
+> **Actualización 2026-09-15**:
+> - **Filtro con/sin stock**: si tocás las grillas de Stock/Precios, el filtro va en
+>   **HAVING sobre los SUM**, no en el WHERE — las grillas fanean `articulo × FP_Almacen`
+>   y filtrar por fila hace que el mismo artículo salga en "Con stock" **y** en "Sin stock".
+>   Excepción: con `warehouseId` la query no agrupa y ahí el filtro por fila es el correcto.
+> - **`articulo.ULTIMA_VENTA` no es confiable**: el ERP no lo actualiza para algunos
+>   artículos; hay fallback `COALESCE` con `MAX(albclit.dfecalb)` (`ntipoalb > 1`).
+> - **Transferir entre depósitos mueve solo `nstock`** (General) y **no toca seriales**.
+>   Ver [[modulo-transferencias-stock]].
 
 > **Actualización 2026-08-26** (APA + commits, ver [[modulo-apa]]):
 > - **`NCOSTEPROM` está en USD** (≈ FOB; verificado: 56.84 vs FOB 55). El APA se resta directo en USD; un APA en ARS se convierte con la cotización `PESOSLO` (`NEW_BYTES.dbo.MS_COTIZACIONES`).
