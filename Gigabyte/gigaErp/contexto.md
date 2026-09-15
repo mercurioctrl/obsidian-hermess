@@ -253,14 +253,21 @@ El módulo **Contenido** (material de marca, vista pública sin login) es la **�
 - [x] Estado APROBADA en órdenes + permisos configurables
 - [x] PDF Commercial Invoice + preview Blu-style
 
-## Estado de migraciones en dev (2026-09-08)
+## Estado de migraciones en dev (act. 2026-09-15 — RESUELTO)
 
-La tabla `migrations` de la DB dev llega solo hasta **0114**; las **0115–0119 no están aplicadas**
-(el `migrate --force` del entrypoint tiene `|| true` y corta ahí sin ruido). Consecuencia concreta:
-`acciones_marketing.envio_campania` (mig 0116) **no existe** todavía. Regla al escribir queries que
-la usen: guardarlas con `Schema::hasColumn('acciones_marketing','envio_campania')` y degradar
-(fallback al slug de `campania`), como hace el [[modulos/dashboard|dashboard de POEs]]. Pendiente:
-revisar por qué corta la 0115 y aplicar el bloque completo cuando corresponda.
+La DB dev ya está **al día hasta 0121**. En el deploy del 2026-09-15 se descubrió la causa real
+del bloqueo en 0114: las migraciones **0115–0119 nunca se habían copiado al container** (el
+hot-deploy por `docker cp` solo mueve los archivos que se le pasan explícitamente). Por eso
+`migrate:status` **ni siquiera las listaba como Pending** — no era que el `migrate` "cortara",
+es que los `.php` no estaban adentro. Se copiaron 0115–0121 a **ambos** containers y `migrate
+--force` las aplicó todas: `acciones_marketing.envio_campania` (0116), `accion_clientes` (0115),
+`campana_linea_clientes` (0117), `estado_ciclo` (0118/0119), renombre estado `CONVERTIDA→APROBADA`
+(0120) y backfill de `creado_por_id` (0121) **ya existen**. Sin pérdida de datos (0120/0121 son
+UPDATEs, no borran). Ver [[changelog#2026-09-15 — Deploy Development|changelog]].
+**Lección de deploy:** si una migración pendiente no aparece en `migrate:status`, el archivo no
+está en el container — comparar `ls database/migrations` repo-vs-container antes de dar el deploy
+por cerrado. El fallback `Schema::hasColumn(...)` del [[modulos/dashboard|dashboard de POEs]] ya
+no es necesario en dev, pero se deja por robustez.
 
 ## Bugs corregidos (historial)
 

@@ -1,3 +1,46 @@
+## 2026-09-15 — Deploy Development: mejoras Campañas/Tareas/Solicitudes + se destraban migs 0115–0121
+
+`git pull` de `Development` (`6753605..1db31dc`, 12 commits vía fast-forward) y **deploy en caliente**
+del bloque de mejoras sobre [[modulos/campanas|Campañas]], [[modulos/tareas|Tareas]] y
+[[modulos/solicitudes|Solicitudes]]. Commits **sin** firma de Claude (autoría del dev). El deploy se
+hizo desde la rama `feat/dashboard-poes` (ya mergeada a `Development` por PRs #44/#45): se cambió a
+`Development` para no dejar afuera lo nuevo.
+
+**Qué entró (commits `170f49d`→`1db31dc`):**
+- **Campañas:** engranaje edita la campaña, orden por fecha, card de detalle **read-only con lápiz**,
+  **cliente obligatorio** en acciones (`170f49d`); **vincular tarea existente** a campaña + listado de
+  tareas en la campaña + **ocultar acciones $0** en Fondos (`05ecaa5`); **vista de calendario propia**
+  de campañas, sacándolas del calendario general/feed (`e2e3945`); **nombre de acción arriba**, tipo
+  obligatorio y fix de validación de estado **por-cliente** (`1c20c7d`); no **heredar** el estado
+  genérico de la línea hacia sub-clientes sin estado propio (`1db31dc`).
+- **Tareas:** **editor enriquecido** en comentarios (`fb60fbb`); fix de la **sesión de calendario**
+  cuando la tarea salta directo a una columna de cierre (`c3bf05c`).
+- **Solicitudes:** estados **aprobada/rechazada/pendiente** + estado de la tarea generada + **backfill
+  de autor** (`b8a0399`); `SolicitudResueltaMail` + blades de resultado actualizados.
+
+**Migraciones — se destrabó el bloque pendiente (0115–0121):** al ir a migrar se vio que la DB seguía
+en **0114** y `migrate:status` **no** listaba 0115–0119 como Pending. Causa real (corrige la memoria
+previa que culpaba al `|| true` del entrypoint): esos `.php` **nunca se habían copiado al container**
+(el `docker cp` solo mueve lo que se le pasa). Se copiaron **0115–0121 a ambos containers**
+(`gigaerp-backend` + `gigaerp-scheduler`) y `migrate --force` las aplicó todas sin error:
+`0115` accion_clientes · `0116` envio_campania en acciones_marketing · `0117` campana_linea_clientes ·
+`0118`/`0119` estado_ciclo · `0120` renombre estado `CONVERTIDA→APROBADA` en solicitudes · `0121`
+backfill `tareas.creado_por_id` = `solicitudes.creado_por_id`. Ver [[contexto#Estado de migraciones en dev (act. 2026-09-15 — RESUELTO)|contexto]].
+
+**Sin pérdida de datos (verificado):** 0120/0121 son `UPDATE`, no borran filas; **no** se usó
+`migrate:fresh`/`refresh`. Conteos post-deploy: 2 solicitudes (2 renombradas a `APROBADA`, 0 en
+`CONVERTIDA`), 74 tareas (1 ligada a solicitud, 0 con autor incorrecto tras el backfill).
+
+**Deploy (en caliente, sin rebuild del backend):** `docker cp` de 8 controllers + `SolicitudResource`
++ `SolicitudResueltaMail` + 2 blades + las 7 migraciones a **ambos** containers; borrar dup Sanctum;
+`migrate --force` (una vez, DB compartida); `view:clear` + `route:clear`; restart backend+scheduler.
+**SIN** `config:cache` (no cambió `config/`) → Google/Meta Ads siguen `demo=false`. Frontend rebuild
+`--no-cache` + `up -d --no-deps frontend` + restart nginx. Verificado vía nginx (:8824): home 200,
+`/api/auth/login` 200, `/api/dashboard` 200; backend/scheduler quedaron "Up" (no recreados → hot-deploy
+intacto).
+
+---
+
 ## 2026-09-08 — Dashboard reducido + descarga de POEs (+ recuperación de crash-loop)
 
 Rediseño del **[[modulos/dashboard|dashboard inicial]]** a pedido del usuario y, de paso,
