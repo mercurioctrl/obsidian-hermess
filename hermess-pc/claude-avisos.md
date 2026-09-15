@@ -13,6 +13,7 @@ Sistema para darse cuenta, de un vistazo y desde otra ventana, qué está hacien
 | 🟢 | Terminó y todavía no miré la pestaña | `Stop` |
 | 🔴 | Terminó **con error**, y no lo miré | `StopFailure` |
 | 🔵 | Terminó y ya la vi / sesión inactiva | el mantenedor al detectar que miré; `SessionStart` |
+| 🕸️ | **Más de 24 h sin actividad** — ya podrías cerrarla | el mantenedor, comparando contra la última actividad |
 | 😵 | Una herramienta falló (vuelve solo a los 6 s) | `PostToolUseFailure` |
 | ⛔ | Denegué un permiso (vuelve solo a los 6 s) | `PermissionDenied` |
 | 🗜️ | Compactando el contexto | `PreCompact` |
@@ -33,13 +34,17 @@ Además: 🟡, 🟢 y 🔴 mandan notificación de escritorio (`notify-send`, el
 | `~/.local/bin/titulo` | Wrapper corto para nombrar la pestaña |
 | `~/.config/ghostty/config` | `bell-features` y los keybinds |
 | `~/.tmux.conf` | `set-titles on`, si no tmux no le pasa el título a Ghostty |
-| `$XDG_RUNTIME_DIR/claude-estado/<pts>.estado` | Estado de cada pestaña (`estado\|nombre\|expira`) — lo escriben los hooks, lo lee el mantenedor |
+| `$XDG_RUNTIME_DIR/claude-estado/<pts>.estado` | Estado de cada pestaña (`estado\|nombre\|expira\|última actividad`) — lo escriben los hooks, lo lee el mantenedor |
 | `$XDG_RUNTIME_DIR/claude-estado/<pts>.cuenta` | Contadores de subagentes y tareas en background |
 | `$XDG_RUNTIME_DIR/claude-estado/<pts>.pid` | PID del mantenedor de esa pestaña |
 
 Hooks registrados (16, todos `async: true`): `UserPromptSubmit`/`PostToolUse`/`PostCompact`→trabajando · `Notification`→atencion · `PermissionRequest`→espera · `PermissionDenied`→denegado · `Stop`→listo · `StopFailure`→fallo · `PostToolUseFailure`→error · `PreCompact`→compactando · `SubagentStart`/`SubagentStop`→subagente± · `TaskCreated`/`TaskCompleted`→tarea± · `SessionStart`→visto · `SessionEnd`→apagar.
 
 **Estados transitorios.** 😵 y ⛔ se escriben con una marca de expiración en el tercer campo del archivo de estado (`estado|nombre|expira`); el mantenedor los devuelve solos a `trabajando` a los 6 s. Igual, si mientras tanto corre otra herramienta, `PostToolUse` ya los limpia antes.
+
+**Pestañas abandonadas (🕸️).** El archivo de estado lleva un cuarto campo con el epoch de la **última actividad real**: lo escriben los hooks (el mantenedor lo preserva cuando reescribe, para no rejuvenecer la pestaña solo). Si pasaron más de `VIEJA` segundos (24 h) y la pestaña está en 🔵 o 🟢, muestra 🕸️ en su lugar. El 🔴 no se tapa: un turno que terminó con error sigue mereciendo atención por más viejo que sea. Mirar la pestaña no la rejuvenece —- la telaraña es por falta de **uso**, no de mirada.
+
+Al levantar el sistema (`--marcar-todas`) la antigüedad no arranca en cero: se toma del **transcript más nuevo** de esa sesión (`~/.claude/projects/<cwd con / → ->/*.jsonl`), así las pestañas que ya estaban abandonadas muestran la telaraña enseguida. Ojo: ese directorio se arma con el cwd, así que en una sesión que hizo `cd` a otro proyecto la estimación inicial falla y cae en "ahora" —- se corrige sola en cuanto la sesión tenga actividad.
 
 **Contadores.** 🤖 y ⚙️ no son estados sino contadores en `<pts>.cuenta` (`subagentes tareas`), porque puede haber varios a la vez. Los hooks `Subagent*`/`Task*` sólo suman o restan ahí —- ni siquiera invocan `jq` —- y el mantenedor los mira cuando el estado es `trabajando`. Se resetean a `0 0` al terminar el turno, para que un evento desbalanceado no deje el 🤖 pegado.
 
