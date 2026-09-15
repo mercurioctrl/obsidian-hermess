@@ -37,6 +37,8 @@ Hooks registrados (todos `async: true`): `Notification`→atencion, `Stop`→lis
 
 **Detectar que miré la pestaña (🟢 → 🔵).** Al entrar en verde lanza un watcher con `setsid` que cada 2 s lee `xprop -root _NET_ACTIVE_WINDOW` y compara `_NET_WM_NAME` contra la marca `🟢 <nombre>`. Ghostty publica ahí el título de la **pestaña activa**, así que si coincide es porque la estoy mirando. Se rinde a la hora. **Depende de X11** (la sesión es x11, no Wayland).
 
+**El título lo mantiene un proceso, no los eventos.** Claude Code **también** escribe el título del terminal (el tema auto-generado de la conversación, con `✳` adelante) y no hay setting para apagarlo, así que pisaba nuestro emoji al terminar cada sesión. Por eso hay **un mantenedor por pestaña**: un `setsid` que cada 1,5 s reescribe el título según el estado —- siempre gana el nuestro. El estado vive en `$XDG_RUNTIME_DIR/claude-estado/<pts>.estado` (`estado|nombre`) y los hooks sólo escriben ahí. La rotación de caritas y el chequeo de foco 🟢→🔵 los hace el mismo proceso (el foco sólo se chequea en verde, cada 2 vueltas, para no abusar de `xprop`).
+
 **Un solo proceso de fondo por pestaña.** El pidfile es `$XDG_RUNTIME_DIR/claude-estado/<N>.pid` (numerado por pts, no por `session_id`): así el fast-path de `PostToolUse` puede chequear con `kill -0` si el rotador ya está vivo **antes** de invocar `jq`, y sale sin hacer nada. Sin eso, cada llamada a herramienta lanzaría un proceso nuevo.
 
 ---
@@ -47,9 +49,11 @@ Hooks registrados (todos `async: true`): `Notification`→atencion, `Stop`→lis
 
 El nombre se guarda por carpeta en `nombres-pestanas.conf`, así que sobrevive a cerrar y reabrir la sesión.
 
-**De dónde sale el nombre** (`nombre_base`): 1) entrada exacta en el conf; 2) si no, compiten la entrada del conf que sea carpeta **padre** y la raíz del repo **git**, y gana **la ruta más profunda** —- así un proyecto con repo propio dentro de `/var/www/laset` se llama como el proyecto en vez de heredar `LASET`; 3) nombre de la carpeta. `$HOME` nunca cuenta como carpeta padre (si no, todo lo que cuelga de él heredaría su nombre).
+**De dónde sale el nombre** (`nombre_base`): 1) entrada exacta en el conf; 2) si la carpeta tiene nombre **genérico** (`app`, `src`, `dist`, `public`, `frontend`…) sube hasta 3 niveles buscando uno significativo; 3) una entrada del conf que sea carpeta **padre** gana si es igual o más específica; 4) nombre de la carpeta. `$HOME` nunca cuenta como carpeta padre.
 
-El cwd sale del JSON del hook: es el **actual**, no el de arranque. Por eso una sesión que hacía `cd app/` pasaba a llamarse `app`. Y `titulo` guarda el nombre para la **raíz del repo**, no para el subdirectorio donde estés parado, así no depende de dónde lo pongas.
+El cwd sale del JSON del hook: es el **actual**, no el de arranque —- por eso una sesión que hacía `cd app/` pasaba a llamarse `app`. `titulo` guarda el nombre para la raíz del repo git, así no depende de dónde estés parado al ponerlo.
+
+> **Lo que NO funcionó:** resolver el nombre por la raíz del repo git. La bóveda entera es un repo, así que `obsidian-hermess/jira` y `obsidian-hermess/Blu` quedaban las dos como `obsidian-hermess`. Por eso la regla final mira nombres genéricos, no repos.
 
 Otros modos del script: `--marcar-todas` (pone 🔵 en toda pestaña con sesión de Claude, salteando las que tienen estado propio), `--aprender` (lee por `xprop` el título que le puse a mano a la pestaña actual y lo registra en el conf).
 
