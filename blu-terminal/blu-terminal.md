@@ -35,9 +35,10 @@ La vía "construir con **Raspberry Pi Zero 2 W** + Beepy" queda como plan B ([[c
 
 ### Registro
 - [[changelog]] — registro de trabajo
+- [[memoria]] — memoria consolidada de Claude (estado + decisiones para retomar)
 
 ## Ver también
 - [[n950-research]] — otra investigación de hardware relacionada
 
 ---
-Última sincronización: 2026-09-12
+Última sincronización: 2026-09-15

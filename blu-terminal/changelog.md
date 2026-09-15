@@ -52,3 +52,9 @@
   switches 5 mm, LiPo 505060). No llega a 13.7. Nueva [[grosor-y-medidas]]; planos e iso
   regenerados en slim, v1 guardada como `*-v1-34mm.png`. [[render]] reescrita.
 
+## 2026-09-15
+
+- doc: consolidada la **memoria persistente de Claude** del proyecto (3 archivos:
+  proyecto, decisión Droid 4, referencia bóveda) + nueva nota [[memoria]] en la bóveda.
+  Sin cambios de investigación; solo se capturó el estado para retomar en sesiones futuras.
+
