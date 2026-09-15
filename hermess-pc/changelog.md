@@ -133,3 +133,18 @@ Detalle completo en [[hermess-pc/chrome-clic-derecho|Chrome — clic derecho (ex
 - Recordatorio: recargar con `Ctrl+Shift+,` o reabrir Ghostty. El doble backslash en `+list-keybinds` es solo formato de impresión, no un escape roto.
 
 Detalle completo en [[hermess-pc/ghostty|Ghostty — terminal]].
+
+---
+
+## 2026-09-15
+
+### Claude Code — avisos de atención: emoji de estado por pestaña + notificación + sonido
+
+- Con ~17 sesiones de Claude Code abiertas era imposible saber cuál pedía permiso o cuál ya había terminado. Se armó un sistema de **hooks** que pone un emoji de estado en el título de la pestaña de Ghostty: 🟡 espera respuesta, 🟢 terminó sin que la vea, 🔵 terminó y ya la vi, y caritas rotando mientras trabaja. Suma `notify-send` (el amarillo en urgencia *critical*) y sonido.
+- **Cómo escribe el título:** el hook no tiene `/dev/tty`, así que el script sube por `/proc/<pid>/fd` hasta el proceso `claude` y le manda la secuencia OSC a su `/dev/pts/N`.
+- **Cómo detecta que miré la pestaña:** watcher que compara `_NET_WM_NAME` de la ventana activa (`xprop`) contra la marca del título. Depende de X11.
+- **Nombrar pestañas:** `prompt_surface_title` **bloquea** los emojis (un título fijo hace que Ghostty ignore las secuencias OSC), así que se reemplazó por el comando `titulo` con cuadrito zenity, con los nombres guardados por carpeta en `~/.claude/nombres-pestanas.conf`. El diálogo nativo quedó en `Ctrl+Shift+Alt+T` para pestañas sin Claude.
+- **Dos trampas de Ghostty** que costaron tiempo: `bell-features` no apaga los defaults que no listás (hay que poner `no-title` explícito), y `Ctrl+Shift+,` para recargar **no existe en teclado latinoamericano** (`Shift+,` da `;`) — se usa `Ctrl+Alt+R` o `kill -USR2`.
+
+Detalle completo en [[hermess-pc/claude-avisos|Claude Code — avisos de atención]]. Config de la terminal en [[hermess-pc/ghostty|Ghostty]].
+

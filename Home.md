@@ -73,6 +73,7 @@
   - [[hermess-pc/vpn-casa|VPN CASA]] — VPN L2TP/IPSec a db-nb-dev.blu.net.ar
   - [[hermess-pc/chrome-keyring|Chrome — keyring roto]] — deslogueo masivo por keyring GNOME corrupto (arreglado 2026-07-17)
   - [[hermess-pc/ghostty|Ghostty]] — terminal principal; el update a 1.2.2 pisó defaults de clic derecho y Shift+Enter (arreglado 2026-09-10)
+  - [[hermess-pc/claude-avisos|Claude Code — avisos de atención]] — emoji de estado por pestaña (🟡 espera · 🟢 terminó · 🔵 visto) + notificación y sonido (2026-09-15)
 - [[n950-research]] — Investigación N950
 - [[fire/fire|fire]] — Fire HD 10 (KFMUWI) como kiosco de cámaras Dahua (gDMSS Plus), gestionada por ADB
   - [[fire/diagnostico|Diagnóstico]] — apagones por batería degradada (~50%) · [[fire/optimizaciones-adb|Optimizaciones ADB]] — 20 apps desactivadas + cómo revertir · [[fire/contexto|Contexto]]
