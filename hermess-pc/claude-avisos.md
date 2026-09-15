@@ -47,6 +47,10 @@ Hooks registrados (todos `async: true`): `Notification`→atencion, `Stop`→lis
 
 El nombre se guarda por carpeta en `nombres-pestanas.conf`, así que sobrevive a cerrar y reabrir la sesión.
 
+**De dónde sale el nombre** (`nombre_base`): 1) entrada exacta en el conf; 2) si no, compiten la entrada del conf que sea carpeta **padre** y la raíz del repo **git**, y gana **la ruta más profunda** —- así un proyecto con repo propio dentro de `/var/www/laset` se llama como el proyecto en vez de heredar `LASET`; 3) nombre de la carpeta. `$HOME` nunca cuenta como carpeta padre (si no, todo lo que cuelga de él heredaría su nombre).
+
+El cwd sale del JSON del hook: es el **actual**, no el de arranque. Por eso una sesión que hacía `cd app/` pasaba a llamarse `app`. Y `titulo` guarda el nombre para la **raíz del repo**, no para el subdirectorio donde estés parado, así no depende de dónde lo pongas.
+
 Otros modos del script: `--marcar-todas` (pone 🔵 en toda pestaña con sesión de Claude, salteando las que tienen estado propio), `--aprender` (lee por `xprop` el título que le puse a mano a la pestaña actual y lo registra en el conf).
 
 ---

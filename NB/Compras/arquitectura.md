@@ -176,6 +176,17 @@ Al generar un ingreso (`POST /v1/makeProviderOrderInbound`): `MakeProviderOrderI
 - **Sobreescribe** (`updateAverageCost=false` y sin "no tocar") → pisa `ncosteprom` con el precio nuevo (convertido a u$d).
 - **Conversión a dólares (`toDollars`)**: la moneda/cotización se leen de `PedProt` (fuente de verdad) vía `getCurrencyInfoByOrder`, no del payload. Si `ccoddiv='PSO'`, divide el precio en pesos por **`nvaldiv_FISCAL`** (la cotización real del dólar; `nValDiv` en PSO es 1). Si `DOL`, el precio ya viene en dólares y no se toca. Detalle y el bug del 2026-07-21 en [[contexto#ncosteprom en ingresos PSO usa nvaldiv_FISCAL (2026-07-21)|contexto]].
 - **Round-trip de los flags**: `ProviderOrderDetailRepository::getDetailOrder` selecciona `PL.updateAverageCost` y `PL.doNotUpdateCost`; `ProviderOrderDetailItemDto` los mapea con `(bool)(... ?? false)`, así el detalle muestra la elección al reabrir la orden pendiente. Front: `app/components/Orders/Detail.vue` (checkbox por ítem + select-all de header + tooltip con las 3 modalidades). Ver [[contexto#Check "no tocar costo" en ingresos (2026-08-09)|contexto]].
+- **Snapshot para anulación** (2026-09-10): antes de tocar `ncosteprom`, el service guarda por línea en `albprol` el estado previo (`prevCosteProm`, `prevUltimoIngreso`, `costMode`), para que la anulación restaure el costo exacto. Ver [[arquitectura#Anular ingreso (reversa)|Anular ingreso]].
+
+## Anular ingreso (reversa)
+
+`DELETE /v1/providerOrderInbound/{inboundId}` → `AnnulProviderOrderInbound` (controller) → `AnnulProviderOrderInboundService` → `AnnulProviderOrderInboundRepository`. Deshace un ingreso y vuelve la orden a `PedProT.cEstado='p'` (editable). `{inboundId}` es el **albarán** (`albprot.nnumalb`).
+
+- **Validaciones** (antes de la transacción): existe (404), pertenece a la empresa (403), **no facturado** (`albprot.lfacturado=0`, 409), **reciente** (`albprot.dfecalb` dentro de `config('inbound.annul_window_days')`, default 10, 409), y **ningún serial tomado** (`getTakenSerials` sobre `ST_DETALLE_STOCK` por `ID_COMPRA`+`CREF`; si hay vendido/egresado/en RMA → 409).
+- **Reversa por línea** (en `DB::transaction`): `stocks.nstock -= ncanent` (**permite negativo**) + **registro inverso append-only** en `registro_stock` (cantidad negativa, no borra el original) → `pedprol.nCanEnt -= ncanent` + limpia flags de costo → restaura `articulo.ncosteprom` desde `prevCosteProm` y `ULTIMO_INGRESO` desde `prevUltimoIngreso` (o `MAX(dfecalb)` previo).
+- **Cierre**: `cEstado='p'` → **borra** `albprol` y `albprot` (borrado real) → recalcula `nstock_ingresando` → **audita** en `NB_WEB.dbo.provider_inbound_anulacion` (JSON del detalle, agente, motivo).
+- **Front**: columna "Acciones" en `pages/providerOrderInbound.vue` con botón "Anular" (visible si `canAnnul`) y modal `this.$confirm` que detalla el proceso antes del `DELETE`. El flag `canAnnul` se calcula en `ProviderOrderInboundDto` (lfacturado + ventana).
+- **DDL**: `database/sql/anular-ingreso/` (columnas de snapshot + tabla de auditoría). **Gap**: no revierte seriales no-vendidos. Ver [[contexto#Anular ingreso de proveedor (2026-09-10)|contexto]] y [[arquitectura#Seriales de ingreso|Seriales de ingreso]].
 
 ## Base de datos
 
