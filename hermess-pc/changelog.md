@@ -148,3 +148,13 @@ Detalle completo en [[hermess-pc/ghostty|Ghostty — terminal]].
 
 Detalle completo en [[hermess-pc/claude-avisos|Claude Code — avisos de atención]]. Config de la terminal en [[hermess-pc/ghostty|Ghostty]].
 
+**Segunda vuelta del mismo día** —- lo que apareció al usarlo en las 17 pestañas reales:
+
+- **tmux se comía el título.** Dentro de tmux el pty es el del *pane*: la secuencia OSC la captura tmux y no llega a Ghostty, porque `set-titles` viene `off`. Fix en `~/.tmux.conf` con `set-titles on` + `set-titles-string` condicional, para que un pane sin título propio muestre el nombre de la sesión tmux y no `hermess-desktop`.
+- **La `Notification` de sesión ociosa dejaba el 🟡 pegado.** Claude Code la dispara también cuando el prompt queda idle 60 s (`Claude is waiting for your input`, confirmado por log); tratada como pedido de atención, la pestaña quedaba amarilla para siempre. Ahora se filtra por el texto y se ignora entera.
+- **Claude Code escribe el título él mismo** (el tema auto-generado, con `✳` adelante) y no hay setting para apagarlo. Por eso el sistema pasó de *escribir el título en cada evento* a **un mantenedor por pestaña** que lo reescribe cada 1,5 s desde un archivo de estado. Los hooks ahora sólo anotan el estado.
+- **El nombre de la pestaña seguía al `cd`**: una sesión que bajaba a `app/` se llamaba `app`. Se resolvió subiendo por carpetas de nombre genérico (`app`, `src`, `dist`…). Antes probé resolverlo por la raíz del repo git y salió peor: la bóveda entera es un repo, así que `obsidian-hermess/jira` y `obsidian-hermess/Blu` quedaban las dos como `obsidian-hermess`.
+- **`Ctrl+Shift+,` para recargar Ghostty no existe en teclado latinoamericano** (`Shift+,` da `;`). Se agregó `Ctrl+Alt+R` y se usó `kill -USR2` —- verificando antes en `/proc/<pid>/status` que Ghostty capture esa señal (SIGUSR1 y SIGHUP lo matarían).
+
+Pendiente: las pestañas con título fijado a mano siguen sin emoji hasta liberarlas (`Ctrl+Shift+Alt+T` → vaciar → Enter); falta confirmar si vaciar alcanza o hay que reabrir la pestaña.
+
