@@ -57,8 +57,9 @@ Otros modos del script: `--marcar-todas` (pone 🔵 en toda pestaña con sesión
 2. **`\n` no envía, `\r` sí.** En el keybind `text:`, un `\n` **inserta un salto de línea** en el prompt de Claude Code (es justo lo que hace `shift+enter`); para que el comando se ejecute hay que mandar `\r`. Mismo problema, al revés, que el de [[hermess-pc/ghostty|Shift+Enter en 1.2.2]].
 3. **`bell-features` es un set de flags que parte de los defaults.** Listar sólo los que quiero **no apaga** el resto: para sacar la campanita del título hay que escribir `no-title` explícito. Verificar siempre con `ghostty +show-config | grep bell-features`, que puede diferir de lo que dice el archivo.
 4. **El hook corre sin `DISPLAY`.** Zenity no abría desde el comando. El script ahora lo saca del entorno del proceso de Ghostty (`/proc/<pid>/environ`).
-5. **El hook `Stop` también dispara** con `/clear`, `/compact` y al retomar sesión.
-6. **Los avisos salen de cualquiera de las sesiones abiertas.** Con muchas sesiones puede volverse ruidoso; si molesta, dejar notificación sólo para el 🟡.
+5. **La `Notification` de sesión ociosa hay que filtrarla.** Claude Code la dispara no sólo para permisos, sino también cuando el prompt queda idle ~60 s ("waiting for your input"). Tomada como 🟡 quedaba **pegada para siempre**, porque el watcher que pasa a 🔵 sólo se arma en 🟢. El script la ignora entera, y el filtro va **antes** de matar el proceso de fondo —- si no, cortaba el watcher. Los mensajes se loguean en `$XDG_RUNTIME_DIR/claude-estado/notif.log` por si hay que afinar el patrón.
+6. **El hook `Stop` también dispara** con `/clear`, `/compact` y al retomar sesión.
+7. **Los avisos salen de cualquiera de las sesiones abiertas.** Con muchas sesiones puede volverse ruidoso; si molesta, dejar notificación sólo para el 🟡.
 
 ---
 
