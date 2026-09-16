@@ -1117,3 +1117,24 @@ Archivos: `app/Repositories/Voucher/VoucherRepository.php`, `pages/vouchers.vue`
 Se pulleó/desplegó Development, que trae la feature de **eze** "nota de credito/debito en cta cte y comprobante manual" (PR #1642, `PED-1436`). Permiso `creditDebitNote`, endpoint `POST /voucher/creditDebitNote` (suc 0010, no fiscal), escribe en `NEW_BYTES.dbo.MC_CCORRIENTES_MOVIMIENTOS`. Se otorgó el permiso a catriel (UserId 7463). Ver [[feature-nota-credito-debito]].
 
 - **Se descubrió que el backend local escribe en `beta.nb.com.ar` (red productiva), no en dev.** Una NC de prueba impactó la cta cte real del cliente 102335 (mov 1031266, USD 2424) — **pendiente de anular**. Ver [[contexto#⚠️ El backend local escribe en BETA (red productiva)]].
+
+## 2026-09-16 — Refacturar por otra empresa
+
+Nueva feature (rama `feature/refacturar-otra-empresa`, back + front, **sin commitear**): botón derecho sobre un pedido liquidado y facturado → refacturarlo por otra empresa emisora, aplicando las percepciones que correspondan. Detalle en [[feature-refacturar-otra-empresa]].
+
+- **Backend:** `Services/Rebill/RebillCompanyService` (preview + execute de 7 pasos) y `RebillVoucherService` (NC + factura); `Repositories/Rebill/` separado en lecturas y escrituras. Endpoints `GET /v1/rebillCompany/{pedido}/companies` y `/preview`, `POST /v1/rebillCompany/{pedido}`.
+- **Permiso nuevo `rebillCompany`** en `permisos_agente` (los 4 lugares del checklist) — aparte de `rebill` porque este proceso además reescribe totales del remito y la cuenta corriente.
+- **Tabla de auditoría** `NB_WEB.dbo.refacturacion_empresa`: guarda el `voucherCompanyCode` original, la NC, la factura nueva y el estado del proceso. Es el único registro si el proceso muere entre el cambio de empresa y su reversión.
+- **Frontend:** ítem en el menú contextual de `pages/orders.vue` + `components/Orders/RebillCompanyModal.vue` con empresa actual, explicación de la acción y comparativo de percepción/total/cuenta corriente.
+- **La percepción la decide `FP_Empresas.percepciones` de la empresa destino**, ignorando `clientes.excluirPercepcion` (ese flag está en 1 en los 96.432 clientes de DIGITO y refleja la empresa vieja).
+- Migraciones `2026_09_16_001` (permiso) y `2026_09_16_002` (auditoría), aplicadas en beta.
+
+Tres bugs encontrados y corregidos durante la construcción, los tres con impacto real:
+
+1. **Cuenta corriente:** la query tomaba "el último movimiento del remito" y agarraba un **pago** (TR 42), no el cargo de la liquidación (TR 24). En ejecución habría escrito el total nuevo sobre un registro de pago. Se filtró por `TR_CODIGO = 24`.
+2. **Precisión:** el cálculo redondeaba a 2 decimales, pero `TOTALREMITO` guarda floats completos (`49.87476348877`). Escribir redondeado metía deriva **aunque la percepción no cambiara**. Se pasó a UPDATE relativo (`col = col + :delta`).
+3. **Diseño de cuenta corriente:** la propuesta original editaba el cargo de la liquidación. Se cambió a **asentar un movimiento nuevo** (TR 32 / TR 16), porque la deuda original puede estar ya cancelada y pisarla escondería la deuda nueva dentro de un asiento saldado. Efecto colateral: desaparece el problema del HMAC.
+
+**Fix de configuración:** `API_VOUCHER_URL` estaba en `http://ms-comprobantes.lio.red/v2`, que da 404 en todas las rutas. Va por **https**. El `.env` tenía un segundo bloque comentado con la URL correcta pero password caduca: sirve la URL nueva con las credenciales que ya estaban activas.
+
+**Incidente:** al armar la primera prueba se cambió a mano el `voucherCompanyCode` del cliente 26806 de 4 a 5 cuando su factura vigente ya era de NB, así que la NC `A000600001204` (DIGITO) quedó anulando la factura `A000400181390` (NB) — CUIT distintos, ~USD 50 en beta, **sin resolver**. Falta además devolver ese cliente a `voucherCompanyCode = 4` y agregar el guard que valida que el emisor de la factura vigente coincida con la empresa actual del cliente.
