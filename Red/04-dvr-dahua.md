@@ -72,9 +72,21 @@ La web UI (`http://10.10.10.101`) necesita **plugin ActiveX** (IE/Windows). Pero
 >
 > 📱 Pendiente del lado del usuario: reabrir el canal en **DMSS** para que suelte la conexión H.265 vieja.
 
+## Sesión reinicios solos (2026-09-16)
+
+El DVR se reiniciaba solo varias veces por día. Resultó ser **dos cosas distintas**:
+
+1. **Un reinicio programado diario a las 05:00** — config `AutoMaintain` de fábrica (`AutoRebootDay:7` = todos los días). Normal, `System.StartUp Flag:0`, ~50 s fuera de línea.
+2. **Cuelgues de firmware** que resetea el watchdog — `System.StartUp Flag:1`, **11 en 7 días** desde el 2026-09-09. **No es corte de energía**: el reloj no se pierde (con la pila RTC agotada, un corte real lo manda a `2000-01-01`) y el DVR contesta `Connection refused` un segundo después del cuelgue, o sea que la placa sigue energizada.
+
+Sospechoso principal: la carga del poller de [[10-frente-captura]] (~115.000 requests/día a `snapshot.cgi` contra un firmware de 2016), instalado el 2026-09-08, un día antes del primer cuelgue. **Test A/B en curso** con el servicio parado.
+
+> 📄 Diagnóstico completo, evidencia, el monitor `dvr-monitor` y los pendientes: **[[11-dvr-reinicios]]**.
+
 ## Ver también
 
 - [[02-camaras#Cámara JARDIN — DH-IPC-HFW1230DT-STW|Cámara JARDIN]] — ficha de la cámara del jardín
 - [[02-camaras]] — Inventario de cámaras IP
 - [[10-frente-captura]] — avisos a Telegram por movimiento en las analógicas CH1/CH2
+- [[11-dvr-reinicios]] — por qué se reinicia solo: programado 05:00 vs cuelgue de firmware, y el monitor de reinicios
 - [[Red]] — Infraestructura de red hogareña

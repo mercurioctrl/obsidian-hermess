@@ -2,6 +2,8 @@
 
 Servicio que **manda una foto a Telegram por detección de movimiento** en las dos cámaras analógicas del frente. Mismo esquema que el [[07-timbre-vto-telegram|timbre]] y el [[02-camaras#Avisos a Telegram en cada reposo (servicio `ptz-captura`, 2026-08-15)|ptz-captura]]. **Agregado 2026-09-08.**
 
+> 🛑 **PARADO desde 2026-09-16 15:01** (`stop` + `disable`). Es el sospechoso de los cuelgues del [[04-dvr-dahua|DVR]]: su polling (~115.000 requests/día) coincide con el inicio de los reinicios anormales. Hay un **test A/B de 48 h** en curso → ver **[[11-dvr-reinicios]]**. Mientras tanto **no llegan avisos del frente**. Revertir: `sudo systemctl enable --now frente-captura`.
+
 ## Qué cámaras son
 
 **FRENTE DER** y **FRENTE IZQ** son las **analógicas CH1 y CH2 del [[04-dvr-dahua|DVR Dahua HCVR]]** (`10.10.10.101`), **no** cámaras IP con dirección propia. Se leen por el DVR:
@@ -45,6 +47,7 @@ Probado end-to-end el 2026-09-08: foto de prueba llegó a Telegram, detección O
 ## Ver también
 
 - [[04-dvr-dahua]] — DVR donde están las analógicas CH1/CH2
+- [[11-dvr-reinicios]] — el test A/B que tiene este servicio parado, y por qué
 - [[07-timbre-vto-telegram]] — mismo esquema (y de ahí salen las credenciales del bot)
 - [[02-camaras#Avisos a Telegram en cada reposo (servicio `ptz-captura`, 2026-08-15)|ptz-captura]] — el otro servicio de fotos por movimiento
 - [[Red]] — Infraestructura de red hogareña

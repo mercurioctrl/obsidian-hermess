@@ -1138,3 +1138,13 @@ Tres bugs encontrados y corregidos durante la construcción, los tres con impact
 **Fix de configuración:** `API_VOUCHER_URL` estaba en `http://ms-comprobantes.lio.red/v2`, que da 404 en todas las rutas. Va por **https**. El `.env` tenía un segundo bloque comentado con la URL correcta pero password caduca: sirve la URL nueva con las credenciales que ya estaban activas.
 
 **Incidente:** al armar la primera prueba se cambió a mano el `voucherCompanyCode` del cliente 26806 de 4 a 5 cuando su factura vigente ya era de NB, así que la NC `A000600001204` (DIGITO) quedó anulando la factura `A000400181390` (NB) — CUIT distintos, ~USD 50 en beta, **sin resolver**. Falta además devolver ese cliente a `voucherCompanyCode = 4` y agregar el guard que valida que el emisor de la factura vigente coincida con la empresa actual del cliente.
+
+## 2026-09-16 — Refacturar por otra empresa: validación end-to-end + guard del emisor
+
+Se probó el circuito completo desde la UI sobre `X000200664885` (cliente 26806, facturado por DIGITO) y **quedó validado lo que faltaba: el cambio de emisor**. La NC `A000600001206` salió por DIGITO (suc 0005, la misma que había facturado) y la factura nueva `A000400181392` por **NB DISTRIBUIDORA (suc 0003)**. Percepción `0 → 0.1552919960022`, `TOTALREMITO` `8.5798826217651 → 8.7351741790771`, cargo de liquidación `1031529` (TR 24) intacto y ajuste `1031557` (TR 32) por la diferencia.
+
+Las 3 corridas del proceso dejaron el `voucherCompanyCode` como estaba: la reversión del `finally` funciona.
+
+**Guard nuevo `guardInvoiceEmitter()`** — corta con 409 si la factura vigente la emitió una empresa distinta de la actual del cliente. Sin esto la NC sale de otra persona jurídica y no anula nada. Compara por **sucursal de facturación** (`FP_FactWebCliEncabezado.CNUMSUC` vs `FP_Empresas.SUCFacturaPlus`), no por CODEMP, porque `SUCFacturaPlus` colisiona (0003 → NB y NBE). Verificado que bloquea el cruce exacto del incidente. Casos sin emisor identificable o cliente sin empresa asignada avisan pero no bloquean.
+
+El cliente 26806 fue devuelto a `voucherCompanyCode = 4`. **Sigue pendiente** la NC cruzada `A000600001204` (DIGITO) contra la factura `A000400181390` (NB) de la primera prueba.

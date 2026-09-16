@@ -100,10 +100,31 @@ database/sql/2026_09_16_002_create_refacturacion_empresa.sql
 
 Con sus `_drop_`. Ambas aplicadas en **beta**.
 
+## Guard del emisor
+
+`guardInvoiceEmitter()` corta con **409** si la factura vigente la emitió una empresa distinta de la que hoy tiene asignada el cliente. El paso 3 emite la NC por la empresa **actual**; si esa no es la que facturó, la nota de crédito sale de otra persona jurídica y **no anula nada** (son CUIT distintos).
+
+La comparación es por **sucursal de facturación** (`FP_FactWebCliEncabezado.CNUMSUC` contra `FP_Empresas.SUCFacturaPlus` de la empresa actual), no por CODEMP: `SUCFacturaPlus` colisiona entre empresas (0003 → NB y NBE), así que de `CNUMSUC` no se puede deducir un CODEMP único.
+
+Alcanza con filtrar por pedido y `NTIPODOCU = 1` porque `VoucherRepository::liberar()` desvincula la factura vieja (`ID_NROREMCLI_ENC = NULL`) al refacturar.
+
+Casos que no bloquean pero avisan: cliente sin `voucherCompanyCode` (`NO_CURRENT_COMPANY`) y factura sin emisor identificable (`INVOICE_EMITTER_UNKNOWN`).
+
+## Validación end-to-end (2026-09-16)
+
+Probado sobre `X000200664885` (pedido `0002-10481864`), cliente 26806, desde la UI:
+
+| Comprobante | Tipo | CNUMSUC | Emisor |
+|---|---|---|---|
+| `A000600020894` (original) | factura | 0005 | DIGITO BINARIO |
+| `A000600001206` (NC) | nota de crédito | 0005 | DIGITO BINARIO |
+| `A000400181392` (nueva) | factura | **0003** | **NB DISTRIBUIDORA** |
+
+La NC salió por la misma empresa que había facturado y **la factura nueva cambió de emisor**. Percepción `0 → 0.1552919960022`, `TOTALREMITO` `8.5798826217651 → 8.7351741790771`, cargo original `1031529` (TR 24) **intacto** y ajuste `1031557` (TR 32) por la diferencia. El `voucherCompanyCode` volvió solo a su valor de inicio en las 3 corridas.
+
 ## Pendientes
 
-- **Guard faltante:** validar que el emisor de la factura vigente (`FP_FactWebCliEncabezado.CNUMSUC`) coincida con la empresa actual del cliente antes de emitir la NC. Sin eso se puede emitir una nota de crédito de una empresa contra una factura de otra — son CUIT distintos.
-- **Incidente de la primera prueba:** se cambió a mano el `voucherCompanyCode` del cliente **26806 (MERCURIO CATRIEL EDUARDO)** de 4 a 5 cuando su factura vigente ya era de NB, así que la NC **`A000600001204` (DIGITO)** quedó anulando la factura **`A000400181390` (NB)**. ~USD 50 en beta, **sin resolver**. Además falta devolver ese cliente a `voucherCompanyCode = 4`.
+- **Incidente de la primera prueba:** se cambió a mano el `voucherCompanyCode` del cliente **26806 (MERCURIO CATRIEL EDUARDO)** de 4 a 5 cuando su factura vigente ya era de NB, así que la NC **`A000600001204` (DIGITO)** quedó anulando la factura **`A000400181390` (NB)**. ~USD 50 en beta, **sin resolver**. El guard del emisor ya impide que vuelva a pasar. El cliente ya fue devuelto a `voucherCompanyCode = 4`.
 - **Deuda técnica:** la emisión de la NC está duplicada respecto de `VoucherController::rebill`. No se refactorizó ese endpoint porque es un circuito fiscal en producción y no se puede probar un refactor sin emitir comprobantes reales. Corresponde colapsarlo en `RebillVoucherService`.
 - Nada commiteado todavía.
 

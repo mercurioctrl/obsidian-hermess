@@ -46,6 +46,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 
 - [[04-dvr-dahua]] — **DVR Dahua HCVR** (10.10.10.101): grabador principal, híbrido 4 analógicas + IP. Se opera por API RPC2. Mapeo de canales y cómo operarlo.
 - [[05-nvr-hikvision]] — **NVR Hikvision** kit WiFi (10.10.10.105): headless, gestión **solo por Hik-Connect**. Emite su propia WiFi para las cámaras del kit. La clave/SSID del AP **no se puede cambiar en remoto** (investigación 2026-07-27).
+- [[11-dvr-reinicios]] — **Por qué el DVR se reinicia solo** (sep 2026): reinicio programado 05:00 (`AutoMaintain`) vs **cuelgues de firmware** (`Flag:1`). Incluye el servicio `dvr-monitor` que avisa cada reinicio por Telegram.
 
 ## Portero / Timbre
 
@@ -68,6 +69,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [ ] **Timbre VTO** — fijar IP en el USG (hoy DHCP) y evaluar bloqueo a WAN; capturar el código del botón (ver [[07-timbre-vto-telegram#⚠️ Pendientes]])
 - [ ] **2 Tuya sin identificar** — `10.10.10.27` y `10.10.10.219` responden en puerto Tuya 6668 pero NO están en la cuenta SmartLife (ver [[08-home-assistant#Notas]])
 - [ ] **Wabee** (medidor energía, `10.10.10.44`) — reservar IP fija en el USG; evaluar llevar el consumo a HA vía su nube/API
+- [ ] **DVR — leer el resultado del test A/B el 2026-09-18** (`python3 ~/scripts/dvr-reinicios.py 3`): si no hubo `Flag:1`, bajar la carga del poller de [[10-frente-captura]] y volver a habilitarlo; si hubo, ir por hardware (ver [[11-dvr-reinicios#⚠️ Pendientes]])
 - [ ] **Telecentro (WAN2)** — venía caída, recuperó 2026-08-02 pero con flapping previo; vigilar estabilidad y verificar seed `wan-mon` con la IP nueva (ver [[Monitoreo_WAN#Incidente Telecentro caída (2026-07/08)]])
 
 ## Historial
@@ -78,6 +80,7 @@ Documentación de la red UniFi del hogar: dispositivos, configuración, cambios 
 - [[02-camaras#Configuración actual (2026-08-15) — barrido 2 reposos + optimización de desgaste]] — Rediseño del patrullaje PTZ PUERTA: de 5 presets a **2 reposos** (izq profundo / der a la esquina) + barrido lento, descansos 90s (**~3× menos desgaste**: ~350 vs ~1000 barridos/día), recuperación automática ante cortes con `@reboot` (agosto 2026)
 - [[04-dvr-dahua#Sesión de reordenamiento (2026-07-26)]] — Reordenamiento de canales del DVR Dahua: PTZ movida CH11→CH9 (julio 2026)
 - [[04-dvr-dahua#Sesión CH5 JARDIN — HD/remoto no andaban (2026-08-29)]] — Cámara del jardín (CH5) solo se veía local: mainstream **H.265** que el DVR viejo no decodifica por ONVIF → pasado a **H.264** + canal a protocolo **Dahua2** + **IP fija** en UniFi y renombrada "CAM Jardin" (agosto 2026)
+- [[11-dvr-reinicios]] — **DVR que se reinicia solo** (septiembre 2026): separados los reinicios **programados de las 05:00** (`AutoMaintain`, de fábrica) de **11 cuelgues de firmware en 7 días**; descartado el corte de energía (el reloj no se pierde y el DVR contesta `Connection refused` un segundo después) → **watchdog**. Sospechoso: el polling de [[10-frente-captura]] (~115.000 requests/día), **test A/B en curso** con el servicio parado. Se dejó el servicio `dvr-monitor` (avisos de reinicio a Telegram) y `~/scripts/dvr-reinicios.py`
 - [[05-nvr-hikvision]] — Conexión del NVR Hikvision kit WiFi (10.10.10.105) e investigación del cambio de clave de su WiFi (julio 2026)
 - [[06-sticky-client-roaming]] — Sticky client 5GHz RESUELTO (agosto 2026): `nexus` a doble banda + Min RSSI -78 en ambas bandas + canales no-DFS (Vestidor 40/Oficina 149/Galeria 161). Incluye runbook de la API UniFi y script `scripts/unifi_diag.py`. Registra también el intento fallido de julio (Min RSSI en 5GHz con nexus solo-5GHz rompió la conexión + incidente DFS)
 - [[07-timbre-vto-telegram]] — Timbre Dahua VTO2101E → Telegram: servicio con detección de movimiento server-side (OpenCV, ROI a la vereda) + aviso de botón; ajuste de sensibilidad y arquitectura pull/push (agosto 2025)
