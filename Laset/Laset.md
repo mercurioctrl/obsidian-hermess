@@ -11,8 +11,11 @@ usa sufijo `laset` (contenedores, red Docker, instancias PM2) y puertos propios 
 - Frontend: `frontLaset/` → `git@github.com:LasetCorp/frontErp.git`
 - Backend: `backLaset/` → `git@github.com:LasetCorp/backErp.git`
 
+**Acceso:** todo por `http://laset.local/` — las 7 apps bajo su path, con sesión compartida (SSO).
+Se loguea una vez y se salta entre apps con el menú del header. Ver [[arquitectura|dominio único y SSO]].
+
 ## Notas técnicas
-- [[arquitectura]] — modelo, wiring front↔back↔DB, red Docker, imágenes.
+- [[arquitectura]] — modelo, wiring front↔back↔DB, dominio único + SSO, listas de precio por color.
 - [[stack]] — tecnologías y versiones.
 - [[operaciones]] — runbook: levantar / reconstruir / logs de cada capa.
 - [[troubleshooting]] — errores conocidos y su solución.
@@ -24,4 +27,4 @@ usa sufijo `laset` (contenedores, red Docker, instancias PM2) y puertos propios 
 - [[Martes]] · [[Miercoles]] — ayudamemoria y tickets del equipo.
 
 ---
-Última sincronización: 2026-09-10
+Última sincronización: 2026-09-16

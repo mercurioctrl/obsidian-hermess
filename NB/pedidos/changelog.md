@@ -1100,3 +1100,20 @@ Cuatro SKU de procesadores Intel con stock salían en el CSV de inventory sin de
 - Rama `feature/intel-dgp-partnumbers`, commit `840c65ed`. PR contra `Development` y `blu-dev-staff`.
 
 Archivo: `app/Services/Report/IntelDgpService.php`.
+
+
+## 2026-09-15 — Fix emisor (Razón Social) en grilla de Comprobantes
+
+La columna Razón Social salía vacía en casi todos los comprobantes y el `null` corría la grilla. El emisor se resuelve por `FP_Empresas.SUCFacturaPlus = CNUMSUC` (NO por CODEMP del cliente): NB factura vía **DIGITO BINARIO SRL** (CODEMP 5) en suc 0005 y **NB DISTRIBUIDORA MAYORISTA SRL** (CODEMP 4) en suc 0003. Ver [[feature-comprobantes-emisor]].
+
+- Backend: `LEFT JOIN FP_Empresas` → `OUTER APPLY` por `SUCFacturaPlus=CNUMSUC` con desempate por CODEMP (query principal + conteo). Path UY sin cambios. Rama `fix/vouchers-emisor-razon-social`, PR #1644 → Development.
+- Frontend: guard `v-if="text && text.length > 0"` en el slot businessName (`pages/vouchers.vue`).
+
+Archivos: `app/Repositories/Voucher/VoucherRepository.php`, `pages/vouchers.vue`.
+
+
+## 2026-09-15 — Nota de Crédito/Débito (eze) + incidente en base beta
+
+Se pulleó/desplegó Development, que trae la feature de **eze** "nota de credito/debito en cta cte y comprobante manual" (PR #1642, `PED-1436`). Permiso `creditDebitNote`, endpoint `POST /voucher/creditDebitNote` (suc 0010, no fiscal), escribe en `NEW_BYTES.dbo.MC_CCORRIENTES_MOVIMIENTOS`. Se otorgó el permiso a catriel (UserId 7463). Ver [[feature-nota-credito-debito]].
+
+- **Se descubrió que el backend local escribe en `beta.nb.com.ar` (red productiva), no en dev.** Una NC de prueba impactó la cta cte real del cliente 102335 (mov 1031266, USD 2424) — **pendiente de anular**. Ver [[contexto#⚠️ El backend local escribe en BETA (red productiva)]].

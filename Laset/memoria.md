@@ -49,3 +49,35 @@ ocultan sobre el getter `columns` del store correspondiente. `companyCode 11 == 
 - **Promoción a `main`**: PR #7 (front) y PR #3 (back) desde `blu-dev-staff`.
 - **Seguridad**: `.env-example` de postventa (working tree) tenía secretos reales; no se subieron. Rotar
   si son válidas. Ver [[contexto#Decisiones (2026-09-09)]].
+
+## Proyecto — Listas de precio por color (2026-09-11)
+4 listas (Azul/Verde/Naranja/Violeta), cada una `base × (1 + %)`, con lista por defecto por cliente
+y override en el modal de la orden. Tablas `LASET_LISTA_COLOR*`; config desde inventario vía
+ms-metadata; aplicación en pedidos. Scopeado a `companyCode 11`.
+En la grilla de Precios se editan **precio y %**: el % de un precio manual es derivado del costo,
+no persistido (si cambia el costo, se recalcula solo). Ver [[arquitectura|listas de color]].
+
+## Proyecto — Dominio único y SSO (2026-09-15/16)
+Las 7 apps bajo `laset.local/<app>` con sesión compartida. **La regla central:** los middlewares de
+permisos releen el usuario de la base por `UserId`, nunca del payload del token — si no, entrar a
+una app desloguea de todas. Aplica a pedidos (3 middlewares), compras, expedicion y postventa.
+**Si se suma un back nuevo al SSO, ese es el patrón.**
+
+Dos trampas que costaron caras y conviene no repetir:
+- `build.publicPath` tiene que ser **relativo**: Nuxt 2 le prepende `router.base` y uno absoluto
+  deja todos los assets en 404 (con el SSR pintando igual, así que parece que anda).
+- PyJWT exige `audience` cuando el token trae `aud`; los backs PHP lo usan como huella de navegador
+  y `firebase/php-jwt` no lo valida. De ahí el `verify_aud: False` en ms-metadata.
+
+`AppSwitcher.vue` está **duplicado en los 6 fronts**: si se cambia, cambiarlo en los 6.
+
+## Estado y pendientes (2026-09-16)
+- PRs abiertos: **frontErp#11** y **backErp#5**. frontErp#11 se apoya en
+  `feature/laset-listas-precio-color`, que tiene 2 commits sin mergear: mergear esa primero.
+- Sin commitear: limpieza de links a saftel, 4 pestañas ocultas de inventario, precio + % en la
+  grilla. Esperan la decisión sobre los deep-links de `DetailExamine.vue` y `AsignarOCModal.vue`.
+- Deuda: cobros conecta a SQL Server **sin cifrado** (`Encrypt = 0`); el vhost de Apache no está
+  versionado; secretos en `.env-example` de postventa pendientes de rotar.
+
+## Ver también
+[[Laset]] · [[arquitectura]] · [[contexto]] · [[troubleshooting]] · [[changelog]]

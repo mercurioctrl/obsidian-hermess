@@ -61,6 +61,15 @@ Activación de GIGABYTE en Frávega: "test de fluidez" para que el público adiv
 - [[muestra-fravega/changelog|Changelog]]
 - [[muestra-fravega/contexto|Contexto]]
 
+### 3d
+Logo GIGABYTE extrusado para imprimir en 3D (Bambu Lab A1 mini). Generado desde el SVG oficial con Python; replica el estilo del STL de referencia del cliente. Tres modelos: una pieza de 180 mm, variante sin soportes, y versión de 330 mm en dos mitades que entran las dos en una sola tirada.
+- [[3d/3d|3d — índice]]
+- [[3d/arquitectura|Arquitectura]]
+- [[3d/stack|Stack]]
+- [[3d/contexto|Contexto]]
+- [[3d/changelog|Changelog]]
+- [[3d/memoria|Memoria]]
+
 ## Reuniones
 
 - [[Reuniones/ERP Sugerencias|ERP Sugerencias]] — feedback y pedidos surgidos en reunión sobre el ERP

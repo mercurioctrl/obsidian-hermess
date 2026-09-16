@@ -351,3 +351,14 @@ reconcilian, Σ saldos = **12.914.427,59 USD** (LST GLOBAL 11.294.120,34 + 1.620
 **Caso Crown (no bug)**: el movimiento "de más" de 30.900 en el ERP es el pago de la factura Y25DG005,
 que sí está en la planilla (fila 173, Pagado) pero fechado 31/12/2026 (placeholder futuro) → ordena
 al final. Factura + pago se cancelan → saldo 0 (coincide). Ver [[feature-laset-cuenta-corriente-proveedores]].
+
+
+## ⚠️ El backend local escribe en BETA (red productiva)
+
+**El `.env` del backend NO apunta al dev aislado.** `DB_HOST=190.210.23.97:4444` → reverse DNS **`beta.nb.com.ar`**, `@@SERVERNAME`=`SAFDB2`, DB `NB_WEB`, usuario `eferreyra_devweb01`. Está en la **misma /24 que la API de producción** (`api.orders.lio.red` → 190.210.23.108). El dev de AWS conocido (`db-nb-massql-dev.blu.net.ar` → 3.22.247.15) es otra IP.
+
+Consecuencia: **cualquier write desde el backend local (tinker, endpoints, migraciones) cae sobre datos reales/beta de NB.** El usuario "devweb01" engaña — es una cuenta dev sobre un server real.
+
+**Regla:** antes de cualquier INSERT/UPDATE/DELETE/DDL, verificar el destino con `SELECT @@SERVERNAME, DB_NAME()`. Si sale `SAFDB2`/beta → tratar como producción y confirmar con el usuario.
+
+Descubierto 2026-09-15 cuando una NC de prueba (suc 10) impactó la cta cte real del cliente 102335. Ver [[feature-nota-credito-debito#Incidente 2026-09-15 — hecho sobre BETA (no dev)]].

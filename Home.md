@@ -23,7 +23,7 @@
 ## 🏢 Clientes & Proyectos
 
 - [[BluPartPicker]] — Comparador de precios hardware
-- [[Gigabyte]] → gigaErp (ERP) · informe-landing (deck paid media con BLU) · gigabyte-aterrizaje (catálogo web / partpicker) · muestra-fravega (activación Frávega 200/60Hz)
+- [[Gigabyte]] → gigaErp (ERP) · informe-landing (deck paid media con BLU) · gigabyte-aterrizaje (catálogo web / partpicker) · muestra-fravega (activación Frávega 200/60Hz) · 3d (logo extrusado para impresión 3D)
 - [[Catirel]] — Proyectos Catirel
 - [[Asus]] — Contrataciones y mini sitio
 - [[D-Link/D-Link|D-Link]] — Reposicionamiento de marca en Argentina (vs TP-Link)
