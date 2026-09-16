@@ -48,6 +48,7 @@ Ver detalles completos en [[stack|Stack e infraestructura]].
 - [[feature-reportes-intel-dgp|Feature: Reportes Intel DGP-S]] â genera los CSV de inventario y sell-out de procesadores Intel que exige el programa DGP-S; mapeo de part numbers BXânombre de CPU (constante PHP) con warnings de faltantes
 - [[feature-comprobantes-emisor|Feature: Emisor (RazÃ³n Social) en Comprobantes]] — el emisor se resuelve por `FP_Empresas.SUCFacturaPlus = CNUMSUC` (NB factura vÃ­a DIGITO BINARIO SRL para suc 0005); fix OUTER APPLY + guard del null que corrÃ­a la grilla
 - [[feature-nota-credito-debito|Feature: Nota de CrÃ©dito/DÃ©bito (eze)]] — permiso `creditDebitNote`, endpoint POST /voucher/creditDebitNote (suc 0010, no fiscal) a MC_CCORRIENTES_MOVIMIENTOS; incidente: se probÃ³ sobre la base beta productiva
+- [[feature-refacturar-otra-empresa|Feature: Refacturar por otra empresa]] — botón derecho sobre un pedido liquidado y facturado: acredita, corrige la liquidación **sin borrarla** y refactura por otro emisor aplicando las percepciones de la empresa destino (`FP_Empresas.percepciones`); permiso `rebillCompany`, auditoría en `refacturacion_empresa`
 - [[decision-permiso-nuevo-agente|Checklist: agregar un permiso nuevo]] Ã¢ÂÂ los 4 lugares (tabla, AuthRepository x2, UserDto, middleware); el gotcha del UserDto que oculta el flag al front
 
 ## Esquema ERP Ã¢ÂÂ Tablas y relaciones

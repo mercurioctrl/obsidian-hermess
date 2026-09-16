@@ -362,3 +362,38 @@ Consecuencia: **cualquier write desde el backend local (tinker, endpoints, migra
 **Regla:** antes de cualquier INSERT/UPDATE/DELETE/DDL, verificar el destino con `SELECT @@SERVERNAME, DB_NAME()`. Si sale `SAFDB2`/beta → tratar como producción y confirmar con el usuario.
 
 Descubierto 2026-09-15 cuando una NC de prueba (suc 10) impactó la cta cte real del cliente 102335. Ver [[feature-nota-credito-debito#Incidente 2026-09-15 — hecho sobre BETA (no dev)]].
+
+## Cuenta corriente y comprobantes (2026-09-16)
+
+Reglas verificadas contra datos reales al construir [[feature-refacturar-otra-empresa]].
+
+### Nunca editar un movimiento de cuenta corriente: asentar uno nuevo
+
+El idioma de la app para ajustar una cuenta corriente es `VoucherService::impactCurrentAccount`, que **INSERTA** un movimiento. Nunca hace UPDATE. Códigos relevantes (`NEW_BYTES.dbo.GL_TRANSACCIONES`, la columna se llama `TR_NOMBRE`, no `TR_DESCRIPCION`):
+
+| TR | Nombre | Efecto en el saldo |
+|----|--------|--------------------|
+| 24 | Remitos - Ventas | suma deuda (lo asienta la liquidación) |
+| 42 | Cobro Efectivo Caja | resta deuda |
+| 32 | Débitos Varios | suma deuda |
+| 16 | Cta Cte - Cobrar al Cliente | resta deuda |
+
+El saldo se calcula **sumando todos los movimientos del cliente** con signo por código (`LiquidateRepository::sellerCredit`): `WHEN 4, 24, 125, 14, 34, 32, 41 THEN CC_IMPORTEUSD * -1 ELSE CC_IMPORTEUSD`. El importe se guarda **siempre positivo**; el signo lo aporta el TR_CODIGO.
+
+**Gotcha:** sobre un mismo remito conviven varios movimientos (el cargo 24 + imputaciones de pago 42). Buscar "el último movimiento del remito" con `ORDER BY ID_CCMOVIMIENTO DESC` **agarra un pago**. Filtrar siempre por `TR_CODIGO = 24`.
+
+`ID_CCMOVIMIENTO` **no es IDENTITY**: se asigna a mano como `MAX + 1`. Por eso borrar y reinsertar un movimiento le cambia el ID, y por eso conviene corregir con asientos nuevos en vez de borrar y rehacer.
+
+### El emisor es CNUMSUC, no el prefijo del CFACTURA
+
+El prefijo del `CFACTURA` (`A0004...`, `A0006...`) es el **punto de venta de AFIP** y **no** mapea 1:1 con la sucursal de FacturaPlus. El emisor real sale de `FP_FactWebCliEncabezado.CNUMSUC` cruzado con `FP_Empresas.SUCFacturaPlus` (0003 = NB DISTRIBUIDORA, 0005 = DIGITO BINARIO). Ver [[feature-comprobantes-emisor]].
+
+Además hay **`CFACTURA` duplicados** en `FP_FactWebCliEncabezado` (números reusados entre 2014 y 2026): buscar por ese campo requiere filtrar también por sucursal o fecha.
+
+### Tipos de columna de importes
+
+En `MS_REMITO_CABECERA`: `TOTALREMITO` y `TOTALSINIVA` son **`real`** (4 bytes, ~7 dígitos significativos); `IMPPERCEP` es **`float`** (8 bytes). Escribir en `TOTALREMITO` siempre pierde algo de precisión — es la columna, no el código. Por eso conviene el UPDATE relativo (`col = col + :delta`) en vez de pisar con un total recalculado en PHP.
+
+### API de comprobantes
+
+`API_VOUCHER_URL` tiene que ser **`https://ms-comprobantes.lio.red/v2`**. La variante HTTP da 404 en todas las rutas. Tipos que pide el front a `getVoucherType`: `'factura'` (o `'eTicket'` si companyCode 11) para facturar, `'CREDITO'` (o `'NC de eTicket'`) para la nota de crédito.
