@@ -59,7 +59,53 @@ NO `hermess87`).
   working tree local; se dejaron **sin subir**. `.env-example` está trackeado (a diferencia del `.env`), así
   que no debe contener secretos. **Pendiente**: rotar esas credenciales si son válidas.
 
+## Decisiones (2026-09-11 · listas de precio por color)
+- **Modelo de precios propio de Laset**: 4 listas de color (Azul, Verde, Naranja, Violeta), cada una
+  `base × (1 + % propio)`. Reemplaza en la práctica el esquema npvp/ntarifapp heredado de NB.
+- **Asignación al cliente: las dos**. Lista por defecto por cliente **y** override editable en el modal
+  de la orden. El usuario pidió explícitamente ambas, no una u otra.
+- **Tablas nuevas y dedicadas** en vez de reusar `priceList` (existía vacía): `LASET_LISTA_COLOR`,
+  `LASET_LISTA_COLOR_ARTICULO`, `LASET_CLIENTE_LISTA_COLOR`.
+- **Alcance `companyCode 11`**: las otras empresas del clon siguen con npvp/ntarifapp intacto.
+- **Pendiente**: cargar a mano los nombres y % reales desde la UI (los actuales son placeholder).
+
+## Decisiones (2026-09-15/16 · dominio único y SSO)
+- **Un solo dominio, `laset.local`**, con cada app bajo su path. El usuario venía entrando por puerto
+  y tenía que loguearse en cada app; ahora se entra una vez.
+- **Menú de aplicaciones en el header de las 6 apps** (no una landing en la raíz): se eligió el
+  switcher porque permite saltar sin volver al inicio, que es lo que espera un ERP.
+- **Header de inventario igualado a 64px**: tenía 55px y rompía la uniformidad del conjunto
+  logo + menú. Decisión del usuario ante la alternativa de dejarlo distinto.
+- **Permisos: siempre releídos de la base, nunca del payload del token.** Es la regla que hace que el
+  SSO funcione; la alternativa (meter todos los permisos en un token único) se descartó por tocar el
+  login de cada back y agrandar el token.
+- **Postventa: `Encrypt = 1; TrustServerCertificate = 1`** en vez de copiar el `Encrypt = 0` que usa
+  cobros: mantiene la conexión cifrada y solo omite validar el certificado autofirmado.
+- **Menú limpio de `*.saftel.com`**: 28 accesos al dominio de la otra empresa, comentados (no borrados).
+  "Reportes" queda, porque apunta a Jira, no a saftel.
+- **Ocultamientos reversibles**: se mantiene la convención de comentar (HTML en templates, `/* */` en
+  JS) en vez de borrar.
+
+## Deuda técnica anotada
+- **Cobros conecta a SQL Server sin cifrado** (`Encrypt = 0` en su DSN). Venía así; el usuario decidió
+  anotarlo y seguir.
+- **El vhost de Apache no está versionado** en ningún monorepo: vive solo en el host.
+- **Secretos en `.env-example`** (ver 2026-09-09): sigue pendiente rotarlos.
+
+## Pendiente de decisión
+- Dos deep-links a `saftel.com` **fuera del menú** (`DetailExamine.vue` en inventario,
+  `AsignarOCModal.vue` en pedidos): ¿reapuntar a `laset.local/...` o sacar?
+- La raíz del dominio hoy redirige a `/inventario/`; se puede cambiar a `/pedidos/`.
+
 ## Estado actual
-Los 7 fronts (PM2) y 7 backs (Docker) están **operativos**; el login real front→back→DB fue validado.
-Mergeado a `blu-dev-staff`: simplificación de UI (2026-09-04), Firebase defensivo y fixes de back (2026-09-09).
-Abierto: PR #8 (ocultar Libre Opción) contra `blu-dev-staff`, y PRs de promoción a `main` (#7 front, #3 back).
+Los 7 fronts (PM2) y 7 backs (Docker) **operativos**, servidos desde `laset.local` con sesión compartida:
+los 6 `/auth/user` responden 200 con un mismo token y se navega entre apps sin volver a loguearse.
+
+Mergeado a `blu-dev-staff`: simplificación de UI (2026-09-04), fixes de back (2026-09-09), listas de
+precio por color (backErp#4).
+Abierto: **frontErp#11** (dominio único + menú + logo) y **backErp#5** (SSO entre los 6 backs).
+⚠️ frontErp#11 se apoya en `feature/laset-listas-precio-color`, que tiene 2 commits sin mergear:
+**hay que mergear esa rama primero**.
+
+Sin commitear todavía: la limpieza de links a saftel, las 4 pestañas ocultas de inventario y el
+precio + % editables de la grilla de Precios. Esperan la decisión sobre los deep-links.

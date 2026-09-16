@@ -2,7 +2,7 @@
 
 Base de conocimiento de la PC personal de hermess: configuración del sistema, red, monitores, extensiones GNOME, servicios, scripts y optimizaciones.
 
-Última sincronización: 2026-09-15
+Última sincronización: 2026-09-16
 
 ---
 

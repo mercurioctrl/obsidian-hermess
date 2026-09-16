@@ -180,3 +180,30 @@ video de YouTube). Detalle técnico en
 
 > Sirve para **iterar el copy en equipo** antes de enviar. Ojo: el hero animado y el badge son imágenes/GIF,
 > su texto no se edita en el editor (se regenera desde `gif-src/` con el pipeline de Chrome headless + FFmpeg).
+
+---
+
+## 11. Repo propio + sistema web v2 (2026-09-16)
+
+El set pasó a tener su **propio site/repo**: `git@github.com:BluIncStudio/dlink-newsletter.git` (rama
+`main`). Se sirve desde el site propio, **ya no depende de WordPress** (imágenes por rutas relativas).
+Commits **solo como `mercurioctrl`**, sin Co-Authored-By. Detalle técnico en
+[[changelog#2026-09-16 — Repo propio + dashboard/editor v2 + logos oficiales (M15)|changelog]] y
+[[contexto#Newsletter / envío de emails (sep-2026)|contexto]].
+
+El editor se convirtió en un **sistema web** para el equipo (todo servido por `servidor.py` en `:8000`,
+IP LAN `10.10.10.7` — **no** funciona por `file://`):
+
+- **`index.html` = dashboard/home**: entrada al sistema, con preview de los 7 newsletters, **etiqueta
+  B2C/B2B editable** (click, compartida) y accesos a Abrir / Editar cada pieza.
+- **`editor-newsletters.html` v2**: interfaz clara estilo dlink.com. **Selector desplegable** de template
+  agrupado B2C/B2B; **barra flotante contextual** al pasar el mouse (imágenes: cambiar URL, **subir archivo**,
+  **redimensionar**; texto: **tamaño** y **negrita a lo seleccionado**); **panel Secciones** para mostrar/ocultar
+  bloques del email antes de enviar; botón Inicio.
+- **`servidor.py`**: versiones compartidas + `/api/meta` (categorías) + `/api/upload` (imágenes a `img/uploads/`).
+
+Además, los **logos de retailers del M15** se cambiaron al set oficial **DLINK_LOGO_RESELLERS** (PNG
+transparente) y la sección "En tienda física" quedó en **3 + 2** centrado.
+
+> Con esto el equipo edita, versiona y organiza los emails desde el navegador, sin tocar código, y todo
+> queda versionado en el repo del site.

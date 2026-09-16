@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-09-16 — Repo propio + dashboard/editor v2 + logos oficiales (M15)
+
+Se llevó todo el set de newsletters a su **propio site/repo** y se convirtió el editor en un sistema
+web completo para el equipo. Detalle en [[contexto#Newsletter / envío de emails (sep-2026)|contexto]]
+y [[newsletter-campana#11. Repo propio + sistema web v2 (2026-09-16)|newsletter-campana]].
+
+- **Repo GitHub** `BluIncStudio/dlink-newsletter` (rama `main`): se pushea todo tal cual, servido desde
+  el site propio (imágenes por rutas relativas, **sin WordPress**). Commits **solo como `mercurioctrl`**.
+- **`index.html` dashboard/home**: preview de los 7 newsletters, etiqueta **B2C/B2B editable** (compartida
+  vía `/api/meta`), botones Abrir/Editar (deep-link `editor#modelo`).
+- **`editor-newsletters.html` v2**: interfaz clara estilo dlink.com; **selector desplegable** de template
+  agrupado B2C/B2B (reemplaza las 7 pestañas); **barra flotante contextual** (imagen: Cambiar/Subir/−+
+  redimensionar · texto: A−/A+ tamaño y **B negrita sobre la selección**); panel **Secciones** para
+  ocultar/mostrar bloques; botón **Inicio** 🏠. La UI del editor se limpia del HTML exportado.
+- **`servidor.py`**: sumados endpoints `/api/meta` (categorías en `versiones/meta.json`) y `/api/upload`
+  (imágenes a `img/uploads/`).
+- **M15 — logos de retailers**: al set oficial **DLINK_LOGO_RESELLERS** (PNG transparente, de
+  `logos/argentina2/` → `img/tiendas/`); sección "En tienda física" en layout **3 + 2** centrado.
+- **M15 — otros ajustes previos**: 1201→1200 Mbps, "M15"→"Mesh Router M15", sección "Dónde comprar" sobre
+  fondo blanco (se quitó la banda teal) con títulos centrados.
+
+Archivos: `index.html`, `editor-newsletters.html`, `muestra-newsletters.html`, `servidor.py`,
+`router-mesh-v2-fondo-gif.html`, `img/tiendas/*.png`, `logos/argentina2/`.
+
 ## 2026-09-11 — Newsletters de switches (DGS-1250 + DGS-3130) — 6º y 7º templates
 
 Dos newsletters **B2B de switches** con el mismo sistema. Specs reales de las fichas oficiales (WebFetch).

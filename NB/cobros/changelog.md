@@ -1,5 +1,40 @@
 # Changelog — CashBox Cobros
 
+## 2026-09-15 — Impuestos internos en el Dashboard + dos bugs de moneda descubiertos
+
+### feat(taxes): impuestos internos sumados a la carga impositiva mensual
+
+- **Merge previo:** el Dashboard de Impuestos y el reporte de ventas xlsx vivían solo en la rama local `feature/reporte-ventas-empresa` (back `3d601b4`, front `e126c0a`), atrasada respecto a las bases. Se generaron los 4 links de PR (contra `Development`/`development` y contra `blu-dev-staff`) y el usuario mergeó por GitHub. Ya están en `Development`/`development`.
+- **Fuente descubierta:** `FP_FactWebCliEncabezado.internalTax` = importe total del comprobante **en su moneda** → `* NVALDIV` para pesos. La columna homónima de `FP_FactWebCliDetalle` (y de `articulo`) es la **alícuota (%)**, no el importe — documentado en el docblock del repositorio. Ver [[impuestos-internos]].
+- **Backend:** query nueva en `TaxesStatisticsRepository` (mismos filtros que el IVA débito: `CAE IS NOT NULL AND LANULADA = 0`), clave `impuestosInternos` en `byMonth` y `totals`, **sumada al total** del mes (decisión del usuario).
+- **Frontend:** tile "Impuestos internos", columna "Imp. internos" en la tabla mensual y serie en el gráfico (`#13c2c2`) en `pages/dashboard/taxes.vue`.
+- **Verificado** corriendo el repositorio real contra la base (`01-06-2026_15-09-2026`): jun $14.739.348,26 / jul $22.739.783,25 / ago $22.350.073,79, idénticos a la query directa. `php -l` y `eslint` limpios. Volumen ~$15-28M/mes, mismo orden que las percepciones IIBB.
+- Validado al centavo contra dos comprobantes reales (A 0006-00020829 `enc 612190` y A 0006-00019978 `enc 609530`), incluyendo el control de cotización contra el total en pesos que imprime el PDF.
+
+### análisis: 4 alícuotas y la tasa del artículo cambia con el tiempo
+
+- Alícuotas: **10,50 / 10,51 / 23,46 / 25,00** (23,30 en 2024). **En 2024 el 100% tributaba 23,3/23,46%**; el 10,5% aparece en 2025 y hoy domina — el mismo monitor cambió de tasa (719 líneas de MONITOR al 23,46% en 2025 vs casi todas al 10,5x en 2026). **No validar períodos viejos con la tasa actual del maestro.**
+- Productos 2026: **2.694 de 2.728 líneas (98,7%) son monitores**; el resto es CCTV (Hikvision DVR/NVR, XVR al 23,46%). En 2025 también PARLANTE y ACCESORIOS. Tres casos parecen error de carga del maestro (TOMACORRIENTE y TECLA al 25%, un MONITOR al 23,46%).
+- **10,50 vs 10,51 conviven en monitores** y el 10,50 gana terreno mes a mes en 2026 (ene 19 vs 171 → ago 177 vs 198): sale de `articulo`, así que alguien está reclasificando sin terminar. Una de las dos está mal.
+- **Cobertura:** el dato arranca **2024-11**; antes `internalTax` es NULL en las 80.383 líneas de detalle previas → el $0 que muestre el dashboard para meses anteriores **es falso**.
+
+### bug(taxes): el dashboard mezcla dólares con pesos — ABIERTO, no corregido
+
+- `TOTIVAS_EnviadoAFIP` e `ImportePercepCLi` están en la **moneda del comprobante** y el repositorio los suma **sin `NVALDIV`**. El ~92% de los comprobantes se factura en DOL.
+- **Impacto jun-ago 2026:** IVA débito muestra $64.398.072 cuando son **$1.061.689.169** (×16,5); percepciones IIBB muestra $13.734.460 cuando son **$186.341.180** (×13,6).
+- **Evidencia (3 vías):** el recálculo desde el detalle coincide al centavo con `TOTIVAS_EnviadoAFIP` sin cotización en 8/8 facturas DOL; el PDF imprime los IVA en DOL y la base guarda ese mismo número; no existe columna alternativa en pesos.
+- **Cuidado con el fix:** `retentionIIBB.amountPaid` **ya está en pesos** y su columna `quotation` **no es multiplicador** (si se aplicara, una retención daría $80.278.962). El fix son dos `* NVALDIV`, sin tocar retenciones.
+- **Caveat sin resolver (IVA crédito):** de 383 comprobantes de compra en USD, **250 son todos de ALLIANZ con `tipo_cambio` entre 36 y 135,80** y fecha 2026. O están en pesos con `moneda=USD` mal seteado, o son USD con el tc erróneo (~$531M de diferencia). No se distingue desde la base → se pidió un PDF de Allianz de julio 2026 (`imp_total 1117,90`, `total_iva 183,12`).
+- **Corrección de una nota vieja:** `MS_REMITO_PERCEPCIONES` **sí reconcilia** con `ImportePercepCLi` (= `IMPPERCEP_CABA + IMPPERCEP_ARBA` exacto, 5/5). Lo que decía [[contexto]] ("miles vs millones") se explicaba por que MSR arranca el 2025-05-14 y por la mezcla de monedas.
+
+### bug(taxes): `monthsBetween()` pierde el mes parcial — ABIERTO
+
+- Calcula el límite como el día 1 del mes de `endExcl` con `while ($cursor < $limit)`: con `01-06-2026_15-09-2026` devuelve jun/jul/ago y **septiembre desaparece** (ni se lista ni se suma, aunque las queries SQL sí traen los datos). No se nota en uso normal porque el menú linkea con `.endOf('month')`.
+
+Archivos: `api-rest-cobros/app/src/Domain/Statistics/Taxes/Repositories/TaxesStatisticsRepository.php`, `cobros-web-app-v1/app/pages/dashboard/taxes.vue`.
+
+---
+
 ## 2026-08-09 — Validación de las rectificativas reconstruidas: NO reconcilian (veredicto)
 
 ### análisis: la reconstrucción FP×padrón no reproduce lo presentado — no presentable

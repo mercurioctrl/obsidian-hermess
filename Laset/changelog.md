@@ -2,6 +2,58 @@
 
 Ver también: [[Laset]] · [[contexto]]
 
+## 2026-09-16
+
+**Docs y contexto**
+- Nueva doc en el repo: `docs/dominio-unico-sso.md` (mapa de paths, las tres piezas del SSO,
+  la regla de releer permisos de la base, snippets de verificación).
+- `docs/troubleshooting.md`: nueva sección "Dominio único / SSO" con 7 síntomas y sus causas.
+- `README.md`, `docs/arquitectura.md` y `CLAUDE.md` apuntan al dominio único como forma de acceso.
+
+**Inventario — grilla de Precios**
+- Columnas de color: además del precio, ahora se ve y se edita el **%**. Editar el precio lo fija
+  a mano y el % se deriva del costo; editar el % limpia el precio manual y el precio vuelve a
+  `costo × (1 + %)`. El back devuelve la fila recalculada, así que la otra celda se actualiza sola.
+- El grupo "Precio por lista (color)" se movió **antes de "Últ. mov."**, pegado a Costo.
+
+## 2026-09-15
+
+**Dominio único `laset.local` + SSO** — ver [[arquitectura]] y [[troubleshooting]]
+- Las 7 apps pasan a servirse desde un solo dominio, cada una bajo su path (`router.base`), detrás
+  de un reverse proxy Apache. Se entra una vez y se salta entre apps con un menú nuevo.
+- `AppSwitcher.vue` en los 6 fronts con UI (duplicado: el monorepo no tiene paquete compartido).
+  Logo fijo de Laset en las 6, ancho 114px, header uniformado a 64px.
+- **Bug 1:** `build.publicPath` absoluto rompía TODOS los assets (Nuxt 2 le prepende `router.base`,
+  montaba en `/pedidos/pedidos/_nuxt/`). El SSR igual pintaba el HTML: la app parecía andar pero
+  nunca hidrataba. Corregido a `publicPath: '_nuxt/'`.
+- **Bug 2:** los backs validaban permisos leyendo el **payload del token**. Con el token compartido
+  cada back recibe la forma de usuario de otra app → 401 → `auth-next` borraba el token y
+  **entrar a una app deslogueaba de todas**. Los 4 backs con middleware (pedidos ×3, compras,
+  expedicion, postventa) ahora releen el usuario de la base por `UserId`.
+- **Firma del JWT:** expedicion y postventa la tenían hardcodeada y distinta; pasan a
+  `md5(JWT_SIGNATURE_KEY)` como el resto. ms-metadata decodifica con `verify_aud: False`
+  (los backs PHP usan `aud` como huella de navegador y PyJWT lo exigía).
+- **Infra que estaba rota de antes:** los Phinx perdían los headers de CORS porque imprimían
+  warnings de PHP 8 antes; el dir `logs/` no era escribible por `www-data`; postventa no conectaba
+  a SQL Server (ODBC 18 valida el certificado autofirmado). Los tres corregidos.
+- Los `.env` de cobros y expedición apuntaban a los **backs de la otra empresa** (8083/8086 en vez
+  de 8183/8184). Corregido junto con sus puertos PM2.
+- Limpieza de menú: 28 links a `*.saftel.com` (dominio de la otra empresa) comentados en los 6
+  fronts; en inventario se ocultaron 4 pestañas sin uso.
+- PRs: frontErp#11 y backErp#5, ambos contra `blu-dev-staff`.
+
+## 2026-09-11 / 2026-09-14
+
+**Listas de precio por color** — reemplaza el esquema npvp/ntarifapp para Laset
+- 4 listas (Azul, Verde, Naranja, Violeta), cada una `base × (1 + %)`, con lista por defecto por
+  cliente y override editable en el modal de la orden.
+- DB: `LASET_LISTA_COLOR`, `LASET_LISTA_COLOR_ARTICULO`, `LASET_CLIENTE_LISTA_COLOR`.
+- ms-metadata: endpoints `/colorLists` y `/items/{id}/colorPrices` (+ batch).
+- Front inventario: modal de configuración y 4 columnas de color editables por artículo.
+- Back y front de pedidos: el precio sale de la lista del cliente; selector con puntito de color.
+- Todo scopeado a `companyCode 11`; las otras empresas del clon quedan intactas.
+- Mergeado: backErp#4.
+
 ## 2026-09-09
 
 **Fixes de código en front y back + promoción a `main`**

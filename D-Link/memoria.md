@@ -76,6 +76,13 @@ Veo 3 = lo más caro → validar toma por toma. Google Flow usa Veo 3 (acceso po
   templates: **M15, M30, DCS-6501LH** (B2C) + APs **DAP-X3060** (Wi-Fi 6), **DAP-E9560** (Wi-Fi 7) y switches
   **DGS-1250-52XMP** (Smart Managed) y **DGS-3130-30PS** (Managed L3 apilable) (B2B).
   Ver [[newsletter-campana#10. Set de templates + editor web (2026-09-11)|newsletter-campana]].
+- **Repo propio + sistema web v2 (16-sep-2026):** todo el set en `git@github.com:BluIncStudio/dlink-newsletter.git`
+  (rama `main`, servido desde el site propio, **sin WordPress**). Commits **solo como `mercurioctrl`**. El editor
+  es ahora un sistema con **`index.html` dashboard** (etiquetas B2C/B2B editables), **barra flotante** para
+  editar/redimensionar imágenes y texto (negrita sobre selección), **panel Secciones** (ocultar bloques),
+  **selector** de template, y `servidor.py` con `/api/meta` + `/api/upload`. Logos de retailers del M15 al set
+  oficial **DLINK_LOGO_RESELLERS** (PNG). Ver
+  [[newsletter-campana#11. Repo propio + sistema web v2 (2026-09-16)|newsletter-campana]].
 
 ## Ver también
 [[D-Link]] · [[contexto]] · [[arquitectura]] · [[plan-trabajo]] · [[videos-clips-ia]] · [[newsletter-campana]]

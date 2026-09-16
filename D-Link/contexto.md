@@ -93,9 +93,25 @@ el problema es **relevancia**, no calidad.
 - **Editor + versiones para el equipo (sep-2026):** `editor-newsletters.html` (edición inline de textos e
   imágenes, toggle desktop/mobile) servido por `servidor.py` (http.server + API). Las **versiones se guardan
   en el servidor** (`versiones/` en disco: `index.json` + un `.html` por versión), **no en localStorage** →
-  son **compartidas** y persisten. El equipo entra por `http://<IP>:8000/editor-newsletters.html` (server en
-  `0.0.0.0:8000`; dejar `servidor.py` corriendo — el `http.server` simple no tiene la API). Los emails gatillan
-  su CSS mobile con `max-width:620px`, por eso la vista "desktop" usa un viewport de **680px**.
+  son **compartidas** y persisten. El equipo entra por `http://<IP>:8000/` (server en
+  `0.0.0.0:8000`, IP LAN de la máquina `10.10.10.7`; dejar `servidor.py` corriendo — el `http.server` simple
+  no tiene la API). **No funciona por `file://`** (sin API no hay subida/versiones/etiquetas). Los emails
+  gatillan su CSS mobile con `max-width:620px`, por eso la vista "desktop" usa un viewport de **680px**.
+- **Repo propio + sistema web v2 (16-sep-2026):** todo el set vive en
+  `git@github.com:BluIncStudio/dlink-newsletter.git` (rama `main`; se sirve desde el site propio,
+  **ya no depende de WordPress** → imágenes por rutas relativas). Commits **solo como
+  `mercurioctrl <catrielmercurio@gmail.com>`, sin Co-Authored-By**. Piezas del sistema:
+  - **`index.html`** = dashboard/home: preview de los 7 newsletters, etiqueta **B2C/B2B editable** (click,
+    compartida vía `/api/meta`), botones Abrir/Editar con deep-link `editor#modelo`.
+  - **`editor-newsletters.html`** = editor con interfaz clara estilo dlink.com (header con logo, selector
+    desplegable de template agrupado B2C/B2B, botón Inicio 🏠). Edición inline + **barra flotante contextual**
+    (hover en modo edición): imágenes → Cambiar URL / **Subir** / **−+ redimensionar**; texto → **A−/A+ tamaño**
+    y **B negrita sobre la selección** (execCommand, parte sí/parte no). Panel **Secciones** para ocultar/mostrar
+    bloques del email (detecta secciones por los comentarios `==== LABEL ====`). La UI se elimina del HTML exportado.
+  - **`servidor.py`** API: `/api/list` · `/api/save` · `/api/delete` (versiones) · `/api/meta` (categorías en
+    `versiones/meta.json`) · `/api/upload` (imágenes → `img/uploads/`, base64, máx 8 MB).
+  - **Logos de retailers del M15:** set oficial **DLINK_LOGO_RESELLERS** (PNG transparente, `logos/argentina2/`
+    → `img/tiendas/`). Sección "En tienda física" en layout **3 + 2** centrado.
 
 ## Gap a cerrar (antes de fijar metas)
 Scraping de MercadoLibre (share-of-shelf, precios, reviews vs TP-Link/Mercusys) + sell-through de

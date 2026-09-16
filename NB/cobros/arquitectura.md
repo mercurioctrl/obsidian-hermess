@@ -238,6 +238,20 @@ Frontend:
 | Percepciones IIBB | `NewBytes_DBF.dbo.FP_FactWebCliEncabezado` | `ImportePercepCLi` | `DFECFAC` | aprox. `clientes.ID_PROVINCIA` |
 | Retenciones IIBB | `NEW_BYTES.dbo.retentionIIBB` | `amountPaid` | `date` | exacta `provinceId` |
 | Retenciones Ganancias | `NEW_BYTES.dbo.ganancias` | `profit_amount` | `created_at` | — (tabla vacía hoy) |
+| **Impuestos internos** | `NewBytes_DBF.dbo.FP_FactWebCliEncabezado` | `internalTax * NVALDIV` | `DFECFAC` | — (nacional) |
+
+**Moneda:** todas las columnas de `FP_FactWebCliEncabezado` están en la **moneda del comprobante**
+(~92% DOL) y necesitan `* NVALDIV`; `retentionIIBB.amountPaid` ya está en **pesos**. Hoy el
+repositorio solo aplica la conversión en impuestos internos → los otros conceptos están
+sub-reportados. Ver [[contexto#Monedas: qué columna está en qué moneda]] y [[impuestos-internos]].
+
+**Claves de la respuesta:** `byMonth[]` y `totals` comparten las claves `ivaDebito`, `ivaCredito`,
+`ivaAPagar`, `percepcionesIibb/Arba/Agip/Otras`, `retencionesIibb/Arba/Agip/Otras`,
+`retencionesGanancias`, `impuestosInternos`, `total`. Más `range` y `jurisdictions`.
+
+**Frontend:** cada concepto se agrega en tres lugares de `pages/dashboard/taxes.vue` — el tile
+`a-statistic`, la constante `SERIES` (serie del gráfico) y el computed `columns` (columna de la
+tabla mensual).
 
 ### Response (shape)
 - `range { from, to }` (Ymd)

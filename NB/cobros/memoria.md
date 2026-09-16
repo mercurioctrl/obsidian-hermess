@@ -1,7 +1,7 @@
 # Memoria — CashBox Cobros
 
 Consolidación de la memoria persistente de Claude Code para este proyecto
-(`~/.claude/projects/-var-www-nb-cobros/memory/`). Sincronizada: 2026-08-09.
+(`~/.claude/projects/-var-www-nb-cobros/memory/`). Sincronizada: 2026-09-16.
 
 ## Proyecto
 
@@ -30,9 +30,13 @@ web `development` (minúscula). Prod `main`, staging `Gamma`/`gamma`. Ver [[cont
    Ver [[arquitectura#Módulo de Préstamos de Capital — archivos]].
 3. **Trade Audit Logger** — logging de auditoría estructurado del flujo de cobro.
    Ver [[arquitectura#Trade Audit Logger]].
-4. **Dashboard de Impuestos** (2026-07-08) — carga impositiva mensual (IVA a pagar,
-   percepciones/retenciones IIBB con desglose ARBA/AGIP/Otras, retenciones ganancias).
-   Ver [[arquitectura#Dashboard de Impuestos (Statistics/Taxes)]].
+4. **Dashboard de Impuestos** (2026-07-08, **mergeado a Development/development el 2026-09-15**) —
+   carga impositiva mensual (IVA a pagar, percepciones/retenciones IIBB con desglose
+   ARBA/AGIP/Otras, retenciones ganancias, **impuestos internos**). Venía de la rama
+   `feature/reporte-ventas-empresa` junto con el reporte de ventas xlsx.
+   Ver [[arquitectura#Dashboard de Impuestos (Statistics/Taxes)]] e [[impuestos-internos]].
+   **Tiene 2 bugs abiertos** (monedas y mes parcial) → ver
+   [[contexto#Bugs conocidos (preexistentes, no del feature)]] antes de creerle los números.
 
 ### Intimación AGIP percepciones (jul-2026)
 AGIP intimó $73,1M en percepciones IIBB CABA (ene-2024→may-2026). Cruzando cada CUIT
@@ -56,6 +60,11 @@ la col INTIMACIÓN de la planilla de Flor da más baja que sus PDF; mail enviado
 - `FP_FactWebCliEncabezado.LANULADA` es `bit` → comparar `= 0`.
 - `/heartbeat` da 500 aunque la base ande (bug SSL propio del repo). DB host real:
   `190.210.23.97:4444` (`NB_WEB`). Ver [[contexto#Bugs conocidos (preexistentes, no del feature)]].
+- **Importes en moneda del comprobante, NO en pesos**: `TOTIVAS_EnviadoAFIP`, `ImportePercepCLi`,
+  `internalTax` y las columnas de MSR van `* NVALDIV` (~92% DOL). En cambio
+  `retentionIIBB.amountPaid` **ya está en pesos** y su columna `quotation` **no es multiplicador**.
+- **`internalTax` significa dos cosas**: importe en `FP_FactWebCliEncabezado`, **alícuota (%)** en
+  `FP_FactWebCliDetalle` y en `articulo`. Ver [[impuestos-internos]].
 
 ## Ver también
-- [[cobros]] · [[arquitectura]] · [[contexto]] · [[changelog]] · [[stack]]
+- [[cobros]] · [[arquitectura]] · [[contexto]] · [[changelog]] · [[stack]] · [[impuestos-internos]]

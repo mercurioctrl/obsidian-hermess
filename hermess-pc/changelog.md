@@ -158,3 +158,19 @@ Detalle completo en [[hermess-pc/claude-avisos|Claude Code — avisos de atenci�
 
 Pendiente: las pestañas con título fijado a mano siguen sin emoji hasta liberarlas (`Ctrl+Shift+Alt+T` → vaciar → Enter); falta confirmar si vaciar alcanza o hay que reabrir la pestaña.
 
+---
+
+## 2026-09-16
+
+### Avisos de Claude Code — siete estados nuevos, telaraña para pestañas abandonadas, y el agujero del Ctrl+C
+
+Segunda tanda sobre [[hermess-pc/claude-avisos|el sistema de avisos]], ya usándolo en serio con 17 pestañas:
+
+- **Siete eventos nuevos mapeados a estado:** 😵 `PostToolUseFailure` (falló una herramienta) · 🔴 `StopFailure` (el turno terminó mal —- antes se veía igual que terminar bien) · 🟡 `PermissionRequest` (más inmediato que esperar la `Notification`) · ⛔ `PermissionDenied` · 🤖 `SubagentStart`/`Stop` · ⚙️ `TaskCreated`/`Completed` · 🗜️ `PreCompact` (esos ratos en que la sesión parece colgada y en realidad está compactando). Van 16 hooks.
+- **😵 y ⛔ se van solos** a los 6 s, con una marca de expiración en el archivo de estado. **🤖 y ⚙️ son contadores**, no estados (puede haber varios a la vez), y se resetean al terminar cada turno para que un evento desbalanceado no deje el emoji pegado.
+- **🕸️ para pestañas con más de 24 h sin actividad** —- "ya podrías cerrarla". Se mide por uso, no por mirada. La antigüedad inicial no arranca en cero: se toma del mtime del transcript más nuevo de cada sesión (`~/.claude/projects/<cwd con / → ->/*.jsonl`), así las abandonadas se marcan enseguida. El 🔴 nunca se tapa con telaraña.
+- **Cancelar con Ctrl+C no dispara ningún hook** —- ni `Stop` ni `StopFailure` —- así que las caritas seguían rotando en una sesión muerta. Se resolvió reciclando la `Notification` de sesión ociosa (`Claude is waiting for your input`, ~60 s de idle): no notifica ni suena, pero prueba que la sesión dejó de trabajar. Si estaba en 🟢 o 🔴 no se toca.
+- **El nombre de la pestaña ya no sigue al `cd`:** sube por carpetas de nombre genérico (`app`, `src`, `dist`…). Resolverlo por raíz de repo git salió peor —- la bóveda entera es un repo, así que `obsidian-hermess/jira` y `obsidian-hermess/Blu` quedaban las dos como `obsidian-hermess`.
+
+Detalle completo, con las trampas de Ghostty y tmux, en [[hermess-pc/claude-avisos|Claude Code — avisos de atención]].
+
