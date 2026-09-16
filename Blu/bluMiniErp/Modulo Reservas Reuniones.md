@@ -4,6 +4,7 @@ Cada **usuario del ERP** tiene un **link público compartible y memorable** (`/a
 
 > PRs: #30 (base) + #31 (invitados adicionales) + #32 (docs). Migraciones `0095`–`0100`. Mergeado a `main` el 2026-08-10.
 > **2026-08-24:** #37 (slug memorable, migración `0103`) + #39 (URL pública `/reservar` → `/agendar`).
+> **2026-09-16:** #64 (link de videollamada fijo → botón Meet nativo, migración `0116`).
 
 ## Modelo de datos
 
@@ -13,7 +14,7 @@ Todo cuelga de `usuarios.id` (no de `empleados`), para que aplique también a ad
 |-------|--------------|
 | `usuarios.booking_slug` (0103) | string(60) unique. **Slug memorable** del link (`/agendar/juan-perez`). Auto-gen del nombre (`asegurarBookingSlug()`, `Str::slug` + desambigua `-2/-3`), **editable** por el usuario |
 | `usuarios.booking_token` | string(64) unique, `$hidden`. Lazy: `Usuario::asegurarBookingToken()`. Ahora **fallback** de links viejos con hash |
-| `booking_configs` (0096) | `usuario_id` (unique), `activo`, `duracion_minutos`, `buffer_minutos`, `dias_anticipacion`, `titulo`, `descripcion`, `ubicacion` |
+| `booking_configs` (0096) | `usuario_id` (unique), `activo`, `duracion_minutos`, `buffer_minutos`, `dias_anticipacion`, `titulo`, `descripcion`, `ubicacion`, `enlace_videollamada` (0116) |
 | `booking_reglas` (0097) | `usuario_id`, `dia_semana` (0=Dom..6=Sáb), `hora_inicio`, `hora_fin` — horarios semanales recurrentes |
 | `booking_bloqueos` (0098) | `tipo` (`bloqueo` día/rango · `extra` slot puntual), `fecha`, `hora_inicio?`, `hora_fin?`, `motivo?` |
 | `booking_reservas` (0099) | `fecha`, `hora_inicio/fin`, `invitado_nombre/email/notas`, `invitados_extra` JSON (0100), `estado`, `cancel_token`, `uid_ics` |
@@ -23,7 +24,7 @@ Modelos: `BookingConfig`, `BookingRegla`, `BookingBloqueo`, `BookingReserva`. `B
 ## Backend
 
 - **`app/Services/BookingService.php`** — `slotsDisponibles()` genera slots de reglas semanales + extras, descartando **feriados**, **ausencias** del empleado vinculado, bloqueos, reservas y horarios pasados; acota a `dias_anticipacion`. `crearReserva()` revalida en **transacción** → anti doble-booking (422). Todo en TZ `America/Argentina/Buenos_Aires`.
-- **`app/Support/IcsBuilder.php`** — helper `.ics` reutilizable (esc/fold + `invite()` con múltiples `ATTENDEE`, `METHOD:REQUEST`). El [[Modulo Calendario]] lo usa; su `respuestaIcs` ahora emite VEVENT con hora para las reservas.
+- **`app/Support/IcsBuilder.php`** — helper `.ics` reutilizable (esc/fold + `invite()` con múltiples `ATTENDEE`, `METHOD:REQUEST`). El [[Modulo Calendario]] lo usa; su `respuestaIcs` ahora emite VEVENT con hora para las reservas. Prop opcional `conference` → emite `X-GOOGLE-CONFERENCE` (ver sección de videollamada).
 - **`PublicBookingController`** (público) + **`MiDisponibilidadController`** (self-service, opera sobre `auth()->user()`). **`resolverAnfitrion($ref)`** resuelve al dueño por `booking_slug` **o** `booking_token` (fallback de links viejos).
 - **`ReservaReunionMail`** + blade `emails/reserva-reunion`: email a cada invitado (saludo personalizado) + al dueño, con `.ics` adjunto. **Se envía por el mailer `erp@`** (`Mail::mailer('erp')`, no payments@); el Mailable/`Mail::raw` fija el `from` en `erp@`. Ver [[Stack e Infraestructura#Mail]].
 
@@ -74,6 +75,23 @@ El anfitrión puede optar por recibir recordatorios de **sus** reuniones (no los
 - **Anti-duplicado:** `booking_reservas.recordatorio_dia_enviado_at` / `recordatorio_1h_enviado_at` (mig `0108`) marcan el envío → cada recordatorio se manda una sola vez.
 - Reusa `PushService::enviarAUsuario`, `Notificacion` y `Mail::mailer('erp')` (mismo patrón que el aviso de nueva reserva). Un fallo de SMTP no corta el resto.
 - ⚠️ El **scheduler** corre en el contenedor `minisaas-scheduler` (`php artisan schedule:work`); al deployar hay que copiar el comando + `console.php` ahí y reiniciarlo.
+
+## Link de videollamada → botón "Unirse" nativo en Google Calendar (PR #64, migración 0116, 2026-09-16)
+
+**Problema:** un evento que entra a Google Calendar **desde un `.ics`** se marca como *importado* y Google **no muestra** el botón "Añadir videollamada de Google Meet" — el usuario no puede sumarle una Meet después, **ni siendo el `ORGANIZER`**. Es una limitación de Google, no del `.ics`. (Misma restricción que Calendly free.)
+
+**Solución (opción "link fijo"):** cada usuario guarda en Mi Disponibilidad un **`enlace_videollamada`** permanente (Google Meet atemporal, Zoom, Teams). Al reservar, `PublicBookingController::construirIcs()` lo mete en tres lugares para máxima compatibilidad:
+- **`X-GOOGLE-CONFERENCE`** (vía prop `conference` de `IcsBuilder::invite`, URI cruda sólo plegada, sin `esc()`) → Google Calendar muestra el botón nativo **"Unirse"**.
+- **`LOCATION`** (sólo si no hay `ubicacion` física) → Apple Calendar / Outlook lo muestran clickeable.
+- **`DESCRIPTION`** (línea `Videollamada: <url>`) → fallback legible en cualquier cliente.
+
+El email (`ReservaReunionMail` + blade) suma fila **"Videollamada"** y botón azul **"Unirse a la videollamada"**.
+
+**Si `enlace_videollamada` está vacío, todo funciona igual que antes** (sin `X-GOOGLE-CONFERENCE`, sin botón). `MiDisponibilidadController` normaliza la URL: si viene sin esquema, antepone `https://`.
+
+**Google Meet permanente:** meet.google.com → "Nueva reunión → Crear una reunión para más tarde" da un link `meet.google.com/abc-defg-hij` que **no vence** y se reutiliza. La UI de Mi Disponibilidad incluye estas instrucciones.
+
+**Trade-off / opción no tomada:** un Meet **único por reunión** requiere la API de Google Calendar con OAuth por usuario (crear el evento del lado de Google con `conferenceData`). Es otro proyecto; acá se optó por el link fijo, que resuelve el 90% sin OAuth.
 
 ## Gotchas
 

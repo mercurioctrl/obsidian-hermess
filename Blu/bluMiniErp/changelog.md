@@ -4,6 +4,17 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-16 — Reservas: link de videollamada fijo (botón Meet nativo en el calendario)
+
+### Link de videollamada → `X-GOOGLE-CONFERENCE` en el `.ics` (rama `feat/reservas-enlace-videollamada`, PR #64, migración 0116)
+- feat: cuando una reserva de [[Modulo Reservas Reuniones]] entra a Google Calendar **desde el `.ics`**, Google la trata como evento *importado* y **no muestra** el botón "Añadir videollamada de Google Meet" (ni siendo el `ORGANIZER`) → el usuario no podía sumarle una Meet. Fix estilo Calendly free: cada usuario guarda un **link de videollamada fijo** (`booking_configs.enlace_videollamada`, Meet permanente/Zoom/Teams) en Mi Disponibilidad. Se inyecta en el `.ics` como **`X-GOOGLE-CONFERENCE`** (botón "Unirse" nativo) + `LOCATION` (si no hay ubicación física) + `DESCRIPTION` (Apple/Outlook), y el email suma fila y botón "Unirse a la videollamada".
+- **Si el campo queda vacío, funciona igual que antes.** El controller normaliza la URL sin esquema → `https://`. La UI incluye instrucciones de cómo crear un Meet permanente ("Nueva reunión → Crear una reunión para más tarde"). Meet único por reunión = OAuth Google Calendar API (opción no tomada, otro proyecto).
+- `IcsBuilder::invite` recibió prop opcional `conference` (URI cruda, sólo plegada). Ver [[Modulo Reservas Reuniones]].
+
+Archivos: `backend/database/migrations/0116_add_enlace_videollamada_to_booking_configs.php`, `backend/app/Support/IcsBuilder.php`, `backend/app/Http/Controllers/{MiDisponibilidad,PublicBooking}Controller.php`, `backend/app/Mail/ReservaReunionMail.php`, `backend/resources/views/emails/reserva-reunion.blade.php`, `frontend/pages/mi-disponibilidad/index.vue`
+
+---
+
 ## 2026-09-08 — Fix PDF de activaciones: portrait paginado (Browsershot) + PRs
 
 ### PDF de activaciones — reemplazo de html2pdf por Browsershot (rama `fix/activaciones-pdf-portrait`, PR #62)
