@@ -10,7 +10,7 @@ Mergeado en **PR #34 + #35** (2026-08-21). Ver también [[Reglas de Negocio]], [
 | | Entra | No entra |
 |---|---|---|
 | **Ventas** | Comprobantes AFIP emitidos por BLU (`comprobantes_afip`, estado `EMITIDA` o `ACREDITADA`): facturas **y** notas de crédito | Invoices de **Mercury** (no son comprobantes argentinos), presupuestos `FACTURADO` sin comprobante, movimientos de cuenta corriente, cobros MP/Stripe |
-| **Compras** | Gastos con **IVA discriminado** (`iva_monto > 0`) = facturas de compra con crédito fiscal | Gastos sin factura (propinas, viáticos sin respaldo), sueldos (van por F.931), retiros, percepciones |
+| **Compras** | Gastos con **IVA discriminado** (`iva_monto > 0`) = facturas de compra con crédito fiscal | Gastos sin factura (propinas, viáticos sin respaldo), sueldos (van por F.931), retiros, percepciones/retenciones sufridas (→ van por [[#Retenciones sufridas (migración 0117)]], no son crédito fiscal) |
 
 ⚠️ **Una factura acreditada se declara igual.** `estado = ACREDITADA` es semántica del ERP, no
 "no declarar": la factura y su NC van las dos y netean entre sí. Excluirlas descuadra contra lo que
@@ -162,6 +162,79 @@ GET   /api/contabilidad?...&empresa_id=       (filtro opcional; también en /con
 
 **Pendiente:** no hay CRUD de empresas (catálogo fijo de 2, editable por DB); DIGITO quedó sin CUIT.
 
+## Retenciones sufridas (migración 0117)
+
+Lo que el agente de retención nos descuenta al pagarnos una factura, y después se computa como
+**pago a cuenta** del impuesto del período. Agregado el **2026-09-17**.
+
+**El problema que resuelve:** la liquidación sólo sabía calcular el impuesto **determinado**. En la
+DDJJ real de IIBB de agosto 2026 el determinado era $93.905,15 pero se ingresaron **$5,45**, porque
+$93.899,70 ya habían sido retenidos. El ERP no tenía dónde cargar los certificados que llegan en
+papel. Ver [[Conciliacion Impuestos 2026-08]].
+
+### Modelo
+
+Tabla `retenciones`, colgada del **presupuesto** (el ancla que usa el equipo), con FK opcional al
+`comprobante_afip` concreto sobre el que se retuvo — que es como viene el certificado.
+
+| Campo | Notas |
+|---|---|
+| `tipo` | `GANANCIAS` · `IIBB` · `IVA` · `SUSS` · `OTRO` (enum `TipoRetencion`) |
+| `jurisdiccion` | Sólo IIBB (CABA, Provincia…) |
+| `agente_nombre` / `agente_cuit` | El cliente que nos paga. Se precarga del cliente del presupuesto |
+| `numero_certificado`, `fecha` | **La fecha del certificado define el período** al que se imputa |
+| `base_imponible`, `alicuota`, `monto` | En la UI el monto se autocompleta con base × alícuota |
+| `archivo_*` | Certificado escaneado (PDF/imagen), opcional pero es el respaldo legal |
+| `empresa_id` | Se hereda del comprobante del presupuesto ([[#Multi-empresa — dos razones sociales (2026-09-08)]]) |
+
+> [!warning] Los importes van SIEMPRE en ARS
+> El agente retiene en pesos aunque la factura sea en USD. No hay conversión ni cotización acá.
+
+> [!warning] La fecha del certificado ≠ la fecha de la factura
+> Suelen caer en meses distintos. Los dos certificados de Microglobal son del **09/09/2026** sobre
+> facturas del **01/09**, y **no** entran en la DDJJ de agosto aunque el trabajo sea de agosto.
+> `retencionesPorTipo()` filtra por `fecha`, no por la fecha del comprobante.
+
+### Efecto en la liquidación
+
+`ContabilidadService::liquidacion()` suma las retenciones del período y las netea. **Las claves
+viejas no cambiaron de significado** — siguen siendo el impuesto determinado — para no romper a los
+consumidores actuales (`DashboardService::impuestosResumen()` delega acá). Se agregaron:
+
+- `retenciones_iva`, `retenciones_ganancias`, `retenciones_iibb`, `retenciones_otras`, `retenciones_total`
+- `iva_neto`, `ganancias_neto`, `iibb_neto`, `total_neto` — lo que **realmente se ingresa**.
+  **Negativo = saldo a favor** que se arrastra al período siguiente.
+
+> [!note] El neteo de Ganancias es informativo, el de IIBB es real
+> **IIBB** es un anticipo mensual: el neteo mensual es exactamente lo que se ingresa.
+> **Ganancias es anual**: el "determinado" mensual del ERP es una estimación propia, así que netear
+> contra él una retención puntual da un número que no corresponde a ninguna DDJJ. Leerlo como
+> referencia, no como posición fiscal.
+
+### Endpoints
+
+```
+GET    /api/presupuestos/{presupuesto}/retenciones
+POST   /api/presupuestos/{presupuesto}/retenciones          (multipart: incluye `archivo`)
+DELETE /api/presupuestos/{presupuesto}/retenciones/{retencion}
+GET    /api/presupuestos/{presupuesto}/retenciones/{retencion}/archivo   (fuera de auth, ?token=)
+```
+
+Gate: `VER_MONTOS_SALDOS` (son plata). El `store` valida que el `comprobante_afip_id` **pertenezca
+al presupuesto** — si no, la retención quedaría imputada a otra venta (422).
+
+### Frontend
+
+- Card **"Retenciones sufridas"** en `pages/presupuestos/[id].vue`, debajo de *Impuestos estimados*:
+  alta con modal, borrado, y descarga del certificado.
+- `pages/contabilidad/index.vue`: bajo cada impuesto, lo retenido y lo que queda por ingresar; el
+  tile negro suma `total_neto`.
+
+> [!tip] El certificado de Ganancias se carga UNA sola vez
+> RG 830 se emite **por orden de pago**, no por factura: un certificado puede cubrir facturas de
+> varios presupuestos y trae un importe no sujeto a retención. Se carga en uno solo y se aclara en
+> observaciones — la liquidación suma **por período**, no por presupuesto. El modal lo avisa.
+
 ## Limitaciones conocidas
 - El libro cubre **sólo lo que pasó por el sistema**. No es el Libro IVA Digital completo (eso exige
   todos los comprobantes emitidos y recibidos del período, incluidos los de afuera del ERP). Conciliar
@@ -170,6 +243,9 @@ GET   /api/contabilidad?...&empresa_id=       (filtro opcional; también en /con
   servicio se presta desde Argentina al exterior, ese comprobante falta y el libro no lo muestra.
 - Los gastos en USD (SaaS del exterior) entran como compra común si tienen IVA cargado, pero en
   realidad son importación de servicios y van por otro régimen.
+- Las **percepciones** sufridas (distintas de las retenciones) se pueden cargar con `tipo` = el
+  impuesto que corresponda, pero el modelo no las distingue de una retención. Si el estudio las
+  imputa en una línea distinta del formulario, el neteo del ERP no va a coincidir con la DDJJ.
 
 ## Ver también
 - [[Reglas de Negocio]] — dominio: cuenta corriente vs gastos, IVA en gastos

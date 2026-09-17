@@ -11,6 +11,9 @@ Ver [[Modulo Contabilidad]] para cómo el ERP arma la liquidación.
 > [!summary] Resultado
 > **Coincide.** Ventas, débito fiscal y base de IIBB dan **exacto al peso**.
 > La única diferencia es de **$737,10** en el crédito fiscal de IVA, y está **sin explicar**.
+>
+> *Actualizado 2026-09-17:* el punto 3 (retenciones no modeladas) quedó resuelto con la
+> migración 0117 y los certificados ya están cargados. El hueco de $737,10 **sigue abierto**.
 
 ---
 
@@ -33,7 +36,7 @@ De acá salen **todos** los números de venta de las dos DDJJ.
 | 18/08/2026 | 30-70974890-0 | 964 | 1.614.240,00 ⚠️ | 302.400,00 | 1.916.640,00 | `id 202` Evento 25-08 Mirador Central |
 | | | | | **438.900,00** | | |
 
-⚠️ El neto de la segunda fila es el *implícito* (`monto − iva_monto`), no el cargado. Ver [[#Gasto 202 con el monto inconsistente]].
+⚠️ El neto de la segunda fila es el *implícito* (`monto − iva_monto`), no el cargado. Ver [[#2. Gasto 202 con el monto inconsistente|el gasto 202]].
 
 ### IVA — F.2051, presentado 15/09/2026, transacción 1194370996
 
@@ -121,10 +124,15 @@ fiscal, no su composición.
 - [ ] Si resultan ser percepciones: preguntar **en qué línea del F.2051 las imputaron** y por qué la
       posición mensual no bajó
 
-> [!note] Si son percepciones, el ERP nunca va a coincidir — y está bien
-> [[Modulo Contabilidad]] **excluye percepciones de compras a propósito** (no son crédito fiscal).
-> No es un bug: es una decisión de diseño. Si el estudio las computa ahí, la diferencia es estructural
-> y hay que dejarla documentada como tal, no "arreglarla" cargando un gasto.
+> [!note] Si son percepciones, el crédito fiscal del ERP nunca va a coincidir — y está bien
+> [[Modulo Contabilidad]] **excluye percepciones del crédito fiscal a propósito** (no son IVA de
+> compras). No es un bug: es una decisión de diseño. Si el estudio las computa ahí, la diferencia es
+> estructural y hay que dejarla documentada como tal, no "arreglarla" cargando un gasto.
+>
+> Desde el **2026-09-17** sí tienen dónde cargarse, pero en otro lado: como
+> [[Modulo Contabilidad#Retenciones sufridas (migración 0117)|retención sufrida]], que descuenta del
+> impuesto a ingresar — **no** del crédito fiscal. O sea: cargarlas ahí corrige el saldo a pagar,
+> pero el renglón "crédito fiscal" va a seguir mostrando 438.900,00.
 
 ### 2. Gasto 202 con el monto inconsistente
 
@@ -143,17 +151,41 @@ monto cargado                                               = 1.916.640   ← +1
       precio unitario; si se desembolsaron **1.742.400**, el banco/caja quedó descontado de más
 - [ ] Ver de dónde salió el +10 % exacto (¿recargo? ¿percepción? ¿edición manual del monto?)
 
-### 3. El ERP no modela retenciones ni percepciones sufridas
+### 3. ~~El ERP no modela retenciones ni percepciones sufridas~~ — RESUELTO (2026-09-17)
 
-No hay tabla ni columna de retenciones/percepciones en **todo** el esquema (verificado por búsqueda en
-migraciones, modelos y servicios). Consecuencia concreta:
+> [!success] Implementado
+> Migración **0117** (`retenciones`) + neteo en `ContabilidadService::liquidacion()`.
+> Ver [[Modulo Contabilidad#Retenciones sufridas (migración 0117)]].
 
-- El ERP muestra el **impuesto determinado** (IIBB 93.905,15) y nunca el **saldo real a ingresar** (5,45)
-- Los certificados de retención que llegan en papel no tienen dónde cargarse ni contra qué imputarse
-- Es la brecha conceptual más grande entre el ERP y las DDJJ reales
+Era la brecha conceptual más grande: el ERP mostraba el **impuesto determinado** (IIBB 93.905,15) y
+nunca el **saldo real a ingresar** (5,45), y los certificados que llegan en papel no tenían dónde
+cargarse. Ahora se cargan desde el detalle del presupuesto (card "Retenciones sufridas", con el
+certificado adjunto) y `/contabilidad` muestra, bajo cada impuesto, lo retenido y lo que queda por
+ingresar.
 
-- [ ] Decidir si se modela (tabla de retenciones/percepciones sufridas imputables al período) o si se
-      asume que ese cálculo queda del lado del estudio
+**Los dos certificados de esta carpeta ya están cargados:**
+
+| Certificado | Presupuesto | Monto |
+|---|---|---:|
+| IIBB CABA 21380 s/ Factura A 0003-00000009 | BLU-202608-027 | 92.100,00 |
+| IIBB CABA 21380 s/ Factura A 0003-00000008 | BLU-202608-026 | 45.663,18 |
+| Ganancias RG 830 17366 (cubre las dos facturas) | BLU-202608-027 | 90.503,60 |
+
+Con eso, **septiembre 2026** (filtrado por BLU) queda:
+
+```
+IIBB        determinado 137.763,18  −  retenido 137.763,18  →  a ingresar   0,00
+Ganancias   determinado  89.924,35  −  retenido  90.503,60  →  a ingresar −579,25
+```
+
+El IIBB cerrando en **cero** es buena señal: el agente retuvo exactamente el 3% de la misma base que
+el ERP usa para determinar el impuesto. El número de Ganancias, en cambio, es sólo referencia —
+Ganancias es anual y el "determinado" mensual es una estimación del ERP, no una posición fiscal.
+
+- [x] Modelar retenciones/percepciones sufridas imputables al período
+- [ ] **Sigue abierto:** el modelo no distingue una *percepción* de una *retención*. Si el hueco del
+      punto 1 resulta ser percepciones y el estudio las imputa en otra línea del formulario, el neteo
+      del ERP no va a coincidir con la DDJJ igual.
 
 ---
 

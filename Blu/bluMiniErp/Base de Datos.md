@@ -213,6 +213,27 @@ Razones sociales propias del negocio (contabilidades separadas). Catálogo chico
 
 `comprobantes_afip` también sumó `empresa_id` (FK -> empresas, nullable, mig 0115). AFIP emite bajo la principal; la NC hereda el de su factura.
 
+### `retenciones` (2026-09-17, mig 0117)
+Retenciones/percepciones **sufridas**: lo que el agente nos descuenta al pagarnos y después se computa como pago a cuenta del impuesto del período. Ver [[Modulo Contabilidad#Retenciones sufridas (migración 0117)]].
+
+| Columna | Tipo | Notas |
+|---------|------|-------|
+| id | bigint PK | |
+| presupuesto_id | FK -> presupuestos | cascadeOnDelete. Es el ancla que usa el equipo |
+| comprobante_afip_id | FK -> comprobantes_afip | nullable, nullOnDelete. La factura concreta sobre la que se retuvo; el `store` valida que sea del mismo presupuesto |
+| empresa_id | FK -> empresas | nullable. Se hereda del comprobante del presupuesto |
+| tipo | varchar(20) | `GANANCIAS` · `IIBB` · `IVA` · `SUSS` · `OTRO` (enum `TipoRetencion`) |
+| jurisdiccion | varchar(60) | nullable. Sólo IIBB ("CABA"…) |
+| agente_nombre / agente_cuit | varchar | el cliente que nos paga |
+| numero_certificado | varchar(60) | nullable |
+| fecha | date | **define el período al que se imputa** — ojo, ≠ fecha de la factura |
+| base_imponible / alicuota / monto | decimal | **siempre en ARS**, aunque la factura sea USD |
+| archivo_nombre / _path / _mime / _size | varchar | certificado escaneado, opcional |
+| observaciones | text | nullable |
+| created_by | FK -> usuarios | nullable |
+
+Índices: `(fecha, tipo)` y `presupuesto_id`. No hay tabla de percepciones aparte: se cargan acá con el `tipo` del impuesto que corresponda.
+
 ### `bancos_cajas`
 | Columna | Tipo | Notas |
 |---------|------|-------|
