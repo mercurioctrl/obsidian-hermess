@@ -26,6 +26,8 @@ Se loguea una vez y se salta entre apps con el menú del header. Ver [[arquitect
 ## Operación de Laset en el ERP de NB (`companyCode = 11`)
 La exportación de Laset se opera además desde el ERP de pedidos de NB, donde Laset es la
 empresa `companyCode = 11`. Notas de esa operación en [[pedidos]].
+- [[como-se-importa-laset-comp11]] — cómo se corre el import: qué dispara el front
+  (`/syncLaset`), qué queda por CLI, de dónde sale cada dato y gotchas por servidor.
 - [[import-proveedores-sli]] — reconstrucción forense del import de las hojas `Codigos SLI`
   (→ ECCN, sí se importó) y `Database Proveedores` (no se importó nunca).
 
