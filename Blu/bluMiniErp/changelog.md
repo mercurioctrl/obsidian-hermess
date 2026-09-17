@@ -4,7 +4,14 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
-## 2026-09-17 — Contabilidad: retenciones sufridas por presupuesto
+## 2026-09-17 — Contabilidad: retenciones sufridas + ERP vs Estudio contable
+
+### «ERP vs Estudio contable»: cargar la DDJJ del estudio mes a mes (migración 0118)
+- feat: el ERP calculaba su liquidación y el estudio mandaba la suya, sin forma de verlas juntas — la conciliación de agosto 2026 hubo que hacerla a mano contra los PDFs. Ahora se carga la DDJJ del estudio por período y se compara.
+- Tabla `declaraciones_estudio`, **una por empresa/período/impuesto** (índice único; el POST es upsert, cargar y corregir son la misma acción). `empresa_id` obligatorio: una DDJJ es de un CUIT, por eso con empresa «Todas» no se ofrece comparación en lugar de inventar una suma.
+- **Se guarda el desglose** (débito, crédito, base, determinado, retenciones), no sólo el importe a pagar: en agosto el total cerraba salvo $737,10 y el hueco estaba en el crédito fiscal. La DDJJ escaneada se puede adjuntar.
+- Sección "ERP vs Estudio contable" en `/contabilidad`: tabla Concepto·ERP·Estudio·Diferencia por impuesto + tabla mes a mes de 12 meses + botón "Copiar lo del ERP".
+- ⚠️ La columna ERP va **neta de las retenciones cargadas** ([[Modulo Contabilidad#Retenciones sufridas (migración 0117)]]): si faltan certificados, la diferencia es justamente esa. Una diferencia no es necesariamente un error del ERP — puede ser un comprobante que no pasó por el sistema.
 
 ### Tabla `retenciones` + neteo en la liquidación (rama `feat/retenciones-sufridas`, migración 0117)
 - feat: hasta acá [[Modulo Contabilidad]] sólo calculaba el impuesto **determinado**, así que mostraba "IIBB a pagar $93.905,15" cuando en la DDJJ real de agosto 2026 se ingresaron **$5,45** — el resto ya había sido retenido. Los certificados que llegan en papel no tenían dónde cargarse. Detectado conciliando contra las DDJJ del estudio: ver [[Conciliacion Impuestos 2026-08]].

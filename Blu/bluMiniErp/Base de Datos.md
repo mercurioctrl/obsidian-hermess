@@ -234,6 +234,27 @@ Retenciones/percepciones **sufridas**: lo que el agente nos descuenta al pagarno
 
 Índices: `(fecha, tipo)` y `presupuesto_id`. No hay tabla de percepciones aparte: se cargan acá con el `tipo` del impuesto que corresponda.
 
+### `declaraciones_estudio` (2026-09-17, mig 0118)
+DDJJ que presenta el estudio contable, para contrastarla con la liquidación del ERP. Ver [[Modulo Contabilidad#DDJJ del estudio — «ERP vs Estudio» (migración 0118)]].
+
+| Columna | Tipo | Notas |
+|---------|------|-------|
+| id | bigint PK | |
+| empresa_id | FK -> empresas | **obligatorio**: una DDJJ pertenece a un CUIT |
+| periodo_anio / periodo_mes | smallint / tinyint | |
+| impuesto | varchar(20) | `IVA` · `IIBB` · `GANANCIAS` (enum `ImpuestoDeclaracion`) |
+| base_imponible | decimal | nullable. IIBB: base · IVA: neto gravado |
+| debito_fiscal / credito_fiscal | decimal | nullable, sólo IVA |
+| impuesto_determinado | decimal | nullable, antes de retenciones |
+| retenciones | decimal | nullable, las computadas por el estudio |
+| monto_a_pagar | decimal | **lo único obligatorio** |
+| numero_formulario | varchar(40) | "F.2051", "F.5220" |
+| fecha_vencimiento / fecha_pago / pagado | date / date / bool | |
+| archivo_nombre / _path / _mime / _size | varchar | DDJJ escaneada, opcional |
+| observaciones / created_by | text / FK | |
+
+Índice **único** `decl_unica_por_periodo` sobre (empresa_id, periodo_anio, periodo_mes, impuesto): el POST es un upsert, volver a cargar **edita**.
+
 ### `bancos_cajas`
 | Columna | Tipo | Notas |
 |---------|------|-------|

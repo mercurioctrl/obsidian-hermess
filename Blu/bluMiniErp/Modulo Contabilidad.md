@@ -235,6 +235,68 @@ al presupuesto** — si no, la retención quedaría imputada a otra venta (422).
 > varios presupuestos y trae un importe no sujeto a retención. Se carga en uno solo y se aclara en
 > observaciones — la liquidación suma **por período**, no por presupuesto. El modal lo avisa.
 
+## DDJJ del estudio — «ERP vs Estudio» (migración 0118)
+
+Lo que el estudio declara y manda a pagar cada mes, guardado **al lado** de lo que calculó el ERP.
+Agregado el **2026-09-17**. No corrige la liquidación propia: son dos fuentes que deben dar parecido,
+y el valor está justamente en ver la diferencia.
+
+**El problema que resuelve:** la conciliación de agosto 2026 hubo que hacerla a mano contra los PDFs
+del estudio. Ver [[Conciliacion Impuestos 2026-08]].
+
+Tabla `declaraciones_estudio`, **una por empresa/período/impuesto** (índice único). El POST es un
+**upsert**: cargar y corregir son la misma acción. `empresa_id` es obligatorio — una DDJJ pertenece a
+un CUIT, así que con empresa «Todas» la sección no ofrece comparación en vez de inventar una suma.
+
+> [!warning] Se guarda el DESGLOSE, no sólo el importe a pagar
+> En agosto 2026 el total cerraba salvo **$737,10** y el hueco estaba en el **crédito fiscal**: con
+> sólo el total, eso no se ve. Campos opcionales: `base_imponible`, `debito_fiscal`,
+> `credito_fiscal`, `impuesto_determinado`, `retenciones`. El único obligatorio es `monto_a_pagar`.
+> También `numero_formulario`, `fecha_vencimiento`, `fecha_pago`, `pagado` y la DDJJ escaneada.
+
+### Qué se ve
+
+Sección **"ERP vs Estudio contable"** en `/contabilidad`:
+
+- Por impuesto (IVA / IIBB), tabla **Concepto · ERP · Estudio · Diferencia** renglón por renglón:
+  débito, crédito, determinado, retenciones, a ingresar. ✓ verde si coincide, ámbar si no.
+- Tabla **mes a mes** de los últimos 12 meses con lo que queda a ingresar en cada fuente.
+- Botón **"Copiar lo del ERP"** en el modal: precarga el desglose para tipear sólo lo que difiere.
+
+Con agosto 2026 cargado, el panel reproduce exactamente la conciliación manual:
+
+```
+IVA   Débito fiscal          657.343,35   657.343,35   ✓
+      Crédito fiscal         438.900,00   439.637,10     737,10
+      A ingresar             218.443,35   217.706,25    -737,10
+IIBB  Base imponible       3.130.171,80 3.130.171,80   ✓
+      Impuesto determinado    93.905,15    93.905,15   ✓
+      Retenciones                  0,00    93.899,70  93.899,70
+      A ingresar              93.905,15         5,45 -93.899,70
+```
+
+> [!note] Cómo leer una diferencia
+> La columna **ERP es neta de las retenciones cargadas**
+> ([[#Retenciones sufridas (migración 0117)]]). La fila de retenciones de IIBB de arriba muestra
+> $0,00 contra $93.899,70 porque los certificados de **agosto** todavía no están cargados en el ERP
+> (sólo están los de septiembre). Eso no es un error de cálculo: es el panel diciendo qué falta.
+>
+> Y una diferencia tampoco es necesariamente un error del ERP: puede ser un comprobante que nunca
+> pasó por el sistema. Es el disparador para ir a buscarlo, no un veredicto.
+
+### Endpoints
+
+```
+GET    /api/declaraciones-estudio?empresa_id=&anio=
+POST   /api/declaraciones-estudio                        (upsert, multipart con `archivo`)
+DELETE /api/declaraciones-estudio/{declaracion}
+GET    /api/declaraciones-estudio/{declaracion}/archivo  (fuera de auth, ?token=)
+```
+
+Gate `VER_MONTOS_SALDOS`. `GET /api/contabilidad` suma `declaraciones` (las del período, indexadas
+por impuesto) y `por_mes` trae `iva_neto`/`iibb_neto` + `iva_declarado`/`iibb_declarado`. **Todo
+`null` con empresa «Todas».**
+
 ## Limitaciones conocidas
 - El libro cubre **sólo lo que pasó por el sistema**. No es el Libro IVA Digital completo (eso exige
   todos los comprobantes emitidos y recibidos del período, incluidos los de afuera del ERP). Conciliar

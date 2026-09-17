@@ -183,6 +183,19 @@ el ERP usa para determinar el impuesto. El número de Ganancias, en cambio, es s
 Ganancias es anual y el "determinado" mensual es una estimación del ERP, no una posición fiscal.
 
 - [x] Modelar retenciones/percepciones sufridas imputables al período
+
+### 4. La conciliación ya no hace falta hacerla a mano (2026-09-17)
+
+> [!success] Implementado
+> Migración **0118** (`declaraciones_estudio`) + sección "ERP vs Estudio contable".
+> Ver [[Modulo Contabilidad#DDJJ del estudio — «ERP vs Estudio» (migración 0118)]].
+
+Todo este cotejo ahora vive en `/contabilidad`: se carga la DDJJ del estudio por período (con el
+desglose y el PDF adjunto) y el panel muestra **Concepto · ERP · Estudio · Diferencia** renglón por
+renglón, más una tabla mes a mes. **Agosto 2026 ya está cargado** (F.2051 y F.5220) y el panel
+reproduce exactamente los números de esta nota, incluido el hueco de $737,10 en el crédito fiscal.
+
+Esta nota queda como el registro de **por qué** se construyó eso y qué sigue sin explicarse.
 - [ ] **Sigue abierto:** el modelo no distingue una *percepción* de una *retención*. Si el hueco del
       punto 1 resulta ser percepciones y el estudio las imputa en otra línea del formulario, el neteo
       del ERP no va a coincidir con la DDJJ igual.
