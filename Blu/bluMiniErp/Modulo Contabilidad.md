@@ -179,3 +179,7 @@ GET   /api/contabilidad?...&empresa_id=       (filtro opcional; también en /con
 - [[Frontend]] — Dashboard (Rentabilidad por Cliente), proyecto (simulador de impuestos)
 - [[Errores Comunes#Costo real de una compra en el simulador de impuestos (2026-08-23)]]
 - [[changelog#2026-08-21]]
+
+## Conciliaciones contra las DDJJ reales
+
+- [[Conciliacion Impuestos 2026-08]] — cotejo de agosto 2026 contra lo que presentó el estudio. Útil para ver qué toma y qué no toma esta liquidación frente a un F.2051 real.
