@@ -213,6 +213,48 @@ Razones sociales propias del negocio (contabilidades separadas). Catálogo chico
 
 `comprobantes_afip` también sumó `empresa_id` (FK -> empresas, nullable, mig 0115). AFIP emite bajo la principal; la NC hereda el de su factura.
 
+### `retenciones` (2026-09-17, mig 0117)
+Retenciones/percepciones **sufridas**: lo que el agente nos descuenta al pagarnos y después se computa como pago a cuenta del impuesto del período. Ver [[Modulo Contabilidad#Retenciones sufridas (migración 0117)]].
+
+| Columna | Tipo | Notas |
+|---------|------|-------|
+| id | bigint PK | |
+| presupuesto_id | FK -> presupuestos | cascadeOnDelete. Es el ancla que usa el equipo |
+| comprobante_afip_id | FK -> comprobantes_afip | nullable, nullOnDelete. La factura concreta sobre la que se retuvo; el `store` valida que sea del mismo presupuesto |
+| empresa_id | FK -> empresas | nullable. Se hereda del comprobante del presupuesto |
+| tipo | varchar(20) | `GANANCIAS` · `IIBB` · `IVA` · `SUSS` · `OTRO` (enum `TipoRetencion`) |
+| jurisdiccion | varchar(60) | nullable. Sólo IIBB ("CABA"…) |
+| agente_nombre / agente_cuit | varchar | el cliente que nos paga |
+| numero_certificado | varchar(60) | nullable |
+| fecha | date | **define el período al que se imputa** — ojo, ≠ fecha de la factura |
+| base_imponible / alicuota / monto | decimal | **siempre en ARS**, aunque la factura sea USD |
+| archivo_nombre / _path / _mime / _size | varchar | certificado escaneado, opcional |
+| observaciones | text | nullable |
+| created_by | FK -> usuarios | nullable |
+
+Índices: `(fecha, tipo)` y `presupuesto_id`. No hay tabla de percepciones aparte: se cargan acá con el `tipo` del impuesto que corresponda.
+
+### `declaraciones_estudio` (2026-09-17, mig 0118)
+DDJJ que presenta el estudio contable, para contrastarla con la liquidación del ERP. Ver [[Modulo Contabilidad#DDJJ del estudio — «ERP vs Estudio» (migración 0118)]].
+
+| Columna | Tipo | Notas |
+|---------|------|-------|
+| id | bigint PK | |
+| empresa_id | FK -> empresas | **obligatorio**: una DDJJ pertenece a un CUIT |
+| periodo_anio / periodo_mes | smallint / tinyint | |
+| impuesto | varchar(20) | `IVA` · `IIBB` · `GANANCIAS` (enum `ImpuestoDeclaracion`) |
+| base_imponible | decimal | nullable. IIBB: base · IVA: neto gravado |
+| debito_fiscal / credito_fiscal | decimal | nullable, sólo IVA |
+| impuesto_determinado | decimal | nullable, antes de retenciones |
+| retenciones | decimal | nullable, las computadas por el estudio |
+| monto_a_pagar | decimal | **lo único obligatorio** |
+| numero_formulario | varchar(40) | "F.2051", "F.5220" |
+| fecha_vencimiento / fecha_pago / pagado | date / date / bool | |
+| archivo_nombre / _path / _mime / _size | varchar | DDJJ escaneada, opcional |
+| observaciones / created_by | text / FK | |
+
+Índice **único** `decl_unica_por_periodo` sobre (empresa_id, periodo_anio, periodo_mes, impuesto): el POST es un upsert, volver a cargar **edita**.
+
 ### `bancos_cajas`
 | Columna | Tipo | Notas |
 |---------|------|-------|
