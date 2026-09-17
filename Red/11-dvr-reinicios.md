@@ -82,6 +82,15 @@ Se deshabilitó además de pararlo porque la PC reinició dos veces esta semana 
 - **Verificar:** `python3 ~/scripts/dvr-reinicios.py 3`
 - **Revertir:** `sudo systemctl enable --now frente-captura`
 
+**Marcha del test:**
+
+| Corte | Anormales (`Flag:1`) |
+|---|---|
+| 7 días previos (09-09 → 09-16 13:45) | **11** (~1,6/día) |
+| Test, primeras 18 h (09-16 15:01 → 09-17 09:15) | **0** |
+
+Los únicos reinicios dentro de la ventana son los programados de las 05:00. Pinta bien, pero 18 h todavía no alcanzan: hubo rachas de hasta 46 h sin cuelgues (09-10 15:55 → 09-12 22:30). Esperar a las 48 h.
+
 > ⚠️ Mientras dura el test **no llegan los avisos de movimiento del frente** a Telegram. El timbre ([[07-timbre-vto-telegram]]) y la PTZ siguen andando: apuntan a `.102` y `.64`, no tocan el DVR.
 
 **Si el test da positivo** (cero cuelgues), dos arreglos posibles para [[10-frente-captura]]:
@@ -98,16 +107,20 @@ Monitor dejado corriendo el **2026-09-16 15:07** para medir el test sin estar mi
 `/home/hermess/scripts/dvr-monitor/`:
 
 - `dvr_monitor.py` — loop principal.
-- `config.env` (perms 600) — `DVR_HOST/USER/PASS`, `CHECK_INTERVAL=30`, `FAILS_TO_DOWN=2`, `STILL_DOWN_SEC=300`, `NOTIFY_SCHEDULED=1`, `NOTIFY_START=1`, `DRY_RUN`.
+- `config.env` (perms 600) — `DVR_HOST/USER/PASS`, `CHECK_INTERVAL=10`, `FAILS_TO_DOWN=2`, `STILL_DOWN_SEC=300`, `RECONCILE_MIN=60`, `NOTIFY_SCHEDULED=1`, `NOTIFY_START=1`, `DRY_RUN`.
 - `/etc/systemd/system/dvr-monitor.service` — `enabled`, `User=hermess`.
 
-**Cómo funciona (y por qué así):** sonda **TCP al puerto 80 cada 30 s** — un handshake, **sin login**. Es deliberado: el monitor no puede sumar carga al DVR, que es justamente la hipótesis bajo prueba. Recién cuando lo ve **caer y volver**, hace **un** login RPC2 y lee el log para saber el `Flag` del arranque:
+**Cómo funciona (y por qué así):** sonda **TCP al puerto 80 cada 10 s** — un handshake, **sin login**. Es deliberado: el monitor no puede sumar carga al DVR, que es justamente la hipótesis bajo prueba. Recién cuando lo ve **caer y volver**, hace **un** login RPC2 y lee el log para saber el `Flag` del arranque:
 
 - `Flag:0` → 🔁 **PROGRAMADO** (05:00). Llega uno por día y sirve de latido del monitor.
 - `Flag:1` → 🚨 **ANORMAL**, con tiempo fuera de línea y las horas exactas del log.
 - Si se cae y **no vuelve en 5 min** → ⚠️ aviso aparte.
 
 Espera 15-20 s antes de leer el log (el DVR abre el 80 antes de aceptar RPC) y reintenta 3 veces.
+
+> ⚠️ **Corregido 2026-09-17:** arrancó con `CHECK_INTERVAL=30` y `FAILS_TO_DOWN=2`, o sea que necesitaba **60 s caído** para darse cuenta — y el DVR bootea en **~45 s**. Se comió el reinicio programado del 09-17 05:00 sin avisar. La regla es `CHECK_INTERVAL × FAILS_TO_DOWN` **< tiempo de booteo**: con 10 s × 2 = 20 s hay margen de sobra. Justo los cuelgues de ~50 s eran la mitad de los casos, así que el monitor se habría perdido la mitad del test.
+>
+> Además se agregó **relectura del log cada `RECONCILE_MIN`=60 min** como red de seguridad: si la sonda igual se pierde un reinicio, la relectura lo encuentra y avisa (marcado *"detectado al releer el log"*). Es 1 login por hora, nada al lado de los 115.000 requests/día del poller. Y si el DVR deja de responder pero **no** aparece un `StartUp` nuevo en el log, ahora avisa distinto (fue la red o un cuelgue del servicio web, no un reinicio).
 
 **Telegram:** mismo esquema que [[10-frente-captura]] y el [[07-timbre-vto-telegram|timbre]] — el `.service` carga **dos** `EnvironmentFile`: primero `vto-timbre/config.env` (credenciales del bot) y luego el propio.
 
