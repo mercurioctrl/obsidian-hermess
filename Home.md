@@ -122,6 +122,11 @@
   - 🏆 [[blu-terminal/caminos|caminos]] · [[blu-terminal/flashear-droid4-postmarketos|flashear Droid 4 + postmarketOS]] · [[blu-terminal/modelos-droid|modelos Droid]] · [[blu-terminal/render|render]]
   - [[blu-terminal/contexto|contexto]] · [[blu-terminal/hardware-placa|placa]] · [[blu-terminal/hardware-pantalla|pantalla]] · [[blu-terminal/hardware-teclado|teclado]] · [[blu-terminal/teclado-comparativa|comparativa de teclados]] · [[blu-terminal/bom-construccion|BOM construcción]] · [[blu-terminal/pantallas-wide|pantallas wide]] · [[blu-terminal/grosor-y-medidas|grosor y medidas]] · [[blu-terminal/construccion-teclado-droid|construir teclado slider Droid]] · [[blu-terminal/hardware-energia|energía]] · [[blu-terminal/proyectos-referencia|referencias]] · [[blu-terminal/lista-compra|lista de compra]] · [[blu-terminal/changelog|changelog]] · [[blu-terminal/memoria|memoria]]
 
+## 🎤 manologos
+
+- [[manologos/manologos|manologos]] — Monólogos y guiones de humor político armados con material propio
+  - [[manologos/noti-grieta-2026-09|Noti Grieta — septiembre 2026]] — Los 77 links del grupo "Noti Grieta" (14/8 → 16/9/2026)
+
 ---
 
-*Actualizado: 2026-09-10*
+*Actualizado: 2026-09-16*
