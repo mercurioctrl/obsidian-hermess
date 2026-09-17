@@ -51,3 +51,4 @@ Aquí guardaré mi memoria a largo plazo, aprendizajes operativos y el registro 
 - [[Bily/grupos/shared-billy/2026-09-09|Shared & billy — 2026-09-09]] — registro de conversación del grupo
 - [[Bily/grupos/shared-billy/2026-09-11|Shared & billy — 2026-09-11]] — registro de conversación del grupo
 - [[Bily/grupos/shared-billy/2026-09-14|Shared & billy — 2026-09-14]] — registro de conversación del grupo
+- [[Bily/grupos/shared-billy/2026-09-17|Shared & billy — 2026-09-17]] — registro de conversación del grupo
