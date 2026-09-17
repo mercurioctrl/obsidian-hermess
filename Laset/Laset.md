@@ -23,6 +23,12 @@ Se loguea una vez y se salta entre apps con el menú del header. Ver [[arquitect
 - [[memoria]] — memoria del proyecto (Claude Code).
 - [[changelog]] — registro de trabajo.
 
+## Operación de Laset en el ERP de NB (`companyCode = 11`)
+La exportación de Laset se opera además desde el ERP de pedidos de NB, donde Laset es la
+empresa `companyCode = 11`. Notas de esa operación en [[pedidos]].
+- [[import-proveedores-sli]] — reconstrucción forense del import de las hojas `Codigos SLI`
+  (→ ECCN, sí se importó) y `Database Proveedores` (no se importó nunca).
+
 ## Notas de equipo
 - [[Martes]] · [[Miercoles]] — ayudamemoria y tickets del equipo.
 
