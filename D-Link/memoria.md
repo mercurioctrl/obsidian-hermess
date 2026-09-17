@@ -80,8 +80,10 @@ Veo 3 = lo más caro → validar toma por toma. Google Flow usa Veo 3 (acceso po
   (rama `main`, servido desde el site propio, **sin WordPress**). Commits **solo como `mercurioctrl`**. El editor
   es ahora un sistema con **`index.html` dashboard** (etiquetas B2C/B2B editables), **barra flotante** para
   editar/redimensionar imágenes y texto (negrita sobre selección), **panel Secciones** (ocultar bloques),
-  **selector** de template, y `servidor.py` con `/api/meta` + `/api/upload`. Logos de retailers del M15 al set
-  oficial **DLINK_LOGO_RESELLERS** (PNG). Ver
+  **selector** de template, y `servidor.py` con `/api/meta` + `/api/upload`. El dashboard tiene un **toggle
+  `Templates | Versiones`** que muestra las versiones guardadas con la misma vista de tarjetas (visor `ver.html`,
+  deep-link `editor#modelo:versionId`). Deploy vía rama **`blu-dev-staff`** (CI de auto-deploy); publicar = PR
+  `main`→`blu-dev-staff`. Logos de retailers del M15 al set oficial **DLINK_LOGO_RESELLERS** (PNG). Ver
   [[newsletter-campana#11. Repo propio + sistema web v2 (2026-09-16)|newsletter-campana]].
 
 ## Ver también

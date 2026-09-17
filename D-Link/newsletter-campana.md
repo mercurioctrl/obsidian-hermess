@@ -195,7 +195,10 @@ El editor se convirtió en un **sistema web** para el equipo (todo servido por `
 IP LAN `10.10.10.7` — **no** funciona por `file://`):
 
 - **`index.html` = dashboard/home**: entrada al sistema, con preview de los 7 newsletters, **etiqueta
-  B2C/B2B editable** (click, compartida) y accesos a Abrir / Editar cada pieza.
+  B2C/B2B editable** (click, compartida) y accesos a Abrir / Editar cada pieza. Trae un **toggle
+  `Templates | Versiones`**: en "Versiones" se ven **todas las versiones guardadas** por el equipo con la
+  **misma vista de tarjetas** (preview real, filtro por producto, fecha, Abrir/Editar/Borrar). Visor a tamaño
+  real en `ver.html`; el botón Editar abre el editor con esa versión cargada (`editor#modelo:versionId`).
 - **`editor-newsletters.html` v2**: interfaz clara estilo dlink.com. **Selector desplegable** de template
   agrupado B2C/B2B; **barra flotante contextual** al pasar el mouse (imágenes: cambiar URL, **subir archivo**,
   **redimensionar**; texto: **tamaño** y **negrita a lo seleccionado**); **panel Secciones** para mostrar/ocultar
@@ -204,6 +207,10 @@ IP LAN `10.10.10.7` — **no** funciona por `file://`):
 
 Además, los **logos de retailers del M15** se cambiaron al set oficial **DLINK_LOGO_RESELLERS** (PNG
 transparente) y la sección "En tienda física" quedó en **3 + 2** centrado.
+
+Para deploy hay una rama de **staging `blu-dev-staff`** con **CI de auto-deploy** (`.github/workflows/deploy.yml`)
+al dominio estático de staging (requiere `index.html` en la raíz). El flujo para publicar es un PR
+**`main` → `blu-dev-staff`** (`compare/blu-dev-staff...main`).
 
 > Con esto el equipo edita, versiona y organiza los emails desde el navegador, sin tocar código, y todo
 > queda versionado en el repo del site.

@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-09-17 — Galería de "Versiones" en el dashboard + staging (blu-dev-staff)
+
+El dashboard ahora deja **ver las versiones guardadas con la misma vista de tarjetas** que las templates,
+y el set tiene una rama de **staging con auto-deploy**. Detalle en
+[[newsletter-campana#11. Repo propio + sistema web v2 (2026-09-16)|newsletter-campana]] y
+[[contexto#Newsletter / envío de emails (sep-2026)|contexto]].
+
+- **`index.html` — toggle `Templates | Versiones`**: en "Versiones" lista **todas** las versiones guardadas
+  por el equipo (`/api/list`) como tarjetas con **preview real**, **filtro por producto**, fecha, tag B2C/B2B
+  y acciones **Abrir ↗ / Editar / 🗑 Borrar**. Deep-link `index.html#versiones`. Los previews se cargan por
+  **`srcdoc`** (no `src`) porque el HTML guardado usa rutas relativas `img/...` y vive en `/versiones/<k>/`;
+  con `srcdoc` resuelven contra la raíz del site y las imágenes se ven.
+- **`ver.html`** (nuevo): visor de una versión a tamaño real (misma técnica `srcdoc`), abierto desde
+  "Abrir ↗" con `ver.html?k=<modelo>&id=<versionId>`.
+- **`editor-newsletters.html`**: deep-link ampliado `editor#<modelo>:<versionId>` para abrir el editor con una
+  **versión puntual cargada** (lo usan los botones "Editar" de las tarjetas de versión).
+- **Staging `blu-dev-staff`**: rama con **CI de auto-deploy** (`.github/workflows/deploy.yml`) al dominio
+  estático de staging (necesita `index.html` en la raíz, si no da 403). Flujo: PR **`main` → `blu-dev-staff`**
+  (`compare/blu-dev-staff...main`). Commits **solo como `mercurioctrl`**, sin Co-Authored-By.
+
+Archivos: `index.html`, `ver.html`, `editor-newsletters.html`.
+
 ## 2026-09-16 — Repo propio + dashboard/editor v2 + logos oficiales (M15)
 
 Se llevó todo el set de newsletters a su **propio site/repo** y se convirtió el editor en un sistema

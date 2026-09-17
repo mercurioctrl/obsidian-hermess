@@ -102,7 +102,10 @@ el problema es **relevancia**, no calidad.
   **ya no depende de WordPress** → imágenes por rutas relativas). Commits **solo como
   `mercurioctrl <catrielmercurio@gmail.com>`, sin Co-Authored-By**. Piezas del sistema:
   - **`index.html`** = dashboard/home: preview de los 7 newsletters, etiqueta **B2C/B2B editable** (click,
-    compartida vía `/api/meta`), botones Abrir/Editar con deep-link `editor#modelo`.
+    compartida vía `/api/meta`), botones Abrir/Editar con deep-link `editor#modelo`. **Toggle `Templates |
+    Versiones`**: la vista Versiones lista las versiones guardadas (`/api/list`) con la **misma vista de
+    tarjetas** (preview real por `srcdoc`, filtro por producto, Abrir/Editar/Borrar; deep-link `#versiones`).
+  - **`ver.html`** = visor de una versión a tamaño real (`ver.html?k=modelo&id=versionId`, `srcdoc`).
   - **`editor-newsletters.html`** = editor con interfaz clara estilo dlink.com (header con logo, selector
     desplegable de template agrupado B2C/B2B, botón Inicio 🏠). Edición inline + **barra flotante contextual**
     (hover en modo edición): imágenes → Cambiar URL / **Subir** / **−+ redimensionar**; texto → **A−/A+ tamaño**
@@ -112,6 +115,10 @@ el problema es **relevancia**, no calidad.
     `versiones/meta.json`) · `/api/upload` (imágenes → `img/uploads/`, base64, máx 8 MB).
   - **Logos de retailers del M15:** set oficial **DLINK_LOGO_RESELLERS** (PNG transparente, `logos/argentina2/`
     → `img/tiendas/`). Sección "En tienda física" en layout **3 + 2** centrado.
+  - **Deploy / staging:** rama **`blu-dev-staff`** con CI de auto-deploy (`.github/workflows/deploy.yml`) al
+    dominio estático de staging (necesita `index.html` en la raíz, si no 403). Publicar = PR **`main` →
+    `blu-dev-staff`** (`compare/blu-dev-staff...main`). Editar/versionar **no** funciona por `file://` (necesita
+    `servidor.py`; IP LAN `10.10.10.7:8000`).
 
 ## Gap a cerrar (antes de fijar metas)
 Scraping de MercadoLibre (share-of-shelf, precios, reviews vs TP-Link/Mercusys) + sell-through de
