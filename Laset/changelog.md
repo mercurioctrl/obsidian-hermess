@@ -2,6 +2,56 @@
 
 Ver también: [[Laset]] · [[contexto]]
 
+## 2026-09-18
+
+**DB — columna faltante del clon**
+- `pedprol.doNotUpdateCost` no existía: abrir una orden de compra moría con
+  `Invalid column name 'doNotUpdateCost'`. El esquema se clonó de NB antes de que la
+  agregaran allá, y el repo sólo tiene código que la usa, ninguna migración que la cree.
+  SQL versionado en `db-laset/2026-09-18_pedprol_doNotUpdateCost.sql` (BIT NULL default 0,
+  igual que su hermana `updateAverageCost`) y aplicado. Verificadas el resto de las columnas
+  de esa query: no falta ninguna otra.
+
+**Git**
+- Subido y mergeado a `blu-dev-staff`: fixes del importador, favicons, fix del menú, grilla de
+  precios por color y los 2 commits de listas de color que habían quedado colgados.
+- Pendiente de merge: `feature/laset-ocultamientos-ui` (links a saftel, 4 pestañas de
+  inventario, `icon.svg`).
+
+## 2026-09-17
+
+**Importación completa de la planilla** → ver [[import-planilla-comp11]]
+- Wipe + reimport de `Cotizaciones y Proformas 2025.10.01 (2).xlsx` (5.075 filas) sobre
+  comp=11. Resultado: 661 OCs, 623 ventas, 661/600 remitos, 1.062 artículos, 0 stock negativo.
+- **La lección**: "Importar todo" no borra nada; sin wipe previo Fase C apila sobre lo
+  existente. La primera pasada dejó el ERP inflado (666 SKUs con delta) y hubo que rehacerla.
+- Fase D abortaba entera por 7 OCs de prueba con almacén `SAF` (no comp=11). Se borraron y se
+  corrigió el comando para que las difiera en vez de tirar la transacción.
+
+**Fixes del importador** (PR mergeado en backErp)
+- `App\Support\XlsxUpload`: la regla `mimes:xlsx` rechazaba **todo** xlsx porque libmagic
+  devuelve `octet-stream`. Afectaba a los 3 botones que suben planilla.
+- `docker-compose` monta `apache-uploads.ini`: PHP corría con `upload_max_filesize = 2M` y
+  las subidas morían con "El campo file no se pudo subir".
+- `laset:run-import-job` rescata las líneas de error antes del recorte a 1500 chars.
+- `delta-check` compara planilla y ERP con el mismo criterio (sin filtro de año, sin filas
+  IGNORED, y una fila es venta sólo si tiene proforma o factura): de 220 SKUs a 24.
+- Nuevos: `laset:reimport` (equivalente CLI del botón) y `scripts/laset_sli_to_csv.py`.
+
+**Proveedores y ECCN**
+- Nuevo `laset:import-proveedores-comp11`: completa dirección/CP/documento/país desde la hoja
+  `Database Proveedores`, que nunca había tenido importador. Aplicados **55 códigos postales**
+  (el `zipcode` es el que ms-comprobantes usa para el SLI). En esta base los proveedores ya
+  tenían dirección y documento, así que fue lo único que faltaba.
+- ECCN: `ecc_familia_proveedor` quedó con **82 vínculos** recalculados contra los maestros
+  reales; las 94 anteriores venían heredadas del clon de NB.
+
+**Front**
+- Favicons de Laset en los 7 fronts (isotipo, no el logotipo: a 32px es ilegible). Los que
+  había eran los de NB.
+- El menú del header ignoraba `visible` en las entradas de primer nivel: por eso "Libre
+  Opción" seguía apareciendo pese al `visible:false`. Corregido en los 6 fronts con menú.
+
 ## 2026-09-16
 
 **Docs y contexto**

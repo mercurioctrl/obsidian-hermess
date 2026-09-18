@@ -71,6 +71,27 @@ Dos trampas que costaron caras y conviene no repetir:
 
 `AppSwitcher.vue` está **duplicado en los 6 fronts**: si se cambia, cambiarlo en los 6.
 
+## Proyecto — Importación de la planilla (2026-09-17/18)
+Detalle en [[import-planilla-comp11]]. Lo que conviene no volver a aprender:
+- **Reimportar exige wipe previo**: `"Importar todo"` no borra, apila. Sin wipe el ERP queda
+  inflado (pasó: 666 SKUs con delta) y hay que rehacer todo.
+- **Fase D corre por tandas** (`--limit=50`) y **aborta entera** si una sola orden tiene un
+  almacén que no es de comp=11.
+- Esta base **no es** la del [[como-se-importa-laset-comp11|ERP de NB]]: acá los proveedores ya
+  tenían datos fiscales, `LST GLOBAL` no existe en comp=11, y el esquema clonado el 2026-09-04
+  **va quedando viejo** respecto del código (caso `pedprol.doNotUpdateCost`).
+- Verificar límites de PHP **por HTTP**, nunca con `php -i` del CLI: leen `conf.d` distintos.
+
+## Estado y pendientes (2026-09-18)
+- Todo mergeado a `blu-dev-staff` salvo **`feature/laset-ocultamientos-ui`**.
+- Pendiente operativo: **Re-vincular facturas** (398 esperando), desplegar en el dev de blu,
+  limpiar 6 snapshots viejos y 20 scripts de diagnóstico en `storage/app` del back de pedidos.
+- Decisión abierta: dar de alta (o no) los 4 proveedores y 18 categorías que dejan 23
+  clasificaciones ECCN afuera.
+- Deuda: cobros conecta a SQL Server **sin cifrado**; el vhost de Apache no está versionado;
+  secretos en `.env-example` de postventa pendientes de rotar; `api-rest-expedicion/app/.emv`
+  es un archivo suelto con lo que parece una credencial.
+
 ## Estado y pendientes (2026-09-16)
 - PRs abiertos: **frontErp#11** y **backErp#5**. frontErp#11 se apoya en
   `feature/laset-listas-precio-color`, que tiene 2 commits sin mergear: mergear esa primero.
@@ -80,4 +101,4 @@ Dos trampas que costaron caras y conviene no repetir:
   versionado; secretos en `.env-example` de postventa pendientes de rotar.
 
 ## Ver también
-[[Laset]] · [[arquitectura]] · [[contexto]] · [[troubleshooting]] · [[changelog]]
+[[Laset]] · [[arquitectura]] · [[contexto]] · [[troubleshooting]] · [[changelog]] · [[import-planilla-comp11]]

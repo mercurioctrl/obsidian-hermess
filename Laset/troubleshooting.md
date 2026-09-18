@@ -56,3 +56,51 @@ autofirmado. (Expedición trae el 17 y por eso no falla.)
 - **`pm2 start: Script not found nuxt.js`** → install no dejó `nuxt`, reinstalar con `--ignore-scripts`.
 - **`ERESOLVE`** → `--legacy-peer-deps`.
 - **Host sin RAM al levantar fronts** → bajar `instances` a `2` (no `'max'`).
+
+## Importador de la planilla (comp=11)
+
+Detalle completo del proceso en [[import-planilla-comp11]].
+
+### "El campo file no se pudo subir" al subir un .xlsx
+Es la regla `uploaded` de Laravel: PHP **no recibió** el archivo. Nunca es permisos. Dos causas:
+- **`upload_max_filesize = 2M`** (default Ubuntu) y la planilla pesa ~4 MB. `apache-uploads.ini`
+  ya trae 100M pero hay que **montarlo** por docker-compose en
+  `/etc/php/8.1/apache2/conf.d/` — ojo, **no** en `/usr/local/etc/php/conf.d/`, que es la ruta
+  de las imágenes oficiales `php:*` y esta imagen (Ubuntu + mod_php) no lee.
+  Verificar **por HTTP**, no con `php -i` del CLI: el CLI lee otra `conf.d` y miente.
+- Un `curl` copiado de Chrome ("Copy as cURL") **no incluye el binario** del archivo: manda 0
+  bytes. Usar `-F 'file=@archivo.xlsx'`.
+
+### "El campo file debe ser un archivo de tipo: xlsx"
+libmagic 8.1.2 no reconoce los .xlsx que exporta Excel (devuelve `application/octet-stream`) y
+`mimes:xlsx` compara contra `guessExtension()`. **Rechaza todo archivo**. No falta
+`shared-mime-info`: finfo funciona bien con .txt, .zip y .png. Resuelto con
+`App\Support\XlsxUpload` (extensión + firma ZIP leída del archivo).
+
+### `[ABORT Fase D stock] N grupos delta sin fila en stocks`
+Una orden con `warehousesId` NULL o un almacén que no está en `FP_Almacen` comp=11 (típico:
+`cCodAlm='SAF'`, de cargas manuales). El ASSERT tira **toda** la transacción, así que una sola
+orden vieja bloquea la migración entera. `--skip-bloqueadas` ahora las difiere. Para ubicarlas:
+
+```sql
+SELECT nNumPed, warehousesId, cCodAlm FROM NewBytes_DBF.dbo.pedprot t
+ WHERE t.companyCode = 11
+   AND NOT EXISTS (SELECT 1 FROM NewBytes_DBF.dbo.FP_Almacen fa
+                    WHERE fa.companyCode = 11 AND fa.ID_ALMACEN = t.warehousesId);
+```
+
+### Fase D "falla" sin decir por qué
+El job guarda el output, pero recortaba a los últimos 1500 chars y el stack de Symfony tapaba
+la línea del error. Mirar `laset_import_jobs.result` → `fase_d.output_tail` (ya corregido para
+que las líneas de error vayan primero).
+
+### El Delta Check marca cientos de SKUs y los datos están bien
+Comparaba criterios distintos de cada lado. Corregido. Si vuelve a dar números grandes **con
+el ERP por encima de la planilla**, la causa suele ser otra: se importó **sin wipe previo** y
+Fase C apiló sobre lo que ya había.
+
+## DB — el clon del esquema quedó viejo
+El esquema se clonó de NB el 2026-09-04; el código siguió avanzando allá. Síntoma:
+`SQLSTATE[42S22] Invalid column name '<x>'` en una pantalla cualquiera.
+Caso real: `pedprol.doNotUpdateCost` (abrir una orden de compra). Fix: agregar la columna
+copiando tipo/nullability/default de su columna hermana y versionar el SQL en `db-laset/`.

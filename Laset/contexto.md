@@ -86,6 +86,23 @@ NO `hermess87`).
 - **Ocultamientos reversibles**: se mantiene la convención de comentar (HTML en templates, `/* */` en
   JS) en vez de borrar.
 
+## Decisiones (2026-09-17/18 · importación de la planilla)
+- **Importar todo ≠ reimportar**: la cadena no borra nada, así que reimportar la planilla sobre
+  una empresa ya cargada **exige wipe previo**. La primera pasada quedó inflada y se rehízo.
+  Ver [[import-planilla-comp11]].
+- **Las 7 OCs de prueba con almacén `SAF` se borraron** (decisión del usuario), en vez de
+  asignarles un depósito válido: eran basura de pruebas con proveedores `Proveedor Testing
+  Laset` / `nuevo proveedor`, dos sin líneas.
+- **No se dan de alta proveedores desde la hoja `Database Proveedores`**: 26 nombres de la
+  planilla no existen en comp=11 y se dejaron afuera a propósito — los crea Fase C cuando
+  aparecen en una venta. El importador nuevo sólo rellena campos vacíos, nunca pisa.
+- **No se regeneró `eccCategorias.csv`** desde la planilla nueva: se comprobó que no aporta un
+  solo vínculo (las claves que agrega son de proveedores inexistentes en comp=11) y ensucia con
+  una fila `-`.
+- **El % de un precio manual es derivado, no persistido**: si cambia el costo, se recalcula.
+- **Validación de subida por extensión + firma ZIP**, no por libmagic. Es más específica que
+  `mimes`, y el contenido igual se valida después (openpyxl + headers canónicos).
+
 ## Deuda técnica anotada
 - **Cobros conecta a SQL Server sin cifrado** (`Encrypt = 0` en su DSN). Venía así; el usuario decidió
   anotarlo y seguir.
@@ -94,18 +111,25 @@ NO `hermess87`).
 
 ## Pendiente de decisión
 - Dos deep-links a `saftel.com` **fuera del menú** (`DetailExamine.vue` en inventario,
-  `AsignarOCModal.vue` en pedidos): ¿reapuntar a `laset.local/...` o sacar?
+  `AsignarOCModal.vue` en pedidos): ¿reapuntar a `laset.local/...` o sacar? (los del **menú**
+  ya se ocultaron, 2026-09-18)
+- **ECCN**: 23 clasificaciones aduaneras no entran porque 4 proveedores (`LST GLOBAL`, `ASUS
+  COMPUTER INTERNATIONAL`, `PNY`, `ZOTAC`) y 18 categorías no existen en comp=11. Darlos de
+  alta o dejarlas afuera.
 - La raíz del dominio hoy redirige a `/inventario/`; se puede cambiar a `/pedidos/`.
 
-## Estado actual
-Los 7 fronts (PM2) y 7 backs (Docker) **operativos**, servidos desde `laset.local` con sesión compartida:
-los 6 `/auth/user` responden 200 con un mismo token y se navega entre apps sin volver a loguearse.
+## Estado actual (2026-09-18)
+Los 7 fronts (PM2, 2 instancias c/u) y 7 backs (Docker) **operativos** en `laset.local`, con SSO.
 
-Mergeado a `blu-dev-staff`: simplificación de UI (2026-09-04), fixes de back (2026-09-09), listas de
-precio por color (backErp#4).
-Abierto: **frontErp#11** (dominio único + menú + logo) y **backErp#5** (SSO entre los 6 backs).
-⚠️ frontErp#11 se apoya en `feature/laset-listas-precio-color`, que tiene 2 commits sin mergear:
-**hay que mergear esa rama primero**.
+**comp=11 recargado desde la planilla del 2026-09-17**: 661 OCs, 623 ventas, 1.062 artículos,
+0 stock negativo, staging con 4.458 filas `IMPORTED` linkeadas. Ver [[import-planilla-comp11]].
 
-Sin commitear todavía: la limpieza de links a saftel, las 4 pestañas ocultas de inventario y el
-precio + % editables de la grilla de Precios. Esperan la decisión sobre los deep-links.
+Mergeado a `blu-dev-staff`: todo lo anterior + fixes del importador, favicons, fix del menú,
+grilla de precios por color y los 2 commits de listas de color que habían quedado colgados.
+Pendiente de merge: **`feature/laset-ocultamientos-ui`** (links a saftel, 4 pestañas de
+inventario, `icon.svg`).
+
+Sin subir (y no se suben): `.env-example` y `package-lock.json` del sync de New-Bytes.
+
+Pendiente operativo: apretar **Re-vincular facturas** (398 facturas esperando), desplegar los
+fixes en el dev de blu, y limpiar 6 snapshots viejos (85 tablas `laset_snap_*`).
