@@ -98,6 +98,12 @@ Detalle en [[import-planilla-comp11]]. Lo que conviene no volver a aprender:
   commiteó dos veces el href del favicon (`50d7966` y `0feed42`).
 - **Cuando aparece un bug de una clase, barrer la clase entera.** El 404 de compras era uno de
   cuatro; dos de los otros fallaban en silencio y nadie los iba a reportar.
+- **Antes de dar un diagnóstico, confirmar CONTRA QUÉ SERVIDOR está mirando el usuario.** Se
+  fueron varias vueltas explicando por qué la pantalla mostraba una columna que ya no existía:
+  estaba en el dev de blu, que comparte la base pero corre su propio código.
+- **Avisar cuando una acción toca infraestructura compartida.** La reimportación se pidió como
+  si fuera local y escribió en la base que también usa el dev de blu. El dimensionamiento era
+  correcto, pero el alcance había que decirlo al pedir el OK, no después.
 
 ## Proyecto — Barrido del `router.base` (2026-09-18)
 Con el dominio único, **todo path que arranca en `/` se pide contra la raíz de `laset.local`**, no
@@ -114,6 +120,23 @@ Excepciones que **no** se tocan: el `resolve().href` que alimenta un `<a :href>`
 (`itemsPrices.vue`) y el manifest, que `@nuxtjs/pwa` genera ya prefijado.
 **Síntoma delator:** la pantalla abre desde el menú pero se rompe al buscar, imprimir o abrir un
 modal — todo lo que arma una URL por código en vez de usar `<NuxtLink>`.
+
+## Proyecto — Cta cte de proveedores (2026-09-18)
+El ledger es `MS_MOV_CTACTE_PROVEEDORES`, cargado por `laset:prov-ccte-import` desde
+"Estado de Cuenta - Proveedores ….xlsx" (127 hojas, una por proveedor; el archivo vive en
+`~/Downloads`, **no** en el repo). 6.894 movimientos, 113 proveedores, **17 cuentas en
+euros**. Detalle completo en la memoria del proyecto (`laset-cta-cte-proveedores`).
+
+La estructura de la planilla es lo que hay que entender: **dos bloques en las mismas filas**,
+el resumen a la izquierda (col 1-2) y el libro desde la col 4. Las facturas están en
+`Facturado` (EUR) y su USD real sale de las filas de **asignación** del mismo invoice.
+
+## Lección: un saldo correcto no valida el detalle
+Las 96 cuentas en dólares "daban bien" y estaban validadas por el usuario, pero cada una
+arrastraba movimientos descartados que el "Ajuste de cierre" tapaba. El saldo cerraba porque
+**el ajuste está calculado para que cierre**, no porque los movimientos estuvieran bien.
+Cuando un import tiene una línea de cuadre, esa línea es sospechosa por diseño: hay que
+mirar su tamaño, no sólo el total. AMI Miami: ajuste −149.386 → 0.
 
 ## Estado y pendientes (2026-09-18)
 - Mergeado a `blu-dev-staff` todo lo del importador, favicons, menú, listas de color,

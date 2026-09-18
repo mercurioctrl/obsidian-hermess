@@ -124,6 +124,24 @@ NO `hermess87`).
 - **No se tocó el `resolve().href` de `itemsPrices.vue`** (`productHref`): ahí alimenta un
   `<a :href>` y sí necesita el base. Tampoco el manifest: lo genera `@nuxtjs/pwa` ya prefijado.
 
+## Decisiones (2026-09-18 · cta cte de proveedores en euros)
+- **Cada movimiento a su cotización real**, no todo al TC de cierre. La diferencia de cambio
+  queda en una línea explícita en vez de repartida en todas las facturas.
+- **Columnas nuevas en el ledger** (`IMPORTE_ORIGEN`, `MONEDA_ORIGEN`) en vez de reutilizar
+  `MONEDA`, que en los datos de la otra empresa ya usa 1/2/15 con una semántica que no está
+  documentada en esta base. Aditivas y anulables: los lectores hacen `ISNULL(...)`.
+- **El cierre se parte en dos líneas** porque son dos cosas distintas: el saldo declarado por
+  la planilla y el efecto FX.
+- **Se quitó la columna "$"** de la cuenta corriente, en línea con "es todo en dólares".
+
+## Pendiente de decisión (nuevo)
+- Los **22.863,50 €** del "Ajuste de cuenta" de Danicoop: la planilla declara un saldo que no
+  es la suma de sus propios movimientos (Debe−Haber 61.870,50 vs 39.007,00 declarado) y
+  absorbe la diferencia en su columna "Saldo EUR" sin dejar rastro. Si se sabe de dónde
+  salen, corresponde cargarlos como lo que son en vez de como ajuste.
+- **HENKELMAN** (002613) quedó marcada como cuenta en euros pero su hoja no tiene columna TC,
+  así que vale 1:1 con el dólar. Revisar si es realmente una cuenta en euros.
+
 ## Deuda técnica anotada
 - **Cobros conecta a SQL Server sin cifrado** (`Encrypt = 0` en su DSN). Venía así; el usuario decidió
   anotarlo y seguir.

@@ -43,6 +43,32 @@ Ver también: [[Laset]] · [[contexto]]
   igual que su hermana `updateAverageCost`) y aplicado. Verificadas el resto de las columnas
   de esa query: no falta ninguna otra.
 
+**Cuenta corriente de proveedores: las cuentas en euros daban mal**
+- Disparador: un proveedor italiano mostraba importes inflados. El importador valuaba
+  **toda** la historia al TC de cierre de la hoja (el último rate) en vez del TC real de
+  cada movimiento: una factura de oct-2022 a 1,0090 quedaba cargada a 1,1946. El sesgo era
+  de **+5,3% sobre 3,2 M**, hasta +8,3% en algunas cuentas. Ahora la factura toma el TC del
+  pago que la canceló (`Asignado USD`/`Asignado EUR`) y el pago toma `Pagado Dolares`; sólo
+  lo impago sigue al de cierre, que es lo correcto.
+- El barrido destapó un segundo defecto **más grande y mudo**: el filtro de "filas de
+  resumen" miraba las columnas 0-3, pero ese bloque vive en la columna 1 y **comparte fila**
+  con el libro, que arranca en la 4. Descartaba **264 movimientos en 60 hojas**. Ningún
+  saldo se veía mal —el "Ajuste de cierre" los absorbía— y por eso el usuario había validado
+  las 96 cuentas en dólares como correctas. AMI Miami arrastraba un ajuste de −149.386 que
+  eran 4 movimientos tirados; ahora da 0.
+  Confirmación independiente: LST Global declara su propio ajuste en las celdas
+  `Ajuste sobrante` 1.175.636,19 y `Ajuste faltante` −1,40, y el parser corregido calcula
+  1.175.634,79 — exactamente la resta.
+- **Saldo en euros**: no se puede derivar dividiendo por la cotización (las líneas de cierre
+  no tienen equivalente 1:1). Se agregaron `IMPORTE_ORIGEN` + `MONEDA_ORIGEN` al ledger, y
+  el cierre pasó a ser **dos líneas**: "Ajuste de cuenta" (en la moneda de la cuenta) y
+  "Diferencia de cambio" (sólo USD). Danicoop cierra en **€39.007,00 / u$d 46.597,01**.
+- El front de compras muestra los dos saldos y las dos columnas en las 17 cuentas europeas;
+  las de dólares quedan igual. Se quitó la columna "$", que era `importe × cotización` con
+  una cotización EUR/USD: ni pesos ni euros.
+- Reimportado dos veces: **6.894 movimientos, 113/113 reconcilian en las dos monedas,
+  0 saldos alterados, 166 movimientos recuperados**, |ajuste| total de 15,2 M a 13,8 M.
+
 **Rutas que ignoraban el `router.base` (barrido completo de los 7 fronts)**
 - Disparador: buscar un proveedor en compras daba **404** con la URL duplicada
   `/compras/compras/providers`. El buscador navegaba con `$router.push(resolve(...).href)` y en

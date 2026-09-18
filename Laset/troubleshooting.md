@@ -126,6 +126,33 @@ El esquema se clonó de NB el 2026-09-04; el código siguió avanzando allá. S�
 Caso real: `pedprol.doNotUpdateCost` (abrir una orden de compra). Fix: agregar la columna
 copiando tipo/nullability/default de su columna hermana y versionar el SQL en `db-laset/`.
 
+## Cuenta corriente de proveedores
+
+Ledger `NEW_BYTES.dbo.MS_MOV_CTACTE_PROVEEDORES`. `TR_CODIGO` 38 y 32 suman deuda; 30, 40,
+44 y 128 restan. `COTIZACION` es el **EUR/USD del movimiento** (1 en las cuentas en
+dólares), **no** un rate contra el peso — de ahí que la columna "$" mostrara basura.
+
+### Los dólares de una cuenta en euros están inflados
+Se valuaba toda la historia al TC de cierre de la hoja. **Fix:** cada movimiento a su TC
+real — la factura al del pago que la canceló (`Asignado USD`/`Asignado EUR`), el pago a
+`Pagado Dolares`. Lo impago sí va al de cierre: es un pasivo vivo en euros.
+
+### Faltan movimientos y hay un "Ajuste de cierre" enorme
+El bloque de resumen de la planilla está en la **columna 1** y comparte fila con el libro,
+que arranca en la **4**; el filtro de rótulos descartaba la fila entera. **No cambiaba
+ningún saldo**, así que las cuentas en dólares parecían correctas. **Fix:** el rótulo sólo
+descarta si está dentro de las columnas del libro.
+
+### El saldo en euros no coincide
+No se deriva de `COTIZACION`: fila por fila sale exacto, el total no. Para eso está
+`IMPORTE_ORIGEN`/`MONEDA_ORIGEN`, y el cierre son dos líneas ("Ajuste de cuenta" en la
+moneda de la cuenta + "Diferencia de cambio" sólo en USD).
+Control: Danicoop (`002418`) = **€39.007,00 / u$d 46.597,01**, 57 movimientos.
+
+### Ves datos nuevos con columnas viejas
+Estás en `compras-laset-dev.blu.net.ar`, que **comparte la base** con este host pero corre
+su propio código. Una reimportación se ve allá al instante; los cambios de código no.
+
 ## Pantallas que muestran datos de la otra empresa (o de menos)
 
 ### El front muestra IVA / impuestos / columnas en pesos en Laset
