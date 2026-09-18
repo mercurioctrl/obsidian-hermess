@@ -61,6 +61,10 @@ GET    /api/presupuestos/{id}         -> show [con wrapper data:]
 PUT    /api/presupuestos/{id}         -> update [con wrapper data:]
 DELETE /api/presupuestos/{id}         -> destroy (solo BORRADOR)
 POST   /api/presupuestos/{id}/transicion -> cambio de estado
+POST   /api/presupuestos/{id}/revertir-cobro -> revertirCobro (NO es transición, ver abajo)
+         body: email + password (credenciales admin)
+POST   /api/presupuestos/{id}/clonar         -> clonar
+         body: cliente_id? (por default el mismo cliente), fecha?
 GET    /api/presupuestos/{id}/pdf
 POST   /api/presupuestos/{id}/etiquetas      -> syncEtiquetas
 POST   /api/presupuestos/{id}/crear-proyecto
@@ -68,7 +72,18 @@ POST   /api/presupuestos/{id}/enviar-invoice -> enviarInvoice
          body: email (required|email)
          efecto: guarda email en cliente si cambió, envía Mailable con PDF adjunto
          BCC automático a payments@blustudioinc.com (MAIL_PAYMENTS_BCC)
+GET    /api/presupuestos/{id}/retenciones              -> retenciones sufridas (mig 0117)
+POST   /api/presupuestos/{id}/retenciones              -> multipart, `archivo` = certificado
+DELETE /api/presupuestos/{id}/retenciones/{retencion}
+GET    /api/presupuestos/{id}/retenciones/{retencion}/archivo
+         fuera de auth, ?token= (como los PDFs). Gate VER_MONTOS_SALDOS
 ```
+
+**Revertir cobro ("descobrar"):** deshace en una transacción el `MovimientoCuenta` PAGO, el `MovimientoBancoCaja` COBRO (restando del banco/caja el monto **del movimiento registrado**, no el total actual) y devuelve el presupuesto a FACTURADO o APROBADO según quede una factura viva. **No es una transición a propósito**, para que no se degrade un estado por accidente. Ver [[changelog#2026-09-16 — Presupuestos: revertir cobro y clonar · logo Blu en los portales públicos]].
+
+**Clonar:** el clon nace BORRADOR con numeración y fecha propias; copia ítems/moneda/descuento/vigencia/observaciones/suscripción/etiquetas y **nada del ciclo de vida** (cobro, AFIP, Mercury, links de pago, cuenta corriente). `generarNumero()` acepta la fecha para que el correlativo salga del período elegido y no de `now()`.
+
+**Retenciones sufridas:** ver [[Modulo Contabilidad#Retenciones sufridas (migración 0117)]].
 
 Ver [[Reglas de Negocio#Presupuestos - Flujo de estados]] para transiciones y efectos automaticos.
 
@@ -262,6 +277,21 @@ POST   /api/presupuestos/{id}/enviar-invoice
 ```
 
 Los 3 URLs opcionales se renderizan como botones en el body del email solo si están presentes en el body del POST. El controller los pasa al `PresupuestoInvoiceMail` como 2do argumento (`$paymentLinks` array) y `attach_mercury_pdf` como 3er argumento (`bool $attachMercuryPdf`). Si `attachMercuryPdf=true` y el presupuesto tiene `mercury_invoice_id`, el Mailable baja el PDF de Mercury vía `MercuryInvoiceService::getInvoicePdf()` y lo adjunta como segundo PDF (además del PDF Blu del presupuesto). Si la descarga falla, se loguea warning y se sigue sin él. Ver [[Modulo Mercury Invoicing#Sub-flow — adjuntar PDF de Mercury al email]].
+
+## Contabilidad — DDJJ del estudio (mig 0118) — ver [[Modulo Contabilidad]]
+```
+GET    /api/contabilidad?anio=&mes=&empresa_id=
+         suma `declaraciones` (las del período, indexadas por impuesto) y
+         `por_mes` con iva_neto/iibb_neto + iva_declarado/iibb_declarado
+         ⚠️ ambos null si empresa_id viene vacío ("Todas"): sin CUIT no hay con qué comparar
+GET    /api/contabilidad/libro-iva?anio=&mes=&token=   (fuera de auth, .xlsx)
+GET    /api/declaraciones-estudio?empresa_id=&anio=
+POST   /api/declaraciones-estudio      -> UPSERT por (empresa, año, mes, impuesto)
+         multipart, `archivo` = DDJJ escaneada. Volver a cargar EDITA, no duplica
+DELETE /api/declaraciones-estudio/{declaracion}
+GET    /api/declaraciones-estudio/{declaracion}/archivo   (fuera de auth, ?token=)
+```
+Gate `VER_MONTOS_SALDOS`. Ver [[Modulo Contabilidad#DDJJ del estudio — «ERP vs Estudio» (migración 0118)]].
 
 ## Etiquetas
 ```

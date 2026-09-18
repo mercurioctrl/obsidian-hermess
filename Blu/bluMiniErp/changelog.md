@@ -23,6 +23,23 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-16 — Presupuestos: revertir cobro y clonar · logo Blu en los portales públicos
+
+### Revertir cobro ("descobrar") y clonar presupuesto (rama `feat/presupuestos-revertir-cobro-y-clonar`, PR #66)
+- feat: **el cobro no se deshacía.** Las transiciones de [[Reglas de Negocio|estado]] sólo avanzan, así que un cobro mal cargado había que corregirlo a mano contra la DB. Nuevo endpoint dedicado **`POST /presupuestos/{id}/revertir-cobro`**, que pide **email + password** igual que el cobro (ver [[Modulo Permisos]]) y deshace los tres efectos **en una transacción**: borra el `MovimientoCuenta` PAGO (la deuda del cliente vuelve a quedar abierta), resta del banco/caja el monto que había ingresado y borra su `MovimientoBancoCaja` COBRO, y devuelve el presupuesto a **FACTURADO** si quedó una factura viva (AFIP `EMITIDA` o invoice Mercury no cancelado) o a **APROBADO** si no, limpiando `banco_caja_cobro_id`.
+- ⚠️ **No es una transición**, a propósito: así no se puede degradar un estado por accidente desde el flujo normal. Usa el **monto del movimiento registrado**, no el total actual del presupuesto (que pudo haber cambiado). El proyecto **no se degrada** (`sincronizarEstadoProyecto` nunca vuelve atrás) y queda registro en el log de quién autorizó y quién estaba logueado.
+- feat: **`POST /presupuestos/{id}/clonar`** para reusar una propuesta ya armada, desde cualquier estado y para el mismo cliente u otro. El clon nace **BORRADOR** con numeración y fecha propias y copia ítems (con orden e IVA), moneda, descuento, vigencia, observaciones, suscripción y etiquetas. **No arrastra nada del ciclo de vida del original**: cobro, facturas AFIP/Mercury, links de pago ni movimientos de cuenta corriente. Recibe su propio proyecto en `propuesta` (regla dura, ver [[Reglas de Negocio]]).
+- ⚠️ **`generarNumero()` ahora acepta la fecha**: el correlativo sale del período de la fecha elegida y no de `now()`, así el número no queda desalineado con la fecha del presupuesto. Por default sigue usando `now()` — sin cambios para el resto del flujo.
+- Ambas acciones viven en el menú **"Más"** del detalle, según la jerarquía de action bar. Suma `Presupuesto::bancoCajaCobro()` y `banco_caja_cobro` al `PresupuestoResource`, para que el modal muestre de dónde sale la plata.
+
+### Logo Blu en las páginas públicas (rama `fix/agendar-logo`, PR #65)
+- fix: `/agendar/{slug}` ([[Modulo Reservas Reuniones]]) y el portal `/n/{token}` ([[Modulo Novedades]] + [[Modulo Requerimientos]]) mostraban la marca como **texto plano "BLU"** en vez del logo. Ahora usan `<img src="/blu_logo.png">`, el mismo asset que el sidebar — no se duplicó en base64. Ver [[Stack e Infraestructura]].
+- El pie del portal (*"Hecho con cariño por el equipo de BLU"*) queda como texto a propósito: ahí "BLU" es parte de una oración, no la marca.
+
+Archivos: `backend/app/Http/Controllers/PresupuestoController.php`, `backend/app/Http/Requests/{RevertirCobro,ClonarPresupuesto}Request.php`, `backend/app/Models/Presupuesto.php`, `frontend/pages/presupuestos/[id].vue`, `frontend/pages/agendar/[token].vue`, `frontend/pages/n/[token].vue`
+
+---
+
 ## 2026-09-16 — Reservas: link de videollamada fijo (botón Meet nativo en el calendario)
 
 ### Link de videollamada → `X-GOOGLE-CONFERENCE` en el `.ics` (rama `feat/reservas-enlace-videollamada`, PR #64, migración 0116)
