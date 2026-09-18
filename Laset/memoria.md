@@ -93,12 +93,36 @@ Detalle en [[import-planilla-comp11]]. Lo que conviene no volver a aprender:
 - **Los límites de PHP se verifican por HTTP, no con `php -i` del CLI**: leen `conf.d`
   distintos y el del CLI miente.
 - Un `curl` copiado de Chrome **no lleva el binario** del archivo: para probar uploads, `-F`.
+- **Antes de commitear un arreglo, mirar si ya vive en otra rama** (`git log --all --oneline`):
+  el working tree principal no lo delata, porque el archivo ya está como corresponde. Así se
+  commiteó dos veces el href del favicon (`50d7966` y `0feed42`).
+- **Cuando aparece un bug de una clase, barrer la clase entera.** El 404 de compras era uno de
+  cuatro; dos de los otros fallaban en silencio y nadie los iba a reportar.
+
+## Proyecto — Barrido del `router.base` (2026-09-18)
+Con el dominio único, **todo path que arranca en `/` se pide contra la raíz de `laset.local`**, no
+contra el base de la app. Cuatro formas del mismo error, las cuatro corregidas:
+
+| Patrón | Qué pasa |
+|---|---|
+| `$router.push(resolve(...).href)` | **Duplica** el base (`/compras/compras/providers`) → usar `route.fullPath` |
+| `fetch('/api/version')` | Le **falta** → usar `$router.options.base` |
+| `<img src="/error.png">` | Le falta → ídem |
+| `.env` con URL de otra app | `COMPROBANTES` tiene que incluir `/comprobantes` |
+
+Excepciones que **no** se tocan: el `resolve().href` que alimenta un `<a :href>`
+(`itemsPrices.vue`) y el manifest, que `@nuxtjs/pwa` genera ya prefijado.
+**Síntoma delator:** la pantalla abre desde el menú pero se rompe al buscar, imprimir o abrir un
+modal — todo lo que arma una URL por código en vez de usar `<NuxtLink>`.
 
 ## Estado y pendientes (2026-09-18)
 - Mergeado a `blu-dev-staff` todo lo del importador, favicons, menú, listas de color,
   ocultamientos, `doNotUpdateCost` y el primer tramo de asignaciones/companyCode.
 - Pendientes de merge: `fix/asignacion-feature-enabled` (override en el repositorio + los otros
-  3 backs) y `fix/laset-cotizacion-oc-stockonly`.
+  3 backs) y `fix/laset-cotizacion-oc-stockonly` en backErp; `fix/router-base-doble-prefijo`
+  (3 commits) en frontErp, más la vieja `fix/favicon-href-router-base` que quedó duplicada.
+- Pendiente de prueba manual: **emitir un comprobante desde cobros y desde expedición**, que
+  pasaron de apuntar al servicio de NB al local de Laset.
 - Pendiente operativo: **Re-vincular facturas** (398 esperando), desplegar en el dev de blu,
   limpiar 6 snapshots viejos y 20 scripts de diagnóstico en `storage/app` del back de pedidos.
 - Decisión abierta: dar de alta (o no) los 4 proveedores y 18 categorías que dejan 23

@@ -114,6 +114,16 @@ NO `hermess87`).
 - **Las 29 OCs sin cotización se repararon con UPDATE**, no se re-importaron: el resto del
   import estaba bien y rehacerlo costaba una hora.
 
+## Decisiones (2026-09-18 · barrido del `router.base`)
+- **Se barrieron los 7 fronts, no sólo el bug reportado**: el 404 de compras era una de cuatro
+  formas de la misma falla. Aparecieron tres más, dos de ellas mudas (el modal de versión vacío y
+  el logo roto de la pantalla pública) que nadie habría reportado.
+- **Los comprobantes de cobros y expedición se reapuntaron al servicio local de Laset**, que antes
+  iban al de NB (`omega.`/`gamma.comprobantes.lio.red`). Es lo correcto —los datos están en la base
+  de Laset— pero es el cambio con más superficie de la tanda y **falta probarlo a mano**.
+- **No se tocó el `resolve().href` de `itemsPrices.vue`** (`productHref`): ahí alimenta un
+  `<a :href>` y sí necesita el base. Tampoco el manifest: lo genera `@nuxtjs/pwa` ya prefijado.
+
 ## Deuda técnica anotada
 - **Cobros conecta a SQL Server sin cifrado** (`Encrypt = 0` en su DSN). Venía así; el usuario decidió
   anotarlo y seguir.
@@ -136,9 +146,12 @@ Los 7 fronts (PM2, 2 instancias c/u) y 7 backs (Docker) **operativos** en `laset
 0 stock negativo, staging con 4.458 filas `IMPORTED` linkeadas. Ver [[import-planilla-comp11]].
 
 Mergeado a `blu-dev-staff`: todo lo anterior + fixes del importador, favicons, fix del menú,
-grilla de precios por color y los 2 commits de listas de color que habían quedado colgados.
-Pendiente de merge: **`feature/laset-ocultamientos-ui`** (links a saftel, 4 pestañas de
-inventario, `icon.svg`).
+grilla de precios por color, los 2 commits de listas de color que habían quedado colgados y
+`feature/laset-ocultamientos-ui` (PR #15).
+
+Abierto: **`fix/router-base-doble-prefijo`** (3 commits), con el barrido del `router.base`. Ya
+aplicado y verificado en este host. Ojo con el duplicado del href del favicon: el mismo cambio
+vive en `fix/favicon-href-router-base`, que nunca se mergeó.
 
 Sin subir (y no se suben): `.env-example` y `package-lock.json` del sync de New-Bytes.
 

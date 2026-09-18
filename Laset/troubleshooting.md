@@ -28,6 +28,27 @@ Los assets dan 404 y la app **no hidrata** (el SSR igual pinta el HTML, por eso 
 Causa: `build.publicPath` absoluto. Nuxt 2 le prepende `router.base` → monta en
 `/pedidos/pedidos/_nuxt/`. **Fix:** `publicPath: '_nuxt/'`.
 
+### La pantalla abre desde el menú pero **buscar** da 404 (`/compras/compras/providers`)
+`$router.push(resolve(...).href)`. En vue-router 3 `resolve()` arma el href con
+`createHref(base, fullPath)` — **ya trae el `router.base`** — y `push()` se lo vuelve a anteponer
+al escribir la history. Con `base: '/'` no se notaba. **Fix:** `resolvedRoute.route.fullPath`.
+Excepción: si el href alimenta un `<a :href>` (`itemsPrices.vue`, `productHref`) **sí** lo necesita.
+
+### Un asset o endpoint propio da 404 (logo, `/api/version`) y la app igual "anda"
+Al revés: al path le **falta** el base, así que se pide contra la raíz de `laset.local`. El
+serverMiddleware y los estáticos sí cuelgan del base. **Fix:** armarlo con
+`$router.options.base` (trae la barra final). Suele fallar en silencio — el `fetch` de
+`BuildVersion.vue` tenía un `catch` que dejaba el modal "Versión de la aplicación" con los campos
+vacíos y una fecha inválida, sin error a la vista.
+
+### Los comprobantes no abren, o abren los de la otra empresa
+`COMPROBANTES` del `.env`. Dos causas con el mismo síntoma: `http://localhost:3907` **sin
+`/comprobantes`** (la app sólo sirve bajo su base), o apuntar al servicio de NB
+(`comprobantes.lio.red`, `omega.`, `gamma.`), que no tiene las rutas de Laset —
+`/voucher/laset/factura/...` sólo existe en el local. **Fix:**
+`COMPROBANTES=http://laset.local/comprobantes` en los 6 fronts.
+⚠️ `process.env` se **inlinea en el build**: no alcanza con reiniciar PM2.
+
 ### 401 `Signature verification failed` entre backs
 Ese back firma con otra clave. Todos usan `md5(JWT_SIGNATURE_KEY)` HS256. Comparar sin exponer el
 secreto: `grep -hE '^JWT_SIGNATURE_KEY=' <back>/app/.env | cut -d= -f2- | md5sum | cut -c1-8`.

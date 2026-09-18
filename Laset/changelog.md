@@ -43,11 +43,35 @@ Ver también: [[Laset]] · [[contexto]]
   igual que su hermana `updateAverageCost`) y aplicado. Verificadas el resto de las columnas
   de esa query: no falta ninguna otra.
 
+**Rutas que ignoraban el `router.base` (barrido completo de los 7 fronts)**
+- Disparador: buscar un proveedor en compras daba **404** con la URL duplicada
+  `/compras/compras/providers`. El buscador navegaba con `$router.push(resolve(...).href)` y en
+  vue-router 3 `resolve()` ya arma el href **con** el base (`createHref(base, fullPath)`), que
+  `push()` vuelve a anteponer. Se navega con `resolvedRoute.route.fullPath`. Eran 6 lugares:
+  compras (`Filters/General`), cobros (`Filters/DashboardGeneral`) y pedidos (`Filters/General`,
+  `Filters/Dashboard`).
+- El barrido encontró **la falla inversa** —paths a los que les falta el base— en tres lados más:
+  `BuildVersion.vue` de los 6 fronts (`fetch('/api/version')`, 404 silencioso que dejaba el modal
+  de versión vacío), el logo de `inventario/layouts/public.vue` y la imagen de
+  `comprobantes/components/Error.vue`. Los tres se arman ahora con `$router.options.base`.
+- **`COMPROBANTES` en los 6 `.env`**: ignoraba el base y 4 fronts apuntaban al servicio de **NB**
+  (`comprobantes.lio.red`, `omega.`, `gamma.`). Pedidos pedía `/voucher/laset/factura/...`, ruta
+  que sólo existe en el comprobantes local. Los 6 pasaron a `http://laset.local/comprobantes`
+  (mismo origen: sin CORS y comparte la cookie). Requiere rebuild: `process.env` se inlinea.
+- Revisado y **sano**: los `baseURL` de axios (absolutos, a los backs de Laset), los `window.open`
+  (blobs o URLs externas) y el manifest PWA, que `@nuxtjs/pwa` genera ya prefijado. El
+  `site.webmanifest`/`browserconfig.xml` estáticos tienen rutas a la raíz pero **están muertos**.
+- Los 7 fronts rebuildeados y verificados: los 6 `api/version` en 200, el logo y el comprobantes
+  en 200, y 0 paths pelados en los bundles.
+
 **Git**
 - Subido y mergeado a `blu-dev-staff`: fixes del importador, favicons, fix del menú, grilla de
-  precios por color y los 2 commits de listas de color que habían quedado colgados.
-- Pendiente de merge: `feature/laset-ocultamientos-ui` (links a saftel, 4 pestañas de
-  inventario, `icon.svg`).
+  precios por color, los 2 commits de listas de color que habían quedado colgados y
+  `feature/laset-ocultamientos-ui` (PR #15).
+- Abierto: **`fix/router-base-doble-prefijo`** (3 commits) con todo lo del `router.base`.
+- ⚠️ El href del favicon quedó **duplicado**: ya vivía en `fix/favicon-href-router-base`
+  (`50d7966`), que nunca se mergeó, y se volvió a commitear en `0feed42`. Mergear una y descartar
+  la otra.
 
 ## 2026-09-17
 
