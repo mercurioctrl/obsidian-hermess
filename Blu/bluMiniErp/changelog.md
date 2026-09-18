@@ -4,6 +4,23 @@ Registro de lo trabajado en el proyecto, agrupado por fecha.
 
 ---
 
+## 2026-09-18 — Personal: el historial de ausencias dice quién la cargó y cuánto descuenta
+
+### Chip de descuento + "Cargada por" + días hábiles reales (rama `feat/ausencias-dias-habiles`)
+- feat: los dos datos **ya estaban** en `ausencias` (`descuenta_dias`, `usuario_id`) y la API ya mandaba el usuario — sólo no se renderizaban. Cada fila de `/staff/{id}` muestra ahora chip verde **"Descuenta N días"** (hábiles) o gris "No descuenta", **"Cargada por {nombre}"**, y "N días corridos" **sólo cuando difiere** de los hábiles.
+- fix: la línea de fecha mostraba **días corridos** calculados en el frontend, que no es lo que descuenta. La ausencia 28/12/2026→8/1/2027 decía "12 días" y descontaba 9. Se sacó ese conteo de la línea de fecha: el único número visible sale del backend.
+- ⚠️ **Una sola implementación del conteo:** `Feriado::contarDiasHabiles()`. `Empleado::diasHabilesEntre()` (el saldo de vacaciones) pasa a delegar ahí y `Ausencia::diasHabiles()` (la card) la usa, para que no puedan divergir. El controller carga los feriados **una vez** por listado, no una query por fila.
+- ⚠️ `descuenta_dias` **manda por sobre el motivo**: `vacacionesDetalle()` filtra sólo por ese flag, así que una ausencia "Enfermedad" con el flag en true también descuenta. Ver [[Modulo Personal]].
+
+### Feriados 2027 cargados (seeder)
+- fix: `feriados` sólo tenía 2025 y 2026. **Un año sin cargar no falla, cuenta de más**: sin el 1/1/2027 esa vacación descontaba 10 hábiles en vez de 9 — alguien ya lo había notado y dejó la cuenta a mano en las observaciones de la ausencia.
+- Las móviles se **derivaron, no se copiaron**: Carnaval y Viernes Santo de Pascua (28/03/2027) y los trasladables por **Ley 27.399** (martes/miércoles → lunes anterior; jueves/viernes → lunes siguiente). El algoritmo se validó contra 2026 y reproduce sus fechas exactas. 16 feriados cargados.
+- ⚠️ **Faltan los puentes turísticos de 2027**: los fija el Poder Ejecutivo por decreto, no se derivan de ninguna regla. Hay que agregarlos a mano cuando se publiquen.
+
+Archivos: `backend/app/Models/{Feriado,Empleado,Ausencia}.php`, `backend/app/Http/Controllers/AusenciaController.php`, `backend/database/seeders/FeriadosSeeder.php`, `frontend/pages/staff/[id].vue`
+
+---
+
 ## 2026-09-17 — Contabilidad: retenciones sufridas + ERP vs Estudio contable
 
 ### «ERP vs Estudio contable»: cargar la DDJJ del estudio mes a mes (migración 0118)

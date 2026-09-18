@@ -122,10 +122,48 @@ Vista **self-service** `/mi-area` para que cada colaborador vea sus propios dato
 - **Frontend:** `pages/mi-area/index.vue` — cards Mis datos · Mi rol · Datos bancarios (CBU/alias con botón copiar) · Vacaciones · **Política de Vacaciones** (colapsable) · **Feriados {año}** (listado, pasados atenuados). Las cards de rol/banco se ocultan si están vacías.
 - **Carga de datos:** los campos nuevos (dirección, cumpleaños, bancarios) los edita el **admin** en `/staff/[id]` tab Información (sección "Datos bancarios"); validación en `EmpleadoController::reglasDatosBancarios()`.
 
+### Historial de ausencias — qué muestra cada fila (2026-09-18)
+
+En `/staff/{id}`, tab Ausencias. Cada fila trae:
+
+| Elemento | De dónde sale |
+|---|---|
+| Chip verde **"Descuenta N días"** / gris "No descuenta" | `ausencias.descuenta_dias`; N = días **hábiles** (`dias_habiles`, que agrega `AusenciaController`) |
+| **"Cargada por {nombre}"** | `ausencias.usuario_id` — el `store` lo setea con el usuario logueado |
+| **"N días corridos"** | sólo aparece cuando **difiere** de los hábiles (el tramo cruza fin de semana o feriado) |
+
+> [!warning] Antes se mostraban días CORRIDOS, que no son los que descuentan
+> La línea de fecha calculaba el rango en el frontend: la ausencia 28/12/2026→8/1/2027 decía
+> **"12 días"** y descontaba **9**. Ese conteo se sacó de ahí — el único número visible sale del
+> backend, del mismo contador que el saldo.
+
+> [!warning] `descuenta_dias` manda por sobre el motivo
+> `vacacionesDetalle()` filtra **sólo** por ese flag, no por `motivo`. Una ausencia con motivo
+> "Enfermedad" y el flag en true **también** descuenta del saldo de vacaciones.
+
+`AusenciaController::conDiasHabiles()` carga los feriados **una sola vez** para el rango del listado,
+en vez de una query por fila.
+
+### Feriados — el seeder hay que correrlo cada año
+
+`FeriadosSeeder` (idempotente) tiene **2025, 2026 y 2027**:
+`php artisan db:seed --class=FeriadosSeeder --force`
+
+> [!danger] Un año sin cargar NO falla: cuenta de más
+> Sin el 1/1/2027 en la tabla, una vacación 28/12/2026→8/1/2027 descontaba **10** días hábiles en vez
+> de 9. Es silencioso y afecta el saldo de todos.
+
+Las fechas **no son todas fijas**:
+- **Carnaval y Viernes Santo** derivan de Pascua (2027: 28/03).
+- **Trasladables** (Güemes 17/6, San Martín 17/8, Diversidad 12/10, Soberanía 20/11) se corren por
+  **Ley 27.399**: martes/miércoles → lunes anterior; jueves/viernes → lunes siguiente.
+- **Puentes turísticos:** los fija el Poder Ejecutivo **por decreto**, no salen de ninguna regla.
+  **2027 todavía no los tiene** — agregarlos a mano cuando se publiquen.
+
 ### Vacaciones — días hábiles + feriados
 
 - **Asignados automáticos por antigüedad:** `Empleado::diasVacacionesAsignados()` = `<=5→14`, `<=10→21`, `<=20→28`, `>20→35`. `antiguedadAnios()` calcula años al 31/12.
-- **⚠️ Se cuentan en DÍAS HÁBILES (política Blu, no ley):** `diasHabilesEntre()` excluye sábados, domingos y **feriados nacionales** (tabla `feriados`). Los 14/21/28/35 se interpretan como hábiles (beneficio adicional al régimen legal). `vacacionesTomadas()`/`vacacionesDetalle()` suman `ausencias` con `motivo='Vacaciones'` del año, recortadas al año.
+- **⚠️ Se cuentan en DÍAS HÁBILES (política Blu, no ley):** el conteo lo hace **`Feriado::contarDiasHabiles()`** (excluye sábados, domingos y **feriados nacionales** de la tabla `feriados`); `Empleado::diasHabilesEntre()` delega ahí. **Única implementación a propósito** (2026-09-18): el historial de ausencias muestra ese mismo número por fila y no puede contradecir al saldo. Los 14/21/28/35 se interpretan como hábiles (beneficio adicional al régimen legal). `vacacionesTomadas()`/`vacacionesDetalle()` suman `ausencias` con `motivo='Vacaciones'` del año, recortadas al año.
 - **Feriados:** modelo `Feriado` + `Feriado::fechasEntre($d,$h)`. Seeder `FeriadosSeeder` (idempotente, **2025+2026**, fuente argentina.gob.ar). Correr al empezar cada año con las fechas nuevas: `php artisan db:seed --class=FeriadosSeeder --force`. También se muestran en el [[Modulo Calendario]].
 
 ### Días extra de vacaciones (premio) (2026-08)
