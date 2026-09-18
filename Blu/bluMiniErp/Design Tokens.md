@@ -81,7 +81,7 @@ Diseno flat, casi sin sombras.
 
 ## Iconografia
 
-Lucide icons via `nuxt-icon`. Siempre con prefijo `lucide:`. Ver [[Frontend#Iconos]] y [[Errores Comunes#Iconos sin prefijo lucide]].
+Lucide icons via `nuxt-icon`. Siempre con prefijo `lucide:`. Ver [[Frontend#Iconos]] y [[Errores Comunes#Iconos sin prefijo lucide se renderizan como texto]].
 
 ---
 

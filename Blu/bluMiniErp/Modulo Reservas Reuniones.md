@@ -26,7 +26,7 @@ Modelos: `BookingConfig`, `BookingRegla`, `BookingBloqueo`, `BookingReserva`. `B
 - **`app/Services/BookingService.php`** — `slotsDisponibles()` genera slots de reglas semanales + extras, descartando **feriados**, **ausencias** del empleado vinculado, bloqueos, reservas y horarios pasados; acota a `dias_anticipacion`. `crearReserva()` revalida en **transacción** → anti doble-booking (422). Todo en TZ `America/Argentina/Buenos_Aires`.
 - **`app/Support/IcsBuilder.php`** — helper `.ics` reutilizable (esc/fold + `invite()` con múltiples `ATTENDEE`, `METHOD:REQUEST`). El [[Modulo Calendario]] lo usa; su `respuestaIcs` ahora emite VEVENT con hora para las reservas. Prop opcional `conference` → emite `X-GOOGLE-CONFERENCE` (ver sección de videollamada).
 - **`PublicBookingController`** (público) + **`MiDisponibilidadController`** (self-service, opera sobre `auth()->user()`). **`resolverAnfitrion($ref)`** resuelve al dueño por `booking_slug` **o** `booking_token` (fallback de links viejos).
-- **`ReservaReunionMail`** + blade `emails/reserva-reunion`: email a cada invitado (saludo personalizado) + al dueño, con `.ics` adjunto. **Se envía por el mailer `erp@`** (`Mail::mailer('erp')`, no payments@); el Mailable/`Mail::raw` fija el `from` en `erp@`. Ver [[Stack e Infraestructura#Mail]].
+- **`ReservaReunionMail`** + blade `emails/reserva-reunion`: email a cada invitado (saludo personalizado) + al dueño, con `.ics` adjunto. **Se envía por el mailer `erp@`** (`Mail::mailer('erp')`, no payments@); el Mailable/`Mail::raw` fija el `from` en `erp@`. Ver [[Stack e Infraestructura#Mail SMTP]].
 
 ## Endpoints
 
@@ -102,6 +102,6 @@ El email (`ReservaReunionMail` + blade) suma fila **"Videollamada"** y botón az
 
 - [[Modulo Calendario]] — donde aparecen las reservas como eventos con hora
 - [[Modulo Personal]] — `/mi-area` enlaza a Mi Disponibilidad; las ausencias bloquean slots
-- [[Modulo Tareas#Web Push]] — mismo `PushService`/notificaciones in-app
+- [[Modulo Tareas#Backend]] — mismo `PushService`/notificaciones in-app
 - [[Errores Comunes]] — gotcha de la regla `gt` con horas
 - [[Backend - API]] · [[Base de Datos]]

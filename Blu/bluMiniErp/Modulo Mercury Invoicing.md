@@ -107,7 +107,7 @@ Migraciones:
 
 **Descargas gateadas (2026-06-30):** las rutas públicas (token por query) `/presupuestos/{id}/pdf`, `/preview` y `/mercury/invoices/{id}/pdf` resuelven el usuario del token y devuelven **403** si NO tiene `VER_MONTOS_SALDOS` (admin bypassa via `Usuario::tienePermiso`). Los documentos tienen montos, por eso se gatean igual que los saldos. El frontend además oculta los botones de descarga (`v-if="authStore.verMontos"`) en listado y detalle. Ver [[Modulo Permisos]].
 
-Ver [[Base de Datos#presupuestos]] y [[Base de Datos#clientes]].
+Ver [[Base de Datos#`presupuestos`]] y [[Base de Datos#`clientes`]].
 
 ---
 
@@ -241,7 +241,7 @@ El default del checkbox es ON cuando hay invoice asociado: la asunción es que s
 
 - [[Medios de Pago#Mercury Invoicing API (desde 2026-04-14)]] — sección extendida en la nota de Medios de Pago
 - [[Backend - API#Mercury Invoicing — endpoints (desde 2026-04-14)]]
-- [[Base de Datos#presupuestos]] — campos persistidos
+- [[Base de Datos#`presupuestos`]] — campos persistidos
 - [[Errores Comunes#Mercury IP whitelist en API tokens]]
 - [[Errores Comunes#Mercury accountNumber vs UUID]]
 - [[Errores Comunes#Mercury endpoint singular vs plural]]

@@ -2,7 +2,7 @@
 
 Integración con un servicio externo tipo cola para enviar mensajes de WhatsApp desde el ERP. Sumada el 2026-04-15 para permitir compartir adjuntos de proyecto con los contactos del cliente.
 
-Ver tambien: [[Backend - API#WhatsApp Inbox - envio de adjuntos]], [[Base de Datos#cliente_telefonos]], [[memoria#WhatsApp Inbox API y compartir adjuntos]].
+Ver tambien: [[Backend - API#WhatsApp Inbox — envío de adjuntos]], [[Base de Datos#`cliente_telefonos`]], [[memoria#WhatsApp Inbox API y compartir adjuntos (2026-04-15)]].
 
 ---
 
@@ -320,6 +320,6 @@ Requiere que `ProyectoController::show` eager-loadee `presupuesto.cliente.telefo
 
 - [[Backend - API#Proyectos]] — endpoint `enviar-whatsapp` y ruta pública
 - [[Backend - Modelos#ProyectoAdjunto]] — método `asegurarPublicToken()`
-- [[Base de Datos#cliente_telefonos]] y [[Base de Datos#proyecto_adjuntos]]
-- [[memoria#WhatsApp Inbox API y compartir adjuntos]] — contexto de la decisión
+- [[Base de Datos#`cliente_telefonos`]] y [[Base de Datos#`proyecto_adjuntos`]]
+- [[memoria#WhatsApp Inbox API y compartir adjuntos (2026-04-15)]] — contexto de la decisión
 - [[changelog#2026-04-15]] — iteración donde se agregó

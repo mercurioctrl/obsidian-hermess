@@ -172,7 +172,7 @@ fillable: prueba_ejecucion_id, orden, descripcion, categoria_servicio,
 
 ## HTTP Resources (API Resources)
 
-Estos envuelven la respuesta en `{ "data": {...} }`. Ver [[Backend - API#wrapper data en respuestas]].
+Estos envuelven la respuesta en `{ "data": {...} }`. Ver [[Backend - API#wrapper `data:` en respuestas]].
 
 | Resource | Usado en |
 |----------|---------|

@@ -99,4 +99,4 @@ inmediato de sub-recursos) + badges en la cara de la tarjeta; elige endpoint seg
 - [[Modulo Novedades]] — comparten portal y `novedades_token` (tabs del mismo enlace)
 - [[Modulo Tareas]] — destino de "convertir en tarea" + misma infra de notificaciones
 - [[Modulo Permisos]] · [[Frontend]] · [[Backend - API]] · [[Base de Datos]]
-- [[changelog#2026-09-03]]
+- [[changelog#2026-09-03 — Nuevo módulo Requerimientos (tablero Trello por cliente)]]

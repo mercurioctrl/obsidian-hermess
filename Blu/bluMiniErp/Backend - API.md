@@ -114,7 +114,7 @@ POST   /api/proyectos/{id}/jira-boards       -> vincularJiraBoard
 DELETE /api/proyectos/{id}/jira-boards/{board}
 ```
 
-Ver [[Frontend#Modulo Jira]] para la integracion de tableros.
+Ver [[Frontend#Modulo Jira (en proyectos/[id].vue)]] para la integracion de tableros.
 
 ## Cuenta Corriente
 ```
@@ -152,7 +152,7 @@ GET    /api/gastos-resumen
 
 > `monto` es calculado por el controller, nunca se envia desde el [[Frontend]]. Ver [[Reglas de Negocio#IVA en Gastos]].
 
-> Proteccion por estado: PUT y DELETE fallan con 422 si presupuesto COBRADO/FACTURADO. Ver [[Reglas de Negocio#Gastos - Proteccion por estado de presupuesto]].
+> Proteccion por estado: PUT y DELETE fallan con 422 si presupuesto COBRADO/FACTURADO. Ver [[Reglas de Negocio#Gastos - Edicion y eliminacion (siempre habilitadas)]].
 
 ## Dashboard
 ```

@@ -73,7 +73,7 @@ Ver detalles de cada modelo en [[Backend - Modelos]].
 | persona_contacto | varchar(150) | nullable |
 | created_at, updated_at | timestamps | |
 
-> Desde 2026-04-15 los clientes tienen además teléfonos múltiples en la tabla [[#cliente_telefonos]] con soporte de tipo (WHATSAPP default, LLAMADA, FIJO).
+> Desde 2026-04-15 los clientes tienen además teléfonos múltiples en la tabla [[Base de Datos#`cliente_telefonos`]] con soporte de tipo (WHATSAPP default, LLAMADA, FIJO).
 
 ### `cliente_telefonos`
 Teléfonos múltiples por cliente (migraciones 0053/0054). Ver [[Modulo WhatsApp Inbox]] y [[changelog#2026-04-15]].
@@ -328,9 +328,9 @@ Sin timestamps. Ver [[Errores Comunes#withTimestamps en la relacion proyecto_emp
 | periodo_desde | date | nullable |
 | periodo_hasta | date | nullable |
 | notas | text | nullable |
-| descripcion_ia | text | nullable. Ver [[Backend - API#Evidencias]] |
+| descripcion_ia | text | nullable. Ver [[Backend - API#Evidencias / Activaciones]] |
 | descripcion_ia_cant_hitos | unsigned int | nullable |
-| created_by | FK -> usuarios | nullable. Usuario que creó la activación (migración 0052, 2026-04-14). Ver [[Reglas de Negocio#Activaciones - tracking de creador]] |
+| created_by | FK -> usuarios | nullable. Usuario que creó la activación (migración 0052, 2026-04-14). Ver [[Reglas de Negocio#Autoria (created_by)]] |
 
 ### `hitos_ejecucion`
 | Columna | Tipo | Notas |
@@ -348,7 +348,7 @@ Sin timestamps. Ver [[Errores Comunes#withTimestamps en la relacion proyecto_emp
 | estado | varchar(50) | Ok / Pendiente Blu / Pendiente Cliente / En Progreso / Cancelado |
 | jira_issue_key | varchar(50) | nullable |
 | jira_issue_summary | varchar(500) | nullable |
-| created_by | FK -> usuarios | nullable. Usuario que creó el hito (migración 0052). En `update()` se preserva al reconciliar por id. Ver [[Backend - Modelos#PruebaEjecucion]] |
+| created_by | FK -> usuarios | nullable. Usuario que creó el hito (migración 0052). En `update()` se preserva al reconciliar por id. Ver [[Backend - Modelos#PruebaEjecucion (Activacion)]] |
 
 ### `etiquetas`
 | Columna | Tipo | Notas |

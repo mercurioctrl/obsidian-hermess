@@ -6,10 +6,10 @@ Gestion completa de empleados: alta, asignacion a proyectos y pagos.
 
 - `empleados` - datos del empleado. Columnas nuevas (2026-08): `direccion` (mig 0090); `fecha_nacimiento` + bancarios `banco`, `tipo_cuenta`, `cbu`, `alias_cbu`, `titular`, `cuil` (mig 0091)
 - `proyecto_empleado` - pivot de asignaciones (sin timestamps)
-- `pagos_personal` - historial de pagos. Cada pago genera un **gasto vinculado** que descuenta saldo de [[Base de Datos#bancos_cajas|bancos_cajas]] (migración 0057: `periodo_mes`, `periodo_anio`, `gasto_id`)
+- `pagos_personal` - historial de pagos. Cada pago genera un **gasto vinculado** que descuenta saldo de [[Base de Datos#`bancos_cajas`|bancos_cajas]] (migración 0057: `periodo_mes`, `periodo_anio`, `gasto_id`)
 - `feriados` - feriados nacionales (mig 0092): `fecha` (unique), `nombre`, `tipo`. Ver sección [[#Área de empleado y vacaciones (Mi Área) (2026-08)]]
 
-Ver columnas detalladas en [[Base de Datos#empleados]].
+Ver columnas detalladas en [[Base de Datos#`empleados`]].
 
 ## Backend
 
@@ -30,7 +30,7 @@ POST   /api/proyectos/{id}/empleados        <- asignar desde el proyecto
 DELETE /api/proyectos/{id}/empleados/{emp}  <- desasignar desde el proyecto
 ```
 
-Sin wrapper `data:`. Ver [[Backend - API#wrapper data en respuestas]].
+Sin wrapper `data:`. Ver [[Backend - API#wrapper `data:` en respuestas]].
 
 ### Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)
 Un pago de personal **ES un gasto**. Al registrar (`POST /empleados/{id}/pagos`):
@@ -38,13 +38,13 @@ Un pago de personal **ES un gasto**. Al registrar (`POST /empleados/{id}/pagos`)
 2. Crea un `Gasto` (tipo `OPERATIVO`, categoría **"Sueldos"** via `firstOrCreate`, `realizado=true`, IVA 0, `tasa_cambio` de dolarapi.com), fechado al **primer día del período** (`Carbon::create(periodo_anio, periodo_mes, 1)`). **Ese gasto es la ÚNICA fuente del descuento de saldo** (`restarSaldo`).
 3. Crea el `PagoPersonal` con `gasto_id`, `periodo_mes`, `periodo_anio`.
 
-Así el sueldo aparece en [[Frontend#Gastos]] (`/gastos`) y en el [[Dashboard UI Skill|Dashboard]] ("Gastos del Período") del mes seleccionado. Descripción del gasto: `"{TipoLabel} {Mes} {Año} — {empleado}"` (+ descripción libre, truncada a 100).
+Así el sueldo aparece en [[Frontend#Estructura de paginas]] (`/gastos`) y en el [[Dashboard UI Skill|Dashboard]] ("Gastos del Período") del mes seleccionado. Descripción del gasto: `"{TipoLabel} {Mes} {Año} — {empleado}"` (+ descripción libre, truncada a 100).
 
 Al eliminar: si el pago tiene `gasto_id`, se borra el gasto (que devuelve el saldo via `sumarSaldo`); pagos legacy (pre-0057) usan fallback de saldo directo.
 
 **⚠️ Período ≠ fecha de pago ≠ mes en curso.** `periodo_mes`/`periodo_anio` definen en qué mes impacta el gasto; `fecha` es cuándo se pagó realmente. El **gasto** se fecha al **día 1 del mes del período** (`Carbon::create(anio, mes, 1)`), NO a `now()` ni a la fecha de pago (ej: período 5/2026 → gasto `2026-05-01` aunque se pague el 16/06).
 
-**Interacción con el Dashboard.** "Gastos del Período" suma `gastos` por `fecha` y **por defecto muestra el mes actual**. Un sueldo imputado a otro mes no aparece mirando el mes en curso — hay que mover el filtro de período del Dashboard. No es bug: confusión real porque el selector "Período" del form defaultea al mes actual. Ver [[Errores Comunes#El gasto de un pago de sueldo aparece en el mes en curso (no es bug)]].
+**Interacción con el Dashboard.** "Gastos del Período" suma `gastos` por `fecha` y **por defecto muestra el mes actual**. Un sueldo imputado a otro mes no aparece mirando el mes en curso — hay que mover el filtro de período del Dashboard. No es bug: confusión real porque el selector "Período" del form defaultea al mes actual. Ver [[Errores Comunes#El gasto de un pago de sueldo "aparece en el mes en curso" (no es bug)]].
 
 Ver [[Reglas de Negocio#Bancos y Cajas - Saldo automatico]].
 
@@ -155,7 +155,7 @@ Recordatorio en `/staff` de **qué empleados activos aún no cobraron el sueldo 
 - [[Modulo Reservas Reuniones]] - Mi Área enlaza a "Mi Disponibilidad"; las ausencias del empleado bloquean los slots reservables
 - [[Modulo Gastos Personal]] - el empleado carga sus gastos de bolsillo con evidencia desde `/mi-area`; admin los aprueba/rechaza (tab "Gastos" en `/staff/{id}`) (2026-09-05)
 - [[Modulo Tareas]] - Tareas asignadas al usuario del empleado
-- [[Base de Datos#empleados]] - Esquema de tablas
+- [[Base de Datos#`empleados`]] - Esquema de tablas
 - [[Backend - API#Staff y Empleados]] - Endpoints
 - [[Reglas de Negocio#Personal - Asignacion a Proyectos]] - Reglas de asignacion
 - [[Errores Comunes]] - Bugs con relaciones pivot

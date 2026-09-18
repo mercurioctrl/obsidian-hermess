@@ -82,4 +82,4 @@ PUT  /api/clientes/{cliente}/novedades/publicado       (body: publicado:bool)
 - [[Modulo Flota GSM]] — otro módulo de seguimiento que no toca finanzas
 - [[Modulo WhatsApp Inbox]] — la ruta pública de adjuntos por token que reutilizan las evidencias
 - [[Frontend]] · [[Backend - API]] · [[Base de Datos]]
-- [[changelog#2026-09-03]]
+- [[changelog#2026-09-03 — Nuevo módulo Novedades (blog público por cliente)]]

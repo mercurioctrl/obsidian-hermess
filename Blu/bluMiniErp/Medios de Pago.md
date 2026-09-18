@@ -6,7 +6,7 @@ Cada una tiene su propio controller, banco vinculado en `configuracion`, y pagin
 
 ## Configuracion comun
 
-Credenciales en la tabla `configuracion` (singleton). Ver [[Base de Datos#configuracion]].
+Credenciales en la tabla `configuracion` (singleton). Ver [[Base de Datos#`configuracion`]].
 
 Las secret keys **nunca se devuelven en `GET /config`** — se reemplazan por flags booleanos.
 
@@ -28,7 +28,7 @@ Bearer token (`mp_access_token`). OAuth adicional (`mp_oauth_token`) para settle
 
 ### Tabla local: mercadopago_movimientos
 
-MP no tiene endpoint de historial completo. Se persisten movimientos localmente con upsert por `mp_id`. Ver [[Base de Datos#mercadopago_movimientos]].
+MP no tiene endpoint de historial completo. Se persisten movimientos localmente con upsert por `mp_id`. Ver [[Base de Datos#`mercadopago_movimientos`]].
 
 ### Clasificacion de direccion
 
@@ -201,7 +201,7 @@ Mercury:      transactions -> API directa
 ## Ver tambien
 
 - [[Backend - API]] - Endpoints de MP, Stripe, Mercury
-- [[Base de Datos#configuracion]] - Credenciales y bancos vinculados
+- [[Base de Datos#`configuracion`]] - Credenciales y bancos vinculados
 - [[Reglas de Negocio#Monedas y Tipo de Cambio]] - Conversion automatica al cobrar
 - [[Frontend]] - Paginas de cada integracion
 - [[Errores Comunes]] - Bugs de integraciones externas

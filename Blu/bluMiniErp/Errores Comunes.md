@@ -34,7 +34,7 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 **Causa:** cambiar el mailer sólo cambia la **conexión/credenciales SMTP**. El header **From** sigue tomando el valor global `config('mail.from')` (= `payments@`). Autenticás como `erp@` pero mandás con From `payments@` → **From mismatch**, muchos servidores lo rechazan.
 
-**Solución:** fijar el `from` **explícito** en el Mailable (envelope: `from: new Address(config('mail.erp_from.address'), config('mail.erp_from.name'))`) y en los `Mail::raw` (`fn($m) => $m->to(...)->from(config('mail.erp_from.address'), config('mail.erp_from.name'))`). Ver [[Stack e Infraestructura#Mail]] y [[changelog#2026-08-25]].
+**Solución:** fijar el `from` **explícito** en el Mailable (envelope: `from: new Address(config('mail.erp_from.address'), config('mail.erp_from.name'))`) y en los `Mail::raw` (`fn($m) => $m->to(...)->from(config('mail.erp_from.address'), config('mail.erp_from.name'))`). Ver [[Stack e Infraestructura#Mail SMTP]] y [[changelog#2026-08-25 — Recuperación de clave + mailer erp@, simulador de aumentos, ajustes de comunicados]].
 
 **Bonus (deploy):** tras editar `config/mail.php` hay que `docker cp` + `php artisan optimize:clear`. Si `config:show mail.mailers.erp` devuelve "does not exist", el archivo no llegó al container (el `docker cp` no aplicó).
 
@@ -78,7 +78,7 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 **Sintoma:** Error SQL al acceder a empleado->proyectos.
 
-**Causa:** La tabla `proyecto_empleado` no tiene timestamps. Ver [[Base de Datos#proyecto_empleado pivot]].
+**Causa:** La tabla `proyecto_empleado` no tiene timestamps. Ver [[Base de Datos#`proyecto_empleado` (pivot)]].
 
 **Solucion:** Solo usar `->withPivot(...)` sin `->withTimestamps()`.
 
@@ -104,7 +104,7 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 **Sintoma:** "Unknown component" error.
 
-**Causa:** `pathPrefix: false` en nuxt.config.ts. Ver [[Frontend#Configuracion]].
+**Causa:** `pathPrefix: false` en nuxt.config.ts. Ver [[Frontend#Configuracion (nuxt.config.ts)]].
 
 **Solucion:** `<FormField>` no `<UiFormField>`.
 
@@ -114,7 +114,7 @@ Bugs reales ya cometidos en este proyecto. Leer antes de modificar cualquier mod
 
 **Sintoma:** `modelo.value` queda como `{ data: { id: 1, ... } }`.
 
-**Solucion:** `modelo.value = res?.data ?? res`. Ver [[Backend - API#wrapper data en respuestas]].
+**Solucion:** `modelo.value = res?.data ?? res`. Ver [[Backend - API#wrapper `data:` en respuestas]].
 
 ---
 
@@ -166,7 +166,7 @@ Iterar gastos y convertir a la moneda del presupuesto usando `tasa_cambio`. Ver 
 
 **Sintoma:** isAdmin es false para todos los usuarios.
 
-**Solucion:** `usuario.value = data?.data ?? data` en fetchMe(). Ver [[Frontend#stores auth]].
+**Solucion:** `usuario.value = data?.data ?? data` en fetchMe(). Ver [[Frontend#`stores/auth.ts`]].
 
 ---
 
@@ -204,7 +204,7 @@ Iterar gastos y convertir a la moneda del presupuesto usando `tasa_cambio`. Ver 
 
 **Sintoma:** `env('MI_VARIABLE')` devuelve null.
 
-**Solucion:** Siempre usar `config()`, nunca `env()` directo en controllers. Registrar en `config/services.php`. Ver [[Stack e Infraestructura#Variables de entorno]].
+**Solucion:** Siempre usar `config()`, nunca `env()` directo en controllers. Registrar en `config/services.php`. Ver [[Stack e Infraestructura#Variables de entorno (.env)]].
 
 ---
 
@@ -406,7 +406,7 @@ Al validar un rango horario con `'hora_fin' => ['regex:...','gt:hora_inicio']`, 
 
 ## Blade PDF: `@include('pdf.partials.logo')` da "Undefined variable $bluLogoBase64" (2026-08-23)
 
-Al crear un blade PDF nuevo (Browsershot, `resources/views/pdf/`) e incluir el logo con `@include('pdf.partials.logo')` seguido de `{{ $bluLogoBase64 }}`, el render tira **500** `Undefined variable $bluLogoBase64 (View: ...)`. Pasó construyendo el [[Modulo Remitos]]. **Causa:** `pdf/partials/logo.blade.php` sólo **define** la variable en un `@php` block, y Blade ejecuta el `@include` en un **scope local** → la variable **no llega al blade padre**. **Fix:** usar `@include('pdf._logo')`, que **renderiza el `<img>`** directamente (como hacen `factura-afip` y `remito`). Para el watermark del footer: contenedor con `opacity:0.12` + `.footer-brand img { height:32px !important }` (el `height:50px` inline del partial gana salvo con `!important`). El partial `_logo` usa `$config->empresa_nombre` en el `alt` → pasar `['config'=>Configuracion::first()]` al render. Ver [[Modulo Remitos]] y [[reference_logo_blu]].
+Al crear un blade PDF nuevo (Browsershot, `resources/views/pdf/`) e incluir el logo con `@include('pdf.partials.logo')` seguido de `{{ $bluLogoBase64 }}`, el render tira **500** `Undefined variable $bluLogoBase64 (View: ...)`. Pasó construyendo el [[Modulo Remitos]]. **Causa:** `pdf/partials/logo.blade.php` sólo **define** la variable en un `@php` block, y Blade ejecuta el `@include` en un **scope local** → la variable **no llega al blade padre**. **Fix:** usar `@include('pdf._logo')`, que **renderiza el `<img>`** directamente (como hacen `factura-afip` y `remito`). Para el watermark del footer: contenedor con `opacity:0.12` + `.footer-brand img { height:32px !important }` (el `height:50px` inline del partial gana salvo con `!important`). El partial `_logo` usa `$config->empresa_nombre` en el `alt` → pasar `['config'=>Configuracion::first()]` al render. Ver [[Modulo Remitos]] y la memoria `reference_logo_blu` (logo en base64 para blades).
 
 ---
 

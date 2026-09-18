@@ -24,7 +24,7 @@ Lecciones aprendidas y correcciones del usuario. Estas guian el comportamiento d
 - **Gasto.categoria:** Es string plano, NO relacion Eloquent. Nunca usar `with('categoria')`
 - **RolUsuario:** Es enum casteado. Comparar con `RolUsuario::ADMIN`, no con string ni `->value`. Ver [[Backend - Modelos#Usuario]]
 - **Rutas apiResource:** Las rutas especificas (`/gastos/categorias`) deben registrarse ANTES del `apiResource`. Ver [[Errores Comunes#Rutas especificas despues de apiResource colisionan con id]]
-- **Logo en blades PDF (2026-08-23):** incluir con `@include('pdf._logo')` (renderiza el `<img>`), NO `@include('pdf.partials.logo')` — ese sólo define `$bluLogoBase64` en scope local del include → error 500 "Undefined variable" en el blade padre. Detectado en [[Modulo Remitos]]. Ver [[Errores Comunes#Blade PDF]]
+- **Logo en blades PDF (2026-08-23):** incluir con `@include('pdf._logo')` (renderiza el `<img>`), NO `@include('pdf.partials.logo')` — ese sólo define `$bluLogoBase64` en scope local del include → error 500 "Undefined variable" en el blade padre. Detectado en [[Modulo Remitos]]. Ver [[Errores Comunes#Blade PDF: `@include('pdf.partials.logo')` da "Undefined variable $bluLogoBase64" (2026-08-23)]]
 - **Laravel 11 sin `config/mail.php`:** El skeleton de este repo no incluye `config/mail.php`. Hay que crearlo a mano para que el Mail facade funcione. Ver [[Errores Comunes#Laravel 11 sin config mail php por default]] y [[Stack e Infraestructura#Mail SMTP]]
 - **Nginx strippea `/api` → el exception renderer depende de `Accept: application/json` (2026-07-12):** Nginx quita el prefijo `/api` antes de pasar al backend, así que Laravel ve el path como `config`, NO `api/config`. En `bootstrap/app.php` el custom renderer usa `if ($request->expectsJson() || $request->is('api/*'))`, y como `is('api/*')` es **false** (el prefijo ya no está), el JSON de error solo se dispara con header `Accept: application/json`. El frontend (`useApi.ts`) siempre lo manda, pero **al testear endpoints con curl hay que incluir `-H "Accept: application/json"`** o los códigos de error engañan (ej. 500 en vez de 401). Ver [[changelog#2026-07-12]]
 - **`AuthenticationException` no mapea a 401 por default (2026-07-12):** un token faltante/vencido lanza `AuthenticationException`, que NO tiene `getStatusCode()` → el handler caía a 500. El frontend (`useApi.ts:24`) espera **401** para limpiar token y redirigir a `/login`, así que el redirect por sesión vencida nunca funcionaba. Fix en el renderer: `if ($e instanceof AuthenticationException) return json 401`. Regla general: cualquier custom exception renderer debe mapear explícitamente AuthenticationException→401 y AuthorizationException→403
@@ -120,7 +120,7 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 
 ### Gastos
 - **Cotizacion e IVA:** Cada gasto registra tasa_cambio (BCRA) e IVA (0/10.5/21/27%). Monto final = subtotal + IVA. Migracion 0047. Ver [[Reglas de Negocio#IVA en Gastos]]
-- **Edicion:** Editables desde listado y proyecto. Proteccion por estado presupuesto COBRADO/FACTURADO. Campo `editable` en GastoResource. Ver [[Reglas de Negocio#Gastos - Proteccion por estado de presupuesto]]
+- **Edicion:** Editables desde listado y proyecto. Proteccion por estado presupuesto COBRADO/FACTURADO. Campo `editable` en GastoResource. Ver [[Reglas de Negocio#Gastos - Edicion y eliminacion (siempre habilitadas)]]
 - **Campo realizado:** Indica si el pago al acreedor fue cancelado. Toggle PATCH, desmarcar requiere admin. Migracion 0048. Ver [[Reglas de Negocio#Gastos - Campo realizado]]
 
 ### Proyectos
@@ -131,7 +131,7 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 ### Personal (Pagos)
 - **Pago = Gasto vinculado (2026-06-16):** Decisión de diseño clave — un pago de personal genera un `Gasto` (categoría "Sueldos", tipo OPERATIVO) que es la **única fuente del descuento de saldo** (evita doble conteo). El pago guarda `gasto_id`; al eliminarlo se borra el gasto y vuelve el saldo. Así los sueldos aparecen en /gastos y Dashboard. Migración 0057. Ver [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)]]
 - **Período mes/año:** El pago tiene `periodo_mes`/`periodo_anio` (≠ fecha real de pago ≠ mes en curso); el gasto se fecha al **día 1 del mes del período** (`Carbon::create(anio,mes,1)`, NO `now()`) → impacta en el mes elegido. Frontend usa `<input type="month">`
-- **Confusión "aparece en el mes en curso" (resuelta 2026-06-16):** el selector "Período" y el Dashboard defaultean al mes actual, por eso parecía que el gasto caía siempre en el mes en curso. No es bug — el gasto usa el período (prueba: queda fechado día 1, no hoy). Ver [[Errores Comunes#El gasto de un pago de sueldo aparece en el mes en curso (no es bug)]]
+- **Confusión "aparece en el mes en curso" (resuelta 2026-06-16):** el selector "Período" y el Dashboard defaultean al mes actual, por eso parecía que el gasto caía siempre en el mes en curso. No es bug — el gasto usa el período (prueba: queda fechado día 1, no hoy). Ver [[Errores Comunes#El gasto de un pago de sueldo "aparece en el mes en curso" (no es bug)]]
 - **Tipos:** SUELDO, BONO, AGUINALDO, ADELANTO, COMISION, OTRO. Moneda del pago debe coincidir con la del banco/caja (422 si no)
 
 ### Activaciones
@@ -167,7 +167,7 @@ Ojo: para activaciones se filtra por `periodo_desde`, así que activaciones sin 
 **Fix del `\Log::error` (2026-04-13):** El catch del `enviarInvoice` usaba `\Log::error(...)` sin FQN, que en Laravel 11 no resuelve (no hay alias `\Log` global). Cuando `Mail::to(...)` lanzaba un error real, el propio catch crasheaba con "Class Log not found", enmascarando la causa. Siempre usar `\Illuminate\Support\Facades\Log::error(...)` o agregar `use Illuminate\Support\Facades\Log;` al tope. Ver [[Errores Comunes#Log facade sin FQN completo falla en Laravel 11]].
 
 ### Clientes — Teléfonos múltiples (2026-04-15)
-Un cliente puede tener N teléfonos con `nombre` de contacto, `codigo_area`, `numero` y `tipo` (`WHATSAPP` default, `LLAMADA`, `FIJO`). Migraciones 0053/0054, modelo `ClienteTelefono` con `$touches = ['cliente']`. Ver [[Base de Datos#cliente_telefonos]] y [[Backend - Modelos#ClienteTelefono]].
+Un cliente puede tener N teléfonos con `nombre` de contacto, `codigo_area`, `numero` y `tipo` (`WHATSAPP` default, `LLAMADA`, `FIJO`). Migraciones 0053/0054, modelo `ClienteTelefono` con `$touches = ['cliente']`. Ver [[Base de Datos#`cliente_telefonos`]] y [[Backend - Modelos#ClienteTelefono]].
 
 **Decisiones de diseño:**
 - **Endpoints dedicados, no sync desde update del cliente.** Hay un `POST /api/clientes/{id}/telefonos` y `DELETE /api/clientes/{id}/telefonos/{telefono}`, registrados ANTES del `apiResource('clientes', …)` para no colisionar con `{cliente}`. Descartamos la alternativa de aceptar el array en el body del update del cliente porque era más complejo (sync/reconcile por id), acoplaba cambios, y forzaba editar el cliente entero para agregar un teléfono.
@@ -247,12 +247,37 @@ Integración con un servicio externo tipo cola para enviar WhatsApp. Ver [[Modul
 ### Recuperación de contraseña + mailer erp@ del sistema (2026-08-25, PR #43) — migración 0105
 
 - **Flujo forgot/reset password** (no existía): `/login` → `/recuperar` → email con link → `/restablecer`. `password_reset_tokens` (mig 0105, token **hasheado**, expira **60 min**). Respuesta **genérica** (sin enumeración), y al resetear **se cierran todas las sesiones**. Rutas públicas con throttle 6/min. Verificado E2E.
-- **Decisión de correos — dos mailers:** `smtp`/`payments@` = SOLO documentos de pago/cobro (invoice de presupuestos, con BCC a payments). `erp`/`erp@blustudioinc.com` (nuevo) = **todo lo demás del sistema**: recuperación de clave + reservas de reuniones + notificaciones de tareas. Clave real de erp@ en `mini-saas/.env` (gitignored). Ver [[Stack e Infraestructura#Mail]].
+- **Decisión de correos — dos mailers:** `smtp`/`payments@` = SOLO documentos de pago/cobro (invoice de presupuestos, con BCC a payments). `erp`/`erp@blustudioinc.com` (nuevo) = **todo lo demás del sistema**: recuperación de clave + reservas de reuniones + notificaciones de tareas. Clave real de erp@ en `mini-saas/.env` (gitignored). Ver [[Stack e Infraestructura#Mail SMTP]].
 - **⚠️ Gotcha:** `Mail::mailer('erp')` no cambia el **From** (queda el global payments@) → hay que fijar `from` explícito desde `config('mail.erp_from')` en el Mailable/`Mail::raw` o el server rechaza. Ver [[Errores Comunes#Mail::mailer('erp') cambia el SMTP pero NO el From → el server rechaza (2026-08-25)]].
 
-### Personal — Simulador de aumentos de sueldo (2026-08-25, PR #41) — ver [[Modulo Personal#Simulador de aumentos]]
+### Personal — Simulador de aumentos de sueldo (2026-08-25, PR #41) — ver [[Modulo Personal#Simulador de aumentos (2026-08-25, PR #41)]]
 
 - Pantalla `/staff/simulador` (100% client-side, what-if, sin backend). Seleccionar empleados + aumentos porcentuales/nominales (en masa o por fila) → sueldo nuevo, extra/mes por empleado, totales por moneda y extra por mes/año. Lee `GET /empleados`; respeta `VER_MONTOS_SALDOS` (aviso si `salario_base` enmascarado). Montos con `fmtM`.
+
+### Gastos de personal — rendición de reembolsos (2026-09-05, mig 0113) — ver [[Modulo Gastos Personal]]
+
+- El empleado carga desde **Mi Área** sus gastos de bolsillo **con evidencia** (imagen/PDF) → quedan **PENDIENTE** hasta que un admin **aprueba/rechaza** (con motivo, notificando al empleado).
+- ⚠️ Es **intake/seguimiento, NO toca finanzas**: no genera un `Gasto` real ni descuenta banco/caja. Mismo criterio que [[Modulo Flota GSM]] y [[Modulo Requerimientos]].
+
+### Retenciones sufridas (2026-09-17, mig 0117) — ver [[Modulo Contabilidad#Retenciones sufridas (migración 0117)]]
+
+- El ERP sólo calculaba el impuesto **determinado**: mostraba "IIBB a pagar $93.905,15" cuando en la DDJJ real de agosto se ingresaron **$5,45**, porque el resto ya estaba retenido. Los certificados en papel no tenían dónde cargarse.
+- Tabla `retenciones` colgada del **presupuesto**, con FK opcional al comprobante AFIP. `liquidacion()` las netea sin cambiarle el significado a las claves viejas (`retenciones_*` y `*_neto` son nuevas), para no romper [[Frontend|el dashboard]].
+- ⚠️ **Importes siempre en ARS** (el agente retiene en pesos aunque la factura sea USD) y se imputan por la **fecha del certificado**, que suele caer en un mes distinto al de la factura.
+- ⚠️ **El neteo de IIBB es real, el de Ganancias es informativo**: IIBB es anticipo mensual; Ganancias es anual y el determinado mensual del ERP es una estimación propia.
+- ⚠️ **El certificado de Ganancias (RG 830) se emite por orden de pago, no por factura**: puede cubrir facturas de varios presupuestos y se carga una sola vez.
+
+### «ERP vs Estudio contable» (2026-09-17, mig 0118) — ver [[Modulo Contabilidad#DDJJ del estudio — «ERP vs Estudio» (migración 0118)]]
+
+- Se carga la DDJJ del estudio por período y se compara **renglón por renglón** contra la liquidación propia. Nace de [[Conciliacion Impuestos 2026-08]], que hubo que hacer a mano contra los PDFs.
+- ⚠️ **Se guarda el desglose, no sólo el importe a pagar.** En agosto el total cerraba salvo **$737,10** y el hueco estaba en el **crédito fiscal**: con sólo el total eso no se ve.
+- `empresa_id` **obligatorio** (una DDJJ es de un CUIT) → con empresa «Todas» no se ofrece comparación, en vez de inventar una suma de dos contabilidades. El POST es **upsert**: cargar y corregir son la misma acción.
+
+### Gotchas sueltos
+
+- **`gh pr edit` falla** (Projects classic, exit 1) *sin* actualizar el body → usar `gh api -X PATCH repos/.../pulls/N -F body=@file`. Ojo con los backticks al pasar `--body` desde bash (command substitution). Ver [[Errores Comunes]].
+- **Laravel: las reglas `gt`/`lt` comparan LONGITUD de string** → rompen la validación de rangos horarios `HH:MM`. Comparar `hora_fin <= hora_inicio` a mano. Ver [[Modulo Reservas Reuniones]] y [[Errores Comunes]].
+- **Modales con `<Transition>` en navegador automatizado:** el `transitionend` no dispara (la pestaña no avanza frames), así que el modal queda en el DOM con `fade-enter-from` + `fade-leave-active` y *parece* que no cierra. **El estado sí cambia** — no es bug de la app; se reproduce igual en modales preexistentes. Verificar el estado, no la presencia del nodo.
 
 ---
 

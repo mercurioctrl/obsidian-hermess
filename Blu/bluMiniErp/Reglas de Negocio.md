@@ -13,7 +13,7 @@ Son dos modulos separados con propositos distintos:
 | Banco/Caja | No involucra | Obligatorio |
 | Saldo negativo | Cliente pago mas (credito a favor) | N/A |
 
-Ver tablas en [[Base de Datos#movimientos_cuenta]] y [[Base de Datos#gastos]].
+Ver tablas en [[Base de Datos#`movimientos_cuenta`]] y [[Base de Datos#`gastos`]].
 
 ## Imputación contable vs fecha real (2026-08-27)
 
@@ -51,6 +51,39 @@ APROBADO / FACTURADO -> COBRADO
 - Al guardar, los movimientos de cuenta corriente se actualizan automaticamente
 - Al pasar a **APROBADO**: crea MovimientoCuenta tipo CARGO
 - Al pasar a **COBRADO**: requiere credenciales admin. Ver [[#Operaciones que requieren credenciales admin]]
+
+### Revertir cobro ("descobrar") — PR #66 (2026-09-16)
+
+Las transiciones **sólo avanzan**, así que un cobro mal cargado no se podía deshacer desde la app.
+`POST /presupuestos/{id}/revertir-cobro` lo deshace en **una transacción**:
+
+1. borra el `MovimientoCuenta` PAGO → la deuda del cliente vuelve a quedar abierta
+2. resta del banco/caja el monto que había ingresado y borra su `MovimientoBancoCaja` COBRO
+3. vuelve a **FACTURADO** si quedó una factura viva (AFIP `EMITIDA` o invoice Mercury no cancelado),
+   si no a **APROBADO**; limpia `banco_caja_cobro_id`
+
+> [!warning] Deliberadamente NO es una transición
+> Si fuera una transición más del flujo, se podría degradar un estado por accidente. Es un endpoint
+> aparte, pide **credenciales admin** igual que el cobro, y queda en el log quién autorizó.
+
+⚠️ Usa el **monto del `MovimientoBancoCaja` registrado**, no el total actual del presupuesto: el total
+pudo haber cambiado después del cobro y restar ese dejaría el saldo del banco mal.
+⚠️ El **proyecto no se degrada**: `sincronizarEstadoProyecto` nunca vuelve atrás (todo presupuesto tiene proyecto: se crea solo y el estado es espejo, pero nunca retrocede).
+
+### Clonar presupuesto — PR #66 (2026-09-16)
+
+`POST /presupuestos/{id}/clonar` reusa una propuesta ya armada, **desde cualquier estado**, para el
+mismo cliente u otro. El clon nace **BORRADOR** con numeración y fecha propias.
+
+| Copia | No copia |
+|---|---|
+| Ítems (con orden e IVA), moneda, descuento, vigencia, observaciones, suscripción, etiquetas | Cobro, facturas AFIP/Mercury, links de pago, movimientos de cuenta corriente |
+
+Recibe **su propio proyecto** en `propuesta` (regla dura: todo presupuesto tiene proyecto), para el
+cliente del clon.
+
+⚠️ **`generarNumero()` acepta la fecha**: el correlativo sale del período de la fecha elegida y no de
+`now()`, así el número no queda desalineado con la fecha. Por default sigue usando `now()`.
 
 Modelo en [[Backend - Modelos#Presupuesto]]. Endpoints en [[Backend - API#Presupuestos]].
 
@@ -97,7 +130,7 @@ El `saldo_actual` se ajusta automaticamente:
 | `DELETE /empleados/{id}/pagos/{id}` | `BancoCaja->sumarSaldo(monto)` |
 | `POST /bancos-cajas/{id}/ajuste` | suma o resta segun monto |
 
-Ver [[Backend - Modelos#BancoCaja]] y [[Modulo Personal#Comportamiento de pagos y saldo]].
+Ver [[Backend - Modelos#BancoCaja]] y [[Modulo Personal#Comportamiento de pagos, gasto vinculado y saldo (⚠️ desde migración 0057)]].
 
 ## Gastos - Campo realizado
 
@@ -122,6 +155,7 @@ Operaciones que usan este patron:
 - Ajuste manual de saldo de banco/caja
 - Desmarcar gasto como `realizado`
 - Transicion de presupuesto a COBRADO
+- **Revertir** el cobro de un presupuesto ("descobrar") — ver [[#Revertir cobro ("descobrar") — PR #66 (2026-09-16)]]
 
 ## Gastos - Edicion y eliminacion (siempre habilitadas)
 
@@ -144,7 +178,7 @@ Los gastos son **siempre editables y eliminables**, sin importar el estado del p
 - Asignables desde presupuesto **y desde proyecto** (mismo endpoint)
 - Filtrable en listados de presupuestos (`?etiqueta_id=`) y proyectos
 
-Ver [[Base de Datos#etiquetas]] y [[Backend - API#Etiquetas]].
+Ver [[Base de Datos#`etiquetas`]] y [[Backend - API#Etiquetas]].
 
 ## Orden de listados - Ultima actividad
 

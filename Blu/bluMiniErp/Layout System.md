@@ -96,4 +96,4 @@ Colores de [[Design Tokens]].
 - [[Design Tokens]] - Colores y espaciado aplicados
 - [[Componentes UI]] - Componentes dentro del layout
 - [[Page Templates]] - Composiciones de paginas completas
-- [[Frontend#Navegacion]] - Sidebar del proyecto actual
+- [[Frontend#Navegacion (sidebar)]] - Sidebar del proyecto actual
