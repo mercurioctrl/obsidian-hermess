@@ -4,6 +4,37 @@ Ver también: [[Laset]] · [[contexto]]
 
 ## 2026-09-18
 
+**Asignaciones OC ↔ venta (las OC no se veían en el detalle de venta)**
+- El endpoint devolvía `{"enabled": false}`: `ASSIGNMENT_FEATURE_ENABLED` venía en `false`
+  —también en el `.env-example`, o sea nunca se había encendido— aunque `ASSIGNMENT_COMPANIES`
+  ya incluía a Laset. Los datos estaban: **4.148 asignaciones** creadas por Fase C.
+
+**companyCode fijo por instancia**
+- Nueva `FORCE_COMPANY_CODE` (`config/laset.php`): el usuario autenticado siempre reporta ese
+  companyCode. Sale de `agentes.companyCode`, así que quien entraba con un agente de NB veía
+  la UI completa (IVA, impuestos internos, precio sin IVA) en lugar de la de Laset.
+- **NO se tocó el maestro `agentes`**: de los 68 de esta base sólo 4 son de Laset; ponerlos
+  todos en 11 habría llenado los selectores de Vendedor con los 46 de NB.
+- Dos trampas que costaron un rato: el override **no puede ir en `UserDto`** (el token se arma
+  con `makeToken($login)`, el objeto crudo del repositorio, y nunca pasa por el Dto), y **cada
+  back tiene su propio `/auth/login`** — con el SSO compartiendo firma, vale el companyCode del
+  back donde se logueó. Aplicado en los 4 que lo usan (pedidos, compras, cobros, expedición);
+  postventa no usa companyCode en ninguna parte.
+
+**OCs sin subtotales**
+- El detalle de compra no mostraba "Subtotal u$d / $": el front los gatea con
+  `currencyQuote > 0` y 29 de las 661 OCs comp=11 tenían `nValDiv = NULL`. Fase C inserta
+  `nValDiv = 1` (comp=11 opera en dólares) pero `LasetFixStockOnlyPedprolCommand` no lo hacía.
+  Corregido el INSERT + `db-laset/2026-09-18_pedprot_nvaldiv_stockonly.sql` para las creadas.
+- Las columnas **en pesos** ya estaban condicionadas a `isLaset` (igual que la columna SKU):
+  aparecían sólo porque el token traía companyCode 4. No hubo que tocar el front.
+
+**Favicon: no se veía ninguno**
+- Los 7 fronts declaraban `href: '/favicon.ico'` en absoluto; con el dominio único el navegador
+  lo pedía contra la raíz (404) en vez de `/pedidos/favicon.ico`. El archivo estaba bien todo el
+  tiempo. Ahora el href lleva el `router.base` de cada app. Requiere rebuild: el `head` queda
+  embebido en el bundle.
+
 **DB — columna faltante del clon**
 - `pedprol.doNotUpdateCost` no existía: abrir una orden de compra moría con
   `Invalid column name 'doNotUpdateCost'`. El esquema se clonó de NB antes de que la

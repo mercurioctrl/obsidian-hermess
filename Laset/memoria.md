@@ -82,8 +82,23 @@ Detalle en [[import-planilla-comp11]]. Lo que conviene no volver a aprender:
   **va quedando viejo** respecto del código (caso `pedprol.doNotUpdateCost`).
 - Verificar límites de PHP **por HTTP**, nunca con `php -i` del CLI: leen `conf.d` distintos.
 
+## Feedback / lecciones de trabajo (2026-09-18)
+- **Commitear siempre en un `git worktree` aparte**, nunca cambiando de rama en el working tree
+  principal: los archivos ya commiteados en otra rama se revierten (o desaparecen, si son
+  nuevos) y el server queda corriendo algo distinto de lo que uno cree. Pasó dos veces —
+  los favicons volvieron a los de NB, y `config/laset.php` desapareció dejando el override de
+  companyCode sin efecto.
+- **No verificar contra el propio archivo que uno acaba de escribir**: comparar lo servido
+  contra la rama/el origen. Una verificación circular dio "todo bien" con los favicons de NB.
+- **Los límites de PHP se verifican por HTTP, no con `php -i` del CLI**: leen `conf.d`
+  distintos y el del CLI miente.
+- Un `curl` copiado de Chrome **no lleva el binario** del archivo: para probar uploads, `-F`.
+
 ## Estado y pendientes (2026-09-18)
-- Todo mergeado a `blu-dev-staff` salvo **`feature/laset-ocultamientos-ui`**.
+- Mergeado a `blu-dev-staff` todo lo del importador, favicons, menú, listas de color,
+  ocultamientos, `doNotUpdateCost` y el primer tramo de asignaciones/companyCode.
+- Pendientes de merge: `fix/asignacion-feature-enabled` (override en el repositorio + los otros
+  3 backs) y `fix/laset-cotizacion-oc-stockonly`.
 - Pendiente operativo: **Re-vincular facturas** (398 esperando), desplegar en el dev de blu,
   limpiar 6 snapshots viejos y 20 scripts de diagnóstico en `storage/app` del back de pedidos.
 - Decisión abierta: dar de alta (o no) los 4 proveedores y 18 categorías que dejan 23

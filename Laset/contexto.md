@@ -103,6 +103,17 @@ NO `hermess87`).
 - **Validación de subida por extensión + firma ZIP**, no por libmagic. Es más específica que
   `mimes`, y el contenido igual se valida después (openpyxl + headers canónicos).
 
+## Decisiones (2026-09-18 · una sola empresa)
+- **`companyCode` fijo por configuración, no por datos**: `FORCE_COMPANY_CODE=11` en el `.env`
+  de cada back en vez de `UPDATE agentes SET companyCode = 11`. De los 68 agentes de esta base
+  sólo 4 son de Laset: cambiarlos todos habría llenado los selectores de Vendedor con los 46 de
+  NB y roto el aislamiento comp=11 que respeta el importador. Es reversible quitando la variable
+  y no afecta a NB, que no la define.
+- **Se encendió `ASSIGNMENT_FEATURE_ENABLED`** (kill switch de asignación OC ↔ venta), también
+  como default en el `.env-example`: los datos ya estaban y sin el flag no se veían.
+- **Las 29 OCs sin cotización se repararon con UPDATE**, no se re-importaron: el resto del
+  import estaba bien y rehacerlo costaba una hora.
+
 ## Deuda técnica anotada
 - **Cobros conecta a SQL Server sin cifrado** (`Encrypt = 0` en su DSN). Venía así; el usuario decidió
   anotarlo y seguir.
@@ -118,7 +129,7 @@ NO `hermess87`).
   alta o dejarlas afuera.
 - La raíz del dominio hoy redirige a `/inventario/`; se puede cambiar a `/pedidos/`.
 
-## Estado actual (2026-09-18)
+## Estado actual (2026-09-18, tarde)
 Los 7 fronts (PM2, 2 instancias c/u) y 7 backs (Docker) **operativos** en `laset.local`, con SSO.
 
 **comp=11 recargado desde la planilla del 2026-09-17**: 661 OCs, 623 ventas, 1.062 artículos,

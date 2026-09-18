@@ -104,3 +104,51 @@ El esquema se clonó de NB el 2026-09-04; el código siguió avanzando allá. S�
 `SQLSTATE[42S22] Invalid column name '<x>'` en una pantalla cualquiera.
 Caso real: `pedprol.doNotUpdateCost` (abrir una orden de compra). Fix: agregar la columna
 copiando tipo/nullability/default de su columna hermana y versionar el SQL en `db-laset/`.
+
+## Pantallas que muestran datos de la otra empresa (o de menos)
+
+### El front muestra IVA / impuestos / columnas en pesos en Laset
+El front decide con `user.companyCode === 11` (`plugins/permissions.js`, y `isLaset` en
+`ProviderOrderInbound/Detail.vue`). Ese valor sale de `agentes.companyCode`, así que **un
+usuario con agente de otra empresa ve la UI que no corresponde**. Se resuelve con
+`FORCE_COMPANY_CODE=11` en el `.env` del back, no tocando el maestro de agentes.
+
+Dos cosas que hacen perder tiempo acá:
+- **El override tiene que ir en el repositorio de auth, no en un Dto**: el token se arma con
+  `makeToken($login)`, el objeto crudo de `AuthRepository::login()`. Si se pone en el Dto,
+  `/auth/user` devuelve el valor forzado pero **el JWT no**, y el front lee del JWT.
+- **Cada back tiene su propio `/auth/login`** (pedidos :8193, compras :8196, cobros :8183,
+  expedición :8184). Como el SSO comparte la firma, vale el companyCode del back donde se
+  logueó: hay que setear la variable en todos. Postventa no usa companyCode.
+
+Para verificar sin navegador:
+```bash
+curl -s http://localhost:8196/v1/auth/login -H 'Content-Type: application/json' \
+  --data-raw '{"username":"USUARIO","password":"CLAVE"}'   # decodificar el payload del JWT
+```
+
+### El detalle de venta no muestra las OC asignadas
+El endpoint responde `{"enabled": false}`, no un error: kill switch
+`ASSIGNMENT_FEATURE_ENABLED` en el `.env` de pedidos (el default del repo es `false`).
+`ASSIGNMENT_COMPANIES` tiene que incluir el companyCode. Tras cambiarlo: `php artisan config:clear`.
+
+### El detalle de una OC no muestra los subtotales
+El front los gatea con `currencyQuote > 0` y la OC tiene `pedprot.nValDiv = NULL`. En comp=11
+todas las OCs son `DOL` y la cotización va en 1. Las creadas por el camino stock-only quedaban
+sin ella (ya corregido el INSERT):
+
+```sql
+SELECT COUNT(*) FROM NewBytes_DBF.dbo.pedprot
+ WHERE companyCode = 11 AND cCodDiv = 'DOL' AND nValDiv IS NULL;
+```
+
+### El favicon no aparece aunque el archivo esté bien
+Con dominio único, `href: '/favicon.ico'` se pide contra la **raíz** (404), no contra
+`/pedidos/favicon.ico`. El `href` tiene que llevar el `router.base` de la app — la misma
+trampa que `build.publicPath`. Verificar qué pide el navegador, no sólo que el archivo exista:
+
+```bash
+curl -s -o /dev/null -w "%{http_code}\n" http://laset.local/favicon.ico          # 404
+curl -s -o /dev/null -w "%{http_code}\n" http://laset.local/pedidos/favicon.ico  # 200
+```
+Cambiar el `head` de `nuxt.config.js` **requiere rebuild**: queda embebido en el bundle.
