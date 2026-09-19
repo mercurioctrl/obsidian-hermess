@@ -4,7 +4,7 @@ proyecto: blu-web-v1 + sitio-api-rest-v1-laravel
 dominio: blustudioinc.com / api.blustudioinc.com
 fecha: 2026-09-19
 autor: Hermes + Claude
-estado: pendiente-de-resolucion
+estado: aplicado-pendiente-de-deploy
 ---
 
 # 🔒 Auditoría de seguridad — blustudioinc.com (2026-09-19)
@@ -214,5 +214,74 @@ Después de cada bloque: `phpunit` verde + smoke test manual del front (login, a
 cita, cancelar cita, formulario de contacto, formulario de partner).
 
 ---
+
+---
+
+## 📌 Estado de ejecución (2026-09-19)
+
+Ramas: `fix/seguridad-2026-09` en ambos repos. **Hecho, falta deployar.**
+
+| Tarea | Estado | Dónde |
+|---|---|---|
+| 1 — Privesc UpdateUser | ✅ | `UpdateUserRequest` + `CreateUserRequest` |
+| 2 — Rate limit /login | ✅ | `RouteServiceProvider` + `routes/api.php` |
+| 3 — DatabaseConnectionController | ✅ borrado | — |
+| 4 — CORS | ✅ | `config/cors.php` + `AllowPartnerCors` |
+| 5 — Security headers | ✅ (sin CSP) | `nuxt.config.ts > routeRules` |
+| 6 — Higiene de .env | ✅ verificado | — |
+| 7 — Info leak ControlAccess | ✅ | `ControlAccessMiddleware` |
+| 8 — hash_equals | ✅ | `Appointment` |
+| 9 — x-powered-by | ✅ | `server/plugins/hide-powered-by.ts` |
+| 10 — TTL de tokens | ✅ 7 días | `config/sanctum.php` + `stores/auth.js` |
+| 11 — Telescope en prod | ✅ | `composer.json` + `config/app.php` + `AppServiceProvider` |
+
+### Decisiones tomadas
+
+- **TAREA 1 — se amplió a `CreateUserRequest`.** Bloquear solo `role_id` en el update
+  dejaba el bypass obvio: un `staff` podía crear un usuario admin y loguearse con él.
+  Ahora asignar rol (`role_id` / `roleId`) es exclusivo de admin en ambos endpoints, y
+  además nadie puede cambiar su propio rol.
+- **TAREA 4 — política partida.** `config/cors.php` queda con lista blanca
+  (blustudioinc.com, www, localhost:3000/3008) y el middleware global `AllowPartnerCors`
+  reabre el wildcard **solo** para `api/partner/*`. Así no hubo que enumerar los dominios
+  de las landings de clientes y ninguna se rompe. Sobrescribible con `CORS_ALLOWED_ORIGINS`.
+- **TAREA 5 — sin CSP.** Se aplicaron X-Frame-Options (`SAMEORIGIN`, no `DENY`, para no
+  romper los iframes internos de `/propuestas`), nosniff, Referrer-Policy, HSTS y
+  Permissions-Policy. La CSP queda pendiente: hay que armarla y probarla en Report-Only.
+- **TAREA 10 — 401 manejado en el front.** `apiFetch()` no manejaba el 401, así que con
+  tokens vencidos el panel quedaba roto. Ahora limpia la sesión y redirige al login.
+  ⚠️ Al deployar, todos los usuarios del panel con token de más de 7 días se desloguean
+  una vez.
+
+### ⚠️ Pendiente de deploy
+
+Nada de esto está en producción todavía. Backend: `./start.sh` (corre `composer install`,
+necesario para que `dont-discover` de Telescope tome efecto). Front: `npm run build` +
+restart de PM2.
+
+### 🔴 Hallazgo nuevo — fuera de la auditoría original
+
+`docker-compose.yml` (versionado en el repo) tiene las passwords de MySQL en claro
+(`npm8956` / `npm8956_root`) y publica **MySQL en `0.0.0.0:3308`** y **phpMyAdmin en
+`0.0.0.0:8080`**. Si el server de producción tiene esos puertos abiertos hacia internet,
+la base es accesible con una password que está en el repositorio.
+
+No se tocó (decisión del usuario: verificar y reportar). Verificado en la máquina de dev:
+los binds son a `0.0.0.0` (confirmado con `ss -ltn`). **Falta verificar en el server de
+producción** si el firewall los está tapando. Si no: atar a `127.0.0.1`, rotar las
+credenciales y sacarlas del repo.
+
+### Verificaciones corridas
+
+- `phpunit`: 2/2 OK antes y después (baseline y final).
+- `/login`: intentos 1-5 → 401, 6+ → 429. Otro email en paralelo → 401 (el keying por
+  email+IP funciona, no bloquea a toda la oficina).
+- CORS: preflight de `/partner/*` desde dominio externo → `Access-Control-Allow-Origin: *`;
+  `/contact` y `/login` desde origen ajeno → sin allow-origin; desde blustudioinc.com y
+  localhost:3000 → permitidos.
+- Telescope: 44 rutas en local, 0 con `APP_ENV=production`. La app arranca en ambos.
+- Front: build OK, las 11 páginas principales responden 200 con los 5 headers y sin
+  `x-powered-by`. Screenshots de home y `/servicios/marketing` idénticas. El diff del
+  front no toca ningún `.vue`, `.scss` ni `.css`.
 
 Relacionado: [[blu-web-v1]] · [[arquitectura]] · [[stack]] · [[changelog]]
