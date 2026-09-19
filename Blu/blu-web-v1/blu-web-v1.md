@@ -9,6 +9,7 @@ Sitio web corporativo de Blu Inc Studio — Nuxt 3 + Vue 3 + SCSS
 - [[stack]] — Dependencias, colores de servicios, backend consumido
 - [[changelog]] — Registro de cambios de assets, decisiones y actualizaciones fuera del código
 - [[memoria]] — Facts, preferencias y gotchas cross-sesión
+- [[auditoria-seguridad-2026-09-19]] — 🔒 Auditoría de seguridad (2026-09-19): tareas a resolver en front + API Laravel, con guía de no romper lo que funciona. **Pendiente de resolución.**
 
 ## Features destacadas
 
